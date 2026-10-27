@@ -35,6 +35,8 @@ input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 2px #68c7d5
 .hero-name{font-size:14px;font-weight:800;text-align:center;margin:7px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tier-chip{position:absolute;right:3px;top:3px;border-radius:4px;padding:2px 5px;font-size:10px;font-weight:900;color:#11131a;background:var(--tier);z-index:2}
 .no-results{padding:30px;text-align:center;color:var(--muted)}
+.sk-num{color:#fff;font-weight:800}.sk-effect{color:#fff;font-weight:800}.sk-status{font-weight:800;color:var(--sk-color,#fff)}.sk-cond{color:#e0474f;font-weight:600}.sk-cond b,.sk-cond .sk-status{color:#e0474f}
+#karmaPopover{position:fixed;z-index:30;width:min(440px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;box-shadow:0 18px 55px #000b;border-radius:4px}#karmaPopover[hidden]{display:none}#karmaPopover .karma-card{border-color:var(--karma-accent,#43b9ed)}
 #tooltip{position:fixed;z-index:20;width:min(380px,calc(100vw - 24px));background:#171d26;border:1px solid #536273;border-radius:14px;box-shadow:0 18px 55px #000b;padding:15px;display:none;pointer-events:none}
 .tip-top{display:flex;gap:14px;align-items:center}.tip-portrait{width:112px;height:132px;object-fit:cover;border-radius:9px;border:2px solid var(--tier);flex-shrink:0}
 .tip-title{font-size:23px;font-weight:900;line-height:1.1;margin-bottom:8px}
@@ -317,9 +319,10 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 
 </div>
 <div id="tooltip" role="tooltip"></div>
+<div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={};
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={};
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -394,24 +397,10 @@ function renderKarmaFilters(){
   b.onclick=()=>{activeKarmaArch=activeKarmaArch===a?'':a;renderKarmaFilters();renderKarmas()};root.append(b);
  });
 }
-function renderKarmas(){
- const board=document.getElementById('karmaBoard');if(!board)return;
- const query=(document.getElementById('karmaSearch')?.value||'').trim().toLowerCase();
- const found=KARMA_DATA.filter(k=>(!activeKarmaArch||k.archetype===activeKarmaArch)&&(!query||[k.name,k.archetype,k.signature||'',k.source,k.exclusive||'',...(k.traits||[]).map(t=>t.label)].join(' ').toLowerCase().includes(query)));
- document.getElementById('karmaResultCount').textContent=`Showing ${found.length} of ${KARMA_DATA.length} Karmas`;
- board.innerHTML='';
- const colors={Venom:'#39b9e8',Amplitude:'#d88bff',Crushing:'#ff9e49',Gale:'#5ed4c8',Bloodburst:'#ef6480',Blazeflame:'#ff9d48',Frostbite:'#69c9e8',Thunderbolt:'#f3d35b',Breaker:'#9b8cff'};
- const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const archOrder=['Venom','Blazeflame','Frostbite','Thunderbolt','Breaker','Bloodburst','Gale','Crushing','Amplitude'];
- for(const arch of archOrder){
-  const items=found.filter(k=>k.archetype===arch);if(!items.length)continue;
-  const section=document.createElement('section');section.className='karma-arch-section';section.style.setProperty('--karma-accent',colors[arch]||'#39b9e8');
-  const head=document.createElement('div');head.className='karma-arch-heading';
-  const hero=HEROES.find(h=>h.archetype===arch);if(hero?.archIcon){const img=document.createElement('img');img.src=hero.archIcon;img.alt=arch;head.append(img)}
-  const title=document.createElement('h3');title.textContent=arch;head.append(title);
-  const count=document.createElement('span');count.textContent=`${items.length} Karmas`;head.append(count);section.append(head);
-  const grid=document.createElement('div');grid.className='karma-grid';
-  for(const k of items){
+const KARMA_ACCENTS={Venom:'#39b9e8',Amplitude:'#d88bff',Crushing:'#ff9e49',Gale:'#5ed4c8',Bloodburst:'#ef6480',Blazeflame:'#ff9d48',Frostbite:'#69c9e8',Thunderbolt:'#f3d35b',Breaker:'#9b8cff'};
+// One Karma card, built from KARMA_DATA. Used by the Karma tab and by the hover popover on character pages.
+function buildKarmaCard(k){
+ const esc=profileEsc;
    const card=document.createElement('article');card.className='karma-card';
    const kh=document.createElement('div');kh.className='karma-card-head';
    const mark=document.createElement('div');mark.className='karma-card-mark';mark.textContent=k.signature?'✦':'◇';mark.title=k.signature?'Signature Karma':'Generic Karma';kh.append(mark);
@@ -438,13 +427,33 @@ function renderKarmas(){
    const stats=document.createElement('div');stats.className='karma-stats';
    const statHeading=document.createElement('div');statHeading.className='karma-stat-heading';statHeading.textContent='Base stats · Lv. 70 / Ascension 6';stats.append(statHeading);
    for(const [label,value] of Object.entries(k.base||{})){const st=document.createElement('div');st.className='karma-stat';st.innerHTML=esc(label)+': <b>'+esc(value)+'</b>';stats.append(st)}
-   card.append(stats);grid.append(card);
+   card.append(stats);
    select.addEventListener('change',()=>{
     const level=Number(select.value);
     card.querySelectorAll('[data-trait-levels]').forEach(node=>{
      try{const levels=JSON.parse(node.dataset.traitLevels||'[]');node.textContent=levels[level]??levels[0]??'';}catch{}
     });
    });
+   return card;
+}
+function renderKarmas(){
+ const board=document.getElementById('karmaBoard');if(!board)return;
+ const query=(document.getElementById('karmaSearch')?.value||'').trim().toLowerCase();
+ const found=KARMA_DATA.filter(k=>(!activeKarmaArch||k.archetype===activeKarmaArch)&&(!query||[k.name,k.archetype,k.signature||'',k.source,k.exclusive||'',...(k.traits||[]).map(t=>t.label)].join(' ').toLowerCase().includes(query)));
+ document.getElementById('karmaResultCount').textContent=`Showing ${found.length} of ${KARMA_DATA.length} Karmas`;
+ board.innerHTML='';
+ const colors=KARMA_ACCENTS;
+ const archOrder=['Venom','Blazeflame','Frostbite','Thunderbolt','Breaker','Bloodburst','Gale','Crushing','Amplitude'];
+ for(const arch of archOrder){
+  const items=found.filter(k=>k.archetype===arch);if(!items.length)continue;
+  const section=document.createElement('section');section.className='karma-arch-section';section.style.setProperty('--karma-accent',colors[arch]||'#39b9e8');
+  const head=document.createElement('div');head.className='karma-arch-heading';
+  const hero=HEROES.find(h=>h.archetype===arch);if(hero?.archIcon){const img=document.createElement('img');img.src=hero.archIcon;img.alt=arch;head.append(img)}
+  const title=document.createElement('h3');title.textContent=arch;head.append(title);
+  const count=document.createElement('span');count.textContent=`${items.length} Karmas`;head.append(count);section.append(head);
+  const grid=document.createElement('div');grid.className='karma-grid';
+  for(const k of items){
+   grid.append(buildKarmaCard(k));
   }
   section.append(grid);board.append(section);
  }
@@ -490,6 +499,34 @@ function makeRoleFilters(){
   root.append(b);
  });
 }
+// Skill text: damage values bold, status effects bold in their archetype colour, Activation Conditions in red.
+function formatSkillText(text){
+ const S=STATUS_ARCHETYPE||{};const names=Object.keys(S).sort((a,b)=>b.length-a.length).join('|')||'(?!)';
+ const re=new RegExp([
+  '(Attack Power )(\\d+(?:\\.\\d+)?%)( Damage)',
+  '\\b('+names+')( \\d+ stacks?(?: or more)?)\\b',
+  '\\b(\\d+ (?:or more )?)('+names+')( [Ss]tacks?)\\b',
+  '\\b(\\d+ (?:or more )?stacks? of )('+names+')\\b',
+  '\\b('+names+')\\b',
+  '(\\[[^\\]]+\\]|Super Armor|Taunt)',
+  '(\\d+(?:\\.\\d+)?(?:%| seconds?\\b| times(?: or more)?))'
+ ].join('|'),'g');
+ const col=w=>ARCH_COLORS[S[w]]||'';
+ const st=(w,inner)=>`<b class="sk-status" style="--sk-color:${col(w)}">${profileEsc(inner)}</b>`;
+ const line=s=>{let out='',last=0,m;re.lastIndex=0;
+  while((m=re.exec(s))){out+=profileEsc(s.slice(last,m.index));last=re.lastIndex;
+   if(m[1])out+=profileEsc(m[1])+'<b class="sk-num">'+profileEsc(m[2])+'</b>'+profileEsc(m[3]);
+   else if(m[4])out+=st(m[4],m[4]+m[5]);
+   else if(m[7])out+=st(m[7],m[6]+m[7]+m[8]);
+   else if(m[10])out+=st(m[10],m[9]+m[10]);
+   else if(m[11])out+=st(m[11],m[11]);
+   else if(m[12])out+='<b class="sk-effect">'+profileEsc(m[12])+'</b>';
+   else if(m[13])out+='<b class="sk-num">'+profileEsc(m[13])+'</b>';
+  }
+  out+=profileEsc(s.slice(last));
+  return /^\s*Activation Conditions?\b/i.test(s)?'<span class="sk-cond">'+out+'</span>':out;};
+ return String(text||'').split('\n').map(line).join('\n');
+}
 let currentProfileName='';
 const SKILL_MAX_TO_LV1=1.75; // max-level weight = Lv.1 weight x 1.75 (verified on every skill patched in 1.1.0)
 function profileEsc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
@@ -518,7 +555,7 @@ function openCharacterProfile(name){
   const isPassive=/mastery\s*\(passive\)/i.test(slot);
   const card=document.createElement('article');card.className='profile-skill'+(isPassive?' profile-skill-passive':'');
   const head=document.createElement('div');head.className='profile-skill-head';head.innerHTML=`<span class="profile-skill-slot">${profileEsc(slot)}</span><h4>${profileEsc(sk.skill)}</h4>`;
-  const body=document.createElement('div');body.className='profile-skill-body';body.textContent=sk.description;
+  const body=document.createElement('div');body.className='profile-skill-body';body.innerHTML=formatSkillText(sk.description);
   card.append(head,body);
   // Mastery/passive effects are fixed: they do not have a skill-level slider.
   if(!isPassive&&maxLevel>1){
@@ -528,7 +565,7 @@ function openCharacterProfile(name){
    const level=document.createElement('span');level.className='profile-skill-level';level.textContent=`Lv. ${maxLevel}`;
    const original=sk.description;
    function updateSkill(){const lv=Number(range.value),factor=(1+(SKILL_MAX_TO_LV1-1)*(lv-1)/(maxLevel-1))/SKILL_MAX_TO_LV1;level.textContent=lv<maxLevel?`Lv. ${lv} (est.)`:`Lv. ${lv}`;
-    body.textContent=original.replace(/(Attack Power )(\d+(?:\.\d+)?)(% Damage)/g,(m,a,num,c)=>a+Math.round(Number(num)*factor)+c);
+    body.innerHTML=formatSkillText(original.replace(/(Attack Power )(\d+(?:\.\d+)?)(% Damage)/g,(m,a,num,c)=>a+Math.round(Number(num)*factor)+c));
    }
    range.addEventListener('input',updateSkill);controls.append(label,range,level);card.append(controls);
   }
@@ -555,6 +592,26 @@ document.querySelectorAll('[data-gear-filter]').forEach(b=>b.addEventListener('c
 $('gearReset').addEventListener('click',()=>{$('gearSearch').value='';activeGearFilter='all';document.querySelectorAll('[data-gear-filter]').forEach(x=>x.classList.toggle('active',x.dataset.gearFilter==='all'));renderGear()});
 function openGearSet(name){document.querySelector('.nav-item[data-page="gear"]').click();activeGearFilter='all';$('gearSearch').value='';document.querySelectorAll('[data-gear-filter]').forEach(x=>x.classList.toggle('active',x.dataset.gearFilter==='all'));renderGear();const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');const target=GEAR_DATA.find(g=>norm(g.name)===norm(name));if(target){const el=$('gear-set-'+target.name.toLowerCase().replace(/[^a-z0-9]+/g,'-'));if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.style.outline='3px solid #36b4df';setTimeout(()=>el.style.outline='',1800)}}}
 
+// Hover / keyboard focus on a Best Karma row shows that Karma's card, built live from KARMA_DATA.
+let karmaPopTimer=null;
+function findKarma(name){const n=s=>String(s||'').trim().toLowerCase().replace(/[.,;:!?]+$/,'').trim();return KARMA_DATA.find(k=>n(k.name)===n(name));}
+function showKarmaPopover(anchor,name){
+ const k=findKarma(name);if(!k)return;clearTimeout(karmaPopTimer);
+ const pop=$('karmaPopover');pop.innerHTML='';pop.style.setProperty('--karma-accent',KARMA_ACCENTS[k.archetype]||'#39b9e8');
+ pop.append(buildKarmaCard(k));pop.hidden=false;
+ const r=anchor.getBoundingClientRect(),w=pop.offsetWidth,hgt=pop.offsetHeight;
+ let left=r.right+12;if(left+w>window.innerWidth-12)left=r.left-w-12;let top=r.top;
+ if(left<12){left=Math.max(12,Math.min(window.innerWidth-w-12,r.left+24));top=r.bottom+6;if(top+hgt>window.innerHeight-12)top=r.top-hgt-6;}
+ if(top+hgt>window.innerHeight-12)top=window.innerHeight-hgt-12;if(top<12)top=12;
+ pop.style.left=left+'px';pop.style.top=top+'px';
+}
+function hideKarmaPopover(delay=150){clearTimeout(karmaPopTimer);karmaPopTimer=setTimeout(()=>{const p=$('karmaPopover');p.hidden=true;p.innerHTML=''},delay);}
+$('karmaPopover').addEventListener('mouseenter',()=>clearTimeout(karmaPopTimer));$('karmaPopover').addEventListener('mouseleave',()=>hideKarmaPopover());
+$('karmaPopover').addEventListener('focusin',()=>clearTimeout(karmaPopTimer));$('karmaPopover').addEventListener('focusout',()=>hideKarmaPopover());
+function wireKarmaPopover(item,name){
+ item.addEventListener('mouseenter',()=>showKarmaPopover(item,name));item.addEventListener('mouseleave',()=>hideKarmaPopover());
+ item.addEventListener('focus',()=>showKarmaPopover(item,name));item.addEventListener('blur',()=>hideKarmaPopover());item.addEventListener('click',()=>hideKarmaPopover(0),true);
+}
 function renderProfileBuild(h,data){
  const karmaRoot=$('profileKarmas');karmaRoot.innerHTML='';
  const text=String(data.karma||'');let signature='',alternatives='';
@@ -569,7 +626,7 @@ function renderProfileBuild(h,data){
  const archetypeKey=Object.keys(genericKarmaByArchetype).find(a=>a.toLowerCase()===String(h.archetype||'').toLowerCase())||Object.keys(genericKarmaByArchetype).find(a=>a.toLowerCase()===String((HEROES.find(x=>x.name===h.name)||{}).archetype||'').toLowerCase());
  const genericKarma=genericKarmaByArchetype[archetypeKey]||'Generic Karma';
  rows.push({title:genericKarma,kind:'Generic',desc:'Generic fallback Karma for this archetype, with Max HP% and Defense% trait effects.'});
- rows.forEach((r,i)=>{const item=document.createElement('article');item.className='profile-build-item profile-karma-link';item.tabIndex=0;item.setAttribute('role','link');item.setAttribute('aria-label',`Open ${r.title} in Karma tab`);item.title='Click to open this Karma in the Karma tab';item.innerHTML=`<div class="profile-build-head"><div class="profile-build-icon">✦</div><div><h4>${profileEsc(r.title)}</h4><small>${profileEsc(r.kind)} · View in Karma Codex ↗</small></div></div><div class="profile-build-desc">${profileEsc(r.desc)}</div>`;const openKarma=()=>{document.querySelector('.nav-item[data-page="karma"]').click();activeKarmaArch='';renderKarmaFilters();const search=$('karmaSearch');const karmaTitle=String(r.title||'').trim().replace(/[.,;:!?]+$/,'').trim();search.value=karmaTitle;renderKarmas();const cards=[...document.querySelectorAll('.karma-card')];const normalizeKarmaName=value=>String(value||'').trim().toLowerCase().replace(/[.,;:!?]+$/,'').trim();const target=cards.find(c=>normalizeKarmaName(c.querySelector('.karma-card-title')?.textContent)===normalizeKarmaName(karmaTitle));if(target){target.scrollIntoView({behavior:'smooth',block:'center'});target.style.outline='3px solid #68c7d5';target.style.outlineOffset='2px';setTimeout(()=>{target.style.outline='';target.style.outlineOffset=''},1800)}else{search.focus()}};item.addEventListener('click',openKarma);item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openKarma()}});karmaRoot.append(item)});
+ rows.forEach((r,i)=>{const item=document.createElement('article');item.className='profile-build-item profile-karma-link';item.tabIndex=0;item.setAttribute('role','link');item.setAttribute('aria-label',`Open ${r.title} in Karma tab`);item.innerHTML=`<div class="profile-build-head"><div class="profile-build-icon">✦</div><div><h4>${profileEsc(r.title)}</h4><small>${profileEsc(r.kind)} · View in Karma Codex ↗</small></div></div><div class="profile-build-desc">${profileEsc(r.desc)}</div>`;const openKarma=()=>{document.querySelector('.nav-item[data-page="karma"]').click();activeKarmaArch='';renderKarmaFilters();const search=$('karmaSearch');const karmaTitle=String(r.title||'').trim().replace(/[.,;:!?]+$/,'').trim();search.value=karmaTitle;renderKarmas();const cards=[...document.querySelectorAll('.karma-card')];const normalizeKarmaName=value=>String(value||'').trim().toLowerCase().replace(/[.,;:!?]+$/,'').trim();const target=cards.find(c=>normalizeKarmaName(c.querySelector('.karma-card-title')?.textContent)===normalizeKarmaName(karmaTitle));if(target){target.scrollIntoView({behavior:'smooth',block:'center'});target.style.outline='3px solid #68c7d5';target.style.outlineOffset='2px';setTimeout(()=>{target.style.outline='';target.style.outlineOffset=''},1800)}else{search.focus()}};item.addEventListener('click',openKarma);item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openKarma()}});wireKarmaPopover(item,r.title);karmaRoot.append(item)});
  const gearRoot=$('profileGearSets');gearRoot.innerHTML='';
  const gearText=String(data.gear||'');let setText=gearText.replace(/^Recommended Gear sets:\s*/i,'');
  const gearNames=setText.split(/\. Main stats:/i)[0].split(/\. Substats:/i)[0].trim();
@@ -710,7 +767,7 @@ function startApp(){
  renderGear();
 }
 fetch('data.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);DATA_META=d.meta||{};
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};DATA_META=d.meta||{};
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
 </script>

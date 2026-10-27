@@ -318,6 +318,30 @@
   "D": "#b28bdc",
   "F": "#48265f"
  },
+ "ARCH_COLORS": {
+  "Venom": "#3eb83a",
+  "Amplitude": "#fec43c",
+  "Crushing": "#7772f4",
+  "Gale": "#84c4e9",
+  "Bloodburst": "#ce686d",
+  "Blazeflame": "#eb8b4e",
+  "Frostbite": "#70c5cb",
+  "Thunderbolt": "#b580fd",
+  "Breaker": "#c6cfce"
+ },
+ "STATUS_ARCHETYPE": {
+  "Poison": "Venom",
+  "Stun": "Amplitude",
+  "Knockdown": "Crushing",
+  "Airborne": "Gale",
+  "Bleed": "Bloodburst",
+  "Burn": "Blazeflame",
+  "Frost": "Frostbite",
+  "Frozen": "Frostbite",
+  "Freeze": "Frostbite",
+  "Shock": "Thunderbolt",
+  "Break": "Breaker"
+ },
  "TEAM_DATA": [
   {
    "tier": "S",
