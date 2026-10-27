@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DragonSword: Awakening — Visual Tier List</title>
+<style>
+:root{--bg:#151a22;--panel:#222a35;--panel2:#2a3441;--line:#3b4654;--text:#f4f6fa;--muted:#aeb8c7;--accent:#68c7d5}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#243b4c 0,#151a22 56%);color:var(--text);font:15px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{padding:26px clamp(16px,4vw,48px) 18px;border-bottom:1px solid #35404d;background:#111820cc}
+h1{font-size:clamp(24px,3vw,36px);margin:0 0 6px;letter-spacing:.02em}header p{margin:0;color:var(--muted)}
+main{max-width:1500px;margin:auto;padding:22px clamp(12px,3vw,36px) 60px}
+.filters{display:grid;grid-template-columns:minmax(220px,2fr) repeat(2,minmax(180px,1fr));gap:10px;margin-bottom:16px}
+input,select{width:100%;background:#202833;color:#f5f7fa;border:1px solid #455363;border-radius:9px;padding:12px 13px;font:inherit;outline:none}
+input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 2px #68c7d522}
+.filter-label{display:block;color:#9eafbf;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin:0 0 6px 3px}
+.archfilters{display:flex;flex-wrap:wrap;gap:3px;margin:6px 0 22px;align-items:center}
+.archbtn{width:42px;height:40px;flex:0 0 42px;border:1px solid #414650;background:#292c33;color:#e8eef4;border-radius:0;padding:7px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:650;position:relative;transition:background .15s,border-color .15s}
+.archbtn img{width:24px;height:24px;object-fit:contain}.archbtn.active{background:#008fca;border-color:#008fca;box-shadow:inset 0 0 0 1px #63c5d355}.archbtn:hover{background:#3b414b;border-color:#7d8795}.archbtn.active:hover{background:#009edb}
+.archbtn .all-symbol{font-size:22px;color:#fff;line-height:1}
+.archbtn[title]:hover::after{content:attr(title);position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);z-index:1000;background:#101217;color:#fff;border:1px solid #555b66;border-radius:5px;padding:6px 9px;font-size:12px;white-space:nowrap;box-shadow:0 5px 18px #0008;pointer-events:none}
+.legend{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 22px;color:var(--muted);font-size:12px}.legend span{padding:5px 9px;border-radius:6px;background:#202833;border:1px solid #394654}
+.tier-section{margin:0 0 18px;border:1px solid #3b4654;border-radius:13px;overflow:visible;background:#1b222c}
+.tier-head{display:flex;align-items:center;gap:14px;padding:11px 15px;border-radius:12px 12px 0 0;font-size:17px;font-weight:900;letter-spacing:.03em}
+.tier-head small{font-size:12px;font-weight:500;opacity:.85;letter-spacing:0}
+.tier-row{display:grid;grid-template-columns:72px 1fr;min-height:130px;border-top:1px solid #303b48}
+.tier-label{display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:950;color:#10131a;border-right:1px solid #ffffff22}
+.cards{display:flex;flex-wrap:wrap;align-content:flex-start;gap:12px;padding:13px}
+.hero-card{position:relative;width:118px;cursor:pointer;text-align:center;border-radius:9px;padding:5px 5px 8px;transition:transform .15s,background .15s}
+.hero-card:hover,.hero-card:focus{transform:translateY(-3px);background:#ffffff0b;outline:none}
+.portrait-wrap{position:relative;width:100%;aspect-ratio:335/386;border:2px solid var(--tier);border-radius:8px;overflow:hidden;background:#10151d;box-shadow:0 0 0 1px #ffffff16,0 3px 12px #0005}
+.portrait{width:100%;height:100%;object-fit:cover;display:block}
+.arch-badge{position:absolute;top:5px;left:5px;width:31px;height:31px;border-radius:50%;background:#111b22eF;border:1px solid #ffffff3d;display:grid;place-items:center;box-shadow:0 2px 8px #0008}
+.arch-badge img{width:26px;height:26px;object-fit:contain}
+.hero-name{font-size:14px;font-weight:800;text-align:center;margin:7px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tier-chip{position:absolute;right:3px;top:3px;border-radius:4px;padding:2px 5px;font-size:10px;font-weight:900;color:#11131a;background:var(--tier);z-index:2}
+.no-results{padding:30px;text-align:center;color:var(--muted)}
+#tooltip{position:fixed;z-index:20;width:min(380px,calc(100vw - 24px));background:#171d26;border:1px solid #536273;border-radius:14px;box-shadow:0 18px 55px #000b;padding:15px;display:none;pointer-events:none}
+.tip-top{display:flex;gap:14px;align-items:center}.tip-portrait{width:112px;height:132px;object-fit:cover;border-radius:9px;border:2px solid var(--tier);flex-shrink:0}
+.tip-title{font-size:23px;font-weight:900;line-height:1.1;margin-bottom:8px}
+.tip-meta{display:flex;align-items:center;gap:7px;color:#c3cedb;font-size:12px;margin-top:5px}.tip-meta img{width:24px;height:24px;object-fit:contain}
+.tip-role-icon{width:22px;height:22px;object-fit:contain}
+.tip-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}
+.tip-tier{border-radius:8px;overflow:hidden;background:#252e39;border:1px solid #ffffff16;text-align:center}
+.tip-tier .label{font-size:10px;color:#b6c2cf;padding:7px 2px 4px}
+.tip-tier .value{font-size:21px;font-weight:950;color:#11131a;padding:7px 0}
+.tip-note{font-size:11px;color:#8f9eae;margin-top:10px}
+footer{color:#8493a3;font-size:12px;margin-top:24px}
+@media(max-width:760px){.filters{grid-template-columns:1fr 1fr}.filters>div:first-child{grid-column:1/-1}.tier-row{grid-template-columns:55px 1fr}.tier-label{font-size:19px}.hero-card{width:100px}.tip-portrait{width:90px;height:108px}.tip-title{font-size:20px}}
+
+/* App shell navigation */
+body{background:#202126}
+.app-sidebar{position:fixed;inset:0 auto 0 0;width:220px;background:#191a1f;border-right:1px solid #36373e;padding:22px 12px;z-index:200;display:flex;flex-direction:column;gap:6px}
+.sidebar-brand{font-size:12px;letter-spacing:.15em;color:#8e929d;padding:3px 12px 20px;font-weight:800}
+.nav-group{font-size:10px;letter-spacing:.12em;color:#858a96;padding:18px 12px 5px}
+.nav-item{display:flex;align-items:center;gap:12px;width:100%;padding:12px 13px;border:0;border-radius:5px;background:transparent;color:#cbd0d9;font:inherit;text-align:left;cursor:pointer}
+.nav-item .nav-icon{width:18px;text-align:center;font-size:17px}
+.nav-item:hover{background:#292b32;color:#fff}
+.nav-item.active{background:#103449;color:#19b9ff;font-weight:700}
+.app-content{margin-left:220px;min-width:0}
+header{padding:24px clamp(16px,3vw,36px) 17px}
+main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
+.page-placeholder{margin:30px auto;max-width:850px;border:1px solid #41434b;border-radius:12px;background:#292b32;padding:28px;color:#e7e8ed}
+.page-placeholder h2{margin:0 0 10px}.page-placeholder p{color:#b8bbc5}
+@media(max-width:760px){.app-sidebar{width:66px;padding:12px 6px}.sidebar-brand,.nav-group,.nav-label{display:none}.nav-item{justify-content:center;padding:13px 5px}.nav-item .nav-icon{font-size:20px}.app-content{margin-left:66px}.filters{grid-template-columns:1fr 1fr}.filters>div:first-child{grid-column:1/-1}}
+
+/* role icon filters */
+
+.selector-row{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin:2px 0 18px}
+.selector-group{min-width:0}.role-selector-group{margin-left:auto}
+.rolefilters{display:flex;align-items:center;gap:3px}
+.rolebtn{width:48px;height:40px;flex:0 0 48px;border:1px solid #414650;background:#292c33;padding:7px;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;transition:background .15s,border-color .15s}
+.rolebtn img{width:25px;height:25px;object-fit:contain}
+.rolebtn.active{background:#008fca;border-color:#008fca;box-shadow:inset 0 0 0 1px #63c5d355}
+.rolebtn:hover{background:#3b414b;border-color:#7d8795}.rolebtn.active:hover{background:#009edb}
+.rolebtn[title]:hover::after{content:attr(title);position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);z-index:1000;background:#101217;color:#fff;border:1px solid #555b66;border-radius:5px;padding:6px 9px;font-size:12px;white-space:nowrap;box-shadow:0 5px 18px #0008;pointer-events:none}
+@media(max-width:760px){.filters{grid-template-columns:1fr 1fr}.filters>div:first-child{grid-column:1/-1}.selector-row{flex-wrap:wrap}.role-selector-group{margin-left:0}}
+
+
+/* Teams visual tier list */
+.teams-page{max-width:1600px;margin:0 auto;padding:6px 0 30px;color:#f2f3f7}
+.teams-intro{text-align:center;margin:10px 0 24px}.teams-intro h2{font-size:25px;margin:0 0 8px}.teams-intro h2 span{color:#00a8f5;font-weight:500}.teams-intro p{color:#c8cad2;margin:0 auto;max-width:1000px;font-size:14px;line-height:1.5}
+.team-tier-group{display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px;margin:14px 0 24px;border:1px solid #41434b;background:#292b32;padding:10px;align-items:stretch}
+.team-tier-label{display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:950;color:#11131a;border-radius:2px;min-height:100%;line-height:1;}
+.team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-content:start}
+.team-card{--team-accent:#8b86ef;min-width:0;border:2px solid var(--team-accent);background:#292b32;display:flex;flex-direction:column;overflow:hidden}
+.team-title{background:var(--team-accent);color:#10131a;text-align:center;font-size:14px;font-weight:900;letter-spacing:.35px;padding:6px 10px;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:9px;min-height:42px}.team-title img{width:31px;height:31px;object-fit:contain;flex:0 0 31px;filter:drop-shadow(0 1px 2px #0005)}.team-title span{line-height:1.2}.team-character-link{cursor:pointer;outline-offset:-3px}.team-character-link:focus-visible{outline:2px solid #fff;z-index:2}.team-slot img.team-character-link:hover{transform:scale(1.06);box-shadow:0 0 0 2px var(--team-accent)}.team-lead img.team-character-link{cursor:pointer}
+.team-body{display:grid;grid-template-columns:minmax(130px,1fr) minmax(0,1.5fr);min-height:155px;flex:1}
+.team-lead{position:relative;display:flex;align-items:stretch;justify-content:center;min-width:0;overflow:hidden;background:linear-gradient(145deg,#202936,#111720);border-right:2px solid var(--team-accent)}
+.team-lead img{width:100%;height:100%;min-height:155px;max-height:220px;object-fit:cover;object-position:center 20%;mask-image:linear-gradient(to right,#000 68%,transparent 100%)}
+.team-lead-name{position:absolute;bottom:0;left:0;right:0;padding:24px 8px 9px;background:linear-gradient(transparent,#080b11dd);font-weight:900;font-size:15px;text-shadow:0 2px 4px #000;text-align:left}
+.team-slot-images.many{flex-wrap:wrap;gap:3px}.team-slot-images.many .swap-divider{display:none}.team-slot-images.many img{width:min(40px,44%)}
+.team-members{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));min-width:0}
+.team-slot{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-width:0;padding:9px 5px;border-right:1px solid color-mix(in srgb,var(--team-accent) 75%,#252832);position:relative}
+.team-slot:last-child{border-right:0}.team-slot-images{display:flex;align-items:center;justify-content:center;gap:3px;width:100%;min-width:0}
+.team-slot img{width:min(68px,46%);aspect-ratio:335/386;object-fit:cover;border:2px solid #d8d9de;background:#111720;border-radius:2px;display:block}
+.team-slot img.single{width:min(82px,100%)}.team-slot .swap-divider{font-size:12px;font-weight:900;color:#f1d46a}
+.team-slot-name{font-size:11px;font-weight:800;text-align:center;line-height:1.25;overflow-wrap:anywhere}.team-slot-alt{font-size:10px;color:#c9cbd3;text-align:center;line-height:1.25}
+.team-notes{border-top:1px solid #454852;padding:8px 11px;color:#c6c9d1;font-size:12px;line-height:1.45;background:#22242b}.team-notes strong{color:#f4f4f6}.team-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:5px}.team-tag{border:1px solid #59606c;border-radius:4px;padding:2px 6px;font-size:10px;font-weight:800;color:#e3e5eb}
+.teams-footnote{color:#9da2ad;font-size:12px;margin:18px 2px 0;line-height:1.5}
+@media(max-width:1050px){.team-grid{grid-template-columns:1fr}.team-body{grid-template-columns:minmax(120px,.8fr) minmax(0,1.4fr)}}
+@media(max-width:600px){.team-tier-group{grid-template-columns:44px minmax(0,1fr);padding:6px;gap:6px}.team-tier-label{font-size:28px}.team-grid{grid-template-columns:1fr}.team-body{grid-template-columns:100px minmax(0,1fr);min-height:140px}.team-lead img{min-height:140px}.team-slot{padding:6px 2px}.team-slot img{width:min(48px,47%)}.team-slot img.single{width:min(58px,100%)}.team-slot-name{font-size:10px}.team-title{font-size:12px}}
+
+
+/* Karma catalogue */
+.karma-page{padding:20px 22px 36px}
+.karma-intro{margin:0 0 18px}
+.karma-intro h2{margin:0 0 6px;font-size:25px;color:#f6f7fb}
+.karma-intro p{margin:0;color:#b9c2d1;line-height:1.5}
+.karma-controls{display:grid;grid-template-columns:minmax(240px,1fr) auto;gap:12px;align-items:center;margin:18px 0 12px}
+.karma-search{width:100%;height:42px;background:#34363d;border:1px solid #4a4e58;border-radius:2px;color:#f7f8fb;padding:0 14px;font:inherit;outline:none}
+.karma-search:focus{border-color:#39a8e8}
+.karma-arch-filters{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.karma-arch-btn{height:42px;min-width:42px;padding:5px 8px;background:#303239;border:1px solid #484b54;color:#e8edf5;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.karma-arch-btn img{width:27px;height:27px;object-fit:contain}
+.karma-arch-btn.active{background:#079fe8;border-color:#079fe8}
+.karma-result-count{font-size:13px;color:#aeb7c6;margin:0 0 16px}
+.karma-arch-section{margin:22px 0 28px}
+.karma-arch-heading{display:flex;align-items:center;gap:12px;padding:0 0 9px;margin-bottom:12px;border-bottom:2px solid var(--karma-accent,#36a8df)}
+.karma-arch-heading img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(0 2px 5px #0007)}
+.karma-arch-heading h3{font-size:21px;letter-spacing:.35px;margin:0;text-transform:uppercase;color:#f6f7fa}
+.karma-arch-heading span{font-size:12px;color:#aeb7c6;margin-left:2px}
+.karma-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.karma-card{background:#292b32;border:1px solid #383b44;border-radius:3px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.karma-card-head{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#34363e;border-bottom:1px solid #3e414b}
+.karma-card-mark{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;background:#24262d;border:1px solid #4d515b;color:var(--karma-accent,#43b9ed);font-size:24px;font-weight:900}
+.karma-card-title{font-size:17px;line-height:1.25;font-weight:800;color:#f8f9fc;margin:0 0 5px}
+.karma-card-meta{font-size:12px;color:#d1d6e0;line-height:1.45}
+.karma-kind{display:inline-block;margin-right:8px;font-weight:800;color:#65d2ff}
+.karma-kind.generic{color:#c4c8d1}
+.karma-source{color:#e0e4ec}
+.karma-effect{padding:12px 14px 14px;line-height:1.55;color:#f0f2f7;flex:1}
+.karma-effect strong{color:#69d8ff}
+.karma-effect-empty{color:#aeb6c4;font-style:italic}
+.karma-awakening-note{margin:0 14px 12px;padding:8px 10px;border-left:3px solid #e6b354;background:#24262d;color:#c7ccd6;font-size:12px;line-height:1.45}
+.karma-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;background:#34363e;border-top:1px solid #41444d;margin-top:auto}
+.karma-stat{padding:8px 12px;border-right:1px solid #41444d;border-bottom:1px solid #41444d;font-size:13px;color:#e4e8ef}
+.karma-stat b{color:#ffc46b}
+.karma-empty{padding:22px;background:#292b32;color:#c2c8d3;border:1px solid #3b3e47}
+@media(max-width:900px){.karma-controls{grid-template-columns:1fr}.karma-arch-filters{justify-content:flex-start}.karma-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.karma-page{padding:14px 10px}.karma-card-head{padding:10px}.karma-card-title{font-size:15px}.karma-stats{grid-template-columns:1fr 1fr}.karma-arch-heading img{width:36px;height:36px}}
+
+
+.karma-trait-title{font-size:12px;text-transform:uppercase;letter-spacing:.45px;font-weight:900;color:#9edfff;margin-bottom:7px}
+.karma-trait-line{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px solid #3a3d46;font-size:13px;line-height:1.35}
+.karma-trait-line:last-of-type{border-bottom:0}
+.karma-trait-line b{white-space:nowrap;color:#ffc46b;text-align:right}
+.karma-arrow{color:#9ca7b8;padding:0 3px}
+.karma-exclusive{margin-top:10px;padding:9px 10px;background:#24262d;border-left:3px solid #63c9ed;line-height:1.5;font-size:13px}
+.karma-exclusive strong{display:block;color:#77d9ff;font-size:11px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:4px}
+.karma-stat-heading{grid-column:1/-1;padding:7px 12px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.45px;color:#aeb8c8;border-bottom:1px solid #41444d}
+
+
+.karma-trait-line{display:block;padding:7px 0}
+.karma-trait-line>span{display:block;font-weight:700;margin-bottom:5px;color:#e9edf4}
+.karma-awakening-values{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.karma-awakening-value{display:flex;flex-direction:column;align-items:center;gap:3px;padding:4px 2px;background:#24262d;border:1px solid #3b3e48;border-radius:2px;min-width:0}
+.karma-awakening-value small{font-size:10px;color:#9da9bb}
+.karma-awakening-value b{font-size:12px;color:#ffc46b;white-space:nowrap}
+@media(max-width:560px){.karma-awakening-values{gap:2px}.karma-awakening-value{padding:3px 0}.karma-awakening-value b{font-size:10px}.karma-awakening-value small{font-size:9px}}
+
+
+/* Karma per-card awakening selector and clear trait/base separation */
+.karma-card-title-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.karma-card-title-row .karma-card-title{margin:0}
+.karma-awakening-select{background:#25272e;color:#f6f8fc;border:1px solid #5a5f6b;border-radius:3px;padding:5px 8px;font:700 12px inherit;min-width:62px;cursor:pointer}
+.karma-trait-title{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#aeb8c8;font-weight:800;margin-bottom:7px}
+.karma-trait-line{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:6px 0;border-bottom:1px solid #3a3d46}
+.karma-trait-line:last-child{border-bottom:0}
+.karma-trait-line>span:first-child{color:#e4e8ef;font-weight:600}
+.karma-trait-right{display:flex;align-items:baseline;gap:8px}.karma-trait-step{font-size:11px;color:#9da9bb;white-space:nowrap}
+.karma-trait-value{font-size:17px;font-weight:900;color:#ffc46b;white-space:nowrap}
+.karma-exclusive{margin-top:12px;padding:12px 13px;background:#202229;border:1px solid #4b505c;border-left:4px solid var(--karma-accent,#39b9e8);border-radius:2px;line-height:1.55}
+.karma-exclusive strong{display:block;font-size:14px;font-weight:900;color:#fff;margin-bottom:5px}
+.karma-exclusive div{font-size:14px;font-weight:600;color:#e9edf5}
+.karma-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+.karma-stat-heading{grid-column:1/-1;padding:8px 12px 5px;color:#bfc7d5;font-size:11px;text-transform:uppercase;letter-spacing:.45px;font-weight:800}
+@media(max-width:560px){.karma-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.karma-trait-value{font-size:15px}}
+
+
+/* All Heroes catalogue */
+.heroes-page{padding:18px clamp(12px,2.5vw,34px) 50px;max-width:1900px;margin:0 auto}
+.heroes-heading{display:flex;align-items:center;gap:12px;margin:0 0 14px;padding:0 0 10px;border-bottom:2px solid #2d9bd5}
+.heroes-heading h2{margin:0;font-size:21px;font-weight:850;text-transform:uppercase;letter-spacing:.015em}
+.heroes-heading span{font-size:13px;color:#aeb8c7;font-weight:500;text-transform:none;letter-spacing:0}
+.heroes-controls{display:grid;grid-template-columns:minmax(220px,1.2fr) minmax(240px,1fr) minmax(170px,.8fr);gap:12px;align-items:end;margin-bottom:18px}
+.heroes-controls>input{height:42px;border-radius:0;background:#34363d;border-color:#484b54;padding:0 14px}
+.heroes-filter-group{min-width:0}
+.heroes-filter-group .filter-label{margin-bottom:5px}
+.heroes-archfilters,.heroes-rolefilters{display:flex;align-items:center;gap:3px;flex-wrap:wrap}
+.heroes-filter-btn{width:40px;height:40px;flex:0 0 40px;border:1px solid #414650;background:#292c33;color:#e8eef4;padding:6px;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;border-radius:0}
+.heroes-filter-btn img{width:25px;height:25px;object-fit:contain}
+.heroes-filter-btn.active{background:#008fca;border-color:#008fca;box-shadow:inset 0 0 0 1px #63c5d355}
+.heroes-filter-btn:hover{background:#3b414b;border-color:#7d8795}
+.heroes-filter-btn[title]:hover::after{content:attr(title);position:absolute;top:calc(100% + 7px);left:50%;transform:translateX(-50%);z-index:1000;background:#101217;color:#fff;border:1px solid #555b66;padding:5px 8px;font-size:12px;white-space:nowrap;pointer-events:none}
+.heroes-filter-btn .all-symbol{font-size:22px;line-height:1}
+.heroes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:10px}
+.heroes-character-card{position:relative;aspect-ratio:140/178;min-width:0;overflow:hidden;background:#282b33;cursor:default;isolation:isolate}
+.heroes-character-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,#000a 100%);z-index:1;pointer-events:none}
+.heroes-character-card .heroes-portrait{width:100%;height:100%;object-fit:cover;display:block;transition:transform .18s ease}
+.heroes-character-card:hover .heroes-portrait{transform:scale(1.035)}
+.heroes-char-name{position:absolute;z-index:2;left:4px;right:4px;bottom:8px;text-align:center;font-size:15px;font-weight:850;color:#fff;text-shadow:0 2px 4px #000,0 0 6px #000;line-height:1.2}
+.heroes-char-badges{position:absolute;z-index:3;right:0;top:0;display:flex;flex-direction:column;gap:2px}
+.heroes-char-badge{width:24px;height:25px;display:grid;place-items:center;background:#111b;color:#fff}
+.heroes-char-badge img{width:21px;height:21px;object-fit:contain}
+.heroes-new{position:absolute;z-index:4;left:0;top:0;padding:3px 7px;background:#ff4657;color:white;font-weight:950;font-size:12px;letter-spacing:.04em;box-shadow:0 2px 6px #0006}
+.heroes-empty{padding:22px;background:#292b32;border:1px solid #3b3e47;color:#c2c8d3}
+@media(max-width:1050px){.heroes-controls{grid-template-columns:1fr 1fr}.heroes-controls>input{grid-column:1/-1}}
+@media(max-width:760px){.heroes-grid{grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:7px}.heroes-char-name{font-size:13px}.heroes-controls{grid-template-columns:1fr}.heroes-controls>input{grid-column:auto}}
+
+
+/* Character profile pages */
+.profile-page{max-width:1500px;margin:0 auto;padding:4px 0 48px;color:#f1f3f7}
+.profile-crumb{font-size:13px;color:#aab5c4;margin:0 0 12px}.profile-crumb button,.profile-intro button{border:0;background:none;color:#69c6ff;padding:0;cursor:pointer;font:inherit;font-weight:750}.profile-hero{position:relative;min-height:170px;border:1px solid #3b4654;background:linear-gradient(100deg,#111820 0%,#25303b 70%,#111820 100%);display:flex;align-items:center;justify-content:space-between;overflow:hidden;margin-bottom:24px}.profile-hero-copy{padding:24px;z-index:1}.profile-hero h2{font-size:clamp(28px,4vw,44px);margin:0 0 5px}.profile-hero .profile-subtitle{font-weight:850;text-transform:uppercase;letter-spacing:.04em}.profile-hero-portrait{height:190px;width:190px;object-fit:cover;object-position:top center;align-self:flex-end;mask-image:linear-gradient(90deg,transparent,#000 20%)}
+.profile-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px}.profile-section-title{font-size:17px;text-transform:uppercase;font-weight:900;margin:0 0 10px;padding-bottom:7px;border-bottom:2px solid #68c7d5;letter-spacing:.02em}.profile-intro p{margin:0;line-height:1.65;color:#e0e5ec}.profile-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:25px 0 22px}.profile-tab{border:1px solid #3b414c;background:#292b32;color:#d8dbe2;padding:15px 8px;cursor:pointer;font:inherit;font-weight:850;text-transform:uppercase;border-bottom:4px solid #454751}.profile-tab.active{background:#343640;color:#fff;border-bottom-color:#68c7d5}.profile-tabpanel{display:none}.profile-tabpanel.active{display:block}.profile-subhead{font-size:17px;font-weight:900;text-transform:uppercase;border-bottom:2px solid #68c7d5;padding-bottom:7px;margin:24px 0 12px}.profile-skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.profile-skill{background:#292b32;border:1px solid #3a3d46;min-width:0}.profile-skill-head{display:flex;align-items:center;gap:10px;background:#35373f;padding:11px 13px}.profile-skill-head h4{margin:0;font-size:15px}.profile-skill-slot{color:#68c7d5;font-size:11px;text-transform:uppercase;font-weight:900;min-width:95px}.profile-skill-body{padding:13px;white-space:pre-line;line-height:1.55;color:#dce1e8}.profile-skill-controls{display:flex;align-items:center;gap:12px;padding:0 13px 13px;color:#bfc5d0;font-size:12px}.profile-skill-controls input{padding:0;accent-color:#68c7d5}.profile-skill-level{font-weight:900;color:#fff;min-width:48px}.profile-mode-heading{grid-column:1/-1;display:flex;align-items:center;gap:13px;padding:15px 18px;margin-top:7px;border:1px solid #3e4551;border-left:5px solid #68c7d5;background:linear-gradient(100deg,#343944,#292b32);color:#f2f4f8;font-size:20px;font-weight:950;letter-spacing:.035em;text-transform:uppercase}.profile-mode-heading small{font-size:11px;letter-spacing:.12em;color:#68c7d5;font-weight:900}.profile-quick-info-list{display:flex;flex-direction:column;gap:5px;line-height:1.35}.profile-quick-info-row{display:flex;align-items:center;gap:7px;flex-wrap:wrap;min-height:24px}.profile-quick-arch{display:inline-flex;align-items:center;gap:6px;font-weight:850}.profile-quick-arch img{width:23px;height:23px;object-fit:contain;vertical-align:middle}.profile-tier-large{display:inline-grid;place-items:center;vertical-align:middle;width:29px;height:29px;padding:0;border-radius:4px;font-size:19px;line-height:1;font-weight:1000;color:#11131a;margin-left:2px;box-shadow:0 1px 4px #0004}.profile-awakening-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.profile-awakening{display:grid;grid-template-columns:65px 1fr;gap:0;background:#25272e;border:1px solid #3a3d46;min-height:86px}.profile-awakening b{display:grid;place-items:center;background:#5e56c8;color:#fff;font-size:18px}.profile-awakening div{padding:12px;font-size:13px;color:#d8dce4}.profile-placeholder{background:#292b32;border:1px solid #3b3e47;padding:18px;color:#aeb7c4;font-style:italic}.profile-proscons{display:grid;grid-template-columns:1fr 1fr;gap:14px}.profile-proscons article{background:#292b32;border:1px solid #3a3d46;padding:17px}.profile-proscons h4{margin:0 0 10px;padding-bottom:9px;border-bottom:1px solid #4a4d55}.profile-pros{color:#64d995}.profile-cons{color:#ff5c65}.profile-build-list{display:grid;gap:9px}.profile-build-item{border:1px solid #3c4049;background:#292b32}.profile-build-item.profile-karma-link{cursor:pointer;transition:border-color .15s,background .15s}.profile-build-item.profile-karma-link:hover,.profile-build-item.profile-karma-link:focus-visible{border-color:#68c7d5;background:#30343c;outline:2px solid #68c7d5;outline-offset:1px}.profile-build-item.profile-karma-link .profile-build-head h4{color:#8bd9ff}.profile-build-item.profile-karma-link:hover .profile-build-head h4{text-decoration:underline}.profile-build-head{display:flex;align-items:center;gap:12px;background:#35373f;padding:10px 12px}.profile-build-icon{width:42px;height:42px;background:linear-gradient(135deg,#454852,#6a5ccf);display:grid;place-items:center;font-size:20px;font-weight:900;flex:0 0 42px}.profile-build-head h4{margin:0;font-size:15px}.profile-build-head small{display:block;color:#b9c2cf;margin-top:3px}.profile-build-desc{padding:12px 14px;line-height:1.55;color:#dce1e8}.profile-build-stats{padding:10px 14px;border-top:1px solid #3a3d46;color:#dce1e8;display:flex;gap:20px;flex-wrap:wrap;font-size:13px}.profile-build-stats b{color:#ffd16a}.profile-gear-pieces{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.profile-gear-piece{background:#292b32;border:1px solid #3b3e47;text-align:center;padding:13px 7px;min-height:82px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}.profile-gear-piece>strong{display:block;color:#f1e68b;font-size:14px;font-weight:900}.profile-main-stat-value{font-size:15px;line-height:1.3;color:#f5f6f8;font-weight:650}.profile-gear-piece .profile-note{font-size:10px;margin-top:0;line-height:1.2}.profile-gear-piece .profile-build-icon{margin:0 auto 8px}.profile-synergy-list{display:grid;gap:10px}.profile-synergy{display:flex;gap:12px;align-items:flex-start;background:#292b32;border:1px solid #3b3e47;padding:12px}.profile-synergy img{width:58px;height:68px;object-fit:cover;border:1px solid #586371;cursor:pointer}.profile-synergy button{background:none;border:0;color:#ffd16a;cursor:pointer;font:inherit;font-weight:800;padding:0}.profile-back{margin-bottom:12px}.profile-note{color:#aeb7c4;font-size:12px;margin-top:8px}
+@media(max-width:900px){.profile-intro-grid,.profile-skills-grid,.profile-proscons{grid-template-columns:1fr}.profile-awakening-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.profile-gear-pieces{grid-template-columns:repeat(3,minmax(0,1fr))}.profile-hero-portrait{width:135px;height:160px}}
+@media(max-width:560px){.profile-tabs{grid-template-columns:1fr}.profile-awakening-grid{grid-template-columns:1fr}.profile-gear-pieces{grid-template-columns:repeat(2,minmax(0,1fr))}.profile-hero-portrait{width:95px;height:125px}.profile-hero-copy{padding:16px}}
+
+
+/* Gear catalogue */
+.gear-page{max-width:1680px;margin:0 auto;padding:22px 28px 36px;color:#edf0f6}
+.gear-heading{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid #31a8e4;padding-bottom:8px;margin-bottom:12px}
+.gear-heading h2{margin:0;font-size:22px;font-weight:900;letter-spacing:.02em}
+.gear-heading span{font-size:13px;color:#b9c1cf}
+.gear-controls{display:flex;gap:10px;margin:12px 0 18px;align-items:center}
+.gear-controls input{flex:1;min-width:180px;background:#34363e;color:#f5f6f9;border:1px solid #444954;padding:11px 13px;font:inherit;border-radius:2px}
+.gear-filter{background:#34363e;color:#d9dce5;border:1px solid #444954;padding:10px 13px;cursor:pointer;font-weight:700}
+.gear-filter.active{background:#168fcb;color:white;border-color:#168fcb}
+.gear-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.gear-card{min-width:0;background:#292b32;border:1px solid #383b44;box-shadow:0 1px 2px #0002;scroll-margin-top:16px}
+.gear-card-head{display:flex;align-items:center;gap:12px;min-height:70px;padding:9px 13px;background:#34363e;border-bottom:1px solid #3e414b}
+.gear-icon-wrap{width:58px;height:58px;flex:0 0 58px;display:grid;place-items:center;background:linear-gradient(135deg,#253b43,#2b6a79);border-radius:2px}
+.gear-icon-wrap img{width:100%;height:100%;object-fit:contain;display:block}
+.gear-card h3{margin:0 0 5px;font-size:17px;font-weight:850;color:#f5f7fb}
+.gear-source{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.035em;color:#c3d2de}
+.gear-effects{padding:11px 13px 13px;display:grid;gap:8px}
+.gear-effect{font-size:13px;line-height:1.55;color:#dbe0e9}
+.gear-effect b{color:#e8edf4;margin-right:5px}
+.gear-card[data-source="Blacksmith"] .gear-icon-wrap{background:linear-gradient(135deg,#283644,#3b4f6c)}
+.gear-empty{padding:26px;text-align:center;color:#aeb6c5;background:#292b32;border:1px solid #383b44}
+@media(max-width:800px){.gear-page{padding:16px 12px}.gear-grid{grid-template-columns:1fr}.gear-controls{flex-wrap:wrap}.gear-controls input{flex-basis:100%}}
+.profile-gear-link{cursor:pointer;transition:border-color .15s,transform .15s}
+.profile-gear-link:hover{border-color:#36b4df;transform:translateY(-1px)}
+.profile-gear-link .profile-build-icon{padding:0;overflow:hidden;background:linear-gradient(135deg,#253b43,#2b6a79)}
+.profile-gear-link .profile-build-icon img{width:100%;height:100%;object-fit:contain}
+.profile-gear-detail{color:#cdd5e0;font-size:12px;line-height:1.45;margin-top:5px}
+.profile-gear-piece img{width:62px;height:62px;object-fit:contain;display:block;margin:0 auto 6px}
+
+</style>
+</head>
+<body>
+<aside class="app-sidebar" aria-label="Main navigation">
+ <div class="sidebar-brand">DRAGONSWORD</div>
+ <div class="nav-group">DATABASE</div>
+ <button class="nav-item" data-page="heroes"><span class="nav-icon">♙</span><span class="nav-label">Heroes</span></button>
+ <button class="nav-item active" data-page="tier"><span class="nav-icon">▦</span><span class="nav-label">Tier List</span></button>
+ <button class="nav-item" data-page="teams"><span class="nav-icon">♟</span><span class="nav-label">Teams</span></button>
+ <button class="nav-item" data-page="gear"><span class="nav-icon">◇</span><span class="nav-label">Gear</span></button>
+ <button class="nav-item" data-page="karma"><span class="nav-icon">✧</span><span class="nav-label">Karma</span></button>
+</aside>
+<div class="app-content">
+<header><h1>DRAGONSWORD: AWAKENING</h1><p>Visual tier list · patch <span id="patchLabel">1.1.2</span> · hover or focus a hero for the early / mid / end-game breakdown</p></header>
+<main id="tierPage">
+<div class="filters">
+ <div><label class="filter-label" for="search">Search heroes</label><input id="search" placeholder="Search by character name…" autocomplete="off"></div>
+ <div><label class="filter-label" for="classType">Support / kit type</label><select id="classType"><option value="">All kit types</option><option>Damage / Control</option><option>Healer</option><option>Buffer</option><option>Tank</option></select></div>
+ <div><label class="filter-label" for="phase">Tier view</label><select id="phase"><option>Early-game</option><option>Mid-game</option><option>End-game</option></select></div>
+</div>
+<div class="selector-row">
+ <div class="selector-group"><div class="filter-label">Filter by archetype</div><div class="archfilters" id="archfilters"></div></div>
+ <div class="selector-group role-selector-group"><div class="filter-label">Filter by role</div><div class="rolefilters" id="rolefilters"></div></div>
+</div>
+<div class="legend"><span>S — top tier</span><span>A — strong</span><span>B — solid / team-dependent</span><span>C — niche / higher investment</span><span>Gray portraits = not owned / codex unavailable in colour</span></div>
+<div id="board"></div>
+<footer>Tier placements come from the workbook’s reviewed Tier List sheet (27 Oct 2026). Roles reflect each hero’s job in their recommended teams. The original uploaded portraits are preserved, including grayscale portraits.</footer>
+</main>
+<section class="heroes-page" id="heroesPage" hidden>
+ <div class="heroes-heading"><h2>All Heroes <span id="heroesCount"></span></h2></div>
+ <div class="heroes-controls">
+  <input id="heroesSearch" type="search" placeholder="Search characters..." autocomplete="off" aria-label="Search characters">
+  <div class="heroes-filter-group"><div class="filter-label">Archetype</div><div class="heroes-archfilters" id="heroesArchFilters"></div></div>
+  <div class="heroes-filter-group"><div class="filter-label">Role</div><div class="heroes-rolefilters" id="heroesRoleFilters"></div></div>
+ </div>
+ <div class="heroes-grid" id="heroesGrid"></div>
+</section>
+<section class="teams-page" id="teamsPage" hidden>
+ <header class="teams-intro"><h2>Team Tier List <span>— DragonSword: Awakening</span></h2><p>Team rankings and compositions from the workbook’s reviewed <em>Teams &amp; Archetypes</em> sheet; every team matches the game’s Recommended Combinations. Character alternatives are shown as split portraits where a specific slot can be swapped.</p></header>
+ <div id="teamBoard"></div>
+ <p class="teams-footnote">Team tiers reflect the workbook's own S–C evaluation, not an official developer ranking. Slots are ordered Main DPS, Sub-DPS, then Support / enabler; alternatives are explained in each team's notes.</p>
+</section>
+<section class="gear-page" id="gearPage" hidden>
+ <div class="gear-heading"><h2>GEAR SETS</h2><span id="gearCount">Showing 12 Gear Sets</span></div>
+ <div class="gear-controls"><input id="gearSearch" type="search" placeholder="Search gear sets..." autocomplete="off" aria-label="Search gear sets"><button class="gear-filter active" data-gear-filter="all">✱ All</button><button class="gear-filter" data-gear-filter="Normal Dungeons">Normal Dungeons</button><button class="gear-filter" data-gear-filter="Blacksmith">Blacksmith</button><button class="gear-filter" id="gearReset">× Reset</button></div>
+ <div class="gear-grid" id="gearGrid"></div>
+ <p class="profile-note">Gear names, acquisition and effects are transcribed from the workbook’s “Gear Sets &amp; Acquisition” sheet. The three general sets are grouped as Normal Dungeons; the other nine are crafted at the Blacksmith.</p>
+</section>
+
+<section class="karma-page" id="karmaPage" hidden>
+ <div class="karma-intro"><h2>Karma Codex</h2><p>All Karmas from the in-game screenshots, grouped by archetype. Base stats shown are at Lv. 70 / Ascension 6.</p></div>
+ <div class="karma-controls">
+  <input class="karma-search" id="karmaSearch" type="search" placeholder="Search Karmas..." autocomplete="off" aria-label="Search Karmas">
+  <div class="karma-arch-filters" id="karmaArchFilters" aria-label="Filter by archetype"></div>
+ </div>
+ <p class="karma-result-count" id="karmaResultCount"></p>
+ <div id="karmaBoard"></div>
+ <p class="karma-awakening-note">Trait values at Ascension 0 (Lv. 1) and Ascension 6 (Lv. 70) are from the in-game screenshots. Ascensions 1–5 are calculated: each Ascension adds the same step, one sixth of the gap between those two values, shown as “+x / Asc.”. Signature-exclusive effects are listed separately. Base stats are Lv. 70 / Ascension 6 values.</p>
+</section>
+<section class="profile-page" id="profilePage" hidden>
+ <div class="profile-crumb"><button type="button" id="profileBackTier">Tier List</button> / Characters / <strong id="profileCrumbName">Character</strong></div>
+ <div class="profile-hero"><div class="profile-hero-copy"><h2 id="profileName">Character</h2><div class="profile-subtitle">Character guide &amp; build</div><div class="profile-note" id="profileUpdated">Data from the master workbook</div></div><img class="profile-hero-portrait" id="profilePortrait" alt=""></div>
+ <div class="profile-intro-grid"><section><h3 class="profile-section-title">Introduction</h3><p id="profileIntro"></p></section><section><h3 class="profile-section-title">Quick info</h3><p id="profileQuickInfo"></p></section></div>
+ <div class="profile-tabs" role="tablist"><button class="profile-tab active" data-profile-tab="skills" role="tab">Skills</button><button class="profile-tab" data-profile-tab="review" role="tab">Review</button><button class="profile-tab" data-profile-tab="build" role="tab">Build and Teams</button></div>
+ <section class="profile-tabpanel active" id="profileSkills" role="tabpanel"><h3 class="profile-subhead">Skills</h3><div class="profile-skills-grid" id="profileSkillsGrid"></div><p class="profile-note">The in-game codex shows max-level values only. Lower levels are estimates: Lv. 1 = max ÷ 1.75 (the ratio found on every skill changed in patch 1.1.0), rising in even steps to the max. Only the “Attack Power % Damage” values change; stacks, durations, buffs and heals are shown as recorded.</p></section>
+ <section class="profile-tabpanel" id="profileReview" role="tabpanel"><h3 class="profile-subhead">Pros &amp; Cons</h3><div class="profile-proscons"><article><h4 class="profile-pros">PROS</h4><div class="profile-placeholder">Character strengths will be added from the reviewed build notes.</div></article><article><h4 class="profile-cons">CONS</h4><div class="profile-placeholder">Character weaknesses and limitations will be added from the reviewed build notes.</div></article></div><h3 class="profile-subhead">Review</h3><div class="profile-placeholder">Full character kit review placeholder — detailed analysis has not been added to the workbook yet.</div></section>
+ <section class="profile-tabpanel" id="profileBuild" role="tabpanel"><h3 class="profile-subhead">Best Karmas</h3><div class="profile-build-list" id="profileKarmas"></div><h3 class="profile-subhead">Best Gear Sets</h3><div class="profile-build-list" id="profileGearSets"></div><h3 class="profile-subhead">Best Main Stats</h3><div class="profile-gear-pieces" id="profileGearStats"></div><h3 class="profile-subhead">Recommended Endgame Stats</h3><div class="profile-placeholder">Recommended endgame stat targets will be added after in-game testing.</div><h3 class="profile-subhead">Synergy</h3><div class="profile-synergy-list" id="profileSynergy"></div></section>
+</section>
+
+</div>
+<div id="tooltip" role="tooltip"></div>
+<script>
+// All data is loaded from data.json at start-up (see the loader at the end of this script).
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={};
+let activeArch='';
+let activeRole='';
+const $=id=>document.getElementById(id);
+function tierColor(t){return TIER_COLORS[t]||'#6b7280'}
+function wireTeamCharacter(element,name){
+ const hero=HEROES.find(h=>h.name.toLowerCase()===name.toLowerCase());
+ if(hero){
+  element.addEventListener('mouseenter',()=>showHeroTip(hero,element));
+  element.addEventListener('mouseleave',hideTip);
+  element.addEventListener('focus',()=>showHeroTip(hero,element));
+  element.addEventListener('blur',hideTip);
+ }
+ element.addEventListener('click',()=>{
+  hideTip();
+  const heroesButton=document.querySelector('.nav-item[data-page="heroes"]');
+  if(heroesButton)heroesButton.click();
+  const search=document.getElementById('heroesSearch');
+  if(search){search.value=name;activeHeroesArch='';activeHeroesRole='';renderHeroesFilters();renderHeroes();}
+ });
+ element.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();element.click();}});
+}
+function renderTeams(){
+ const board=document.getElementById('teamBoard'); if(!board)return; board.innerHTML='';
+ const tiers=['S','A','B','C'];
+ const colors={S:'#f05258',A:'#ff9d48',B:'#69c9e8',C:'#8b86ef'};
+ const heroMap=new Map(HEROES.map(h=>[h.name.toLowerCase(),h]));
+ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const portrait=name=>heroMap.get(name.toLowerCase())?.portrait||'';
+ for(const tier of tiers){
+  const items=TEAM_DATA.filter(t=>t.tier===tier); if(!items.length)continue;
+  const group=document.createElement('section');group.className='team-tier-group';
+  const label=document.createElement('div');label.className='team-tier-label';label.style.background=colors[tier];label.textContent=tier;label.setAttribute('aria-label',tier+' tier');group.append(label);
+  const grid=document.createElement('div');grid.className='team-grid';
+  for(const team of items){
+   const card=document.createElement('article');card.className='team-card';card.dataset.teamName=team.name;card.style.setProperty('--team-accent',team.accent);
+   const title=document.createElement('div');title.className='team-title';const archHero=HEROES.find(h=>h.archetype===team.arch&&h.archIcon);if(archHero){const archImg=document.createElement('img');archImg.src=archHero.archIcon;archImg.alt=team.arch+' archetype';title.append(archImg)}const titleText=document.createElement('span');titleText.textContent=team.name;title.append(titleText);card.append(title);
+   const body=document.createElement('div');body.className='team-body';
+   const lead=document.createElement('div');lead.className='team-lead';
+   const leadImg=document.createElement('img');leadImg.alt=team.lead;leadImg.src=portrait(team.lead);leadImg.loading='lazy';leadImg.classList.add('team-character-link');leadImg.tabIndex=0;leadImg.title='View '+team.lead+' in Heroes';wireTeamCharacter(leadImg,team.lead);lead.append(leadImg);
+   const leadName=document.createElement('div');leadName.className='team-lead-name';leadName.textContent=team.lead;lead.append(leadName);body.append(lead);
+   const members=document.createElement('div');members.className='team-members';
+   for(const slot of team.members){
+    const box=document.createElement('div');box.className='team-slot';
+    const pics=document.createElement('div');pics.className='team-slot-images';
+    const names=[slot.name,...(slot.alts||[])];if(names.length>2)pics.classList.add('many');
+    names.forEach((name,i)=>{if(i>0){const sep=document.createElement('span');sep.className='swap-divider';sep.textContent='/';pics.append(sep)}const im=document.createElement('img');im.src=portrait(name);im.alt=name;im.title='View '+name+' in Heroes';im.loading='lazy';im.classList.add('team-character-link');im.tabIndex=0;if(names.length===1)im.classList.add('single');wireTeamCharacter(im,name);pics.append(im)});
+    box.append(pics);const nm=document.createElement('div');nm.className='team-slot-name';nm.textContent=slot.name;box.append(nm);
+    if(slot.alts?.length){const alt=document.createElement('div');alt.className='team-slot-alt';alt.textContent='Alt: '+slot.alts.join(' / ');box.append(alt)}
+    members.append(box);
+   }
+   body.append(members);card.append(body);
+   const notes=document.createElement('div');notes.className='team-notes';
+   const tags=document.createElement('div');tags.className='team-tags';team.tags.forEach(t=>{const x=document.createElement('span');x.className='team-tag';x.textContent=t;tags.append(x)});notes.append(tags);
+   const note=document.createElement('div');note.innerHTML='<strong>Team fit:</strong> '+esc(team.note);notes.append(note);card.append(notes);grid.append(card);
+  }
+  group.append(grid);board.append(group);
+ }
+}
+
+
+let activeKarmaArch='';
+// Ascension 0..6: even steps between the two recorded values (a0 = Lv.1 pre-Ascension, a6 = Lv.70 Ascension 6).
+function karmaLevels(t){const pct=/%$/.test(String(t.a0));const a=parseFloat(t.a0),b=parseFloat(t.a6);const step=(b-a)/6;const f=n=>String(Math.round(n*100)/100)+(pct?'%':'');return{levels:[0,1,2,3,4,5,6].map(i=>i===0?String(t.a0):i===6?String(t.a6):f(a+step*i)),step:f(step)};}
+function renderKarmaFilters(){
+ const root=document.getElementById('karmaArchFilters'); if(!root)return; root.innerHTML='';
+ const all=document.createElement('button');all.className='karma-arch-btn'+(!activeKarmaArch?' active':'');all.textContent='✱';all.title='All archetypes';all.setAttribute('aria-label','All archetypes');
+ all.onclick=()=>{activeKarmaArch='';renderKarmaFilters();renderKarmas()};root.append(all);
+ ARCHES.forEach(a=>{
+  const hero=HEROES.find(h=>h.archetype===a);const b=document.createElement('button');
+  b.className='karma-arch-btn'+(activeKarmaArch===a?' active':'');b.title=a;b.setAttribute('aria-label',a);
+  if(hero?.archIcon)b.innerHTML=`<img src="${hero.archIcon}" alt="">`;else b.textContent=a.slice(0,1);
+  b.onclick=()=>{activeKarmaArch=activeKarmaArch===a?'':a;renderKarmaFilters();renderKarmas()};root.append(b);
+ });
+}
+function renderKarmas(){
+ const board=document.getElementById('karmaBoard');if(!board)return;
+ const query=(document.getElementById('karmaSearch')?.value||'').trim().toLowerCase();
+ const found=KARMA_DATA.filter(k=>(!activeKarmaArch||k.archetype===activeKarmaArch)&&(!query||[k.name,k.archetype,k.signature||'',k.source,k.exclusive||'',...(k.traits||[]).map(t=>t.label)].join(' ').toLowerCase().includes(query)));
+ document.getElementById('karmaResultCount').textContent=`Showing ${found.length} of ${KARMA_DATA.length} Karmas`;
+ board.innerHTML='';
+ const colors={Venom:'#39b9e8',Amplitude:'#d88bff',Crushing:'#ff9e49',Gale:'#5ed4c8',Bloodburst:'#ef6480',Blazeflame:'#ff9d48',Frostbite:'#69c9e8',Thunderbolt:'#f3d35b',Breaker:'#9b8cff'};
+ const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const archOrder=['Venom','Blazeflame','Frostbite','Thunderbolt','Breaker','Bloodburst','Gale','Crushing','Amplitude'];
+ for(const arch of archOrder){
+  const items=found.filter(k=>k.archetype===arch);if(!items.length)continue;
+  const section=document.createElement('section');section.className='karma-arch-section';section.style.setProperty('--karma-accent',colors[arch]||'#39b9e8');
+  const head=document.createElement('div');head.className='karma-arch-heading';
+  const hero=HEROES.find(h=>h.archetype===arch);if(hero?.archIcon){const img=document.createElement('img');img.src=hero.archIcon;img.alt=arch;head.append(img)}
+  const title=document.createElement('h3');title.textContent=arch;head.append(title);
+  const count=document.createElement('span');count.textContent=`${items.length} Karmas`;head.append(count);section.append(head);
+  const grid=document.createElement('div');grid.className='karma-grid';
+  for(const k of items){
+   const card=document.createElement('article');card.className='karma-card';
+   const kh=document.createElement('div');kh.className='karma-card-head';
+   const mark=document.createElement('div');mark.className='karma-card-mark';mark.textContent=k.signature?'✦':'◇';mark.title=k.signature?'Signature Karma':'Generic Karma';kh.append(mark);
+   const info=document.createElement('div');info.style.minWidth='0';info.style.flex='1';
+   const titleRow=document.createElement('div');titleRow.className='karma-card-title-row';
+   const name=document.createElement('h4');name.className='karma-card-title';name.textContent=k.name;titleRow.append(name);
+   const select=document.createElement('select');select.className='karma-awakening-select';select.setAttribute('aria-label',`Ascension level for ${k.name}`);select.title='Ascension level';
+   for(let a=0;a<=6;a++){const opt=document.createElement('option');opt.value=String(a);opt.textContent='A'+a;select.append(opt)}
+   titleRow.append(select);info.append(titleRow);
+   const meta=document.createElement('div');meta.className='karma-card-meta';
+   const kind=document.createElement('span');kind.className='karma-kind'+(!k.signature?' generic':'');kind.textContent=k.signature?`Signature · ${k.signature}`:'Generic Karma';meta.append(kind);
+   const src=document.createElement('span');src.className='karma-source';src.textContent='Source: '+k.source;meta.append(src);info.append(meta);kh.append(info);card.append(kh);
+   const effect=document.createElement('div');effect.className='karma-effect';
+   if(k.traits&&k.traits.length){
+    const traitTitle=document.createElement('div');traitTitle.className='karma-trait-title';traitTitle.textContent='Karma trait';effect.append(traitTitle);
+    for(const t of k.traits){
+     const line=document.createElement('div');line.className='karma-trait-line';
+     const label=document.createElement('span');label.textContent=t.label;line.append(label);
+     const value=document.createElement('b');value.className='karma-trait-value';const lv=karmaLevels(t);value.dataset.traitLevels=JSON.stringify(lv.levels);value.textContent=lv.levels[0];const step=document.createElement('small');step.className='karma-trait-step';step.textContent=`+${lv.step} / Asc.`;const right=document.createElement('span');right.className='karma-trait-right';right.append(step,value);line.append(right);effect.append(line);
+    }
+   }
+   if(k.exclusive){const ex=document.createElement('div');ex.className='karma-exclusive';ex.innerHTML='<strong>Signature exclusive effect</strong><div>'+esc(k.exclusive)+'</div>';effect.append(ex)}
+   card.append(effect);
+   const stats=document.createElement('div');stats.className='karma-stats';
+   const statHeading=document.createElement('div');statHeading.className='karma-stat-heading';statHeading.textContent='Base stats · Lv. 70 / Ascension 6';stats.append(statHeading);
+   for(const [label,value] of Object.entries(k.base||{})){const st=document.createElement('div');st.className='karma-stat';st.innerHTML=esc(label)+': <b>'+esc(value)+'</b>';stats.append(st)}
+   card.append(stats);grid.append(card);
+   select.addEventListener('change',()=>{
+    const level=Number(select.value);
+    card.querySelectorAll('[data-trait-levels]').forEach(node=>{
+     try{const levels=JSON.parse(node.dataset.traitLevels||'[]');node.textContent=levels[level]??levels[0]??'';}catch{}
+    });
+   });
+  }
+  section.append(grid);board.append(section);
+ }
+ if(!found.length)board.innerHTML='<div class="karma-empty">No Karmas match your search or archetype filter.</div>';
+}
+function makeArchFilters(){
+ $('archfilters').innerHTML='';
+ const all=document.createElement('button');
+ all.className='archbtn'+(!activeArch?' active':'');
+ all.title='All archetypes'; all.setAttribute('aria-label','All archetypes');
+ all.innerHTML='<span class="all-symbol">✱</span>';
+ all.onclick=()=>{activeArch='';makeArchFilters();render()};
+ $('archfilters').append(all);
+ ARCHES.forEach(a=>{
+  const h=HEROES.find(x=>x.archetype===a);
+  const b=document.createElement('button');
+  b.className='archbtn'+(activeArch===a?' active':'');
+  b.title=a; b.setAttribute('aria-label',a);
+  b.innerHTML=`<img src="${h?.archIcon||''}" alt="">`;
+  b.onclick=()=>{activeArch=activeArch===a?'':a;makeArchFilters();render()};
+  $('archfilters').append(b);
+ });
+}
+function makeRoleFilters(){
+ const root=$('rolefilters');root.innerHTML='';
+ const roles=[
+  {key:'Main DPS',label:'Main DPS'},
+  {key:'Sub-DPS',label:'Sub DPS'},
+  {key:'Support',label:'Support'}
+ ];
+ const all=document.createElement('button');
+ all.className='rolebtn'+(!activeRole?' active':'');
+ all.title='All roles';all.setAttribute('aria-label','All roles');
+ all.innerHTML='<span class="all-symbol">✱</span>';
+ all.onclick=()=>{activeRole='';makeRoleFilters();render()};
+ root.append(all);
+ roles.forEach(r=>{
+  const b=document.createElement('button');
+  b.className='rolebtn'+(activeRole===r.key?' active':'');
+  b.title=r.label;b.setAttribute('aria-label',r.label);
+  b.innerHTML=`<img src="${ROLE_ICONS[r.key]||''}" alt="">`;
+  b.onclick=()=>{activeRole=activeRole===r.key?'':r.key;makeRoleFilters();render()};
+  root.append(b);
+ });
+}
+let currentProfileName='';
+const SKILL_MAX_TO_LV1=1.75; // max-level weight = Lv.1 weight x 1.75 (verified on every skill patched in 1.1.0)
+function profileEsc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function openCharacterProfile(name){
+ const h=HEROES.find(x=>x.name.toLowerCase()===String(name).toLowerCase());if(!h)return;
+ currentProfileName=h.name;hideTip();
+ ['tierPage','heroesPage','teamsPage','gearPage','karmaPage'].forEach(id=>$(id).hidden=true);
+ $('profilePage').hidden=false;
+ document.querySelectorAll('.nav-item').forEach(x=>x.classList.toggle('active',x.dataset.page==='tier'));
+ document.title='DragonSword: Awakening — '+h.name;
+ $('profileName').textContent=h.name;$('profileCrumbName').textContent=h.name;$('profilePortrait').src=h.portrait;$('profilePortrait').alt=h.name;
+ $('profileUpdated').textContent='Character guide · workbook data · End-game tier '+(h.tiers['End-game']||'—');
+ $('profileIntro').innerHTML=`Guide and build for <button type="button" data-back-tier="1">${profileEsc(h.name)}</button> from DragonSword: Awakening. <button type="button" data-back-tier="1">${profileEsc(h.name)}</button> is a character from the <strong>${profileEsc(h.archetype)}</strong> archetype. To learn more about ${profileEsc(h.name)}, check the sections below. Use the tabs to quickly switch to the kind of information you're looking for.`;
+ $('profileQuickInfo').innerHTML=`<div class="profile-quick-info-list"><div class="profile-quick-info-row"><strong>Archetype:</strong> <span class="profile-quick-arch"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)}</span></div><div class="profile-quick-info-row"><strong>Role:</strong> <span>${profileEsc(h.role)}</span></div><div class="profile-quick-info-row"><strong>End-game tier:</strong> <span class="profile-tier-large" style="background:${tierColor(h.tiers['End-game']||'—')}">${profileEsc(h.tiers['End-game']||'—')}</span></div></div>`;
+ const data=CHARACTER_PROFILE_DATA[h.name]||{skills:[],karma:'',gear:''};
+ const skillRoot=$('profileSkillsGrid');skillRoot.innerHTML='';
+ (data.skills||[]).forEach((sk,i)=>{
+  const slot=String(sk.slot||'');
+  if(/^MODE SWITCH/i.test(slot)){
+   const modeName=String(sk.skill||'').replace(/^Mode:\s*/i,'').trim()||slot.replace(/^MODE SWITCH\s*[—-]?\s*/i,'').trim();
+   const heading=document.createElement('div');heading.className='profile-mode-heading';
+   heading.innerHTML=`<small>ALTERNATE MODE</small><span>${profileEsc(modeName)}</span>`;
+   skillRoot.append(heading);return;
+  }
+  const maxMatch=sk.skill.match(/Lv\.?\s*(\d+)/i),maxLevel=maxMatch?Math.max(1,parseInt(maxMatch[1],10)):10;
+  const isPassive=/mastery\s*\(passive\)/i.test(slot);
+  const card=document.createElement('article');card.className='profile-skill'+(isPassive?' profile-skill-passive':'');
+  const head=document.createElement('div');head.className='profile-skill-head';head.innerHTML=`<span class="profile-skill-slot">${profileEsc(slot)}</span><h4>${profileEsc(sk.skill)}</h4>`;
+  const body=document.createElement('div');body.className='profile-skill-body';body.textContent=sk.description;
+  card.append(head,body);
+  // Mastery/passive effects are fixed: they do not have a skill-level slider.
+  if(!isPassive&&maxLevel>1){
+   const controls=document.createElement('div');controls.className='profile-skill-controls';
+   const label=document.createElement('label');label.textContent='Skill level';
+   const range=document.createElement('input');range.type='range';range.min='1';range.max=String(maxLevel);range.value=String(maxLevel);range.setAttribute('aria-label',`${sk.skill} level`);
+   const level=document.createElement('span');level.className='profile-skill-level';level.textContent=`Lv. ${maxLevel}`;
+   const original=sk.description;
+   function updateSkill(){const lv=Number(range.value),factor=(1+(SKILL_MAX_TO_LV1-1)*(lv-1)/(maxLevel-1))/SKILL_MAX_TO_LV1;level.textContent=lv<maxLevel?`Lv. ${lv} (est.)`:`Lv. ${lv}`;
+    body.textContent=original.replace(/(Attack Power )(\d+(?:\.\d+)?)(% Damage)/g,(m,a,num,c)=>a+Math.round(Number(num)*factor)+c);
+   }
+   range.addEventListener('input',updateSkill);controls.append(label,range,level);card.append(controls);
+  }
+  skillRoot.append(card);
+ });
+ renderProfileBuild(h,data);
+ document.querySelectorAll('.profile-tab').forEach(b=>b.classList.toggle('active',b.dataset.profileTab==='skills'));
+ document.querySelectorAll('.profile-tabpanel').forEach(p=>p.classList.toggle('active',p.id==='profileSkills'));
+ window.scrollTo({top:0,behavior:'instant'});
+}
+
+let activeGearFilter='all';
+function renderGear(){
+ const q=($('gearSearch')?.value||'').trim().toLowerCase();
+ const rows=GEAR_DATA.filter(g=>(activeGearFilter==='all'||g.source===activeGearFilter)&&(!q||(g.name+' '+g.source+' '+g.two+' '+g.three).toLowerCase().includes(q)));
+ $('gearCount').textContent=`Showing ${rows.length} of ${GEAR_DATA.length} Gear Sets`;
+ const root=$('gearGrid');root.innerHTML='';
+ if(!rows.length){root.innerHTML='<div class="gear-empty">No gear sets match this search.</div>';return}
+ rows.forEach(g=>{const card=document.createElement('article');card.className='gear-card';card.id='gear-set-'+g.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');card.dataset.source=g.source;
+ card.innerHTML=`<div class="gear-card-head"><div class="gear-icon-wrap"><img src="${g.icon}" alt="${profileEsc(g.name)} icon"></div><div><h3>${profileEsc(g.name)}</h3><div class="gear-source">${profileEsc(g.source)}</div></div></div><div class="gear-effects"><div class="gear-effect"><b>(2) Piece</b> ${profileEsc(g.two)}</div><div class="gear-effect"><b>(3) Piece</b> ${profileEsc(g.three)}</div></div>`;root.append(card)});
+}
+$('gearSearch').addEventListener('input',renderGear);
+document.querySelectorAll('[data-gear-filter]').forEach(b=>b.addEventListener('click',()=>{activeGearFilter=b.dataset.gearFilter;document.querySelectorAll('[data-gear-filter]').forEach(x=>x.classList.toggle('active',x===b));renderGear()}));
+$('gearReset').addEventListener('click',()=>{$('gearSearch').value='';activeGearFilter='all';document.querySelectorAll('[data-gear-filter]').forEach(x=>x.classList.toggle('active',x.dataset.gearFilter==='all'));renderGear()});
+function openGearSet(name){document.querySelector('.nav-item[data-page="gear"]').click();activeGearFilter='all';$('gearSearch').value='';document.querySelectorAll('[data-gear-filter]').forEach(x=>x.classList.toggle('active',x.dataset.gearFilter==='all'));renderGear();const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');const target=GEAR_DATA.find(g=>norm(g.name)===norm(name));if(target){const el=$('gear-set-'+target.name.toLowerCase().replace(/[^a-z0-9]+/g,'-'));if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.style.outline='3px solid #36b4df';setTimeout(()=>el.style.outline='',1800)}}}
+
+function renderProfileBuild(h,data){
+ const karmaRoot=$('profileKarmas');karmaRoot.innerHTML='';
+ const text=String(data.karma||'');let signature='',alternatives='';
+ const mainPart=text.replace(/^Recommended Karma:\s*/i,'').split(/Alternatives?:/i)[0].trim();
+ const recommendedParts=mainPart.split(/\s*\+\s*/).map(x=>x.trim()).filter(Boolean);
+ const altMatch=text.match(/Alternatives?:\s*(.*)$/i);if(altMatch)alternatives=altMatch[1].trim();
+ if(recommendedParts[0])signature=recommendedParts[0].replace(/\s*\(signature\)/i,'').trim();
+ const rows=[];if(signature)rows.push({title:signature,kind:/signature/i.test(recommendedParts[0]||'')?'Signature':'Recommended',desc:'Recommended Karma from the master workbook.'});
+ const bestAlternative=recommendedParts[1]||alternatives.split(',').map(x=>x.trim()).filter(Boolean)[0]||'';
+ if(bestAlternative)rows.push({title:bestAlternative,kind:'Best alternative',desc:'Alternative listed in the master workbook.'});
+ const genericKarmaByArchetype={Amplitude:'Pounding Heart',Crushing:'Scattered Pulse',Gale:'Wings of the Sky',Bloodburst:'Blooming Blood',Blazeflame:'Leg Scale of Blazing Flames',Frostbite:'Season of Bitter Cold',Thunderbolt:'Flash Claws',Venom:'Dominating Head',Breaker:'A Cut Above'};
+ const archetypeKey=Object.keys(genericKarmaByArchetype).find(a=>a.toLowerCase()===String(h.archetype||'').toLowerCase())||Object.keys(genericKarmaByArchetype).find(a=>a.toLowerCase()===String((HEROES.find(x=>x.name===h.name)||{}).archetype||'').toLowerCase());
+ const genericKarma=genericKarmaByArchetype[archetypeKey]||'Generic Karma';
+ rows.push({title:genericKarma,kind:'Generic',desc:'Generic fallback Karma for this archetype, with Max HP% and Defense% trait effects.'});
+ rows.forEach((r,i)=>{const item=document.createElement('article');item.className='profile-build-item profile-karma-link';item.tabIndex=0;item.setAttribute('role','link');item.setAttribute('aria-label',`Open ${r.title} in Karma tab`);item.title='Click to open this Karma in the Karma tab';item.innerHTML=`<div class="profile-build-head"><div class="profile-build-icon">✦</div><div><h4>${profileEsc(r.title)}</h4><small>${profileEsc(r.kind)} · View in Karma Codex ↗</small></div></div><div class="profile-build-desc">${profileEsc(r.desc)}</div>`;const openKarma=()=>{document.querySelector('.nav-item[data-page="karma"]').click();activeKarmaArch='';renderKarmaFilters();const search=$('karmaSearch');const karmaTitle=String(r.title||'').trim().replace(/[.,;:!?]+$/,'').trim();search.value=karmaTitle;renderKarmas();const cards=[...document.querySelectorAll('.karma-card')];const normalizeKarmaName=value=>String(value||'').trim().toLowerCase().replace(/[.,;:!?]+$/,'').trim();const target=cards.find(c=>normalizeKarmaName(c.querySelector('.karma-card-title')?.textContent)===normalizeKarmaName(karmaTitle));if(target){target.scrollIntoView({behavior:'smooth',block:'center'});target.style.outline='3px solid #68c7d5';target.style.outlineOffset='2px';setTimeout(()=>{target.style.outline='';target.style.outlineOffset=''},1800)}else{search.focus()}};item.addEventListener('click',openKarma);item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openKarma()}});karmaRoot.append(item)});
+ const gearRoot=$('profileGearSets');gearRoot.innerHTML='';
+ const gearText=String(data.gear||'');let setText=gearText.replace(/^Recommended Gear sets:\s*/i,'');
+ const gearNames=setText.split(/\. Main stats:/i)[0].split(/\. Substats:/i)[0].trim();
+ const gearParts=gearNames?gearNames.split(/\s*\+\s*/).map(x=>x.trim()).filter(Boolean):[];
+ const normGear=s=>String(s||'').replace(/^\d+\s*/,'').replace(/[^a-z0-9]/gi,'').toLowerCase();
+ const matched=gearParts.map(part=>{const cleaned=part.replace(/^\d+\s*/,'');return GEAR_DATA.find(g=>normGear(g.name)===normGear(cleaned))}).filter(Boolean);
+ if(!matched.length)gearRoot.innerHTML='<div class="profile-placeholder">Recommended gear combination will be added after testing.</div>';
+ matched.forEach((g,i)=>{const item=document.createElement('article');item.className='profile-build-item profile-gear-link';item.tabIndex=0;item.setAttribute('role','link');item.title='Click to view this gear set in the Gear tab';item.innerHTML=`<div class="profile-build-head"><div class="profile-build-icon"><img src="${g.icon}" alt=""></div><div><h4>${profileEsc(g.name)}</h4><small>${i===0?'Recommended 3-piece set':'Recommended 2-piece set'} · View in Gear Sets ↗</small></div></div><div class="profile-gear-detail"><b>(2)</b> ${profileEsc(g.two)}<br><b>(3)</b> ${profileEsc(g.three)}</div>`;item.addEventListener('click',()=>openGearSet(g.name));item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openGearSet(g.name)}});gearRoot.append(item)});
+ const statRoot=$('profileGearStats');statRoot.innerHTML='';
+ const mainStatsMatch=String(data.gear||'').match(/Main stats:\s*([^.]*)/i);
+ const mainStatsText=mainStatsMatch?mainStatsMatch[1]:'';
+ const chestMatch=mainStatsText.match(/([^,]+?)\s+chest\b/i);
+ const legsMatch=mainStatsText.match(/([^,]+?)\s+legs?\b/i);
+ const mainStatBySlot={Helmet:'Not specified',Chest:chestMatch?chestMatch[1].trim():'Not specified',Legs:legsMatch?legsMatch[1].trim():'Not specified',Gloves:'Not specified',Boots:'Not specified'};
+ const pieces=['Helmet','Chest','Legs','Gloves','Boots'];
+ pieces.forEach(name=>{const el=document.createElement('div');el.className='profile-gear-piece';el.innerHTML=`<strong>${name}</strong><div class="profile-main-stat-value">${profileEsc(mainStatBySlot[name])}</div>${mainStatBySlot[name]==='Not specified'?'<div class="profile-note">Not specified in workbook yet</div>':''}`;statRoot.append(el)});
+ const sy=$('profileSynergy');sy.innerHTML='';const relevant=TEAM_DATA.filter(t=>t.members.some(m=>[m.name,...(m.alts||[])].some(n=>n.toLowerCase()===h.name.toLowerCase())));
+ if(!relevant.length)sy.innerHTML='<div class="profile-placeholder">No team entry currently lists this character. Synergy recommendations can be added to the Teams workbook.</div>';
+ relevant.forEach(t=>{const item=document.createElement('article');item.className='profile-synergy';const lead=HEROES.find(x=>x.name.toLowerCase()===t.lead.toLowerCase());item.innerHTML=`${lead?`<img src="${lead.portrait}" alt="${profileEsc(t.lead)}">`:''}<div><button type="button" data-team-link="${profileEsc(t.name)}">${profileEsc(t.name)} · ${profileEsc(t.tier)} Tier</button><div class="profile-note">${profileEsc(t.note)}</div></div>`;item.querySelector('[data-team-link]').addEventListener('click',()=>{document.querySelector('.nav-item[data-page="teams"]').click();const target=[...document.querySelectorAll('.team-card')].find(el=>el.dataset.teamName===t.name);if(target){target.scrollIntoView({behavior:'smooth',block:'center'});target.style.outline='3px solid #68c7d5';setTimeout(()=>target.style.outline='',1800)}});sy.append(item)});
+}
+function closeCharacterProfile(){hideTip();$('profilePage').hidden=true;$('tierPage').hidden=false;document.querySelectorAll('.nav-item').forEach(x=>x.classList.toggle('active',x.dataset.page==='tier'));document.title='DragonSword: Awakening — Visual tier list';window.scrollTo({top:0,behavior:'instant'})}
+$('profileBackTier').addEventListener('click',closeCharacterProfile);
+document.querySelectorAll('[data-profile-tab]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.profile-tab').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.profile-tabpanel').forEach(p=>p.classList.toggle('active',p.id==={skills:'profileSkills',review:'profileReview',build:'profileBuild'}[b.dataset.profileTab]));}));
+document.getElementById('profileIntro').addEventListener('click',e=>{if(e.target.closest('[data-back-tier]'))closeCharacterProfile()});
+
+function filtered(){
+ const q=$('search').value.trim().toLowerCase(),ct=$('classType').value;
+ return HEROES.filter(h=>(!q||h.name.toLowerCase().includes(q))&&(!activeRole||h.role===activeRole)&&(!ct||h.classType===ct)&&(!activeArch||h.archetype===activeArch));
+}
+function render(){
+ const phase=$('phase').value;const heroes=filtered();
+ const buckets={S:[],A:[],B:[],C:[],D:[],F:[]};
+ heroes.forEach(h=>{const t=h.tiers[phase]||'Unranked';(buckets[t]||buckets.F).push(h)});
+ const board=$('board');board.innerHTML='';
+ const titles={S:'S TIER',A:'A TIER',B:'B TIER',C:'C TIER',D:'D TIER',F:'F TIER'};
+ for(const tier of TIER_ORDER){
+  const section=document.createElement('section');section.className='tier-section';
+  const head=document.createElement('div');head.className='tier-head';head.style.background=tierColor(tier);head.style.color='#141820';head.innerHTML=`${titles[tier]} <small>${buckets[tier].length} heroes</small>`;section.append(head);
+  const row=document.createElement('div');row.className='tier-row';
+  const label=document.createElement('div');label.className='tier-label';label.style.background=tierColor(tier);label.textContent=tier;row.append(label);
+  const cards=document.createElement('div');cards.className='cards';
+  buckets[tier].forEach(h=>cards.append(makeCard(h,phase,tier)));
+  if(!buckets[tier].length){const blank=document.createElement('div');blank.className='no-results';blank.textContent='No heroes match these filters in this tier.';cards.append(blank)}
+  row.append(cards);section.append(row);board.append(section);
+ }
+ if(!heroes.length) board.innerHTML='<div class="no-results">No heroes match your filters.</div>';
+}
+function makeCard(h,phase,tier){
+ const card=document.createElement('div');card.className='hero-card';card.tabIndex=0;card.style.setProperty('--tier',tierColor(tier));
+ card.innerHTML=`<div class="portrait-wrap"><img class="portrait" src="${h.portrait}" alt="${h.name}"><span class="arch-badge"><img src="${h.archIcon}" alt="${h.archetype}"></span><span class="tier-chip">${tier}</span></div><div class="hero-name">${h.name}</div>`;
+ card.style.cursor='pointer';card.setAttribute('role','button');card.setAttribute('aria-label',`Open ${h.name} character page`);card.addEventListener('click',()=>openCharacterProfile(h.name));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCharacterProfile(h.name)}});card.addEventListener('mouseenter',e=>showTip(h,card));card.addEventListener('mousemove',e=>positionTip(e));card.addEventListener('mouseleave',hideTip);
+ card.addEventListener('focus',()=>showTip(h,card));card.addEventListener('blur',hideTip);
+ return card;
+}
+function showTip(h,card){
+ const tip=$('tooltip');const phase=$('phase').value;const activeTier=h.tiers[phase]||'—';tip.style.setProperty('--tier',tierColor(activeTier));
+ const roleIcon=ROLE_ICONS[h.role]||'';
+ tip.innerHTML=`<div class="tip-top"><img class="tip-portrait" src="${h.portrait}" alt=""><div><div class="tip-title">${h.name}</div><div class="tip-meta"><img src="${h.archIcon}" alt="">${h.archetype}</div><div class="tip-meta">${roleIcon?`<img class="tip-role-icon" src="${roleIcon}" alt="">`:''}${h.role}</div><div class="tip-meta">Kit tag: ${h.classType}</div></div></div><div class="tip-tiers">${['Early-game','Mid-game','End-game'].map(p=>{const t=h.tiers[p]||'—';return `<div class="tip-tier"><div class="label">${p}</div><div class="value" style="background:${tierColor(t)}">${t}</div></div>`}).join('')}</div><div class="tip-note">Tier source: reviewed workbook · patch ${patchText()}.</div>`;
+ tip.style.display='block';const r=card.getBoundingClientRect();tip.style.left=Math.min(window.innerWidth-tip.offsetWidth-12,Math.max(12,r.left+r.width+12))+'px';tip.style.top=Math.min(window.innerHeight-tip.offsetHeight-12,Math.max(12,r.top-20))+'px';
+}
+function showHeroTip(h,card){
+ const tip=$('tooltip');
+ const activeTier=h.tiers['End-game']||'—';
+ tip.style.setProperty('--tier',tierColor(activeTier));
+ const roleIcon=ROLE_ICONS[h.role]||'';
+ tip.innerHTML=`<div class="tip-top"><img class="tip-portrait" src="${h.portrait}" alt=""><div><div class="tip-title">${h.name}</div><div class="tip-meta"><img src="${h.archIcon}" alt="">${h.archetype}</div><div class="tip-meta">${roleIcon?`<img class="tip-role-icon" src="${roleIcon}" alt="">`:''}${h.role}</div></div></div><div class="tip-tiers"><div class="tip-tier"><div class="label">End-game</div><div class="value" style="background:${tierColor(activeTier)}">${activeTier}</div></div></div><div class="tip-note">End-game tier · reviewed workbook.</div>`;
+ tip.style.display='block';
+ const r=card.getBoundingClientRect();
+ let left=r.right+12;if(left+tip.offsetWidth>window.innerWidth-12)left=r.left-tip.offsetWidth-12;
+ tip.style.left=Math.max(12,Math.min(window.innerWidth-tip.offsetWidth-12,left))+'px';
+ tip.style.top=Math.max(12,Math.min(window.innerHeight-tip.offsetHeight-12,r.top-12))+'px';
+}
+function positionTip(e){const tip=$('tooltip');if(tip.style.display!=='block')return;const x=e.clientX+18,y=e.clientY+18;tip.style.left=Math.min(window.innerWidth-tip.offsetWidth-12,x)+'px';tip.style.top=Math.min(window.innerHeight-tip.offsetHeight-12,y)+'px'}
+function hideTip(){$('tooltip').style.display='none'}
+['search','classType','phase'].forEach(id=>$(id).addEventListener('input',render));
+document.querySelectorAll('.nav-item').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.nav-item').forEach(x=>x.classList.toggle('active',x===btn));
+ const page=btn.dataset.page;
+ $('profilePage').hidden=true;
+ $('tierPage').hidden=page!=='tier';
+ $('heroesPage').hidden=page!=='heroes';
+ $('teamsPage').hidden=page!=='teams';
+ $('gearPage').hidden=page!=='gear';
+ $('karmaPage').hidden=page!=='karma';
+ const titles={tier:'Visual tier list',heroes:'Heroes',teams:'Teams',gear:'Gear',karma:'Karma'};
+ document.title='DragonSword: Awakening — '+titles[page];
+}));
+
+let activeHeroesArch='';
+let activeHeroesRole='';
+function renderHeroesFilters(){
+ const archRoot=$('heroesArchFilters'),roleRoot=$('heroesRoleFilters');
+ archRoot.innerHTML='';roleRoot.innerHTML='';
+ function addAll(root,active,change,label){
+  const b=document.createElement('button');b.className='heroes-filter-btn'+(!active?' active':'');b.title=label;b.setAttribute('aria-label',label);b.innerHTML='<span class="all-symbol">✱</span>';
+  b.onclick=()=>{change('');renderHeroesFilters();renderHeroes()};root.append(b);
+ }
+ addAll(archRoot,activeHeroesArch,v=>activeHeroesArch=v,'All archetypes');
+ ARCHES.forEach(a=>{
+  const h=HEROES.find(x=>x.archetype===a),b=document.createElement('button');
+  b.className='heroes-filter-btn'+(activeHeroesArch===a?' active':'');b.title=a;b.setAttribute('aria-label',a);
+  b.innerHTML=`<img src="${h?.archIcon||''}" alt="">`;
+  b.onclick=()=>{activeHeroesArch=activeHeroesArch===a?'':a;renderHeroesFilters();renderHeroes()};archRoot.append(b);
+ });
+ const roles=[{key:'Main DPS',label:'Main DPS'},{key:'Sub-DPS',label:'Sub DPS'},{key:'Support',label:'Support'}];
+ addAll(roleRoot,activeHeroesRole,v=>activeHeroesRole=v,'All roles');
+ roles.forEach(r=>{
+  const b=document.createElement('button');b.className='heroes-filter-btn'+(activeHeroesRole===r.key?' active':'');b.title=r.label;b.setAttribute('aria-label',r.label);
+  b.innerHTML=`<img src="${ROLE_ICONS[r.key]||''}" alt="">`;
+  b.onclick=()=>{activeHeroesRole=activeHeroesRole===r.key?'':r.key;renderHeroesFilters();renderHeroes()};roleRoot.append(b);
+ });
+}
+function renderHeroes(){
+ const q=$('heroesSearch').value.trim().toLowerCase();
+ const list=HEROES.filter(h=>(!q||h.name.toLowerCase().includes(q))&&(!activeHeroesArch||h.archetype===activeHeroesArch)&&(!activeHeroesRole||h.role===activeHeroesRole));
+ $('heroesCount').textContent=`Showing ${list.length} characters`;
+ const grid=$('heroesGrid');grid.innerHTML='';
+ list.forEach(h=>{
+  const card=document.createElement('article');card.className='heroes-character-card';card.title=`${h.name} · ${h.archetype} · ${h.role}`;
+  card.tabIndex=0;
+  card.innerHTML=`<img class="heroes-portrait" src="${h.portrait}" alt="${h.name}" loading="lazy"><div class="heroes-char-badges"><span class="heroes-char-badge" title="${h.role}"><img src="${ROLE_ICONS[h.role]||''}" alt="${h.role}"></span></div>${h.name==='Ryza'?'<span class="heroes-new">NEW</span>':''}<div class="heroes-char-name">${h.name}</div>`;
+  card.style.cursor='pointer';card.setAttribute('role','button');card.setAttribute('aria-label',`Open ${h.name} character page`);card.addEventListener('click',()=>openCharacterProfile(h.name));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCharacterProfile(h.name)}});card.addEventListener('mouseenter',()=>showHeroTip(h,card));
+  card.addEventListener('mouseleave',hideTip);
+  card.addEventListener('focus',()=>showHeroTip(h,card));
+  card.addEventListener('blur',hideTip);
+  grid.append(card);
+ });
+ if(!list.length)grid.innerHTML='<div class="heroes-empty">No characters match your search and filters.</div>';
+}
+
+function patchText(){const m=DATA_META||{};return m.balancePatch&&m.balancePatch!==m.patch?`${m.patch} (no balance changes since ${m.balancePatch})`:(m.patch||'');}
+function startApp(){
+ $('patchLabel').textContent=patchText();
+ makeArchFilters();makeRoleFilters();render();renderTeams();renderKarmaFilters();renderKarmas();
+ document.getElementById('karmaSearch').addEventListener('input',renderKarmas);
+ renderHeroesFilters();renderHeroes();
+ document.getElementById('heroesSearch').addEventListener('input',renderHeroes);
+ renderGear();
+}
+fetch('data.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);DATA_META=d.meta||{};
+ startApp();
+}).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
+</script>
+</body></html>
