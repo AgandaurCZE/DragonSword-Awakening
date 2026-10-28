@@ -519,8 +519,8 @@ function formatSkillText(text){
   '\\b('+names+')\\b',
   '(\\[[^\\]]+\\]|Super Armor|Taunt)',
   '(\\d+(?:\\.\\d+)?(?:%| seconds?\\b| times(?: or more)?))'
- ].join('|'),'g');
- const col=w=>ARCH_COLORS[S[w]]||'';
+ ].join('|'),'gi');
+ const col=w=>{const key=Object.keys(S).find(k=>k.toLowerCase()===String(w).toLowerCase());return ARCH_COLORS[S[key]]||'';};
  const st=(w,inner)=>`<b class="sk-status" style="--sk-color:${col(w)}">${profileEsc(inner)}</b>`;
  const line=s=>{let out='',last=0,m;re.lastIndex=0;
   while((m=re.exec(s))){out+=profileEsc(s.slice(last,m.index));last=re.lastIndex;
