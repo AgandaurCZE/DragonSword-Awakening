@@ -2779,7 +2779,117 @@
     "His damage sits below Charlotte's, so he works best as her partner rather than the lead.",
     "Venom Cutter needs Airborne, so his biggest hit waits on Phantom Slash, Venom Dance or a teammate.",
     "Poison ticks use the Attack of whoever applied the first stack, so if he poisons before a stronger main damage dealer, the ticks are weaker."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "him",
+    "summary": [
+     "Johnny is a Venom sub-DPS who brings both halves of the Venom game plan himself: Poison from [[skill:Fatal Sting]], [[skill:Venom Dance]], [[skill:Venom Cutter]] and [[skill:Poison Grab]], and Airborne from Venom Dance, [[skill:Phantom Slash]] and Poison Grab at 2+ stacks. He's **A tier at every stage** and the second slot of the S-tier Venom team with [[hero:Charlotte]] and [[hero:Reina]].",
+     "Because he launches enemies himself, his biggest hit, Venom Cutter (1456%, needs Airborne), is easy to unlock, and it lands on a Poisoned, Airborne target at about 2.5× its normal damage (Poison +50%, Airborne +100%, measured).",
+     "He's a partner more than a lead: Charlotte's kit has the bigger finisher ([[skill:Charlotte/Shadow Grab]], 1700%), so Johnny's job is to keep both statuses up for her."
+    ],
+    "verdict": {
+     "level": "good",
+     "label": "Yes, he's free",
+     "text": [
+      "He comes from the Story Quests, he's A tier at every stage, and he's half of the strongest Venom team in the guide. Even without Charlotte he sets up his own combos.",
+      "His best awakening is [[awk:1]] (Phantom Slash twice in a row); [[awk:5]] is worth about +17% damage while Poison is up."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Johnny keeps Poison stacked and the target launched, so he and his partners can use their Airborne-only skills."
+     ],
+     "loop": [
+      "Open with [[skill:Venom Dance]]: Poison and Airborne in one skill.",
+      "Spend [[skill:Venom Cutter]] while the target is Airborne.",
+      "Use [[skill:Poison Grab]] on the Poisoned target; at 2+ Poison stacks it launches again and allows continuous attacks during its Mount Action.",
+      "Relaunch with [[skill:Phantom Slash]] and refresh Poison with [[skill:Fatal Sting]]."
+     ],
+     "combos": [
+      {
+       "name": "Solo combo",
+       "sequence": [
+        "Venom Dance",
+        "Venom Cutter",
+        "Poison Grab"
+       ],
+       "note": "Venom Dance gives Poison and Airborne at once, so Venom Cutter is ready straight away; Poison Grab follows on the Poisoned target and is enhanced at 2+ stacks."
+      },
+      {
+       "name": "Double launch (A1)",
+       "sequence": [
+        "Phantom Slash",
+        "Phantom Slash",
+        "Venom Cutter"
+       ],
+       "note": "With [[awk:1]] Phantom Slash can be used twice in a row: two launches, then Venom Cutter on the Airborne target. Without A1, use it once."
+      },
+      {
+       "name": "Venom team combo",
+       "sequence": [
+        "Venom Dance",
+        "Charlotte/Shadow Grab",
+        "Venom Cutter"
+       ],
+       "note": "Johnny's launch also unlocks [[hero:Charlotte]]'s [[skill:Charlotte/Shadow Grab]], and Venom Cutter follows on the same Airborne target."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Venom Dance]] and [[skill:Phantom Slash]]: his setup",
+      "points": [
+       "Venom Dance (936%) inflicts Poison and Airborne; his Mastery adds movement distance and hits to it.",
+       "Phantom Slash (1113%) launches the target and works on the ground and in the air; his signature Karma leaves blades along its path that deal extra damage and Poison."
+      ]
+     },
+     {
+      "title": "[[skill:Venom Cutter]] and [[skill:Poison Grab]]: his damage",
+      "points": [
+       "Venom Cutter (1456%) needs Airborne; [[awk:6]] adds more hits.",
+       "Poison Grab (1176%) needs Poison: at 1 stack it applies Poison, at 2+ it adds Airborne and allows continuous attacks during the Mount Action on giant bosses."
+      ]
+     },
+     {
+      "title": "[[skill:Fatal Sting]] and Poison",
+      "points": [
+       "Fatal Sting (dash attack, 686%) is his quick Poison refresh; [[awk:3]] adds a powerful extra thrust.",
+       "Poison ticks use the Attack of whoever applied the first stack. In the guide's builds his end-game Attack (3,929) is about the same as Charlotte's (3,862), so who Poisons first barely matters."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Venom Cutter]], [[skill:Venom Dance]] and [[skill:Poison Grab]]: his biggest hits and his setup."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Phantom Slash]] and [[skill:Fatal Sting]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Dirty Fight]] and [[skill:Piercing Step]]: filler damage."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:1]]** for the double Phantom Slash. [[awk:5]] (+15% Poison Additional Damage, +10% Defense Ignore) is worth about +17% damage while Poison is up.",
+      "[[awk:3]] and [[awk:6]] add hits to Fatal Sting and Venom Cutter; [[awk:2]] and [[awk:4]] are smaller."
+     ],
+     "karma": [
+      "Signature: [[karma:Wandering Blade]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Poison Additional Damage, plus the Poison blades along Phantom Slash. Second: [[karma:Defeating Poison with Poison]]."
+     ],
+     "gear": [
+      "3 [[set:Venomfog Shade]] + 2 [[set:The Infiltrator]]. Main stats and substats are on the Build tab."
+     ]
+    },
+    "teams": [
+     "**Venom (S tier):** [[hero:Charlotte]] + Johnny + [[hero:Reina]]. Two Poison sources and two Airborne sources keep every conditional skill in the team available.",
+     "**Gale (S tier):** Johnny can take [[hero:Reina]]'s slot next to [[hero:Kalsion]] and [[hero:Eileen]] (the game recommends him with Eileen), adding Poison and more Airborne."
+    ]
+   }
   },
   "Charlotte": {
    "archetype": "VENOM",
@@ -3199,7 +3309,107 @@
     "Her heal is a flat 20% of max HP, so gear can't make it stronger.",
     "Relic Fall needs Knockdown first.",
     "She fills the healer slot in B-tier teams and is only an alternative in Bloodburst."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Lute is an Amplitude healer. [[skill:Healing Circle]] restores 20% of max HP to herself and allies in range, and she adds Stun ([[skill:Stun Slash]]) and Knockdown ([[skill:Swordgrab]]) so teammates' conditional skills fire. She's **A tier early-game** and B tier after that.",
+     "Unusually for a healer she has two big hits: Swordgrab (1626%) and [[skill:Relic Fall]] (1499%, needs Knockdown). Her Mastery also adds Stun to the hits of [[skill:Kick Combo]].",
+     "Her heal is a flat 20% of max HP, so gear can't make it bigger; that's the main reason she drops to B tier later."
+    ],
+    "verdict": {
+     "level": "good",
+     "label": "Yes, she's free",
+     "text": [
+      "She comes from the Story Quests, so she costs nothing, and she's the healer in the guide's Stun teams (Amplitude and Breaker). She's also the alternative for [[hero:Astria]] in the A-tier Bloodburst team.",
+      "Her best awakening is [[awk:1]]: Relic Fall leaves a zone that raises allies' Attack Power."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Keep the team alive with Healing Circle, and use Stun and Knockdown to open conditional skills for the damage dealers."
+     ],
+     "loop": [
+      "Use [[skill:Stun Slash]] to Stun: it unlocks [[skill:Theresia/Divine Arc]], [[skill:Roxy/Kick Storm]], [[skill:Castella/Upper Blow]] and [[skill:Astria/Bolt Bombard]].",
+      "Follow with [[skill:Swordgrab]] for Knockdown.",
+      "Drop [[skill:Relic Fall]] on the knocked-down target.",
+      "Place [[skill:Healing Circle]] when the team needs it."
+     ],
+     "combos": [
+      {
+       "name": "Her own combo",
+       "sequence": [
+        "Stun Slash",
+        "Swordgrab",
+        "Relic Fall"
+       ],
+       "note": "Stun first, then Swordgrab's Knockdown unlocks Relic Fall. With [[awk:3]] Swordgrab can be used twice in a row."
+      },
+      {
+       "name": "Amplitude team combo",
+       "sequence": [
+        "Stun Slash",
+        "Theresia/Divine Arc",
+        "Theresia/Holy Rise"
+       ],
+       "note": "Lute's Stun opens [[hero:Theresia]]'s Divine Arc, whose Bleed then opens Holy Rise."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Healing Circle]]: her heal",
+      "points": [
+       "Restores 20% of max HP to herself and allies in range and deals 600%.",
+       "[[awk:6]] adds a healing-over-time circle inside it. Whether the 20% grows with skill level hasn't been checked."
+      ]
+     },
+     {
+      "title": "[[skill:Stun Slash]], [[skill:Swordgrab]] and [[skill:Relic Fall]]",
+      "points": [
+       "Stun Slash (1269%) Stuns; Swordgrab (1626%) Knocks down and has a Mount Action on giant bosses.",
+       "Relic Fall (1499%) needs Knockdown; her signature Karma summons more relics, and [[awk:1]] leaves an Attack Power zone for allies."
+      ]
+     },
+     {
+      "title": "[[skill:Kick Combo]] and Mastery",
+      "points": [
+       "Her Mastery adds hits to Kick Combo, more Rage from [[skill:Dropkick]], and Stun on hit."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Healing Circle]]: the team's safety net."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Swordgrab]], [[skill:Relic Fall]] and [[skill:Stun Slash]]: her damage and her Stun."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Sword Slash]], [[skill:Dropkick]] and [[skill:Kick Combo]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:1]]** (Attack Power zone from Relic Fall). [[awk:6]] (healing-over-time circle) and [[awk:3]] (double Swordgrab) are next.",
+      "[[awk:2]], [[awk:4]] and [[awk:5]] are stat bonuses that do little for a healer."
+     ],
+     "karma": [
+      "Signature: [[karma:A Sword Summoned for a Friend]] (exclusive shop): +15% Defense Ignore, +20% Attack Power, +20% Stun Additional Damage, and more relics in Relic Fall. Second: [[karma:I'll Knock You Out Myself]]."
+     ],
+     "gear": [
+      "3 [[set:Holy Arbiter]] + 2 [[set:Battle Will]], with Max HP Up on the chest and Defense Up on the legs to keep her alive."
+     ]
+    },
+    "teams": [
+     "**Amplitude (B tier):** [[hero:Theresia]] + [[hero:Astria]] + Lute, the safest Stun team thanks to her heal.",
+     "**Breaker (B tier):** [[hero:Castella]] + [[hero:Astria]] + Lute. She's also the alternative for Astria in **Bloodburst (A tier)** and for [[hero:Sion]] in **Crushing**."
+    ]
+   }
   },
   "Theresia": {
    "archetype": "AMPLITUDE",
@@ -3395,7 +3605,106 @@
     "C tier early-game: she needs levels and her Karma before she shines.",
     "Her best results depend on her signature Karma from the exclusive shop.",
     "Using Celestial Verdict in Heretic Judgment cuts the mode short by 4 seconds."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Theresia is an Amplitude main damage dealer who chains Stun into Bleed: [[skill:Celestial Verdict]] Stuns, which unlocks [[skill:Divine Arc]] (1570%), and Divine Arc's Bleed unlocks [[skill:Holy Rise]]. She's **S tier at end-game**, but C tier early.",
+     "Divine Arc also enters or extends Heretic Judgment, a mode in which her auto attack applies Stun and Bleed, so once it's running she keeps both statuses up herself.",
+     "Her signature Karma is unusually important: +1050 Stun and +525 Bleed Additional Attack Power (about +29% and +15% of her end-game Attack on Stunned or Bleeding targets), more Divine Arc damage and extra Bleed in Heretic Judgment. With it, the Bloodburst team is close to S."
+    ],
+    "verdict": {
+     "level": "great",
+     "label": "Yes, if you can wait for her",
+     "text": [
+      "She's a Hero shop exchange (Fate's Invitation) and one of the strongest end-game heroes, but she's weak early and leans on her exclusive-shop signature Karma.",
+      "Her best awakening is [[awk:3]]: Divine Arc hits harder and extends Heretic Judgment."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Open with Stun, spend Divine Arc and Holy Rise, and stay in Heretic Judgment as long as possible."
+     ],
+     "loop": [
+      "Stun with [[skill:Celestial Verdict]].",
+      "Use [[skill:Divine Arc]] on the Stunned target: Bleed plus Heretic Judgment.",
+      "Use [[skill:Holy Rise]] on the Bleeding target: more Bleed and Airborne.",
+      "Keep attacking in Heretic Judgment; avoid Celestial Verdict there unless needed, as it cuts the mode by 4 s."
+     ],
+     "combos": [
+      {
+       "name": "Core combo",
+       "sequence": [
+        "Celestial Verdict",
+        "Divine Arc",
+        "Holy Rise"
+       ],
+       "note": "Stun unlocks Divine Arc, its Bleed unlocks Holy Rise; both land on a Stunned, Bleeding target at about 2.5× (measured bonuses)."
+      },
+      {
+       "name": "Bloodburst team combo",
+       "sequence": [
+        "Roxy/Crimson Spiral",
+        "Divine Arc",
+        "Roxy/Kick Storm"
+       ],
+       "note": "[[hero:Roxy]]'s Stun opens Divine Arc for Theresia and Kick Storm for herself."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Celestial Verdict]]: her opener",
+      "points": [
+       "Celestial Verdict (1017%) Stuns; in Heretic Judgment it adds extra Stun but shortens the mode by 4 s. [[awk:6]] adds more hits."
+      ]
+     },
+     {
+      "title": "[[skill:Divine Arc]] and [[skill:Holy Rise]]: her damage",
+      "points": [
+       "Divine Arc (1570%) needs Stun, applies Bleed and enters or extends Heretic Judgment; [[awk:3]] and her signature Karma add damage.",
+       "Holy Rise (1188%) needs Bleed and applies Bleed and Airborne; [[awk:1]] turns its upward strike into a multi-hit whirlwind."
+      ]
+     },
+     {
+      "title": "Heretic Judgment",
+      "points": [
+       "[[skill:Consecration]] (981%) starts it; in the mode her auto attack applies Stun and Bleed with more range.",
+       "Her Mastery adds Super Armor and damage reduction when she Dodges in the mode."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Divine Arc]], [[skill:Holy Rise]] and [[skill:Celestial Verdict]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Consecration]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Judgment Spiral]], [[skill:Celestial Dive]] and [[skill:Heaven's Flick]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:3]].** [[awk:4]] (+15% Bleed Additional Damage) is worth about +13% while Bleed is up, and [[awk:2]] (+15% Attack Power) about +9%."
+     ],
+     "karma": [
+      "Signature: [[karma:Merciful Death Sentence]] (exclusive shop): more important to her than any other signature Karma is to its hero, because two of its stats boost her two statuses. Second: [[karma:I'll Knock You Out Myself]]."
+     ],
+     "gear": [
+      "3 [[set:Bloodstained Chaser]] + 2 [[set:The Infiltrator]]."
+     ]
+    },
+    "teams": [
+     "**Amplitude (B tier):** Theresia + [[hero:Astria]] + [[hero:Lute]], the safest Stun team; [[hero:Roxy]] can replace Astria for more damage.",
+     "**Bloodburst (A tier):** [[hero:Roxy]] + Theresia + [[hero:Astria]], close to S with her signature Karma. She's also the alternative for Astria in **Breaker**."
+    ]
+   }
   },
   "Alex": {
    "archetype": "CRUSHING",
@@ -3579,7 +3888,99 @@
     "Guard Counter has to be timed with the enemy's attack.",
     "His team, Crushing, is B tier.",
     "Pounding Grab needs Knockdown (or Stun after A3)."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "him",
+    "summary": [
+     "Alex is the only tank and the only Crushing hero. [[skill:Guard Stance]] puts him in Defensive Stance, where he takes less Super Armor damage and counters hits with a shockwave; his Mastery makes it Taunt enemies in range and lowers their Attack by 10%. He's **A tier early-game** and B after that.",
+     "[[skill:Guard Counter]], timed with an enemy attack, cuts the target's Defense by 20%, which raises the whole team's damage, and Knocks it down for [[skill:Pounding Grab]].",
+     "His own damage is low by design: his kit and gear go into survival."
+    ],
+    "verdict": {
+     "level": "ok",
+     "label": "Only if you need a tank",
+     "text": [
+      "He's a Hero shop exchange (Fate's Invitation). Teams in the guide manage without a tank, and his team (Crushing) is B tier, so he's a comfort pick for hard fights.",
+      "His best awakening is [[awk:6]]: a stronger shield and Rage refunds in Defensive Stance."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Hold enemy attention in Defensive Stance, time Guard Counter, and use Knockdown to open Pounding Grab."
+     ],
+     "loop": [
+      "Enter Defensive Stance with [[skill:Guard Stance]] (Taunt).",
+      "Time [[skill:Guard Counter]] with an enemy attack: −20% Defense and Knockdown.",
+      "Use [[skill:Pounding Grab]] on the knocked-down target.",
+      "Use [[skill:Knockdown Smash]] for Knockdown when Guard Counter isn't ready."
+     ],
+     "combos": [
+      {
+       "name": "Counter combo",
+       "sequence": [
+        "Guard Stance",
+        "Guard Counter",
+        "Pounding Grab"
+       ],
+       "note": "Guard Counter Knocks down and cuts Defense; Pounding Grab needs Knockdown (or Stun with [[awk:3]])."
+      },
+      {
+       "name": "Simple combo",
+       "sequence": [
+        "Knockdown Smash",
+        "Pounding Grab"
+       ],
+       "note": "Knockdown Smash opens Pounding Grab without timing a counter."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Guard Stance]] and Defensive Stance",
+      "points": [
+       "Less Super Armor depletion and a counter-shockwave when hit; his Mastery adds unconditional Taunt and −10% Attack on Taunted enemies.",
+       "His signature Karma adds +100% Super Armor resistance for a time and −10% damage taken for him and nearby allies in Defensive Stance; [[awk:1]] and [[awk:6]] strengthen it."
+      ]
+     },
+     {
+      "title": "[[skill:Guard Counter]] and [[skill:Pounding Grab]]",
+      "points": [
+       "Guard Counter (1172%) cuts the target's Defense by 20% on success and Knocks down.",
+       "Pounding Grab (1456%) needs Knockdown and raises the enemy's hostility towards him by 33%."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Guard Stance]] and [[skill:Guard Counter]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Knockdown Smash]] and [[skill:Pounding Grab]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Brandish]], [[skill:Dive Kick]] and [[skill:Dodge Combo]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:6]].** [[awk:2]] (+40% Defense) and [[awk:1]] are solid; [[awk:3]] lets Pounding Grab use Stun."
+     ],
+     "karma": [
+      "Signature: [[karma:Loyalty Amidst Lethargy]] (exclusive shop): +30% Max HP, +1175 Knockdown Additional Attack Power, +20% Knockdown Additional Damage, plus the Defensive Stance damage reduction. Second: [[karma:Stay Sharp. Always]]."
+     ],
+     "gear": [
+      "3 [[set:Earthshatterer]] + 2 [[set:Battle Will]], with Max HP Up and Defense Up main stats everywhere."
+     ]
+    },
+    "teams": [
+     "**Crushing (B tier):** Alex + [[hero:Othello]] + [[hero:Sion]], the game's recommendation; both partners apply Knockdown for Pounding Grab.",
+     "He's also the alternative for [[hero:Dana]] in **Frostbite** as a Knockdown tank."
+    ]
+   }
   },
   "Reina": {
    "archetype": "GALE",
@@ -3729,7 +4130,107 @@
     "Tempest only works on an Airborne target, so her damage drops whenever the enemy can't be launched.",
     "No healing, shields or team stat buffs: her value is the Airborne setup and her own damage.",
     "Her A4 and A5 bonuses only count against Airborne targets."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Reina is the Gale enabler and one of three heroes rated **S at every stage**. She launches enemies with [[skill:Rising Cutter]], [[skill:Wind Slayer]] and [[skill:Wind Grab]], and her two biggest hits, [[skill:Tempest]] (1515%) and Wind Grab (1582%), both need Airborne, so she feeds herself.",
+     "Airborne doubles every hit the team lands on the target while it's up (measured +100%), so her launches boost everyone, not just her.",
+     "[[awk:3]] is the most game-changing awakening in the guide: Wind Grab resets Tempest's cooldown, looping her two biggest hits."
+    ],
+    "verdict": {
+     "level": "great",
+     "label": "Yes, a top pick",
+     "text": [
+      "She's a Hero shop exchange (Fate's Invitation), S tier at every stage, and the Airborne starter in both S-tier teams (Venom and Gale).",
+      "Aim for [[awk:3]] as early as you can."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Launch the target, then loop Tempest and Wind Grab while partners cash in on the Airborne."
+     ],
+     "loop": [
+      "Launch with [[skill:Rising Cutter]] or [[skill:Wind Slayer]].",
+      "Use [[skill:Tempest]] on the Airborne target.",
+      "Use [[skill:Wind Grab]]; with [[awk:3]] it resets Tempest's cooldown.",
+      "Use Tempest again; her Mastery lets her Dodge in mid-air (2.5 s cooldown) to stay with the target."
+     ],
+     "combos": [
+      {
+       "name": "Tempest loop (A3)",
+       "sequence": [
+        "Rising Cutter",
+        "Tempest",
+        "Wind Grab",
+        "Tempest"
+       ],
+       "note": "Rising Cutter launches, Tempest and Wind Grab need Airborne, and with A3 Wind Grab resets Tempest for a second cast."
+      },
+      {
+       "name": "Venom team combo",
+       "sequence": [
+        "Rising Cutter",
+        "Charlotte/Shadow Grab"
+       ],
+       "note": "Her launch unlocks [[hero:Charlotte]]'s Shadow Grab (and Johnny's Venom Cutter)."
+      },
+      {
+       "name": "Gale team combo",
+       "sequence": [
+        "Wind Slayer",
+        "Kalsion/Explosion"
+       ],
+       "note": "Wind Slayer works on the ground and in the air and sets up [[hero:Kalsion]]'s Explosion."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "Launchers",
+      "points": [
+       "[[skill:Rising Cutter]] (1475%) and [[skill:Wind Slayer]] (961%) both apply Airborne; [[awk:6]] gives [[skill:Winchester]] a leap that also applies Airborne."
+      ]
+     },
+     {
+      "title": "[[skill:Tempest]] and [[skill:Wind Grab]]",
+      "points": [
+       "Tempest (1515%) needs Airborne; [[awk:1]] adds hits and her signature Karma makes it emit a sword aura.",
+       "Wind Grab (1582%) needs and applies Airborne, with a Mount Action on giant bosses; [[awk:3]] resets Tempest."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Tempest]], [[skill:Wind Grab]] and [[skill:Rising Cutter]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Wind Slayer]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Wind Sword]], [[skill:Silphid Spike]] and [[skill:Winchester]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:3]].** [[awk:5]] (+15% Airborne Additional Damage, +15% Crit Damage) is worth at least +13%, [[awk:1]] adds Tempest hits."
+     ],
+     "karma": [
+      "Signature: [[karma:The Wind That Protects the Kingdom]] (exclusive shop): +10% Crit Rate, +20% Crit Damage, +20% Airborne Additional Damage, and Tempest's sword aura. Second: [[karma:A Path That Leads to the Wind]]."
+     ],
+     "gear": [
+      "3 [[set:Azure Gale]] + 2 [[set:The Infiltrator]]."
+     ]
+    },
+    "teams": [
+     "**Venom (S tier):** [[hero:Charlotte]] + [[hero:Johnny]] + Reina.",
+     "**Gale (S tier):** [[hero:Kalsion]] + [[hero:Eileen]] + Reina. She can also replace [[hero:Kalien]] in **Blazeflame** as Airborne setup."
+    ]
+   }
   },
   "Eileen": {
    "archetype": "GALE",
@@ -3872,7 +4373,107 @@
     "Vanguard Banner only works while the Brave One buff is active.",
     "Rolling Upper needs Airborne, and Barraging Spear is her only skill listed as applying it.",
     "B tier early-game."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Eileen is a Gale sub-DPS and team buffer. [[skill:Brave One]] gives +15% Attack to herself and allies in range, and [[skill:Vanguard Banner]] (2295%, the biggest skill hit in the game) adds +20% Crit Rate in range, but only while Brave One's buff is active. She's **A tier from mid-game on**.",
+     "She also applies Airborne with [[skill:Barraging Spear]], which unlocks [[skill:Rolling Upper]] (1558%).",
+     "Her signature Karma raises Crit Rate and Crit Damage further when Vanguard Banner is used inside Brave One's area (the Karma calls it \"Banner Maid\")."
+    ],
+    "verdict": {
+     "level": "good",
+     "label": "Yes for Gale teams",
+     "text": [
+      "She's a Hero shop exchange (Fate's Invitation), A tier from mid-game on, and plays in both S-tier teams (Gale, and Venom as an alternative).",
+      "Her best awakening is [[awk:1]]: a bigger Brave One area keeps the team inside her buff."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Plant Brave One, buff the team with Vanguard Banner, and add Airborne for your partners."
+     ],
+     "loop": [
+      "Use [[skill:Brave One]] (+15% Attack in range).",
+      "Use [[skill:Vanguard Banner]] while the buff is active (+20% Crit Rate in range).",
+      "Launch with [[skill:Barraging Spear]].",
+      "Follow with [[skill:Rolling Upper]] on the Airborne target."
+     ],
+     "combos": [
+      {
+       "name": "Buff combo",
+       "sequence": [
+        "Brave One",
+        "Vanguard Banner"
+       ],
+       "note": "Vanguard Banner needs Brave One's buff; inside its area her signature Karma adds more Crit Rate and Crit Damage."
+      },
+      {
+       "name": "Airborne combo",
+       "sequence": [
+        "Barraging Spear",
+        "Rolling Upper"
+       ],
+       "note": "Barraging Spear's Airborne unlocks Rolling Upper."
+      },
+      {
+       "name": "Gale team combo",
+       "sequence": [
+        "Brave One",
+        "Vanguard Banner",
+        "Kalsion/Explosion"
+       ],
+       "note": "[[hero:Kalsion]]'s Explosion lands with both her buffs up."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "Team buffs",
+      "points": [
+       "[[skill:Brave One]] (1161%): +15% Attack Power in range; [[awk:1]] widens the area.",
+       "[[skill:Vanguard Banner]] (2295%): +20% Crit Rate in range, needs Brave One's buff."
+      ]
+     },
+     {
+      "title": "Airborne",
+      "points": [
+       "[[skill:Barraging Spear]] (1308%) applies Airborne; her Mastery adds hits.",
+       "[[skill:Rolling Upper]] (1558%) needs Airborne; [[awk:3]] adds hits."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Vanguard Banner]] and [[skill:Brave One]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Rolling Upper]] and [[skill:Barraging Spear]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Grand Spear]], [[skill:Spin Presser]] and [[skill:Spiral Shave]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:1]].** [[awk:4]] (+15% Crit Rate) is worth about +9% and [[awk:5]] at least +11%."
+     ],
+     "karma": [
+      "Signature: [[karma:Between Chivalry and Bookmarks]] (exclusive shop): +15% Defense Ignore, +20% Attack Power, +20% Airborne Additional Damage, and the stronger banner inside Brave One. Second: [[karma:A Path That Leads to the Wind]]."
+     ],
+     "gear": [
+      "3 [[set:Azure Gale]] + 2 [[set:The Infiltrator]]."
+     ]
+    },
+    "teams": [
+     "**Gale (S tier):** [[hero:Kalsion]] + Eileen + [[hero:Reina]].",
+     "She's the alternative for [[hero:Reina]] in **Venom (S tier)**, trading some Airborne for her team buffs."
+    ]
+   }
   },
   "Roxy": {
    "archetype": "BLOODBURST",
@@ -4026,7 +4627,106 @@
     "Kick Storm needs Stun, so without Crimson Spiral or a Stun teammate her biggest hit is locked.",
     "Bleeding Grab needs 2 Bleed stacks for its full combo and Knockdown.",
     "Only one team is built around her; elsewhere she's an alternative pick."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Roxy is the Bloodburst main damage dealer and sets up her own big hit: [[skill:Crimson Spiral]] applies Bleed and Stun, which unlocks [[skill:Kick Storm]] (1786%, needs Stun), one of the biggest hits in the game. She's **A tier at every stage**.",
+     "Kick Storm lands on a Bleeding, Stunned target, so it gets the measured +150% from those two statuses together. Five of her skills apply Bleed, so it stays up.",
+     "[[skill:Bleeding Grab]] rounds her out: at 1 Bleed stack it applies Bleed, at 2+ it Knocks down and allows continuous attacks during its Mount Action."
+    ],
+    "verdict": {
+     "level": "good",
+     "label": "Yes for Bleed and Stun teams",
+     "text": [
+      "She's a Hero shop exchange (Fate's Invitation), A tier at every stage, and the lead of the A-tier Bloodburst team, which is close to S once [[hero:Theresia]] has her signature Karma.",
+      "Her best awakening is [[awk:6]] (more hits on Kick Storm); [[awk:5]] is worth about +18% damage while Bleed is up."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Stun the target yourself, then spend Kick Storm on it while Bleed keeps the hit bonus up."
+     ],
+     "loop": [
+      "Apply Bleed with [[skill:Sliding Shot]] or [[skill:Bloody Shower]].",
+      "Use [[skill:Crimson Spiral]] for Bleed and Stun (hold the key to extend it).",
+      "Fire [[skill:Kick Storm]] on the Stunned target.",
+      "Finish with [[skill:Bleeding Grab]] at 2+ Bleed stacks for Knockdown."
+     ],
+     "combos": [
+      {
+       "name": "Core combo",
+       "sequence": [
+        "Crimson Spiral",
+        "Kick Storm",
+        "Bleeding Grab"
+       ],
+       "note": "Crimson Spiral's Stun unlocks Kick Storm; Bleeding Grab at 2+ Bleed stacks adds Knockdown."
+      },
+      {
+       "name": "Bloodburst team combo",
+       "sequence": [
+        "Theresia/Celestial Verdict",
+        "Kick Storm",
+        "Theresia/Divine Arc"
+       ],
+       "note": "[[hero:Theresia]]'s Stun also unlocks Kick Storm, and her Divine Arc uses the same Stun."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Crimson Spiral]] and [[skill:Kick Storm]]: her combo",
+      "points": [
+       "Crimson Spiral (865%) applies Bleed and Stun and can be held longer; [[awk:1]] makes her tankier while it runs.",
+       "Kick Storm (1786%) needs Stun; [[awk:6]] adds hits and her signature Karma fires more arrows."
+      ]
+     },
+     {
+      "title": "Bleed skills",
+      "points": [
+       "[[skill:Sliding Shot]] (729%) and [[skill:Bloody Shower]] (1010%) apply Bleed; [[skill:Bleeding Grab]] (1245%) needs Bleed and Knocks down at 2+ stacks."
+      ]
+     },
+     {
+      "title": "[[skill:Double Shot]] and Mastery",
+      "points": [
+       "Double Shot has a plunge attack; [[awk:3]] stacks Crit Damage on each plunge hit. Her Mastery adds a mid-air somersault to Dodge."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Kick Storm]] and [[skill:Crimson Spiral]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Bleeding Grab]] and [[skill:Bloody Shower]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Bow Shot]], [[skill:Double Shot]] and [[skill:Sliding Shot]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:6]]**, with [[awk:5]] (about +18%) close behind. [[awk:2]] (+15% Attack Power) is worth about +9.6%.",
+      "[[awk:4]] (Stun damage) is a smaller gain."
+     ],
+     "karma": [
+      "Signature: [[karma:The Noble Lady's Wild Hobby]] (exclusive shop): +10% Defense Ignore, +15% Attack Power, +20% Bleed Additional Damage, and more arrows from Kick Storm. Second: [[karma:Fangs Lurking in the Thicket]]."
+     ],
+     "gear": [
+      "3 [[set:Bloodstained Chaser]] + 2 [[set:The Infiltrator]]. [[set:Holy Arbiter]] is a close alternative for the 2-piece, since Kick Storm always hits a Stunned target."
+     ]
+    },
+    "teams": [
+     "**Bloodburst (A tier):** Roxy + [[hero:Theresia]] + [[hero:Astria]]; three Stun sources keep Kick Storm ready. [[hero:Lute]] can replace Astria.",
+     "She's also an alternative in **Amplitude** (for Astria; the game recommends her with Lute and Theresia) and in **Crushing** for [[hero:Othello]]."
+    ]
+   }
   },
   "Aria": {
    "archetype": "BLAZEFLAME",
@@ -4184,7 +4884,106 @@
     "Only one team uses her, and it's A tier rather than S because she and Kalien are B-tier damage.",
     "Multiple Bolt (1541%), her biggest hit, needs Airborne.",
     "A3's Burn zone adds little when Kalsion and Kalien already keep Burn up."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Aria is a Blazeflame sub-DPS and the setup engine of the Blazeflame team: six of her skills apply both Burn and Airborne, which keeps [[hero:Kalsion]]'s [[skill:Kalsion/Burst Grab]] (needs Burn) and [[skill:Kalsion/Explosion]] (needs Airborne) ready. She's **B tier at every stage**.",
+     "She fights with Bomb Arrows: [[skill:Bolt Shot]] fires one every 3rd attack, [[skill:Multiple Bolt]] fires homing ones, and [[skill:Switch On!]] detonates them all at once.",
+     "Her own damage is modest (her biggest hit is Multiple Bolt at 1541%), and the Blazeflame team is A tier rather than S because she and [[hero:Kalien]] are B-tier damage."
+    ],
+    "verdict": {
+     "level": "ok",
+     "label": "Good if you play Kalsion",
+     "text": [
+      "She's free from the Story Quests, so there's no reason not to have her. Her value is what she enables for Kalsion; on her own she's B tier.",
+      "Her best awakening is [[awk:5]] (+15% Burn Additional Damage, +15% Attack Power), about +20% damage while Burn is up."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Keep Burn and Airborne on the target for Kalsion, and detonate your Bomb Arrows for burst."
+     ],
+     "loop": [
+      "Burn and launch with [[skill:Air Bomb]], [[skill:Rolling Bomb]] or [[skill:Shoot and Bomb]].",
+      "Fire [[skill:Multiple Bolt]] at the Airborne target.",
+      "Detonate every Bomb Arrow with [[skill:Switch On!]].",
+      "Refill Bomb Arrows with [[skill:Bolt Shot]]."
+     ],
+     "combos": [
+      {
+       "name": "Bomb combo",
+       "sequence": [
+        "Air Bomb",
+        "Multiple Bolt",
+        "Switch On!"
+       ],
+       "note": "Air Bomb applies Burn and Airborne, unlocking Multiple Bolt; Switch On! then detonates its homing Bomb Arrows together."
+      },
+      {
+       "name": "Blazeflame team combo",
+       "sequence": [
+        "Rolling Bomb",
+        "Kalsion/Explosion"
+       ],
+       "note": "Her launch lets [[hero:Kalsion]] use Explosion (2173%) on a Burning, Airborne target."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "Bomb Arrows",
+      "points": [
+       "[[skill:Bolt Shot]] fires a Bomb Arrow every 3rd attack; Bomb Arrows apply Burn and Airborne when they explode.",
+       "[[skill:Multiple Bolt]] (1541%) needs Airborne and fires homing Bomb Arrows; [[awk:6]] adds more.",
+       "[[skill:Switch On!]] (1228%) detonates all of them; her signature Karma makes the explosion bigger and adds more Burn and Airborne."
+      ]
+     },
+     {
+      "title": "Setup skills",
+      "points": [
+       "[[skill:Air Bomb]] (915%), [[skill:Rolling Bomb]] (813%) and [[skill:Shoot and Bomb]] (628%) all apply Burn and Airborne; [[awk:1]] lets her use Rolling Bomb twice in a row.",
+       "Her Mastery throws a second bomb during Shoot and Bomb."
+      ]
+     },
+     {
+      "title": "Crit from her set",
+      "points": [
+       "[[set:Blazing Flames]]' 3-piece gives +15% Crit Rate for 12 s whenever she applies Burn, which is almost always, so the guide counts it as always on."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Multiple Bolt]] and [[skill:Switch On!]]: her biggest hits."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Air Bomb]] and [[skill:Rolling Bomb]]: setup and damage."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Bolt Shot]], [[skill:Shoot and Bomb]] and [[skill:Rapid Shot]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:5]]** (about +20% damage while Burn is up). [[awk:1]] and [[awk:6]] are good kit upgrades.",
+      "[[awk:3]]'s Burn zone adds little when Kalsion and Kalien already keep Burn up."
+     ],
+     "karma": [
+      "Signature: [[karma:Explosion Is Art]] (exclusive shop): +10% Crit Rate, +300 Burn Additional Attack Power (about +6% Attack on Burning targets at end-game) and +20% Burn Additional Damage. Second: [[karma:The Burning Taste of Fire]]."
+     ],
+     "gear": [
+      "3 [[set:Blazing Flames]] + 2 [[set:The Infiltrator]]. [[set:Azure Gale]] is a close alternative for the 2-piece, since Multiple Bolt always hits an Airborne target."
+     ]
+    },
+    "teams": [
+     "**Blazeflame (A tier):** [[hero:Kalsion]] + Aria + [[hero:Kalien]], the game's recommendation for all three. [[hero:Cerese]] is the alternative in her slot."
+    ]
+   }
   },
   "Kalien": {
    "archetype": "BLAZEFLAME",
@@ -4340,7 +5139,101 @@
     "Fox Grab, his biggest hit (1178%), needs Super Armor Break until A1.",
     "His skills have the lowest combined skill % of any hero in the guide.",
     "A4 (Break Additional Damage) does almost nothing for him."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "him",
+    "summary": [
+     "Kalien is a Blazeflame support whose job is Burn: seven of his skills apply it, the most of any hero, and [[skill:Finale]] adds Stun. He's **C tier early-game** and B tier after that.",
+     "He fights through fox spirits: [[skill:Fox Parade]] and [[skill:Fox Chase]] summon them, [[skill:Fox Grab]] sends Sur's Clones to lift and slam enemies, and Finale detonates every clone at once.",
+     "His skills have the lowest combined skill % of any hero in the guide, so he's in teams for Burn stacks and Stun rather than damage."
+    ],
+    "verdict": {
+     "level": "ok",
+     "label": "Only for Blazeflame",
+     "text": [
+      "He's a Hero shop exchange (Fate's Invitation), and his value is limited to keeping Burn up for [[hero:Kalsion]]. Spend Fate's Invitations on stronger heroes first.",
+      "If you do use him, [[awk:1]] is essential: Fox Grab, his biggest hit, can then be used on any Burning target."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Keep Burn stacked for Kalsion and add Stun with Finale."
+     ],
+     "loop": [
+      "Burn with [[skill:Firefox]] and [[skill:Pyro-Fang]].",
+      "Summon foxes with [[skill:Fox Parade]] and [[skill:Fox Chase]].",
+      "Send [[skill:Fox Grab]]'s clones (needs Super Armor Break, or Burn with [[awk:1]]).",
+      "Detonate them with [[skill:Finale]] for Burn and Stun."
+     ],
+     "combos": [
+      {
+       "name": "Fox combo",
+       "sequence": [
+        "Fox Parade",
+        "Fox Grab",
+        "Finale"
+       ],
+       "note": "Fox Parade Burns; Fox Grab (on a Burning target with A1) sends clones; Finale detonates them for Burn and Stun."
+      },
+      {
+       "name": "Blazeflame team combo",
+       "sequence": [
+        "Fox Chase",
+        "Kalsion/Burst Grab",
+        "Kalsion/Explosion"
+       ],
+       "note": "Kalien's Burn stacks let [[hero:Kalsion]]'s Burst Grab launch the target at 2+ stacks, setting up Explosion."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "Fox spirits",
+      "points": [
+       "[[skill:Fox Parade]] (710%) and [[skill:Twin Tails]] (546%) send exploding foxes; his Mastery makes Twin Tails last longer and spin wider.",
+       "[[skill:Fox Chase]] (1040%) summons Sur; [[awk:3]] keeps Sur longer and adds a launch, slam and Stun."
+      ]
+     },
+     {
+      "title": "[[skill:Fox Grab]] and [[skill:Finale]]",
+      "points": [
+       "Fox Grab (1178%) needs Super Armor Break until [[awk:1]] adds Burning targets; his signature Karma summons more foxes.",
+       "Finale (811%) detonates all clones and applies Burn and Stun."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Fox Grab]] and [[skill:Finale]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Fox Chase]] and [[skill:Fox Parade]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Firefox]], [[skill:Pyro-Fang]] and [[skill:Twin Tails]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:1]].** [[awk:5]] is worth about +18% damage while Burn is up; [[awk:3]] adds Stun.",
+      "[[awk:4]] (Break damage) does almost nothing for him."
+     ],
+     "karma": [
+      "Signature: [[karma:The Chosen One of the Crimson Flame]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Burn Additional Damage, and more foxes in Fox Grab. Second: [[karma:A Flame That Cuts Through the Moment]]."
+     ],
+     "gear": [
+      "3 [[set:Blazing Flames]] + 2 [[set:The Infiltrator]]; Blazing Flames' 3-piece Crit Rate is nearly always on because he applies Burn constantly."
+     ]
+    },
+    "teams": [
+     "**Blazeflame (A tier):** [[hero:Kalsion]] + [[hero:Aria]] + Kalien; [[hero:Reina]] can replace him as Airborne setup.",
+     "He's also the alternative for [[hero:Lute]] in **Breaker** (the game recommends him with Castella and Astria) for Stun and Burn."
+    ]
+   }
   },
   "Kalsion": {
    "archetype": "BLAZEFLAME",
@@ -4546,7 +5439,114 @@
     "Explosion needs Airborne; outside Royal Flame only Burst Grab gives him that, so he leans on Aria, Reina or Eileen.",
     "Most of his kit runs through Royal Flame, so he is noticeably weaker while it's down.",
     "Burst Grab's Airborne needs 2 Burn stacks first."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "him",
+    "summary": [
+     "Kalsion is the Blazeflame main damage dealer and one of three heroes rated **S at every stage**. His plan is Burn → Airborne → [[skill:Explosion]]: Explosion (2173%, the second-biggest skill hit in the game) needs Airborne, pulls enemies in and can be held longer.",
+     "[[skill:Weapon Blaze]] puts him in Royal Flame: +15% Attack, and his auto, jump and dash attacks apply Burn. [[skill:Burst Grab]] turns 2+ Burn stacks into Airborne, so he can set up his own Explosion.",
+     "Outside Royal Flame only Burst Grab launches the target, so he plays best with Airborne partners like [[hero:Aria]], [[hero:Reina]] or [[hero:Eileen]]."
+    ],
+    "verdict": {
+     "level": "great",
+     "label": "Yes, a top pick",
+     "text": [
+      "S tier at every stage, lead of the S-tier Gale team and the A-tier Blazeflame team. How he's obtained isn't recorded in the guide yet.",
+      "His best awakening is [[awk:3]] (longer Royal Flame with extra Attack Power); [[awk:1]] and [[awk:5]] (about +17%) are just as strong."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Stay in Royal Flame, stack Burn, and spend Explosion every time the target is Airborne."
+     ],
+     "loop": [
+      "Enter Royal Flame with [[skill:Weapon Blaze]].",
+      "Stack Burn with [[skill:Great Rush]], [[skill:Circle Cleave]] and [[skill:Circular Slash]].",
+      "Use [[skill:Burst Grab]] at 2+ Burn stacks to launch the target.",
+      "Detonate [[skill:Explosion]] on the Airborne target; in Royal Flame, [[skill:Flame Wave]] also applies Burn and Airborne."
+     ],
+     "combos": [
+      {
+       "name": "Solo combo",
+       "sequence": [
+        "Weapon Blaze",
+        "Great Rush",
+        "Burst Grab",
+        "Explosion"
+       ],
+       "note": "Royal Flame attacks stack Burn, Burst Grab launches at 2+ stacks, Explosion follows on the Airborne target."
+      },
+      {
+       "name": "Royal Flame launch",
+       "sequence": [
+        "Weapon Blaze",
+        "Flame Wave",
+        "Explosion"
+       ],
+       "note": "In Royal Flame, Flame Wave applies Burn and Airborne, which unlocks Explosion straight away."
+      },
+      {
+       "name": "Team combo",
+       "sequence": [
+        "Aria/Air Bomb",
+        "Explosion"
+       ],
+       "note": "[[hero:Aria]] (or [[hero:Reina]]) launches the target for him."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Explosion]]",
+      "points": [
+       "Explosion (2173%) needs Airborne, pulls enemies in and can be held longer; [[awk:1]] runs it at full duration without holding, and his signature Karma raises its range and damage."
+      ]
+     },
+     {
+      "title": "Royal Flame",
+      "points": [
+       "[[skill:Weapon Blaze]] (697%) applies Burn and starts Royal Flame (+15% Attack); [[awk:3]] extends it and adds Attack Power.",
+       "In Royal Flame his auto, jump and dash attacks apply Burn, and [[skill:Flame Wave]] (1073%) applies Burn and Airborne; [[awk:6]] makes it fire a beam and leave a Burn zone."
+      ]
+     },
+     {
+      "title": "[[skill:Burst Grab]]",
+      "points": [
+       "Burst Grab (1221%) needs Burn: at 1 stack it Burns, at 2+ it launches and allows continuous attacks during its Mount Action. His Mastery adds an extra explosion."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Explosion]], [[skill:Burst Grab]] and [[skill:Weapon Blaze]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Flame Wave]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Great Rush]], [[skill:Circle Cleave]] and [[skill:Circular Slash]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:3]]**, with [[awk:1]] and [[awk:5]] (about +17%) equally rated. [[awk:2]] and [[awk:4]] are smaller."
+     ],
+     "karma": [
+      "Signature: [[karma:The Sun Blazes Again]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Burn Additional Damage, and a bigger, stronger Explosion. Second: [[karma:A Flame That Cuts Through the Moment]]."
+     ],
+     "gear": [
+      "3 [[set:Blazing Flames]] + 2 [[set:The Infiltrator]]; Blazing Flames' 3-piece Crit Rate is nearly always on because he applies Burn constantly."
+     ]
+    },
+    "teams": [
+     "**Gale (S tier):** Kalsion + [[hero:Eileen]] + [[hero:Reina]]; three Airborne sources keep Explosion ready.",
+     "**Blazeflame (A tier):** Kalsion + [[hero:Aria]] + [[hero:Kalien]], the game's recommendation; Aria keeps Burn and Airborne up for him."
+    ]
+   }
   },
   "Dana": {
    "archetype": "FROSTBITE",
@@ -4701,7 +5701,107 @@
     "B tier at end-game, and the Frostbite team was nerfed in patch 1.1.0.",
     "Chako Knuckle and Chako Spin need Rime Energy and Frost or Knockdown, so her damage takes setup.",
     "Her own damage is low."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Dana is a Frostbite support built around [[skill:Chako Shield]]: her ice golem blocks attacks in a defensive stance, counters with a shockwave and shields allies, and her Mastery adds +10% Defense to herself and allies in range. She's **A tier early and mid-game**, B at end-game.",
+     "She applies Frost with six skills and Knockdown with [[skill:Summon Chako]]. Chako's attacks run on Rime Energy: [[skill:Chako Knuckle]] needs Rime Energy (Rapid Strikes) or 2 Frost stacks (Powerful Strike), and [[skill:Chako Spin]] needs Rime Energy plus Frost or Knockdown.",
+     "Frost is the least-measured status in the guide: whether it ticks and what Frozen does haven't been tested yet."
+    ],
+    "verdict": {
+     "level": "ok",
+     "label": "Situational",
+     "text": [
+      "She's a Hero shop exchange (Fate's Invitation). She's a strong early support, but her team (Frostbite) is B tier and was nerfed in patch 1.1.0, so pick her for safety rather than damage.",
+      "Her best awakening is [[awk:6]]: longer Chako Spin plus a whirlwind that applies Frost and Airborne."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Protect the team with Chako Shield, and keep Frost and Knockdown on the target for her Chako attacks."
+     ],
+     "loop": [
+      "[[skill:Summon Chako]]: Frost, Knockdown and Rime Energy.",
+      "Hold [[skill:Chako Shield]] to block and shield allies (also gives Rime Energy).",
+      "Spend Rime Energy on [[skill:Chako Spin]] and [[skill:Chako Knuckle]].",
+      "Build Frost stacks with [[skill:Snow Pop]] and [[skill:Snow Step]]."
+     ],
+     "combos": [
+      {
+       "name": "Chako combo",
+       "sequence": [
+        "Summon Chako",
+        "Chako Spin",
+        "Chako Knuckle"
+       ],
+       "note": "Summon Chako gives Rime Energy and Knockdown, which unlocks Chako Spin; Chako Knuckle follows on Rime Energy."
+      },
+      {
+       "name": "Frost stacking",
+       "sequence": [
+        "Snow Step",
+        "Snow Pop",
+        "Chako Knuckle"
+       ],
+       "note": "Two Frost stacks switch Chako Knuckle to its Powerful Strike."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Chako Shield]] and Mastery",
+      "points": [
+       "Blocks attacks in a defensive stance, counters with a shockwave and shields allies for a while.",
+       "Her Mastery adds a shield and +10% Defense for herself and allies in range when she uses it."
+      ]
+     },
+     {
+      "title": "[[skill:Summon Chako]], [[skill:Chako Knuckle]] and [[skill:Chako Spin]]",
+      "points": [
+       "Summon Chako (843%) inflicts Frost and Knockdown; her signature Karma raises frost spikes at the summoning point.",
+       "Chako Knuckle and Chako Spin (1108%) spend Rime Energy; [[awk:1]] makes Knuckle faster and stronger on Frozen targets, [[awk:3]] fills Rime Energy on summon."
+      ]
+     },
+     {
+      "title": "Frost skills",
+      "points": [
+       "[[skill:Snow Pop]] (charge action for a stronger snowball), [[skill:Freezy Pop]] and [[skill:Snow Step]] all apply Frost."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Chako Shield]]: her protection."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Summon Chako]], [[skill:Chako Spin]] and [[skill:Chako Knuckle]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Snow Pop]], [[skill:Freezy Pop]] and [[skill:Snow Step]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:6]].** [[awk:1]] and [[awk:3]] speed up her Chako attacks.",
+      "[[awk:2]], [[awk:4]] and [[awk:5]] are damage stats that matter little for a support."
+     ],
+     "karma": [
+      "Signature: [[karma:A Sparkling Tea Time]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Frost Additional Damage, and frost spikes when Chako is summoned. Second: [[karma:Rock-Splitting Ice]]."
+     ],
+     "gear": [
+      "3 [[set:Froststorm]] + 2 [[set:Battle Will]], with Max HP Up on the chest and Defense Up on the legs."
+     ]
+    },
+    "teams": [
+     "**Frostbite (B tier):** [[hero:Othello]] + [[hero:Cerese]] + Dana, the game's recommendation; picked for safety because patch 1.1.0 nerfed all three.",
+     "She's also an alternative for [[hero:Sion]] in **Crushing** as a shield support."
+    ]
+   }
   },
   "Cerese": {
    "archetype": "FROSTBITE",
@@ -4859,7 +5959,106 @@
     "Shattering Touch needs a Frozen enemy or an Ice Block, so part of her damage waits on setup.",
     "The Frostbite team is B tier and was nerfed in patch 1.1.0.",
     "A6's ice wall needs three skills lined up."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Cerese is a Frostbite sub-DPS and Frost starter: six skills apply Frost, and [[skill:Ice Storm]] (1528%) and [[skill:Frozen Spike]] also launch enemies Airborne. She's **A tier from mid-game on**.",
+     "Her finisher [[skill:Shattering Touch]] (1241%) shatters Ice Blocks and Frozen enemies, and [[skill:Frozen Needles]] (1161%) needs Frost or Airborne. [[skill:Frozen Road]] leaves an icy path that speeds up allies and slows enemies.",
+     "Frost is the least-measured status in the guide, so her Frost damage can't be quantified yet."
+    ],
+    "verdict": {
+     "level": "ok",
+     "label": "Good in Frost or Blazeflame",
+     "text": [
+      "She's A tier from mid-game on and fits two teams (Frostbite, and Blazeflame as an alternative). How she's obtained isn't recorded in the guide yet.",
+      "Her best awakening is [[awk:3]] (faster Frost build-up plus Knockdown); [[awk:5]] is worth about +17% damage while Frost is up."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Spread Frost, launch enemies, and shatter Ice Blocks or Frozen targets."
+     ],
+     "loop": [
+      "Frost with [[skill:Ice Ball]] (charge it for more Frost) and [[skill:Frozen Road]].",
+      "Use [[skill:Ice Storm]] for Frost and Airborne.",
+      "Fire [[skill:Frozen Needles]] at the Frosted or Airborne target.",
+      "Create an Ice Block with [[skill:Frozen Spike]], then shatter it with [[skill:Shattering Touch]]."
+     ],
+     "combos": [
+      {
+       "name": "Core combo",
+       "sequence": [
+        "Ice Storm",
+        "Frozen Needles",
+        "Frozen Spike",
+        "Shattering Touch"
+       ],
+       "note": "Ice Storm unlocks Frozen Needles; Frozen Spike's Ice Block lets Shattering Touch fire even without a Frozen enemy."
+      },
+      {
+       "name": "Blazeflame team combo",
+       "sequence": [
+        "Ice Storm",
+        "Kalsion/Explosion"
+       ],
+       "note": "Her launch unlocks [[hero:Kalsion]]'s Explosion."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Ice Storm]]",
+      "points": [
+       "Ice Storm (1528%) applies Frost and Airborne and works on the ground and in the air; her signature Karma sends the storm on to the nearest enemy, and [[awk:1]] makes it bigger and longer."
+      ]
+     },
+     {
+      "title": "Ice Blocks and shattering",
+      "points": [
+       "[[skill:Frozen Spike]] (810%) sends an Ice Block forward with Frost and Airborne; [[awk:6]] adds an ice wall when used on her icy path.",
+       "[[skill:Shattering Touch]] (1241%) needs an Ice Block or a Frozen enemy."
+      ]
+     },
+     {
+      "title": "Frost skills",
+      "points": [
+       "[[skill:Frozen Needles]] needs Frost or Airborne; [[awk:3]] adds Frost build-up and Knockdown.",
+       "[[skill:Glacial Wave]]'s 3rd spell is stronger; her Mastery lengthens Frozen Road and makes it apply Frost."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Ice Storm]] and [[skill:Frozen Needles]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Shattering Touch]] and [[skill:Frozen Spike]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Ice Ball]], [[skill:Glacial Wave]] and [[skill:Frozen Road]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:3]]**, with [[awk:5]] (about +17%) equally rated. [[awk:1]] is next."
+     ],
+     "karma": [
+      "Signature: [[karma:Eternal Blizzard]] (exclusive shop): +15% Attack Power, +425 Frost Additional Attack Power (about +9% Attack on Frosted targets at end-game), +20% Frost Additional Damage, and the travelling Ice Storm. Second: [[karma:Frozen Fortress]]."
+     ],
+     "gear": [
+      "3 [[set:Froststorm]] + 2 [[set:The Infiltrator]]."
+     ]
+    },
+    "teams": [
+     "**Frostbite (B tier):** [[hero:Othello]] + Cerese + [[hero:Dana]]; [[hero:Ornette]] can replace her.",
+     "She's the alternative for [[hero:Aria]] in **Blazeflame (A tier)**; the game recommends her with Kalsion."
+    ]
+   }
   },
   "Othello": {
    "archetype": "FROSTBITE",
@@ -5013,7 +6212,104 @@
     "Frozen Burst needs a Frozen enemy or an Ice Spear on the field.",
     "His best team, Frostbite, is B tier and was nerfed in patch 1.1.0.",
     "In the Crushing team he has no Frost partner, so his Frozen-only skills fire less often."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "him",
+    "summary": [
+     "Othello is the Frostbite main damage dealer, built for Frozen targets. [[skill:Frozen Stinger]] drives Ice Spears into enemies (they freeze and slow), [[skill:Ice Crown]] adds Frost and Knockdown, and [[skill:Frozen Burst]] (995%) shatters Frozen enemies and every Ice Spear on the field. He's **C tier early** and B after that.",
+     "Frozen Burst can also fire whenever an Ice Spear is on the field, so Frozen Stinger lets him use it without waiting for Frozen.",
+     "[[awk:1]] and his signature Karma both upgrade Frozen Stinger, and the two stack."
+    ],
+    "verdict": {
+     "level": "ok",
+     "label": "Situational",
+     "text": [
+      "He's B tier at best, and his team (Frostbite) is B tier and was nerfed in patch 1.1.0. How he's obtained isn't recorded in the guide yet.",
+      "His best awakening is [[awk:1]]; [[awk:5]] is worth about +18% while Frost is up."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Plant Ice Spears, build Frost, and shatter it all with Frozen Burst."
+     ],
+     "loop": [
+      "Plant Ice Spears with [[skill:Frozen Stinger]].",
+      "Use [[skill:Ice Grab]] on the Frosted target (Frost and Knockdown at 2+ stacks).",
+      "Use [[skill:Ice Crown]] for Frost, Knockdown and a spear prison.",
+      "Shatter with [[skill:Frozen Burst]]."
+     ],
+     "combos": [
+      {
+       "name": "Core combo",
+       "sequence": [
+        "Frozen Stinger",
+        "Ice Grab",
+        "Frozen Burst"
+       ],
+       "note": "Frozen Stinger's spears and Frost unlock Ice Grab, then Frozen Burst shatters the spears."
+      },
+      {
+       "name": "Knockdown combo",
+       "sequence": [
+        "Ice Crown",
+        "Ice Grab"
+       ],
+       "note": "On a knocked-down target Ice Grab applies both Frost and Knockdown."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Frozen Stinger]]",
+      "points": [
+       "Frozen Stinger (1130%) thrusts Ice Spears that slow the target; [[awk:1]] makes it faster and stronger, and his signature Karma strengthens its final attack."
+      ]
+     },
+     {
+      "title": "[[skill:Ice Crown]] and [[skill:Ice Grab]]",
+      "points": [
+       "Ice Crown (785%) applies Frost and Knockdown and builds a spear prison; [[awk:6]] drops an extra giant spear.",
+       "Ice Grab (1238%) needs Frost; at 2+ Frost stacks or on Knockdown it applies Frost and Knockdown."
+      ]
+     },
+     {
+      "title": "[[skill:Frozen Burst]]",
+      "points": [
+       "Needs a Frozen enemy or an Ice Spear on the field; [[awk:3]] adds range and damage."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Frozen Stinger]], [[skill:Ice Grab]] and [[skill:Frozen Burst]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Ice Crown]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Avenger Circle]], [[skill:Piercing Spike]] and [[skill:Half-Moon Cutter]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:1]]**, with [[awk:5]] (about +18%) equally rated. [[awk:2]] (+15% Attack Power) is worth about +9%."
+     ],
+     "karma": [
+      "Signature: [[karma:The Spear That Fells the Sun]] (exclusive shop): +10% Crit Damage, +475 Frost Additional Attack Power (about +13% Attack on Frosted targets at end-game), +20% Frost Additional Damage. Second: [[karma:Rock-Splitting Ice]]."
+     ],
+     "gear": [
+      "3 [[set:Froststorm]] + 2 [[set:The Infiltrator]]."
+     ]
+    },
+    "teams": [
+     "**Frostbite (B tier):** Othello + [[hero:Cerese]] + [[hero:Dana]]; picked for safety after the patch 1.1.0 nerfs.",
+     "**Crushing (B tier):** with [[hero:Alex]] and [[hero:Sion]] he has no Frost partner, so his Frozen-only skills fire less often."
+    ]
+   }
   },
   "Ornette": {
    "archetype": "THUNDERBOLT",
@@ -5167,7 +6463,106 @@
     "Judgment needs Shock first.",
     "Her +30% Crit Damage only applies to herself, not the team.",
     "B tier early-game."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Ornette is a Thunderbolt sub-DPS who turns Shock into Knockdown: four skills apply Shock, and [[skill:Judgment]] (1578%, needs Shock, enhanced at 2+ Shock stacks) Knocks the target down. She's **A tier from mid-game on**.",
+     "[[skill:Holy Circle]] gives her +30% Crit Damage, and her signature Karma makes [[skill:Holy Cross]] bigger with more hits when cast inside Holy Circle.",
+     "She fits three teams: Thunderbolt, and as an alternative in Frostbite and Crushing."
+    ],
+    "verdict": {
+     "level": "good",
+     "label": "Yes, she's free",
+     "text": [
+      "She comes from the Story Quests, is A tier from mid-game on, and slots into several teams.",
+      "Her best awakening is [[awk:5]] (+15% Shock Additional Damage, +10% Defense Ignore), about +17% damage while Shock is up."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Stack Shock, cash it in with Judgment, and fight inside Holy Circle for the Crit Damage."
+     ],
+     "loop": [
+      "Shock with [[skill:Holy Cutter]] and [[skill:Holy Cross]].",
+      "Place [[skill:Holy Circle]] (+30% Crit Damage for herself).",
+      "Use [[skill:Judgment]] on the Shocked target for Knockdown.",
+      "Use [[skill:Holy Grab]] on the knocked-down target for Shock and Airborne."
+     ],
+     "combos": [
+      {
+       "name": "Core combo",
+       "sequence": [
+        "Holy Cross",
+        "Judgment",
+        "Holy Grab"
+       ],
+       "note": "Shock unlocks Judgment, Judgment's Knockdown unlocks Holy Grab."
+      },
+      {
+       "name": "Holy Circle combo",
+       "sequence": [
+        "Holy Circle",
+        "Holy Cross",
+        "Judgment"
+       ],
+       "note": "With her signature Karma, Holy Cross cast inside Holy Circle is bigger with more hits."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Judgment]] and [[skill:Holy Grab]]",
+      "points": [
+       "Judgment (1578%) needs Shock, is enhanced at 2+ stacks and Knocks down; [[awk:6]] adds a pull and a Shock wave.",
+       "Holy Grab (1207%) needs Knockdown and applies Shock and Airborne, with a Mount Action on giant bosses."
+      ]
+     },
+     {
+      "title": "[[skill:Holy Circle]] and [[skill:Holy Cross]]",
+      "points": [
+       "Holy Circle (972%) creates a lightning zone and +30% Crit Damage for herself; [[awk:3]] makes it bigger and longer.",
+       "Holy Cross (867%) is a slow-moving cross; [[awk:1]] lets her aim it and makes it last longer."
+      ]
+     },
+     {
+      "title": "[[skill:Holy Cutter]] and Mastery",
+      "points": [
+       "Her Mastery adds an extra wide swing to Holy Cutter that applies Shock and Knockdown."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Judgment]] and [[skill:Holy Grab]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Holy Circle]] and [[skill:Holy Cross]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Pray]], [[skill:Shining Spin]] and [[skill:Holy Cutter]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:5]].** [[awk:2]] (+15% Attack Power) is worth about +9%; [[awk:3]] strengthens Holy Circle."
+     ],
+     "karma": [
+      "Signature: [[karma:Sacred Lightning Baptism]] (exclusive shop): +10% Crit Rate, +10% Crit Damage, +20% Shock Additional Damage, and the bigger Holy Cross. Second: [[karma:The One Chosen by Lightning]]."
+     ],
+     "gear": [
+      "3 [[set:Thunderrush]] + 2 [[set:The Infiltrator]]. Thunderrush's 3-piece needs Signal skills, so use them often."
+     ]
+    },
+    "teams": [
+     "**Thunderbolt (A tier):** [[hero:Tarte]] + Ornette + [[hero:Sion]]; all three apply Shock and turn it into Knockdown or Stun.",
+     "She's the alternative for [[hero:Cerese]] in **Frostbite** (the game recommends her with Othello) and for [[hero:Othello]] in **Crushing**."
+    ]
+   }
   },
   "Sion": {
    "archetype": "THUNDERBOLT",
@@ -5321,7 +6716,99 @@
     "His buffs only work inside the relic's area, so allies have to stay in it.",
     "Justice Fall needs Shock first.",
     "No healing or shields."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "him",
+    "summary": [
+     "Sion is a Thunderbolt support who buffs the team: [[skill:Bless]] gives +15% Attack (Orzea's Blessing) or +15% Defense (Orzea's Protection) to himself and allies in range. He's **A tier from mid-game on**.",
+     "He applies Shock with four skills and Knockdown with [[skill:Divine Smash]] and [[skill:Justice Fall]] (1551%, needs Shock), and both of those place the relic area that carries his buff.",
+     "His Mastery widens the buff areas and makes them apply Shock as well."
+    ],
+    "verdict": {
+     "level": "good",
+     "label": "Yes for Shock teams",
+     "text": [
+      "He's a Hero shop exchange (Fate's Invitation), A tier from mid-game on, and his team buff helps whoever is dealing the damage.",
+      "His best awakening is [[awk:1]]: Bless also gives +10% team Crit Rate (or +25% Crit Damage Reduction)."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Keep the relic area up under your team, add Shock and Knockdown, and hit hard with Justice Fall."
+     ],
+     "loop": [
+      "Shock with [[skill:Divine Crash]] (thrown relic).",
+      "Place the relic with [[skill:Divine Smash]] (Knockdown) or [[skill:Justice Fall]] (needs Shock).",
+      "Use [[skill:Bless]] for the team buff.",
+      "Keep allies inside the area."
+     ],
+     "combos": [
+      {
+       "name": "Core combo",
+       "sequence": [
+        "Divine Crash",
+        "Justice Fall",
+        "Divine Smash"
+       ],
+       "note": "Divine Crash Shocks, unlocking Justice Fall; Divine Smash recovers the relic at once and Knocks down."
+      },
+      {
+       "name": "Thunderbolt team combo",
+       "sequence": [
+        "Bless",
+        "Tarte/Thunderbolt"
+       ],
+       "note": "Bless buffs the team and applies Shock, which unlocks [[hero:Tarte]]'s Thunderbolt."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Bless]]: the buff",
+      "points": [
+       "Orzea's Blessing: +15% Attack Power; Orzea's Protection: +15% Defense; both for himself and allies in range, and Bless applies Shock.",
+       "[[awk:1]] adds +10% Crit Rate (or +25% Crit Damage Reduction). Whether the buff grows with skill level hasn't been checked; Charlotte's Invisible buff does."
+      ]
+     },
+     {
+      "title": "Relic skills",
+      "points": [
+       "[[skill:Divine Crash]] (838%) throws the relic and Shocks; [[skill:Divine Smash]] (1029%) recovers it at once and Knocks down.",
+       "[[skill:Justice Fall]] (1551%) needs Shock and Knocks down; [[awk:3]] adds a pull-in shockwave. His signature Karma restores Rage when he retrieves the relic."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Bless]] and [[skill:Justice Fall]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Divine Smash]] and [[skill:Divine Crash]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Divine Bolt]], [[skill:Air Bolt]] and [[skill:Sliding Bolt]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:1]].** The rest are small gains for a support; [[awk:5]] adds Shock damage and Crit Rate if he deals damage too."
+     ],
+     "karma": [
+      "Signature: [[karma:Fate Spoke to the Boy]] (exclusive shop): +10% Crit Rate, +10% Crit Damage, +20% Shock Additional Damage, and Rage back when retrieving the relic. Second: [[karma:The One Chosen by Lightning]]."
+     ],
+     "gear": [
+      "3 [[set:Thunderrush]] + 2 [[set:Battle Will]], with Max HP Up on the chest and Defense Up on the legs."
+     ]
+    },
+    "teams": [
+     "**Thunderbolt (A tier):** [[hero:Tarte]] + [[hero:Ornette]] + Sion; [[hero:Ryza]] can replace him.",
+     "**Crushing (B tier):** [[hero:Alex]] + [[hero:Othello]] + Sion, where his Knockdown opens Alex's Pounding Grab."
+    ]
+   }
   },
   "Tarte": {
    "archetype": "THUNDERBOLT",
@@ -5477,7 +6964,104 @@
     "Cure only works on an ally who has Stun, Airborne, Knockdown or Break.",
     "Holy Orb explosions need setup with Bolt Bubble and Shock hits.",
     "Thunderrush's 3-piece needs Signal skills, so she has to use them often."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Tarte is the damage slot of the Thunderbolt team, with a support side. [[skill:Bolt Bubble]] fills the field with Holy Orbs that explode when any Shock attack hits them, including teammates' attacks, and [[skill:Thunderbolt]] (needs Shock) adds Stun. She's **A tier from mid-game on**.",
+     "[[skill:Cure]] runs to an ally hit by a physical status (Stun, Airborne, Knockdown or Break), removes it and heals 10% of max HP; her signature Karma turns it into a lasting healing circle.",
+     "Orb damage takes setup: orbs have to be placed and then hit with Shock."
+    ],
+    "verdict": {
+     "level": "good",
+     "label": "Yes for Shock teams",
+     "text": [
+      "She's a Hero shop exchange (Fate's Invitation), A tier from mid-game on, and the lead of the A-tier Thunderbolt team.",
+      "Her best awakening is [[awk:5]] (+15% Shock Additional Damage, +10% Crit Damage), about +17% damage while Shock is up."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Place Holy Orbs, detonate them with Shock attacks, and Stun with Thunderbolt."
+     ],
+     "loop": [
+      "Place orbs with [[skill:Bolt Bubble]] and [[skill:Bolt Orb]].",
+      "Detonate them with [[skill:Spiky Bolt]] or [[skill:Cannon Bolt]].",
+      "Shock with [[skill:Lightning Shock]] (hold to extend it).",
+      "Use [[skill:Thunderbolt]] on the Shocked target for Stun; use [[skill:Cure]] when an ally is hit by a physical status."
+     ],
+     "combos": [
+      {
+       "name": "Orb combo",
+       "sequence": [
+        "Bolt Bubble",
+        "Cannon Bolt",
+        "Thunderbolt"
+       ],
+       "note": "Bolt Bubble places orbs, Cannon Bolt detonates them (Shock), and Thunderbolt follows on the Shocked target."
+      },
+      {
+       "name": "Thunderbolt team combo",
+       "sequence": [
+        "Bolt Bubble",
+        "Ornette/Holy Cross"
+       ],
+       "note": "[[hero:Ornette]]'s Shock attacks also detonate Tarte's orbs."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "Holy Orbs",
+      "points": [
+       "[[skill:Bolt Bubble]] (1541%) keeps generating orbs; her Mastery makes it last longer and lets her place orbs while jumping.",
+       "Any Shock attack from her or an ally detonates an orb for strong damage plus Shock."
+      ]
+     },
+     {
+      "title": "[[skill:Thunderbolt]] and [[skill:Lightning Shock]]",
+      "points": [
+       "Thunderbolt (1063%) needs Shock and applies Shock and Stun; [[awk:6]] raises its damage and Stun chance.",
+       "Lightning Shock (1068%) can be held longer; [[awk:3]] widens it and Stuns at full charge."
+      ]
+     },
+     {
+      "title": "[[skill:Cure]]",
+      "points": [
+       "Cleanses a physical status from an ally and heals 10% of max HP; her signature Karma leaves a healing, cleansing circle, and [[awk:1]] adds a shield."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Bolt Bubble]], [[skill:Thunderbolt]] and [[skill:Lightning Shock]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Cure]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Bolt Orb]], [[skill:Spiky Bolt]] and [[skill:Cannon Bolt]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:5]].** [[awk:6]] and [[awk:3]] improve her Stun; [[awk:4]] (Stun damage) is a small gain."
+     ],
+     "karma": [
+      "Signature: [[karma:A Helping Hand for Good Kids]] (exclusive shop): +15% Attack Power, +425 Shock Additional Attack Power (about +9% Attack on Shocked targets at end-game), +20% Shock Additional Damage, and the lasting Cure circle. Second: [[karma:The One Chosen by Lightning]]."
+     ],
+     "gear": [
+      "3 [[set:Thunderrush]] + 2 [[set:The Infiltrator]]."
+     ]
+    },
+    "teams": [
+     "**Thunderbolt (A tier):** Tarte + [[hero:Ornette]] + [[hero:Sion]]; [[hero:Ryza]] can take her slot."
+    ]
+   }
   },
   "Ryza": {
    "archetype": "THUNDERBOLT",
@@ -5630,7 +7214,99 @@
     "B tier early and mid-game.",
     "Flash needs her spear on the field first.",
     "She isn't a starter in any team; she's an alternative in Thunderbolt (for Tarte or Sion)."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Ryza is a Thunderbolt main damage dealer who fights with thrown spears: [[skill:Lightning Javelin]] throws one, and [[skill:Flash]] (1370%) teleports to it. Five skills apply Shock, and [[skill:Thunder Grab]] (1382%, needs Shock) adds Knockdown. She's **A tier at end-game**, B before that.",
+     "Her Mastery lets Thunder Grab activate on physical statuses as well as Shock, so it's rarely locked.",
+     "[[awk:1]] reshapes her kit: Flash becomes a charged multi-hit that strikes once per spear on the field and adds Airborne; [[awk:6]] raises Lightning Javelin's maximum stacks to 4."
+    ],
+    "verdict": {
+     "level": "ok",
+     "label": "Good later",
+     "text": [
+      "She's A tier at end-game but only an alternative in the Thunderbolt team. How she's obtained isn't recorded yet; her signature Karma was added to the exclusive shop in patch 1.1.0.",
+      "Her best awakening is [[awk:1]]; [[awk:5]] is worth about +18% while Shock is up."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Throw spears, teleport to them with Flash, and finish with Thunder Grab."
+     ],
+     "loop": [
+      "Throw [[skill:Lightning Javelin]] (aim mode available).",
+      "Teleport with [[skill:Flash]] to recover the spear and hit the area.",
+      "Use [[skill:Thunder Grab]] on the Shocked target (enhanced at 2+ Shock stacks).",
+      "Use [[skill:Stormbringer]] for Shock and Airborne."
+     ],
+     "combos": [
+      {
+       "name": "Spear combo",
+       "sequence": [
+        "Lightning Javelin",
+        "Flash",
+        "Thunder Grab"
+       ],
+       "note": "The spear unlocks Flash, both apply Shock, and Thunder Grab follows on the Shocked target."
+      },
+      {
+       "name": "Charged Flash (A1)",
+       "sequence": [
+        "Lightning Javelin",
+        "Lightning Javelin",
+        "Flash"
+       ],
+       "note": "With [[awk:1]] Flash strikes once per spear on the field; [[awk:6]] allows up to 4 stacks."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "Spears",
+      "points": [
+       "[[skill:Lightning Javelin]] (674%) throws a Shocking spear, with an aim mode; [[skill:Flash]] (1370%) needs a spear on the field.",
+       "Her signature Karma adds a powerful thrust after Flash when the attack key is pressed again."
+      ]
+     },
+     {
+      "title": "[[skill:Thunder Grab]] and [[skill:Stormbringer]]",
+      "points": [
+       "Thunder Grab (1382%) needs Shock (or a physical status, via her Mastery) and applies Shock and Knockdown.",
+       "Stormbringer (860%) applies Shock and Airborne; [[awk:3]] adds a lightning strike and a bigger, longer pillar."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Flash]], [[skill:Thunder Grab]] and [[skill:Lightning Javelin]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Stormbringer]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Volt Thrust]], [[skill:Lightning Flow]] and [[skill:Lightning Step]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:1]]**, with [[awk:5]] (about +18%) equally rated. [[awk:6]] pairs well with A1."
+     ],
+     "karma": [
+      "Signature: [[karma:The Scar Lightning Left Behind]] (exclusive shop, added in 1.1.0): +10% Crit Rate, +300 Shock Additional Attack Power (about +7% Attack on Shocked targets at end-game), +20% Shock Additional Damage. Second: [[karma:The One Chosen by Lightning]]."
+     ],
+     "gear": [
+      "3 [[set:Thunderrush]] + 2 [[set:The Infiltrator]]."
+     ]
+    },
+    "teams": [
+     "**Thunderbolt (A tier):** she replaces [[hero:Tarte]] or [[hero:Sion]] alongside [[hero:Ornette]], one swap at a time; build her like Tarte."
+    ]
+   }
   },
   "Castella": {
    "archetype": "BREAKER",
@@ -5777,7 +7453,107 @@
     "Much of her bonus damage (signature Karma, Ruinsbreaker, A5) is Break damage, which only counts while the enemy is in Break.",
     "Her own team, Breaker, is B tier because Astria and Lute are weaker partners.",
     "A2 (+15% Defense) adds nothing to her damage."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Castella is the Breaker main damage dealer and the guide's Super Armor breaker. Her combo is [[skill:Stun Blow]] (1835%, the third-biggest skill hit in the game), which needs the target's Super Armor broken and inflicts Stun, straight into [[skill:Upper Blow]] (1652%, needs Stun or Knockdown), which launches it Airborne. She's **A tier at every stage**.",
+     "Upper Blow lands on a Stunned target, so it gets the measured +100% Stun bonus on top of its own size.",
+     "Much of her bonus damage is Break damage: her signature Karma (+1100 Break Additional Attack Power, +20% Break Additional Damage), [[set:Ruinsbreaker]] and [[awk:5]]. Break's own hit bonus and how often enemies are in Break haven't been measured yet, so the guide can't put a number on that part."
+    ],
+    "verdict": {
+     "level": "good",
+     "label": "Yes, she's free",
+     "text": [
+      "She comes from the Story Quests and is A tier at every stage. Her own team (Breaker) is only B tier, but she also fits Gale and Crushing as an alternative.",
+      "Her best awakening is [[awk:1]]: Stun Blow gets more hits and also Knocks down."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Wear down the target's Super Armor, then cash in with Stun Blow into Upper Blow."
+     ],
+     "loop": [
+      "Pressure Super Armor with [[skill:Whirlwind]] (you can move while it spins; [[awk:6]] raises its Super Armor Break power).",
+      "Use [[skill:Stun Blow]] the moment Super Armor breaks.",
+      "Follow with [[skill:Upper Blow]] on the Stunned target.",
+      "Use [[skill:Howling]]; with [[awk:3]] it lowers the Defense of enemies it hits."
+     ],
+     "combos": [
+      {
+       "name": "Core combo",
+       "sequence": [
+        "Whirlwind",
+        "Stun Blow",
+        "Upper Blow"
+       ],
+       "note": "Whirlwind breaks Super Armor, Stun Blow Stuns, and Upper Blow (needs Stun or Knockdown) launches the target."
+      },
+      {
+       "name": "Breaker team combo",
+       "sequence": [
+        "Stun Blow",
+        "Astria/Bolt Bombard",
+        "Upper Blow"
+       ],
+       "note": "Castella's Stun also unlocks [[hero:Astria]]'s Bolt Bombard before Castella launches the target."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Stun Blow]] and [[skill:Upper Blow]]: her damage",
+      "points": [
+       "Stun Blow (1835%) needs broken Super Armor and Stuns; [[awk:1]] adds hits and Knockdown.",
+       "Upper Blow (1652%) needs Stun or Knockdown and launches the target Airborne."
+      ]
+     },
+     {
+      "title": "[[skill:Whirlwind]] and [[skill:Howling]]",
+      "points": [
+       "Whirlwind (1384%) is an area spin she can move during; [[awk:6]] makes it faster and stronger at breaking Super Armor.",
+       "Howling (1006%): her signature Karma turns it into a hold action that lasts longer; [[awk:3]] widens it and lowers enemy Defense."
+      ]
+     },
+     {
+      "title": "[[skill:Shoulder Crusher]] and Mastery",
+      "points": [
+       "Her Mastery adds distance and hits to Shoulder Crusher and reduces damage taken while it's used."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Stun Blow]] and [[skill:Upper Blow]]: her two biggest hits."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Whirlwind]] and [[skill:Howling]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Wild Blow]], [[skill:Wild Crash]] and [[skill:Shoulder Crusher]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:1]].** [[awk:3]] (team Defense cut) and [[awk:6]] (faster Whirlwind) come next; [[awk:5]]'s +15% Defense Ignore alone is worth about +9% damage.",
+      "[[awk:2]] (+15% Defense) adds nothing to her damage."
+     ],
+     "karma": [
+      "Signature: [[karma:Noisy Duet]] (exclusive shop): +20% Attack Power, +1100 Break Additional Attack Power and +20% Break Additional Damage, plus the held Howling. Second: [[karma:Destruction Is the Mother of Creation]]."
+     ],
+     "gear": [
+      "3 [[set:Ruinsbreaker]] + 2 [[set:The Infiltrator]]. Ruinsbreaker's 3-piece gives +10% Defense Ignore for 6 s when attacking enemies in Break."
+     ]
+    },
+    "teams": [
+     "**Breaker (B tier):** Castella + [[hero:Astria]] + [[hero:Lute]], the game's recommendation for her; B because only Castella is A tier.",
+     "She's also an alternative in **Gale (S tier)** for [[hero:Reina]] as a Break starter, and in **Crushing** for [[hero:Othello]]."
+    ]
+   }
   },
   "Astria": {
    "archetype": "BREAKER",
@@ -5961,7 +7737,107 @@
     "She runs on arrows, and Reload can only be used once some are spent.",
     "Her Break bonuses (signature Karma, Ruinsbreaker, A5) only count while the enemy is in Break, and none of her skills apply it.",
     "A3's Burn zone does nothing in her teams."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Astria is a Breaker sub-DPS with a stance: [[skill:Siege Assault]] plants her ballista for Precision Shot, which gives +40% Attack and longer range but restricts movement, and makes [[skill:Ballista Shot]] apply Stun. She's **C tier early** and B after that.",
+     "Her big hit [[skill:Bolt Bombard]] (1526%) needs Stun, so in Precision Shot she sets it up herself. She runs on arrows: [[skill:Reload]] refills them once some are spent.",
+     "Her Break bonuses (signature Karma, [[set:Ruinsbreaker]], [[awk:5]]) only count while the enemy is in Break, and none of her skills apply Break."
+    ],
+    "verdict": {
+     "level": "ok",
+     "label": "Situational",
+     "text": [
+      "She's a Hero shop exchange (Fate's Invitation) and B tier at best. She's a useful third Stun source in Stun teams, but not a priority.",
+      "Her best awakening is [[awk:6]] (more arrows and faster attacks in Precision Shot)."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Plant the ballista, Stun with Ballista Shot, and spend Bolt Bombard on the Stunned target."
+     ],
+     "loop": [
+      "Enter Precision Shot with [[skill:Siege Assault]].",
+      "Stun with [[skill:Ballista Shot]].",
+      "Use [[skill:Bolt Bombard]] on the Stunned target.",
+      "Use [[skill:Wide Shot]] (its arrows explode in Precision Shot) and [[skill:Reload]] when arrows run low."
+     ],
+     "combos": [
+      {
+       "name": "Core combo",
+       "sequence": [
+        "Siege Assault",
+        "Ballista Shot",
+        "Bolt Bombard"
+       ],
+       "note": "Precision Shot makes Ballista Shot Stun, which unlocks Bolt Bombard."
+      },
+      {
+       "name": "Reload burst (A1)",
+       "sequence": [
+        "Reload",
+        "Ballista Shot",
+        "Bolt Bombard"
+       ],
+       "note": "With [[awk:1]], the shot after Reload fires an enhanced arrow."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "Precision Shot",
+      "points": [
+       "[[skill:Siege Assault]] toggles Precision Shot (+40% Attack, longer range, restricted movement); her Mastery reloads 1 arrow when she Dodges in it.",
+       "Her signature Karma turns Ballista Shot into a charge action that fires all loaded arrows in one shot."
+      ]
+     },
+     {
+      "title": "[[skill:Bolt Bombard]] and [[skill:Wide Shot]]",
+      "points": [
+       "Bolt Bombard (1526%) needs Stun and uses no arrows.",
+       "Wide Shot (1082%) fires a fan of arrows, exploding in Precision Shot."
+      ]
+     },
+     {
+      "title": "Arrows",
+      "points": [
+       "Ballista Shot and [[skill:Stunt Shot]] use 1 arrow each; [[skill:Reload]] refills them and gives +20% movement speed; [[awk:6]] raises the arrow count."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Bolt Bombard]] and [[skill:Siege Assault]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Wide Shot]] and [[skill:Ballista Shot]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Stunt Shot]] and [[skill:Slide]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:6]].** [[awk:2]] (+15% Attack Power) is worth about +9%; [[awk:5]]'s +20% Attack Power is the biggest Attack bonus of any awakening.",
+      "[[awk:3]]'s Burn zone does nothing in her teams."
+     ],
+     "karma": [
+      "Signature: [[karma:Wildflowers Bloom Through the Wind]] (exclusive shop): +10% Crit Rate, +1125 Break Additional Attack Power, +20% Break Additional Damage, and the charged Ballista Shot. Second: [[karma:Destruction Is the Mother of Creation]]."
+     ],
+     "gear": [
+      "3 [[set:Ruinsbreaker]] + 2 [[set:The Infiltrator]]. [[set:Holy Arbiter]] is a close alternative for the 2-piece, since Bolt Bombard always hits a Stunned target."
+     ]
+    },
+    "teams": [
+     "**Bloodburst (A tier):** [[hero:Roxy]] + [[hero:Theresia]] + Astria, as the third Stun source.",
+     "**Amplitude** and **Breaker (B tier):** with [[hero:Theresia]] or [[hero:Castella]] plus [[hero:Lute]]."
+    ]
+   }
   }
  },
  "AWAKENINGS": {

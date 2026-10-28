@@ -1,3 +1,16 @@
+## 2026-10-28 — Claude: skill names no longer split by status colouring
+- `colourStatusWords()` leaves skill, Karma and set names that contain a status or archetype word (e.g. Venom Cutter, Poison Step, Frozen Burst, Defeating Poison with Poison) uncoloured, so only real status words are coloured in reviews, pros/cons and the Status Effects box.
+
+## 2026-10-28 — Claude: full reviews for all 20 heroes
+- The other 19 heroes get a full review in Charlotte's approved format: overview, verdict with how to get them, gameplay loop, 2–3 combos built from activation conditions, kit analysis, skill priorities, best awakening stop, Karma, gear and teams.
+- Every hero, skill, Karma, set and awakening link and every combo chip was checked to resolve (0 unresolved), with no script errors.
+- Numbers quoted come from the data:
+  - skill % from the codex;
+  - status bonuses from `DAMAGE_TESTS`;
+  - awakening values from the modelled ratings;
+  - Additional Attack Power as a share of each hero's end-game Attack from the Build tab totals.
+- Where a fact isn't known, the review says so: how Kalsion, Cerese, Othello and Ryza are obtained; Frost; Break; whether heal and buff values grow with skill level.
+
 ## 2026-10-28 — Claude: one behaviour for all hover cards
 - **Skill links** in reviews and pros/cons now use the same skill card as the older awakening and Karma skill links, with the level slider and the skill owner's archetype colour.
 - **Clicking any link on desktop jumps to it:**

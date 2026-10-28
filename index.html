@@ -789,11 +789,21 @@ function renderProfileStatus(h,data){
 
 // Pros & Cons (Review tab) from CHARACTER_PROFILE_DATA[hero].pros / .cons. Status and archetype names are coloured by archetype.
 const PC_ICON={pro:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M12 6.5v11M6.5 12h11"/></svg>',con:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M6.5 12h11"/></svg>'};
+// Names of skills, Karmas and sets that contain a status or archetype word (e.g. "Venom Cutter") are left uncoloured.
+let _protectedNames=null;
+function protectedNames(){if(_protectedNames)return _protectedNames;const words=[...Object.keys(STATUS_ARCHETYPE),...Object.keys(ARCH_COLORS)];const has=n=>words.some(w=>new RegExp('\\b'+w+'\\b').test(n));
+ const names=new Set();Object.values(CHARACTER_PROFILE_DATA).forEach(p=>(p.skills||[]).forEach(sk=>{const n=String(sk.skill||'').replace(/\s*\(Lv\.?\s*\d+\)\s*$/,'').replace(/\s*\([^)]*\)\s*$/,'').trim();if(n&&has(n))names.add(n)}));
+ KARMA_DATA.forEach(k=>{if(has(k.name))names.add(k.name)});GEAR_DATA.forEach(g=>{if(has(g.name))names.add(g.name)});
+ return _protectedNames=[...names].sort((a,b)=>b.length-a.length);}
 function colourStatusWords(text){
  const words=[...Object.keys(STATUS_ARCHETYPE),...Object.keys(ARCH_COLORS)].sort((a,b)=>b.length-a.length);
  if(!words.length)return profileEsc(text);
- const rx=new RegExp('\\b('+words.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')\\b','g');
- return profileEsc(text).replace(rx,w=>{const col=ARCH_COLORS[STATUS_ARCHETYPE[w]||w];return col?`<b style="color:${col}">${w}</b>`:w});
+ const esc=x=>x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+ const rx=new RegExp('\\b('+words.map(esc).join('|')+')\\b','g');
+ const prot=protectedNames();const keep=[];let t=profileEsc(text);
+ if(prot.length)t=t.replace(new RegExp('\\b('+prot.map(n=>esc(profileEsc(n))).join('|')+')(?![\\w])','g'),m=>{keep.push(m);return '\u0000'+(keep.length-1)+'\u0000'});
+ t=t.replace(rx,w=>{const col=ARCH_COLORS[STATUS_ARCHETYPE[w]||w];return col?`<b style="color:${col}">${w}</b>`:w});
+ return t.replace(/\u0000(\d+)\u0000/g,(m,i)=>keep[i]);
 }
 function renderProfileProsCons(data,hero){
  [['profilePros',data.pros,'pro'],['profileCons',data.cons,'con']].forEach(([id,list,kind])=>{const ul=$(id);if(!ul)return;
