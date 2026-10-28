@@ -608,7 +608,7 @@ function makeRoleFilters(){
 }
 // Skill text: damage values bold, status effects bold in their archetype colour, Activation Conditions in red.
 function formatSkillText(text){
- const S=STATUS_ARCHETYPE||{};const names=Object.keys(S).sort((a,b)=>b.length-a.length).join('|')||'(?!)';
+ const S=STATUS_ARCHETYPE||{};const names=[...new Set([...Object.keys(S),...(ARCHES||[])])].sort((a,b)=>b.length-a.length).join('|')||'(?!)';
  const re=new RegExp([
   '(Attack Power )(\\d+(?:\\.\\d+)?%)( Damage)',
   '\\b('+names+')( \\d+ stacks?(?: or more)?)\\b',
@@ -618,7 +618,7 @@ function formatSkillText(text){
   '(\\[[^\\]]+\\]|Super Armor|Taunt)',
   '(\\d+(?:\\.\\d+)?(?:%| seconds?\\b| times(?: or more)?))'
  ].join('|'),'gi');
- const col=w=>{const key=Object.keys(S).find(k=>k.toLowerCase()===String(w).toLowerCase());return ARCH_COLORS[S[key]]||'';};
+ const col=w=>{const key=Object.keys(S).find(k=>k.toLowerCase()===String(w).toLowerCase());const arch=Object.keys(ARCH_COLORS||{}).find(k=>k.toLowerCase()===String(w).toLowerCase());return ARCH_COLORS[S[key]||arch]||'';};
  const st=(w,inner)=>`<b class="sk-status" style="--sk-color:${col(w)}">${profileEsc(inner)}</b>`;
  const line=s=>{let out='',last=0,m;re.lastIndex=0;
   while((m=re.exec(s))){out+=profileEsc(s.slice(last,m.index));last=re.lastIndex;
