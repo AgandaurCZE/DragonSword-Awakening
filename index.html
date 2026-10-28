@@ -237,7 +237,12 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .gear-controls input{flex:1;min-width:180px;background:#34363e;color:#f5f6f9;border:1px solid #444954;padding:11px 13px;font:inherit;border-radius:2px}
 .gear-filter{background:#34363e;color:#d9dce5;border:1px solid #444954;padding:10px 13px;cursor:pointer;font-weight:700}
 .gear-filter.active{background:#168fcb;color:white;border-color:#168fcb}
-.gear-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.gear-section{margin:0 0 26px}
+.gear-section-title{display:flex;align-items:center;gap:16px;margin:2px 0 16px;color:#dfe7f2;font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.gear-section-title:before,.gear-section-title:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,#4d5868)}
+.gear-section-title:after{background:linear-gradient(90deg,#4d5868,transparent)}
+.gear-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.gear-section-general .gear-card:nth-child(3){grid-column:1 / -1;width:calc(50% - 8px);justify-self:center}
 .gear-card{min-width:0;background:#292b32;border:1px solid #383b44;box-shadow:0 1px 2px #0002;scroll-margin-top:16px}
 .gear-card-head{display:flex;align-items:center;gap:12px;min-height:70px;padding:9px 13px;background:#34363e;border-bottom:1px solid #3e414b}
 .gear-icon-wrap{width:58px;height:58px;flex:0 0 58px;display:grid;place-items:center;background:linear-gradient(135deg,#253b43,#2b6a79);border-radius:2px}
@@ -246,10 +251,10 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .gear-source{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.035em;color:#c3d2de}
 .gear-effects{padding:11px 13px 13px;display:grid;gap:8px}
 .gear-effect{font-size:13px;line-height:1.55;color:#dbe0e9}
-.gear-effect b{color:#e8edf4;margin-right:5px}
+.gear-effect b{color:#e8edf4;margin-right:5px}.gear-effect b.sk-status{color:var(--sk-color,#fff)}
 .gear-card[data-source="Blacksmith"] .gear-icon-wrap{background:linear-gradient(135deg,#283644,#3b4f6c)}
 .gear-empty{padding:26px;text-align:center;color:#aeb6c5;background:#292b32;border:1px solid #383b44}
-@media(max-width:800px){.gear-page{padding:16px 12px}.gear-grid{grid-template-columns:1fr}.gear-controls{flex-wrap:wrap}.gear-controls input{flex-basis:100%}}
+@media(max-width:800px){.gear-page{padding:16px 12px}.gear-grid{grid-template-columns:1fr}.gear-section-general .gear-card:nth-child(3){grid-column:auto;width:auto;justify-self:stretch}.gear-controls{flex-wrap:wrap}.gear-controls input{flex-basis:100%}}
 .profile-gear-link{cursor:pointer;transition:border-color .15s,transform .15s}
 .profile-gear-link:hover{border-color:#36b4df;transform:translateY(-1px)}
 .profile-gear-link .profile-build-icon{padding:0;overflow:hidden;background:linear-gradient(135deg,#253b43,#2b6a79)}
@@ -302,7 +307,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <section class="gear-page" id="gearPage" hidden>
  <div class="gear-heading"><h2>GEAR SETS</h2><span id="gearCount">Showing 12 Gear Sets</span></div>
  <div class="gear-controls"><input id="gearSearch" type="search" placeholder="Search gear sets..." autocomplete="off" aria-label="Search gear sets"><button class="gear-filter active" data-gear-filter="all">✱ All</button><button class="gear-filter" data-gear-filter="Normal Dungeons">Normal Dungeons</button><button class="gear-filter" data-gear-filter="Blacksmith">Blacksmith</button><button class="gear-filter" id="gearReset">× Reset</button></div>
- <div class="gear-grid" id="gearGrid"></div>
+ <div id="gearGrid"></div>
  <p class="profile-note">Gear names, acquisition and effects are transcribed from the workbook’s “Gear Sets &amp; Acquisition” sheet. The three general sets are grouped as Normal Dungeons; the other nine are crafted at the Blacksmith.</p>
 </section>
 
@@ -689,14 +694,24 @@ function renderGear(){
  $('gearCount').textContent=`Showing ${rows.length} of ${GEAR_DATA.length} Gear Sets`;
  const root=$('gearGrid');root.innerHTML='';
  if(!rows.length){root.innerHTML='<div class="gear-empty">No gear sets match this search.</div>';return}
- rows.forEach(g=>{
-  const card=document.createElement('article');card.className='gear-card';card.id='gear-set-'+g.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');card.dataset.source=g.source;
-  const archetype=gearArchetype(g);
-  const color=ARCH_COLORS[archetype]||'';
-  if(color)card.style.setProperty('--gear-arch-color',color);
-  card.innerHTML=`<div class="gear-card-head"><div class="gear-icon-wrap"><img src="${g.icon}" alt="${profileEsc(g.name)} icon"></div><div><h3>${profileEsc(g.name)}</h3><div class="gear-source">${profileEsc(g.source)}</div></div></div><div class="gear-effects"><div class="gear-effect"><b>(2) Piece</b> ${formatSkillText(g.two)}</div><div class="gear-effect"><b>(3) Piece</b> ${formatSkillText(g.three)}</div></div>`;
-  root.append(card);
- });
+ const general=rows.filter(g=>g.source==='Normal Dungeons');
+ const archetypeSets=rows.filter(g=>g.source!=='Normal Dungeons');
+ const makeSection=(title,items,isGeneral)=>{
+  if(!items.length)return;
+  const section=document.createElement('section');section.className='gear-section'+(isGeneral?' gear-section-general':' gear-section-archetype');
+  const heading=document.createElement('h3');heading.className='gear-section-title';heading.textContent=title;section.append(heading);
+  const grid=document.createElement('div');grid.className='gear-grid';
+  items.forEach(g=>{
+   const card=document.createElement('article');card.className='gear-card';card.id='gear-set-'+g.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');card.dataset.source=g.source;
+   const archetype=gearArchetype(g);const color=ARCH_COLORS[archetype]||'';
+   if(color)card.style.setProperty('--gear-arch-color',color);
+   card.innerHTML=`<div class="gear-card-head"><div class="gear-icon-wrap"><img src="${g.icon}" alt="${profileEsc(g.name)} icon"></div><div><h3>${profileEsc(g.name)}</h3><div class="gear-source">${profileEsc(g.source)}</div></div></div><div class="gear-effects"><div class="gear-effect"><b>(2) Piece</b> ${formatSkillText(g.two)}</div><div class="gear-effect"><b>(3) Piece</b> ${formatSkillText(g.three)}</div></div>`;
+   grid.append(card);
+  });
+  section.append(grid);root.append(section);
+ };
+ makeSection('General sets',general,true);
+ makeSection('Archetype sets',archetypeSets,false);
 }
 $('gearSearch').addEventListener('input',renderGear);
 document.querySelectorAll('[data-gear-filter]').forEach(b=>b.addEventListener('click',()=>{activeGearFilter=b.dataset.gearFilter;document.querySelectorAll('[data-gear-filter]').forEach(x=>x.classList.toggle('active',x===b));renderGear()}));
