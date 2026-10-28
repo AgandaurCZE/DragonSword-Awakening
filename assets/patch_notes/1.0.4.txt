@@ -1,0 +1,93 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.0.4 has been applied.
+Details of the update are as follows.
+
+
+
+■ Localization
+
+    Fixed several items where translations were unnatural
+    Fixed an issue where certain vowels/characters were missing in the early tutorial guide text under the Thai language environment
+
+
+
+■ Combat & Controls
+
+    Fixed an issue where Summon Chako's rage was being consumed when Dana used Chako Spin
+    Fixed a tooltip error on Dana's jump attack skill Freezy Pop
+    Fixed an issue where consecutive Air Stomps in place were not possible for Roxy's 3rd Awakening
+    Adjusted the cooldown of Roxy's Aerial Re-jump action in 3rd Awakening from 3s to 1.5s
+    Fixed an issue where enemies were not properly lifted when Eileen applied the Airborne status effect using Barraging Spear
+    Fixed an issue where fall damage was applied when re-mounting or boost-jumping after dismounting from the Abyssal Direwolf
+
+
+
+■ Balance
+
+    The following items are now available for purchase from the Gold Shop:
+    - Lowest-Grade Monster Essence / Hide / Bone Fragment / Carapace / Claw
+    Increased EXP and added rewards for defeating World Bosses:
+    - Horg the Roamer, Andras the Cave Predator, Pakirus the Specter of Thirst: Mercenary Corps EXP 800, Adventurer's Emblem ×35
+    - Scraping Brack, Karon the Tyrant, Hagen the Dark Necromancer: Mercenary Corps EXP 1200, Chronograph of Ages ×3
+    - Hungry Eye Octavia, Lavanis Feather of Burning Ashes, Barpedin the Crushing Darkness: Mercenary Corps EXP 1600, Fragment of Memory ×50
+    Increased the reward from Sudden Missions to Fragment of Sacred Light ×60
+
+
+
+■ Quests
+
+    Fixed an issue where Adventure Quest 48. Siege got stuck on a black screen after the cutscene
+    Fixed an issue where lip-sync was not applied to some character dialogue during Adventure Quest 39. Where the Giant Sleeps
+    Fixed an issue where the NPC was not displayed during the Weldon Area Quest, though the speech bubble appeared
+    Fixed an issue where the Area Quest could not proceed if Igniter Snickrak was defeated before completing certain Area Quests
+    Fixed an issue in Adventure Quest 59. Tomb of Greed where Johnny's icon was displayed as Lute's icon when using cooking
+    Fixed an issue where certain NPCs were not displayed during Dana's Hero Quest
+    Fixed an issue in Adventure Quest 35. Steelheart Fortress where players could not move if they failed the mini-game outside the fortress
+    Fixed an issue where players could not move if they attempted the puzzle mini-game without completing Marmot King Hog's Bond Quest [Fly, Familiar!]
+    Removed some of the placed Harpy monsters during Adventure Quest 37. The Looming Shadow
+    Fixed an issue where certain character sounds were not affected by option settings during specific quests
+
+
+
+■ System
+
+    Fixed an issue where the skill description scroll did not work in the Hero Codex
+    Fixed an issue where Castella's voice played when entering the active character codex in the Hero Codex
+    Fixed an issue where the Depth of Field option was not being applied
+    Fixed an issue in controller environments where refresh rate options above 120Hz could not be toggled
+    Fixed an issue where re-entering the Hunt Dungeon and Trait Dungeon lists did not automatically return to the previous list position
+    Fixed an issue where the difficulty setting for Merc Guide → Special Challenges could not be operated with a controller
+    Fixed an issue where the language displayed on the field did not change when the text language was changed in the options
+    Fixed an issue where the treasure chest's locked state was not released upon defeating Snark the Hungry Pouchfang
+
+
+
+■ Graphics
+
+    Fixed an issue where the back of the character's hair appeared unnatural when Cerese wore the Ophelia's Oath costume
+    Fixed an issue where some buildings in the town appeared abnormally
+    Fixed an issue where the back of Charlotte's hair was displayed abnormally on her hood
+    Fixed an issue where the character could pass through walls at specific locations in the Shadowed Woods
+    Fixed an issue where the character fell through the ground in some areas of the world
+
+
+
+■ Miscellaneous
+
+    Fixed an issue where the [30-second Aerial Monster Attack] achievement was counted even when the monster fell into water
+    Fixed an issue where certain underwater treasure chests could not be opened in specific areas
+    Fixed an issue where the first-time reward from the Tower of Trials appeared unclaimed until reconnecting
+    Fixed an issue where camera speed applied differently when moving the right stick up/down on a controller
+    Fixed an issue where in-game mouse sensitivity was switched to controller sensitivity after using a controller in the UI
+    Fixed an issue where combat background music played even when not in combat upon moving to the harpy-roamed area in the eastern world
+    Fixed an issue where the UI disappeared and the hero could not be controlled when moving to the Merc Guide from the dungeon reward source on the world map
+    Fixed an intermittent issue where the room could not be found when entering multiplayer via invite code
+
+
+
+
+
+Thank you.
+
+— The DragonSword : Awakening Team

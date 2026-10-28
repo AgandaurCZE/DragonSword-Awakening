@@ -1,0 +1,22 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.0.5 has been applied.
+Details of the update are as follows.
+
+
+
+■ Quests
+
+    Fixed an issue where progression was blocked at the "Talk to Ornette" step during the following Adventure Quests:
+    - Adventure Quest 15. Ornette's Request
+    - Adventure Quest 16. Preparing for the Funeral
+    - Adventure Quest 17. Experience as a Special Diplomatic Envoy
+    - Adventure Quest 18. Despair and Hope
+
+
+
+
+
+Thank you.
+
+— The DragonSword : Awakening Team

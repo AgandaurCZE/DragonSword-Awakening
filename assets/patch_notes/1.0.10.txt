@@ -1,0 +1,101 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.0.10 has been applied.
+Details of the update are as follows.
+
+
+
+■ Localization
+
+    Fixed items where translations were unnatural
+
+
+
+■ System
+
+    Improved the inventory menu to allow discarding items in specific categories (Cooking, Materials, Cooking Ingredients, Runes)
+    Improved certain menus to display item info when clicking item slots
+    - Heroes, Mercenary Corps, Merc Guide, World Map, Tower of Trials, Crafting, Synthesis, Shop Purchase, Reward Popups
+    Improved control scheme for the Team settings menu
+    - The [Deploy] button no longer appears when the team composition has not been changed
+    - Removed the action of entering team detail settings by individually selecting heroes with a controller
+    - Existing heroes are no longer automatically removed from the team composition when entering team detail settings
+    Fixed multiplayer lobbies to disband the party when the party leader is unresponsive for a long time
+    Added hero acquisition cinematics
+    - Cinematics can be viewed when heroes are acquired as quest rewards or from the Exchange Shop
+    - Cinematics do not play when navigating to the Codex from a quest reward to check hero details
+
+
+
+■ Action
+
+    Fixed an issue where the aim target of projectiles was misdirected when certain objects were placed
+    - Othello's [Ice Spear] object
+    - Cerese's [Ice Pillar]
+    - [Relic] placed by Sion
+    - Charlotte's [Clone]
+    Removed camera rotation sensitivity changes when using specific hero skills
+    - Alex [Defensive Stance], [Dodge Combo]
+    - Aria [Air Bomb]
+    - Astria (with dedicated Karma equipped) [Ballista Shot] charge action during [Precision Shooting] mode
+    - Castella [Howling]
+    - Dana [Snow Step]
+    - Johnny [Fatal Sting]
+    - Ornette (with first Awakening unlocked) [Holy Cross]
+    - Tarte [Lightning Shock]
+
+
+
+■ Balance
+
+    Improved Familiar stamina to increase by 30 for every 10 levels the Mercenary Corps gains
+    Reduced the difficulty of the World Boss Hagen encounter
+    - Reduced HP recovery when failing to break the astral projection pattern (35% → 20%)
+    - Reduced Super Armor value of the doppelgangers Hagen enters in astral state (500 → 50)
+    ※ Terrain improvements for the Hagen encounter are planned for a future update.
+
+
+
+■ Quests
+
+    Fixed an issue during Adventure Quest 45. Mercenary and Knight where the dialogue overlap area with Eileen was awkward
+    Fixed an issue where a certain step location was displayed in a different place during Bond Quest - Marmot King Hog [Path of the Hero 3]
+    Fixed an issue during Hero Quest - Kalien [Spirit of the Mistflower Village] where Abaddon, Wraith of Destruction appeared upon completing a certain step
+    Fixed an intermittent issue during Adventure Quest 48. Steelheart Fortress Siege scenario dungeon where the Ogre Slaughterer appeared first
+    Fixed an issue during Area Quest [Before the Order Arrives] where NPC Gemma disappeared immediately after the conversation
+
+
+
+■ Bug Fixes
+
+    Fixed an issue where Reina failed to land and remained permanently airborne when killed during an aerial dodge attack
+    Improved an issue where frame drops occurred periodically after the previous patch
+    Fixed an issue where titles were not applied after reconnecting
+    Fixed an issue where a purchased hero was not active when navigating back to the Codex after purchasing a specific hero from the Exchange Shop
+    Fixed an issue where the first-time reward remained in the dungeon reward list even after being obtained
+    Fixed an issue where the quest completion popup and content unlock notice appeared simultaneously
+    Fixed an issue where auto-advance dialogue did not function properly when long lines were displayed
+    Fixed an issue where certain treasure map images displayed a different location than the actual one
+    - [Treasure Map of the Strong Horde], [Treasure Map of the Stone Spine], [Treasure Map of the Highlands]
+    Fixed an issue where the enhancement level/level/Rune name displayed differently after navigating to the Equipment/Karma/Rune management button and going back in the Inventory menu
+    Fixed an issue where the reading material on the 2nd floor of the Silver Ford Outpost Watchtower could not be viewed with short characters
+    Fixed an issue where Cerese remained in a T-pose after completing the marmot catching mini-game with the [Ice Storm] skill
+    Fixed an issue in Hunt [Ghoul Greed] where the Ghoul Greed's target was not released after colliding with an object
+    Fixed an issue where the special achievement [Assassin Grid] could only be unlocked on Normal difficulty of [Ghoul Greed]
+    Fixed an issue where users who had already earned cumulative Renown rewards appeared eligible to receive Renown rewards again when new achievements were added
+    Fixed an issue where the pickup object was not dropped when riding an updraft while holding it
+    Fixed an issue during Adventure Quest 10. Temporary Alliance where the character got stuck in the ground when devoured by the dragon
+    Fixed an intermittent issue during Adventure Quest 10. Temporary Alliance where the dragon did not despawn
+    Fixed an issue in Raid [Chase Toward the End] where the character was moved to the Phase 2 area after being wiped out in Phase 1 during solo challenge entry
+    Fixed an issue in Raid [Chase Toward the End] where players could move outside the raid map
+    Fixed an issue in Raid [Chase Toward the End] where players could not return to the combat area if they moved backwards immediately after entering the top floor
+    Fixed an intermittent issue where rewards could not be received in multiplayer
+    Fixed an issue where the guest's ready status was maintained when re-entering the same lobby after leaving in ready status
+    Fixed an issue where the guest user's screen camera focus was zoomed in when entering the map in multiplayer
+    Fixed an issue where players could move inside the terrain in the cave beneath the Barren Trade Post
+
+
+
+
+
+Thank you.

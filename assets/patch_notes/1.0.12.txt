@@ -1,0 +1,35 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.0.12 has been applied.
+Details of the update are as follows.
+
+
+
+■ Localization
+
+    Fixed an issue where the description of the number of attacks that fire [Bomb Arrows] in Aria's basic attack skill description was not being updated
+    Fixed an issue where the default weapon description of Theresia's costume was displayed as Ornette's costume description
+
+
+
+■ Action
+
+    Astria
+    - Fixed an issue where a cooldown was being applied to the Slide skill when [Blazing Lightning] (Master Skill) was learned
+    - Fixed an issue where the hero could not rotate while using the Slide skill
+
+
+
+■ Bug Fixes
+
+    Fixed an issue where Super Armor was abnormally high during the ceiling-hanging pattern of the World Boss [Andras the Cave Predator]
+    Fixed an issue where a hero became invincible when switching occurred simultaneously with Familiar dismount from being hit
+    Fixed an issue where the crafting result popup could not be closed when the crafting cinematic was played to completion during 5-Star Equipment crafting
+
+
+
+
+
+Thank you.
+
+— The DragonSword : Awakening Team

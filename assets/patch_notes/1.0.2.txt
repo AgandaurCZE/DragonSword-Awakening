@@ -1,0 +1,36 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.0.2 has been applied.
+Details of the update are as follows.
+
+
+
+■ Graphics Options
+
+    Fixed an issue where the screen resolution became excessively small after verifying integrity of game files
+    Fixed a crash that occurred when enabling the Frame Generation option
+    Fixed an issue where changes to the FPS Limit setting were not saved
+
+
+
+■ Quests
+
+    Fixed an issue where alternate characters could not be used in Adventure Quest 29
+    Fixed an issue where Scenario Mode would not be lifted upon death in Adventure Quest 29
+    Fixed a bug that prevented progression of the Veteran Promotion Quest
+    Fixed an issue in [Area Quest] Novice Mercenary Dain where the bag could not be interacted with after re-accepting the quest following a failure
+    Fixed an issue where the game would shut down due to abnormal play during Ornette's Bond Quest
+
+
+
+■ Miscellaneous
+
+    Fixed several other crash issues
+
+
+
+
+
+Thank you.
+
+— The DragonSword : Awakening Team

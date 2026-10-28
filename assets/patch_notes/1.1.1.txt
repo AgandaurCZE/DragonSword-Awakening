@@ -1,0 +1,26 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.1.1 has been applied.
+This update fixes the three issues previously announced as Known Issues.
+
+
+
+■ Bug Fixes
+
+    Fixed an issue where players who had cleared Adventure Quest [53. Reunion] could not level up [Ryza] from the Hero menu on their first login
+    Fixed an issue where the step to talk to Reina could not be completed in Adventure Quest [45. Mercenaries and Knights]
+    Fixed an issue where currency obtained as Hunt Rank rewards could not be used properly
+        As part of this fix, Hunt Ranks, scores, and rewards have been reset
+        First-time Hunt Rank achievement rewards can be earned again
+
+
+
+■ Changes Applied in Version 1.1
+🔗 Update Notes 1.1.0
+
+
+
+We apologize for any inconvenience caused by the Hunt Rank reset.
+Thank you.
+
+— The DragonSword : Awakening Team

@@ -1,0 +1,57 @@
+Hello, this is the DragonSword : Awakening team.
+
+※ This notice applies to players who played the pre-launch build of DragonSword : Awakening.
+※ Players starting the game for the first time from today's official launch are NOT affected.
+
+With today's patch, some progression data from the pre-launch build will be reset.
+We ask for your understanding regarding the inconvenience of having to rediscover or progress through the affected content again.
+
+The details of the changes are as follows.
+
+
+
+■ Cooking Recipes
+
+    Some discovered cooking recipes will be reset and will need to be discovered again.
+    Recipes discovered after this patch will be saved normally.
+
+
+
+■ Mini-Games
+
+    Some mini-game records will be reset, and you will be able to play them again. However, rewards already claimed cannot be received again.
+    Mini-game progress after this patch will be saved normally.
+
+
+
+■ Titles / Achievements
+
+    All titles will be reset except for those obtained through Mercenary Corps promotions.
+    However, achievement progression values (progress) will be preserved, so you can obtain the corresponding titles again by claiming the achievement rewards.
+    Accumulated Fame stage rewards will also be reset and can be claimed again.
+    Achievement rewards and titles obtained after this patch will be saved normally.
+
+
+
+■ Karma Codex
+
+    Some Karma Codex entries will be reset, and the corresponding Karma will need to be collected again to be recorded in the codex.
+    Karma obtained after this patch will be saved normally.
+
+
+
+■ Sudden Missions
+
+    Discovery information for Sudden Missions in the Merc Guide will be reset, and locations will need to be rediscovered to be saved again.
+    Sudden Mission discovery and progress records after this patch will be saved normally.
+
+
+
+
+
+Once again, we apologize for the inconvenience.
+We will continue to work toward providing a better play experience.
+
+Thank you.
+
+— The DragonSword : Awakening Team

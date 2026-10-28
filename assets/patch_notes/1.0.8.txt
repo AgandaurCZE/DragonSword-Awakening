@@ -1,0 +1,21 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.0.8 has been applied.
+Details of the update are as follows.
+
+
+
+■ Bug Fixes
+
+    Fixed an issue where the character was switched to non-combat state when using dash by holding the dodge key
+    Fixed an issue where Sion's Relic placed on the field was retrieved when using dash by holding the dodge key
+    Fixed an issue where Theresia's [Inquisition] state was ended during combat when using dash by holding the dodge key
+    Fixed an issue where Kalsion's [Royal Flame] state was ended during combat when using dash by holding the dodge key
+
+
+
+
+
+Thank you.
+
+— The DragonSword : Awakening Team

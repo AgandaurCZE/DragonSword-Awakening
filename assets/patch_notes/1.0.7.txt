@@ -1,0 +1,144 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.0.7 has been applied.
+Details of the update are as follows.
+
+
+■ Localization
+
+    Fixed items where translations were unnatural
+
+    Multilingual UI display improvements:
+    - Removed the purchase quantity display and expanded the item name field in the Exchange Shop panel accessed via town merchants
+    - Fixed an issue where the level indicator and boss name overlapped in [Hunt > Barduk] on certain resolutions
+    - Fixed an issue where NPC names appeared excessively small in the chat log when the name was long
+    - Fixed an issue where text on certain Dungeon Field Gates was being truncated
+    - Fixed an issue where category names in item tooltips encroached on the icon area
+
+
+■ System
+
+    Added [Quick Entry] feature to multiplayer content
+    ※ The [Retry] feature that was being prepared alongside this has been delayed to next week's patch due to issues discovered during implementation.
+
+    Added a setting to configure the lobby search range for multiplayer matching
+
+    Increased the maximum number of saved map pins on the World Map (100 → 200)
+
+    Expanded the maximum Rune inventory capacity (200 → 500)
+
+    Improved the inventory to display the number of Runes owned
+
+    Removed the usage limit on the Statue of Organa, allowing unlimited use
+
+    Improved dungeon entry and wipe recovery so players start with 100% HP and all fallen characters are revived
+
+    Improved menu shortcut keys so that pressing the same key again closes the menu (World Map, Heroes, Team, Inventory, Quests, Merc Guide, Exchange Shop, Help, Settings)
+
+    Added a setting to allow dismounting from Familiars using the attack button
+
+    Added a setting to configure whether sound plays while the game is inactive (in background)
+
+
+■ Improvements
+
+    4-Star Rune Synthesis can now yield 5-Star Runes
+
+    Familiars and characters now maintain their dash state even when jumping or falling during a dash
+
+
+■ Quests
+
+    Fixed an issue in Hero Quest - Kalien where progression occurred via an Orbis Castle NPC
+
+    Fixed an issue in Adventure Quest 55 where treasure chests overlapping the quest path were not being hidden
+
+    Fixed an issue in Bond Quest - Marmot King Hog where the weather became fixed during progression
+
+    Fixed an intermittent issue where progression was blocked during the [50 m/s] quest
+
+    Fixed an intermittent issue in Adventure Quest 13 where the black screen state persisted after failing Scenario Mode
+
+    Fixed an issue in Adventure Quests 15-18 where lip-sync was not applied to Ornette
+
+    Fixed an intermittent issue in Adventure Quest 47 where the NPC did not appear
+
+    Fixed an issue in Adventure Quests 15-18 where Ornette's animations were not applied
+
+    Fixed an issue in Adventure Quest 37 where the dubbed voice did not match the text during dialogue with Cerese
+
+    Fixed an intermittent issue in Adventure Quest 45 where progression was blocked
+
+    Fixed an issue in Adventure Quest 45 where monsters did not respawn after traveling to town
+
+    Fixed an issue in Hero Quest - Dana where Gideon did not spawn
+
+    Fixed an issue in Bond Quest - Ninian where progression was blocked at the end of a cutscene
+
+    Fixed an intermittent issue in Adventure Quest 56 where the door closed and blocked progression
+
+
+■ Bug Fixes
+
+    Fixed an issue where some treasure chests did not appear
+
+    Fixed an issue in Equipment > Reforge where the word [Reduction] in [Critical Damage Reduction] was not displayed on certain resolutions in the English translation
+
+    Fixed an issue in Sudden Missions - Undiscarded Erat where the clear status was not marked in the Merc Guide and the boss respawned on client reconnect
+
+    Fixed an issue where the interaction button had to be pressed twice after map transitions
+
+    Fixed an issue where [Combat Control Guide] settings were not saved after exiting the game
+
+    Fixed an issue where [Vibration Intensity] settings were not saved after exiting the game
+
+    Fixed the issue so that [Vibration Intensity] can now be configured from the title screen
+
+    Fixed an issue where the character was displayed in the default pose during cooking cinematics after entering and exiting the Hero Codex
+
+    Fixed an issue where Radish Soup was always crafted at 1-star quality
+
+    Fixed an issue where the [In Progress] tab of the Quest menu could not be exited when all available quests were completed
+
+    Fixed an issue on the multiplayer guest screen where character slot numbers jumped during multi-mount
+
+    Fixed an issue on the multiplayer guest screen where characters displayed abnormal motions during switching
+
+    Fixed an issue in the Ursula Raid where shots fired from a specific position were misdirected
+
+    Fixed an issue where chest-opening inputs were processed consecutively
+
+    Fixed an intermittent issue where the RB button switched to the standard attack button during combat
+
+    Fixed an issue where Reina's weapon clipped through her arm during [Boil] and [Slice] cooking actions
+
+    Fixed an issue where skill descriptions in the Codex could not be scrolled with a controller
+
+    Fixed an issue in Sudden Missions - Undiscarded Erat where the mission could be repeated after defeating the boss and reconnecting
+
+    Fixed an issue where the character model jumped when repeatedly selecting between the default outfit and a costume
+
+    Fixed an issue where costumes appeared unequipped when opening an NPC shop UI while a costume was equipped
+
+    Fixed an issue in multiplayer where achievements were only unlocked for the host
+
+    Fixed an issue where the [Castella] name was missing from the Castella join tutorial guide text
+
+    Fixed an issue where achievement counts only updated when the player possessed items beyond the current achievement quantity
+
+
+
+⚠️ Notice: Delayed Release of Cerese's Swimsuit DLC
+
+
+Cerese's swimsuit DLC is currently pending Steam review, with the estimated review completion expected this Friday (August 7).
+
+The three swimsuit DLCs were originally accelerated ahead of schedule so that we could bring them to you as soon as possible. During this preparation, some content was missing due to an oversight on our part, and the DLC is currently under re-review. The two that passed review first were released last week.
+
+We will deploy the remaining DLC as soon as the review is complete.
+We sincerely apologize for not being able to launch on the originally scheduled date.
+
+
+Thank you.
+
+— The DragonSword : Awakening Team

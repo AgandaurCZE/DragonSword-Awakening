@@ -1,0 +1,581 @@
+Hello, this is the DragonSword : Awakening team.
+
+Here are the details of Update 1.1.0, released on October 15, 2026.
+
+
+
+■ Localization
+
+    Improved awkward translations based on new content translations and player reports
+
+
+
+
+
+■ Major Systems
+
+[Training Ground]
+
+    Added the Training Ground, where you can hold mock battles against monsters with your heroes
+    Enter via Edric, the Training Ground Keeper in front of Roderic Palace
+    Targets can be set to a stationary Ogre dummy, or a combat-active Ogre or Goblin
+    Damage measurement begins when you attack a monster, showing total damage and damage per second (DPS)
+    Press Backspace on keyboard, or LB + Menu (Xbox) / L1 + Options (PS) on controller to end measurement
+
+
+
+[Hunt: Score, Rank & Hell Difficulty]
+
+    Added a Score & Rank system to Hunt battles
+        Earn a score by defeating the Hunt boss — the faster you defeat it, the higher your score
+        Earn bonus points through Perfect Dodges, inflicting status effects, and breaking Super Armor
+        Ranks are achieved based on your score, with rewards for first-time rank achievements on each difficulty of each Hunt boss
+
+    Clear Time for Hunt dungeons, Raids, and regular dungeons now starts counting when combat with monsters begins, rather than upon entering the dungeon
+    Added [Hell], the sixth Hunt difficulty
+    Lowered monster stats on [Nightmare] difficulty following the overall combat balance changes
+
+
+
+[New Hero: Ryza]
+
+[Ryza], one of The Six Heroes who defeated the Origin Dragon Arugal and known as the "Spear of Annihilation," joins as a new companion.
+Ryza attacks enemies with swift spearwork and powerful lightning strikes, inflicting the Shock status effect. Her signature combat style involves leaping through space toward spears planted on the field, then retrieving them to strike surrounding enemies.
+
+    Obtain hero [Ryza] as a reward for completing Adventure Quest [53. Reunion]
+    ※ Granted immediately if you have already completed the quest
+    [Ryza] added to the Hero Codex, with detailed info and an introduction video
+    Added Ryza's Exclusive Karma [The Scar Lightning Left Behind], available at the Exchange
+
+
+
+[Hero Log & Quests]
+
+    Added Othello's Hero Quest [What the Wind Asks] (available from [Quests → Hero Log] after completing Chapter 5)
+    Added still images to the human cannonball scene in Dana's Hero Log [Festival Preparations]
+    Objective markers now display for tracked quests even when progressing in Scenario Mode
+    Adjusted the position of objective markers guiding you to destinations in [High-Ranking Mercenary Crew Promotion Quest], and removed target markers that unnecessarily appeared during NPC conversation steps
+    Quest areas now display on the minimap when they come within its range
+
+
+
+[Exploration & World Map]
+
+    Added 8 new map pin types that can be set at marked locations on the World Map
+        Eggs, World Puzzles, Mini-games, Local Quests, Treasure Chests, Honey, Grains, Mushrooms
+
+    Fixed an issue in the quest [The Whims of Time] where, after solving the ancient device puzzle, the device displayed the previously used interaction icon instead of the hand icon
+    Improved an issue where an unfitting item pickup sound effect played when interacting with certain devices
+
+
+
+[Hero Recruitment, Familiars & Rewards]
+
+    Added a tutorial guiding hero recruitment upon first entering the Exchange, and expanded the related Help
+    Added descriptions of each hero's action characteristics to hero info popups at the Exchange
+    Added a notification guiding hero recruitment upon obtaining a Fate's Invitation
+    Changed where Familiars are obtained
+        Now obtained from the [Codex] menu → [Familiar] menu
+        Familiar acquisition conditions can still be checked in the Codex menu as before
+
+
+
+[Mercenary Guide & Achievements]
+
+    Adjusted dungeon sort order in [Mercenary Guide → Special Challenges] based on the grade of obtainable equipment
+    Fixed inconsistent sort order for Barduk in [Mercenary Guide → Special Challenges]
+    Added achievement unlock notifications
+
+
+
+[Cooking & Quick Slots]
+
+    Expanded cooking Quick Slots from 2 to 3
+    Ingredient names and categories can now be checked by hovering the mouse or focusing with a controller in the cooking and ingredient change menus
+    Fixed an issue where cooking cooldowns were applied incorrectly in Steam Deck sleep mode
+    All cooking cooldowns now reset upon reconnecting to the game
+
+
+
+[Settings & Help]
+
+    Added a [Tag Combo Animation On/Off] option to [Settings > Game > Combat Display]
+
+
+
+[Costumes]
+
+    Improved the item icon displayed when obtaining Kalien's Vestment of the Great Spirit costume
+    Fixed an issue where the weapon highlight effect also appeared on Reina's body when using skills while wearing her default or swimsuit costume
+    Fixed an issue where the appearance on the Karma screen did not update immediately after changing weapon costumes
+    Fixed an issue where parts were turned off by default when previewing unowned costumes
+    Fixed an issue where the grip of Kalsion's costume weapon was misaligned with his hand
+    Fixed an issue where costume part display settings could not be changed with a controller
+    Fixed an issue where Cerese froze in a T-pose if her costume was changed while using Ice Storm
+
+
+
+
+
+■ Balance
+
+This update improves the overall formula for damage dealt to monsters.
+These improvements focus on reducing reliance on specific hero and equipment combinations and making a wider variety of combinations viable.
+
+[Critical Hit Improvements]
+
+We've reworked the critical hit formula so that critical hits now occur exactly at your Critical Rate.
+As part of this rework, monsters' critical resistance has been removed entirely, meaning critical hits will always occur once your Critical Rate reaches 100%.
+Accordingly, critical values on equipment and skills, as well as values for other Sub-Options, have been adjusted across the board.
+However, values were tuned so that the feel of critical hits and the efficiency of equipment Sub-Options remain nearly the same as before.
+
+    Changed critical buff values included in skills
+        Eileen — Critical Damage buff obtainable via Vanguard Banner with Exclusive Karma equipped: 50% → 20%
+        Sion — Critical Rate buff obtainable via Justice Fall: 20% → 10%
+
+
+
+[Defense Ignore Improvements]
+
+As the way Defense Ignore applies to damage has changed, displayed damage numbers will decrease. However, monster HP has also been adjusted accordingly, so actual time-to-kill remains largely unchanged.
+
+    Monster Max HP reduced in proportion to their Defense
+    Max HP reduced by up to 44%, based on giant boss monsters
+
+
+
+[New Equipment Option]
+
+A new equipment Sub-Option, "Status Effect Additional Attack Power Increase", has been added.
+This option increases all status effect additional attack power — such as Stun Additional Attack Power and Bleed Additional Attack Power — by the option value (%).
+The increased additional attack power is added to your attack power when attacking enemies afflicted with the corresponding status effect.
+
+[Skill Balance Changes]
+
+Skill damage and Rage cost/gain have been adjusted to fit the new formula, and damage has been increased for heroes who were underperforming.
+To strengthen the role of the Break attribute — specialists in breaking Super Armor — we've increased Castella's Rage efficiency and adjusted the Super Armor break values of some heroes who were stronger than expected.
+The damage bonus when multiple characters mount a boss at the same time has also been increased by 20%.
+Detailed skill changes for each hero are as follows.
+
+Eileen
+Eileen's Barraging Spear and Brave One can now be used more often, strengthening her Airborne status effect chains and Signal Skill chains.
+
+    Grand Spear (Basic Attack): Base damage 3.95 → 3.67
+    Spin Presser (Jump Attack): Base damage 3.13 → 3.35
+    Spiral Shave (Dodge Attack): Base damage 4.63 → 4.22
+    Barraging Spear: Base damage 6.18 → 7.47
+    Barraging Spear: Rage cost reduced by 30%
+    Brave One: Base damage 5.46 → 6.64
+    Brave One: Rage cost reduced by 20%
+    Rolling Upper: Base damage 7.42 → 8.9
+    Vanguard Banner: Base damage 11.54 → 13.12
+
+
+
+Lute
+Lute's Stun Slash can now be used more often, and Swordgrab's Knockdown application value has been increased, strengthening his Stun chains and overall performance.
+
+    Sword Slash (Basic Attack): Base damage 3.7 → 3.67
+    Dropkick (Jump Attack): Base damage 3.77 → 4.11
+    Kick Combo (Dodge Attack): Base damage 4.12 → 4.07
+    Stun Slash: Base damage 5.44 → 7.25
+    Stun Slash: Rage cost reduced by 10%
+    Healing Circle: Base damage 2.31 → 3.43
+    Swordgrab: Base damage 6.66 → 9.29
+    Swordgrab: Knockdown application value increased by 100%
+    Relic Fall: Base damage 9.4 → 8.56
+
+
+
+Castella
+Castella's basic attack Rage efficiency has been improved. Whirlwind can now be used more often, with overall performance strengthened. To bolster her Break role, Howling's Super Armor break has been increased, strengthening Signal Skill chains. Upper Blow can now be used against Stunned enemies, making her viable in Stun compositions as well.
+
+    Wild Blow (Basic Attack): Base damage 4.29 → 3.92
+    Wild Blow (Basic Attack): Rage gain increased by 50%
+    Wild Crash (Jump Attack): Base damage 2.97 → 3.21
+    Shoulder Crusher (Dodge Attack): Base damage 4.59 → 4.21
+    Whirlwind: Base damage 7.06 → 7.91
+    Whirlwind: Rage cost reduced by 20%
+    Howling: Base damage 4.36 → 5.75
+    Howling: Super Armor break increased by 36%
+    Stun Blow: Base damage 10.56 → 10.49
+    Upper Blow: Base damage 9.63 → 9.44
+    Upper Blow can now be used against Stunned enemies
+
+
+
+Reina
+Reina's Rising Cutter can now be used more often, and Wind Slayer's Airborne application value has been increased, reducing play risk while boosting damage.
+
+    Wind Sword (Basic Attack): Base damage 3.44 → 3.5
+    Silphid Spike (Jump Attack): Base damage 3.61 → 3.65
+    Winchester (Dodge Attack): Base damage 4.15 → 3.83
+    Rising Cutter: Base damage 6.24 → 8.43
+    Rising Cutter: Rage cost reduced by 15%
+    Wind Slayer: Base damage 5.34 → 5.49
+    Wind Slayer: Airborne application value increased by 100%
+    Tempest: Base damage 8.88 → 8.66
+    Wind Grab: Base damage 8.2 → 9.04
+
+
+
+Roxy
+Roxy's Crimson Spiral and Bloody Shower can now be used more often, and Kick Storm's base damage has been significantly increased, enabling explosive damage by leveraging Stun. Bleeding Grab's base share has been reduced while its multi-mount damage has been increased, making it more effective against giant bosses.
+
+    Bow Shot (Basic Attack): Base damage 3.19 → 3.47
+    Double Shot (Jump Attack): Base damage 3.05 → 3.41
+    Sliding Shot (Dodge Attack): Base damage 3.78 → 4.17
+    Crimson Spiral: Base damage 5.09 → 4.94
+    Crimson Spiral: Rage cost reduced by 20%
+    Bloody Shower: Base damage 5.2 → 5.77
+    Bloody Shower: Rage cost reduced by 10%
+    Kick Storm: Base damage 6.91 → 10.21
+    Bleeding Grab: Base damage 8.32 → 7.11
+
+
+
+Aria
+To reinforce Aria's concept of detonating bolts, the damage of Multiple Bolt and Switch On! has been increased.
+
+    Bolt Shot (Basic Attack): Base damage 3.84 → 3.57
+    Shoot and Bomb (Jump Attack): Base damage 3.52 → 3.59
+    Rapid Shot (Dodge Attack): Base damage 4.06 → 3.52
+    Air Bomb: Base damage 5.59 → 5.23
+    Rolling Bomb: Base damage 5.02 → 4.64
+    Multiple Bolt: Base damage 5.98 → 8.81
+    Switch On!: Base damage 5.58 → 7.02
+
+
+
+Johnny
+Johnny's damage share has shifted from Venom Cutter to Phantom Slash, slightly raising his performance floor relative to control difficulty. Poison Grab's base share has been reduced while its multi-mount damage has been increased, making it more effective against giant bosses.
+
+    Dirty Fight (Basic Attack): Base damage 3.59 → 3.51
+    Piercing Step (Jump Attack): Base damage 2.82 → 3.03
+    Fatal Sting (Dodge Attack): Base damage 3.98 → 3.92
+    Venom Dance: Base damage 5.48 → 5.35
+    Phantom Slash: Base damage 5.88 → 6.36
+    Venom Cutter: Base damage 8.8 → 8.32
+    Poison Grab: Base damage 8.32 → 6.72
+
+
+
+Ornette
+Ornette's damage share has shifted slightly from Holy Cross to Holy Circle, slightly raising her performance floor relative to control difficulty. Holy Grab's base share has been reduced while its multi-mount damage has been increased, making it more effective against giant bosses.
+
+    Pray (Basic Attack): Base damage 4.04 → 4.01
+    Shining Spin (Jump Attack): Base damage 3.47 → 4.08
+    Holy Cutter (Dodge Attack): Base damage 3.6 → 3.22
+    Holy Cross: Base damage 5.72 → 4.96
+    Holy Circle: Base damage 4.76 → 5.56
+    Holy Grab: Base damage 7.55 → 6.9
+
+
+
+Kalsion
+Kalsion's high-Rage-cost Flame Wave and long-cast Explosion have received base damage increases, raising the share of his high-risk skills.
+Burst Grab's base share has been reduced while its multi-mount damage has been increased, making it more effective against giant bosses.
+
+    Great Rush (Basic Attack): Base damage 4.26 → 3.57
+    Circular Slash (Dodge Attack): Base damage 4.55 → 3.84
+    Weapon Blaze: Base damage 4.15 → 3.98
+    Flame Wave: Base damage 4.76 → 6.13
+    Burst Grab: Base damage 8.17 → 6.98
+    Explosion: Base damage 10.73 → 12.42
+
+
+
+Othello
+Despite not having the Break attribute, Othello was unintentionally delivering Super Armor break performance far exceeding Break-attribute heroes, so this has been adjusted. His damage share has also shifted from Ice Crown and Frozen Burst to Frozen Stinger, slightly raising his performance ceiling with his Exclusive Karma equipped.
+Ice Grab's base share has been reduced while its multi-mount damage has been increased, making it more effective against giant bosses.
+
+    Avenger Circle (Basic Attack): Base damage 3.91 → 3.72
+    Avenger Circle (Basic Attack): Super Armor break reduced
+    Piercing Spike (Jump Attack): Base damage 4.06 → 4.03
+    Half-Moon Cutter (Dodge Attack): Base damage 3.8 → 3.74
+    Frozen Stinger: Base damage 5.4 → 6.46
+    Ice Crown: Base damage 5.08 → 4.49
+    Ice Grab: Base damage 8.06 → 7.08
+    Frozen Burst: Base damage 6.17 → 5.69
+    Frozen Burst: Super Armor break reduced by 50%
+
+
+
+Charlotte
+Charlotte's damage share has been moved from Invisible and Illusion Kick to Shadow Grab, making her more effective against multiple enemies, and Shadow Grab's multi-mount damage has been increased for better effectiveness against giant bosses.
+
+    Shadow Dance (Basic Attack): Base damage 3.64 → 3.32
+    Shadow Leaf (Jump Attack): Base damage 3.71 → 4.08
+    Poison Step (Dodge Attack): Base damage 3.59 → 3.45
+    Invisible: Base damage 4.8 → 4.23
+    Invisible: Rage cost increased by 10%
+    Poison Dagger: Base damage 6.08 → 5.95
+    Poison Dagger: Rage cost increased by 40%
+    Illusion Kick: Base damage 8.77 → 6.98
+    Shadow Grab: Base damage 6.98 → 9.71
+
+
+
+Alex
+Considering that Alex deals damage conditionally, the share of Knockdown Smash has been increased. Guard Counter's damage has been slightly adjusted and Pounding Grab's base damage has been increased, raising his performance floor relative to control difficulty. Its multi-mount damage has also been increased for better effectiveness against giant bosses, with base damage raised to match its higher risk.
+
+    Dive Kick (Basic Attack): Base damage 3.57 → 3.54
+    Brandish (Jump Attack): Base damage 3.11 → 3.51
+    Dodge Combo (Dodge Attack): Base damage 3.98 → 3.7
+    Knockdown Smash: Base damage 6.11 → 7.74
+    Guard Stance: Base damage 4.02 → 3.9
+    Pounding Grab: Base damage 4.6 → 8.32
+    Guard Counter: Base damage 7.14 → 6.7
+
+
+
+Theresia
+Theresia's Bleed application value has been increased, and the base damage of her high-Rage-cost Celestial Verdict has been raised. Her damage share has also shifted slightly from Holy Rise to Divine Arc, enabling explosive damage against Stunned enemies.
+
+    Judgment Spiral (Basic Attack): Base damage 3.57 → 3.55
+    Judgment Spiral (Basic Attack): Bleed value increased by 150% (with Exclusive Karma equipped)
+    Celestial Dive (Jump Attack): Base damage 3.24 → 3.32
+    Heaven's Flick (Dodge Attack): Base damage 3.2 → 3.54
+    Consecration: Base damage 5.26 → 5.6
+    Celestial Verdict: Base damage 4.88 → 5.81
+    Celestial Verdict: Rage cost reduced by 30%
+    Divine Arc: Base damage 6.42 → 8.97
+    Holy Rise: Base damage 8.78 → 6.79
+
+
+
+Tarte
+Tarte's damage share has shifted from Thunderbolt to Bolt Bubble, raising the performance ceiling of play using her holy orbs. This rewards high-risk play with greater damage.
+
+    Bolt Orb (Basic Attack): Base damage 3.21 → 3.51
+    Spiky Bolt (Jump Attack): Base damage 3.99 → 4.14
+    Cannon Bolt (Dodge Attack): Base damage 3.81 → 3.51
+    Lightning Shock: Base damage 6.25 → 6.1
+    Bolt Bubble: Base damage 6.96 → 8.8
+    Thunderbolt: Base damage 8.8 → 6.08
+
+
+
+Cerese
+The Super Armor break of Cerese's easy-to-use Shattering Touch has been adjusted. Her damage share has also shifted from Frozen Needles to Ice Storm, raising her performance ceiling with her Exclusive Karma and Awakenings.
+
+    Ice Ball (Basic Attack): Base damage 2.85 → 2.67
+    Glacial Wave (Jump Attack): Base damage 3.63 → 3.86
+    Frozen Road (Dodge Attack): Base damage 4.28 → 4.3
+    Ice Storm: Base damage 7.58 → 8.73
+    Frozen Spike: Base damage 4.92 → 4.63
+    Frozen Needles: Base damage 8.2 → 6.63
+    Shattering Touch: Super Armor break reduced by 50%
+
+
+
+Sion
+Sion's Divine Smash base damage has been slightly increased, and Bless's base damage has also been slightly raised so that converting Relics with it is more meaningful.
+
+    Divine Bolt (Basic Attack): Base damage 3.46 → 2.92
+    Air Bolt (Jump Attack): Base damage 4.05 → 3.99
+    Sliding Bolt (Dodge Attack): Base damage 3.51 → 3.38
+    Divine Crash: Base damage 4.72 → 4.79
+    Divine Smash: Base damage 5.6 → 5.88
+    Bless: Base damage 4.25 → 5.85
+    Justice Fall: Base damage 8.94 → 8.87
+
+
+
+Astria
+Astria's damage share has shifted from her basic attacks to Bolt Bombard, raising her performance ceiling through Signal Skill usage.
+
+    Ballista Shot (Basic Attack): Base damage 4 → 3.5
+    Stunt Shot (Jump Attack): Base damage 4 → 2.85
+    Slide (Dodge Attack): Base damage 3.59 → 3.52
+    Wide Shot: Base damage 5.95 → 6.18
+    Bolt Bombard: Base damage 6.98 → 8.72
+
+
+
+Dana
+Dana's damage share has shifted from Chako Shield and Chako Knuckle to Chako Spin, raising the damage ceiling of her harder-to-use skill.
+
+    Snow Pop (Basic Attack): Base damage 3.41 → 3.94
+    Freezy Pop (Jump Attack): Base damage 3.18 → 3.12
+    Snow Step (Dodge Attack): Base damage 3.26 → 4.23
+    Summon Chako: Base damage 4.81 → 4.82
+    Chako Shield: Base damage 3.05 → 4.49
+    Chako Shield: Rage cost increased by 50%
+    Chako Knuckle: Base damage 5.02 → 5
+    Chako Knuckle: Rage gain reduced by 50%
+    Chako Spin: Base damage 5.17 → 6.33
+
+
+
+Kalien
+Kalien's damage share has shifted from Fox Grab to Fox Chase, increasing the value of her third Awakening effect and her summoned Sur.
+
+    Firefox (Basic Attack): Base damage 2.84 → 2.74
+    Pyro-Fang (Jump Attack): Base damage 3.08 → 3.59
+    Twin Tails (Dodge Attack): Base damage 3.32 → 3.12
+    Fox Parade: Base damage 4.24 → 4.05
+    Fox Parade: Rage cost increased by 20%
+    Fox Chase: Base damage 4.74 → 5.94
+    Fox Grab: Base damage 7.95 → 6.73
+
+
+
+
+
+■ Action
+
+[Combat & Camera]
+
+    Strengthened aim correction for ranged attacks while locked on (applies only to projectiles that already had aim correction)
+    The camera now turns toward the target faster when starting Lock-On or switching targets
+    Switching attacks with no target no longer automatically target wild animals or nearby objects
+    Improved the display of ice effects from Cerese, Othello, and Dana (Chako) and the explosion effect of Aria's Air Bomb so they no longer excessively obscure the screen near the camera
+    Removed some obstacles that hindered movement in the World Boss Hagen battle area
+
+
+
+[Heroes & Monsters]
+
+    Sion can now use the Active Skill to retrieve placed Relics even when far away from them
+    Monsters near a monster that has entered combat now also recognize the player as an enemy
+    Monsters now enter a Wary state for a set time when a projectile hits the ground or an object within their detection range
+
+
+
+[Familiars]
+
+    Familiar Air Free Dash now carries over movement speed from the previous action, and fixed an issue where dash speed dropped too low in some situations
+    Rider motions now transition smoothly when moving after jumping or landing while riding a Familiar
+
+
+
+[Controls & Controller]
+
+    Separated the throw action while holding objects from the interact action
+        Added a Throw entry to the [Settings > Controls > Input Settings] menu
+        The Throw tutorial now displays the throw button for the controller or keyboard in use
+
+    Added D-pad control prompts to the interaction list when using a controller
+    New control keys added in this update (Quick Slot 3, Throw) are now applied while preserving existing user settings
+        If required controls are left unassigned due to key conflicts, you can check them in the [Settings > Controls > Input Settings] menu
+
+
+
+
+
+■ Bug Fixes
+
+[Combat & Monsters]
+
+    Fixed collision that blocked movement while defeated monsters were disappearing
+    Fixed an issue where summons blocked the movement of certain cinematic monsters
+    Fixed an issue where projectiles veered toward defeated monsters regardless of Aim Correction settings
+    Fixed an issue where aim correction targeted lava pools instead of the monster when fighting the Eastern Field Boss Harpy
+    Fixed an issue where traps set by Goblin Archers remained after they died
+    Removed damage dealt when the Earthlander burrows underground after swallowing a hero, mitigating abnormal camera exposure
+    Mitigated an issue where Largo stopped acting during combat
+    Mitigated an issue where heroes got caught on monster collision areas during large boss battles
+    Fixed an issue where monsters did not attack in some combat zones of the Steelheart Fortress scenario and raid
+    Fixed an issue where Ghouls remained invisible if their entrance animation was canceled
+    Mitigated an issue where Soulwarden Zelmoor teleported to the ceiling, making the battle impossible to continue
+    Fixed an issue in the Fang Bandits' Arena where the horn-blowing Gnoll did not disappear when blocked by Dana's summoned Chako
+    Mitigated an issue in the Ursula battle area where climbing onto walls or invisible collision areas with a Familiar caused monsters to get stuck
+    Fixed an issue on Nightmare difficulty where the damage reduction effect was reapplied even when only some status effects were removed
+    Fixed an issue where attempting to mount the Earthlander as it burrowed caused heroes to fall below the ground
+    Fixed an issue where dedicated background music did not play during some Named Monster battles, such as Trapped Predator Brugon
+
+
+
+[Hero Skills & Combat Actions]
+
+    Heroes now switch to a falling state when dropping off a cliff after attacking, allowing aerial actions
+    Fixed an issue where Johnny moved excessively if the target died right after he used his Tag Combo Signal Skill
+    Fixed an issue where Dana's summon skill did not summon at the designated location when used as a multiplayer guest
+    Fixed an issue where the blue mist effect did not disappear when switching to another hero after Cerese used Ice Storm and then proceeding with a quest dialogue scene
+    Fixed an issue where ally-targeted effects such as Alex's Guard Stance did not apply properly right after a Perfect Dodge
+    Fixed an issue where the camera and attack direction changed abnormally when Aria used Air Bomb after dodging while locked on
+    Fixed an issue where Airborne was not applied when Aria's Bomb Arrows detonated automatically
+    Fixed an issue where Castella's default camera was positioned too high
+    Fixed an issue where some heroes could not use surprise grabs
+    Fixed an issue where Johnny's 'Venom Cutter' Tag Combo did not activate when all mountable spots on a monster were occupied
+
+
+
+[Quests]
+
+    Fixed an issue where NPC names were cut off after Lyn's entrance scene during Adventure Quest 17
+    Fixed an issue where a door that should be closed briefly appeared open after reconnecting during Adventure Quest 3
+    Fixed an issue where unnecessary Rift Fragments spawned when defeating the Goblin Berserker in [Elite Mercenary Crew Promotion Quest]
+    Fixed an issue in Theresia's Hero Quest where destroying Relics from later steps in advance made the quest impossible to progress
+    Fixed an issue in the Marmot Bond Quest where the Undergrown Dawn Lanternleaf acquisition notification did not disappear
+    Fixed an issue in the quest [36. Unusual Signs] where allied Orbis soldiers' airborne hit and landing animations displayed abnormally
+    Improved an issue where Lute's feet appeared sunken into the carpet during the indoor castle dialogue scene in Cerese's Hero Quest
+    Fixed an issue where the last character of long quest interaction text was cut off at 1280×720 resolution
+    Fixed an issue in Ninian's Bond Quest where Ninian got stuck on the bridges in front of Orbis Castle's main and west gates while being escorted
+
+
+
+[Exploration & Familiars]
+
+    Improved an issue where the Breezewind Hill waterfall current became excessively strong at high frame rate settings, making the treasure chest inside hard to reach
+    Improved an issue where heroes fell through some terrain on the Skyspire Rock Mountain cliffs
+    Fixed an issue where the previous hero and their ride remained after switching to a hero mounted on a monster while riding
+    Fixed an issue where the screen transition did not clear when entering a restricted area while climbing and then exiting via Air Dash
+    Fixed an issue where Dana and Tarte could not complete slide puzzles by the water
+    Fixed an issue where geese on the water did not disappear or drop Bird Meat when defeated
+    Improved an issue where hero positions jumped during interaction due to collision with certain gatherables
+    Fixed misplaced Bird Eggs, including duplicates and eggs floating in midair
+    Adjusted interaction height so that gathering is possible while riding Tarte's Direwolf
+    Fixed an issue where some NPCs in Seagull Village overlapped at the same position
+
+
+
+[Menus & Controls]
+
+    Fixed an issue where the selection border remained on the Mercenary Crew Grade screen after switching from controller to keyboard and mouse
+    Fixed an issue where you could not interact with NPCs, treasure chests, etc. via controller while Astria's Reload Signal was active in towns or while riding a Familiar in the field
+    Fixed an issue in Team Details where continuously pressing the same direction at the end of the hero list with a controller repeatedly reselected the hero, causing the model to flicker
+    Fixed an issue where heroes could not be selected after entering Team Details with keyboard and mouse and then switching to a controller
+    Fixed an issue where the stamina gauge stayed red even after stamina recovered
+    Fixed an issue where pressing R on the quit game popup triggered the reset function of the options menu behind it
+    Fixed an issue where continuously moving the controller stick while deleting save data deleted a different save than the one selected
+    Fixed an issue where the location button for undiscovered monsters did not appear when scrolling the Mercenary Guide after completing a Sudden Mission
+    Fixed an issue where the model disappeared when switching between Full Screen and Window Mode on the last screen of the Familiar acquisition cinematic
+    Fixed an issue where pressing Back on a controller after opening the Steam Store to purchase DLC also navigated back on the game screen
+    Fixed an issue where other heroes' descriptions could not be scrolled on the Karma screen of the Hero menu
+    Fixed an issue where long Set Effect descriptions could not be scrolled on the Equipment Crafting screen
+    Fixed an issue where 0/0 was displayed instead of the name after removing a Rune registered as a Synthesis material
+    Fixed an issue where keyboard/mouse and controller prompts were swapped after resetting control settings with a category header such as [Movement and View] selected
+    Fixed an issue where the "New" indicator did not appear in the Codex menu after obtaining new Karma or heroes
+    Fixed an issue where the clear time on dungeon and raid results was displayed as 0 seconds
+    Changed the [Exit] text to [End Conversation] when interacting with NPCs
+    Fixed an issue where the related achievement was not unlocked when Johnny's HP dropped to 1 from fall damage
+
+
+
+[Visuals, Cinematics & Stability]
+
+    Fixed an issue where the game could crash while processing certain effects
+    Improved an issue where ground textures in some dungeons and fields appeared stretched when Graphics or Texture Quality was set to Low
+    Improved the display of floating or overlapping props in the castle, as well as background objects missing on low graphics settings
+    Improved an issue where heroes appeared to float on parts of the southern road due to a height mismatch between the ground and road
+    Improved an issue in Ursula's Solo Mode and Multiplayer Mode where the background and fog changed depending on the world time before entry, or light bloomed excessively
+    Improved an issue where raindrop and splash effects did not appear on water surfaces during rain
+    Improved issues where heroes fell through the floor in the Eastern underground ruins, or were blocked by invisible collision at the top of the destroyed Steelheart Fortress
+    Improved an issue where thin lines were visible in the water foam on the Bluehill Wetlands beach
+    Fixed an issue where a World Boss's HP bar was displayed during the flight mini-game
+    The configured FPS limit is now correctly applied when using FSR Frame Generation
+    Fixed an issue where some terrain appeared split after warping to Fleecy Cloud Ranch
+    Fixed an issue on Steam Deck where the cross-section of the severed horn displayed abnormally during Gauron's defeat cinematic
+    Fixed an issue where the illustration in hero acquisition cinematics briefly appeared corrupted
+    Fixed an issue where Lute, Dana, Charlotte, and Kalien's feet appeared to float above flat ground while standing
+    Fixed an issue where the fabric of Theresia's lower garment briefly disappeared when dismounting a Familiar in her default costume
+
+
+
+
+
+Thank you.
+
+— The DragonSword : Awakening Team

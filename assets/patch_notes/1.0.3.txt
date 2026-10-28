@@ -1,0 +1,24 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.0.3 has been applied.
+Details of the update are as follows.
+
+
+
+■ Content
+
+    Fixed an issue where World Bosses and Sudden Missions were not being reset
+
+
+
+■ Quests
+
+    Fixed an issue in the Intermediate Promotion Quest where the prison door would not open
+
+
+
+
+
+Thank you.
+
+— The DragonSword : Awakening Team

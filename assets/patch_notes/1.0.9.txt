@@ -1,0 +1,109 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.0.9 has been applied.
+Details of the update are as follows.
+
+
+
+■ Localization
+
+    Fixed items where translations were unnatural
+
+
+
+■ System
+
+    Expanded the number of configurable slots in the Team menu (5 → 7)
+    Adjusted World Bosses and Sudden Mission monsters to respawn 2 hours after being defeated
+    Added the ability to check where heroes are obtained from the Codex menu
+    Improved so that clearing Normal Dungeons, Currency Dungeons, and Trait Dungeons grants rewards immediately
+    Improved Hunt monster clear status to register immediately upon monster death
+    Improved readability in the dialogue records of each Quest entry in the Quest menu by adjusting UI line-break handling
+    Adjusted the default value of the lobby search range in the Settings menu to [Wide]
+    ※ Applied to new users and full setting resets; existing users must modify this manually.
+    Fixed an issue where the legend/completion rate was displayed via D-PAD input when the right panel was active in the World Map menu
+    Changed the position of [Growth] and [Swap] buttons and controller mapping for Karma/Equipment in the Heroes menu
+
+
+
+■ Improvements
+
+    Fixed an issue where defeating swimming geese did not count toward the achievement
+    Shortened the phase in the Ursula Raid so that players can immediately engage the dragon-form Ursula after defeating the humanoid form
+
+
+
+■ Balance
+
+    Fixed a text display error on the Griffon Familiar's 3rd equip effect
+    - Increases movement speed by 20% while gliding → Increases movement speed by 20% for all Familiars while gliding
+    Changed the Griffon Familiar's 4th equip effect
+    - [Charged Jump] cooldown reduced by 10% → All Familiars' maximum stamina increased by 10%
+    Added an achievement for clearing Barduk on Nightmare difficulty
+    ※ Players who have already cleared Nightmare must clear it again to unlock the achievement.
+    Increased gathering and mining rewards obtained at once
+    - Crystal of Remembrance / Crystal of Recollection / Crystal of Reverie / Crystal of Oblivion
+    - Binding Crystal / Piercing Crystal / Vein Crystal
+    - Rich Binding Crystal (Binding Crystal)
+    - Rich Piercing Crystal (Piercing Crystal)
+    - Rich Vein Crystal (Vein Crystal)
+    - Wheat / Rice
+    - Goblin Barbecue (Aged Game Meat)
+    Increased dungeon and raid clear rewards
+    - Increased all Normal Dungeon clear rewards
+    - Increased all Trait Dungeon clear rewards
+    - Increased all Currency Dungeon clear rewards
+    - Increased all Hunt clear rewards
+    - Increased all Raid clear rewards
+
+
+
+■ Quests
+
+    Fixed an issue where Servant Pio remained after completing the Miss Gwen series of Area Quests
+    Fixed an issue in Hero Quest - Dana [Mistblossom Festival] where the weather would not transition during progression
+    Fixed an issue in Hero Quest - Dana [A Welcome Quest], during the [Box Moving] step, where the box to be moved was generated below the ground
+    Fixed an intermittent issue in Hero Quest - Theresia where the quest would not progress even after defeating the boss
+    Fixed the display of monster-kill treasure chests during Area Quests
+    Reduced the combat difficulty of Scenario Mode in Adventure Quest 58 [Ghoul Greed] scenario dungeon
+    - Lute, Johnny, and Kalien are now unlocked up to their sixth Awakening
+    Added guidance text indicating the next journey after completing the final Adventure Quest, shown before the credits roll
+
+
+
+■ Bug Fixes
+
+    Fixed an issue where the Settings menu could not be closed with ESC on the title screen
+    Fixed an issue where heroes were displayed wearing costumes in the Codex menu
+    Fixed an issue where Cerese's portrait did not change when switching costumes
+    Fixed an issue where switching Cerese's costume from [Moonlight on the Night Sea] to [Ophelia's Oath] did not apply the changed outfit after reconnecting
+    Fixed an issue where the hide button for outfit parts operated on the costume weapon tab
+    Improved an issue where lobby loading took a long time when entering a multiplayer lobby
+    Fixed an intermittent issue where party members did not properly enter during multiplayer
+    Fixed an issue where a Raid could be started even if not all members had readied up during Raid multiplayer
+    Fixed an intermittent issue during multiplayer [Quick Entry] where the game started directly without going through the lobby
+    Fixed an issue where equipment set effects were not applied in multiplayer environments
+    Fixed an intermittent issue on Steam Deck where cooking cooldowns operated abnormally
+    Fixed an issue where the region entry notification did not disappear
+    Fixed an issue where HP decreased after entering and exiting a dungeon following consumption of a max-HP-boosting cooking dish
+    Fixed an issue where the [I'll Stand in the Sky] achievement could be unlocked when advancing a quest dialogue during Reina's aerial attack
+    Fixed an issue where inputting the dash key during Charlotte's dodge motion caused the character to descend to the ground
+    Fixed an issue where Charlotte's [Clone Explosion] skill could be used consecutively in the air
+    Fixed an issue where fall damage was not applied when Charlotte was in combat or stealth state
+    Fixed an issue where Kalien's sixth Awakening effect was not applied in multiplayer environments
+    Fixed an issue where monsters that died in the air and fell into water remained without disappearing
+    Fixed an issue where cancelling a dodge into a dash could not be performed
+    Fixed an issue where ice props generated by Cerese's sixth Awakening effect could not be destroyed with [Frozen Burst] when Othello's third Awakening was active
+    Fixed an issue where Roxy would get stuck inside a monster's body when using the aerial stomp skill
+    Fixed an intermittent issue where the client would freeze during Roxy's stomp action on Gauron
+    Updated the probability information in the Options menu to reflect the [5-Star Rune obtainable from 4-Star Rune Synthesis]
+    Fixed an issue where some projectiles (such as Astria's ranged attacks) were fired in directions other than the aim target
+    ※ Similar issues have been identified with some other projectiles as well, and improvements will be delivered in next week's update.
+
+
+
+
+
+Thank you.
+
+— The DragonSword : Awakening Team

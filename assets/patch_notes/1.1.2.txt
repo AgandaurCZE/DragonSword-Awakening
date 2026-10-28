@@ -1,0 +1,40 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.1.2 has been applied.
+Details of the update are as follows.
+
+
+
+■ Improvements
+
+    Changed the key to end measurement in the Training Ground to ESC (keyboard)
+        Pressing ESC during DPS measurement now ends the measurement; opening the Main Menu with ESC is available once measurement has ended
+
+    Improved the cutscene that plays during Othello's Hero Quest [The Name Left Behind]
+
+
+
+■ Bug Fixes
+
+    Fixed an issue where the Lesser Dragon respawned after being defeated during Adventure Quest [28. The Wanderer of the Wilderness]
+    Fixed an issue where defeating the Tower's Specter did not progress properly during Cerese's Hero Quest [Cressila's Upside-Down Tower]
+    Fixed an issue where the marker pointed to empty ground instead of the NPC during Othello's Hero Quest [The End of the Man They Sought]
+    Fixed an issue where Heavy Attacks triggered more than three times when Othello mounted using Ice Grab
+    Fixed an issue where Ryza moved while floating in midair when mounting using Thunder Grab
+    Fixed an issue where the explosion damage of clones created by Charlotte's Invisible was intermittently applied twice in a row
+    Fixed an issue where Ornette could use Holy Cross twice in a row with her Exclusive Karma equipped
+    Fixed an issue where equipment was crafted without consuming the Forging Mold after visiting the Exchange with a Main Option selected during Equipment Crafting
+    Quick Slot borders now display correctly on item icons after registering food to a Quick Slot from the Inventory menu
+    Fixed an issue where beehives for gathering Honey were not displayed properly
+    Fixed an issue where food buffs could be stacked using a specific method
+
+
+
+■ Changes Applied in Version 1.1
+🔗 Update Notes 1.1.0
+
+
+
+Thank you.
+
+— The DragonSword : Awakening Team

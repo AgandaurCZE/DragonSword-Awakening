@@ -1,0 +1,149 @@
+Hello, this is the DragonSword : Awakening team.
+
+Update 1.0.11 has been applied.
+Details of the update are as follows.
+
+
+
+■ Localization
+
+    Fixed items where translations were unnatural
+
+
+
+■ Just Dodge (New)
+
+    Added a new feature that triggers Just Dodge when perfectly evading an enemy attack with Dodge
+    When Just Dodge triggers, the following effects are applied:
+    - 1 second of invincibility
+    - 3 seconds of guaranteed critical hits
+    - 10% recovery of Active Skill Rage gauge
+    - Half of the Dodge Stamina cost is recovered
+    Added help documentation for the Just Dodge feature
+    - Viewable in [Help > Combat Controls > Basic Controls > Just Dodge]
+
+
+
+■ Controls
+
+    Comprehensive Lock-On system improvements — control scheme, target retention, target search, and camera movement all improved
+
+    ▶ Control Scheme Changes
+    - Gamepad
+    · R Stick click toggles Lock-On ON/OFF
+    · Directional target switching moved to R Stick left/right
+    · Previous target switching function removed
+    - Keyboard & Mouse
+    · TAB key click toggles Lock-On ON/OFF
+    · Previous target switching function moved to Caps Lock
+    · Additional keys can now be assigned for directional target switching
+
+    ▶ Lock-On Target Retention
+    - Auto-release range changed based on target tier
+    - Sudden Missions, World Bosses, Hunt, and Raid monsters no longer release Lock-On even when moving farther than before
+
+    ▶ Lock-On Target Search
+    - Improved target search to consider angle and range when acquiring targets
+
+    ▶ Camera Movement
+    - Camera movement toward Lock-On targets now feels more natural
+
+    Added grace period for additional jump when a hero leaves the ground
+
+
+
+■ Action
+
+    Improved so that the Super Armor of the hero left on the field after switching will not be broken for 1 second
+
+
+
+■ Balance
+
+    Lute
+    - Learning [A Young Boy's Choice] (Master Skill) now applies Stun value to all [Dropkick] attacks
+
+    Aria
+    - Basic attack changed from 5-hit to 3-hit
+    - Final basic attack now ends more quickly
+    - When switching to another hero while using [Air Bomb], the bomb is now thrown immediately
+
+    Tarte
+    - Improved so that the final attack fires when releasing the hold of [Lightning Shock] skill
+    - Adjusted damage and Shock application values for each hold stage of [Lightning Shock]
+    - When switching to another hero while using [Lightning Shock], the skill now plays out to completion
+
+    Roxy
+    - Increased Bleed application value of [Crimson Spiral] at Base and 1st Awakening unlocked
+    - Increased [Kick Storm] damage when 6th Awakening is unlocked and dedicated Karma is equipped
+
+    Astria
+    - Fixed awkward Slide (Dodge Attack) motion when Master Skills are learned
+    - Slide (Dodge Attack) can now change direction while used
+
+    Kalsion
+    - Full-charged [Flame Wave] now explodes immediately on hitting monsters (excluding small monsters)
+
+    Dana
+    - When switching to another hero while using [Summon Chako], Chako is now summoned immediately
+
+
+
+■ Multiplayer
+
+    Retry feature added
+    - After a final clear or party wipe, the party leader can select [Retry] to restart the Hunt/Raid
+    Improved notifications when leaving during multiplayer
+    - The party may be disbanded if the party leader leaves
+    - All party members can receive rewards upon final clear
+    Removed search range settings for multiplayer lobbies
+    - Lobbies are now searched by fastest response time, and unnecessary search range settings have been removed
+    Update notification is displayed when a higher version exists during multiplayer Quick Entry
+    Notification is displayed when joining via invite code if the party leader's game version differs
+    Fixed an issue where the button did not work correctly when changing difficulty in a multiplayer lobby
+    Fixed an issue where the changed language was not reflected on the loading screen after changing language following multiplayer
+
+
+
+■ System
+
+    Fixed so that Steam Achievements can now be earned offline
+    - Steam Achievements for achievements earned offline are now unlocked when connecting online
+    Added an effect to Hero Quests currently in progress in the Hero Record section of the Quest menu for improved visibility
+    Added a preview feature in the Hero Codex section of the Codex menu to briefly check each hero's combat style
+    Added [Familiar Dash Blur Effect] ON/OFF toggle in [Settings > Controls > Combat Camera]
+    - Controls whether the blur effect is applied when dashing after mounting a Familiar (including aerial dash and aerial free dash)
+    Added [Quest Guide Display Duration] control in [Settings > Game > Misc]
+    - Controls the display duration or ON/OFF of distance and direction guides for tracked quests
+    Improved acquisition cinematics for Heroes and Familiars
+    - Improved Charlotte's acquisition cinematic
+    - Improved Othello's acquisition cinematic
+    Simplified the left-side category tab UI for Special Challenges in the Merc Guide menu
+    Added obtainable dungeons to the acquisition list for mining and gathering material items
+    Improved the Cooking tab in the Inventory menu to sort by cooking effect
+
+
+
+■ Bug Fixes
+
+    Fixed so that Sion can now perform parkour while in combat state
+    Fixed an issue where focus was not set to the target dungeon when selecting a dungeon from the item acquisition source and moving to the Merc Guide menu via controller input
+    Fixed an issue where progress only increased by 1 when collecting 2 Bird Eggs for the Familiar [Diligent Sparrow] acquisition condition
+    Fixed so that cooking is no longer possible during mini-games
+    Fixed a crash that occurred when setting down fertilizer via roll during Bond Quest [Path of the Hero]
+    Fixed an issue where a hero would remain suspended in mid-air when dying in the air
+    Fixed an issue where combat became impossible when a World Boss reset during battle
+    Fixed an issue where Barduk could not descend to the ground after jumping during combat
+    Fixed an issue where the acquisition source of some equipment was displayed as an unreleased dungeon
+    Fixed an issue where Karlien's hero material was displayed abnormally when switching after using [Fox Grab]
+    Fixed an issue where the set effect text of some equipment appeared cut off in certain language environments
+    Fixed an issue in Dungeon [Deepwind Borderland] where some puzzle props could not be hit, preventing progression
+    Fixed an issue where Reina's face and body skin tones were displayed differently when wearing the [White Flower of the Blue Waves] costume
+
+
+
+
+
+Thank you.
+
+— The DragonSword : Awakening Team
