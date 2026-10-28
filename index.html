@@ -130,6 +130,11 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .karma-card-title{font-size:17px;line-height:1.25;font-weight:800;color:#f8f9fc;margin:0 0 5px}
 .karma-card-meta{font-size:12px;color:#d1d6e0;line-height:1.45}
 .karma-kind{display:inline-block;margin-right:8px;font-weight:800;color:#65d2ff}
+.karma-skill-link{appearance:none;background:none;border:0;padding:0;color:inherit;font:inherit;font-weight:750;text-decoration:underline;text-decoration-style:dotted;text-decoration-color:#9ca8b8;text-underline-offset:3px;cursor:pointer}
+.karma-skill-link:hover,.karma-skill-link:focus-visible{color:var(--karma-accent,#68c7d5);outline-offset:2px}
+.karma-skill-popover{position:fixed;z-index:250;width:min(440px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;background:#202126;border:1px solid #536273;border-radius:8px;box-shadow:0 18px 55px #000b;padding:12px}
+.karma-skill-popover[hidden]{display:none}
+.karma-skill-popover .profile-skill{margin:0}
 .karma-signature-link{appearance:none;background:none;border:0;padding:0;color:inherit;font:inherit;font-weight:700;text-decoration:underline;text-decoration-color:currentColor;text-underline-offset:2px;cursor:pointer}
 .karma-signature-link:hover,.karma-signature-link:focus-visible{color:var(--karma-accent);outline-offset:2px}
 
@@ -431,7 +436,7 @@ function buildKarmaCard(k){
      const value=document.createElement('b');value.className='karma-trait-value';const lv=karmaLevels(t);value.dataset.traitLevels=JSON.stringify(lv.levels);value.textContent=lv.levels[0];const step=document.createElement('small');step.className='karma-trait-step';step.textContent=`+${lv.step} / Asc.`;const right=document.createElement('span');right.className='karma-trait-right';right.append(step,value);line.append(right);effect.append(line);
     }
    }
-   if(k.exclusive){const ex=document.createElement('div');ex.className='karma-exclusive';ex.innerHTML='<strong>Signature exclusive effect</strong><div>'+formatSkillText(k.exclusive)+'</div>';effect.append(ex)}
+   if(k.exclusive){const ex=document.createElement('div');ex.className='karma-exclusive';ex.innerHTML='<strong>Signature exclusive effect</strong><div>'+formatKarmaExclusive(k)+'</div>';effect.append(ex)}
    card.append(effect);
    const stats=document.createElement('div');stats.className='karma-stats';
    const statHeading=document.createElement('div');statHeading.className='karma-stat-heading';statHeading.textContent='Base stats · Lv. 70 / Ascension 6';stats.append(statHeading);
@@ -445,6 +450,70 @@ function buildKarmaCard(k){
    });
    return card;
 }
+// Link skill names mentioned by a signature effect to the exact skill data for that hero.
+function formatKarmaExclusive(k){
+ const raw=String(k.exclusive||'');
+ const profile=CHARACTER_PROFILE_DATA[k.signature];
+ const skills=(profile?.skills||[]).map(sk=>{
+  const full=String(sk.skill||'').replace(/\\s*\\(Lv\\.?\\s*\\d+\\).*$/i,'').trim();
+  const name=full.split(/\\s*\\(/)[0].trim();
+  return name?{...sk,displayName:name}:null;
+ }).filter(Boolean).sort((a,b)=>b.displayName.length-a.displayName.length);
+ const matches=[];let text=raw;
+ for(const sk of skills){
+  const re=new RegExp('(?<![\\\\w])'+sk.displayName.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\function renderKarmas(){')+'(?![\\\\w])','i');
+  const m=re.exec(text);
+  if(m){const token='KARMASKILLTOKEN'+matches.length+'X';matches.push({token,skill:sk,matched:m[0]});text=text.slice(0,m.index)+token+text.slice(m.index+m[0].length);}
+ }
+ let html=formatSkillText(text);
+ for(const m of matches){
+  const tokenEsc=profileEsc(m.token);
+  const link='<button type="button" class="karma-skill-link" data-karma-skill="'+profileEsc(m.skill.displayName)+'" data-karma-hero="'+profileEsc(k.signature)+'" aria-label="View '+profileEsc(k.signature)+' skill '+profileEsc(m.skill.displayName)+'" title="Hover to preview skill; click to open Skills">'+profileEsc(m.matched)+'</button>';
+  html=html.replace(tokenEsc,link);
+ }
+ return html;
+}
+function showKarmaSkillPopover(anchor,heroName,skillName){
+ const profile=CHARACTER_PROFILE_DATA[heroName];if(!profile)return;
+ const norm=s=>String(s||'').trim().toLowerCase();
+ const skill=(profile.skills||[]).find(sk=>norm(String(sk.skill||'').replace(/\\s*\\(Lv\\.?\\s*\\d+\\).*$/i,'').split(/\\s*\\(/)[0])===norm(skillName));
+ if(!skill)return;
+ let pop=document.getElementById('karmaSkillPopover');
+ if(!pop){pop=document.createElement('div');pop.id='karmaSkillPopover';pop.className='karma-skill-popover';pop.hidden=true;document.body.append(pop);
+  pop.addEventListener('mouseenter',()=>clearTimeout(karmaSkillHideTimer));
+  pop.addEventListener('mouseleave',()=>hideKarmaSkillPopover());
+ }
+ pop.innerHTML='';
+ const card=document.createElement('article');card.className='profile-skill';
+ const head=document.createElement('div');head.className='profile-skill-head';
+ const slot=document.createElement('span');slot.className='profile-skill-slot';slot.textContent=skill.slot||'Skill';
+ const title=document.createElement('h4');title.textContent=skill.skill||skillName;head.append(slot,title);
+ const body=document.createElement('div');body.className='profile-skill-body';body.innerHTML=formatSkillText(skill.description||'');
+ card.append(head,body);
+ const maxMatch=String(skill.skill||'').match(/Lv\\.?\\s*(\\d+)/i),maxLevel=maxMatch?Math.max(1,parseInt(maxMatch[1],10)):1;
+ if(maxLevel>1&&!/mastery\\s*\\(passive\\)/i.test(skill.slot||'')){
+  const controls=document.createElement('div');controls.className='profile-skill-controls';
+  const label=document.createElement('label');label.textContent='Skill level';
+  const range=document.createElement('input');range.type='range';range.min='1';range.max=String(maxLevel);range.value=String(maxLevel);range.setAttribute('aria-label',skill.skill+' level');
+  const level=document.createElement('span');level.className='profile-skill-level';level.textContent='Lv. '+maxLevel;
+  const original=skill.description||'';
+  range.addEventListener('input',()=>{const lv=Number(range.value),factor=(1+(SKILL_MAX_TO_LV1-1)*(lv-1)/(maxLevel-1))/SKILL_MAX_TO_LV1;level.textContent=lv<maxLevel?'Lv. '+lv+' (est.)':'Lv. '+lv;body.innerHTML=formatSkillText(original.replace(/(Attack Power )(\\d+(?:\\.\\d+)?)(% Damage)/g,(m,a,num,c)=>a+Math.round(Number(num)*factor)+c));});
+  controls.append(label,range,level);card.append(controls);
+ }
+ pop.append(card);pop.hidden=false;
+ const r=anchor.getBoundingClientRect(),w=pop.offsetWidth,h=pop.offsetHeight;
+ let left=r.left,top=r.bottom+8;
+ if(left+w>window.innerWidth-12)left=window.innerWidth-w-12;
+ if(top+h>window.innerHeight-12)top=r.top-h-8;
+ pop.style.left=Math.max(12,left)+'px';pop.style.top=Math.max(12,top)+'px';
+}
+let karmaSkillHideTimer=null;
+function hideKarmaSkillPopover(delay=180){clearTimeout(karmaSkillHideTimer);karmaSkillHideTimer=setTimeout(()=>{const pop=document.getElementById('karmaSkillPopover');if(pop)pop.hidden=true;},delay);}
+document.addEventListener('pointerover',e=>{const link=e.target.closest?.('.karma-skill-link');if(link)showKarmaSkillPopover(link,link.dataset.karmaHero,link.dataset.karmaSkill);});
+document.addEventListener('pointerout',e=>{const link=e.target.closest?.('.karma-skill-link');if(link&&!link.contains(e.relatedTarget)&&!document.getElementById('karmaSkillPopover')?.contains(e.relatedTarget))hideKarmaSkillPopover();});
+document.addEventListener('focusin',e=>{const link=e.target.closest?.('.karma-skill-link');if(link)showKarmaSkillPopover(link,link.dataset.karmaHero,link.dataset.karmaSkill);});
+document.addEventListener('focusout',e=>{if(e.target.closest?.('.karma-skill-link'))hideKarmaSkillPopover();});
+document.addEventListener('click',e=>{const link=e.target.closest?.('.karma-skill-link');if(!link)return;e.preventDefault();hideKarmaSkillPopover(0);openCharacterProfile(link.dataset.karmaHero,'skills');});
 function renderKarmas(){
  const board=document.getElementById('karmaBoard');if(!board)return;
  const query=(document.getElementById('karmaSearch')?.value||'').trim().toLowerCase();
