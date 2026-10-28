@@ -1,3 +1,16 @@
+## 2026-10-28 — Claude: data structure for sorting and future features; checker and stats scripts
+- New `tools/validate_data.py` (cross-reference and rule checker), `tools/hero_stats.py` (recalculates base-stat estimates and gear builds from data.json) and `tools/skill_meta.py` (generates skill details and structured builds). Usage is in AGENTS.md → Tools.
+- `data.json` (schemaVersion 3):
+  - `CHARACTER_PROFILE_DATA[hero].build` stores the Karma and gear-set recommendations as data.
+  - `skills[].meta` gives each skill its max level, max damage %, the statuses it inflicts and the statuses it requires.
+  - New `GENERIC_KARMA` per archetype.
+- Fixes found by the checker:
+  - Lute's, Dana's and Sion's chest and legs builds had only 4 substats; now 5, with Defense Ignore added.
+  - The second Karma name carried a stray full stop on every hero.
+  - Ryza's signature Karma hover card didn't open, because the name included "(signature, Exchange)".
+- `index.html`: the Best Karmas, gear sets and set-bonus totals read `build` first, with the old sentence parsing kept as a fallback. The generic Karma comes from data.json.
+- Validation: the checker passes. A side-by-side browser comparison with the previous version across all 20 heroes found only the intended differences listed above, and no script errors.
+
 ## 2026-10-28 — Claude: awakenings moved to data.json, verified word for word, re-rated 0–5
 - `data.json`: new `AWAKENINGS` key for all 20 heroes × 6. The names and full text were read from the 120 screenshots (OCR, then every line checked by eye against the images), replacing ChatGPT's shortened paraphrases. The 60 stat awakenings carry `effects` as numbers (e.g. `{stat: "Critical Hit Chance", value: 10}`) for future use in the totals.
 - Ratings redone by Claude on the full 0–5 scale, judged on each hero's kit, role and teams. The spread is now 0×2, 1×10, 2×57, 3×37, 4×13 and 5×1 (Reina A3: Wind Grab resets Tempest). Each rating has a one-line reason shown under the card.

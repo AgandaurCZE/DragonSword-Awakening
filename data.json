@@ -1,5 +1,5 @@
 {
- "schemaVersion": 2,
+ "schemaVersion": 3,
  "meta": {
   "patch": "1.1.2",
   "balancePatch": "1.1.0",
@@ -341,6 +341,17 @@
   "Freeze": "Frostbite",
   "Shock": "Thunderbolt",
   "Break": "Breaker"
+ },
+ "GENERIC_KARMA": {
+  "Amplitude": "Pounding Heart",
+  "Crushing": "Scattered Pulse",
+  "Gale": "Wings of the Sky",
+  "Bloodburst": "Blooming Blood",
+  "Blazeflame": "Leg Scale of Blazing Flames",
+  "Frostbite": "Season of Bitter Cold",
+  "Thunderbolt": "Flash Claws",
+  "Venom": "Dominating Head",
+  "Breaker": "A Cut Above"
  },
  "TEAM_DATA": [
   {
@@ -2117,49 +2128,139 @@
     {
      "slot": "Auto attack",
      "skill": "Dirty Fight  (Lv.7)",
-     "description": "Swing the dual daggers at the enemy.\nAttack Power 615% Damage"
+     "description": "Swing the dual daggers at the enemy.\nAttack Power 615% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 615,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Piercing Step  (Lv.7)",
-     "description": "Jumps into the air toward the enemy, spins spectacularly, and slashes the surrounding area.\nAttack Power 530% Damage"
+     "description": "Jumps into the air toward the enemy, spins spectacularly, and slashes the surrounding area.\nAttack Power 530% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 530,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 530% Damage"
+     "description": "Rolls forward to move.\nAttack Power 530% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 530,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Fatal Sting (Poison)  (Lv.7)",
-     "description": "Quickly thrusts the dagger forward. Then stabs the enemy again.\nAttack Power 686% Damage\nInflicts Poison status effect"
+     "description": "Quickly thrusts the dagger forward. Then stabs the enemy again.\nAttack Power 686% Damage\nInflicts Poison status effect",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 686,
+      "inflicts": [
+       "Poison"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Venom Dance (Poison)  (Lv.10)",
-     "description": "Swing the dual daggers at the enemy to slash repeatedly, then finish with a kick.\nAttack Power 936% Damage\nInflicts Poison and Airborne status effects"
+     "description": "Swing the dual daggers at the enemy to slash repeatedly, then finish with a kick.\nAttack Power 936% Damage\nInflicts Poison and Airborne status effects",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 936,
+      "inflicts": [
+       "Airborne",
+       "Poison"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Phantom Slash (Airborne)  (Lv.10)",
-     "description": "Rapidly charge toward the enemy and slash through them with dual daggers.\nAttack Power 1113% Damage\nInflicts the Airborne status effect\nCan be used on the ground and in the air"
+     "description": "Rapidly charge toward the enemy and slash through them with dual daggers.\nAttack Power 1113% Damage\nInflicts the Airborne status effect\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1113,
+      "inflicts": [
+       "Airborne"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Venom Cutter (Poison)  (Lv.10)",
-     "description": "Closes in on the enemy and slashes through them with a series of flashy strikes.\nAttack Power 1456% Damage\nInflicts Poison status effect\nActivation Conditions: Can be activated when the target is in the Airborne status"
+     "description": "Closes in on the enemy and slashes through them with a series of flashy strikes.\nAttack Power 1456% Damage\nInflicts Poison status effect\nActivation Conditions: Can be activated when the target is in the Airborne status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1456,
+      "inflicts": [
+       "Poison"
+      ],
+      "requiresAny": [
+       "Airborne"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Poison Grab (Poison)  (Lv.10)",
-     "description": "Closes in on the enemy, grabs them, and delivers a deep slash with the dual daggers.\nAttack Power 1176% Damage\nPoison 1 stack: Inflicts Poison status effect\nPoison 2 stacks or more: Inflicts Airborne status effect\nMount Action: Attacks while clinging to certain giant bosses.\nWith 2 or more stacks of Poison, you can press the attack key again to attack continuously; pressing the jump or roll keys will end the Mount Action.\nActivation Conditions: Activates when the target is under the Poison status effect. Enhanced when the target has 2 or more Poison stacks."
+     "description": "Closes in on the enemy, grabs them, and delivers a deep slash with the dual daggers.\nAttack Power 1176% Damage\nPoison 1 stack: Inflicts Poison status effect\nPoison 2 stacks or more: Inflicts Airborne status effect\nMount Action: Attacks while clinging to certain giant bosses.\nWith 2 or more stacks of Poison, you can press the attack key again to attack continuously; pressing the jump or roll keys will end the Mount Action.\nActivation Conditions: Activates when the target is under the Poison status effect. Enhanced when the target has 2 or more Poison stacks.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1176,
+      "inflicts": [
+       "Airborne",
+       "Poison"
+      ],
+      "requiresAny": [
+       "Poison"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Trails of Sword Light",
-     "description": "The movement distance and number of attacks for the [Venom Dance] skill increase.\nCharlotte"
+     "description": "The movement distance and number of attacks for the [Venom Dance] skill increase.\nCharlotte",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "Wandering Blade",
+     "second": "Defeating Poison with Poison",
+     "alternatives": [
+      "So Good It's to Die For",
+      "A Spectacular Poison"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Venomfog Shade",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Charlotte": {
    "archetype": "VENOM",
@@ -2170,49 +2271,136 @@
     {
      "slot": "Auto attack",
      "skill": "Shadow Dance  (Lv.7)",
-     "description": "Swing a dagger at the enemy and attack with a kick.\nAttack Power 580% Damage"
+     "description": "Swing a dagger at the enemy and attack with a kick.\nAttack Power 580% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 580,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Shadow Leaf  (Lv.7)",
-     "description": "While jumping, swings a dagger at the enemy and then stomps down with a foot.\nAttack Power 713% Damage"
+     "description": "While jumping, swings a dagger at the enemy and then stomps down with a foot.\nAttack Power 713% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 713,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Performs a forward somersault to move forward.\nAttack Power 713% Damage"
+     "description": "Performs a forward somersault to move forward.\nAttack Power 713% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 713,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Poison Step (Poison)  (Lv.7)",
-     "description": "Move forward while tumbling and swing a dagger toward the front.\nAttack Power 604% Damage\nInflicts Poison status effect"
+     "description": "Move forward while tumbling and swing a dagger toward the front.\nAttack Power 604% Damage\nInflicts Poison status effect",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 604,
+      "inflicts": [
+       "Poison"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Invisible  (Lv.10)",
-     "description": "Steps back and hides in the darkness, entering [Stealth] for a set time and summoning a [Clone] on the spot. The [Clone] automatically explodes after a set time.\nAttack Power 740% Damage\nIncreases Critical Damage by 15% while hidden\n[Stealth]: Becomes invisible and is removed from enemy targeting. The [Stealth] status is canceled while attacking.\nCan be used on the ground and in the air"
+     "description": "Steps back and hides in the darkness, entering [Stealth] for a set time and summoning a [Clone] on the spot. The [Clone] automatically explodes after a set time.\nAttack Power 740% Damage\nIncreases Critical Damage by 15% while hidden\n[Stealth]: Becomes invisible and is removed from enemy targeting. The [Stealth] status is canceled while attacking.\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 740,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Poison Dagger (Poison)  (Lv.10)",
-     "description": "Throw daggers repeatedly at the enemy.\nAttack Power 1042% Damage\nInflicts Poison status effect\nCan be used on the ground and in the air"
+     "description": "Throw daggers repeatedly at the enemy.\nAttack Power 1042% Damage\nInflicts Poison status effect\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1042,
+      "inflicts": [
+       "Poison"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Illusion Kick (Airborne)  (Lv.10)",
-     "description": "Approach the enemy, stab them with a dagger, then kick them.\nAttack Power 1222% Damage\nInflicts the Airborne status effect\nActivation Conditions: Can be activated when the target is under the Poison status effect or in the [Stealth] state"
+     "description": "Approach the enemy, stab them with a dagger, then kick them.\nAttack Power 1222% Damage\nInflicts the Airborne status effect\nActivation Conditions: Can be activated when the target is under the Poison status effect or in the [Stealth] state",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1222,
+      "inflicts": [
+       "Airborne"
+      ],
+      "requiresAny": [
+       "Poison",
+       "Stealth"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Shadow Grab (Knockdown)  (Lv.10)",
-     "description": "Close in on the enemy and slam the ground.\nAttack Power 1700% Damage\nInflicts the Knockdown status effect\nMount Action: Attacks while clinging to certain giant bosses. You can attack continuously by inputting the attack button again, and you can end the mount action by inputting a jump or roll. Inflicts Knockdown status effect upon additional input\nActivation Conditions: Can be activated when the target is in the Airborne status"
+     "description": "Close in on the enemy and slam the ground.\nAttack Power 1700% Damage\nInflicts the Knockdown status effect\nMount Action: Attacks while clinging to certain giant bosses. You can attack continuously by inputting the attack button again, and you can end the mount action by inputting a jump or roll. Inflicts Knockdown status effect upon additional input\nActivation Conditions: Can be activated when the target is in the Airborne status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1700,
+      "inflicts": [
+       "Knockdown"
+      ],
+      "requiresAny": [
+       "Airborne"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Hidden Blade",
-     "description": "The motion of the 4th hit of the basic attack changes and its damage increases. Pressing the attack key again during a jump attack or dodge attack casts an enhanced attack."
+     "description": "The motion of the 4th hit of the basic attack changes and its damage increases. Pressing the attack key again during a jump attack or dodge attack casts an enhanced attack.",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "The Conviction Left in Darkness",
+     "second": "Defeating Poison with Poison",
+     "alternatives": [
+      "So Good It's to Die For",
+      "A Spectacular Poison"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Venomfog Shade",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Lute": {
    "archetype": "AMPLITUDE",
@@ -2223,49 +2411,129 @@
     {
      "slot": "Auto attack",
      "skill": "Sword Slash  (Lv.7)",
-     "description": "Swing the greatsword at the enemy.\nAttack Power 642% Damage"
+     "description": "Swing the greatsword at the enemy.\nAttack Power 642% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 642,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Dropkick  (Lv.7)",
-     "description": "While jumping, swing the greatsword at the enemy, then strike downwards to attack.\nAttack Power 719% Damage"
+     "description": "While jumping, swing the greatsword at the enemy, then strike downwards to attack.\nAttack Power 719% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 719,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 719% Damage"
+     "description": "Rolls forward to move.\nAttack Power 719% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 719,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Kick Combo  (Lv.7)",
-     "description": "Performs a roundhouse kick forward, then a side kick.\nAttack Power 713% Damage\nDash Action: When the attack button is pressed during a dash, the attack changes to a two-footed kick toward the front."
+     "description": "Performs a roundhouse kick forward, then a side kick.\nAttack Power 713% Damage\nDash Action: When the attack button is pressed during a dash, the attack changes to a two-footed kick toward the front.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 713,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Stun Slash (Stun)  (Lv.10)",
-     "description": "Swings the greatsword powerfully at the enemy, then jumps and finishes with a powerful downward strike.\nAttack Power 1269% Damage\nInflicts the Stun status effect"
+     "description": "Swings the greatsword powerfully at the enemy, then jumps and finishes with a powerful downward strike.\nAttack Power 1269% Damage\nInflicts the Stun status effect",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1269,
+      "inflicts": [
+       "Stun"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Healing Circle (Recovery)  (Lv.10)",
-     "description": "Creates an area in front that heals damage for a certain period of time.\nAttack Power 600% Damage\nRestores 20% of maximum HP to self and allies within range"
+     "description": "Creates an area in front that heals damage for a certain period of time.\nAttack Power 600% Damage\nRestores 20% of maximum HP to self and allies within range",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 600,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Swordgrab (Knockdown)  (Lv.10)",
-     "description": "Close in on the enemy, pierce them with the greatsword, then strike downward onto the ground.\nAttack Power 1626% Damage\nInflicts the Knockdown status effect\nMount Action: Attacks while clinging to certain giant bosses. Pressing the attack button again allows for consecutive attacks, and pressing the jump or roll button ends the mount action. Inflicts Knockdown status effect upon additional input."
+     "description": "Close in on the enemy, pierce them with the greatsword, then strike downward onto the ground.\nAttack Power 1626% Damage\nInflicts the Knockdown status effect\nMount Action: Attacks while clinging to certain giant bosses. Pressing the attack button again allows for consecutive attacks, and pressing the jump or roll button ends the mount action. Inflicts Knockdown status effect upon additional input.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1626,
+      "inflicts": [
+       "Knockdown"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special B",
      "skill": "Relic Fall  (Lv.10)",
-     "description": "Summon a massive sacred artifact using Sacred Energy and bring it crashing down.\nAttack Power 1499% Damage\nActivation Conditions: Can be activated when the target is in the Knockdown status"
+     "description": "Summon a massive sacred artifact using Sacred Energy and bring it crashing down.\nAttack Power 1499% Damage\nActivation Conditions: Can be activated when the target is in the Knockdown status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1499,
+      "inflicts": [],
+      "requiresAny": [
+       "Knockdown"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "A Young Boy's Choice",
-     "description": "The number of attacks for the [Kick Combo] skill and the Rage gained from the [Dropkick] skill increase, and the Stun status effect is additionally applied to enemies hit.\nTheresia"
+     "description": "The number of attacks for the [Kick Combo] skill and the Rage gained from the [Dropkick] skill increase, and the Stun status effect is additionally applied to enemies hit.\nTheresia",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "A Sword Summoned for a Friend",
+     "second": "I'll Knock You Out Myself",
+     "alternatives": [
+      "Every Rose Has Its Thorn",
+      "A Coincidental Yet Perfect Plan"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Holy Arbiter",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Theresia": {
    "archetype": "AMPLITUDE",
@@ -2276,47 +2544,114 @@
     {
      "slot": "Auto attack",
      "skill": "Judgment Spiral  (Lv.7)",
-     "description": "Swings the flails in rapid succession.\nAttack Power 621% Damage"
+     "description": "Swings the flails in rapid succession.\nAttack Power 621% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 621,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Celestial Dive  (Lv.7)",
-     "description": "Swings the flail upward, then spins and slams it downward.\nAttack Power 581% Damage"
+     "description": "Swings the flail upward, then spins and slams it downward.\nAttack Power 581% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 581,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 581% Damage"
+     "description": "Rolls forward to move.\nAttack Power 581% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 581,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Heaven's Flick  (Lv.7)",
-     "description": "After rolling, quickly thrust the flail forward to strike.\nAttack Power 620% Damage"
+     "description": "After rolling, quickly thrust the flail forward to strike.\nAttack Power 620% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 620,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Consecration (Bleed)  (Lv.10)",
-     "description": "After activating [Heretic Judgment], alternately strike and pull back both flails toward the front.\nAttack Power 981% Damage\nInflicts Bleed status effect\n[Heretic Judgment]: A spinning flail continuously deals damage to surrounding enemies."
+     "description": "After activating [Heretic Judgment], alternately strike and pull back both flails toward the front.\nAttack Power 981% Damage\nInflicts Bleed status effect\n[Heretic Judgment]: A spinning flail continuously deals damage to surrounding enemies.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 981,
+      "inflicts": [
+       "Bleed"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Celestial Verdict (Stun)  (Lv.10)",
-     "description": "Slams the iron balls of the two-handed flail forward to create a shockwave.\nAttack Power 1017% Damage\nInflicts the Stun status effect"
+     "description": "Slams the iron balls of the two-handed flail forward to create a shockwave.\nAttack Power 1017% Damage\nInflicts the Stun status effect",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1017,
+      "inflicts": [
+       "Stun"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Divine Arc (Bleed)  (Lv.10)",
-     "description": "Quickly close in on the target and strike with a series of spins.\nAttack Power 1570% Damage\nInflicts Bleed status effect. Enters [Heretic Judgment] or increases the duration of an active [Heretic Judgment]\nActivation Conditions: Can be activated when the target is in the Stun status"
+     "description": "Quickly close in on the target and strike with a series of spins.\nAttack Power 1570% Damage\nInflicts Bleed status effect. Enters [Heretic Judgment] or increases the duration of an active [Heretic Judgment]\nActivation Conditions: Can be activated when the target is in the Stun status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1570,
+      "inflicts": [
+       "Bleed"
+      ],
+      "requiresAny": [
+       "Stun"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Holy Rise (Bleed)  (Lv.10)",
-     "description": "Quickly approaches the target, delivers a series of strikes, then strikes upward.\nAttack Power 1188% Damage\nInflicts Bleed and Airborne status effects\nActivation Conditions: Can be activated when the target is in the Bleed status effect"
+     "description": "Quickly approaches the target, delivers a series of strikes, then strikes upward.\nAttack Power 1188% Damage\nInflicts Bleed and Airborne status effects\nActivation Conditions: Can be activated when the target is in the Bleed status effect",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1188,
+      "inflicts": [
+       "Airborne",
+       "Bleed"
+      ],
+      "requiresAny": [
+       "Bleed"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Unwavering Faith",
-     "description": "While in [Heretic Judgment] mode, using the [Dodge] skill increases super armor reduction and damage reduction for a certain period."
+     "description": "While in [Heretic Judgment] mode, using the [Dodge] skill increases super armor reduction and damage reduction for a certain period.",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "MODE SWITCH — Heretic Judgment",
@@ -2326,19 +2661,62 @@
     {
      "slot": "Auto attack (Heretic Judgment mode)",
      "skill": "Judgment Spiral (Stun)  (Lv.7)",
-     "description": "Swings the flails in rapid succession.\nAttack Power 621% Damage\n[Heretic Judgment] Inflicts Stun, Bleed status effects\n[Heretic Judgment] Increases attack range"
+     "description": "Swings the flails in rapid succession.\nAttack Power 621% Damage\n[Heretic Judgment] Inflicts Stun, Bleed status effects\n[Heretic Judgment] Increases attack range",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 621,
+      "inflicts": [
+       "Bleed",
+       "Stun"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack (Heretic Judgment mode)",
      "skill": "Heaven's Flick  (Lv.7)",
-     "description": "After rolling, quickly thrust the flail forward to strike.\nAttack Power 620% Damage\n[Heretic Judgment] Piercing Strike"
+     "description": "After rolling, quickly thrust the flail forward to strike.\nAttack Power 620% Damage\n[Heretic Judgment] Piercing Strike",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 620,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate (Heretic Judgment mode)",
      "skill": "Celestial Verdict (Stun)  (Lv.10)",
-     "description": "Slams the iron balls of the two-handed flail forward to create a shockwave.\nAttack Power 1017% Damage\nInflicts the Stun status effect\nWhen in [Heretic Judgment], additional Stun status effect is applied\n[Heretic Judgment] duration reduced by 4 seconds"
+     "description": "Slams the iron balls of the two-handed flail forward to create a shockwave.\nAttack Power 1017% Damage\nInflicts the Stun status effect\nWhen in [Heretic Judgment], additional Stun status effect is applied\n[Heretic Judgment] duration reduced by 4 seconds",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1017,
+      "inflicts": [
+       "Stun"
+      ],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "Merciful Death Sentence",
+     "second": "I'll Knock You Out Myself",
+     "alternatives": [
+      "Every Rose Has Its Thorn",
+      "A Coincidental Yet Perfect Plan"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Bloodstained Chaser",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Alex": {
    "archetype": "CRUSHING",
@@ -2349,47 +2727,107 @@
     {
      "slot": "Auto attack",
      "skill": "Brandish  (Lv.7)",
-     "description": "Swing your sword and shield at the enemy.\nAttack Power 619% Damage"
+     "description": "Swing your sword and shield at the enemy.\nAttack Power 619% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 619,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Dive Kick  (Lv.7)",
-     "description": "While jumping, swing your sword at the enemy, then kick the ground.\nAttack Power 614% Damage"
+     "description": "While jumping, swing your sword at the enemy, then kick the ground.\nAttack Power 614% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 614,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 614% Damage"
+     "description": "Rolls forward to move.\nAttack Power 614% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 614,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Dodge Combo  (Lv.7)",
-     "description": "Rolls and swings the sword widely at the enemy.\nAttack Power 648% Damage\nDash Action: If you press the attack button while dashing, the dash transforms into a powerful front kick."
+     "description": "Rolls and swings the sword widely at the enemy.\nAttack Power 648% Damage\nDash Action: If you press the attack button while dashing, the dash transforms into a powerful front kick.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 648,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Knockdown Smash (Knockdown)  (Lv.10)",
-     "description": "Swing the shield at the enemy, then kick them.\nAttack Power 1354% Damage\nInflicts the Knockdown status effect"
+     "description": "Swing the shield at the enemy, then kick them.\nAttack Power 1354% Damage\nInflicts the Knockdown status effect",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1354,
+      "inflicts": [
+       "Knockdown"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Guard Stance  (Lv.10)",
-     "description": "Hold the shield forward to enter [Defensive Stance].\nAttack Power 682% Damage\n[Defensive Stance]: Focuses on defense, reducing Super Armor depletion. When hit by an enemy attack, counters with a shockwave.\nSwitching Action: When switching heroes while in [Defensive Stance], remains on the battlefield for a short time."
+     "description": "Hold the shield forward to enter [Defensive Stance].\nAttack Power 682% Damage\n[Defensive Stance]: Focuses on defense, reducing Super Armor depletion. When hit by an enemy attack, counters with a shockwave.\nSwitching Action: When switching heroes while in [Defensive Stance], remains on the battlefield for a short time.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 682,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Pounding Grab  (Lv.10)",
-     "description": "Closes in on the enemy, thrusts the sword, then lifts it up and slams it down.\nAttack Power 1456% Damage\nMount Action: Attacks while clinging to certain giant bosses. Increases enemy hostility by 33% and applies it to self.\nActivation Conditions: Can be activated when the target is in the Knockdown status"
+     "description": "Closes in on the enemy, thrusts the sword, then lifts it up and slams it down.\nAttack Power 1456% Damage\nMount Action: Attacks while clinging to certain giant bosses. Increases enemy hostility by 33% and applies it to self.\nActivation Conditions: Can be activated when the target is in the Knockdown status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1456,
+      "inflicts": [],
+      "requiresAny": [
+       "Knockdown"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Guard Counter (Knockdown)  (Lv.10)",
-     "description": "While in [Defensive Stance] mode, using this skill in sync with an enemy's attack timing causes you to swing your shield in a counterattack, canceling [Defensive Stance] mode.\nAttack Power 1172% Damage\nReduces the target's Defense by 20% on a successful counterattack\nInflicts the Knockdown status effect\nActivation Conditions: Can be activated while in [Defensive Stance] mode"
+     "description": "While in [Defensive Stance] mode, using this skill in sync with an enemy's attack timing causes you to swing your shield in a counterattack, canceling [Defensive Stance] mode.\nAttack Power 1172% Damage\nReduces the target's Defense by 20% on a successful counterattack\nInflicts the Knockdown status effect\nActivation Conditions: Can be activated while in [Defensive Stance] mode",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1172,
+      "inflicts": [
+       "Knockdown"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Taunt is the best defense",
-     "description": "Enhances the [Guard Stance] skill to unconditionally apply the Taunt status to enemies within range.\nFor a certain period, reduces the attack power of enemies in the Taunt state by 10%"
+     "description": "Enhances the [Guard Stance] skill to unconditionally apply the Taunt status to enemies within range.\nFor a certain period, reduces the attack power of enemies in the Taunt state by 10%",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "MODE SWITCH — Defensive Stance",
@@ -2399,19 +2837,57 @@
     {
      "slot": "Auto attack (Defensive Stance mode)",
      "skill": "Brandish  (Lv.7)",
-     "description": "Swing your sword and shield at the enemy.\nAttack Power 619% Damage\nIn [Defensive Stance] mode, thrusts at enemies with a sword while holding a shield in front."
+     "description": "Swing your sword and shield at the enemy.\nAttack Power 619% Damage\nIn [Defensive Stance] mode, thrusts at enemies with a sword while holding a shield in front.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 619,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack (Defensive Stance mode)",
      "skill": "Dodge Combo  (Lv.7)",
-     "description": "Rolls and swings the sword widely at the enemy.\nAttack Power 648% Damage\nIn [Defensive Stance] mode, charges forward with the shield raised and strikes.\nDash Action: If you press the attack button while dashing, the dash transforms into a powerful front kick."
+     "description": "Rolls and swings the sword widely at the enemy.\nAttack Power 648% Damage\nIn [Defensive Stance] mode, charges forward with the shield raised and strikes.\nDash Action: If you press the attack button while dashing, the dash transforms into a powerful front kick.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 648,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate (Defensive Stance mode)",
      "skill": "Guard Stance  (Lv.10)",
-     "description": "Hold the shield forward to enter [Defensive Stance].\nAttack Power 682% Damage\n[Taunt]: Makes a provocative gesture at the enemy, redirecting the enemy's hostility toward allies onto oneself. Amplifies the hostility of enemies within range by 40% and applies it to oneself.\n[Defensive Stance]: Focuses on defense, reducing Super Armor depletion. When hit by an enemy attack, counters with a shockwave.\nSwitching Action: When switching heroes while in [Defensive Stance], remains on the battlefield for a short time."
+     "description": "Hold the shield forward to enter [Defensive Stance].\nAttack Power 682% Damage\n[Taunt]: Makes a provocative gesture at the enemy, redirecting the enemy's hostility toward allies onto oneself. Amplifies the hostility of enemies within range by 40% and applies it to oneself.\n[Defensive Stance]: Focuses on defense, reducing Super Armor depletion. When hit by an enemy attack, counters with a shockwave.\nSwitching Action: When switching heroes while in [Defensive Stance], remains on the battlefield for a short time.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 682,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "Loyalty Amidst Lethargy",
+     "second": "Stay Sharp. Always",
+     "alternatives": [
+      "Merciless Kick",
+      "Legends Left Behind by the Master"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Earthshatterer",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Reina": {
    "archetype": "GALE",
@@ -2422,49 +2898,133 @@
     {
      "slot": "Auto attack",
      "skill": "Wind Sword  (Lv.7)",
-     "description": "Charge toward the enemy while swinging your sword.\nAttack Power 613% Damage"
+     "description": "Charge toward the enemy while swinging your sword.\nAttack Power 613% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 613,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Silphid Spike  (Lv.7)",
-     "description": "While jumping, swing your sword at the enemy and strike downward.\nAttack Power 638% Damage"
+     "description": "While jumping, swing your sword at the enemy and strike downward.\nAttack Power 638% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 638,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 638% Damage"
+     "description": "Rolls forward to move.\nAttack Power 638% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 638,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Winchester  (Lv.7)",
-     "description": "Spin toward the enemy and kick them.\nAttack Power 670% Damage\nDash Attack: When the attack button is pressed while dashing, the attack transforms into a lunging strike where the character dashes forward and swings their sword."
+     "description": "Spin toward the enemy and kick them.\nAttack Power 670% Damage\nDash Attack: When the attack button is pressed while dashing, the attack transforms into a lunging strike where the character dashes forward and swings their sword.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 670,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Rising Cutter (Airborne)  (Lv.10)",
-     "description": "Charge forward, swinging the sword powerfully like a whirlwind toward the enemy. Slash upward powerfully, then strike downward.\nAttack Power 1475% Damage\nInflicts the Airborne status effect"
+     "description": "Charge forward, swinging the sword powerfully like a whirlwind toward the enemy. Slash upward powerfully, then strike downward.\nAttack Power 1475% Damage\nInflicts the Airborne status effect",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1475,
+      "inflicts": [
+       "Airborne"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Wind Slayer (Airborne)  (Lv.10)",
-     "description": "Dash toward the enemy like a storm, slashing quickly as you pass.\nAttack Power 961% Damage\nInflicts the Airborne status effect\nCan be used on the ground and in the air"
+     "description": "Dash toward the enemy like a storm, slashing quickly as you pass.\nAttack Power 961% Damage\nInflicts the Airborne status effect\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 961,
+      "inflicts": [
+       "Airborne"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Tempest  (Lv.10)",
-     "description": "Close in on the enemy and launch a series of attacks, swinging the sword as if dancing.\nAttack Power 1515% Damage\nActivation Conditions: Can be activated when the target is in the Airborne status"
+     "description": "Close in on the enemy and launch a series of attacks, swinging the sword as if dancing.\nAttack Power 1515% Damage\nActivation Conditions: Can be activated when the target is in the Airborne status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1515,
+      "inflicts": [],
+      "requiresAny": [
+       "Airborne"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Wind Grab (Airborne)  (Lv.10)",
-     "description": "Closes in on the enemy, grabs them, and slashes with the sword.\nAttack Power 1582% Damage\nInflicts the Airborne status effect\nMount Action: Attacks while clinging to certain giant bosses. You can perform consecutive attacks by inputting the attack button again, and you can end the mount action by inputting a jump or roll. Inflicts the Airborne status effect upon additional input\nActivation Conditions: Can be activated when the target is in the Airborne status"
+     "description": "Closes in on the enemy, grabs them, and slashes with the sword.\nAttack Power 1582% Damage\nInflicts the Airborne status effect\nMount Action: Attacks while clinging to certain giant bosses. You can perform consecutive attacks by inputting the attack button again, and you can end the mount action by inputting a jump or roll. Inflicts the Airborne status effect upon additional input\nActivation Conditions: Can be activated when the target is in the Airborne status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1582,
+      "inflicts": [
+       "Airborne"
+      ],
+      "requiresAny": [
+       "Airborne"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Steel Flutter",
-     "description": "[Dodge] The skill changes to a form that can be used in mid-air.\nCooldown 2.5 seconds\nEileen"
+     "description": "[Dodge] The skill changes to a form that can be used in mid-air.\nCooldown 2.5 seconds\nEileen",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "The Wind That Protects the Kingdom",
+     "second": "A Path That Leads to the Wind",
+     "alternatives": [
+      "Become a Star in That Sky",
+      "The Wind Blows Again"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Azure Gale",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Eileen": {
    "archetype": "GALE",
@@ -2475,49 +3035,127 @@
     {
      "slot": "Auto attack",
      "skill": "Grand Spear  (Lv.7)",
-     "description": "Charge toward the enemy while swinging the halberd.\nAttack Power 643% Damage"
+     "description": "Charge toward the enemy while swinging the halberd.\nAttack Power 643% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 643,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Spin Presser  (Lv.7)",
-     "description": "While jumping, swing the halberd at the enemy and then slam it into the ground.\nAttack Power 587% Damage"
+     "description": "While jumping, swing the halberd at the enemy and then slam it into the ground.\nAttack Power 587% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 587,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 587% Damage"
+     "description": "Rolls forward to move.\nAttack Power 587% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 587,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Spiral Shave  (Lv.7)",
-     "description": "Charge forward while swinging the halberd, then strike upward.\nAttack Power 739% Damage\nDash Attack: When the attack button is pressed during a dash, the halberd is swung briefly forward before immediately changing to an upward strike."
+     "description": "Charge forward while swinging the halberd, then strike upward.\nAttack Power 739% Damage\nDash Attack: When the attack button is pressed during a dash, the halberd is swung briefly forward before immediately changing to an upward strike.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 739,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Barraging Spear (Airborne)  (Lv.10)",
-     "description": "Stab the enemy repeatedly with the halberd, then slash upward.\nAttack Power 1308% Damage\nInflicts the Airborne status effect"
+     "description": "Stab the enemy repeatedly with the halberd, then slash upward.\nAttack Power 1308% Damage\nInflicts the Airborne status effect",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1308,
+      "inflicts": [
+       "Airborne"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Brave One  (Lv.10)",
-     "description": "Stab the halberd into the ground to intimidate enemies and boost allies' morale for a short time.\nAttack Power 1161% Damage\nIncreases Attack Power by 15% for self and allies within range"
+     "description": "Stab the halberd into the ground to intimidate enemies and boost allies' morale for a short time.\nAttack Power 1161% Damage\nIncreases Attack Power by 15% for self and allies within range",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1161,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Rolling Upper  (Lv.10)",
-     "description": "Charges toward the enemy, spins multiple times, and slashes them upward, sending them flying into the air.\nAttack Power 1558% Damage\nActivation Conditions: Can be activated when the target is in the Airborne status"
+     "description": "Charges toward the enemy, spins multiple times, and slashes them upward, sending them flying into the air.\nAttack Power 1558% Damage\nActivation Conditions: Can be activated when the target is in the Airborne status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1558,
+      "inflicts": [],
+      "requiresAny": [
+       "Airborne"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Vanguard Banner  (Lv.10)",
-     "description": "You swing your halberd as if dancing while moving toward the enemy.\nAttack Power 2295% Damage\nIncreases Critical Rate by 20% for self and allies within range\nYou can move slowly while casting this skill.\nActivation Conditions: Can be activated while the [Brave One] buff is active"
+     "description": "You swing your halberd as if dancing while moving toward the enemy.\nAttack Power 2295% Damage\nIncreases Critical Rate by 20% for self and allies within range\nYou can move slowly while casting this skill.\nActivation Conditions: Can be activated while the [Brave One] buff is active",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 2295,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Resolve lingering on the tip of a spear",
-     "description": "The number of attacks for the [Barraging Spear] skill increases."
+     "description": "The number of attacks for the [Barraging Spear] skill increases.",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "Between Chivalry and Bookmarks",
+     "second": "A Path That Leads to the Wind",
+     "alternatives": [
+      "Become a Star in That Sky",
+      "The Wind Blows Again"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Azure Gale",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Roxy": {
    "archetype": "BLOODBURST",
@@ -2528,49 +3166,138 @@
     {
      "slot": "Auto attack",
      "skill": "Bow Shot  (Lv.7)",
-     "description": "Fires an arrow forward.\nAttack Power 608% Damage"
+     "description": "Fires an arrow forward.\nAttack Power 608% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 608,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Double Shot  (Lv.7)",
-     "description": "Fires a rapid volley of arrows forward.\nAttack Power 596% Damage\n[Plunge Attack]: Pressing the jump key again makes you quickly plunge toward the ground and attack. On hit, you step off the enemy and leap up again."
+     "description": "Fires a rapid volley of arrows forward.\nAttack Power 596% Damage\n[Plunge Attack]: Pressing the jump key again makes you quickly plunge toward the ground and attack. On hit, you step off the enemy and leap up again.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 596,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 596% Damage"
+     "description": "Rolls forward to move.\nAttack Power 596% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 596,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Sliding Shot (Bleed)  (Lv.7)",
-     "description": "Slides forward, strikes the surrounding area with a bow, then fires arrows in rapid succession.\nAttack Power 729% Damage\nInflicts Bleed status effect\nDash Action: If the attack key is pressed while dashing, the movement changes to a short spin and charge forward."
+     "description": "Slides forward, strikes the surrounding area with a bow, then fires arrows in rapid succession.\nAttack Power 729% Damage\nInflicts Bleed status effect\nDash Action: If the attack key is pressed while dashing, the movement changes to a short spin and charge forward.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 729,
+      "inflicts": [
+       "Bleed"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Crimson Spiral (Bleed)  (Lv.10)",
-     "description": "Spin forward, charge, and deliver a powerful kick.\nAttack Power 865% Damage\nInflicts Bleed, Stun status effects\nHold Action: Holding the skill key increases the skill's duration.\nCan be used on the ground and in the air"
+     "description": "Spin forward, charge, and deliver a powerful kick.\nAttack Power 865% Damage\nInflicts Bleed, Stun status effects\nHold Action: Holding the skill key increases the skill's duration.\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 865,
+      "inflicts": [
+       "Bleed",
+       "Stun"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Bloody Shower (Bleed)  (Lv.10)",
-     "description": "Rapidly fire arrows forward.\nAttack Power 1010% Damage\nInflicts Bleed status effect\nCan be used on the ground and in the air"
+     "description": "Rapidly fire arrows forward.\nAttack Power 1010% Damage\nInflicts Bleed status effect\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1010,
+      "inflicts": [
+       "Bleed"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Kick Storm (Bleed)  (Lv.10)",
-     "description": "Close in on the enemy, kick them, then fire an arrow.\nAttack Power 1786% Damage\nInflicts Bleed status effect\nActivation Conditions: Can be activated when the target is in the Stun status"
+     "description": "Close in on the enemy, kick them, then fire an arrow.\nAttack Power 1786% Damage\nInflicts Bleed status effect\nActivation Conditions: Can be activated when the target is in the Stun status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1786,
+      "inflicts": [
+       "Bleed"
+      ],
+      "requiresAny": [
+       "Stun"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Bleeding Grab (Bleed)  (Lv.10)",
-     "description": "Closes in on the enemy, grabs them, twists them, and strikes.\nAttack Power 1245% Damage\nBleed 1 stack applies Bleed status effect\nBleed 2 stacks or more applies Knockdown status effect\nMount Action: Cling to certain giant bosses and attack. At Bleed 2 stacks or more, additional attack key inputs allow consecutive attacks. Pressing Jump or Roll ends the Mount Action. At Bleed 1 stack inflicts Bleed status. At Bleed 2 stacks or more with additional input, inflicts Knockdown status.\nActivation Conditions: Activates when the target is in Bleed status. Enhanced when the target is in Bleed 2 stacks or more."
+     "description": "Closes in on the enemy, grabs them, twists them, and strikes.\nAttack Power 1245% Damage\nBleed 1 stack applies Bleed status effect\nBleed 2 stacks or more applies Knockdown status effect\nMount Action: Cling to certain giant bosses and attack. At Bleed 2 stacks or more, additional attack key inputs allow consecutive attacks. Pressing Jump or Roll ends the Mount Action. At Bleed 1 stack inflicts Bleed status. At Bleed 2 stacks or more with additional input, inflicts Knockdown status.\nActivation Conditions: Activates when the target is in Bleed status. Enhanced when the target is in Bleed 2 stacks or more.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1245,
+      "inflicts": [
+       "Knockdown",
+       "Bleed"
+      ],
+      "requiresAny": [
+       "Bleed"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Agile Moves",
-     "description": "While using the [Dodge] skill, pressing the jump key performs a mid-air somersault to move further."
+     "description": "While using the [Dodge] skill, pressing the jump key performs a mid-air somersault to move further.",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "The Noble Lady's Wild Hobby",
+     "second": "Fangs Lurking in the Thicket",
+     "alternatives": [
+      "A Soldier's Basic Qualities"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Bloodstained Chaser",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Aria": {
    "archetype": "BLAZEFLAME",
@@ -2581,49 +3308,142 @@
     {
      "slot": "Auto attack",
      "skill": "Bolt Shot  (Lv.7)",
-     "description": "Fires an arrow forward.\nAttack Power 625% Damage\nInflicts the Burn and Airborne status effects when [Bomb Arrow] explodes\nFires a [Bomb Arrow] every 3rd attack."
+     "description": "Fires an arrow forward.\nAttack Power 625% Damage\nInflicts the Burn and Airborne status effects when [Bomb Arrow] explodes\nFires a [Bomb Arrow] every 3rd attack.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 625,
+      "inflicts": [
+       "Airborne",
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Shoot and Bomb (Burn)  (Lv.7)",
-     "description": "While jumping, fires an arrow forward and then throws a bomb.\nAttack Power 628% Damage\nInflicts Burn and Airborne status effects"
+     "description": "While jumping, fires an arrow forward and then throws a bomb.\nAttack Power 628% Damage\nInflicts Burn and Airborne status effects",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 628,
+      "inflicts": [
+       "Airborne",
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 628% Damage"
+     "description": "Rolls forward to move.\nAttack Power 628% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 628,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Rapid Shot  (Lv.7)",
-     "description": "After rolling, fires arrows continuously toward the front.\nAttack Power 615% Damage"
+     "description": "After rolling, fires arrows continuously toward the front.\nAttack Power 615% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 615,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Air Bomb (Burn)  (Lv.10)",
-     "description": "Throws a bomb and fires at it to detonate it in midair.\nAttack Power 915% Damage\nInflicts Burn and Airborne status effects"
+     "description": "Throws a bomb and fires at it to detonate it in midair.\nAttack Power 915% Damage\nInflicts Burn and Airborne status effects",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 915,
+      "inflicts": [
+       "Airborne",
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Rolling Bomb (Burn)  (Lv.10)",
-     "description": "Rolls a bomb forward that automatically explodes after a certain amount of time.\nAttack Power 813% Damage\nInflicts Burn and Airborne status effects"
+     "description": "Rolls a bomb forward that automatically explodes after a certain amount of time.\nAttack Power 813% Damage\nInflicts Burn and Airborne status effects",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 813,
+      "inflicts": [
+       "Airborne",
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Multiple Bolt  (Lv.10)",
-     "description": "Fires a homing [Bomb Arrow] at enemies.\nAttack Power 1541% Damage\nInflicts the Burn and Airborne status effects when [Bomb Arrow] explodes\nActivation Conditions: Can be activated when the target is in the Airborne status"
+     "description": "Fires a homing [Bomb Arrow] at enemies.\nAttack Power 1541% Damage\nInflicts the Burn and Airborne status effects when [Bomb Arrow] explodes\nActivation Conditions: Can be activated when the target is in the Airborne status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1541,
+      "inflicts": [
+       "Airborne",
+       "Burn"
+      ],
+      "requiresAny": [
+       "Airborne"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Switch On! (Burn)  (Lv.10)",
-     "description": "Detonates all [Bomb Arrows] on the battlefield simultaneously.\nAttack Power 1228% Damage\nInflicts Burn and Airborne status effects\n[Bomb Arrow]: Explodes automatically after a certain amount of time, but can be detonated immediately by using the [Switch On!] skill.\nActivation Conditions: Can be activated if a [Bomb Arrow] is present on the battlefield"
+     "description": "Detonates all [Bomb Arrows] on the battlefield simultaneously.\nAttack Power 1228% Damage\nInflicts Burn and Airborne status effects\n[Bomb Arrow]: Explodes automatically after a certain amount of time, but can be detonated immediately by using the [Switch On!] skill.\nActivation Conditions: Can be activated if a [Bomb Arrow] is present on the battlefield",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1228,
+      "inflicts": [
+       "Airborne",
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "More Bombs, More Firepower",
-     "description": "[Shoot and Bomb] While using this skill, pressing the attack key again throws another bomb.\nKalien"
+     "description": "[Shoot and Bomb] While using this skill, pressing the attack key again throws another bomb.\nKalien",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "Explosion Is Art",
+     "second": "The Burning Taste of Fire",
+     "alternatives": [
+      "A Flame That Cuts Through the Moment"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Blazing Flames",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Kalien": {
    "archetype": "BLAZEFLAME",
@@ -2634,49 +3454,140 @@
     {
      "slot": "Auto attack",
      "skill": "Firefox (Burn)  (Lv.7)",
-     "description": "Launches a spirit-infused flame forward.\nAttack Power 479% Damage\nInflicts Burn status effect"
+     "description": "Launches a spirit-infused flame forward.\nAttack Power 479% Damage\nInflicts Burn status effect",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 479,
+      "inflicts": [
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Pyro-Fang (Burn)  (Lv.7)",
-     "description": "While jumping, launches a spirit-infused flame forward.\nAttack Power 628% Damage\nInflicts Burn status effect"
+     "description": "While jumping, launches a spirit-infused flame forward.\nAttack Power 628% Damage\nInflicts Burn status effect",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 628,
+      "inflicts": [
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Teleports forward while unleashing a burst of flames.\nAttack Power 628% Damage"
+     "description": "Teleports forward while unleashing a burst of flames.\nAttack Power 628% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 628,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Twin Tails  (Lv.7)",
-     "description": "Summon 2 Fox spirits to pull in and incinerate enemies within the area.\nAttack Power 546% Damage\nInflicts Burn status effect\nThe Fox Spirit dashes forward and, after a certain amount of time or upon hitting an enemy or wall, spins to pull in enemies within its range."
+     "description": "Summon 2 Fox spirits to pull in and incinerate enemies within the area.\nAttack Power 546% Damage\nInflicts Burn status effect\nThe Fox Spirit dashes forward and, after a certain amount of time or upon hitting an enemy or wall, spins to pull in enemies within its range.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 546,
+      "inflicts": [
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Fox Parade (Burn)  (Lv.10)",
-     "description": "Summon multiple Fox Spirits and command them to charge at enemies.\nAttack Power 710% Damage\nInflicts Burn status effect\nFox Spirits explode after a certain amount of time or upon contact with an enemy or a wall.\nCan be used on the ground or in the air. When used in the air, Fox Spirits charge forward toward the front rather than at enemies."
+     "description": "Summon multiple Fox Spirits and command them to charge at enemies.\nAttack Power 710% Damage\nInflicts Burn status effect\nFox Spirits explode after a certain amount of time or upon contact with an enemy or a wall.\nCan be used on the ground or in the air. When used in the air, Fox Spirits charge forward toward the front rather than at enemies.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 710,
+      "inflicts": [
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Fox Chase (Burn)  (Lv.10)",
-     "description": "Summon [Sur] in front of you to incinerate enemies within range.\nAttack Power 1040% Damage\nInflicts Burn status effect\n[Sur]: A fire fox spirit bound by a contract with Kalien. It explodes violently upon contact with an enemy or a wall. It returns to the spirit realm after a certain amount of time.\nCan be used on the ground and in the air"
+     "description": "Summon [Sur] in front of you to incinerate enemies within range.\nAttack Power 1040% Damage\nInflicts Burn status effect\n[Sur]: A fire fox spirit bound by a contract with Kalien. It explodes violently upon contact with an enemy or a wall. It returns to the spirit realm after a certain amount of time.\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1040,
+      "inflicts": [
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Fox Grab (Burn)  (Lv.10)",
-     "description": "Summon multiple [Sur's Clones] toward enemies to detonate them.\nAttack Power 1178% Damage\nInflicts Burn status effect\n[Sur's Clones]: A small avatar of Sur, the fire fox spirit contracted with Kalien. Lifts enemies into the air, slams them into the ground, and detonates them. Returns to the spirit realm after a certain time.\nMount Action: [Sur's Avatar] clings to certain giant bosses and attacks. Burn status applied.\nActivation Conditions: Activates upon the target's Super Armor Break. Usable on ground and in air."
+     "description": "Summon multiple [Sur's Clones] toward enemies to detonate them.\nAttack Power 1178% Damage\nInflicts Burn status effect\n[Sur's Clones]: A small avatar of Sur, the fire fox spirit contracted with Kalien. Lifts enemies into the air, slams them into the ground, and detonates them. Returns to the spirit realm after a certain time.\nMount Action: [Sur's Avatar] clings to certain giant bosses and attacks. Burn status applied.\nActivation Conditions: Activates upon the target's Super Armor Break. Usable on ground and in air.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1178,
+      "inflicts": [
+       "Burn"
+      ],
+      "requiresAny": [
+       "Break",
+       "Super Armor Break"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Finale (Stun)  (Lv.10)",
-     "description": "Simultaneously detonates all [Sur's Clones] summoned on the battlefield.\nAttack Power 811% Damage\nInflicts Burn and Stun status effects\nCan be used on the ground and in the air"
+     "description": "Simultaneously detonates all [Sur's Clones] summoned on the battlefield.\nAttack Power 811% Damage\nInflicts Burn and Stun status effects\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 811,
+      "inflicts": [
+       "Burn",
+       "Stun"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Unceasing Flames",
-     "description": "The duration of the [Twin Tails] skill is increased, and the rotation range of the Fox spirits is expanded.\nKalsion"
+     "description": "The duration of the [Twin Tails] skill is increased, and the rotation range of the Fox spirits is expanded.\nKalsion",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "The Chosen One of the Crimson Flame",
+     "second": "A Flame That Cuts Through the Moment",
+     "alternatives": [
+      "The Burning Taste of Fire"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Blazing Flames",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Kalsion": {
    "archetype": "BLAZEFLAME",
@@ -2687,47 +3598,110 @@
     {
      "slot": "Auto attack",
      "skill": "Great Rush  (Lv.7)",
-     "description": "Charges toward the enemy while swinging the greatsword.\nAttack Power 625% Damage"
+     "description": "Charges toward the enemy while swinging the greatsword.\nAttack Power 625% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 625,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Circle Cleave  (Lv.7)",
-     "description": "While jumping, swing the greatsword toward the enemy and slam it down.\nAttack Power 641% Damage"
+     "description": "While jumping, swing the greatsword toward the enemy and slam it down.\nAttack Power 641% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 641,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 641% Damage"
+     "description": "Rolls forward to move.\nAttack Power 641% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 641,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Circular Slash  (Lv.7)",
-     "description": "Swings a greatsword wide toward the front, then strikes with a fist.\nAttack Power 673% Damage"
+     "description": "Swings a greatsword wide toward the front, then strikes with a fist.\nAttack Power 673% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 673,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Weapon Blaze (Burn)  (Lv.10)",
-     "description": "He unleashes a burst of fiery energy, imbuing his greatsword with the [Royal Flame].\nAttack Power 697% Damage\n[Royal Flame]: A blazing flame persists for a certain duration. Increases Attack Power by 15%\nInflicts Burn status effect"
+     "description": "He unleashes a burst of fiery energy, imbuing his greatsword with the [Royal Flame].\nAttack Power 697% Damage\n[Royal Flame]: A blazing flame persists for a certain duration. Increases Attack Power by 15%\nInflicts Burn status effect",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 697,
+      "inflicts": [
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Flame Wave  (Lv.10)",
-     "description": "Swing the greatsword widely toward the enemy, move forward, and finish with a powerful downward strike that creates a shockwave.\nAttack Power 1073% Damage\nCharge Action: Holding the skill key changes the attack to fire a sword beam forward.\nCan be used on the ground and in the air"
+     "description": "Swing the greatsword widely toward the enemy, move forward, and finish with a powerful downward strike that creates a shockwave.\nAttack Power 1073% Damage\nCharge Action: Holding the skill key changes the attack to fire a sword beam forward.\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1073,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Burst Grab (Burn)  (Lv.10)",
-     "description": "Close in on the enemy, stab them with the greatsword to pin them, then slam them into the ground.\nAttack Power 1221% Damage\nBurn 1 stack applies the Burn status effect\nBurn 2 stacks or more applies the Airborne status effect\nMount Action: Attacks while clinging to certain giant bosses. When Burn is stacked 2 times or more, you can perform consecutive attacks by pressing the attack button again, pressing the jump or roll button will end the mount action. Burn 1 stack Inflicts Burn status effect. Burn 2 stacks or more Inflicts Airborne status effect upon additional input.\nActivation Conditions: Can be activated when the target is under the Burn status effect. Enhanced when the target has 2 or more Burn stacks"
+     "description": "Close in on the enemy, stab them with the greatsword to pin them, then slam them into the ground.\nAttack Power 1221% Damage\nBurn 1 stack applies the Burn status effect\nBurn 2 stacks or more applies the Airborne status effect\nMount Action: Attacks while clinging to certain giant bosses. When Burn is stacked 2 times or more, you can perform consecutive attacks by pressing the attack button again, pressing the jump or roll button will end the mount action. Burn 1 stack Inflicts Burn status effect. Burn 2 stacks or more Inflicts Airborne status effect upon additional input.\nActivation Conditions: Can be activated when the target is under the Burn status effect. Enhanced when the target has 2 or more Burn stacks",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1221,
+      "inflicts": [
+       "Airborne",
+       "Burn"
+      ],
+      "requiresAny": [
+       "Burn"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Explosion  (Lv.10)",
-     "description": "Generate a fireball to pull in surrounding enemies, then detonate it.\nAttack Power 2173% Damage\nHold Action: Holding the skill button increases the skill duration.\nActivation Conditions: Can be activated when the target is in a Airborne status"
+     "description": "Generate a fireball to pull in surrounding enemies, then detonate it.\nAttack Power 2173% Damage\nHold Action: Holding the skill button increases the skill duration.\nActivation Conditions: Can be activated when the target is in a Airborne status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 2173,
+      "inflicts": [],
+      "requiresAny": [
+       "Airborne"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Exploding Glory",
-     "description": "When using the [Burst Grab] skill, an additional explosion occurs."
+     "description": "When using the [Burst Grab] skill, an additional explosion occurs.",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "MODE SWITCH — Royal Flame",
@@ -2737,24 +3711,76 @@
     {
      "slot": "Auto attack (Royal Flame mode)",
      "skill": "Great Rush (Burn)  (Lv.7)",
-     "description": "Charges toward the enemy while swinging the greatsword.\nAttack Power 625% Damage\nInflicts Burn status effect while in [Royal Flame] mode"
+     "description": "Charges toward the enemy while swinging the greatsword.\nAttack Power 625% Damage\nInflicts Burn status effect while in [Royal Flame] mode",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 625,
+      "inflicts": [
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack (Royal Flame mode)",
      "skill": "Circle Cleave (Burn)  (Lv.7)",
-     "description": "While jumping, swing the greatsword toward the enemy and slam it down.\nAttack Power 641% Damage\nInflicts Burn status effect while in [Royal Flame] mode"
+     "description": "While jumping, swing the greatsword toward the enemy and slam it down.\nAttack Power 641% Damage\nInflicts Burn status effect while in [Royal Flame] mode",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 641,
+      "inflicts": [
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack (Royal Flame mode)",
      "skill": "Circular Slash (Burn)  (Lv.7)",
-     "description": "Swings a greatsword wide toward the front, then strikes with a fist.\nAttack Power 673% Damage\nInflicts Burn status effect while in [Royal Flame] mode"
+     "description": "Swings a greatsword wide toward the front, then strikes with a fist.\nAttack Power 673% Damage\nInflicts Burn status effect while in [Royal Flame] mode",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 673,
+      "inflicts": [
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate (Royal Flame mode)",
      "skill": "Flame Wave (Burn / Airborne)  (Lv.10)",
-     "description": "Swing the greatsword widely toward the enemy, move forward, and finish with a powerful downward strike that creates a shockwave.\nAttack Power 1073% Damage\nIn [Royal Flame] mode, inflicts Burn and Airborne status effects\nCharge Action: Holding the skill key changes the attack to fire a sword beam forward.\nCan be used on the ground and in the air"
+     "description": "Swing the greatsword widely toward the enemy, move forward, and finish with a powerful downward strike that creates a shockwave.\nAttack Power 1073% Damage\nIn [Royal Flame] mode, inflicts Burn and Airborne status effects\nCharge Action: Holding the skill key changes the attack to fire a sword beam forward.\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1073,
+      "inflicts": [
+       "Airborne",
+       "Burn"
+      ],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "The Sun Blazes Again",
+     "second": "A Flame That Cuts Through the Moment",
+     "alternatives": [
+      "The Burning Taste of Fire"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Blazing Flames",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Dana": {
    "archetype": "FROSTBITE",
@@ -2765,49 +3791,140 @@
     {
      "slot": "Auto attack",
      "skill": "Snow Pop (Frost)  (Lv.7)",
-     "description": "Fires a snowball forward.\nAttack Power 689% Damage\nInflicts Frost status\nCharge Action: Hold down the attack button to gather power and fire an even more powerful snowball forward."
+     "description": "Fires a snowball forward.\nAttack Power 689% Damage\nInflicts Frost status\nCharge Action: Hold down the attack button to gather power and fire an even more powerful snowball forward.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 689,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Freezy Pop (Frost)  (Lv.7)",
-     "description": "While jumping, she swings her staff to create a frost wind in front of her and fires snowballs at enemies.\nAttack Power 546% Damage\nInflicts Frost status"
+     "description": "While jumping, she swings her staff to create a frost wind in front of her and fires snowballs at enemies.\nAttack Power 546% Damage\nInflicts Frost status",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 546,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Slides forward.\nAttack Power 546% Damage"
+     "description": "Slides forward.\nAttack Power 546% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 546,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Snow Step (Frost)  (Lv.7)",
-     "description": "Slides forward while creating an icy path with her staff. The icy path automatically melts and disappears after a certain amount of time.\nAttack Power 740% Damage\nInflicts Frost status"
+     "description": "Slides forward while creating an icy path with her staff. The icy path automatically melts and disappears after a certain amount of time.\nAttack Power 740% Damage\nInflicts Frost status",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 740,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Summon Chako (Frost)  (Lv.10)",
-     "description": "Summon [Chako] at the designated location. If [Chako] is already summoned, order [Chako] to drop down to the target location. Gain Rime Energy when using this skill.\nAttack Power 843% Damage\nInflicts Frost and Knockdown status effects\n[Chako]: An ice golem created by Dana. It seeks out enemies on its own to protect Dana and engages them in battle. The size of the [Ice Clump] on [Chako]'s back varies depending on the amount of Rime Energy Dana has."
+     "description": "Summon [Chako] at the designated location. If [Chako] is already summoned, order [Chako] to drop down to the target location. Gain Rime Energy when using this skill.\nAttack Power 843% Damage\nInflicts Frost and Knockdown status effects\n[Chako]: An ice golem created by Dana. It seeks out enemies on its own to protect Dana and engages them in battle. The size of the [Ice Clump] on [Chako]'s back varies depending on the amount of Rime Energy Dana has.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 843,
+      "inflicts": [
+       "Knockdown",
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Chako Shield  (Lv.10)",
-     "description": "Summon [Chako] to protect allies behind it. If it blocks an enemy attack while in a defensive stance, it attacks the surrounding area with a shockwave and grants a shield to allies for a certain period. Gain Rime Energy when using this skill.\nAttack Power 785% Damage\nWhen the skill is used again, [Chako]'s defensive stance is released. If [Chako] is already summoned, [Chako] will teleport to Dana, assume a defensive stance, and protect the allies behind it."
+     "description": "Summon [Chako] to protect allies behind it. If it blocks an enemy attack while in a defensive stance, it attacks the surrounding area with a shockwave and grants a shield to allies for a certain period. Gain Rime Energy when using this skill.\nAttack Power 785% Damage\nWhen the skill is used again, [Chako]'s defensive stance is released. If [Chako] is already summoned, [Chako] will teleport to Dana, assume a defensive stance, and protect the allies behind it.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 785,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Chako Knuckle (Frost)  (Lv.10)",
-     "description": "Dana consumes Rime Energy to command [Chako] to attack. [Chako] either delivers rapid strikes or a powerful single blow, depending on the activation conditions. When used while in a defensive stance, it returns to the defensive stance after the attack ends.\nAttack Power 876% Damage\nInflicts Frost status\nActivation Conditions: [Rapid Strikes] When Rime Energy is held. [Powerful Strike] When the target has 2 Frost Stacks"
+     "description": "Dana consumes Rime Energy to command [Chako] to attack. [Chako] either delivers rapid strikes or a powerful single blow, depending on the activation conditions. When used while in a defensive stance, it returns to the defensive stance after the attack ends.\nAttack Power 876% Damage\nInflicts Frost status\nActivation Conditions: [Rapid Strikes] When Rime Energy is held. [Powerful Strike] When the target has 2 Frost Stacks",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 876,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": [
+       "Frost"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Chako Spin (Frost)  (Lv.10)",
-     "description": "Dana consumes Rime Energy to command [Chako] to perform a spinning charge attack. Upon receiving the command, [Chako] closes in on the target and attacks while continuously spinning.\nAttack Power 1108% Damage\nInflicts Frost status\nActivation Conditions: Can be activated when Rime Energy is held and the target is in the Frost or Knockdown status"
+     "description": "Dana consumes Rime Energy to command [Chako] to perform a spinning charge attack. Upon receiving the command, [Chako] closes in on the target and attacks while continuously spinning.\nAttack Power 1108% Damage\nInflicts Frost status\nActivation Conditions: Can be activated when Rime Energy is held and the target is in the Frost or Knockdown status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1108,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": [
+       "Knockdown",
+       "Frost"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Barrier of Gathered Sparkle",
-     "description": "When using [Chako Shield], grants a shield to herself and allies within range. Empowers allies within range for a certain duration.\nIncreases the Defense of yourself and allies within range by 10% for a set duration\nCerese"
+     "description": "When using [Chako Shield], grants a shield to herself and allies within range. Empowers allies within range for a certain duration.\nIncreases the Defense of yourself and allies within range by 10% for a set duration\nCerese",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "A Sparkling Tea Time",
+     "second": "Rock-Splitting Ice",
+     "alternatives": [
+      "Frozen Fortress"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Froststorm",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Cerese": {
    "archetype": "FROSTBITE",
@@ -2818,49 +3935,141 @@
     {
      "slot": "Auto attack",
      "skill": "Ice Ball (Frost)  (Lv.7)",
-     "description": "Fires a frost spell forward.\nAttack Power 467% Damage\nInflicts Frost status\nCharge Action: Holding down the attack key causes the spell to transform into a form infused with more frost."
+     "description": "Fires a frost spell forward.\nAttack Power 467% Damage\nInflicts Frost status\nCharge Action: Holding down the attack key causes the spell to transform into a form infused with more frost.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 467,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Glacial Wave (Frost)  (Lv.7)",
-     "description": "While jumping, fires a frost spell forward.\nAttack Power 676% Damage\nInflicts Frost status\nThe 3rd Frost spell cast is more powerful and deals additional damage upon exploding."
+     "description": "While jumping, fires a frost spell forward.\nAttack Power 676% Damage\nInflicts Frost status\nThe 3rd Frost spell cast is more powerful and deals additional damage upon exploding.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 676,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Slides forward.\nAttack Power 676% Damage"
+     "description": "Slides forward.\nAttack Power 676% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 676,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Frozen Road (Frost)  (Lv.7)",
-     "description": "Lifts you slightly into the air, then moves you quickly while leaving an icy path on the ground. The icy path increases the movement speed of allies and slows down enemies. It automatically melts and disappears after a certain amount of time.\nAttack Power 752% Damage\nInflicts Frost status"
+     "description": "Lifts you slightly into the air, then moves you quickly while leaving an icy path on the ground. The icy path increases the movement speed of allies and slows down enemies. It automatically melts and disappears after a certain amount of time.\nAttack Power 752% Damage\nInflicts Frost status",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 752,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Ice Storm (Frost / Airborne)  (Lv.10)",
-     "description": "Leaps into the air and creates a cold storm in front.\nAttack Power 1528% Damage\nInflicts Frost and Airborne status effects\nCan be used on the ground and in the air"
+     "description": "Leaps into the air and creates a cold storm in front.\nAttack Power 1528% Damage\nInflicts Frost and Airborne status effects\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1528,
+      "inflicts": [
+       "Airborne",
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Frozen Spike (Frost / Airborne)  (Lv.10)",
-     "description": "Casts a spell that causes a giant [Ice Block] to surge forward. The [Ice Block] automatically melts and disappears after a certain amount of time.\nAttack Power 810% Damage\nInflicts Frost and Airborne status effects"
+     "description": "Casts a spell that causes a giant [Ice Block] to surge forward. The [Ice Block] automatically melts and disappears after a certain amount of time.\nAttack Power 810% Damage\nInflicts Frost and Airborne status effects",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 810,
+      "inflicts": [
+       "Airborne",
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Frozen Needles (Frost)  (Lv.10)",
-     "description": "Fires a barrage of frost magic spells at the enemy all at once.\nAttack Power 1161% Damage\nInflicts Frost status\nActivation Conditions: Can be activated when the target is under the Frost or Airborne status effects\nCan be used on the ground and in the air"
+     "description": "Fires a barrage of frost magic spells at the enemy all at once.\nAttack Power 1161% Damage\nInflicts Frost status\nActivation Conditions: Can be activated when the target is under the Frost or Airborne status effects\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1161,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": [
+       "Airborne",
+       "Frost"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Shattering Touch  (Lv.10)",
-     "description": "Simultaneously shatters and destroys all [Ice Blocks] and frozen enemies on the battlefield.\nAttack Power 1241% Damage\nActivation Conditions: Can be activated when a [Ice Block] is present or the target is in the Frozen status effect\nCan be used on the ground and in the air"
+     "description": "Simultaneously shatters and destroys all [Ice Blocks] and frozen enemies on the battlefield.\nAttack Power 1241% Damage\nActivation Conditions: Can be activated when a [Ice Block] is present or the target is in the Frozen status effect\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1241,
+      "inflicts": [],
+      "requiresAny": [
+       "Frozen"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "March of the Cruel Frost",
-     "description": "The duration of the frost path created by the [Frozen Road] skill is increased, and enemies hit by the skill are additionally afflicted with the Frost status effect.\nOthello"
+     "description": "The duration of the frost path created by the [Frozen Road] skill is increased, and enemies hit by the skill are additionally afflicted with the Frost status effect.\nOthello",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "Eternal Blizzard",
+     "second": "Frozen Fortress",
+     "alternatives": [
+      "Rock-Splitting Ice"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Froststorm",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Othello": {
    "archetype": "FROSTBITE",
@@ -2871,49 +4080,138 @@
     {
      "slot": "Auto attack",
      "skill": "Avenger Circle  (Lv.7)",
-     "description": "Swing the spear toward the enemy.\nAttack Power 651% Damage"
+     "description": "Swing the spear toward the enemy.\nAttack Power 651% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 651,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Piercing Spike  (Lv.7)",
-     "description": "While jumping, swing the spear toward the enemy and thrust it.\nAttack Power 705% Damage"
+     "description": "While jumping, swing the spear toward the enemy and thrust it.\nAttack Power 705% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 705,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 705% Damage"
+     "description": "Rolls forward to move.\nAttack Power 705% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 705,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Half-Moon Cutter (Frost)  (Lv.7)",
-     "description": "Roll, then swing the spear forward.\nAttack Power 655% Damage\nInflicts Frost status"
+     "description": "Roll, then swing the spear forward.\nAttack Power 655% Damage\nInflicts Frost status",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 655,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Frozen Stinger (Frost)  (Lv.10)",
-     "description": "Charges toward the enemy and repeatedly thrusts [Ice Spears] into them.\nAttack Power 1130% Damage\nInflicts Frost status\n[Ice Spear]: When attached, the body freezes and movements become sluggish. Multiple spears can be attached at once, and they automatically melt away after a set time."
+     "description": "Charges toward the enemy and repeatedly thrusts [Ice Spears] into them.\nAttack Power 1130% Damage\nInflicts Frost status\n[Ice Spear]: When attached, the body freezes and movements become sluggish. Multiple spears can be attached at once, and they automatically melt away after a set time.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1130,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Ice Crown (Frost / Knockdown)  (Lv.10)",
-     "description": "Leaps toward an enemy, slams a spear into the ground, and creates a prison of [Ice Spears] on the surrounding terrain.\nAttack Power 785% Damage\nInflicts Frost and Knockdown status effects\nCan be used on the ground and in the air"
+     "description": "Leaps toward an enemy, slams a spear into the ground, and creates a prison of [Ice Spears] on the surrounding terrain.\nAttack Power 785% Damage\nInflicts Frost and Knockdown status effects\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 785,
+      "inflicts": [
+       "Knockdown",
+       "Frost"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Ice Grab (Frost)  (Lv.10)",
-     "description": "Close in on the enemy, grab them, thrust [Ice Spear] into them, then break free.\nAttack Power 1238% Damage\nAt 1 Frost Stack, inflicts Frost. At 2 Frost Stacks or more, or on Knockdown, inflicts Frost and Knockdown\nMount Action: Attacks while clinging to certain giant bosses. With 2 stacks of Frost, you can perform consecutive attacks by pressing the attack button again, pressing the jump or roll button ends the mount action. With 1 stack of Frost, inflicts the Frost status effect, [Ice Spear] attached. 2 Frost Stacks, and upon additional input, inflicts the Knockdown status effect\nActivation Conditions: Can be activated when the target is under the Frost status effect. Enhanced when the target has 2 or more Frost Stacks"
+     "description": "Close in on the enemy, grab them, thrust [Ice Spear] into them, then break free.\nAttack Power 1238% Damage\nAt 1 Frost Stack, inflicts Frost. At 2 Frost Stacks or more, or on Knockdown, inflicts Frost and Knockdown\nMount Action: Attacks while clinging to certain giant bosses. With 2 stacks of Frost, you can perform consecutive attacks by pressing the attack button again, pressing the jump or roll button ends the mount action. With 1 stack of Frost, inflicts the Frost status effect, [Ice Spear] attached. 2 Frost Stacks, and upon additional input, inflicts the Knockdown status effect\nActivation Conditions: Can be activated when the target is under the Frost status effect. Enhanced when the target has 2 or more Frost Stacks",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1238,
+      "inflicts": [
+       "Knockdown",
+       "Frost"
+      ],
+      "requiresAny": [
+       "Frost"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Frozen Burst (Frost)  (Lv.10)",
-     "description": "Simultaneously shatters all frozen enemies and [Ice Spears] on the battlefield.\nAttack Power 995% Damage\nInflicts Frost status\nActivation Conditions: Can be activated if the target is under the Frozen status effect or if an [Ice Spear] is present on the battlefield"
+     "description": "Simultaneously shatters all frozen enemies and [Ice Spears] on the battlefield.\nAttack Power 995% Damage\nInflicts Frost status\nActivation Conditions: Can be activated if the target is under the Frozen status effect or if an [Ice Spear] is present on the battlefield",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 995,
+      "inflicts": [
+       "Frost"
+      ],
+      "requiresAny": [
+       "Frozen"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Lion's Roar",
-     "description": "[Half-Moon Cutter] is changed into a charge action: holding the attack key deals greater damage over a wider area."
+     "description": "[Half-Moon Cutter] is changed into a charge action: holding the attack key deals greater damage over a wider area.",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "The Spear That Fells the Sun",
+     "second": "Rock-Splitting Ice",
+     "alternatives": [
+      "Frozen Fortress"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Froststorm",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Ornette": {
    "archetype": "THUNDERBOLT",
@@ -2924,49 +4222,138 @@
     {
      "slot": "Auto attack",
      "skill": "Pray  (Lv.7)",
-     "description": "Swing the scythe while advancing toward the enemy.\nAttack Power 702% Damage"
+     "description": "Swing the scythe while advancing toward the enemy.\nAttack Power 702% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 702,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Shining Spin  (Lv.7)",
-     "description": "While jumping, swing the scythe toward the enemy and strike downward.\nAttack Power 713% Damage"
+     "description": "While jumping, swing the scythe toward the enemy and strike downward.\nAttack Power 713% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 713,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 713% Damage"
+     "description": "Rolls forward to move.\nAttack Power 713% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 713,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Holy Cutter (Shock)  (Lv.7)",
-     "description": "Spin forward while swinging the lightning-wrapped sickle.\nAttack Power 563% Damage\nInflicts the Shock status effect"
+     "description": "Spin forward while swinging the lightning-wrapped sickle.\nAttack Power 563% Damage\nInflicts the Shock status effect",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 563,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Holy Cross (Shock)  (Lv.10)",
-     "description": "Swing a sickle wrapped in lightning toward the front to create a slowly advancing cross.\nAttack Power 867% Damage\nInflicts the Shock status effect"
+     "description": "Swing a sickle wrapped in lightning toward the front to create a slowly advancing cross.\nAttack Power 867% Damage\nInflicts the Shock status effect",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 867,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Holy Circle (Shock)  (Lv.10)",
-     "description": "Wraps the scythe in lightning, then strikes down at the enemy to create a lightning zone and receive [Revelation of Dawn].\nAttack Power 972% Damage\n[Revelation of Dawn]: Increases own Critical Damage by 30%\nInflicts the Shock status effect"
+     "description": "Wraps the scythe in lightning, then strikes down at the enemy to create a lightning zone and receive [Revelation of Dawn].\nAttack Power 972% Damage\n[Revelation of Dawn]: Increases own Critical Damage by 30%\nInflicts the Shock status effect",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 972,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Judgment (Knockdown)  (Lv.10)",
-     "description": "Close in on the enemy and quickly slash in a cross pattern with the lightning-wrapped sickle.\nAttack Power 1578% Damage\nInflicts the Knockdown status effect\nActivation Conditions: Can be activated when the target is under the Shock status effect. Enhanced when the target has Shock 2 stacks or more.\nCan be used on the ground and in the air"
+     "description": "Close in on the enemy and quickly slash in a cross pattern with the lightning-wrapped sickle.\nAttack Power 1578% Damage\nInflicts the Knockdown status effect\nActivation Conditions: Can be activated when the target is under the Shock status effect. Enhanced when the target has Shock 2 stacks or more.\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1578,
+      "inflicts": [
+       "Knockdown"
+      ],
+      "requiresAny": [
+       "Shock"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Holy Grab (Shock)  (Lv.10)",
-     "description": "Close in on the enemy, stab them with the lightning-wrapped sickle to grab them, then spin them away.\nAttack Power 1207% Damage\nInflicts Shock and Airborne status effects\nMount Action: Attacks while clinging to certain giant bosses. Pressing the attack key again allows for consecutive attacks, and pressing the jump or roll keys ends the Mount Action. Inflicts Shock status effect upon additional input.\nActivation Conditions: Can be activated when the target is in the Knockdown status"
+     "description": "Close in on the enemy, stab them with the lightning-wrapped sickle to grab them, then spin them away.\nAttack Power 1207% Damage\nInflicts Shock and Airborne status effects\nMount Action: Attacks while clinging to certain giant bosses. Pressing the attack key again allows for consecutive attacks, and pressing the jump or roll keys ends the Mount Action. Inflicts Shock status effect upon additional input.\nActivation Conditions: Can be activated when the target is in the Knockdown status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1207,
+      "inflicts": [
+       "Airborne",
+       "Shock"
+      ],
+      "requiresAny": [
+       "Knockdown"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Zone of Purification",
-     "description": "Enhances the [Holy Cutter] skill so that when an additional attack button is pressed while the skill is active, the scythe is swung widely to deliver an extra attack, inflicting the Shock and Knockdown status effects on the struck enemy.\nSion"
+     "description": "Enhances the [Holy Cutter] skill so that when an additional attack button is pressed while the skill is active, the scythe is swung widely to deliver an extra attack, inflicting the Shock and Knockdown status effects on the struck enemy.\nSion",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "Sacred Lightning Baptism",
+     "second": "The One Chosen by Lightning",
+     "alternatives": [
+      "A Flash of Invention",
+      "The Agent of Divine Punishment"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Thunderrush",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Sion": {
    "archetype": "THUNDERBOLT",
@@ -2977,49 +4364,137 @@
     {
      "slot": "Auto attack",
      "skill": "Divine Bolt  (Lv.7)",
-     "description": "Fire a sphere forward.\nAttack Power 512% Damage"
+     "description": "Fire a sphere forward.\nAttack Power 512% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 512,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Air Bolt  (Lv.7)",
-     "description": "While jumping, fires a sphere toward the front.\nAttack Power 698% Damage"
+     "description": "While jumping, fires a sphere toward the front.\nAttack Power 698% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 698,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 698% Damage"
+     "description": "Rolls forward to move.\nAttack Power 698% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 698,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Sliding Bolt (Shock)  (Lv.7)",
-     "description": "Slides forward to deliver a kick, then fires a sphere toward the front. The sphere moves slowly forward, attacking any enemies it collides with.\nAttack Power 591% Damage\nInflicts the Shock status effect"
+     "description": "Slides forward to deliver a kick, then fires a sphere toward the front. The sphere moves slowly forward, attacking any enemies it collides with.\nAttack Power 591% Damage\nInflicts the Shock status effect",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 591,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Divine Crash (Shock)  (Lv.10)",
-     "description": "Throws a sacred relic forward.\nAttack Power 838% Damage\nInflicts the Shock status effect\nRecovers the Relic after a certain amount of time. Recovers the Relic immediately when using the [Divine Smash] skill.\nCan be used on the ground and in the air"
+     "description": "Throws a sacred relic forward.\nAttack Power 838% Damage\nInflicts the Shock status effect\nRecovers the Relic after a certain amount of time. Recovers the Relic immediately when using the [Divine Smash] skill.\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 838,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Divine Smash (Knockdown)  (Lv.10)",
-     "description": "Leaps toward the enemy, then places a sacred relic to create an area affected by [Orzea's Blessing].\nAttack Power 1029% Damage\nInflicts the Knockdown status effect\nWhen using the [Divine Crash] skill, the Relic spins, striking nearby enemies before plunging back into the ground. No buffs are applied while spinning. The Relic is retrieved after a certain amount of time if you exit combat or switch heroes.\nCan be used on the ground and in the air"
+     "description": "Leaps toward the enemy, then places a sacred relic to create an area affected by [Orzea's Blessing].\nAttack Power 1029% Damage\nInflicts the Knockdown status effect\nWhen using the [Divine Crash] skill, the Relic spins, striking nearby enemies before plunging back into the ground. No buffs are applied while spinning. The Relic is retrieved after a certain amount of time if you exit combat or switch heroes.\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1029,
+      "inflicts": [
+       "Knockdown"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Bless (Shock)  (Lv.10)",
-     "description": "Attack Power 1023% Damage\n[Orzea's Blessing]: Increases Attack Power by 15% for self and allies within range\n[Orzea's Protection]: Increases Defense by 15% for self and allies within range\nInflicts the Shock status effect\nWhen a skill is used while [Orzea's Blessing] is active, it changes to [Orzea's Protection], when a skill is used while [Orzea's Protection] is active, it changes to the [Orzea's Blessing] buff.\nActivation Conditions: Can be activated when a Sacred Relic is deployed"
+     "description": "Attack Power 1023% Damage\n[Orzea's Blessing]: Increases Attack Power by 15% for self and allies within range\n[Orzea's Protection]: Increases Defense by 15% for self and allies within range\nInflicts the Shock status effect\nWhen a skill is used while [Orzea's Blessing] is active, it changes to [Orzea's Protection], when a skill is used while [Orzea's Protection] is active, it changes to the [Orzea's Blessing] buff.\nActivation Conditions: Can be activated when a Sacred Relic is deployed",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1023,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special B",
      "skill": "Justice Fall (Knockdown)  (Lv.10)",
-     "description": "Summon a sacred relic at the enemy's location and drive it into the ground to deploy an area affected by [Orzea's Blessing].\nAttack Power 1551% Damage\nInflicts the Knockdown status effect\nActivation Conditions: Can be activated when the target is under the Shock status effect"
+     "description": "Summon a sacred relic at the enemy's location and drive it into the ground to deploy an area affected by [Orzea's Blessing].\nAttack Power 1551% Damage\nInflicts the Knockdown status effect\nActivation Conditions: Can be activated when the target is under the Shock status effect",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1551,
+      "inflicts": [
+       "Knockdown"
+      ],
+      "requiresAny": [
+       "Shock"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Surge",
-     "description": "The area of effect for [Orzea's Blessing] and [Orzea's Protection] is expanded, and they additionally inflict the Shock status effect.\nTarte"
+     "description": "The area of effect for [Orzea's Blessing] and [Orzea's Protection] is expanded, and they additionally inflict the Shock status effect.\nTarte",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "Fate Spoke to the Boy",
+     "second": "The One Chosen by Lightning",
+     "alternatives": [
+      "A Flash of Invention",
+      "The Agent of Divine Punishment"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Thunderrush",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Tarte": {
    "archetype": "THUNDERBOLT",
@@ -3030,49 +4505,139 @@
     {
      "slot": "Auto attack",
      "skill": "Bolt Orb  (Lv.7)",
-     "description": "Fires a [Holy Orb] toward the front.\nAttack Power 614% Damage\n[Holy Orb]: When a Shock status attack from you or an ally hits the [Holy Orb], it explodes, dealing powerful damage and inflicting the Shock status effect. The explosion's damage is affected by the [Bolt Bubble] skill."
+     "description": "Fires a [Holy Orb] toward the front.\nAttack Power 614% Damage\n[Holy Orb]: When a Shock status attack from you or an ally hits the [Holy Orb], it explodes, dealing powerful damage and inflicting the Shock status effect. The explosion's damage is affected by the [Bolt Bubble] skill.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 614,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Spiky Bolt (Shock)  (Lv.7)",
-     "description": "While jumping, fires [Holy Orbs] toward the front.\nAttack Power 724% Damage\nInflicts the Shock status effect\nOn the final attack, fires a sphere that detonates the [Holy Orb]. The explosion's damage is affected by the [Bolt Bubble] skill."
+     "description": "While jumping, fires [Holy Orbs] toward the front.\nAttack Power 724% Damage\nInflicts the Shock status effect\nOn the final attack, fires a sphere that detonates the [Holy Orb]. The explosion's damage is affected by the [Bolt Bubble] skill.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 724,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 724% Damage"
+     "description": "Rolls forward to move.\nAttack Power 724% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 724,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Cannon Bolt (Shock)  (Lv.7)",
-     "description": "After rolling, fires a sphere that detonates the [Holy Orb].\nAttack Power 614% Damage\nInflicts the Shock status effect\nThe explosion's damage is affected by the [Bolt Bubble] skill."
+     "description": "After rolling, fires a sphere that detonates the [Holy Orb].\nAttack Power 614% Damage\nInflicts the Shock status effect\nThe explosion's damage is affected by the [Bolt Bubble] skill.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 614,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Lightning Shock (Shock)  (Lv.10)",
-     "description": "Fires a sacred lightning bolt forward.\nAttack Power 1068% Damage\nInflicts the Shock status effect\nHold Action: Holding the skill button increases the skill duration."
+     "description": "Fires a sacred lightning bolt forward.\nAttack Power 1068% Damage\nInflicts the Shock status effect\nHold Action: Holding the skill button increases the skill duration.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1068,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Bolt Bubble  (Lv.10)",
-     "description": "Swings the wand to continuously generate [Holy Orbs].\nAttack Power 1541% Damage\n[Holy Orb]: When a Shock status attack from you or an ally hits the [Holy Orb], it explodes, dealing powerful damage and inflicting the Shock status effect."
+     "description": "Swings the wand to continuously generate [Holy Orbs].\nAttack Power 1541% Damage\n[Holy Orb]: When a Shock status attack from you or an ally hits the [Holy Orb], it explodes, dealing powerful damage and inflicting the Shock status effect.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1541,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Thunderbolt (Shock)  (Lv.10)",
-     "description": "Lift the scripture you are holding into the air, then slam it down onto the enemy's head with a bolt of lightning.\nAttack Power 1063% Damage\nInflicts Shock and Stun status effects\nActivation Conditions: Can be activated when the target is under the Shock status effect"
+     "description": "Lift the scripture you are holding into the air, then slam it down onto the enemy's head with a bolt of lightning.\nAttack Power 1063% Damage\nInflicts Shock and Stun status effects\nActivation Conditions: Can be activated when the target is under the Shock status effect",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1063,
+      "inflicts": [
+       "Shock",
+       "Stun"
+      ],
+      "requiresAny": [
+       "Shock"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Cure (Recovery)  (Lv.10)",
-     "description": "Runs to an ally afflicted by a physical status effect, casts a blessing to remove the status effect, and restores vitality.\nRestores 10% of allies' maximum HP\nActivation Conditions: Can be activated when an ally is afflicted with Stun, Airborne, or Knockdown, or is in Break state"
+     "description": "Runs to an ally afflicted by a physical status effect, casts a blessing to remove the status effect, and restores vitality.\nRestores 10% of allies' maximum HP\nActivation Conditions: Can be activated when an ally is afflicted with Stun, Airborne, or Knockdown, or is in Break state",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": [
+       "Knockdown",
+       "Airborne",
+       "Break",
+       "Stun"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Tingling Droplet Game",
-     "description": "[Bolt Bubble] skill duration is increased. Generates [Holy Orb] even while jumping.\nRyza"
+     "description": "[Bolt Bubble] skill duration is increased. Generates [Holy Orb] even while jumping.\nRyza",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "A Helping Hand for Good Kids",
+     "second": "The One Chosen by Lightning",
+     "alternatives": [
+      "A Flash of Invention",
+      "The Agent of Divine Punishment"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Thunderrush",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Ryza": {
    "archetype": "THUNDERBOLT",
@@ -3083,49 +4648,137 @@
     {
      "slot": "Auto attack",
      "skill": "Volt Thrust  (Lv.7)",
-     "description": "Swings the spear wildly forward, thrusting repeatedly, then strikes downward.\nAttack Power 670% Damage"
+     "description": "Swings the spear wildly forward, thrusting repeatedly, then strikes downward.\nAttack Power 670% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 670,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Lightning Flow  (Lv.7)",
-     "description": "Attacks the target twice in midair, then strikes downward with the spear.\nAttack Power 697% Damage"
+     "description": "Attacks the target twice in midair, then strikes downward with the spear.\nAttack Power 697% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 697,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Teleports a short distance forward.\nAttack Power 697% Damage"
+     "description": "Teleports a short distance forward.\nAttack Power 697% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 697,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Lightning Step (Shock)  (Lv.7)",
-     "description": "Leap through space to move a short distance, then strike downward with the spear.\nAttack Power 692% Damage\nInflicts the Shock status effect\nIf the first attack hits an enemy, a follow-up attack is possible."
+     "description": "Leap through space to move a short distance, then strike downward with the spear.\nAttack Power 692% Damage\nInflicts the Shock status effect\nIf the first attack hits an enemy, a follow-up attack is possible.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 692,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Lightning Javelin (Shock)  (Lv.10)",
-     "description": "Throw a spear charged with lightning toward the front.\nAttack Power 674% Damage\nInflicts the Shock status effect\nCharge Action: Press the skill key to enter aim mode and attack in the desired direction.\nCan be used on the ground and in the air"
+     "description": "Throw a spear charged with lightning toward the front.\nAttack Power 674% Damage\nInflicts the Shock status effect\nCharge Action: Press the skill key to enter aim mode and attack in the desired direction.\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 674,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Stormbringer (Shock / Airborne)  (Lv.10)",
-     "description": "Spin while swinging the spear, then strike with a powerful bolt of lightning.\nAttack Power 860% Damage\nInflicts Shock and Airborne status effects\nCan be used on the ground and in the air"
+     "description": "Spin while swinging the spear, then strike with a powerful bolt of lightning.\nAttack Power 860% Damage\nInflicts Shock and Airborne status effects\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 860,
+      "inflicts": [
+       "Airborne",
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Flash (Shock)  (Lv.10)",
-     "description": "Teleports to a spear located on the field. Recovers the spear and attacks the surrounding area.\nAttack Power 1370% Damage\nInflicts the Shock status effect\nActivation Conditions: Activates when [Ryza's Spear] is present on the field\nCan be used on the ground and in the air"
+     "description": "Teleports to a spear located on the field. Recovers the spear and attacks the surrounding area.\nAttack Power 1370% Damage\nInflicts the Shock status effect\nActivation Conditions: Activates when [Ryza's Spear] is present on the field\nCan be used on the ground and in the air",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1370,
+      "inflicts": [
+       "Shock"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special B",
      "skill": "Thunder Grab (Shock / Knockdown)  (Lv.10)",
-     "description": "Close in on the enemy and slam them twice with great force.\nAttack Power 1382% Damage\nInflicts Shock and Knockdown status effects\nMount Action: Attacks while clinging to certain giant bosses. At Shock 2 stacks or more, you can press the attack key again to attack continuously, and pressing the jump or roll key ends the Mount Action. At Shock 1 stack, inflicts the Shock status effect. At Shock 2 stacks or more, upon additional input, inflicts the Knockdown status effect\nActivation Conditions: Can be activated when the target is under the Shock status effect. Enhanced when the target has Shock 2 stacks or more"
+     "description": "Close in on the enemy and slam them twice with great force.\nAttack Power 1382% Damage\nInflicts Shock and Knockdown status effects\nMount Action: Attacks while clinging to certain giant bosses. At Shock 2 stacks or more, you can press the attack key again to attack continuously, and pressing the jump or roll key ends the Mount Action. At Shock 1 stack, inflicts the Shock status effect. At Shock 2 stacks or more, upon additional input, inflicts the Knockdown status effect\nActivation Conditions: Can be activated when the target is under the Shock status effect. Enhanced when the target has Shock 2 stacks or more",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1382,
+      "inflicts": [
+       "Knockdown",
+       "Shock"
+      ],
+      "requiresAny": [
+       "Shock"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Endless Flash",
-     "description": "Physical status effects are added to the activation conditions of the [Thunder Grab] skill."
+     "description": "Physical status effects are added to the activation conditions of the [Thunder Grab] skill.",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "The Scar Lightning Left Behind",
+     "second": "The One Chosen by Lightning",
+     "alternatives": [
+      "A Flash of Invention",
+      "The Agent of Divine Punishment"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Thunderrush",
+      "pieces": 3
+     },
+     {
+      "set": "Battle Will",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Castella": {
    "archetype": "BREAKER",
@@ -3136,49 +4789,130 @@
     {
      "slot": "Auto attack",
      "skill": "Wild Blow  (Lv.7)",
-     "description": "Swing the axe toward the enemy.\nAttack Power 685% Damage"
+     "description": "Swing the axe toward the enemy.\nAttack Power 685% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 685,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Wild Crash  (Lv.7)",
-     "description": "While jumping, strikes downward with an axe toward the front.\nAttack Power 561% Damage"
+     "description": "While jumping, strikes downward with an axe toward the front.\nAttack Power 561% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 561,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 561% Damage"
+     "description": "Rolls forward to move.\nAttack Power 561% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 561,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Shoulder Crusher  (Lv.7)",
-     "description": "Deliver a shoulder strike forward, then deliver a powerful upward swing with the axe.\nAttack Power 737% Damage\nDash Action: If an attack button is pressed while dashing, the attack changes to a jumping uppercut toward the front."
+     "description": "Deliver a shoulder strike forward, then deliver a powerful upward swing with the axe.\nAttack Power 737% Damage\nDash Action: If an attack button is pressed while dashing, the attack changes to a jumping uppercut toward the front.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 737,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Whirlwind  (Lv.10)",
-     "description": "Performs an area attack by rapidly spinning the axe toward enemies.\nAttack Power 1384% Damage\nYou can move slowly while casting skills."
+     "description": "Performs an area attack by rapidly spinning the axe toward enemies.\nAttack Power 1384% Damage\nYou can move slowly while casting skills.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1384,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Howling  (Lv.10)",
-     "description": "Shouts a rage-filled war cry at the enemy.\nAttack Power 1006% Damage"
+     "description": "Shouts a rage-filled war cry at the enemy.\nAttack Power 1006% Damage",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1006,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Stun Blow (Stun)  (Lv.10)",
-     "description": "Close in on the enemy and crush them with a merciless axe strike.\nAttack Power 1835% Damage\nInflicts the Stun status effect\nActivation Conditions: Can be activated when the target's Super Armor is broken"
+     "description": "Close in on the enemy and crush them with a merciless axe strike.\nAttack Power 1835% Damage\nInflicts the Stun status effect\nActivation Conditions: Can be activated when the target's Super Armor is broken",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1835,
+      "inflicts": [
+       "Stun"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special B",
      "skill": "Upper Blow (Airborne)  (Lv.10)",
-     "description": "Close in on the enemy and deliver a powerful upward strike with all your might.\nAttack Power 1652% Damage\nInflicts the Airborne status effect\nActivation Conditions: Can be activated when the target is in the Stun or Knockdown status"
+     "description": "Close in on the enemy and deliver a powerful upward strike with all your might.\nAttack Power 1652% Damage\nInflicts the Airborne status effect\nActivation Conditions: Can be activated when the target is in the Stun or Knockdown status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1652,
+      "inflicts": [
+       "Airborne"
+      ],
+      "requiresAny": [
+       "Knockdown",
+       "Stun"
+      ]
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Rage Elf's Sprint",
-     "description": "The movement distance and number of attacks for the [Shoulder Crusher] skill are increased.\nWhile using the skill, Super Armor damage reduction is increased and damage taken is decreased.\nAstria"
+     "description": "The movement distance and number of attacks for the [Shoulder Crusher] skill are increased.\nWhile using the skill, Super Armor damage reduction is increased and damage taken is decreased.\nAstria",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "Noisy Duet",
+     "second": "Destruction Is the Mother of Creation",
+     "alternatives": [
+      "The Way of the Wild",
+      "A Reckless Charge"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Ruinsbreaker",
+      "pieces": 3
+     },
+     {
+      "set": "Holy Arbiter",
+      "pieces": 2
+     }
+    ]
+   }
   },
   "Astria": {
    "archetype": "BREAKER",
@@ -3189,47 +4923,103 @@
     {
      "slot": "Auto attack",
      "skill": "Ballista Shot  (Lv.7)",
-     "description": "Fires arrows forward. If out of arrows, swings the ballista.\nAttack Power 612% Damage\nConsumes 1 arrow upon attack"
+     "description": "Fires arrows forward. If out of arrows, swings the ballista.\nAttack Power 612% Damage\nConsumes 1 arrow upon attack",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 612,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Jump attack",
      "skill": "Stunt Shot  (Lv.7)",
-     "description": "While jumping, fires an arrow forward. If no arrows are available, swings the ballista.\nAttack Power 498% Damage\nConsumes 1 arrow per attack\nWhen all arrows are depleted, pressing the attack key again reloads an arrow."
+     "description": "While jumping, fires an arrow forward. If no arrows are available, swings the ballista.\nAttack Power 498% Damage\nConsumes 1 arrow per attack\nWhen all arrows are depleted, pressing the attack key again reloads an arrow.",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 498,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 498% Damage"
+     "description": "Rolls forward to move.\nAttack Power 498% Damage",
+     "meta": {
+      "maxLevel": 1,
+      "attackPct": 498,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Dash attack",
      "skill": "Slide  (Lv.7)",
-     "description": "While rolling, slide forward and collide with enemies in your path.\nAttack Power 615% Damage"
+     "description": "While rolling, slide forward and collide with enemies in your path.\nAttack Power 615% Damage",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 615,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Skill",
      "skill": "Siege Assault  (Lv.10)",
-     "description": "Stabs the ballista into the ground to enter [Precision Shot] mode.\nAttack Power increased by 40%\n[Precision Shot] When used while in this mode, the ballista is raised, switching to [Normal Shot] mode.\n[Precision Shot]: Movement is restricted, but attacks have a longer range.\n[Normal Shot]: Attacks while moving freely."
+     "description": "Stabs the ballista into the ground to enter [Precision Shot] mode.\nAttack Power increased by 40%\n[Precision Shot] When used while in this mode, the ballista is raised, switching to [Normal Shot] mode.\n[Precision Shot]: Movement is restricted, but attacks have a longer range.\n[Normal Shot]: Attacks while moving freely.",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate",
      "skill": "Wide Shot  (Lv.10)",
-     "description": "Fire arrows in a fan-shaped pattern toward the front.\nAttack Power 1082% Damage\nNo arrows consumed when attacking"
+     "description": "Fire arrows in a fan-shaped pattern toward the front.\nAttack Power 1082% Damage\nNo arrows consumed when attacking",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1082,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A",
      "skill": "Bolt Bombard  (Lv.10)",
-     "description": "Swings the ballista toward the enemy and fires an arrow into the air. The arrow explodes, scattering sharp shrapnel around the area.\nAttack Power 1526% Damage\nNo arrows consumed when attacking\nActivation Conditions: Can be activated when the target is in the Stun status"
+     "description": "Swings the ballista toward the enemy and fires an arrow into the air. The arrow explodes, scattering sharp shrapnel around the area.\nAttack Power 1526% Damage\nNo arrows consumed when attacking\nActivation Conditions: Can be activated when the target is in the Stun status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1526,
+      "inflicts": [],
+      "requiresAny": [
+       "Stun"
+      ]
+     }
     },
     {
      "slot": "Special B",
      "skill": "Reload  (Lv.10)",
-     "description": "Load the ballista with the maximum number of arrows. After loading, your body feels light as your energy surges.\nIncreases movement speed by 20% for a certain period of time\nActivation Conditions: Arrow Consumption Can be activated"
+     "description": "Load the ballista with the maximum number of arrows. After loading, your body feels light as your energy surges.\nIncreases movement speed by 20% for a certain period of time\nActivation Conditions: Arrow Consumption Can be activated",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Mastery (passive)",
      "skill": "Blazing Lightning",
-     "description": "The [Slide] skill is enhanced, increasing movement distance and speed. While in [Precision Shooting] mode, when using the [Dodge] skill, 1 arrow is reloaded."
+     "description": "The [Slide] skill is enhanced, increasing movement distance and speed. While in [Precision Shooting] mode, when using the [Dodge] skill, 1 arrow is reloaded.",
+     "meta": {
+      "maxLevel": null,
+      "attackPct": null,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "MODE SWITCH — Precision Shot",
@@ -3239,19 +5029,61 @@
     {
      "slot": "Auto attack (Precision Shot mode)",
      "skill": "Ballista Shot (Stun)  (Lv.7)",
-     "description": "Fires arrows forward. If out of arrows, swings the ballista.\nAttack Power 612% Damage\nIn [Precision Shot] mode, inflicts the Stun status effect\nIf out of arrows while in [Precision Shot] mode, reloads to maximum capacity.\nConsumes 1 arrow upon attack"
+     "description": "Fires arrows forward. If out of arrows, swings the ballista.\nAttack Power 612% Damage\nIn [Precision Shot] mode, inflicts the Stun status effect\nIf out of arrows while in [Precision Shot] mode, reloads to maximum capacity.\nConsumes 1 arrow upon attack",
+     "meta": {
+      "maxLevel": 7,
+      "attackPct": 612,
+      "inflicts": [
+       "Stun"
+      ],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Ultimate (Precision Shot mode)",
      "skill": "Wide Shot  (Lv.10)",
-     "description": "Fire arrows in a fan-shaped pattern toward the front.\nAttack Power 1082% Damage\nIn [Precision Shot] mode, the arrow explodes, dealing greater damage.\nNo arrows consumed when attacking"
+     "description": "Fire arrows in a fan-shaped pattern toward the front.\nAttack Power 1082% Damage\nIn [Precision Shot] mode, the arrow explodes, dealing greater damage.\nNo arrows consumed when attacking",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1082,
+      "inflicts": [],
+      "requiresAny": []
+     }
     },
     {
      "slot": "Special A (Precision Shot mode)",
      "skill": "Bolt Bombard  (Lv.10)",
-     "description": "Swings the ballista toward the enemy and fires an arrow into the air. The arrow explodes, scattering sharp shrapnel around the area.\nAttack Power 1526% Damage\nIn [Precision Shot] mode, the splash damage radius increases.\nNo arrows consumed when attacking\nActivation Conditions: Can be activated when the target is in the Stun status"
+     "description": "Swings the ballista toward the enemy and fires an arrow into the air. The arrow explodes, scattering sharp shrapnel around the area.\nAttack Power 1526% Damage\nIn [Precision Shot] mode, the splash damage radius increases.\nNo arrows consumed when attacking\nActivation Conditions: Can be activated when the target is in the Stun status",
+     "meta": {
+      "maxLevel": 10,
+      "attackPct": 1526,
+      "inflicts": [],
+      "requiresAny": [
+       "Stun"
+      ]
+     }
     }
-   ]
+   ],
+   "build": {
+    "karma": {
+     "signature": "Wildflowers Bloom Through the Wind",
+     "second": "Destruction Is the Mother of Creation",
+     "alternatives": [
+      "The Way of the Wild",
+      "A Reckless Charge"
+     ]
+    },
+    "sets": [
+     {
+      "set": "Ruinsbreaker",
+      "pieces": 3
+     },
+     {
+      "set": "Holy Arbiter",
+      "pieces": 2
+     }
+    ]
+   }
   }
  },
  "AWAKENINGS": {
@@ -6501,7 +8333,8 @@
       "Attack Power Up",
       "Critical Hit Chance",
       "Critical Damage",
-      "Defense Up"
+      "Defense Up",
+      "Defense Ignore"
      ]
     },
     "Legs": {
@@ -6510,7 +8343,8 @@
       "Max HP Up",
       "Attack Power Up",
       "Critical Hit Chance",
-      "Critical Damage"
+      "Critical Damage",
+      "Defense Ignore"
      ]
     },
     "Gloves": {
@@ -6673,7 +8507,8 @@
       "Attack Power Up",
       "Critical Hit Chance",
       "Critical Damage",
-      "Defense Up"
+      "Defense Up",
+      "Defense Ignore"
      ]
     },
     "Legs": {
@@ -6682,7 +8517,8 @@
       "Max HP Up",
       "Attack Power Up",
       "Critical Hit Chance",
-      "Critical Damage"
+      "Critical Damage",
+      "Defense Ignore"
      ]
     },
     "Gloves": {
@@ -7019,7 +8855,8 @@
       "Attack Power Up",
       "Critical Hit Chance",
       "Critical Damage",
-      "Defense Up"
+      "Defense Up",
+      "Defense Ignore"
      ]
     },
     "Legs": {
@@ -7028,7 +8865,8 @@
       "Max HP Up",
       "Attack Power Up",
       "Critical Hit Chance",
-      "Critical Damage"
+      "Critical Damage",
+      "Defense Ignore"
      ]
     },
     "Gloves": {

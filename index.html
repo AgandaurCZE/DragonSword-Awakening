@@ -337,7 +337,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]};
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]};
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -832,7 +832,7 @@ const GEAR_SLOTS=['Helmet','Chest','Legs','Gloves','Boots'];
 const KARMA_TRAIT_STAT={'Attack Power':'Attack Power Up','Critical Rate':'Critical Hit Chance','Max HP':'Max HP Up','Defense':'Defense Up'};
 function statIsPct(s){return (GEAR_STATS.percentStats||[]).includes(s)||/Additional Damage$|^Defense Ignore$/.test(s);}
 function fmtStat(s,v,sign){const pct=statIsPct(s);const r=pct?Math.round(v*100)/100:Math.round(v);return (sign&&v>=0?'+':'')+(pct?r.toLocaleString('en-GB',{maximumFractionDigits:2})+'%':r.toLocaleString('en-GB'));}
-function heroSets(name){const g=String((CHARACTER_PROFILE_DATA[name]||{}).gear||'').replace(/^Recommended Gear sets:\s*/i,'').split(/\.\s*Main stats:/i)[0];
+function heroSets(name){const B=(CHARACTER_PROFILE_DATA[name]||{}).build;if(B&&B.sets&&B.sets.length)return B.sets.map(s=>({set:GEAR_DATA.find(g=>g.name===s.set),pieces:s.pieces})).filter(x=>x.set);const g=String((CHARACTER_PROFILE_DATA[name]||{}).gear||'').replace(/^Recommended Gear sets:\s*/i,'').split(/\.\s*Main stats:/i)[0];
  return g.split(/\s*\+\s*/).map(x=>{const m=x.match(/^(\d+)\s+(.+)$/);if(!m)return null;const set=GEAR_DATA.find(s=>s.name.toLowerCase()===m[2].trim().toLowerCase());return set?{set,pieces:Number(m[1])}:null}).filter(Boolean);}
 // Title passives (TITLES in data.json), summed per stat. Not shown on the page yet.
 // mode 'all' = every title with a known passive (end-game target); 'owned' = only titles marked obtained.
@@ -895,12 +895,13 @@ function renderProfileBuild(h,data){
  const recommendedParts=mainPart.split(/\s*\+\s*/).map(x=>x.trim()).filter(Boolean);
  const altMatch=text.match(/Alternatives?:\s*(.*)$/i);if(altMatch)alternatives=altMatch[1].trim();
  if(recommendedParts[0])signature=recommendedParts[0].replace(/\s*\(signature\)/i,'').trim();
+ const B=data.build&&data.build.karma;if(B&&B.signature){signature=B.signature;recommendedParts[0]=B.signature+' (signature)';recommendedParts[1]=B.second||'';alternatives=(B.alternatives||[]).join(', ');}
  const rows=[];if(signature)rows.push({title:signature,kind:/signature/i.test(recommendedParts[0]||'')?'Signature':'Recommended',desc:'Recommended Karma from the master workbook.'});
  const bestAlternative=recommendedParts[1]||alternatives.split(',').map(x=>x.trim()).filter(Boolean)[0]||'';
  if(bestAlternative)rows.push({title:bestAlternative,kind:'Best alternative',desc:'Alternative listed in the master workbook.'});
  const genericKarmaByArchetype={Amplitude:'Pounding Heart',Crushing:'Scattered Pulse',Gale:'Wings of the Sky',Bloodburst:'Blooming Blood',Blazeflame:'Leg Scale of Blazing Flames',Frostbite:'Season of Bitter Cold',Thunderbolt:'Flash Claws',Venom:'Dominating Head',Breaker:'A Cut Above'};
  const archetypeKey=Object.keys(genericKarmaByArchetype).find(a=>a.toLowerCase()===String(h.archetype||'').toLowerCase())||Object.keys(genericKarmaByArchetype).find(a=>a.toLowerCase()===String((HEROES.find(x=>x.name===h.name)||{}).archetype||'').toLowerCase());
- const genericKarma=genericKarmaByArchetype[archetypeKey]||'Generic Karma';
+ const genericKarma=GENERIC_KARMA[h.archetype]||genericKarmaByArchetype[archetypeKey]||'Generic Karma';
  rows.push({title:genericKarma,kind:'Generic',desc:'Generic fallback Karma for this archetype, with Max HP% and Defense% trait effects.'});
  rows.forEach((r,i)=>{const item=document.createElement('article');item.className='profile-build-item profile-karma-link';item.tabIndex=0;item.setAttribute('role','link');item.setAttribute('aria-label',`Open ${r.title} in Karma tab`);item.innerHTML=`<div class="profile-build-head"><div class="profile-build-icon">✦</div><div><h4>${profileEsc(r.title)}</h4><small>${profileEsc(r.kind)} · View in Karma Codex ↗</small></div></div><div class="profile-build-desc">${profileEsc(r.desc)}</div>`;const openKarma=()=>{document.querySelector('.nav-item[data-page="karma"]').click();activeKarmaArch='';renderKarmaFilters();const search=$('karmaSearch');const karmaTitle=String(r.title||'').trim().replace(/[.,;:!?]+$/,'').trim();search.value=karmaTitle;renderKarmas();const cards=[...document.querySelectorAll('.karma-card')];const normalizeKarmaName=value=>String(value||'').trim().toLowerCase().replace(/[.,;:!?]+$/,'').trim();const target=cards.find(c=>normalizeKarmaName(c.querySelector('.karma-card-title')?.textContent)===normalizeKarmaName(karmaTitle));if(target){target.scrollIntoView({behavior:'smooth',block:'center'});target.style.outline='3px solid #68c7d5';target.style.outlineOffset='2px';setTimeout(()=>{target.style.outline='';target.style.outlineOffset=''},1800)}else{search.focus()}};item.addEventListener('click',openKarma);item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openKarma()}});wireKarmaPopover(item,r.title);karmaRoot.append(item)});
  const gearRoot=$('profileGearSets');gearRoot.innerHTML='';
@@ -908,7 +909,7 @@ function renderProfileBuild(h,data){
  const gearNames=setText.split(/\. Main stats:/i)[0].split(/\. Substats:/i)[0].trim();
  const gearParts=gearNames?gearNames.split(/\s*\+\s*/).map(x=>x.trim()).filter(Boolean):[];
  const normGear=s=>String(s||'').replace(/^\d+\s*/,'').replace(/[^a-z0-9]/gi,'').toLowerCase();
- const matched=gearParts.map(part=>{const cleaned=part.replace(/^\d+\s*/,'');return GEAR_DATA.find(g=>normGear(g.name)===normGear(cleaned))}).filter(Boolean);
+ const matched=(data.build&&data.build.sets&&data.build.sets.length?data.build.sets.map(s=>s.set):gearParts.map(part=>part.replace(/^\d+\s*/,''))).map(name=>GEAR_DATA.find(g=>normGear(g.name)===normGear(name))).filter(Boolean);
  if(!matched.length)gearRoot.innerHTML='<div class="profile-placeholder">Recommended gear combination will be added after testing.</div>';
  matched.forEach((g,i)=>{const item=document.createElement('article');item.className='profile-build-item profile-gear-link';item.tabIndex=0;item.setAttribute('role','link');item.title='Click to view this gear set in the Gear tab';item.innerHTML=`<div class="profile-build-head"><div class="profile-build-icon"><img src="${g.icon}" alt=""></div><div><h4>${profileEsc(g.name)}</h4><small>${i===0?'Recommended 3-piece set':'Recommended 2-piece set'} · View in Gear Sets ↗</small></div></div><div class="profile-gear-detail"><b>(2)</b> ${profileEsc(g.two)}<br><b>(3)</b> ${profileEsc(g.three)}</div>`;item.addEventListener('click',()=>openGearSet(g.name));item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openGearSet(g.name)}});gearRoot.append(item)});
  renderBuildStats(h);
@@ -1037,7 +1038,7 @@ function startApp(){
  renderGear();
 }
 fetch('data.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;DATA_META=d.meta||{};
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;DATA_META=d.meta||{};
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
 </script>
