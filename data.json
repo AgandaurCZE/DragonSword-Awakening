@@ -10147,7 +10147,7 @@
    "Skill buffs scale with level too: Invisible's Critical Damage buff is +10% at Lv.1 and +15% at Lv.10 (x1.5, not x1.75).",
    "Armor Penetration raises damage, so the Training Ogre has Defense: at the same 681 Attack, going from 10 to 33 raised the larger hits by 1.2% (499 -> 505, 312 -> 316, 174 -> 176), about +0.05% damage per point against this dummy. Combo ratio 0.505 -> 0.513 x Attack x skill %. The Poison tick stayed 340 (= Attack / 2), so Poison ignores Defense, or at least Armor Penetration. The dummy's Defense value and the exact Defense formula are not known.",
    "Defense Ignore 0.97% (Armor Penetration 0) raised the larger hits by about 0.4% compared with the Armor Penetration 0 tests scaled to the same Attack (e.g. 482 vs 480.3 expected). Combo ratio 0.508. Poison tick 329 = 658 / 2 rounded down, unaffected. Against this dummy, roughly 1% Defense Ignore ~ +0.4% damage and 1 Armor Penetration ~ +0.05%.",
-   "Two Poison stacks from Charlotte tick for 493 = 1.5 x the one-stack tick (329 x 1.5 = 493.5). Charlotte then Johnny gives 429, which fits neither 1.5 x either hero's tick (493 / 483) nor a simple sum. Not explained yet."
+   "Two Poison stacks tick for 1.5 x the one-stack tick of whoever applied the FIRST stack; the second applier's Attack doesn't matter: Charlotte (658) first -> 493 (658 x 0.75 = 493.5) with either hero second; Johnny (645) first -> 484 (645 x 0.75 = 483.75, so his hidden Attack is at least 645.33 if the game rounds down). 3+ stacks not tested."
   ],
   "tests": [
    {
@@ -10506,13 +10506,30 @@
        "Charlotte",
        "Johnny"
       ],
-      "tick": 429
+      "tick": 493
+     },
+     {
+      "stacks": 2,
+      "appliers": [
+       "Johnny",
+       "Charlotte"
+      ],
+      "tick": 484
+     },
+     {
+      "stacks": 2,
+      "appliers": [
+       "Johnny",
+       "Johnny"
+      ],
+      "tick": 484
      }
     ],
     "attack": {
      "Charlotte": 658,
      "Johnny": 645
-    }
+    },
+    "note": "Retested 28 Oct. The first run gave 429 for Charlotte then Johnny; the retest gave 493, so the 429 is treated as a misread or an expired stack."
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
