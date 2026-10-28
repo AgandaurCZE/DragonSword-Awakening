@@ -1,3 +1,9 @@
+## 2026-10-28 — Claude: hero pages coloured by archetype
+- Hero pages use the hero's archetype colour (`ARCH_COLORS`, set as `--hero-accent` on `#profilePage`) in place of the fixed teal: name, banner edge, section underlines, tabs, skill slot labels, sliders, mode headings, Karma names, gear hover and the review cards.
+- Combo chips for another hero's skill use that hero's archetype colour for the slot tag, the border and the hero's name (e.g. Reina in Gale colour in Charlotte's Venom team combo).
+- Fixed the hero-name buttons in the Introduction, which showed as plain grey browser buttons because their style never applied.
+- Links (heroes, skills, Karmas, sets) stay light blue so they don't look like status words.
+
 ## 2026-10-28 — Claude: full review layout (Charlotte sample)
 - New `CHARACTER_PROFILE_DATA[].review` and `renderProfileReview()`, replacing the Review placeholder on the Review tab. Sections: Overview, Verdict (with how to get the hero), How to play (gameplay loop and combo chips), Kit analysis, Investment (skill priorities, awakening stop, Karma, gear), Teams, and tier rating boxes.
 - **Links in reviews and pros/cons:** heroes, skills, Karmas, gear sets and awakenings open a card on hover. On phones a tap pins the card; hero cards have a button to open that hero's guide. Status and archetype names are coloured.
