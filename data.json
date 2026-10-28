@@ -10147,7 +10147,7 @@
    "Skill buffs scale with level too: Invisible's Critical Damage buff is +10% at Lv.1 and +15% at Lv.10 (x1.5, not x1.75).",
    "Armor Penetration raises damage, so the Training Ogre has Defense: at the same 681 Attack, going from 10 to 33 raised the larger hits by 1.2% (499 -> 505, 312 -> 316, 174 -> 176), about +0.05% damage per point against this dummy. Combo ratio 0.505 -> 0.513 x Attack x skill %. The Poison tick stayed 340 (= Attack / 2), so Poison ignores Defense, or at least Armor Penetration. The dummy's Defense value and the exact Defense formula are not known.",
    "Defense Ignore 0.97% (Armor Penetration 0) raised the larger hits by about 0.4% compared with the Armor Penetration 0 tests scaled to the same Attack (e.g. 482 vs 480.3 expected). Combo ratio 0.508. Poison tick 329 = 658 / 2 rounded down, unaffected. Against this dummy, roughly 1% Defense Ignore ~ +0.4% damage and 1 Armor Penetration ~ +0.05%.",
-   "Two Poison stacks tick for 1.5 x the one-stack tick of whoever applied the FIRST stack; the second applier's Attack doesn't matter: Charlotte (658) first -> 493 (658 x 0.75 = 493.5) with either hero second; Johnny (645) first -> 484 (645 x 0.75 = 483.75, so his hidden Attack is at least 645.33 if the game rounds down). 3+ stacks not tested."
+   "Poison tick by stacks, as a share of the FIRST applier's Attack: 1 stack 50%, 2 stacks 75%, 3 stacks 100% (+25% per extra stack). The other appliers' Attack doesn't matter. 2 stacks: Charlotte (658) first -> 493, Johnny (645) first -> 484, whoever applied the second. 3 stacks (goblin dummies, order not tracked): ticks of 645 and 658, exactly the two heroes' Attack. 4+ stacks and the stack limit not tested."
   ],
   "tests": [
    {
@@ -10523,6 +10523,18 @@
        "Johnny"
       ],
       "tick": 484
+     },
+     {
+      "stacks": 3,
+      "appliers": "Johnny and Charlotte (order not tracked)",
+      "tick": 645,
+      "enemy": "goblin training dummy"
+     },
+     {
+      "stacks": 3,
+      "appliers": "Johnny and Charlotte (order not tracked)",
+      "tick": 658,
+      "enemy": "goblin training dummy"
      }
     ],
     "attack": {

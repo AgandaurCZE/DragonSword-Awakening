@@ -54,8 +54,9 @@ Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
 7. STATUS TICKS – mostly done (28 Oct): Poison, Bleed, Burn and Shock tick for
    50% of Attack, 4 times. Still open:
    - Seconds between ticks.
-   - Poison 2 stacks DONE (x1.5, first applier's Attack). A 3rd stack if
-     you can.
+   - Poison stacks DONE up to 3 (50% / 75% / 100% of the first applier's
+     Attack). Optional: does a 4th stack exist, and do Bleed, Burn and Shock
+     stack the same way?
    - Frost and Stun: do they tick at all?
 
 8. DECISIONS – DONE (28 Oct)
