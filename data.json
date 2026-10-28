@@ -10706,7 +10706,7 @@
     "Each application ticks 4 times over about 10 seconds (about one tick every 2.5 seconds).",
     "Each tick deals a share of the Attack of the hero who applied the FIRST stack. Later stacks make the ticks bigger, even when another hero applies them, but their own Attack doesn't count.",
     "Ticks aren't reduced by the enemy's Defense: Armor Penetration and Defense Ignore don't change them.",
-    "While an enemy has this status, hits on it deal 1.5x damage, whatever the stack count. If it's also Airborne or Knocked down, hits deal 2.5x: the bonuses add up (+50% from this status, +100% from Airborne or Knockdown). Measured on training dummies with all four statuses.",
+    "While an enemy has this status, hits on it deal 1.5x damage, whatever the stack count. If it's also Airborne or Knocked down, hits deal 2.5x: the bonuses add up (+50% from this status, +100% from Airborne or Knockdown). A second damage-over-time status adds another +50% (Poison + Bleed: 2x). Measured on training dummies with all four statuses.",
     "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets and awakenings) don't change its ticks (tested with Burn).",
     "Tick damage is rounded down."
    ],
