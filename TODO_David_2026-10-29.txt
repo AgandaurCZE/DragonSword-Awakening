@@ -1,68 +1,96 @@
-DragonSword guide – things to test and decide (29 Oct 2026)
+DragonSword guide – things to test (updated 28 Oct 2026, 21:00)
 ==============================================================
 
-Written by Claude on 28 Oct. Tick items off or delete this file when done.
-Results can go into the DragonSword Test Kit page (press Save on each test)
-or straight into a chat message, whichever is easier.
+Written by Claude. Ordered by how much each item changes the guide: do them
+top-down, whenever you feel like it. Send results in a chat message (or the
+Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt).
 
-Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
+Tip for the goblin dummies: record the screen (Windows Game Bar: Win+Alt+R,
+or OBS) and pause on the frame where your hit lands.
 
 
-1. SKILL LEVELS – DONE (28 Oct): every level measured, same for all heroes.
-   Still open: the 1% rounding differences (whenever you have time).
-   - The site can be 1% off the game at some levels. This can happen on
-     every damage skill: Auto, Dash and Jump attack (Lv.1–7) and Skill,
-     Ultimate, Special A and Special B (Lv.1–10), on all 20 heroes.
-     Dodge doesn't count.
-   - Only skills on heroes you own can be levelled, so only those can be
-     read.
-   - Lv.1 alone fixes some skills, not all (4 of the 7 you measured).
-     A full row Lv.1 to max fixes a skill for certain; the site would then
-     show the recorded numbers exactly.
-   - Format: hero – skill name: Lv1, Lv2, … (as you sent today).
+-------------------------------------------------------------- MOST USEFUL
 
-2. KARMA ASCENSIONS – DONE (28 Oct): A0–A6 all measured, the rule is exact.
+1. WHAT "<STATUS> ADDITIONAL DAMAGE / ATTACK POWER" DOES  << do this first
+   Why: every status has these bonuses (Karma traits, the 2-piece of every
+   status gear set, awakenings A4/A5), and the recommended builds use
+   "<status> Additional Attack Power" as a filler substat. We know they
+   don't change ticks. Aria's Burn Karma (+4% / +110) turned her x1.5 hit on
+   a burning goblin into x2.0, but we can't tell which bonus did what.
+   Test (Aria, auto-attack first hit, clean goblin vs burning goblin):
+   a) Something with ONLY the % bonus: 2 pieces of Blazing Flames
+      (+15% Burn Additional Damage), or Kalien's / Kalsion's signature Karma
+      (only Burn Additional Damage) if you own one.
+   b) If you own a gear piece with a "Burn Additional Attack Power" (or any
+      "<status> Additional Attack Power") substat: the same test with it on
+      and off.
+   Write down Aria's Attack each time.
 
-3. LEVEL 40 (once you have the breakthrough materials)
+2. LEVEL 40 (once you have the breakthrough materials)
    - Any hero except Charlotte: Attack, Defense, Max HP at level 40 BEFORE
-     the breakthrough, then AFTER it. Read them on the levelling screen
-     (no titles there).
+     the breakthrough, then AFTER it (levelling screen, no titles there).
    - Charlotte too if you can, since her breakthroughs differ.
    - The guide predicts 426 / 132 / 2852 before the breakthrough
      (440 / 127 / 2777 for Charlotte).
+   Why: all level-70 hero stats on the site are estimates from Lv1–30.
 
-4. TRAINING DUMMY (Test Kit tests 2–8, in this order)
-   - Damage spread: 10–20 non-crit hits of one single-hit skill.
-   - Attack scaling: same skill, before and after a gear swap that only
-     changes Attack.
-   - Crit damage: one normal hit and one crit with the same skill.
-   - Crit chance: about 200 hits at around 50% Crit Rate, count the crits.
-   - Defense Ignore / Armor Penetration, status bonuses and buff stacking
-     if the dummy allows statuses and buffs.
-   - First check what the dummy lets you set (level, defense, statuses),
-     and note it in the chat.
-
-5. TITLES
+3. TITLES
    - Upload the title screenshots into assets/titles/ (the folder is ready;
      see assets/titles/README.txt). Claude will turn them into data.
 
-6. GEAR SUBSTATS
-   - Do green, blue and purple pieces roll the same substat values as
-     orange ones? Compare one substat (e.g. Crit Rate on a helmet)
-     across rarities.
 
-7. STATUS TICKS – Poison done (28 Oct): 50/75/100% of the first applier's
-   Attack at 1/2/3 stacks, max 3, about 10 s (a tick every ~2.5 s).
-   Bleed, Burn and Shock stack the same way (max 3). Still open:
-   - Frost and Stun: do they tick at all? (once you have the heroes)
+-------------------------------------------------------------- USEFUL
 
-8. DECISIONS – DONE (28 Oct)
-   - Awakening ratings were redone by Claude on the full 0–5 scale; tell
-     Claude if you disagree with any.
-   - Awakening stat bonuses now count in Recommended Endgame Stats, shown
-     in purple with a hover naming the awakening.
+4. SKILL BUFFS BY LEVEL
+   - Invisible (Charlotte): the Critical Damage buff at every level,
+     Lv.1 to Lv.10 (it's +10% at Lv.1 and +15% at Lv.10).
+   - Any other skill whose buff, heal or duration shows a number, if you
+     notice one changing with level.
+   Why: the level slider only changes damage % at the moment; with these
+   it could change buffs correctly too.
+
+5. CRIT CHANCE
+   - About 100–200 hits with one hero, count how many crit (note the Crit
+     Rate). Tells us whether the Crit Rate stat is the real chance.
+   - Do status ticks ever crit? Watch 20 or so ticks.
+
+6. BLUE / PURPLE / GREEN GEAR
+   - Blue main stats don't keep one ratio to Orange, and Blue substats are
+     half or a quarter of Orange depending on the stat.
+   - Most useful: one piece's main stat at every upgrade level (+0 to +9),
+     and its substats. Any rarity.
+
+
+-------------------------------------------------------------- WHEN YOU CAN
+
+7. STATUS EFFECTS – mostly done (28 Oct)
+   Known: Poison, Bleed, Burn, Shock tick 50/75/100% of the first applier's
+   Attack at 1/2/3 stacks (max 3), 4 ticks over ~10 s. Hits on an enemy
+   get +50% per damage-over-time status and +100% each for Airborne,
+   Knockdown and Stun, added together.
+   Still open:
+   - Break: does it give a hit bonus? (Castella / Astria)
+   - Is x3.5 a cap? (Airborne + Knockdown + Poison + Bleed gave x3.5, not
+     x4.0 – maybe Bleed had worn off.)
+   - Frost: does it tick at all, and what does Frozen do? (once you have a
+     Frost hero)
+
+8. SKILL ROUNDING (low priority)
+   - The site can be 1% off the game at some skill levels. A full row
+     Lv.1 to max for any skill makes the site show it exactly.
+   - Format: hero – skill name: Lv1, Lv2, …
 
 9. KARMA LEVELS (optional, whenever you level a Karma further)
    - Base Attack / Defense / Max HP at Lv40, 50, 60, 70 before and after
      each breakthrough, for Frozen Fortress or A Flame That Cuts Through the
      Moment. With those, the site can get a Karma level slider.
+
+
+-------------------------------------------------------------- DONE (28 Oct)
+- Skill level multipliers (all levels), Karma Ascensions A0–A6.
+- Damage: proportional to Attack and skill %; crit = x(1 + Crit Damage);
+  no random spread; Armor Penetration / Defense Ignore work (small effect
+  on the dummies).
+- Status ticks, stacks and duration; status hit bonuses.
+- Dodge does no damage (removed from the site).
+- Awakening ratings and awakening stats in the end-game totals.
