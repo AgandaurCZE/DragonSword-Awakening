@@ -1,5 +1,33 @@
 # Changelog
 
+
+## 2026-10-28 — Add awakening icons and impact ratings
+- Displayed the shared `assets/awakenings/Awakening_Icon.png` beside every awakening heading. The page crops it to a square and uses a circular transparency mask to remove the teal outer background visually while preserving the dark ring and bright symbol; the uploaded source file itself is unchanged.
+- Added five diamond indicators per awakening: 0 = Not needed; 1 = Barely noticeable; 2 = Good to have; 3 = Moderately powerful; 4 = Very powerful; 5 = Best / tier-changing. Lit diamonds are bright red. Best Awakening shows the selected awakening’s own rating; it is not forced to five.
+- Ratings are qualitative first-pass judgments based on the effects shown in the uploaded images, prioritizing mechanic changes, added uses, cooldown loops, control and team utility over small standalone stat bonuses. Rationale and chosen Best Awakening:
+- **Alex** — A1: 4/5, A2: 2/5, A3: 3/5, A4: 1/5, A5: 2/5, A6: 5/5. A6 selected for its defensive-mode, Guard Counter and Rage-loop changes.
+- **Aria** — A1: 4/5, A2: 1/5, A3: 3/5, A4: 1/5, A5: 2/5, A6: 4/5. A1 selected for a second Rolling Bomb use.
+- **Astria** — A1: 4/5, A2: 2/5, A3: 3/5, A4: 1/5, A5: 2/5, A6: 4/5. A1 selected for enhanced arrows from core attacks.
+- **Castella** — A1: 4/5, A2: 1/5, A3: 3/5, A4: 1/5, A5: 2/5, A6: 4/5. A1 selected for extra Stun Blow attacks and Knockdown.
+- **Cerese** — A1: 3/5, A2: 1/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 4/5. A3 selected for Frost buildup plus Knockdown control.
+- **Charlotte** — A1: 4/5, A2: 1/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 3/5. A3 selected for area pull-and-slam control.
+- **Dana** — A1: 4/5, A2: 1/5, A3: 3/5, A4: 1/5, A5: 2/5, A6: 3/5. A1 selected for faster/more Chako hits and stronger Frozen finisher.
+- **Eileen** — A1: 3/5, A2: 1/5, A3: 3/5, A4: 2/5, A5: 2/5, A6: 4/5. A6 selected for extra Spiral Shave attacks and movement support.
+- **Johnny** — A1: 4/5, A2: 1/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 3/5. A3 selected for the extra Fatal Sting thrust.
+- **Kalien** — A1: 3/5, A2: 1/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 4/5. A3 selected for Sur’s longer presence and Stun slam.
+- **Kalsion** — A1: 4/5, A2: 1/5, A3: 3/5, A4: 1/5, A5: 2/5, A6: 4/5. A1 selected for full-duration fireball without holding the key.
+- **Lute** — A1: 4/5, A2: 2/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 3/5. A1 selected for an Attack Power field with Karma synergy.
+- **Ornette** — A1: 4/5, A2: 2/5, A3: 3/5, A4: 1/5, A5: 2/5, A6: 4/5. A1 selected for charge/direction control and longer Holy Cross.
+- **Othello** — A1: 3/5, A2: 2/5, A3: 3/5, A4: 1/5, A5: 2/5, A6: 4/5. A6 selected for an additional giant spear on Ice Crown.
+- **Reina** — A1: 3/5, A2: 1/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 3/5. A3 selected for Tempest cooldown reset loops.
+- **Roxy** — A1: 4/5, A2: 2/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 3/5. A1 selected for extended Crimson Spiral and defensive/offensive effects.
+- **Ryza** — A1: 4/5, A2: 1/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 3/5. A1 selected for Flash’s charge/pierce/Airborne transformation.
+- **Sion** — A1: 3/5, A2: 2/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 3/5. A3 selected for Justice Fall’s enemy pull.
+- **Tarte** — A1: 3/5, A2: 1/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 4/5. A3 selected for charged Stun and improved Lightning Shock.
+- **Theresia** — A1: 3/5, A2: 2/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 3/5. A3 selected for Divine Arc damage and Heretic Judgment extension.
+- **Text/hover limitation:** each uploaded A1–A6 file is a raster screenshot containing the full description. The text inside that image cannot itself be recolored or made hoverable as HTML; the cards now show a concise rationale, but full per-skill hover previews require transcribing each screenshot’s effect text into structured descriptions. No claim is made that hover over text inside the PNG works.
+- Validation: JavaScript syntax, JSON parsing and committed-file checks to be run after update. Browser-level interaction test unavailable in this step.
+
 ## 2026-10-28 — Claude: titles data section, set-bonus and title maths confirmed
 - `data.json`: added `TITLES` (109 titles in game; 3 owned with cumulative Defense +10, Max HP +50, Defense Up +1.5%; Novice Mercenary Crew = Max HP +50; 11 other names seen, effects unknown). Recorded title bonuses in `HERO_STAT_MODEL.observations`; Lv1 71/30/511 seen on Aria, Ornette and Roxy is 71/20/461 + titles.
 - `index.html`: loads `TITLES`; new helper `titleBonusTotals()` (not rendered yet; ready for a Titles section or for adding titles to the end-game totals).
