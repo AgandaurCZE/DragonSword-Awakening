@@ -113,6 +113,7 @@ Change these in the HTML if needed:
 
 **Observations not used in the totals yet** (in `HERO_STAT_MODEL.observations`):
 - every status resistance is 50, at any level;
+- Titles (achievement rewards) add account-wide passive bonuses to every hero. Base stats exclude them, and so do the totals until the title effects are known. Ask David whether a measurement was taken with titles active.
 - displayed stats are rounded down.
 
 ### Hero base-stat estimates
