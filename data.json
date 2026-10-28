@@ -3254,6 +3254,1460 @@
    ]
   }
  },
+ "AWAKENINGS": {
+  "note": "Awakening names and text copied word for word from the in-game screenshots in assets/awakenings/<Hero>/A1-A6.png (OCR, then every line checked by eye). '\\n' is a line break in the game text. 'effects' lists the always-on stat bonuses in the same stat names as GEAR_STATS, ready for the end-game totals (not added to them yet). Ratings 0-5 are Claude's judgement (28 Oct 2026) of what the awakening does for that hero's kit, role and teams.",
+  "ratingScale": [
+   "Not needed",
+   "Barely noticeable",
+   "Good to have",
+   "Moderately powerful",
+   "Very powerful",
+   "Game-changing"
+  ],
+  "icon": "assets/awakenings/Awakening_Icon.png",
+  "heroes": {
+   "Johnny": {
+    "best": 1,
+    "list": [
+     {
+      "level": 1,
+      "name": "An Unstoppable Dagger",
+      "text": "You can use the [Phantom Slash] skill 2 times in a row.",
+      "effects": [],
+      "rating": 4,
+      "why": "Phantom Slash twice in a row: double the burst and a second Airborne launch for the team's combos."
+     },
+     {
+      "level": 2,
+      "name": "Unbreakable Recklessness",
+      "text": "Critical Rate increases by 10%.",
+      "effects": [
+       {
+        "stat": "Critical Hit Chance",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "+10% Crit Rate is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "A Spectacular Entrance!",
+      "text": "While using the [Fatal Sting] skill, pressing the attack key triggers an additional powerful thrust.",
+      "effects": [],
+      "rating": 3,
+      "why": "Fatal Sting gains an extra powerful thrust."
+     },
+     {
+      "level": 4,
+      "name": "A Sharp Fang",
+      "text": "Airborne Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Airborne Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "He launches enemies himself, so Airborne damage applies."
+     },
+     {
+      "level": 5,
+      "name": "A Perilous Flicker of Luck",
+      "text": "Poison Additional Damage increases by 15%.\nDefense Ignore increases by 10%.",
+      "effects": [
+       {
+        "stat": "Poison Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Defense Ignore",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Poison damage and +10% Defense Ignore."
+     },
+     {
+      "level": 6,
+      "name": "A Mud-Slinging Battle",
+      "text": "The number of attacks for the [Venom Cutter] skill increases.",
+      "effects": [],
+      "rating": 3,
+      "why": "More hits on Venom Cutter, his biggest hit (1456%)."
+     }
+    ]
+   },
+   "Lute": {
+    "best": 1,
+    "list": [
+     {
+      "level": 1,
+      "name": "Sword Light Descending from the Sky",
+      "text": "The relic summoned by the [Relic Fall] skill persists for a certain duration and creates an area that increases allies' Attack Power.\n\nThe buff is enhanced when equipped with a dedicated Karma.",
+      "effects": [],
+      "rating": 4,
+      "why": "Relic Fall leaves a lasting zone that raises allies' Attack Power, a new team buff; stronger with her signature Karma."
+     },
+     {
+      "level": 2,
+      "name": "The Throbbing of a Pulsating Heart",
+      "text": "Defense Ignore increases by 15%.",
+      "effects": [
+       {
+        "stat": "Defense Ignore",
+        "value": 15
+       }
+      ],
+      "rating": 1,
+      "why": "Defense Ignore helps her damage, which isn't her main job as a healer."
+     },
+     {
+      "level": 3,
+      "name": "Swordplay Imbued with Tenderness",
+      "text": "You can use the [Swordgrab] skill 2 times in a row.",
+      "effects": [],
+      "rating": 3,
+      "why": "Swordgrab (1626%) twice in a row: more damage and Knockdown."
+     },
+     {
+      "level": 4,
+      "name": "A Blow That Devours Consciousness",
+      "text": "Knockdown Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Knockdown Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 1,
+      "why": "Knockdown damage on a healer: barely noticeable."
+     },
+     {
+      "level": 5,
+      "name": "A Resolve That Seeps In Quietly",
+      "text": "Stun Additional Damage increases by 15%.\nCritical Damage increases by 10%.",
+      "effects": [
+       {
+        "stat": "Stun Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Critical Damage",
+        "value": 10
+       }
+      ],
+      "rating": 1,
+      "why": "Stun damage and +10% Crit Damage on a healer."
+     },
+     {
+      "level": 6,
+      "name": "A Radiance That Envelops the Heart",
+      "text": "Creates a magic circle within the area deployed by the [Healing Circle] skill that continuously restores allies' HP for a certain period.",
+      "effects": [],
+      "rating": 3,
+      "why": "An extra healing-over-time circle inside Healing Circle: better team sustain."
+     }
+    ]
+   },
+   "Castella": {
+    "best": 1,
+    "list": [
+     {
+      "level": 1,
+      "name": "An Axe That Shakes the Earth",
+      "text": "The number of attacks from the [Stun Blow] skill is increased, and it inflicts the Knockdown status effect.",
+      "effects": [],
+      "rating": 4,
+      "why": "Stun Blow, her biggest hit (1835%), gets more hits and adds Knockdown: more damage and a second status."
+     },
+     {
+      "level": 2,
+      "name": "A Branch Stronger Than Any",
+      "text": "Defense increases by 15%.",
+      "effects": [
+       {
+        "stat": "Defense Up",
+        "value": 15
+       }
+      ],
+      "rating": 0,
+      "why": "Defense does nothing for her job as a damage dealer."
+     },
+     {
+      "level": 3,
+      "name": "A Cool Shout",
+      "text": "[Howling] Increases the attack range of the skill.\nReduces the defense of hit enemies for a certain period of time.",
+      "effects": [],
+      "rating": 3,
+      "why": "A bigger Howling that also lowers enemy defense helps the whole team's damage."
+     },
+     {
+      "level": 4,
+      "name": "Heat Blooming in a Single Cup",
+      "text": "Stun Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Stun Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "Her Stun Blow combos make Stun damage useful."
+     },
+     {
+      "level": 5,
+      "name": "An Oath Lingering on a Forgotten Name",
+      "text": "Break Additional Damage increases by 15%.\nDefense Ignore increases by 15%.",
+      "effects": [
+       {
+        "stat": "Break Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Defense Ignore",
+        "value": 15
+       }
+      ],
+      "rating": 3,
+      "why": "Break damage and +15% Defense Ignore, both relevant to a Breaker damage dealer."
+     },
+     {
+      "level": 6,
+      "name": "The Swirling Trail of a Fading Star",
+      "text": "The rotation speed of the [Whirlwind] skill increases, and its Super Armor Break power increases.",
+      "effects": [],
+      "rating": 3,
+      "why": "Faster Whirlwind with stronger Super Armor Break, her team role."
+     }
+    ]
+   },
+   "Aria": {
+    "best": 1,
+    "list": [
+     {
+      "level": 1,
+      "name": "A Burning Premonition",
+      "text": "You can use the [Rolling Bomb] skill 2 times in a row.",
+      "effects": [],
+      "rating": 3,
+      "why": "Rolling Bomb twice in a row doubles a damage burst and its status application."
+     },
+     {
+      "level": 2,
+      "name": "A Pragmatic Way of Survival",
+      "text": "Defense Ignore increases by 10%.",
+      "effects": [
+       {
+        "stat": "Defense Ignore",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "+10% Defense Ignore is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "A Burning Wick",
+      "text": "[Air Bomb] Inflicts a continuous Burn status effect for a certain duration when approaching the ground set ablaze by the bomb.",
+      "effects": [],
+      "rating": 2,
+      "why": "Extra Burn zone; useful, but Burn is already plentiful in the Blazeflame team (Kalsion and Kalien apply it constantly)."
+     },
+     {
+      "level": 4,
+      "name": "A Special Formula",
+      "text": "Airborne Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Airborne Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 1,
+      "why": "Airborne damage helps a little since she launches enemies, but it's a narrow bonus."
+     },
+     {
+      "level": 5,
+      "name": "A Calculated Angle",
+      "text": "Burn Additional Damage increases by 15%.\nAttack Power increases by 15%.",
+      "effects": [
+       {
+        "stat": "Burn Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Attack Power Up",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "Burn damage and +15% Attack Power: a decent pair of stats."
+     },
+     {
+      "level": 6,
+      "name": "The Calculation Pays Off",
+      "text": "The number of guided [Bomb Arrows] from the [Multiple Bolt] skill increases.",
+      "effects": [],
+      "rating": 3,
+      "why": "More guided arrows from Multiple Bolt, her biggest hit (1541%)."
+     }
+    ]
+   },
+   "Dana": {
+    "best": 6,
+    "list": [
+     {
+      "level": 1,
+      "name": "Frozen Sparkle",
+      "text": "When using [Chako Knuckle], [Chako] advances while attacking, and the rapid-hit speed and count are increased.\nIf the target is Frozen, the damage and Super Armor destruction of [Chako]'s final blow are increased.",
+      "effects": [],
+      "rating": 3,
+      "why": "Chako Knuckle hits faster and more often, and its final blow is stronger on Frozen targets."
+     },
+     {
+      "level": 2,
+      "name": "Light Found in the Monochrome",
+      "text": "Defense Ignore increases by 10%.",
+      "effects": [
+       {
+        "stat": "Defense Ignore",
+        "value": 10
+       }
+      ],
+      "rating": 1,
+      "why": "Defense Ignore helps her damage, which isn't her main job as a support."
+     },
+     {
+      "level": 3,
+      "name": "Companion of Snow",
+      "text": "[Summon Chako] is enhanced: when used, Rime Energy is fully charged.",
+      "effects": [],
+      "rating": 2,
+      "why": "Rime Energy fully charged when summoning Chako: faster access to Chako's skills."
+     },
+     {
+      "level": 4,
+      "name": "Equation of Protection",
+      "text": "Knockdown Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Knockdown Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 1,
+      "why": "Knockdown damage on a support: barely noticeable."
+     },
+     {
+      "level": 5,
+      "name": "Sharpness Imbued in the Snow",
+      "text": "Frost Additional Damage increases by 15%.\nCritical Rate increases by 10%.",
+      "effects": [
+       {
+        "stat": "Frost Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Critical Hit Chance",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Frost damage and +10% Crit Rate on a support."
+     },
+     {
+      "level": 6,
+      "name": "Blizzard Dancing with Chako",
+      "text": "The duration of [Chako Spin] is increased.\nCreates a whirlwind that inflicts Frost and Airborne on enemies.",
+      "effects": [],
+      "rating": 3,
+      "why": "Longer Chako Spin plus a whirlwind that applies Frost and Airborne: more status for the Frost team."
+     }
+    ]
+   },
+   "Kalien": {
+    "best": 1,
+    "list": [
+     {
+      "level": 1,
+      "name": "Fuse of Valor",
+      "text": "The activation conditions of the [Fox Grab] skill are eased.\nCan be activated when the target is in Super Armor Break or Burn status.",
+      "effects": [],
+      "rating": 4,
+      "why": "Fox Grab, his biggest hit (1178%), can be used on any burning target, and he burns almost everything he hits."
+     },
+     {
+      "level": 2,
+      "name": "Fox's Gaze",
+      "text": "Critical Rate increases by 10%.",
+      "effects": [
+       {
+        "stat": "Critical Hit Chance",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "+10% Crit Rate is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "Pact of Scorching Fire",
+      "text": "[Fox Chase] The [Sur] summoned by this skill stays by your side longer.\nUpon Summoning, its attack changes to a move that lifts the enemy into the air and then slams them to the ground, if it strikes the enemy with its tail, it additionally inflicts the Stun status effect.",
+      "effects": [],
+      "rating": 3,
+      "why": "Sur stays longer and adds a launch, slam and Stun: more damage and Stun for Stun teams."
+     },
+     {
+      "level": 4,
+      "name": "Unyielding Dignity",
+      "text": "Break Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Break Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 0,
+      "why": "Kalien never applies Break and his teams rarely do."
+     },
+     {
+      "level": 5,
+      "name": "Burning Dignity",
+      "text": "Burn Additional Damage increases by 15%.\nDefense Ignore increases by 10%.",
+      "effects": [
+       {
+        "stat": "Burn Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Defense Ignore",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Burn damage and +10% Defense Ignore."
+     },
+     {
+      "level": 6,
+      "name": "The Flame of Proof",
+      "text": "The [Fox Parade] skill summons a [Sur's Avatar].\nIt remains by your side longer than a typical Fox spirit and does not return to the spirit realm for a certain period even after exploding.",
+      "effects": [],
+      "rating": 3,
+      "why": "Fox Parade's avatar lingers and keeps fighting: more damage over time."
+     }
+    ]
+   },
+   "Roxy": {
+    "best": 6,
+    "list": [
+     {
+      "level": 1,
+      "name": "Dancing with You",
+      "text": "[Crimson Spiral] The skill is enhanced, holding the skill key extends its duration.\nWhile the skill is active, damage taken is reduced and Super Armor reduction is increased.",
+      "effects": [],
+      "rating": 3,
+      "why": "Crimson Spiral can be held longer and makes her tankier while it runs."
+     },
+     {
+      "level": 2,
+      "name": "Pride",
+      "text": "Attack Power increases by 15%.",
+      "effects": [
+       {
+        "stat": "Attack Power Up",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "+15% Attack Power is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "The Hunter of the Battlefield",
+      "text": "Each time the plunge attack of [Double Shot] hits an enemy, gain a stacking Critical Damage effect.\nAfter an aerial action, the cooldown of Forward Jump is reduced.",
+      "effects": [],
+      "rating": 3,
+      "why": "Plunge attacks stack Crit Damage, and Forward Jump comes back sooner."
+     },
+     {
+      "level": 4,
+      "name": "The Gaze of the Red Fox",
+      "text": "Stun Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Stun Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "Kick Storm needs Stun and she Stuns herself, so Stun damage applies."
+     },
+     {
+      "level": 5,
+      "name": "A Sharp Arrow",
+      "text": "Bleed Additional Damage increases by 15%.\nDefense Ignore increases by 10%.",
+      "effects": [
+       {
+        "stat": "Bleed Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Defense Ignore",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Bleed damage and +10% Defense Ignore."
+     },
+     {
+      "level": 6,
+      "name": "Resolve, Not Arrogance",
+      "text": "The number of attacks for the [Kick Storm] skill increases.",
+      "effects": [],
+      "rating": 4,
+      "why": "More hits on Kick Storm (1786%), her main damage skill."
+     }
+    ]
+   },
+   "Alex": {
+    "best": 6,
+    "list": [
+     {
+      "level": 1,
+      "name": "The Shield of the Seasoned One",
+      "text": "[Defensive Stance] While in this mode, you gain more Rage when hit, and the shockwave is enhanced.\nThe shockwave's attack range, Super Armor Break damage, and knockback distance increase.",
+      "effects": [],
+      "rating": 3,
+      "why": "Better Rage gain and a stronger shockwave in Defensive Stance: a solid upgrade to his core tanking mode."
+     },
+     {
+      "level": 2,
+      "name": "Strength That Transcends Time",
+      "text": "Defense increases by 40%.",
+      "effects": [
+       {
+        "stat": "Defense Up",
+        "value": 40
+       }
+      ],
+      "rating": 3,
+      "why": "+40% Defense is a big survival boost for the team's tank."
+     },
+     {
+      "level": 3,
+      "name": "A Subtle Opening",
+      "text": "[Pounding Grab] The skill's activation conditions are relaxed.\nIt can be activated when the target is in the Knockdown or Stun status effect.",
+      "effects": [],
+      "rating": 2,
+      "why": "Pounding Grab also accepts Stun, so it fires more often when a Stun hero (Lute, Theresia) is in the team."
+     },
+     {
+      "level": 4,
+      "name": "Unassuming Skill",
+      "text": "Knockdown Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Knockdown Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 1,
+      "why": "Knockdown damage only matters for his own hits; his damage isn't his main job."
+     },
+     {
+      "level": 5,
+      "name": "A Shield for One",
+      "text": "Knockdown Additional Damage increases by 15%.\nMax HP increases by 10%.",
+      "effects": [
+       {
+        "stat": "Knockdown Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Max HP Up",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Small damage bonus plus +10% Max HP; useful for a tank but not exciting."
+     },
+     {
+      "level": 6,
+      "name": "Back to the Battlefield",
+      "text": "While in [Defensive Stance] mode, the shield is strengthened up to Level 2 based on the number of times you are hit.\n\nLevel 1 Enhancement\nThe attack range and super armor penetration of the [Guard Counter] skill increase.\nIf you use the [Guard Counter] skill in sync with an enemy's attack, you recover the Rage consumed and reduce the enemy's defense.\n\nLevel 2 Enhancement\nThe effects of Level 1 are amplified, and a shield is additionally acquired.",
+      "effects": [],
+      "rating": 4,
+      "why": "Guard Counter cuts enemy defense for the whole team, refunds Rage and adds a shield: the most impactful change to his kit."
+     }
+    ]
+   },
+   "Theresia": {
+    "best": 3,
+    "list": [
+     {
+      "level": 1,
+      "name": "The Mace of Branding",
+      "text": "The upward strike of the [Holy Rise] skill changes to a whirlwind attack, increasing the number of attacks.",
+      "effects": [],
+      "rating": 3,
+      "why": "Holy Rise becomes a multi-hit whirlwind."
+     },
+     {
+      "level": 2,
+      "name": "Oath Beyond Sin",
+      "text": "Attack Power increases by 15%.",
+      "effects": [
+       {
+        "stat": "Attack Power Up",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "+15% Attack Power is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "Time of Judgment",
+      "text": "The damage of the [Divine Arc] skill is increased.\nWhen casting the [Divine Arc] skill, the duration of [Heretic Judgment] mode is extended, and attack power is increased for a certain period.",
+      "effects": [],
+      "rating": 4,
+      "why": "Divine Arc (1570%) hits harder, extends Heretic Judgment and grants Attack Power; Heretic Judgment is where her signature Karma adds extra Bleed."
+     },
+     {
+      "level": 4,
+      "name": "The Inquisitor's Gaze",
+      "text": "Bleed Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Bleed Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "She applies Bleed herself, so Bleed damage applies."
+     },
+     {
+      "level": 5,
+      "name": "The Pulse of Divinity",
+      "text": "Stun Additional Damage increases by 15%.\nCritical Rate increases by 10%.",
+      "effects": [
+       {
+        "stat": "Stun Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Critical Hit Chance",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Stun damage and +10% Crit Rate."
+     },
+     {
+      "level": 6,
+      "name": "In the Name of the Goddess",
+      "text": "The number of attacks for the [Celestial Verdict] skill increases.",
+      "effects": [],
+      "rating": 3,
+      "why": "More hits on Celestial Verdict, her Stun opener."
+     }
+    ]
+   },
+   "Ornette": {
+    "best": 3,
+    "list": [
+     {
+      "level": 1,
+      "name": "A Steadfast Vow of Faith",
+      "text": "[Holy Cross] The skill is changed to a charging skill that allows you to change the casting direction.\nThe duration of the [Holy Cross] skill is increased.",
+      "effects": [],
+      "rating": 3,
+      "why": "Holy Cross can be aimed and lasts longer."
+     },
+     {
+      "level": 2,
+      "name": "Traces Etched in Repentance",
+      "text": "Attack Power increases by 15%.",
+      "effects": [
+       {
+        "stat": "Attack Power Up",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "+15% Attack Power is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "Compassion as Deep as the Sea",
+      "text": "[Holy Circle] The area affected by the skill's lightning expands, and its duration increases.",
+      "effects": [],
+      "rating": 3,
+      "why": "Holy Circle grows and lasts longer; it's her +30% Crit Damage zone and powers her signature Karma's Holy Cross bonus."
+     },
+     {
+      "level": 4,
+      "name": "Lightning Striking from the Heavens",
+      "text": "Knockdown Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Knockdown Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "Her Judgment applies Knockdown, so Knockdown damage applies."
+     },
+     {
+      "level": 5,
+      "name": "A Flash That Awakens the Dawn",
+      "text": "Shock Additional Damage increases by 15%.\nDefense Ignore increases by 10%.",
+      "effects": [
+       {
+        "stat": "Shock Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Defense Ignore",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Shock damage and +10% Defense Ignore."
+     },
+     {
+      "level": 6,
+      "name": "Sacred Grace",
+      "text": "The final hit of the [Judgment] skill pulls in surrounding enemies and releases a circular sacred wave.\nThe wave inflicts the Shock status effect on hit enemies.",
+      "effects": [],
+      "rating": 3,
+      "why": "Judgment pulls enemies in and spreads Shock with a wave."
+     }
+    ]
+   },
+   "Sion": {
+    "best": 1,
+    "list": [
+     {
+      "level": 1,
+      "name": "Manifestation of Divinity",
+      "text": "The buff deployed when placing a sacred relic is enhanced.\n\n[Orzea's Blessing]\nCritical Rate increased by 10%\n[Orzea's Protection]\nCritical Damage Reduction increased by 25%",
+      "effects": [],
+      "rating": 4,
+      "why": "Bless also gives +10% Crit Rate to the team (or +25% Crit Damage Reduction): a bigger team buff from a support."
+     },
+     {
+      "level": 2,
+      "name": "Unyielding Blessing",
+      "text": "Critical Damage increases by 10%.",
+      "effects": [
+       {
+        "stat": "Critical Damage",
+        "value": 10
+       }
+      ],
+      "rating": 1,
+      "why": "Crit Damage on a support: barely noticeable."
+     },
+     {
+      "level": 3,
+      "name": "Legacy of Faith",
+      "text": "The [Justice Fall] skill generates a shockwave that pulls in nearby enemies.",
+      "effects": [],
+      "rating": 2,
+      "why": "Justice Fall pulls nearby enemies in."
+     },
+     {
+      "level": 4,
+      "name": "Unwavering Faith",
+      "text": "Knockdown Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Knockdown Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 1,
+      "why": "Knockdown damage on a support: barely noticeable."
+     },
+     {
+      "level": 5,
+      "name": "Holy Power",
+      "text": "Shock Additional Damage increases by 15%.\nCritical Rate increases by 10%.",
+      "effects": [
+       {
+        "stat": "Shock Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Critical Hit Chance",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Shock damage and +10% Crit Rate."
+     },
+     {
+      "level": 6,
+      "name": "Divine Vibrations",
+      "text": "The attack range and duration of the [Divine Crash] skill are increased.",
+      "effects": [],
+      "rating": 2,
+      "why": "Divine Crash gains range and duration."
+     }
+    ]
+   },
+   "Tarte": {
+    "best": 6,
+    "list": [
+     {
+      "level": 1,
+      "name": "A Glimmering Touch",
+      "text": "[Cure] Grants a shield to allies blessed by this skill and pushes away surrounding enemies.",
+      "effects": [],
+      "rating": 2,
+      "why": "Cure also shields and knocks enemies back: better safety, but Cure only triggers on allies with a physical status."
+     },
+     {
+      "level": 2,
+      "name": "A Child of Purity",
+      "text": "Defense Ignore increases by 10%.",
+      "effects": [
+       {
+        "stat": "Defense Ignore",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "+10% Defense Ignore is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "Affection Filled with Longing",
+      "text": "The [Lightning Shock] skill has been enhanced, increasing its attack range and inflicting the Stun status effect when charged to maximum level.",
+      "effects": [],
+      "rating": 3,
+      "why": "Lightning Shock gains range and Stuns at full charge."
+     },
+     {
+      "level": 4,
+      "name": "Untainted Intensity",
+      "text": "Stun Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Stun Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "Her Thunderbolt applies Stun, so Stun damage applies."
+     },
+     {
+      "level": 5,
+      "name": "A Radiant Realization",
+      "text": "Shock Additional Damage increases by 15%.\nCritical Damage increases by 10%.",
+      "effects": [
+       {
+        "stat": "Shock Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Critical Damage",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Shock damage and +10% Crit Damage."
+     },
+     {
+      "level": 6,
+      "name": "Childlike Innocence Blooming with Excitement",
+      "text": "The [Thunderbolt] skill is enhanced, increasing its damage and the chance to inflict the Stun status effect.",
+      "effects": [],
+      "rating": 3,
+      "why": "Thunderbolt hits harder and Stuns more reliably."
+     }
+    ]
+   },
+   "Kalsion": {
+    "best": 3,
+    "list": [
+     {
+      "level": 1,
+      "name": "The Unshakable Throne",
+      "text": "The [Explosion] skill has been modified so that the fireball persists for the maximum skill duration without needing to hold the skill key.",
+      "effects": [],
+      "rating": 4,
+      "why": "Explosion (2173%, the biggest hit in the game) runs at full duration without holding the key, so he can keep attacking."
+     },
+     {
+      "level": 2,
+      "name": "The Never-Setting Sun",
+      "text": "Critical Rate increases by 10%.",
+      "effects": [
+       {
+        "stat": "Critical Hit Chance",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "+10% Crit Rate is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "Noon Sunlight",
+      "text": "The duration of the [Royal Flame] mode is increased, and additional attack power is granted.",
+      "effects": [],
+      "rating": 4,
+      "why": "Longer Royal Flame plus extra Attack Power: his whole kit runs on Royal Flame (Burn on every attack, +15% Attack)."
+     },
+     {
+      "level": 4,
+      "name": "The Young King's Coronation",
+      "text": "Airborne Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Airborne Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "Explosion hits Airborne targets, so Airborne damage applies to his biggest hit."
+     },
+     {
+      "level": 5,
+      "name": "Backlight",
+      "text": "Burn Additional Damage increases by 15%.\nCritical Rate increases by 10%.",
+      "effects": [
+       {
+        "stat": "Burn Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Critical Hit Chance",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Burn damage and +10% Crit Rate."
+     },
+     {
+      "level": 6,
+      "name": "A Lineage of Tragedy",
+      "text": "[Royal Flame] In this mode, the [Flame Wave] skill is altered to fire a sword beam forward without holding the skill key. Approaching the ground set ablaze by the sword beam inflicts the Burn status effect continuously for a certain duration.",
+      "effects": [],
+      "rating": 3,
+      "why": "Flame Wave fires a beam without holding and leaves a Burn zone."
+     }
+    ]
+   },
+   "Cerese": {
+    "best": 3,
+    "list": [
+     {
+      "level": 1,
+      "name": "Ice Crystal",
+      "text": "The attack range and duration of the [Ice Storm] skill are increased.",
+      "effects": [],
+      "rating": 3,
+      "why": "Ice Storm, her biggest hit (1528%), covers more area for longer."
+     },
+     {
+      "level": 2,
+      "name": "Snowfield Storm",
+      "text": "Defense Ignore increases by 10%.",
+      "effects": [
+       {
+        "stat": "Defense Ignore",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "+10% Defense Ignore is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "Endlessly Rising Magic",
+      "text": "Increases the Frost status buildup of the ice needles fired by the [Frozen Needles] skill, and additionally inflicts the Knockdown status effect on enemies hit.",
+      "effects": [],
+      "rating": 4,
+      "why": "Faster Frost build-up plus Knockdown: freezes targets sooner for Othello's Frozen-only skills."
+     },
+     {
+      "level": 4,
+      "name": "Flow of the Elements",
+      "text": "Airborne Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Airborne Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "She launches enemies, so Airborne damage applies to her own combos."
+     },
+     {
+      "level": 5,
+      "name": "Frozen Gaze",
+      "text": "Frost Additional Damage increases by 15%.\nCritical Rate increases by 10%.",
+      "effects": [
+       {
+        "stat": "Frost Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Critical Hit Chance",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Frost damage and +10% Crit Rate."
+     },
+     {
+      "level": 6,
+      "name": "The Frost Witch",
+      "text": "When the [Frozen Spike] skill is used on an ice path created by the [Frozen Road] skill, it generates an ice wall. The ice wall can be detonated with [Shattering Touch] and will automatically melt and disappear after a certain amount of time.",
+      "effects": [],
+      "rating": 2,
+      "why": "An ice wall combo that needs three skills lined up; situational."
+     }
+    ]
+   },
+   "Reina": {
+    "best": 3,
+    "list": [
+     {
+      "level": 1,
+      "name": "Resolute Will",
+      "text": "The number of attacks for the [Tempest] skill increases.",
+      "effects": [],
+      "rating": 3,
+      "why": "More hits on Tempest (1515%)."
+     },
+     {
+      "level": 2,
+      "name": "The Knight's Tactics",
+      "text": "Critical Rate increases by 10%.",
+      "effects": [
+       {
+        "stat": "Critical Hit Chance",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "+10% Crit Rate is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "Flash",
+      "text": "Using the [Wind Grab] skill resets the cooldown of the [Tempest] skill.",
+      "effects": [],
+      "rating": 5,
+      "why": "Wind Grab resets Tempest's cooldown, turning her two biggest hits (1582% and 1515%) into a repeatable loop. Game-changing for her damage."
+     },
+     {
+      "level": 4,
+      "name": "The Steadfast Blade of the Wind",
+      "text": "Airborne Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Airborne Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "Airborne is her own status, so this boosts her and her team's combos."
+     },
+     {
+      "level": 5,
+      "name": "Sword Dance for the King",
+      "text": "Airborne Additional Damage increases by 15%.\nCritical Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Airborne Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Critical Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "Airborne damage and +15% Crit Damage."
+     },
+     {
+      "level": 6,
+      "name": "Knight of the Wind",
+      "text": "[Winchester] While using this skill, pressing the attack key again causes the character to leap upward and inflict the Airborne status effect.",
+      "effects": [],
+      "rating": 2,
+      "why": "Winchester gains a leap that applies Airborne: one more launch for the team."
+     }
+    ]
+   },
+   "Astria": {
+    "best": 6,
+    "list": [
+     {
+      "level": 1,
+      "name": "Mighty Power",
+      "text": "After using the [Reload] skill, using the [Ballista Shot] or [Stunt Shot] skill will fire an enhanced arrow.",
+      "effects": [],
+      "rating": 3,
+      "why": "Reload powers up the next Ballista Shot or Stunt Shot: more burst."
+     },
+     {
+      "level": 2,
+      "name": "A Cheerful and Lively Girl",
+      "text": "Attack Power increases by 15%.",
+      "effects": [
+       {
+        "stat": "Attack Power Up",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "+15% Attack Power is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "Orbis Shooting Practice",
+      "text": "When approaching the ground set ablaze by the [Bolt Bombard] skill, it continuously inflicts the Burn status effect for a certain period.",
+      "effects": [],
+      "rating": 1,
+      "why": "A Burn zone does little for her: none of her teams build around Burn."
+     },
+     {
+      "level": 4,
+      "name": "Guardian of the Potato Fields",
+      "text": "Stun Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Stun Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "Her Precision Shot applies Stun, so Stun damage applies to her own targets."
+     },
+     {
+      "level": 5,
+      "name": "Sowing",
+      "text": "Break Additional Damage increases by 15%.\nAttack Power increases by 20%.",
+      "effects": [
+       {
+        "stat": "Break Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Attack Power Up",
+        "value": 20
+       }
+      ],
+      "rating": 3,
+      "why": "Break damage and +20% Attack Power, the largest Attack bonus of any awakening."
+     },
+     {
+      "level": 6,
+      "name": "Garrison Commander",
+      "text": "Increases the maximum number of arrows and the number of arrows reloaded when an additional attack key is pressed while using the [Stunt Shot] skill, and increases the attack speed in [Precision Shot] mode.",
+      "effects": [],
+      "rating": 3,
+      "why": "More arrows and faster attacks in Precision Shot mode mean more damage and more Stun for the team."
+     }
+    ]
+   },
+   "Eileen": {
+    "best": 1,
+    "list": [
+     {
+      "level": 1,
+      "name": "A Sharply Polished Spear",
+      "text": "The area that boosts allies' morale with the [Brave One] skill is expanded.",
+      "effects": [],
+      "rating": 3,
+      "why": "A bigger Brave One area keeps the whole team inside her +15% Attack buff more easily."
+     },
+     {
+      "level": 2,
+      "name": "The Commander Is Watching",
+      "text": "Critical Damage increases by 10%.",
+      "effects": [
+       {
+        "stat": "Critical Damage",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "+10% Crit Damage is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "Training Is a Knight's Fundamental Duty",
+      "text": "[Rolling Upper] Increases the number of attacks for this skill.",
+      "effects": [],
+      "rating": 2,
+      "why": "More hits on Rolling Upper."
+     },
+     {
+      "level": 4,
+      "name": "The Flag Announcing Victory",
+      "text": "Critical Rate increases by 15%.",
+      "effects": [
+       {
+        "stat": "Critical Hit Chance",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "+15% Crit Rate is a solid damage boost."
+     },
+     {
+      "level": 5,
+      "name": "The Trials of an Apprentice Knight",
+      "text": "Airborne Additional Damage increases by 15%.\nDefense Ignore increases by 10%.",
+      "effects": [
+       {
+        "stat": "Airborne Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Defense Ignore",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Airborne damage and +10% Defense Ignore."
+     },
+     {
+      "level": 6,
+      "name": "A Rising Sense of Victory",
+      "text": "The number of attacks for the [Spiral Shave] skill increases. An additional attack drives the spear into the ground, creating a magic circle that boosts movement speed.",
+      "effects": [],
+      "rating": 2,
+      "why": "More hits on Spiral Shave plus a movement-speed circle."
+     }
+    ]
+   },
+   "Othello": {
+    "best": 1,
+    "list": [
+     {
+      "level": 1,
+      "name": "The Wounded Lion",
+      "text": "[Frozen Stinger] is enhanced, changing into a faster and stronger piercing attack.",
+      "effects": [],
+      "rating": 4,
+      "why": "Frozen Stinger becomes faster and stronger, and his signature Karma also upgrades Frozen Stinger: the two stack."
+     },
+     {
+      "level": 2,
+      "name": "Sleepless Night",
+      "text": "Attack Power increases by 15%.",
+      "effects": [
+       {
+        "stat": "Attack Power Up",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "+15% Attack Power is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "Sharpening Days",
+      "text": "The attack range and damage of [Frozen Burst] are increased.",
+      "effects": [],
+      "rating": 3,
+      "why": "Frozen Burst gains range and damage."
+     },
+     {
+      "level": 4,
+      "name": "What Never Fades",
+      "text": "Knockdown Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Knockdown Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "His Ice Crown and Ice Grab apply Knockdown, so Knockdown damage applies."
+     },
+     {
+      "level": 5,
+      "name": "A Happy Dream",
+      "text": "Frost Additional Damage increases by 15%.\nDefense Ignore increases by 10%.",
+      "effects": [
+       {
+        "stat": "Frost Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Defense Ignore",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Frost damage and +10% Defense Ignore."
+     },
+     {
+      "level": 6,
+      "name": "Spear of Annihilation",
+      "text": "[Ice Crown] is enhanced: a giant spear is additionally summoned at the center of the ice prison and falls down.",
+      "effects": [],
+      "rating": 3,
+      "why": "Ice Crown drops an extra giant spear."
+     }
+    ]
+   },
+   "Charlotte": {
+    "best": 1,
+    "list": [
+     {
+      "level": 1,
+      "name": "My Mother's Hands",
+      "text": "[Poison Dagger] is changed: a powerful large shuriken is thrown along with the daggers.",
+      "effects": [],
+      "rating": 3,
+      "why": "Poison Dagger adds a powerful shuriken to a skill she uses all the time: a straight damage gain, also on single bosses."
+     },
+     {
+      "level": 2,
+      "name": "The Poisonous Flower",
+      "text": "Critical Damage increases by 10%.",
+      "effects": [
+       {
+        "stat": "Critical Damage",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "+10% Crit Damage is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "The Path of Shadows",
+      "text": "[Shadow Grab] is enhanced: when used, enemies around the target are also pulled in and slammed into the ground.",
+      "effects": [],
+      "rating": 3,
+      "why": "Shadow Grab (1700%) also pulls in and slams nearby enemies: big in crowds, nothing extra on a lone boss."
+     },
+     {
+      "level": 4,
+      "name": "Feather-Light Peace",
+      "text": "Airborne Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Airborne Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "Her finishers hit launched targets, so Airborne damage applies."
+     },
+     {
+      "level": 5,
+      "name": "The Sharpened Blade",
+      "text": "Poison Additional Damage increases by 15%.\nCritical Rate increases by 10%.",
+      "effects": [
+       {
+        "stat": "Poison Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Critical Hit Chance",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Poison damage and +10% Crit Rate."
+     },
+     {
+      "level": 6,
+      "name": "Into the Shadow World",
+      "text": "[Illusion Kick] is changed: when used, quickly approach the target and additionally inflict Poison.",
+      "effects": [],
+      "rating": 2,
+      "why": "Illusion Kick gap-closes and adds Poison: convenient, small damage gain."
+     }
+    ]
+   },
+   "Ryza": {
+    "best": 1,
+    "list": [
+     {
+      "level": 1,
+      "name": "Echoes of Lightning",
+      "text": "The [Flash] skill changes to a Charge Action.\nWhen charged, it pierces through enemies, moving and attacking consecutively once for each spear remaining on the field, and additionally inflicts the Airborne status effect.",
+      "effects": [],
+      "rating": 4,
+      "why": "Flash becomes a charged multi-hit that strikes once per spear on the field and adds Airborne: a major upgrade to her main skill."
+     },
+     {
+      "level": 2,
+      "name": "The Piercing Spear",
+      "text": "Defense Ignore increases by 10%.",
+      "effects": [
+       {
+        "stat": "Defense Ignore",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "+10% Defense Ignore is a plain damage boost."
+     },
+     {
+      "level": 3,
+      "name": "Awakened Thunder",
+      "text": "The [Stormbringer] skill gains a lightning strike attack, and the range and duration of the lightning pillar are increased.",
+      "effects": [],
+      "rating": 3,
+      "why": "Stormbringer gains a lightning strike and a bigger, longer pillar."
+     },
+     {
+      "level": 4,
+      "name": "The Hunter from on High",
+      "text": "Airborne Additional Damage increases by 15%.",
+      "effects": [
+       {
+        "stat": "Airborne Additional Damage",
+        "value": 15
+       }
+      ],
+      "rating": 2,
+      "why": "With A1 she launches enemies, so Airborne damage applies."
+     },
+     {
+      "level": 5,
+      "name": "Wounds Left by Lightning",
+      "text": "Shock Additional Damage increases by 15%.\nCritical Rate increases by 10%.",
+      "effects": [
+       {
+        "stat": "Shock Additional Damage",
+        "value": 15
+       },
+       {
+        "stat": "Critical Hit Chance",
+        "value": 10
+       }
+      ],
+      "rating": 2,
+      "why": "Shock damage and +10% Crit Rate."
+     },
+     {
+      "level": 6,
+      "name": "The Unfading Flash",
+      "text": "The maximum stacks of the [Lightning Javelin] skill increase to 4.",
+      "effects": [],
+      "rating": 3,
+      "why": "One more Lightning Javelin stack means one more spear on the field, which also feeds A1's charged Flash."
+     }
+    ]
+   }
+  }
+ },
  "SKILL_LEVEL_MULTIPLIERS": {
   "note": "Skill attack weight at each level = Lv.1 weight x multiplier, where Lv.1 = max-level value / 1.75. Measured in-game (28 Oct 2026): max-Lv.10 skills on Charlotte Poison Dagger and Reina Wind Grab (identical multipliers); max-Lv.7 skills on Johnny Dirty Fight. null = not measured yet; the page fills it in evenly between the nearest measured levels and marks it '(est.)'. Values round to the nearest whole %.",
   "byMaxLevel": {

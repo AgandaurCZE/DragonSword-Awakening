@@ -1,0 +1,61 @@
+DragonSword guide – things to test and decide (29 Oct 2026)
+==============================================================
+
+Written by Claude on 28 Oct. Tick items off or delete this file when done.
+Results can go into the DragonSword Test Kit page (press Save on each test)
+or straight into a chat message, whichever is easier.
+
+Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
+
+
+1. SKILL LEVELS NOT MEASURED YET (quick, in the codex)
+   The site shows these as "(est.)" until measured.
+   - One level-10 skill at Lv.6, 7, 8 and 9 (e.g. Reina – Wind Grab).
+   - One level-7 skill at Lv.6 (e.g. Johnny – Dirty Fight).
+   - Optional: Lv.2–5 of one skill from a different hero, to confirm the
+     multipliers are the same for everyone.
+
+2. KARMA ASCENSIONS NOT MEASURED YET
+   - Any Karma you can see at A3, A4 and A5. Frozen Fortress or
+     A Flame That Cuts Through the Moment are best, since A0–A2 are already
+     recorded for them.
+
+3. LEVEL 40 (once you have the breakthrough materials)
+   - Any hero except Charlotte: Attack, Defense, Max HP at level 40 BEFORE
+     the breakthrough, then AFTER it. Read them on the levelling screen
+     (no titles there).
+   - Charlotte too if you can, since her breakthroughs differ.
+   - The guide predicts 426 / 132 / 2852 before the breakthrough
+     (440 / 127 / 2777 for Charlotte).
+
+4. TRAINING DUMMY (Test Kit tests 2–8, in this order)
+   - Damage spread: 10–20 non-crit hits of one single-hit skill.
+   - Attack scaling: same skill, before and after a gear swap that only
+     changes Attack.
+   - Crit damage: one normal hit and one crit with the same skill.
+   - Crit chance: about 200 hits at around 50% Crit Rate, count the crits.
+   - Defense Ignore / Armor Penetration, status bonuses and buff stacking
+     if the dummy allows statuses and buffs.
+   - First check what the dummy lets you set (level, defense, statuses),
+     and note it in the chat.
+
+5. TITLES
+   - Upload the title screenshots to GitHub, e.g. into a new folder
+     assets/titles/. Claude will turn them into data.
+
+6. GEAR SUBSTATS
+   - Do green, blue and purple pieces roll the same substat values as
+     orange ones? Compare one substat (e.g. Crit Rate on a helmet)
+     across rarities.
+
+7. STATUS TICKS
+   - If damage numbers appear while Poison, Burn or Bleed tick on an enemy,
+     note a few values and how often they appear.
+
+8. DECISIONS FOR YOU
+   - Awakening ratings: read through the new 0–5 ratings and their reasons
+     on each hero's Review tab. Tell Claude any you disagree with.
+   - Awakening stat bonuses (e.g. A2 "Critical Rate +10%") are now stored as
+     numbers. Should the Recommended Endgame Stats include all six
+     awakenings (a fully awakened hero)? If yes, they'd show in their own
+     colour, like the set bonuses.

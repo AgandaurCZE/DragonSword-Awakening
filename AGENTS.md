@@ -15,7 +15,7 @@ Every commit to `main` goes live about a minute later. There is no build step, n
 |---|---|
 | `data.json` | **All guide content.** The single source of truth. Edit this for any content change. |
 | `index.html` | Layout, CSS and JavaScript. Contains no guide data. It loads `data.json` at start-up and renders every page from it. |
-| `assets/` | Images as WebP: `heroes/<name>.webp` (portraits), `archetypes/<archetype>.webp`, `roles/<role>.webp`, `gear/<set>.webp`. File names are lowercase with hyphens. |
+| `assets/` | Images as WebP: `heroes/<name>.webp` (portraits), `archetypes/<archetype>.webp`, `roles/<role>.webp`, `gear/<set>.webp`. File names are lowercase with hyphens. `awakenings/<Hero>/A1–A6.png` are David's original screenshots: the source for `AWAKENINGS`, not shown on the page. `awakenings/Awakening_Icon.png` is shown on the cards. |
 | `AGENTS.md` / `CLAUDE.md` | These notes. |
 
 How the page starts: `index.html` runs `fetch('data.json')`, copies each top-level key into a global variable of the same name (`HEROES`, `TEAM_DATA`, …), then calls `startApp()`, which draws every tab. Opening `index.html` directly from disk (`file://`) fails because browsers block the fetch. Test with a local server instead, e.g. `python3 -m http.server` in the repository folder.
@@ -42,6 +42,7 @@ How the page starts: `index.html` runs `fetch('data.json')`, copies each top-lev
 | `TITLES` | `{note, totalCount, ownedCount, ownedCumulative[], list[{name, obtained, passive[{stat, value}] or null}]}` | Achievement titles. Their passives apply to every hero. **Not shown on the page yet**: `titleBonusTotals()` in `index.html` sums them. Flat title stats add before % multipliers; title % joins the % pool (confirmed in-game). Only Novice Mercenary Crew's passive (Max HP +50) is known; `null` means not checked yet. |
 | `SKILL_LEVEL_MULTIPLIERS` | `{note, byMaxLevel: {"7": [7 values], "10": [10 values]}, measured}` | Skill level slider (character pages and skill previews). Lv.1 = max ÷ 1.75; each level = Lv.1 × multiplier. `null` = not measured; the page fills those in evenly and marks them "(est.)". |
 | `KARMA_ASCENSION` | `{note, multipliers[7], measured, rounding}` | Karma A0–A6 values (`karmaLevels()`): A0 × multiplier, rounded like the game (whole % and nearest 5). A1 = ×4/3 and A2 = ×5/3 (measured), A6 = ×5; A3–A5 are `null`, filled in evenly and marked "est.". |
+| `AWAKENINGS` | `{note, ratingScale[6], icon, heroes: {hero: {best, list[{level, name, text, effects[{stat, value}], rating, why}]}}}` | Review tab on character pages (`renderProfileAwakenings()`). `text` is copied word for word from the screenshots in `assets/awakenings/<Hero>/A1–A6.png`, with `\n` for line breaks. `effects` are the always-on stat bonuses, using the `GEAR_STATS` stat names; they aren't added to the end-game totals yet. `rating` runs 0–5: 0 = not needed, 5 = game-changing. `why` is shown under each card. `best` is the awakening shown in the Best Awakening card. |
 
 ### Text formats the page reads (keep them exactly)
 
