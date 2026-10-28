@@ -497,8 +497,7 @@ function buildKarmaCard(k){
 }
 // Link skill names mentioned by a signature effect to the exact skill data for that hero.
 function formatKarmaExclusive(k){
- const raw=String(k.exclusive||''); const profile=CHARACTER_PROFILE_DATA[k.signature];
- const skills=(profile?.skills||[]).map(sk=>{
+ const raw=String(k.exclusive||''); const profile=CHARACTER_PROFILE_DATA[k.signature]; const skills=(profile?.skills||[]).map(sk=>{
   const full=String(sk.skill||'').replace(/\s*\(Lv\.?\s*\d+\).*$/i,'').trim();
   const name=full.split(/\s*\(/)[0].trim();
   return name?{...sk,displayName:name}:null;
@@ -672,7 +671,7 @@ const SKILL_MAX_TO_LV1=1.75; // max-level weight = Lv.1 weight x 1.75 (verified 
 function profileEsc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function formatAwakeningText(raw,heroName){
  let text=String(raw||'');const skills=[];
- const addSkills=name=>{for(const sk of CHARACTER_PROFILE_DATA[name]?.skills||[]){const displayName=String(sk.skill||'').replace(/\\s*\\(Lv\\.?\\s*\\d+\\).*$/i,'').trim().split(/\\s*\\(/)[0].trim();if(displayName&&!skills.some(x=>x.displayName.toLowerCase()===displayName.toLowerCase()))skills.push({displayName,heroName:name})}};
+ const addSkills=name=>{for(const sk of CHARACTER_PROFILE_DATA[name]?.skills||[]){const displayName=String(sk.skill||'').replace(/\s*\(Lv\.?\s*\d+\).*$/i,'').trim().split(/\s*\(/)[0].trim();if(displayName&&!skills.some(x=>x.displayName.toLowerCase()===displayName.toLowerCase()))skills.push({displayName,heroName:name})}};
  addSkills(heroName);for(const h of HEROES){if(h.name!==heroName)addSkills(h.name)}
  const matches=[],lower=text.toLowerCase();
  for(const sk of skills){const needle=sk.displayName.toLowerCase();let at=lower.indexOf(needle);while(at>=0){const before=text[at-1]||'',after=text[at+needle.length]||'';if(!/[a-z0-9]/i.test(before)&&!/[a-z0-9]/i.test(after)){matches.push({at,end:at+needle.length,matched:text.slice(at,at+needle.length),skill:sk});at=lower.indexOf(needle,at+needle.length)}else at=lower.indexOf(needle,at+1)}}
