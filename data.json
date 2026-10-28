@@ -10131,7 +10131,7 @@
    "Damage is proportional to the skill %: Shadow Dance Lv.1 -> Lv.2 (332% -> 365%, x1.10) raised every hit by x1.10 (e.g. 423 -> 465).",
    "Crit hit = non-crit x (1 + Critical Damage): x1.5 at 50% Crit Damage; x1.6 during Invisible at Lv.1 (+10%). Each hit of a multi-hit attack rolls its own crit.",
    "Single hit (Reina Wind Slayer Lv.1, 549%, Attack 333): 916 damage = 0.50 x Attack x skill %. Whether the 0.50 is the dummy's defence, a level gap or a fixed constant is not known.",
-   "Charlotte's full auto-attack combo (4 clicks, 9 hits) totals 2.08-2.09 x Attack, which is 0.63 x Attack x 332%, not 0.50. Not explained yet.",
+   "Reina's full auto-attack combo (Wind Sword Lv.2, 385%: 2x89 + 128 + 128 + 205 = 639) is 0.50 x Attack x 385%, the same as her single hit, so the codex % covers the whole combo for her. Charlotte's combo totals 0.63 x Attack x 332% (x1.25 more). All three heroes were Lv.30, so a level difference doesn't explain it. Not explained yet; was the dummy poisoned during Charlotte's combo?",
    "Poison tick = 50% of the applier's Attack, rounded down: Charlotte 684 -> 342, 637 -> 318; Johnny 584 -> 292. 4 ticks seen before the stacks expired.",
    "Skill buffs scale with level too: Invisible's Critical Damage buff is +10% at Lv.1 and +15% at Lv.10 (x1.5, not x1.75)."
   ],
@@ -10170,7 +10170,8 @@
      "454": 681,
      "283": 425,
      "39 during Invisible": 63
-    }
+    },
+    "level": 30
    },
    {
     "hero": "Charlotte",
@@ -10203,7 +10204,8 @@
      "148": 222,
      "423": 634,
      "264": 396
-    }
+    },
+    "level": 30
    },
    {
     "hero": "Charlotte",
@@ -10236,7 +10238,8 @@
      "162": 244,
      "465": 697,
      "290": 436
-    }
+    },
+    "level": 30
    },
    {
     "hero": "Reina",
@@ -10249,7 +10252,37 @@
      "hit": [
       916
      ]
-    }
+    },
+    "level": 30
+   },
+   {
+    "hero": "Reina",
+    "attack": 333,
+    "level": 30,
+    "critRate": 5,
+    "critDamage": 50,
+    "skill": "Wind Sword (auto attack) Lv.2, 385%",
+    "hits": {
+     "click1": [
+      89,
+      89
+     ],
+     "click2": [
+      128
+     ],
+     "click3": [
+      128
+     ],
+     "click4": [
+      205
+     ]
+    },
+    "crits": {
+     "89": 134,
+     "128": 192,
+     "205": 308
+    },
+    "note": "Attack assumed unchanged from the Wind Slayer test (same gear)."
    },
    {
     "status": "Poison",
@@ -10273,6 +10306,7 @@
     "ticksSeen": 4
    }
   ],
-  "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down."
+  "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
+  "heroLevels": "Charlotte, Reina and Johnny were all Lv.30 (before the breakthrough) in these tests."
  }
 }
