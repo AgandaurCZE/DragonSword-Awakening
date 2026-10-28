@@ -1,3 +1,13 @@
+## 2026-10-28 — Claude: first training-dummy results
+- New `DAMAGE_TESTS` key with David's dummy results and findings:
+  - damage is proportional to Attack and to the skill %;
+  - a crit multiplies damage by 1 + Crit Damage;
+  - a Poison tick is 50% of the applier's Attack;
+  - Reina's single hit dealt 0.50 × Attack × skill %;
+  - Charlotte's auto-attack combo totals 0.63 × Attack × 332%, which isn't explained yet.
+- `GEAR_STATS.observedBlue`: Blue gear values. Substats are half the Orange values.
+- Neither is shown on the page.
+
 ## 2026-10-28 — Claude: Dodge shows no damage
 - All 20 Dodge (`Dash` slot) descriptions lose the "Attack Power N% Damage" line. Dodge does no damage in-game (David); the codex number was the jump attack's. The number is kept as `codexAttackPct`, hidden. `skill_meta.py` re-run, so Dodge `meta.attackPct` is now null.
 - TODO: recording each skill's levels, to remove the 1% rounding differences.

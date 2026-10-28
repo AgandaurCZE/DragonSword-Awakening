@@ -8475,6 +8475,82 @@
      "Defense Ignore": 3.88
     }
    }
+  },
+  "observedBlue": {
+   "note": "Blue pieces David wore in the 28 Oct damage tests, compared with the Orange tables. Substats: Blue is half of Orange (2.48 vs 4.94, 2.10 vs 4.21, 2.24 vs 4.48). Main stats: about 0.466 of Orange for most stats (7/15 = 0.4667 fits, rounded down), but Attack Power Up is 0.445 on both pieces seen, so no single rule yet. Not used by the page.",
+   "main": [
+    {
+     "slot": "Chest",
+     "stat": "Attack Power Up",
+     "level": 0,
+     "value": 3.97
+    },
+    {
+     "slot": "Helmet",
+     "stat": "Attack Power Up",
+     "level": 0,
+     "value": 2.78
+    },
+    {
+     "slot": "Helmet",
+     "stat": "Critical Hit Resistance",
+     "level": 0,
+     "value": 3.36
+    },
+    {
+     "slot": "Gloves",
+     "stat": "Critical Hit Resistance",
+     "level": 0,
+     "value": 3.36
+    },
+    {
+     "slot": "Gloves",
+     "stat": "Critical Damage Reduction",
+     "level": 0,
+     "value": 3.82
+    },
+    {
+     "slot": "Legs",
+     "stat": "Attack",
+     "level": 3,
+     "value": 45
+    },
+    {
+     "slot": "Chest",
+     "stat": "Max HP",
+     "level": 0,
+     "value": 336
+    },
+    {
+     "slot": "Legs",
+     "stat": "Defense",
+     "level": 0,
+     "value": 19
+    },
+    {
+     "slot": "Boots",
+     "stat": "Defense Up",
+     "level": 3,
+     "value": 5.9
+    }
+   ],
+   "sub": [
+    {
+     "slot": "Legs",
+     "stat": "Critical Hit Resistance",
+     "value": 2.48
+    },
+    {
+     "slot": "Boots",
+     "stat": "Defense Up",
+     "value": 2.1
+    },
+    {
+     "slot": "Boots",
+     "stat": "Max HP Up",
+     "value": 2.24
+    }
+   ]
   }
  },
  "HERO_STAT_MODEL": {
@@ -10047,5 +10123,156 @@
     "passive": null
    }
   ]
+ },
+ "DAMAGE_TESTS": {
+  "note": "Training-dummy results (Lv.90 Training Ogre; the game shows no dummy stats). Every value repeated 5 times with identical results unless noted. Not used by the page yet.",
+  "findings": [
+   "Damage is proportional to Attack: Charlotte's auto-attack hits fell by the same ratio as her Attack (684 -> 637, x0.931; e.g. 3rd click 454 -> 423).",
+   "Damage is proportional to the skill %: Shadow Dance Lv.1 -> Lv.2 (332% -> 365%, x1.10) raised every hit by x1.10 (e.g. 423 -> 465).",
+   "Crit hit = non-crit x (1 + Critical Damage): x1.5 at 50% Crit Damage; x1.6 during Invisible at Lv.1 (+10%). Each hit of a multi-hit attack rolls its own crit.",
+   "Single hit (Reina Wind Slayer Lv.1, 549%, Attack 333): 916 damage = 0.50 x Attack x skill %. Whether the 0.50 is the dummy's defence, a level gap or a fixed constant is not known.",
+   "Charlotte's full auto-attack combo (4 clicks, 9 hits) totals 2.08-2.09 x Attack, which is 0.63 x Attack x 332%, not 0.50. Not explained yet.",
+   "Poison tick = 50% of the applier's Attack, rounded down: Charlotte 684 -> 342, 637 -> 318; Johnny 584 -> 292. 4 ticks seen before the stacks expired.",
+   "Skill buffs scale with level too: Invisible's Critical Damage buff is +10% at Lv.1 and +15% at Lv.10 (x1.5, not x1.75)."
+  ],
+  "tests": [
+   {
+    "hero": "Charlotte",
+    "attack": 684,
+    "critRate": 5,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.1, 332%",
+    "awakenings": 1,
+    "mastery": false,
+    "hits": {
+     "click1": [
+      39,
+      39,
+      90
+     ],
+     "click2": [
+      39,
+      39,
+      158
+     ],
+     "click3": [
+      454
+     ],
+     "click4": [
+      283,
+      283
+     ]
+    },
+    "crits": {
+     "39": 59,
+     "90": 136,
+     "158": 238,
+     "454": 681,
+     "283": 425,
+     "39 during Invisible": 63
+    }
+   },
+   {
+    "hero": "Charlotte",
+    "attack": 637,
+    "critRate": 6.75,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.1, 332%",
+    "hits": {
+     "click1": [
+      37,
+      37,
+      84
+     ],
+     "click2": [
+      37,
+      37,
+      148
+     ],
+     "click3": [
+      423
+     ],
+     "click4": [
+      264,
+      264
+     ]
+    },
+    "crits": {
+     "37": 55,
+     "84": 126,
+     "148": 222,
+     "423": 634,
+     "264": 396
+    }
+   },
+   {
+    "hero": "Charlotte",
+    "attack": 637,
+    "critRate": 6.75,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.2, 365%",
+    "hits": {
+     "click1": [
+      40,
+      40,
+      93
+     ],
+     "click2": [
+      40,
+      40,
+      162
+     ],
+     "click3": [
+      465
+     ],
+     "click4": [
+      290,
+      290
+     ]
+    },
+    "crits": {
+     "40": 61,
+     "93": 139,
+     "162": 244,
+     "465": 697,
+     "290": 436
+    }
+   },
+   {
+    "hero": "Reina",
+    "attack": 333,
+    "critRate": 5,
+    "critDamage": 50,
+    "skill": "Wind Slayer (ultimate) Lv.1, 549%, single hit",
+    "awakenings": 0,
+    "hits": {
+     "hit": [
+      916
+     ]
+    }
+   },
+   {
+    "status": "Poison",
+    "ticks": [
+     {
+      "hero": "Charlotte",
+      "attack": 684,
+      "tick": 342
+     },
+     {
+      "hero": "Charlotte",
+      "attack": 637,
+      "tick": 318
+     },
+     {
+      "hero": "Johnny",
+      "attack": 584,
+      "tick": 292
+     }
+    ],
+    "ticksSeen": 4
+   }
+  ],
+  "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down."
  }
 }
