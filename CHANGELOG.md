@@ -6,6 +6,7 @@ All changes to this project made by ChatGPT must be recorded here. Entries are n
 - Updated `index.html` only. Skill names mentioned in signature Karma exclusive effects now show a hover/focus preview using the character's existing skill data and styling, including the level slider where applicable.
 - Tapping/clicking a linked skill opens its character profile directly on the Skills tab, supporting mobile users.
 - Reuses `CHARACTER_PROFILE_DATA`, `formatSkillText` and existing profile skill CSS; no new skill data or large embedded content was added.
+- Added explicit links for Dana's “Chako is summoned” wording to Summon Chako and Eileen's “Banner Maid” wording to the recorded Vanguard Banner skill.
 - Validation: checked signature effects against the skills recorded for all 20 signature owners; recognized skill names are matched from `data.json`. Live browser testing is not available in this editing session.
 
 ## 2026-10-28 — Link signature Karmas to character builds and color their effects
