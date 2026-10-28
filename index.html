@@ -37,6 +37,7 @@ input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 2px #68c7d5
 .no-results{padding:30px;text-align:center;color:var(--muted)}
 .sk-num{color:#fff;font-weight:800}.sk-effect{color:#fff;font-weight:800}.sk-status{font-weight:800;color:var(--sk-color,#fff)}.sk-cond{color:#e0474f;font-weight:600}.sk-cond b,.sk-cond .sk-status{color:#e0474f}
 #karmaPopover{position:fixed;z-index:30;width:min(440px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;box-shadow:0 18px 55px #000b;border-radius:4px}#karmaPopover[hidden]{display:none}#karmaPopover .karma-card{border-color:var(--karma-accent,#43b9ed)}
+.build-why{margin:0 0 10px}.build-piece{justify-content:flex-start;gap:6px}.build-main-val{display:block;color:#ffc46b;font-weight:900;font-size:16px;margin-top:2px}.build-subs{list-style:none;margin:4px 0 0;padding:6px 0 0;border-top:1px solid #3b3e47;width:100%;text-align:left}.build-subs li{display:flex;justify-content:space-between;gap:6px;font-size:11px;line-height:1.5;color:#c9cfd9}.build-subs b{color:#f5f6f8;white-space:nowrap}.eg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;background:#292b32;border:1px solid #3b3e47;padding:6px 14px}.eg-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid #353842}.eg-label{color:#dce1e8;font-weight:600}.eg-val{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;justify-content:flex-end}.eg-total{font-size:16px;font-weight:900;color:#ffc46b}.eg-own{font-size:12px;color:#aeb7c4}.eg-set,.eg-set-key{color:#5fd38d;font-weight:800}.eg-set{font-size:12px}.eg-est{color:#ffb86f;font-weight:700}.eg-cap{font-size:10px;color:#e0474f;font-weight:800;border:1px solid #e0474f;padding:0 4px;border-radius:2px}[data-tip]{position:relative;cursor:help;text-decoration:underline dotted #7d8796;text-underline-offset:3px}[data-tip]:hover::after,[data-tip]:focus::after{content:attr(data-tip);position:absolute;right:0;bottom:calc(100% + 6px);z-index:40;width:max-content;max-width:300px;white-space:pre-line;background:#171d26;border:1px solid #536273;color:#e4e8ef;font-size:12px;font-weight:500;line-height:1.45;padding:8px 10px;border-radius:6px;box-shadow:0 10px 30px #000a;text-align:left}@media(max-width:700px){.eg-grid{grid-template-columns:1fr}}
 #tooltip{position:fixed;z-index:20;width:min(380px,calc(100vw - 24px));background:#171d26;border:1px solid #536273;border-radius:14px;box-shadow:0 18px 55px #000b;padding:15px;display:none;pointer-events:none}
 .tip-top{display:flex;gap:14px;align-items:center}.tip-portrait{width:112px;height:132px;object-fit:cover;border-radius:9px;border:2px solid var(--tier);flex-shrink:0}
 .tip-title{font-size:23px;font-weight:900;line-height:1.1;margin-bottom:8px}
@@ -314,7 +315,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  <div class="profile-tabs" role="tablist"><button class="profile-tab active" data-profile-tab="skills" role="tab">Skills</button><button class="profile-tab" data-profile-tab="review" role="tab">Review</button><button class="profile-tab" data-profile-tab="build" role="tab">Build and Teams</button></div>
  <section class="profile-tabpanel active" id="profileSkills" role="tabpanel"><h3 class="profile-subhead">Skills</h3><div class="profile-skills-grid" id="profileSkillsGrid"></div><p class="profile-note">The in-game codex shows max-level values only. Lower levels are estimates: Lv. 1 = max ÷ 1.75 (the ratio found on every skill changed in patch 1.1.0), rising in even steps to the max. Only the “Attack Power % Damage” values change; stacks, durations, buffs and heals are shown as recorded.</p></section>
  <section class="profile-tabpanel" id="profileReview" role="tabpanel"><h3 class="profile-subhead">Pros &amp; Cons</h3><div class="profile-proscons"><article><h4 class="profile-pros">PROS</h4><div class="profile-placeholder">Character strengths will be added from the reviewed build notes.</div></article><article><h4 class="profile-cons">CONS</h4><div class="profile-placeholder">Character weaknesses and limitations will be added from the reviewed build notes.</div></article></div><h3 class="profile-subhead">Review</h3><div class="profile-placeholder">Full character kit review placeholder — detailed analysis has not been added to the workbook yet.</div></section>
- <section class="profile-tabpanel" id="profileBuild" role="tabpanel"><h3 class="profile-subhead">Best Karmas</h3><div class="profile-build-list" id="profileKarmas"></div><h3 class="profile-subhead">Best Gear Sets</h3><div class="profile-build-list" id="profileGearSets"></div><h3 class="profile-subhead">Best Main Stats</h3><div class="profile-gear-pieces" id="profileGearStats"></div><h3 class="profile-subhead">Recommended Endgame Stats</h3><div class="profile-placeholder">Recommended endgame stat targets will be added after in-game testing.</div><h3 class="profile-subhead">Synergy</h3><div class="profile-synergy-list" id="profileSynergy"></div></section>
+ <section class="profile-tabpanel" id="profileBuild" role="tabpanel"><h3 class="profile-subhead">Best Karmas</h3><div class="profile-build-list" id="profileKarmas"></div><h3 class="profile-subhead">Best Gear Sets</h3><div class="profile-build-list" id="profileGearSets"></div><h3 class="profile-subhead">Best Main Stats</h3><div class="profile-gear-pieces" id="profileGearStats"></div><h3 class="profile-subhead">Recommended Endgame Stats</h3><div id="profileEndgame"></div><h3 class="profile-subhead">Synergy</h3><div class="profile-synergy-list" id="profileSynergy"></div></section>
 </section>
 
 </div>
@@ -322,7 +323,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={};
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={};
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -612,6 +613,63 @@ function wireKarmaPopover(item,name){
  item.addEventListener('mouseenter',()=>showKarmaPopover(item,name));item.addEventListener('mouseleave',()=>hideKarmaPopover());
  item.addEventListener('focus',()=>showKarmaPopover(item,name));item.addEventListener('blur',()=>hideKarmaPopover());item.addEventListener('click',()=>hideKarmaPopover(0),true);
 }
+// ---------- Gear builds and end-game stat totals (data: HERO_BUILDS, GEAR_STATS, HERO_BASE_STATS, KARMA_DATA, GEAR_DATA) ----------
+const GEAR_SLOTS=['Helmet','Chest','Legs','Gloves','Boots'];
+const KARMA_TRAIT_STAT={'Attack Power':'Attack Power Up','Critical Rate':'Critical Hit Chance','Max HP':'Max HP Up','Defense':'Defense Up'};
+function statIsPct(s){return (GEAR_STATS.percentStats||[]).includes(s)||/Additional Damage$|^Defense Ignore$/.test(s);}
+function fmtStat(s,v,sign){const pct=statIsPct(s);const r=pct?Math.round(v*100)/100:Math.round(v);return (sign&&v>=0?'+':'')+(pct?r.toLocaleString('en-GB',{maximumFractionDigits:2})+'%':r.toLocaleString('en-GB'));}
+function heroSets(name){const g=String((CHARACTER_PROFILE_DATA[name]||{}).gear||'').replace(/^Recommended Gear sets:\s*/i,'').split(/\.\s*Main stats:/i)[0];
+ return g.split(/\s*\+\s*/).map(x=>{const m=x.match(/^(\d+)\s+(.+)$/);if(!m)return null;const set=GEAR_DATA.find(s=>s.name.toLowerCase()===m[2].trim().toLowerCase());return set?{set,pieces:Number(m[1])}:null}).filter(Boolean);}
+function endgameStats(name){
+ const base=HERO_BASE_STATS[name],build=HERO_BUILDS[name],k=KARMA_DATA.find(x=>x.signature===name);if(!base||!build)return null;
+ const own={},setv={},src={},set=[];const add=(o,s,v,from)=>{o[s]=(o[s]||0)+v;if(from)(src[s]=src[s]||[]).push(from)};
+ const parts={Attack:{hero:base['Attack'],karma:0,gear:0},Defense:{hero:base['Defense'],karma:0,gear:0},'Max HP':{hero:base['Max HP'],karma:0,gear:0}};
+ ['Critical Hit Chance','Critical Damage'].forEach(s=>add(own,s,base[s]||0));
+ if(k){Object.entries(k.base||{}).forEach(([s,v])=>{if(parts[s])parts[s].karma+=Number(v)});
+  (k.traits||[]).forEach(t=>add(own,KARMA_TRAIT_STAT[t.label]||t.label,parseFloat(t.a6)));}
+ const lv=build.level??15;
+ GEAR_SLOTS.forEach(slot=>{const p=build.pieces[slot],g=GEAR_STATS.slots[slot];if(!p||!g)return;
+  const one=(s,v)=>{if(parts[s])parts[s].gear+=v;else add(own,s,v)};
+  one(p.main,(g.main[p.main]||[])[lv]||0);(p.subs||[]).forEach(s=>one(s,g.sub[s]||0));});
+ heroSets(name).forEach(({set,pieces})=>{const bon=[...(set.twoBonus||[]),...(pieces>=3?(set.threeBonus||[]):[])];
+  bon.forEach(b=>add(setv,b.stat,b.value,`${set.name} (${pieces}-piece): ${b.stat} +${b.value}%${b.condition?' '+b.condition:''}`));});
+ const rows=[];
+ [['Attack','Attack Power Up'],['Defense','Defense Up'],['Max HP','Max HP Up']].forEach(([s,pct])=>{const P=parts[s],flat=P.hero+P.karma+P.gear;
+  const ownTotal=flat*(1+(own[pct]||0)/100),withSet=flat*(1+((own[pct]||0)+(setv[pct]||0))/100);
+  rows.push({stat:s,own:ownTotal,set:withSet-ownTotal,tip:`Hero Lv.70${base.estimated?' (estimated)':''}: ${fmtStat(s,P.hero)}\nSignature Karma (A6): ${fmtStat(s,P.karma)}\nGear (flat): ${fmtStat(s,P.gear)}\n${pct}: ${fmtStat(pct,own[pct]||0,true)}`,setTip:(src[pct]||[]).join('\n')});});
+ const skip=new Set(['Attack Power Up','Defense Up','Max HP Up']);
+ const order=['Critical Hit Chance','Critical Damage','Defense Ignore','Armor Penetration'];
+ const keys=[...new Set([...Object.keys(own),...Object.keys(setv)])].filter(s=>!skip.has(s));
+ keys.sort((a,b)=>{const ia=order.indexOf(a),ib=order.indexOf(b);return (ia<0?99:ia)-(ib<0?99:ib)||a.localeCompare(b)});
+ keys.forEach(s=>rows.push({stat:s,own:own[s]||0,set:setv[s]||0,tip:'',setTip:(src[s]||[]).join('\n')}));
+ return {rows,build,base};
+}
+function renderBuildStats(h){
+ const root=$('profileGearStats'),eg=$('profileEndgame');root.innerHTML='';eg.innerHTML='';
+ const build=HERO_BUILDS[h.name];
+ if(!build){root.innerHTML='<div class="profile-placeholder">No gear build recorded for this hero yet.</div>';return}
+ const lv=build.level??15;
+ root.parentNode.querySelectorAll('.build-why').forEach(x=>x.remove());const intro=document.createElement('p');intro.className='profile-note build-why';intro.innerHTML=`<strong>${profileEsc(build.type)} build.</strong> ${profileEsc(build.why)}`;root.before(intro);
+ GEAR_SLOTS.forEach(slot=>{const p=build.pieces[slot],g=GEAR_STATS.slots[slot];if(!p||!g)return;
+  const el=document.createElement('div');el.className='profile-gear-piece build-piece';
+  el.innerHTML=`<strong>${slot}</strong><div class="profile-main-stat-value">${profileEsc(p.main)}<span class="build-main-val">${fmtStat(p.main,(g.main[p.main]||[])[lv]||0,true)}</span></div>`+
+   `<ul class="build-subs">${(p.subs||[]).map(s=>`<li><span>${profileEsc(s)}</span><b>${fmtStat(s,g.sub[s]||0,true)}</b></li>`).join('')}</ul>`;
+  root.append(el);});
+ const res=endgameStats(h.name);if(!res)return;
+ const note=document.createElement('p');note.className='profile-note';
+ note.innerHTML=`Fully built at level 70: signature Karma at Ascension 6, ${profileEsc(build.rarity||'Orange')} gear at +${lv} with the stats above. <span class="eg-set-key">Coloured values</span> come from the recommended gear sets (hover for the source and when they apply).`+
+  (res.base.estimated?' <span class="eg-est">Hero base stats are estimates</span> from measured levels 1–30 until the level-70 values are confirmed in-game.':'');
+ eg.append(note);
+ const grid=document.createElement('div');grid.className='eg-grid';
+ res.rows.forEach(r=>{const row=document.createElement('div');row.className='eg-row';const total=r.own+r.set;
+  const tipAttr=t=>t?` data-tip="${profileEsc(t)}" tabindex="0"`:'';
+  let val=`<b class="eg-total">${fmtStat(r.stat,total)}</b>`;
+  if(Math.abs(r.set)>0.001)val+=`<span class="eg-own"${tipAttr(r.tip)}>${fmtStat(r.stat,r.own)}</span><span class="eg-set"${tipAttr(r.setTip)}>${fmtStat(r.stat,r.set,true)}</span>`;
+  else if(r.tip)val=`<b class="eg-total"${tipAttr(r.tip)}>${fmtStat(r.stat,total)}</b>`;
+  if(r.stat==='Critical Hit Chance'&&total>100)val+=`<span class="eg-cap" data-tip="Since patch 1.1.0 crits land at exactly your Crit Rate, so anything above 100% does nothing." tabindex="0">max 100%</span>`;
+  row.innerHTML=`<span class="eg-label">${profileEsc(r.stat)}</span><span class="eg-val">${val}</span>`;grid.append(row);});
+ eg.append(grid);
+}
 function renderProfileBuild(h,data){
  const karmaRoot=$('profileKarmas');karmaRoot.innerHTML='';
  const text=String(data.karma||'');let signature='',alternatives='';
@@ -635,14 +693,7 @@ function renderProfileBuild(h,data){
  const matched=gearParts.map(part=>{const cleaned=part.replace(/^\d+\s*/,'');return GEAR_DATA.find(g=>normGear(g.name)===normGear(cleaned))}).filter(Boolean);
  if(!matched.length)gearRoot.innerHTML='<div class="profile-placeholder">Recommended gear combination will be added after testing.</div>';
  matched.forEach((g,i)=>{const item=document.createElement('article');item.className='profile-build-item profile-gear-link';item.tabIndex=0;item.setAttribute('role','link');item.title='Click to view this gear set in the Gear tab';item.innerHTML=`<div class="profile-build-head"><div class="profile-build-icon"><img src="${g.icon}" alt=""></div><div><h4>${profileEsc(g.name)}</h4><small>${i===0?'Recommended 3-piece set':'Recommended 2-piece set'} · View in Gear Sets ↗</small></div></div><div class="profile-gear-detail"><b>(2)</b> ${profileEsc(g.two)}<br><b>(3)</b> ${profileEsc(g.three)}</div>`;item.addEventListener('click',()=>openGearSet(g.name));item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openGearSet(g.name)}});gearRoot.append(item)});
- const statRoot=$('profileGearStats');statRoot.innerHTML='';
- const mainStatsMatch=String(data.gear||'').match(/Main stats:\s*([^.]*)/i);
- const mainStatsText=mainStatsMatch?mainStatsMatch[1]:'';
- const chestMatch=mainStatsText.match(/([^,]+?)\s+chest\b/i);
- const legsMatch=mainStatsText.match(/([^,]+?)\s+legs?\b/i);
- const mainStatBySlot={Helmet:'Not specified',Chest:chestMatch?chestMatch[1].trim():'Not specified',Legs:legsMatch?legsMatch[1].trim():'Not specified',Gloves:'Not specified',Boots:'Not specified'};
- const pieces=['Helmet','Chest','Legs','Gloves','Boots'];
- pieces.forEach(name=>{const el=document.createElement('div');el.className='profile-gear-piece';el.innerHTML=`<strong>${name}</strong><div class="profile-main-stat-value">${profileEsc(mainStatBySlot[name])}</div>${mainStatBySlot[name]==='Not specified'?'<div class="profile-note">Not specified in workbook yet</div>':''}`;statRoot.append(el)});
+ renderBuildStats(h);
  const sy=$('profileSynergy');sy.innerHTML='';const relevant=TEAM_DATA.filter(t=>t.members.some(m=>[m.name,...(m.alts||[])].some(n=>n.toLowerCase()===h.name.toLowerCase())));
  if(!relevant.length)sy.innerHTML='<div class="profile-placeholder">No team entry currently lists this character. Synergy recommendations can be added to the Teams workbook.</div>';
  relevant.forEach(t=>{const item=document.createElement('article');item.className='profile-synergy';const lead=HEROES.find(x=>x.name.toLowerCase()===t.lead.toLowerCase());item.innerHTML=`${lead?`<img src="${lead.portrait}" alt="${profileEsc(t.lead)}">`:''}<div><button type="button" data-team-link="${profileEsc(t.name)}">${profileEsc(t.name)} · ${profileEsc(t.tier)} Tier</button><div class="profile-note">${profileEsc(t.note)}</div></div>`;item.querySelector('[data-team-link]').addEventListener('click',()=>{document.querySelector('.nav-item[data-page="teams"]').click();const target=[...document.querySelectorAll('.team-card')].find(el=>el.dataset.teamName===t.name);if(target){target.scrollIntoView({behavior:'smooth',block:'center'});target.style.outline='3px solid #68c7d5';setTimeout(()=>target.style.outline='',1800)}});sy.append(item)});
@@ -767,7 +818,7 @@ function startApp(){
  renderGear();
 }
 fetch('data.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};DATA_META=d.meta||{};
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};DATA_META=d.meta||{};
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
 </script>

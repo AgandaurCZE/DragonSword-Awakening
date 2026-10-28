@@ -34,7 +34,11 @@ How the page starts: `index.html` runs `fetch('data.json')`, copies each top-lev
 | `TEAM_DATA` | list of `{tier, name, accent, lead, arch, members[{name, alts[]}], tags[], note}` | Teams page, plus the Synergy section on character pages. `lead` = `members[0].name` (the big portrait). Slot order: Main DPS, Sub-DPS, Support/enabler. `alts` are swap-ins for that slot. |
 | `KARMA_DATA` | list of 53 `{archetype, name, signature, source, exclusive, traits[{label, a0, a6}], base{Attack, Defense, Max HP}}` | Karma tab **and** the hover cards on character pages; both are built by the same function, so one edit updates both. `a0` = Lv. 1 / Ascension 0, `a6` = Lv. 70 / Ascension 6, both from screenshots. |
 | `CHARACTER_PROFILE_DATA` | `{heroName: {archetype, role, karma, gear, skills[{slot, skill, description}]}}` | Character pages (open one by clicking a hero). |
-| `GEAR_DATA` | list of 12 `{name, source, two, three, icon}` | Gear tab and the gear section on character pages. |
+| `GEAR_DATA` | list of 12 `{name, source, two, three, icon, twoBonus[], threeBonus[]}` | Gear tab and the gear section on character pages. `two`/`three` are the display text; `twoBonus`/`threeBonus` are the same effects as `{stat, value, condition?}` for the stat totals. A 3-piece set is counted as giving its 2-piece bonus too (assumption, not yet confirmed in-game). |
+| `GEAR_STATS` | `{slots: {Helmet, Chest, Legs, Gloves, Boots: {main: {stat: [16 values for +0..+15]}, sub: {stat: value}}}, percentStats[], rarities[], substatUnlockLevels[]}` | Best Main Stats and the stat totals. From David's in-game gear info (source of truth). |
+| `HERO_BASE_STATS` | `{hero: {Attack, Defense, Max HP, Critical Hit Chance, Critical Damage, estimated, profile}}` | Level-70 hero stats with no gear or Karma. **Currently estimates** (`estimated: true`). Replace with measured values and set `estimated` to `false`. |
+| `HERO_STAT_MODEL` | measurements + formula | Documents how the estimates were made (see "Hero base-stat estimates" below). Not read by the page except as reference. |
+| `HERO_BUILDS` | `{hero: {type, why, rarity, level, pieces: {slot: {main, subs[5]}}}}` | Best Main Stats cards and the Recommended Endgame Stats totals on character pages. Stat names must match `GEAR_STATS` exactly. |
 
 ### Text formats the page reads (keep them exactly)
 
@@ -58,6 +62,7 @@ Change these in the HTML if needed:
 - the kit-type filter options (the `<select id="classType">`)
 - the "NEW" badge on Ryza (`renderHeroes`)
 - the skill-level ratio `SKILL_MAX_TO_LV1 = 1.75`
+- the Karma trait → stat name mapping (`KARMA_TRAIT_STAT`) and the gear slot list (`GEAR_SLOTS`)
 
 ## Data rules
 
@@ -85,6 +90,43 @@ Change these in the HTML if needed:
 
    Main stats: a Crit DMG chest only if the build gives Crit Rate, otherwise a Cooldown Reduction chest; Attack on the legs for everyone. Karma: the signature first, then the best general card of the hero's own archetype.
 7. The old Excel workbook (`DragonSword_Awakening_Master_Reference_Claude_Edit_27Oct_v2.xlsx`, kept on David's Google Drive) is **out of date**. Use `data.json` instead.
+
+## Gear, builds and end-game stat totals
+
+**Gear rules (from David's testing; may change):**
+- Main stat values depend on the upgrade level. Each substat has one fixed value.
+- Green gear maxes at +6 with 2 substats, Blue at +9 with 3, Purple at +12 with 4, Orange at +15 with 5. Substats unlock at +3, +6, +9, +12 and +15.
+- A piece can't have the same stat as both main and substat. Flat and % versions (e.g. `Attack` and `Attack Power Up`) count as different stats. Substats on one piece are all different.
+- Cooldown Reduction and Status Application Rate don't exist on armour. Don't recommend them.
+- Helmet, Gloves and Boots have identical tables for now.
+
+**How the page calculates the totals** (`endgameStats()` in `index.html`; all inputs are in `data.json`):
+- Attack = (hero base + signature Karma base Attack + flat Attack from gear) × (1 + all Attack Power Up %). Defense and Max HP work the same way with Defense Up and Max HP Up.
+- Every other stat is a plain sum: hero, Karma traits at Ascension 6, gear main stats at +15, and substats.
+- Set bonuses (always-on and conditional) are calculated separately and shown in green next to the total, with a hover giving the source and the condition.
+- Only the signature Karma counts; the second Karma doesn't.
+
+**How `HERO_BUILDS` was chosen** (by role and team position, after checking skill text):
+- **Damage builds** (Main DPS, Sub-DPS and the enablers Reina and Kalien): every combination of Attack Power Up, Crit Rate and Crit Damage main stats was tried. The one with the highest Attack × (1 + Crit Rate × Crit Damage) won, with Crit Rate capped at 100% and set bonuses excluded. Spare substat slots get Defense Ignore, then the hero's own status Additional Attack Power.
+- **Support builds** (Lute, Dana, Sion): Max HP Up chest and Defense Up legs, damage on the other three slots. Their heals and buffs are % of max HP or flat %, so their own stats can't raise them.
+- **Tank build** (Alex): Max HP Up and Defense Up in every slot, with HP, Defense and crit-resistance substats.
+
+### Hero base-stat estimates
+
+Every hero levels identically; only breakthrough bonuses differ.
+- **Levelling:** the level part follows `base + b(L-1) + c(L-1)²`, fitted exactly to measured Lv1 (Aria), Lv20 and Lv30. At level 70 that's 751 Attack / 210 Defense / 4,867 Max HP.
+- **Breakthroughs** happen at levels 20, 30, 40, 50 and 60. Two profiles have been measured so far:
+  - **Profile A** (Charlotte; used for all Main DPS): +32/+11/+173 at level 20 and +37/+13/+202 at level 30.
+  - **Profile B** (Johnny and Reina; used for everyone else): +25/+13/+207 and +30/+16/+243.
+- The level 40–60 breakthroughs are assumed to keep rising by the same step each tier.
+
+## Open tasks (for any assistant)
+
+1. **When David sends measured level-70 stats for a hero:** put them in `HERO_BASE_STATS[hero]` and set `estimated: false`. If they're a breakthrough measurement instead, add it to `HERO_STAT_MODEL.measured` and recalculate that hero.
+2. **If a measured hero contradicts their profile** (e.g. Castella, a Main DPS, doesn't match Charlotte's breakthroughs), the profile rule is wrong. Re-estimate the affected heroes and tell David.
+3. **If testing changes the gear tables or rules**, update `GEAR_STATS`. Then re-check that each build in `HERO_BUILDS` doesn't use the same stat as both main and substat on one piece.
+4. **If the game shows that a 3-piece set doesn't include its 2-piece bonus**, change the `pieces>=3` line in `endgameStats()`.
+5. **Recalculating a damage build after the numbers change:** try all 3⁵ main-stat combinations as described above, or ask David before hand-editing.
 
 ## How to make changes
 

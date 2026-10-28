@@ -2045,7 +2045,7 @@
    "archetype": "VENOM",
    "role": "Role: Sub-DPS: Poison + Airborne combo partner",
    "karma": "Recommended Karma: Wandering Blade (signature) + Defeating Poison with Poison. Alternatives: So Good It's to Die For, A Spectacular Poison",
-   "gear": "Recommended Gear sets: 3 Venomfog Shade + 2 Battle Will. Main stats: Crit DMG chest, ATK legs. Substats: Additional Power, ATK Power Up, DEF Ignore, Crit Chance, Status Effect Additional Attack Power Increase",
+   "gear": "Recommended Gear sets: 3 Venomfog Shade + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2098,7 +2098,7 @@
    "archetype": "VENOM",
    "role": "Role: Main DPS: Poison; launches with Illusion Kick, finishes with Shadow Grab",
    "karma": "Recommended Karma: The Conviction Left in Darkness (signature) + Defeating Poison with Poison. Alternatives: So Good It's to Die For, A Spectacular Poison",
-   "gear": "Recommended Gear sets: 3 Venomfog Shade + 2 Battle Will. Main stats: Crit DMG chest, ATK legs. Substats: Additional Power, ATK Power Up, DEF Ignore, Crit Chance, Status Effect Additional Attack Power Increase",
+   "gear": "Recommended Gear sets: 3 Venomfog Shade + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2151,7 +2151,7 @@
    "archetype": "AMPLITUDE",
    "role": "Role: Support (Healer): 20% team heal, Stun and Knockdown",
    "karma": "Recommended Karma: A Sword Summoned for a Friend (signature) + I'll Knock You Out Myself. Alternatives: Every Rose Has Its Thorn, A Coincidental Yet Perfect Plan",
-   "gear": "Recommended Gear sets: 3 Holy Arbiter + 2 Battle Will. Main stats: Cooldown Reduction chest, ATK legs. Substats: Cooldown Reduction, healing, Status Application Rate",
+   "gear": "Recommended Gear sets: 3 Holy Arbiter + 2 Battle Will. Main stats: Attack Power Up helmet, Max HP Up chest, Defense Up legs, Attack Power Up gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2204,7 +2204,7 @@
    "archetype": "AMPLITUDE",
    "role": "Role: Main DPS: Stun → Bleed combos (best with Merciful Death Sentence)",
    "karma": "Recommended Karma: Merciful Death Sentence (signature) + I'll Knock You Out Myself. Alternatives: Every Rose Has Its Thorn, A Coincidental Yet Perfect Plan",
-   "gear": "Recommended Gear sets: 3 Bloodstained Chaser + 2 Battle Will. Main stats: Cooldown Reduction chest, ATK legs. Substats: Status Effect Additional Attack Power Increase, Status Application Rate, Cooldown Reduction, ATK Power Up",
+   "gear": "Recommended Gear sets: 3 Bloodstained Chaser + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Attack Power Up legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2277,7 +2277,7 @@
    "archetype": "CRUSHING",
    "role": "Role: Support (Tank): Taunt, counter, −20% target Defense, team damage reduction",
    "karma": "Recommended Karma: Loyalty Amidst Lethargy (signature) + Stay Sharp. Always. Alternatives: Merciless Kick, Legends Left Behind by the Master",
-   "gear": "Recommended Gear sets: 3 Earthshatterer + 2 Battle Will. Main stats: Cooldown Reduction chest, ATK legs. Substats: DEF Ignore, ATK Power Up, survival stats",
+   "gear": "Recommended Gear sets: 3 Earthshatterer + 2 Battle Will. Main stats: Max HP Up helmet, Max HP Up chest, Defense Up legs, Defense Up gloves, Max HP Up boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2350,7 +2350,7 @@
    "archetype": "GALE",
    "role": "Role: Support (Enabler): Airborne starter for the team",
    "karma": "Recommended Karma: The Wind That Protects the Kingdom (signature) + A Path That Leads to the Wind. Alternatives: Become a Star in That Sky, The Wind Blows Again",
-   "gear": "Recommended Gear sets: 3 Azure Gale + 2 Battle Will. Main stats: Cooldown Reduction chest, ATK legs. Substats: Airborne rate, Crit x2, ATK Power Up, DEF Ignore",
+   "gear": "Recommended Gear sets: 3 Azure Gale + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Attack Power Up legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2403,7 +2403,7 @@
    "archetype": "GALE",
    "role": "Role: Sub-DPS / Support (Buffer): +15% team Attack (Brave One), +20% team Crit Rate (Vanguard Banner)",
    "karma": "Recommended Karma: Between Chivalry and Bookmarks (signature) + A Path That Leads to the Wind. Alternatives: Become a Star in That Sky, The Wind Blows Again",
-   "gear": "Recommended Gear sets: 3 Azure Gale + 2 Battle Will. Main stats: Crit DMG chest, ATK legs. Substats: Additional Power, ATK Power Up, DEF Ignore, Crit Chance",
+   "gear": "Recommended Gear sets: 3 Azure Gale + 2 Battle Will. Main stats: Critical Hit Chance helmet, Attack Power Up chest, Critical Damage legs, Critical Hit Chance gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2456,7 +2456,7 @@
    "archetype": "BLOODBURST",
    "role": "Role: Main DPS: Bleed burst; sets up her own Stun for Kick Storm",
    "karma": "Recommended Karma: The Noble Lady's Wild Hobby (signature) + Fangs Lurking in the Thicket. Alternatives: A Soldier's Basic Qualities",
-   "gear": "Recommended Gear sets: 3 Bloodstained Chaser + 2 Battle Will. Main stats: Cooldown Reduction chest, ATK legs. Substats: Status Effect Additional Attack Power Increase, ATK Power Up, Additional Power, DEF Ignore",
+   "gear": "Recommended Gear sets: 3 Bloodstained Chaser + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2509,7 +2509,7 @@
    "archetype": "BLAZEFLAME",
    "role": "Role: Sub-DPS: Burn + Airborne starter",
    "karma": "Recommended Karma: Explosion Is Art (signature) + The Burning Taste of Fire. Alternatives: A Flame That Cuts Through the Moment",
-   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 Battle Will. Main stats: Cooldown Reduction chest, ATK legs. Substats: Status Application Rate, Cooldown Reduction, ATK Power Up, Status Effect Additional Attack Power Increase",
+   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 Battle Will. Main stats: Attack Power Up helmet, Attack Power Up chest, Critical Hit Chance legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2562,7 +2562,7 @@
    "archetype": "BLAZEFLAME",
    "role": "Role: Support (Enabler): Burn stacks and Stun setup",
    "karma": "Recommended Karma: The Chosen One of the Crimson Flame (signature) + A Flame That Cuts Through the Moment. Alternatives: The Burning Taste of Fire",
-   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 Battle Will. Main stats: Cooldown Reduction chest, ATK legs. Substats: Status Application Rate, Cooldown Reduction, ATK Power Up, Status Effect Additional Attack Power Increase",
+   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2615,7 +2615,7 @@
    "archetype": "BLAZEFLAME",
    "role": "Role: Main DPS: Burn → Airborne → Explosion",
    "karma": "Recommended Karma: The Sun Blazes Again (signature) + A Flame That Cuts Through the Moment. Alternatives: The Burning Taste of Fire",
-   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 Battle Will. Main stats: Crit DMG chest, ATK legs. Substats: Additional Power, ATK Power Up, DEF Ignore, Crit Chance, Status Effect Additional Attack Power Increase",
+   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2693,7 +2693,7 @@
    "archetype": "FROSTBITE",
    "role": "Role: Support (Tank / Buffer): Chako shield, +10% team Defense, Frost",
    "karma": "Recommended Karma: A Sparkling Tea Time (signature) + Rock-Splitting Ice. Alternatives: Frozen Fortress",
-   "gear": "Recommended Gear sets: 3 Froststorm + 2 Battle Will. Main stats: Cooldown Reduction chest, ATK legs. Substats: Cooldown Reduction, Status Application Rate, survival stats",
+   "gear": "Recommended Gear sets: 3 Froststorm + 2 Battle Will. Main stats: Attack Power Up helmet, Max HP Up chest, Defense Up legs, Critical Hit Chance gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2746,7 +2746,7 @@
    "archetype": "FROSTBITE",
    "role": "Role: Sub-DPS: Frost + Airborne starter, crowd control",
    "karma": "Recommended Karma: Eternal Blizzard (signature) + Frozen Fortress. Alternatives: Rock-Splitting Ice",
-   "gear": "Recommended Gear sets: 3 Froststorm + 2 Battle Will. Main stats: Cooldown Reduction chest, ATK legs. Substats: Status Application Rate, Cooldown Reduction, ATK Power Up, Status Effect Additional Attack Power Increase",
+   "gear": "Recommended Gear sets: 3 Froststorm + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2799,7 +2799,7 @@
    "archetype": "FROSTBITE",
    "role": "Role: Main DPS: big hits on Frozen targets",
    "karma": "Recommended Karma: The Spear That Fells the Sun (signature) + Rock-Splitting Ice. Alternatives: Frozen Fortress",
-   "gear": "Recommended Gear sets: 3 Froststorm + 2 Battle Will. Main stats: Crit DMG chest, ATK legs. Substats: Additional Power, ATK Power Up, DEF Ignore, Crit Chance, Status Effect Additional Attack Power Increase",
+   "gear": "Recommended Gear sets: 3 Froststorm + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2852,7 +2852,7 @@
    "archetype": "THUNDERBOLT",
    "role": "Role: Sub-DPS: Shock control and Knockdown; +30% own Crit Damage",
    "karma": "Recommended Karma: Sacred Lightning Baptism (signature) + The One Chosen by Lightning. Alternatives: A Flash of Invention, The Agent of Divine Punishment",
-   "gear": "Recommended Gear sets: 3 Thunderrush + 2 Battle Will. Main stats: Cooldown Reduction chest, ATK legs. Substats: Status Application Rate, Cooldown Reduction, ATK Power Up, Status Effect Additional Attack Power Increase",
+   "gear": "Recommended Gear sets: 3 Thunderrush + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Attack Power Up legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2905,7 +2905,7 @@
    "archetype": "THUNDERBOLT",
    "role": "Role: Support (Buffer) / Sub-DPS: +15% team Attack or Defense; Shock and Knockdown",
    "karma": "Recommended Karma: Fate Spoke to the Boy (signature) + The One Chosen by Lightning. Alternatives: A Flash of Invention, The Agent of Divine Punishment",
-   "gear": "Recommended Gear sets: 3 Thunderrush + 2 Battle Will. Main stats: Cooldown Reduction chest, ATK legs. Substats: Cooldown Reduction, Status Application Rate, survival stats",
+   "gear": "Recommended Gear sets: 3 Thunderrush + 2 Battle Will. Main stats: Attack Power Up helmet, Max HP Up chest, Defense Up legs, Attack Power Up gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2958,7 +2958,7 @@
    "archetype": "THUNDERBOLT",
    "role": "Role: Main DPS / Support (Healer): Shock damage, Stun, conditional heal and cleanse",
    "karma": "Recommended Karma: A Helping Hand for Good Kids (signature) + The One Chosen by Lightning. Alternatives: A Flash of Invention, The Agent of Divine Punishment",
-   "gear": "Recommended Gear sets: 3 Thunderrush + 2 Battle Will. Main stats: Crit DMG chest, ATK legs. Substats: Additional Power, ATK Power Up, DEF Ignore, Crit Chance, Status Effect Additional Attack Power Increase",
+   "gear": "Recommended Gear sets: 3 Thunderrush + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -3011,7 +3011,7 @@
    "archetype": "THUNDERBOLT",
    "role": "Role: Main DPS: Shock application; Flash and Thunder Grab",
    "karma": "Recommended Karma: The Scar Lightning Left Behind (signature, Exchange) + The One Chosen by Lightning. Alternatives: A Flash of Invention, The Agent of Divine Punishment",
-   "gear": "Recommended Gear sets: 3 Thunderrush + 2 Battle Will. Main stats: Crit DMG chest, ATK legs. Substats: Additional Power, ATK Power Up, DEF Ignore, Crit Chance, Status Effect Additional Attack Power Increase",
+   "gear": "Recommended Gear sets: 3 Thunderrush + 2 Battle Will. Main stats: Attack Power Up helmet, Attack Power Up chest, Critical Hit Chance legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -3064,7 +3064,7 @@
    "archetype": "BREAKER",
    "role": "Role: Main DPS: Super Armor breaker; Stun Blow → Upper Blow",
    "karma": "Recommended Karma: Noisy Duet (signature) + Destruction Is the Mother of Creation. Alternatives: The Way of the Wild, A Reckless Charge",
-   "gear": "Recommended Gear sets: 3 Ruinsbreaker + 2 Holy Arbiter. Main stats: Cooldown Reduction chest, ATK legs. Substats: Status Effect Additional Attack Power Increase, ATK Power Up, Additional Power, DEF Ignore",
+   "gear": "Recommended Gear sets: 3 Ruinsbreaker + 2 Holy Arbiter. Main stats: Critical Hit Chance helmet, Attack Power Up chest, Critical Damage legs, Critical Hit Chance gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -3117,7 +3117,7 @@
    "archetype": "BREAKER",
    "role": "Role: Sub-DPS: Stun via Precision Shot, big hits on Stunned foes",
    "karma": "Recommended Karma: Wildflowers Bloom Through the Wind (signature) + Destruction Is the Mother of Creation. Alternatives: The Way of the Wild, A Reckless Charge",
-   "gear": "Recommended Gear sets: 3 Ruinsbreaker + 2 Holy Arbiter. Main stats: Crit DMG chest, ATK legs. Substats: Additional Power, ATK Power Up, DEF Ignore, Crit Chance, Status Effect Additional Attack Power Increase",
+   "gear": "Recommended Gear sets: 3 Ruinsbreaker + 2 Holy Arbiter. Main stats: Attack Power Up helmet, Attack Power Up chest, Critical Hit Chance legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -3193,84 +3193,2779 @@
    "source": "Normal Dungeons",
    "two": "Critical Rate +9%",
    "three": "Critical Rate +6%",
-   "icon": "assets/gear/the-infiltrator.webp"
+   "icon": "assets/gear/the-infiltrator.webp",
+   "twoBonus": [
+    {
+     "stat": "Critical Hit Chance",
+     "value": 9
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Critical Hit Chance",
+     "value": 6
+    }
+   ]
   },
   {
    "name": "Ballad of Life",
    "source": "Normal Dungeons",
    "two": "Max HP Up +9%",
    "three": "Max HP Up +6%",
-   "icon": "assets/gear/ballad-of-life.webp"
+   "icon": "assets/gear/ballad-of-life.webp",
+   "twoBonus": [
+    {
+     "stat": "Max HP Up",
+     "value": 9
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Max HP Up",
+     "value": 6
+    }
+   ]
   },
   {
    "name": "Battle Will",
    "source": "Normal Dungeons",
    "two": "Attack Power Up +6%",
    "three": "Attack Power Up +4%",
-   "icon": "assets/gear/battle-will.webp"
+   "icon": "assets/gear/battle-will.webp",
+   "twoBonus": [
+    {
+     "stat": "Attack Power Up",
+     "value": 6
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Attack Power Up",
+     "value": 4
+    }
+   ]
   },
   {
    "name": "Venomfog Shade",
    "source": "Blacksmith",
    "two": "Poison Additional Damage +15%",
    "three": "When dodging an attack, Critical Rate increases by 4% for 12 seconds.",
-   "icon": "assets/gear/venomfog-shade.webp"
+   "icon": "assets/gear/venomfog-shade.webp",
+   "twoBonus": [
+    {
+     "stat": "Poison Additional Damage",
+     "value": 15
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Critical Hit Chance",
+     "value": 4,
+     "condition": "for 12 s after dodging an attack"
+    }
+   ]
   },
   {
    "name": "Blazing Flames",
    "source": "Blacksmith",
    "two": "Burn Additional Damage +15%",
    "three": "Increases Critical Rate by 15% for 12 seconds when applying Burn.",
-   "icon": "assets/gear/blazing-flames.webp"
+   "icon": "assets/gear/blazing-flames.webp",
+   "twoBonus": [
+    {
+     "stat": "Burn Additional Damage",
+     "value": 15
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Critical Hit Chance",
+     "value": 15,
+     "condition": "for 12 s after applying Burn"
+    }
+   ]
   },
   {
    "name": "Froststorm",
    "source": "Blacksmith",
    "two": "Frost Additional Damage +15%",
    "three": "Increases Attack Power by 10% for 8 seconds when using an Active Skill.",
-   "icon": "assets/gear/froststorm.webp"
+   "icon": "assets/gear/froststorm.webp",
+   "twoBonus": [
+    {
+     "stat": "Frost Additional Damage",
+     "value": 15
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Attack Power Up",
+     "value": 10,
+     "condition": "for 8 s after using an Active Skill"
+    }
+   ]
   },
   {
    "name": "Thunderrush",
    "source": "Blacksmith",
    "two": "Shock Additional Damage +15%",
    "three": "When Signal is used, Critical Rate increases by 6% and Critical Damage increases by 10% for 8 seconds.",
-   "icon": "assets/gear/thunderrush.webp"
+   "icon": "assets/gear/thunderrush.webp",
+   "twoBonus": [
+    {
+     "stat": "Shock Additional Damage",
+     "value": 15
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Critical Hit Chance",
+     "value": 6,
+     "condition": "for 8 s after using Signal"
+    },
+    {
+     "stat": "Critical Damage",
+     "value": 10,
+     "condition": "for 8 s after using Signal"
+    }
+   ]
   },
   {
    "name": "Azure Gale",
    "source": "Blacksmith",
    "two": "Airborne Additional Damage +15%",
    "three": "Increases Attack Power by 10% for 8 seconds when using an Active Skill.",
-   "icon": "assets/gear/azure-gale.webp"
+   "icon": "assets/gear/azure-gale.webp",
+   "twoBonus": [
+    {
+     "stat": "Airborne Additional Damage",
+     "value": 15
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Attack Power Up",
+     "value": 10,
+     "condition": "for 8 s after using an Active Skill"
+    }
+   ]
   },
   {
    "name": "Holy Arbiter",
    "source": "Blacksmith",
    "two": "Stun Additional Damage +15%",
    "three": "Increases Attack Power by 9% for 6 seconds when tagged.",
-   "icon": "assets/gear/holy-arbiter.webp"
+   "icon": "assets/gear/holy-arbiter.webp",
+   "twoBonus": [
+    {
+     "stat": "Stun Additional Damage",
+     "value": 15
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Attack Power Up",
+     "value": 9,
+     "condition": "for 6 s after being tagged in"
+    }
+   ]
   },
   {
    "name": "Bloodstained Chaser",
    "source": "Blacksmith",
    "two": "Bleed Additional Damage +15%",
    "three": "Increases Attack Power by 9% for 6 seconds when using a skill.",
-   "icon": "assets/gear/bloodstained-chaser.webp"
+   "icon": "assets/gear/bloodstained-chaser.webp",
+   "twoBonus": [
+    {
+     "stat": "Bleed Additional Damage",
+     "value": 15
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Attack Power Up",
+     "value": 9,
+     "condition": "for 6 s after using a skill"
+    }
+   ]
   },
   {
    "name": "Earthshatterer",
    "source": "Blacksmith",
    "two": "Knockdown Additional Damage +15%",
    "three": "When using a Signal skill, gains 20% Defense Ignore for 10 seconds.",
-   "icon": "assets/gear/earthshatterer.webp"
+   "icon": "assets/gear/earthshatterer.webp",
+   "twoBonus": [
+    {
+     "stat": "Knockdown Additional Damage",
+     "value": 15
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Defense Ignore",
+     "value": 20,
+     "condition": "for 10 s after using a Signal skill"
+    }
+   ]
   },
   {
    "name": "Ruinsbreaker",
    "source": "Blacksmith",
    "two": "Break Additional Damage +15%",
    "three": "When attacking enemies in Break status, Defense Ignore increases by 10% for 6 seconds.",
-   "icon": "assets/gear/ruinsbreaker.webp"
+   "icon": "assets/gear/ruinsbreaker.webp",
+   "twoBonus": [
+    {
+     "stat": "Break Additional Damage",
+     "value": 15
+    }
+   ],
+   "threeBonus": [
+    {
+     "stat": "Defense Ignore",
+     "value": 10,
+     "condition": "for 6 s when attacking enemies in Break"
+    }
+   ]
   }
- ]
+ ],
+ "GEAR_STATS": {
+  "note": "From David's in-game gear info (source of truth, still being tested). Main stat values by upgrade level +0..+15; a substat has one fixed value. A piece can't have the same stat as main and substat (flat and % count as different stats). Helmet, Gloves and Boots are currently identical.",
+  "percentStats": [
+   "Attack Power Up",
+   "Critical Damage",
+   "Critical Damage Reduction",
+   "Critical Hit Chance",
+   "Critical Hit Resistance",
+   "Defense Ignore",
+   "Defense Up",
+   "Max HP Up"
+  ],
+  "rarities": [
+   {
+    "name": "Green",
+    "maxLevel": 6,
+    "substats": 2
+   },
+   {
+    "name": "Blue",
+    "maxLevel": 9,
+    "substats": 3
+   },
+   {
+    "name": "Purple",
+    "maxLevel": 12,
+    "substats": 4
+   },
+   {
+    "name": "Orange",
+    "maxLevel": 15,
+    "substats": 5
+   }
+  ],
+  "substatUnlockLevels": [
+   3,
+   6,
+   9,
+   12,
+   15
+  ],
+  "slots": {
+   "Helmet": {
+    "main": {
+     "Attack": [
+      46.0,
+      56.0,
+      65.0,
+      75.0,
+      84.0,
+      93.0,
+      103.0,
+      112.0,
+      121.0,
+      131.0,
+      140.0,
+      150.0,
+      159.0,
+      168.0,
+      178.0,
+      187.0
+     ],
+     "Max HP": [
+      504.0,
+      605.0,
+      706.0,
+      807.0,
+      908.0,
+      1009.0,
+      1110.0,
+      1211.0,
+      1312.0,
+      1413.0,
+      1514.0,
+      1615.0,
+      1716.0,
+      1817.0,
+      1918.0,
+      2019.0
+     ],
+     "Defense": [
+      32.0,
+      39.0,
+      45.0,
+      52.0,
+      59.0,
+      65.0,
+      72.0,
+      78.0,
+      85.0,
+      91.0,
+      98.0,
+      105.0,
+      111.0,
+      118.0,
+      124.0,
+      131.0
+     ],
+     "Attack Power Up": [
+      6.25,
+      7.5,
+      8.75,
+      10.0,
+      11.25,
+      12.5,
+      13.75,
+      15.0,
+      16.25,
+      17.5,
+      18.75,
+      20.0,
+      21.25,
+      22.5,
+      23.75,
+      25.0
+     ],
+     "Max HP Up": [
+      8.41,
+      10.09,
+      11.77,
+      13.46,
+      15.14,
+      16.82,
+      18.5,
+      20.19,
+      21.87,
+      23.55,
+      25.24,
+      26.92,
+      28.6,
+      30.28,
+      31.97,
+      33.65
+     ],
+     "Defense Up": [
+      7.9,
+      9.48,
+      11.06,
+      12.65,
+      14.23,
+      15.81,
+      17.39,
+      18.97,
+      20.55,
+      22.13,
+      23.71,
+      25.3,
+      26.88,
+      28.46,
+      30.04,
+      31.62
+     ],
+     "Critical Hit Chance": [
+      6.9,
+      8.28,
+      9.67,
+      11.05,
+      12.43,
+      13.81,
+      15.19,
+      16.57,
+      17.96,
+      19.34,
+      20.72,
+      22.1,
+      23.48,
+      24.86,
+      26.25,
+      27.63
+     ],
+     "Critical Damage": [
+      7.72,
+      9.26,
+      10.8,
+      12.35,
+      13.89,
+      15.44,
+      16.98,
+      18.52,
+      20.07,
+      21.61,
+      23.16,
+      24.7,
+      26.25,
+      27.79,
+      29.33,
+      30.88
+     ],
+     "Critical Hit Resistance": [
+      7.21,
+      8.65,
+      10.09,
+      11.53,
+      12.98,
+      14.42,
+      15.86,
+      17.3,
+      18.75,
+      20.19,
+      21.63,
+      23.07,
+      24.51,
+      25.96,
+      27.4,
+      28.84
+     ],
+     "Critical Damage Reduction": [
+      8.2,
+      9.84,
+      11.48,
+      13.12,
+      14.76,
+      16.4,
+      18.04,
+      19.68,
+      21.32,
+      22.96,
+      24.6,
+      26.25,
+      27.89,
+      29.53,
+      31.17,
+      32.81
+     ]
+    },
+    "sub": {
+     "Attack": 25.0,
+     "Max HP": 269.0,
+     "Defense": 17.0,
+     "Attack Power Up": 3.33,
+     "Max HP Up": 4.48,
+     "Defense Up": 4.21,
+     "Stun Additional Attack Power": 87.0,
+     "Airborne Additional Attack Power": 87.0,
+     "Knockdown Additional Attack Power": 87.0,
+     "Bleed Additional Attack Power": 70.0,
+     "Burn Additional Attack Power": 70.0,
+     "Frost Additional Attack Power": 70.0,
+     "Shock Additional Attack Power": 70.0,
+     "Poison Additional Attack Power": 70.0,
+     "Critical Hit Resistance": 3.84,
+     "Critical Damage Reduction": 4.37,
+     "Break Additional Attack Power": 87.0,
+     "All Status Effect Additional Attack Power": 31.0,
+     "Critical Hit Chance": 3.68,
+     "Critical Damage": 4.11,
+     "Armor Penetration": 15.0,
+     "Defense Ignore": 3.88
+    }
+   },
+   "Chest": {
+    "main": {
+     "Attack": [
+      66.0,
+      80.0,
+      93.0,
+      107.0,
+      120.0,
+      133.0,
+      147.0,
+      160.0,
+      174.0,
+      187.0,
+      200.0,
+      214.0,
+      227.0,
+      241.0,
+      254.0,
+      267.0
+     ],
+     "Max HP": [
+      721.0,
+      865.0,
+      1009.0,
+      1153.0,
+      1298.0,
+      1442.0,
+      1586.0,
+      1730.0,
+      1875.0,
+      2019.0,
+      2163.0,
+      2307.0,
+      2451.0,
+      2596.0,
+      2740.0,
+      2884.0
+     ],
+     "Defense": [
+      46.0,
+      56.0,
+      65.0,
+      75.0,
+      84.0,
+      93.0,
+      103.0,
+      112.0,
+      121.0,
+      131.0,
+      140.0,
+      150.0,
+      159.0,
+      168.0,
+      178.0,
+      187.0
+     ],
+     "Attack Power Up": [
+      8.92,
+      10.71,
+      12.5,
+      14.28,
+      16.07,
+      17.85,
+      19.64,
+      21.42,
+      23.21,
+      25.0,
+      26.78,
+      28.57,
+      30.35,
+      32.14,
+      33.92,
+      35.71
+     ],
+     "Max HP Up": [
+      12.01,
+      14.42,
+      16.82,
+      19.23,
+      21.63,
+      24.03,
+      26.44,
+      28.84,
+      31.25,
+      33.65,
+      36.05,
+      38.46,
+      40.86,
+      43.26,
+      45.67,
+      48.07
+     ],
+     "Defense Up": [
+      11.29,
+      13.55,
+      15.81,
+      18.07,
+      20.33,
+      22.59,
+      24.84,
+      27.1,
+      29.36,
+      31.62,
+      33.88,
+      36.14,
+      38.4,
+      40.66,
+      42.92,
+      45.18
+     ],
+     "Critical Hit Chance": [
+      9.86,
+      11.84,
+      13.81,
+      15.78,
+      17.76,
+      19.73,
+      21.71,
+      23.68,
+      25.65,
+      27.63,
+      29.6,
+      31.57,
+      33.55,
+      35.52,
+      37.5,
+      39.47
+     ],
+     "Critical Damage": [
+      11.02,
+      13.23,
+      15.44,
+      17.64,
+      19.85,
+      22.05,
+      24.26,
+      26.47,
+      28.67,
+      30.88,
+      33.08,
+      35.29,
+      37.5,
+      39.7,
+      41.91,
+      44.11
+     ],
+     "Critical Hit Resistance": [
+      10.3,
+      12.36,
+      14.42,
+      16.48,
+      18.54,
+      20.6,
+      22.66,
+      24.72,
+      26.78,
+      28.84,
+      30.9,
+      32.96,
+      35.02,
+      37.08,
+      39.14,
+      41.2
+     ],
+     "Critical Damage Reduction": [
+      11.71,
+      14.06,
+      16.4,
+      18.75,
+      21.09,
+      23.43,
+      25.78,
+      28.12,
+      30.46,
+      32.81,
+      35.15,
+      37.5,
+      39.84,
+      42.18,
+      44.53,
+      46.87
+     ]
+    },
+    "sub": {
+     "Attack": 35.0,
+     "Max HP": 384.0,
+     "Defense": 25.0,
+     "Attack Power Up": 4.76,
+     "Max HP Up": 6.41,
+     "Defense Up": 6.02,
+     "Stun Additional Attack Power": 125.0,
+     "Airborne Additional Attack Power": 125.0,
+     "Knockdown Additional Attack Power": 125.0,
+     "Bleed Additional Attack Power": 100.0,
+     "Burn Additional Attack Power": 100.0,
+     "Frost Additional Attack Power": 100.0,
+     "Shock Additional Attack Power": 100.0,
+     "Poison Additional Attack Power": 100.0,
+     "Critical Hit Resistance": 5.49,
+     "Critical Damage Reduction": 6.25,
+     "Break Additional Attack Power": 125.0,
+     "All Status Effect Additional Attack Power": 45.0,
+     "Critical Hit Chance": 5.26,
+     "Critical Damage": 5.88,
+     "Armor Penetration": 21.0,
+     "Defense Ignore": 5.55
+    }
+   },
+   "Legs": {
+    "main": {
+     "Attack": [
+      60.0,
+      72.0,
+      84.0,
+      96.0,
+      108.0,
+      120.0,
+      132.0,
+      144.0,
+      156.0,
+      168.0,
+      180.0,
+      192.0,
+      204.0,
+      216.0,
+      229.0,
+      241.0
+     ],
+     "Max HP": [
+      649.0,
+      778.0,
+      908.0,
+      1038.0,
+      1168.0,
+      1298.0,
+      1427.0,
+      1557.0,
+      1687.0,
+      1817.0,
+      1947.0,
+      2076.0,
+      2206.0,
+      2336.0,
+      2466.0,
+      2596.0
+     ],
+     "Defense": [
+      42.0,
+      50.0,
+      59.0,
+      67.0,
+      75.0,
+      84.0,
+      92.0,
+      101.0,
+      109.0,
+      118.0,
+      126.0,
+      135.0,
+      143.0,
+      151.0,
+      160.0,
+      168.0
+     ],
+     "Attack Power Up": [
+      8.03,
+      9.64,
+      11.25,
+      12.85,
+      14.46,
+      16.07,
+      17.67,
+      19.28,
+      20.89,
+      22.5,
+      24.1,
+      25.71,
+      27.32,
+      28.92,
+      30.53,
+      32.14
+     ],
+     "Max HP Up": [
+      10.81,
+      12.98,
+      15.14,
+      17.3,
+      19.47,
+      21.63,
+      23.79,
+      25.96,
+      28.12,
+      30.28,
+      32.45,
+      34.61,
+      36.77,
+      38.94,
+      41.1,
+      43.26
+     ],
+     "Defense Up": [
+      10.16,
+      12.19,
+      14.23,
+      16.26,
+      18.29,
+      20.33,
+      22.36,
+      24.39,
+      26.43,
+      28.46,
+      30.49,
+      32.53,
+      34.56,
+      36.59,
+      38.62,
+      40.66
+     ],
+     "Critical Hit Chance": [
+      8.88,
+      10.65,
+      12.43,
+      14.21,
+      15.98,
+      17.76,
+      19.53,
+      21.31,
+      23.09,
+      24.86,
+      26.64,
+      28.42,
+      30.19,
+      31.97,
+      33.75,
+      35.52
+     ],
+     "Critical Damage": [
+      9.92,
+      11.91,
+      13.89,
+      15.88,
+      17.86,
+      19.85,
+      21.83,
+      23.82,
+      25.8,
+      27.79,
+      29.77,
+      31.76,
+      33.75,
+      35.73,
+      37.72,
+      39.7
+     ],
+     "Critical Hit Resistance": [
+      9.27,
+      11.12,
+      12.98,
+      14.83,
+      16.68,
+      18.54,
+      20.39,
+      22.25,
+      24.1,
+      25.96,
+      27.81,
+      29.67,
+      31.52,
+      33.37,
+      35.23,
+      37.08
+     ],
+     "Critical Damage Reduction": [
+      10.54,
+      12.65,
+      14.76,
+      16.87,
+      18.98,
+      21.09,
+      23.2,
+      25.31,
+      27.42,
+      29.53,
+      31.64,
+      33.75,
+      35.85,
+      37.96,
+      40.07,
+      42.18
+     ]
+    },
+    "sub": {
+     "Attack": 32.0,
+     "Max HP": 346.0,
+     "Defense": 22.0,
+     "Attack Power Up": 4.28,
+     "Max HP Up": 5.76,
+     "Defense Up": 5.42,
+     "Stun Additional Attack Power": 112.0,
+     "Airborne Additional Attack Power": 112.0,
+     "Knockdown Additional Attack Power": 112.0,
+     "Bleed Additional Attack Power": 90.0,
+     "Burn Additional Attack Power": 90.0,
+     "Frost Additional Attack Power": 90.0,
+     "Shock Additional Attack Power": 90.0,
+     "Poison Additional Attack Power": 90.0,
+     "Critical Hit Resistance": 4.94,
+     "Critical Damage Reduction": 5.62,
+     "Break Additional Attack Power": 112.0,
+     "All Status Effect Additional Attack Power": 40.0,
+     "Critical Hit Chance": 4.73,
+     "Critical Damage": 5.29,
+     "Armor Penetration": 19.0,
+     "Defense Ignore": 5.0
+    }
+   },
+   "Gloves": {
+    "main": {
+     "Attack": [
+      46.0,
+      56.0,
+      65.0,
+      75.0,
+      84.0,
+      93.0,
+      103.0,
+      112.0,
+      121.0,
+      131.0,
+      140.0,
+      150.0,
+      159.0,
+      168.0,
+      178.0,
+      187.0
+     ],
+     "Max HP": [
+      504.0,
+      605.0,
+      706.0,
+      807.0,
+      908.0,
+      1009.0,
+      1110.0,
+      1211.0,
+      1312.0,
+      1413.0,
+      1514.0,
+      1615.0,
+      1716.0,
+      1817.0,
+      1918.0,
+      2019.0
+     ],
+     "Defense": [
+      32.0,
+      39.0,
+      45.0,
+      52.0,
+      59.0,
+      65.0,
+      72.0,
+      78.0,
+      85.0,
+      91.0,
+      98.0,
+      105.0,
+      111.0,
+      118.0,
+      124.0,
+      131.0
+     ],
+     "Attack Power Up": [
+      6.25,
+      7.5,
+      8.75,
+      10.0,
+      11.25,
+      12.5,
+      13.75,
+      15.0,
+      16.25,
+      17.5,
+      18.75,
+      20.0,
+      21.25,
+      22.5,
+      23.75,
+      25.0
+     ],
+     "Max HP Up": [
+      8.41,
+      10.09,
+      11.77,
+      13.46,
+      15.14,
+      16.82,
+      18.5,
+      20.19,
+      21.87,
+      23.55,
+      25.24,
+      26.92,
+      28.6,
+      30.28,
+      31.97,
+      33.65
+     ],
+     "Defense Up": [
+      7.9,
+      9.48,
+      11.06,
+      12.65,
+      14.23,
+      15.81,
+      17.39,
+      18.97,
+      20.55,
+      22.13,
+      23.71,
+      25.3,
+      26.88,
+      28.46,
+      30.04,
+      31.62
+     ],
+     "Critical Hit Chance": [
+      6.9,
+      8.28,
+      9.67,
+      11.05,
+      12.43,
+      13.81,
+      15.19,
+      16.57,
+      17.96,
+      19.34,
+      20.72,
+      22.1,
+      23.48,
+      24.86,
+      26.25,
+      27.63
+     ],
+     "Critical Damage": [
+      7.72,
+      9.26,
+      10.8,
+      12.35,
+      13.89,
+      15.44,
+      16.98,
+      18.52,
+      20.07,
+      21.61,
+      23.16,
+      24.7,
+      26.25,
+      27.79,
+      29.33,
+      30.88
+     ],
+     "Critical Hit Resistance": [
+      7.21,
+      8.65,
+      10.09,
+      11.53,
+      12.98,
+      14.42,
+      15.86,
+      17.3,
+      18.75,
+      20.19,
+      21.63,
+      23.07,
+      24.51,
+      25.96,
+      27.4,
+      28.84
+     ],
+     "Critical Damage Reduction": [
+      8.2,
+      9.84,
+      11.48,
+      13.12,
+      14.76,
+      16.4,
+      18.04,
+      19.68,
+      21.32,
+      22.96,
+      24.6,
+      26.25,
+      27.89,
+      29.53,
+      31.17,
+      32.81
+     ]
+    },
+    "sub": {
+     "Attack": 25.0,
+     "Max HP": 269.0,
+     "Defense": 17.0,
+     "Attack Power Up": 3.33,
+     "Max HP Up": 4.48,
+     "Defense Up": 4.21,
+     "Stun Additional Attack Power": 87.0,
+     "Airborne Additional Attack Power": 87.0,
+     "Knockdown Additional Attack Power": 87.0,
+     "Bleed Additional Attack Power": 70.0,
+     "Burn Additional Attack Power": 70.0,
+     "Frost Additional Attack Power": 70.0,
+     "Shock Additional Attack Power": 70.0,
+     "Poison Additional Attack Power": 70.0,
+     "Critical Hit Resistance": 3.84,
+     "Critical Damage Reduction": 4.37,
+     "Break Additional Attack Power": 87.0,
+     "All Status Effect Additional Attack Power": 31.0,
+     "Critical Hit Chance": 3.68,
+     "Critical Damage": 4.11,
+     "Armor Penetration": 15.0,
+     "Defense Ignore": 3.88
+    }
+   },
+   "Boots": {
+    "main": {
+     "Attack": [
+      46.0,
+      56.0,
+      65.0,
+      75.0,
+      84.0,
+      93.0,
+      103.0,
+      112.0,
+      121.0,
+      131.0,
+      140.0,
+      150.0,
+      159.0,
+      168.0,
+      178.0,
+      187.0
+     ],
+     "Max HP": [
+      504.0,
+      605.0,
+      706.0,
+      807.0,
+      908.0,
+      1009.0,
+      1110.0,
+      1211.0,
+      1312.0,
+      1413.0,
+      1514.0,
+      1615.0,
+      1716.0,
+      1817.0,
+      1918.0,
+      2019.0
+     ],
+     "Defense": [
+      32.0,
+      39.0,
+      45.0,
+      52.0,
+      59.0,
+      65.0,
+      72.0,
+      78.0,
+      85.0,
+      91.0,
+      98.0,
+      105.0,
+      111.0,
+      118.0,
+      124.0,
+      131.0
+     ],
+     "Attack Power Up": [
+      6.25,
+      7.5,
+      8.75,
+      10.0,
+      11.25,
+      12.5,
+      13.75,
+      15.0,
+      16.25,
+      17.5,
+      18.75,
+      20.0,
+      21.25,
+      22.5,
+      23.75,
+      25.0
+     ],
+     "Max HP Up": [
+      8.41,
+      10.09,
+      11.77,
+      13.46,
+      15.14,
+      16.82,
+      18.5,
+      20.19,
+      21.87,
+      23.55,
+      25.24,
+      26.92,
+      28.6,
+      30.28,
+      31.97,
+      33.65
+     ],
+     "Defense Up": [
+      7.9,
+      9.48,
+      11.06,
+      12.65,
+      14.23,
+      15.81,
+      17.39,
+      18.97,
+      20.55,
+      22.13,
+      23.71,
+      25.3,
+      26.88,
+      28.46,
+      30.04,
+      31.62
+     ],
+     "Critical Hit Chance": [
+      6.9,
+      8.28,
+      9.67,
+      11.05,
+      12.43,
+      13.81,
+      15.19,
+      16.57,
+      17.96,
+      19.34,
+      20.72,
+      22.1,
+      23.48,
+      24.86,
+      26.25,
+      27.63
+     ],
+     "Critical Damage": [
+      7.72,
+      9.26,
+      10.8,
+      12.35,
+      13.89,
+      15.44,
+      16.98,
+      18.52,
+      20.07,
+      21.61,
+      23.16,
+      24.7,
+      26.25,
+      27.79,
+      29.33,
+      30.88
+     ],
+     "Critical Hit Resistance": [
+      7.21,
+      8.65,
+      10.09,
+      11.53,
+      12.98,
+      14.42,
+      15.86,
+      17.3,
+      18.75,
+      20.19,
+      21.63,
+      23.07,
+      24.51,
+      25.96,
+      27.4,
+      28.84
+     ],
+     "Critical Damage Reduction": [
+      8.2,
+      9.84,
+      11.48,
+      13.12,
+      14.76,
+      16.4,
+      18.04,
+      19.68,
+      21.32,
+      22.96,
+      24.6,
+      26.25,
+      27.89,
+      29.53,
+      31.17,
+      32.81
+     ]
+    },
+    "sub": {
+     "Attack": 25.0,
+     "Max HP": 269.0,
+     "Defense": 17.0,
+     "Attack Power Up": 3.33,
+     "Max HP Up": 4.48,
+     "Defense Up": 4.21,
+     "Stun Additional Attack Power": 87.0,
+     "Airborne Additional Attack Power": 87.0,
+     "Knockdown Additional Attack Power": 87.0,
+     "Bleed Additional Attack Power": 70.0,
+     "Burn Additional Attack Power": 70.0,
+     "Frost Additional Attack Power": 70.0,
+     "Shock Additional Attack Power": 70.0,
+     "Poison Additional Attack Power": 70.0,
+     "Critical Hit Resistance": 3.84,
+     "Critical Damage Reduction": 4.37,
+     "Break Additional Attack Power": 87.0,
+     "All Status Effect Additional Attack Power": 31.0,
+     "Critical Hit Chance": 3.68,
+     "Critical Damage": 4.11,
+     "Armor Penetration": 15.0,
+     "Defense Ignore": 3.88
+    }
+   }
+  }
+ },
+ "HERO_STAT_MODEL": {
+  "level": 70,
+  "breakthroughs": [
+   20,
+   30,
+   40,
+   50,
+   60
+  ],
+  "note": "Lv.70 base stats (no gear, no Karma). Estimated until measured in-game: replace a hero's numbers in HERO_BASE_STATS and set 'estimated' to false. Every hero levels the same; only breakthrough bonuses differ by hero. Crit comes only from gear, Karma and buffs.",
+  "measured": {
+   "Lv1 (Aria)": [
+    71,
+    20,
+    461
+   ],
+   "Lv20 all heroes": [
+    188,
+    52,
+    1215
+   ],
+   "Lv20 breakthrough Charlotte": [
+    32,
+    11,
+    173
+   ],
+   "Lv20 breakthrough Johnny/Reina": [
+    25,
+    13,
+    207
+   ],
+   "Lv30 pre-breakthrough Charlotte": [
+    303,
+    86,
+    1925
+   ],
+   "Lv30 pre-breakthrough Johnny/Reina": [
+    296,
+    88,
+    1959
+   ],
+   "Lv30 breakthrough Charlotte": [
+    37,
+    13,
+    202
+   ],
+   "Lv30 breakthrough Johnny/Reina": [
+    30,
+    16,
+    243
+   ],
+   "order": [
+    "Attack",
+    "Defense",
+    "Max HP"
+   ]
+  },
+  "levelCurve": {
+   "formula": "base + b*(L-1) + c*(L-1)^2, fitted exactly to Lv1, Lv20 and Lv30",
+   "Attack": {
+    "base": 71,
+    "b": 4.75445,
+    "c": 0.07387
+   },
+   "Defense": {
+    "base": 20,
+    "b": 1.28076,
+    "c": 0.02123
+   },
+   "Max HP": {
+    "base": 461,
+    "b": 30.50145,
+    "c": 0.4833
+   }
+  },
+  "breakthroughProfiles": {
+   "A": {
+    "label": "Attack-leaning (measured on Charlotte)",
+    "Attack": {
+     "Lv20": 32,
+     "Lv30": 37,
+     "perTierIncrease": 5
+    },
+    "Defense": {
+     "Lv20": 11,
+     "Lv30": 13,
+     "perTierIncrease": 2
+    },
+    "Max HP": {
+     "Lv20": 173,
+     "Lv30": 202,
+     "perTierIncrease": 29
+    }
+   },
+   "B": {
+    "label": "Balanced (measured on Johnny and Reina)",
+    "Attack": {
+     "Lv20": 25,
+     "Lv30": 30,
+     "perTierIncrease": 5
+    },
+    "Defense": {
+     "Lv20": 13,
+     "Lv30": 16,
+     "perTierIncrease": 3
+    },
+    "Max HP": {
+     "Lv20": 207,
+     "Lv30": 243,
+     "perTierIncrease": 36
+    }
+   }
+  },
+  "profileRule": "Profile A for Main DPS heroes, profile B for everyone else (only Charlotte, Johnny and Reina measured so far)."
+ },
+ "HERO_BASE_STATS": {
+  "Johnny": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Lute": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Castella": {
+   "Attack": 961,
+   "Defense": 284,
+   "Max HP": 6022,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "A"
+  },
+  "Aria": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Dana": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Kalien": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Roxy": {
+   "Attack": 961,
+   "Defense": 284,
+   "Max HP": 6022,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "A"
+  },
+  "Alex": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Theresia": {
+   "Attack": 961,
+   "Defense": 284,
+   "Max HP": 6022,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "A"
+  },
+  "Ornette": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Sion": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Tarte": {
+   "Attack": 961,
+   "Defense": 284,
+   "Max HP": 6022,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "A"
+  },
+  "Kalsion": {
+   "Attack": 961,
+   "Defense": 284,
+   "Max HP": 6022,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "A"
+  },
+  "Cerese": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Reina": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Astria": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Eileen": {
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "B"
+  },
+  "Othello": {
+   "Attack": 961,
+   "Defense": 284,
+   "Max HP": 6022,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "A"
+  },
+  "Charlotte": {
+   "Attack": 961,
+   "Defense": 284,
+   "Max HP": 6022,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "A"
+  },
+  "Ryza": {
+   "Attack": 961,
+   "Defense": 284,
+   "Max HP": 6022,
+   "Critical Hit Chance": 5,
+   "Critical Damage": 50,
+   "estimated": true,
+   "profile": "A"
+  }
+ },
+ "HERO_BUILDS": {
+  "Johnny": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Poison Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Poison Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Poison Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Poison Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Poison Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Lute": {
+   "type": "Support",
+   "why": "Healing Circle restores 20% of max HP and Lute's other support is not stat-based, so her gear can't raise her healing. Chest and legs keep her alive (Max HP Up also raises her own share of the heal); the other three slots add damage.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Max HP Up",
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Defense Ignore",
+      "Stun Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Max HP Up",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Defense Up"
+     ]
+    },
+    "Legs": {
+     "main": "Defense Up",
+     "subs": [
+      "Max HP Up",
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Critical Damage"
+     ]
+    },
+    "Gloves": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Max HP Up",
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Defense Ignore",
+      "Stun Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Max HP Up",
+      "Attack Power Up",
+      "Critical Damage",
+      "Defense Ignore",
+      "Stun Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Castella": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Break Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Break Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Break Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Break Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Break Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Aria": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Dana": {
+   "type": "Support",
+   "why": "Chako's shields and the Defense aura don't list any stat scaling, so Dana's gear can't raise them. Chest and legs keep her alive on the front line; the other three slots add damage.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Max HP Up",
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Max HP Up",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Defense Up"
+     ]
+    },
+    "Legs": {
+     "main": "Defense Up",
+     "subs": [
+      "Max HP Up",
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Critical Damage"
+     ]
+    },
+    "Gloves": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Max HP Up",
+      "Attack Power Up",
+      "Critical Damage",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Max HP Up",
+      "Attack Power Up",
+      "Critical Damage",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Kalien": {
+   "type": "Damage",
+   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Roxy": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Bleed Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Bleed Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Bleed Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Bleed Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Bleed Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Alex": {
+   "type": "Tank",
+   "why": "Alex holds aggro with Taunt and Defensive Stance, so every slot goes into staying alive: Max HP Up and Defense Up mains, then HP, Defense and crit-resistance substats. His team damage comes from the Knockdown setup, not his own gear.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Max HP Up",
+     "subs": [
+      "Defense Up",
+      "Max HP",
+      "Defense",
+      "Critical Damage Reduction",
+      "Critical Hit Resistance"
+     ]
+    },
+    "Chest": {
+     "main": "Max HP Up",
+     "subs": [
+      "Defense Up",
+      "Max HP",
+      "Defense",
+      "Critical Damage Reduction",
+      "Critical Hit Resistance"
+     ]
+    },
+    "Legs": {
+     "main": "Defense Up",
+     "subs": [
+      "Max HP Up",
+      "Max HP",
+      "Defense",
+      "Critical Damage Reduction",
+      "Critical Hit Resistance"
+     ]
+    },
+    "Gloves": {
+     "main": "Defense Up",
+     "subs": [
+      "Max HP Up",
+      "Max HP",
+      "Defense",
+      "Critical Damage Reduction",
+      "Critical Hit Resistance"
+     ]
+    },
+    "Boots": {
+     "main": "Max HP Up",
+     "subs": [
+      "Defense Up",
+      "Max HP",
+      "Defense",
+      "Critical Damage Reduction",
+      "Critical Hit Resistance"
+     ]
+    }
+   }
+  },
+  "Theresia": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Stun Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Stun Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Stun Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Stun Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Stun Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Ornette": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Sion": {
+   "type": "Support",
+   "why": "Bless gives a flat +15% Attack or Defense, so Sion's own stats don't change the buff. Chest and legs keep him alive to keep Bless up; the other three slots add damage.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Max HP Up",
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Max HP Up",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Defense Up"
+     ]
+    },
+    "Legs": {
+     "main": "Defense Up",
+     "subs": [
+      "Max HP Up",
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Critical Damage"
+     ]
+    },
+    "Gloves": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Max HP Up",
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Max HP Up",
+      "Attack Power Up",
+      "Critical Damage",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Tarte": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Kalsion": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Cerese": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Reina": {
+   "type": "Damage",
+   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Astria": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Break Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Break Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Break Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Break Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Break Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Eileen": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Othello": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Frost Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Charlotte": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Poison Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Poison Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Poison Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Poison Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Poison Additional Attack Power"
+     ]
+    }
+   }
+  },
+  "Ryza": {
+   "type": "Damage",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "rarity": "Orange",
+   "level": 15,
+   "pieces": {
+    "Helmet": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Chest": {
+     "main": "Attack Power Up",
+     "subs": [
+      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    }
+   }
+  }
+ }
 }
