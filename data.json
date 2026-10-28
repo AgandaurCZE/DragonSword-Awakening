@@ -10149,8 +10149,9 @@
    "Defense Ignore 0.97% (Armor Penetration 0) raised the larger hits by about 0.4% compared with the Armor Penetration 0 tests scaled to the same Attack (e.g. 482 vs 480.3 expected). Combo ratio 0.508. Poison tick 329 = 658 / 2 rounded down, unaffected. Against this dummy, roughly 1% Defense Ignore ~ +0.4% damage and 1 Armor Penetration ~ +0.05%.",
    "Poison tick by stacks, as a share of the FIRST applier's Attack: 1 stack 50%, 2 stacks 75%, 3 stacks 100% (+25% per extra stack). The other appliers' Attack doesn't matter. 2 stacks: Charlotte (658) first -> 493, Johnny (645) first -> 484, whoever applied the second. 3 stacks (goblin dummies, order not tracked): ticks of 645 and 658, exactly the two heroes' Attack. Poison stops at 3 stacks (no 4th). Stacks last about 10 seconds (timed by eye), so the 4 ticks are about 2.5 seconds apart. Bleed, Burn and Shock stack exactly the same way, also to a maximum of 3 (Lv.1 heroes, 71 Attack: 35 / 53 / 71). They also last about 10 seconds (a tick every ~2.5 s).",
    "Burn Additional Damage (+4%) and Burn Additional Attack Power (+110) don't change Burn ticks: Aria with 381 Attack ticked 190 / 285 / 381 = 50 / 75 / 100% of 381, rounded down. So these status bonuses must do something else, most likely raise hits against enemies that have the status (not tested yet).",
-   "Hits on an enemy that has Poison, Burn, Bleed or Shock deal x1.5, at any stack count: Charlotte 22 -> 33 with Poison, Roxy 24 -> 36 with Bleed, Ornette 17 -> 26 with Shock; Aria with no Karma (71 Attack) hit 19 on a clean goblin and 28 on a burning one (19.x x 1.5 = 28.5, rounded down), the same at 1, 2 or 3 stacks. With A Flame That Cuts Through the Moment (381 Attack; Burn Additional Damage 4%, Burn Additional Attack Power 110) the same hit went 102 -> 205 (x2.01). x1.5 would give 153, so the Karma's Burn bonuses add about 52 more to a hit on a burning enemy. +4% alone can't do that; the flat 110 most likely does most of it, but how it's applied isn't known. Hit damage is otherwise the same share of Attack in both cases (19/71 = 0.268, 102/381 = 0.268).",
-   "Status hit bonuses add up: +50% for each damage-over-time status (Poison, Bleed, Burn, Shock) and +100% each for Airborne, Knockdown and Stun. Charlotte's small auto-attack hit (22 clean): Poison 33 (x1.5), Poison + Bleed 44 (x2.0), Airborne + Poison 55 (x2.5), Knockdown + Poison + Bleed 66 (x3.0, recheck), Stun + Poison + Bleed 66 (x3.0), Airborne + Knockdown + Poison 77 (x3.5). Reina: Airborne alone x2.0. Exception: Airborne + Knockdown + Poison + Bleed was 77 (x3.5) twice, where adding up gives x4.0, so either x3.5 is a cap or Bleed wasn't on. The two earlier x2.5 results with Poison + Bleed + Airborne/Knockdown were most likely Bleed wearing off. Break not tested."
+   "Hits on an enemy that has Poison, Burn, Bleed or Shock deal x1.5, at any stack count: Charlotte 22 -> 33 with Poison, Roxy 24 -> 36 with Bleed, Ornette 17 -> 26 with Shock; Aria with no Karma (71 Attack) hit 19 on a clean goblin and 28 on a burning one (19.x x 1.5 = 28.5, rounded down), the same at 1, 2 or 3 stacks. The Karma results are explained by the status-bonus rule below.",
+   "Status hit bonuses add up: +50% for each damage-over-time status (Poison, Bleed, Burn, Shock) and +100% each for Airborne, Knockdown and Stun. Charlotte's small auto-attack hit (22 clean): Poison 33 (x1.5), Poison + Bleed 44 (x2.0), Airborne + Poison 55 (x2.5), Knockdown + Poison + Bleed 66 (x3.0, recheck), Stun + Poison + Bleed 66 (x3.0), Airborne + Knockdown + Poison 77 (x3.5). Reina: Airborne alone x2.0. Exception: Airborne + Knockdown + Poison + Bleed was 77 (x3.5) twice, where adding up gives x4.0, so either x3.5 is a cap or Bleed wasn't on. The two earlier x2.5 results with Poison + Bleed + Airborne/Knockdown were most likely Bleed wearing off. Break not tested.",
+   "How the status bonuses work (tested with Burn): a hit on an enemy with the status = k x (Attack + <status> Additional Attack Power) x 1.5 x (1 + <status> Additional Damage). A clean hit is k x Attack, so neither bonus does anything on a clean enemy, and neither changes ticks. One value of k (0.2677-0.2681 for Aria's first auto-attack hit on the goblins) fits all 8 results: no bonus 19 -> 28; +15% 19 -> 32; +4% & +110 102 -> 205; +19% & +110 102 -> 234. Not tested: how these bonuses combine when the enemy has several statuses (e.g. Airborne bonuses together with Poison bonuses)."
   ],
   "tests": [
    {
@@ -10703,6 +10704,60 @@
      }
     },
     "note": "Knockdown + Poison + Bleed and Airborne + Poison + Bleed first gave 55 (x2.5); the Knockdown recheck gave 66 (x3.0), so Bleed had most likely worn off the first time. Goblin dummies come in a group of about 10, which makes single numbers hard to read."
+   },
+   {
+    "test": "Burn bonuses on hits (Blazing Flames 2-piece and/or Burn Karma)",
+    "hero": "Aria",
+    "level": 1,
+    "enemy": "goblin training dummies",
+    "skill": "auto attack, first hit",
+    "runs": [
+     {
+      "setup": "Blazing Flames 2-piece, no Karma",
+      "attack": 71,
+      "burnAdditionalDamage": 15,
+      "burnAdditionalAttackPower": 0,
+      "hits": {
+       "clean": 19,
+       "1-3 stacks": 32
+      },
+      "ticks": {
+       "1": 35,
+       "2": 53,
+       "3": 71
+      }
+     },
+     {
+      "setup": "Blazing Flames 2-piece + A Flame That Cuts Through the Moment",
+      "attack": 381,
+      "burnAdditionalDamage": 19,
+      "burnAdditionalAttackPower": 110,
+      "hits": {
+       "clean": 102,
+       "1-3 stacks": 234
+      },
+      "ticks": {
+       "1": 190,
+       "2": 285,
+       "3": 381
+      }
+     },
+     {
+      "setup": "A Flame That Cuts Through the Moment only (repeat)",
+      "attack": 381,
+      "burnAdditionalDamage": 4,
+      "burnAdditionalAttackPower": 110,
+      "hits": {
+       "clean": 102,
+       "1-3 stacks": 205
+      },
+      "ticks": {
+       "1": 190,
+       "2": 285,
+       "3": 381
+      }
+     }
+    ]
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
@@ -10732,10 +10787,10 @@
     "Each tick deals a share of the Attack of the hero who applied the FIRST stack. Later stacks make the ticks bigger, even when another hero applies them, but their own Attack doesn't count.",
     "Ticks aren't reduced by the enemy's Defense: Armor Penetration and Defense Ignore don't change them.",
     "While an enemy has this status, hits on it deal 1.5x damage, whatever the stack count. Bonuses from different statuses add up: +50% for each damage-over-time status and +100% each for Airborne, Knockdown and Stun. Measured: Poison + Bleed 2x, Airborne + Poison 2.5x, Knockdown or Stun + Poison + Bleed 3x, Knockdown + Airborne + Poison 3.5x. The highest seen is 3.5x: Knockdown + Airborne + Poison + Bleed was also 3.5x, not 4x. Measured on training dummies.",
-    "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets and awakenings) don't change its ticks (tested with Burn).",
+    "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets, awakenings and substats) don't change its ticks. They raise hits on an enemy that has the status: Additional Attack Power is added to your Attack for those hits, and Additional Damage multiplies them (tested with Burn: Blazing Flames' +15% turned Aria's 1.5x into 1.72x).",
     "Tick damage is rounded down."
    ],
-   "untested": "Not tested yet: what those bonuses do instead (most likely more damage from hits on enemies that have the status), and whether ticks can crit."
+   "untested": "Not tested yet: how the bonuses of several statuses combine on one enemy, whether ticks can crit, and Break."
   }
  }
 }

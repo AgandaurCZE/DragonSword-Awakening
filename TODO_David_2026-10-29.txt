@@ -11,20 +11,10 @@ or OBS) and pause on the frame where your hit lands.
 
 -------------------------------------------------------------- MOST USEFUL
 
-1. WHAT "<STATUS> ADDITIONAL DAMAGE / ATTACK POWER" DOES  << do this first
-   Why: every status has these bonuses (Karma traits, the 2-piece of every
-   status gear set, awakenings A4/A5), and the recommended builds use
-   "<status> Additional Attack Power" as a filler substat. We know they
-   don't change ticks. Aria's Burn Karma (+4% / +110) turned her x1.5 hit on
-   a burning goblin into x2.0, but we can't tell which bonus did what.
-   Test (Aria, auto-attack first hit, clean goblin vs burning goblin):
-   a) Something with ONLY the % bonus: 2 pieces of Blazing Flames
-      (+15% Burn Additional Damage), or Kalien's / Kalsion's signature Karma
-      (only Burn Additional Damage) if you own one.
-   b) If you own a gear piece with a "Burn Additional Attack Power" (or any
-      "<status> Additional Attack Power") substat: the same test with it on
-      and off.
-   Write down Aria's Attack each time.
+1. STATUS BONUSES – DONE (28 Oct): on hits against an enemy with the status,
+   "Additional Attack Power" adds to Attack and "Additional Damage" multiplies.
+   Optional follow-up: with Airborne + Burn on the same goblin, does Aria's
+   Burn Karma still add the same amount? (how bonuses of two statuses mix)
 
 2. LEVEL 40 (once you have the breakthrough materials)
    - Any hero except Charlotte: Attack, Defense, Max HP at level 40 BEFORE
