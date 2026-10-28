@@ -8,15 +8,7 @@ or straight into a chat message, whichever is easier.
 Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
 
 
-1. SKILL LEVELS NOT MEASURED YET (quick, in the codex)
-   >> 28 Oct: your message listed these as tested but the numbers didn't
-      come through. Please paste the values (skill name + Attack Power %
-      for each level).
-   The site shows these as "(est.)" until measured.
-   - One level-10 skill at Lv.6, 7, 8 and 9 (e.g. Reina – Wind Grab).
-   - One level-7 skill at Lv.6 (e.g. Johnny – Dirty Fight).
-   - Optional: Lv.2–5 of one skill from a different hero, to confirm the
-     multipliers are the same for everyone.
+1. SKILL LEVELS – DONE (28 Oct): every level measured, same for all heroes.
 
 2. KARMA ASCENSIONS – DONE (28 Oct): A0–A6 all measured, the rule is exact.
 

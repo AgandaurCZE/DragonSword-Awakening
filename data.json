@@ -6973,7 +6973,7 @@
   }
  },
  "SKILL_LEVEL_MULTIPLIERS": {
-  "note": "Skill attack weight at each level = Lv.1 weight x multiplier, where Lv.1 = max-level value / 1.75. Measured in-game (28 Oct 2026): max-Lv.10 skills on Charlotte Poison Dagger and Reina Wind Grab (identical multipliers); max-Lv.7 skills on Johnny Dirty Fight. null = not measured yet; the page fills it in evenly between the nearest measured levels and marks it '(est.)'. Values round to the nearest whole %.",
+  "note": "Skill attack weight at each level = Lv.1 weight x multiplier, where Lv.1 = max-level value / 1.75. All levels measured in-game (28 Oct 2026) on 7 skills from 5 heroes (see measured); the multipliers are the same for every hero. Max level 10: Skill, Ultimate, Special A, Special B. Max level 7: Auto, Dash and Jump attacks. Dash (dodge) stays Lv.1; Mastery (passive) can't be levelled. The game rounds a hidden unrounded Lv.1 value x multiplier to the nearest whole %; one hidden value per skill reproduces all 57 measured values exactly. The page only knows the max-level value, so it uses round(max / 1.75 x multiplier): 47 of 57 exact, the other 10 are 1 off.",
   "byMaxLevel": {
    "7": [
     1,
@@ -6981,7 +6981,7 @@
     1.2,
     1.33,
     1.45,
-    null,
+    1.6,
     1.75
    ],
    "10": [
@@ -6990,22 +6990,49 @@
     1.1,
     1.15,
     1.23,
-    null,
-    null,
-    null,
-    null,
+    1.3,
+    1.38,
+    1.48,
+    1.58,
     1.75
    ]
   },
   "measured": {
-   "Johnny Dirty Fight (Lv.7)": [
-    351,
-    386,
-    421,
-    467,
-    509,
-    null,
-    615
+   "Reina Wind Grab (Lv.10)": [
+    904,
+    949,
+    995,
+    1040,
+    1112,
+    1176,
+    1248,
+    1338,
+    1429,
+    1582
+   ],
+   "Johnny Venom Cutter (Lv.10)": [
+    832,
+    874,
+    915,
+    957,
+    1023,
+    1082,
+    1148,
+    1231,
+    1315,
+    1456
+   ],
+   "Ornette Holy Cross (Lv.10)": [
+    496,
+    520,
+    545,
+    570,
+    610,
+    644,
+    684,
+    734,
+    783,
+    867
    ],
    "Charlotte Poison Dagger (Lv.10)": [
     595,
@@ -7019,17 +7046,32 @@
     null,
     1042
    ],
-   "Reina Wind Grab (Lv.10)": [
-    904,
-    949,
-    995,
-    1040,
-    1112,
-    null,
-    null,
-    null,
-    null,
-    1582
+   "Johnny Dirty Fight (Lv.7)": [
+    351,
+    386,
+    421,
+    467,
+    509,
+    562,
+    615
+   ],
+   "Charlotte Shadow Leaf (Lv.7)": [
+    408,
+    448,
+    489,
+    542,
+    591,
+    652,
+    713
+   ],
+   "Castella Shoulder Crusher (Lv.7)": [
+    421,
+    463,
+    505,
+    560,
+    611,
+    674,
+    737
    ]
   }
  },
