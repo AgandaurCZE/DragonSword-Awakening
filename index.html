@@ -87,6 +87,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .team-tier-label{display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:950;color:#11131a;border-radius:2px;min-height:100%;line-height:1;}
 .team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-content:start}
 .team-card{--team-accent:#8b86ef;min-width:0;border:2px solid var(--team-accent);background:#292b32;display:flex;flex-direction:column;overflow:hidden}
+.team-notes strong.sk-status{color:var(--sk-color,#fff)}
 .team-title{background:var(--team-accent);color:#10131a;text-align:center;font-size:14px;font-weight:900;letter-spacing:.35px;padding:6px 10px;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:9px;min-height:42px}.team-title img{width:31px;height:31px;object-fit:contain;flex:0 0 31px;filter:drop-shadow(0 1px 2px #0005)}.team-title span{line-height:1.2}.team-character-link{cursor:pointer;outline-offset:-3px}.team-character-link:focus-visible{outline:2px solid #fff;z-index:2}.team-slot img.team-character-link:hover{transform:scale(1.06);box-shadow:0 0 0 2px var(--team-accent)}.team-lead img.team-character-link{cursor:pointer}
 .team-body{display:grid;grid-template-columns:minmax(130px,1fr) minmax(0,1.5fr);min-height:155px;flex:1}
 .team-lead{position:relative;display:flex;align-items:stretch;justify-content:center;min-width:0;overflow:hidden;background:linear-gradient(145deg,#202936,#111720);border-right:2px solid var(--team-accent)}
@@ -363,15 +364,21 @@ function renderTeams(){
  const tiers=['S','A','B','C'];
  const colors={S:'#f05258',A:'#ff9d48',B:'#69c9e8',C:'#8b86ef'};
  const heroMap=new Map(HEROES.map(h=>[h.name.toLowerCase(),h]));
- const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const portrait=name=>heroMap.get(name.toLowerCase())?.portrait||'';
+ // Darken the sampled archetype color slightly so its icon remains distinct against the team title.
+ const teamArchColor=arch=>{
+  const hex=ARCH_COLORS[arch];if(!hex)return '#555b68';
+  const n=parseInt(hex.slice(1),16),r=(n>>16)&255,g=(n>>8)&255,b=n&255;
+  const shade=v=>Math.round(v*.78).toString(16).padStart(2,'0');
+  return '#'+shade(r)+shade(g)+shade(b);
+ };
  for(const tier of tiers){
   const items=TEAM_DATA.filter(t=>t.tier===tier); if(!items.length)continue;
   const group=document.createElement('section');group.className='team-tier-group';
   const label=document.createElement('div');label.className='team-tier-label';label.style.background=colors[tier];label.textContent=tier;label.setAttribute('aria-label',tier+' tier');group.append(label);
   const grid=document.createElement('div');grid.className='team-grid';
   for(const team of items){
-   const card=document.createElement('article');card.className='team-card';card.dataset.teamName=team.name;card.style.setProperty('--team-accent',team.accent);
+   const card=document.createElement('article');card.className='team-card';card.dataset.teamName=team.name;card.style.setProperty('--team-accent',teamArchColor(team.arch));
    const title=document.createElement('div');title.className='team-title';const archHero=HEROES.find(h=>h.archetype===team.arch&&h.archIcon);if(archHero){const archImg=document.createElement('img');archImg.src=archHero.archIcon;archImg.alt=team.arch+' archetype';title.append(archImg)}const titleText=document.createElement('span');titleText.textContent=team.name;title.append(titleText);card.append(title);
    const body=document.createElement('div');body.className='team-body';
    const lead=document.createElement('div');lead.className='team-lead';
@@ -389,8 +396,8 @@ function renderTeams(){
    }
    body.append(members);card.append(body);
    const notes=document.createElement('div');notes.className='team-notes';
-   const tags=document.createElement('div');tags.className='team-tags';team.tags.forEach(t=>{const x=document.createElement('span');x.className='team-tag';x.textContent=t;tags.append(x)});notes.append(tags);
-   const note=document.createElement('div');note.innerHTML='<strong>Team fit:</strong> '+esc(team.note);notes.append(note);card.append(notes);grid.append(card);
+   const tags=document.createElement('div');tags.className='team-tags';team.tags.forEach(t=>{const x=document.createElement('span');x.className='team-tag';x.innerHTML=formatSkillText(t);tags.append(x)});notes.append(tags);
+   const note=document.createElement('div');note.innerHTML='<strong>Team fit:</strong> '+formatSkillText(team.note);notes.append(note);card.append(notes);grid.append(card);
   }
   group.append(grid);board.append(group);
  }
