@@ -679,7 +679,10 @@ function gearArchetype(g){
  const text=`${g.name||''} ${g.two||''} ${g.three||''}`;
  const statuses=Object.keys(STATUS_ARCHETYPE||{}).sort((a,b)=>b.length-a.length);
  for(const status of statuses){
-  if(new RegExp('\\\\b'+status.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\let activeGearFilter='all';
+  if(new RegExp('\\\\b'+status+'\\\\b','i').test(text))return STATUS_ARCHETYPE[status];
+ }
+ return '';
+}
 function renderGear(){
  const q=($('gearSearch')?.value||'').trim().toLowerCase();
  const rows=GEAR_DATA.filter(g=>(activeGearFilter==='all'||g.source===activeGearFilter)&&(!q||(g.name+' '+g.source+' '+g.two+' '+g.three).toLowerCase().includes(q)));
