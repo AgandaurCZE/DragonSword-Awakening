@@ -78,7 +78,7 @@ Change these in the HTML if needed:
 2. **Never invent numbers.** Status mechanics (tick damage, durations) are unverified. The only calculated values on the site are clearly labelled:
    - **Skill levels below max:** Lv. 1 = max ÷ 1.75 times the measured multipliers (`SKILL_LEVEL_MULTIPLIERS`). Every level is measured; values can be 1 off the game because of rounding.
 3. Codex values are post-patch 1.1.0. Patch 1.1.2 changed nothing in the balance.
-4. **Dodge** (the `Dash` slot) can't be upgraded (always Lv.1) and does no damage: the hero's own skill window shows no damage value. The codex still shows the jump attack's value next to it, and the guide copies the codex. This is known; don't "fix" it.
+4. **Dodge** (the `Dash` slot) can't be upgraded (always Lv.1) and does no damage: the hero's own skill window shows no damage value. The codex shows the jump attack's value next to it anyway. That number is kept out of the description and stored as the skill's `codexAttackPct`, which the page doesn't show. Don't put it back unless David confirms Dodge damage later in the game. Dash *attack* is a separate skill and does do damage.
    **Skill levels:** Auto, Dash and Jump attacks max at Lv.7; Skill, Ultimate, Special A and Special B at Lv.10; Mastery (passive) can't be levelled.
 5. **Archetypes and their heroes:**
    - Venom (Poison): Johnny, Charlotte

@@ -2582,13 +2582,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 530% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 530,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 530
     },
     {
      "slot": "Dash attack",
@@ -2725,13 +2726,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Performs a forward somersault to move forward.\nAttack Power 713% Damage",
+     "description": "Performs a forward somersault to move forward.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 713,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 713
     },
     {
      "slot": "Dash attack",
@@ -2865,13 +2867,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 719% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 719,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 719
     },
     {
      "slot": "Dash attack",
@@ -2998,13 +3001,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 581% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 581,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 581
     },
     {
      "slot": "Dash attack",
@@ -3181,13 +3185,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 614% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 614,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 614
     },
     {
      "slot": "Dash attack",
@@ -3352,13 +3357,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 638% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 638,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 638
     },
     {
      "slot": "Dash attack",
@@ -3489,13 +3495,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 587% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 587,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 587
     },
     {
      "slot": "Dash attack",
@@ -3620,13 +3627,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 596% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 596,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 596
     },
     {
      "slot": "Dash attack",
@@ -3768,13 +3776,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 628% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 628,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 628
     },
     {
      "slot": "Dash attack",
@@ -3912,13 +3921,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Teleports forward while unleashing a burst of flames.\nAttack Power 628% Damage",
+     "description": "Teleports forward while unleashing a burst of flames.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 628,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 628
     },
     {
      "slot": "Dash attack",
@@ -3983,8 +3993,8 @@
       "maxLevel": 10,
       "attackPct": 811,
       "inflicts": [
-       "Burn",
-       "Stun"
+       "Stun",
+       "Burn"
       ],
       "requiresAny": []
      }
@@ -4052,13 +4062,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 641% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 641,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 641
     },
     {
      "slot": "Dash attack",
@@ -4249,13 +4260,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Slides forward.\nAttack Power 546% Damage",
+     "description": "Slides forward.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 546,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 546
     },
     {
      "slot": "Dash attack",
@@ -4393,13 +4405,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Slides forward.\nAttack Power 676% Damage",
+     "description": "Slides forward.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 676,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 676
     },
     {
      "slot": "Dash attack",
@@ -4534,13 +4547,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 705% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 705,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 705
     },
     {
      "slot": "Dash attack",
@@ -4676,13 +4690,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 713% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 713,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 713
     },
     {
      "slot": "Dash attack",
@@ -4818,13 +4833,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 698% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 698,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 698
     },
     {
      "slot": "Dash attack",
@@ -4961,13 +4977,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 724% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 724,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 724
     },
     {
      "slot": "Dash attack",
@@ -5102,13 +5119,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Teleports a short distance forward.\nAttack Power 697% Damage",
+     "description": "Teleports a short distance forward.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 697,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 697
     },
     {
      "slot": "Dash attack",
@@ -5243,13 +5261,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 561% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 561,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 561
     },
     {
      "slot": "Dash attack",
@@ -5377,13 +5396,14 @@
     {
      "slot": "Dash",
      "skill": "Dodge  (Lv.1)",
-     "description": "Rolls forward to move.\nAttack Power 498% Damage",
+     "description": "Rolls forward to move.",
      "meta": {
       "maxLevel": 1,
-      "attackPct": 498,
+      "attackPct": null,
       "inflicts": [],
       "requiresAny": []
-     }
+     },
+     "codexAttackPct": 498
     },
     {
      "slot": "Dash attack",

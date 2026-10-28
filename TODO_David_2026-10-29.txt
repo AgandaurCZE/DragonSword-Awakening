@@ -9,6 +9,17 @@ Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
 
 
 1. SKILL LEVELS – DONE (28 Oct): every level measured, same for all heroes.
+   Still open: the 1% rounding differences (whenever you have time).
+   - The site can be 1% off the game at some levels. This can happen on
+     every damage skill: Auto, Dash and Jump attack (Lv.1–7) and Skill,
+     Ultimate, Special A and Special B (Lv.1–10), on all 20 heroes.
+     Dodge doesn't count.
+   - Only skills on heroes you own can be levelled, so only those can be
+     read.
+   - Lv.1 alone fixes some skills, not all (4 of the 7 you measured).
+     A full row Lv.1 to max fixes a skill for certain; the site would then
+     show the recorded numbers exactly.
+   - Format: hero – skill name: Lv1, Lv2, … (as you sent today).
 
 2. KARMA ASCENSIONS – DONE (28 Oct): A0–A6 all measured, the rule is exact.
 
