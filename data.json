@@ -10150,7 +10150,7 @@
    "Poison tick by stacks, as a share of the FIRST applier's Attack: 1 stack 50%, 2 stacks 75%, 3 stacks 100% (+25% per extra stack). The other appliers' Attack doesn't matter. 2 stacks: Charlotte (658) first -> 493, Johnny (645) first -> 484, whoever applied the second. 3 stacks (goblin dummies, order not tracked): ticks of 645 and 658, exactly the two heroes' Attack. Poison stops at 3 stacks (no 4th). Stacks last about 10 seconds (timed by eye), so the 4 ticks are about 2.5 seconds apart. Bleed, Burn and Shock stack exactly the same way, also to a maximum of 3 (Lv.1 heroes, 71 Attack: 35 / 53 / 71). They also last about 10 seconds (a tick every ~2.5 s).",
    "Burn Additional Damage (+4%) and Burn Additional Attack Power (+110) don't change Burn ticks: Aria with 381 Attack ticked 190 / 285 / 381 = 50 / 75 / 100% of 381, rounded down. So these status bonuses must do something else, most likely raise hits against enemies that have the status (not tested yet).",
    "Hits on an enemy that has Poison, Burn, Bleed or Shock deal x1.5, at any stack count: Charlotte 22 -> 33 with Poison, Roxy 24 -> 36 with Bleed, Ornette 17 -> 26 with Shock; Aria with no Karma (71 Attack) hit 19 on a clean goblin and 28 on a burning one (19.x x 1.5 = 28.5, rounded down), the same at 1, 2 or 3 stacks. With A Flame That Cuts Through the Moment (381 Attack; Burn Additional Damage 4%, Burn Additional Attack Power 110) the same hit went 102 -> 205 (x2.01). x1.5 would give 153, so the Karma's Burn bonuses add about 52 more to a hit on a burning enemy. +4% alone can't do that; the flat 110 most likely does most of it, but how it's applied isn't known. Hit damage is otherwise the same share of Attack in both cases (19/71 = 0.268, 102/381 = 0.268).",
-   "Status hit bonuses ADD UP: Airborne alone doubles hits (Reina 87 -> 174, x2.0); Poison + Airborne gives x2.5 (Charlotte 22 -> 55, 50 -> 127), not x3 as multiplying would. Knockdown on top of Bleed or Shock is also x2.5 (Roxy 24 -> 61, Ornette 17 -> 44). So: +50% for a damage-over-time status, +100% for Airborne or Knockdown, added together. Two different damage-over-time statuses also add up: Poison + Bleed doubled Charlotte's hits (22 -> 44, 50 -> 101, x2.0). BUT Knockdown + Poison + Bleed gave only x2.5 (Charlotte 22 -> 55), not the x3.0 that adding would give. Airborne + Poison + Bleed was also x2.5 (22 -> 55). So the highest seen is x2.5: either a cap, or a second damage-over-time status doesn't count once Airborne/Knockdown is on. Only Airborne + Knockdown together (x3.0 if no cap) or four damage-over-time statuses could tell these apart. Not tested: Knockdown alone, Stun and Break, and Airborne + Knockdown together."
+   "Status hit bonuses ADD UP: Airborne alone doubles hits (Reina 87 -> 174, x2.0); Poison + Airborne gives x2.5 (Charlotte 22 -> 55, 50 -> 127), not x3 as multiplying would. Knockdown on top of Bleed or Shock is also x2.5 (Roxy 24 -> 61, Ornette 17 -> 44). So: +50% for a damage-over-time status, +100% for Airborne or Knockdown, added together. Two different damage-over-time statuses also add up: Poison + Bleed doubled Charlotte's hits (22 -> 44, 50 -> 101, x2.0). BUT Knockdown + Poison + Bleed gave only x2.5 (Charlotte 22 -> 55), not the x3.0 that adding would give. Airborne + Poison + Bleed was also x2.5 (22 -> 55). But once, with Knockdown AND Airborne on a poisoned enemy (Bleed unsure; hard to repeat), Charlotte's small hits were 77 = x3.5, which fits +100% + 100% + 50%. So there's no hard cap at x2.5. Best fit so far: each of Airborne and Knockdown adds +100%; damage-over-time statuses add +50% each, but only one of them counts once Airborne or Knockdown is on. Stun and Break not tested."
   ],
   "tests": [
    {
@@ -10683,6 +10683,10 @@
       "Airborne + Poison + Bleed": [
        55,
        55
+      ],
+      "Knockdown + Airborne + Poison (Bleed unsure), seen once": [
+       77,
+       77
       ]
      }
     },
@@ -10715,7 +10719,7 @@
     "Each application ticks 4 times over about 10 seconds (about one tick every 2.5 seconds).",
     "Each tick deals a share of the Attack of the hero who applied the FIRST stack. Later stacks make the ticks bigger, even when another hero applies them, but their own Attack doesn't count.",
     "Ticks aren't reduced by the enemy's Defense: Armor Penetration and Defense Ignore don't change them.",
-    "While an enemy has this status, hits on it deal 1.5x damage, whatever the stack count. Bonuses from different statuses add up: +50% for each damage-over-time status (Poison + Bleed: 2x) and +100% for Airborne or Knockdown (with one damage-over-time status: 2.5x). 2.5x is the most seen: Airborne or Knockdown with Poison + Bleed was still 2.5x. Measured on training dummies.",
+    "While an enemy has this status, hits on it deal 1.5x damage, whatever the stack count. Bonuses from different statuses add up: +50% for each damage-over-time status (Poison + Bleed: 2x) and +100% each for Airborne and Knockdown (Airborne + Poison: 2.5x). Once Airborne or Knockdown is on, a second damage-over-time status hasn't added more (Airborne + Poison + Bleed: 2.5x). Measured on training dummies.",
     "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets and awakenings) don't change its ticks (tested with Burn).",
     "Tick damage is rounded down."
    ],
