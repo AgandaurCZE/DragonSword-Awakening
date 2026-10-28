@@ -9,7 +9,7 @@ Inputs (all in data.json):
   HERO_STAT_MODEL.breakthroughProfiles Lv20/Lv30 bonuses and the per-tier increase
   HERO_BASE_STATS[hero].profile        which breakthrough profile a hero uses
   HERO_BASE_STATS[hero].estimated      false = measured in-game: this script never overwrites that hero's numbers
-  GEAR_STATS, KARMA_DATA, HEROES, CHARACTER_PROFILE_DATA
+  GEAR_STATS, KARMA_DATA, HEROES, CHARACTER_PROFILE_DATA, AWAKENINGS (stat effects of all six awakenings count as always on)
 The 'why' texts in HERO_BUILDS are kept; only main stats and substats are recalculated.
 """
 import json, math, os, sys, itertools, collections
@@ -42,14 +42,21 @@ for n, b in base.items():
 KARMA = {k['signature']: k for k in d['KARMA_DATA'] if k.get('signature')}
 TRAIT = {'Attack Power': 'Attack Power Up', 'Critical Rate': 'Critical Hit Chance', 'Max HP': 'Max HP Up', 'Defense': 'Defense Up'}
 
+def awakening_bonus(hero):
+    out = collections.Counter()
+    for a in d.get('AWAKENINGS', {}).get('heroes', {}).get(hero, {}).get('list', []):
+        for e in a.get('effects', []): out[e['stat']] += e['value']
+    return out
+
 def karma_bonus(k):
     out = collections.Counter()
     for t in k['traits']: out[TRAIT.get(t['label'], t['label'])] += float(str(t['a6']).rstrip('%'))
     return out
 
 def damage_index(hero, pieces):
-    """Attack x expected crit multiplier from hero base + signature Karma (A6) + gear. Set bonuses excluded. Crit Rate counts up to 100%."""
-    hb, k = base[hero], KARMA[hero]; kb = karma_bonus(k)
+    """Attack x expected crit multiplier from hero base + signature Karma (A6) + all six awakenings + gear.
+    Set bonuses excluded (several are conditional). Crit Rate counts up to 100%."""
+    hb, k = base[hero], KARMA[hero]; kb = karma_bonus(k) + awakening_bonus(hero)
     flat = hb['Attack'] + float(k['base']['Attack']); pct = kb['Attack Power Up']
     cr = hb['Critical Hit Chance'] + kb['Critical Hit Chance']; cd = hb['Critical Damage'] + kb['Critical Damage']
     for s, p in pieces.items():

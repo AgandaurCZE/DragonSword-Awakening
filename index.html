@@ -37,7 +37,7 @@ input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 2px #68c7d5
 .no-results{padding:30px;text-align:center;color:var(--muted)}
 .sk-num{color:#fff;font-weight:800}.sk-effect{color:#fff;font-weight:800}.sk-status{font-weight:800;color:var(--sk-color,#fff)}.sk-cond{color:#e0474f;font-weight:600}.sk-cond b,.sk-cond .sk-status{color:#e0474f}
 #karmaPopover{position:fixed;z-index:30;width:min(440px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;box-shadow:0 18px 55px #000b;border-radius:4px}#karmaPopover[hidden]{display:none}#karmaPopover .karma-card{border-color:var(--karma-accent,#43b9ed)}
-.build-why{margin:0 0 10px}.build-piece{justify-content:flex-start;gap:6px}.build-main-val{display:block;color:#ffc46b;font-weight:900;font-size:16px;margin-top:2px}.build-subs{list-style:none;margin:4px 0 0;padding:6px 0 0;border-top:1px solid #3b3e47;width:100%;text-align:left}.build-subs li{display:flex;justify-content:space-between;gap:6px;font-size:11px;line-height:1.5;color:#c9cfd9}.build-subs b{color:#f5f6f8;white-space:nowrap}.eg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;background:#292b32;border:1px solid #3b3e47;padding:6px 14px}.eg-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid #353842}.eg-label{color:#dce1e8;font-weight:600}.eg-val{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;justify-content:flex-end}.eg-total{font-size:16px;font-weight:900;color:#ffc46b}.eg-own{font-size:12px;color:#aeb7c4}.eg-set,.eg-set-key{color:#5fd38d;font-weight:800}.eg-set{font-size:12px}.eg-est{color:#ffb86f;font-weight:700}.eg-cap{font-size:10px;color:#e0474f;font-weight:800;border:1px solid #e0474f;padding:0 4px;border-radius:2px}[data-tip]{position:relative;cursor:help;text-decoration:underline dotted #7d8796;text-underline-offset:3px}[data-tip]:hover::after,[data-tip]:focus::after{content:attr(data-tip);position:absolute;right:0;bottom:calc(100% + 6px);z-index:40;width:max-content;max-width:300px;white-space:pre-line;background:#171d26;border:1px solid #536273;color:#e4e8ef;font-size:12px;font-weight:500;line-height:1.45;padding:8px 10px;border-radius:6px;box-shadow:0 10px 30px #000a;text-align:left}@media(max-width:700px){.eg-grid{grid-template-columns:1fr}}
+.build-why{margin:0 0 10px}.build-piece{justify-content:flex-start;gap:6px}.build-main-val{display:block;color:#ffc46b;font-weight:900;font-size:16px;margin-top:2px}.build-subs{list-style:none;margin:4px 0 0;padding:6px 0 0;border-top:1px solid #3b3e47;width:100%;text-align:left}.build-subs li{display:flex;justify-content:space-between;gap:6px;font-size:11px;line-height:1.5;color:#c9cfd9}.build-subs b{color:#f5f6f8;white-space:nowrap}.eg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;background:#292b32;border:1px solid #3b3e47;padding:6px 14px}.eg-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid #353842}.eg-label{color:#dce1e8;font-weight:600}.eg-val{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;justify-content:flex-end}.eg-total{font-size:16px;font-weight:900;color:#ffc46b}.eg-own{font-size:12px;color:#aeb7c4}.eg-set,.eg-set-key{color:#5fd38d;font-weight:800}.eg-set{font-size:12px}.eg-awk,.eg-awk-key{color:#c58bff;font-weight:800}.eg-awk{font-size:12px}.eg-est{color:#ffb86f;font-weight:700}.eg-cap{font-size:10px;color:#e0474f;font-weight:800;border:1px solid #e0474f;padding:0 4px;border-radius:2px}[data-tip]{position:relative;cursor:help;text-decoration:underline dotted #7d8796;text-underline-offset:3px}[data-tip]:hover::after,[data-tip]:focus::after{content:attr(data-tip);position:absolute;right:0;bottom:calc(100% + 6px);z-index:40;width:max-content;max-width:300px;white-space:pre-line;background:#171d26;border:1px solid #536273;color:#e4e8ef;font-size:12px;font-weight:500;line-height:1.45;padding:8px 10px;border-radius:6px;box-shadow:0 10px 30px #000a;text-align:left}@media(max-width:700px){.eg-grid{grid-template-columns:1fr}}
 #tooltip{position:fixed;z-index:20;width:min(380px,calc(100vw - 24px));background:#171d26;border:1px solid #536273;border-radius:14px;box-shadow:0 18px 55px #000b;padding:15px;display:none;pointer-events:none}
 .tip-top{display:flex;gap:14px;align-items:center}.tip-portrait{width:112px;height:132px;object-fit:cover;border-radius:9px;border:2px solid var(--tier);flex-shrink:0}
 .tip-title{font-size:23px;font-weight:900;line-height:1.1;margin-bottom:8px}
@@ -320,7 +320,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  </div>
  <p class="karma-result-count" id="karmaResultCount"></p>
  <div id="karmaBoard"></div>
- <p class="karma-awakening-note">Trait values at Ascension 0 (Lv. 1) and Ascension 6 (Lv. 70) are from the in-game screenshots. Each Ascension multiplies the A0 value: A1 ×4/3 and A2 ×5/3 (measured in-game), A6 ×5. A3–A5 aren’t measured yet; they’re filled in evenly between A2 and A6 and marked “est.”. Values are rounded like the game: whole % and the nearest 5. Signature-exclusive effects are listed separately. Base stats are Lv. 70 / Ascension 6 values.</p>
+ <p class="karma-awakening-note">Trait values at Ascension 0 (Lv. 1) and Ascension 6 (Lv. 70) are from the in-game screenshots. Each Ascension multiplies the A0 value: ×4/3, ×5/3, ×2, ×8/3, ×11/3 and ×5 for A1–A6, measured in-game. Values are rounded like the game: whole % and the nearest 5. Signature-exclusive effects are listed separately. Base stats are Lv. 70 / Ascension 6 values.</p>
 </section>
 <section class="profile-page" id="profilePage" hidden>
  <div class="profile-crumb"><button type="button" id="profileBackTier">Tier List</button> / Characters / <strong id="profileCrumbName">Character</strong></div>
@@ -439,7 +439,7 @@ function renderTeams(){
 
 let activeKarmaArch='';
 // Ascension 0..6: even steps between the two recorded values (a0 = Lv.1 pre-Ascension, a6 = Lv.70 Ascension 6).
-// Karma trait per Ascension = A0 x multiplier (KARMA_ASCENSION in data.json); unmeasured Ascensions filled evenly and flagged est.
+// Karma trait per Ascension = A0 x multiplier (KARMA_ASCENSION in data.json); any null multiplier is filled evenly and flagged est.
 function karmaLevels(t){const pct=/%$/.test(String(t.a0));const a=parseFloat(t.a0);const R=KARMA_ASCENSION.rounding||{percent:1,flat:5};
  const f=fillSteps(KARMA_ASCENSION.multipliers||[1,null,null,null,null,null,5]);const unit=pct?(R.percent||1):(R.flat||5);
  const fmt=n=>String(Math.round(n/unit)*unit)+(pct?'%':'');
@@ -840,7 +840,7 @@ function heroSets(name){const B=(CHARACTER_PROFILE_DATA[name]||{}).build;if(B&&B
 function titleBonusTotals(mode='all'){const out={};(TITLES.list||[]).forEach(t=>{if(mode==='owned'&&t.obtained!==true)return;(t.passive||[]).forEach(b=>{out[b.stat]=(out[b.stat]||0)+Number(b.value)})});return out;}
 function endgameStats(name){
  const base=HERO_BASE_STATS[name],build=HERO_BUILDS[name],k=KARMA_DATA.find(x=>x.signature===name);if(!base||!build)return null;
- const own={},setv={},src={},set=[];const add=(o,s,v,from)=>{o[s]=(o[s]||0)+v;if(from)(src[s]=src[s]||[]).push(from)};
+ const own={},setv={},awk={},src={},awkSrc={},set=[];const add=(o,s,v,from,where=src)=>{o[s]=(o[s]||0)+v;if(from)(where[s]=where[s]||[]).push(from)};
  const parts={Attack:{hero:base['Attack'],karma:0,gear:0},Defense:{hero:base['Defense'],karma:0,gear:0},'Max HP':{hero:base['Max HP'],karma:0,gear:0}};
  ['Critical Hit Chance','Critical Damage'].forEach(s=>add(own,s,base[s]||0));
  if(k){Object.entries(k.base||{}).forEach(([s,v])=>{if(parts[s])parts[s].karma+=Number(v)});
@@ -851,15 +851,17 @@ function endgameStats(name){
   one(p.main,(g.main[p.main]||[])[lv]||0);(p.subs||[]).forEach(s=>one(s,g.sub[s]||0));});
  heroSets(name).forEach(({set,pieces})=>{const bon=[...(set.twoBonus||[]),...(pieces>=3?(set.threeBonus||[]):[])];
   bon.forEach(b=>add(setv,b.stat,b.value,`${set.name} (${pieces}-piece): ${b.stat} +${b.value}%${b.condition?' '+b.condition:''}`));});
+ // All six awakenings (always on for a fully awakened hero): AWAKENINGS[hero].list[].effects
+ (((AWAKENINGS.heroes||{})[name]||{}).list||[]).forEach(a=>(a.effects||[]).forEach(e=>add(awk,e.stat,e.value,`A${a.level} · ${a.name}: ${e.stat} +${e.value}%`,awkSrc)));
  const rows=[];
  [['Attack','Attack Power Up'],['Defense','Defense Up'],['Max HP','Max HP Up']].forEach(([s,pct])=>{const P=parts[s],flat=P.hero+P.karma+P.gear;
-  const ownTotal=flat*(1+(own[pct]||0)/100),withSet=flat*(1+((own[pct]||0)+(setv[pct]||0))/100);
-  rows.push({stat:s,own:ownTotal,set:withSet-ownTotal,tip:`Hero Lv.70${base.estimated?' (estimated)':''}: ${fmtStat(s,P.hero)}\nSignature Karma (A6): ${fmtStat(s,P.karma)}\nGear (flat): ${fmtStat(s,P.gear)}\n${pct}: ${fmtStat(pct,own[pct]||0,true)}`,setTip:(src[pct]||[]).join('\n')});});
+  const ownTotal=flat*(1+(own[pct]||0)/100),withSet=flat*(1+((own[pct]||0)+(setv[pct]||0))/100),withAwk=flat*(1+((own[pct]||0)+(setv[pct]||0)+(awk[pct]||0))/100);
+  rows.push({stat:s,own:ownTotal,set:withSet-ownTotal,awk:withAwk-withSet,awkTip:(awkSrc[pct]||[]).join('\n'),tip:`Hero Lv.70${base.estimated?' (estimated)':''}: ${fmtStat(s,P.hero)}\nSignature Karma (A6): ${fmtStat(s,P.karma)}\nGear (flat): ${fmtStat(s,P.gear)}\n${pct}: ${fmtStat(pct,own[pct]||0,true)}`,setTip:(src[pct]||[]).join('\n')});});
  const skip=new Set(['Attack Power Up','Defense Up','Max HP Up']);
  const order=['Critical Hit Chance','Critical Damage','Defense Ignore','Armor Penetration'];
- const keys=[...new Set([...Object.keys(own),...Object.keys(setv)])].filter(s=>!skip.has(s));
+ const keys=[...new Set([...Object.keys(own),...Object.keys(setv),...Object.keys(awk)])].filter(s=>!skip.has(s));
  keys.sort((a,b)=>{const ia=order.indexOf(a),ib=order.indexOf(b);return (ia<0?99:ia)-(ib<0?99:ib)||a.localeCompare(b)});
- keys.forEach(s=>rows.push({stat:s,own:own[s]||0,set:setv[s]||0,tip:'',setTip:(src[s]||[]).join('\n')}));
+ keys.forEach(s=>rows.push({stat:s,own:own[s]||0,set:setv[s]||0,awk:awk[s]||0,tip:'',setTip:(src[s]||[]).join('\n'),awkTip:(awkSrc[s]||[]).join('\n')}));
  return {rows,build,base};
 }
 function renderBuildStats(h){
@@ -875,14 +877,15 @@ function renderBuildStats(h){
   root.append(el);});
  const res=endgameStats(h.name);if(!res)return;
  const note=document.createElement('p');note.className='profile-note';
- note.innerHTML=`Fully built at level 70: signature Karma at Ascension 6, ${profileEsc(build.rarity||'Orange')} gear at +${lv} with the stats above. <span class="eg-set-key">Coloured values</span> come from the recommended gear sets (hover for the source and when they apply).`+
+ note.innerHTML=`Fully built at level 70: signature Karma at Ascension 6, ${profileEsc(build.rarity||'Orange')} gear at +${lv} with the stats above. <span class="eg-set-key">Green values</span> come from the recommended gear sets and <span class="eg-awk-key">purple values</span> from the hero's awakenings (all six unlocked); hover for the source.`+
   (res.base.estimated?' <span class="eg-est">Hero base stats are estimates</span> from measured levels 1–30 until the level-70 values are confirmed in-game.':'');
  eg.append(note);
  const grid=document.createElement('div');grid.className='eg-grid';
- res.rows.forEach(r=>{const row=document.createElement('div');row.className='eg-row';const total=r.own+r.set;
+ res.rows.forEach(r=>{const row=document.createElement('div');row.className='eg-row';const total=r.own+r.set+(r.awk||0);
   const tipAttr=t=>t?` data-tip="${profileEsc(t)}" tabindex="0"`:'';
   let val=`<b class="eg-total">${fmtStat(r.stat,total)}</b>`;
-  if(Math.abs(r.set)>0.001)val+=`<span class="eg-own"${tipAttr(r.tip)}>${fmtStat(r.stat,r.own)}</span><span class="eg-set"${tipAttr(r.setTip)}>${fmtStat(r.stat,r.set,true)}</span>`;
+  const hasSet=Math.abs(r.set)>0.001,hasAwk=Math.abs(r.awk||0)>0.001;
+  if(hasSet||hasAwk){val+=`<span class="eg-own"${tipAttr(r.tip)}>${fmtStat(r.stat,r.own)}</span>`;if(hasSet)val+=`<span class="eg-set"${tipAttr(r.setTip)}>${fmtStat(r.stat,r.set,true)}</span>`;if(hasAwk)val+=`<span class="eg-awk"${tipAttr(r.awkTip)}>${fmtStat(r.stat,r.awk,true)}</span>`;}
   else if(r.tip)val=`<b class="eg-total"${tipAttr(r.tip)}>${fmtStat(r.stat,total)}</b>`;
   if(r.stat==='Critical Hit Chance'&&total>100)val+=`<span class="eg-cap" data-tip="A hit can't crit more than 100% of the time. The game says the final chance also depends on the target's Critical Hit Resistance, so extra Crit Rate may still help against resistant enemies (not tested)." tabindex="0">over 100%</span>`;
   row.innerHTML=`<span class="eg-label">${profileEsc(r.stat)}</span><span class="eg-val">${val}</span>`;grid.append(row);});

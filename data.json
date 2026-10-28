@@ -630,7 +630,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Amplitude",
@@ -659,7 +665,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Amplitude",
@@ -683,7 +695,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Amplitude",
@@ -712,7 +730,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Amplitude",
@@ -741,7 +765,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Amplitude",
@@ -765,7 +795,13 @@
     "Attack": "749",
     "Defense": "374",
     "Max HP": "9230"
-   }
+   },
+   "baseLv1": {
+    "Attack": "56",
+    "Defense": "28",
+    "Max HP": "692"
+   },
+   "statType": "Defense"
   },
   {
    "archetype": "Crushing",
@@ -794,7 +830,13 @@
     "Attack": "749",
     "Defense": "374",
     "Max HP": "9230"
-   }
+   },
+   "baseLv1": {
+    "Attack": "56",
+    "Defense": "28",
+    "Max HP": "692"
+   },
+   "statType": "Defense"
   },
   {
    "archetype": "Crushing",
@@ -823,7 +865,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Crushing",
@@ -852,7 +900,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Crushing",
@@ -876,7 +930,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Crushing",
@@ -900,7 +960,13 @@
     "Attack": "749",
     "Defense": "374",
     "Max HP": "9230"
-   }
+   },
+   "baseLv1": {
+    "Attack": "56",
+    "Defense": "28",
+    "Max HP": "692"
+   },
+   "statType": "Defense"
   },
   {
    "archetype": "Gale",
@@ -929,7 +995,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Gale",
@@ -958,7 +1030,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Gale",
@@ -987,7 +1065,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Gale",
@@ -1016,7 +1100,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Gale",
@@ -1040,7 +1130,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Gale",
@@ -1064,7 +1160,13 @@
     "Attack": "749",
     "Defense": "374",
     "Max HP": "9230"
-   }
+   },
+   "baseLv1": {
+    "Attack": "56",
+    "Defense": "28",
+    "Max HP": "692"
+   },
+   "statType": "Defense"
   },
   {
    "archetype": "Bloodburst",
@@ -1093,7 +1195,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Bloodburst",
@@ -1117,7 +1225,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Bloodburst",
@@ -1146,7 +1260,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Bloodburst",
@@ -1170,7 +1290,13 @@
     "Attack": "749",
     "Defense": "374",
     "Max HP": "9230"
-   }
+   },
+   "baseLv1": {
+    "Attack": "56",
+    "Defense": "28",
+    "Max HP": "692"
+   },
+   "statType": "Defense"
   },
   {
    "archetype": "Blazeflame",
@@ -1199,7 +1325,13 @@
     "Attack": "1633",
     "Defense": "149",
     "Max HP": "3172"
-   }
+   },
+   "baseLv1": {
+    "Attack": "120",
+    "Defense": "11",
+    "Max HP": "259"
+   },
+   "statType": "High Attack"
   },
   {
    "archetype": "Blazeflame",
@@ -1228,7 +1360,13 @@
     "Attack": "1633",
     "Defense": "149",
     "Max HP": "3172"
-   }
+   },
+   "baseLv1": {
+    "Attack": "120",
+    "Defense": "11",
+    "Max HP": "259"
+   },
+   "statType": "High Attack"
   },
   {
    "archetype": "Blazeflame",
@@ -1257,7 +1395,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Blazeflame",
@@ -1281,7 +1425,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Blazeflame",
@@ -1310,7 +1460,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Blazeflame",
@@ -1334,7 +1490,13 @@
     "Attack": "749",
     "Defense": "374",
     "Max HP": "9230"
-   }
+   },
+   "baseLv1": {
+    "Attack": "56",
+    "Defense": "28",
+    "Max HP": "692"
+   },
+   "statType": "Defense"
   },
   {
    "archetype": "Frostbite",
@@ -1363,7 +1525,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Frostbite",
@@ -1392,7 +1560,13 @@
     "Attack": "1633",
     "Defense": "149",
     "Max HP": "3172"
-   }
+   },
+   "baseLv1": {
+    "Attack": "120",
+    "Defense": "11",
+    "Max HP": "259"
+   },
+   "statType": "High Attack"
   },
   {
    "archetype": "Frostbite",
@@ -1421,7 +1595,13 @@
     "Attack": "1633",
     "Defense": "149",
     "Max HP": "3172"
-   }
+   },
+   "baseLv1": {
+    "Attack": "120",
+    "Defense": "11",
+    "Max HP": "259"
+   },
+   "statType": "High Attack"
   },
   {
    "archetype": "Frostbite",
@@ -1445,7 +1625,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Frostbite",
@@ -1474,7 +1660,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Frostbite",
@@ -1498,7 +1690,13 @@
     "Attack": "749",
     "Defense": "374",
     "Max HP": "9230"
-   }
+   },
+   "baseLv1": {
+    "Attack": "56",
+    "Defense": "28",
+    "Max HP": "692"
+   },
+   "statType": "Defense"
   },
   {
    "archetype": "Thunderbolt",
@@ -1527,7 +1725,13 @@
     "Attack": "1633",
     "Defense": "149",
     "Max HP": "3172"
-   }
+   },
+   "baseLv1": {
+    "Attack": "120",
+    "Defense": "11",
+    "Max HP": "259"
+   },
+   "statType": "High Attack"
   },
   {
    "archetype": "Thunderbolt",
@@ -1556,7 +1760,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Thunderbolt",
@@ -1585,7 +1795,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Thunderbolt",
@@ -1614,7 +1830,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Thunderbolt",
@@ -1643,7 +1865,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Thunderbolt",
@@ -1667,7 +1895,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Thunderbolt",
@@ -1696,7 +1930,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Thunderbolt",
@@ -1720,7 +1960,13 @@
     "Attack": "749",
     "Defense": "374",
     "Max HP": "9230"
-   }
+   },
+   "baseLv1": {
+    "Attack": "56",
+    "Defense": "28",
+    "Max HP": "692"
+   },
+   "statType": "Defense"
   },
   {
    "archetype": "Venom",
@@ -1749,7 +1995,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Venom",
@@ -1778,7 +2030,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Venom",
@@ -1807,7 +2065,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Venom",
@@ -1836,7 +2100,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Venom",
@@ -1860,7 +2130,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Venom",
@@ -1884,7 +2160,13 @@
     "Attack": "749",
     "Defense": "374",
     "Max HP": "9230"
-   }
+   },
+   "baseLv1": {
+    "Attack": "56",
+    "Defense": "28",
+    "Max HP": "692"
+   },
+   "statType": "Defense"
   },
   {
    "archetype": "Breaker",
@@ -1913,7 +2195,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Breaker",
@@ -1942,7 +2230,13 @@
     "Attack": "1633",
     "Defense": "149",
     "Max HP": "3172"
-   }
+   },
+   "baseLv1": {
+    "Attack": "120",
+    "Defense": "11",
+    "Max HP": "259"
+   },
+   "statType": "High Attack"
   },
   {
    "archetype": "Breaker",
@@ -1966,7 +2260,13 @@
     "Attack": "1070",
     "Defense": "300",
     "Max HP": "6922"
-   }
+   },
+   "baseLv1": {
+    "Attack": "80",
+    "Defense": "22",
+    "Max HP": "519"
+   },
+   "statType": "Balanced"
   },
   {
    "archetype": "Breaker",
@@ -1995,7 +2295,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Breaker",
@@ -2024,7 +2330,13 @@
     "Attack": "1312",
     "Defense": "224",
     "Max HP": "5479"
-   }
+   },
+   "baseLv1": {
+    "Attack": "96",
+    "Defense": "16",
+    "Max HP": "432"
+   },
+   "statType": "Attack"
   },
   {
    "archetype": "Breaker",
@@ -2048,18 +2360,24 @@
     "Attack": "749",
     "Defense": "374",
     "Max HP": "9230"
-   }
+   },
+   "baseLv1": {
+    "Attack": "56",
+    "Defense": "28",
+    "Max HP": "692"
+   },
+   "statType": "Defense"
   }
  ],
  "KARMA_ASCENSION": {
-  "note": "Karma trait value at each Ascension = A0 value x multiplier. Measured in-game on Frozen Fortress and A Flame That Cuts Through the Moment: A1 = x4/3, A2 = x5/3; A6 = x5 holds for all 141 recorded traits. A3-A5 are not measured: the page fills them in evenly between A2 and A6 and marks them 'est.'. The game shows % values rounded to whole numbers and flat values rounded to the nearest 5.",
+  "note": "Karma trait value at each Ascension = A0 value x multiplier: x1, x4/3, x5/3, x2, x8/3, x11/3, x5 for A0-A6 (in thirds: 3, 4, 5, 6, 8, 11, 15). Measured in-game on Frozen Fortress and A Flame That Cuts Through the Moment: all 35 values match. The game shows % values rounded to whole numbers and flat values rounded to the nearest 5.",
   "multipliers": [
    1,
    1.3333333333333333,
    1.6666666666666667,
-   null,
-   null,
-   null,
+   2,
+   2.6666666666666665,
+   3.6666666666666665,
    5
   ],
   "measured": {
@@ -2068,18 +2386,18 @@
      "6%",
      "8%",
      "10%",
-     null,
-     null,
-     null,
+     "12%",
+     "16%",
+     "22%",
      "30%"
     ],
     "Frost Additional Attack Power": [
      "160",
      "215",
      "265",
-     null,
-     null,
-     null,
+     "320",
+     "425",
+     "585",
      "800"
     ]
    },
@@ -2088,27 +2406,27 @@
      "2%",
      "3%",
      "3%",
-     null,
-     null,
-     null,
+     "4%",
+     "5%",
+     "7%",
      "10%"
     ],
     "Burn Additional Damage": [
      "4%",
      "5%",
      "7%",
-     null,
-     null,
-     null,
+     "8%",
+     "11%",
+     "15%",
      "20%"
     ],
     "Burn Additional Attack Power": [
      "110",
      "145",
      "185",
-     null,
-     null,
-     null,
+     "220",
+     "295",
+     "405",
      "550"
     ]
    }
@@ -2116,6 +2434,120 @@
   "rounding": {
    "percent": 1,
    "flat": 5
+  }
+ },
+ "KARMA_LEVELLING": {
+  "note": "Karma base stats (Attack/Defense/Max HP) by level. Every card has one of four stat types, set by its level-1 stats (KARMA_DATA[].statType, .baseLv1). Measured in-game: level gains are proportional to the level-1 stats (about x1.91 at Lv20 before breakthrough on both cards tested), while breakthrough bonuses differ by type (Balanced: +50% of Lv1 at Lv20; Attack type: more Attack, less HP). Not used by the page yet; ready for a Karma level slider once levels 40-70 are measured.",
+  "types": {
+   "Balanced": {
+    "lv1": [
+     80,
+     22,
+     519
+    ],
+    "lv70": [
+     1070,
+     300,
+     6922
+    ]
+   },
+   "Attack": {
+    "lv1": [
+     96,
+     16,
+     432
+    ],
+    "lv70": [
+     1312,
+     224,
+     5479
+    ]
+   },
+   "Defense": {
+    "lv1": [
+     56,
+     28,
+     692
+    ],
+    "lv70": [
+     749,
+     374,
+     9230
+    ]
+   },
+   "High Attack": {
+    "lv1": [
+     120,
+     11,
+     259
+    ],
+    "lv70": [
+     1633,
+     149,
+     3172
+    ]
+   }
+  },
+  "order": [
+   "Attack",
+   "Defense",
+   "Max HP"
+  ],
+  "measured": {
+   "Frozen Fortress (Balanced)": {
+    "Lv1": [
+     80,
+     22,
+     519
+    ],
+    "Lv20 before breakthrough": [
+     153,
+     43,
+     993
+    ],
+    "Lv20 after breakthrough": [
+     193,
+     54,
+     1252
+    ],
+    "Lv30 before breakthrough": [
+     255,
+     71,
+     1648
+    ],
+    "Lv30 after breakthrough": [
+     302,
+     84,
+     1951
+    ]
+   },
+   "A Flame That Cuts Through the Moment (Attack)": {
+    "Lv1": [
+     96,
+     16,
+     432
+    ],
+    "Lv20 before breakthrough": [
+     184,
+     32,
+     827
+    ],
+    "Lv20 after breakthrough": [
+     236,
+     40,
+     1000
+    ],
+    "Lv30 before breakthrough": [
+     310,
+     53,
+     1330
+    ],
+    "Lv30 after breakthrough": [
+     371,
+     63,
+     1532
+    ]
+   }
   }
  },
  "CHARACTER_PROFILE_DATA": {
@@ -8255,7 +8687,7 @@
  "HERO_BUILDS": {
   "Johnny": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8280,9 +8712,9 @@
      ]
     },
     "Legs": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -8290,9 +8722,9 @@
      ]
     },
     "Gloves": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -8313,7 +8745,7 @@
   },
   "Lute": {
    "type": "Support",
-   "why": "Healing Circle restores 20% of max HP and Lute's other support is not stat-based, so her gear can't raise her healing. Chest and legs keep her alive (Max HP Up also raises her own share of the heal); the other three slots add damage.",
+   "why": "Healing Circle restores 20% of max HP and Lute's other support is not stat-based, so her gear can't raise her healing. Chest and legs keep her alive (Max HP Up also raises her own share of the heal); the other three slots add damage. Those three slots are chosen with all six awakenings unlocked.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8348,10 +8780,10 @@
      ]
     },
     "Gloves": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
       "Max HP Up",
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Defense Ignore",
       "Stun Additional Attack Power"
@@ -8371,7 +8803,7 @@
   },
   "Castella": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8429,7 +8861,7 @@
   },
   "Aria": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8444,6 +8876,26 @@
      ]
     },
     "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Legs": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Gloves": {
      "main": "Attack Power Up",
      "subs": [
       "Critical Hit Chance",
@@ -8453,31 +8905,11 @@
       "Burn Additional Attack Power"
      ]
     },
-    "Legs": {
-     "main": "Critical Hit Chance",
-     "subs": [
-      "Attack Power Up",
-      "Critical Damage",
-      "Attack",
-      "Defense Ignore",
-      "Burn Additional Attack Power"
-     ]
-    },
-    "Gloves": {
-     "main": "Critical Hit Chance",
-     "subs": [
-      "Attack Power Up",
-      "Critical Damage",
-      "Attack",
-      "Defense Ignore",
-      "Burn Additional Attack Power"
-     ]
-    },
     "Boots": {
-     "main": "Critical Damage",
+     "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
-      "Critical Hit Chance",
+      "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Burn Additional Attack Power"
@@ -8487,7 +8919,7 @@
   },
   "Dana": {
    "type": "Support",
-   "why": "Chako's shields and the Defense aura don't list any stat scaling, so Dana's gear can't raise them. Chest and legs keep her alive on the front line; the other three slots add damage.",
+   "why": "Chako's shields and the Defense aura don't list any stat scaling, so Dana's gear can't raise them. Chest and legs keep her alive on the front line; the other three slots add damage. Those three slots are chosen with all six awakenings unlocked.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8522,10 +8954,10 @@
      ]
     },
     "Gloves": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
       "Max HP Up",
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Defense Ignore",
       "Frost Additional Attack Power"
@@ -8545,7 +8977,7 @@
   },
   "Kalien": {
    "type": "Damage",
-   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8570,9 +9002,9 @@
      ]
     },
     "Legs": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -8580,9 +9012,9 @@
      ]
     },
     "Gloves": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -8603,14 +9035,14 @@
   },
   "Roxy": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
     "Helmet": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -8618,26 +9050,16 @@
      ]
     },
     "Chest": {
-     "main": "Critical Hit Chance",
+     "main": "Critical Damage",
      "subs": [
       "Attack Power Up",
-      "Critical Damage",
+      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Bleed Additional Attack Power"
      ]
     },
     "Legs": {
-     "main": "Critical Hit Chance",
-     "subs": [
-      "Attack Power Up",
-      "Critical Damage",
-      "Attack",
-      "Defense Ignore",
-      "Bleed Additional Attack Power"
-     ]
-    },
-    "Gloves": {
      "main": "Attack Power Up",
      "subs": [
       "Critical Hit Chance",
@@ -8647,11 +9069,21 @@
       "Bleed Additional Attack Power"
      ]
     },
-    "Boots": {
-     "main": "Critical Damage",
+    "Gloves": {
+     "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
-      "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Bleed Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Bleed Additional Attack Power"
@@ -8719,7 +9151,7 @@
   },
   "Theresia": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8744,6 +9176,16 @@
      ]
     },
     "Legs": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Stun Additional Attack Power"
+     ]
+    },
+    "Gloves": {
      "main": "Attack Power Up",
      "subs": [
       "Critical Hit Chance",
@@ -8753,21 +9195,11 @@
       "Stun Additional Attack Power"
      ]
     },
-    "Gloves": {
+    "Boots": {
      "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
       "Critical Damage",
-      "Attack",
-      "Defense Ignore",
-      "Stun Additional Attack Power"
-     ]
-    },
-    "Boots": {
-     "main": "Critical Damage",
-     "subs": [
-      "Attack Power Up",
-      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Stun Additional Attack Power"
@@ -8777,7 +9209,7 @@
   },
   "Ornette": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8802,6 +9234,16 @@
      ]
     },
     "Legs": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Shock Additional Attack Power"
+     ]
+    },
+    "Gloves": {
      "main": "Attack Power Up",
      "subs": [
       "Critical Hit Chance",
@@ -8811,21 +9253,11 @@
       "Shock Additional Attack Power"
      ]
     },
-    "Gloves": {
+    "Boots": {
      "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
       "Critical Damage",
-      "Attack",
-      "Defense Ignore",
-      "Shock Additional Attack Power"
-     ]
-    },
-    "Boots": {
-     "main": "Critical Damage",
-     "subs": [
-      "Attack Power Up",
-      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Shock Additional Attack Power"
@@ -8835,7 +9267,7 @@
   },
   "Sion": {
    "type": "Support",
-   "why": "Bless gives a flat +15% Attack or Defense, so Sion's own stats don't change the buff. Chest and legs keep him alive to keep Bless up; the other three slots add damage.",
+   "why": "Bless gives a flat +15% Attack or Defense, so Sion's own stats don't change the buff. Chest and legs keep him alive to keep Bless up; the other three slots add damage. Those three slots are chosen with all six awakenings unlocked.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8893,7 +9325,7 @@
   },
   "Tarte": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8951,7 +9383,7 @@
   },
   "Kalsion": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8966,10 +9398,10 @@
      ]
     },
     "Chest": {
-     "main": "Critical Hit Chance",
+     "main": "Critical Damage",
      "subs": [
       "Attack Power Up",
-      "Critical Damage",
+      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Burn Additional Attack Power"
@@ -8996,10 +9428,10 @@
      ]
     },
     "Boots": {
-     "main": "Critical Damage",
+     "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
-      "Critical Hit Chance",
+      "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Burn Additional Attack Power"
@@ -9009,7 +9441,7 @@
   },
   "Cerese": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9034,10 +9466,10 @@
      ]
     },
     "Legs": {
-     "main": "Critical Hit Chance",
+     "main": "Critical Damage",
      "subs": [
       "Attack Power Up",
-      "Critical Damage",
+      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Frost Additional Attack Power"
@@ -9054,10 +9486,10 @@
      ]
     },
     "Boots": {
-     "main": "Critical Damage",
+     "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
-      "Critical Hit Chance",
+      "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Frost Additional Attack Power"
@@ -9067,7 +9499,7 @@
   },
   "Reina": {
    "type": "Damage",
-   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9082,9 +9514,9 @@
      ]
     },
     "Chest": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9092,9 +9524,9 @@
      ]
     },
     "Legs": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9125,14 +9557,14 @@
   },
   "Astria": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
     "Helmet": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9140,6 +9572,16 @@
      ]
     },
     "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Break Additional Attack Power"
+     ]
+    },
+    "Legs": {
      "main": "Attack Power Up",
      "subs": [
       "Critical Hit Chance",
@@ -9149,21 +9591,11 @@
       "Break Additional Attack Power"
      ]
     },
-    "Legs": {
-     "main": "Critical Hit Chance",
-     "subs": [
-      "Attack Power Up",
-      "Critical Damage",
-      "Attack",
-      "Defense Ignore",
-      "Break Additional Attack Power"
-     ]
-    },
     "Gloves": {
-     "main": "Critical Hit Chance",
+     "main": "Critical Damage",
      "subs": [
       "Attack Power Up",
-      "Critical Damage",
+      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Break Additional Attack Power"
@@ -9183,14 +9615,14 @@
   },
   "Eileen": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
     "Helmet": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9198,9 +9630,9 @@
      ]
     },
     "Chest": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9218,9 +9650,9 @@
      ]
     },
     "Gloves": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9241,7 +9673,7 @@
   },
   "Othello": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9299,7 +9731,7 @@
   },
   "Charlotte": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9324,9 +9756,9 @@
      ]
     },
     "Legs": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9334,9 +9766,9 @@
      ]
     },
     "Gloves": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9357,7 +9789,7 @@
   },
   "Ryza": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9382,10 +9814,10 @@
      ]
     },
     "Legs": {
-     "main": "Critical Hit Chance",
+     "main": "Critical Damage",
      "subs": [
       "Attack Power Up",
-      "Critical Damage",
+      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Shock Additional Attack Power"
@@ -9402,10 +9834,10 @@
      ]
     },
     "Boots": {
-     "main": "Critical Damage",
+     "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
-      "Critical Hit Chance",
+      "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Shock Additional Attack Power"

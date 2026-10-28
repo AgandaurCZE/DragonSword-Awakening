@@ -9,16 +9,16 @@ Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
 
 
 1. SKILL LEVELS NOT MEASURED YET (quick, in the codex)
+   >> 28 Oct: your message listed these as tested but the numbers didn't
+      come through. Please paste the values (skill name + Attack Power %
+      for each level).
    The site shows these as "(est.)" until measured.
    - One level-10 skill at Lv.6, 7, 8 and 9 (e.g. Reina – Wind Grab).
    - One level-7 skill at Lv.6 (e.g. Johnny – Dirty Fight).
    - Optional: Lv.2–5 of one skill from a different hero, to confirm the
      multipliers are the same for everyone.
 
-2. KARMA ASCENSIONS NOT MEASURED YET
-   - Any Karma you can see at A3, A4 and A5. Frozen Fortress or
-     A Flame That Cuts Through the Moment are best, since A0–A2 are already
-     recorded for them.
+2. KARMA ASCENSIONS – DONE (28 Oct): A0–A6 all measured, the rule is exact.
 
 3. LEVEL 40 (once you have the breakthrough materials)
    - Any hero except Charlotte: Attack, Defense, Max HP at level 40 BEFORE
@@ -40,8 +40,8 @@ Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
      and note it in the chat.
 
 5. TITLES
-   - Upload the title screenshots to GitHub, e.g. into a new folder
-     assets/titles/. Claude will turn them into data.
+   - Upload the title screenshots into assets/titles/ (the folder is ready;
+     see assets/titles/README.txt). Claude will turn them into data.
 
 6. GEAR SUBSTATS
    - Do green, blue and purple pieces roll the same substat values as
@@ -52,10 +52,13 @@ Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
    - If damage numbers appear while Poison, Burn or Bleed tick on an enemy,
      note a few values and how often they appear.
 
-8. DECISIONS FOR YOU
-   - Awakening ratings: read through the new 0–5 ratings and their reasons
-     on each hero's Review tab. Tell Claude any you disagree with.
-   - Awakening stat bonuses (e.g. A2 "Critical Rate +10%") are now stored as
-     numbers. Should the Recommended Endgame Stats include all six
-     awakenings (a fully awakened hero)? If yes, they'd show in their own
-     colour, like the set bonuses.
+8. DECISIONS – DONE (28 Oct)
+   - Awakening ratings were redone by Claude on the full 0–5 scale; tell
+     Claude if you disagree with any.
+   - Awakening stat bonuses now count in Recommended Endgame Stats, shown
+     in purple with a hover naming the awakening.
+
+9. KARMA LEVELS (optional, whenever you level a Karma further)
+   - Base Attack / Defense / Max HP at Lv40, 50, 60, 70 before and after
+     each breakthrough, for Frozen Fortress or A Flame That Cuts Through the
+     Moment. With those, the site can get a Karma level slider.
