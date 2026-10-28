@@ -130,6 +130,9 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .karma-card-title{font-size:17px;line-height:1.25;font-weight:800;color:#f8f9fc;margin:0 0 5px}
 .karma-card-meta{font-size:12px;color:#d1d6e0;line-height:1.45}
 .karma-kind{display:inline-block;margin-right:8px;font-weight:800;color:#65d2ff}
+.karma-signature-link{appearance:none;background:none;border:0;padding:0;color:inherit;font:inherit;font-weight:700;text-decoration:underline;text-decoration-color:currentColor;text-underline-offset:2px;cursor:pointer}
+.karma-signature-link:hover,.karma-signature-link:focus-visible{color:var(--karma-accent);outline-offset:2px}
+
 .karma-kind.generic{color:#c4c8d1}
 .karma-source{color:#e0e4ec}
 .karma-effect{padding:12px 14px 14px;line-height:1.55;color:#f0f2f7;flex:1}
@@ -412,7 +415,12 @@ function buildKarmaCard(k){
    for(let a=0;a<=6;a++){const opt=document.createElement('option');opt.value=String(a);opt.textContent='A'+a;select.append(opt)}
    titleRow.append(select);info.append(titleRow);
    const meta=document.createElement('div');meta.className='karma-card-meta';
-   const kind=document.createElement('span');kind.className='karma-kind'+(!k.signature?' generic':'');kind.textContent=k.signature?`Signature · ${k.signature}`:'Generic Karma';meta.append(kind);
+   const kind=document.createElement('span');kind.className='karma-kind'+(!k.signature?' generic':'');
+   if(k.signature){
+    kind.append(document.createTextNode('Signature · '));
+    const heroLink=document.createElement('button');heroLink.type='button';heroLink.className='karma-signature-link';heroLink.textContent=k.signature;heroLink.title=`Open ${k.signature}'s Build and Teams`;heroLink.addEventListener('click',()=>openCharacterProfile(k.signature,'build'));kind.append(heroLink);
+   }else kind.textContent='Generic Karma';
+   meta.append(kind);
    const src=document.createElement('span');src.className='karma-source';src.textContent='Source: '+k.source;meta.append(src);info.append(meta);kh.append(info);card.append(kh);
    const effect=document.createElement('div');effect.className='karma-effect';
    if(k.traits&&k.traits.length){
@@ -423,7 +431,7 @@ function buildKarmaCard(k){
      const value=document.createElement('b');value.className='karma-trait-value';const lv=karmaLevels(t);value.dataset.traitLevels=JSON.stringify(lv.levels);value.textContent=lv.levels[0];const step=document.createElement('small');step.className='karma-trait-step';step.textContent=`+${lv.step} / Asc.`;const right=document.createElement('span');right.className='karma-trait-right';right.append(step,value);line.append(right);effect.append(line);
     }
    }
-   if(k.exclusive){const ex=document.createElement('div');ex.className='karma-exclusive';ex.innerHTML='<strong>Signature exclusive effect</strong><div>'+esc(k.exclusive)+'</div>';effect.append(ex)}
+   if(k.exclusive){const ex=document.createElement('div');ex.className='karma-exclusive';ex.innerHTML='<strong>Signature exclusive effect</strong><div>'+formatSkillText(k.exclusive)+'</div>';effect.append(ex)}
    card.append(effect);
    const stats=document.createElement('div');stats.className='karma-stats';
    const statHeading=document.createElement('div');statHeading.className='karma-stat-heading';statHeading.textContent='Base stats · Lv. 70 / Ascension 6';stats.append(statHeading);
@@ -531,7 +539,7 @@ function formatSkillText(text){
 let currentProfileName='';
 const SKILL_MAX_TO_LV1=1.75; // max-level weight = Lv.1 weight x 1.75 (verified on every skill patched in 1.1.0)
 function profileEsc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function openCharacterProfile(name){
+function openCharacterProfile(name,initialTab='skills'){
  const h=HEROES.find(x=>x.name.toLowerCase()===String(name).toLowerCase());if(!h)return;
  currentProfileName=h.name;hideTip();
  ['tierPage','heroesPage','teamsPage','gearPage','karmaPage'].forEach(id=>$(id).hidden=true);
@@ -573,8 +581,9 @@ function openCharacterProfile(name){
   skillRoot.append(card);
  });
  renderProfileBuild(h,data);
- document.querySelectorAll('.profile-tab').forEach(b=>b.classList.toggle('active',b.dataset.profileTab==='skills'));
- document.querySelectorAll('.profile-tabpanel').forEach(p=>p.classList.toggle('active',p.id==='profileSkills'));
+ const startTab=['skills','review','build'].includes(initialTab)?initialTab:'skills';
+ document.querySelectorAll('.profile-tab').forEach(b=>b.classList.toggle('active',b.dataset.profileTab===startTab));
+ document.querySelectorAll('.profile-tabpanel').forEach(p=>p.classList.toggle('active',p.id===({skills:'profileSkills',review:'profileReview',build:'profileBuild'}[startTab])));
  window.scrollTo({top:0,behavior:'instant'});
 }
 
