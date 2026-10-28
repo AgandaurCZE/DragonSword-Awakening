@@ -497,8 +497,7 @@ function buildKarmaCard(k){
 }
 // Link skill names mentioned by a signature effect to the exact skill data for that hero.
 function formatKarmaExclusive(k){
- const raw=String(k.exclusive||''); const profile=CHARACTER_PROFILE_DATA[k.signature]; const skills=(profile?.skills||[]).map(sk=>{
-  const full=String(sk.skill||'').replace(/\s*\(Lv\.?\s*\d+\).*$/i,'').trim();
+ const raw=String(k.exclusive||''); const profile=CHARACTER_PROFILE_DATA[k.signature]; const skills=(profile?.skills||[]).map(sk=>{  const full=String(sk.skill||'').replace(/\s*\(Lv\.?\s*\d+\).*$/i,'').trim();
   const name=full.split(/\s*\(/)[0].trim();
   return name?{...sk,displayName:name}:null;
  }).filter(Boolean).sort((a,b)=>b.displayName.length-a.displayName.length);
@@ -687,13 +686,12 @@ function renderProfileAwakenings(hero){
   const article=document.createElement('article');article.className=isBest?'profile-awakening-best':'profile-awakening';
   const heading=document.createElement('strong');heading.className='profile-awakening-label';heading.textContent=label;
   const media=document.createElement('div');media.className='profile-awakening-media';
-  const img=document.createElement('img');img.src=asset;img.alt=label;img.loading='lazy';
-  const fallback=document.createElement('div');fallback.className='awakening-image-fallback';fallback.textContent='Image placeholder';fallback.hidden=true;
-  img.addEventListener('error',()=>{img.hidden=true;fallback.hidden=false});media.append(img,fallback);
+  const fallback=document.createElement('div');fallback.className='awakening-image-fallback';fallback.textContent='Image placeholder';
+  if(asset){const img=document.createElement('img');img.src=asset;img.alt=label;img.loading='lazy';fallback.hidden=true;img.addEventListener('error',()=>{img.hidden=true;fallback.hidden=false});media.append(img,fallback)}else media.append(fallback);
   const desc=document.createElement('div');desc.className='profile-awakening-desc';desc.innerHTML=description?formatAwakeningText(description,hero.name):'<span class="profile-note">Awakening details will be added later.</span>';
   article.append(heading,media,desc);return article;
  };
- bestRoot.replaceChildren(card('Best Awakening',best?.image||'assets/awakenings/'+hero.name+'/ABest.png',best?.description||'',true));
+ bestRoot.replaceChildren(card('Best Awakening',best?.image||(best?.level?'assets/awakenings/'+hero.name+'/A'+best.level+'.png':''),best?.description||'',true));
  root.replaceChildren();for(let i=1;i<=6;i++){const awakening=(data.awakenings||[]).find(a=>Number(a.level)===i)||{};root.append(card('Awakening '+i,awakening.image||'assets/awakenings/'+hero.name+'/A'+i+'.png',awakening.description||''))}
 }
 function setupSearchClearButtons(){
