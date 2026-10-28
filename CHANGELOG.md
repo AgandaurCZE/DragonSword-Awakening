@@ -3,7 +3,7 @@
 ## 2026-10-28 — Require validation after every change
 - Added `CHATGPT.md` with a mandatory workflow for future repository edits: syntax validation, reviewing the diff for accidental/malformed changes, relevant functional checks, truthful reporting of any testing limitations, updating this changelog every time, and re-fetching/reviewing committed files.
 - Left `AGENTS.md` and `CLAUDE.md` untouched.
-- Validation: re-fetched the current changelog before editing; the new instruction file was created successfully. Final file verification is being performed after this changelog update.
+- Validation: re-fetched `CHATGPT.md` and `CHANGELOG.md` after committing and confirmed the new instructions and this entry are present; confirmed `AGENTS.md` remains unchanged.
 
 ## 2026-10-28 — Fix site-breaking JavaScript syntax error
 - Removed an accidentally duplicated, malformed block inserted before `renderKarmas()` in `index.html`. It contained a stray regex fragment and caused the browser to fail parsing the entire script, preventing the site from initializing.
