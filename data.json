@@ -7092,6 +7092,60 @@
     611,
     674,
     737
+   ],
+   "Charlotte Shadow Dance (Lv.7)": [
+    332,
+    null,
+    null,
+    null,
+    null,
+    null,
+    580
+   ],
+   "Charlotte Poison Step (Lv.7)": [
+    345,
+    null,
+    null,
+    null,
+    null,
+    null,
+    604
+   ],
+   "Charlotte Invisible (Lv.10)": [
+    423,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    740
+   ],
+   "Charlotte Illusion Kick (Lv.10)": [
+    698,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    1222
+   ],
+   "Charlotte Shadow Grab (Lv.10)": [
+    971,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    1700
    ]
   }
  },
