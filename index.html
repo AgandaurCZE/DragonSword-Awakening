@@ -320,14 +320,14 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  </div>
  <p class="karma-result-count" id="karmaResultCount"></p>
  <div id="karmaBoard"></div>
- <p class="karma-awakening-note">Trait values at Ascension 0 (Lv. 1) and Ascension 6 (Lv. 70) are from the in-game screenshots. Ascensions 1–5 are calculated: each Ascension adds the same step, one sixth of the gap between those two values, shown as “+x / Asc.”. Signature-exclusive effects are listed separately. Base stats are Lv. 70 / Ascension 6 values.</p>
+ <p class="karma-awakening-note">Trait values at Ascension 0 (Lv. 1) and Ascension 6 (Lv. 70) are from the in-game screenshots. Each Ascension multiplies the A0 value: A1 ×4/3 and A2 ×5/3 (measured in-game), A6 ×5. A3–A5 aren’t measured yet; they’re filled in evenly between A2 and A6 and marked “est.”. Values are rounded like the game: whole % and the nearest 5. Signature-exclusive effects are listed separately. Base stats are Lv. 70 / Ascension 6 values.</p>
 </section>
 <section class="profile-page" id="profilePage" hidden>
  <div class="profile-crumb"><button type="button" id="profileBackTier">Tier List</button> / Characters / <strong id="profileCrumbName">Character</strong></div>
  <div class="profile-hero"><div class="profile-hero-copy"><h2 id="profileName">Character</h2><div class="profile-subtitle">Character guide &amp; build</div><div class="profile-note" id="profileUpdated">Data from the master workbook</div></div><img class="profile-hero-portrait" id="profilePortrait" alt=""></div>
  <div class="profile-intro-grid"><section><h3 class="profile-section-title">Introduction</h3><p id="profileIntro"></p></section><section><h3 class="profile-section-title">Quick info</h3><p id="profileQuickInfo"></p></section></div>
  <div class="profile-tabs" role="tablist"><button class="profile-tab active" data-profile-tab="skills" role="tab">Skills</button><button class="profile-tab" data-profile-tab="review" role="tab">Review</button><button class="profile-tab" data-profile-tab="build" role="tab">Build and Teams</button></div>
- <section class="profile-tabpanel active" id="profileSkills" role="tabpanel"><h3 class="profile-subhead">Skills</h3><div class="profile-skills-grid" id="profileSkillsGrid"></div><p class="profile-note">The in-game codex shows max-level values only. Lower levels are estimates: Lv. 1 = max ÷ 1.75 (the ratio found on every skill changed in patch 1.1.0), rising in even steps to the max. Only the “Attack Power % Damage” values change; stacks, durations, buffs and heals are shown as recorded.</p></section>
+ <section class="profile-tabpanel active" id="profileSkills" role="tabpanel"><h3 class="profile-subhead">Skills</h3><div class="profile-skills-grid" id="profileSkillsGrid"></div><p class="profile-note">The in-game codex shows max-level values only. Lower levels use measured multipliers: Lv. 1 = max ÷ 1.75, then ×1.05, ×1.10, ×1.15, ×1.23 at Lv. 2–5 for level-10 skills (×1.10, ×1.20, ×1.33, ×1.45 for level-7 skills). Levels not measured yet are filled in evenly and marked “(est.)”. Only the “Attack Power % Damage” values change; stacks, durations, buffs and heals are shown as recorded.</p></section>
  <section class="profile-tabpanel" id="profileReview" role="tabpanel"><h3 class="profile-subhead">Pros &amp; Cons</h3><div class="profile-proscons"><article><h4 class="profile-pros">PROS</h4><div class="profile-placeholder">Character strengths will be added from the reviewed build notes.</div></article><article><h4 class="profile-cons">CONS</h4><div class="profile-placeholder">Character weaknesses and limitations will be added from the reviewed build notes.</div></article></div><h3 class="profile-subhead">Review</h3><div class="profile-placeholder">Full character kit review placeholder — detailed analysis has not been added to the workbook yet.</div><h3 class="profile-subhead">Best Awakening</h3><div id="profileBestAwakening"></div><h3 class="profile-subhead">Awakenings</h3><div class="profile-awakening-grid" id="profileAwakenings"></div></section>
  <section class="profile-tabpanel" id="profileBuild" role="tabpanel"><h3 class="profile-subhead">Best Karmas</h3><div class="profile-build-list" id="profileKarmas"></div><h3 class="profile-subhead">Best Gear Sets</h3><div class="profile-build-list" id="profileGearSets"></div><h3 class="profile-subhead">Best Main Stats</h3><div class="profile-gear-pieces" id="profileGearStats"></div><h3 class="profile-subhead">Recommended Endgame Stats</h3><div id="profileEndgame"></div><h3 class="profile-subhead">Synergy</h3><div class="profile-synergy-list" id="profileSynergy"></div></section>
 </section>
@@ -337,7 +337,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]};
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]};
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -439,7 +439,11 @@ function renderTeams(){
 
 let activeKarmaArch='';
 // Ascension 0..6: even steps between the two recorded values (a0 = Lv.1 pre-Ascension, a6 = Lv.70 Ascension 6).
-function karmaLevels(t){const pct=/%$/.test(String(t.a0));const a=parseFloat(t.a0),b=parseFloat(t.a6);const step=(b-a)/6;const f=n=>String(Math.round(n*100)/100)+(pct?'%':'');return{levels:[0,1,2,3,4,5,6].map(i=>i===0?String(t.a0):i===6?String(t.a6):f(a+step*i)),step:f(step)};}
+// Karma trait per Ascension = A0 x multiplier (KARMA_ASCENSION in data.json); unmeasured Ascensions filled evenly and flagged est.
+function karmaLevels(t){const pct=/%$/.test(String(t.a0));const a=parseFloat(t.a0);const R=KARMA_ASCENSION.rounding||{percent:1,flat:5};
+ const f=fillSteps(KARMA_ASCENSION.multipliers||[1,null,null,null,null,null,5]);const unit=pct?(R.percent||1):(R.flat||5);
+ const fmt=n=>String(Math.round(n/unit)*unit)+(pct?'%':'');
+ return{levels:f.values.map((m,i)=>i===0?String(t.a0):i===6?String(t.a6):fmt(a*m)),est:f.est};}
 function renderKarmaFilters(){
  const root=document.getElementById('karmaArchFilters'); if(!root)return; root.innerHTML='';
  const all=document.createElement('button');all.className='karma-arch-btn'+(!activeKarmaArch?' active':'');all.textContent='✱';all.title='All archetypes';all.setAttribute('aria-label','All archetypes');
@@ -478,7 +482,7 @@ function buildKarmaCard(k){
     for(const t of k.traits){
      const line=document.createElement('div');line.className='karma-trait-line';
      const label=document.createElement('span');label.textContent=t.label;line.append(label);
-     const value=document.createElement('b');value.className='karma-trait-value';const lv=karmaLevels(t);value.dataset.traitLevels=JSON.stringify(lv.levels);value.textContent=lv.levels[0];const step=document.createElement('small');step.className='karma-trait-step';step.textContent=`+${lv.step} / Asc.`;const right=document.createElement('span');right.className='karma-trait-right';right.append(step,value);line.append(right);effect.append(line);
+     const value=document.createElement('b');value.className='karma-trait-value';const lv=karmaLevels(t);value.dataset.traitLevels=JSON.stringify(lv.levels);value.dataset.traitEst=JSON.stringify(lv.est);value.textContent=lv.levels[0];const step=document.createElement('small');step.className='karma-trait-step';step.textContent='';const right=document.createElement('span');right.className='karma-trait-right';right.append(step,value);line.append(right);effect.append(line);
     }
    }
    if(k.exclusive){const ex=document.createElement('div');ex.className='karma-exclusive';ex.innerHTML='<strong>Signature exclusive effect</strong><div>'+formatKarmaExclusive(k)+'</div>';effect.append(ex)}
@@ -490,7 +494,7 @@ function buildKarmaCard(k){
    select.addEventListener('change',()=>{
     const level=Number(select.value);
     card.querySelectorAll('[data-trait-levels]').forEach(node=>{
-     try{const levels=JSON.parse(node.dataset.traitLevels||'[]');node.textContent=levels[level]??levels[0]??'';}catch{}
+     try{const levels=JSON.parse(node.dataset.traitLevels||'[]'),est=JSON.parse(node.dataset.traitEst||'[]');node.textContent=levels[level]??levels[0]??'';const s=node.parentNode&&node.parentNode.querySelector('.karma-trait-step');if(s)s.textContent=est[level]?'est.':'';}catch{}
     });
    });
    return card;
@@ -556,7 +560,7 @@ function showKarmaSkillPopover(anchor,heroName,skillName){
   const range=document.createElement('input');range.type='range';range.min='1';range.max=String(maxLevel);range.value=String(maxLevel);range.setAttribute('aria-label',skill.skill+' level');
   const level=document.createElement('span');level.className='profile-skill-level';level.textContent='Lv. '+maxLevel;
   const original=skill.description||'';
-  range.addEventListener('input',()=>{const lv=Number(range.value),factor=(1+(SKILL_MAX_TO_LV1-1)*(lv-1)/(maxLevel-1))/SKILL_MAX_TO_LV1;level.textContent=lv<maxLevel?'Lv. '+lv+' (est.)':'Lv. '+lv;body.innerHTML=formatSkillText(original.replace(/(Attack Power )(\d+(?:\.\d+)?)(% Damage)/g,(m,a,num,c)=>a+Math.round(Number(num)*factor)+c));});
+  range.addEventListener('input',()=>{const lv=Number(range.value),sf=skillLevelFactor(lv,maxLevel),factor=sf.factor;level.textContent=sf.est?'Lv. '+lv+' (est.)':'Lv. '+lv;body.innerHTML=formatSkillText(original.replace(/(Attack Power )(\d+(?:\.\d+)?)(% Damage)/g,(m,a,num,c)=>a+skillLevelValue(num,factor)+c));});
   controls.append(label,range,level);card.append(controls);
  }
  pop.append(card);pop.hidden=false;
@@ -665,6 +669,14 @@ function formatSkillText(text){
 let currentProfileName='';
 let AWAKENING_DATA={}; // Future per-hero descriptions; images live in assets/awakenings/<Hero>/A1.png–A6.png.
 const SKILL_MAX_TO_LV1=1.75; // max-level weight = Lv.1 weight x 1.75 (verified on every skill patched in 1.1.0)
+// Value at a lower level: Lv.1 rounded to a whole %, times the level multiplier (matches 13 of 15 in-game checks, the other 2 are 1 off). Max level stays exactly as in the codex.
+function skillLevelValue(num,factor){const n=Number(num);return factor>=0.9999?n:Math.round(Math.round(n/SKILL_MAX_TO_LV1)*factor*SKILL_MAX_TO_LV1);}
+// Fill null entries evenly between the nearest known values. Returns {values, est[]}.
+function fillSteps(arr){const v=arr.slice(),est=v.map(x=>x==null);for(let i=0;i<v.length;i++){if(v[i]!=null)continue;let a=i-1,b=i+1;while(b<v.length&&v[b]==null)b++;v[i]=v[a]+(v[b]-v[a])*(i-a)/(b-a);}return{values:v,est};}
+// Skill level multiplier relative to the max level (SKILL_LEVEL_MULTIPLIERS in data.json). est = level not measured.
+function skillLevelFactor(lv,maxLevel){const t=(SKILL_LEVEL_MULTIPLIERS.byMaxLevel||{})[String(maxLevel)];
+ if(t&&t.length===maxLevel){const f=fillSteps(t);return{factor:f.values[lv-1]/f.values[maxLevel-1],est:f.est[lv-1]};}
+ return{factor:(1+(SKILL_MAX_TO_LV1-1)*(lv-1)/(maxLevel-1))/SKILL_MAX_TO_LV1,est:lv<maxLevel};}
 function profileEsc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function formatAwakeningText(raw,heroName){
  let text=String(raw||'');const skills=[];
@@ -925,8 +937,8 @@ function openCharacterProfile(name,initialTab='skills'){
    const range=document.createElement('input');range.type='range';range.min='1';range.max=String(maxLevel);range.value=String(maxLevel);range.setAttribute('aria-label',`${sk.skill} level`);
    const level=document.createElement('span');level.className='profile-skill-level';level.textContent=`Lv. ${maxLevel}`;
    const original=sk.description;
-   function updateSkill(){const lv=Number(range.value),factor=(1+(SKILL_MAX_TO_LV1-1)*(lv-1)/(maxLevel-1))/SKILL_MAX_TO_LV1;level.textContent=lv<maxLevel?`Lv. ${lv} (est.)`:`Lv. ${lv}`;
-    body.innerHTML=formatSkillText(original.replace(/(Attack Power )(\d+(?:\.\d+)?)(% Damage)/g,(m,a,num,c)=>a+Math.round(Number(num)*factor)+c));
+   function updateSkill(){const lv=Number(range.value),sf=skillLevelFactor(lv,maxLevel),factor=sf.factor;level.textContent=sf.est?`Lv. ${lv} (est.)`:`Lv. ${lv}`;
+    body.innerHTML=formatSkillText(original.replace(/(Attack Power )(\d+(?:\.\d+)?)(% Damage)/g,(m,a,num,c)=>a+skillLevelValue(num,factor)+c));
    }
    range.addEventListener('input',updateSkill);controls.append(label,range,level);card.append(controls);
   }
@@ -1209,7 +1221,7 @@ function startApp(){
  renderGear();
 }
 fetch('data.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;DATA_META=d.meta||{};
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;DATA_META=d.meta||{};
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
 </script>

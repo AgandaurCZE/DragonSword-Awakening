@@ -1,3 +1,8 @@
+## 2026-10-28 — Claude: measured skill-level and Karma Ascension steps; new level curve
+- `data.json`: new `SKILL_LEVEL_MULTIPLIERS` (Lv.2–5 measured on Johnny Dirty Fight, Charlotte Poison Dagger, Reina Wind Grab) and `KARMA_ASCENSION` (A1 ×4/3, A2 ×5/3 measured on Frozen Fortress and A Flame That Cuts Through the Moment; A6 ×5 holds for all 141 traits). Hero base-stat estimates refitted with the new level-10 measurement (exponential-type curve); Lv.70 estimates now 1,003 / 327 / 6,771 (profile B) and 1,038 / 307 / 6,531 (Charlotte). Recommended gear unchanged.
+- `index.html`: `fillSteps()`, `skillLevelFactor()`, `skillLevelValue()` used by both skill sliders (character page and skill previews); `karmaLevels()` now uses the Ascension multipliers with the game's rounding and marks A3–A5 "est.". Explanatory notes on the Skills and Karma pages updated.
+- Validation: local web server + Chromium. All 15 measured Karma values match exactly; 13 of 15 measured skill values match exactly, 2 are 1 point off. All tabs and 20 character pages render with no script errors (only 404s are the unused awakening screenshot slots).
+
 ## 2026-10-28 — Refine awakening icon presentation
 - Updated `index.html`: removed the awakening icon from the Best Awakening card while keeping it on all six individual awakening cards.
 - Increased the individual awakening icons from 38px to 52px and widened the circular crop from 31% to 42% so the symbol is more visible.

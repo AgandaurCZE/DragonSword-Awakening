@@ -2040,6 +2040,73 @@
    }
   }
  ],
+ "KARMA_ASCENSION": {
+  "note": "Karma trait value at each Ascension = A0 value x multiplier. Measured in-game on Frozen Fortress and A Flame That Cuts Through the Moment: A1 = x4/3, A2 = x5/3; A6 = x5 holds for all 141 recorded traits. A3-A5 are not measured: the page fills them in evenly between A2 and A6 and marks them 'est.'. The game shows % values rounded to whole numbers and flat values rounded to the nearest 5.",
+  "multipliers": [
+   1,
+   1.3333333333333333,
+   1.6666666666666667,
+   null,
+   null,
+   null,
+   5
+  ],
+  "measured": {
+   "Frozen Fortress": {
+    "Frost Additional Damage": [
+     "6%",
+     "8%",
+     "10%",
+     null,
+     null,
+     null,
+     "30%"
+    ],
+    "Frost Additional Attack Power": [
+     "160",
+     "215",
+     "265",
+     null,
+     null,
+     null,
+     "800"
+    ]
+   },
+   "A Flame That Cuts Through the Moment": {
+    "Critical Rate": [
+     "2%",
+     "3%",
+     "3%",
+     null,
+     null,
+     null,
+     "10%"
+    ],
+    "Burn Additional Damage": [
+     "4%",
+     "5%",
+     "7%",
+     null,
+     null,
+     null,
+     "20%"
+    ],
+    "Burn Additional Attack Power": [
+     "110",
+     "145",
+     "185",
+     null,
+     null,
+     null,
+     "550"
+    ]
+   }
+  },
+  "rounding": {
+   "percent": 1,
+   "flat": 5
+  }
+ },
  "CHARACTER_PROFILE_DATA": {
   "Johnny": {
    "archetype": "VENOM",
@@ -3184,6 +3251,67 @@
      "skill": "Bolt Bombard  (Lv.10)",
      "description": "Swings the ballista toward the enemy and fires an arrow into the air. The arrow explodes, scattering sharp shrapnel around the area.\nAttack Power 1526% Damage\nIn [Precision Shot] mode, the splash damage radius increases.\nNo arrows consumed when attacking\nActivation Conditions: Can be activated when the target is in the Stun status"
     }
+   ]
+  }
+ },
+ "SKILL_LEVEL_MULTIPLIERS": {
+  "note": "Skill attack weight at each level = Lv.1 weight x multiplier, where Lv.1 = max-level value / 1.75. Measured in-game (28 Oct 2026): max-Lv.10 skills on Charlotte Poison Dagger and Reina Wind Grab (identical multipliers); max-Lv.7 skills on Johnny Dirty Fight. null = not measured yet; the page fills it in evenly between the nearest measured levels and marks it '(est.)'. Values round to the nearest whole %.",
+  "byMaxLevel": {
+   "7": [
+    1,
+    1.1,
+    1.2,
+    1.33,
+    1.45,
+    null,
+    1.75
+   ],
+   "10": [
+    1,
+    1.05,
+    1.1,
+    1.15,
+    1.23,
+    null,
+    null,
+    null,
+    null,
+    1.75
+   ]
+  },
+  "measured": {
+   "Johnny Dirty Fight (Lv.7)": [
+    351,
+    386,
+    421,
+    467,
+    509,
+    null,
+    615
+   ],
+   "Charlotte Poison Dagger (Lv.10)": [
+    595,
+    625,
+    655,
+    685,
+    732,
+    null,
+    null,
+    null,
+    null,
+    1042
+   ],
+   "Reina Wind Grab (Lv.10)": [
+    904,
+    949,
+    995,
+    1040,
+    1112,
+    null,
+    null,
+    null,
+    null,
+    1582
    ]
   }
  },
@@ -4536,6 +4664,11 @@
     30,
     511
    ],
+   "Lv10 (Aria, Roxy, Ornette)": [
+    122,
+    34,
+    790
+   ],
    "Lv20 all heroes": [
     188,
     52,
@@ -4588,21 +4721,21 @@
    ]
   },
   "levelCurve": {
-   "formula": "base + b*(L-1) + c*(L-1)^2, fitted exactly to Lv1, Lv20 and Lv30",
+   "formula": "a + b*(exp(r*(L-1)) - 1); least-squares fit to Lv1, Lv10, Lv20, Lv30 (largest error 0.7 Attack, 0.3 Defense, 5 Max HP). A quadratic fits worse (1.1 / 0.4 / 7). Level 40 will decide: this curve predicts 371 / 103 / 2402 before breakthrough bonuses.",
    "Attack": {
-    "base": 71,
-    "b": 4.75445,
-    "c": 0.07387
+    "a": 71.28566,
+    "b": 252.30228,
+    "r": 0.02009
    },
    "Defense": {
-    "base": 20,
-    "b": 1.28076,
-    "c": 0.02123
+    "a": 20.1047,
+    "b": 66.36601,
+    "r": 0.02077
    },
    "Max HP": {
-    "base": 461,
-    "b": 30.50145,
-    "c": 0.4833
+    "a": 463.02195,
+    "b": 1606.58316,
+    "r": 0.0203
    }
   },
   "breakthroughProfiles": {
@@ -4653,180 +4786,180 @@
  },
  "HERO_BASE_STATS": {
   "Johnny": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Lute": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Castella": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Aria": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Dana": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Kalien": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Roxy": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Alex": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Theresia": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Ornette": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Sion": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Tarte": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Kalsion": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Cerese": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Reina": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Astria": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Eileen": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Othello": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Charlotte": {
-   "Attack": 961,
-   "Defense": 284,
-   "Max HP": 6022,
+   "Attack": 1038,
+   "Defense": 307,
+   "Max HP": 6531,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "A"
   },
   "Ryza": {
-   "Attack": 926,
-   "Defense": 304,
-   "Max HP": 6262,
+   "Attack": 1003,
+   "Defense": 327,
+   "Max HP": 6771,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,

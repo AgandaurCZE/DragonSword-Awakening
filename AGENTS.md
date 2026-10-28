@@ -40,6 +40,8 @@ How the page starts: `index.html` runs `fetch('data.json')`, copies each top-lev
 | `HERO_STAT_MODEL` | measurements + formula | Documents how the estimates were made (see "Hero base-stat estimates" below). Not read by the page except as reference. |
 | `HERO_BUILDS` | `{hero: {type, why, rarity, level, pieces: {slot: {main, subs[5]}}}}` | Best Main Stats cards and the Recommended Endgame Stats totals on character pages. Stat names must match `GEAR_STATS` exactly. |
 | `TITLES` | `{note, totalCount, ownedCount, ownedCumulative[], list[{name, obtained, passive[{stat, value}] or null}]}` | Achievement titles. Their passives apply to every hero. **Not shown on the page yet**: `titleBonusTotals()` in `index.html` sums them. Flat title stats add before % multipliers; title % joins the % pool (confirmed in-game). Only Novice Mercenary Crew's passive (Max HP +50) is known; `null` means not checked yet. |
+| `SKILL_LEVEL_MULTIPLIERS` | `{note, byMaxLevel: {"7": [7 values], "10": [10 values]}, measured}` | Skill level slider (character pages and skill previews). Lv.1 = max ÷ 1.75; each level = Lv.1 × multiplier. `null` = not measured; the page fills those in evenly and marks them "(est.)". |
+| `KARMA_ASCENSION` | `{note, multipliers[7], measured, rounding}` | Karma A0–A6 values (`karmaLevels()`): A0 × multiplier, rounded like the game (whole % and nearest 5). A1 = ×4/3 and A2 = ×5/3 (measured), A6 = ×5; A3–A5 are `null`, filled in evenly and marked "est.". |
 
 ### Text formats the page reads (keep them exactly)
 
@@ -69,8 +71,8 @@ Change these in the HTML if needed:
 
 1. **Sources of truth:** hero skill data comes from the in-game codex; Karma stats, gear-set effects and the game's Recommended Combinations come from David's screenshots. If anything conflicts, the codex wins. Flag the conflict; don't guess.
 2. **Never invent numbers.** Status mechanics (tick damage, durations) are unverified. The only calculated values on the site are clearly labelled:
-   - **Skill levels below max:** Lv. 1 = max ÷ 1.75, rising in even steps, marked "(est.)". The 1.75 ratio holds for every skill changed in patch 1.1.0.
-   - **Karma Ascension 1–5:** even steps between `a0` and `a6`.
+   - **Skill levels below max:** Lv. 1 = max ÷ 1.75 and measured multipliers for Lv. 2–5 (`SKILL_LEVEL_MULTIPLIERS`). Unmeasured levels (6–9 on level-10 skills, 6 on level-7 skills) are filled in evenly and marked "(est.)".
+   - **Karma Ascension 3–5:** filled in evenly between the measured A2 (×5/3) and A6 (×5) and marked "est.".
 3. Codex values are post-patch 1.1.0. Patch 1.1.2 changed nothing in the balance.
 4. **Dodge** can't be upgraded in the game and always shows the same value as the jump attack in the codex. This is correct; don't "fix" it.
 5. **Archetypes and their heroes:**
@@ -120,7 +122,8 @@ Change these in the HTML if needed:
 ### Hero base-stat estimates
 
 Every hero levels identically; only breakthrough bonuses differ.
-- **Levelling:** the level part follows `base + b(L-1) + c(L-1)²`, fitted exactly to measured Lv1 (Aria), Lv20 and Lv30. At level 70 that's 751 Attack / 210 Defense / 4,867 Max HP.
+- **Levelling:** the level part follows `a + b(e^(r(L-1)) - 1)`, a best fit to the measured levels 1, 10, 20 and 30. It's within 1 point for Attack and Defense and within 5 for Max HP; a quadratic fits worse. At level 70 that's 828 Attack / 232 Defense / 5,375 Max HP before breakthroughs.
+- **Level-40 check:** before the breakthrough, this curve predicts 426 / 132 / 2,852 for profile-B heroes and 440 / 127 / 2,777 for Charlotte. A measurement that differs means the curve should be refitted with the new point.
 - **Breakthroughs** happen at levels 20, 30, 40, 50 and 60. Two profiles have been measured so far:
   - **Profile A** (Charlotte only): +32/+11/+173 at level 20 and +37/+13/+202 at level 30.
   - **Profile B** (measured on Johnny, Reina, Castella and Lute; used for everyone except Charlotte): +25/+13/+207 and +30/+16/+243. The profile isn't tied to role: Castella is a Main DPS and Lute a healer.
