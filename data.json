@@ -8477,7 +8477,7 @@
    }
   },
   "observedBlue": {
-   "note": "Blue pieces David wore in the 28 Oct damage tests, compared with the Orange tables. Substats: Blue is half of Orange (2.48 vs 4.94, 2.10 vs 4.21, 2.24 vs 4.48). Main stats: about 0.466 of Orange for most stats (7/15 = 0.4667 fits, rounded down), but Attack Power Up is 0.445 on both pieces seen, so no single rule yet. Not used by the page.",
+   "note": "Blue pieces David wore in the 28 Oct damage tests, compared with the Orange tables. Substats are not one ratio: Critical Hit Resistance, Defense Up and Max HP Up are half of Orange (2.48 vs 4.94, 2.10 vs 4.21, 2.24 vs 4.48), but Defense Ignore is a quarter (0.97 vs 3.88 on boots; screenshot of Battle Will Boots +6). Main stats: about 0.466 of Orange for most stats (7/15 = 0.4667 fits, rounded down), but Attack Power Up is 0.445 on both pieces seen. Not used by the page.",
    "main": [
     {
      "slot": "Chest",
@@ -8532,6 +8532,12 @@
      "stat": "Defense Up",
      "level": 3,
      "value": 5.9
+    },
+    {
+     "slot": "Boots",
+     "stat": "Defense Up",
+     "level": 6,
+     "value": 10.33
     }
    ],
    "sub": [
@@ -8549,6 +8555,11 @@
      "slot": "Boots",
      "stat": "Max HP Up",
      "value": 2.24
+    },
+    {
+     "slot": "Boots",
+     "stat": "Defense Ignore",
+     "value": 0.97
     }
    ]
   }
@@ -10362,8 +10373,8 @@
       96
      ],
      "click2": [
-      44,
-      44,
+      42,
+      42,
       168
      ],
      "click3": [
@@ -10374,14 +10385,14 @@
      ]
     },
     "crits": {
-     "42/44": 63,
+     "42": 63,
      "96": 144,
      "168": 253,
      "482": 724,
      "301": 452
     },
     "poisonTick": 329,
-    "note": "The only Defense Ignore substat David has (0.97%). The 4th click hit once."
+    "note": "The only Defense Ignore substat David has (0.97%, on Blue Battle Will Boots +6). The 4th click hit once."
    },
    {
     "hero": "Reina",
