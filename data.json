@@ -10134,7 +10134,7 @@
    "Auto-attack combos match the codex % at 0.50 x Attack when Charlotte's 4th click is counted as one hit (it sometimes hits once, likely an extra hit on the big ogre): Charlotte 0.502-0.505 in all four tests, Reina 0.498 (Wind Sword Lv.2, 385%: 2x89 + 128 + 128 + 205). So the codex % is the whole combo, and the dummy gives the same 0.50 to single hits and combos.",
    "Poison tick = 50% of the applier's Attack, rounded down: Charlotte 684 -> 342, 637 -> 318; Johnny 584 -> 292. 4 ticks seen before the stacks expired.",
    "Skill buffs scale with level too: Invisible's Critical Damage buff is +10% at Lv.1 and +15% at Lv.10 (x1.5, not x1.75).",
-   "Armor Penetration 10 (from 0) changed nothing measurable: combo 0.505 x Attack x 365% (earlier tests 0.502-0.505) and Poison tick 340 = 681 / 2 rounded down. Either the Training Ogre has 0 Defense (so the 0.50 is part of the damage formula), or 10 is too small to show against its Defense. Not settled."
+   "Armor Penetration raises damage, so the Training Ogre has Defense: at the same 681 Attack, going from 10 to 33 raised the larger hits by 1.2% (499 -> 505, 312 -> 316, 174 -> 176), about +0.05% damage per point against this dummy. Combo ratio 0.505 -> 0.513 x Attack x skill %. The Poison tick stayed 340 (= Attack / 2), so Poison ignores Defense, or at least Armor Penetration. The dummy's Defense value and the exact Defense formula are not known."
   ],
   "tests": [
    {
@@ -10310,6 +10310,41 @@
     },
     "poisonTick": 340,
     "note": "Blue chest upgraded to get an Armor Penetration 10 substat. The 4th click hit once. David gave the crit of 174 as 234, probably copied from the previous test (x1.5 would be 261)."
+   },
+   {
+    "hero": "Charlotte",
+    "attack": 681,
+    "armorPenetration": 33,
+    "level": 30,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.2, 365%",
+    "hits": {
+     "click1": [
+      44,
+      44,
+      101
+     ],
+     "click2": [
+      44,
+      44,
+      176
+     ],
+     "click3": [
+      505
+     ],
+     "click4": [
+      316
+     ]
+    },
+    "crits": {
+     "44": 66,
+     "101": 151,
+     "176": 265,
+     "505": 758,
+     "316": 474
+    },
+    "poisonTick": 340,
+    "note": "Same Attack as the Armor Penetration 10 test; Armor Penetration 33 is the most David can reach now. The 4th click hit once."
    },
    {
     "hero": "Reina",
