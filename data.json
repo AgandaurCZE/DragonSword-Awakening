@@ -2693,7 +2693,18 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Applies Poison and Airborne himself, so he unlocks his own Venom Cutter (1456%) and Poison Grab.",
+    "Sub-DPS of the S-tier Venom team with Charlotte and Reina, where every conditional skill stays live.",
+    "A1 lets him use Phantom Slash twice in a row: double the burst and a second Airborne launch.",
+    "His signature Karma leaves Poison-inflicting blades along Phantom Slash's path."
+   ],
+   "cons": [
+    "His damage sits below Charlotte's, so he works best as her partner rather than the lead.",
+    "Venom Cutter needs Airborne, so his biggest hit waits on Phantom Slash, Venom Dance or a teammate.",
+    "Poison ticks use the Attack of whoever applied the first stack, so if he poisons before a stronger main damage dealer, the ticks are weaker."
+   ]
   },
   "Charlotte": {
    "archetype": "VENOM",
@@ -2834,7 +2845,19 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "S tier at every stage of the game and the lead of the S-tier Venom team, which is the game's own recommendation for her.",
+    "Illusion Kick works on a Poisoned target or from her own Stealth, so she can open a combo without help.",
+    "Shadow Grab (1700%) is one of the biggest hits in the game, and Illusion Kick sets it up by launching the target Airborne.",
+    "Invisible adds +15% Crit Damage while hidden and takes her out of enemy targeting.",
+    "A5 (+15% Poison Additional Damage, +10% Crit Rate) is worth about +17% damage while Poison is on the target."
+   ],
+   "cons": [
+    "Only 2 of her skills apply Poison (Poison Step and Poison Dagger), so keeping it up relies on Johnny or careful rotation.",
+    "Shadow Grab needs Airborne, so her biggest hit waits on Illusion Kick or a partner like Reina.",
+    "A3's pull-in only helps against groups; it adds nothing on a lone boss."
+   ]
   },
   "Lute": {
    "archetype": "AMPLITUDE",
@@ -2968,7 +2991,19 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Healing Circle restores 20% of max HP to the whole team.",
+    "Applies Stun (Stun Slash) and Knockdown (Swordgrab), unlocking those skills for teammates.",
+    "Swordgrab (1626%) and Relic Fall (1499%) give her real damage for a healer.",
+    "A1 makes Relic Fall leave a zone that raises allies' Attack Power."
+   ],
+   "cons": [
+    "B tier from mid-game on.",
+    "Her heal is a flat 20% of max HP, so gear can't make it stronger.",
+    "Relic Fall needs Knockdown first.",
+    "She fills the healer slot in B-tier teams and is only an alternative in Bloodburst."
+   ]
   },
   "Theresia": {
    "archetype": "AMPLITUDE",
@@ -3152,7 +3187,19 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "S tier at end-game; she leads the Amplitude team and is the second damage dealer in the A-tier Bloodburst team.",
+    "Applies Stun and Bleed herself: Celestial Verdict Stuns, which unlocks Divine Arc (1570%), and Bleed unlocks Holy Rise.",
+    "In Heretic Judgment her auto attack applies Stun and Bleed, and Divine Arc keeps the mode going.",
+    "Her signature Karma (+1050 Stun and +525 Bleed Additional Attack Power, extra Bleed in Heretic Judgment) is a huge boost; with it the Bloodburst team is close to S.",
+    "A3 makes Divine Arc hit harder and extends Heretic Judgment."
+   ],
+   "cons": [
+    "C tier early-game: she needs levels and her Karma before she shines.",
+    "Her best results depend on her signature Karma from the exclusive shop.",
+    "Using Celestial Verdict in Heretic Judgment cuts the mode short by 4 seconds."
+   ]
   },
   "Alex": {
    "archetype": "CRUSHING",
@@ -3324,7 +3371,19 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "The only tank: Taunt pulls enemies onto him and cuts their Attack by 10%.",
+    "Guard Counter lowers the target's Defense by 20%, which raises the whole team's damage.",
+    "His signature Karma cuts damage taken by him and nearby allies by 10% in Defensive Stance.",
+    "A6 adds a shield and Rage refunds in Defensive Stance."
+   ],
+   "cons": [
+    "Low damage: his kit and gear go into survival.",
+    "Guard Counter has to be timed with the enemy's attack.",
+    "His team, Crushing, is B tier.",
+    "Pounding Grab needs Knockdown (or Stun after A3)."
+   ]
   },
   "Reina": {
    "archetype": "GALE",
@@ -3462,7 +3521,19 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "S tier at every stage and the Airborne starter in both S-tier teams (Venom and Gale).",
+    "Three of her skills apply Airborne, so Tempest (1515%) and Wind Grab (1582%) are almost always ready.",
+    "A3 is game-changing: Wind Grab resets Tempest's cooldown, looping her two biggest hits.",
+    "Airborne doubles every hit the team lands on the target while it's up (measured +100%), so her launches boost everyone.",
+    "Her Mastery lets her Dodge in mid-air."
+   ],
+   "cons": [
+    "Tempest only works on an Airborne target, so her damage drops whenever the enemy can't be launched.",
+    "No healing, shields or team stat buffs: her value is the Airborne setup and her own damage.",
+    "Her A4 and A5 bonuses only count against Airborne targets."
+   ]
   },
   "Eileen": {
    "archetype": "GALE",
@@ -3594,7 +3665,18 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Brave One gives +15% Attack to herself and allies in range.",
+    "Vanguard Banner (2295%) is the biggest skill hit in the game and gives +20% Crit Rate to allies in range.",
+    "Plays in both S-tier teams: Gale, and as an alternative in Venom.",
+    "Her signature Karma adds more Crit Rate and Crit Damage when her banner skill is used inside Brave One's area."
+   ],
+   "cons": [
+    "Vanguard Banner only works while the Brave One buff is active.",
+    "Rolling Upper needs Airborne, and Barraging Spear is her only skill listed as applying it.",
+    "B tier early-game."
+   ]
   },
   "Roxy": {
    "archetype": "BLOODBURST",
@@ -3737,7 +3819,18 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Sets up her own Stun with Crimson Spiral, unlocking Kick Storm (1786%), one of the biggest hits in the game.",
+    "Applies Bleed with 5 skills, so Bleed and its +50% hit bonus stay up.",
+    "Leads the A-tier Bloodburst team, whose three Stun sources keep Kick Storm ready.",
+    "A6 adds hits to Kick Storm, and A5 is worth about +18% damage while Bleed is on the target."
+   ],
+   "cons": [
+    "Kick Storm needs Stun, so without Crimson Spiral or a Stun teammate her biggest hit is locked.",
+    "Bleeding Grab needs 2 Bleed stacks for its full combo and Knockdown.",
+    "Only one team is built around her; elsewhere she's an alternative pick."
+   ]
   },
   "Aria": {
    "archetype": "BLAZEFLAME",
@@ -3884,7 +3977,18 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Applies Burn and Airborne with almost every attack, keeping Kalsion's Burst Grab and Explosion ready.",
+    "A5 is worth about +20% damage while Burn is on the target.",
+    "Her signature Karma makes Switch On! explode bigger and add more Burn and Airborne."
+   ],
+   "cons": [
+    "B tier: her own damage is modest, and she's picked mainly for setup.",
+    "Only one team uses her, and it's A tier rather than S because she and Kalien are B-tier damage.",
+    "Multiple Bolt (1541%), her biggest hit, needs Airborne.",
+    "A3's Burn zone adds little when Kalsion and Kalien already keep Burn up."
+   ]
   },
   "Kalien": {
    "archetype": "BLAZEFLAME",
@@ -4029,7 +4133,18 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Applies Burn with 7 skills, the most of any hero, so Burn stacks stay up for Kalsion.",
+    "Finale adds Stun, giving Blazeflame and Breaker teams a second status.",
+    "A1 lets Fox Grab fire on any Burning target, which is almost always."
+   ],
+   "cons": [
+    "C tier early-game.",
+    "Fox Grab, his biggest hit (1178%), needs Super Armor Break until A1.",
+    "His skills have the lowest combined skill % of any hero in the guide.",
+    "A4 (Break Additional Damage) does almost nothing for him."
+   ]
   },
   "Kalsion": {
    "archetype": "BLAZEFLAME",
@@ -4223,7 +4338,19 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "S tier at every stage; he leads both the S-tier Gale team and the A-tier Blazeflame team.",
+    "Explosion (2173%) is the second-biggest skill hit in the game, after Eileen's Vanguard Banner.",
+    "Weapon Blaze's Royal Flame gives +15% Attack and makes his auto, jump and dash attacks apply Burn.",
+    "Burst Grab turns 2+ Burn stacks into Airborne, so he can set up his own Explosion.",
+    "A1 runs Explosion at full duration without holding the key, and A3 extends Royal Flame with extra Attack Power."
+   ],
+   "cons": [
+    "Explosion needs Airborne; outside Royal Flame only Burst Grab gives him that, so he leans on Aria, Reina or Eileen.",
+    "Most of his kit runs through Royal Flame, so he is noticeably weaker while it's down.",
+    "Burst Grab's Airborne needs 2 Burn stacks first."
+   ]
   },
   "Dana": {
    "archetype": "FROSTBITE",
@@ -4368,7 +4495,17 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Chako Shield blocks attacks, shields allies and gives +10% team Defense.",
+    "Applies Frost with 6 skills, plus Knockdown from Summon Chako.",
+    "A6 adds a whirlwind that applies Frost and Airborne."
+   ],
+   "cons": [
+    "B tier at end-game, and the Frostbite team was nerfed in patch 1.1.0.",
+    "Chako Knuckle and Chako Spin need Rime Energy and Frost or Knockdown, so her damage takes setup.",
+    "Her own damage is low."
+   ]
   },
   "Cerese": {
    "archetype": "FROSTBITE",
@@ -4514,7 +4651,19 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Applies Frost with 6 skills and Airborne with Ice Storm and Frozen Spike.",
+    "Ice Storm (1528%) is a big area hit, and her signature Karma sends the storm on to the nearest enemy.",
+    "Frozen Road slows enemies and speeds up allies.",
+    "Fits two teams: Frostbite, and Blazeflame as an alternative (the game recommends her with Kalsion).",
+    "A3 speeds up Frost build-up and adds Knockdown."
+   ],
+   "cons": [
+    "Shattering Touch needs a Frozen enemy or an Ice Block, so part of her damage waits on setup.",
+    "The Frostbite team is B tier and was nerfed in patch 1.1.0.",
+    "A6's ice wall needs three skills lined up."
+   ]
   },
   "Othello": {
    "archetype": "FROSTBITE",
@@ -4657,7 +4806,18 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Applies Frost and Knockdown with Ice Crown and Ice Grab.",
+    "A1 and his signature Karma both upgrade Frozen Stinger, and the two stack.",
+    "His Ice Spears slow enemies down."
+   ],
+   "cons": [
+    "C tier early-game and B tier after that.",
+    "Frozen Burst needs a Frozen enemy or an Ice Spear on the field.",
+    "His best team, Frostbite, is B tier and was nerfed in patch 1.1.0.",
+    "In the Crushing team he has no Frost partner, so his Frozen-only skills fire less often."
+   ]
   },
   "Ornette": {
    "archetype": "THUNDERBOLT",
@@ -4800,7 +4960,18 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Holy Circle gives her +30% Crit Damage.",
+    "Applies Shock with 4 skills and turns it into Knockdown with Judgment (1578%).",
+    "Fits several teams: Thunderbolt (A tier), and as an alternative in Frostbite and Crushing.",
+    "A5 is worth about +17% damage while Shock is on the target."
+   ],
+   "cons": [
+    "Judgment needs Shock first.",
+    "Her +30% Crit Damage only applies to herself, not the team.",
+    "B tier early-game."
+   ]
   },
   "Sion": {
    "archetype": "THUNDERBOLT",
@@ -4942,7 +5113,19 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Bless gives +15% Attack (or Defense) to himself and allies in range.",
+    "Applies Shock with 4 skills and Knockdown with Divine Smash and Justice Fall.",
+    "Justice Fall (1551%) is a strong hit for a support.",
+    "A1 adds +10% team Crit Rate (or +25% Crit Damage Reduction) to Bless.",
+    "Fits two teams: Thunderbolt and Crushing."
+   ],
+   "cons": [
+    "His buffs only work inside the relic's area, so allies have to stay in it.",
+    "Justice Fall needs Shock first.",
+    "No healing or shields."
+   ]
   },
   "Tarte": {
    "archetype": "THUNDERBOLT",
@@ -5086,7 +5269,19 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "The damage slot of the A-tier Thunderbolt team.",
+    "Her Holy Orbs explode when any Shock attack hits them, including teammates' attacks.",
+    "Cure removes physical statuses and heals 10% max HP, and her signature Karma turns it into a lasting healing circle.",
+    "Thunderbolt adds Stun, and A6 raises its damage and Stun chance.",
+    "A5 is worth about +17% damage while Shock is on the target."
+   ],
+   "cons": [
+    "Cure only works on an ally who has Stun, Airborne, Knockdown or Break.",
+    "Holy Orb explosions need setup with Bolt Bubble and Shock hits.",
+    "Thunderrush's 3-piece needs Signal skills, so she has to use them often."
+   ]
   },
   "Ryza": {
    "archetype": "THUNDERBOLT",
@@ -5228,7 +5423,18 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "A tier at end-game; Flash (1370%) and Thunder Grab (1382%) hit hard.",
+    "Applies Shock with 5 skills.",
+    "Her Mastery lets Thunder Grab activate on physical statuses as well as Shock.",
+    "A1 turns Flash into a charged multi-hit that strikes once per spear and adds Airborne."
+   ],
+   "cons": [
+    "B tier early and mid-game.",
+    "Flash needs her spear on the field first.",
+    "She isn't a starter in any team; she's an alternative in Thunderbolt (for Tarte or Sion)."
+   ]
   },
   "Castella": {
    "archetype": "BREAKER",
@@ -5363,7 +5569,19 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Stun Blow (1835%) is the third-biggest skill hit in the game, and it Stuns the target.",
+    "Stun Blow into Upper Blow (1652%) is a self-contained combo once the target's Super Armor breaks.",
+    "Howling, with A3, lowers the Defense of hit enemies for the whole team.",
+    "Her Mastery makes Shoulder Crusher reduce damage taken while it's used."
+   ],
+   "cons": [
+    "Stun Blow only works after the target's Super Armor is broken, so her burst waits for it.",
+    "Much of her bonus damage (signature Karma, Ruinsbreaker, A5) is Break damage, which only counts while the enemy is in Break.",
+    "Her own team, Breaker, is B tier because Astria and Lute are weaker partners.",
+    "A2 (+15% Defense) adds nothing to her damage."
+   ]
   },
   "Astria": {
    "archetype": "BREAKER",
@@ -5535,7 +5753,19 @@
       "pieces": 2
      }
     ]
-   }
+   },
+   "pros": [
+    "Precision Shot mode gives +40% Attack and makes her auto attack Stun.",
+    "Bolt Bombard (1526%) hits hard on Stunned targets.",
+    "A5 gives +20% Attack Power, the largest Attack bonus of any awakening."
+   ],
+   "cons": [
+    "C tier early-game and B tier after that.",
+    "Precision Shot restricts her movement.",
+    "She runs on arrows, and Reload can only be used once some are spent.",
+    "Her Break bonuses (signature Karma, Ruinsbreaker, A5) only count while the enemy is in Break, and none of her skills apply it.",
+    "A3's Burn zone does nothing in her teams."
+   ]
   }
  },
  "AWAKENINGS": {
@@ -6423,7 +6653,7 @@
       "text": "The [Explosion] skill has been modified so that the fireball persists for the maximum skill duration without needing to hold the skill key.",
       "effects": [],
       "rating": 4,
-      "why": "Explosion (2173%, the biggest hit in the game) runs at full duration without holding the key, so he can keep attacking."
+      "why": "Explosion (2173%, the second-biggest skill hit in the game after Eileen's Vanguard Banner) runs at full duration without holding the key, so he can keep attacking."
      },
      {
       "level": 2,

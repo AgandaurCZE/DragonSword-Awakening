@@ -1,3 +1,11 @@
+## 2026-10-28 — Claude: Pros & Cons for every hero
+- New `pros` and `cons` lists in `CHARACTER_PROFILE_DATA` for all 20 heroes, drawn from their tiers, teams, skill text, signature Karmas and awakenings. S-tier heroes have more pros; C/B-tier heroes have more cons.
+- Review tab: the Pros & Cons placeholders are replaced by `renderProfileProsCons()`:
+  - green text with a drawn plus icon for pros, bright red with a minus icon for cons;
+  - status and archetype names coloured in their archetype colour.
+- Fixed Kalsion A1's explanation: Explosion (2173%) is the second-biggest skill hit, after Eileen's Vanguard Banner (2295%).
+- Checked: all 20 heroes render with no errors, at desktop and phone width.
+
 ## 2026-10-28 — Claude: builds and awakening ratings re-checked with the measured damage formula
 - **2-piece set:** `tools/hero_stats.py` now picks it together with the main stats (`HERO_BUILDS[].setChoice`).
   - All 16 damage builds change from Battle Will to The Infiltrator: +0.4% to +1.6%. Its +9% Crit Rate frees a main stat from Crit Rate. Castella and Astria change from Holy Arbiter.
