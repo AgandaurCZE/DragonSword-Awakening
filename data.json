@@ -10134,7 +10134,8 @@
    "Auto-attack combos match the codex % at 0.50 x Attack when Charlotte's 4th click is counted as one hit (it sometimes hits once, likely an extra hit on the big ogre): Charlotte 0.502-0.505 in all four tests, Reina 0.498 (Wind Sword Lv.2, 385%: 2x89 + 128 + 128 + 205). So the codex % is the whole combo, and the dummy gives the same 0.50 to single hits and combos.",
    "Poison tick = 50% of the applier's Attack, rounded down: Charlotte 684 -> 342, 637 -> 318; Johnny 584 -> 292. 4 ticks seen before the stacks expired.",
    "Skill buffs scale with level too: Invisible's Critical Damage buff is +10% at Lv.1 and +15% at Lv.10 (x1.5, not x1.75).",
-   "Armor Penetration raises damage, so the Training Ogre has Defense: at the same 681 Attack, going from 10 to 33 raised the larger hits by 1.2% (499 -> 505, 312 -> 316, 174 -> 176), about +0.05% damage per point against this dummy. Combo ratio 0.505 -> 0.513 x Attack x skill %. The Poison tick stayed 340 (= Attack / 2), so Poison ignores Defense, or at least Armor Penetration. The dummy's Defense value and the exact Defense formula are not known."
+   "Armor Penetration raises damage, so the Training Ogre has Defense: at the same 681 Attack, going from 10 to 33 raised the larger hits by 1.2% (499 -> 505, 312 -> 316, 174 -> 176), about +0.05% damage per point against this dummy. Combo ratio 0.505 -> 0.513 x Attack x skill %. The Poison tick stayed 340 (= Attack / 2), so Poison ignores Defense, or at least Armor Penetration. The dummy's Defense value and the exact Defense formula are not known.",
+   "Defense Ignore 0.97% (Armor Penetration 0) raised the larger hits by about 0.4% compared with the Armor Penetration 0 tests scaled to the same Attack (e.g. 482 vs 480.3 expected). Combo ratio 0.508. Poison tick 329 = 658 / 2 rounded down, unaffected. Against this dummy, roughly 1% Defense Ignore ~ +0.4% damage and 1 Armor Penetration ~ +0.05%."
   ],
   "tests": [
    {
@@ -10347,6 +10348,42 @@
     "note": "Same Attack as the Armor Penetration 10 test; Armor Penetration 33 is the most David can reach now. The 4th click hit once."
    },
    {
+    "hero": "Charlotte",
+    "attack": 658,
+    "armorPenetration": 0,
+    "defenseIgnore": 0.97,
+    "level": 30,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.2, 365%",
+    "hits": {
+     "click1": [
+      42,
+      42,
+      96
+     ],
+     "click2": [
+      44,
+      44,
+      168
+     ],
+     "click3": [
+      482
+     ],
+     "click4": [
+      301
+     ]
+    },
+    "crits": {
+     "42/44": 63,
+     "96": 144,
+     "168": 253,
+     "482": 724,
+     "301": 452
+    },
+    "poisonTick": 329,
+    "note": "The only Defense Ignore substat David has (0.97%). The 4th click hit once."
+   },
+   {
     "hero": "Reina",
     "attack": 333,
     "critRate": 5,
@@ -10412,6 +10449,7 @@
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
-  "heroLevels": "Charlotte, Reina and Johnny were all Lv.30 (before the breakthrough) in these tests."
+  "heroLevels": "Charlotte, Reina and Johnny were all Lv.30 (before the breakthrough) in these tests.",
+  "defenseModelGuess": "Untested guess, not used anywhere: damage x K / (K + effective Defense), with the ogre's Defense about equal to K (hence the ~0.50). That predicts +0.5% for 0.97% Defense Ignore (seen ~+0.4%) and puts the ogre's Defense and K both roughly 900. Needs a second enemy or a bigger Defense Ignore value to check."
  }
 }
