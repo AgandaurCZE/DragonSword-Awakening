@@ -1181,7 +1181,7 @@ function startApp(){
  document.getElementById('heroesSearch').addEventListener('input',renderHeroes);
  renderGear();
 }
-fetch('data.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
+fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
  ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});

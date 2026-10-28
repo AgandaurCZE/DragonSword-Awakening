@@ -1,3 +1,6 @@
+## 2026-10-28 — Claude: always load fresh data
+- `index.html` now fetches `data.json` with a unique query and `cache: 'no-store'`, so data changes show after a normal refresh once GitHub Pages has deployed.
+
 ## 2026-10-28 — Claude: skill names no longer split by status colouring
 - `colourStatusWords()` leaves skill, Karma and set names that contain a status or archetype word (e.g. Venom Cutter, Poison Step, Frozen Burst, Defeating Poison with Poison) uncoloured, so only real status words are coloured in reviews, pros/cons and the Status Effects box.
 
