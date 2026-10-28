@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-28 — Claude: titles data section, set-bonus and title maths confirmed
+- `data.json`: added `TITLES` (109 titles in game; 3 owned with cumulative Defense +10, Max HP +50, Defense Up +1.5%; Novice Mercenary Crew = Max HP +50; 11 other names seen, effects unknown). Recorded title bonuses in `HERO_STAT_MODEL.observations`; Lv1 71/30/511 seen on Aria, Ornette and Roxy is 71/20/461 + titles.
+- `index.html`: loads `TITLES`; new helper `titleBonusTotals()` (not rendered yet; ready for a Titles section or for adding titles to the end-game totals).
+- Confirmed in-game: a 3-piece set includes its 2-piece bonus; title flat stats are added before % multipliers (Charlotte Lv30: (86+10)×1.015=97 Def, 1925+50=1975 HP, ×1.09=2152, ×1.15=2271).
+- Visual work for a Titles display is left to ChatGPT (David's request).
+- Validation: local web server + Chromium; all tabs and all 20 character pages render with no script errors. Only 404s are the not-yet-added `assets/awakenings/<Hero>/A1–A6.png` images.
+
 ## 2026-10-28 — Add search clear buttons and awakening foundations
 - Added a red × clear button to all four search fields (Tier List, Heroes, Gear and Karma); clearing fires the existing input event so filters update immediately.
 - Added per-character Review sections for Best Awakening and Awakenings 1–6, with image placeholders for `assets/awakenings/<Hero>/A1.png` through `A6.png`. Added a future per-hero awakening data structure and formatting that reuses archetype/status/effect styling and Karma-style skill hover/click previews.

@@ -5988,5 +5988,91 @@
     }
    }
   }
+ },
+ "TITLES": {
+  "note": "Titles are achievement rewards (Mercenary Crew > Title). Every obtained title's passive effect applies to all heroes, slotted or not. Flat bonuses are added to the hero's flat stats before % bonuses multiply; % bonuses join the same pool as gear and set % (confirmed in-game: Charlotte Lv30 86 Defense -> (86 + 10) x 1.015 = 97; 1925 Max HP -> 1925 + 50 = 1975, and Ballad of Life's +9%/+15% then apply to 1975). Only one title's own effect is known so far; fill in 'passive' as titles are checked. Not yet used by the page.",
+  "totalCount": 109,
+  "ownedCount": 3,
+  "ownedCumulative": [
+   {
+    "stat": "Defense",
+    "value": 10
+   },
+   {
+    "stat": "Max HP",
+    "value": 50
+   },
+   {
+    "stat": "Defense Up",
+    "value": 1.5
+   }
+  ],
+  "list": [
+   {
+    "name": "Novice Mercenary Crew",
+    "obtained": true,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 50
+     }
+    ]
+   },
+   {
+    "name": "Nut Patrol",
+    "obtained": null,
+    "passive": null
+   },
+   {
+    "name": "Loot Sweeper",
+    "obtained": null,
+    "passive": null
+   },
+   {
+    "name": "Guide of the World",
+    "obtained": null,
+    "passive": null
+   },
+   {
+    "name": "Dungeon Conqueror",
+    "obtained": null,
+    "passive": null
+   },
+   {
+    "name": "Pioneer of the Wind Path",
+    "obtained": null,
+    "passive": null
+   },
+   {
+    "name": "Restorer of Grace",
+    "obtained": null,
+    "passive": null
+   },
+   {
+    "name": "Dawn Gatherer",
+    "obtained": null,
+    "passive": null
+   },
+   {
+    "name": "Nature Gatherer",
+    "obtained": null,
+    "passive": null
+   },
+   {
+    "name": "Hardy Gatherer",
+    "obtained": null,
+    "passive": null
+   },
+   {
+    "name": "Verdant Gatherer",
+    "obtained": null,
+    "passive": null
+   },
+   {
+    "name": "Pure White Gatherer",
+    "obtained": null,
+    "passive": null
+   }
+  ]
  }
 }

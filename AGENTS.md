@@ -39,6 +39,7 @@ How the page starts: `index.html` runs `fetch('data.json')`, copies each top-lev
 | `HERO_BASE_STATS` | `{hero: {Attack, Defense, Max HP, Critical Hit Chance, Critical Damage, estimated, profile}}` | Level-70 hero stats with no gear or Karma. **Currently estimates** (`estimated: true`). Replace with measured values and set `estimated` to `false`. |
 | `HERO_STAT_MODEL` | measurements + formula | Documents how the estimates were made (see "Hero base-stat estimates" below). Not read by the page except as reference. |
 | `HERO_BUILDS` | `{hero: {type, why, rarity, level, pieces: {slot: {main, subs[5]}}}}` | Best Main Stats cards and the Recommended Endgame Stats totals on character pages. Stat names must match `GEAR_STATS` exactly. |
+| `TITLES` | `{note, totalCount, ownedCount, ownedCumulative[], list[{name, obtained, passive[{stat, value}] or null}]}` | Achievement titles. Their passives apply to every hero. **Not shown on the page yet**: `titleBonusTotals()` in `index.html` sums them. Flat title stats add before % multipliers; title % joins the % pool (confirmed in-game). Only Novice Mercenary Crew's passive (Max HP +50) is known; `null` means not checked yet. |
 
 ### Text formats the page reads (keep them exactly)
 
