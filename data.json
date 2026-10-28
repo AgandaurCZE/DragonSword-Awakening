@@ -19,7 +19,10 @@
    },
    "owned": true,
    "role": "Sub-DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": "Story Quests"
+   }
   },
   {
    "name": "Lute",
@@ -33,7 +36,10 @@
    },
    "owned": true,
    "role": "Support",
-   "classType": "Healer"
+   "classType": "Healer",
+   "obtain": {
+    "method": "Story Quests"
+   }
   },
   {
    "name": "Castella",
@@ -47,7 +53,10 @@
    },
    "owned": true,
    "role": "Main DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": "Story Quests"
+   }
   },
   {
    "name": "Aria",
@@ -61,7 +70,10 @@
    },
    "owned": true,
    "role": "Sub-DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": "Story Quests"
+   }
   },
   {
    "name": "Dana",
@@ -75,7 +87,11 @@
    },
    "owned": false,
    "role": "Support",
-   "classType": "Buffer"
+   "classType": "Buffer",
+   "obtain": {
+    "method": "Hero shop exchange",
+    "cost": "Fate's Invitation"
+   }
   },
   {
    "name": "Kalien",
@@ -89,7 +105,11 @@
    },
    "owned": false,
    "role": "Support",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": "Hero shop exchange",
+    "cost": "Fate's Invitation"
+   }
   },
   {
    "name": "Roxy",
@@ -103,7 +123,11 @@
    },
    "owned": true,
    "role": "Main DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": "Hero shop exchange",
+    "cost": "Fate's Invitation"
+   }
   },
   {
    "name": "Alex",
@@ -117,7 +141,11 @@
    },
    "owned": false,
    "role": "Support",
-   "classType": "Tank"
+   "classType": "Tank",
+   "obtain": {
+    "method": "Hero shop exchange",
+    "cost": "Fate's Invitation"
+   }
   },
   {
    "name": "Theresia",
@@ -131,7 +159,11 @@
    },
    "owned": false,
    "role": "Main DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": "Hero shop exchange",
+    "cost": "Fate's Invitation"
+   }
   },
   {
    "name": "Ornette",
@@ -145,7 +177,10 @@
    },
    "owned": true,
    "role": "Sub-DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": "Story Quests"
+   }
   },
   {
    "name": "Sion",
@@ -159,7 +194,11 @@
    },
    "owned": false,
    "role": "Support",
-   "classType": "Buffer"
+   "classType": "Buffer",
+   "obtain": {
+    "method": "Hero shop exchange",
+    "cost": "Fate's Invitation"
+   }
   },
   {
    "name": "Tarte",
@@ -173,7 +212,11 @@
    },
    "owned": false,
    "role": "Main DPS",
-   "classType": "Healer"
+   "classType": "Healer",
+   "obtain": {
+    "method": "Hero shop exchange",
+    "cost": "Fate's Invitation"
+   }
   },
   {
    "name": "Kalsion",
@@ -187,7 +230,11 @@
    },
    "owned": false,
    "role": "Main DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": null,
+    "note": "Not recorded yet"
+   }
   },
   {
    "name": "Cerese",
@@ -201,7 +248,11 @@
    },
    "owned": false,
    "role": "Sub-DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": null,
+    "note": "Not recorded yet"
+   }
   },
   {
    "name": "Reina",
@@ -215,7 +266,11 @@
    },
    "owned": true,
    "role": "Support",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": "Hero shop exchange",
+    "cost": "Fate's Invitation"
+   }
   },
   {
    "name": "Astria",
@@ -229,7 +284,11 @@
    },
    "owned": false,
    "role": "Sub-DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": "Hero shop exchange",
+    "cost": "Fate's Invitation"
+   }
   },
   {
    "name": "Eileen",
@@ -243,7 +302,11 @@
    },
    "owned": false,
    "role": "Sub-DPS",
-   "classType": "Buffer"
+   "classType": "Buffer",
+   "obtain": {
+    "method": "Hero shop exchange",
+    "cost": "Fate's Invitation"
+   }
   },
   {
    "name": "Othello",
@@ -257,7 +320,11 @@
    },
    "owned": false,
    "role": "Main DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": null,
+    "note": "Not recorded yet"
+   }
   },
   {
    "name": "Charlotte",
@@ -271,7 +338,11 @@
    },
    "owned": true,
    "role": "Main DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": "Hero shop exchange",
+    "cost": "Fate's Invitation"
+   }
   },
   {
    "name": "Ryza",
@@ -285,7 +356,11 @@
    },
    "owned": false,
    "role": "Main DPS",
-   "classType": "Damage / Control"
+   "classType": "Damage / Control",
+   "obtain": {
+    "method": null,
+    "note": "Not recorded yet"
+   }
   }
  ],
  "ROLE_ICONS": {
@@ -2857,7 +2932,128 @@
     "Only 2 of her skills apply Poison (Poison Step and Poison Dagger), so keeping it up relies on Johnny or careful rotation.",
     "Shadow Grab needs Airborne, so her biggest hit waits on Illusion Kick or a partner like Reina.",
     "A3's pull-in only helps against groups; it adds nothing on a lone boss."
-   ]
+   ],
+   "review": {
+    "updated": "28 Oct 2026",
+    "pronoun": "her",
+    "summary": [
+     "Charlotte is a Venom main damage dealer who plays like an assassin: she Poisons the target, launches it with [[skill:Illusion Kick]] and finishes with [[skill:Shadow Grab]] (1700%), one of the biggest hits in the game. She is **S tier at every stage**, and she leads the S-tier Venom team, which is the game's own recommendation for her.",
+     "What makes her special is that she can start her combo on her own. Illusion Kick works on a Poisoned target **or** from her own Stealth ([[skill:Invisible]]), so she never has to wait for a teammate to unlock her skills. Every hit she lands on a Poisoned, Airborne enemy gets the measured status bonuses (+50% for Poison, +100% for Airborne), so her finisher lands at about 2.5× its normal damage.",
+     "Her weak spot is Poison uptime: only [[skill:Poison Step]] and [[skill:Poison Dagger]] apply it, so she keeps it up best next to [[hero:Johnny]]. Her A3 pull-in also does nothing against a lone boss."
+    ],
+    "verdict": {
+     "level": "great",
+     "label": "Yes, a top pick",
+     "text": [
+      "She is one of only three heroes rated S at every stage, she's a Main DPS, and her team is the strongest Venom setup in the guide. If you're spending **Fate's Invitations** in the Hero shop, she is one of the safest choices.",
+      "She works at A0 thanks to her self-sufficient combo. Her most valuable awakening is [[awk:5]] (about +17% damage); [[awk:1]] adds a big shuriken to Poison Dagger, a skill she uses all the time."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Charlotte is the team's damage. Her job is to keep Poison on the target and spend her Special skills the moment their conditions are met: Illusion Kick needs Poison or Stealth, and Shadow Grab needs Airborne."
+     ],
+     "loop": [
+      "Apply Poison with [[skill:Poison Step]] (dash attack) or [[skill:Poison Dagger]] (Ultimate).",
+      "Use [[skill:Illusion Kick]] on the Poisoned target to launch it Airborne.",
+      "Finish with [[skill:Shadow Grab]] while it's Airborne. The 1700% hit lands on a Poisoned, Airborne enemy and adds Knockdown.",
+      "Fill the gaps with [[skill:Shadow Dance]] and refresh Poison before it runs out (about 10 s per application)."
+     ],
+     "combos": [
+      {
+       "name": "Core combo",
+       "sequence": [
+        "Poison Step",
+        "Illusion Kick",
+        "Shadow Grab"
+       ],
+       "note": "Poison unlocks Illusion Kick, Illusion Kick's Airborne unlocks Shadow Grab. Shadow Grab hits at about 2.5× (Poison +50%, Airborne +100%)."
+      },
+      {
+       "name": "Stealth opener (no Poison needed)",
+       "sequence": [
+        "Invisible",
+        "Illusion Kick",
+        "Shadow Grab",
+        "Poison Dagger"
+       ],
+       "note": "Invisible's Stealth allows Illusion Kick on a clean target and gives +15% Crit Damage while hidden. Poison Dagger afterwards puts Poison up for the next loop. With her signature Karma, using Invisible again detonates the Clone at once."
+      },
+      {
+       "name": "Venom team combo",
+       "sequence": [
+        "Poison Dagger",
+        "Reina/Rising Cutter",
+        "Shadow Grab",
+        "Johnny/Venom Cutter"
+       ],
+       "note": "With [[hero:Reina]] launching the target, Charlotte can skip Illusion Kick and go straight into Shadow Grab, and [[hero:Johnny]]'s [[skill:Johnny/Venom Cutter]] (needs Airborne) follows up. Poison ticks use the Attack of whoever applied the first stack; her and Johnny's end-game Attack are within about 2% in the guide's builds, so it barely matters who Poisons first."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Illusion Kick]] and [[skill:Shadow Grab]]: her damage",
+      "points": [
+       "Illusion Kick (1222%) needs Poison or Stealth and launches the target Airborne.",
+       "Shadow Grab (1700%) needs Airborne, adds Knockdown, and has a Mount Action on certain giant bosses.",
+       "Together they are 44% of her skill % (each skill counted once), and both land on a target with at least two statuses."
+      ]
+     },
+     {
+      "title": "[[skill:Invisible]]: Stealth and Crit Damage",
+      "points": [
+       "Stealth removes her from enemy targeting until she attacks; the skill deals 740% and leaves a Clone that explodes.",
+       "+15% Crit Damage while hidden at Lv.10 (+10% at Lv.1, measured).",
+       "Her signature Karma lets her reuse Invisible to detonate the Clone instantly."
+      ]
+     },
+     {
+      "title": "[[skill:Poison Step]] and [[skill:Poison Dagger]]: Poison",
+      "points": [
+       "Her only two Poison sources. Poison ticks 4 times over about 10 s for 50/75/100% of Attack at 1/2/3 stacks (max 3).",
+       "Poison also makes every hit on the target deal +50% (measured), which is why keeping it up matters more than the ticks themselves.",
+       "Poison Dagger works on the ground and in the air; [[awk:1]] adds a powerful shuriken to it."
+      ]
+     },
+     {
+      "title": "[[skill:Shadow Dance]] and Mastery",
+      "points": [
+       "Her auto-attack is a 4-click combo (580% at Lv.7). Her Mastery changes and strengthens the 4th hit and adds an enhanced follow-up after jump and dash attacks."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Shadow Grab]], [[skill:Illusion Kick]] and [[skill:Poison Dagger]]: her biggest hits. Each level adds damage; Lv.10 is 1.75× Lv.1."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Invisible]] (more Crit Damage and Clone damage per level) and [[skill:Poison Step]] (Poison source)."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Shadow Dance]] and [[skill:Shadow Leaf]]: filler damage between Specials."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:5]]** (+15% Poison Additional Damage, +10% Crit Rate), about +17% damage while Poison is up. [[awk:1]] is the first worthwhile stop: a straight damage gain on a skill she uses all the time.",
+      "[[awk:3]] is great in crowds but adds nothing on a lone boss; [[awk:2]], [[awk:4]] and [[awk:6]] are small gains."
+     ],
+     "karma": [
+      "Signature: [[karma:The Conviction Left in Darkness]] (exclusive shop). Its +475 Poison Additional Attack Power is about +12% Attack on every hit against a Poisoned target at end-game, plus +20% Poison Additional Damage. Second: [[karma:Defeating Poison with Poison]]."
+     ],
+     "gear": [
+      "3 [[set:Venomfog Shade]] + 2 [[set:The Infiltrator]]. [[set:Azure Gale]] is a close alternative for the 2-piece, since Shadow Grab always hits an Airborne target. Main stats and substats are on the Build tab."
+     ]
+    },
+    "teams": [
+     "**Venom (S tier):** Charlotte + [[hero:Johnny]] + [[hero:Reina]]. Johnny doubles the Poison and Airborne sources, and Reina's launches keep Shadow Grab and Johnny's Venom Cutter available. [[hero:Eileen]] can replace Reina and adds +15% team Attack and +20% team Crit Rate.",
+     "**Gale (S tier):** Charlotte can take [[hero:Kalsion]]'s place as the damage dealer alongside [[hero:Eileen]] and [[hero:Reina]], where three Airborne sources keep Shadow Grab ready almost constantly."
+    ]
+   }
   },
   "Lute": {
    "archetype": "AMPLITUDE",
@@ -3670,7 +3866,7 @@
     "Brave One gives +15% Attack to herself and allies in range.",
     "Vanguard Banner (2295%) is the biggest skill hit in the game and gives +20% Crit Rate to allies in range.",
     "Plays in both S-tier teams: Gale, and as an alternative in Venom.",
-    "Her signature Karma adds more Crit Rate and Crit Damage when her banner skill is used inside Brave One's area."
+    "Her signature Karma raises Crit Rate and Crit Damage further when Vanguard Banner is used inside Brave One's area."
    ],
    "cons": [
     "Vanguard Banner only works while the Brave One buff is active.",

@@ -36,7 +36,7 @@ input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 2px #68c7d5
 .tier-chip{position:absolute;right:3px;top:3px;border-radius:4px;padding:2px 5px;font-size:10px;font-weight:900;color:#11131a;background:var(--tier);z-index:2}
 .no-results{padding:30px;text-align:center;color:var(--muted)}
 .sk-num{color:#fff;font-weight:800}.sk-effect{color:#fff;font-weight:800}.sk-status{font-weight:800;color:var(--sk-color,#fff)}.sk-cond{color:#e0474f;font-weight:600}.sk-cond b,.sk-cond .sk-status{color:#e0474f}
-#karmaPopover{position:fixed;z-index:30;width:min(440px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;box-shadow:0 18px 55px #000b;border-radius:4px}#karmaPopover[hidden]{display:none}#karmaPopover .karma-card{border-color:var(--karma-accent,#43b9ed)}
+#karmaPopover{position:fixed;z-index:1000;width:min(440px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;box-shadow:0 18px 55px #000b;border-radius:4px}#karmaPopover[hidden]{display:none}.ref{color:#8bd9ff;font-weight:750;border-bottom:1px dotted #8bd9ff99;cursor:pointer}.ref:hover,.ref:focus-visible{color:#c7ecff;outline:none;border-bottom-style:solid}.ref-card{background:#1b1f27;border:1px solid #4a5566;padding:13px 14px;color:#dce1e8}.ref-head{display:flex;gap:11px;align-items:center}.ref-portrait{width:56px;height:66px;object-fit:cover;border:1px solid #586371}.ref-icon{width:44px;height:44px;object-fit:contain}.ref-title{font-weight:900;font-size:16px;color:#fff;margin:2px 0}.ref-kicker{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#68c7d5;font-weight:850}.ref-meta{display:flex;align-items:center;gap:6px;font-size:12px;color:#b9c2cf}.ref-meta img{width:18px;height:18px}.ref-tiers{display:flex;gap:4px;margin-top:5px}.ref-tiers span{font-size:11px;font-weight:900;color:#11131a;padding:2px 6px;border-radius:3px}.ref-body{margin-top:9px;font-size:13px;line-height:1.55;white-space:pre-line}.ref-why{margin-top:8px;padding-top:7px;border-top:1px solid #3b3e47;font-style:italic;color:#aeb7c4;white-space:normal}.ref-open{margin-top:10px;width:100%;background:#2b3442;border:1px solid #68c7d5;color:#e9f6ff;font:inherit;font-weight:800;padding:8px;cursor:pointer}.ref-open:hover{background:#34404f}#profileReviewBody{display:flex;flex-direction:column;gap:12px}.rv-card{background:linear-gradient(100deg,#2a2e37,#25272e 60%);border:1px solid #3a3d46;border-left:4px solid var(--rv-accent)}.rv-card-head{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid #3a3d46;background:#2f333d}.rv-card-head h4{margin:0;font-size:18px;color:#fff}.rv-tag{font-size:10px;font-weight:900;letter-spacing:.1em;color:var(--rv-accent);border:1px solid var(--rv-accent);padding:3px 7px;white-space:nowrap}.rv-card-body{padding:12px 16px 14px;color:#dce1e8;line-height:1.65;font-size:14px}.rv-card-body p{margin:0 0 10px}.rv-card-body h5{margin:14px 0 6px;font-size:14px;color:#fff;text-transform:uppercase;letter-spacing:.04em}.rv-card-body h5:first-child{margin-top:2px}.rv-list{margin:0 0 6px;padding-left:20px}.rv-list li{margin:3px 0}.rv-steps{margin:0 0 8px;padding-left:22px}.rv-steps li{margin:4px 0}.rv-kit+.rv-kit{margin-top:10px;padding-top:8px;border-top:1px solid #353944}.rv-kit h5{margin:4px 0}.rv-legend{font-size:12px;color:#aeb7c4;margin-bottom:8px}.rv-combo{background:#20232a;border:1px solid #393d47;padding:10px 12px;margin:8px 0}.rv-combo-name{font-weight:900;color:#fff;font-size:13px;margin-bottom:7px;text-transform:uppercase;letter-spacing:.04em}.rv-chips{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.rv-chip{display:inline-flex;align-items:center;gap:6px;background:#30353f;border:1px solid #4a5260;padding:4px 9px;font-size:13px;color:#e9f1fb;border-bottom:1px solid #4a5260}.rv-chip small{font-size:9px;font-weight:900;letter-spacing:.06em;color:#11131a;background:var(--rv-accent);padding:1px 5px}.rv-chip.ref{color:#e9f1fb;border-bottom:1px solid #4a5260}.rv-chip.ref:hover{border-color:var(--rv-accent)}.rv-chip em{font-style:normal;color:#aeb7c4;font-size:11px}.rv-chip-note{font-style:italic;color:#c3cad5;background:transparent;border-style:dashed}.rv-arrow{color:var(--rv-accent);font-weight:900}.rv-combo-note{margin-top:8px;font-size:13px;color:#c9d0da}.rv-verdict{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:10px}.rv-verdict-badge{font-weight:950;font-size:14px;padding:5px 12px;color:#11131a;background:#64d995;text-transform:uppercase;letter-spacing:.04em}.rv-verdict-badge[data-level=good]{background:#9bd86a}.rv-verdict-badge[data-level=ok]{background:#f5d36c}.rv-verdict-badge[data-level=skip]{background:#ff6b73}.rv-obtain{font-size:13px;color:#b9c2cf}.rv-prio{display:flex;flex-direction:column;gap:7px}.rv-prio-row{display:flex;gap:10px;align-items:flex-start}.rv-prio-badge{flex:0 0 70px;text-align:center;font-size:11px;font-weight:900;padding:3px 0;color:#11131a;background:#64d995;text-transform:uppercase}.rv-prio-badge[data-p=Medium]{background:#f5d36c}.rv-prio-badge[data-p=Low]{background:#8a93a3}.rv-ratings{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}.rv-rating-box{text-align:center;font-size:24px;font-weight:950;color:#11131a;padding:10px 0}.rv-rating-label{text-align:center;color:#c9d0da;font-size:13px;margin-top:6px}@media(max-width:700px){.rv-card-head h4{font-size:16px}.rv-card-body{padding:10px 12px}.rv-prio-badge{flex-basis:58px}}#karmaPopover .karma-card{border-color:var(--karma-accent,#43b9ed)}
 .build-why{margin:0 0 10px}.build-piece{justify-content:flex-start;gap:6px}.build-main-val{display:block;color:#ffc46b;font-weight:900;font-size:16px;margin-top:2px}.build-subs{list-style:none;margin:4px 0 0;padding:6px 0 0;border-top:1px solid #3b3e47;width:100%;text-align:left}.build-subs li{display:flex;justify-content:space-between;gap:6px;font-size:11px;line-height:1.5;color:#c9cfd9}.build-subs b{color:#f5f6f8;white-space:nowrap}.eg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;background:#292b32;border:1px solid #3b3e47;padding:6px 14px}.eg-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid #353842}.eg-label{color:#dce1e8;font-weight:600}.eg-val{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;justify-content:flex-end}.eg-total{font-size:16px;font-weight:900;color:#ffc46b}.eg-own{font-size:12px;color:#aeb7c4}.eg-set,.eg-set-key{color:#5fd38d;font-weight:800}.eg-set{font-size:12px}.eg-awk,.eg-awk-key{color:#c58bff;font-weight:800}.eg-awk{font-size:12px}.eg-est{color:#ffb86f;font-weight:700}.eg-cap{font-size:10px;color:#e0474f;font-weight:800;border:1px solid #e0474f;padding:0 4px;border-radius:2px}[data-tip]{position:relative;cursor:help;text-decoration:underline dotted #7d8796;text-underline-offset:3px}[data-tip]:hover::after,[data-tip]:focus::after{content:attr(data-tip);position:absolute;right:0;bottom:calc(100% + 6px);z-index:40;width:max-content;max-width:300px;white-space:pre-line;background:#171d26;border:1px solid #536273;color:#e4e8ef;font-size:12px;font-weight:500;line-height:1.45;padding:8px 10px;border-radius:6px;box-shadow:0 10px 30px #000a;text-align:left}@media(max-width:700px){.eg-grid{grid-template-columns:1fr}}
 #tooltip{position:fixed;z-index:20;width:min(380px,calc(100vw - 24px));background:#171d26;border:1px solid #536273;border-radius:14px;box-shadow:0 18px 55px #000b;padding:15px;display:none;pointer-events:none}
 .tip-top{display:flex;gap:14px;align-items:center}.tip-portrait{width:112px;height:132px;object-fit:cover;border-radius:9px;border:2px solid var(--tier);flex-shrink:0}
@@ -328,7 +328,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  <div class="profile-intro-grid"><section><h3 class="profile-section-title">Introduction</h3><p id="profileIntro"></p></section><section><h3 class="profile-section-title">Quick info</h3><p id="profileQuickInfo"></p></section></div>
  <div class="profile-tabs" role="tablist"><button class="profile-tab active" data-profile-tab="skills" role="tab">Skills</button><button class="profile-tab" data-profile-tab="review" role="tab">Review</button><button class="profile-tab" data-profile-tab="build" role="tab">Build and Teams</button></div>
  <section class="profile-tabpanel active" id="profileSkills" role="tabpanel"><h3 class="profile-subhead">Skills</h3><div class="profile-skills-grid" id="profileSkillsGrid"></div><div id="profileStatus"></div><p class="profile-note">The in-game codex shows max-level values only. Lower levels use multipliers measured in-game: Lv. 1 = max ÷ 1.75, then ×1.05, ×1.10, ×1.15, ×1.23, ×1.30, ×1.38, ×1.48, ×1.58 at Lv. 2–9 for level-10 skills (×1.10, ×1.20, ×1.33, ×1.45, ×1.60 at Lv. 2–6 for level-7 skills). Values can be 1% off the game’s because of rounding. Only the “Attack Power % Damage” values change; stacks, durations, buffs and heals are shown as recorded.</p></section>
- <section class="profile-tabpanel" id="profileReview" role="tabpanel"><h3 class="profile-subhead">Pros &amp; Cons</h3><div class="profile-proscons"><article><h4 class="profile-pros">PROS</h4><ul class="pc-list pc-pros" id="profilePros"></ul></article><article><h4 class="profile-cons">CONS</h4><ul class="pc-list pc-cons" id="profileCons"></ul></article></div><h3 class="profile-subhead">Review</h3><div class="profile-placeholder">Full character kit review placeholder — detailed analysis has not been added to the workbook yet.</div><h3 class="profile-subhead">Best Awakening</h3><div id="profileBestAwakening"></div><h3 class="profile-subhead">Awakenings</h3><div class="profile-awakening-grid" id="profileAwakenings"></div></section>
+ <section class="profile-tabpanel" id="profileReview" role="tabpanel"><h3 class="profile-subhead">Pros &amp; Cons</h3><div class="profile-proscons"><article><h4 class="profile-pros">PROS</h4><ul class="pc-list pc-pros" id="profilePros"></ul></article><article><h4 class="profile-cons">CONS</h4><ul class="pc-list pc-cons" id="profileCons"></ul></article></div><h3 class="profile-subhead">Review</h3><div id="profileReviewBody"></div><h3 class="profile-subhead">Best Awakening</h3><div id="profileBestAwakening"></div><h3 class="profile-subhead">Awakenings</h3><div class="profile-awakening-grid" id="profileAwakenings"></div></section>
  <section class="profile-tabpanel" id="profileBuild" role="tabpanel"><h3 class="profile-subhead">Best Karmas</h3><div class="profile-build-list" id="profileKarmas"></div><h3 class="profile-subhead">Best Gear Sets</h3><div class="profile-build-list" id="profileGearSets"></div><h3 class="profile-subhead">Best Main Stats</h3><div class="profile-gear-pieces" id="profileGearStats"></div><h3 class="profile-subhead">Recommended Endgame Stats</h3><div id="profileEndgame"></div><h3 class="profile-subhead">Synergy</h3><div class="profile-synergy-list" id="profileSynergy"></div></section>
 </section>
 
@@ -761,7 +761,8 @@ function openCharacterProfile(name,initialTab='skills'){
   skillRoot.append(card);
  });
  renderProfileStatus(h,data);
- renderProfileProsCons(data);
+ renderProfileProsCons(data,h.name);
+ renderProfileReview(h,data);
  renderProfileBuild(h,data);
  const startTab=['skills','review','build'].includes(initialTab)?initialTab:'skills';
  document.querySelectorAll('.profile-tab').forEach(b=>b.classList.toggle('active',b.dataset.profileTab===startTab));
@@ -791,9 +792,88 @@ function colourStatusWords(text){
  const rx=new RegExp('\\b('+words.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')\\b','g');
  return profileEsc(text).replace(rx,w=>{const col=ARCH_COLORS[STATUS_ARCHETYPE[w]||w];return col?`<b style="color:${col}">${w}</b>`:w});
 }
-function renderProfileProsCons(data){
+function renderProfileProsCons(data,hero){
  [['profilePros',data.pros,'pro'],['profileCons',data.cons,'con']].forEach(([id,list,kind])=>{const ul=$(id);if(!ul)return;
-  ul.innerHTML=(list&&list.length)?list.map(t=>`<li><span class="pc-icon pc-icon-${kind}">${PC_ICON[kind]}</span><span>${colourStatusWords(t)}</span></li>`).join(''):`<li class="pc-empty">Not written yet.</li>`;});
+  ul.innerHTML=(list&&list.length)?list.map(t=>`<li><span class="pc-icon pc-icon-${kind}">${PC_ICON[kind]}</span><span>${richText(t,hero)}</span></li>`).join(''):`<li class="pc-empty">Not written yet.</li>`;});
+}
+
+// ---------- Full review (Review tab) from CHARACTER_PROFILE_DATA[hero].review ----------
+// Rich text: [[hero:Name]], [[skill:Skill]] (own hero) or [[skill:Hero/Skill]], [[karma:Name]], [[set:Name]], [[awk:Hero/5]] or [[awk:5]],
+// optional label after '|' ([[skill:Shadow Grab|her grab]]), **bold**. Status and archetype names are coloured automatically.
+let refPopTimer=null,refPinned=null;
+function findSkill(hero,name){const n=s=>String(s||'').replace(/\s*\(Lv\.?\s*\d+\)\s*$/,'').replace(/\s*\([^)]*\)\s*$/,'').trim().toLowerCase();const p=CHARACTER_PROFILE_DATA[hero];return p&&(p.skills||[]).find(sk=>!/^MODE SWITCH/i.test(sk.slot)&&n(sk.skill)===n(name));}
+function refLabel(type,key,hero){
+ if(type==='skill'){const [h,sk]=key.includes('/')?key.split('/'):[hero,key];return sk}
+ if(type==='awk'){const [h,l]=key.includes('/')?key.split('/'):[hero,key];const a=((AWAKENINGS.heroes[h]||{}).list||[]).find(x=>String(x.level)===String(l));return a?`A${l} · ${a.name}`:`A${l}`}
+ return key;
+}
+function richText(text,hero){
+ const out=[];let last=0;const rx=/\[\[(hero|skill|karma|set|awk):([^\]|]+)(?:\|([^\]]+))?\]\]/g;let m;
+ const plain=t=>colourStatusWords(t);
+ while((m=rx.exec(text))){out.push(plain(text.slice(last,m.index)));const [ ,type,key,label]=m;
+  const k=key.trim(),full=(type==='skill'||type==='awk')&&!k.includes('/')?`${hero}/${k}`:k;
+  out.push(`<span class="ref ref-${type}" tabindex="0" role="button" data-ref-type="${type}" data-ref-key="${profileEsc(full)}">${profileEsc(label||refLabel(type,k,hero))}</span>`);last=rx.lastIndex;}
+ out.push(plain(text.slice(last)));return out.join('').replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+}
+function refCardHtml(type,key){
+ if(type==='hero'){const h=HEROES.find(x=>x.name===key);if(!h)return '';const t=h.tiers||{};
+  return `<div class="ref-card"><div class="ref-head"><img class="ref-portrait" src="${h.portrait}" alt=""><div><div class="ref-title">${profileEsc(h.name)}</div><div class="ref-meta"><img src="${h.archIcon}" alt="">${colourStatusWords(h.archetype)} · ${profileEsc(h.role)}</div><div class="ref-tiers">${['Early-game','Mid-game','End-game'].map(p=>`<span style="background:${tierColor(t[p])}">${p.split('-')[0]} ${t[p]||'—'}</span>`).join('')}</div></div></div><button type="button" class="ref-open" data-open-hero="${profileEsc(h.name)}">Open ${profileEsc(h.name)}'s guide →</button></div>`}
+ if(type==='skill'){const [h,n]=key.split('/');const sk=findSkill(h,n);if(!sk)return '';
+  return `<div class="ref-card"><div class="ref-kicker">${profileEsc(h)} · ${profileEsc(sk.slot)}</div><div class="ref-title">${profileEsc(sk.skill)}</div><div class="ref-body">${formatSkillText(sk.description)}</div></div>`}
+ if(type==='set'){const g=GEAR_DATA.find(x=>x.name===key);if(!g)return '';
+  return `<div class="ref-card"><div class="ref-head"><img class="ref-icon" src="${g.icon}" alt=""><div><div class="ref-title">${profileEsc(g.name)}</div><div class="ref-meta">${profileEsc(g.source)}</div></div></div><div class="ref-body"><b>(2)</b> ${colourStatusWords(g.two)}<br><b>(3)</b> ${colourStatusWords(g.three)}</div></div>`}
+ if(type==='awk'){const [h,l]=key.split('/');const a=((AWAKENINGS.heroes[h]||{}).list||[]).find(x=>String(x.level)===String(l));if(!a)return '';
+  return `<div class="ref-card"><div class="ref-kicker">${profileEsc(h)} · Awakening ${l} · rated ${a.rating}/5</div><div class="ref-title">${profileEsc(a.name)}</div><div class="ref-body">${formatSkillText(a.text)}<div class="ref-why">${profileEsc(a.why)}</div></div></div>`}
+ return '';
+}
+function showRefPopover(anchor){
+ const type=anchor.dataset.refType,key=anchor.dataset.refKey;clearTimeout(refPopTimer);clearTimeout(karmaPopTimer);
+ const pop=$('karmaPopover');pop.innerHTML='';
+ if(type==='karma'){const k=findKarma(key);if(!k)return;pop.style.setProperty('--karma-accent',KARMA_ACCENTS[k.archetype]||'#39b9e8');pop.append(buildKarmaCard(k));}
+ else{const html=refCardHtml(type,key);if(!html)return;pop.innerHTML=html;}
+ pop.hidden=false;const r=anchor.getBoundingClientRect(),w=pop.offsetWidth,hgt=pop.offsetHeight;
+ let left=r.left,top=r.bottom+8;if(left+w>window.innerWidth-12)left=window.innerWidth-w-12;if(left<12)left=12;
+ if(top+hgt>window.innerHeight-12)top=r.top-hgt-8;if(top<12)top=12;pop.style.left=left+'px';pop.style.top=top+'px';
+}
+function hideRefPopover(delay=150){if(refPinned)return;hideKarmaPopover(delay);}
+document.addEventListener('mouseover',e=>{const a=e.target.closest('.ref');if(a&&!refPinned)showRefPopover(a);});
+document.addEventListener('mouseout',e=>{const a=e.target.closest('.ref');if(a&&!refPinned)hideRefPopover();});
+document.addEventListener('focusin',e=>{const a=e.target.closest&&e.target.closest('.ref');if(a)showRefPopover(a);});
+document.addEventListener('click',e=>{
+ const open=e.target.closest('[data-open-hero]');if(open){refPinned=null;$('karmaPopover').hidden=true;openCharacterProfile(open.dataset.openHero,'review');return;}
+ const a=e.target.closest('.ref');
+ if(a){e.preventDefault();if(refPinned===a){refPinned=null;hideKarmaPopover(0);return;}refPinned=a;showRefPopover(a);return;}
+ if(refPinned&&!e.target.closest('#karmaPopover')){refPinned=null;hideKarmaPopover(0);}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&refPinned){refPinned=null;hideKarmaPopover(0);}const a=e.target.closest&&e.target.closest('.ref');if(a&&(e.key==='Enter'||e.key===' ')){e.preventDefault();a.click();}});
+const RV_SLOT_SHORT={'Auto attack':'AUTO','Jump attack':'JUMP','Dash attack':'DASH ATK','Dash':'DODGE','Skill':'SKILL','Ultimate':'ULT','Special A':'SP-A','Special B':'SP-B'};
+function rvChip(hero,token){let h=hero,n=token;if(token.includes('/'))[h,n]=token.split('/');const sk=findSkill(h,n);if(!sk)return `<span class="rv-chip rv-chip-note">${colourStatusWords(token)}</span>`;
+ const slot=String(sk.slot).replace(/\s*\(.*$/,'');return `<span class="rv-chip ref ref-skill" tabindex="0" role="button" data-ref-type="skill" data-ref-key="${profileEsc(h+'/'+n)}"><small>${RV_SLOT_SHORT[slot]||profileEsc(slot)}</small>${profileEsc(n)}${h!==hero?` <em>(${profileEsc(h)})</em>`:''}</span>`;}
+function renderProfileReview(h,data){
+ const root=$('profileReviewBody');if(!root)return;const R=data.review;const accent=ARCH_COLORS[h.archetype]||'#68c7d5';
+ root.style.setProperty('--rv-accent',accent);
+ if(!R){root.innerHTML='<div class="profile-placeholder">A full review for this hero hasn\'t been written yet.</div>';return;}
+ const P=a=>(a||[]).map(t=>`<p>${richText(t,h.name)}</p>`).join('');const L=a=>`<ul class="rv-list">${(a||[]).map(t=>`<li>${richText(t,h.name)}</li>`).join('')}</ul>`;
+ const card=(tag,title,body)=>`<section class="rv-card"><div class="rv-card-head"><span class="rv-tag">${tag}</span><h4>${title}</h4></div><div class="rv-card-body">${body}</div></section>`;
+ const ob=h.obtain||{};const parts=[];
+ parts.push(card('OVERVIEW',`${profileEsc(h.name)} in short`,P(R.summary)));
+ const v=R.verdict||{};
+ parts.push(card('VERDICT','Should I get '+(R.pronoun==='him'?'him':R.pronoun==='them'?'them':'her')+'?',`<div class="rv-verdict"><span class="rv-verdict-badge" data-level="${profileEsc(v.level||'')}">${profileEsc(v.label||'')}</span><span class="rv-obtain">${profileEsc(ob.method?('How to get: '+ob.method+(ob.cost?' ('+ob.cost+')':'')):'How to get: not recorded yet')}</span></div>${P(v.text)}`));
+ if(R.howToPlay){const H=R.howToPlay;let body='';
+  if(H.loop)body+=`<h5>Gameplay loop</h5><ol class="rv-steps">${H.loop.map(t=>`<li>${richText(t,h.name)}</li>`).join('')}</ol>`;
+  if(H.combos)body+=`<h5>Combos</h5><div class="rv-legend">Built from the skills' activation conditions in the codex, not timed in-game. Hover or tap a skill to see it.</div>`+H.combos.map(c=>`<div class="rv-combo"><div class="rv-combo-name">${profileEsc(c.name)}</div><div class="rv-chips">${c.sequence.map(t=>rvChip(h.name,t)).join('<span class="rv-arrow">→</span>')}</div><div class="rv-combo-note">${richText(c.note||'',h.name)}</div></div>`).join('');
+  parts.push(card('HOW TO PLAY','Role, loop and combos',P(H.intro)+body));}
+ if(R.kit)parts.push(card('KIT','Kit analysis',R.kit.map(k=>`<div class="rv-kit"><h5>${richText(k.title,h.name)}</h5>${L(k.points)}</div>`).join('')));
+ if(R.investment){const I=R.investment;let body='';
+  if(I.skills)body+=`<h5>Skill levels</h5><div class="rv-prio">${I.skills.map(s=>`<div class="rv-prio-row"><span class="rv-prio-badge" data-p="${profileEsc(s.priority)}">${profileEsc(s.priority)}</span><div>${richText(s.text,h.name)}</div></div>`).join('')}</div>`;
+  if(I.awakening)body+=`<h5>Awakenings</h5>${P(I.awakening)}`;
+  if(I.karma)body+=`<h5>Karma</h5>${P(I.karma)}`;
+  if(I.gear)body+=`<h5>Gear</h5>${P(I.gear)}`;
+  parts.push(card('INVESTMENT','What to invest in',body));}
+ if(R.teams)parts.push(card('TEAMS','Teams and partners',P(R.teams)));
+ const t=h.tiers||{};
+ parts.push(`<div class="rv-ratings">${['Early-game','Mid-game','End-game'].map(p=>`<div class="rv-rating"><div class="rv-rating-box" style="background:${tierColor(t[p])}">${t[p]||'—'}</div><div class="rv-rating-label">${p}</div></div>`).join('')}</div><p class="profile-note">Tiers from the guide's Tier List · patch ${profileEsc(patchText())}. Review written ${profileEsc(R.updated||'')}; numbers come from the codex and the measured damage rules in the guide.</p>`);
+ root.innerHTML=parts.join('');
 }
 
 let activeGearFilter='all';
@@ -849,7 +929,7 @@ function showKarmaPopover(anchor,name){
  if(top+hgt>window.innerHeight-12)top=window.innerHeight-hgt-12;if(top<12)top=12;
  pop.style.left=left+'px';pop.style.top=top+'px';
 }
-function hideKarmaPopover(delay=150){clearTimeout(karmaPopTimer);karmaPopTimer=setTimeout(()=>{const p=$('karmaPopover');p.hidden=true;p.innerHTML=''},delay);}
+function hideKarmaPopover(delay=150){if(typeof refPinned!=='undefined'&&refPinned&&delay!==0)return;clearTimeout(karmaPopTimer);karmaPopTimer=setTimeout(()=>{const p=$('karmaPopover');p.hidden=true;p.innerHTML=''},delay);}
 $('karmaPopover').addEventListener('mouseenter',()=>clearTimeout(karmaPopTimer));$('karmaPopover').addEventListener('mouseleave',()=>hideKarmaPopover());
 $('karmaPopover').addEventListener('focusin',()=>clearTimeout(karmaPopTimer));$('karmaPopover').addEventListener('focusout',()=>hideKarmaPopover());
 function wireKarmaPopover(item,name){

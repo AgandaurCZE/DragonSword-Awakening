@@ -1,3 +1,13 @@
+## 2026-10-28 — Claude: full review layout (Charlotte sample)
+- New `CHARACTER_PROFILE_DATA[].review` and `renderProfileReview()`, replacing the Review placeholder on the Review tab. Sections: Overview, Verdict (with how to get the hero), How to play (gameplay loop and combo chips), Kit analysis, Investment (skill priorities, awakening stop, Karma, gear), Teams, and tier rating boxes.
+- **Links in reviews and pros/cons:** heroes, skills, Karmas, gear sets and awakenings open a card on hover. On phones a tap pins the card; hero cards have a button to open that hero's guide. Status and archetype names are coloured.
+- `HEROES[].obtain`, from David:
+  - Hero shop exchange (Fate's Invitation): Eileen, Astria, Alex, Kalien, Dana, Theresia, Tarte, Sion, Reina, Roxy, Charlotte.
+  - Story Quests: Lute, Johnny, Aria, Castella, Ornette.
+  - Not recorded yet: Kalsion, Cerese, Othello, Ryza.
+- Charlotte has the first full review, as a sample for approval. Eileen's Karma pro now names Vanguard Banner (David's reading of "Banner Maid").
+- Checked: all links resolve, and there are no script errors at desktop or phone width.
+
 ## 2026-10-28 — Claude: Pros & Cons for every hero
 - New `pros` and `cons` lists in `CHARACTER_PROFILE_DATA` for all 20 heroes, drawn from their tiers, teams, skill text, signature Karmas and awakenings. S-tier heroes have more pros; C/B-tier heroes have more cons.
 - Review tab: the Pros & Cons placeholders are replaced by `renderProfileProsCons()`:
