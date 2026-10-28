@@ -13,8 +13,9 @@ or OBS) and pause on the frame where your hit lands.
 
 1. STATUS BONUSES – DONE (28 Oct): on hits against an enemy with the status,
    "Additional Attack Power" adds to Attack and "Additional Damage" multiplies.
-   Optional follow-up: with Airborne + Burn on the same goblin, does Aria's
-   Burn Karma still add the same amount? (how bonuses of two statuses mix)
+   They apply to the whole hit, including other statuses' bonuses (410 test).
+   Optional: a hero with bonuses for TWO statuses (e.g. Burn Karma + a
+   Knockdown set/awakening) – do the two Additional Damage % add or multiply?
 
 2. LEVEL 40 (once you have the breakthrough materials)
    - Any hero except Charlotte: Attack, Defense, Max HP at level 40 BEFORE

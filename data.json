@@ -10151,7 +10151,7 @@
    "Burn Additional Damage (+4%) and Burn Additional Attack Power (+110) don't change Burn ticks: Aria with 381 Attack ticked 190 / 285 / 381 = 50 / 75 / 100% of 381, rounded down. So these status bonuses must do something else, most likely raise hits against enemies that have the status (not tested yet).",
    "Hits on an enemy that has Poison, Burn, Bleed or Shock deal x1.5, at any stack count: Charlotte 22 -> 33 with Poison, Roxy 24 -> 36 with Bleed, Ornette 17 -> 26 with Shock; Aria with no Karma (71 Attack) hit 19 on a clean goblin and 28 on a burning one (19.x x 1.5 = 28.5, rounded down), the same at 1, 2 or 3 stacks. The Karma results are explained by the status-bonus rule below.",
    "Status hit bonuses add up: +50% for each damage-over-time status (Poison, Bleed, Burn, Shock) and +100% each for Airborne, Knockdown and Stun. Charlotte's small auto-attack hit (22 clean): Poison 33 (x1.5), Poison + Bleed 44 (x2.0), Airborne + Poison 55 (x2.5), Knockdown + Poison + Bleed 66 (x3.0, recheck), Stun + Poison + Bleed 66 (x3.0), Airborne + Knockdown + Poison 77 (x3.5). Reina: Airborne alone x2.0. Exception: Airborne + Knockdown + Poison + Bleed was 77 (x3.5) twice, where adding up gives x4.0, so either x3.5 is a cap or Bleed wasn't on. The two earlier x2.5 results with Poison + Bleed + Airborne/Knockdown were most likely Bleed wearing off. Break not tested.",
-   "How the status bonuses work (tested with Burn): a hit on an enemy with the status = k x (Attack + <status> Additional Attack Power) x 1.5 x (1 + <status> Additional Damage). A clean hit is k x Attack, so neither bonus does anything on a clean enemy, and neither changes ticks. One value of k (0.2677-0.2681 for Aria's first auto-attack hit on the goblins) fits all 8 results: no bonus 19 -> 28; +15% 19 -> 32; +4% & +110 102 -> 205; +19% & +110 102 -> 234. Not tested: how these bonuses combine when the enemy has several statuses (e.g. Airborne bonuses together with Poison bonuses)."
+   "How the status bonuses work (tested with Burn): a hit on an enemy with the status = k x (Attack + <status> Additional Attack Power) x 1.5 x (1 + <status> Additional Damage). A clean hit is k x Attack, so neither bonus does anything on a clean enemy, and neither changes ticks. One value of k (0.2677-0.2681 for Aria's first auto-attack hit on the goblins) fits all 8 results: no bonus 19 -> 28; +15% 19 -> 32; +4% & +110 102 -> 205; +19% & +110 102 -> 234. With several statuses the bonuses apply to the whole hit: Aria (381 Attack, +110 / +4% Burn) on Bleed + Knockdown + Burn hit 410 = k x 491 x 3.0 x 1.04 (410.1-410.8). Applying them only to Burn's +50% would give about 323. So: hit = k x (Attack + Additional Attack Power of a status the enemy has) x (1 + all status hit bonuses) x (1 + Additional Damage of a status the enemy has). Not tested: bonuses for two different statuses at once (e.g. Burn and Knockdown Additional Damage together: added or multiplied)."
   ],
   "tests": [
    {
@@ -10758,6 +10758,19 @@
       }
      }
     ]
+   },
+   {
+    "test": "Burn bonuses with several statuses",
+    "hero": "Aria",
+    "level": 1,
+    "attack": 381,
+    "setup": "No gear; A Flame That Cuts Through the Moment (Burn Additional Damage 4%, Burn Additional Attack Power 110)",
+    "enemy": "goblin training dummies",
+    "skill": "auto attack, first hit",
+    "hits": {
+     "clean (earlier)": 102,
+     "Bleed + Knockdown + Burn": 410
+    }
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
@@ -10787,10 +10800,10 @@
     "Each tick deals a share of the Attack of the hero who applied the FIRST stack. Later stacks make the ticks bigger, even when another hero applies them, but their own Attack doesn't count.",
     "Ticks aren't reduced by the enemy's Defense: Armor Penetration and Defense Ignore don't change them.",
     "While an enemy has this status, hits on it deal 1.5x damage, whatever the stack count. Bonuses from different statuses add up: +50% for each damage-over-time status and +100% each for Airborne, Knockdown and Stun. Measured: Poison + Bleed 2x, Airborne + Poison 2.5x, Knockdown or Stun + Poison + Bleed 3x, Knockdown + Airborne + Poison 3.5x. The highest seen is 3.5x: Knockdown + Airborne + Poison + Bleed was also 3.5x, not 4x. Measured on training dummies.",
-    "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets, awakenings and substats) don't change its ticks. They raise hits on an enemy that has the status: Additional Attack Power is added to your Attack for those hits, and Additional Damage multiplies them (tested with Burn: Blazing Flames' +15% turned Aria's 1.5x into 1.72x).",
+    "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets, awakenings and substats) don't change its ticks. They raise every hit on an enemy that has the status: Additional Attack Power is added to your Attack, and Additional Damage multiplies the whole hit, including the bonuses from other statuses (tested with Burn: Blazing Flames' +15% turned Aria's 1.5x into 1.72x).",
     "Tick damage is rounded down."
    ],
-   "untested": "Not tested yet: how the bonuses of several statuses combine on one enemy, whether ticks can crit, and Break."
+   "untested": "Not tested yet: bonuses for two different statuses at once (added or multiplied), whether ticks can crit, and Break."
   }
  }
 }
