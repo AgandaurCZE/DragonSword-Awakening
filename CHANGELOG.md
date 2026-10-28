@@ -1,3 +1,11 @@
+## 2026-10-28 — Claude: Status Effects box on character pages
+- New `STATUS_EFFECTS` key and `renderProfileStatus()`: heroes whose skills inflict Poison, Bleed, Burn or Shock get a Status Effects box under their skills (12 of 20 heroes). It shows:
+  - a stacks table: 50/75/100% of Attack per tick, ×4 ticks over ~10 s;
+  - the rules measured in `DAMAGE_TESTS`;
+  - a note on what isn't tested yet.
+- Checked on all 20 heroes at desktop and phone width with no script errors.
+- Bleed, Burn and Shock also last about 10 s (David).
+
 ## 2026-10-28 — Claude: first training-dummy results
 - New `DAMAGE_TESTS` key with David's dummy results and findings:
   - damage is proportional to Attack and to the skill %;

@@ -10565,5 +10565,32 @@
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
   "heroLevels": "Charlotte, Reina and Johnny were all Lv.30 (before the breakthrough) in these tests.",
   "defenseModelGuess": "Untested guess, not used anywhere: damage x K / (K + effective Defense), with the ogre's Defense about equal to K (hence the ~0.50). That predicts +0.5% for 0.97% Defense Ignore (seen ~+0.4%) and puts the ogre's Defense and K both roughly 900. Needs a second enemy or a bigger Defense Ignore value to check."
+ },
+ "STATUS_EFFECTS": {
+  "note": "Shown on character pages (Skills tab) for heroes whose skills inflict one of these statuses. From David's training-dummy tests on 28 Oct 2026 (details in DAMAGE_TESTS).",
+  "damageOverTime": {
+   "statuses": [
+    "Poison",
+    "Bleed",
+    "Burn",
+    "Shock"
+   ],
+   "ticks": 4,
+   "durationSeconds": 10,
+   "tickEverySeconds": 2.5,
+   "maxStacks": 3,
+   "tickPctByStacks": [
+    50,
+    75,
+    100
+   ],
+   "rules": [
+    "Each application ticks 4 times over about 10 seconds (about one tick every 2.5 seconds).",
+    "Each tick deals a share of the Attack of the hero who applied the FIRST stack. Later stacks make the ticks bigger, even when another hero applies them, but their own Attack doesn't count.",
+    "Ticks aren't reduced by the enemy's Defense: Armor Penetration and Defense Ignore don't change them.",
+    "Tick damage is rounded down."
+   ],
+   "untested": "Not tested yet: what “… Additional Damage” and “… Additional Attack Power” for a status (from Karmas, gear sets and awakenings) do to these ticks, and whether ticks can crit."
+  }
  }
 }
