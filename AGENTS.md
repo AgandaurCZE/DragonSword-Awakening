@@ -34,7 +34,7 @@ How the page starts: `index.html` runs `fetch('data.json')`, copies each top-lev
 | `TEAM_DATA` | list of `{tier, name, accent, lead, arch, members[{name, alts[]}], tags[], note}` | Teams page, plus the Synergy section on character pages. `lead` = `members[0].name` (the big portrait). Slot order: Main DPS, Sub-DPS, Support/enabler. `alts` are swap-ins for that slot. |
 | `KARMA_DATA` | list of 53 `{archetype, name, signature, source, exclusive, traits[{label, a0, a6}], base{Attack, Defense, Max HP}}` | Karma tab **and** the hover cards on character pages; both are built by the same function, so one edit updates both. `a0` = Lv. 1 / Ascension 0, `a6` = Lv. 70 / Ascension 6, both from screenshots. |
 | `CHARACTER_PROFILE_DATA` | `{heroName: {archetype, role, karma, gear, skills[{slot, skill, description}]}}` | Character pages (open one by clicking a hero). |
-| `GEAR_DATA` | list of 12 `{name, source, two, three, icon, twoBonus[], threeBonus[]}` | Gear tab and the gear section on character pages. `two`/`three` are the display text; `twoBonus`/`threeBonus` are the same effects as `{stat, value, condition?}` for the stat totals. A 3-piece set is counted as giving its 2-piece bonus too (assumption, not yet confirmed in-game). |
+| `GEAR_DATA` | list of 12 `{name, source, two, three, icon, twoBonus[], threeBonus[]}` | Gear tab and the gear section on character pages. `two`/`three` are the display text; `twoBonus`/`threeBonus` are the same effects as `{stat, value, condition?}` for the stat totals. A 3-piece set gives its 2-piece bonus too (confirmed in-game: Ballad of Life +9% at 2 pieces, +15% at 3, nothing more at 5). |
 | `GEAR_STATS` | `{slots: {Helmet, Chest, Legs, Gloves, Boots: {main: {stat: [16 values for +0..+15]}, sub: {stat: value}}}, percentStats[], rarities[], substatUnlockLevels[]}` | Best Main Stats and the stat totals. From David's in-game gear info (source of truth). |
 | `HERO_BASE_STATS` | `{hero: {Attack, Defense, Max HP, Critical Hit Chance, Critical Damage, estimated, profile}}` | Level-70 hero stats with no gear or Karma. **Currently estimates** (`estimated: true`). Replace with measured values and set `estimated` to `false`. |
 | `HERO_STAT_MODEL` | measurements + formula | Documents how the estimates were made (see "Hero base-stat estimates" below). Not read by the page except as reference. |
@@ -111,21 +111,26 @@ Change these in the HTML if needed:
 - **Support builds** (Lute, Dana, Sion): Max HP Up chest and Defense Up legs, damage on the other three slots. Their heals and buffs are % of max HP or flat %, so their own stats can't raise them.
 - **Tank build** (Alex): Max HP Up and Defense Up in every slot, with HP, Defense and crit-resistance substats.
 
+**Observations not used in the totals yet** (in `HERO_STAT_MODEL.observations`):
+- every status resistance is 50, at any level;
+- Charlotte with no gear shows Critical Hit Resistance 5.84%;
+- displayed stats are rounded down.
+
 ### Hero base-stat estimates
 
 Every hero levels identically; only breakthrough bonuses differ.
 - **Levelling:** the level part follows `base + b(L-1) + c(L-1)²`, fitted exactly to measured Lv1 (Aria), Lv20 and Lv30. At level 70 that's 751 Attack / 210 Defense / 4,867 Max HP.
 - **Breakthroughs** happen at levels 20, 30, 40, 50 and 60. Two profiles have been measured so far:
-  - **Profile A** (Charlotte; used for all Main DPS): +32/+11/+173 at level 20 and +37/+13/+202 at level 30.
-  - **Profile B** (Johnny and Reina; used for everyone else): +25/+13/+207 and +30/+16/+243.
+  - **Profile A** (Charlotte only): +32/+11/+173 at level 20 and +37/+13/+202 at level 30.
+  - **Profile B** (measured on Johnny, Reina, Castella and Lute; used for everyone except Charlotte): +25/+13/+207 and +30/+16/+243. The profile isn't tied to role: Castella is a Main DPS and Lute a healer.
 - The level 40–60 breakthroughs are assumed to keep rising by the same step each tier.
 
 ## Open tasks (for any assistant)
 
 1. **When David sends measured level-70 stats for a hero:** put them in `HERO_BASE_STATS[hero]` and set `estimated: false`. If they're a breakthrough measurement instead, add it to `HERO_STAT_MODEL.measured` and recalculate that hero.
-2. **If a measured hero contradicts their profile** (e.g. Castella, a Main DPS, doesn't match Charlotte's breakthroughs), the profile rule is wrong. Re-estimate the affected heroes and tell David.
+2. **If a measured hero doesn't match profile B**, add them to `HERO_STAT_MODEL.measured`, give them their own breakthrough numbers, re-estimate them and tell David.
 3. **If testing changes the gear tables or rules**, update `GEAR_STATS`. Then re-check that each build in `HERO_BUILDS` doesn't use the same stat as both main and substat on one piece.
-4. **If the game shows that a 3-piece set doesn't include its 2-piece bonus**, change the `pieces>=3` line in `endgameStats()`.
+4. **Crit Rate above 100%:** the game says the final crit chance depends on the target's Critical Hit Resistance, so whether extra Crit Rate is useful hasn't been tested. The builds currently treat 100% as the most that counts.
 5. **Recalculating a damage build after the numbers change:** try all 3⁵ main-stat combinations as described above, or ask David before hand-editing.
 
 ## How to make changes

@@ -4566,6 +4566,16 @@
     16,
     243
    ],
+   "Lv20 breakthrough Castella": [
+    25,
+    13,
+    207
+   ],
+   "Lv20 breakthrough Lute": [
+    25,
+    13,
+    207
+   ],
    "order": [
     "Attack",
     "Defense",
@@ -4610,7 +4620,7 @@
     }
    },
    "B": {
-    "label": "Balanced (measured on Johnny and Reina)",
+    "label": "Standard (measured on Johnny, Reina, Castella and Lute)",
     "Attack": {
      "Lv20": 25,
      "Lv30": 30,
@@ -4628,7 +4638,13 @@
     }
    }
   },
-  "profileRule": "Profile A for Main DPS heroes, profile B for everyone else (only Charlotte, Johnny and Reina measured so far)."
+  "profileRule": "Profile A only for Charlotte (measured); profile B for everyone else. Castella (Main DPS) and Lute (healer) both measured as B, so the profile is not tied to role.",
+  "observations": {
+   "statusResistance": "Every status resistance (Stun, Airborne, Knockdown, Shock, Frost, Burn, Poison, Bleed) is 50 on Charlotte with no gear; the same at Lv1.",
+   "critHitResistance": "Charlotte with no gear shows Critical Hit Resistance 5.84% (level-dependence not yet checked).",
+   "critRateText": "In-game: 'Increases the chance of a Critical Hit ... The final probability is determined by the target's Critical Hit Resistance.' Nothing says what happens above 100%.",
+   "setBonusTest": "Ballad of Life on Charlotte (no other gear stats, no Karma): Max HP 1975 -> 2152 with 2 pieces (+9%) -> 2271 with 3 pieces (+15% = 2-piece + 3-piece) -> 2271 with 5 pieces. Displayed values are rounded down."
+  }
  },
  "HERO_BASE_STATS": {
   "Johnny": {
@@ -4650,13 +4666,13 @@
    "profile": "B"
   },
   "Castella": {
-   "Attack": 961,
-   "Defense": 284,
-   "Max HP": 6022,
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
-   "profile": "A"
+   "profile": "B"
   },
   "Aria": {
    "Attack": 926,
@@ -4686,13 +4702,13 @@
    "profile": "B"
   },
   "Roxy": {
-   "Attack": 961,
-   "Defense": 284,
-   "Max HP": 6022,
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
-   "profile": "A"
+   "profile": "B"
   },
   "Alex": {
    "Attack": 926,
@@ -4704,13 +4720,13 @@
    "profile": "B"
   },
   "Theresia": {
-   "Attack": 961,
-   "Defense": 284,
-   "Max HP": 6022,
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
-   "profile": "A"
+   "profile": "B"
   },
   "Ornette": {
    "Attack": 926,
@@ -4731,22 +4747,22 @@
    "profile": "B"
   },
   "Tarte": {
-   "Attack": 961,
-   "Defense": 284,
-   "Max HP": 6022,
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
-   "profile": "A"
+   "profile": "B"
   },
   "Kalsion": {
-   "Attack": 961,
-   "Defense": 284,
-   "Max HP": 6022,
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
-   "profile": "A"
+   "profile": "B"
   },
   "Cerese": {
    "Attack": 926,
@@ -4785,13 +4801,13 @@
    "profile": "B"
   },
   "Othello": {
-   "Attack": 961,
-   "Defense": 284,
-   "Max HP": 6022,
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
-   "profile": "A"
+   "profile": "B"
   },
   "Charlotte": {
    "Attack": 961,
@@ -4803,19 +4819,19 @@
    "profile": "A"
   },
   "Ryza": {
-   "Attack": 961,
-   "Defense": 284,
-   "Max HP": 6022,
+   "Attack": 926,
+   "Defense": 304,
+   "Max HP": 6262,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
-   "profile": "A"
+   "profile": "B"
   }
  },
  "HERO_BUILDS": {
   "Johnny": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -4929,7 +4945,7 @@
   },
   "Castella": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -4987,7 +5003,7 @@
   },
   "Aria": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5101,7 +5117,7 @@
   },
   "Kalien": {
    "type": "Damage",
-   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5159,7 +5175,7 @@
   },
   "Roxy": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5275,7 +5291,7 @@
   },
   "Theresia": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5333,7 +5349,7 @@
   },
   "Ornette": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5447,7 +5463,7 @@
   },
   "Tarte": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5505,7 +5521,7 @@
   },
   "Kalsion": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5563,7 +5579,7 @@
   },
   "Cerese": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5621,7 +5637,7 @@
   },
   "Reina": {
    "type": "Damage",
-   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5679,7 +5695,7 @@
   },
   "Astria": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5737,7 +5753,7 @@
   },
   "Eileen": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5795,7 +5811,7 @@
   },
   "Othello": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5853,7 +5869,7 @@
   },
   "Charlotte": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -5911,7 +5927,7 @@
   },
   "Ryza": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (Crit Rate only counts up to 100%, since 1.1.0 crits land at exactly your Crit Rate), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {

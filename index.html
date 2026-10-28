@@ -666,7 +666,7 @@ function renderBuildStats(h){
   let val=`<b class="eg-total">${fmtStat(r.stat,total)}</b>`;
   if(Math.abs(r.set)>0.001)val+=`<span class="eg-own"${tipAttr(r.tip)}>${fmtStat(r.stat,r.own)}</span><span class="eg-set"${tipAttr(r.setTip)}>${fmtStat(r.stat,r.set,true)}</span>`;
   else if(r.tip)val=`<b class="eg-total"${tipAttr(r.tip)}>${fmtStat(r.stat,total)}</b>`;
-  if(r.stat==='Critical Hit Chance'&&total>100)val+=`<span class="eg-cap" data-tip="Since patch 1.1.0 crits land at exactly your Crit Rate, so anything above 100% does nothing." tabindex="0">max 100%</span>`;
+  if(r.stat==='Critical Hit Chance'&&total>100)val+=`<span class="eg-cap" data-tip="A hit can't crit more than 100% of the time. The game says the final chance also depends on the target's Critical Hit Resistance, so extra Crit Rate may still help against resistant enemies (not tested)." tabindex="0">over 100%</span>`;
   row.innerHTML=`<span class="eg-label">${profileEsc(r.stat)}</span><span class="eg-val">${val}</span>`;grid.append(row);});
  eg.append(grid);
 }
