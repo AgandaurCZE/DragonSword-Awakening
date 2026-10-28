@@ -345,12 +345,11 @@ function tierColor(t){return TIER_COLORS[t]||'#6b7280'}
 function wireTeamCharacter(element,name){
  const hero=HEROES.find(h=>h.name.toLowerCase()===name.toLowerCase());
  if(hero){
-  element.addEventListener('mouseenter',()=>showHeroTip(hero,element));
-  element.addEventListener('mouseleave',hideTip);
-  element.addEventListener('focus',()=>showHeroTip(hero,element));
-  element.addEventListener('blur',hideTip);
+  element.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')showHeroCard(hero,element)});
+  element.addEventListener('pointerleave',e=>{if(!$('karmaPopover').contains(e.relatedTarget))hideKarmaPopover()});
  }
  element.addEventListener('click',()=>{
+  if(hero){navigateRef('hero',hero.name);return;}
   hideTip();
   const heroesButton=document.querySelector('.nav-item[data-page="heroes"]');
   if(heroesButton)heroesButton.click();
@@ -546,7 +545,7 @@ function showKarmaSkillPopover(anchor,heroName,skillName){
   pop.addEventListener('mouseenter',()=>clearTimeout(karmaSkillHideTimer));
   pop.addEventListener('mouseleave',()=>hideKarmaSkillPopover());
  }
- pop.innerHTML='';
+ pop.innerHTML='';{const hh=HEROES.find(x=>x.name===heroName);pop.style.setProperty('--hero-accent',(hh&&ARCH_COLORS[hh.archetype])||'#68c7d5');}
  const card=document.createElement('article');card.className='profile-skill';
  const head=document.createElement('div');head.className='profile-skill-head';
  const slot=document.createElement('span');slot.className='profile-skill-slot';slot.textContent=skill.slot||'Skill';
@@ -572,11 +571,14 @@ function showKarmaSkillPopover(anchor,heroName,skillName){
 }
 let karmaSkillHideTimer=null;
 function hideKarmaSkillPopover(delay=180){clearTimeout(karmaSkillHideTimer);karmaSkillHideTimer=setTimeout(()=>{const pop=document.getElementById('karmaSkillPopover');if(pop)pop.hidden=true;},delay);}
-document.addEventListener('pointerover',e=>{const link=e.target.closest?.('.karma-skill-link');if(link)showKarmaSkillPopover(link,link.dataset.karmaHero,link.dataset.karmaSkill);});
-document.addEventListener('pointerout',e=>{const link=e.target.closest?.('.karma-skill-link');if(link&&!link.contains(e.relatedTarget)&&!document.getElementById('karmaSkillPopover')?.contains(e.relatedTarget))hideKarmaSkillPopover();});
-document.addEventListener('focusin',e=>{const link=e.target.closest?.('.karma-skill-link');if(link)showKarmaSkillPopover(link,link.dataset.karmaHero,link.dataset.karmaSkill);});
+const IS_TOUCH=window.matchMedia&&window.matchMedia('(hover: none)').matches;
+document.addEventListener('pointerover',e=>{if(e.pointerType==='touch')return;const link=e.target.closest?.('.karma-skill-link, .ref-skill');if(link)showSkillRef(link);});
+document.addEventListener('pointerout',e=>{if(e.pointerType==='touch')return;const link=e.target.closest?.('.karma-skill-link, .ref-skill');if(link&&!link.contains(e.relatedTarget)&&!document.getElementById('karmaSkillPopover')?.contains(e.relatedTarget))hideKarmaSkillPopover();});
 document.addEventListener('focusout',e=>{if(e.target.closest?.('.karma-skill-link'))hideKarmaSkillPopover();});
-document.addEventListener('click',e=>{const link=e.target.closest?.('.karma-skill-link');if(!link)return;e.preventDefault();hideKarmaSkillPopover(0);openCharacterProfile(link.dataset.karmaHero,'skills');});
+document.addEventListener('click',e=>{const link=e.target.closest?.('.karma-skill-link');if(!link)return;e.preventDefault();
+ if(IS_TOUCH){showSkillRef(link,true);return;}
+ hideKarmaSkillPopover(0);navigateRef('skill',link.dataset.karmaHero+'/'+link.dataset.karmaSkill);});
+document.addEventListener('pointerdown',e=>{const pop=document.getElementById('karmaSkillPopover');if(pop&&!pop.hidden&&!pop.contains(e.target)&&!e.target.closest('.karma-skill-link, .ref-skill'))hideKarmaSkillPopover(0);});
 function renderKarmas(){
  const board=document.getElementById('karmaBoard');if(!board)return;
  const query=(document.getElementById('karmaSearch')?.value||'').trim().toLowerCase();
@@ -720,7 +722,7 @@ function setupSearchClearButtons(){
 }
 function openCharacterProfile(name,initialTab='skills'){
  const h=HEROES.find(x=>x.name.toLowerCase()===String(name).toLowerCase());if(!h)return;
- currentProfileName=h.name;hideTip();
+ currentProfileName=h.name;hideTip();if(typeof refPinned!=='undefined')refPinned=null;{const kp=$('karmaPopover');kp.hidden=true;kp.innerHTML='';}{const sp=document.getElementById('karmaSkillPopover');if(sp)sp.hidden=true;}
  ['tierPage','heroesPage','teamsPage','gearPage','karmaPage'].forEach(id=>$(id).hidden=true);
  $('profilePage').hidden=false;
  $('profilePage').style.setProperty('--hero-accent',ARCH_COLORS[h.archetype]||'#68c7d5');
@@ -818,7 +820,7 @@ function richText(text,hero){
 }
 function refCardHtml(type,key){
  if(type==='hero'){const h=HEROES.find(x=>x.name===key);if(!h)return '';const t=h.tiers||{};
-  return `<div class="ref-card"><div class="ref-head"><img class="ref-portrait" src="${h.portrait}" alt=""><div><div class="ref-title">${profileEsc(h.name)}</div><div class="ref-meta"><img src="${h.archIcon}" alt="">${colourStatusWords(h.archetype)} · ${profileEsc(h.role)}</div><div class="ref-tiers">${['Early-game','Mid-game','End-game'].map(p=>`<span style="background:${tierColor(t[p])}">${p.split('-')[0]} ${t[p]||'—'}</span>`).join('')}</div></div></div><button type="button" class="ref-open" data-open-hero="${profileEsc(h.name)}">Open ${profileEsc(h.name)}'s guide →</button></div>`}
+  return `<div class="ref-card"><div class="ref-head"><img class="ref-portrait" src="${h.portrait}" alt=""><div><div class="ref-title">${profileEsc(h.name)}</div><div class="ref-meta"><img src="${h.archIcon}" alt="">${colourStatusWords(h.archetype)} · ${profileEsc(h.role)}</div><div class="ref-meta">Kit: ${profileEsc(h.classType)}</div><div class="ref-tiers">${['Early-game','Mid-game','End-game'].map(p=>`<span style="background:${tierColor(t[p])}">${p.split('-')[0]} ${t[p]||'—'}</span>`).join('')}</div></div></div><button type="button" class="ref-open" data-open-hero="${profileEsc(h.name)}">Open ${profileEsc(h.name)}'s guide →</button></div>`}
  if(type==='skill'){const [h,n]=key.split('/');const sk=findSkill(h,n);if(!sk)return '';
   return `<div class="ref-card"><div class="ref-kicker">${profileEsc(h)} · ${profileEsc(sk.slot)}</div><div class="ref-title">${profileEsc(sk.skill)}</div><div class="ref-body">${formatSkillText(sk.description)}</div></div>`}
  if(type==='set'){const g=GEAR_DATA.find(x=>x.name===key);if(!g)return '';
@@ -827,23 +829,42 @@ function refCardHtml(type,key){
   return `<div class="ref-card"><div class="ref-kicker">${profileEsc(h)} · Awakening ${l} · rated ${a.rating}/5</div><div class="ref-title">${profileEsc(a.name)}</div><div class="ref-body">${formatSkillText(a.text)}<div class="ref-why">${profileEsc(a.why)}</div></div></div>`}
  return '';
 }
-function showRefPopover(anchor){
- const type=anchor.dataset.refType,key=anchor.dataset.refKey;clearTimeout(refPopTimer);clearTimeout(karmaPopTimer);
+function skillRefParts(a){return a.classList.contains('karma-skill-link')?[a.dataset.karmaHero,a.dataset.karmaSkill]:String(a.dataset.refKey).split('/');}
+function showSkillRef(anchor,withButton=false){const [h,n]=skillRefParts(anchor);hideKarmaPopover(0);showKarmaSkillPopover(anchor,h,n);
+ const pop=document.getElementById('karmaSkillPopover');if(!pop||pop.hidden)return;clearTimeout(karmaSkillHideTimer);
+ if(withButton&&!pop.querySelector('.ref-open')){const b=document.createElement('button');b.type='button';b.className='ref-open';b.textContent=`Open ${n} on ${h}'s Skills tab →`;b.addEventListener('click',()=>{hideKarmaSkillPopover(0);navigateRef('skill',h+'/'+n)});pop.firstElementChild.append(b);}}
+function flashEl(el){if(!el)return;el.scrollIntoView({behavior:'smooth',block:'center'});el.style.outline='3px solid var(--hero-accent,#68c7d5)';el.style.outlineOffset='2px';setTimeout(()=>{el.style.outline='';el.style.outlineOffset=''},1800);}
+function openKarmaByName(name){document.querySelector('.nav-item[data-page="karma"]').click();if(typeof activeKarmaArch!=='undefined'){activeKarmaArch='';renderKarmaFilters();}const search=$('karmaSearch');search.value=name;renderKarmas();
+ const n=v=>String(v||'').trim().toLowerCase();flashEl([...document.querySelectorAll('.karma-card')].find(c=>n(c.querySelector('.karma-card-title')?.textContent)===n(name)));}
+function navigateRef(type,key){refPinned=null;hideKarmaPopover(0);hideKarmaSkillPopover(0);hideTip();
+ if(type==='hero'){openCharacterProfile(key,'skills');return;}
+ if(type==='karma'){openKarmaByName(key);return;}
+ if(type==='set'){openGearSet(key);return;}
+ const [h,n]=key.split('/');
+ if(type==='skill'){openCharacterProfile(h,'skills');const sk=findSkill(h,n);if(sk)setTimeout(()=>flashEl([...document.querySelectorAll('#profileSkillsGrid .profile-skill')].find(c=>c.querySelector('h4')?.textContent===sk.skill)),60);return;}
+ if(type==='awk'){openCharacterProfile(h,'review');setTimeout(()=>flashEl(document.querySelectorAll('#profileAwakenings > *')[Number(n)-1]),60);}
+}
+const REF_OPEN_LABEL={karma:k=>`Open ${k} in the Karma tab →`,set:k=>`Open ${k} in Gear Sets →`,awk:k=>`Show A${k.split('/')[1]} on ${k.split('/')[0]}'s Review tab →`};
+function showRefPopover(anchor,type=anchor.dataset.refType,key=anchor.dataset.refKey,withButton=false){
+ if(type==='skill'){showSkillRef(anchor,withButton);return;}
+ hideKarmaSkillPopover(0);clearTimeout(refPopTimer);clearTimeout(karmaPopTimer);
  const pop=$('karmaPopover');pop.innerHTML='';
  if(type==='karma'){const k=findKarma(key);if(!k)return;pop.style.setProperty('--karma-accent',KARMA_ACCENTS[k.archetype]||'#39b9e8');pop.append(buildKarmaCard(k));}
  else{const html=refCardHtml(type,key);if(!html)return;pop.innerHTML=html;}
+ if(withButton&&REF_OPEN_LABEL[type]){const b=document.createElement('button');b.type='button';b.className='ref-open';b.textContent=REF_OPEN_LABEL[type](key);b.addEventListener('click',()=>navigateRef(type,key));pop.firstElementChild.append(b);}
  pop.hidden=false;const r=anchor.getBoundingClientRect(),w=pop.offsetWidth,hgt=pop.offsetHeight;
- let left=r.left,top=r.bottom+8;if(left+w>window.innerWidth-12)left=window.innerWidth-w-12;if(left<12)left=12;
+ let left=r.left,top=r.bottom+8;if(r.height>60&&r.right+w+12<window.innerWidth){left=r.right+10;top=r.top;}if(left+w>window.innerWidth-12)left=window.innerWidth-w-12;if(left<12)left=12;
  if(top+hgt>window.innerHeight-12)top=r.top-hgt-8;if(top<12)top=12;pop.style.left=left+'px';pop.style.top=top+'px';
 }
 function hideRefPopover(delay=150){if(refPinned)return;hideKarmaPopover(delay);}
-document.addEventListener('mouseover',e=>{const a=e.target.closest('.ref');if(a&&!refPinned)showRefPopover(a);});
-document.addEventListener('mouseout',e=>{const a=e.target.closest('.ref');if(a&&!refPinned)hideRefPopover();});
-document.addEventListener('focusin',e=>{const a=e.target.closest&&e.target.closest('.ref');if(a)showRefPopover(a);});
+document.addEventListener('pointerover',e=>{if(e.pointerType==='touch')return;const a=e.target.closest('.ref:not(.ref-skill)');if(a&&!refPinned)showRefPopover(a);});
+document.addEventListener('pointerout',e=>{if(e.pointerType==='touch')return;const a=e.target.closest('.ref:not(.ref-skill)');if(a&&!refPinned&&!$('karmaPopover').contains(e.relatedTarget))hideRefPopover();});
 document.addEventListener('click',e=>{
- const open=e.target.closest('[data-open-hero]');if(open){refPinned=null;$('karmaPopover').hidden=true;openCharacterProfile(open.dataset.openHero,'review');return;}
+ const open=e.target.closest('[data-open-hero]');if(open){navigateRef('hero',open.dataset.openHero);return;}
  const a=e.target.closest('.ref');
- if(a){e.preventDefault();if(refPinned===a){refPinned=null;hideKarmaPopover(0);return;}refPinned=a;showRefPopover(a);return;}
+ if(a){e.preventDefault();
+  if(IS_TOUCH){if(refPinned===a){refPinned=null;hideKarmaPopover(0);hideKarmaSkillPopover(0);return;}refPinned=a.classList.contains('ref-skill')?null:a;showRefPopover(a,undefined,undefined,true);return;}
+  navigateRef(a.dataset.refType,a.dataset.refKey);return;}
  if(refPinned&&!e.target.closest('#karmaPopover')){refPinned=null;hideKarmaPopover(0);}
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&refPinned){refPinned=null;hideKarmaPopover(0);}const a=e.target.closest&&e.target.closest('.ref');if(a&&(e.key==='Enter'||e.key===' ')){e.preventDefault();a.click();}});
@@ -1059,8 +1080,8 @@ function render(){
 function makeCard(h,phase,tier){
  const card=document.createElement('div');card.className='hero-card';card.tabIndex=0;card.style.setProperty('--tier',tierColor(tier));
  card.innerHTML=`<div class="portrait-wrap"><img class="portrait" src="${h.portrait}" alt="${h.name}"><span class="arch-badge"><img src="${h.archIcon}" alt="${h.archetype}"></span><span class="tier-chip">${tier}</span></div><div class="hero-name">${h.name}</div>`;
- card.style.cursor='pointer';card.setAttribute('role','button');card.setAttribute('aria-label',`Open ${h.name} character page`);card.addEventListener('click',()=>openCharacterProfile(h.name));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCharacterProfile(h.name)}});card.addEventListener('mouseenter',e=>showTip(h,card));card.addEventListener('mousemove',e=>positionTip(e));card.addEventListener('mouseleave',hideTip);
- card.addEventListener('focus',()=>showTip(h,card));card.addEventListener('blur',hideTip);
+ card.style.cursor='pointer';card.setAttribute('role','button');card.setAttribute('aria-label',`Open ${h.name} character page`);card.addEventListener('click',()=>openCharacterProfile(h.name));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCharacterProfile(h.name)}});card.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')showHeroCard(h,card)});card.addEventListener('pointerleave',e=>{if(!$('karmaPopover').contains(e.relatedTarget))hideKarmaPopover()});
+ card.addEventListener('focus',()=>showHeroCard(h,card));card.addEventListener('blur',()=>hideKarmaPopover());
  return card;
 }
 function showTip(h,card){
@@ -1069,6 +1090,7 @@ function showTip(h,card){
  tip.innerHTML=`<div class="tip-top"><img class="tip-portrait" src="${h.portrait}" alt=""><div><div class="tip-title">${h.name}</div><div class="tip-meta"><img src="${h.archIcon}" alt="">${h.archetype}</div><div class="tip-meta">${roleIcon?`<img class="tip-role-icon" src="${roleIcon}" alt="">`:''}${h.role}</div><div class="tip-meta">Kit tag: ${h.classType}</div></div></div><div class="tip-tiers">${['Early-game','Mid-game','End-game'].map(p=>{const t=h.tiers[p]||'—';return `<div class="tip-tier"><div class="label">${p}</div><div class="value" style="background:${tierColor(t)}">${t}</div></div>`}).join('')}</div><div class="tip-note">Tier source: reviewed workbook · patch ${patchText()}.</div>`;
  tip.style.display='block';const r=card.getBoundingClientRect();tip.style.left=Math.min(window.innerWidth-tip.offsetWidth-12,Math.max(12,r.left+r.width+12))+'px';tip.style.top=Math.min(window.innerHeight-tip.offsetHeight-12,Math.max(12,r.top-20))+'px';
 }
+function showHeroCard(h,anchor){hideTip();showRefPopover(anchor,'hero',h.name,IS_TOUCH);}
 function showHeroTip(h,card){
  const tip=$('tooltip');
  const activeTier=h.tiers['End-game']||'—';
@@ -1130,10 +1152,10 @@ function renderHeroes(){
   const card=document.createElement('article');card.className='heroes-character-card';card.title=`${h.name} · ${h.archetype} · ${h.role}`;
   card.tabIndex=0;
   card.innerHTML=`<img class="heroes-portrait" src="${h.portrait}" alt="${h.name}" loading="lazy"><div class="heroes-char-badges"><span class="heroes-char-badge" title="${h.role}"><img src="${ROLE_ICONS[h.role]||''}" alt="${h.role}"></span></div>${h.name==='Ryza'?'<span class="heroes-new">NEW</span>':''}<div class="heroes-char-name">${h.name}</div>`;
-  card.style.cursor='pointer';card.setAttribute('role','button');card.setAttribute('aria-label',`Open ${h.name} character page`);card.addEventListener('click',()=>openCharacterProfile(h.name));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCharacterProfile(h.name)}});card.addEventListener('mouseenter',()=>showHeroTip(h,card));
-  card.addEventListener('mouseleave',hideTip);
-  card.addEventListener('focus',()=>showHeroTip(h,card));
-  card.addEventListener('blur',hideTip);
+  card.style.cursor='pointer';card.setAttribute('role','button');card.setAttribute('aria-label',`Open ${h.name} character page`);card.addEventListener('click',()=>openCharacterProfile(h.name));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCharacterProfile(h.name)}});card.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')showHeroCard(h,card)});
+  card.addEventListener('pointerleave',e=>{if(!$('karmaPopover').contains(e.relatedTarget))hideKarmaPopover()});
+  card.addEventListener('focus',()=>showHeroCard(h,card));
+  card.addEventListener('blur',()=>hideKarmaPopover());
   grid.append(card);
  });
  if(!list.length)grid.innerHTML='<div class="heroes-empty">No characters match your search and filters.</div>';

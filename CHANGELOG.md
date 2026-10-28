@@ -1,3 +1,14 @@
+## 2026-10-28 — Claude: one behaviour for all hover cards
+- **Skill links** in reviews and pros/cons now use the same skill card as the older awakening and Karma skill links, with the level slider and the skill owner's archetype colour.
+- **Clicking any link on desktop jumps to it:**
+  - skill: the Skills tab, scrolled to the skill and highlighted;
+  - Karma: the Karma tab, filtered to the card;
+  - set: Gear Sets;
+  - awakening: the Review tab, scrolled to the card;
+  - hero: that hero's guide.
+- **Phones:** a tap shows the card with an "Open …" button, because phones can't hover.
+- **Hero hovers everywhere** (tier list, Heroes page, Teams page) now use the new hero card: tiers for all three stages, kit tag and an "Open guide" button. Clicking a hero on the Teams page now opens their guide instead of the Heroes page search.
+
 ## 2026-10-28 — Claude: hero pages coloured by archetype
 - Hero pages use the hero's archetype colour (`ARCH_COLORS`, set as `--hero-accent` on `#profilePage`) in place of the fixed teal: name, banner edge, section underlines, tabs, skill slot labels, sliders, mode headings, Karma names, gear hover and the review cards.
 - Combo chips for another hero's skill use that hero's archetype colour for the slot tag, the border and the hero's name (e.g. Reina in Gale colour in Charlotte's Venom team combo).
