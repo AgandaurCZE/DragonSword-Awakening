@@ -1,3 +1,7 @@
+## 2026-10-28 — Replace Roxy, Ornette and Reina portraits
+- Replaced `assets/heroes/roxy.webp`, `assets/heroes/ornette.webp`, and `assets/heroes/reina.webp` with the newly supplied full-colour character images, cropped to remove the card frame/name area and sized for the site's portrait cards. Existing `data.json` portrait paths remain unchanged.
+- Validation: the source images were inspected, converted to WebP, and the repository portrait paths were checked against `data.json`. The data schema was not changed; live browser testing remains to be performed.
+
 ## 2026-10-28 — Claude: data structure for sorting and future features; checker and stats scripts
 - New `tools/validate_data.py` (cross-reference and rule checker), `tools/hero_stats.py` (recalculates base-stat estimates and gear builds from data.json) and `tools/skill_meta.py` (generates skill details and structured builds). Usage is in AGENTS.md → Tools.
 - `data.json` (schemaVersion 3):
