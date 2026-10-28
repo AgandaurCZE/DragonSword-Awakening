@@ -1,7 +1,7 @@
 ## 2026-10-28 — Claude: Skills tab split into Basic Moves and Skills
 - The Skills tab now starts with **Basic Moves**: Basic Attack Combo (shown in place of "Auto attack"; the data slot name is unchanged), Jump attack, Dash attack and Dash.
 - A Gear-page-style divider, **Skills**, follows, with Skill and Ultimate, then Special A and Special B, then Mastery centred below (full width on phones).
-- The "Basic Moves" title, the divider line and the "Skills" text use the hero's archetype colour.
+- "Basic Moves" and "Skills" are both Gear-page-style dividers (text between two lines) in the hero's archetype colour.
 - Alternate-mode sections (Theresia, Alex, Kalsion, Astria) follow unchanged. Grouping is done by `groupProfileSkills()`; `data.json` is not changed.
 
 ## 2026-10-28 — Claude: Skills tab split into Basic Moves and Skills
