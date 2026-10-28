@@ -88,7 +88,7 @@ Change these in the HTML if needed:
    - Castella and Astria: 3 Ruinsbreaker + 2 Holy Arbiter
    - Alex: 3 Earthshatterer + 2 Battle Will
 
-   Main stats: a Crit DMG chest only if the build gives Crit Rate, otherwise a Cooldown Reduction chest; Attack on the legs for everyone. Karma: the signature first, then the best general card of the hero's own archetype.
+   Main stats and substats per slot are in `HERO_BUILDS` (see "Gear, builds and end-game stat totals" below). Karma: the signature first, then the best general card of the hero's own archetype.
 7. The old Excel workbook (`DragonSword_Awakening_Master_Reference_Claude_Edit_27Oct_v2.xlsx`, kept on David's Google Drive) is **out of date**. Use `data.json` instead.
 
 ## Gear, builds and end-game stat totals
@@ -113,7 +113,6 @@ Change these in the HTML if needed:
 
 **Observations not used in the totals yet** (in `HERO_STAT_MODEL.observations`):
 - every status resistance is 50, at any level;
-- Charlotte with no gear shows Critical Hit Resistance 5.84%;
 - displayed stats are rounded down.
 
 ### Hero base-stat estimates

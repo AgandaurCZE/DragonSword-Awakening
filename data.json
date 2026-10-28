@@ -4641,7 +4641,6 @@
   "profileRule": "Profile A only for Charlotte (measured); profile B for everyone else. Castella (Main DPS) and Lute (healer) both measured as B, so the profile is not tied to role.",
   "observations": {
    "statusResistance": "Every status resistance (Stun, Airborne, Knockdown, Shock, Frost, Burn, Poison, Bleed) is 50 on Charlotte with no gear; the same at Lv1.",
-   "critHitResistance": "Charlotte with no gear shows Critical Hit Resistance 5.84% (level-dependence not yet checked).",
    "critRateText": "In-game: 'Increases the chance of a Critical Hit ... The final probability is determined by the target's Critical Hit Resistance.' Nothing says what happens above 100%.",
    "setBonusTest": "Ballad of Life on Charlotte (no other gear stats, no Karma): Max HP 1975 -> 2152 with 2 pieces (+9%) -> 2271 with 3 pieces (+15% = 2-piece + 3-piece) -> 2271 with 5 pieces. Displayed values are rounded down."
   }
