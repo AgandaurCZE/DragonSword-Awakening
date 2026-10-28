@@ -1,3 +1,8 @@
+## 2026-10-28 — Refine awakening icon presentation
+- Updated `index.html`: removed the awakening icon from the Best Awakening card while keeping it on all six individual awakening cards.
+- Increased the individual awakening icons from 38px to 52px and widened the circular crop from 31% to 42% so the symbol is more visible.
+- Validation: reviewed the targeted source replacements and confirmed the best-card icon is conditionally omitted while individual cards retain it. Live browser testing was not available in this session.
+
 ## 2026-10-28 — Replace awakening screenshots with named text cards
 - Updated `index.html`: checked all 120 awakening screenshots and transcribed their displayed names into an `AWAKENING_NAMES` map for all 20 characters.
 - Removed screenshot images from every awakening card. Cards show both the awakening number and exact screenshot title in a larger, centered heading, alongside the awakening icon; the existing power diamonds, rating label, and rewritten effect text remain. The Best Awakening card uses the same layout.
