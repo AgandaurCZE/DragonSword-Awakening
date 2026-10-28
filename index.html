@@ -242,7 +242,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .gear-card-head{display:flex;align-items:center;gap:12px;min-height:70px;padding:9px 13px;background:#34363e;border-bottom:1px solid #3e414b}
 .gear-icon-wrap{width:58px;height:58px;flex:0 0 58px;display:grid;place-items:center;background:linear-gradient(135deg,#253b43,#2b6a79);border-radius:2px}
 .gear-icon-wrap img{width:100%;height:100%;object-fit:contain;display:block}
-.gear-card h3{margin:0 0 5px;font-size:17px;font-weight:850;color:#f5f7fb}
+.gear-card h3{margin:0 0 5px;font-size:17px;font-weight:850;color:var(--gear-arch-color,#f5f7fb)}
 .gear-source{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.035em;color:#c3d2de}
 .gear-effects{padding:11px 13px 13px;display:grid;gap:8px}
 .gear-effect{font-size:13px;line-height:1.55;color:#dbe0e9}
@@ -674,6 +674,12 @@ function openCharacterProfile(name,initialTab='skills'){
 }
 
 let activeGearFilter='all';
+// Identify an elemental/status set from its name and bonuses, using the same mapping as skill and Karma text.
+function gearArchetype(g){
+ const text=`${g.name||''} ${g.two||''} ${g.three||''}`;
+ const statuses=Object.keys(STATUS_ARCHETYPE||{}).sort((a,b)=>b.length-a.length);
+ for(const status of statuses){
+  if(new RegExp('\\\\b'+status.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\let activeGearFilter='all';
 function renderGear(){
  const q=($('gearSearch')?.value||'').trim().toLowerCase();
  const rows=GEAR_DATA.filter(g=>(activeGearFilter==='all'||g.source===activeGearFilter)&&(!q||(g.name+' '+g.source+' '+g.two+' '+g.three).toLowerCase().includes(q)));
@@ -682,6 +688,24 @@ function renderGear(){
  if(!rows.length){root.innerHTML='<div class="gear-empty">No gear sets match this search.</div>';return}
  rows.forEach(g=>{const card=document.createElement('article');card.className='gear-card';card.id='gear-set-'+g.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');card.dataset.source=g.source;
  card.innerHTML=`<div class="gear-card-head"><div class="gear-icon-wrap"><img src="${g.icon}" alt="${profileEsc(g.name)} icon"></div><div><h3>${profileEsc(g.name)}</h3><div class="gear-source">${profileEsc(g.source)}</div></div></div><div class="gear-effects"><div class="gear-effect"><b>(2) Piece</b> ${profileEsc(g.two)}</div><div class="gear-effect"><b>(3) Piece</b> ${profileEsc(g.three)}</div></div>`;root.append(card)});
+}')+'\\\\b','i').test(text))return STATUS_ARCHETYPE[status];
+ }
+ return '';
+}
+function renderGear(){
+ const q=($('gearSearch')?.value||'').trim().toLowerCase();
+ const rows=GEAR_DATA.filter(g=>(activeGearFilter==='all'||g.source===activeGearFilter)&&(!q||(g.name+' '+g.source+' '+g.two+' '+g.three).toLowerCase().includes(q)));
+ $('gearCount').textContent=`Showing ${rows.length} of ${GEAR_DATA.length} Gear Sets`;
+ const root=$('gearGrid');root.innerHTML='';
+ if(!rows.length){root.innerHTML='<div class="gear-empty">No gear sets match this search.</div>';return}
+ rows.forEach(g=>{
+  const card=document.createElement('article');card.className='gear-card';card.id='gear-set-'+g.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');card.dataset.source=g.source;
+  const archetype=gearArchetype(g);
+  const color=ARCH_COLORS[archetype]||'';
+  if(color)card.style.setProperty('--gear-arch-color',color);
+  card.innerHTML=`<div class="gear-card-head"><div class="gear-icon-wrap"><img src="${g.icon}" alt="${profileEsc(g.name)} icon"></div><div><h3>${profileEsc(g.name)}</h3><div class="gear-source">${profileEsc(g.source)}</div></div></div><div class="gear-effects"><div class="gear-effect"><b>(2) Piece</b> ${formatSkillText(g.two)}</div><div class="gear-effect"><b>(3) Piece</b> ${formatSkillText(g.three)}</div></div>`;
+  root.append(card)
+ });
 }
 $('gearSearch').addEventListener('input',renderGear);
 document.querySelectorAll('[data-gear-filter]').forEach(b=>b.addEventListener('click',()=>{activeGearFilter=b.dataset.gearFilter;document.querySelectorAll('[data-gear-filter]').forEach(x=>x.classList.toggle('active',x===b));renderGear()}));
