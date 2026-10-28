@@ -674,24 +674,12 @@ function openCharacterProfile(name,initialTab='skills'){
 }
 
 let activeGearFilter='all';
-// Identify an elemental/status set from its name and bonuses, using the same mapping as skill and Karma text.
+// Identify elemental/status sets using the same mapping as skill and Karma text.
 function gearArchetype(g){
  const text=`${g.name||''} ${g.two||''} ${g.three||''}`.toLowerCase();
  const statuses=Object.keys(STATUS_ARCHETYPE||{}).sort((a,b)=>b.length-a.length);
  for(const status of statuses){
   if(text.includes(status.toLowerCase()))return STATUS_ARCHETYPE[status];
- }
- return '';
-}
-function renderGear(){
- const q=($('gearSearch')?.value||'').trim().toLowerCase();
- const rows=GEAR_DATA.filter(g=>(activeGearFilter==='all'||g.source===activeGearFilter)&&(!q||(g.name+' '+g.source+' '+g.two+' '+g.three).toLowerCase().includes(q)));
- $('gearCount').textContent=`Showing ${rows.length} of ${GEAR_DATA.length} Gear Sets`;
- const root=$('gearGrid');root.innerHTML='';
- if(!rows.length){root.innerHTML='<div class="gear-empty">No gear sets match this search.</div>';return}
- rows.forEach(g=>{const card=document.createElement('article');card.className='gear-card';card.id='gear-set-'+g.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');card.dataset.source=g.source;
- card.innerHTML=`<div class="gear-card-head"><div class="gear-icon-wrap"><img src="${g.icon}" alt="${profileEsc(g.name)} icon"></div><div><h3>${profileEsc(g.name)}</h3><div class="gear-source">${profileEsc(g.source)}</div></div></div><div class="gear-effects"><div class="gear-effect"><b>(2) Piece</b> ${profileEsc(g.two)}</div><div class="gear-effect"><b>(3) Piece</b> ${profileEsc(g.three)}</div></div>`;root.append(card)});
-}')+'\\\\b','i').test(text))return STATUS_ARCHETYPE[status];
  }
  return '';
 }
@@ -707,7 +695,7 @@ function renderGear(){
   const color=ARCH_COLORS[archetype]||'';
   if(color)card.style.setProperty('--gear-arch-color',color);
   card.innerHTML=`<div class="gear-card-head"><div class="gear-icon-wrap"><img src="${g.icon}" alt="${profileEsc(g.name)} icon"></div><div><h3>${profileEsc(g.name)}</h3><div class="gear-source">${profileEsc(g.source)}</div></div></div><div class="gear-effects"><div class="gear-effect"><b>(2) Piece</b> ${formatSkillText(g.two)}</div><div class="gear-effect"><b>(3) Piece</b> ${formatSkillText(g.three)}</div></div>`;
-  root.append(card)
+  root.append(card);
  });
 }
 $('gearSearch').addEventListener('input',renderGear);
