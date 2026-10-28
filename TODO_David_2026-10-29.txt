@@ -54,7 +54,6 @@ Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
 7. STATUS TICKS – Poison done (28 Oct): 50/75/100% of the first applier's
    Attack at 1/2/3 stacks, max 3, about 10 s (a tick every ~2.5 s).
    Bleed, Burn and Shock stack the same way (max 3). Still open:
-   - Bleed, Burn, Shock: duration (about 10 s like Poison?).
    - Frost and Stun: do they tick at all? (once you have the heroes)
 
 8. DECISIONS – DONE (28 Oct)
