@@ -101,7 +101,7 @@
     "Mid-game": "A",
     "End-game": "A"
    },
-   "owned": false,
+   "owned": true,
    "role": "Main DPS",
    "classType": "Damage / Control"
   },
@@ -143,7 +143,7 @@
     "Mid-game": "A",
     "End-game": "A"
    },
-   "owned": false,
+   "owned": true,
    "role": "Sub-DPS",
    "classType": "Damage / Control"
   },
@@ -213,7 +213,7 @@
     "Mid-game": "S",
     "End-game": "S"
    },
-   "owned": false,
+   "owned": true,
    "role": "Support",
    "classType": "Damage / Control"
   },
