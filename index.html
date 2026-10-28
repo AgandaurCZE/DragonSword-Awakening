@@ -676,10 +676,10 @@ function openCharacterProfile(name,initialTab='skills'){
 let activeGearFilter='all';
 // Identify an elemental/status set from its name and bonuses, using the same mapping as skill and Karma text.
 function gearArchetype(g){
- const text=`${g.name||''} ${g.two||''} ${g.three||''}`;
+ const text=`${g.name||''} ${g.two||''} ${g.three||''}`.toLowerCase();
  const statuses=Object.keys(STATUS_ARCHETYPE||{}).sort((a,b)=>b.length-a.length);
  for(const status of statuses){
-  if(new RegExp('\\\\b'+status+'\\\\b','i').test(text))return STATUS_ARCHETYPE[status];
+  if(text.includes(status.toLowerCase()))return STATUS_ARCHETYPE[status];
  }
  return '';
 }
