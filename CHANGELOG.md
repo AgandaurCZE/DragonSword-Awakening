@@ -4,7 +4,7 @@
 - Added a red × clear button to all four search fields (Tier List, Heroes, Gear and Karma); clearing fires the existing input event so filters update immediately.
 - Added per-character Review sections for Best Awakening and Awakenings 1–6, with image placeholders for `assets/awakenings/<Hero>/A1.png` through `A6.png`. Added a future per-hero awakening data structure and formatting that reuses archetype/status/effect styling and Karma-style skill hover/click previews.
 - Created tracked `assets/awakenings/<Hero>/` folders for all 20 heroes, each with a `.gitkeep` file ready for the PNGs.
-- Validation: syntax, JSON and final committed-file checks will be performed after the commit; live browser testing is unavailable in this environment.
+- Validation: extracted inline JavaScript passed `new Function` syntax parsing after fixing a regex escape; `data.json` parsed successfully; re-fetched committed files confirm the search controls, awakening sections, formatting helper, changelog entry and all 20 hero folders. `AGENTS.md` remains unchanged. Live browser testing is unavailable in this environment.
 
 ## 2026-10-28 — Use dedicated transparent archetype icons in team headers
 - Replaced the oversized hero-portrait corner crop in Team headers with each hero's dedicated `archIcon` asset, displayed as a small contained circular icon. This avoids cropping unrelated portrait content and removes the opaque square background/shadow so transparent corners blend into the title.
