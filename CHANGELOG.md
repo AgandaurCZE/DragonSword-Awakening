@@ -1,3 +1,8 @@
+## 2026-10-28 — Replace awakening screenshots with named text cards
+- Updated `index.html`: checked all 120 awakening screenshots and transcribed their displayed names into an `AWAKENING_NAMES` map for all 20 characters.
+- Removed screenshot images from every awakening card. Cards show both the awakening number and exact screenshot title in a larger, centered heading, alongside the awakening icon; the existing power diamonds, rating label, and rewritten effect text remain. The Best Awakening card uses the same layout.
+- Validation: all inline JavaScript blocks passed V8 syntax parsing; static checks confirmed 20 characters × 6 names, screenshot rendering code/CSS removed, and rating/effect rendering retained. Live browser testing was unavailable in this session.
+
 # Changelog
 
 
