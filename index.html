@@ -531,59 +531,6 @@ document.addEventListener('pointerout',e=>{const link=e.target.closest?.('.karma
 document.addEventListener('focusin',e=>{const link=e.target.closest?.('.karma-skill-link');if(link)showKarmaSkillPopover(link,link.dataset.karmaHero,link.dataset.karmaSkill);});
 document.addEventListener('focusout',e=>{if(e.target.closest?.('.karma-skill-link'))hideKarmaSkillPopover();});
 document.addEventListener('click',e=>{const link=e.target.closest?.('.karma-skill-link');if(!link)return;e.preventDefault();hideKarmaSkillPopover(0);openCharacterProfile(link.dataset.karmaHero,'skills');});
-function renderKarmas(){')+'(?![\\\\w])','i');
-  const m=re.exec(text);
-  if(m){const token='KARMASKILLTOKEN'+matches.length+'X';matches.push({token,skill:sk,matched:m[0]});text=text.slice(0,m.index)+token+text.slice(m.index+m[0].length);}
- }
- let html=formatSkillText(text);
- for(const m of matches){
-  const tokenEsc=profileEsc(m.token);
-  const link='<button type="button" class="karma-skill-link" data-karma-skill="'+profileEsc(m.skill.displayName)+'" data-karma-hero="'+profileEsc(k.signature)+'" aria-label="View '+profileEsc(k.signature)+' skill '+profileEsc(m.skill.displayName)+'" title="Hover to preview skill; click to open Skills">'+profileEsc(m.matched)+'</button>';
-  html=html.replace(tokenEsc,link);
- }
- return html;
-}
-function showKarmaSkillPopover(anchor,heroName,skillName){
- const profile=CHARACTER_PROFILE_DATA[heroName];if(!profile)return;
- const norm=s=>String(s||'').trim().toLowerCase();
- const skill=(profile.skills||[]).find(sk=>norm(String(sk.skill||'').replace(/\\s*\\(Lv\\.?\\s*\\d+\\).*$/i,'').split(/\\s*\\(/)[0])===norm(skillName));
- if(!skill)return;
- let pop=document.getElementById('karmaSkillPopover');
- if(!pop){pop=document.createElement('div');pop.id='karmaSkillPopover';pop.className='karma-skill-popover';pop.hidden=true;document.body.append(pop);
-  pop.addEventListener('mouseenter',()=>clearTimeout(karmaSkillHideTimer));
-  pop.addEventListener('mouseleave',()=>hideKarmaSkillPopover());
- }
- pop.innerHTML='';
- const card=document.createElement('article');card.className='profile-skill';
- const head=document.createElement('div');head.className='profile-skill-head';
- const slot=document.createElement('span');slot.className='profile-skill-slot';slot.textContent=skill.slot||'Skill';
- const title=document.createElement('h4');title.textContent=skill.skill||skillName;head.append(slot,title);
- const body=document.createElement('div');body.className='profile-skill-body';body.innerHTML=formatSkillText(skill.description||'');
- card.append(head,body);
- const maxMatch=String(skill.skill||'').match(/Lv\\.?\\s*(\\d+)/i),maxLevel=maxMatch?Math.max(1,parseInt(maxMatch[1],10)):1;
- if(maxLevel>1&&!/mastery\\s*\\(passive\\)/i.test(skill.slot||'')){
-  const controls=document.createElement('div');controls.className='profile-skill-controls';
-  const label=document.createElement('label');label.textContent='Skill level';
-  const range=document.createElement('input');range.type='range';range.min='1';range.max=String(maxLevel);range.value=String(maxLevel);range.setAttribute('aria-label',skill.skill+' level');
-  const level=document.createElement('span');level.className='profile-skill-level';level.textContent='Lv. '+maxLevel;
-  const original=skill.description||'';
-  range.addEventListener('input',()=>{const lv=Number(range.value),factor=(1+(SKILL_MAX_TO_LV1-1)*(lv-1)/(maxLevel-1))/SKILL_MAX_TO_LV1;level.textContent=lv<maxLevel?'Lv. '+lv+' (est.)':'Lv. '+lv;body.innerHTML=formatSkillText(original.replace(/(Attack Power )(\\d+(?:\\.\\d+)?)(% Damage)/g,(m,a,num,c)=>a+Math.round(Number(num)*factor)+c));});
-  controls.append(label,range,level);card.append(controls);
- }
- pop.append(card);pop.hidden=false;
- const r=anchor.getBoundingClientRect(),w=pop.offsetWidth,h=pop.offsetHeight;
- let left=r.left,top=r.bottom+8;
- if(left+w>window.innerWidth-12)left=window.innerWidth-w-12;
- if(top+h>window.innerHeight-12)top=r.top-h-8;
- pop.style.left=Math.max(12,left)+'px';pop.style.top=Math.max(12,top)+'px';
-}
-let karmaSkillHideTimer=null;
-function hideKarmaSkillPopover(delay=180){clearTimeout(karmaSkillHideTimer);karmaSkillHideTimer=setTimeout(()=>{const pop=document.getElementById('karmaSkillPopover');if(pop)pop.hidden=true;},delay);}
-document.addEventListener('pointerover',e=>{const link=e.target.closest?.('.karma-skill-link');if(link)showKarmaSkillPopover(link,link.dataset.karmaHero,link.dataset.karmaSkill);});
-document.addEventListener('pointerout',e=>{const link=e.target.closest?.('.karma-skill-link');if(link&&!link.contains(e.relatedTarget)&&!document.getElementById('karmaSkillPopover')?.contains(e.relatedTarget))hideKarmaSkillPopover();});
-document.addEventListener('focusin',e=>{const link=e.target.closest?.('.karma-skill-link');if(link)showKarmaSkillPopover(link,link.dataset.karmaHero,link.dataset.karmaSkill);});
-document.addEventListener('focusout',e=>{if(e.target.closest?.('.karma-skill-link'))hideKarmaSkillPopover();});
-document.addEventListener('click',e=>{const link=e.target.closest?.('.karma-skill-link');if(!link)return;e.preventDefault();hideKarmaSkillPopover(0);openCharacterProfile(link.dataset.karmaHero,'skills');});
 function renderKarmas(){
  const board=document.getElementById('karmaBoard');if(!board)return;
  const query=(document.getElementById('karmaSearch')?.value||'').trim().toLowerCase();
