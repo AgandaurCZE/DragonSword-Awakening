@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-28 — Fix Gear status colors and group sets
+- Updated `index.html` so status words in Gear bonus descriptions retain their archetype colors; the more-specific `.gear-effect b` rule had overridden the formatter's `.sk-status` color, so added a targeted override.
+- Split the Gear tab into titled “General sets” and “Archetype sets” sections. The three Normal Dungeons sets display in a two-up layout with the third centered below; the nine Blacksmith sets remain in a two-column grid. On narrow screens, the layout collapses to one column.
+- Search and source filters still apply across both sections; empty sections are omitted.
+- Validation: re-fetched `index.html`; JavaScript syntax check passed using `new Function`, `data.json` parses as JSON, confirmed 3 Normal Dungeons and 9 Blacksmith sets, one Gear renderer/helper, both bonuses use `formatSkillText`, and the color override and section layout rules are present. Live browser interaction testing was unavailable.
+
 ## 2026-10-28 — Color Gear tab set names and effects
 - Updated `index.html`: Gear set bonus descriptions now use the existing skill-text formatter, so mapped status effects and relevant numeric values receive the same emphasis and archetype colors used in Skills and Karma.
 - Gear set names now use the matching archetype color inferred from their mapped status effects. Neutral sets without a mapped archetype retain the default title color; no gear data was changed.
