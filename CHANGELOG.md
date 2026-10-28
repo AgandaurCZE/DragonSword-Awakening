@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-28 — Fix site-breaking JavaScript syntax error
+- Removed an accidentally duplicated, malformed block inserted before `renderKarmas()` in `index.html`. It contained a stray regex fragment and caused the browser to fail parsing the entire script, preventing the site from initializing.
+- Kept the valid Karma skill-preview implementation and the real `renderKarmas()` function intact.
+- Validation: confirmed the malformed duplicate block is removed and only one `renderKarmas()` declaration remains. A live browser run was not available in this session.
+
 All changes to this project made by ChatGPT must be recorded here. Entries are newest first.
 
 ## 2026-10-28 — Add signature Karma skill previews
