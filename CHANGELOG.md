@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-28 — Crop team archetype badges and link skill mentions
+- Updated `index.html` to derive the small Team title badge from the top-left corner of a hero portrait (the embedded original archetype badge), clipped in a fixed square rather than using a separate archetype icon or color-shaded substitute.
+- Added `formatTeamSkillText` for team tags and Team fit descriptions. It scans `CHARACTER_PROFILE_DATA` skill names, prioritizes the team's own roster when a name is shared, and emits the existing Karma-style skill links. Existing delegated hover/focus previews and click-to-open skill navigation handle desktop and mobile.
+- Validation: re-fetched `index.html`; inline JavaScript syntax check passed using `new Function`, `data.json` parses as JSON, and confirmed the crop styling, portrait source, skill lookup/link markup, team tag/note integration and existing hover/click handlers are present. Live browser visual testing was unavailable, so the exact crop bounds and rendered popover remain unverified in-browser.
+ 
 ## 2026-10-28 — Apply archetype colors to Teams
 - Updated `index.html` so each team card's border/accent and title background are based on its own archetype's sampled color, darkened slightly so the archetype icon remains visually distinct. Team-name typography and text color remain unchanged.
 - Team tags (role/enabler summaries) and Team fit descriptions now use the shared skill-text formatter, coloring status effects and archetype names consistently. Extended the shared formatter to recognize archetype names as well as status terms, using the matching archetype color.
