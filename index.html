@@ -459,7 +459,16 @@ function formatKarmaExclusive(k){
   const name=full.split(/\s*\(/)[0].trim();
   return name?{...sk,displayName:name}:null;
  }).filter(Boolean).sort((a,b)=>b.displayName.length-a.displayName.length);
+ const aliases=[];
+ if(k.signature==='Dana')aliases.push({phrase:'Chako is summoned',skillName:'Summon Chako'});
+ if(k.signature==='Eileen')aliases.push({phrase:'Banner Maid',skillName:'Vanguard Banner'});
  const matches=[];let text=raw;
+ for(const alias of aliases){
+  const sk=skills.find(x=>x.displayName.toLowerCase()===alias.skillName.toLowerCase());if(!sk)continue;
+  const at=text.toLowerCase().indexOf(alias.phrase.toLowerCase());if(at<0)continue;
+  const token='KARMASKILLTOKEN'+matches.length+'X';matches.push({token,skill:sk,matched:text.slice(at,at+alias.phrase.length)});
+  text=text.slice(0,at)+token+text.slice(at+alias.phrase.length);
+ }
  for(const sk of skills){
   const lower=text.toLowerCase(),needle=sk.displayName.toLowerCase();
   let at=lower.indexOf(needle);
