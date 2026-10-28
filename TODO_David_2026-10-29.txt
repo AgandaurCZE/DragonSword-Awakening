@@ -51,9 +51,12 @@ Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
      orange ones? Compare one substat (e.g. Crit Rate on a helmet)
      across rarities.
 
-7. STATUS TICKS
-   - If damage numbers appear while Poison, Burn or Bleed tick on an enemy,
-     note a few values and how often they appear.
+7. STATUS TICKS – mostly done (28 Oct): Poison, Bleed, Burn and Shock tick for
+   50% of Attack, 4 times. Still open:
+   - Seconds between ticks.
+   - Poison: Johnny + Johnny (2 stacks), and Johnny first then Charlotte,
+     to explain the 429. A 3rd stack if you can.
+   - Frost and Stun: do they tick at all?
 
 8. DECISIONS – DONE (28 Oct)
    - Awakening ratings were redone by Claude on the full 0–5 scale; tell
