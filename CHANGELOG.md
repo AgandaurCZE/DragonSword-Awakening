@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-28 — Use dedicated transparent archetype icons in team headers
+- Replaced the oversized hero-portrait corner crop in Team headers with each hero's dedicated `archIcon` asset, displayed as a small contained circular icon. This avoids cropping unrelated portrait content and removes the opaque square background/shadow so transparent corners blend into the title.
+- Kept the existing archetype-colored Team title styling and skill-preview behavior unchanged.
+- Validation: checked the targeted CSS and render logic replacements and confirmed `AGENTS.md` remains untouched. Live browser visual testing is unavailable in this environment.
+
 ## 2026-10-28 — Crop team archetype badges and link skill mentions
 - Updated `index.html` to derive the small Team title badge from the top-left corner of a hero portrait (the embedded original archetype badge), clipped in a fixed square rather than using a separate archetype icon or color-shaded substitute.
 - Added `formatTeamSkillText` for team tags and Team fit descriptions. It scans `CHARACTER_PROFILE_DATA` skill names, prioritizes the team's own roster when a name is shared, and emits the existing Karma-style skill links. Existing delegated hover/focus previews and click-to-open skill navigation handle desktop and mobile.
