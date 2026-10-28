@@ -1,4 +1,4 @@
-DragonSword guide – things to test (updated 28 Oct 2026, 21:00)
+DragonSword guide – things to test (updated 29 Oct 2026, 00:30)
 ==============================================================
 
 Written by Claude. Ordered by how much each item changes the guide: do them
@@ -40,10 +40,13 @@ or OBS) and pause on the frame where your hit lands.
    Why: the level slider only changes damage % at the moment; with these
    it could change buffs correctly too.
 
-5. CRIT CHANCE
-   - About 100–200 hits with one hero, count how many crit (note the Crit
-     Rate). Tells us whether the Crit Rate stat is the real chance.
-   - Do status ticks ever crit? Watch 20 or so ticks.
+5. "ALL STATUS EFFECT ADDITIONAL ATTACK POWER" SUBSTAT
+   - Patch 1.1.0 calls it a % increase of every status Additional Attack
+     Power; our gear table stores it as a flat 31-45. How does it show on
+     your gear: with or without a % sign? A screenshot of one piece is enough.
+   - (Crit chance no longer needs testing: 1.1.0 says crits happen exactly
+     at your Crit Rate and monsters have no crit resistance.)
+   - Optional: do status ticks ever crit? Watch 20 or so ticks.
 
 6. BLUE / PURPLE / GREEN GEAR
    - Blue main stats don't keep one ratio to Orange, and Blue substats are

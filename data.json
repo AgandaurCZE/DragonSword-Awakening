@@ -4,7 +4,25 @@
   "patch": "1.1.2",
   "balancePatch": "1.1.0",
   "updated": "2026-10-27",
-  "note": "Single source of truth for the site. index.html loads this file; images live in assets/."
+  "note": "Single source of truth for the site. index.html loads this file; images live in assets/.",
+  "patchDates": {
+   "1.1.2": "2026-10-27",
+   "1.1.1": "2026-10-15",
+   "1.1.0": "2026-10-15",
+   "1.0.12": "2026-09-10",
+   "1.0.11": "2026-09-03",
+   "1.0.10": "2026-08-20",
+   "1.0.9": "2026-08-13",
+   "1.0.8": "2026-08-07",
+   "1.0.7": "2026-08-06",
+   "1.0.6": "2026-07-31",
+   "1.0.5": "2026-07-30",
+   "1.0.4": "2026-07-30",
+   "1.0.3": "2026-07-25",
+   "1.0.2": "2026-07-24",
+   "1.0.1": "2026-07-23",
+   "1.0.0": "2026-07-23"
+  }
  },
  "HEROES": [
   {
@@ -358,8 +376,8 @@
    "role": "Main DPS",
    "classType": "Damage / Control",
    "obtain": {
-    "method": null,
-    "note": "Not recorded yet"
+    "method": "Story Quests",
+    "cost": "Adventure Quest 53. Reunion"
    }
   }
  ],
@@ -590,7 +608,7 @@
    "tags": [
     "Main DPS + Frost sub-DPS + shield / buffer"
    ],
-   "note": "Othello is the main damage dealer on Frozen targets, Cerese starts Frost and adds crowd control, and Dana supports with Chako's shield and a +10% team Defense aura. All three stack Frost and the team matches the game's recommendations, but patch 1.1.0 nerfed all three and their listed damage is the lowest of any full team, so pick it for safety. Alts: Ornette (the game recommends her with Othello; Shock and Knockdown) for Cerese; Alex as a Knockdown tank for Dana."
+   "note": "Othello is the main damage dealer on Frozen targets, Cerese starts Frost and adds crowd control, and Dana supports with Chako's shield and a +10% team Defense aura. All three stack Frost and the team matches the game's recommendations, but patch 1.1.0 lowered Othello's and Cerese's damage and Super Armor break (Dana's damage went up, with higher Rage costs), and their listed damage is the lowest of any full team, so pick it for safety. Alts: Ornette (the game recommends her with Othello; Shock and Knockdown) for Cerese; Alex as a Knockdown tank for Dana."
   },
   {
    "tier": "B",
@@ -618,7 +636,7 @@
    "tags": [
     "Main DPS / Break starter + Stun sub-DPS + healer"
    ],
-   "note": "Castella is the main damage dealer and Break starter (Stun Blow into Upper Blow), Astria adds Stun and Break damage, and Lute heals and Stuns. Matches the game's recommendation for Castella. Not A because only Castella is A tier. Alts: Theresia (Stun damage) for Astria; Kalien (the game recommends him with Castella and Astria; Stun and Burn) for Lute."
+   "note": "Castella is the main damage dealer and Break starter (Stun Blow into Upper Blow), Astria adds Stun and Break damage, and Lute heals and Stuns. Matches the game's recommendation for Castella. Not A because only Castella is A tier. Alts: Theresia (Stun damage) for Astria; Kalien (the game recommends her with Castella and Astria; Stun and Burn) for Lute."
   },
   {
    "tier": "B",
@@ -3301,29 +3319,29 @@
    "pros": [
     "Healing Circle restores 20% of max HP to the whole team.",
     "Applies Stun (Stun Slash) and Knockdown (Swordgrab), unlocking those skills for teammates.",
-    "Swordgrab (1626%) and Relic Fall (1499%) give her real damage for a healer.",
+    "Swordgrab (1626%) and Relic Fall (1499%) give him real damage for a healer.",
     "A1 makes Relic Fall leave a zone that raises allies' Attack Power."
    ],
    "cons": [
     "B tier from mid-game on.",
-    "Her heal is a flat 20% of max HP, so gear can't make it stronger.",
+    "His heal is a flat 20% of max HP, so gear can't make it stronger.",
     "Relic Fall needs Knockdown first.",
-    "She fills the healer slot in B-tier teams and is only an alternative in Bloodburst."
+    "He fills the healer slot in B-tier teams and is only an alternative in Bloodburst."
    ],
    "review": {
     "updated": "28 Oct 2026",
-    "pronoun": "her",
+    "pronoun": "him",
     "summary": [
-     "Lute is an Amplitude healer. [[skill:Healing Circle]] restores 20% of max HP to herself and allies in range, and she adds Stun ([[skill:Stun Slash]]) and Knockdown ([[skill:Swordgrab]]) so teammates' conditional skills fire. She's **A tier early-game** and B tier after that.",
-     "Unusually for a healer she has two big hits: Swordgrab (1626%) and [[skill:Relic Fall]] (1499%, needs Knockdown). Her Mastery also adds Stun to the hits of [[skill:Kick Combo]].",
-     "Her heal is a flat 20% of max HP, so gear can't make it bigger; that's the main reason she drops to B tier later."
+     "Lute is an Amplitude healer. [[skill:Healing Circle]] restores 20% of max HP to himself and allies in range, and he adds Stun ([[skill:Stun Slash]]) and Knockdown ([[skill:Swordgrab]]) so teammates' conditional skills fire. He's **A tier early-game** and B tier after that.",
+     "Unusually for a healer he has two big hits: Swordgrab (1626%) and [[skill:Relic Fall]] (1499%, needs Knockdown). His Mastery also adds Stun to the hits of [[skill:Kick Combo]].",
+     "His heal is a flat 20% of max HP, so gear can't make it bigger; that's the main reason he drops to B tier later."
     ],
     "verdict": {
      "level": "good",
-     "label": "Yes, she's free",
+     "label": "Yes, he's free",
      "text": [
-      "She comes from the Story Quests, so she costs nothing, and she's the healer in the guide's Stun teams (Amplitude and Breaker). She's also the alternative for [[hero:Astria]] in the A-tier Bloodburst team.",
-      "Her best awakening is [[awk:1]]: Relic Fall leaves a zone that raises allies' Attack Power."
+      "He comes from the Story Quests, so he costs nothing, and he's the healer in the guide's Stun teams (Amplitude and Breaker). He's also the alternative for [[hero:Astria]] in the A-tier Bloodburst team.",
+      "His best awakening is [[awk:1]]: Relic Fall leaves a zone that raises allies' Attack Power."
      ]
     },
     "howToPlay": {
@@ -3338,7 +3356,7 @@
      ],
      "combos": [
       {
-       "name": "Her own combo",
+       "name": "His own combo",
        "sequence": [
         "Stun Slash",
         "Swordgrab",
@@ -3359,9 +3377,9 @@
     },
     "kit": [
      {
-      "title": "[[skill:Healing Circle]]: her heal",
+      "title": "[[skill:Healing Circle]]: his heal",
       "points": [
-       "Restores 20% of max HP to herself and allies in range and deals 600%.",
+       "Restores 20% of max HP to himself and allies in range and deals 600%.",
        "[[awk:6]] adds a healing-over-time circle inside it. Whether the 20% grows with skill level hasn't been checked."
       ]
      },
@@ -3369,13 +3387,13 @@
       "title": "[[skill:Stun Slash]], [[skill:Swordgrab]] and [[skill:Relic Fall]]",
       "points": [
        "Stun Slash (1269%) Stuns; Swordgrab (1626%) Knocks down and has a Mount Action on giant bosses.",
-       "Relic Fall (1499%) needs Knockdown; her signature Karma summons more relics, and [[awk:1]] leaves an Attack Power zone for allies."
+       "Relic Fall (1499%) needs Knockdown; his signature Karma summons more relics, and [[awk:1]] leaves an Attack Power zone for allies."
       ]
      },
      {
       "title": "[[skill:Kick Combo]] and Mastery",
       "points": [
-       "Her Mastery adds hits to Kick Combo, more Rage from [[skill:Dropkick]], and Stun on hit."
+       "His Mastery adds hits to Kick Combo, more Rage from [[skill:Dropkick]], and Stun on hit."
       ]
      }
     ],
@@ -3402,12 +3420,12 @@
       "Signature: [[karma:A Sword Summoned for a Friend]] (exclusive shop): +15% Defense Ignore, +20% Attack Power, +20% Stun Additional Damage, and more relics in Relic Fall. Second: [[karma:I'll Knock You Out Myself]]."
      ],
      "gear": [
-      "3 [[set:Holy Arbiter]] + 2 [[set:Battle Will]], with Max HP Up on the chest and Defense Up on the legs to keep her alive."
+      "3 [[set:Holy Arbiter]] + 2 [[set:Battle Will]], with Max HP Up on the chest and Defense Up on the legs to keep him alive."
      ]
     },
     "teams": [
-     "**Amplitude (B tier):** [[hero:Theresia]] + [[hero:Astria]] + Lute, the safest Stun team thanks to her heal.",
-     "**Breaker (B tier):** [[hero:Castella]] + [[hero:Astria]] + Lute. She's also the alternative for Astria in **Bloodburst (A tier)** and for [[hero:Sion]] in **Crushing**."
+     "**Amplitude (B tier):** [[hero:Theresia]] + [[hero:Astria]] + Lute, the safest Stun team thanks to his heal.",
+     "**Breaker (B tier):** [[hero:Castella]] + [[hero:Astria]] + Lute. He's also the alternative for Astria in **Bloodburst (A tier)** and for [[hero:Sion]] in **Crushing**."
     ]
    }
   },
@@ -5136,24 +5154,24 @@
    ],
    "cons": [
     "C tier early-game.",
-    "Fox Grab, his biggest hit (1178%), needs Super Armor Break until A1.",
-    "His skills have the lowest combined skill % of any hero in the guide.",
-    "A4 (Break Additional Damage) does almost nothing for him."
+    "Fox Grab, her biggest hit (1178%), needs Super Armor Break until A1.",
+    "Her skills have the lowest combined skill % of any hero in the guide.",
+    "A4 (Break Additional Damage) does almost nothing for her."
    ],
    "review": {
     "updated": "28 Oct 2026",
-    "pronoun": "him",
+    "pronoun": "her",
     "summary": [
-     "Kalien is a Blazeflame support whose job is Burn: seven of his skills apply it, the most of any hero, and [[skill:Finale]] adds Stun. He's **C tier early-game** and B tier after that.",
-     "He fights through fox spirits: [[skill:Fox Parade]] and [[skill:Fox Chase]] summon them, [[skill:Fox Grab]] sends Sur's Clones to lift and slam enemies, and Finale detonates every clone at once.",
-     "His skills have the lowest combined skill % of any hero in the guide, so he's in teams for Burn stacks and Stun rather than damage."
+     "Kalien is a Blazeflame support whose job is Burn: seven of her skills apply it, the most of any hero, and [[skill:Finale]] adds Stun. She's **C tier early-game** and B tier after that.",
+     "She fights through fox spirits: [[skill:Fox Parade]] and [[skill:Fox Chase]] summon them, [[skill:Fox Grab]] sends Sur's Clones to lift and slam enemies, and Finale detonates every clone at once.",
+     "Her skills have the lowest combined skill % of any hero in the guide, so she's in teams for Burn stacks and Stun rather than damage."
     ],
     "verdict": {
      "level": "ok",
      "label": "Only for Blazeflame",
      "text": [
-      "He's a Hero shop exchange (Fate's Invitation), and his value is limited to keeping Burn up for [[hero:Kalsion]]. Spend Fate's Invitations on stronger heroes first.",
-      "If you do use him, [[awk:1]] is essential: Fox Grab, his biggest hit, can then be used on any Burning target."
+      "She's a Hero shop exchange (Fate's Invitation), and her value is limited to keeping Burn up for [[hero:Kalsion]]. Spend Fate's Invitations on stronger heroes first.",
+      "If you do use her, [[awk:1]] is essential: Fox Grab, her biggest hit, can then be used on any Burning target."
      ]
     },
     "howToPlay": {
@@ -5191,14 +5209,14 @@
      {
       "title": "Fox spirits",
       "points": [
-       "[[skill:Fox Parade]] (710%) and [[skill:Twin Tails]] (546%) send exploding foxes; his Mastery makes Twin Tails last longer and spin wider.",
+       "[[skill:Fox Parade]] (710%) and [[skill:Twin Tails]] (546%) send exploding foxes; her Mastery makes Twin Tails last longer and spin wider.",
        "[[skill:Fox Chase]] (1040%) summons Sur; [[awk:3]] keeps Sur longer and adds a launch, slam and Stun."
       ]
      },
      {
       "title": "[[skill:Fox Grab]] and [[skill:Finale]]",
       "points": [
-       "Fox Grab (1178%) needs Super Armor Break until [[awk:1]] adds Burning targets; his signature Karma summons more foxes.",
+       "Fox Grab (1178%) needs Super Armor Break until [[awk:1]] adds Burning targets; her signature Karma summons more foxes.",
        "Finale (811%) detonates all clones and applies Burn and Stun."
       ]
      }
@@ -5220,18 +5238,18 @@
      ],
      "awakening": [
       "**Best stop: [[awk:1]].** [[awk:5]] is worth about +18% damage while Burn is up; [[awk:3]] adds Stun.",
-      "[[awk:4]] (Break damage) does almost nothing for him."
+      "[[awk:4]] (Break damage) does almost nothing for her."
      ],
      "karma": [
       "Signature: [[karma:The Chosen One of the Crimson Flame]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Burn Additional Damage, and more foxes in Fox Grab. Second: [[karma:A Flame That Cuts Through the Moment]]."
      ],
      "gear": [
-      "3 [[set:Blazing Flames]] + 2 [[set:The Infiltrator]]; Blazing Flames' 3-piece Crit Rate is nearly always on because he applies Burn constantly."
+      "3 [[set:Blazing Flames]] + 2 [[set:The Infiltrator]]; Blazing Flames' 3-piece Crit Rate is nearly always on because she applies Burn constantly."
      ]
     },
     "teams": [
-     "**Blazeflame (A tier):** [[hero:Kalsion]] + [[hero:Aria]] + Kalien; [[hero:Reina]] can replace him as Airborne setup.",
-     "He's also the alternative for [[hero:Lute]] in **Breaker** (the game recommends him with Castella and Astria) for Stun and Burn."
+     "**Blazeflame (A tier):** [[hero:Kalsion]] + [[hero:Aria]] + Kalien; [[hero:Reina]] can replace her as Airborne setup.",
+     "She's also the alternative for [[hero:Lute]] in **Breaker** (the game recommends her with Castella and Astria) for Stun and Burn."
     ]
    }
   },
@@ -5698,7 +5716,7 @@
     "A6 adds a whirlwind that applies Frost and Airborne."
    ],
    "cons": [
-    "B tier at end-game, and the Frostbite team was nerfed in patch 1.1.0.",
+    "B tier at end-game, and her Frostbite teammates Othello and Cerese were nerfed in patch 1.1.0.",
     "Chako Knuckle and Chako Spin need Rime Energy and Frost or Knockdown, so her damage takes setup.",
     "Her own damage is low."
    ],
@@ -5714,7 +5732,7 @@
      "level": "ok",
      "label": "Situational",
      "text": [
-      "She's a Hero shop exchange (Fate's Invitation). She's a strong early support, but her team (Frostbite) is B tier and was nerfed in patch 1.1.0, so pick her for safety rather than damage.",
+      "She's a Hero shop exchange (Fate's Invitation). She's a strong early support, but her team (Frostbite) is B tier and two of its members were nerfed in patch 1.1.0, so pick her for safety rather than damage.",
       "Her best awakening is [[awk:6]]: longer Chako Spin plus a whirlwind that applies Frost and Airborne."
      ]
     },
@@ -5798,7 +5816,7 @@
      ]
     },
     "teams": [
-     "**Frostbite (B tier):** [[hero:Othello]] + [[hero:Cerese]] + Dana, the game's recommendation; picked for safety because patch 1.1.0 nerfed all three.",
+     "**Frostbite (B tier):** [[hero:Othello]] + [[hero:Cerese]] + Dana, the game's recommendation; picked for safety; patch 1.1.0 nerfed Othello and Cerese and gave Dana more damage but higher Rage costs.",
      "She's also an alternative for [[hero:Sion]] in **Crushing** as a shield support."
     ]
    }
@@ -5957,7 +5975,7 @@
    ],
    "cons": [
     "Shattering Touch needs a Frozen enemy or an Ice Block, so part of her damage waits on setup.",
-    "The Frostbite team is B tier and was nerfed in patch 1.1.0.",
+    "The Frostbite team is B tier, and she and Othello were nerfed in patch 1.1.0.",
     "A6's ice wall needs three skills lined up."
    ],
    "review": {
@@ -6210,7 +6228,7 @@
    "cons": [
     "C tier early-game and B tier after that.",
     "Frozen Burst needs a Frozen enemy or an Ice Spear on the field.",
-    "His best team, Frostbite, is B tier and was nerfed in patch 1.1.0.",
+    "His best team, Frostbite, is B tier, and he and Cerese were nerfed in patch 1.1.0.",
     "In the Crushing team he has no Frost partner, so his Frozen-only skills fire less often."
    ],
    "review": {
@@ -6225,7 +6243,7 @@
      "level": "ok",
      "label": "Situational",
      "text": [
-      "He's B tier at best, and his team (Frostbite) is B tier and was nerfed in patch 1.1.0. How he's obtained isn't recorded in the guide yet.",
+      "He's B tier at best, and his team (Frostbite) is B tier, and he was nerfed in patch 1.1.0. How he's obtained isn't recorded in the guide yet.",
       "His best awakening is [[awk:1]]; [[awk:5]] is worth about +18% while Frost is up."
      ]
     },
@@ -6306,7 +6324,7 @@
      ]
     },
     "teams": [
-     "**Frostbite (B tier):** Othello + [[hero:Cerese]] + [[hero:Dana]]; picked for safety after the patch 1.1.0 nerfs.",
+     "**Frostbite (B tier):** Othello + [[hero:Cerese]] + [[hero:Dana]]; picked for safety after the patch 1.1.0 nerfs to Othello and Cerese.",
      "**Crushing (B tier):** with [[hero:Alex]] and [[hero:Sion]] he has no Frost partner, so his Frozen-only skills fire less often."
     ]
    }
@@ -7227,7 +7245,7 @@
      "level": "ok",
      "label": "Good later",
      "text": [
-      "She's A tier at end-game but only an alternative in the Thunderbolt team. How she's obtained isn't recorded yet; her signature Karma was added to the exclusive shop in patch 1.1.0.",
+      "She's A tier at end-game but only an alternative in the Thunderbolt team. She's free: a reward for Adventure Quest 53. Reunion, and her signature Karma is at the Exchange (both added in patch 1.1.0).",
       "Her best awakening is [[awk:1]]; [[awk:5]] is worth about +18% while Shock is up."
      ]
     },
@@ -7550,7 +7568,7 @@
      ]
     },
     "teams": [
-     "**Breaker (B tier):** Castella + [[hero:Astria]] + [[hero:Lute]], the game's recommendation for her; B because only Castella is A tier.",
+     "**Breaker (B tier):** Castella + [[hero:Astria]] + [[hero:Lute]], the game's recommendation for him; B because only Castella is A tier.",
      "She's also an alternative in **Gale (S tier)** for [[hero:Reina]] as a Break starter, and in **Crushing** for [[hero:Othello]]."
     ]
    }
@@ -11262,7 +11280,7 @@
   },
   "Lute": {
    "type": "Support",
-   "why": "Healing Circle restores 20% of max HP and Lute's other support is not stat-based, so her gear can't raise her healing. Chest and legs keep her alive (Max HP Up also raises her own share of the heal); the other three slots add damage. Those three slots are chosen with all six awakenings unlocked.",
+   "why": "Healing Circle restores 20% of max HP and Lute's other support is not stat-based, so his gear can't raise his healing. Chest and legs keep him alive (Max HP Up also raises his own share of the heal); the other three slots add damage. Those three slots are chosen with all six awakenings unlocked.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -13281,5 +13299,1888 @@
    ],
    "untested": "Not tested yet: bonuses for two different statuses at once (added or multiplied), whether ticks can crit, and Break."
   }
+ },
+ "PATCH_NOTES": {
+  "note": "Official patch notes (assets/patch_notes, from Steam), with developer messages left out and the important changes kept. Dates and BuildIDs are from SteamDB as David sent them. Hero arrows on the Tier List and Teams show the latest balance patch (latestBalance). tierChanges records any tier moves we decide on after a patch; tiers are never moved by a formula.",
+  "latestBalance": "1.1.0",
+  "badgeTypes": {
+   "hero": "New hero",
+   "balance": "Balance",
+   "content": "Content",
+   "costume": "Costumes",
+   "quest": "Story & quests",
+   "system": "Systems & QoL",
+   "fix": "Bug fixes"
+  },
+  "directions": {
+   "buff": "Buff",
+   "nerf": "Nerf",
+   "mixed": "Mixed",
+   "adjusted": "Adjusted",
+   "fix": "Fix",
+   "new": "New"
+  },
+  "impactLabels": [
+   "",
+   "Minor",
+   "Moderate",
+   "Major"
+  ],
+  "rating": "1.1.0 hero ratings come from the official before/after numbers. Base damage values are the patch notes' Lv. 1 multipliers × 175, which equals the codex max-level % (124 of 126 match exactly; the other 2 are Alex's two basic attacks, whose names the notes swap). damagePct is the change in the sum of every damaging skill's max-level %. Direction: buff or nerf when that sum moves 3% or more; if Rage, status-application or Super Armor changes point the other way it's mixed. Under 3% the non-damage changes decide, and with none it's adjusted. Impact: under 5% Minor, 5–10% Moderate, 10% or more Major, one step higher when 2 or more non-damage changes point the same way. Crit buff values changed by the crit rework aren't counted. Ratings for other patches are read from the notes, with no numbers given.",
+  "patches": [
+   {
+    "version": "1.1.2",
+    "title": "Update Notes 1.1.2",
+    "date": "2026-10-27",
+    "time": "06:04",
+    "buildId": 26210326,
+    "balance": false,
+    "headline": "Training Ground and bug fixes; no balance changes.",
+    "highlights": [
+     {
+      "badge": "system",
+      "text": "The Training Ground measurement now ends with ESC on keyboard."
+     },
+     {
+      "badge": "quest",
+      "text": "Improved cutscene in Othello's Hero Quest The Name Left Behind; fixes for Adventure Quest 28 and Cerese's and Othello's Hero Quests.",
+      "heroes": [
+       "Othello",
+       "Cerese"
+      ]
+     },
+     {
+      "badge": "fix",
+      "text": "Hero fixes that remove unintended extra hits: Charlotte's Invisible clone explosions could hit twice in a row, Ornette could use Holy Cross twice in a row with her Exclusive Karma, and Othello's Ice Grab mount could trigger more than three Heavy Attacks.",
+      "heroes": [
+       "Charlotte",
+       "Ornette",
+       "Othello"
+      ]
+     },
+     {
+      "badge": "fix",
+      "text": "Food buffs can no longer be stacked; Equipment Crafting no longer skips the Forging Mold cost."
+     }
+    ],
+    "heroChanges": {
+     "Charlotte": {
+      "direction": "fix",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Invisible",
+        "text": "Clone explosion damage was sometimes applied twice in a row; fixed."
+       }
+      ]
+     },
+     "Ornette": {
+      "direction": "fix",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Holy Cross",
+        "text": "Could be used twice in a row with her Exclusive Karma equipped; fixed."
+       }
+      ]
+     },
+     "Othello": {
+      "direction": "fix",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Ice Grab",
+        "text": "Heavy Attacks could trigger more than three times when mounting; fixed."
+       }
+      ]
+     },
+     "Ryza": {
+      "direction": "fix",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Thunder Grab",
+        "text": "She could move while floating in midair when mounting; fixed."
+       }
+      ]
+     }
+    },
+    "fixCount": 10,
+    "source": "assets/patch_notes/1.1.2.txt",
+    "badges": [
+     "quest",
+     "system",
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.1.1",
+    "title": "Update Notes 1.1.1",
+    "date": "2026-10-15",
+    "time": "13:35",
+    "buildId": 25959946,
+    "balance": false,
+    "headline": "Hotfix for three known issues from 1.1.0.",
+    "highlights": [
+     {
+      "badge": "fix",
+      "text": "Players who had already cleared Adventure Quest 53. Reunion can now level up Ryza on their first login.",
+      "heroes": [
+       "Ryza"
+      ]
+     },
+     {
+      "badge": "quest",
+      "text": "The step to talk to Reina in Adventure Quest 45. Mercenaries and Knights can be completed again."
+     },
+     {
+      "badge": "content",
+      "text": "Hunt Rank reward currency fixed. Hunt Ranks, scores and rewards were reset, so first-time Rank rewards can be earned again."
+     }
+    ],
+    "heroChanges": {},
+    "fixCount": 3,
+    "source": "assets/patch_notes/1.1.1.txt",
+    "badges": [
+     "content",
+     "quest",
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.1.0",
+    "title": "MAJOR Update Notes 1.1.0",
+    "date": "2026-10-15",
+    "time": "07:32",
+    "buildId": 25953718,
+    "balance": true,
+    "headline": "Combat rework: new damage formula, crit and Defense Ignore reworks, skill changes for all 19 existing heroes, new hero Ryza, Training Ground and Hell Hunts.",
+    "highlights": [
+     {
+      "badge": "hero",
+      "text": "New hero Ryza (Thunderbolt, Shock), a reward for Adventure Quest 53. Reunion. Her Exclusive Karma The Scar Lightning Left Behind is at the Exchange.",
+      "heroes": [
+       "Ryza"
+      ]
+     },
+     {
+      "badge": "balance",
+      "text": "Crit rework: crits now happen exactly at your Critical Rate, and monsters no longer have critical resistance, so 100% Critical Rate means every hit crits. Crit values on gear and skills were adjusted to keep the same feel."
+     },
+     {
+      "badge": "balance",
+      "text": "Defense Ignore rework: displayed damage numbers are lower, but monster Max HP was reduced in proportion to their Defense (up to 44% on giant bosses), so time-to-kill is about the same."
+     },
+     {
+      "badge": "balance",
+      "text": "New gear Sub-Option \"Status Effect Additional Attack Power Increase\": raises every status Additional Attack Power by the option value (%). That bonus is added to your Attack against enemies with the matching status."
+     },
+     {
+      "badge": "balance",
+      "text": "Skill damage and Rage costs adjusted for every hero to fit the new formula, with underperforming heroes raised. Castella's Rage efficiency was raised, some heroes' Super Armor break lowered, and the multi-mount damage bonus was increased by 20%."
+     },
+     {
+      "badge": "content",
+      "text": "Training Ground added (Edric, in front of Roderic Palace): stationary Ogre dummy or combat-active Ogre or Goblin, with total damage and DPS."
+     },
+     {
+      "badge": "content",
+      "text": "Hunt Score & Rank system, a sixth Hunt difficulty (Hell), and lower monster stats on Nightmare. Clear times now start when combat begins."
+     },
+     {
+      "badge": "quest",
+      "text": "Othello's Hero Quest What the Wind Asks (after Chapter 5), new stills in Dana's Hero Log, and tracked-quest markers in Scenario Mode.",
+      "heroes": [
+       "Othello",
+       "Dana"
+      ]
+     },
+     {
+      "badge": "system",
+      "text": "8 new map pin types, a third cooking Quick Slot, a Tag Combo animation toggle, hero recruitment tutorials, Familiars now obtained from the Codex, and a separate Throw key."
+     },
+     {
+      "badge": "costume",
+      "text": "Costume fixes for Kalien, Reina, Kalsion and Cerese.",
+      "heroes": [
+       "Kalien",
+       "Reina",
+       "Kalsion",
+       "Cerese"
+      ]
+     },
+     {
+      "badge": "fix",
+      "text": "Hero fixes include Aria's Bomb Arrows not applying Airborne when they detonate automatically, Alex's Guard Stance not applying right after a Perfect Dodge, and Johnny's Venom Cutter Tag Combo not activating when every mount spot was taken.",
+      "heroes": [
+       "Aria",
+       "Alex",
+       "Johnny"
+      ]
+     }
+    ],
+    "heroChanges": {
+     "Eileen": {
+      "direction": "buff",
+      "impact": 3,
+      "damagePct": 11.9,
+      "totalBefore": 7406,
+      "totalAfter": 8291,
+      "devNote": "Eileen's Barraging Spear and Brave One can now be used more often, strengthening her Airborne status effect chains and Signal Skill chains.",
+      "changes": [
+       {
+        "skill": "Vanguard Banner",
+        "text": "Critical Damage buff with her Exclusive Karma: 50% → 20% (part of the crit rework; not counted in the rating)"
+       },
+       {
+        "skill": "Grand Spear",
+        "slot": "Auto attack",
+        "before": 691,
+        "after": 642
+       },
+       {
+        "skill": "Spin Presser",
+        "slot": "Jump attack",
+        "before": 548,
+        "after": 586
+       },
+       {
+        "skill": "Spiral Shave",
+        "slot": "Dash attack",
+        "before": 810,
+        "after": 738
+       },
+       {
+        "skill": "Barraging Spear",
+        "slot": "Skill",
+        "before": 1082,
+        "after": 1307
+       },
+       {
+        "skill": "Barraging Spear",
+        "slot": "Skill",
+        "text": "Rage cost reduced by 30%"
+       },
+       {
+        "skill": "Brave One",
+        "slot": "Ultimate",
+        "before": 956,
+        "after": 1162
+       },
+       {
+        "skill": "Brave One",
+        "slot": "Ultimate",
+        "text": "Rage cost reduced by 20%"
+       },
+       {
+        "skill": "Rolling Upper",
+        "slot": "Special A",
+        "before": 1298,
+        "after": 1558
+       },
+       {
+        "skill": "Vanguard Banner",
+        "slot": "Special B",
+        "before": 2019,
+        "after": 2296
+       }
+      ]
+     },
+     "Lute": {
+      "direction": "buff",
+      "impact": 3,
+      "damagePct": 14.0,
+      "totalBefore": 6198,
+      "totalAfter": 7068,
+      "devNote": "Lute's Stun Slash can now be used more often, and Swordgrab's Knockdown application value has been increased, strengthening his Stun chains and overall performance.",
+      "changes": [
+       {
+        "skill": "Sword Slash",
+        "slot": "Auto attack",
+        "before": 648,
+        "after": 642
+       },
+       {
+        "skill": "Dropkick",
+        "slot": "Jump attack",
+        "before": 660,
+        "after": 719
+       },
+       {
+        "skill": "Kick Combo",
+        "slot": "Dash attack",
+        "before": 721,
+        "after": 712
+       },
+       {
+        "skill": "Stun Slash",
+        "slot": "Skill",
+        "before": 952,
+        "after": 1269
+       },
+       {
+        "skill": "Stun Slash",
+        "slot": "Skill",
+        "text": "Rage cost reduced by 10%"
+       },
+       {
+        "skill": "Healing Circle",
+        "slot": "Ultimate",
+        "before": 404,
+        "after": 600
+       },
+       {
+        "skill": "Swordgrab",
+        "slot": "Special A",
+        "before": 1166,
+        "after": 1626
+       },
+       {
+        "skill": "Swordgrab",
+        "slot": "Special A",
+        "text": "Knockdown application value increased by 100%"
+       },
+       {
+        "skill": "Relic Fall",
+        "slot": "Special B",
+        "before": 1645,
+        "after": 1498
+       }
+      ]
+     },
+     "Castella": {
+      "direction": "buff",
+      "impact": 2,
+      "damagePct": 3.4,
+      "totalBefore": 7603,
+      "totalAfter": 7860,
+      "devNote": "Castella's basic attack Rage efficiency has been improved. Whirlwind can now be used more often, with overall performance strengthened. To bolster her Break role, Howling's Super Armor break has been increased, strengthening Signal Skill chains. Upper Blow can now be used against Stunned enemies, making her viable in Stun compositions as well.",
+      "changes": [
+       {
+        "skill": "Wild Blow",
+        "slot": "Auto attack",
+        "before": 751,
+        "after": 686
+       },
+       {
+        "skill": "Wild Blow",
+        "slot": "Auto attack",
+        "text": "Rage gain increased by 50%"
+       },
+       {
+        "skill": "Wild Crash",
+        "slot": "Jump attack",
+        "before": 520,
+        "after": 562
+       },
+       {
+        "skill": "Shoulder Crusher",
+        "slot": "Dash attack",
+        "before": 803,
+        "after": 737
+       },
+       {
+        "skill": "Whirlwind",
+        "slot": "Skill",
+        "before": 1236,
+        "after": 1384
+       },
+       {
+        "skill": "Whirlwind",
+        "slot": "Skill",
+        "text": "Rage cost reduced by 20%"
+       },
+       {
+        "skill": "Howling",
+        "slot": "Ultimate",
+        "before": 763,
+        "after": 1006
+       },
+       {
+        "skill": "Howling",
+        "slot": "Ultimate",
+        "text": "Super Armor break increased by 36%"
+       },
+       {
+        "skill": "Stun Blow",
+        "slot": "Special A",
+        "before": 1848,
+        "after": 1836
+       },
+       {
+        "skill": "Upper Blow",
+        "slot": "Special B",
+        "before": 1685,
+        "after": 1652
+       },
+       {
+        "skill": "Upper Blow",
+        "text": "Upper Blow can now be used against Stunned enemies"
+       }
+      ]
+     },
+     "Reina": {
+      "direction": "buff",
+      "impact": 3,
+      "damagePct": 6.9,
+      "totalBefore": 6974,
+      "totalAfter": 7454,
+      "devNote": "Reina's Rising Cutter can now be used more often, and Wind Slayer's Airborne application value has been increased, reducing play risk while boosting damage.",
+      "changes": [
+       {
+        "skill": "Wind Sword",
+        "slot": "Auto attack",
+        "before": 602,
+        "after": 612
+       },
+       {
+        "skill": "Silphid Spike",
+        "slot": "Jump attack",
+        "before": 632,
+        "after": 639
+       },
+       {
+        "skill": "Winchester",
+        "slot": "Dash attack",
+        "before": 726,
+        "after": 670
+       },
+       {
+        "skill": "Rising Cutter",
+        "slot": "Skill",
+        "before": 1092,
+        "after": 1475
+       },
+       {
+        "skill": "Rising Cutter",
+        "slot": "Skill",
+        "text": "Rage cost reduced by 15%"
+       },
+       {
+        "skill": "Wind Slayer",
+        "slot": "Ultimate",
+        "before": 934,
+        "after": 961
+       },
+       {
+        "skill": "Wind Slayer",
+        "slot": "Ultimate",
+        "text": "Airborne application value increased by 100%"
+       },
+       {
+        "skill": "Tempest",
+        "slot": "Special A",
+        "before": 1554,
+        "after": 1516
+       },
+       {
+        "skill": "Wind Grab",
+        "slot": "Special B",
+        "before": 1435,
+        "after": 1582
+       }
+      ]
+     },
+     "Roxy": {
+      "direction": "buff",
+      "impact": 3,
+      "damagePct": 10.0,
+      "totalBefore": 6219,
+      "totalAfter": 6839,
+      "devNote": "Roxy's Crimson Spiral and Bloody Shower can now be used more often, and Kick Storm's base damage has been significantly increased, enabling explosive damage by leveraging Stun. Bleeding Grab's base share has been reduced while its multi-mount damage has been increased, making it more effective against giant bosses.",
+      "changes": [
+       {
+        "skill": "Bow Shot",
+        "slot": "Auto attack",
+        "before": 558,
+        "after": 607
+       },
+       {
+        "skill": "Double Shot",
+        "slot": "Jump attack",
+        "before": 534,
+        "after": 597
+       },
+       {
+        "skill": "Sliding Shot",
+        "slot": "Dash attack",
+        "before": 662,
+        "after": 730
+       },
+       {
+        "skill": "Crimson Spiral",
+        "slot": "Skill",
+        "before": 891,
+        "after": 865
+       },
+       {
+        "skill": "Crimson Spiral",
+        "slot": "Skill",
+        "text": "Rage cost reduced by 20%"
+       },
+       {
+        "skill": "Bloody Shower",
+        "slot": "Ultimate",
+        "before": 910,
+        "after": 1010
+       },
+       {
+        "skill": "Bloody Shower",
+        "slot": "Ultimate",
+        "text": "Rage cost reduced by 10%"
+       },
+       {
+        "skill": "Kick Storm",
+        "slot": "Special A",
+        "before": 1209,
+        "after": 1787
+       },
+       {
+        "skill": "Bleeding Grab",
+        "slot": "Special B",
+        "before": 1456,
+        "after": 1244
+       }
+      ]
+     },
+     "Aria": {
+      "direction": "buff",
+      "impact": 2,
+      "damagePct": 8.3,
+      "totalBefore": 5875,
+      "totalAfter": 6365,
+      "devNote": "To reinforce Aria's concept of detonating bolts, the damage of Multiple Bolt and Switch On! has been increased.",
+      "changes": [
+       {
+        "skill": "Bolt Shot",
+        "slot": "Auto attack",
+        "before": 672,
+        "after": 625
+       },
+       {
+        "skill": "Shoot and Bomb",
+        "slot": "Jump attack",
+        "before": 616,
+        "after": 628
+       },
+       {
+        "skill": "Rapid Shot",
+        "slot": "Dash attack",
+        "before": 710,
+        "after": 616
+       },
+       {
+        "skill": "Air Bomb",
+        "slot": "Skill",
+        "before": 978,
+        "after": 915
+       },
+       {
+        "skill": "Rolling Bomb",
+        "slot": "Ultimate",
+        "before": 878,
+        "after": 812
+       },
+       {
+        "skill": "Multiple Bolt",
+        "slot": "Special A",
+        "before": 1046,
+        "after": 1542
+       },
+       {
+        "skill": "Switch On!",
+        "slot": "Special B",
+        "before": 976,
+        "after": 1228
+       }
+      ]
+     },
+     "Johnny": {
+      "direction": "nerf",
+      "impact": 1,
+      "damagePct": -4.3,
+      "totalBefore": 6803,
+      "totalAfter": 6512,
+      "devNote": "Johnny's damage share has shifted from Venom Cutter to Phantom Slash, slightly raising his performance floor relative to control difficulty. Poison Grab's base share has been reduced while its multi-mount damage has been increased, making it more effective against giant bosses.",
+      "changes": [
+       {
+        "skill": "Dirty Fight",
+        "slot": "Auto attack",
+        "before": 628,
+        "after": 614
+       },
+       {
+        "skill": "Piercing Step",
+        "slot": "Jump attack",
+        "before": 494,
+        "after": 530
+       },
+       {
+        "skill": "Fatal Sting",
+        "slot": "Dash attack",
+        "before": 696,
+        "after": 686
+       },
+       {
+        "skill": "Venom Dance",
+        "slot": "Skill",
+        "before": 959,
+        "after": 936
+       },
+       {
+        "skill": "Phantom Slash",
+        "slot": "Ultimate",
+        "before": 1029,
+        "after": 1113
+       },
+       {
+        "skill": "Venom Cutter",
+        "slot": "Special A",
+        "before": 1540,
+        "after": 1456
+       },
+       {
+        "skill": "Poison Grab",
+        "slot": "Special B",
+        "before": 1456,
+        "after": 1176
+       }
+      ]
+     },
+     "Ornette": {
+      "direction": "adjusted",
+      "impact": 1,
+      "damagePct": -1.0,
+      "totalBefore": 6672,
+      "totalAfter": 6602,
+      "devNote": "Ornette's damage share has shifted slightly from Holy Cross to Holy Circle, slightly raising her performance floor relative to control difficulty. Holy Grab's base share has been reduced while its multi-mount damage has been increased, making it more effective against giant bosses.",
+      "changes": [
+       {
+        "skill": "Pray",
+        "slot": "Auto attack",
+        "before": 707,
+        "after": 702
+       },
+       {
+        "skill": "Shining Spin",
+        "slot": "Jump attack",
+        "before": 607,
+        "after": 714
+       },
+       {
+        "skill": "Holy Cutter",
+        "slot": "Dash attack",
+        "before": 630,
+        "after": 564
+       },
+       {
+        "skill": "Holy Cross",
+        "slot": "Skill",
+        "before": 1001,
+        "after": 868
+       },
+       {
+        "skill": "Holy Circle",
+        "slot": "Ultimate",
+        "before": 833,
+        "after": 973
+       },
+       {
+        "skill": "Holy Grab",
+        "slot": "Special B",
+        "before": 1321,
+        "after": 1208
+       }
+      ]
+     },
+     "Kalsion": {
+      "direction": "adjusted",
+      "impact": 1,
+      "damagePct": 0.8,
+      "totalBefore": 7050,
+      "totalAfter": 7103,
+      "devNote": "Kalsion's high-Rage-cost Flame Wave and long-cast Explosion have received base damage increases, raising the share of his high-risk skills. Burst Grab's base share has been reduced while its multi-mount damage has been increased, making it more effective against giant bosses.",
+      "changes": [
+       {
+        "skill": "Great Rush",
+        "slot": "Auto attack",
+        "before": 746,
+        "after": 625
+       },
+       {
+        "skill": "Circular Slash",
+        "slot": "Dash attack",
+        "before": 796,
+        "after": 672
+       },
+       {
+        "skill": "Weapon Blaze",
+        "slot": "Skill",
+        "before": 726,
+        "after": 696
+       },
+       {
+        "skill": "Flame Wave",
+        "slot": "Ultimate",
+        "before": 833,
+        "after": 1073
+       },
+       {
+        "skill": "Burst Grab",
+        "slot": "Special A",
+        "before": 1430,
+        "after": 1222
+       },
+       {
+        "skill": "Explosion",
+        "slot": "Special B",
+        "before": 1878,
+        "after": 2174
+       }
+      ]
+     },
+     "Othello": {
+      "direction": "nerf",
+      "impact": 2,
+      "damagePct": -3.5,
+      "totalBefore": 6381,
+      "totalAfter": 6159,
+      "devNote": "Despite not having the Break attribute, Othello was unintentionally delivering Super Armor break performance far exceeding Break-attribute heroes, so this has been adjusted. His damage share has also shifted from Ice Crown and Frozen Burst to Frozen Stinger, slightly raising his performance ceiling with his Exclusive Karma equipped. Ice Grab's base share has been reduced while its multi-mount damage has been increased, making it more effective against giant bosses.",
+      "changes": [
+       {
+        "skill": "Avenger Circle",
+        "slot": "Auto attack",
+        "before": 684,
+        "after": 651
+       },
+       {
+        "skill": "Avenger Circle",
+        "slot": "Auto attack",
+        "text": "Super Armor break reduced"
+       },
+       {
+        "skill": "Piercing Spike",
+        "slot": "Jump attack",
+        "before": 710,
+        "after": 705
+       },
+       {
+        "skill": "Half-Moon Cutter",
+        "slot": "Dash attack",
+        "before": 665,
+        "after": 654
+       },
+       {
+        "skill": "Frozen Stinger",
+        "slot": "Skill",
+        "before": 945,
+        "after": 1130
+       },
+       {
+        "skill": "Ice Crown",
+        "slot": "Ultimate",
+        "before": 889,
+        "after": 786
+       },
+       {
+        "skill": "Ice Grab",
+        "slot": "Special A",
+        "before": 1410,
+        "after": 1239
+       },
+       {
+        "skill": "Frozen Burst",
+        "slot": "Special B",
+        "before": 1080,
+        "after": 996
+       },
+       {
+        "skill": "Frozen Burst",
+        "slot": "Special B",
+        "text": "Super Armor break reduced by 50%"
+       }
+      ]
+     },
+     "Charlotte": {
+      "direction": "nerf",
+      "impact": 2,
+      "damagePct": 0.4,
+      "totalBefore": 6575,
+      "totalAfter": 6601,
+      "devNote": "Charlotte's damage share has been moved from Invisible and Illusion Kick to Shadow Grab, making her more effective against multiple enemies, and Shadow Grab's multi-mount damage has been increased for better effectiveness against giant bosses.",
+      "changes": [
+       {
+        "skill": "Shadow Dance",
+        "slot": "Auto attack",
+        "before": 637,
+        "after": 581
+       },
+       {
+        "skill": "Shadow Leaf",
+        "slot": "Jump attack",
+        "before": 649,
+        "after": 714
+       },
+       {
+        "skill": "Poison Step",
+        "slot": "Dash attack",
+        "before": 628,
+        "after": 604
+       },
+       {
+        "skill": "Invisible",
+        "slot": "Skill",
+        "before": 840,
+        "after": 740
+       },
+       {
+        "skill": "Invisible",
+        "slot": "Skill",
+        "text": "Rage cost increased by 10%"
+       },
+       {
+        "skill": "Poison Dagger",
+        "slot": "Ultimate",
+        "before": 1064,
+        "after": 1041
+       },
+       {
+        "skill": "Poison Dagger",
+        "slot": "Ultimate",
+        "text": "Rage cost increased by 40%"
+       },
+       {
+        "skill": "Illusion Kick",
+        "slot": "Special A",
+        "before": 1535,
+        "after": 1222
+       },
+       {
+        "skill": "Shadow Grab",
+        "slot": "Special B",
+        "before": 1222,
+        "after": 1699
+       }
+      ]
+     },
+     "Alex": {
+      "direction": "buff",
+      "impact": 3,
+      "damagePct": 15.0,
+      "totalBefore": 5691,
+      "totalAfter": 6545,
+      "devNote": "Considering that Alex deals damage conditionally, the share of Knockdown Smash has been increased. Guard Counter's damage has been slightly adjusted and Pounding Grab's base damage has been increased, raising his performance floor relative to control difficulty. Its multi-mount damage has also been increased for better effectiveness against giant bosses, with base damage raised to match its higher risk.",
+      "changes": [
+       {
+        "skill": "Brandish",
+        "patchName": "Dive Kick",
+        "slot": "Auto attack",
+        "before": 625,
+        "after": 620
+       },
+       {
+        "skill": "Dive Kick",
+        "patchName": "Brandish",
+        "slot": "Jump attack",
+        "before": 544,
+        "after": 614
+       },
+       {
+        "skill": "Dodge Combo",
+        "slot": "Dash attack",
+        "before": 696,
+        "after": 648
+       },
+       {
+        "skill": "Knockdown Smash",
+        "slot": "Skill",
+        "before": 1069,
+        "after": 1354
+       },
+       {
+        "skill": "Guard Stance",
+        "slot": "Ultimate",
+        "before": 703,
+        "after": 682
+       },
+       {
+        "skill": "Pounding Grab",
+        "slot": "Special A",
+        "before": 805,
+        "after": 1456
+       },
+       {
+        "skill": "Guard Counter",
+        "slot": "Special B",
+        "before": 1250,
+        "after": 1172
+       }
+      ]
+     },
+     "Theresia": {
+      "direction": "buff",
+      "impact": 3,
+      "damagePct": 6.3,
+      "totalBefore": 6187,
+      "totalAfter": 6578,
+      "devNote": "Theresia's Bleed application value has been increased, and the base damage of her high-Rage-cost Celestial Verdict has been raised. Her damage share has also shifted slightly from Holy Rise to Divine Arc, enabling explosive damage against Stunned enemies.",
+      "changes": [
+       {
+        "skill": "Judgment Spiral",
+        "slot": "Auto attack",
+        "before": 625,
+        "after": 621
+       },
+       {
+        "skill": "Judgment Spiral",
+        "slot": "Auto attack",
+        "text": "Bleed value increased by 150% (with Exclusive Karma equipped)"
+       },
+       {
+        "skill": "Celestial Dive",
+        "slot": "Jump attack",
+        "before": 567,
+        "after": 581
+       },
+       {
+        "skill": "Heaven's Flick",
+        "slot": "Dash attack",
+        "before": 560,
+        "after": 620
+       },
+       {
+        "skill": "Consecration",
+        "slot": "Skill",
+        "before": 920,
+        "after": 980
+       },
+       {
+        "skill": "Celestial Verdict",
+        "slot": "Ultimate",
+        "before": 854,
+        "after": 1017
+       },
+       {
+        "skill": "Celestial Verdict",
+        "slot": "Ultimate",
+        "text": "Rage cost reduced by 30%"
+       },
+       {
+        "skill": "Divine Arc",
+        "slot": "Special A",
+        "before": 1124,
+        "after": 1570
+       },
+       {
+        "skill": "Holy Rise",
+        "slot": "Special B",
+        "before": 1536,
+        "after": 1188
+       }
+      ]
+     },
+     "Tarte": {
+      "direction": "adjusted",
+      "impact": 1,
+      "damagePct": -2.7,
+      "totalBefore": 5779,
+      "totalAfter": 5624,
+      "devNote": "Tarte's damage share has shifted from Thunderbolt to Bolt Bubble, raising the performance ceiling of play using her holy orbs. This rewards high-risk play with greater damage.",
+      "changes": [
+       {
+        "skill": "Bolt Orb",
+        "slot": "Auto attack",
+        "before": 562,
+        "after": 614
+       },
+       {
+        "skill": "Spiky Bolt",
+        "slot": "Jump attack",
+        "before": 698,
+        "after": 724
+       },
+       {
+        "skill": "Cannon Bolt",
+        "slot": "Dash attack",
+        "before": 667,
+        "after": 614
+       },
+       {
+        "skill": "Lightning Shock",
+        "slot": "Skill",
+        "before": 1094,
+        "after": 1068
+       },
+       {
+        "skill": "Bolt Bubble",
+        "slot": "Ultimate",
+        "before": 1218,
+        "after": 1540
+       },
+       {
+        "skill": "Thunderbolt",
+        "slot": "Special A",
+        "before": 1540,
+        "after": 1064
+       }
+      ]
+     },
+     "Cerese": {
+      "direction": "nerf",
+      "impact": 1,
+      "damagePct": -1.7,
+      "totalBefore": 6747,
+      "totalAfter": 6635,
+      "devNote": "The Super Armor break of Cerese's easy-to-use Shattering Touch has been adjusted. Her damage share has also shifted from Frozen Needles to Ice Storm, raising her performance ceiling with her Exclusive Karma and Awakenings.",
+      "changes": [
+       {
+        "skill": "Ice Ball",
+        "slot": "Auto attack",
+        "before": 499,
+        "after": 467
+       },
+       {
+        "skill": "Glacial Wave",
+        "slot": "Jump attack",
+        "before": 635,
+        "after": 676
+       },
+       {
+        "skill": "Frozen Road",
+        "slot": "Dash attack",
+        "before": 749,
+        "after": 752
+       },
+       {
+        "skill": "Ice Storm",
+        "slot": "Skill",
+        "before": 1326,
+        "after": 1528
+       },
+       {
+        "skill": "Frozen Spike",
+        "slot": "Ultimate",
+        "before": 861,
+        "after": 810
+       },
+       {
+        "skill": "Frozen Needles",
+        "slot": "Special A",
+        "before": 1435,
+        "after": 1160
+       },
+       {
+        "skill": "Shattering Touch",
+        "slot": "Special B",
+        "text": "Super Armor break reduced by 50%"
+       }
+      ]
+     },
+     "Sion": {
+      "direction": "buff",
+      "impact": 1,
+      "damagePct": 3.3,
+      "totalBefore": 6041,
+      "totalAfter": 6242,
+      "devNote": "Sion's Divine Smash base damage has been slightly increased, and Bless's base damage has also been slightly raised so that converting Relics with it is more meaningful.",
+      "changes": [
+       {
+        "skill": "Justice Fall",
+        "text": "Critical Rate buff: 20% → 10% (part of the crit rework; not counted in the rating)"
+       },
+       {
+        "skill": "Divine Bolt",
+        "slot": "Auto attack",
+        "before": 606,
+        "after": 511
+       },
+       {
+        "skill": "Air Bolt",
+        "slot": "Jump attack",
+        "before": 709,
+        "after": 698
+       },
+       {
+        "skill": "Sliding Bolt",
+        "slot": "Dash attack",
+        "before": 614,
+        "after": 592
+       },
+       {
+        "skill": "Divine Crash",
+        "slot": "Skill",
+        "before": 826,
+        "after": 838
+       },
+       {
+        "skill": "Divine Smash",
+        "slot": "Ultimate",
+        "before": 980,
+        "after": 1029
+       },
+       {
+        "skill": "Bless",
+        "slot": "Special A",
+        "before": 744,
+        "after": 1024
+       },
+       {
+        "skill": "Justice Fall",
+        "slot": "Special B",
+        "before": 1564,
+        "after": 1552
+       }
+      ]
+     },
+     "Astria": {
+      "direction": "adjusted",
+      "impact": 1,
+      "damagePct": 1.0,
+      "totalBefore": 4289,
+      "totalAfter": 4333,
+      "devNote": "Astria's damage share has shifted from her basic attacks to Bolt Bombard, raising her performance ceiling through Signal Skill usage.",
+      "changes": [
+       {
+        "skill": "Ballista Shot",
+        "slot": "Auto attack",
+        "before": 700,
+        "after": 612
+       },
+       {
+        "skill": "Stunt Shot",
+        "slot": "Jump attack",
+        "before": 700,
+        "after": 499
+       },
+       {
+        "skill": "Slide",
+        "slot": "Dash attack",
+        "before": 628,
+        "after": 616
+       },
+       {
+        "skill": "Wide Shot",
+        "slot": "Ultimate",
+        "before": 1041,
+        "after": 1082
+       },
+       {
+        "skill": "Bolt Bombard",
+        "slot": "Special A",
+        "before": 1222,
+        "after": 1526
+       }
+      ]
+     },
+     "Dana": {
+      "direction": "mixed",
+      "impact": 3,
+      "damagePct": 14.5,
+      "totalBefore": 4880,
+      "totalAfter": 5587,
+      "devNote": "Dana's damage share has shifted from Chako Shield and Chako Knuckle to Chako Spin, raising the damage ceiling of her harder-to-use skill.",
+      "changes": [
+       {
+        "skill": "Snow Pop",
+        "slot": "Auto attack",
+        "before": 597,
+        "after": 690
+       },
+       {
+        "skill": "Freezy Pop",
+        "slot": "Jump attack",
+        "before": 556,
+        "after": 546
+       },
+       {
+        "skill": "Snow Step",
+        "slot": "Dash attack",
+        "before": 570,
+        "after": 740
+       },
+       {
+        "skill": "Summon Chako",
+        "slot": "Skill",
+        "before": 842,
+        "after": 844
+       },
+       {
+        "skill": "Chako Shield",
+        "slot": "Ultimate",
+        "before": 534,
+        "after": 786
+       },
+       {
+        "skill": "Chako Shield",
+        "slot": "Ultimate",
+        "text": "Rage cost increased by 50%"
+       },
+       {
+        "skill": "Chako Knuckle",
+        "slot": "Special A",
+        "before": 878,
+        "after": 875
+       },
+       {
+        "skill": "Chako Knuckle",
+        "slot": "Special A",
+        "text": "Rage gain reduced by 50%"
+       },
+       {
+        "skill": "Chako Spin",
+        "slot": "Special B",
+        "before": 905,
+        "after": 1108
+       }
+      ]
+     },
+     "Kalien": {
+      "direction": "nerf",
+      "impact": 1,
+      "damagePct": 0.0,
+      "totalBefore": 5391,
+      "totalAfter": 5392,
+      "devNote": "Kalien's damage share has shifted from Fox Grab to Fox Chase, increasing the value of her third Awakening effect and her summoned Sur.",
+      "changes": [
+       {
+        "skill": "Firefox",
+        "slot": "Auto attack",
+        "before": 497,
+        "after": 480
+       },
+       {
+        "skill": "Pyro-Fang",
+        "slot": "Jump attack",
+        "before": 539,
+        "after": 628
+       },
+       {
+        "skill": "Twin Tails",
+        "slot": "Dash attack",
+        "before": 581,
+        "after": 546
+       },
+       {
+        "skill": "Fox Parade",
+        "slot": "Skill",
+        "before": 742,
+        "after": 709
+       },
+       {
+        "skill": "Fox Parade",
+        "slot": "Skill",
+        "text": "Rage cost increased by 20%"
+       },
+       {
+        "skill": "Fox Chase",
+        "slot": "Ultimate",
+        "before": 830,
+        "after": 1040
+       },
+       {
+        "skill": "Fox Grab",
+        "slot": "Special A",
+        "before": 1391,
+        "after": 1178
+       }
+      ]
+     },
+     "Ryza": {
+      "direction": "new",
+      "impact": 0,
+      "devNote": "New hero: a Thunderbolt spear fighter who inflicts Shock. Reward for Adventure Quest 53. Reunion; her Exclusive Karma, The Scar Lightning Left Behind, is at the Exchange.",
+      "changes": []
+     }
+    },
+    "fixCount": 82,
+    "source": "assets/patch_notes/1.1.0.txt",
+    "badges": [
+     "hero",
+     "balance",
+     "content",
+     "costume",
+     "quest",
+     "system",
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.12",
+    "title": "Update Notes 1.0.12",
+    "date": "2026-09-10",
+    "time": "02:59",
+    "buildId": 25202218,
+    "balance": false,
+    "headline": "Astria Slide fixes and small bug fixes.",
+    "highlights": [
+     {
+      "badge": "fix",
+      "text": "Astria's Slide no longer gets a cooldown with Blazing Lightning (Master Skill) learned, and she can rotate while using it.",
+      "heroes": [
+       "Astria"
+      ]
+     },
+     {
+      "badge": "fix",
+      "text": "Aria's basic attack description now shows the right number of attacks that fire Bomb Arrows.",
+      "heroes": [
+       "Aria"
+      ]
+     },
+     {
+      "badge": "fix",
+      "text": "World Boss Andras the Cave Predator no longer has abnormally high Super Armor during the ceiling-hanging pattern."
+     }
+    ],
+    "heroChanges": {
+     "Astria": {
+      "direction": "fix",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Slide",
+        "text": "No cooldown with Blazing Lightning learned; can rotate while sliding."
+       }
+      ]
+     }
+    },
+    "fixCount": 7,
+    "source": "assets/patch_notes/1.0.12.txt",
+    "badges": [
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.11",
+    "title": "Update Notes 1.0.11",
+    "date": "2026-09-03",
+    "time": "02:57",
+    "buildId": 25076183,
+    "balance": true,
+    "headline": "Just Dodge, a Lock-On overhaul, multiplayer Retry and hero adjustments.",
+    "highlights": [
+     {
+      "badge": "content",
+      "text": "Just Dodge: dodging an attack perfectly gives 1 s of invincibility, 3 s of guaranteed critical hits, 10% Active Skill Rage and half the Dodge Stamina back."
+     },
+     {
+      "badge": "balance",
+      "text": "Hero adjustments for Lute, Aria, Tarte, Roxy, Astria, Kalsion and Dana (see below).",
+      "heroes": [
+       "Lute",
+       "Aria",
+       "Tarte",
+       "Roxy",
+       "Astria",
+       "Kalsion",
+       "Dana"
+      ]
+     },
+     {
+      "badge": "balance",
+      "text": "A hero left on the field after switching can't have Super Armor broken for 1 second."
+     },
+     {
+      "badge": "system",
+      "text": "Lock-On overhaul (new controls, target retention, target search and camera), multiplayer Retry for Hunts and Raids, offline Steam Achievements, and a combat-style preview in the Hero Codex."
+     }
+    ],
+    "heroChanges": {
+     "Lute": {
+      "direction": "buff",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Dropkick",
+        "text": "With A Young Boy's Choice (Master Skill) learned, all Dropkick attacks apply Stun value."
+       }
+      ]
+     },
+     "Aria": {
+      "direction": "adjusted",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Bolt Shot",
+        "text": "Basic attack changed from 5 hits to 3, and the final hit ends more quickly."
+       },
+       {
+        "skill": "Air Bomb",
+        "text": "Switching heroes while using it now throws the bomb immediately."
+       }
+      ]
+     },
+     "Tarte": {
+      "direction": "adjusted",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Lightning Shock",
+        "text": "Releasing the hold now fires the final attack; damage and Shock values adjusted per hold stage; switching heroes no longer cancels it."
+       }
+      ]
+     },
+     "Roxy": {
+      "direction": "buff",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Crimson Spiral",
+        "text": "More Bleed application at base and with the 1st Awakening."
+       },
+       {
+        "skill": "Kick Storm",
+        "text": "More damage with the 6th Awakening and her dedicated Karma."
+       }
+      ]
+     },
+     "Astria": {
+      "direction": "buff",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Slide",
+        "text": "Can change direction while used; awkward motion with Master Skills fixed."
+       }
+      ]
+     },
+     "Kalsion": {
+      "direction": "buff",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Flame Wave",
+        "text": "Fully charged, it now explodes immediately on hitting monsters (not small ones)."
+       }
+      ]
+     },
+     "Dana": {
+      "direction": "buff",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Summon Chako",
+        "text": "Switching heroes while using it now summons Chako immediately."
+       }
+      ]
+     }
+    },
+    "fixCount": 18,
+    "source": "assets/patch_notes/1.0.11.txt",
+    "badges": [
+     "balance",
+     "content",
+     "system"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.10",
+    "title": "Update Notes 1.0.10",
+    "date": "2026-08-20",
+    "time": "06:04",
+    "buildId": 24831799,
+    "balance": false,
+    "headline": "Quality-of-life, aim fixes and an easier World Boss Hagen.",
+    "highlights": [
+     {
+      "badge": "system",
+      "text": "Items in some categories can be discarded, item info opens on click in more menus, team setup controls are simpler, and hero acquisition cinematics were added."
+     },
+     {
+      "badge": "balance",
+      "text": "World Boss Hagen made easier (less HP recovery from a failed astral break, 35% → 20%; doppelganger Super Armor 500 → 50), and Familiar stamina +30 per 10 Mercenary Corps levels."
+     },
+     {
+      "badge": "fix",
+      "text": "Projectiles no longer aim at Othello's Ice Spear, Cerese's Ice Pillar, Sion's Relics or Charlotte's Clones, and skill-specific camera sensitivity changes were removed.",
+      "heroes": [
+       "Othello",
+       "Cerese",
+       "Sion",
+       "Charlotte"
+      ]
+     },
+     {
+      "badge": "fix",
+      "text": "Titles now stay applied after reconnecting; Reina no longer stays airborne when killed during an aerial dodge attack.",
+      "heroes": [
+       "Reina"
+      ]
+     }
+    ],
+    "heroChanges": {},
+    "fixCount": 32,
+    "source": "assets/patch_notes/1.0.10.txt",
+    "badges": [
+     "balance",
+     "system",
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.9",
+    "title": "Update Notes 1.0.9",
+    "date": "2026-08-13",
+    "time": "02:59",
+    "buildId": 24693558,
+    "balance": false,
+    "headline": "More rewards, 7 team slots and many hero fixes.",
+    "highlights": [
+     {
+      "badge": "system",
+      "text": "Team slots 5 → 7, World Bosses and Sudden Missions respawn 2 hours after defeat, and the Codex shows where each hero is obtained."
+     },
+     {
+      "badge": "content",
+      "text": "Higher gathering, mining, dungeon, Hunt and Raid rewards, Griffon Familiar effects changed, and a Barduk Nightmare achievement."
+     },
+     {
+      "badge": "quest",
+      "text": "Adventure Quest 58 (Ghoul Greed) made easier: Lute, Johnny and Kalien are unlocked up to their 6th Awakening there.",
+      "heroes": [
+       "Lute",
+       "Johnny",
+       "Kalien"
+      ]
+     },
+     {
+      "badge": "fix",
+      "text": "Gear set effects now apply in multiplayer. Kalien's 6th Awakening now works in multiplayer. Charlotte's Clone Explosion can no longer be used repeatedly in the air.",
+      "heroes": [
+       "Kalien",
+       "Charlotte"
+      ]
+     }
+    ],
+    "heroChanges": {
+     "Charlotte": {
+      "direction": "fix",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Clone Explosion",
+        "text": "Could be used repeatedly in the air; fixed. Dash input during her dodge no longer drops her to the ground."
+       }
+      ]
+     },
+     "Kalien": {
+      "direction": "fix",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Awakening 6",
+        "text": "Now applies in multiplayer."
+       }
+      ]
+     }
+    },
+    "fixCount": 33,
+    "source": "assets/patch_notes/1.0.9.txt",
+    "badges": [
+     "content",
+     "quest",
+     "system",
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.8",
+    "title": "Update Notes 1.0.8",
+    "date": "2026-08-07",
+    "time": "01:12",
+    "buildId": 24597321,
+    "balance": false,
+    "headline": "Hotfix for holding the dodge key.",
+    "highlights": [
+     {
+      "badge": "fix",
+      "text": "Dashing by holding the dodge key no longer leaves combat, picks up Sion's Relics, or ends Theresia's Inquisition or Kalsion's Royal Flame.",
+      "heroes": [
+       "Sion",
+       "Theresia",
+       "Kalsion"
+      ]
+     }
+    ],
+    "heroChanges": {},
+    "fixCount": 4,
+    "source": "assets/patch_notes/1.0.8.txt",
+    "badges": [
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.7",
+    "title": "Update Notes 1.0.7",
+    "date": "2026-08-06",
+    "time": "04:51",
+    "buildId": 24585402,
+    "balance": false,
+    "headline": "Quick Entry for multiplayer and quality-of-life improvements.",
+    "highlights": [
+     {
+      "badge": "system",
+      "text": "Multiplayer Quick Entry, map pins 100 → 200, Rune inventory 200 → 500, unlimited Statue of Organa use, and full HP and revives on dungeon entry and wipe recovery."
+     },
+     {
+      "badge": "content",
+      "text": "4-Star Rune Synthesis can now yield 5-Star Runes."
+     },
+     {
+      "badge": "costume",
+      "text": "Cerese's swimsuit DLC was delayed by Steam review (expected 7 August).",
+      "heroes": [
+       "Cerese"
+      ]
+     },
+     {
+      "badge": "fix",
+      "text": "Many quest blockers fixed, including Adventure Quests 13, 15–18, 45 and 56 and the Hero Quests of Kalien and Dana. Radish Soup is no longer always 1-star."
+     }
+    ],
+    "heroChanges": {},
+    "fixCount": 42,
+    "source": "assets/patch_notes/1.0.7.txt",
+    "badges": [
+     "content",
+     "costume",
+     "system",
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.6",
+    "title": "Update Notes 1.0.6",
+    "date": "2026-07-31",
+    "time": "09:44",
+    "buildId": 24487183,
+    "balance": false,
+    "headline": "Summer costumes for Astria, Reina and Cerese.",
+    "highlights": [
+     {
+      "badge": "costume",
+      "text": "New costumes and weapon skins: Astria (Coral Summer Mischief, Sunshine Heartshot), Reina (White Flower of the Blue Waves, Petals at the Wave's Edge) and Cerese (Moonlight on the Night Sea, Star upon the Waves; on sale once the store page was ready).",
+      "heroes": [
+       "Astria",
+       "Reina",
+       "Cerese"
+      ]
+     }
+    ],
+    "heroChanges": {},
+    "fixCount": 0,
+    "source": "assets/patch_notes/1.0.6.txt",
+    "badges": [
+     "costume"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.5",
+    "title": "Update Notes 1.0.5",
+    "date": "2026-07-30",
+    "time": "08:42",
+    "buildId": 24468094,
+    "balance": false,
+    "headline": "Hotfix for Ornette quest blockers.",
+    "highlights": [
+     {
+      "badge": "quest",
+      "text": "Adventure Quests 15–18 no longer get stuck at the \"Talk to Ornette\" step.",
+      "heroes": [
+       "Ornette"
+      ]
+     }
+    ],
+    "heroChanges": {},
+    "fixCount": 1,
+    "source": "assets/patch_notes/1.0.5.txt",
+    "badges": [
+     "quest"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.4",
+    "title": "Update Notes 1.0.4",
+    "date": "2026-07-30",
+    "time": "02:48",
+    "buildId": 24446810,
+    "balance": false,
+    "headline": "First big fix patch: more World Boss rewards and hero fixes.",
+    "highlights": [
+     {
+      "badge": "content",
+      "text": "World Bosses give more Mercenary Corps EXP and new rewards, Sudden Missions give Fragment of Sacred Light ×60, and Lowest-Grade Monster materials are sold in the Gold Shop."
+     },
+     {
+      "badge": "balance",
+      "text": "Roxy's Aerial Re-jump cooldown with her 3rd Awakening: 3 s → 1.5 s.",
+      "heroes": [
+       "Roxy"
+      ]
+     },
+     {
+      "badge": "fix",
+      "text": "Chako Spin no longer uses Summon Chako's Rage, Eileen's Barraging Spear now lifts enemies properly, and Roxy can do repeated Air Stomps with her 3rd Awakening.",
+      "heroes": [
+       "Dana",
+       "Eileen",
+       "Roxy"
+      ]
+     },
+     {
+      "badge": "fix",
+      "text": "Many quest, system and graphics fixes (Adventure Quests 35, 37, 39, 48 and 59, Hero Codex skill scrolling, Depth of Field)."
+     }
+    ],
+    "heroChanges": {
+     "Roxy": {
+      "direction": "buff",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Awakening 3",
+        "text": "Aerial Re-jump cooldown 3 s → 1.5 s; repeated Air Stomps in place fixed."
+       }
+      ]
+     },
+     "Dana": {
+      "direction": "fix",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Chako Spin",
+        "text": "No longer uses Summon Chako's Rage. Freezy Pop tooltip fixed."
+       }
+      ]
+     },
+     "Eileen": {
+      "direction": "fix",
+      "impact": 1,
+      "changes": [
+       {
+        "skill": "Barraging Spear",
+        "text": "Now lifts enemies properly when it applies Airborne."
+       }
+      ]
+     }
+    },
+    "fixCount": 37,
+    "source": "assets/patch_notes/1.0.4.txt",
+    "badges": [
+     "balance",
+     "content",
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.3",
+    "title": "Update Notes 1.0.3",
+    "date": "2026-07-25",
+    "time": "02:08",
+    "buildId": 24375914,
+    "balance": false,
+    "headline": "World Boss and Sudden Mission reset fix.",
+    "highlights": [
+     {
+      "badge": "fix",
+      "text": "World Bosses and Sudden Missions reset properly again; the Intermediate Promotion Quest prison door opens."
+     }
+    ],
+    "heroChanges": {},
+    "fixCount": 2,
+    "source": "assets/patch_notes/1.0.3.txt",
+    "badges": [
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.2",
+    "title": "Update Notes 1.0.2",
+    "date": "2026-07-24",
+    "time": "12:27",
+    "buildId": 24372205,
+    "balance": false,
+    "headline": "Graphics, crash and quest fixes.",
+    "highlights": [
+     {
+      "badge": "fix",
+      "text": "Frame Generation crash and FPS-limit saving fixed, plus other crashes."
+     },
+     {
+      "badge": "quest",
+      "text": "Adventure Quest 29, the Veteran Promotion Quest and Ornette's Bond Quest fixed.",
+      "heroes": [
+       "Ornette"
+      ]
+     }
+    ],
+    "heroChanges": {},
+    "fixCount": 9,
+    "source": "assets/patch_notes/1.0.2.txt",
+    "badges": [
+     "quest",
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.1",
+    "title": "Update Notes 1.0.1",
+    "date": "2026-07-23",
+    "time": "09:24",
+    "buildId": 24350519,
+    "balance": false,
+    "headline": "Unpurchased DLC could be equipped; fixed.",
+    "highlights": [
+     {
+      "badge": "fix",
+      "text": "Unpurchased DLC can no longer be equipped in-game."
+     }
+    ],
+    "heroChanges": {},
+    "fixCount": 1,
+    "source": "assets/patch_notes/1.0.1.txt",
+    "badges": [
+     "fix"
+    ],
+    "tierChanges": []
+   },
+   {
+    "version": "1.0.0",
+    "title": "[Patch Notice] Regarding Partial Progression Data Reset (Pre-Launch Build Users)",
+    "date": "2026-07-23",
+    "time": "03:11",
+    "buildId": 24332085,
+    "balance": false,
+    "launch": true,
+    "headline": "Launch. Players of the pre-launch build had some progress reset.",
+    "highlights": [
+     {
+      "badge": "system",
+      "text": "For pre-launch players only: some cooking recipes, mini-game records, the Karma Codex, Sudden Mission discoveries and titles (except Mercenary Corps promotion titles) were reset. Achievement progress was kept, so titles can be claimed again."
+     }
+    ],
+    "heroChanges": {},
+    "fixCount": 0,
+    "source": "assets/patch_notes/1.0.0.txt",
+    "badges": [
+     "system"
+    ],
+    "tierChanges": []
+   }
+  ]
  }
 }

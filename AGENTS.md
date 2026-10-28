@@ -18,6 +18,7 @@ Every commit to `main` goes live about a minute later. There is no build step, n
 | `assets/` | Images as WebP: `heroes/<name>.webp` (portraits), `archetypes/<archetype>.webp`, `roles/<role>.webp`, `gear/<set>.webp`. File names are lowercase with hyphens. `awakenings/<Hero>/A1–A6.png` are David's original screenshots: the source for `AWAKENINGS`, not shown on the page. `awakenings/Awakening_Icon.png` is shown on the cards. |
 | `AGENTS.md` / `CLAUDE.md` | These notes. |
 | `tools/` | Python scripts for the data (no build step; the site never runs them). See **Tools** below. |
+| `assets/patch_notes/<version>.txt` | The official Steam patch notes, word for word (1.0.0 = the launch notice). The source for `PATCH_NOTES`; linked from the Patch Notes page. |
 | `CHANGELOG.md` | A record of every change, newest first. |
 
 How the page starts: `index.html` runs `fetch('data.json')`, copies each top-level key into a global variable of the same name (`HEROES`, `TEAM_DATA`, …), then calls `startApp()`, which draws every tab. Opening `index.html` directly from disk (`file://`) fails because browsers block the fetch. Test with a local server instead, e.g. `python3 -m http.server` in the repository folder.
@@ -48,6 +49,7 @@ How the page starts: `index.html` runs `fetch('data.json')`, copies each top-lev
 | `KARMA_LEVELLING` | `{note, types, order, measured}` | Karma base stats by level (Lv1→Lv30 measured on two cards). Not used by the page yet; ready for a Karma level slider. Every card has one of four stat types (`KARMA_DATA[].statType`: Balanced, Attack, Defense, High Attack), set by its level-1 stats (`KARMA_DATA[].baseLv1`). |
 | `DAMAGE_TESTS` | `{note, findings[], tests[], statsCheck}` | Training-dummy results and what they show (damage ∝ Attack × skill %, crit = ×(1 + Crit Damage), Poison, Bleed, Burn and Shock ticks = 50/75/100% of the first applier's Attack at 1/2/3 stacks, 4 ticks). Not used by the page yet. Blue gear values seen in the same tests are in `GEAR_STATS.observedBlue`. |
 | `STATUS_EFFECTS` | `{note, damageOverTime: {statuses[], ticks, durationSeconds, tickEverySeconds, maxStacks, tickPctByStacks[], rules[], untested}}` | The Status Effects box on the Skills tab of character pages (`renderProfileStatus()`), shown for heroes whose skills inflict one of `statuses` (read from `skills[].meta.inflicts`). Edit the rules here, not in the HTML. |
+| `PATCH_NOTES` | `{note, latestBalance, badgeTypes{key: label}, directions{key: label}, impactLabels[4], rating, patches[{version, title, date, time, buildId, balance, launch?, headline, highlights[{badge, text, heroes[]}], heroChanges{hero: {direction, impact 0–3, damagePct?, totalBefore?, totalAfter?, devNote?, changes[{skill, slot?, patchName?, before?, after?, text?}]}}, tierChanges[], fixCount, badges[], source}]}` | The Patch Notes page (`renderPatches()`), the green ▲ / red ▼ / amber mixed arrows on the Tier List, Teams and hero hover cards (from the `latestBalance` patch, via `latestArrow()`), and the Patch history card on the Review tab (`renderProfilePatches()`). Highlights are the important changes from `assets/patch_notes/`, with developer messages left out. 1.1.0 `heroChanges` come from the official before/after numbers (method in `rating`); other patches' directions are read from the notes. `tierChanges` records tier moves agreed with David after a patch; **tiers are never moved by a formula**. Badge keys: hero, balance, content, costume, quest, system, fix. |
 | `AWAKENINGS` | `{note, ratingScale[6], icon, heroes: {hero: {best, list[{level, name, text, effects[{stat, value}], rating, why}]}}}` | Review tab on character pages (`renderProfileAwakenings()`). `text` is copied word for word from the screenshots in `assets/awakenings/<Hero>/A1–A6.png`, with `\n` for line breaks. `effects` are the always-on stat bonuses, using the `GEAR_STATS` stat names. They count in the end-game totals, where they're shown in purple, and in the build optimiser. `rating` runs 0–5: 0 = not needed, 5 = game-changing. Stat awakenings on damage heroes are rated by modelled end-game damage gain (15%+ = 4, 8–15% = 3, 3–8% = 2, 1–3% = 1; method in `AWAKENINGS.note`). `why` is shown under each card. `best` is the awakening shown in the Best Awakening card. |
 
 ### Text formats the page reads (keep them exactly)
@@ -71,6 +73,7 @@ Change these in the HTML if needed:
 - the team tier label colours (`renderTeams`)
 - the kit-type filter options (the `<select id="classType">`)
 - the "NEW" badge on Ryza (`renderHeroes`)
+- the patch badge colours and icons (`PB_COLORS`, `PB_ICONS`) and the arrow colours and shapes (`PA_COLOR`, `PA_SVG`)
 - the skill-level ratio `SKILL_MAX_TO_LV1 = 1.75`
 - the Karma trait → stat name mapping (`KARMA_TRAIT_STAT`) and the gear slot list (`GEAR_SLOTS`)
 
@@ -79,7 +82,7 @@ Change these in the HTML if needed:
 1. **Sources of truth:** hero skill data comes from the in-game codex; Karma stats, gear-set effects and the game's Recommended Combinations come from David's screenshots. If anything conflicts, the codex wins. Flag the conflict; don't guess.
 2. **Never invent numbers.** Status mechanics are only partly measured (see `DAMAGE_TESTS`): Poison, Bleed, Burn and Shock tick 4 times, for 50/75/100% of the first applier's Attack at 1/2/3 stacks (max 3). All four last about 10 s (a tick every ~2.5 s). Frost, Stun and other statuses are unverified. The only calculated values on the site are clearly labelled:
    - **Skill levels below max:** Lv. 1 = max ÷ 1.75 times the measured multipliers (`SKILL_LEVEL_MULTIPLIERS`). Every level is measured; values can be 1 off the game because of rounding.
-3. Codex values are post-patch 1.1.0. Patch 1.1.2 changed nothing in the balance.
+3. Codex values are post-patch 1.1.0. Patch 1.1.2 changed nothing in the balance. The 1.1.0 notes list every skill's Lv. 1 multiplier before and after; × 175 they equal the codex max-level % (124 of 126 exact; the notes swap the names of Alex's Auto and Jump attacks, Brandish and Dive Kick, so the codex names are kept).
 4. **Dodge** (the `Dash` slot) can't be upgraded (always Lv.1) and does no damage: the hero's own skill window shows no damage value. The codex shows the jump attack's value next to it anyway. That number is kept out of the description and stored as the skill's `codexAttackPct`, which the page doesn't show. Don't put it back unless David confirms Dodge damage later in the game. Dash *attack* is a separate skill and does do damage.
    **Skill levels:** Auto, Dash and Jump attacks max at Lv.7; Skill, Ultimate, Special A and Special B at Lv.10; Mastery (passive) can't be levelled.
 5. **Archetypes and their heroes:**
@@ -143,7 +146,7 @@ Every hero levels identically; only breakthrough bonuses differ.
 1. **When David sends measured level-70 stats for a hero:** put them in `HERO_BASE_STATS[hero]` and set `estimated: false`. If they're a breakthrough measurement instead, add it to `HERO_STAT_MODEL.measured` and recalculate that hero.
 2. **If a measured hero doesn't match profile B**, add them to `HERO_STAT_MODEL.measured`, give them their own breakthrough numbers, re-estimate them and tell David.
 3. **If testing changes the gear tables or rules**, update `GEAR_STATS`. Then re-check that each build in `HERO_BUILDS` doesn't use the same stat as both main and substat on one piece.
-4. **Crit Rate above 100%:** the game says the final crit chance depends on the target's Critical Hit Resistance, so whether extra Crit Rate is useful hasn't been tested. The builds currently treat 100% as the most that counts.
+4. **Crit Rate above 100%:** settled by patch 1.1.0: crits happen exactly at your Critical Rate and monsters no longer have Critical Hit Resistance, so 100% is the most that counts. The builds already cap it there.
 5. **Recalculating a damage build after the numbers change:** try all 3⁵ main-stat combinations as described above, or ask David before hand-editing.
 
 ## Tools

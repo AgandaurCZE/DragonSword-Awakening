@@ -1,3 +1,13 @@
+## 2026-10-29 — Claude: Patch Notes page, buff/nerf arrows, pronoun and data fixes
+- New **Patch Notes** tab: every update from 1.0.0 (launch) to 1.1.2, newest first, with Steam dates and BuildIDs. Each patch shows badges (New hero, Balance, Content, Costumes, Story & quests, Systems & QoL, Bug fixes), the important changes without the developer messages, the bug-fix count and a link to the full official notes. You can filter by badge and by hero.
+- 1.1.0 hero changes use the official before/after numbers. Click a hero for every skill's old and new max-level %, Rage and Super Armor changes and the developer note. Each hero gets a direction (buff, nerf, mixed, adjusted) and an impact (Minor, Moderate, Major) by a fixed rule, stored in `PATCH_NOTES.rating`.
+- Green ▲ (buff), red ▼ (nerf) and amber (mixed) arrows from the latest balance patch now show on the Tier List cards, Team cards and hero hover cards. Clicking an arrow on the Tier List opens that hero's patch history. Tiers themselves are not changed.
+- The Review tab has a new **Patch history** card per hero.
+- Pronouns: Lute is now he/him and Kalien she/her in all review text, pros/cons and the build note.
+- Ryza: obtained from the Story (Adventure Quest 53. Reunion), as patch 1.1.0 states.
+- Frostbite: the "1.1.0 nerfed all three" wording is corrected. Othello and Cerese were nerfed; Dana's skill damage went up (+14.5% in total) with higher Rage costs.
+- AGENTS.md: open task 4 (Crit Rate above 100%) is closed by the 1.1.0 crit rework. The validator now checks `PATCH_NOTES`.
+
 ## 2026-10-28 — Claude: Skills tab split into Basic Moves and Skills
 - The Skills tab now starts with **Basic Moves**: Basic Attack Combo (shown in place of "Auto attack"; the data slot name is unchanged), Jump attack, Dash attack and Dash.
 - A Gear-page-style divider, **Skills**, follows, with Skill and Ultimate, then Special A and Special B, then Mastery centred below (full width on phones).

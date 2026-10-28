@@ -263,6 +263,59 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .profile-gear-detail{color:#cdd5e0;font-size:12px;line-height:1.45;margin-top:5px}
 .profile-gear-piece img{width:62px;height:62px;object-fit:contain;display:block;margin:0 auto 6px}
 
+/* Patch Notes timeline + buff/nerf arrows */
+.pa{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;flex:none;vertical-align:-4px;box-shadow:0 1px 4px #0009}
+.pa svg{width:12px;height:12px;display:block}
+.pa-buff{background:#1f9d55;color:#eafff2}.pa-nerf{background:#d63c43;color:#fff0f0}.pa-mixed{background:#d9962b;color:#1b1406}.pa-adjusted{background:#5b6270;color:#e6e9ee}.pa-fix{background:#3c4656;color:#cfd6e2}.pa-new{background:#f0b94a;color:#1b1406;width:auto;border-radius:9px;padding:0 6px;font-size:9px;font-weight:900;letter-spacing:.05em}
+.portrait-wrap .patch-arrow{position:absolute;left:5px;bottom:5px;z-index:2;cursor:pointer}
+.portrait-wrap .patch-arrow .pa{width:22px;height:22px}.portrait-wrap .patch-arrow .pa-new{width:auto;height:18px;font-size:10px}.portrait-wrap .patch-arrow .pa svg{width:14px;height:14px}
+.team-lead-name .pa,.team-slot-name .pa{margin-left:5px;width:15px;height:15px;vertical-align:-3px}.team-lead-name .pa svg,.team-slot-name .pa svg{width:10px;height:10px}
+.ref-patch{display:flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;color:#d6dbe4}
+.patches-page{max-width:1280px;margin:0 auto;padding:22px 28px 36px;color:#edf0f6}
+.patch-summary{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;background:#2a2d35;border:1px solid #3a3d46;border-left:4px solid #19b9ff;padding:12px 16px;margin-bottom:14px;font-size:14px;color:#dce1e8}
+.patch-summary b{color:#fff}.patch-summary .ps-count{display:inline-flex;align-items:center;gap:6px;font-weight:800}
+.patch-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:18px}
+.patch-controls select{width:auto;flex:0 0 auto;max-width:100%;background:#34363e;color:#e8ebf1;border:1px solid #444954;padding:9px 10px;font:inherit;font-weight:700}
+.patch-filter{display:inline-flex;align-items:center;gap:6px;background:#34363e;color:#d9dce5;border:1px solid #444954;padding:8px 11px;cursor:pointer;font:inherit;font-size:13px;font-weight:700}
+.patch-filter.active{background:#168fcb;color:#fff;border-color:#168fcb}
+.patch-timeline{position:relative;padding-left:26px}
+.patch-timeline:before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(#19b9ff,#3a3d46 40%,#3a3d46)}
+.patch-entry{position:relative;margin-bottom:18px}
+.patch-entry:before{content:"";position:absolute;left:-23px;top:16px;width:12px;height:12px;border-radius:50%;background:#1d2027;border:2px solid #6b7486}
+.patch-entry.is-balance:before{border-color:#19b9ff;background:#19b9ff}
+.patch-card{background:linear-gradient(100deg,#2a2e37,#25272e 60%);border:1px solid #3a3d46}
+.patch-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding:12px 16px;background:#2f333d;border-bottom:1px solid #3a3d46}
+.patch-version{font-size:24px;font-weight:900;color:#fff;letter-spacing:.01em}
+.patch-date{font-size:13px;color:#b9c1cf}
+.patch-title{flex-basis:100%;font-size:12px;color:#8f98a8}
+.patch-badges{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto}
+.pbadge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;color:var(--pb);border:1px solid var(--pb);background:color-mix(in srgb,var(--pb) 12%,transparent);padding:3px 7px;white-space:nowrap}
+.pbadge svg{width:13px;height:13px;flex:none}
+.patch-body{padding:12px 16px 14px;color:#dce1e8;font-size:14px;line-height:1.6}
+.patch-headline{margin:0 0 10px;font-weight:700;color:#fff}
+.patch-hl{list-style:none;margin:0;padding:0}
+.patch-hl li{display:flex;gap:9px;margin:0 0 7px}
+.patch-hl li .pbadge{padding:2px;border:0;background:none;margin-top:3px}
+.patch-hl li .pbadge span{display:none}
+.patch-more{font-size:12px;color:#9aa3b2;margin-top:6px}.patch-more a{color:#68c7d5}
+.patch-heroes-title{margin:14px 0 8px;font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#dfe7f2}
+.patch-hero-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px}
+.phc{min-width:0;display:flex;align-items:center;gap:9px;background:#22252c;border:1px solid #3a3d46;border-left:3px solid var(--pc,#5b6270);padding:6px 8px;cursor:pointer;color:inherit;font:inherit;text-align:left;width:100%}
+.phc:hover,.phc.open{border-color:var(--pc,#5b6270);background:#2b2f38}
+.phc img{width:40px;height:40px;object-fit:cover;object-position:top;border-radius:4px;flex:none}
+.phc-name{font-weight:800;color:#fff;font-size:14px;line-height:1.2}
+.phc-sub{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;font-size:12px;color:#c4cad5;margin-top:2px}
+.pips{display:inline-flex;gap:2px}.pips i{width:6px;height:6px;border-radius:1px;background:#4a505c}.pips i.on{background:var(--pc,#aaa)}
+.phd{grid-column:1/-1;background:#1d2026;border:1px solid #3a3d46;border-left:3px solid var(--pc,#5b6270);padding:10px 14px;font-size:13px}
+.phd-dev{color:#aab2c0;font-style:italic;margin:0 0 8px}
+.phd table{width:100%;border-collapse:collapse}.phd td{padding:4px 6px;border-top:1px solid #30343d;vertical-align:top}
+.phd td.num{white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+.up{color:#4ade80;font-weight:800}.down{color:#ff6b70;font-weight:800}
+.phd-open{margin-top:8px;background:none;border:0;color:#68c7d5;cursor:pointer;font:inherit;font-weight:700;padding:0}
+.patch-empty{padding:26px;text-align:center;color:#aeb6c5;background:#292b32;border:1px solid #383b44}
+.rv-patch{margin:0 0 12px}.rv-patch-head{display:flex;align-items:center;gap:8px;font-weight:800;color:#fff;margin-bottom:4px}.rv-patch-head small{font-weight:600;color:#9aa3b2}
+.rv-patch ul{margin:0;padding-left:20px}
+@media(max-width:700px){.patches-page{padding:16px 12px}.patch-timeline{padding-left:18px}.patch-timeline:before{left:4px}.patch-entry:before{left:-19px}.patch-badges{margin-left:0}.patch-hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.phc img{width:34px;height:34px}}
 </style>
 </head>
 <body>
@@ -274,6 +327,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  <button class="nav-item" data-page="teams"><span class="nav-icon">♟</span><span class="nav-label">Teams</span></button>
  <button class="nav-item" data-page="gear"><span class="nav-icon">◇</span><span class="nav-label">Gear</span></button>
  <button class="nav-item" data-page="karma"><span class="nav-icon">✧</span><span class="nav-label">Karma</span></button>
+ <button class="nav-item" data-page="patches"><span class="nav-icon">☰</span><span class="nav-label">Patch Notes</span></button>
 </aside>
 <div class="app-content">
 <header><h1>DRAGONSWORD: AWAKENING</h1><p>Visual tier list · patch <span id="patchLabel">1.1.2</span> · hover or focus a hero for the early / mid / end-game breakdown</p></header>
@@ -322,6 +376,10 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  <div id="karmaBoard"></div>
  <p class="karma-awakening-note">Trait values at Ascension 0 (Lv. 1) and Ascension 6 (Lv. 70) are from the in-game screenshots. Each Ascension multiplies the A0 value: ×4/3, ×5/3, ×2, ×8/3, ×11/3 and ×5 for A1–A6, measured in-game. Values are rounded like the game: whole % and the nearest 5. Signature-exclusive effects are listed separately. Base stats are Lv. 70 / Ascension 6 values.</p>
 </section>
+<section class="patches-page" id="patchesPage" hidden>
+ <div class="gear-heading"><h2>PATCH NOTES</h2><span>Every update since launch, newest first, from the official Steam notes</span></div>
+ <div id="patchesBody"></div>
+</section>
 <section class="profile-page" id="profilePage" hidden>
  <div class="profile-crumb"><button type="button" id="profileBackTier">Tier List</button> / Characters / <strong id="profileCrumbName">Character</strong></div>
  <div class="profile-hero"><div class="profile-hero-copy"><h2 id="profileName">Character</h2><div class="profile-subtitle">Character guide &amp; build</div><div class="profile-note" id="profileUpdated">Data from the master workbook</div></div><img class="profile-hero-portrait" id="profilePortrait" alt=""></div>
@@ -337,7 +395,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={};
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={};
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -415,14 +473,14 @@ function renderTeams(){
    const body=document.createElement('div');body.className='team-body';
    const lead=document.createElement('div');lead.className='team-lead';
    const leadImg=document.createElement('img');leadImg.alt=team.lead;leadImg.src=portrait(team.lead);leadImg.loading='lazy';leadImg.classList.add('team-character-link');leadImg.tabIndex=0;leadImg.title='View '+team.lead+' in Heroes';wireTeamCharacter(leadImg,team.lead);lead.append(leadImg);
-   const leadName=document.createElement('div');leadName.className='team-lead-name';leadName.textContent=team.lead;lead.append(leadName);body.append(lead);
+   const leadName=document.createElement('div');leadName.className='team-lead-name';leadName.textContent=team.lead;leadName.insertAdjacentHTML('beforeend',latestArrow(team.lead));lead.append(leadName);body.append(lead);
    const members=document.createElement('div');members.className='team-members';
    for(const slot of team.members){
     const box=document.createElement('div');box.className='team-slot';
     const pics=document.createElement('div');pics.className='team-slot-images';
     const names=[slot.name,...(slot.alts||[])];if(names.length>2)pics.classList.add('many');
     names.forEach((name,i)=>{if(i>0){const sep=document.createElement('span');sep.className='swap-divider';sep.textContent='/';pics.append(sep)}const im=document.createElement('img');im.src=portrait(name);im.alt=name;im.title='View '+name+' in Heroes';im.loading='lazy';im.classList.add('team-character-link');im.tabIndex=0;if(names.length===1)im.classList.add('single');wireTeamCharacter(im,name);pics.append(im)});
-    box.append(pics);const nm=document.createElement('div');nm.className='team-slot-name';nm.textContent=slot.name;box.append(nm);
+    box.append(pics);const nm=document.createElement('div');nm.className='team-slot-name';nm.textContent=slot.name;nm.insertAdjacentHTML('beforeend',latestArrow(slot.name));box.append(nm);
     if(slot.alts?.length){const alt=document.createElement('div');alt.className='team-slot-alt';alt.textContent='Alt: '+slot.alts.join(' / ');box.append(alt)}
     members.append(box);
    }
@@ -831,7 +889,7 @@ function richText(text,hero){
 }
 function refCardHtml(type,key){
  if(type==='hero'){const h=HEROES.find(x=>x.name===key);if(!h)return '';const t=h.tiers||{};
-  return `<div class="ref-card"><div class="ref-head"><img class="ref-portrait" src="${h.portrait}" alt=""><div><div class="ref-title">${profileEsc(h.name)}</div><div class="ref-meta"><img src="${h.archIcon}" alt="">${colourStatusWords(h.archetype)} · ${profileEsc(h.role)}</div><div class="ref-meta">Kit: ${profileEsc(h.classType)}</div><div class="ref-tiers">${['Early-game','Mid-game','End-game'].map(p=>`<span style="background:${tierColor(t[p])}">${p.split('-')[0]} ${t[p]||'—'}</span>`).join('')}</div></div></div><button type="button" class="ref-open" data-open-hero="${profileEsc(h.name)}">Open ${profileEsc(h.name)}'s guide →</button></div>`}
+  return `<div class="ref-card"><div class="ref-head"><img class="ref-portrait" src="${h.portrait}" alt=""><div><div class="ref-title">${profileEsc(h.name)}</div><div class="ref-meta"><img src="${h.archIcon}" alt="">${colourStatusWords(h.archetype)} · ${profileEsc(h.role)}</div><div class="ref-meta">Kit: ${profileEsc(h.classType)}</div><div class="ref-tiers">${['Early-game','Mid-game','End-game'].map(p=>`<span style="background:${tierColor(t[p])}">${p.split('-')[0]} ${t[p]||'—'}</span>`).join('')}</div>${(()=>{const l=latestBalanceChange(h.name);return l?`<div class="ref-patch">${patchArrow(l.c,l.version)} Patch ${l.version}: ${profileEsc(patchDirLabel(l.c))}${l.c.damagePct!=null?` (skill damage ${l.c.damagePct>0?'+':''}${l.c.damagePct}%)`:''}</div>`:''})()}</div></div><button type="button" class="ref-open" data-open-hero="${profileEsc(h.name)}">Open ${profileEsc(h.name)}'s guide →</button></div>`}
  if(type==='skill'){const [h,n]=key.split('/');const sk=findSkill(h,n);if(!sk)return '';
   return `<div class="ref-card"><div class="ref-kicker">${profileEsc(h)} · ${profileEsc(sk.slot)}</div><div class="ref-title">${profileEsc(sk.skill)}</div><div class="ref-body">${formatSkillText(sk.description)}</div></div>`}
  if(type==='set'){const g=GEAR_DATA.find(x=>x.name===key);if(!g)return '';
@@ -903,9 +961,11 @@ function renderProfileReview(h,data){
   if(I.gear)body+=`<h5>Gear</h5>${P(I.gear)}`;
   parts.push(card('INVESTMENT','What to invest in',body));}
  if(R.teams)parts.push(card('TEAMS','Teams and partners',P(R.teams)));
+ {const ph=renderProfilePatches(h);if(ph)parts.push(card('PATCHES','Patch history',ph));}
  const t=h.tiers||{};
  parts.push(`<div class="rv-ratings">${['Early-game','Mid-game','End-game'].map(p=>`<div class="rv-rating"><div class="rv-rating-box" style="background:${tierColor(t[p])}">${t[p]||'—'}</div><div class="rv-rating-label">${p}</div></div>`).join('')}</div><p class="profile-note">Tiers from the guide's Tier List · patch ${profileEsc(patchText())}. Review written ${profileEsc(R.updated||'')}; numbers come from the codex and the measured damage rules in the guide.</p>`);
  root.innerHTML=parts.join('');
+ root.querySelectorAll('[data-open-patches]').forEach(b=>b.onclick=()=>openPatchesFor(b.dataset.openPatches));
 }
 
 // Skills tab layout: Basic Moves (auto, jump, dash attack, dodge), then a "Skills" divider with Skill/Ultimate, Special A/B
@@ -1102,9 +1162,10 @@ function render(){
 }
 function makeCard(h,phase,tier){
  const card=document.createElement('div');card.className='hero-card';card.tabIndex=0;card.style.setProperty('--tier',tierColor(tier));
- card.innerHTML=`<div class="portrait-wrap"><img class="portrait" src="${h.portrait}" alt="${h.name}"><span class="arch-badge"><img src="${h.archIcon}" alt="${h.archetype}"></span><span class="tier-chip">${tier}</span></div><div class="hero-name">${h.name}</div>`;
+ card.innerHTML=`<div class="portrait-wrap"><img class="portrait" src="${h.portrait}" alt="${h.name}"><span class="arch-badge"><img src="${h.archIcon}" alt="${h.archetype}"></span><span class="tier-chip">${tier}</span>${(()=>{const a=latestArrow(h.name);return a?`<span class="patch-arrow" data-patch-hero="${h.name}">${a}</span>`:''})()}</div><div class="hero-name">${h.name}</div>`;
  card.style.cursor='pointer';card.setAttribute('role','button');card.setAttribute('aria-label',`Open ${h.name} character page`);card.addEventListener('click',()=>openCharacterProfile(h.name));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCharacterProfile(h.name)}});card.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')showHeroCard(h,card)});card.addEventListener('pointerleave',e=>{if(!$('karmaPopover').contains(e.relatedTarget))hideKarmaPopover()});
  card.addEventListener('focus',()=>showHeroCard(h,card));card.addEventListener('blur',()=>hideKarmaPopover());
+ const pa=card.querySelector('.patch-arrow');if(pa)pa.addEventListener('click',e=>{e.stopPropagation();hideKarmaPopover(0);openPatchesFor(h.name)});
  return card;
 }
 function showTip(h,card){
@@ -1138,7 +1199,8 @@ document.querySelectorAll('.nav-item').forEach(btn=>btn.addEventListener('click'
  $('teamsPage').hidden=page!=='teams';
  $('gearPage').hidden=page!=='gear';
  $('karmaPage').hidden=page!=='karma';
- const titles={tier:'Visual tier list',heroes:'Heroes',teams:'Teams',gear:'Gear',karma:'Karma'};
+ $('patchesPage').hidden=page!=='patches';
+ const titles={tier:'Visual tier list',heroes:'Heroes',teams:'Teams',gear:'Gear',karma:'Karma',patches:'Patch Notes'};
  document.title='DragonSword: Awakening — '+titles[page];
 }));
 
@@ -1184,6 +1246,60 @@ function renderHeroes(){
  if(!list.length)grid.innerHTML='<div class="heroes-empty">No characters match your search and filters.</div>';
 }
 
+// ---- Patch Notes (PATCH_NOTES in data.json) ----
+const PB_COLORS={hero:'#f0b94a',balance:'#19b9ff',content:'#6fd08c',costume:'#ff7eb6',quest:'#b28cff',system:'#9aa4b5',fix:'#ff8a5c'};
+const PB_ICONS={
+ hero:'<path d="M8 1.5l1.9 4 4.3.5-3.2 3 .9 4.3L8 11.2l-3.9 2.1.9-4.3-3.2-3 4.3-.5z" fill="currentColor"/>',
+ balance:'<path d="M8 2v11M4 13h8M3 4h10M5 4l-2.5 5h5zM11 4l-2.5 5h5z" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linejoin="round"/>',
+ content:'<path d="M3 14V2M3 2.5h9l-2 3 2 3H3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/>',
+ costume:'<path d="M5.5 2L2 4.5l1.5 3L5 6.5V14h6V6.5l1.5 1 1.5-3L10.5 2c-.5 1.2-1.4 1.8-2.5 1.8S6 3.2 5.5 2z" fill="currentColor"/>',
+ quest:'<path d="M4 2h7.5a1.5 1.5 0 011.5 1.5V14H5a2 2 0 01-2-2V3a1 1 0 011-1zM6 5.5h5M6 8h5M6 10.5h3" stroke="currentColor" stroke-width="1.3" fill="none"/>',
+ system:'<circle cx="8" cy="8" r="2.2" stroke="currentColor" stroke-width="1.4" fill="none"/><path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2M3.4 3.4l1.4 1.4M11.2 11.2l1.4 1.4M3.4 12.6l1.4-1.4M11.2 4.8l1.4-1.4" stroke="currentColor" stroke-width="1.4"/>',
+ fix:'<path d="M5.5 5.5a2.5 2.5 0 015 0V10a2.5 2.5 0 01-5 0zM5.5 8H2.5M13.5 8h-3M3 4.5l2.5 1.5M13 4.5l-2.5 1.5M3 12l2.5-1.5M13 12l-2.5-1.5M8 6.5v5" stroke="currentColor" stroke-width="1.3" fill="none"/>'};
+function patchBadge(k,withLabel=true){const P=PATCH_NOTES||{};return `<span class="pbadge" style="--pb:${PB_COLORS[k]||'#9aa4b5'}" title="${profileEsc((P.badgeTypes||{})[k]||k)}"><svg viewBox="0 0 16 16" aria-hidden="true">${PB_ICONS[k]||''}</svg><span>${withLabel?profileEsc((P.badgeTypes||{})[k]||k):''}</span></span>`;}
+const PA_SVG={buff:'<path d="M8 3l5.5 8h-11z" fill="currentColor"/>',nerf:'<path d="M8 13l5.5-8h-11z" fill="currentColor"/>',mixed:'<path d="M8 1.5l4 5.5H4zM8 14.5l4-5.5H4z" fill="currentColor"/>',adjusted:'<path d="M3 6.5h10M3 9.5h10" stroke="currentColor" stroke-width="2"/>',fix:'<path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="2.2" fill="none"/>'};
+function patchDirLabel(c){const P=PATCH_NOTES||{};const d=(P.directions||{})[c.direction]||c.direction;const i=(P.impactLabels||[])[c.impact]||'';return c.direction==='new'?'New hero':c.direction==='mixed'&&i?`Mixed (${i.toLowerCase()} impact)`:(i&&!['fix','adjusted'].includes(c.direction)?i+' '+d.toLowerCase():d);}
+function patchArrow(c,version){if(!c)return '';const t=`Patch ${version}: ${patchDirLabel(c)}${c.damagePct!=null?` (skill damage ${c.damagePct>0?'+':''}${c.damagePct}%)`:''}`;
+ if(c.direction==='new')return `<span class="pa pa-new" title="${profileEsc(t)}">NEW</span>`;
+ return `<span class="pa pa-${c.direction}" title="${profileEsc(t)}" aria-label="${profileEsc(t)}"><svg viewBox="0 0 16 16" aria-hidden="true">${PA_SVG[c.direction]||''}</svg></span>`;}
+function latestBalanceChange(name){const P=PATCH_NOTES||{};const p=(P.patches||[]).find(x=>x.version===P.latestBalance);const c=p&&(p.heroChanges||{})[name];return c?{c,version:p.version}:null;}
+function latestArrow(name,onlyDirectional=true){const l=latestBalanceChange(name);if(!l)return '';if(onlyDirectional&&!['buff','nerf','mixed','new'].includes(l.c.direction))return '';return patchArrow(l.c,l.version);}
+function patchDate(iso){if(!iso)return '';const [y,m,d]=iso.split('-').map(Number);return `${d} ${['January','February','March','April','May','June','July','August','September','October','November','December'][m-1]} ${y}`;}
+const PA_COLOR={buff:'#1f9d55',nerf:'#d63c43',mixed:'#d9962b',adjusted:'#5b6270',fix:'#3c4656',new:'#f0b94a'};
+function patchChangeRows(c){return (c.changes||[]).map(x=>{const nm=`<b>${profileEsc(x.skill||'')}</b>${x.patchName?` <small style="color:#8f98a8">(“${profileEsc(x.patchName)}” in the notes)</small>`:''}${x.slot?` <small style="color:#8f98a8">· ${profileEsc(x.slot)}</small>`:''}`;
+ if(x.before!=null){const pc=Math.round((x.after-x.before)/x.before*1000)/10;return `<tr><td>${nm}</td><td class="num">${x.before}% → <b>${x.after}%</b></td><td class="num ${pc>0?'up':pc<0?'down':''}">${pc>0?'+':''}${pc}%</td></tr>`;}
+ return `<tr><td>${nm}</td><td colspan="2">${colourStatusWords(x.text||'')}</td></tr>`;}).join('');}
+let activePatchBadge='',activePatchHero='';
+function openPatchesFor(hero){document.querySelector('.nav-item[data-page="patches"]').click();activePatchHero=hero||'';activePatchBadge='';renderPatches();const s=$('patchHeroSelect');if(s)s.value=activePatchHero;window.scrollTo({top:0});}
+function renderPatches(){
+ const root=$('patchesBody');if(!root)return;const P=PATCH_NOTES||{};const patches=P.patches||[];
+ const lb=patches.find(x=>x.version===P.latestBalance);let sum='';
+ if(lb){const cnt={};Object.values(lb.heroChanges||{}).forEach(c=>cnt[c.direction]=(cnt[c.direction]||0)+1);
+  sum=`<div class="patch-summary"><span>Latest balance patch: <b>${profileEsc(lb.version)}</b> · ${patchDate(lb.date)}</span>${['buff','nerf','mixed','adjusted','new'].filter(k=>cnt[k]).map(k=>`<span class="ps-count">${patchArrow({direction:k},lb.version)} ${cnt[k]} ${k==='new'?'new hero':((P.directions||{})[k]||k).toLowerCase()+(cnt[k]>1?(k==='buff'?'s':k==='nerf'?'s':''):'')}</span>`).join('')}<span style="color:#9aa3b2;font-size:12px;flex-basis:100%">Green ▲ buffed, red ▼ nerfed, amber mixed. The same arrows appear on the Tier List and Teams. How the ratings are worked out is explained at the bottom of this page.</span></div>`;}
+ const heroes=HEROES.map(h=>h.name).sort();
+ const controls=`<div class="patch-controls"><button class="patch-filter${!activePatchBadge?' active':''}" data-pbf="">✱ All</button>${Object.keys(P.badgeTypes||{}).map(k=>`<button class="patch-filter${activePatchBadge===k?' active':''}" data-pbf="${k}">${patchBadge(k,false).replace('<span class="pbadge"','<span class="pbadge" style="border:0;background:none;padding:0;--pb:'+PB_COLORS[k]+'"')} ${profileEsc(P.badgeTypes[k])}</button>`).join('')}<select id="patchHeroSelect" aria-label="Filter by hero"><option value="">All heroes</option>${heroes.map(n=>`<option${n===activePatchHero?' selected':''}>${profileEsc(n)}</option>`).join('')}</select></div>`;
+ const list=patches.filter(p=>{if(activePatchBadge&&!(p.badges||[]).includes(activePatchBadge))return false;if(activePatchHero&&!((p.heroChanges||{})[activePatchHero]||(p.highlights||[]).some(h=>(h.heroes||[]).includes(activePatchHero))))return false;return true;});
+ const entry=p=>{let hl=(p.highlights||[]).filter(h=>!activePatchBadge||h.badge===activePatchBadge);
+  if(activePatchHero)hl=(p.highlights||[]).filter(h=>(h.heroes||[]).includes(activePatchHero)&&(!activePatchBadge||h.badge===activePatchBadge));
+  let hc=Object.entries(p.heroChanges||{});if(activePatchHero)hc=hc.filter(([n])=>n===activePatchHero);
+  const order={buff:0,mixed:1,nerf:2,adjusted:3,new:4,fix:5};hc.sort((a,b)=>(order[a[1].direction]-order[b[1].direction])||((b[1].impact||0)-(a[1].impact||0))||((b[1].damagePct||0)-(a[1].damagePct||0)));
+  const showHeroes=hc.length&&(!activePatchBadge||activePatchBadge==='balance'||activePatchBadge==='fix'&&hc.some(([,c])=>c.direction==='fix'));
+  const chips=hc.filter(([,c])=>activePatchBadge!=='fix'||c.direction==='fix').map(([n,c])=>{const h=HEROES.find(x=>x.name===n)||{};const col=PA_COLOR[c.direction];
+   return `<button type="button" class="phc" style="--pc:${col}" data-phc="${profileEsc(p.version)}|${profileEsc(n)}"><img src="${h.portrait||''}" alt=""><div><div class="phc-name">${profileEsc(n)}</div><div class="phc-sub">${patchArrow(c,p.version)} ${profileEsc(patchDirLabel(c))}${c.impact&&!['fix','new','adjusted'].includes(c.direction)?` <span class="pips">${[1,2,3].map(i=>`<i class="${i<=c.impact?'on':''}"></i>`).join('')}</span>`:''}${c.damagePct!=null?` <span class="${c.damagePct>0?'up':c.damagePct<0?'down':''}">${c.damagePct>0?'+':''}${c.damagePct}%</span>`:''}</div></div></button>`;}).join('');
+  return `<article class="patch-entry${p.balance?' is-balance':''}" id="patch-${p.version.replace(/\./g,'-')}"><div class="patch-card"><div class="patch-head"><span class="patch-version">${profileEsc(p.version)}${p.launch?' <small style="font-size:12px;color:#f0b94a;vertical-align:middle">LAUNCH</small>':''}</span><span class="patch-date">${patchDate(p.date)}</span><div class="patch-badges">${(p.badges||[]).map(b=>patchBadge(b)).join('')}</div><div class="patch-title">${profileEsc(p.title)} · Steam build ${profileEsc(String(p.buildId||''))}</div></div><div class="patch-body"><p class="patch-headline">${profileEsc(p.headline||'')}</p>${hl.length?`<ul class="patch-hl">${hl.map(h=>`<li>${patchBadge(h.badge,false)}<div>${colourStatusWords(h.text)}</div></li>`).join('')}</ul>`:''}${showHeroes&&chips?`<div class="patch-heroes-title">Hero changes${p.version===P.latestBalance?' · click a hero for the numbers':''}</div><div class="patch-hero-grid">${chips}</div>`:''}<div class="patch-more">${p.fixCount?`${p.fixCount} bug fix${p.fixCount>1?'es':''} in total. `:''}<a href="${profileEsc(p.source)}" target="_blank" rel="noopener">Full official notes</a></div></div></div></article>`;};
+ root.innerHTML=sum+controls+(list.length?`<div class="patch-timeline">${list.map(entry).join('')}</div>`:'<div class="patch-empty">No patches match these filters.</div>')+`<p class="profile-note">${profileEsc(P.rating||'')} ${profileEsc(P.note||'')}</p>`;
+ root.querySelectorAll('[data-pbf]').forEach(b=>b.onclick=()=>{activePatchBadge=b.dataset.pbf;renderPatches()});
+ $('patchHeroSelect').onchange=e=>{activePatchHero=e.target.value;renderPatches()};
+ root.querySelectorAll('.phc').forEach(b=>b.onclick=()=>{const grid=b.parentElement;const open=b.classList.contains('open');grid.querySelectorAll('.phd').forEach(x=>x.remove());grid.querySelectorAll('.phc.open').forEach(x=>x.classList.remove('open'));if(open)return;
+  const [v,n]=b.dataset.phc.split('|');const c=(patches.find(x=>x.version===v).heroChanges||{})[n];b.classList.add('open');
+  const cols=getComputedStyle(grid).gridTemplateColumns.split(' ').length;const chipsArr=[...grid.querySelectorAll('.phc')];const idx=chipsArr.indexOf(b);const after=chipsArr[Math.min(chipsArr.length-1,Math.floor(idx/cols)*cols+cols-1)];
+  const d=document.createElement('div');d.className='phd';d.style.setProperty('--pc',PA_COLOR[c.direction]);
+  d.innerHTML=`${c.devNote?`<p class="phd-dev">Developer note: “${profileEsc(c.devNote)}”</p>`:''}${c.totalBefore?`<p style="margin:0 0 8px">Sum of all skill damage (max-level %): ${c.totalBefore}% → <b>${c.totalAfter}%</b> <span class="${c.damagePct>0?'up':c.damagePct<0?'down':''}">(${c.damagePct>0?'+':''}${c.damagePct}%)</span></p>`:''}${(c.changes||[]).length?`<table>${patchChangeRows(c)}</table>`:''}<button type="button" class="phd-open">Open ${profileEsc(n)}'s page →</button>`;
+  d.querySelector('.phd-open').onclick=()=>openCharacterProfile(n,'review');after.after(d);});
+}
+function renderProfilePatches(h){const P=PATCH_NOTES||{};const rows=(P.patches||[]).filter(p=>(p.heroChanges||{})[h.name]);if(!rows.length)return '';
+ return rows.map(p=>{const c=p.heroChanges[h.name];return `<div class="rv-patch"><div class="rv-patch-head">${patchArrow(c,p.version)} Patch ${profileEsc(p.version)}: ${profileEsc(patchDirLabel(c))}${c.damagePct!=null?` <span class="${c.damagePct>0?'up':c.damagePct<0?'down':''}">(skill damage ${c.damagePct>0?'+':''}${c.damagePct}%)</span>`:''} <small>${patchDate(p.date)}</small></div><ul>${(c.changes||[]).map(x=>`<li><b>${profileEsc(x.skill||'')}</b>: ${x.before!=null?`${x.before}% → ${x.after}%`:colourStatusWords(x.text||'')}</li>`).join('')||`<li>${profileEsc(c.devNote||'')}</li>`}</ul></div>`}).join('')+`<button type="button" class="phd-open" data-open-patches="${profileEsc(h.name)}">See ${profileEsc(h.name)} in Patch Notes →</button>`;}
+
 function patchText(){const m=DATA_META||{};return m.balancePatch&&m.balancePatch!==m.patch?`${m.patch} (no balance changes since ${m.balancePatch})`:(m.patch||'');}
 function startApp(){
   setupSearchClearButtons();
@@ -1193,9 +1309,10 @@ function startApp(){
  renderHeroesFilters();renderHeroes();
  document.getElementById('heroesSearch').addEventListener('input',renderHeroes);
  renderGear();
+ renderPatches();
 }
 fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
 </script>

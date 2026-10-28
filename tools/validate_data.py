@@ -136,6 +136,22 @@ for ml, arr in d.get('SKILL_LEVEL_MULTIPLIERS', {}).get('byMaxLevel', {}).items(
 m = d.get('KARMA_ASCENSION', {}).get('multipliers', [])
 if len(m) != 7 or m[0] != 1 or m[6] is None: bad('KARMA_ASCENSION.multipliers: needs 7 values, A0 = 1, A6 known')
 
+# Patch notes: hero names, badge and direction keys, source files
+PN = d.get('PATCH_NOTES', {})
+pn_versions = [p['version'] for p in PN.get('patches', [])]
+if PN and PN.get('latestBalance') not in pn_versions: bad('PATCH_NOTES.latestBalance is not a listed patch')
+for p in PN.get('patches', []):
+    v = p['version']
+    asset(p.get('source', ''), f'PATCH_NOTES {v} source')
+    for b in p.get('badges', []) + [h['badge'] for h in p.get('highlights', [])]:
+        if b not in PN.get('badgeTypes', {}): bad(f'PATCH_NOTES {v}: unknown badge {b!r}')
+    for h in p.get('highlights', []):
+        for n in h.get('heroes', []):
+            if n not in heroes: bad(f'PATCH_NOTES {v}: unknown hero {n!r} in highlights')
+    for n, c in p.get('heroChanges', {}).items():
+        if n not in heroes: bad(f'PATCH_NOTES {v}: unknown hero {n!r} in heroChanges')
+        if c.get('direction') not in PN.get('directions', {}): bad(f'PATCH_NOTES {v} {n}: unknown direction {c.get("direction")!r}')
+
 if problems:
     print(f'{len(problems)} problem(s):'); [print(' -', p) for p in problems]; sys.exit(1)
 print(f'data.json OK: {len(heroes)} heroes, {len(karma)} Karmas, {len(gear)} gear sets, {len(d["TEAM_DATA"])} teams checked.')
