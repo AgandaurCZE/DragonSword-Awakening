@@ -10150,7 +10150,7 @@
    "Poison tick by stacks, as a share of the FIRST applier's Attack: 1 stack 50%, 2 stacks 75%, 3 stacks 100% (+25% per extra stack). The other appliers' Attack doesn't matter. 2 stacks: Charlotte (658) first -> 493, Johnny (645) first -> 484, whoever applied the second. 3 stacks (goblin dummies, order not tracked): ticks of 645 and 658, exactly the two heroes' Attack. Poison stops at 3 stacks (no 4th). Stacks last about 10 seconds (timed by eye), so the 4 ticks are about 2.5 seconds apart. Bleed, Burn and Shock stack exactly the same way, also to a maximum of 3 (Lv.1 heroes, 71 Attack: 35 / 53 / 71). They also last about 10 seconds (a tick every ~2.5 s).",
    "Burn Additional Damage (+4%) and Burn Additional Attack Power (+110) don't change Burn ticks: Aria with 381 Attack ticked 190 / 285 / 381 = 50 / 75 / 100% of 381, rounded down. So these status bonuses must do something else, most likely raise hits against enemies that have the status (not tested yet).",
    "Hits on an enemy that has Poison, Burn, Bleed or Shock deal x1.5, at any stack count: Charlotte 22 -> 33 with Poison, Roxy 24 -> 36 with Bleed, Ornette 17 -> 26 with Shock; Aria with no Karma (71 Attack) hit 19 on a clean goblin and 28 on a burning one (19.x x 1.5 = 28.5, rounded down), the same at 1, 2 or 3 stacks. With A Flame That Cuts Through the Moment (381 Attack; Burn Additional Damage 4%, Burn Additional Attack Power 110) the same hit went 102 -> 205 (x2.01). x1.5 would give 153, so the Karma's Burn bonuses add about 52 more to a hit on a burning enemy. +4% alone can't do that; the flat 110 most likely does most of it, but how it's applied isn't known. Hit damage is otherwise the same share of Attack in both cases (19/71 = 0.268, 102/381 = 0.268).",
-   "Status hit bonuses ADD UP: Airborne alone doubles hits (Reina 87 -> 174, x2.0); Poison + Airborne gives x2.5 (Charlotte 22 -> 55, 50 -> 127), not x3 as multiplying would. Knockdown on top of Bleed or Shock is also x2.5 (Roxy 24 -> 61, Ornette 17 -> 44). So: +50% for a damage-over-time status, +100% for Airborne or Knockdown, added together. Two different damage-over-time statuses also add up: Poison + Bleed doubled Charlotte's hits (22 -> 44, 50 -> 101, x2.0). BUT Knockdown + Poison + Bleed gave only x2.5 (Charlotte 22 -> 55), not the x3.0 that adding would give. Airborne + Poison + Bleed was also x2.5 (22 -> 55). But once, with Knockdown AND Airborne on a poisoned enemy (Bleed unsure; hard to repeat), Charlotte's small hits were 77 = x3.5, which fits +100% + 100% + 50%. So there's no hard cap at x2.5. Stun + Poison + Bleed gave 66 = x3.0, which fits everything adding up (+100% Stun, +50% each damage-over-time status). That conflicts with Airborne/Knockdown + Poison + Bleed giving x2.5 (expected x3.0 by the same rule); possibly Bleed had worn off in those two tests. Needs a recheck."
+   "Status hit bonuses add up: +50% for each damage-over-time status (Poison, Bleed, Burn, Shock) and +100% each for Airborne, Knockdown and Stun. Charlotte's small auto-attack hit (22 clean): Poison 33 (x1.5), Poison + Bleed 44 (x2.0), Airborne + Poison 55 (x2.5), Knockdown + Poison + Bleed 66 (x3.0, recheck), Stun + Poison + Bleed 66 (x3.0), Airborne + Knockdown + Poison 77 (x3.5). Reina: Airborne alone x2.0. Exception: Airborne + Knockdown + Poison + Bleed was 77 (x3.5) twice, where adding up gives x4.0, so either x3.5 is a cap or Bleed wasn't on. The two earlier x2.5 results with Poison + Bleed + Airborne/Knockdown were most likely Bleed wearing off. Break not tested."
   ],
   "tests": [
    {
@@ -10691,10 +10691,18 @@
       "Stun + Poison + Bleed": [
        66,
        66
+      ],
+      "Knockdown + Poison + Bleed (recheck)": [
+       66,
+       66
+      ],
+      "Airborne + Knockdown + Poison + Bleed": [
+       77,
+       77
       ]
      }
     },
-    "note": "Knockdown + Poison + Bleed: only the two small hits could be read among the goblins."
+    "note": "Knockdown + Poison + Bleed and Airborne + Poison + Bleed first gave 55 (x2.5); the Knockdown recheck gave 66 (x3.0), so Bleed had most likely worn off the first time. Goblin dummies come in a group of about 10, which makes single numbers hard to read."
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
@@ -10723,7 +10731,7 @@
     "Each application ticks 4 times over about 10 seconds (about one tick every 2.5 seconds).",
     "Each tick deals a share of the Attack of the hero who applied the FIRST stack. Later stacks make the ticks bigger, even when another hero applies them, but their own Attack doesn't count.",
     "Ticks aren't reduced by the enemy's Defense: Armor Penetration and Defense Ignore don't change them.",
-    "While an enemy has this status, hits on it deal 1.5x damage, whatever the stack count. Bonuses from different statuses add up: +50% for each damage-over-time status and +100% for Airborne, Knockdown or Stun. Measured: Poison + Bleed 2x, Airborne + Poison 2.5x, Stun + Poison + Bleed 3x, Knockdown + Airborne + Poison 3.5x. Two results with Airborne or Knockdown + Poison + Bleed came out lower (2.5x) and are being rechecked. Measured on training dummies.",
+    "While an enemy has this status, hits on it deal 1.5x damage, whatever the stack count. Bonuses from different statuses add up: +50% for each damage-over-time status and +100% each for Airborne, Knockdown and Stun. Measured: Poison + Bleed 2x, Airborne + Poison 2.5x, Knockdown or Stun + Poison + Bleed 3x, Knockdown + Airborne + Poison 3.5x. The highest seen is 3.5x: Knockdown + Airborne + Poison + Bleed was also 3.5x, not 4x. Measured on training dummies.",
     "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets and awakenings) don't change its ticks (tested with Burn).",
     "Tick damage is rounded down."
    ],
