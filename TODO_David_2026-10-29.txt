@@ -51,12 +51,11 @@ Test Kit: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
      orange ones? Compare one substat (e.g. Crit Rate on a helmet)
      across rarities.
 
-7. STATUS TICKS – mostly done (28 Oct): Poison, Bleed, Burn and Shock tick for
-   50% of Attack, 4 times. Still open:
-   - Seconds between ticks.
-   - Poison stacks DONE up to 3 (50% / 75% / 100% of the first applier's
-     Attack). Optional: does a 4th stack exist, and do Bleed, Burn and Shock
-     stack the same way?
+7. STATUS TICKS – Poison done (28 Oct): 50/75/100% of the first applier's
+   Attack at 1/2/3 stacks, max 3, about 10 s (a tick every ~2.5 s).
+   Bleed, Burn and Shock tick for 50% of Attack, 4 times. Still open, once
+   you have the heroes:
+   - Bleed, Burn, Shock: stacking and duration.
    - Frost and Stun: do they tick at all?
 
 8. DECISIONS – DONE (28 Oct)
