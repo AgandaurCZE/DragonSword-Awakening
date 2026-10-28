@@ -1,3 +1,16 @@
+## 2026-10-28 — Claude: builds and awakening ratings re-checked with the measured damage formula
+- **2-piece set:** `tools/hero_stats.py` now picks it together with the main stats (`HERO_BUILDS[].setChoice`).
+  - All 16 damage builds change from Battle Will to The Infiltrator: +0.4% to +1.6%. Its +9% Crit Rate frees a main stat from Crit Rate. Castella and Astria change from Holy Arbiter.
+  - Status sets (Azure Gale, Earthshatterer, Holy Arbiter, Ruinsbreaker) come out between −2% and +2.2% against Battle Will, depending on whether two statuses' Additional Damage adds or multiplies (untested). Close alternatives are named in each build's text.
+  - Supports and Alex keep Battle Will.
+  - Main stats re-optimised. Profile gear sentences and `build.sets` rewritten.
+- **Awakening ratings** for damage heroes' stat awakenings now come from the modelled end-game damage gain, with the number in each explanation:
+  - Own-status A5 awakenings (+15% Additional Damage plus a stat) are about +17–20%, so they go from rated 2 to 4.
+  - Plain Attack Power +15% is about +9%, so it goes to 3.
+  - Airborne, Knockdown and Stun Additional Damage awakenings are +2.6–6.4% as a lower bound.
+  - Best awakening changed for Charlotte, Aria, Ornette and Tarte (now A5).
+- Checked: the validator passes; all 20 heroes render with no errors; Charlotte's Build and Review tabs checked by eye.
+
 ## 2026-10-28 — Claude: Status Effects box on character pages
 - New `STATUS_EFFECTS` key and `renderProfileStatus()`: heroes whose skills inflict Poison, Bleed, Burn or Shock get a Status Effects box under their skills (12 of 20 heroes). It shows:
   - a stacks table: 50/75/100% of Attack per tick, ×4 ticks over ~10 s;

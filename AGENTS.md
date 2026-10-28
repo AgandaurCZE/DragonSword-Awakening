@@ -48,7 +48,7 @@ How the page starts: `index.html` runs `fetch('data.json')`, copies each top-lev
 | `KARMA_LEVELLING` | `{note, types, order, measured}` | Karma base stats by level (Lv1→Lv30 measured on two cards). Not used by the page yet; ready for a Karma level slider. Every card has one of four stat types (`KARMA_DATA[].statType`: Balanced, Attack, Defense, High Attack), set by its level-1 stats (`KARMA_DATA[].baseLv1`). |
 | `DAMAGE_TESTS` | `{note, findings[], tests[], statsCheck}` | Training-dummy results and what they show (damage ∝ Attack × skill %, crit = ×(1 + Crit Damage), Poison, Bleed, Burn and Shock ticks = 50/75/100% of the first applier's Attack at 1/2/3 stacks, 4 ticks). Not used by the page yet. Blue gear values seen in the same tests are in `GEAR_STATS.observedBlue`. |
 | `STATUS_EFFECTS` | `{note, damageOverTime: {statuses[], ticks, durationSeconds, tickEverySeconds, maxStacks, tickPctByStacks[], rules[], untested}}` | The Status Effects box on the Skills tab of character pages (`renderProfileStatus()`), shown for heroes whose skills inflict one of `statuses` (read from `skills[].meta.inflicts`). Edit the rules here, not in the HTML. |
-| `AWAKENINGS` | `{note, ratingScale[6], icon, heroes: {hero: {best, list[{level, name, text, effects[{stat, value}], rating, why}]}}}` | Review tab on character pages (`renderProfileAwakenings()`). `text` is copied word for word from the screenshots in `assets/awakenings/<Hero>/A1–A6.png`, with `\n` for line breaks. `effects` are the always-on stat bonuses, using the `GEAR_STATS` stat names. They count in the end-game totals, where they're shown in purple, and in the build optimiser. `rating` runs 0–5: 0 = not needed, 5 = game-changing. `why` is shown under each card. `best` is the awakening shown in the Best Awakening card. |
+| `AWAKENINGS` | `{note, ratingScale[6], icon, heroes: {hero: {best, list[{level, name, text, effects[{stat, value}], rating, why}]}}}` | Review tab on character pages (`renderProfileAwakenings()`). `text` is copied word for word from the screenshots in `assets/awakenings/<Hero>/A1–A6.png`, with `\n` for line breaks. `effects` are the always-on stat bonuses, using the `GEAR_STATS` stat names. They count in the end-game totals, where they're shown in purple, and in the build optimiser. `rating` runs 0–5: 0 = not needed, 5 = game-changing. Stat awakenings on damage heroes are rated by modelled end-game damage gain (15%+ = 4, 8–15% = 3, 3–8% = 2, 1–3% = 1; method in `AWAKENINGS.note`). `why` is shown under each card. `best` is the awakening shown in the Best Awakening card. |
 
 ### Text formats the page reads (keep them exactly)
 
@@ -94,9 +94,9 @@ Change these in the HTML if needed:
    - Breaker (Break): Castella, Astria
 
    Many heroes inflict Knockdown, but Alex is the only Crushing hero.
-6. **Default build:** a 3-piece set matching the archetype + 2-piece Battle Will. Exceptions:
-   - Castella and Astria: 3 Ruinsbreaker + 2 Holy Arbiter
-   - Alex: 3 Earthshatterer + 2 Battle Will
+6. **Default build:** a 3-piece set matching the archetype, plus a 2-piece set chosen by `tools/hero_stats.py` (`HERO_BUILDS[hero].setChoice`). Since 28 Oct 2026 that's The Infiltrator for every damage build (about +0.4–1.6% over Battle Will), and Battle Will for the supports (Lute, Dana, Sion) and the tank. Exceptions to the 3-piece:
+   - Castella and Astria: 3 Ruinsbreaker
+   - Alex: 3 Earthshatterer
 
    Main stats and substats per slot are in `HERO_BUILDS` (see "Gear, builds and end-game stat totals" below). Karma: the signature first, then the best general card of the hero's own archetype.
 7. The old Excel workbook (`DragonSword_Awakening_Master_Reference_Claude_Edit_27Oct_v2.xlsx`, kept on David's Google Drive) is **out of date**. Use `data.json` instead.
@@ -118,7 +118,8 @@ Change these in the HTML if needed:
 - Only the signature Karma counts; the second Karma doesn't.
 
 **How `HERO_BUILDS` was chosen** (by role and team position, after checking skill text):
-- **Damage builds** (Main DPS, Sub-DPS and the enablers Reina and Kalien): every combination of Attack Power Up, Crit Rate and Crit Damage main stats was tried. The one with the highest Attack × (1 + Crit Rate × Crit Damage) won. The calculation counts all six awakenings' stat bonuses, caps Crit Rate at 100% and leaves out set bonuses. Spare substat slots get Defense Ignore, then the hero's own status Additional Attack Power.
+- **Damage builds** (Main DPS, Sub-DPS and the enablers Reina and Kalien): every combination of Attack Power Up, Crit Rate and Crit Damage main stats was tried. The one with the highest Attack × (1 + Crit Rate × Crit Damage) won. The calculation counts all six awakenings' stat bonuses and the 2-piece set's always-on bonus, caps Crit Rate at 100% and leaves out 3-piece bonuses, except Blazing Flames' Crit Rate for Aria, Kalien and Kalsion (they apply Burn with almost every skill). Spare substat slots get Defense Ignore, then the hero's own status Additional Attack Power.
+- **2-piece set** (damage builds): the mains are re-optimised for Battle Will, The Infiltrator, and the set of every status one of the hero's skills needs (Azure Gale, Earthshatterer, Holy Arbiter, Ruinsbreaker). A status set's +15% Additional Damage only counts on hits from skills that need that status. Those hits are weighted for their status bonus (`DAMAGE_TESTS`), and different statuses' Additional Damage is assumed to add (the cautious case, untested). `setChoice` stores the comparison, including what status sets would give if the bonuses multiply. The profile `gear` sentence and `build.sets` are rewritten to match by `--write`.
 - **Support builds** (Lute, Dana, Sion): Max HP Up chest and Defense Up legs, damage on the other three slots. Their heals and buffs are % of max HP or flat %, so their own stats can't raise them.
 - **Tank build** (Alex): Max HP Up and Defense Up in every slot, with HP, Defense and crit-resistance substats.
 

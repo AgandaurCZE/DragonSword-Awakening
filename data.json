@@ -2555,7 +2555,7 @@
    "archetype": "VENOM",
    "role": "Role: Sub-DPS: Poison + Airborne combo partner",
    "karma": "Recommended Karma: Wandering Blade (signature) + Defeating Poison with Poison. Alternatives: So Good It's to Die For, A Spectacular Poison",
-   "gear": "Recommended Gear sets: 3 Venomfog Shade + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Venomfog Shade + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Damage chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2689,7 +2689,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -2699,7 +2699,7 @@
    "archetype": "VENOM",
    "role": "Role: Main DPS: Poison; launches with Illusion Kick, finishes with Shadow Grab",
    "karma": "Recommended Karma: The Conviction Left in Darkness (signature) + Defeating Poison with Poison. Alternatives: So Good It's to Die For, A Spectacular Poison",
-   "gear": "Recommended Gear sets: 3 Venomfog Shade + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Venomfog Shade + 2 The Infiltrator. Main stats: Attack Power Up helmet, Attack Power Up chest, Critical Hit Chance legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2830,7 +2830,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -2840,7 +2840,7 @@
    "archetype": "AMPLITUDE",
    "role": "Role: Support (Healer): 20% team heal, Stun and Knockdown",
    "karma": "Recommended Karma: A Sword Summoned for a Friend (signature) + I'll Knock You Out Myself. Alternatives: Every Rose Has Its Thorn, A Coincidental Yet Perfect Plan",
-   "gear": "Recommended Gear sets: 3 Holy Arbiter + 2 Battle Will. Main stats: Attack Power Up helmet, Max HP Up chest, Defense Up legs, Attack Power Up gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Holy Arbiter + 2 Battle Will. Main stats: Attack Power Up helmet, Max HP Up chest, Defense Up legs, Critical Hit Chance gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -2974,7 +2974,7 @@
    "archetype": "AMPLITUDE",
    "role": "Role: Main DPS: Stun → Bleed combos (best with Merciful Death Sentence)",
    "karma": "Recommended Karma: Merciful Death Sentence (signature) + I'll Knock You Out Myself. Alternatives: Every Rose Has Its Thorn, A Coincidental Yet Perfect Plan",
-   "gear": "Recommended Gear sets: 3 Bloodstained Chaser + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Attack Power Up legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Bloodstained Chaser + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Damage chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -3148,7 +3148,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -3330,7 +3330,7 @@
    "archetype": "GALE",
    "role": "Role: Support (Enabler): Airborne starter for the team",
    "karma": "Recommended Karma: The Wind That Protects the Kingdom (signature) + A Path That Leads to the Wind. Alternatives: Become a Star in That Sky, The Wind Blows Again",
-   "gear": "Recommended Gear sets: 3 Azure Gale + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Attack Power Up legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Azure Gale + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Attack Power Up legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -3458,7 +3458,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -3468,7 +3468,7 @@
    "archetype": "GALE",
    "role": "Role: Sub-DPS / Support (Buffer): +15% team Attack (Brave One), +20% team Crit Rate (Vanguard Banner)",
    "karma": "Recommended Karma: Between Chivalry and Bookmarks (signature) + A Path That Leads to the Wind. Alternatives: Become a Star in That Sky, The Wind Blows Again",
-   "gear": "Recommended Gear sets: 3 Azure Gale + 2 Battle Will. Main stats: Critical Hit Chance helmet, Attack Power Up chest, Critical Damage legs, Critical Hit Chance gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Azure Gale + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Damage chest, Attack Power Up legs, Critical Hit Chance gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -3590,7 +3590,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -3600,7 +3600,7 @@
    "archetype": "BLOODBURST",
    "role": "Role: Main DPS: Bleed burst; sets up her own Stun for Kick Storm",
    "karma": "Recommended Karma: The Noble Lady's Wild Hobby (signature) + Fangs Lurking in the Thicket. Alternatives: A Soldier's Basic Qualities",
-   "gear": "Recommended Gear sets: 3 Bloodstained Chaser + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Bloodstained Chaser + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Critical Damage gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -3733,7 +3733,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -3743,7 +3743,7 @@
    "archetype": "BLAZEFLAME",
    "role": "Role: Sub-DPS: Burn + Airborne starter",
    "karma": "Recommended Karma: Explosion Is Art (signature) + The Burning Taste of Fire. Alternatives: A Flame That Cuts Through the Moment",
-   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 Battle Will. Main stats: Attack Power Up helmet, Attack Power Up chest, Critical Hit Chance legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Attack Power Up legs, Critical Damage gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -3880,7 +3880,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -3890,7 +3890,7 @@
    "archetype": "BLAZEFLAME",
    "role": "Role: Support (Enabler): Burn stacks and Stun setup",
    "karma": "Recommended Karma: The Chosen One of the Crimson Flame (signature) + A Flame That Cuts Through the Moment. Alternatives: The Burning Taste of Fire",
-   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Damage legs, Attack Power Up gloves, Attack Power Up boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -3993,8 +3993,8 @@
       "maxLevel": 10,
       "attackPct": 811,
       "inflicts": [
-       "Stun",
-       "Burn"
+       "Burn",
+       "Stun"
       ],
       "requiresAny": []
      }
@@ -4025,7 +4025,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -4035,7 +4035,7 @@
    "archetype": "BLAZEFLAME",
    "role": "Role: Main DPS: Burn → Airborne → Explosion",
    "karma": "Recommended Karma: The Sun Blazes Again (signature) + A Flame That Cuts Through the Moment. Alternatives: The Burning Taste of Fire",
-   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Blazing Flames + 2 The Infiltrator. Main stats: Attack Power Up helmet, Attack Power Up chest, Critical Hit Chance legs, Critical Damage gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -4219,7 +4219,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -4229,7 +4229,7 @@
    "archetype": "FROSTBITE",
    "role": "Role: Support (Tank / Buffer): Chako shield, +10% team Defense, Frost",
    "karma": "Recommended Karma: A Sparkling Tea Time (signature) + Rock-Splitting Ice. Alternatives: Frozen Fortress",
-   "gear": "Recommended Gear sets: 3 Froststorm + 2 Battle Will. Main stats: Attack Power Up helmet, Max HP Up chest, Defense Up legs, Critical Hit Chance gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Froststorm + 2 Battle Will. Main stats: Attack Power Up helmet, Max HP Up chest, Defense Up legs, Attack Power Up gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -4374,7 +4374,7 @@
    "archetype": "FROSTBITE",
    "role": "Role: Sub-DPS: Frost + Airborne starter, crowd control",
    "karma": "Recommended Karma: Eternal Blizzard (signature) + Frozen Fortress. Alternatives: Rock-Splitting Ice",
-   "gear": "Recommended Gear sets: 3 Froststorm + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Froststorm + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Damage chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -4510,7 +4510,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -4520,7 +4520,7 @@
    "archetype": "FROSTBITE",
    "role": "Role: Main DPS: big hits on Frozen targets",
    "karma": "Recommended Karma: The Spear That Fells the Sun (signature) + Rock-Splitting Ice. Alternatives: Frozen Fortress",
-   "gear": "Recommended Gear sets: 3 Froststorm + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Froststorm + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -4653,7 +4653,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -4663,7 +4663,7 @@
    "archetype": "THUNDERBOLT",
    "role": "Role: Sub-DPS: Shock control and Knockdown; +30% own Crit Damage",
    "karma": "Recommended Karma: Sacred Lightning Baptism (signature) + The One Chosen by Lightning. Alternatives: A Flash of Invention, The Agent of Divine Punishment",
-   "gear": "Recommended Gear sets: 3 Thunderrush + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Attack Power Up legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Thunderrush + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Damage chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -4796,7 +4796,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -4948,7 +4948,7 @@
    "archetype": "THUNDERBOLT",
    "role": "Role: Main DPS / Support (Healer): Shock damage, Stun, conditional heal and cleanse",
    "karma": "Recommended Karma: A Helping Hand for Good Kids (signature) + The One Chosen by Lightning. Alternatives: A Flash of Invention, The Agent of Divine Punishment",
-   "gear": "Recommended Gear sets: 3 Thunderrush + 2 Battle Will. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Thunderrush + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Hit Chance legs, Attack Power Up gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -5082,7 +5082,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -5092,7 +5092,7 @@
    "archetype": "THUNDERBOLT",
    "role": "Role: Main DPS: Shock application; Flash and Thunder Grab",
    "karma": "Recommended Karma: The Scar Lightning Left Behind (signature, Exchange) + The One Chosen by Lightning. Alternatives: A Flash of Invention, The Agent of Divine Punishment",
-   "gear": "Recommended Gear sets: 3 Thunderrush + 2 Battle Will. Main stats: Attack Power Up helmet, Attack Power Up chest, Critical Hit Chance legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Thunderrush + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Damage legs, Attack Power Up gloves, Attack Power Up boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -5224,7 +5224,7 @@
       "pieces": 3
      },
      {
-      "set": "Battle Will",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -5234,7 +5234,7 @@
    "archetype": "BREAKER",
    "role": "Role: Main DPS: Super Armor breaker; Stun Blow → Upper Blow",
    "karma": "Recommended Karma: Noisy Duet (signature) + Destruction Is the Mother of Creation. Alternatives: The Way of the Wild, A Reckless Charge",
-   "gear": "Recommended Gear sets: 3 Ruinsbreaker + 2 Holy Arbiter. Main stats: Critical Hit Chance helmet, Attack Power Up chest, Critical Damage legs, Critical Hit Chance gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Ruinsbreaker + 2 The Infiltrator. Main stats: Attack Power Up helmet, Critical Hit Chance chest, Critical Damage legs, Attack Power Up gloves, Critical Hit Chance boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -5359,7 +5359,7 @@
       "pieces": 3
      },
      {
-      "set": "Holy Arbiter",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -5369,7 +5369,7 @@
    "archetype": "BREAKER",
    "role": "Role: Sub-DPS: Stun via Precision Shot, big hits on Stunned foes",
    "karma": "Recommended Karma: Wildflowers Bloom Through the Wind (signature) + Destruction Is the Mother of Creation. Alternatives: The Way of the Wild, A Reckless Charge",
-   "gear": "Recommended Gear sets: 3 Ruinsbreaker + 2 Holy Arbiter. Main stats: Attack Power Up helmet, Attack Power Up chest, Critical Hit Chance legs, Critical Hit Chance gloves, Critical Damage boots. Substats: see Best Main Stats",
+   "gear": "Recommended Gear sets: 3 Ruinsbreaker + 2 The Infiltrator. Main stats: Critical Hit Chance helmet, Attack Power Up chest, Critical Hit Chance legs, Critical Damage gloves, Critical Damage boots. Substats: see Best Main Stats",
    "skills": [
     {
      "slot": "Auto attack",
@@ -5531,7 +5531,7 @@
       "pieces": 3
      },
      {
-      "set": "Holy Arbiter",
+      "set": "The Infiltrator",
       "pieces": 2
      }
     ]
@@ -5539,7 +5539,7 @@
   }
  },
  "AWAKENINGS": {
-  "note": "Awakening names and text copied word for word from the in-game screenshots in assets/awakenings/<Hero>/A1-A6.png (OCR, then every line checked by eye). '\\n' is a line break in the game text. 'effects' lists the always-on stat bonuses in the same stat names as GEAR_STATS, ready for the end-game totals (not added to them yet). Ratings 0-5 are Claude's judgement (28 Oct 2026) of what the awakening does for that hero's kit, role and teams.",
+  "note": "Awakening names and text copied word for word from the in-game screenshots in assets/awakenings/<Hero>/A1-A6.png (OCR, then every line checked by eye). '\\n' is a line break in the game text. 'effects' lists the always-on stat bonuses in the same stat names as GEAR_STATS; they count in the end-game totals (purple) and in the build optimiser. Ratings 0-5: kit-changing awakenings are Claude's judgement of what they do for the hero's kit, role and teams. Stat awakenings on damage heroes (28 Oct 2026, after the damage tests) are rated by their modelled damage gain at end-game with the recommended build: 15%+ = 4, 8-15% = 3, 3-8% = 2, 1-3% = 1. The model uses the measured damage rules in DAMAGE_TESTS, assumes the hero's own damage-over-time status stays on the target, counts Airborne/Knockdown/Stun bonuses only on skills that need that status (a lower bound), values Break bonuses at nothing (Break uptime unknown) and values Defense Ignore on an enemy like the Training Ogre (its Defense halves damage). Support and tank heroes' stat awakenings keep their earlier ratings. The best awakening is the highest-rated; on a tie the earlier pick stays.",
   "ratingScale": [
    "Not needed",
    "Barely noticeable",
@@ -5572,7 +5572,7 @@
        }
       ],
       "rating": 2,
-      "why": "+10% Crit Rate is a plain damage boost."
+      "why": "+10% Crit Rate: about +5.9% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -5593,7 +5593,7 @@
        }
       ],
       "rating": 2,
-      "why": "He launches enemies himself, so Airborne damage applies."
+      "why": "Airborne Additional Damage counts on hits against an airborne enemy. 22% of Johnny's skill damage comes from skills that need Airborne: at least +3.2% damage at end-game, more if Airborne is up for other hits too."
      },
      {
       "level": 5,
@@ -5609,8 +5609,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Poison damage and +10% Defense Ignore."
+      "rating": 4,
+      "why": "Poison Additional Damage multiplies every hit on a poisoned enemy, and Johnny applies Poison with 4 skills (each application lasts about 10 s). With +10% Defense Ignore: about +17% damage at end-game, assuming Poison stays on the target."
      },
      {
       "level": 6,
@@ -5716,7 +5716,7 @@
        }
       ],
       "rating": 0,
-      "why": "Defense does nothing for her job as a damage dealer."
+      "why": "+15% Defense Up adds no damage; it only helps survival."
      },
      {
       "level": 3,
@@ -5737,7 +5737,7 @@
        }
       ],
       "rating": 2,
-      "why": "Her Stun Blow combos make Stun damage useful."
+      "why": "Stun Additional Damage counts on hits against a stunned enemy. 11% of Castella's skill damage comes from skills that need Stun: at least +2.3% damage at end-game, more if Stun is up for other hits too."
      },
      {
       "level": 5,
@@ -5754,7 +5754,7 @@
        }
       ],
       "rating": 3,
-      "why": "Break damage and +15% Defense Ignore, both relevant to a Breaker damage dealer."
+      "why": "Break Additional Damage only counts on hits against an enemy in Break, and how often enemies are in Break isn't measured, so it's valued at nothing here. +15% Defense Ignore alone: about +9.2% damage at end-game."
      },
      {
       "level": 6,
@@ -5767,7 +5767,7 @@
     ]
    },
    "Aria": {
-    "best": 1,
+    "best": 5,
     "list": [
      {
       "level": 1,
@@ -5788,7 +5788,7 @@
        }
       ],
       "rating": 2,
-      "why": "+10% Defense Ignore is a plain damage boost."
+      "why": "+10% Defense Ignore: about +6.0% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -5808,8 +5808,8 @@
         "value": 15
        }
       ],
-      "rating": 1,
-      "why": "Airborne damage helps a little since she launches enemies, but it's a narrow bonus."
+      "rating": 2,
+      "why": "Airborne Additional Damage counts on hits against an airborne enemy. 24% of Aria's skill damage comes from skills that need Airborne: at least +3.5% damage at end-game, more if Airborne is up for other hits too."
      },
      {
       "level": 5,
@@ -5825,8 +5825,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "Burn damage and +15% Attack Power: a decent pair of stats."
+      "rating": 4,
+      "why": "Burn Additional Damage multiplies every hit on a burning enemy, and Aria applies Burn with 6 skills (each application lasts about 10 s). With +15% Attack Power: about +21% damage at end-game, assuming Burn stays on the target."
      },
      {
       "level": 6,
@@ -5932,7 +5932,7 @@
        }
       ],
       "rating": 2,
-      "why": "+10% Crit Rate is a plain damage boost."
+      "why": "+10% Crit Rate: about +6.0% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -5952,8 +5952,8 @@
         "value": 15
        }
       ],
-      "rating": 0,
-      "why": "Kalien never applies Break and his teams rarely do."
+      "rating": 1,
+      "why": "Break Additional Damage only counts on hits against an enemy in Break, and how often enemies are in Break isn't measured, so it's valued at nothing here."
      },
      {
       "level": 5,
@@ -5969,8 +5969,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Burn damage and +10% Defense Ignore."
+      "rating": 4,
+      "why": "Burn Additional Damage multiplies every hit on a burning enemy, and Kalien applies Burn with 7 skills (each application lasts about 10 s). With +10% Defense Ignore: about +18% damage at end-game, assuming Burn stays on the target."
      },
      {
       "level": 6,
@@ -6003,8 +6003,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "+15% Attack Power is a plain damage boost."
+      "rating": 3,
+      "why": "+15% Attack Power: about +9.6% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6025,7 +6025,7 @@
        }
       ],
       "rating": 2,
-      "why": "Kick Storm needs Stun and she Stuns herself, so Stun damage applies."
+      "why": "Stun Additional Damage counts on hits against a stunned enemy. 26% of Roxy's skill damage comes from skills that need Stun: at least +3.7% damage at end-game, more if Stun is up for other hits too."
      },
      {
       "level": 5,
@@ -6041,8 +6041,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Bleed damage and +10% Defense Ignore."
+      "rating": 4,
+      "why": "Bleed Additional Damage multiplies every hit on a bleeding enemy, and Roxy applies Bleed with 5 skills (each application lasts about 10 s). With +10% Defense Ignore: about +18% damage at end-game, assuming Bleed stays on the target."
      },
      {
       "level": 6,
@@ -6147,8 +6147,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "+15% Attack Power is a plain damage boost."
+      "rating": 3,
+      "why": "+15% Attack Power: about +9.2% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6168,8 +6168,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "She applies Bleed herself, so Bleed damage applies."
+      "rating": 3,
+      "why": "Bleed Additional Damage multiplies every hit on a bleeding enemy, and Theresia applies Bleed with 4 skills (each application lasts about 10 s). About +13% damage at end-game, assuming Bleed stays on the target."
      },
      {
       "level": 5,
@@ -6185,8 +6185,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Stun damage and +10% Crit Rate."
+      "rating": 3,
+      "why": "Stun Additional Damage counts on hits against a stunned enemy. 22% of Theresia's skill damage comes from skills that need Stun, and +10% Crit Rate adds the rest: at least +9.4% damage at end-game, more if Stun is up for other hits too."
      },
      {
       "level": 6,
@@ -6199,7 +6199,7 @@
     ]
    },
    "Ornette": {
-    "best": 3,
+    "best": 5,
     "list": [
      {
       "level": 1,
@@ -6219,8 +6219,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "+15% Attack Power is a plain damage boost."
+      "rating": 3,
+      "why": "+15% Attack Power: about +9.2% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6241,7 +6241,7 @@
        }
       ],
       "rating": 2,
-      "why": "Her Judgment applies Knockdown, so Knockdown damage applies."
+      "why": "Knockdown Additional Damage counts on hits against a knocked-down enemy. 18% of Ornette's skill damage comes from skills that need Knockdown: at least +2.7% damage at end-game, more if Knockdown is up for other hits too."
      },
      {
       "level": 5,
@@ -6257,8 +6257,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Shock damage and +10% Defense Ignore."
+      "rating": 4,
+      "why": "Shock Additional Damage multiplies every hit on a shocked enemy, and Ornette applies Shock with 4 skills (each application lasts about 10 s). With +10% Defense Ignore: about +17% damage at end-game, assuming Shock stays on the target."
      },
      {
       "level": 6,
@@ -6343,7 +6343,7 @@
     ]
    },
    "Tarte": {
-    "best": 6,
+    "best": 5,
     "list": [
      {
       "level": 1,
@@ -6364,7 +6364,7 @@
        }
       ],
       "rating": 2,
-      "why": "+10% Defense Ignore is a plain damage boost."
+      "why": "+10% Defense Ignore: about +6.0% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6384,8 +6384,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "Her Thunderbolt applies Stun, so Stun damage applies."
+      "rating": 1,
+      "why": "Stun Additional Damage only counts on hits against a stunned enemy. Tarte applies Stun with some skills, but none of them needs it, so the gain depends on how often it's up. "
      },
      {
       "level": 5,
@@ -6401,8 +6401,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Shock damage and +10% Crit Damage."
+      "rating": 4,
+      "why": "Shock Additional Damage multiplies every hit on a shocked enemy, and Tarte applies Shock with 4 skills (each application lasts about 10 s). With +10% Crit Damage: about +17% damage at end-game, assuming Shock stays on the target."
      },
      {
       "level": 6,
@@ -6436,7 +6436,7 @@
        }
       ],
       "rating": 2,
-      "why": "+10% Crit Rate is a plain damage boost."
+      "why": "+10% Crit Rate: about +5.7% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6457,7 +6457,7 @@
        }
       ],
       "rating": 2,
-      "why": "Explosion hits Airborne targets, so Airborne damage applies to his biggest hit."
+      "why": "Airborne Additional Damage counts on hits against an airborne enemy. 21% of Kalsion's skill damage comes from skills that need Airborne: at least +3.1% damage at end-game, more if Airborne is up for other hits too."
      },
      {
       "level": 5,
@@ -6473,8 +6473,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Burn damage and +10% Crit Rate."
+      "rating": 4,
+      "why": "Burn Additional Damage multiplies every hit on a burning enemy, and Kalsion applies Burn with 6 skills (each application lasts about 10 s). With +10% Crit Rate: about +17% damage at end-game, assuming Burn stays on the target."
      },
      {
       "level": 6,
@@ -6508,7 +6508,7 @@
        }
       ],
       "rating": 2,
-      "why": "+10% Defense Ignore is a plain damage boost."
+      "why": "+10% Defense Ignore: about +6.0% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6529,7 +6529,7 @@
        }
       ],
       "rating": 2,
-      "why": "She launches enemies, so Airborne damage applies to her own combos."
+      "why": "Airborne Additional Damage counts on hits against an airborne enemy. 17% of Cerese's skill damage comes from skills that need Airborne: at least +2.6% damage at end-game, more if Airborne is up for other hits too."
      },
      {
       "level": 5,
@@ -6545,8 +6545,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Frost damage and +10% Crit Rate."
+      "rating": 4,
+      "why": "Frost Additional Damage multiplies every hit on an enemy with Frost, and Cerese applies Frost with 6 skills (each application lasts about 10 s). With +10% Crit Rate: about +17% damage at end-game, assuming Frost stays on the target."
      },
      {
       "level": 6,
@@ -6580,7 +6580,7 @@
        }
       ],
       "rating": 2,
-      "why": "+10% Crit Rate is a plain damage boost."
+      "why": "+10% Crit Rate: about +6.5% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6601,7 +6601,7 @@
        }
       ],
       "rating": 2,
-      "why": "Airborne is her own status, so this boosts her and her team's combos."
+      "why": "Airborne Additional Damage counts on hits against an airborne enemy. 42% of Reina's skill damage comes from skills that need Airborne: at least +6.4% damage at end-game, more if Airborne is up for other hits too."
      },
      {
       "level": 5,
@@ -6617,8 +6617,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "Airborne damage and +15% Crit Damage."
+      "rating": 3,
+      "why": "Airborne Additional Damage counts on hits against an airborne enemy. 42% of Reina's skill damage comes from skills that need Airborne, and +15% Crit Damage adds the rest: at least +13.3% damage at end-game, more if Airborne is up for other hits too."
      },
      {
       "level": 6,
@@ -6651,8 +6651,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "+15% Attack Power is a plain damage boost."
+      "rating": 3,
+      "why": "+15% Attack Power: about +8.8% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6673,7 +6673,7 @@
        }
       ],
       "rating": 2,
-      "why": "Her Precision Shot applies Stun, so Stun damage applies to her own targets."
+      "why": "Stun Additional Damage counts on hits against a stunned enemy. 31% of Astria's skill damage comes from skills that need Stun: at least +6.4% damage at end-game, more if Stun is up for other hits too."
      },
      {
       "level": 5,
@@ -6690,7 +6690,7 @@
        }
       ],
       "rating": 3,
-      "why": "Break damage and +20% Attack Power, the largest Attack bonus of any awakening."
+      "why": "Break Additional Damage only counts on hits against an enemy in Break, and how often enemies are in Break isn't measured, so it's valued at nothing here. +20% Attack Power alone: about +12.1% damage at end-game."
      },
      {
       "level": 6,
@@ -6724,7 +6724,7 @@
        }
       ],
       "rating": 2,
-      "why": "+10% Crit Damage is a plain damage boost."
+      "why": "+10% Crit Damage: about +4.7% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6744,8 +6744,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "+15% Crit Rate is a solid damage boost."
+      "rating": 3,
+      "why": "+15% Crit Rate: about +9.1% damage at end-game with this build."
      },
      {
       "level": 5,
@@ -6761,8 +6761,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Airborne damage and +10% Defense Ignore."
+      "rating": 3,
+      "why": "Airborne Additional Damage counts on hits against an airborne enemy. 19% of Eileen's skill damage comes from skills that need Airborne, and +10% Defense Ignore adds the rest: at least +10.6% damage at end-game, more if Airborne is up for other hits too."
      },
      {
       "level": 6,
@@ -6795,8 +6795,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "+15% Attack Power is a plain damage boost."
+      "rating": 3,
+      "why": "+15% Attack Power: about +9.2% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6816,8 +6816,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "His Ice Crown and Ice Grab apply Knockdown, so Knockdown damage applies."
+      "rating": 1,
+      "why": "Knockdown Additional Damage only counts on hits against a knocked-down enemy. Othello applies Knockdown with some skills, but none of them needs it, so the gain depends on how often it's up. "
      },
      {
       "level": 5,
@@ -6833,8 +6833,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Frost damage and +10% Defense Ignore."
+      "rating": 4,
+      "why": "Frost Additional Damage multiplies every hit on an enemy with Frost, and Othello applies Frost with 5 skills (each application lasts about 10 s). With +10% Defense Ignore: about +18% damage at end-game, assuming Frost stays on the target."
      },
      {
       "level": 6,
@@ -6847,7 +6847,7 @@
     ]
    },
    "Charlotte": {
-    "best": 1,
+    "best": 5,
     "list": [
      {
       "level": 1,
@@ -6868,7 +6868,7 @@
        }
       ],
       "rating": 2,
-      "why": "+10% Crit Damage is a plain damage boost."
+      "why": "+10% Crit Damage: about +4.8% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6889,7 +6889,7 @@
        }
       ],
       "rating": 2,
-      "why": "Her finishers hit launched targets, so Airborne damage applies."
+      "why": "Airborne Additional Damage counts on hits against an airborne enemy. 26% of Charlotte's skill damage comes from skills that need Airborne: at least +3.7% damage at end-game, more if Airborne is up for other hits too."
      },
      {
       "level": 5,
@@ -6905,8 +6905,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Poison damage and +10% Crit Rate."
+      "rating": 4,
+      "why": "Poison Additional Damage multiplies every hit on a poisoned enemy, and Charlotte applies Poison with 2 skills (each application lasts about 10 s). With +10% Crit Rate: about +17% damage at end-game, assuming Poison stays on the target."
      },
      {
       "level": 6,
@@ -6940,7 +6940,7 @@
        }
       ],
       "rating": 2,
-      "why": "+10% Defense Ignore is a plain damage boost."
+      "why": "+10% Defense Ignore: about +6.0% damage at end-game with this build."
      },
      {
       "level": 3,
@@ -6960,8 +6960,8 @@
         "value": 15
        }
       ],
-      "rating": 2,
-      "why": "With A1 she launches enemies, so Airborne damage applies."
+      "rating": 1,
+      "why": "Airborne Additional Damage only counts on hits against an airborne enemy. Ryza applies Airborne with some skills, but none of them needs it, so the gain depends on how often it's up. "
      },
      {
       "level": 5,
@@ -6977,8 +6977,8 @@
         "value": 10
        }
       ],
-      "rating": 2,
-      "why": "Shock damage and +10% Crit Rate."
+      "rating": 4,
+      "why": "Shock Additional Damage multiplies every hit on a shocked enemy, and Ryza applies Shock with 5 skills (each application lasts about 10 s). With +10% Crit Rate: about +18% damage at end-game, assuming Shock stays on the target."
      },
      {
       "level": 6,
@@ -8890,7 +8890,7 @@
  "HERO_BUILDS": {
   "Johnny": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.5% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -8905,6 +8905,16 @@
      ]
     },
     "Chest": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Poison Additional Attack Power"
+     ]
+    },
+    "Legs": {
      "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
@@ -8914,7 +8924,7 @@
       "Poison Additional Attack Power"
      ]
     },
-    "Legs": {
+    "Gloves": {
      "main": "Attack Power Up",
      "subs": [
       "Critical Hit Chance",
@@ -8924,7 +8934,7 @@
       "Poison Additional Attack Power"
      ]
     },
-    "Gloves": {
+    "Boots": {
      "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
@@ -8933,16 +8943,18 @@
       "Defense Ignore",
       "Poison Additional Attack Power"
      ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Venomfog Shade",
+    "vsBattleWill": {
+     "The Infiltrator": 1.5,
+     "Battle Will": 0.0,
+     "Azure Gale": -0.4
     },
-    "Boots": {
-     "main": "Critical Damage",
-     "subs": [
-      "Attack Power Up",
-      "Critical Hit Chance",
-      "Attack",
-      "Defense Ignore",
-      "Poison Additional Attack Power"
-     ]
+    "statusSetsIfBonusesMultiply": {
+     "Azure Gale": 0.9
     }
    }
   },
@@ -9006,14 +9018,14 @@
   },
   "Castella": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.0% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
     "Helmet": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9021,9 +9033,9 @@
      ]
     },
     "Chest": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9041,9 +9053,9 @@
      ]
     },
     "Gloves": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9060,11 +9072,25 @@
       "Break Additional Attack Power"
      ]
     }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Ruinsbreaker",
+    "vsBattleWill": {
+     "The Infiltrator": 1.0,
+     "Battle Will": 0.0,
+     "Earthshatterer": -1.9,
+     "Holy Arbiter": -2.0
+    },
+    "statusSetsIfBonusesMultiply": {
+     "Earthshatterer": -1.1,
+     "Holy Arbiter": -1.4
+    }
    }
   },
   "Aria": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.1% damage over Battle Will. Azure Gale (Airborne) is a close alternative: -0.1% to +1.2% over Battle Will, depending on whether Additional Damage for two different statuses adds or multiplies (not tested yet). Blazing Flames' 3-piece Crit Rate counts as always on, since Burn is applied by almost every skill.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9089,16 +9115,6 @@
      ]
     },
     "Legs": {
-     "main": "Critical Damage",
-     "subs": [
-      "Attack Power Up",
-      "Critical Hit Chance",
-      "Attack",
-      "Defense Ignore",
-      "Burn Additional Attack Power"
-     ]
-    },
-    "Gloves": {
      "main": "Attack Power Up",
      "subs": [
       "Critical Hit Chance",
@@ -9108,15 +9124,37 @@
       "Burn Additional Attack Power"
      ]
     },
-    "Boots": {
-     "main": "Critical Hit Chance",
+    "Gloves": {
+     "main": "Critical Damage",
      "subs": [
       "Attack Power Up",
-      "Critical Damage",
+      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Burn Additional Attack Power"
      ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Blazing Flames",
+    "vsBattleWill": {
+     "The Infiltrator": 1.1,
+     "Battle Will": 0.0,
+     "Azure Gale": -0.1
+    },
+    "statusSetsIfBonusesMultiply": {
+     "Azure Gale": 1.2
     }
    }
   },
@@ -9180,7 +9218,7 @@
   },
   "Kalien": {
    "type": "Damage",
-   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +0.6% damage over Battle Will. Blazing Flames' 3-piece Crit Rate counts as always on, since Burn is applied by almost every skill.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9205,6 +9243,16 @@
      ]
     },
     "Legs": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Burn Additional Attack Power"
+     ]
+    },
+    "Gloves": {
      "main": "Attack Power Up",
      "subs": [
       "Critical Hit Chance",
@@ -9214,55 +9262,37 @@
       "Burn Additional Attack Power"
      ]
     },
-    "Gloves": {
-     "main": "Critical Hit Chance",
-     "subs": [
-      "Attack Power Up",
-      "Critical Damage",
-      "Attack",
-      "Defense Ignore",
-      "Burn Additional Attack Power"
-     ]
-    },
     "Boots": {
-     "main": "Critical Damage",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
       "Critical Hit Chance",
+      "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Burn Additional Attack Power"
      ]
     }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Blazing Flames",
+    "vsBattleWill": {
+     "The Infiltrator": 0.6,
+     "Battle Will": 0.0,
+     "Ruinsbreaker": -1.2
+    },
+    "statusSetsIfBonusesMultiply": {
+     "Ruinsbreaker": -0.4
+    }
    }
   },
   "Roxy": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.2% damage over Battle Will. Holy Arbiter (Stun) is a close alternative: -0.0% to +1.4% over Battle Will, depending on whether Additional Damage for two different statuses adds or multiplies (not tested yet).",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
     "Helmet": {
-     "main": "Critical Hit Chance",
-     "subs": [
-      "Attack Power Up",
-      "Critical Damage",
-      "Attack",
-      "Defense Ignore",
-      "Bleed Additional Attack Power"
-     ]
-    },
-    "Chest": {
-     "main": "Critical Damage",
-     "subs": [
-      "Attack Power Up",
-      "Critical Hit Chance",
-      "Attack",
-      "Defense Ignore",
-      "Bleed Additional Attack Power"
-     ]
-    },
-    "Legs": {
      "main": "Attack Power Up",
      "subs": [
       "Critical Hit Chance",
@@ -9272,7 +9302,7 @@
       "Bleed Additional Attack Power"
      ]
     },
-    "Gloves": {
+    "Chest": {
      "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
@@ -9282,7 +9312,7 @@
       "Bleed Additional Attack Power"
      ]
     },
-    "Boots": {
+    "Legs": {
      "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
@@ -9291,6 +9321,38 @@
       "Defense Ignore",
       "Bleed Additional Attack Power"
      ]
+    },
+    "Gloves": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Bleed Additional Attack Power"
+     ]
+    },
+    "Boots": {
+     "main": "Critical Damage",
+     "subs": [
+      "Attack Power Up",
+      "Critical Hit Chance",
+      "Attack",
+      "Defense Ignore",
+      "Bleed Additional Attack Power"
+     ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Bloodstained Chaser",
+    "vsBattleWill": {
+     "The Infiltrator": 1.2,
+     "Battle Will": 0.0,
+     "Holy Arbiter": -0.0
+    },
+    "statusSetsIfBonusesMultiply": {
+     "Holy Arbiter": 1.4
     }
    }
   },
@@ -9354,7 +9416,7 @@
   },
   "Theresia": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.4% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9369,20 +9431,20 @@
      ]
     },
     "Chest": {
-     "main": "Critical Hit Chance",
+     "main": "Critical Damage",
      "subs": [
       "Attack Power Up",
-      "Critical Damage",
+      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Stun Additional Attack Power"
      ]
     },
     "Legs": {
-     "main": "Critical Damage",
+     "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
-      "Critical Hit Chance",
+      "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Stun Additional Attack Power"
@@ -9408,11 +9470,23 @@
       "Stun Additional Attack Power"
      ]
     }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Bloodstained Chaser",
+    "vsBattleWill": {
+     "The Infiltrator": 1.4,
+     "Holy Arbiter": 0.3,
+     "Battle Will": 0.0
+    },
+    "statusSetsIfBonusesMultiply": {
+     "Holy Arbiter": 0.7
+    }
    }
   },
   "Ornette": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.5% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9427,20 +9501,20 @@
      ]
     },
     "Chest": {
-     "main": "Critical Hit Chance",
+     "main": "Critical Damage",
      "subs": [
       "Attack Power Up",
-      "Critical Damage",
+      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Shock Additional Attack Power"
      ]
     },
     "Legs": {
-     "main": "Critical Damage",
+     "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
-      "Critical Hit Chance",
+      "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Shock Additional Attack Power"
@@ -9465,6 +9539,18 @@
       "Defense Ignore",
       "Shock Additional Attack Power"
      ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Thunderrush",
+    "vsBattleWill": {
+     "The Infiltrator": 1.5,
+     "Battle Will": 0.0,
+     "Earthshatterer": -0.9
+    },
+    "statusSetsIfBonusesMultiply": {
+     "Earthshatterer": 0.2
     }
    }
   },
@@ -9528,7 +9614,7 @@
   },
   "Tarte": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.3% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9581,12 +9667,20 @@
       "Defense Ignore",
       "Shock Additional Attack Power"
      ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Thunderrush",
+    "vsBattleWill": {
+     "The Infiltrator": 1.3,
+     "Battle Will": 0.0
     }
    }
   },
   "Kalsion": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.3% damage over Battle Will. Azure Gale (Airborne) is a close alternative: -0.4% to +0.8% over Battle Will, depending on whether Additional Damage for two different statuses adds or multiplies (not tested yet). Blazing Flames' 3-piece Crit Rate counts as always on, since Burn is applied by almost every skill.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9601,10 +9695,10 @@
      ]
     },
     "Chest": {
-     "main": "Critical Damage",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
       "Critical Hit Chance",
+      "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Burn Additional Attack Power"
@@ -9621,30 +9715,42 @@
      ]
     },
     "Gloves": {
-     "main": "Attack Power Up",
+     "main": "Critical Damage",
      "subs": [
+      "Attack Power Up",
       "Critical Hit Chance",
-      "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Burn Additional Attack Power"
      ]
     },
     "Boots": {
-     "main": "Critical Hit Chance",
+     "main": "Critical Damage",
      "subs": [
       "Attack Power Up",
-      "Critical Damage",
+      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Burn Additional Attack Power"
      ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Blazing Flames",
+    "vsBattleWill": {
+     "The Infiltrator": 1.3,
+     "Battle Will": 0.0,
+     "Azure Gale": -0.4
+    },
+    "statusSetsIfBonusesMultiply": {
+     "Azure Gale": 0.8
     }
    }
   },
   "Cerese": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.4% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9659,20 +9765,20 @@
      ]
     },
     "Chest": {
-     "main": "Critical Hit Chance",
+     "main": "Critical Damage",
      "subs": [
       "Attack Power Up",
-      "Critical Damage",
+      "Critical Hit Chance",
       "Attack",
       "Defense Ignore",
       "Frost Additional Attack Power"
      ]
     },
     "Legs": {
-     "main": "Critical Damage",
+     "main": "Critical Hit Chance",
      "subs": [
       "Attack Power Up",
-      "Critical Hit Chance",
+      "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Frost Additional Attack Power"
@@ -9697,12 +9803,24 @@
       "Defense Ignore",
       "Frost Additional Attack Power"
      ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Froststorm",
+    "vsBattleWill": {
+     "The Infiltrator": 1.4,
+     "Battle Will": 0.0,
+     "Azure Gale": -1.0
+    },
+    "statusSetsIfBonusesMultiply": {
+     "Azure Gale": 0.0
     }
    }
   },
   "Reina": {
    "type": "Damage",
-   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +0.5% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9717,6 +9835,16 @@
      ]
     },
     "Chest": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    },
+    "Legs": {
      "main": "Attack Power Up",
      "subs": [
       "Critical Hit Chance",
@@ -9726,20 +9854,10 @@
       "Airborne Additional Attack Power"
      ]
     },
-    "Legs": {
-     "main": "Critical Hit Chance",
-     "subs": [
-      "Attack Power Up",
-      "Critical Damage",
-      "Attack",
-      "Defense Ignore",
-      "Airborne Additional Attack Power"
-     ]
-    },
     "Gloves": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9755,12 +9873,20 @@
       "Defense Ignore",
       "Airborne Additional Attack Power"
      ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Azure Gale",
+    "vsBattleWill": {
+     "The Infiltrator": 0.5,
+     "Battle Will": 0.0
     }
    }
   },
   "Astria": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.6% damage over Battle Will. Holy Arbiter (Stun) is a close alternative: +0.6% to +2.2% over Battle Will, depending on whether Additional Damage for two different statuses adds or multiplies (not tested yet).",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9775,9 +9901,9 @@
      ]
     },
     "Chest": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9785,9 +9911,9 @@
      ]
     },
     "Legs": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9813,12 +9939,24 @@
       "Defense Ignore",
       "Break Additional Attack Power"
      ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Ruinsbreaker",
+    "vsBattleWill": {
+     "The Infiltrator": 1.6,
+     "Holy Arbiter": 0.6,
+     "Battle Will": 0.0
+    },
+    "statusSetsIfBonusesMultiply": {
+     "Holy Arbiter": 2.2
     }
    }
   },
   "Eileen": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.1% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9833,16 +9971,6 @@
      ]
     },
     "Chest": {
-     "main": "Critical Hit Chance",
-     "subs": [
-      "Attack Power Up",
-      "Critical Damage",
-      "Attack",
-      "Defense Ignore",
-      "Airborne Additional Attack Power"
-     ]
-    },
-    "Legs": {
      "main": "Critical Damage",
      "subs": [
       "Attack Power Up",
@@ -9852,10 +9980,20 @@
       "Airborne Additional Attack Power"
      ]
     },
-    "Gloves": {
+    "Legs": {
      "main": "Attack Power Up",
      "subs": [
       "Critical Hit Chance",
+      "Critical Damage",
+      "Attack",
+      "Defense Ignore",
+      "Airborne Additional Attack Power"
+     ]
+    },
+    "Gloves": {
+     "main": "Critical Hit Chance",
+     "subs": [
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9871,12 +10009,20 @@
       "Defense Ignore",
       "Airborne Additional Attack Power"
      ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Azure Gale",
+    "vsBattleWill": {
+     "The Infiltrator": 1.1,
+     "Battle Will": 0.0
     }
    }
   },
   "Othello": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.3% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9929,12 +10075,20 @@
       "Defense Ignore",
       "Frost Additional Attack Power"
      ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Froststorm",
+    "vsBattleWill": {
+     "The Infiltrator": 1.3,
+     "Battle Will": 0.0
     }
    }
   },
   "Charlotte": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.4% damage over Battle Will. Azure Gale (Airborne) is a close alternative: -0.2% to +1.2% over Battle Will, depending on whether Additional Damage for two different statuses adds or multiplies (not tested yet).",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -9949,9 +10103,9 @@
      ]
     },
     "Chest": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9959,9 +10113,9 @@
      ]
     },
     "Legs": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -9988,11 +10142,23 @@
       "Poison Additional Attack Power"
      ]
     }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Venomfog Shade",
+    "vsBattleWill": {
+     "The Infiltrator": 1.4,
+     "Battle Will": 0.0,
+     "Azure Gale": -0.2
+    },
+    "statusSetsIfBonusesMultiply": {
+     "Azure Gale": 1.2
+    }
    }
   },
   "Ryza": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. 2-piece set: The Infiltrator. Its +9% Crit Rate lets a main stat move from Crit Rate to Attack Power or Crit Damage: about +1.0% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -10007,9 +10173,9 @@
      ]
     },
     "Chest": {
-     "main": "Attack Power Up",
+     "main": "Critical Hit Chance",
      "subs": [
-      "Critical Hit Chance",
+      "Attack Power Up",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -10027,9 +10193,9 @@
      ]
     },
     "Gloves": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
@@ -10037,14 +10203,22 @@
      ]
     },
     "Boots": {
-     "main": "Critical Hit Chance",
+     "main": "Attack Power Up",
      "subs": [
-      "Attack Power Up",
+      "Critical Hit Chance",
       "Critical Damage",
       "Attack",
       "Defense Ignore",
       "Shock Additional Attack Power"
      ]
+    }
+   },
+   "setChoice": {
+    "set": "The Infiltrator",
+    "threePiece": "Thunderrush",
+    "vsBattleWill": {
+     "The Infiltrator": 1.0,
+     "Battle Will": 0.0
     }
    }
   }
