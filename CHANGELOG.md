@@ -25,8 +25,8 @@
 - **Sion** — A1: 3/5, A2: 2/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 3/5. A3 selected for Justice Fall’s enemy pull.
 - **Tarte** — A1: 3/5, A2: 1/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 4/5. A3 selected for charged Stun and improved Lightning Shock.
 - **Theresia** — A1: 3/5, A2: 2/5, A3: 4/5, A4: 1/5, A5: 2/5, A6: 3/5. A3 selected for Divine Arc damage and Heretic Judgment extension.
-- **Text/hover limitation:** each uploaded A1–A6 file is a raster screenshot containing the full description. The text inside that image cannot itself be recolored or made hoverable as HTML; the cards now show a concise rationale, but full per-skill hover previews require transcribing each screenshot’s effect text into structured descriptions. No claim is made that hover over text inside the PNG works.
-- Validation: JavaScript syntax, JSON parsing and committed-file checks to be run after update. Browser-level interaction test unavailable in this step.
+- Added HTML text transcriptions of all 120 A1–A6 descriptions beneath their source screenshots. The text reuses `formatSkillText` for colored status/archetype/effect terms and `formatAwakeningText` for Karma-style skill hover/click links. The text baked into the PNG remains raster, but the equivalent HTML description is interactive.
+- Validation: inline JavaScript syntax and `data.json` parsing passed before commit; final committed-file verification follows. Browser-level visual/hover testing is unavailable in this environment.
 
 ## 2026-10-28 — Claude: titles data section, set-bonus and title maths confirmed
 - `data.json`: added `TITLES` (109 titles in game; 3 owned with cumulative Defense +10, Max HP +50, Defense Up +1.5%; Novice Mercenary Crew = Max HP +50; 11 other names seen, effects unknown). Recorded title bonuses in `HERO_STAT_MODEL.observations`; Lv1 71/30/511 seen on Aria, Ornette and Roxy is 71/20/461 + titles.
