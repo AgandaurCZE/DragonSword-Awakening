@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-28 — Color Gear tab set names and effects
+- Updated `index.html`: Gear set bonus descriptions now use the existing skill-text formatter, so mapped status effects and relevant numeric values receive the same emphasis and archetype colors used in Skills and Karma.
+- Gear set names now use the matching archetype color inferred from their mapped status effects. Neutral sets without a mapped archetype retain the default title color; no gear data was changed.
+- Validation: re-fetched the committed `index.html`; parsed its inline JavaScript with `new Function`, parsed `data.json` as JSON, confirmed there is exactly one gear renderer and one archetype helper, verified both bonuses use `formatSkillText`, and checked the malformed leftover fragment is absent. Live browser interaction testing was unavailable.
+
 ## 2026-10-28 — Require validation after every change
 - Added `CHATGPT.md` with a mandatory workflow for future repository edits: syntax validation, reviewing the diff for accidental/malformed changes, relevant functional checks, truthful reporting of any testing limitations, updating this changelog every time, and re-fetching/reviewing committed files.
 - Left `AGENTS.md` and `CLAUDE.md` untouched.
