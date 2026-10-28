@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-28 — Apply archetype colors to Teams
+- Updated `index.html` so each team card's border/accent and title background are based on its own archetype's sampled color, darkened slightly so the archetype icon remains visually distinct. Team-name typography and text color remain unchanged.
+- Team tags (role/enabler summaries) and Team fit descriptions now use the shared skill-text formatter, coloring status effects and archetype names consistently. Extended the shared formatter to recognize archetype names as well as status terms, using the matching archetype color.
+- Validation: re-fetched `index.html`; JavaScript syntax check passed using `new Function`, `data.json` parses as JSON, confirmed one `renderTeams()` function, all 9 team archetypes are present, and the team tag/note formatting plus archetype-color mapping are in the committed source. Live browser interaction testing was unavailable.
+ 
 ## 2026-10-28 — Fix Gear status colors and group sets
 - Updated `index.html` so status words in Gear bonus descriptions retain their archetype colors; the more-specific `.gear-effect b` rule had overridden the formatter's `.sk-status` color, so added a targeted override.
 - Split the Gear tab into titled “General sets” and “Archetype sets” sections. The three Normal Dungeons sets display in a two-up layout with the third centered below; the nine Blacksmith sets remain in a two-column grid. On narrow screens, the layout collapses to one column.
