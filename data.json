@@ -10147,7 +10147,7 @@
    "Skill buffs scale with level too: Invisible's Critical Damage buff is +10% at Lv.1 and +15% at Lv.10 (x1.5, not x1.75).",
    "Armor Penetration raises damage, so the Training Ogre has Defense: at the same 681 Attack, going from 10 to 33 raised the larger hits by 1.2% (499 -> 505, 312 -> 316, 174 -> 176), about +0.05% damage per point against this dummy. Combo ratio 0.505 -> 0.513 x Attack x skill %. The Poison tick stayed 340 (= Attack / 2), so Poison ignores Defense, or at least Armor Penetration. The dummy's Defense value and the exact Defense formula are not known.",
    "Defense Ignore 0.97% (Armor Penetration 0) raised the larger hits by about 0.4% compared with the Armor Penetration 0 tests scaled to the same Attack (e.g. 482 vs 480.3 expected). Combo ratio 0.508. Poison tick 329 = 658 / 2 rounded down, unaffected. Against this dummy, roughly 1% Defense Ignore ~ +0.4% damage and 1 Armor Penetration ~ +0.05%.",
-   "Poison tick by stacks, as a share of the FIRST applier's Attack: 1 stack 50%, 2 stacks 75%, 3 stacks 100% (+25% per extra stack). The other appliers' Attack doesn't matter. 2 stacks: Charlotte (658) first -> 493, Johnny (645) first -> 484, whoever applied the second. 3 stacks (goblin dummies, order not tracked): ticks of 645 and 658, exactly the two heroes' Attack. Poison stops at 3 stacks (no 4th). Stacks last about 10 seconds (timed by eye), so the 4 ticks are about 2.5 seconds apart. Bleed, Burn and Shock stacking and timing not tested yet."
+   "Poison tick by stacks, as a share of the FIRST applier's Attack: 1 stack 50%, 2 stacks 75%, 3 stacks 100% (+25% per extra stack). The other appliers' Attack doesn't matter. 2 stacks: Charlotte (658) first -> 493, Johnny (645) first -> 484, whoever applied the second. 3 stacks (goblin dummies, order not tracked): ticks of 645 and 658, exactly the two heroes' Attack. Poison stops at 3 stacks (no 4th). Stacks last about 10 seconds (timed by eye), so the 4 ticks are about 2.5 seconds apart. Bleed, Burn and Shock stack exactly the same way, also to a maximum of 3 (Lv.1 heroes, 71 Attack: 35 / 53 / 71). Their duration wasn't timed."
   ],
   "tests": [
    {
@@ -10542,6 +10542,24 @@
      "Johnny": 645
     },
     "note": "Retested 28 Oct. The first run gave 429 for Charlotte then Johnny; the retest gave 493, so the 429 is treated as a misread or an expired stack."
+   },
+   {
+    "status": "Bleed / Burn / Shock stacks",
+    "heroes": {
+     "Bleed": "Roxy",
+     "Burn": "Aria",
+     "Shock": "Ornette"
+    },
+    "level": 1,
+    "attack": 71,
+    "enemy": "goblin training dummies",
+    "ticks": {
+     "1": 35,
+     "2": 53,
+     "3": 71
+    },
+    "maxStacks": 3,
+    "note": "Identical for all three statuses: 71 x 0.5 / 0.75 / 1.0 = 35.5 / 53.25 / 71, rounded down."
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
