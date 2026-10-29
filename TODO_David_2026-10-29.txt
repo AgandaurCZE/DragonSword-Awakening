@@ -120,3 +120,7 @@ Tier list decisions so far (agreed 29 Oct 2026, not on the page yet; they go int
 - Castella: no "Needs awakening" tag; gets the Easy tag. David: works fine as she is, even in teams she doesn't fit well, because she breaks enemies fast and broken enemies don't act for the 8 s (big QoL for newer and casual players). Play: spin, break, apply Stun, swap. A1 (Knockdown on Stun Blow) mainly lets her stand in for a dedicated Knockdown enabler in more teams.
 
 On hold (David, 29 Oct: not possible with his current roster without spending an awakening on Castella) — possible test (Castella A1 adds Knockdown to Stun Blow): Charlotte's first auto-attack click on the Training Ogre with Stun + Airborne + Knockdown and no Poison/Bleed. x4.0 (88) = bonuses keep adding; x3.5 (77) = a cap, which would also explain the earlier goblin result.
+
+Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we have it for all characters")
+- Castella Review: A1 note = mainly lets her stand in for a dedicated Knockdown enabler in more teams; Pros = breaks enemies fast and broken enemies don't act for 8 s (forgiving for newer and casual players).
+- Put every decision above into TIER_LIST_V2.heroes (tiers, tags, needs, awakenings) and the matching Review texts in one go.
