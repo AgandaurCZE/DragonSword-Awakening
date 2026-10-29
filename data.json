@@ -14404,7 +14404,8 @@
    "DoT ticks: 5 per application (0, 2.5, 5, 7.5, 10 s), not 4 as first recorded. Total per application at 1/2/3 stacks: 250/375/500% of the first applier's Attack.",
    "Breaker weakness (Drosophia of Breaker) doesn't change status hit bonuses; it likely affects Super Armor break instead (untested). Drosophia of Bloodburst has no weakness (tested with every status).",
    "Super Armor break: no hit bonus (Castella 194 before and after); lasts 8 s on both Drosophia bosses, whatever hero breaks it. Drosophia of Breaker has a much bigger Super Armor bar: Charlotte needed about 2x or more vs the Bloodburst one, Castella only about 1.4x. Likely meaning of the Breaker weakness: Breakers lose much less to the bigger bar (rough counts, two heroes).",
-   "Status ticks never crit (David, 29 Oct 2026, Test Kit): Poison, Bleed, Burn and Shock, 100 ticks each (Poison 200), at 1, 2 and 3 stacks, with 12.77% Crit Rate: 0 crits. Crit stats only raise direct hits. Each stack count also has its own visual on the enemy."
+   "Status ticks never crit (David, 29 Oct 2026, Test Kit): Poison, Bleed, Burn and Shock, 100 ticks each (Poison 200), at 1, 2 and 3 stacks, with 12.77% Crit Rate: 0 crits. Crit stats only raise direct hits. Each stack count also has its own visual on the enemy.",
+   "Charlotte's Illusion Kick and her Clone explosion (Invisible) apply Poison in-game, though the codex text names no Poison for either (David, 29 Oct 2026, screenshots on Lv. 90 goblins; no Karma or awakening effect explains it). Illusion Kick about 0.6 stack per press, the Clone explosion a full stack, and both hit several goblins."
   ],
   "tests": [
    {
@@ -15318,7 +15319,7 @@
     "date": "2026-10-29",
     "by": "David (Test Kit)",
     "enemy": "Goblin training dummies, Lv. 90",
-    "note": "Stacks applied by one press, read from the stack gauge (fractions estimated). Charlotte's Invisible (clone explosion) and Illusion Kick are listed as applying Poison, but their codex text names no Poison (Illusion Kick: Airborne; Invisible: none) - to confirm with David.",
+    "note": "Stacks applied by one press, read from the stack gauge (fractions estimated). Charlotte's Illusion Kick and Clone explosion apply Poison although the codex doesn't say so (confirmed with screenshots, 29 Oct 2026).",
     "results": [
      {
       "hero": "Johnny",
