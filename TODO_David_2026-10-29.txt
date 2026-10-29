@@ -183,6 +183,8 @@ Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we
   - A1: Holy Cross becomes a charge skill you can aim + longer duration = big QoL (now it just goes where you faced).
   - A3: bigger, longer Holy Circle could make her a proper off-field DPS; now the Ultimate lasts about 2 s with ~3 pulses.
   - Super fast, little thinking: Skill -> Ult -> Special A -> Special B -> Special A, swap; with a Shock enabler maybe just Specials and swap. Needs more testing with Thunderbolt teammates.
-  - Proposed: Easy tag. Tier C or low B (old list B/A/A). Patch 1.1.0: about -1% total, share moved from Holy Cross to Holy Circle.
+  - Clarified 19:07: no Needs Shock tag. She reaches 2 Shock stacks herself; with 2 stacks she can loop Special A -> Special B -> Special A (otherwise only A -> B), which raises her own damage. Open: is staying on screen longer worth it, given her low multipliers vs other Shock DPS (Tarte, Ryza; not owned by David)?
+  - TIER AGREED 19:07: B overall (old list B/A/A), Single target B, Groups B. Tag: Easy. Revisit after testing with more Thunderbolt teammates.
+  - (Earlier proposal: Easy tag, tier C or low B.) Patch 1.1.0: about -1% total, share moved from Holy Cross to Holy Circle.
 - Self-sufficient, NEW BAR (agreed 18:38): only heroes who run their whole kit alone AND are strong doing it, i.e. can carry a fight without the team. Kept: Reina, Johnny. Removed: Roxy, Aria. Update the tag's desc text in TIER_LIST_V2.tags when applying. Claude must say so whenever a proposed tag doesn't meet its definition.
 - Tag rules (David, 29 Oct): no "Team-dependent" tag; only Self-sufficient. Heroes like Reina are covered by the Enabler tag. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes.
