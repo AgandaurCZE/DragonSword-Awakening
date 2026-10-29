@@ -139,6 +139,12 @@ if len(m) != 7 or m[0] != 1 or m[6] is None: bad('KARMA_ASCENSION.multipliers: n
 # Karma and Familiar pictures
 for k in d['KARMA_DATA']:
     if k.get('image'): asset(k['image'], f"KARMA_DATA[{k['name']}].image")
+for n_, ab in d.get('FAMILIARS', {}).get('abilities', {}).items():
+    asset(ab['icon'], f'FAMILIARS.abilities[{n_}].icon')
+for g_, ps in d.get('FAMILIARS', {}).get('passives', {}).items():
+    for p_ in ps:
+        for n_ in re.findall(r'\[([^\]]+)\]', p_['text']):
+            if n_ not in d['FAMILIARS'].get('abilities', {}): bad(f'FAMILIARS.passives[{g_}]: unknown ability {n_!r}')
 for f in d.get('FAMILIARS', {}).get('list', []):
     if f.get('image'): asset(f['image'], f"FAMILIARS[{f['name']}].image")
 

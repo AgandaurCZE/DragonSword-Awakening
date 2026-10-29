@@ -331,6 +331,25 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .fam-card{background:#25272e;border:1px solid #3a3d46;overflow:hidden}.fam-card img{width:100%;aspect-ratio:392/467;object-fit:cover;display:block}
 .fam-card div{padding:7px 9px;font-weight:800;font-size:13px;color:#e5e7eb;line-height:1.3}
 @media(max-width:700px){.fam-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.fam-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,360px);gap:14px;align-items:start}
+.fam-row .fam-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.fam-passive{background:linear-gradient(160deg,#21394a,#1d2430 70%);border:1px solid #33536a;border-left:3px solid #4fb6c9;padding:12px 14px}
+.fam-passive-title{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#bfe9f2;margin-bottom:8px}
+.fam-passive ol{list-style:none;margin:0;padding:0}
+.fp-row{display:flex;gap:12px;align-items:flex-start;padding:7px 0;border-top:1px solid #ffffff12;font-size:13px;line-height:1.45;color:#dce4ec}.fp-row:first-child{border-top:0}
+.fp-none .fp-text{color:#8f98a8;font-style:italic}
+.fp-num{flex:none;width:22px;height:22px;margin:3px 4px 0;transform:rotate(45deg);border-radius:6px;background:#565b63;border:2px solid #7a808a;display:grid;place-items:center;box-shadow:0 2px 5px #0006}
+.fp-num span{transform:rotate(-45deg);font-weight:900;font-size:13px;color:#e8ecf1}
+.fp-num.on{background:#24806d;border-color:#5fd3b5}.fp-num.on span{color:#fff}
+.fam-abil{display:inline-flex;align-items:center;gap:4px;background:#0f2a36;border:1px solid #3a8fa4;color:#8fe3f2;font:inherit;font-weight:800;padding:0 6px 0 2px;border-radius:10px;cursor:help;vertical-align:1px}
+.fam-abil img{width:16px;height:16px;border-radius:50%}
+.fam-abil:hover,.fam-abil:focus{background:#16404f;outline:none}
+.fp-scope{display:inline-block;font-size:10px;font-weight:900;letter-spacing:.04em;color:#fbbf24;border:1px solid #fbbf2488;background:#fbbf2414;border-radius:3px;padding:0 5px;margin-left:2px;text-decoration:none}
+.fam-pop{text-align:center;min-width:240px;max-width:320px}.fam-pop img{width:72px;height:72px;border-radius:50%;box-shadow:0 0 0 2px #ffffff30}
+.fam-pop-name{font-size:18px;font-weight:900;color:#fff;margin-top:6px}.fam-pop-line{height:1px;background:linear-gradient(90deg,transparent,#7d8ea3,transparent);margin:8px 0}
+.fam-pop p{margin:0 0 6px;font-size:13px;color:#e4e8ef;line-height:1.45}.fam-pop-cd b{color:#f5b942}.fam-pop-src{font-size:11px;color:#8f98a8}
+@media(max-width:900px){.fam-row{grid-template-columns:1fr}}
+@media(max-width:600px){.fam-row .fam-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Patch Notes timeline + buff/nerf arrows */
 .pa{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;flex:none;vertical-align:-4px;box-shadow:0 1px 4px #0009}
 .pa svg{width:12px;height:12px;display:block}
@@ -872,7 +891,7 @@ function openCharacterProfile(name,initialTab='skills'){
  $('profileName').textContent=h.name;$('profileCrumbName').textContent=h.name;$('profilePortrait').src=h.portrait;$('profilePortrait').alt=h.name;
  $('profileUpdated').textContent='Character guide · workbook data · End-game tier '+(h.tiers['End-game']||'—');
  $('profileIntro').innerHTML=`Guide and build for <button type="button" data-back-tier="1">${profileEsc(h.name)}</button> from DragonSword: Awakening. <button type="button" data-back-tier="1">${profileEsc(h.name)}</button> is a character from the <strong>${profileEsc(h.archetype)}</strong> archetype. To learn more about ${profileEsc(h.name)}, check the sections below. Use the tabs to quickly switch to the kind of information you're looking for.`;
- $('profileQuickInfo').innerHTML=`<div class="profile-quick-info-list"><div class="profile-quick-info-row"><strong>Archetype:</strong> <span class="profile-quick-arch"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)}</span></div><div class="profile-quick-info-row"><strong>Role:</strong> <span>${profileEsc(h.role)}</span></div><div class="profile-quick-info-row"><strong>End-game tier:</strong> <span class="profile-tier-large" style="background:${tierColor(h.tiers['End-game']||'—')}">${profileEsc(h.tiers['End-game']||'—')}</span></div></div>`;
+ $('profileQuickInfo').innerHTML=`<div class="profile-quick-info-list"><div class="profile-quick-info-row"><strong>Archetype:</strong> <span class="profile-quick-arch"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)}</span></div><div class="profile-quick-info-row"><strong>Role:</strong> <span>${profileEsc(h.role)}</span></div>${h.faction?`<div class="profile-quick-info-row"><strong>Faction:</strong> <span>${profileEsc(h.faction)}</span></div>`:''}<div class="profile-quick-info-row"><strong>Kit:</strong> <span>${profileEsc(h.classType||'')}</span></div>${h.obtain?.method?`<div class="profile-quick-info-row"><strong>How to get:</strong> <span>${profileEsc(h.obtain.method+(h.obtain.cost?' ('+h.obtain.cost+')':''))}</span></div>`:''}<div class="profile-quick-info-row"><strong>End-game tier:</strong> <span class="profile-tier-large" style="background:${tierColor(h.tiers['End-game']||'—')}">${profileEsc(h.tiers['End-game']||'—')}</span></div></div>`;
  const data=CHARACTER_PROFILE_DATA[h.name]||{skills:[],karma:'',gear:''};
   renderProfileAwakenings(h);
  const skillRoot=$('profileSkillsGrid');skillRoot.innerHTML='';
@@ -1382,11 +1401,22 @@ function renderProfilePatches(h){const P=PATCH_NOTES||{};const rows=(P.patches||
 // ---- Simple pages: Familiars, Titles, Trait Dungeons ----
 const PAGE_IDS={tier:'tierPage',heroes:'heroesPage',teams:'teamsPage',gear:'gearPage',karma:'karmaPage',patches:'patchesPage',familiars:'familiarsPage',titles:'titlesPage',trait:'traitPage'};
 function navIcon(id,src){const el=$(id);if(!el||!src)return;const im=new Image();im.onload=()=>{el.textContent='';const m=document.createElement('span');m.className='nav-mask';m.style.webkitMaskImage=m.style.maskImage=`url('${src}')`;el.append(m)};im.src=src;}
+function famAbilityHtml(name){const A=((FAMILIARS||{}).abilities||{})[name];if(!A)return `[${profileEsc(name)}]`;return `<button type="button" class="fam-abil" data-abil="${profileEsc(name)}"><img src="${profileEsc(A.icon)}" alt="">${profileEsc(name)}</button>`;}
+function famPassiveText(t){return profileEsc(t).replace(/\[([^\]]+)\]/g,(m,n)=>famAbilityHtml(n));}
+function famShowAbility(el){const A=((FAMILIARS||{}).abilities||{})[el.dataset.abil];if(!A)return;const tip=$('tooltip');
+ tip.innerHTML=`<div class="fam-pop"><img src="${profileEsc(A.icon)}" alt=""><div class="fam-pop-name">${profileEsc(el.dataset.abil)}</div><div class="fam-pop-line"></div><p>${profileEsc(A.description)}</p><p class="fam-pop-cd">Cooldown <b>${A.cooldown.toFixed(1)}</b> seconds</p><div class="fam-pop-src">${profileEsc(A.species)} ability</div></div>`;
+ tip.style.setProperty('--tier','#536273');tip.style.display='block';const r=el.getBoundingClientRect();let left=r.left;if(left+tip.offsetWidth>window.innerWidth-12)left=window.innerWidth-tip.offsetWidth-12;tip.style.left=Math.max(12,left)+'px';let top=r.bottom+8;if(top+tip.offsetHeight>window.innerHeight-12)top=r.top-tip.offsetHeight-8;tip.style.top=Math.max(12,top)+'px';}
+document.addEventListener('click',e=>{const tip=$('tooltip');if(tip&&tip.dataset.abil&&!e.target.closest('.fam-abil')){hideTip();tip.dataset.abil='';}});
 function renderFamiliars(){const F=FAMILIARS||{};const list=F.list||[];const root=$('familiarsBody');
  const groups=F.groups||[...new Set(list.map(f=>f.group||'Other'))];
  const card=f=>`<article class="fam-card">${f.image?`<img src="${profileEsc(f.image)}" alt="${profileEsc(f.name)}" loading="lazy">`:''}<div>${profileEsc(f.name)}${f.obtain?`<div class="simple-meta">How to get: ${profileEsc(f.obtain)}</div>`:''}${(f.effects||[]).length?`<ul>${f.effects.map(e=>`<li>${colourStatusWords(e)}</li>`).join('')}</ul>`:''}</div></article>`;
- root.innerHTML=list.length?groups.map(g=>{const fs=list.filter(f=>(f.group||'Other')===g);return fs.length?`<section class="fam-group"><h3>${profileEsc(g)} <small>${fs.length} familiar${fs.length>1?'s':''}</small></h3><div class="fam-grid">${fs.map(card).join('')}</div></section>`:''}).join(''):`<div class="simple-empty">${profileEsc(F.empty||'Familiars are coming soon.')}</div>`;
- if(F.note)root.insertAdjacentHTML('beforeend',`<p class="profile-note">${profileEsc(F.note)}</p>`);}
+ const passive=g=>{const P=(F.passives||{})[g];if(!P||!P.length)return '';const owned=(F.owned||{})[g]||0;
+  return `<aside class="fam-passive"><div class="fam-passive-title">${profileEsc(g)} passive effect</div><ol>${P.map(p=>`<li class="fp-row${p.scope==='none'?' fp-none':''}"><span class="fp-num${p.count<=owned?' on':''}" title="${p.count<=owned?'Unlocked in David\'s game':'Collect '+p.count+' '+g+' familiar'+(p.count>1?'s':'')}"><span>${p.count}</span></span><div class="fp-text">${famPassiveText(p.text)}${p.scope==='species'?` <span class="fp-scope" data-tip="Applies only to ${profileEsc(g)} familiars, not to the others.">${profileEsc(g)} only</span>`:''}</div></li>`).join('')}</ol></aside>`;};
+ root.innerHTML=list.length?groups.map(g=>{const fs=list.filter(f=>(f.group||'Other')===g);return fs.length?`<section class="fam-group"><h3>${profileEsc(g)} <small>${fs.length} familiar${fs.length>1?'s':''}</small></h3><div class="fam-row"><div class="fam-grid">${fs.map(card).join('')}</div>${passive(g)}</div></section>`:''}).join(''):`<div class="simple-empty">${profileEsc(F.empty||'Familiars are coming soon.')}</div>`;
+ if(F.passiveNote)root.insertAdjacentHTML('beforeend',`<p class="profile-note">${profileEsc(F.passiveNote)}</p>`);
+ if(F.note)root.insertAdjacentHTML('beforeend',`<p class="profile-note">${profileEsc(F.note)}</p>`);
+ root.querySelectorAll('.fam-abil').forEach(b=>{b.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')famShowAbility(b)});b.addEventListener('pointerleave',e=>{if(e.pointerType!=='touch')hideTip()});b.addEventListener('focus',()=>famShowAbility(b));b.addEventListener('blur',hideTip);b.addEventListener('click',e=>{e.stopPropagation();const tip=$('tooltip');if(tip.style.display==='block'&&tip.dataset.abil===b.dataset.abil){hideTip();tip.dataset.abil='';}else{famShowAbility(b);tip.dataset.abil=b.dataset.abil;}})});
+}
 function renderTitles(){const T=TITLES||{};const list=T.list||[];const root=$('titlesBody');const known=list.filter(t=>t.passive).length;
  const fmt=b=>`${profileEsc(b.stat)} +${b.value}${/Up$|%/.test(b.stat)?'%':''}`;
  root.innerHTML=`<div class="simple-summary"><b>${T.totalCount||list.length}</b> titles in the game · <b>${list.length}</b> listed here · passive known for <b>${known}</b>. Every title you own gives its passive to <b>all heroes</b>, slotted or not.</div>

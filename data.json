@@ -15316,7 +15316,7 @@
   ]
  },
  "FAMILIARS": {
-  "note": "Familiars are mounts and companions, obtained from Codex > Familiar since patch 1.1.0. Pictures are from David's Codex screenshots (grey = not collected yet; the in-game name was painted out). How to get each one and its equip effects aren't recorded yet.",
+  "note": "Familiars are mounts and companions, obtained from Codex > Familiar since patch 1.1.0. Pictures are from David's Codex screenshots (grey = not collected yet; the in-game name was painted out). Passive effects and abilities are from David's in-game screenshots and notes. How to get each familiar isn't recorded yet. Numbered badges in green are the steps David has unlocked.",
   "empty": "Familiars will be listed here: how to get each one and its equip effects.",
   "list": [
    {
@@ -15498,12 +15498,230 @@
    "Bird",
    "Cat",
    "Direwolf",
-   "Dragon",
    "Griffon",
    "Insect",
    "Sky Wolf",
-   "Squirrel"
-  ]
+   "Squirrel",
+   "Dragon"
+  ],
+  "abilities": {
+   "Air Dash": {
+    "species": "Bird",
+    "icon": "assets/familiars/abilities/bird.webp",
+    "description": "You can dash quickly while in the air.",
+    "cooldown": 3.0
+   },
+   "Swim Dash": {
+    "species": "Cat",
+    "icon": "assets/familiars/abilities/cat.webp",
+    "description": "You can dash quickly while swimming.",
+    "cooldown": 2.0
+   },
+   "Boost Jump": {
+    "species": "Direwolf",
+    "icon": "assets/familiars/abilities/direwolf.webp",
+    "description": "You can jump farther while using Ground Boost.",
+    "cooldown": 0.0
+   },
+   "Air Free Dash": {
+    "species": "Dragon",
+    "icon": "assets/familiars/abilities/dragon.webp",
+    "description": "You can dash quickly in any direction while in the air.",
+    "cooldown": 3.0
+   },
+   "Charged Jump": {
+    "species": "Griffon",
+    "icon": "assets/familiars/abilities/griffon.webp",
+    "description": "You can gather power while standing still to perform a high jump.",
+    "cooldown": 5.0
+   },
+   "Underwater Dash": {
+    "species": "Sky Wolf",
+    "icon": "assets/familiars/abilities/sky_wolf.webp",
+    "description": "You can dash quickly while diving.",
+    "cooldown": 2.0
+   },
+   "Climbing Jump": {
+    "species": "Squirrel",
+    "icon": "assets/familiars/abilities/squirrel.webp",
+    "description": "You can jump while climbing to climb faster.",
+    "cooldown": 0.7
+   }
+  },
+  "passives": {
+   "Insect": [
+    {
+     "count": 1,
+     "text": "No effect",
+     "scope": "none"
+    },
+    {
+     "count": 2,
+     "text": "Increases all familiars' maximum stamina by 10%",
+     "scope": "all"
+    },
+    {
+     "count": 3,
+     "text": "Increases all familiars' maximum stamina by 10%",
+     "scope": "all"
+    },
+    {
+     "count": 4,
+     "text": "Increases all familiars' maximum stamina by 10%",
+     "scope": "all"
+    }
+   ],
+   "Squirrel": [
+    {
+     "count": 1,
+     "text": "[Climbing Jump] Available",
+     "scope": "species"
+    },
+    {
+     "count": 2,
+     "text": "All Familiars can use [Climbing Jump]",
+     "scope": "all"
+    },
+    {
+     "count": 3,
+     "text": "Reduces stamina consumption by 20% for all Familiars when climbing",
+     "scope": "all"
+    },
+    {
+     "count": 4,
+     "text": "Increases movement speed by 10% for all Familiars when climbing",
+     "scope": "all"
+    }
+   ],
+   "Cat": [
+    {
+     "count": 1,
+     "text": "[Swim Dash] Available",
+     "scope": "species"
+    },
+    {
+     "count": 2,
+     "text": "All Familiars can use [Swim Dash]",
+     "scope": "all"
+    },
+    {
+     "count": 3,
+     "text": "Reduces stamina consumption by 20% for all Familiars when moving on water",
+     "scope": "all"
+    },
+    {
+     "count": 4,
+     "text": "Increases movement speed by 10% for all Familiars when moving on water",
+     "scope": "all"
+    }
+   ],
+   "Bird": [
+    {
+     "count": 1,
+     "text": "[Air Dash] Available",
+     "scope": "species"
+    },
+    {
+     "count": 2,
+     "text": "All Familiars can use [Air Dash]",
+     "scope": "all"
+    },
+    {
+     "count": 3,
+     "text": "Reduces stamina consumption by 20% for all Familiars when moving in the air",
+     "scope": "all"
+    },
+    {
+     "count": 4,
+     "text": "Increases movement speed by 10% for all Familiars when moving in the air",
+     "scope": "all"
+    }
+   ],
+   "Sky Wolf": [
+    {
+     "count": 1,
+     "text": "[Underwater Dash] Available",
+     "scope": "species"
+    },
+    {
+     "count": 2,
+     "text": "All Familiars can use [Underwater Dash]",
+     "scope": "all"
+    },
+    {
+     "count": 3,
+     "text": "Reduces stamina consumption by 20% for all Familiars when moving underwater",
+     "scope": "all"
+    },
+    {
+     "count": 4,
+     "text": "Increases movement speed by 10% for all Familiars when moving underwater",
+     "scope": "all"
+    }
+   ],
+   "Direwolf": [
+    {
+     "count": 1,
+     "text": "[Boost Jump] Available",
+     "scope": "species"
+    },
+    {
+     "count": 2,
+     "text": "All Familiars can use [Boost Jump]",
+     "scope": "all"
+    },
+    {
+     "count": 3,
+     "text": "Reduces stamina consumption by 20% for all Familiars during Ground Boost",
+     "scope": "all"
+    },
+    {
+     "count": 4,
+     "text": "Increases movement speed by 10% for all Familiars when moving on land",
+     "scope": "all"
+    }
+   ],
+   "Griffon": [
+    {
+     "count": 1,
+     "text": "[Charged Jump] Available",
+     "scope": "species"
+    },
+    {
+     "count": 2,
+     "text": "All Familiars can use [Charged Jump]",
+     "scope": "all"
+    },
+    {
+     "count": 3,
+     "text": "Reduces stamina consumption by 20% for all Familiars while gliding",
+     "scope": "all"
+    },
+    {
+     "count": 4,
+     "text": "Increases all familiars' maximum stamina by 10%",
+     "scope": "all"
+    }
+   ],
+   "Dragon": [
+    {
+     "count": 1,
+     "text": "[Air Free Dash] Available",
+     "scope": "species"
+    }
+   ]
+  },
+  "owned": {
+   "Bird": 1,
+   "Cat": 0,
+   "Direwolf": 0,
+   "Griffon": 0,
+   "Insect": 1,
+   "Sky Wolf": 1,
+   "Squirrel": 0,
+   "Dragon": 0
+  },
+  "passiveNote": "Each species' passive unlocks step by step as you collect more familiars of that species (1 to 4; the Dragon has only one). Steps marked with the species name apply only to that species; the rest apply to all familiars. Text from the game; one typo fixed (\"consumtion\")."
  },
  "TRAIT_DUNGEONS": {
   "note": "Trait Dungeon bosses are weak to some archetypes and immune to others; higher difficulties may add immunities. Data comes from David's runs.",

@@ -1,3 +1,9 @@
+## 2026-10-29 — Claude: Familiar passives and abilities; faction on hero pages; big screenshots removed
+- **Familiars:** each species now has a passive-effect box beside its cards, with numbered diamond badges 1–4 drawn in the game's style (green = unlocked in David's game). Steps that only apply to that species carry a "<Species> only" tag with a hover note. Ability names such as Air Dash are chips with the ability's icon. Hovering (or tapping) one opens a pop-up with the icon, description and cooldown, all read from David's screenshots. Dragon moved to the bottom. One game typo fixed ("consumtion").
+- **Hero pages:** Quick info now also shows Faction, Kit and How to get.
+- The full Codex screenshots (Karma, heroes, Familiars) were deleted at David's request; the cut-out pictures stay, and the originals remain in git history.
+- The validator checks the ability icons and that every `[Ability]` in the passives exists.
+
 ## 2026-10-29 — Claude: Karma art, new hero portraits, Familiars page
 - From David's Codex screenshots, 102 card pictures were cut out automatically: 53 Karmas, 20 heroes and 29 Familiars. Each was named by reading the card text and matched to the data (every Karma and hero matched exactly). The in-game name printed on each card was painted out so only the art remains.
 - **Heroes:** new, sharper portraits (392×467, was 337×406) without the baked-in name, used everywhere portraits appear. Colour and grey still match who David owns. New `faction` field (the Codex groups), shown on the hero hover card.
