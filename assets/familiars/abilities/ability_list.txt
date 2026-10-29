@@ -1,0 +1,44 @@
+[Insect] Passive Effect
+1 - No effect
+2 - Increases all familiars' maximum stamina by 10%
+3 - Increases all familiars' maximum stamina by 10%
+4 - Increases all familiars' maximum stamina by 10%
+
+[Squirrel] Passive Effect
+1 - [Climbing Jump] Available
+2 - All Familiars can use [Climbing Jump]
+3 - Reduces stamina consumtion by 20% for all Familiars when climbing
+4 - Increases movement speed by 10% for all Familiars when climbing
+
+[Cat] Passive Effect
+1 - [Swim Dash] Available
+2 - All Familiars can use [Swim Dash]
+3 - Reduces stamina consumption by 20% for all Familiars when moving on water
+4 - Increases movement speed by 10% for all Familiars when moving on water
+
+[Bird] Passive Effect
+1 - [Air Dash] Available
+2 - All Familiars can use [Air Dash]
+3 - Reduces stamina consumption by 20% for all Familiars when moving in the air
+4 - Increases movement speed by 10% for all Familiars when moving in the air
+
+[Sky Wolf] Passive Effect
+1 - [Underwater Dash] Available
+2 - All Familiars can use [Underwater Dash]
+3 - Reduces stamina consumption by 20% for all Familiars when moving underwater
+4 - Increases movement speed by 10% for all Familiars when moving underwater
+
+[Direwolf] Passive Effect
+1 - [Boost Jump] Available
+2 - All Familiars can use [Boost Jump]
+3 - Reduces stamina consumption by 20% for all Familiars during Ground Boost
+4 - Increases movement speed by 10% for all Familiars when moving on land
+
+[Griffon] Passive Effect
+1 - [Charged Jump] Available
+2 - All Familiars can use [Charged Jump]
+3 - Reduces stamina consumption by 20% for all Familiars while gliding
+4 - Increases all familiars' maximum stamina by 10%
+
+[Dragon] Passive Effect
+1 - [Air Free Dash] Available
