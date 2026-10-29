@@ -17884,12 +17884,12 @@
    "self": {
     "label": "Self-sufficient",
     "color": "#e2e8f0",
-    "desc": "Meets most of their own activation conditions, so they fit almost any team."
+    "desc": "Runs their whole kit alone and is strong doing it, so they can carry a fight without the team."
    },
    "needs": {
     "label": "Needs",
     "color": "#94a3b8",
-    "desc": "Key skills only work once a teammate applies this status. The status is shown in its archetype's colour; \"or\" means either one is enough."
+    "desc": "Relies on a teammate for this status: their own source is too rare to keep their key skills going. The status is shown in its archetype's colour; \"or\" means either one is enough."
    },
    "buffer": {
     "label": "Team buffer",
@@ -17923,6 +17923,101 @@
    }
   },
   "signatureKarmaText": "The purple card in a portrait's bottom-right corner means the hero's signature Karma changes how they play, not just their stats. The rating assumes you have it.",
-  "heroes": {}
+  "heroes": {
+   "Reina": {
+    "overall": {
+     "tier": "S",
+     "single": "S",
+     "groups": "S+"
+    },
+    "tags": [
+     "enabler",
+     "self",
+     "easy"
+    ]
+   },
+   "Johnny": {
+    "overall": {
+     "tier": "A",
+     "single": "A",
+     "groups": "S"
+    },
+    "tags": [
+     "enabler",
+     "self"
+    ]
+   },
+   "Charlotte": {
+    "overall": {
+     "tier": "A",
+     "single": "A",
+     "groups": "B"
+    },
+    "tags": [
+     "expert"
+    ],
+    "needs": [
+     [
+      "Airborne"
+     ]
+    ],
+    "expert": {
+     "drop": 1,
+     "reason": "You have to plan which skill comes when: Poison or Stealth for Illusion Kick, Airborne for Shadow Grab, Stealth for the Crit Damage. Without well-placed Shadow Grabs she does little on her own."
+    }
+   },
+   "Castella": {
+    "overall": {
+     "tier": "B",
+     "single": "B",
+     "groups": "B"
+    },
+    "tags": [
+     "easy",
+     "enabler"
+    ]
+   },
+   "Roxy": {
+    "overall": {
+     "tier": "B",
+     "single": "B",
+     "groups": "C"
+    },
+    "tags": [
+     "enabler"
+    ]
+   },
+   "Aria": {
+    "overall": {
+     "tier": "B",
+     "single": "B",
+     "groups": "A"
+    },
+    "tags": [
+     "enabler"
+    ]
+   },
+   "Ornette": {
+    "overall": {
+     "tier": "B",
+     "single": "B",
+     "groups": "B"
+    },
+    "tags": [
+     "easy"
+    ]
+   },
+   "Lute": {
+    "overall": {
+     "tier": "C",
+     "single": "C",
+     "groups": "C"
+    },
+    "tags": [
+     "enabler",
+     "easy"
+    ]
+   }
+  }
  }
 }

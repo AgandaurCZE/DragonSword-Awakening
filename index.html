@@ -314,6 +314,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .v2-rolehead{display:flex;align-items:center;justify-content:center;gap:7px;background:#25282f;padding:9px;font-weight:900;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#e5e7eb}.v2-rolehead img{width:20px;height:20px}
 .v2-corner{background:#15181e}
 .v2-tierlabel{display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:950;color:#11131a;min-height:150px;text-align:center}
+.v2-tierlabel.unrated{font-size:11px;color:#cbd0d9;writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:.08em;text-transform:uppercase}
 .v2-cell{background:#1e2128;display:flex;flex-wrap:wrap;align-content:flex-start;justify-content:center;gap:6px;padding:10px 6px}
 .v2-cell-role{display:none}
 .v2-card{width:104px}.v2-card .hero-name{font-size:13px}
@@ -1596,7 +1597,7 @@ function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();
  html+=`<div class="v2-grid" style="--cols:${rolesShown.length}"><div class="v2-corner"></div>${rolesShown.map(r=>`<div class="v2-rolehead"><img src="${ROLE_ICONS[r]||''}" alt="">${profileEsc(r)}</div>`).join('')}`;
  const rows=[...tiers,'?'];
  rows.forEach(t=>{const inRow=list.filter(h=>(v2Tier(h.name).t||'?')===t);if(t==='?'&&!inRow.length)return;
-  html+=`<div class="v2-tierlabel" style="background:${t==='?'?'#3a3f4a':v2TierColor(t)}">${t==='?'?'Unrated':t}</div>`+rolesShown.map(r=>{const cs=inRow.filter(h=>h.role===r);return `<div class="v2-cell"><div class="v2-cell-role">${profileEsc(r)}</div>${cs.map(v2Card).join('')}</div>`}).join('');});
+  html+=`<div class="v2-tierlabel${t==='?'?' unrated':''}" style="background:${t==='?'?'#3a3f4a':v2TierColor(t)}">${t==='?'?'Unrated':t}</div>`+rolesShown.map(r=>{const cs=inRow.filter(h=>h.role===r);return `<div class="v2-cell"><div class="v2-cell-role">${profileEsc(r)}</div>${cs.map(v2Card).join('')}</div>`}).join('');});
  html+=`</div>`;
  root.innerHTML=html;
  root.querySelectorAll('[data-v2mode]').forEach(b=>b.onclick=()=>{V2.mode=b.dataset.v2mode;renderTierV2()});

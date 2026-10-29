@@ -1,3 +1,8 @@
+## 2026-10-29 — Claude: new tier list, first ratings (preview only)
+- `TIER_LIST_V2.heroes`: the 8 heroes David owns, rated together from his gameplay (Overall, Single target, Groups, tags, Charlotte's Expert −1 and Needs Airborne). The other 12 stay Unrated until David plays them.
+- Tag texts: Self-sufficient now means "runs their whole kit alone and is strong doing it"; Needs means their own source of the status is too rare.
+- The "Unrated" row label no longer gets cut off (smaller, vertical text).
+
 ## 2026-10-29 — Claude: stray names in Mastery text
 - Removed a stray hero name at the end of 11 Mastery descriptions (e.g. Reina's ended with "Eileen"). It was the next hero's name from the Codex page, picked up when the text was copied. Spotted by David.
 
