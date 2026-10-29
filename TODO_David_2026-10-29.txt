@@ -176,5 +176,13 @@ Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we
   - Signature Karma (Explosion Is Art, not owned): exclusive = Switch On! makes a larger explosion that adds Burn and Airborne. A bigger enabler AoE, not a Main DPS change (David doubts it, she's too slow).
   - Kalien interaction (from the data): Aria's Burn only helps Kalien's Fox Grab with Kalien's A1 (without it Fox Grab needs Super Armor Break). Fits "Kalien needs A1".
   - TIER AGREED 18:36: B overall (old list B), Groups A, Single target B (only thanks to Multiple Bolt; otherwise C). Tags: Enabler (Self-sufficient removed 18:38, new bar).
+- Ornette (David, 18:53, dummies only):
+  - Loop: Judgment (Special A, needs Shock, enhanced at 2+ stacks; inflicts Knockdown) -> Holy Grab (Special B, needs Knockdown; inflicts Shock + Airborne) -> Judgment again if there's enough Shock. So no Knockdown enabler needed for her own kit. David first said she "absolutely needs a Shock enabler" -> to clarify (she applies Shock with Holy Cutter, Holy Cross, Holy Circle and Holy Grab).
+  - Feels incredibly smooth, lots of flashy effects and floating numbers, but the numbers feel small; multipliers low. Solo and groups both feel satisfying.
+  - Holy Cross (Skill): a slowly advancing Shock cross that damages and Shocks what it passes. Signature Karma (Sacred Lightning Baptism): Holy Cross inside Holy Circle gets larger with more hits (matches David's guess); welcome, not needed.
+  - A1: Holy Cross becomes a charge skill you can aim + longer duration = big QoL (now it just goes where you faced).
+  - A3: bigger, longer Holy Circle could make her a proper off-field DPS; now the Ultimate lasts about 2 s with ~3 pulses.
+  - Super fast, little thinking: Skill -> Ult -> Special A -> Special B -> Special A, swap; with a Shock enabler maybe just Specials and swap. Needs more testing with Thunderbolt teammates.
+  - Proposed: Easy tag. Tier C or low B (old list B/A/A). Patch 1.1.0: about -1% total, share moved from Holy Cross to Holy Circle.
 - Self-sufficient, NEW BAR (agreed 18:38): only heroes who run their whole kit alone AND are strong doing it, i.e. can carry a fight without the team. Kept: Reina, Johnny. Removed: Roxy, Aria. Update the tag's desc text in TIER_LIST_V2.tags when applying. Claude must say so whenever a proposed tag doesn't meet its definition.
 - Tag rules (David, 29 Oct): no "Team-dependent" tag; only Self-sufficient. Heroes like Reina are covered by the Enabler tag. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes.
