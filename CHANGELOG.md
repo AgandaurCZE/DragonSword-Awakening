@@ -1,3 +1,6 @@
+## 2026-10-30 — Claude: Trait Dungeons weakness note (preview only)
+- The weakness box now says a weakness also speeds up status build-up (about 2–3×), and that bosses resist build-up more on higher difficulties. From David's Test Kit results (Johnny, Trait Dungeon I and III).
+
 ## 2026-10-29 — Claude: archetype badge lined up with the portrait emblem
 - The archetype badge on hero cards (both tier lists) now sits exactly over the archetype emblem printed in the portrait's top-left corner and scales with the card (23% of its width), instead of a fixed 31 px badge 5 px in. Spotted by David.
 

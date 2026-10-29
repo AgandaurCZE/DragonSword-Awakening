@@ -18094,7 +18094,7 @@
    }
   ],
   "difficulties": 4,
-  "weaknessTest": "Tested by David with Reina and Johnny: a weakness doubles the hit bonus of that archetype's status. Poison's +50% becomes +100%, Airborne's +100% becomes +200%. It does nothing to hits without the status and doesn't raise damage-over-time ticks. Bosses that aren't weak to you take the same multiplier as the Training Ground dummy. Airborne also built up faster on the weak boss. Breaker is the exception: Drosophia of Breaker has a much bigger Super Armor bar, and Breakers are held back by it far less than other heroes (Castella about 1.4× the usual hits, Charlotte about 2×).",
+  "weaknessTest": "Tested by David with Reina and Johnny: a weakness doubles the hit bonus of that archetype's status. Poison's +50% becomes +100%, Airborne's +100% becomes +200%. It does nothing to hits without the status and doesn't raise damage-over-time ticks. Bosses that aren't weak to you take the same multiplier as the Training Ground dummy. A weakness also makes the status build up about 2–3× faster: Johnny's Poison Grab gave a full Poison stack per press on a Venom-weak boss, but only about 0.3 on a boss without the weakness (Very Hard). Bosses resist status build-up more than normal enemies, and more on higher difficulties (Very Hard roughly halves it compared with Normal), so heroes of the weak archetype matter more the harder you go. Breaker is the exception: Drosophia of Breaker has a much bigger Super Armor bar, and Breakers are held back by it far less than other heroes (Castella about 1.4× the usual hits, Charlotte about 2×).",
   "difficultyLevels": [
    {
     "n": 1,
