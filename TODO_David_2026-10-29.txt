@@ -148,5 +148,7 @@ Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we
   - Knockdown (Swordgrab) feels almost non-existent: slow, single target; the slam knocks down others only if they're hit by the slammed target, in a small circle that needs precision. Doesn't add much team damage.
   - Relic Fall: needs Knockdown and hits quite low even with Knockdown on; with several Knocked-down enemies it seems to pick one at random, so it can hit a lone enemy far from the group instead of the AoE.
   - Healing (20%): nice for casuals; good players try not to get hit at all, which is why most teams run no healer.
+  - TIER AGREED 17:51: C overall (old list A/B/B). Tags: Enabler (Stun) + Easy. Only benefits: Stun for some damage if you have no one else, and the heal for very casual players; "otherwise he's just filled with cons".
+  - A1 (Attack Power zone from Relic Fall, stronger with his signature Karma): untested (David won't spend awakening stones on low-ranked heroes). Could be big, but depends on the zone size, and if Relic Fall picks a far-off target both the Special and the zone are wasted. No Needs-awakening tag; mention as untested potential.
   - So: not Self-sufficient (Relic Fall isn't worth chasing); Knockdown not part of his Enabler value.
 - Tag rules (David, 29 Oct): no "Team-dependent" tag; only Self-sufficient. Heroes like Reina are covered by the Enabler tag. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes.
