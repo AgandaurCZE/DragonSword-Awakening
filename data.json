@@ -12771,7 +12771,8 @@
    "Burn Additional Damage (+4%) and Burn Additional Attack Power (+110) don't change Burn ticks: Aria with 381 Attack ticked 190 / 285 / 381 = 50 / 75 / 100% of 381, rounded down. So these status bonuses must do something else, most likely raise hits against enemies that have the status (not tested yet).",
    "Hits on an enemy that has Poison, Burn, Bleed or Shock deal x1.5, at any stack count: Charlotte 22 -> 33 with Poison, Roxy 24 -> 36 with Bleed, Ornette 17 -> 26 with Shock; Aria with no Karma (71 Attack) hit 19 on a clean goblin and 28 on a burning one (19.x x 1.5 = 28.5, rounded down), the same at 1, 2 or 3 stacks. The Karma results are explained by the status-bonus rule below.",
    "Status hit bonuses add up: +50% for each damage-over-time status (Poison, Bleed, Burn, Shock) and +100% each for Airborne, Knockdown and Stun. Charlotte's small auto-attack hit (22 clean): Poison 33 (x1.5), Poison + Bleed 44 (x2.0), Airborne + Poison 55 (x2.5), Knockdown + Poison + Bleed 66 (x3.0, recheck), Stun + Poison + Bleed 66 (x3.0), Airborne + Knockdown + Poison 77 (x3.5). Reina: Airborne alone x2.0. Exception: Airborne + Knockdown + Poison + Bleed was 77 (x3.5) twice, where adding up gives x4.0, so either x3.5 is a cap or Bleed wasn't on. The two earlier x2.5 results with Poison + Bleed + Airborne/Knockdown were most likely Bleed wearing off. Break not tested.",
-   "How the status bonuses work (tested with Burn): a hit on an enemy with the status = k x (Attack + <status> Additional Attack Power) x 1.5 x (1 + <status> Additional Damage). A clean hit is k x Attack, so neither bonus does anything on a clean enemy, and neither changes ticks. One value of k (0.2677-0.2681 for Aria's first auto-attack hit on the goblins) fits all 8 results: no bonus 19 -> 28; +15% 19 -> 32; +4% & +110 102 -> 205; +19% & +110 102 -> 234. With several statuses the bonuses apply to the whole hit: Aria (381 Attack, +110 / +4% Burn) on Bleed + Knockdown + Burn hit 410 = k x 491 x 3.0 x 1.04 (410.1-410.8). Applying them only to Burn's +50% would give about 323. So: hit = k x (Attack + Additional Attack Power of a status the enemy has) x (1 + all status hit bonuses) x (1 + Additional Damage of a status the enemy has). Not tested: bonuses for two different statuses at once (e.g. Burn and Knockdown Additional Damage together: added or multiplied)."
+   "How the status bonuses work (tested with Burn): a hit on an enemy with the status = k x (Attack + <status> Additional Attack Power) x 1.5 x (1 + <status> Additional Damage). A clean hit is k x Attack, so neither bonus does anything on a clean enemy, and neither changes ticks. One value of k (0.2677-0.2681 for Aria's first auto-attack hit on the goblins) fits all 8 results: no bonus 19 -> 28; +15% 19 -> 32; +4% & +110 102 -> 205; +19% & +110 102 -> 234. With several statuses the bonuses apply to the whole hit: Aria (381 Attack, +110 / +4% Burn) on Bleed + Knockdown + Burn hit 410 = k x 491 x 3.0 x 1.04 (410.1-410.8). Applying them only to Burn's +50% would give about 323. So: hit = k x (Attack + Additional Attack Power of a status the enemy has) x (1 + all status hit bonuses) x (1 + Additional Damage of a status the enemy has). Not tested: bonuses for two different statuses at once (e.g. Burn and Knockdown Additional Damage together: added or multiplied).",
+   "Trait Dungeon weakness (David, 29 Oct 2026, Reina on Mantius bosses): no effect on hits without the status (143 on both bosses). On a boss weak to the hero's archetype, that archetype's status hit bonus goes from +100% to +200% (Airborne: x2.0 to x3.0). Whether it doubles the bonus or adds +100% is still open."
   ],
   "tests": [
    {
@@ -13410,6 +13411,29 @@
     "open": [
      "Only one hit each, so not yet a rule. A crit on either hit, or different Defense between the two bosses, would change the ratio.",
      "Repeat with the same non-status hit on both bosses, and note any crits, to separate the weakness bonus from Defense."
+    ]
+   },
+   {
+    "test": "Trait Dungeon weakness, boss only",
+    "hero": "Reina",
+    "date": "2026-10-29",
+    "enemy": "Mantius of Gale (weak to Gale) vs Mantius of Amplitude, the boss itself",
+    "skill": "auto attack, first hit",
+    "hits": {
+     "Amplitude boss, no Airborne": 143,
+     "Amplitude boss, Airborne": 287,
+     "Gale-weak boss, no Airborne": 143,
+     "Gale-weak boss, Airborne": 431
+    },
+    "observations": [
+     "Without the status, weakness changes nothing: 143 on both bosses, so it is not a general damage bonus and both bosses take the same damage otherwise.",
+     "With Airborne: x2.0 on the normal boss (the usual +100%) and x3.0 on the weak boss, so the weakness raised Airborne's hit bonus from +100% to +200%.",
+     "The first test (473 vs 320, about 1.48x) fits this within about 1%.",
+     "Airborne also built up faster on the weak boss (first test)."
+    ],
+    "open": [
+     "Whether the weakness doubles the status bonus or adds a flat +100%: both give +200% for Airborne. A damage-over-time status (+50%) would tell them apart: doubled gives x2.0, added gives x2.5. Example: Charlotte or Johnny hitting a Poisoned Ghagaroach of Thunderbolt (weak to Venom) vs a Poisoned non-weak boss.",
+     "Whether the weakness also raises Poison, Bleed, Burn and Shock tick damage."
     ]
    }
   ],
@@ -16020,7 +16044,7 @@
    }
   ],
   "difficulties": 4,
-  "weaknessTest": "First test (David, Reina): her auto attack's first hit on an Airborne target did 473 on the Gale-weak boss vs 320 on the Amplitude boss, about 1.48x, and Airborne built up faster (one skill instead of two or three). One test so far, so treat the number as a first look.",
+  "weaknessTest": "Tested with Reina (David): a weakness does nothing on its own. Her auto attack did 143 on both bosses without Airborne. It boosts the hero's own status bonus: with Airborne the hit did ×2.0 on a normal boss (287) but ×3.0 on the Gale-weak boss (431), so Airborne's bonus went from +100% to +200%. Airborne also built up faster on the weak boss. Whether Poison, Bleed, Burn and Shock gain the same isn't tested yet.",
   "difficultyLevels": [
    {
     "n": 1,

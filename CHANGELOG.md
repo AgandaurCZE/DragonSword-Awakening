@@ -1,3 +1,6 @@
+## 2026-10-29 — Claude: what a Trait Dungeon weakness does
+- From David's boss-only test with Reina: a weakness does nothing on hits without the status (143 on both bosses). On the weak boss Airborne's hit bonus rises from +100% to +200% (287 → 431). Recorded in `DAMAGE_TESTS` (test and finding), shown in the box on the Trait Dungeons page, and the follow-up test is on David's TODO list (item 11).
+
 ## 2026-10-29 — Claude: Trait Dungeon banners, difficulty selector and reward icons
 - Every boss card now uses its in-game picture as the banner (cropped from David's Extreme screens).
 - A I–IV selector in the banner's top-left switches difficulty (Normal, Hard, Very Hard, Extreme). It updates the recommended level (20/30/40/50) and the rewards, shown as in-game icons with amounts (EXP, Adventurer's Emblem and the boss's own green, blue or purple trait stones). Hover an icon for its name.
