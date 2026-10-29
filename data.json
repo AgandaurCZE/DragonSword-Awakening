@@ -15889,9 +15889,132 @@
   }
  },
  "TRAIT_DUNGEONS": {
-  "note": "Trait Dungeon bosses are weak to some archetypes and immune to others; higher difficulties may add immunities. Data comes from David's runs.",
-  "empty": "Trait Dungeon bosses will be listed here with their weaknesses, immunities and the heroes to bring.",
-  "bosses": []
+  "note": "Trait Dungeon bosses, from David's in-game screens. Weaknesses and immunities are the same on every difficulty (I–IV). Mantius and Drosophia are weak to the archetype in their name; each Ghagaroach is immune to its own archetype and weak to the next one in a loop: Blazeflame → Frostbite → Thunderbolt → Venom → Blazeflame. Heroes are ranked by the current Tier List (End-game). Recommended level and rewards are only recorded where David has sent the screen.",
+  "empty": "Trait Dungeon bosses will be listed here.",
+  "bosses": [
+   {
+    "id": "mantius-amplitude",
+    "name": "Mantius of Amplitude",
+    "family": "Mantius",
+    "archetype": "Amplitude",
+    "weak": [
+     "Amplitude"
+    ],
+    "immune": [],
+    "image": null,
+    "level": 20,
+    "rewards": [
+     {
+      "item": "EXP",
+      "amount": 400
+     },
+     {
+      "item": "Adventurer's Emblem",
+      "amount": 5
+     },
+     {
+      "item": "Amplitude material",
+      "amount": 10
+     }
+    ]
+   },
+   {
+    "id": "mantius-crushing",
+    "name": "Mantius of Crushing",
+    "family": "Mantius",
+    "archetype": "Crushing",
+    "weak": [
+     "Crushing"
+    ],
+    "immune": [],
+    "image": null
+   },
+   {
+    "id": "mantius-gale",
+    "name": "Mantius of Gale",
+    "family": "Mantius",
+    "archetype": "Gale",
+    "weak": [
+     "Gale"
+    ],
+    "immune": [],
+    "image": null
+   },
+   {
+    "id": "drosophia-breaker",
+    "name": "Drosophia of Breaker",
+    "family": "Drosophia",
+    "archetype": "Breaker",
+    "weak": [
+     "Breaker"
+    ],
+    "immune": [],
+    "image": null
+   },
+   {
+    "id": "drosophia-bloodburst",
+    "name": "Drosophia of Bloodburst",
+    "family": "Drosophia",
+    "archetype": "Bloodburst",
+    "weak": [],
+    "immune": [],
+    "image": null,
+    "note": "The game lists its weakness as \"None\". It may be a typo in the game, so it is shown exactly as the game states it."
+   },
+   {
+    "id": "ghagaroach-blazeflame",
+    "name": "Ghagaroach of Blazeflame",
+    "family": "Ghagaroach",
+    "archetype": "Blazeflame",
+    "weak": [
+     "Frostbite"
+    ],
+    "immune": [
+     "Blazeflame"
+    ],
+    "image": null
+   },
+   {
+    "id": "ghagaroach-frostbite",
+    "name": "Ghagaroach of Frostbite",
+    "family": "Ghagaroach",
+    "archetype": "Frostbite",
+    "weak": [
+     "Thunderbolt"
+    ],
+    "immune": [
+     "Frostbite"
+    ],
+    "image": null
+   },
+   {
+    "id": "ghagaroach-thunderbolt",
+    "name": "Ghagaroach of Thunderbolt",
+    "family": "Ghagaroach",
+    "archetype": "Thunderbolt",
+    "weak": [
+     "Venom"
+    ],
+    "immune": [
+     "Thunderbolt"
+    ],
+    "image": null
+   },
+   {
+    "id": "ghagaroach-venom",
+    "name": "Ghagaroach of Venom",
+    "family": "Ghagaroach",
+    "archetype": "Venom",
+    "weak": [
+     "Blazeflame"
+    ],
+    "immune": [
+     "Venom"
+    ],
+    "image": null
+   }
+  ],
+  "difficulties": 4
  },
  "UI_ICONS": {
   "note": "Menu icons from assets/ui, cut out of David's in-game screenshots (white versions, used as masks so they take the menu colour; -gold versions kept for later). exchange, guides and help are spare. A missing entry keeps the text symbol.",

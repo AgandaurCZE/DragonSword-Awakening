@@ -355,6 +355,29 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .fam-pop p{margin:0 0 6px;font-size:13px;color:#e4e8ef;line-height:1.45}.fam-pop-cd b{color:#f5b942}.fam-pop-src{font-size:11px;color:#8f98a8}
 @media(max-width:900px){.fam-row{grid-template-columns:1fr}}
 @media(max-width:600px){.fam-row .fam-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tr-card{margin-bottom:22px;background:#1e2128;border:1px solid #3a3d46}
+.tr-banner{position:relative;height:150px;overflow:hidden;background:var(--bg,linear-gradient(115deg,color-mix(in srgb,var(--ac) 45%,#141820),#141820 70%)) center/cover;border-bottom:2px solid var(--ac)}
+.tr-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b132088,transparent 30%,transparent 60%,#0b1320b0)}
+.tr-ghost{position:absolute;left:4%;top:50%;transform:translateY(-50%);height:190%;opacity:.12;filter:blur(.5px)}
+.tr-title{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;padding:0 200px}
+.tr-title img{width:34px;height:34px}.tr-title h3{margin:0;font-size:24px;font-weight:950;color:#fff;text-shadow:0 2px 8px #000}
+.tr-lv{font-size:12px;font-weight:800;color:#1b1406;background:#f5d77a;border-radius:9px;padding:1px 8px}
+.tr-corner{position:absolute;right:12px;z-index:2;display:flex;flex-direction:column;gap:4px;align-items:flex-end}.tr-corner.top{top:12px}.tr-corner.bottom{bottom:12px}
+.tr-chip{display:inline-flex;align-items:center;gap:6px;background:#0b1320d9;border:1px solid var(--ac,#5b6270);padding:4px 10px 4px 6px;color:#fff;font-weight:900;font-size:14px}
+.tr-chip small{display:block;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#aab4c2;line-height:1}
+.tr-chip img{width:24px;height:24px}.tr-chip svg{width:16px;height:16px;flex:none}
+.tr-chip.weak svg{color:#3ddc84}.tr-chip.immune svg{color:#ff5a5f}.tr-chip.none{border-color:#5b6270;color:#cbd0d9;padding-left:10px}
+.tr-rewards{position:absolute;left:12px;bottom:10px;z-index:2;display:flex;gap:6px;flex-wrap:wrap}.tr-rewards span{font-size:11px;font-weight:700;color:#dce1e8;background:#0b1320cc;border:1px solid #ffffff22;padding:2px 7px}.tr-rewards b{color:#f5d77a}
+.tr-cols{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.tr-col{padding:12px 14px}.tr-col h4{margin:0 0 10px;font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.tr-col.good h4{color:#4ade80}.tr-col.badcol{border-left:1px solid #33363f}.tr-col.badcol h4{color:#ff6b70}
+.tr-heroes{display:flex;flex-wrap:wrap;gap:10px}
+.tr-hero{width:86px;background:none;border:0;padding:0;cursor:pointer;color:#e5e7eb;font:inherit;text-align:center}
+.tr-portrait{position:relative;display:block;aspect-ratio:392/467;border:2px solid #4ade80;border-radius:6px;overflow:hidden}.tr-hero.bad .tr-portrait{border-color:#ff5a5f;filter:grayscale(.6) brightness(.7)}
+.tr-portrait img{width:100%;height:100%;object-fit:cover;display:block}.tr-portrait .tier-chip{position:absolute;right:3px;top:3px}
+.tr-name{display:block;font-size:12px;font-weight:800;margin-top:4px}.tr-hero:hover .tr-portrait{transform:translateY(-2px)}
+.tr-note{margin:0;padding:8px 14px 12px;font-size:12px;color:#9aa3b2;font-style:italic}
+@media(max-width:800px){.tr-cols{grid-template-columns:1fr}.tr-col.badcol{border-left:0;border-top:1px solid #33363f}.tr-title{padding:0 12px;justify-content:flex-start;padding-top:18px;align-items:flex-start}.tr-title h3{font-size:18px}.tr-banner{height:170px}.tr-corner.top{top:auto;bottom:50px}}
 /* Patch Notes timeline + buff/nerf arrows */
 .pa{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;flex:none;vertical-align:-4px;box-shadow:0 1px 4px #0009}
 .pa svg{width:12px;height:12px;display:block}
@@ -1434,9 +1457,19 @@ function renderTitles(){const T=TITLES||{};const list=T.list||[];const root=$('t
  <div class="simple-table-wrap"><table class="simple-table"><thead><tr><th>Title</th><th>Passive bonus</th></tr></thead><tbody>${list.map(t=>`<tr><td><b>${profileEsc(t.name)}</b></td><td>${t.passive?t.passive.map(fmt).join(', '):'<span class="muted">Not checked yet</span>'}</td></tr>`).join('')}</tbody></table></div>
  <p class="profile-note">How title bonuses add up (tested in-game): flat bonuses are added to the hero's own stats before % bonuses multiply; % bonuses join the same pool as gear and set %. The full list will grow as titles are checked.</p>`;}
 function renderTrait(){const D=TRAIT_DUNGEONS||{};const list=D.bosses||[];const root=$('traitBody');
- const archChip=a=>{const h=HEROES.find(x=>x.archetype===a);return `<span class="arch-chip" style="--ac:${ARCH_COLORS[a]||'#888'}">${h?`<img src="${h.archIcon}" alt="">`:''}${profileEsc(a)}</span>`};
- root.innerHTML=list.length?`<div class="simple-grid">${list.map(b=>`<article class="simple-card"><h3>${profileEsc(b.name)}</h3>${b.level?`<div class="simple-meta">Lv. ${profileEsc(String(b.level))}</div>`:''}<div class="trait-row"><span>Weak against</span>${(b.weak||[]).map(archChip).join('')||'<span class="muted">not recorded</span>'}</div><div class="trait-row"><span>Immune to</span>${(b.immune||[]).map(archChip).join('')||'<span class="muted">not recorded</span>'}</div>${b.note?`<p>${colourStatusWords(b.note)}</p>`:''}</article>`).join('')}</div>`:`<div class="simple-empty">${profileEsc(D.empty||'Trait Dungeon bosses are coming soon.')}</div>`;
- if(D.note)root.insertAdjacentHTML('beforeend',`<p class="profile-note">${profileEsc(D.note)}</p>`);}
+ const archIcon=a=>HEROES.find(x=>x.archetype===a)?.archIcon||'';
+ const order={'S':0,'A':1,'B':2,'C':3,'D':4,'F':5};
+ const heroesOf=archs=>HEROES.filter(h=>archs.includes(h.archetype)).sort((a,b)=>(order[a.tiers['End-game']]??9)-(order[b.tiers['End-game']]??9)||a.name.localeCompare(b.name));
+ const tile=(h,bad)=>`<button type="button" class="tr-hero${bad?' bad':''}" data-hero="${profileEsc(h.name)}"><span class="tr-portrait"><img src="${profileEsc(h.portrait)}" alt="${profileEsc(h.name)}" loading="lazy"><span class="tier-chip" style="--tier:${tierColor(h.tiers['End-game'])};background:${tierColor(h.tiers['End-game'])}">${profileEsc(h.tiers['End-game']||'—')}</span></span><span class="tr-name">${profileEsc(h.name)}</span></button>`;
+ const chip=(a,kind)=>`<span class="tr-chip ${kind}" style="--ac:${ARCH_COLORS[a]||'#888'}"><svg viewBox="0 0 16 16" aria-hidden="true">${kind==='weak'?'<path d="M8 3l5.5 8h-11z" fill="currentColor"/>':'<path d="M8 13l5.5-8h-11z" fill="currentColor"/>'}</svg>${archIcon(a)?`<img src="${archIcon(a)}" alt="">`:''}<span><small>${kind==='weak'?'Weakness':'Immune'}</small>${profileEsc(a)}</span></span>`;
+ const none=kind=>`<span class="tr-chip ${kind} none"><span><small>${kind==='weak'?'Weakness':'Immune'}</small>None</span></span>`;
+ const card=b=>{const ac=ARCH_COLORS[b.archetype]||'#5b6270';const W=heroesOf(b.weak||[]),I=heroesOf(b.immune||[]);
+  const banner=`<div class="tr-banner" style="--ac:${ac};${b.image?`--bg:url('${profileEsc(b.image)}')`:''}">${b.image?'':`<img class="tr-ghost" src="${archIcon(b.archetype)}" alt="">`}<div class="tr-title"><img src="${archIcon(b.archetype)}" alt=""><h3>${profileEsc(b.name)}</h3>${b.level?`<span class="tr-lv">Recommended Lv.${b.level}</span>`:''}</div><div class="tr-corner top">${(b.weak||[]).length?b.weak.map(a=>chip(a,'weak')).join(''):none('weak')}</div>${(b.immune||[]).length?`<div class="tr-corner bottom">${b.immune.map(a=>chip(a,'immune')).join('')}</div>`:''}${(b.rewards||[]).length?`<div class="tr-rewards">${b.rewards.map(r=>`<span>${profileEsc(r.item)} <b>×${r.amount}</b></span>`).join('')}</div>`:''}</div>`;
+  const cols=`<div class="tr-cols"><div class="tr-col good"><h4>Strong here${(b.weak||[]).length?` · ${b.weak.map(profileEsc).join(', ')} heroes`:''}</h4>${W.length?`<div class="tr-heroes">${W.map(h=>tile(h,false)).join('')}</div>`:`<p class="muted">No archetype gets a weakness bonus here, so bring your strongest team.</p>`}</div><div class="tr-col badcol"><h4>Immune · leave at home</h4>${I.length?`<div class="tr-heroes">${I.map(h=>tile(h,true)).join('')}</div>`:`<p class="muted">No immunities: every hero can hurt this boss.</p>`}</div></div>`;
+  return `<article class="tr-card" id="trait-${profileEsc(b.id)}">${banner}${cols}${b.note?`<p class="tr-note">${profileEsc(b.note)}</p>`:''}</article>`;};
+ root.innerHTML=list.length?list.map(card).join(''):`<div class="simple-empty">${profileEsc(D.empty||'Trait Dungeon bosses are coming soon.')}</div>`;
+ if(D.note)root.insertAdjacentHTML('beforeend',`<p class="profile-note">${profileEsc(D.note)}</p>`);
+ root.querySelectorAll('.tr-hero').forEach(b=>{const h=HEROES.find(x=>x.name===b.dataset.hero);b.addEventListener('click',()=>openCharacterProfile(h.name));b.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')showHeroCard(h,b)});b.addEventListener('pointerleave',e=>{if(!$('karmaPopover').contains(e.relatedTarget))hideKarmaPopover()});});}
 
 // ---- New tier list (TIER_LIST_V2): hidden preview, opened with ?tiers=new (add &demo=1 for sample placements) ----
 const V2_ICONS={

@@ -1,3 +1,8 @@
+## 2026-10-29 — Claude: Trait Dungeons page
+- All 9 Trait Dungeon bosses, in David's layout. Each banner has the name in the middle, the weakness top-right (green ▲) and the immunity bottom-right (red ▼). Below it: "Strong here" (heroes of the weak archetype) and "Immune · leave at home" (heroes of the immune archetype, greyed), ranked by End-game tier. Hovering a hero shows the hero card; clicking opens their page.
+- Weaknesses and immunities are from David's notes and are the same on every difficulty. Drosophia of Bloodburst shows "None" exactly as the game does.
+- Mantius of Amplitude also shows its recommended level (20) and Normal rewards. Banners use a tinted archetype background until David's boss screenshots arrive.
+
 ## 2026-10-29 — Claude: how to get each Familiar
 - Every Familiar card now shows how to get it, from David's list:
   - DLC: links to the Steam store page, with the price;
