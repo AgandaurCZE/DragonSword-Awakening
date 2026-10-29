@@ -264,6 +264,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .profile-gear-piece img{width:62px;height:62px;object-fit:contain;display:block;margin:0 auto 6px}
 
 .nav-svg,.nav-img{width:20px;height:20px;display:block;margin:0 auto;object-fit:contain}
+.nav-mask{display:block;width:22px;height:22px;margin:0 auto;background:currentColor;-webkit-mask:center/contain no-repeat;mask:center/contain no-repeat}
 .simple-page{max-width:1280px;margin:0 auto;padding:22px 28px 36px;color:#edf0f6}
 .simple-empty{padding:30px;text-align:center;color:#aeb6c5;background:#292b32;border:1px solid #383b44}
 .simple-summary{background:#2a2d35;border:1px solid #3a3d46;border-left:4px solid #e9c46a;padding:12px 16px;margin-bottom:14px;font-size:14px;color:#dce1e8}
@@ -294,7 +295,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .v2-rt{display:inline-grid;place-items:center;min-width:34px;height:26px;font-weight:950;color:#11131a;border-radius:4px}
 .v2-modes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 10px}
 .v2-mode{position:relative;height:96px;border:2px solid #3a3d46;background:var(--bg,linear-gradient(120deg,#26324a,#1b2230)) center/cover;cursor:pointer;color:#fff;font:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;filter:grayscale(.5) brightness(.75);transition:filter .15s}
-.v2-mode.on{border-color:#f5b942;filter:none;box-shadow:0 0 16px #f5b94255}.v2-mode:hover{filter:none}
+.v2-mode.on{border-color:#f5b942;filter:none;box-shadow:0 0 16px #f5b94255}.v2-mode::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,#0b1320b0,#0b132040 75%)}.v2-mode>span{position:relative}.v2-mode:hover{filter:none}
 .v2-mode-label{font-size:26px;font-weight:950;text-shadow:0 2px 6px #000}.v2-mode-sub{font-size:12px;color:#cbd5e1;text-shadow:0 1px 3px #000}
 .v2-bosses{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin-bottom:10px}
 .v2-boss{position:relative;height:78px;border:2px solid #3a3d46;background:var(--bg,linear-gradient(120deg,#203047,#151b26)) center/cover;cursor:pointer;color:#fff;font:inherit;text-align:left;overflow:hidden;filter:grayscale(.55) brightness(.7)}
@@ -380,9 +381,9 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <aside class="app-sidebar" aria-label="Main navigation">
  <div class="sidebar-brand">DRAGONSWORD</div>
  <div class="nav-group">DATABASE</div>
- <button class="nav-item" data-page="heroes"><span class="nav-icon">♙</span><span class="nav-label">Heroes</span></button>
+ <button class="nav-item" data-page="heroes"><span class="nav-icon" id="navIconHeroes">♙</span><span class="nav-label">Heroes</span></button>
  <button class="nav-item active" data-page="tier"><span class="nav-icon">▦</span><span class="nav-label">Tier List</span></button>
- <button class="nav-item" data-page="teams"><span class="nav-icon">♟</span><span class="nav-label">Teams</span></button>
+ <button class="nav-item" data-page="teams"><span class="nav-icon" id="navIconTeams">♟</span><span class="nav-label">Teams</span></button>
  <button class="nav-item" data-page="gear"><span class="nav-icon">◇</span><span class="nav-label">Gear</span></button>
  <button class="nav-item" data-page="karma"><span class="nav-icon">✧</span><span class="nav-label">Karma</span></button>
  <button class="nav-item" data-page="familiars"><span class="nav-icon" id="navIconFamiliars">♞</span><span class="nav-label">Familiars</span></button>
@@ -1371,7 +1372,7 @@ function renderProfilePatches(h){const P=PATCH_NOTES||{};const rows=(P.patches||
 
 // ---- Simple pages: Familiars, Titles, Trait Dungeons ----
 const PAGE_IDS={tier:'tierPage',heroes:'heroesPage',teams:'teamsPage',gear:'gearPage',karma:'karmaPage',patches:'patchesPage',familiars:'familiarsPage',titles:'titlesPage',trait:'traitPage'};
-function navIcon(id,src){const el=$(id);if(!el||!src)return;const im=new Image();im.onload=()=>{el.textContent='';im.className='nav-img';im.alt='';el.append(im)};im.src=src;}
+function navIcon(id,src){const el=$(id);if(!el||!src)return;const im=new Image();im.onload=()=>{el.textContent='';const m=document.createElement('span');m.className='nav-mask';m.style.webkitMaskImage=m.style.maskImage=`url('${src}')`;el.append(m)};im.src=src;}
 function renderFamiliars(){const F=FAMILIARS||{};const list=F.list||[];const root=$('familiarsBody');
  root.innerHTML=list.length?`<div class="simple-grid">${list.map(f=>`<article class="simple-card"><h3>${profileEsc(f.name)}</h3>${f.obtain?`<div class="simple-meta">How to get: ${profileEsc(f.obtain)}</div>`:''}${(f.effects||[]).length?`<ul>${f.effects.map(e=>`<li>${colourStatusWords(e)}</li>`).join('')}</ul>`:''}</article>`).join('')}</div>`:`<div class="simple-empty">${profileEsc(F.empty||'Familiars are coming soon.')}</div>`;
  if(F.note)root.insertAdjacentHTML('beforeend',`<p class="profile-note">${profileEsc(F.note)}</p>`);}
@@ -1476,7 +1477,7 @@ function startApp(){
  renderGear();
  renderPatches();
  renderFamiliars();renderTitles();renderTrait();initTierV2();
- navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);
+ navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);navIcon('navIconHeroes',(UI_ICONS||{}).heroes);navIcon('navIconTeams',(UI_ICONS||{}).teams);
 }
 fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
  ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};

@@ -1,3 +1,7 @@
+## 2026-10-29 — Claude: in-game icons and boss pictures
+- David's in-game icons were cut out of their dark backgrounds and converted to WebP in `assets/ui/` (white versions plus `-gold`). The menu now uses them for Heroes, Teams, Familiars and Trait Dungeons, coloured like the menu text (grey, blue when selected). Exchange, Guides and Help are kept for later.
+- New tier list preview: the Overall and Bosses mode buttons use David's backgrounds (the in-game badge strip cropped off). Furcas and Vanak the Bloody Hook have wide banner crops for their tabs and full portraits kept for later (`assets/bosses/`; `farkas.png` is stored as `furcas`).
+
 ## 2026-10-29 — Claude: new tier list foundation (hidden preview)
 - The new tier list is in the code, but visitors still see the old one. Open it with `?tiers=new` at the end of the site address; add `&demo=1` to fill it with sample placements and tags.
 - What's built:

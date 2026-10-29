@@ -15200,8 +15200,12 @@
   "bosses": []
  },
  "UI_ICONS": {
-  "note": "Menu icons from assets/ui. A missing or empty entry keeps the text symbol.",
-  "titles": "assets/ui/titles.svg"
+  "note": "Menu icons from assets/ui, cut out of David's in-game screenshots (white versions, used as masks so they take the menu colour; -gold versions kept for later). exchange, guides and help are spare. A missing entry keeps the text symbol.",
+  "titles": "assets/ui/titles.svg",
+  "heroes": "assets/ui/hero.webp",
+  "teams": "assets/ui/teams.webp",
+  "familiars": "assets/ui/familiar.webp",
+  "trait": "assets/ui/trait-dungeons.webp"
  },
  "TIER_LIST_V2": {
   "note": "New tier list (preview, hidden behind ?tiers=new until launch). Ratings are decided with David from codex data and in-game testing, never by a formula. heroes[name] = {overall:{tier, groups, single}, bosses:{all, <bossId>: tier}, tags[], needs[[status, ...]], expert:{drop, reason}, signatureKarma, progression:{early?, late?}}. Missing values show as unrated or '?'.",
@@ -15225,13 +15229,13 @@
    "overall": {
     "label": "Overall",
     "sub": "Open world, dungeons and story",
-    "image": null,
+    "image": "assets/ui/mode-overall.webp",
     "intro": "How the hero performs across normal play: the open world, dungeons and the story. Hover a hero for their tiers against groups and single targets."
    },
    "bosses": {
     "label": "Bosses",
     "sub": "Hunts, Raids and World Bosses",
-    "image": null,
+    "image": "assets/ui/mode-bosses.webp",
     "intro": "How the hero performs against big single targets: Super Armor, mounting and grabs. Pick a boss for that fight, or All bosses for the general picture."
    }
   },
@@ -15241,18 +15245,20 @@
     "name": "Furcas the Starving Ghost of Corrosion",
     "level": 20,
     "type": "Hunt",
-    "image": null,
+    "image": "assets/bosses/furcas-banner.webp",
     "weak": [],
-    "immune": []
+    "immune": [],
+    "portrait": "assets/bosses/furcas.webp"
    },
    {
     "id": "vanak",
     "name": "Vanak the Bloody Hook",
     "level": 25,
     "type": "Hunt",
-    "image": null,
+    "image": "assets/bosses/vanak-banner.webp",
     "weak": [],
-    "immune": []
+    "immune": [],
+    "portrait": "assets/bosses/vanak.webp"
    }
   ],
   "undiscovered": {
