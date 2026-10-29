@@ -1,3 +1,6 @@
+## 2026-10-29 — Claude: Super Armor break test
+- Castella's test: breaking Super Armor gives no hit bonus (194 before and after, on two bosses), and the Breaker weakness didn't make breaking faster than on Mantius of Amplitude. Recorded in `DAMAGE_TESTS`, the Drosophia of Breaker card and `STATUS_EFFECTS`. TODO item 12 now asks for the same-family comparison (Drosophia of Breaker vs Drosophia of Bloodburst).
+
 ## 2026-10-29 — Claude: Drosophia tests
 - Drosophia of Bloodburst: David tested every status; it really has no weakness (the "may be a typo" note is replaced).
 - Drosophia of Breaker: its weakness doesn't change any status hit bonus. It probably speeds up Super Armor break, which is noted on the card, in `DAMAGE_TESTS`, and as TODO item 12.

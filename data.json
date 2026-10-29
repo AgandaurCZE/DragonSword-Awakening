@@ -12786,7 +12786,8 @@
    "Trait Dungeon weakness (David, 29 Oct 2026, Reina and Johnny, boss only): doubles the hit bonus of the weak archetype's status (Poison +50% -> +100%, Airborne +100% -> +200%). No effect on hits without the status, no effect on DoT ticks. A neutral boss gives the same multiplier as the Training Ground dummy (no resistance on Normal). Airborne also built up faster on the weak boss. Untested: whether higher difficulties add resistances.",
    "Two different gear stats exist: 'All Status Effect Additional Attack Power' is flat (25 on a blue legs substat) and is added to Attack on hits against an enemy with any status; 'Status Effect Additional Attack Power Increase' is a % (1.94% on blue boots +3), the 1.1.0 sub-option that raises all status Additional Attack Power. Neither affects DoT ticks.",
    "DoT ticks: 5 per application (0, 2.5, 5, 7.5, 10 s), not 4 as first recorded. Total per application at 1/2/3 stacks: 250/375/500% of the first applier's Attack.",
-   "Breaker weakness (Drosophia of Breaker) doesn't change status hit bonuses; it likely affects Super Armor break instead (untested). Drosophia of Bloodburst has no weakness (tested with every status)."
+   "Breaker weakness (Drosophia of Breaker) doesn't change status hit bonuses; it likely affects Super Armor break instead (untested). Drosophia of Bloodburst has no weakness (tested with every status).",
+   "Super Armor break gives no hit bonus (Castella, 194 before and after, two bosses). The Breaker weakness didn't speed up breaking against a Mantius; a same-family comparison is pending."
   ],
   "tests": [
    {
@@ -13545,6 +13546,31 @@
      "Drosophia of Breaker (weak to Breaker): the same results, so the Breaker weakness doesn't raise any status hit bonus.",
      "Amplitude = Stun; Breaker = breaking Super Armor (the bar under HP). The Breaker weakness probably affects Super Armor break speed; untested."
     ]
+   },
+   {
+    "test": "Super Armor break: speed and hit bonus",
+    "hero": "Castella",
+    "date": "2026-10-29",
+    "skill": "one skill with 6 swings",
+    "enemy": "Drosophia of Breaker (weak to Breaker) vs Mantius of Amplitude (neutral)",
+    "hits": {
+     "Drosophia of Breaker, Super Armor up": 194,
+     "Drosophia of Breaker, Super Armor broken": 194,
+     "Mantius of Amplitude, Super Armor up": 194,
+     "Mantius of Amplitude, Super Armor broken": 194
+    },
+    "breakCost": {
+     "Drosophia of Breaker": "the whole skill sequence once plus one auto attack",
+     "Mantius of Amplitude": "about half of the skill"
+    },
+    "observations": [
+     "Breaking Super Armor gives no hit bonus: 194 before and after on both bosses.",
+     "The Breaker weakness didn't make breaking faster: Drosophia of Breaker needed more hits than Mantius of Amplitude.",
+     "Same hit (194) on both bosses: same Defense."
+    ],
+    "open": [
+     "Drosophia and Mantius are different monsters and may have different Super Armor bars. Compare Drosophia of Breaker with Drosophia of Bloodburst (same model, no weakness) to isolate the weakness."
+    ]
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
@@ -13577,7 +13603,7 @@
     "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets, awakenings and substats) don't change its ticks. They raise every hit on an enemy that has the status: Additional Attack Power is added to your Attack, and Additional Damage multiplies the whole hit, including the bonuses from other statuses (tested with Burn: Blazing Flames' +15% turned Aria's 1.5x into 1.72x).",
     "Tick damage is rounded down."
    ],
-   "untested": "Not tested yet: bonuses for two different statuses at once (added or multiplied), whether ticks can crit, and Break."
+   "untested": "Not tested yet: bonuses for two different statuses at once (added or multiplied), whether ticks can crit (Break gives no hit bonus: tested 29 Oct 2026)."
   }
  },
  "PATCH_NOTES": {
@@ -16089,7 +16115,7 @@
     ],
     "immune": [],
     "image": "assets/trait/drosophia-breaker.webp",
-    "note": "Tested by David: the Breaker weakness doesn't change any status hit bonus (all statuses gave the normal +50% or +100%). Breaker is about breaking Super Armor, so the weakness most likely speeds up the Super Armor bar instead. Not measured yet."
+    "note": "Tested by David: the Breaker weakness doesn't change any status hit bonus, and breaking Super Armor gives no hit bonus (Castella: 194 before and after). Breaking even took more hits here than on Mantius of Amplitude, so what the weakness does is still unknown."
    },
    {
     "id": "drosophia-bloodburst",
@@ -16155,7 +16181,7 @@
    }
   ],
   "difficulties": 4,
-  "weaknessTest": "Tested by David with Reina and Johnny: a weakness doubles the hit bonus of that archetype's status. Poison's +50% becomes +100%, Airborne's +100% becomes +200%. It does nothing to hits without the status and doesn't raise damage-over-time ticks. Bosses that aren't weak to you take the same multiplier as the Training Ground dummy. Airborne also built up faster on the weak boss. Breaker is the exception: on Drosophia of Breaker no status bonus changed, so its weakness probably works on Super Armor break instead.",
+  "weaknessTest": "Tested by David with Reina and Johnny: a weakness doubles the hit bonus of that archetype's status. Poison's +50% becomes +100%, Airborne's +100% becomes +200%. It does nothing to hits without the status and doesn't raise damage-over-time ticks. Bosses that aren't weak to you take the same multiplier as the Training Ground dummy. Airborne also built up faster on the weak boss. Breaker is the exception: on Drosophia of Breaker no status bonus changed and breaking didn't get faster, so what its weakness does is still unknown.",
   "difficultyLevels": [
    {
     "n": 1,

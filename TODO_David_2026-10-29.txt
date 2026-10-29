@@ -63,7 +63,7 @@ or OBS) and pause on the frame where your hit lands.
    get +50% per damage-over-time status and +100% each for Airborne,
    Knockdown and Stun, added together.
    Still open:
-   - Break: does it give a hit bonus? (Castella / Astria)
+   - Break: no hit bonus (Castella, 29 Oct).
    - Is x3.5 a cap? (Airborne + Knockdown + Poison + Bleed gave x3.5, not
      x4.0 – maybe Bleed had worn off.)
    - Frost: does it tick at all, and what does Frozen do? (once you have a
@@ -102,12 +102,12 @@ or OBS) and pause on the frame where your hit lands.
      one boss. A lower multiplier on Hard would mean resistances grow with
      difficulty; a lower plain hit only means more Defense.
 
-12. BREAKER WEAKNESS = FASTER SUPER ARMOR BREAK?
-   - With Castella (or Astria): count the hits of one skill (e.g. Howling)
-     needed to empty the Super Armor bar on Drosophia of Breaker, then on a
-     boss that isn't weak to Breaker (e.g. Mantius of Amplitude, Normal).
-   - Fewer hits on the Breaker boss = the weakness speeds up the break.
-     A rough count is fine; a screen recording makes it easy.
+12. BREAKER WEAKNESS (follow-up)
+   - Known: breaking Super Armor gives no hit bonus (194 before and after),
+     and Drosophia of Breaker took MORE hits to break than Mantius of
+     Amplitude.
+   - Fair test: same Castella skill on Drosophia of Breaker vs Drosophia of
+     Bloodburst (same monster, no weakness). Count the hits to break.
 
 -------------------------------------------------------------- DONE (28 Oct)
 - Trait Dungeon weakness (29 Oct): doubles the status hit bonus.
