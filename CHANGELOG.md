@@ -1,3 +1,6 @@
+## 2026-10-29 — Claude: patch arrow beside the tier chip
+- On Tier List cards the ▲/▼ arrow (and Ryza's NEW) now sits just left of the tier letter in the top-right corner instead of bottom-left.
+
 ## 2026-10-29 — Claude: "damage moved between skills" counts as mixed; crit note updated
 - Patch 1.1.0 rating rule: when a hero's total skill damage changed by less than 3% but one skill went up 15% or more and another down 15% or more, the hero is now **mixed** (amber), with impact from the share of damage moved. Charlotte, Kalien and Cerese change from nerf, and Kalsion, Tarte and Astria from adjusted, all to mixed. These are exactly the heroes whose developer notes say their "damage share shifted". Tooltips and the patch detail now say how much damage moved.
 - Build tab: the "over 100%" Crit Rate note now states the 1.1.0 rule (crits happen exactly at your Crit Rate; monsters have no crit resistance) instead of the old untested caveat.
