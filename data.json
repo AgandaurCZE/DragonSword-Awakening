@@ -13603,7 +13603,7 @@
     "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets, awakenings and substats) don't change its ticks. They raise every hit on an enemy that has the status: Additional Attack Power is added to your Attack, and Additional Damage multiplies the whole hit, including the bonuses from other statuses (tested with Burn: Blazing Flames' +15% turned Aria's 1.5x into 1.72x).",
     "Tick damage is rounded down."
    ],
-   "untested": "Not tested yet: bonuses for two different statuses at once (added or multiplied), whether ticks can crit (Break gives no hit bonus: tested 29 Oct 2026)."
+   "untested": "Not tested yet: bonuses for two different statuses at once (added or multiplied), whether ticks can crit. Break gives no hit bonus (tested 29 Oct 2026)."
   }
  },
  "PATCH_NOTES": {
