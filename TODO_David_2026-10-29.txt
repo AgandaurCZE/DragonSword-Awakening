@@ -126,4 +126,6 @@ On hold (David, 29 Oct: not possible with his current roster without spending an
 Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we have it for all characters")
 - Castella Review: A1 note = mainly lets her stand in for a dedicated Knockdown enabler in more teams; Pros = breaks enemies fast and broken enemies don't act for 8 s (forgiving for newer and casual players).
 - Put every decision above into TIER_LIST_V2.heroes (tiers, tags, needs, awakenings) and the matching Review texts in one go.
+- Johnny and Charlotte: Needs Airborne tag (David, 29 Oct). Both work without it and can apply Airborne themselves (Johnny: Phantom Slash, Venom Dance, Poison Grab; Charlotte: Illusion Kick), but an Airborne enabler makes a really big difference. In their own kits Airborne is more QoL: the Skill or Ultimate relaunches a falling enemy and keeps the status on, so the rotation can keep going.
+  Open: the Needs tag text currently says key skills "only work once a teammate applies this status", which is stronger than this. Reword it, or keep two strengths?
 - Tag rules (David, 29 Oct): no "Team-dependent" tag; only Self-sufficient. Heroes like Reina are covered by the Enabler tag. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes.
