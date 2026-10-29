@@ -12787,7 +12787,7 @@
    "Two different gear stats exist: 'All Status Effect Additional Attack Power' is flat (25 on a blue legs substat) and is added to Attack on hits against an enemy with any status; 'Status Effect Additional Attack Power Increase' is a % (1.94% on blue boots +3), the 1.1.0 sub-option that raises all status Additional Attack Power. Neither affects DoT ticks.",
    "DoT ticks: 5 per application (0, 2.5, 5, 7.5, 10 s), not 4 as first recorded. Total per application at 1/2/3 stacks: 250/375/500% of the first applier's Attack.",
    "Breaker weakness (Drosophia of Breaker) doesn't change status hit bonuses; it likely affects Super Armor break instead (untested). Drosophia of Bloodburst has no weakness (tested with every status).",
-   "Super Armor break: no hit bonus (Castella 194 before and after). Lasts 8 s (Drosophia of Bloodburst, any hero). The Breaker weakness doesn't speed it up (same monster: 5 hits without weakness vs 7 with). Its effect, if any, is still unknown; next check is break duration on the weak boss."
+   "Super Armor break: no hit bonus (Castella 194 before and after); lasts 8 s on both Drosophia bosses, whatever hero breaks it. Drosophia of Breaker has a much bigger Super Armor bar: Charlotte needed about 2x or more vs the Bloodburst one, Castella only about 1.4x. Likely meaning of the Breaker weakness: Breakers lose much less to the bigger bar (rough counts, two heroes)."
   ],
   "tests": [
    {
@@ -13592,6 +13592,31 @@
     ],
     "open": [
      "Break duration on Drosophia of Breaker: longer than 8 s with Castella would be the weakness effect."
+    ]
+   },
+   {
+    "test": "Drosophia of Breaker: break duration and bar size",
+    "date": "2026-10-29",
+    "by": "David",
+    "breakDurationSeconds": {
+     "Drosophia of Breaker": 8,
+     "Drosophia of Bloodburst": 8
+    },
+    "breakCost": {
+     "Charlotte": {
+      "Drosophia of Bloodburst": "about her whole combo",
+      "Drosophia of Breaker": "two whole combo sequences plus auto attacks"
+     },
+     "Castella": {
+      "Drosophia of Bloodburst": "5 hits",
+      "Drosophia of Breaker": "7 hits"
+     }
+    },
+    "observations": [
+     "Break lasts 8 s on both bosses: the weakness doesn't lengthen it.",
+     "Drosophia of Breaker has a much larger Super Armor bar: Charlotte needed about twice as much or more.",
+     "Castella needed only about 1.4x as many hits, so a Breaker is held back far less by the bigger bar. Likely what the Breaker weakness means; two heroes and rough counts only.",
+     "The boss uses many rush and charge attacks, so breaking it to stop them is the point of the fight."
     ]
    }
   ],
@@ -16137,7 +16162,7 @@
     ],
     "immune": [],
     "image": "assets/trait/drosophia-breaker.webp",
-    "note": "Tested by David: the Breaker weakness doesn't change any status hit bonus and doesn't make Super Armor break faster (Castella needed 7 hits here vs 5 on Drosophia of Bloodburst, the same monster without a weakness). What it does, if anything, is still unknown."
+    "note": "Tested by David: this boss has a much bigger Super Armor bar than Drosophia of Bloodburst and uses many rush and charge attacks, so breaking it is the key to the fight. Charlotte needed about twice as many hits to break it, Castella only about 1.4 times as many, which is likely what the Breaker weakness does. Status bonuses and the 8 s break are the same as usual."
    },
    {
     "id": "drosophia-bloodburst",
@@ -16203,7 +16228,7 @@
    }
   ],
   "difficulties": 4,
-  "weaknessTest": "Tested by David with Reina and Johnny: a weakness doubles the hit bonus of that archetype's status. Poison's +50% becomes +100%, Airborne's +100% becomes +200%. It does nothing to hits without the status and doesn't raise damage-over-time ticks. Bosses that aren't weak to you take the same multiplier as the Training Ground dummy. Airborne also built up faster on the weak boss. Breaker is the exception: on Drosophia of Breaker no status bonus changed and Super Armor didn't break faster than on the same monster without a weakness, so what its weakness does is still unknown.",
+  "weaknessTest": "Tested by David with Reina and Johnny: a weakness doubles the hit bonus of that archetype's status. Poison's +50% becomes +100%, Airborne's +100% becomes +200%. It does nothing to hits without the status and doesn't raise damage-over-time ticks. Bosses that aren't weak to you take the same multiplier as the Training Ground dummy. Airborne also built up faster on the weak boss. Breaker is the exception: Drosophia of Breaker has a much bigger Super Armor bar, and Breakers are held back by it far less than other heroes (Castella about 1.4× the usual hits, Charlotte about 2×).",
   "difficultyLevels": [
    {
     "n": 1,

@@ -1,3 +1,6 @@
+## 2026-10-29 — Claude: Breaker boss explained (likely)
+- Break lasts 8 s on both Drosophia bosses. Drosophia of Breaker has a much bigger Super Armor bar: Charlotte needs about 2× the hits, Castella only about 1.4×. That's the likely effect of the Breaker weakness; it's on the card and in the box, marked as likely. TODO item 12 is closed.
+
 ## 2026-10-29 — Claude: Breaker weakness doesn't speed up Super Armor break
 - Same-monster test with Castella: 5 hits to break Drosophia of Bloodburst vs 7 on Drosophia of Breaker. Breaks last 8 s, whichever hero breaks it. Recorded on both Drosophia cards, in `DAMAGE_TESTS` and in TODO item 12 (one optional check left: break duration on the Breaker boss).
 
