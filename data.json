@@ -14408,7 +14408,7 @@
    "Charlotte's Illusion Kick and her Clone explosion (Invisible) apply Poison in-game, though the codex text names no Poison for either (David, 29 Oct 2026, screenshots on Lv. 90 goblins; no Karma or awakening effect explains it). Illusion Kick about 0.6 stack per press, the Clone explosion a full stack, and both hit several goblins.",
    "Hidden Poison (David, 29 Oct 2026, screenshots): Charlotte's Illusion Kick (~0.6 stack) and Invisible's Clone explosion (~1 stack, area) apply Poison, which the codex text doesn't mention. So Charlotte applies Poison with 4 skills, not 2, and Illusion Kick from Stealth feeds her own Poison condition. The Clone explosion works differently from other appliers (David, 23:28): it tops the current stack up to full and stops there. From 0% of stack 1 it gives a full first stack; from 99% it adds only the missing 1% and nothing to stack 2. So it guarantees at least 1 full stack but never adds more.",
    "Stun, Airborne and Knockdown build up on the same kind of gauge icon as the damage-over-time statuses (David, 29 Oct 2026), but it fills only once (one 'stack'). When it fills, the status triggers; the icon disappears when the status ends (Airborne: enemy lands; Knockdown: enemy stands up; Stun: stun ends). So their application value per skill can be measured the same way, as a fraction of one gauge.",
-   "Trait Dungeon weakness also speeds up status application (David, 29 Oct 2026, Test Kit, Trait Dungeon I, Lv. 20 bosses): Johnny's Poison Grab put 1 Poison stack on the Venom-weak boss but only 0.6 on a boss without the weakness (Venom Dance: 1 stack on the weak boss). The same Poison Grab gave 1 stack on Lv. 90 goblin dummies, so bosses resist application more than mobs, whatever their level. One skill compared so far; whether weakness multiplies application (x1.67?) or a press is capped at 1 stack is open."
+   "Status application drops with difficulty and rises with weakness (David, 29-30 Oct 2026, Test Kit, Johnny, Poison stacks per press, estimated from the gauge; at III the neutral values are hard to read, 0.25-0.35). Poison Grab: Lv.90 goblins 1 | TD I neutral 0.6, weak 1 | TD III neutral ~0.3, weak 1. Venom Dance: goblins 1 | TD I neutral 0.5, weak 1 | TD III neutral ~0.3, weak 0.75. Venom Cutter: goblins 1.25 | TD III neutral ~0.4, weak 1. So: (1) bosses resist build-up more than mobs, and more at higher difficulty (I -> III roughly halves it), which confirms David's resistance idea; (2) a weakness raises build-up by roughly 2-3x (and doubles the hit bonus). Several weak results sit at exactly 1, so a press may be capped at one stack; not confirmed."
   ],
   "tests": [
    {
@@ -15453,6 +15453,36 @@
       "stacksPerPress": 1.0
      }
     ]
+   },
+   {
+    "test": "Status application vs difficulty and weakness",
+    "date": "2026-10-30",
+    "by": "David (Test Kit)",
+    "hero": "Johnny",
+    "status": "Poison",
+    "unit": "stacks per press",
+    "results": {
+     "Poison Grab": {
+      "goblins Lv90": 1,
+      "TD I neutral": 0.6,
+      "TD I weak": 1,
+      "TD III neutral": 0.3,
+      "TD III weak": 1
+     },
+     "Venom Dance": {
+      "goblins Lv90": 1,
+      "TD I neutral": 0.5,
+      "TD I weak": 1,
+      "TD III neutral": 0.3,
+      "TD III weak": 0.75
+     },
+     "Venom Cutter": {
+      "goblins Lv90": 1.25,
+      "TD III neutral": 0.4,
+      "TD III weak": 1
+     }
+    },
+    "note": "TD III neutral values are estimates between 0.25 and 0.35 (0.4 for Venom Cutter)."
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
