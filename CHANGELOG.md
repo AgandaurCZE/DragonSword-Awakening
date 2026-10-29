@@ -1,3 +1,7 @@
+## 2026-10-29 — Claude: first Trait Dungeon weakness test
+- `DAMAGE_TESTS` has David's first weakness test: Reina's auto-attack first hit on an Airborne target did 473 on Mantius of Gale vs 320 on Mantius of Amplitude (about 1.48×), and Airborne built up faster. It's marked as a single test, with what's still open.
+- The Trait Dungeons page shows this as a short "What a weakness does" box at the top.
+
 ## 2026-10-29 — Claude: Trait Dungeons page
 - All 9 Trait Dungeon bosses, in David's layout. Each banner has the name in the middle, the weakness top-right (green ▲) and the immunity bottom-right (red ▼). Below it: "Strong here" (heroes of the weak archetype) and "Immune · leave at home" (heroes of the immune archetype, greyed), ranked by End-game tier. Hovering a hero shows the hero card; clicking opens their page.
 - Weaknesses and immunities are from David's notes and are the same on every difficulty. Drosophia of Bloodburst shows "None" exactly as the game does.

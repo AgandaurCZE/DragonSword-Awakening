@@ -13391,6 +13391,26 @@
      "clean (earlier)": 102,
      "Bleed + Knockdown + Burn": 410
     }
+   },
+   {
+    "test": "Trait Dungeon weakness",
+    "hero": "Reina",
+    "date": "2026-10-29",
+    "enemy": "Mantius of Amplitude (not weak to Gale) vs Mantius of Gale (weak to Gale), Normal",
+    "skill": "auto attack, first hit, target Airborne",
+    "hits": {
+     "not weak (Amplitude boss)": 320,
+     "weak (Gale boss)": 473
+    },
+    "ratio": 1.478,
+    "observations": [
+     "About 1.48x damage against the boss weak to her archetype.",
+     "Airborne built up faster on the weak boss: one skill instead of the usual two or three."
+    ],
+    "open": [
+     "Only one hit each, so not yet a rule. A crit on either hit, or different Defense between the two bosses, would change the ratio.",
+     "Repeat with the same non-status hit on both bosses, and note any crits, to separate the weakness bonus from Defense."
+    ]
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
@@ -16014,7 +16034,8 @@
     "image": null
    }
   ],
-  "difficulties": 4
+  "difficulties": 4,
+  "weaknessTest": "First test (David, Reina): her auto attack's first hit on an Airborne target did 473 on the Gale-weak boss vs 320 on the Amplitude boss, about 1.48x, and Airborne built up faster (one skill instead of two or three). One test so far, so treat the number as a first look."
  },
  "UI_ICONS": {
   "note": "Menu icons from assets/ui, cut out of David's in-game screenshots (white versions, used as masks so they take the menu colour; -gold versions kept for later). exchange, guides and help are spare. A missing entry keeps the text symbol.",
