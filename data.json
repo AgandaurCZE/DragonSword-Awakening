@@ -14408,7 +14408,10 @@
    "Charlotte's Illusion Kick and her Clone explosion (Invisible) apply Poison in-game, though the codex text names no Poison for either (David, 29 Oct 2026, screenshots on Lv. 90 goblins; no Karma or awakening effect explains it). Illusion Kick about 0.6 stack per press, the Clone explosion a full stack, and both hit several goblins.",
    "Hidden Poison (David, 29 Oct 2026, screenshots): Charlotte's Illusion Kick (~0.6 stack) and Invisible's Clone explosion (~1 stack, area) apply Poison, which the codex text doesn't mention. So Charlotte applies Poison with 4 skills, not 2, and Illusion Kick from Stealth feeds her own Poison condition. The Clone explosion works differently from other appliers (David, 23:28): it tops the current stack up to full and stops there. From 0% of stack 1 it gives a full first stack; from 99% it adds only the missing 1% and nothing to stack 2. So it guarantees at least 1 full stack but never adds more.",
    "Stun, Airborne and Knockdown build up on the same kind of gauge icon as the damage-over-time statuses (David, 29 Oct 2026), but it fills only once (one 'stack'). When it fills, the status triggers; the icon disappears when the status ends (Airborne: enemy lands; Knockdown: enemy stands up; Stun: stun ends). So their application value per skill can be measured the same way, as a fraction of one gauge.",
-   "Status application drops with difficulty and rises with weakness (David, 29-30 Oct 2026, Test Kit, Johnny, Poison stacks per press, estimated from the gauge; at III the neutral values are hard to read, 0.25-0.35). Poison Grab: Lv.90 goblins 1 | TD I neutral 0.6, weak 1 | TD III neutral ~0.3, weak 1. Venom Dance: goblins 1 | TD I neutral 0.5, weak 1 | TD III neutral ~0.3, weak 0.75. Venom Cutter: goblins 1.25 | TD III neutral ~0.4, weak 1. So: (1) bosses resist build-up more than mobs, and more at higher difficulty (I -> III roughly halves it), which confirms David's resistance idea; (2) a weakness raises build-up by roughly 2-3x (and doubles the hit bonus). Several weak results sit at exactly 1, so a press may be capped at one stack; not confirmed."
+   "Status application drops with difficulty and rises with weakness (David, 29-30 Oct 2026, Test Kit, Johnny, Poison stacks per press, estimated from the gauge; at III the neutral values are hard to read, 0.25-0.35). Poison Grab: Lv.90 goblins 1 | TD I neutral 0.6, weak 1 | TD III neutral ~0.3, weak 1. Venom Dance: goblins 1 | TD I neutral 0.5, weak 1 | TD III neutral ~0.3, weak 0.75. Venom Cutter: goblins 1.25 | TD III neutral ~0.4, weak 1. So: (1) bosses resist build-up more than mobs, and more at higher difficulty (I -> III roughly halves it), which confirms David's resistance idea; (2) a weakness raises build-up by roughly 2-3x (and doubles the hit bonus). Several weak results sit at exactly 1, so a press may be capped at one stack; not confirmed.",
+   "Physical statuses on Lv. 90 goblins (David, 30 Oct 2026, Test Kit; one use of a skill = one press): almost every Airborne, Knockdown and Stun skill fills the gauge in one use (Reina's three Airborne skills, Lute's Stun Slash and Swordgrab, Roxy's Crimson Spiral held or pressed, Castella's Stun Blow at 0.2 per hit over 5 hits and Upper Blow, Charlotte's Illusion Kick and Shadow Grab, Johnny's Phantom Slash, Venom Dance and Venom Cutter, Aria's Air Bomb and Rolling Bomb, Ornette's Holy Grab). Weaker: Ornette's Judgment 0.75 Knockdown, Aria's Switch On! 0.5 Airborne per bolt (1.5 with all 3 bolts on one enemy), Aria's Shoot and Bomb 0.1 Airborne. So on mobs the physical enablers differ in how often and how widely they apply, not how much.",
+   "Leftover build-up stays on the enemy after a physical status ends (David, 30 Oct 2026): Reina's Rising Cutter fills the Airborne gauge on hit 2 and adds 0.4 on hit 4, and that 0.4 is still there after the enemy lands; the same with Aria's Switch On! (0.5 left over). Reina's Wind Slayer has 2 charges; used back to back it leaves no leftover.",
+   "More hidden statuses (David, 30 Oct 2026, not in the codex text): Charlotte's Clone explosion applies Airborne as well as Poison; Johnny's Venom Cutter (needs an Airborne target) also makes other enemies it hits Airborne. Roxy's Bleeding Grab gives a full Knockdown at 2+ Bleed stacks, as the codex says."
   ],
   "tests": [
    {
@@ -15451,6 +15454,142 @@
       "skill": "Holy Grab",
       "status": "Shock",
       "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Reina",
+      "skill": "Wind Grab",
+      "status": "Airborne",
+      "stacksPerPress": 1.0,
+      "note": "2 hitter each for 0.5 stack"
+     },
+     {
+      "hero": "Reina",
+      "skill": "Rising Cutter",
+      "status": "Airborne",
+      "stacksPerPress": 1.4,
+      "note": "4 hitter (2nd hit for 1.0 stack, fourth for 0.4) the over stack stays on enemy after Airborne effect is over"
+     },
+     {
+      "hero": "Reina",
+      "skill": "Wind Slayer",
+      "status": "Airborne",
+      "stacksPerPress": 1.0,
+      "note": "Has 2 charges, if used right after each other doesn't leave any buildup"
+     },
+     {
+      "hero": "Lute",
+      "skill": "Swordgrab",
+      "status": "Knockdown",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Lute",
+      "skill": "Stun Slash",
+      "status": "Stun",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Crimson Spiral",
+      "status": "Stun",
+      "stacksPerPress": 1.0,
+      "note": "Full stun for both Charge and press mode"
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Bleeding Grab",
+      "status": "Knockdown",
+      "stacksPerPress": 1.0,
+      "note": "After 2 bleed stacks applies full Knockdown on one enemy"
+     },
+     {
+      "hero": "Castella",
+      "skill": "Stun Blow",
+      "status": "Stun",
+      "stacksPerPress": 1.0,
+      "note": "5 Hitter - 0.20 per hit"
+     },
+     {
+      "hero": "Castella",
+      "skill": "Upper Blow",
+      "status": "Airborne",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Judgment",
+      "status": "Knockdown",
+      "stacksPerPress": 0.75
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Grab",
+      "status": "Airborne",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Aria",
+      "skill": "Shoot and Bomb",
+      "status": "Airborne",
+      "stacksPerPress": 0.1,
+      "note": "2 attacks, only second hit applies burn (0.45) and airborne (0.10)"
+     },
+     {
+      "hero": "Aria",
+      "skill": "Air Bomb",
+      "status": "Airborne",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Aria",
+      "skill": "Rolling Bomb",
+      "status": "Airborne",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Aria",
+      "skill": "Switch On!",
+      "status": "Airborne",
+      "stacksPerPress": 0.5,
+      "note": "Explodes 3 bolts from Multiple Bolt skill, if all 3 bolts are on one enemy he gets a total of 1.5 Airborne stacks, with the 0.5 staying up after airborne ends"
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Illusion Kick",
+      "status": "Airborne",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Shadow Grab",
+      "status": "Knockdown",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Invisible",
+      "status": "Airborne",
+      "stacksPerPress": 1.0,
+      "note": "Clone Explosion does apply both Poison AND Airborne"
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Phantom Slash",
+      "status": "Airborne",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Venom Dance",
+      "status": "Airborne",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Venom Cutter",
+      "status": "Airborne",
+      "stacksPerPress": 1.0,
+      "note": "It targets an enemy that is Airborne but IF enemies that are not in airborne gets hit by this Special A skill, they get the status too."
      }
     ]
    },
