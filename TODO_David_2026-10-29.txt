@@ -102,6 +102,13 @@ or OBS) and pause on the frame where your hit lands.
      one boss. A lower multiplier on Hard would mean resistances grow with
      difficulty; a lower plain hit only means more Defense.
 
+12. BREAKER WEAKNESS = FASTER SUPER ARMOR BREAK?
+   - With Castella (or Astria): count the hits of one skill (e.g. Howling)
+     needed to empty the Super Armor bar on Drosophia of Breaker, then on a
+     boss that isn't weak to Breaker (e.g. Mantius of Amplitude, Normal).
+   - Fewer hits on the Breaker boss = the weakness speeds up the break.
+     A rough count is fine; a screen recording makes it easy.
+
 -------------------------------------------------------------- DONE (28 Oct)
 - Trait Dungeon weakness (29 Oct): doubles the status hit bonus.
 - Skill level multipliers (all levels), Karma Ascensions A0–A6.

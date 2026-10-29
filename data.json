@@ -12785,7 +12785,8 @@
    "How the status bonuses work (tested with Burn): a hit on an enemy with the status = k x (Attack + <status> Additional Attack Power) x 1.5 x (1 + <status> Additional Damage). A clean hit is k x Attack, so neither bonus does anything on a clean enemy, and neither changes ticks. One value of k (0.2677-0.2681 for Aria's first auto-attack hit on the goblins) fits all 8 results: no bonus 19 -> 28; +15% 19 -> 32; +4% & +110 102 -> 205; +19% & +110 102 -> 234. With several statuses the bonuses apply to the whole hit: Aria (381 Attack, +110 / +4% Burn) on Bleed + Knockdown + Burn hit 410 = k x 491 x 3.0 x 1.04 (410.1-410.8). Applying them only to Burn's +50% would give about 323. So: hit = k x (Attack + Additional Attack Power of a status the enemy has) x (1 + all status hit bonuses) x (1 + Additional Damage of a status the enemy has). Not tested: bonuses for two different statuses at once (e.g. Burn and Knockdown Additional Damage together: added or multiplied).",
    "Trait Dungeon weakness (David, 29 Oct 2026, Reina and Johnny, boss only): doubles the hit bonus of the weak archetype's status (Poison +50% -> +100%, Airborne +100% -> +200%). No effect on hits without the status, no effect on DoT ticks. A neutral boss gives the same multiplier as the Training Ground dummy (no resistance on Normal). Airborne also built up faster on the weak boss. Untested: whether higher difficulties add resistances.",
    "Two different gear stats exist: 'All Status Effect Additional Attack Power' is flat (25 on a blue legs substat) and is added to Attack on hits against an enemy with any status; 'Status Effect Additional Attack Power Increase' is a % (1.94% on blue boots +3), the 1.1.0 sub-option that raises all status Additional Attack Power. Neither affects DoT ticks.",
-   "DoT ticks: 5 per application (0, 2.5, 5, 7.5, 10 s), not 4 as first recorded. Total per application at 1/2/3 stacks: 250/375/500% of the first applier's Attack."
+   "DoT ticks: 5 per application (0, 2.5, 5, 7.5, 10 s), not 4 as first recorded. Total per application at 1/2/3 stacks: 250/375/500% of the first applier's Attack.",
+   "Breaker weakness (Drosophia of Breaker) doesn't change status hit bonuses; it likely affects Super Armor break instead (untested). Drosophia of Bloodburst has no weakness (tested with every status)."
   ],
   "tests": [
    {
@@ -13533,6 +13534,16 @@
      "Poisoned hit = 0.2253 x (679 + 25 x 1.0194) x 2.0 (doubled Poison bonus) = about 317-319, measured 319: the flat All Status Effect Additional Attack Power is added to Attack before the status bonus multiplies.",
      "Tick 339 = 50% of 679: the flat 25 doesn't reach ticks.",
      "Ticks happen 5 times per application: at 0 s and every 2.5 s to 10 s (David, true for every DoT he tested)."
+    ]
+   },
+   {
+    "test": "Drosophia bosses: no weakness and Breaker weakness",
+    "date": "2026-10-29",
+    "by": "David",
+    "observations": [
+     "Drosophia of Bloodburst: Bleed, Burn, Shock, Frost and Poison gave +50% on hits, Airborne, Knockdown and Stun +100%, i.e. the normal values. It has no weakness, as the game says.",
+     "Drosophia of Breaker (weak to Breaker): the same results, so the Breaker weakness doesn't raise any status hit bonus.",
+     "Amplitude = Stun; Breaker = breaking Super Armor (the bar under HP). The Breaker weakness probably affects Super Armor break speed; untested."
     ]
    }
   ],
@@ -16077,7 +16088,8 @@
      "Breaker"
     ],
     "immune": [],
-    "image": "assets/trait/drosophia-breaker.webp"
+    "image": "assets/trait/drosophia-breaker.webp",
+    "note": "Tested by David: the Breaker weakness doesn't change any status hit bonus (all statuses gave the normal +50% or +100%). Breaker is about breaking Super Armor, so the weakness most likely speeds up the Super Armor bar instead. Not measured yet."
    },
    {
     "id": "drosophia-bloodburst",
@@ -16087,7 +16099,7 @@
     "weak": [],
     "immune": [],
     "image": "assets/trait/drosophia-bloodburst.webp",
-    "note": "The game lists its weakness as \"None\". It may be a typo in the game, so it is shown exactly as the game states it."
+    "note": "Tested by David: no weakness. Bleed, Burn, Shock, Frost and Poison gave the normal +50% and Airborne, Knockdown and Stun the normal +100%, so the game's \"None\" is correct."
    },
    {
     "id": "ghagaroach-blazeflame",
@@ -16143,7 +16155,7 @@
    }
   ],
   "difficulties": 4,
-  "weaknessTest": "Tested by David with Reina and Johnny: a weakness doubles the hit bonus of that archetype's status. Poison's +50% becomes +100%, Airborne's +100% becomes +200%. It does nothing to hits without the status and doesn't raise damage-over-time ticks. Bosses that aren't weak to you take the same multiplier as the Training Ground dummy. Airborne also built up faster on the weak boss.",
+  "weaknessTest": "Tested by David with Reina and Johnny: a weakness doubles the hit bonus of that archetype's status. Poison's +50% becomes +100%, Airborne's +100% becomes +200%. It does nothing to hits without the status and doesn't raise damage-over-time ticks. Bosses that aren't weak to you take the same multiplier as the Training Ground dummy. Airborne also built up faster on the weak boss. Breaker is the exception: on Drosophia of Breaker no status bonus changed, so its weakness probably works on Super Armor break instead.",
   "difficultyLevels": [
    {
     "n": 1,

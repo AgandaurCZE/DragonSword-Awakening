@@ -1,3 +1,7 @@
+## 2026-10-29 — Claude: Drosophia tests
+- Drosophia of Bloodburst: David tested every status; it really has no weakness (the "may be a typo" note is replaced).
+- Drosophia of Breaker: its weakness doesn't change any status hit bonus. It probably speeds up Super Armor break, which is noted on the card, in `DAMAGE_TESTS`, and as TODO item 12.
+
 ## 2026-10-29 — Claude: DoT ticks are 5, not 4; flat status Attack Power confirmed
 - David noticed that Poison, Bleed, Burn and Shock tick straight away and then every 2.5 s, so **5 ticks** per application, not 4. Fixed in `STATUS_EFFECTS` (the Status Effects box now shows 250/375/500% totals at 1/2/3 stacks), in Charlotte's review, in `DAMAGE_TESTS` and in AGENTS.md.
 - Johnny's new test confirms two separate gear stats: flat "All Status Effect Additional Attack Power" (added to Attack before the status bonus) and the % "Status Effect Additional Attack Power Increase". Neither changes ticks. The values seen on blue gear are recorded in `GEAR_STATS.observedBlue`.
