@@ -1,5 +1,6 @@
 ## 2026-10-29 — Claude: preview gate fix
 - The hidden menu buttons (Familiars, Titles, Trait Dungeons) were still visible because the menu's `display:flex` style overrode the `hidden` attribute. Added `.nav-item[hidden]{display:none!important}`. Checked by testing what's actually on screen.
+- Removed the new tier list's demo mode (`&demo=1`); we work in `?tiers=new` from now on.
 
 ## 2026-10-29 — Claude: new tabs hidden until launch
 - At David's request, Familiars, Titles and Trait Dungeons are hidden from visitors. Their menu buttons only show with `?tiers=new` (or `?preview=1`), along with the new tier list. Title ticks only affect hero stats in the preview. Visitors see Heroes, the old Tier List, Teams, Gear, Karma and Patch Notes.

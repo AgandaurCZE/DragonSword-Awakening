@@ -1535,7 +1535,7 @@ function renderTrait(){const D=TRAIT_DUNGEONS||{};const list=D.bosses||[];const 
  root.querySelectorAll('.tr-card').forEach(c=>{setDiff(c,1);c.querySelectorAll('.tr-diff').forEach(x=>x.onclick=()=>setDiff(c,Number(x.dataset.n)))});
  root.querySelectorAll('.tr-hero').forEach(b=>{const h=HEROES.find(x=>x.name===b.dataset.hero);b.addEventListener('click',()=>openCharacterProfile(h.name));b.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')showHeroCard(h,b)});b.addEventListener('pointerleave',e=>{if(!$('karmaPopover').contains(e.relatedTarget))hideKarmaPopover()});});}
 
-// ---- New tier list (TIER_LIST_V2): hidden preview, opened with ?tiers=new (add &demo=1 for sample placements) ----
+// ---- New tier list (TIER_LIST_V2): hidden preview, opened with ?tiers=new ----
 const V2_ICONS={
  expert:'<path d="M9 1.5L3.5 9H8l-1 5.5L12.5 7H8z" fill="currentColor"/>',
  easy:'<path d="M8 13.5S2.5 10 2.5 6.2A2.9 2.9 0 018 4.6a2.9 2.9 0 015.5 1.6C13.5 10 8 13.5 8 13.5z" fill="currentColor"/>',
@@ -1548,11 +1548,9 @@ const V2_ICONS={
  early:'<circle cx="8" cy="10.5" r="3" fill="currentColor"/><path d="M8 2.5v2M3.3 5l1.4 1.4M12.7 5l-1.4 1.4M1.5 10.5h2M12.5 10.5h2" stroke="currentColor" stroke-width="1.5"/><path d="M1.5 13.8h13" stroke="currentColor" stroke-width="1.5"/>',
  late:'<path d="M8 14V7.5M8 8C8 5 6 3.5 3 3.5 3 6.5 5 8 8 8zM8 9.5c0-2.6 1.8-4 4.5-4 0 2.6-1.8 4-4.5 4z" stroke="currentColor" stroke-width="1.4" fill="none"/>',
  counter:'<circle cx="8" cy="8" r="5.6" stroke="currentColor" stroke-width="1.4" fill="none"/><circle cx="8" cy="8" r="2.6" stroke="currentColor" stroke-width="1.4" fill="none"/><circle cx="8" cy="8" r=".9" fill="currentColor"/>'};
-let V2={mode:'overall',boss:'all',arch:'',role:'',q:'',demo:false};
+let V2={mode:'overall',boss:'all',arch:'',role:'',q:''};
 function v2Data(){return TIER_LIST_V2||{};}
 function v2Hero(name){const D=v2Data();let H=(D.heroes||{})[name];
- if(!H&&V2.demo){const h=HEROES.find(x=>x.name===name);const t=h?.tiers?.['End-game'];const ex={Charlotte:{tags:['expert'],expert:{drop:1,reason:'Demo text: her best damage needs Stealth, clone timing and Poison and Airborne kept up.'},needs:[['Airborne']]},Reina:{tags:['enabler','self']},Eileen:{tags:['buffer'],signatureKarma:true},Kalien:{tags:['awk','late'],awk:1,progression:{late:'Demo text: from Awakening 1 (Fox Grab on any Burning target).'}},Lute:{tags:['easy','early'],progression:{early:'Demo text: falls off in the mid-game.'}},Kalsion:{needs:[['Burn','Airborne']],tags:['sa'],signatureKarma:true}}[name]||{};
-  H={overall:{tier:t,groups:t,single:t},bosses:{all:t},...ex};}
  return H||{};}
 function v2Tier(name){const H=v2Hero(name);if(V2.mode==='overall')return {t:H.overall?.tier};const b=H.bosses||{};if(V2.boss==='all')return {t:b.all};return b[V2.boss]?{t:b[V2.boss]}:{t:b.all,fallback:!!b.all};}
 function v2TierColor(t){return (v2Data().tierColors||{})[t]||tierColor(t);}
@@ -1575,7 +1573,7 @@ function v2TipHtml(h){const H=v2Hero(h.name);const D=v2Data();const box=(label,t
  let tiers='';
  if(V2.mode==='overall')tiers=box('Overall',H.overall?.tier)+box('Groups',H.overall?.groups)+box('Single target',H.overall?.single);
  else tiers=box('All bosses',H.bosses?.all)+(D.bosses||[]).map(b=>box(b.name,(H.bosses||{})[b.id])).join('');
- return `<div class="tip-top"><img class="tip-portrait" src="${h.portrait}" alt=""><div><div class="tip-title">${profileEsc(h.name)}</div><div class="tip-meta"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)} · ${profileEsc(h.role)}</div></div></div><div class="tip-tiers v2-tip-tiers">${tiers}</div>${H.expert?`<div class="tip-note"><b style="color:#ef4444">Expert −${H.expert.drop}:</b> ${profileEsc(H.expert.reason||'')}</div>`:''}<div class="tip-note">${V2.demo?'Demo data, not real ratings.':'Click for the full guide.'}</div>`;}
+ return `<div class="tip-top"><img class="tip-portrait" src="${h.portrait}" alt=""><div><div class="tip-title">${profileEsc(h.name)}</div><div class="tip-meta"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)} · ${profileEsc(h.role)}</div></div></div><div class="tip-tiers v2-tip-tiers">${tiers}</div>${H.expert?`<div class="tip-note"><b style="color:#ef4444">Expert −${H.expert.drop}:</b> ${profileEsc(H.expert.reason||'')}</div>`:''}<div class="tip-note">Click for the full guide.</div>`;}
 function v2ShowTip(h,el){const tip=$('tooltip');tip.innerHTML=v2TipHtml(h);tip.style.setProperty('--tier','#536273');tip.style.display='block';const r=el.getBoundingClientRect();let left=r.right+12;if(left+tip.offsetWidth>window.innerWidth-12)left=r.left-tip.offsetWidth-12;tip.style.left=Math.max(12,left)+'px';tip.style.top=Math.max(12,Math.min(window.innerHeight-tip.offsetHeight-12,r.top-12))+'px';}
 function v2ModeBtn(key){const M=v2Data().modes?.[key]||{};return `<button type="button" class="v2-mode${V2.mode===key?' on':''}" data-v2mode="${key}" style="${M.image?`--bg:url('${M.image}')`:''}"><span class="v2-mode-label">${profileEsc(M.label||key)}</span><span class="v2-mode-sub">${profileEsc(M.sub||'')}</span></button>`;}
 function v2BossTab(b){return `<button type="button" class="v2-boss${V2.boss===b.id?' on':''}" data-v2boss="${b.id}" style="${b.image?`--bg:url('${b.image}')`:''};${b.focus?`background-position:${b.focus}`:''}"><span class="v2-boss-text">${b.level?`<span class="v2-lv">Lv.${b.level}</span>`:''}<span class="v2-boss-name">${profileEsc(b.name)}</span></span></button>`;}
@@ -1584,7 +1582,7 @@ function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();
  const M=D.modes?.[V2.mode]||{};const bossName=V2.mode==='bosses'?(V2.boss==='all'?'All bosses':(D.bosses||[]).find(b=>b.id===V2.boss)?.name):'';
  const tagRows=Object.entries(D.tags||{}).map(([k,T])=>`<tr><td>${k==='needs'?v2NeedsChip(['Airborne']):v2Chip(k,{awk:1,expert:{drop:1}},{})}</td><td>${profileEsc(T.desc)}</td></tr>`).join('');
  const experts=Object.entries(D.heroes||{}).filter(([,H])=>H.expert).map(([n,H])=>`<li><b>${profileEsc(n)} (−${H.expert.drop}):</b> ${profileEsc(H.expert.reason||'')}</li>`).join('');
- let html=`${V2.demo?'<div class="v2-banner">DEMO DATA: placements copied from the old End-game tiers and example tags. Not real ratings.</div>':'<div class="v2-banner preview">PREVIEW: hidden from visitors. Ratings are added as we decide them together.</div>'}
+ let html=`<div class="v2-banner preview">PREVIEW: hidden from visitors. Ratings are added as we decide them together.</div>
  <div class="v2-head"><h2>Tier List <span>(${profileEsc(M.label||'')}${bossName?' · '+profileEsc(bossName):''})</span></h2><button type="button" class="v2-legacy" id="v2Legacy">Legacy view</button></div>
  <details class="v2-panel"><summary>About this tier list</summary><div>${(D.about||[]).map(p=>`<p>${profileEsc(p)}</p>`).join('')}</div></details>
  <details class="v2-panel"><summary>Modes</summary><div>${Object.values(D.modes||{}).map(m=>`<p><b>${profileEsc(m.label)}</b> (${profileEsc(m.sub)}): ${profileEsc(m.intro||'')}</p>`).join('')}</div></details>
@@ -1617,7 +1615,7 @@ const IS_PREVIEW=(()=>{const p=new URLSearchParams(location.search);return p.get
 // Pages hidden from visitors until launch (David, 29 Oct 2026): shown only in the preview (?tiers=new).
 const PREVIEW_PAGES=['familiars','titles','trait'];
 function applyPreviewGate(){if(IS_PREVIEW)return;PREVIEW_PAGES.forEach(pg=>{const b=document.querySelector(`.nav-item[data-page="${pg}"]`);if(b)b.hidden=true;});}
-function initTierV2(){const p=new URLSearchParams(location.search);if(p.get('tiers')!=='new')return;V2.demo=p.get('demo')==='1';const tp=$('tierPage');const box=document.createElement('div');box.id='tierV2';tp.prepend(box);showTierV2(true);}
+function initTierV2(){const p=new URLSearchParams(location.search);if(p.get('tiers')!=='new')return;const tp=$('tierPage');const box=document.createElement('div');box.id='tierV2';tp.prepend(box);showTierV2(true);}
 
 function patchText(){const m=DATA_META||{};return m.balancePatch&&m.balancePatch!==m.patch?`${m.patch} (no balance changes since ${m.balancePatch})`:(m.patch||'');}
 function startApp(){
