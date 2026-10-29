@@ -15039,6 +15039,30 @@
      "Stun + Airborne = x3.0: the two bonuses add (1 + 1 + 1), they don't multiply (that would be x4.0).",
      "Clean single-target confirmation of the goblin-dummy results, without Poison or Bleed in the mix."
     ]
+   },
+   {
+    "test": "Skill buff by level",
+    "date": "2026-10-29",
+    "by": "David (Test Kit)",
+    "hero": "Lute",
+    "skill": "Healing Circle (Lv.10)",
+    "value": "Restores % of Maximum HP",
+    "byLevel": [
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     20
+    ],
+    "observations": [
+     "Heal goes +1% per level from Lv. 1 to Lv. 9, then +2% at Lv. 10 (x2.0 of Lv. 1 at max).",
+     "Damage multipliers also jump at the last level (x1.58 -> x1.75), so the max level may give an extra step for buffs too. One skill only so far."
+    ]
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
