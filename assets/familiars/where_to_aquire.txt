@@ -1,0 +1,44 @@
+[Insect]
+1 - Purchased with Adventurer's Emblem (100) 
+2 - Mining (0/300)
+3 - Clear Puzzle (0/40)
+4 - Default Reward (Free familiar when fuction unlocks)
+
+[Squirrel]
+1 - Purchase DLC (3.99€ - https://store.steampowered.com/app/4785990/DragonSword_Awakening_Familiar_Cotton_Flying_Squirrel/) - You can make this link embed into the "Purchase DLC" text
+2 - Defeat Squirrels (0/100)
+3 - Purchase DLC (3.99€ - https://store.steampowered.com/app/4785980/DragonSword_Awakening_Familiar_Viola_Flying_Squirrel/) - You can make this link embed into the "Purchase DLC" text
+4 - Intermediate Mercenary Crew Promotion
+
+[Cat]
+1 - Purchase DLC (3.99€ - https://store.steampowered.com/app/4786000/DragonSword_Awakening_Familiar_Orchid_Wing_Cat/) - You can make this link embed into the "Purchase DLC" text
+2 - Craft Equipment (0/100)
+3 - Open Treasure Chest (0/300)
+4 - Advanced Mercenary Crew Promotion
+
+[Bird]
+1 - Clear Mini-Game (0/20)
+2 - Purchase DLC (3.99€ - https://store.steampowered.com/app/4786010/DragonSword_Awakening_Familiar_Timid_Hummingbird/) - You can make this link embed into the "Purchase DLC" text
+3 - Collected Bird Eggs (0/150)
+4 - Novice Mercenary Crew Promotion
+
+[Sky Wolf]
+1 - Purchase DLC (3.99€ - https://store.steampowered.com/app/4786030/DragonSword_Awakening_Familiar_Frost_Sky_Wolf/) - You can make this link embed into the "Purchase DLC" text
+2 - Purchase with Gold (300, 000)
+3 - Purchase DLC (3.99€ - https://store.steampowered.com/app/4786020/DragonSword_Awakening_Familiar_Gale_Sky_Wolf/) - You can make this link embed into the "Purchase DLC" text
+4 - Complete 9. The Captain's Scheme (Story Quest)
+
+[Direwolf]
+1 - Veteran Mercenary Crew Promotion
+2 - Purchase DLC (7.99€ - https://store.steampowered.com/app/4742660/DragonSword_Awakening_Familiar_Abyssal_Direwolf/) - You can make this link embed into the "Purchase DLC" text
+3 - Purchase DLC (3.99€ - https://store.steampowered.com/app/4872640/DragonSword_Awakening_Familiar_Flame_Spirit_Fox/) - You can make this link embed into the "Purchase DLC" text
+4 - Purchase DLC (3.99€ - https://store.steampowered.com/app/4872650/DragonSword_Awakening_Familiar_War_Direwolf/) - You can make this link embed into the "Purchase DLC" text
+
+[Griffon]
+1 - Defeat World Boss (0/30)
+2 - Purchase DLC (3.99€ - https://store.steampowered.com/app/4786050/DragonSword_Awakening_Familiar_Holy_Knightage_Griffon/) - You can make this link embed into the "Purchase DLC" text
+3 - Purchase DLC (3.99€ - https://store.steampowered.com/app/4786040/DragonSword_Awakening_Familiar_Exploration_Squad_Griffon/) - You can make this link embed into the "Purchase DLC" text
+4 - Elite Mercenary Crew Promotion
+
+[Dragon]
+1 - Purchase the Deluxe Edition (19.99€ - https://store.steampowered.com/app/4742640/DragonSword_Awakening_Deluxe_Pack/) - You can make this link embed into the "Deluxe Edition" text
