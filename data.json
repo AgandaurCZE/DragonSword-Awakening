@@ -11039,8 +11039,212 @@
       14.76
      ],
      "observation": "Step +0.74 (= +0 value / 5) for +1 to +3, then double (+1.48) from +4 to +9. Matches the Blue boots seen earlier (+3 = 5.90, +6 = 10.33). The Orange table in GEAR_STATS has one even step (+1.58 = 7.9 / 5) all the way to +15; worth checking whether Orange also doubles after +3."
+    },
+    {
+     "slot": "Helmet",
+     "stat": "Critical Hit Resistance",
+     "rarity": "Blue",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      3.36,
+      4.04,
+      4.71,
+      5.38,
+      6.73,
+      8.08,
+      9.42,
+      10.77,
+      12.12,
+      13.46
+     ]
+    },
+    {
+     "slot": "Helmet",
+     "stat": "Attack Power Up",
+     "rarity": "Blue",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      2.78,
+      3.34,
+      3.9,
+      4.45,
+      5.57,
+      6.68,
+      7.8,
+      8.91,
+      10.02,
+      11.14
+     ]
+    },
+    {
+     "slot": "Helmet",
+     "stat": "Max HP",
+     "rarity": "Blue",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      235.0,
+      282.0,
+      329.0,
+      376.0,
+      471.0,
+      565.0,
+      659.0,
+      753.0,
+      848.0,
+      942.0
+     ]
+    },
+    {
+     "slot": "Helmet",
+     "stat": "Defense",
+     "rarity": "Green",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      12.0,
+      17.0,
+      24.0,
+      29.0,
+      39.0,
+      44.0,
+      49.0
+     ]
+    },
+    {
+     "slot": "Chest",
+     "stat": "Max HP Up",
+     "rarity": "Blue",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      5.6,
+      6.73,
+      7.85,
+      8.97,
+      11.22,
+      13.46,
+      15.71,
+      17.95,
+      20.19,
+      22.44
+     ]
+    },
+    {
+     "slot": "Chest",
+     "stat": "Max HP",
+     "rarity": "Blue",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      336.0,
+      403.0,
+      471.0,
+      538.0,
+      673.0,
+      807.0,
+      942.0,
+      1076.0,
+      1211.0,
+      1346.0
+     ]
+    },
+    {
+     "slot": "Legs",
+     "stat": "Max HP",
+     "rarity": "Green",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      242.0,
+      339.0,
+      484.0,
+      581.0,
+      775.0,
+      872.0,
+      969.0
+     ]
+    },
+    {
+     "slot": "Legs",
+     "stat": "Attack",
+     "rarity": "Blue",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      28.0,
+      33.0,
+      39.0,
+      45.0,
+      56.0,
+      67.0,
+      78.0,
+      90.0,
+      101.0,
+      112.0
+     ]
+    },
+    {
+     "slot": "Legs",
+     "stat": "Critical Hit Chance",
+     "rarity": "Blue",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      1.75,
+      2.1,
+      2.45,
+      2.8,
+      3.5,
+      4.2,
+      4.9,
+      5.6,
+      6.3,
+      7.0
+     ]
+    },
+    {
+     "slot": "Gloves",
+     "stat": "Critical Damage Reduction",
+     "rarity": "Blue",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      3.82,
+      4.59,
+      5.36,
+      6.12,
+      7.66,
+      9.19,
+      10.72,
+      12.25,
+      13.78,
+      15.31
+     ]
+    },
+    {
+     "slot": "Gloves",
+     "stat": "Critical Hit Resistance",
+     "rarity": "Blue",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      3.36,
+      4.04,
+      4.71,
+      5.38,
+      6.73,
+      8.08,
+      9.42,
+      10.77,
+      12.12,
+      13.46
+     ]
     }
-   ]
+   ],
+   "rowsFinding": "Every piece reaches exactly 4x its +0 value at max level, whatever the stat. Blue: x1.2, 1.4, 1.6 for +1..+3, then +0.4 per level (2.0 ... 4.0 at +9). Green: x1, 1.4, 2.0, 2.4, 3.2, 3.6, 4.0 (+0..+6). The database Orange table also ends at 4x its +0 (with even +0.2 steps; the in-game step shape for Orange is unknown). Blue +0 = 0.466 x database Orange +0 for most stats (7/15), Green +0 = 0.375 (3/8). Exceptions: Attack Power Up 0.445, and Critical Hit Chance (legs) 0.197: the database Orange Crit Rate main stat (8.88 at +0, 35.5 at +15) is probably far too high. That matters for every damage build."
   }
  },
  "HERO_STAT_MODEL": {
@@ -14199,7 +14403,8 @@
    "Two different gear stats exist: 'All Status Effect Additional Attack Power' is flat (25 on a blue legs substat) and is added to Attack on hits against an enemy with any status; 'Status Effect Additional Attack Power Increase' is a % (1.94% on blue boots +3), the 1.1.0 sub-option that raises all status Additional Attack Power. Neither affects DoT ticks.",
    "DoT ticks: 5 per application (0, 2.5, 5, 7.5, 10 s), not 4 as first recorded. Total per application at 1/2/3 stacks: 250/375/500% of the first applier's Attack.",
    "Breaker weakness (Drosophia of Breaker) doesn't change status hit bonuses; it likely affects Super Armor break instead (untested). Drosophia of Bloodburst has no weakness (tested with every status).",
-   "Super Armor break: no hit bonus (Castella 194 before and after); lasts 8 s on both Drosophia bosses, whatever hero breaks it. Drosophia of Breaker has a much bigger Super Armor bar: Charlotte needed about 2x or more vs the Bloodburst one, Castella only about 1.4x. Likely meaning of the Breaker weakness: Breakers lose much less to the bigger bar (rough counts, two heroes)."
+   "Super Armor break: no hit bonus (Castella 194 before and after); lasts 8 s on both Drosophia bosses, whatever hero breaks it. Drosophia of Breaker has a much bigger Super Armor bar: Charlotte needed about 2x or more vs the Bloodburst one, Castella only about 1.4x. Likely meaning of the Breaker weakness: Breakers lose much less to the bigger bar (rough counts, two heroes).",
+   "Status ticks never crit (David, 29 Oct 2026, Test Kit): Poison, Bleed, Burn and Shock, 100 ticks each (Poison 200), at 1, 2 and 3 stacks, with 12.77% Crit Rate: 0 crits. Crit stats only raise direct hits. Each stack count also has its own visual on the enemy."
   ],
   "tests": [
    {
@@ -15107,6 +15312,142 @@
       ]
      }
     ]
+   },
+   {
+    "test": "Status application per skill",
+    "date": "2026-10-29",
+    "by": "David (Test Kit)",
+    "enemy": "Goblin training dummies, Lv. 90",
+    "note": "Stacks applied by one press, read from the stack gauge (fractions estimated). Charlotte's Invisible (clone explosion) and Illusion Kick are listed as applying Poison, but their codex text names no Poison (Illusion Kick: Airborne; Invisible: none) - to confirm with David.",
+    "results": [
+     {
+      "hero": "Johnny",
+      "skill": "Venom Dance",
+      "status": "Poison",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Poison Grab",
+      "status": "Poison",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Venom Cutter",
+      "status": "Poison",
+      "stacksPerPress": 1.25
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Fatal Sting",
+      "status": "Poison",
+      "stacksPerPress": 0.75
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Poison Step",
+      "status": "Poison",
+      "stacksPerPress": 0.45
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Invisible (clone explosion)",
+      "status": "Poison",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Illusion Kick",
+      "status": "Poison",
+      "stacksPerPress": 0.6
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Bleeding Grab",
+      "status": "Bleed",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Crimson Spiral (Holding)",
+      "status": "Bleed",
+      "stacksPerPress": 0.99
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Bloody Shower",
+      "status": "Bleed",
+      "stacksPerPress": 1.1
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Crimson Spiral (Press)",
+      "status": "Bleed",
+      "stacksPerPress": 0.45
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Sliding Shot",
+      "status": "Bleed",
+      "stacksPerPress": 0.25
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Kick Storm",
+      "status": "Bleed",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Aria",
+      "skill": "Shoot and Bomb",
+      "status": "Burn",
+      "stacksPerPress": 0.45
+     },
+     {
+      "hero": "Aria",
+      "skill": "Air Bomb",
+      "status": "Burn",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Aria",
+      "skill": "Rolling Bomb",
+      "status": "Burn",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Aria",
+      "skill": "Switch On!",
+      "status": "Burn",
+      "stacksPerPress": 0.25,
+      "presses": 3
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Cross",
+      "status": "Shock",
+      "stacksPerPress": 1.5
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Cutter",
+      "status": "Shock",
+      "stacksPerPress": 0.5
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Circle",
+      "status": "Shock",
+      "stacksPerPress": 1.0
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Grab",
+      "status": "Shock",
+      "stacksPerPress": 1.0
+     }
+    ]
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
@@ -15137,9 +15478,10 @@
     "Ticks aren't reduced by the enemy's Defense: Armor Penetration and Defense Ignore don't change them.",
     "While an enemy has this status, hits on it deal 1.5x damage, whatever the stack count. Bonuses from different statuses add up: +50% for each damage-over-time status and +100% each for Airborne, Knockdown and Stun. Measured: Poison + Bleed 2x, Airborne + Poison 2.5x, Knockdown or Stun + Poison + Bleed 3x, Knockdown + Airborne + Poison 3.5x. The highest seen is 3.5x: Knockdown + Airborne + Poison + Bleed was also 3.5x, not 4x. Measured on training dummies.",
     "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets, awakenings and substats) don't change its ticks. They raise every hit on an enemy that has the status: Additional Attack Power is added to your Attack, and Additional Damage multiplies the whole hit, including the bonuses from other statuses (tested with Burn: Blazing Flames' +15% turned Aria's 1.5x into 1.72x).",
-    "Tick damage is rounded down."
+    "Tick damage is rounded down.",
+    "Ticks never crit (watched 500 ticks over all four statuses)."
    ],
-   "untested": "Not tested yet: bonuses for two different statuses at once (added or multiplied), whether ticks can crit. Break gives no hit bonus (tested 29 Oct 2026)."
+   "untested": "Not tested yet: bonuses for two different statuses at once (added or multiplied). Break gives no hit bonus (tested 29 Oct 2026)."
   }
  },
  "PATCH_NOTES": {
