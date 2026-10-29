@@ -147,7 +147,8 @@ Every hero levels identically; only breakthrough bonuses differ.
 2. **If a measured hero doesn't match profile B**, add them to `HERO_STAT_MODEL.measured`, give them their own breakthrough numbers, re-estimate them and tell David.
 3. **If testing changes the gear tables or rules**, update `GEAR_STATS`. Then re-check that each build in `HERO_BUILDS` doesn't use the same stat as both main and substat on one piece.
 4. **Crit Rate above 100%:** settled by patch 1.1.0: crits happen exactly at your Critical Rate and monsters no longer have Critical Hit Resistance, so 100% is the most that counts. The builds already cap it there.
-5. **Recalculating a damage build after the numbers change:** try all 3⁵ main-stat combinations as described above, or ask David before hand-editing.
+5. **Eileen as a crit buffer (waiting on David's tests):** Vanguard Banner gives +20% Crit Rate to allies in range, and Sion's Awakening 1 adds +10% to Orzea's Blessing. Because the builds sit at about 100% Crit Rate, those buffs are wasted on teammates. Once David measures Vanguard Banner's duration, cooldown or Rage and recast rate (TODO item 10), work out whether team-aware "with Eileen" builds pay off (Charlotte example: Crit Rate gloves → Crit Damage = +11% with the buff up, −2% without) and whether Eileen fits more teams. Ask David before adding such builds.
+6. **Recalculating a damage build after the numbers change:** try all 3⁵ main-stat combinations as described above, or ask David before hand-editing.
 
 ## Tools
 

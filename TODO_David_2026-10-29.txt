@@ -80,6 +80,22 @@ or OBS) and pause on the frame where your hit lands.
      Moment. With those, the site can get a Karma level slider.
 
 
+-------------------------------------------------------------- ONCE YOU HAVE EILEEN
+
+10. EILEEN'S TEAM CRIT BUFF
+   - Vanguard Banner: how long the +20% Crit Rate buff lasts, its cooldown or
+     Rage cost, and how often you can recast it during a normal team rotation.
+   - With her Exclusive Karma (Between Chivalry and Bookmarks): the extra
+     Crit Rate and Crit Damage when Banner Maid is used inside the Brave One
+     area (the patch notes say Crit Damage 20%; the Crit Rate part is unknown).
+   - Brave One: duration of the +15% Attack.
+   Why: our builds already sit at about 100% Crit Rate, so her buff does
+   nothing for teammates right now. A teammate built for her (e.g. Charlotte
+   with Crit Damage gloves instead of Crit Rate) gains about +11% while the
+   buff is up and loses about 2% while it's down. Uptime decides whether
+   "with Eileen" builds are worth it, and how high Eileen should rank.
+
+
 -------------------------------------------------------------- DONE (28 Oct)
 - Skill level multipliers (all levels), Karma Ascensions A0–A6.
 - Damage: proportional to Attack and skill %; crit = x(1 + Crit Damage);
