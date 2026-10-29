@@ -308,8 +308,9 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .v2-lv{font-size:10px;font-weight:900;color:#1b1406;background:#f5d77a;border-radius:9px;padding:0 6px}
 .v2-boss-name{font-weight:900;font-size:13px;line-height:1.2;text-shadow:0 2px 4px #000}.v2-boss.locked .v2-boss-name{color:#7d8594;text-shadow:none}
 .v2-intro{color:#9aa3b2;font-size:13px;margin:4px 0 10px}
-.v2-filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}.v2-filters input{flex:1 1 220px;background:#292b32;border:1px solid #414650;color:#e8eef4;padding:10px 12px;font:inherit}
+.v2-filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}.v2-filters input{flex:0 1 200px;min-width:140px;background:#292b32;border:1px solid #414650;color:#e8eef4;padding:10px 12px;font:inherit}
 .v2-fgroup{display:flex;flex-wrap:wrap}
+.v2-kit-btn svg{width:22px;height:22px}
 .v2-grid{display:grid;grid-template-columns:64px repeat(var(--cols),minmax(0,1fr));gap:2px;background:#15181e;border:1px solid #2c313a}
 .v2-rolehead{display:flex;align-items:center;justify-content:center;gap:7px;background:#25282f;padding:9px;font-weight:900;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#e5e7eb}.v2-rolehead img{width:20px;height:20px}
 .v2-corner{background:#15181e}
@@ -1549,7 +1550,8 @@ const V2_ICONS={
  early:'<circle cx="8" cy="10.5" r="3" fill="currentColor"/><path d="M8 2.5v2M3.3 5l1.4 1.4M12.7 5l-1.4 1.4M1.5 10.5h2M12.5 10.5h2" stroke="currentColor" stroke-width="1.5"/><path d="M1.5 13.8h13" stroke="currentColor" stroke-width="1.5"/>',
  late:'<path d="M8 14V7.5M8 8C8 5 6 3.5 3 3.5 3 6.5 5 8 8 8zM8 9.5c0-2.6 1.8-4 4.5-4 0 2.6-1.8 4-4.5 4z" stroke="currentColor" stroke-width="1.4" fill="none"/>',
  counter:'<circle cx="8" cy="8" r="5.6" stroke="currentColor" stroke-width="1.4" fill="none"/><circle cx="8" cy="8" r="2.6" stroke="currentColor" stroke-width="1.4" fill="none"/><circle cx="8" cy="8" r=".9" fill="currentColor"/>'};
-let V2={mode:'overall',boss:'all',arch:'',role:'',q:''};
+let V2={mode:'overall',boss:'all',arch:'',role:'',kit:'',q:''};
+const V2_KITS={'Damage / Control':'<path d="M3 2.5l7.5 7.5M2.5 3l1.2-.5L13 11.8l-1 1zM13 2.5L5.5 10M13.5 3l-1.2-.5L3 11.8l1 1M2.5 11.5l2 2M13.5 11.5l-2 2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>','Healer':'<path d="M6.3 2.5h3.4v3.8h3.8v3.4H9.7v3.8H6.3V9.7H2.5V6.3h3.8z" fill="currentColor"/>','Buffer':'<path d="M8 2.5l4.5 5H9.6V13H6.4V7.5H3.5z" fill="currentColor"/>','Tank':'<path d="M8 1.8l5 2v4c0 3-2.2 5.2-5 6.4-2.8-1.2-5-3.4-5-6.4v-4z" fill="currentColor"/>'};
 function v2Data(){return TIER_LIST_V2||{};}
 function v2Hero(name){const D=v2Data();let H=(D.heroes||{})[name];
  return H||{};}
@@ -1579,7 +1581,7 @@ function v2ShowTip(h,el){const tip=$('tooltip');tip.innerHTML=v2TipHtml(h);tip.s
 function v2ModeBtn(key){const M=v2Data().modes?.[key]||{};return `<button type="button" class="v2-mode${V2.mode===key?' on':''}" data-v2mode="${key}" style="${M.image?`--bg:url('${M.image}')`:''}"><span class="v2-mode-label">${profileEsc(M.label||key)}</span><span class="v2-mode-sub">${profileEsc(M.sub||'')}</span></button>`;}
 function v2BossTab(b){return `<button type="button" class="v2-boss${V2.boss===b.id?' on':''}" data-v2boss="${b.id}" style="${b.image?`--bg:url('${b.image}')`:''};${b.focus?`background-position:${b.focus}`:''}"><span class="v2-boss-text">${b.level?`<span class="v2-lv">Lv.${b.level}</span>`:''}<span class="v2-boss-name">${profileEsc(b.name)}</span></span></button>`;}
 function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();const tiers=D.tiers||['S','A','B','C'];const roles=D.roles||['Main DPS','Sub-DPS','Support'];
- const list=HEROES.filter(h=>(!V2.q||h.name.toLowerCase().includes(V2.q))&&(!V2.arch||h.archetype===V2.arch)&&(!V2.role||h.role===V2.role));
+ const list=HEROES.filter(h=>(!V2.q||h.name.toLowerCase().includes(V2.q))&&(!V2.arch||h.archetype===V2.arch)&&(!V2.role||h.role===V2.role)&&(!V2.kit||h.classType===V2.kit));
  const M=D.modes?.[V2.mode]||{};const bossName=V2.mode==='bosses'?(V2.boss==='all'?'All bosses':(D.bosses||[]).find(b=>b.id===V2.boss)?.name):'';
  const tagRows=Object.entries(D.tags||{}).map(([k,T])=>`<tr><td>${k==='needs'?v2NeedsChip(['Airborne']):v2Chip(k,{awk:1,expert:{drop:1}},{})}</td><td>${profileEsc(T.desc)}</td></tr>`).join('');
  const experts=Object.entries(D.heroes||{}).filter(([,H])=>H.expert).map(([n,H])=>`<li><b>${profileEsc(n)} (−${H.expert.drop}):</b> ${profileEsc(H.expert.reason||'')}</li>`).join('');
@@ -1592,7 +1594,7 @@ function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();
  <div class="v2-modes">${['overall','bosses'].map(v2ModeBtn).join('')}</div>`;
  if(V2.mode==='bosses'){const un=D.undiscovered||{};const locks=Object.entries(un).flatMap(([type,n])=>Array.from({length:n},()=>`<div class="v2-boss locked"><span class="v2-boss-text"><span class="v2-boss-name">${profileEsc(type)} boss · not reached yet</span></span></div>`));
   html+=`<div class="v2-bosses"><button type="button" class="v2-boss all${V2.boss==='all'?' on':''}" data-v2boss="all"><span class="v2-boss-text"><span class="v2-boss-name">All bosses</span></span></button>${(D.bosses||[]).map(v2BossTab).join('')}${locks.join('')}</div>`;}
- html+=`<p class="v2-intro">${profileEsc(M.intro||'')}</p><div class="v2-filters"><input type="search" id="v2Search" placeholder="Search heroes…" value="${profileEsc(V2.q)}" autocomplete="off"><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.arch?' active':''}" data-v2arch="" title="All archetypes"><span class="all-symbol">✱</span></button>${ARCHES.map(a=>{const h=HEROES.find(x=>x.archetype===a);return `<button class="heroes-filter-btn${V2.arch===a?' active':''}" data-v2arch="${profileEsc(a)}" title="${profileEsc(a)}"><img src="${h?.archIcon||''}" alt=""></button>`}).join('')}</div><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.role?' active':''}" data-v2role="" title="All roles"><span class="all-symbol">✱</span></button>${roles.map(r=>`<button class="heroes-filter-btn${V2.role===r?' active':''}" data-v2role="${profileEsc(r)}" title="${profileEsc(r)}"><img src="${ROLE_ICONS[r]||''}" alt=""></button>`).join('')}</div></div>`;
+ html+=`<p class="v2-intro">${profileEsc(M.intro||'')}</p><div class="v2-filters"><input type="search" id="v2Search" placeholder="Search heroes…" value="${profileEsc(V2.q)}" autocomplete="off"><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.arch?' active':''}" data-v2arch="" title="All archetypes"><span class="all-symbol">✱</span></button>${ARCHES.map(a=>{const h=HEROES.find(x=>x.archetype===a);return `<button class="heroes-filter-btn${V2.arch===a?' active':''}" data-v2arch="${profileEsc(a)}" title="${profileEsc(a)}"><img src="${h?.archIcon||''}" alt=""></button>`}).join('')}</div><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.role?' active':''}" data-v2role="" title="All roles"><span class="all-symbol">✱</span></button>${roles.map(r=>`<button class="heroes-filter-btn${V2.role===r?' active':''}" data-v2role="${profileEsc(r)}" title="${profileEsc(r)}"><img src="${ROLE_ICONS[r]||''}" alt=""></button>`).join('')}</div><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.kit?' active':''}" data-v2kit="" title="All kit types"><span class="all-symbol">✱</span></button>${Object.entries(V2_KITS).map(([k,ic])=>`<button class="heroes-filter-btn v2-kit-btn${V2.kit===k?' active':''}" data-v2kit="${profileEsc(k)}" title="${profileEsc(k)}"><svg viewBox="0 0 16 16" aria-hidden="true">${ic}</svg></button>`).join('')}</div></div>`;
  const rolesShown=V2.role?[V2.role]:roles;
  html+=`<div class="v2-grid" style="--cols:${rolesShown.length}"><div class="v2-corner"></div>${rolesShown.map(r=>`<div class="v2-rolehead"><img src="${ROLE_ICONS[r]||''}" alt="">${profileEsc(r)}</div>`).join('')}`;
  const rows=[...tiers,'?'];
@@ -1604,6 +1606,7 @@ function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();
  root.querySelectorAll('[data-v2boss]').forEach(b=>b.onclick=()=>{V2.boss=b.dataset.v2boss;renderTierV2()});
  root.querySelectorAll('[data-v2arch]').forEach(b=>b.onclick=()=>{V2.arch=b.dataset.v2arch;renderTierV2()});
  root.querySelectorAll('[data-v2role]').forEach(b=>b.onclick=()=>{V2.role=b.dataset.v2role;renderTierV2()});
+ root.querySelectorAll('[data-v2kit]').forEach(b=>b.onclick=()=>{V2.kit=b.dataset.v2kit;renderTierV2()});
  const s=$('v2Search');s.oninput=()=>{V2.q=s.value.trim().toLowerCase();const pos=s.selectionStart;renderTierV2();const n=$('v2Search');n.focus();n.setSelectionRange(pos,pos);};
  $('v2Legacy').onclick=()=>showTierV2(false);
  root.querySelectorAll('.v2-card').forEach(c=>{const h=HEROES.find(x=>x.name===c.dataset.hero);

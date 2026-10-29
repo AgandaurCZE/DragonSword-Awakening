@@ -1,3 +1,6 @@
+## 2026-10-29 — Claude: kit-type filter on the new tier list (preview only)
+- New icon buttons after the role filter: Damage / Control (crossed swords), Healer (cross), Buffer (arrow), Tank (shield), using `HEROES[].classType`. The search box is shorter so everything fits on one line on desktop.
+
 ## 2026-10-29 — Claude: new tier list, first ratings (preview only)
 - `TIER_LIST_V2.heroes`: the 8 heroes David owns, rated together from his gameplay (Overall, Single target, Groups, tags, Charlotte's Expert −1 and Needs Airborne). The other 12 stay Unrated until David plays them.
 - Tag texts: Self-sufficient now means "runs their whole kit alone and is strong doing it"; Needs means their own source of the status is too rare.

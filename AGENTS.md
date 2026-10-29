@@ -82,7 +82,7 @@ Change these in the HTML if needed:
 - the team tier label colours (`renderTeams`)
 - the kit-type filter options (the `<select id="classType">`)
 - the "NEW" badge on Ryza (`renderHeroes`)
-- the new tier list's tag icons (`V2_ICONS`)
+- the new tier list's tag icons (`V2_ICONS`) and kit-type filter icons (`V2_KITS`: Damage / Control, Healer, Buffer, Tank, matched against `HEROES[].classType`)
 - the patch badge colours and icons (`PB_COLORS`, `PB_ICONS`) and the arrow colours and shapes (`PA_COLOR`, `PA_SVG`)
 - the skill-level ratio `SKILL_MAX_TO_LV1 = 1.75`
 - the Karma trait → stat name mapping (`KARMA_TRAIT_STAT`) and the gear slot list (`GEAR_SLOTS`)
