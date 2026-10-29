@@ -24,6 +24,10 @@ Every commit to `main` goes live about a minute later. There is no build step, n
 
 How the page starts: `index.html` runs `fetch('data.json')`, copies each top-level key into a global variable of the same name (`HEROES`, `TEAM_DATA`, …), then calls `startApp()`, which draws every tab. Opening `index.html` directly from disk (`file://`) fails because browsers block the fetch. Test with a local server instead, e.g. `python3 -m http.server` in the repository folder.
 
+## Preview (hidden until launch)
+
+David's decision (29 Oct 2026): new work stays hidden as a surprise until launch. Visitors see Heroes, the old Tier List, Teams, Gear, Karma and Patch Notes. **Familiars, Titles and Trait Dungeons** (and the new tier list) only appear with `?tiers=new` (or `?preview=1`) in the URL: `PREVIEW_PAGES` and `applyPreviewGate()` in `index.html` hide their menu buttons otherwise, and title ticks only count in the preview. Add any new tab to `PREVIEW_PAGES` until David says to launch.
+
 ## `data.json` keys
 
 | Key | Shape | Used by |

@@ -1,3 +1,6 @@
+## 2026-10-29 — Claude: new tabs hidden until launch
+- At David's request, Familiars, Titles and Trait Dungeons are hidden from visitors. Their menu buttons only show with `?tiers=new` (or `?preview=1`), along with the new tier list. Title ticks only affect hero stats in the preview. Visitors see Heroes, the old Tier List, Teams, Gear, Karma and Patch Notes.
+
 ## 2026-10-29 — Claude: tick your titles; live end-game totals and gear
 - Titles tab: every row has a tick box. Ticked titles are saved in the viewer's browser; "Ticked only" and the "Your titles" total use them, and a "clear" link resets them.
 - Hero pages: the end-game totals count the ticked titles (gold values, hover for which titles). The recommended gear is re-optimised live with them, using a JavaScript copy of `tools/hero_stats.py`'s optimiser, checked to give exactly the stored builds with no titles ticked. When titles push Crit Rate up, main stats move to Crit Damage or Attack Power Up; changed pieces get a gold frame and the build text says which.
