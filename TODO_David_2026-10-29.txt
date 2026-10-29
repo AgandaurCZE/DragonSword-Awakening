@@ -143,4 +143,10 @@ Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we
   - TIER AGREED 17:36: Overall A (was S on the old list), Expert -1 (casual B; replaces the -2 above). Single target A, Groups B, with potential for Groups A with her best-in-slot signature Karma (David).
   - Signature Karma: no badge, AGREED 17:33 (best-in-slot: helps her damage and changes her playstyle a bit, not needed to work).
   - Rage (checked in the data 17:33): no gear, title, familiar or general Karma stat raises Rage gain. Only hero-specific sources: Sion's signature Karma (Rage back on relic pickup), Alex A1/A6, Lute's Mastery (Dropkick), and Just Dodge (patch 1.0.11: 10% Active Skill Rage). Patch 1.1.0 raised Invisible's Rage cost by 10% and Poison Dagger's by 40%, so Clone cycling got harder. Skill/Ultimate seem to be Rage-only, no cooldown shown in game (David: Johnny, Reina, Charlotte).
+- Lute (David, 17:47): his only real plus is the Stun.
+  - Stun Slash (Skill) applies Stun in one press; small cone/cleave AoE, hits only what's in front of him.
+  - Knockdown (Swordgrab) feels almost non-existent: slow, single target; the slam knocks down others only if they're hit by the slammed target, in a small circle that needs precision. Doesn't add much team damage.
+  - Relic Fall: needs Knockdown and hits quite low even with Knockdown on; with several Knocked-down enemies it seems to pick one at random, so it can hit a lone enemy far from the group instead of the AoE.
+  - Healing (20%): nice for casuals; good players try not to get hit at all, which is why most teams run no healer.
+  - So: not Self-sufficient (Relic Fall isn't worth chasing); Knockdown not part of his Enabler value.
 - Tag rules (David, 29 Oct): no "Team-dependent" tag; only Self-sufficient. Heroes like Reina are covered by the Enabler tag. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes.
