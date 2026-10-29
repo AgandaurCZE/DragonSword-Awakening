@@ -1,3 +1,11 @@
+## 2026-10-29 — Claude: how to get each Familiar
+- Every Familiar card now shows how to get it, from David's list:
+  - DLC: links to the Steam store page, with the price;
+  - Gold and Adventurer's Emblem: the in-game currency icons with the amount;
+  - Activities: the in-game requirement, e.g. Mining ×300;
+  - Mercenary Crew promotions, the story quest and the free starter.
+- The Gold coin and Adventurer's Emblem icons were cut out of David's screenshots (`assets/ui/gold.webp`, `assets/ui/adventurers-emblem.webp`).
+
 ## 2026-10-29 — Claude: Insect stamina note
 - The Insect passive box notes that steps 2–4 each add 10% maximum stamina, are believed to add up, and that it isn't tested whether each 10% is of the base or the already raised stamina (`FAMILIARS.passiveNotes`).
 

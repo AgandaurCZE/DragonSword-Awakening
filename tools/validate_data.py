@@ -145,7 +145,11 @@ for g_, ps in d.get('FAMILIARS', {}).get('passives', {}).items():
     for p_ in ps:
         for n_ in re.findall(r'\[([^\]]+)\]', p_['text']):
             if n_ not in d['FAMILIARS'].get('abilities', {}): bad(f'FAMILIARS.passives[{g_}]: unknown ability {n_!r}')
+for c_, cur in d.get('FAMILIARS', {}).get('currencies', {}).items():
+    asset(cur['icon'], f'FAMILIARS.currencies[{c_}].icon')
 for f in d.get('FAMILIARS', {}).get('list', []):
+    o_ = f.get('obtain')
+    if isinstance(o_, dict) and o_.get('type') == 'currency' and o_.get('currency') not in d['FAMILIARS'].get('currencies', {}): bad(f"FAMILIARS[{f['name']}]: unknown currency {o_.get('currency')!r}")
     if f.get('image'): asset(f['image'], f"FAMILIARS[{f['name']}].image")
 
 # Patch notes: hero names, badge and direction keys, source files

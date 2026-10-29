@@ -15316,182 +15316,334 @@
   ]
  },
  "FAMILIARS": {
-  "note": "Familiars are mounts and companions, obtained from Codex > Familiar since patch 1.1.0. Pictures are from David's Codex screenshots (grey = not collected yet; the in-game name was painted out). Passive effects and abilities are from David's in-game screenshots and notes. How to get each familiar isn't recorded yet. Numbered badges in green are the steps David has unlocked.",
+  "note": "Familiars are mounts and companions, obtained from Codex > Familiar since patch 1.1.0. Pictures are from David's Codex screenshots (grey = not collected yet; the in-game name was painted out). Passive effects and abilities are from David's in-game screenshots and notes. Numbered badges in green are the steps David has unlocked. How to get each one is from David's notes (assets/familiars/where_to_aquire.txt); the ×N counts are the in-game requirement.",
   "empty": "Familiars will be listed here: how to get each one and its equip effects.",
   "list": [
    {
     "name": "Refreshing Canary",
     "group": "Bird",
     "image": "assets/familiars/refreshing-canary.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "task",
+     "label": "Clear Mini-Game",
+     "count": 20
+    }
    },
    {
     "name": "Timid Hummingbird",
     "group": "Bird",
     "image": "assets/familiars/timid-hummingbird.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Purchase DLC",
+     "price": "3.99€",
+     "url": "https://store.steampowered.com/app/4786010/DragonSword_Awakening_Familiar_Timid_Hummingbird/"
+    }
    },
    {
     "name": "Diligent Sparrow",
     "group": "Bird",
     "image": "assets/familiars/diligent-sparrow.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "task",
+     "label": "Collect Bird Eggs",
+     "count": 150
+    }
    },
    {
     "name": "Bright Crowtit",
     "group": "Bird",
     "image": "assets/familiars/bright-crowtit.webp",
-    "owned": true
+    "owned": true,
+    "obtain": {
+     "type": "promotion",
+     "label": "Novice Mercenary Crew Promotion"
+    }
    },
    {
     "name": "Orchid Wing Cat",
     "group": "Cat",
     "image": "assets/familiars/orchid-wing-cat.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Purchase DLC",
+     "price": "3.99€",
+     "url": "https://store.steampowered.com/app/4786000/DragonSword_Awakening_Familiar_Orchid_Wing_Cat/"
+    }
    },
    {
     "name": "Mist Wing Cat",
     "group": "Cat",
     "image": "assets/familiars/mist-wing-cat.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "task",
+     "label": "Craft Equipment",
+     "count": 100
+    }
    },
    {
     "name": "Shadow Wing Cat",
     "group": "Cat",
     "image": "assets/familiars/shadow-wing-cat.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "task",
+     "label": "Open Treasure Chest",
+     "count": 300
+    }
    },
    {
     "name": "Dawn Wing Cat",
     "group": "Cat",
     "image": "assets/familiars/dawn-wing-cat.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "promotion",
+     "label": "Advanced Mercenary Crew Promotion"
+    }
    },
    {
     "name": "Stormy Direwolf",
     "group": "Direwolf",
     "image": "assets/familiars/stormy-direwolf.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "promotion",
+     "label": "Veteran Mercenary Crew Promotion"
+    }
    },
    {
     "name": "Abyssal Direwolf",
     "group": "Direwolf",
     "image": "assets/familiars/abyssal-direwolf.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Purchase DLC",
+     "price": "7.99€",
+     "url": "https://store.steampowered.com/app/4742660/DragonSword_Awakening_Familiar_Abyssal_Direwolf/"
+    }
    },
    {
     "name": "Flame Spirit Fox",
     "group": "Direwolf",
     "image": "assets/familiars/flame-spirit-fox.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Purchase DLC",
+     "price": "3.99€",
+     "url": "https://store.steampowered.com/app/4872640/DragonSword_Awakening_Familiar_Flame_Spirit_Fox/"
+    }
    },
    {
     "name": "War Direwolf",
     "group": "Direwolf",
     "image": "assets/familiars/war-direwolf.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Purchase DLC",
+     "price": "3.99€",
+     "url": "https://store.steampowered.com/app/4872650/DragonSword_Awakening_Familiar_War_Direwolf/"
+    }
    },
    {
     "name": "Brave Baby Dragon",
     "group": "Dragon",
     "image": "assets/familiars/brave-baby-dragon.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Deluxe Edition",
+     "price": "19.99€",
+     "url": "https://store.steampowered.com/app/4742640/DragonSword_Awakening_Deluxe_Pack/"
+    }
    },
    {
     "name": "Guardian Griffon",
     "group": "Griffon",
     "image": "assets/familiars/guardian-griffon.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "task",
+     "label": "Defeat World Boss",
+     "count": 30
+    }
    },
    {
     "name": "Holy Knightage Griffon",
     "group": "Griffon",
     "image": "assets/familiars/holy-knightage-griffon.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Purchase DLC",
+     "price": "3.99€",
+     "url": "https://store.steampowered.com/app/4786050/DragonSword_Awakening_Familiar_Holy_Knightage_Griffon/"
+    }
    },
    {
     "name": "Exploration Squad Griffon",
     "group": "Griffon",
     "image": "assets/familiars/exploration-squad-griffon.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Purchase DLC",
+     "price": "3.99€",
+     "url": "https://store.steampowered.com/app/4786040/DragonSword_Awakening_Familiar_Exploration_Squad_Griffon/"
+    }
    },
    {
     "name": "Knightage Griffon",
     "group": "Griffon",
     "image": "assets/familiars/knightage-griffon.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "promotion",
+     "label": "Elite Mercenary Crew Promotion"
+    }
    },
    {
     "name": "Fierce Rhinoceros Beetle",
     "group": "Insect",
     "image": "assets/familiars/fierce-rhinoceros-beetle.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "currency",
+     "currency": "emblem",
+     "amount": 100,
+     "label": "Adventurer's Emblem"
+    }
    },
    {
     "name": "Cowardly Firefly",
     "group": "Insect",
     "image": "assets/familiars/cowardly-firefly.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "task",
+     "label": "Mining",
+     "count": 300
+    }
    },
    {
     "name": "Red Ladybug",
     "group": "Insect",
     "image": "assets/familiars/red-ladybug.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "task",
+     "label": "Clear Puzzle",
+     "count": 40
+    }
    },
    {
     "name": "Robust Stag Beetle",
     "group": "Insect",
     "image": "assets/familiars/robust-stag-beetle.webp",
-    "owned": true
+    "owned": true,
+    "obtain": {
+     "type": "default",
+     "label": "Free when Familiars unlock"
+    }
    },
    {
     "name": "Frost Sky Wolf",
     "group": "Sky Wolf",
     "image": "assets/familiars/frost-sky-wolf.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Purchase DLC",
+     "price": "3.99€",
+     "url": "https://store.steampowered.com/app/4786030/DragonSword_Awakening_Familiar_Frost_Sky_Wolf/"
+    }
    },
    {
     "name": "Sandstorm Sky Wolf",
     "group": "Sky Wolf",
     "image": "assets/familiars/sandstorm-sky-wolf.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "currency",
+     "currency": "gold",
+     "amount": 300000,
+     "label": "Gold"
+    }
    },
    {
     "name": "Gale Sky Wolf",
     "group": "Sky Wolf",
     "image": "assets/familiars/gale-sky-wolf.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Purchase DLC",
+     "price": "3.99€",
+     "url": "https://store.steampowered.com/app/4786020/DragonSword_Awakening_Familiar_Gale_Sky_Wolf/"
+    }
    },
    {
     "name": "Snowstorm Sky Wolf",
     "group": "Sky Wolf",
     "image": "assets/familiars/snowstorm-sky-wolf.webp",
-    "owned": true
+    "owned": true,
+    "obtain": {
+     "type": "quest",
+     "label": "Story Quest 9. The Captain's Scheme"
+    }
    },
    {
     "name": "Cotton Flying Squirrel",
     "group": "Squirrel",
     "image": "assets/familiars/cotton-flying-squirrel.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Purchase DLC",
+     "price": "3.99€",
+     "url": "https://store.steampowered.com/app/4785990/DragonSword_Awakening_Familiar_Cotton_Flying_Squirrel/"
+    }
    },
    {
     "name": "Acorn Flying Squirrel",
     "group": "Squirrel",
     "image": "assets/familiars/acorn-flying-squirrel.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "task",
+     "label": "Defeat Squirrels",
+     "count": 100
+    }
    },
    {
     "name": "Viola Flying Squirrel",
     "group": "Squirrel",
     "image": "assets/familiars/viola-flying-squirrel.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "dlc",
+     "label": "Purchase DLC",
+     "price": "3.99€",
+     "url": "https://store.steampowered.com/app/4785980/DragonSword_Awakening_Familiar_Viola_Flying_Squirrel/"
+    }
    },
    {
     "name": "Maple Flying Squirrel",
     "group": "Squirrel",
     "image": "assets/familiars/maple-flying-squirrel.webp",
-    "owned": false
+    "owned": false,
+    "obtain": {
+     "type": "promotion",
+     "label": "Intermediate Mercenary Crew Promotion"
+    }
    }
   ],
   "groups": [
@@ -15724,6 +15876,16 @@
   "passiveNote": "Each species' passive unlocks step by step as you collect more familiars of that species (1 to 4; the Dragon has only one). Steps marked with the species name apply only to that species; the rest apply to all familiars. Text from the game; one typo fixed (\"consumtion\").",
   "passiveNotes": {
    "Insect": "Steps 2 to 4 each add 10% maximum stamina. They're believed to add up, but whether each 10% is of the base or the already raised stamina isn't tested yet."
+  },
+  "currencies": {
+   "gold": {
+    "name": "Gold",
+    "icon": "assets/ui/gold.webp"
+   },
+   "emblem": {
+    "name": "Adventurer's Emblem",
+    "icon": "assets/ui/adventurers-emblem.webp"
+   }
   }
  },
  "TRAIT_DUNGEONS": {
