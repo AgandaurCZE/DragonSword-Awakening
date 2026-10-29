@@ -12681,7 +12681,7 @@
   }
  },
  "TITLES": {
-  "note": "Titles are achievement rewards (Mercenary Crew > Title). Every obtained title's passive effect applies to all heroes, slotted or not. Flat bonuses are added to the hero's flat stats before % bonuses multiply; % bonuses join the same pool as gear and set % (confirmed in-game: Charlotte Lv30 86 Defense -> (86 + 10) x 1.015 = 97; 1925 Max HP -> 1925 + 50 = 1975, and Ballad of Life's +9%/+15% then apply to 1975). Only one title's own effect is known so far; fill in 'passive' as titles are checked. Not yet used by the page.",
+  "note": "All 109 titles, read from David's screen recording of the Title list (29 Oct 2026), in the game's order. Every obtained title's passive applies to all heroes, slotted or not. Flat bonuses are added to the hero's flat stats before % bonuses multiply; % bonuses join the same pool as gear and set % (confirmed in-game). Name colours are the game's: the five colours run from strongest (pink) to weakest (lavender) passives. The game hides the condition once a title is obtained, so Curious Hands and 【777】 have none recorded; Novice Mercenary Crew's is inferred from the other promotion titles.",
   "totalCount": 109,
   "ownedCount": 3,
   "ownedCumulative": [
@@ -12700,70 +12700,1460 @@
   ],
   "list": [
    {
+    "name": "Veteran Mercenary Crew",
+    "grade": 1,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 385
+     }
+    ],
+    "category": "Promotion",
+    "achievement": "Veteran Mercenary Crew promotion"
+   },
+   {
+    "name": "Dragon's Word",
+    "grade": 1,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack Power Up",
+      "value": 4.7
+     }
+    ],
+    "category": "Special",
+    "achievement": "Dragon Sword?"
+   },
+   {
+    "name": "One Who Broke the Thunderbolt",
+    "grade": 1,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack Power Up",
+      "value": 2.3
+     },
+     {
+      "stat": "Critical Damage",
+      "value": 2
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Conqueror of Ursula"
+   },
+   {
+    "name": "One Who Broke the Dragon Horn",
+    "grade": 1,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack Power Up",
+      "value": 2.3
+     },
+     {
+      "stat": "Critical Hit Chance",
+      "value": 2
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Conqueror of Gauron"
+   },
+   {
+    "name": "Elite Mercenary Crew",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 190
+     }
+    ],
+    "category": "Promotion",
+    "achievement": "Elite Mercenary Crew promotion"
+   },
+   {
+    "name": "Status Effect Master",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP Up",
+      "value": 3.2
+     }
+    ],
+    "category": "Special",
+    "achievement": "Status Effect Master"
+   },
+   {
+    "name": "Conqueror of Barduk",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Armor Penetration",
+      "value": 10
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Conqueror of Barduk"
+   },
+   {
+    "name": "Crushing Darkness",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 2.9
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Subduer of Barpedin"
+   },
+   {
+    "name": "Hungry Eye",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 2.6
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Subduer of Octavia"
+   },
+   {
+    "name": "Conqueror of the Earthlander",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense Ignore",
+      "value": 2.7
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Conqueror of the Earthlander"
+   },
+   {
+    "name": "Feather of Burning Ashes",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 20
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Subduer of Lavanis"
+   },
+   {
+    "name": "Conqueror of Ghoul Greed",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Armor Penetration",
+      "value": 10
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Conqueror of Ghoul Greed"
+   },
+   {
+    "name": "Conqueror of Gallore the Collapse",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 2.9
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Conqueror of Gallore the Collapse"
+   },
+   {
+    "name": "Conqueror of Furcas",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack Power Up",
+      "value": 2.3
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Conqueror of Furcas"
+   },
+   {
+    "name": "Conqueror of Vanak",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 2.6
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Conqueror of Vanak"
+   },
+   {
+    "name": "Upstream Angler",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 2.6
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Salmon Fillet Collector"
+   },
+   {
+    "name": "Boar Hunter",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 20
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Boar Meat Collector"
+   },
+   {
+    "name": "Victim and Perpetrator",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 2.9
+     }
+    ],
+    "category": "Explore",
+    "achievement": "You Charged First?"
+   },
+   {
+    "name": "Doting Parent",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 1.3
+     },
+     {
+      "stat": "Critical Damage",
+      "value": 1
+     }
+    ],
+    "category": "Quest",
+    "achievement": "An Unforgettable Encounter"
+   },
+   {
+    "name": "Chest Addict",
+    "grade": 2,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 15
+     }
+    ],
+    "category": "Explore",
+    "achievement": "Ah, Can't Resist a Chest"
+   },
+   {
+    "name": "High-Ranking Mercenary Crew",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 150
+     }
+    ],
+    "category": "Promotion",
+    "achievement": "Advanced Mercenary Crew promotion"
+   },
+   {
+    "name": "Carousel",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 2.2
+     }
+    ],
+    "category": "Special",
+    "achievement": "Round and Round"
+   },
+   {
+    "name": "Tycoon",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense Up",
+      "value": 2.3
+     }
+    ],
+    "category": "Special",
+    "achievement": "10,000,000!"
+   },
+   {
+    "name": "One Who Defies Gravity",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 2
+     }
+    ],
+    "category": "Special",
+    "achievement": "I'll Stand in the Sky"
+   },
+   {
+    "name": "One Whose Hobby Is Stomping",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 2.2
+     }
+    ],
+    "category": "Special",
+    "achievement": "Is Stomping Your Hobby?"
+   },
+   {
+    "name": "Instagrab",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP Up",
+      "value": 2.5
+     }
+    ],
+    "category": "Special",
+    "achievement": "The One Who Roots Out the Source of Harm"
+   },
+   {
+    "name": "Near-Death State",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP Up",
+      "value": 2.5
+     }
+    ],
+    "category": "Special",
+    "achievement": "Heh, Perfect Landing!"
+   },
+   {
+    "name": "Architect",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense Up",
+      "value": 2.3
+     }
+    ],
+    "category": "Special",
+    "achievement": "Gas! Gas! Gas!"
+   },
+   {
+    "name": "Master of Ambush",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP Up",
+      "value": 2.5
+     }
+    ],
+    "category": "Special",
+    "achievement": "Assassin Grid"
+   },
+   {
+    "name": "Dark Necromancer",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 2
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Subduer of Hagen"
+   },
+   {
+    "name": "Tyrant",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 2.2
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Subduer of Karon"
+   },
+   {
+    "name": "Scraping",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 15
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Subduer of Brack"
+   },
+   {
+    "name": "A Hero's Beginning",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 15
+     }
+    ],
+    "category": "Combat",
+    "achievement": "A Towering Threat Brought Down"
+   },
+   {
+    "name": "Beekeeper",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 15
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Honey Collector"
+   },
+   {
+    "name": "Goose Egg Gatherer",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 15
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Goose Egg Collector"
+   },
+   {
+    "name": "Pure Gatherer",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 150
+     }
+    ],
+    "category": "Collect",
+    "achievement": "White Dewblossom Collector"
+   },
+   {
+    "name": "Walnut Patrol",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 150
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Walnut Collector"
+   },
+   {
+    "name": "Violet Gatherer",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 10
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Round Eggplant Collector"
+   },
+   {
+    "name": "Serene Gatherer",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Armor Penetration",
+      "value": 10
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Blue Lotus Mushroom Collector"
+   },
+   {
+    "name": "Crimson Gatherer",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 10
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Leaflet Tomato Collector"
+   },
+   {
+    "name": "Wave Gatherer",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 2.2
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Conch Collector"
+   },
+   {
+    "name": "Fox Hunter",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 15
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Fox Meat Collector"
+   },
+   {
+    "name": "Silver Angler",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 2
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Silverwing Fillet Collector"
+   },
+   {
+    "name": "Fixer",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 150
+     }
+    ],
+    "category": "Quest",
+    "achievement": "We Solve Anything"
+   },
+   {
+    "name": "Red Fox",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 15
+     }
+    ],
+    "category": "Quest",
+    "achievement": "A Tale Carried on the Embers"
+   },
+   {
+    "name": "Saintess of the Dawn",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 15
+     }
+    ],
+    "category": "Quest",
+    "achievement": "No One Will Know, Right?"
+   },
+   {
+    "name": "Inquisitor",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 15
+     }
+    ],
+    "category": "Quest",
+    "achievement": "The End of the White Mistblossom"
+   },
+   {
+    "name": "Sage of the Blue Moon",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 15
+     }
+    ],
+    "category": "Quest",
+    "achievement": "Warmth for Frozen Wisdom"
+   },
+   {
+    "name": "Snow Alchemist",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 15
+     }
+    ],
+    "category": "Quest",
+    "achievement": "One Strawberry Flavor, as Ordered"
+   },
+   {
+    "name": "One Who Connects The Six Heroes",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 150
+     }
+    ],
+    "category": "Quest",
+    "achievement": "A Hero's Beginning"
+   },
+   {
+    "name": "Awaken, Hero",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 10
+     }
+    ],
+    "category": "Quest",
+    "achievement": "Savior of the De-monworld"
+   },
+   {
+    "name": "Patron of the Workshop",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Armor Penetration",
+      "value": 10
+     }
+    ],
+    "category": "Explore",
+    "achievement": "I'm here to order equipment"
+   },
+   {
+    "name": "Abundance Upon the Land",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Armor Penetration",
+      "value": 10
+     }
+    ],
+    "category": "Explore",
+    "achievement": "If I See Grass, I Pull It First"
+   },
+   {
+    "name": "World Traveling Chef",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Armor Penetration",
+      "value": 10
+     }
+    ],
+    "category": "Explore",
+    "achievement": "Today's Menu Is Everything"
+   },
+   {
+    "name": "One Who Walks the Vein",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Armor Penetration",
+      "value": 10
+     }
+    ],
+    "category": "Explore",
+    "achievement": "The Pickaxe Is Just a Helper"
+   },
+   {
+    "name": "Tail Tracker",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 2.2
+     }
+    ],
+    "category": "Explore",
+    "achievement": "A Long Tail Gets Caught"
+   },
+   {
+    "name": "Puzzle Solved by Pushing",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 2
+     }
+    ],
+    "category": "Explore",
+    "achievement": "Slide to Solve"
+   },
+   {
+    "name": "Marmot Challenger",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 2
+     }
+    ],
+    "category": "Explore",
+    "achievement": "There's a Marmot in That Burrow!"
+   },
+   {
+    "name": "Master of Pressing",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 2
+     }
+    ],
+    "category": "Explore",
+    "achievement": "Hold On, Stand Right There"
+   },
+   {
+    "name": "Legendary Explorer",
+    "grade": 3,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 10
+     }
+    ],
+    "category": "Explore",
+    "achievement": "In Search of Hidden Treasure"
+   },
+   {
+    "name": "Curious Hands",
+    "grade": 3,
+    "obtained": true,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 10
+     }
+    ],
+    "category": null,
+    "achievement": null
+   },
+   {
+    "name": "【777】",
+    "grade": 4,
+    "obtained": true,
+    "passive": [
+     {
+      "stat": "Defense Up",
+      "value": 1.5
+     }
+    ],
+    "category": null,
+    "achievement": null
+   },
+   {
+    "name": "Intermediate Mercenary Crew",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Promotion",
+    "achievement": "Intermediate Mercenary Crew promotion"
+   },
+   {
+    "name": "Falling",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense Up",
+      "value": 1.5
+     }
+    ],
+    "category": "Special",
+    "achievement": "This Is Eye Level Between You and Me"
+   },
+   {
+    "name": "Destroyer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP Up",
+      "value": 1.6
+     }
+    ],
+    "category": "Special",
+    "achievement": "There Was an Arm, and Then There Wasn't"
+   },
+   {
+    "name": "Specter of Thirst",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 1.5
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Subduer of Pakirus"
+   },
+   {
+    "name": "Turning the Enemy Against Itself",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP Up",
+      "value": 1.6
+     }
+    ],
+    "category": "Special",
+    "achievement": "Who Cast the Frenzy?"
+   },
+   {
+    "name": "The Predator",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 1.3
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Subduer of Andras"
+   },
+   {
+    "name": "The Roamer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 10
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Subduer of Horg"
+   },
+   {
+    "name": "Environmental Cleaner",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 1.3
+     }
+    ],
+    "category": "Combat",
+    "achievement": "This World's Janitor"
+   },
+   {
+    "name": "One Who Erases Names",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 1.5
+     }
+    ],
+    "category": "Combat",
+    "achievement": "May I Have Your Name?"
+   },
+   {
+    "name": "Skilled Hunter",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 10
+     }
+    ],
+    "category": "Combat",
+    "achievement": "Hunt Squad, Open for Business"
+   },
+   {
+    "name": "Bird Egg Gatherer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 10
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Bird Egg Collector"
+   },
+   {
+    "name": "Strange Gatherer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Grave Bellherb Collector"
+   },
+   {
+    "name": "Delicate Gatherer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Dried Maneflower Collector"
+   },
+   {
+    "name": "Peanut Patrol",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Peanut Collector"
+   },
+   {
+    "name": "Wheat Farmer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Wheat Collector"
+   },
+   {
+    "name": "Suspicious Gatherer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Armor Penetration",
+      "value": 5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Cave Mushroom Collector"
+   },
+   {
+    "name": "Rice Farmer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Rice Collector"
+   },
+   {
+    "name": "Small Gatherer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Dwarf Potato Collector"
+   },
+   {
+    "name": "Blue Gatherer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Waveleaf Cabbage Collector"
+   },
+   {
+    "name": "Water Gatherer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Aqualily Collector"
+   },
+   {
+    "name": "Fragrant Gatherer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Wild Onion Collector"
+   },
+   {
+    "name": "Waterside Gatherer",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 1.5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Shrimp Flesh Collector"
+   },
+   {
+    "name": "Riverside Angler",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Hit Chance",
+      "value": 1.3
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Trout Fillet Collector"
+   },
+   {
+    "name": "Kind",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Quest",
+    "achievement": "Struck Up a Chat, Got a Job"
+   },
+   {
+    "name": "Goose Hunter",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 10
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Bird Meat Collector"
+   },
+   {
+    "name": "Master of Mushroom Cuisine",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 5
+     }
+    ],
+    "category": "Quest",
+    "achievement": "Dreams Come True"
+   },
+   {
+    "name": "I Want to Do Missions",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 5
+     }
+    ],
+    "category": "Quest",
+    "achievement": "A Mercenary as of Today"
+   },
+   {
+    "name": "Uninvited Guest of the Nest",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 1.5
+     }
+    ],
+    "category": "Explore",
+    "achievement": "The Goose Won't Take It"
+   },
+   {
+    "name": "Impregnable",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Quest",
+    "achievement": "What Was Kept and What Was Lost"
+   },
+   {
+    "name": "Nut Patrol",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 1.5
+     }
+    ],
+    "category": "Explore",
+    "achievement": "Nut Confiscation Raid"
+   },
+   {
+    "name": "Loot Sweeper",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 5
+     }
+    ],
+    "category": "Explore",
+    "achievement": "Gotta Open That Suspicious Chest"
+   },
+   {
+    "name": "Dungeon Conqueror",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Explore",
+    "achievement": "A Mercenary! Open Up!"
+   },
+   {
+    "name": "Guide of the World",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Explore",
+    "achievement": "Fast Travel Expert"
+   },
+   {
+    "name": "Pioneer of the Wind Path",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Explore",
+    "achievement": "The Wind Path That Unveils the Unknown"
+   },
+   {
+    "name": "Restorer of Grace",
+    "grade": 4,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 100
+     }
+    ],
+    "category": "Explore",
+    "achievement": "Oh! Our Goddess"
+   },
+   {
+    "name": "Dawn Gatherer",
+    "grade": 5,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 50
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Dawn Lanternleaf Collector"
+   },
+   {
     "name": "Novice Mercenary Crew",
+    "grade": 5,
     "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
       "value": 50
      }
-    ]
-   },
-   {
-    "name": "Nut Patrol",
-    "obtained": null,
-    "passive": null
-   },
-   {
-    "name": "Loot Sweeper",
-    "obtained": null,
-    "passive": null
-   },
-   {
-    "name": "Guide of the World",
-    "obtained": null,
-    "passive": null
-   },
-   {
-    "name": "Dungeon Conqueror",
-    "obtained": null,
-    "passive": null
-   },
-   {
-    "name": "Pioneer of the Wind Path",
-    "obtained": null,
-    "passive": null
-   },
-   {
-    "name": "Restorer of Grace",
-    "obtained": null,
-    "passive": null
-   },
-   {
-    "name": "Dawn Gatherer",
-    "obtained": null,
-    "passive": null
+    ],
+    "category": "Promotion",
+    "achievement": "Novice Mercenary Crew promotion",
+    "inferred": true
    },
    {
     "name": "Nature Gatherer",
-    "obtained": null,
-    "passive": null
+    "grade": 5,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Armor Penetration",
+      "value": 5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Tree Sap Mushroom Collector"
    },
    {
     "name": "Hardy Gatherer",
-    "obtained": null,
-    "passive": null
-   },
-   {
-    "name": "Verdant Gatherer",
-    "obtained": null,
-    "passive": null
+    "grade": 5,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Armor Penetration",
+      "value": 5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Rock Mushroom Collector"
    },
    {
     "name": "Pure White Gatherer",
-    "obtained": null,
-    "passive": null
+    "grade": 5,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Whitebloom Carrot Collector"
+   },
+   {
+    "name": "Verdant Gatherer",
+    "grade": 5,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Lantern Gourd Collector"
+   },
+   {
+    "name": "Root Gatherer",
+    "grade": 5,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Defense",
+      "value": 5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Radish Collector"
+   },
+   {
+    "name": "Beach Gatherer",
+    "grade": 5,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 0.7
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Shellfish Collector"
+   },
+   {
+    "name": "Rabbit Hunter",
+    "grade": 5,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Attack",
+      "value": 5
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Beast Meat Collector"
+   },
+   {
+    "name": "Sand Gatherer",
+    "grade": 5,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 0.7
+     }
+    ],
+    "category": "Collect",
+    "achievement": "Sand Crab Collector"
+   },
+   {
+    "name": "Black Wings",
+    "grade": 5,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Max HP",
+      "value": 50
+     }
+    ],
+    "category": "Quest",
+    "achievement": "Awakened Heart"
+   },
+   {
+    "name": "A Small White Pang of Conscience",
+    "grade": 5,
+    "obtained": false,
+    "passive": [
+     {
+      "stat": "Critical Damage",
+      "value": 0.7
+     }
+    ],
+    "category": "Explore",
+    "achievement": "You Could've Just Walked By"
    }
+  ],
+  "grades": {
+   "1": {
+    "color": "#f2a7c8"
+   },
+   "2": {
+    "color": "#a9e6ad"
+   },
+   "3": {
+    "color": "#8fe0e0"
+   },
+   "4": {
+    "color": "#e8c49e"
+   },
+   "5": {
+    "color": "#c4b5f0"
+   }
+  },
+  "categories": [
+   "Combat",
+   "Explore",
+   "Collect",
+   "Quest",
+   "Special",
+   "Promotion"
   ]
  },
  "DAMAGE_TESTS": {

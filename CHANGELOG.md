@@ -1,3 +1,9 @@
+## 2026-10-29 — Claude: all 109 Titles
+- The Titles tab lists every title with its passive and how to get it, read by OCR from David's screen recording. David owns 3: Curious Hands, 【777】 and Novice Mercenary Crew. Their total (Defense +10, Max HP +50, Defense Up +1.50%) matches the game's Cumulative Set Effect.
+- At the top: David's total and the total of all 109 titles together. Below: search plus filters by category, by bonus stat and for owned titles only.
+- Title names use the game's five colours, which follow passive strength (pink strongest, lavender weakest).
+- Titles still don't count in the end-game stat totals.
+
 ## 2026-10-29 — Claude: Breaker boss explained (likely)
 - Break lasts 8 s on both Drosophia bosses. Drosophia of Breaker has a much bigger Super Armor bar: Charlotte needs about 2× the hits, Castella only about 1.4×. That's the likely effect of the Breaker weakness; it's on the card and in the box, marked as likely. TODO item 12 is closed.
 
