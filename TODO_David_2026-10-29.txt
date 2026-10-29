@@ -151,4 +151,11 @@ Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we
   - TIER AGREED 17:51: C overall (old list A/B/B). Tags: Enabler (Stun) + Easy. Only benefits: Stun for some damage if you have no one else, and the heal for very casual players; "otherwise he's just filled with cons".
   - A1 (Attack Power zone from Relic Fall, stronger with his signature Karma): untested (David won't spend awakening stones on low-ranked heroes). Could be big, but depends on the zone size, and if Relic Fall picks a far-off target both the Special and the zone are wasted. No Needs-awakening tag; mention as untested potential.
   - So: not Self-sufficient (Relic Fall isn't worth chasing); Knockdown not part of his Enabler value.
+- Reina (David, 18:02):
+  - TIER AGREED: S overall, Single target S, Groups S+. At minimum A just for how easily she applies Airborne, which many heroes need.
+  - Tags: Enabler + Self-sufficient + Easy (easiest hero discussed so far). That's the 3-tag maximum.
+  - Applies Airborne so fast you have time to swap and rotate; if you mess up, her Ultimate (Wind Slayer) has two charges (David; not in the codex text).
+  - Tempest: multi-hit (about 7 hits, David's count) on targets in front of her, very low cooldown (feels about a DoT tick, ~2.5 s). Her Specials also do strong damage.
+  - Mastery (mid-air Dodge, 2.5 s cooldown) could be a big QoL.
+  - Signature Karma (The Wind That Protects the Kingdom): not owned yet. Its exclusive effect is "The Tempest skill changes to emit a sword aura", so it does touch Tempest (David expects it to be big). Badge undecided until seen.
 - Tag rules (David, 29 Oct): no "Team-dependent" tag; only Self-sufficient. Heroes like Reina are covered by the Enabler tag. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes.

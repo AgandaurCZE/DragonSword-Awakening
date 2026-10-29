@@ -2884,7 +2884,7 @@
     {
      "slot": "Mastery (passive)",
      "skill": "Trails of Sword Light",
-     "description": "The movement distance and number of attacks for the [Venom Dance] skill increase.\nCharlotte",
+     "description": "The movement distance and number of attacks for the [Venom Dance] skill increase.",
      "meta": {
       "maxLevel": null,
       "attackPct": null,
@@ -3413,7 +3413,7 @@
     {
      "slot": "Mastery (passive)",
      "skill": "A Young Boy's Choice",
-     "description": "The number of attacks for the [Kick Combo] skill and the Rage gained from the [Dropkick] skill increase, and the Stun status effect is additionally applied to enemies hit.\nTheresia",
+     "description": "The number of attacks for the [Kick Combo] skill and the Rage gained from the [Dropkick] skill increase, and the Stun status effect is additionally applied to enemies hit.",
      "meta": {
       "maxLevel": null,
       "attackPct": null,
@@ -4234,7 +4234,7 @@
     {
      "slot": "Mastery (passive)",
      "skill": "Steel Flutter",
-     "description": "[Dodge] The skill changes to a form that can be used in mid-air.\nCooldown 2.5 seconds\nEileen",
+     "description": "[Dodge] The skill changes to a form that can be used in mid-air.\nCooldown 2.5 seconds",
      "meta": {
       "maxLevel": null,
       "attackPct": null,
@@ -4990,7 +4990,7 @@
     {
      "slot": "Mastery (passive)",
      "skill": "More Bombs, More Firepower",
-     "description": "[Shoot and Bomb] While using this skill, pressing the attack key again throws another bomb.\nKalien",
+     "description": "[Shoot and Bomb] While using this skill, pressing the attack key again throws another bomb.",
      "meta": {
       "maxLevel": null,
       "attackPct": null,
@@ -5245,7 +5245,7 @@
     {
      "slot": "Mastery (passive)",
      "skill": "Unceasing Flames",
-     "description": "The duration of the [Twin Tails] skill is increased, and the rotation range of the Fox spirits is expanded.\nKalsion",
+     "description": "The duration of the [Twin Tails] skill is increased, and the rotation range of the Fox spirits is expanded.",
      "meta": {
       "maxLevel": null,
       "attackPct": null,
@@ -5808,7 +5808,7 @@
     {
      "slot": "Mastery (passive)",
      "skill": "Barrier of Gathered Sparkle",
-     "description": "When using [Chako Shield], grants a shield to herself and allies within range. Empowers allies within range for a certain duration.\nIncreases the Defense of yourself and allies within range by 10% for a set duration\nCerese",
+     "description": "When using [Chako Shield], grants a shield to herself and allies within range. Empowers allies within range for a certain duration.\nIncreases the Defense of yourself and allies within range by 10% for a set duration",
      "meta": {
       "maxLevel": null,
       "attackPct": null,
@@ -6064,7 +6064,7 @@
     {
      "slot": "Mastery (passive)",
      "skill": "March of the Cruel Frost",
-     "description": "The duration of the frost path created by the [Frozen Road] skill is increased, and enemies hit by the skill are additionally afflicted with the Frost status effect.\nOthello",
+     "description": "The duration of the frost path created by the [Frozen Road] skill is increased, and enemies hit by the skill are additionally afflicted with the Frost status effect.",
      "meta": {
       "maxLevel": null,
       "attackPct": null,
@@ -6568,7 +6568,7 @@
     {
      "slot": "Mastery (passive)",
      "skill": "Zone of Purification",
-     "description": "Enhances the [Holy Cutter] skill so that when an additional attack button is pressed while the skill is active, the scythe is swung widely to deliver an extra attack, inflicting the Shock and Knockdown status effects on the struck enemy.\nSion",
+     "description": "Enhances the [Holy Cutter] skill so that when an additional attack button is pressed while the skill is active, the scythe is swung widely to deliver an extra attack, inflicting the Shock and Knockdown status effects on the struck enemy.",
      "meta": {
       "maxLevel": null,
       "attackPct": null,
@@ -6818,7 +6818,7 @@
     {
      "slot": "Mastery (passive)",
      "skill": "Surge",
-     "description": "The area of effect for [Orzea's Blessing] and [Orzea's Protection] is expanded, and they additionally inflict the Shock status effect.\nTarte",
+     "description": "The area of effect for [Orzea's Blessing] and [Orzea's Protection] is expanded, and they additionally inflict the Shock status effect.",
      "meta": {
       "maxLevel": null,
       "attackPct": null,
@@ -7068,7 +7068,7 @@
     {
      "slot": "Mastery (passive)",
      "skill": "Tingling Droplet Game",
-     "description": "[Bolt Bubble] skill duration is increased. Generates [Holy Orb] even while jumping.\nRyza",
+     "description": "[Bolt Bubble] skill duration is increased. Generates [Holy Orb] even while jumping.",
      "meta": {
       "maxLevel": null,
       "attackPct": null,
@@ -7557,7 +7557,7 @@
     {
      "slot": "Mastery (passive)",
      "skill": "Rage Elf's Sprint",
-     "description": "The movement distance and number of attacks for the [Shoulder Crusher] skill are increased.\nWhile using the skill, Super Armor damage reduction is increased and damage taken is decreased.\nAstria",
+     "description": "The movement distance and number of attacks for the [Shoulder Crusher] skill are increased.\nWhile using the skill, Super Armor damage reduction is increased and damage taken is decreased.",
      "meta": {
       "maxLevel": null,
       "attackPct": null,

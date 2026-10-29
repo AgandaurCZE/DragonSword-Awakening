@@ -1,3 +1,6 @@
+## 2026-10-29 — Claude: stray names in Mastery text
+- Removed a stray hero name at the end of 11 Mastery descriptions (e.g. Reina's ended with "Eileen"). It was the next hero's name from the Codex page, picked up when the text was copied. Spotted by David.
+
 ## 2026-10-29 — Claude: preview gate fix
 - The hidden menu buttons (Familiars, Titles, Trait Dungeons) were still visible because the menu's `display:flex` style overrode the `hidden` attribute. Added `.nav-item[hidden]{display:none!important}`. Checked by testing what's actually on screen.
 - Removed the new tier list's demo mode (`&demo=1`); we work in `?tiers=new` from now on.
