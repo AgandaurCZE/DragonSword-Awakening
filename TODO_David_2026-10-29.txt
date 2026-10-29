@@ -175,5 +175,5 @@ Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we
   - Slow, but does her job; multipliers OK once her kit gets going; enables herself.
   - Signature Karma (Explosion Is Art, not owned): exclusive = Switch On! makes a larger explosion that adds Burn and Airborne. A bigger enabler AoE, not a Main DPS change (David doubts it, she's too slow).
   - Kalien interaction (from the data): Aria's Burn only helps Kalien's Fox Grab with Kalien's A1 (without it Fox Grab needs Super Armor Break). Fits "Kalien needs A1".
-  - TIER (David's proposal): B overall (old list B), Groups A, Single target B (only thanks to Multiple Bolt; otherwise C). Tags proposed: Enabler + Self-sufficient.
+  - TIER AGREED 18:36: B overall (old list B), Groups A, Single target B (only thanks to Multiple Bolt; otherwise C). Tags: Enabler + Self-sufficient (Self-sufficient under review: David worries it is overused).
 - Tag rules (David, 29 Oct): no "Team-dependent" tag; only Self-sufficient. Heroes like Reina are covered by the Enabler tag. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes.
