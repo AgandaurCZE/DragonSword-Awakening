@@ -11018,6 +11018,28 @@
      "value": 1.94,
      "note": "% stat, not in the Orange tables yet"
     }
+   ],
+   "rows": [
+    {
+     "slot": "Helmet",
+     "stat": "Defense Up",
+     "rarity": "Blue",
+     "date": "2026-10-29",
+     "by": "David (Test Kit)",
+     "byLevel": [
+      3.68,
+      4.43,
+      5.17,
+      5.9,
+      7.38,
+      8.86,
+      10.33,
+      11.81,
+      13.28,
+      14.76
+     ],
+     "observation": "Step +0.74 (= +0 value / 5) for +1 to +3, then double (+1.48) from +4 to +9. Matches the Blue boots seen earlier (+3 = 5.90, +6 = 10.33). The Orange table in GEAR_STATS has one even step (+1.58 = 7.9 / 5) all the way to +15; worth checking whether Orange also doubles after +3."
+    }
    ]
   }
  },
@@ -15041,27 +15063,49 @@
     ]
    },
    {
-    "test": "Skill buff by level",
+    "test": "Skill buffs by level",
     "date": "2026-10-29",
     "by": "David (Test Kit)",
-    "hero": "Lute",
-    "skill": "Healing Circle (Lv.10)",
-    "value": "Restores % of Maximum HP",
-    "byLevel": [
-     10,
-     11,
-     12,
-     13,
-     14,
-     15,
-     16,
-     17,
-     18,
-     20
-    ],
     "observations": [
-     "Heal goes +1% per level from Lv. 1 to Lv. 9, then +2% at Lv. 10 (x2.0 of Lv. 1 at max).",
-     "Damage multipliers also jump at the last level (x1.58 -> x1.75), so the max level may give an extra step for buffs too. One skill only so far."
+     "Both skills: an even step from Lv. 1 to Lv. 9, then a double step at Lv. 10. Step = (Lv.10 - Lv.1) / 10: Healing Circle +1% (Lv.10 +2%), Invisible +0.5% (Lv.10 +1%).",
+     "So buff at level L = Lv.1 + step x (L - 1) up to Lv. 9, and Lv.1 + 10 x step at Lv. 10. Damage multipliers also take a bigger step at the last level (x1.58 -> x1.75).",
+     "Max / Lv.1 differs per skill (x2.0 heal, x1.5 Crit Damage), so each buff needs its own Lv.1 and max value."
+    ],
+    "skills": [
+     {
+      "hero": "Lute",
+      "skill": "Healing Circle (Lv.10)",
+      "value": "Restores % of Maximum HP",
+      "byLevel": [
+       10,
+       11,
+       12,
+       13,
+       14,
+       15,
+       16,
+       17,
+       18,
+       20
+      ]
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Invisible (Lv.10)",
+      "value": "Critical Damage %",
+      "byLevel": [
+       10,
+       10.5,
+       11,
+       11.5,
+       12,
+       12.5,
+       13,
+       13.5,
+       14,
+       15
+      ]
+     }
     ]
    }
   ],
