@@ -190,3 +190,10 @@ Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we
   - (Earlier proposal: Easy tag, tier C or low B.) Patch 1.1.0: about -1% total, share moved from Holy Cross to Holy Circle.
 - Self-sufficient, NEW BAR (agreed 18:38): only heroes who run their whole kit alone AND are strong doing it, i.e. can carry a fight without the team. Kept: Reina, Johnny. Removed: Roxy, Aria. Update the tag's desc text in TIER_LIST_V2.tags when applying. Claude must say so whenever a proposed tag doesn't meet its definition.
 - Tag rules (David, 29 Oct): no "Team-dependent" tag; only Self-sufficient. Heroes like Reina are covered by the Enabler tag. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes.
+
+Launch checklist (David, 29 Oct 19:42; for when the project is done)
+- Footer credit line: "Fan-made guide. Not affiliated with or endorsed by HOUND13. DragonSword: Awakening and all game assets belong to their respective owners."
+- Corner links: Discord (David's server; ask for the invite link), GitHub (the repo), Claude credit (text "Built with Claude" linking to claude.ai unless Anthropic's brand guidelines allow the logo). Check each brand's current logo rules first (web search, with David's OK).
+- Optional: a short "how this was made" note (David's in-game testing, the data, open questions).
+- Remove the preview gate (PREVIEW_PAGES) and swap the new tier list in as the default.
+- Post on the game's subreddit.
