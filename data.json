@@ -9840,7 +9840,7 @@
   }
  ],
  "GEAR_STATS": {
-  "note": "From David's in-game gear info (source of truth, still being tested). Main stat values by upgrade level +0..+15; a substat has one fixed value. A piece can't have the same stat as main and substat (flat and % count as different stats). Helmet, Gloves and Boots are currently identical.",
+  "note": "Orange values (+0..+15) come from an external game database used at the start of the project, probably the Korean mobile version, NOT confirmed in the PC game (David, 29 Oct 2026). Treat them as rough until replaced by in-game readings (Test Kit 'Gear upgrade row', saved in observedBlue.rows). Rules confirmed in-game: a substat has one fixed value; a piece can't have the same stat as main and substat (flat and % count as different stats). Helmet, Gloves and Boots are currently identical.",
   "percentStats": [
    "Attack Power Up",
    "Critical Damage",
