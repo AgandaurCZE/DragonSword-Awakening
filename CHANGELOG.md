@@ -1,3 +1,7 @@
+## 2026-10-29 — Claude: tick your titles; live end-game totals and gear
+- Titles tab: every row has a tick box. Ticked titles are saved in the viewer's browser; "Ticked only" and the "Your titles" total use them, and a "clear" link resets them.
+- Hero pages: the end-game totals count the ticked titles (gold values, hover for which titles). The recommended gear is re-optimised live with them, using a JavaScript copy of `tools/hero_stats.py`'s optimiser, checked to give exactly the stored builds with no titles ticked. When titles push Crit Rate up, main stats move to Crit Damage or Attack Power Up; changed pieces get a gold frame and the build text says which.
+
 ## 2026-10-29 — Claude: all 109 Titles
 - The Titles tab lists every title with its passive and how to get it, read by OCR from David's screen recording. David owns 3: Curious Hands, 【777】 and Novice Mercenary Crew. Their total (Defense +10, Max HP +50, Defense Up +1.50%) matches the game's Cumulative Set Effect.
 - At the top: David's total and the total of all 109 titles together. Below: search plus filters by category, by bonus stat and for owned titles only.
