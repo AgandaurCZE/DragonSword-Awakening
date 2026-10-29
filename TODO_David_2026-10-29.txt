@@ -158,4 +158,12 @@ Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we
   - Tempest: multi-hit (about 7 hits, David's count) on targets in front of her, very low cooldown (feels about a DoT tick, ~2.5 s). Her Specials also do strong damage.
   - Mastery (mid-air Dodge, 2.5 s cooldown) could be a big QoL.
   - Signature Karma (The Wind That Protects the Kingdom): not owned yet. Its exclusive effect is "The Tempest skill changes to emit a sword aura", so it does touch Tempest (David expects it to be big). Badge undecided until seen.
+- Roxy (David, 18:18, small testing):
+  - Feels single target. Only AoE is Crimson Spiral (Skill): held, it applies ~99% of the first Bleed stack and Stuns right away, pushes enemies, and pulls in anyone who walks into the kicks. Stuns better than Lute.
+  - Bleeding Grab (Special B) can be used 3 times in a row when one press applies a full Bleed stack (it does on mobs): after 3 presses the mob has 3 Bleed stacks and Knockdown. 3 x 711% (= codex 1245% / 1.75, i.e. Lv.1), last hit with Knockdown: "okayish".
+  - Best rotation found: Skill -> Special A -> 3x Special B -> Ultimate; she unlocks her whole kit herself. Each skill applies almost or a full Bleed stack; the dash attack about a third.
+  - Mobile, fast, feels good to play. Damage feels on the low side.
+  - Signature Karma (more Kick Storm arrows; now about 5 arrows = one full Bleed stack): if it doubles the arrows, Kick Storm alone could reach 2 stacks and unlock Bleeding Grab's Knockdown sooner. Open: is that a damage loss (2x instead of 3x Bleeding Grab), or a small Knockdown source for the team? (Data: Theresia's conditions are Stun (Divine Arc) and Bleed (Holy Rise), not Knockdown; Knockdown would only add its +100% hit bonus.)
+  - Enabler value from the data: her Stun unlocks Theresia's Divine Arc, Astria's Bolt Bombard and Castella's Upper Blow; her Bleed unlocks Theresia's Holy Rise.
+  - Tier: David between A and B, leaning B. Tags proposed: Enabler + Self-sufficient.
 - Tag rules (David, 29 Oct): no "Team-dependent" tag; only Self-sufficient. Heroes like Reina are covered by the Enabler tag. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes.
