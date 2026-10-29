@@ -166,4 +166,14 @@ Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we
   - Signature Karma (more Kick Storm arrows; now about 5 arrows = one full Bleed stack): if it doubles the arrows, Kick Storm alone could reach 2 stacks and unlock Bleeding Grab's Knockdown sooner. Open: is that a damage loss (2x instead of 3x Bleeding Grab), or a small Knockdown source for the team? (Data: Theresia's conditions are Stun (Divine Arc) and Bleed (Holy Rise), not Knockdown; Knockdown would only add its +100% hit bonus.)
   - Enabler value from the data: her Stun unlocks Theresia's Divine Arc, Astria's Bolt Bombard and Castella's Upper Blow; her Bleed unlocks Theresia's Holy Rise.
   - TIER AGREED 18:19: B overall (old list A), Single target B, Groups C. Tags: Enabler + Self-sufficient.
+- Aria (David, 18:33):
+  - Air Bomb (Skill): a full Burn stack + Airborne right away, pressed or held (hold only aims). Slow but big AoE: +150% hit bonus at once for a Blazeflame team (Burn +50% + Airborne +100%, matches DAMAGE_TESTS).
+  - Rolling Bomb (Ultimate): feels very weak, small AoE, terrible damage, but applies Burn + Airborne right away.
+  - Multiple Bolt (Special A) -> Switch On! (Special B) feels good: 3 homing bolts, targets seem random among Airborne enemies when pressed (can all land on one target), detonated by Switch On!.
+  - Play: Skill -> Ult -> Special A, then swap to someone who does more. Enabler with some damage from her Specials.
+  - Jump attack (Shoot and Bomb): small-medium AoE bomb, about 1/3 Burn stack per hit, Airborne ~1/10. Enhanced basic after Switch On! fires homing bolts but scales much lower: not worth it.
+  - Slow, but does her job; multipliers OK once her kit gets going; enables herself.
+  - Signature Karma (Explosion Is Art, not owned): exclusive = Switch On! makes a larger explosion that adds Burn and Airborne. A bigger enabler AoE, not a Main DPS change (David doubts it, she's too slow).
+  - Kalien interaction (from the data): Aria's Burn only helps Kalien's Fox Grab with Kalien's A1 (without it Fox Grab needs Super Armor Break). Fits "Kalien needs A1".
+  - TIER (David's proposal): B overall (old list B), Groups A, Single target B (only thanks to Multiple Bolt; otherwise C). Tags proposed: Enabler + Self-sufficient.
 - Tag rules (David, 29 Oct): no "Team-dependent" tag; only Self-sufficient. Heroes like Reina are covered by the Enabler tag. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes.
