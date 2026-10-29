@@ -1,3 +1,10 @@
+## 2026-10-29 — Claude: Karma art, new hero portraits, Familiars page
+- From David's Codex screenshots, 102 card pictures were cut out automatically: 53 Karmas, 20 heroes and 29 Familiars. Each was named by reading the card text and matched to the data (every Karma and hero matched exactly). The in-game name printed on each card was painted out so only the art remains.
+- **Heroes:** new, sharper portraits (392×467, was 337×406) without the baked-in name, used everywhere portraits appear. Colour and grey still match who David owns. New `faction` field (the Codex groups), shown on the hero hover card.
+- **Karma:** card art now appears as the thumbnail on every Karma card (the Karma tab and Karma hover cards) and in the Best Karmas rows on hero pages; signature cards keep a small ✦. New `image` and `owned` fields (A Flame That Cuts Through the Moment and Frozen Fortress are in colour).
+- **Familiars:** the tab now lists all 29 with pictures, grouped like the Codex. How to get them and their effects come later.
+- The validator now checks the Karma and Familiar picture paths.
+
 ## 2026-10-29 — Claude: boss tabs re-cropped; tag tooltip shown once
 - New tier list preview: the boss tabs are taller (104 px) with shading only behind the text. Furcas's banner now shows his horns, eye and teeth. Vanak's shows his hook, arm and horned helmet (mirrored so the helmet sits clear of the name).
 - `assets/bosses/furcas.png` was empty after the GitHub rename; it's restored from the original upload.

@@ -136,6 +136,12 @@ for ml, arr in d.get('SKILL_LEVEL_MULTIPLIERS', {}).get('byMaxLevel', {}).items(
 m = d.get('KARMA_ASCENSION', {}).get('multipliers', [])
 if len(m) != 7 or m[0] != 1 or m[6] is None: bad('KARMA_ASCENSION.multipliers: needs 7 values, A0 = 1, A6 known')
 
+# Karma and Familiar pictures
+for k in d['KARMA_DATA']:
+    if k.get('image'): asset(k['image'], f"KARMA_DATA[{k['name']}].image")
+for f in d.get('FAMILIARS', {}).get('list', []):
+    if f.get('image'): asset(f['image'], f"FAMILIARS[{f['name']}].image")
+
 # Patch notes: hero names, badge and direction keys, source files
 PN = d.get('PATCH_NOTES', {})
 pn_versions = [p['version'] for p in PN.get('patches', [])]

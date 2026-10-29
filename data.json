@@ -40,7 +40,8 @@
    "classType": "Damage / Control",
    "obtain": {
     "method": "Story Quests"
-   }
+   },
+   "faction": "Johnny Mercenaries"
   },
   {
    "name": "Lute",
@@ -57,7 +58,8 @@
    "classType": "Healer",
    "obtain": {
     "method": "Story Quests"
-   }
+   },
+   "faction": "Johnny Mercenaries"
   },
   {
    "name": "Castella",
@@ -74,7 +76,8 @@
    "classType": "Damage / Control",
    "obtain": {
     "method": "Story Quests"
-   }
+   },
+   "faction": "Johnny Mercenaries"
   },
   {
    "name": "Aria",
@@ -91,7 +94,8 @@
    "classType": "Damage / Control",
    "obtain": {
     "method": "Story Quests"
-   }
+   },
+   "faction": "Johnny Mercenaries"
   },
   {
    "name": "Dana",
@@ -109,7 +113,8 @@
    "obtain": {
     "method": "Hero shop exchange",
     "cost": "Fate's Invitation"
-   }
+   },
+   "faction": "Red Fox Mercenaries"
   },
   {
    "name": "Kalien",
@@ -127,7 +132,8 @@
    "obtain": {
     "method": "Hero shop exchange",
     "cost": "Fate's Invitation"
-   }
+   },
+   "faction": "Red Fox Mercenaries"
   },
   {
    "name": "Roxy",
@@ -145,7 +151,8 @@
    "obtain": {
     "method": "Hero shop exchange",
     "cost": "Fate's Invitation"
-   }
+   },
+   "faction": "Red Fox Mercenaries"
   },
   {
    "name": "Alex",
@@ -163,7 +170,8 @@
    "obtain": {
     "method": "Hero shop exchange",
     "cost": "Fate's Invitation"
-   }
+   },
+   "faction": "Red Fox Mercenaries"
   },
   {
    "name": "Theresia",
@@ -181,7 +189,8 @@
    "obtain": {
     "method": "Hero shop exchange",
     "cost": "Fate's Invitation"
-   }
+   },
+   "faction": "Organa Order"
   },
   {
    "name": "Ornette",
@@ -198,7 +207,8 @@
    "classType": "Damage / Control",
    "obtain": {
     "method": "Story Quests"
-   }
+   },
+   "faction": "Organa Order"
   },
   {
    "name": "Sion",
@@ -216,7 +226,8 @@
    "obtain": {
     "method": "Hero shop exchange",
     "cost": "Fate's Invitation"
-   }
+   },
+   "faction": "Organa Order"
   },
   {
    "name": "Tarte",
@@ -234,7 +245,8 @@
    "obtain": {
     "method": "Hero shop exchange",
     "cost": "Fate's Invitation"
-   }
+   },
+   "faction": "Organa Order"
   },
   {
    "name": "Kalsion",
@@ -252,7 +264,8 @@
    "obtain": {
     "method": null,
     "note": "Not recorded yet"
-   }
+   },
+   "faction": "Orbis Kingdom"
   },
   {
    "name": "Cerese",
@@ -270,7 +283,8 @@
    "obtain": {
     "method": null,
     "note": "Not recorded yet"
-   }
+   },
+   "faction": "Orbis Kingdom"
   },
   {
    "name": "Reina",
@@ -288,7 +302,8 @@
    "obtain": {
     "method": "Hero shop exchange",
     "cost": "Fate's Invitation"
-   }
+   },
+   "faction": "Orbis Kingdom"
   },
   {
    "name": "Astria",
@@ -306,7 +321,8 @@
    "obtain": {
     "method": "Hero shop exchange",
     "cost": "Fate's Invitation"
-   }
+   },
+   "faction": "Orbis Kingdom"
   },
   {
    "name": "Eileen",
@@ -324,7 +340,8 @@
    "obtain": {
     "method": "Hero shop exchange",
     "cost": "Fate's Invitation"
-   }
+   },
+   "faction": "Orbis Kingdom"
   },
   {
    "name": "Othello",
@@ -342,7 +359,8 @@
    "obtain": {
     "method": null,
     "note": "Not recorded yet"
-   }
+   },
+   "faction": "Lentus Rebellion"
   },
   {
    "name": "Charlotte",
@@ -360,7 +378,8 @@
    "obtain": {
     "method": "Hero shop exchange",
     "cost": "Fate's Invitation"
-   }
+   },
+   "faction": "Lentus Rebellion"
   },
   {
    "name": "Ryza",
@@ -378,7 +397,8 @@
    "obtain": {
     "method": "Story Quests",
     "cost": "Adventure Quest 53. Reunion"
-   }
+   },
+   "faction": "Other"
   }
  ],
  "ROLE_ICONS": {
@@ -729,7 +749,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/a-sword-summoned-for-a-friend.webp",
+   "owned": false
   },
   {
    "archetype": "Amplitude",
@@ -764,7 +786,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/merciful-death-sentence.webp",
+   "owned": false
   },
   {
    "archetype": "Amplitude",
@@ -794,7 +818,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/i-ll-knock-you-out-myself.webp",
+   "owned": false
   },
   {
    "archetype": "Amplitude",
@@ -829,7 +855,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/every-rose-has-its-thorn.webp",
+   "owned": false
   },
   {
    "archetype": "Amplitude",
@@ -864,7 +892,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/a-coincidental-yet-perfect-plan.webp",
+   "owned": false
   },
   {
    "archetype": "Amplitude",
@@ -894,7 +924,9 @@
     "Defense": "28",
     "Max HP": "692"
    },
-   "statType": "Defense"
+   "statType": "Defense",
+   "image": "assets/karma/pounding-heart.webp",
+   "owned": false
   },
   {
    "archetype": "Crushing",
@@ -929,7 +961,9 @@
     "Defense": "28",
     "Max HP": "692"
    },
-   "statType": "Defense"
+   "statType": "Defense",
+   "image": "assets/karma/loyalty-amidst-lethargy.webp",
+   "owned": false
   },
   {
    "archetype": "Crushing",
@@ -964,7 +998,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/legends-left-behind-by-the-master.webp",
+   "owned": false
   },
   {
    "archetype": "Crushing",
@@ -999,7 +1035,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/merciless-kick.webp",
+   "owned": false
   },
   {
    "archetype": "Crushing",
@@ -1029,7 +1067,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/stay-sharp-always.webp",
+   "owned": false
   },
   {
    "archetype": "Crushing",
@@ -1059,7 +1099,9 @@
     "Defense": "28",
     "Max HP": "692"
    },
-   "statType": "Defense"
+   "statType": "Defense",
+   "image": "assets/karma/scattered-pulse.webp",
+   "owned": false
   },
   {
    "archetype": "Gale",
@@ -1094,7 +1136,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/between-chivalry-and-bookmarks.webp",
+   "owned": false
   },
   {
    "archetype": "Gale",
@@ -1129,7 +1173,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/the-wind-that-protects-the-kingdom.webp",
+   "owned": false
   },
   {
    "archetype": "Gale",
@@ -1164,7 +1210,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/the-wind-blows-again.webp",
+   "owned": false
   },
   {
    "archetype": "Gale",
@@ -1199,7 +1247,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/become-a-star-in-that-sky.webp",
+   "owned": false
   },
   {
    "archetype": "Gale",
@@ -1229,7 +1279,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/a-path-that-leads-to-the-wind.webp",
+   "owned": false
   },
   {
    "archetype": "Gale",
@@ -1259,7 +1311,9 @@
     "Defense": "28",
     "Max HP": "692"
    },
-   "statType": "Defense"
+   "statType": "Defense",
+   "image": "assets/karma/wings-of-the-sky.webp",
+   "owned": false
   },
   {
    "archetype": "Bloodburst",
@@ -1294,7 +1348,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/the-noble-lady-s-wild-hobby.webp",
+   "owned": false
   },
   {
    "archetype": "Bloodburst",
@@ -1324,7 +1380,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/fangs-lurking-in-the-thicket.webp",
+   "owned": false
   },
   {
    "archetype": "Bloodburst",
@@ -1359,7 +1417,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/a-soldier-s-basic-qualities.webp",
+   "owned": false
   },
   {
    "archetype": "Bloodburst",
@@ -1389,7 +1449,9 @@
     "Defense": "28",
     "Max HP": "692"
    },
-   "statType": "Defense"
+   "statType": "Defense",
+   "image": "assets/karma/blooming-blood.webp",
+   "owned": false
   },
   {
    "archetype": "Blazeflame",
@@ -1424,7 +1486,9 @@
     "Defense": "11",
     "Max HP": "259"
    },
-   "statType": "High Attack"
+   "statType": "High Attack",
+   "image": "assets/karma/explosion-is-art.webp",
+   "owned": false
   },
   {
    "archetype": "Blazeflame",
@@ -1459,7 +1523,9 @@
     "Defense": "11",
     "Max HP": "259"
    },
-   "statType": "High Attack"
+   "statType": "High Attack",
+   "image": "assets/karma/the-chosen-one-of-the-crimson-flame.webp",
+   "owned": false
   },
   {
    "archetype": "Blazeflame",
@@ -1494,7 +1560,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/the-sun-blazes-again.webp",
+   "owned": false
   },
   {
    "archetype": "Blazeflame",
@@ -1524,7 +1592,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/the-burning-taste-of-fire.webp",
+   "owned": false
   },
   {
    "archetype": "Blazeflame",
@@ -1559,7 +1629,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/a-flame-that-cuts-through-the-moment.webp",
+   "owned": true
   },
   {
    "archetype": "Blazeflame",
@@ -1589,7 +1661,9 @@
     "Defense": "28",
     "Max HP": "692"
    },
-   "statType": "Defense"
+   "statType": "Defense",
+   "image": "assets/karma/leg-scale-of-blazing-flames.webp",
+   "owned": false
   },
   {
    "archetype": "Frostbite",
@@ -1624,7 +1698,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/the-spear-that-fells-the-sun.webp",
+   "owned": false
   },
   {
    "archetype": "Frostbite",
@@ -1659,7 +1735,9 @@
     "Defense": "11",
     "Max HP": "259"
    },
-   "statType": "High Attack"
+   "statType": "High Attack",
+   "image": "assets/karma/eternal-blizzard.webp",
+   "owned": false
   },
   {
    "archetype": "Frostbite",
@@ -1694,7 +1772,9 @@
     "Defense": "11",
     "Max HP": "259"
    },
-   "statType": "High Attack"
+   "statType": "High Attack",
+   "image": "assets/karma/a-sparkling-tea-time.webp",
+   "owned": false
   },
   {
    "archetype": "Frostbite",
@@ -1724,7 +1804,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/frozen-fortress.webp",
+   "owned": true
   },
   {
    "archetype": "Frostbite",
@@ -1759,7 +1841,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/rock-splitting-ice.webp",
+   "owned": false
   },
   {
    "archetype": "Frostbite",
@@ -1789,7 +1873,9 @@
     "Defense": "28",
     "Max HP": "692"
    },
-   "statType": "Defense"
+   "statType": "Defense",
+   "image": "assets/karma/season-of-bitter-cold.webp",
+   "owned": false
   },
   {
    "archetype": "Thunderbolt",
@@ -1824,7 +1910,9 @@
     "Defense": "11",
     "Max HP": "259"
    },
-   "statType": "High Attack"
+   "statType": "High Attack",
+   "image": "assets/karma/a-helping-hand-for-good-kids.webp",
+   "owned": false
   },
   {
    "archetype": "Thunderbolt",
@@ -1859,7 +1947,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/the-scar-lightning-left-behind.webp",
+   "owned": false
   },
   {
    "archetype": "Thunderbolt",
@@ -1894,7 +1984,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/sacred-lightning-baptism.webp",
+   "owned": false
   },
   {
    "archetype": "Thunderbolt",
@@ -1929,7 +2021,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/fate-spoke-to-the-boy.webp",
+   "owned": false
   },
   {
    "archetype": "Thunderbolt",
@@ -1964,7 +2058,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/a-flash-of-invention.webp",
+   "owned": false
   },
   {
    "archetype": "Thunderbolt",
@@ -1994,7 +2090,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/the-one-chosen-by-lightning.webp",
+   "owned": false
   },
   {
    "archetype": "Thunderbolt",
@@ -2029,7 +2127,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/the-agent-of-divine-punishment.webp",
+   "owned": false
   },
   {
    "archetype": "Thunderbolt",
@@ -2059,7 +2159,9 @@
     "Defense": "28",
     "Max HP": "692"
    },
-   "statType": "Defense"
+   "statType": "Defense",
+   "image": "assets/karma/flash-claws.webp",
+   "owned": false
   },
   {
    "archetype": "Venom",
@@ -2094,7 +2196,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/the-conviction-left-in-darkness.webp",
+   "owned": false
   },
   {
    "archetype": "Venom",
@@ -2129,7 +2233,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/wandering-blade.webp",
+   "owned": false
   },
   {
    "archetype": "Venom",
@@ -2164,7 +2270,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/defeating-poison-with-poison.webp",
+   "owned": false
   },
   {
    "archetype": "Venom",
@@ -2199,7 +2307,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/a-spectacular-poison.webp",
+   "owned": false
   },
   {
    "archetype": "Venom",
@@ -2229,7 +2339,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/so-good-it-s-to-die-for.webp",
+   "owned": false
   },
   {
    "archetype": "Venom",
@@ -2259,7 +2371,9 @@
     "Defense": "28",
     "Max HP": "692"
    },
-   "statType": "Defense"
+   "statType": "Defense",
+   "image": "assets/karma/dominating-head.webp",
+   "owned": false
   },
   {
    "archetype": "Breaker",
@@ -2294,7 +2408,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/noisy-duet.webp",
+   "owned": false
   },
   {
    "archetype": "Breaker",
@@ -2329,7 +2445,9 @@
     "Defense": "11",
     "Max HP": "259"
    },
-   "statType": "High Attack"
+   "statType": "High Attack",
+   "image": "assets/karma/wildflowers-bloom-through-the-wind.webp",
+   "owned": false
   },
   {
    "archetype": "Breaker",
@@ -2359,7 +2477,9 @@
     "Defense": "22",
     "Max HP": "519"
    },
-   "statType": "Balanced"
+   "statType": "Balanced",
+   "image": "assets/karma/destruction-is-the-mother-of-creation.webp",
+   "owned": false
   },
   {
    "archetype": "Breaker",
@@ -2394,7 +2514,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/the-way-of-the-wild.webp",
+   "owned": false
   },
   {
    "archetype": "Breaker",
@@ -2429,7 +2551,9 @@
     "Defense": "16",
     "Max HP": "432"
    },
-   "statType": "Attack"
+   "statType": "Attack",
+   "image": "assets/karma/a-reckless-charge.webp",
+   "owned": false
   },
   {
    "archetype": "Breaker",
@@ -2459,7 +2583,9 @@
     "Defense": "28",
     "Max HP": "692"
    },
-   "statType": "Defense"
+   "statType": "Defense",
+   "image": "assets/karma/a-cut-above.webp",
+   "owned": false
   }
  ],
  "KARMA_ASCENSION": {
@@ -15190,9 +15316,194 @@
   ]
  },
  "FAMILIARS": {
-  "note": "Familiars are mounts and companions. Obtained from Codex > Familiar since patch 1.1.0. Data will be added from in-game screenshots.",
+  "note": "Familiars are mounts and companions, obtained from Codex > Familiar since patch 1.1.0. Pictures are from David's Codex screenshots (grey = not collected yet; the in-game name was painted out). How to get each one and its equip effects aren't recorded yet.",
   "empty": "Familiars will be listed here: how to get each one and its equip effects.",
-  "list": []
+  "list": [
+   {
+    "name": "Refreshing Canary",
+    "group": "Bird",
+    "image": "assets/familiars/refreshing-canary.webp",
+    "owned": false
+   },
+   {
+    "name": "Timid Hummingbird",
+    "group": "Bird",
+    "image": "assets/familiars/timid-hummingbird.webp",
+    "owned": false
+   },
+   {
+    "name": "Diligent Sparrow",
+    "group": "Bird",
+    "image": "assets/familiars/diligent-sparrow.webp",
+    "owned": false
+   },
+   {
+    "name": "Bright Crowtit",
+    "group": "Bird",
+    "image": "assets/familiars/bright-crowtit.webp",
+    "owned": true
+   },
+   {
+    "name": "Orchid Wing Cat",
+    "group": "Cat",
+    "image": "assets/familiars/orchid-wing-cat.webp",
+    "owned": false
+   },
+   {
+    "name": "Mist Wing Cat",
+    "group": "Cat",
+    "image": "assets/familiars/mist-wing-cat.webp",
+    "owned": false
+   },
+   {
+    "name": "Shadow Wing Cat",
+    "group": "Cat",
+    "image": "assets/familiars/shadow-wing-cat.webp",
+    "owned": false
+   },
+   {
+    "name": "Dawn Wing Cat",
+    "group": "Cat",
+    "image": "assets/familiars/dawn-wing-cat.webp",
+    "owned": false
+   },
+   {
+    "name": "Stormy Direwolf",
+    "group": "Direwolf",
+    "image": "assets/familiars/stormy-direwolf.webp",
+    "owned": false
+   },
+   {
+    "name": "Abyssal Direwolf",
+    "group": "Direwolf",
+    "image": "assets/familiars/abyssal-direwolf.webp",
+    "owned": false
+   },
+   {
+    "name": "Flame Spirit Fox",
+    "group": "Direwolf",
+    "image": "assets/familiars/flame-spirit-fox.webp",
+    "owned": false
+   },
+   {
+    "name": "War Direwolf",
+    "group": "Direwolf",
+    "image": "assets/familiars/war-direwolf.webp",
+    "owned": false
+   },
+   {
+    "name": "Brave Baby Dragon",
+    "group": "Dragon",
+    "image": "assets/familiars/brave-baby-dragon.webp",
+    "owned": false
+   },
+   {
+    "name": "Guardian Griffon",
+    "group": "Griffon",
+    "image": "assets/familiars/guardian-griffon.webp",
+    "owned": false
+   },
+   {
+    "name": "Holy Knightage Griffon",
+    "group": "Griffon",
+    "image": "assets/familiars/holy-knightage-griffon.webp",
+    "owned": false
+   },
+   {
+    "name": "Exploration Squad Griffon",
+    "group": "Griffon",
+    "image": "assets/familiars/exploration-squad-griffon.webp",
+    "owned": false
+   },
+   {
+    "name": "Knightage Griffon",
+    "group": "Griffon",
+    "image": "assets/familiars/knightage-griffon.webp",
+    "owned": false
+   },
+   {
+    "name": "Fierce Rhinoceros Beetle",
+    "group": "Insect",
+    "image": "assets/familiars/fierce-rhinoceros-beetle.webp",
+    "owned": false
+   },
+   {
+    "name": "Cowardly Firefly",
+    "group": "Insect",
+    "image": "assets/familiars/cowardly-firefly.webp",
+    "owned": false
+   },
+   {
+    "name": "Red Ladybug",
+    "group": "Insect",
+    "image": "assets/familiars/red-ladybug.webp",
+    "owned": false
+   },
+   {
+    "name": "Robust Stag Beetle",
+    "group": "Insect",
+    "image": "assets/familiars/robust-stag-beetle.webp",
+    "owned": true
+   },
+   {
+    "name": "Frost Sky Wolf",
+    "group": "Sky Wolf",
+    "image": "assets/familiars/frost-sky-wolf.webp",
+    "owned": false
+   },
+   {
+    "name": "Sandstorm Sky Wolf",
+    "group": "Sky Wolf",
+    "image": "assets/familiars/sandstorm-sky-wolf.webp",
+    "owned": false
+   },
+   {
+    "name": "Gale Sky Wolf",
+    "group": "Sky Wolf",
+    "image": "assets/familiars/gale-sky-wolf.webp",
+    "owned": false
+   },
+   {
+    "name": "Snowstorm Sky Wolf",
+    "group": "Sky Wolf",
+    "image": "assets/familiars/snowstorm-sky-wolf.webp",
+    "owned": true
+   },
+   {
+    "name": "Cotton Flying Squirrel",
+    "group": "Squirrel",
+    "image": "assets/familiars/cotton-flying-squirrel.webp",
+    "owned": false
+   },
+   {
+    "name": "Acorn Flying Squirrel",
+    "group": "Squirrel",
+    "image": "assets/familiars/acorn-flying-squirrel.webp",
+    "owned": false
+   },
+   {
+    "name": "Viola Flying Squirrel",
+    "group": "Squirrel",
+    "image": "assets/familiars/viola-flying-squirrel.webp",
+    "owned": false
+   },
+   {
+    "name": "Maple Flying Squirrel",
+    "group": "Squirrel",
+    "image": "assets/familiars/maple-flying-squirrel.webp",
+    "owned": false
+   }
+  ],
+  "groups": [
+   "Bird",
+   "Cat",
+   "Direwolf",
+   "Dragon",
+   "Griffon",
+   "Insect",
+   "Sky Wolf",
+   "Squirrel"
+  ]
  },
  "TRAIT_DUNGEONS": {
   "note": "Trait Dungeon bosses are weak to some archetypes and immune to others; higher difficulties may add immunities. Data comes from David's runs.",
