@@ -1,3 +1,9 @@
+## 2026-10-29 — Claude: Trait Dungeon banners, difficulty selector and reward icons
+- Every boss card now uses its in-game picture as the banner (cropped from David's Extreme screens).
+- A I–IV selector in the banner's top-left switches difficulty (Normal, Hard, Very Hard, Extreme). It updates the recommended level (20/30/40/50) and the rewards, shown as in-game icons with amounts (EXP, Adventurer's Emblem and the boss's own green, blue or purple trait stones). Hover an icon for its name.
+- 29 reward icons were cut out of the screenshots; the source PNGs were deleted afterwards (still in git history).
+- On phones the banner contents stack so nothing overlaps.
+
 ## 2026-10-29 — Claude: first Trait Dungeon weakness test
 - `DAMAGE_TESTS` has David's first weakness test: Reina's auto-attack first hit on an Airborne target did 473 on Mantius of Gale vs 320 on Mantius of Amplitude (about 1.48×), and Airborne built up faster. It's marked as a single test, with what's still open.
 - The Trait Dungeons page shows this as a short "What a weakness does" box at the top.

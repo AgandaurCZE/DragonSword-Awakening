@@ -15909,7 +15909,7 @@
   }
  },
  "TRAIT_DUNGEONS": {
-  "note": "Trait Dungeon bosses, from David's in-game screens. Weaknesses and immunities are the same on every difficulty (I–IV). Mantius and Drosophia are weak to the archetype in their name; each Ghagaroach is immune to its own archetype and weak to the next one in a loop: Blazeflame → Frostbite → Thunderbolt → Venom → Blazeflame. Heroes are ranked by the current Tier List (End-game). Recommended level and rewards are only recorded where David has sent the screen.",
+  "note": "Trait Dungeon bosses, from David's in-game screens. Weaknesses and immunities are the same on every difficulty (I–IV). Mantius and Drosophia are weak to the archetype in their name; each Ghagaroach is immune to its own archetype and weak to the next one in a loop: Blazeflame → Frostbite → Thunderbolt → Venom → Blazeflame. Heroes are ranked by the current Tier List (End-game). Recommended level and rewards per difficulty are from David's Mantius of Amplitude screens; the numbers are the same for every boss, only the trait stone matches the boss's archetype (icons from each boss's own screens). The stone's in-game name isn't recorded, so it's described by colour.",
   "empty": "Trait Dungeon bosses will be listed here.",
   "bosses": [
    {
@@ -15921,22 +15921,7 @@
      "Amplitude"
     ],
     "immune": [],
-    "image": null,
-    "level": 20,
-    "rewards": [
-     {
-      "item": "EXP",
-      "amount": 400
-     },
-     {
-      "item": "Adventurer's Emblem",
-      "amount": 5
-     },
-     {
-      "item": "Amplitude material",
-      "amount": 10
-     }
-    ]
+    "image": "assets/trait/mantius-amplitude.webp"
    },
    {
     "id": "mantius-crushing",
@@ -15947,7 +15932,7 @@
      "Crushing"
     ],
     "immune": [],
-    "image": null
+    "image": "assets/trait/mantius-crushing.webp"
    },
    {
     "id": "mantius-gale",
@@ -15958,7 +15943,7 @@
      "Gale"
     ],
     "immune": [],
-    "image": null
+    "image": "assets/trait/mantius-gale.webp"
    },
    {
     "id": "drosophia-breaker",
@@ -15969,7 +15954,7 @@
      "Breaker"
     ],
     "immune": [],
-    "image": null
+    "image": "assets/trait/drosophia-breaker.webp"
    },
    {
     "id": "drosophia-bloodburst",
@@ -15978,7 +15963,7 @@
     "archetype": "Bloodburst",
     "weak": [],
     "immune": [],
-    "image": null,
+    "image": "assets/trait/drosophia-bloodburst.webp",
     "note": "The game lists its weakness as \"None\". It may be a typo in the game, so it is shown exactly as the game states it."
    },
    {
@@ -15992,7 +15977,7 @@
     "immune": [
      "Blazeflame"
     ],
-    "image": null
+    "image": "assets/trait/ghagaroach-blazeflame.webp"
    },
    {
     "id": "ghagaroach-frostbite",
@@ -16005,7 +15990,7 @@
     "immune": [
      "Frostbite"
     ],
-    "image": null
+    "image": "assets/trait/ghagaroach-frostbite.webp"
    },
    {
     "id": "ghagaroach-thunderbolt",
@@ -16018,7 +16003,7 @@
     "immune": [
      "Thunderbolt"
     ],
-    "image": null
+    "image": "assets/trait/ghagaroach-thunderbolt.webp"
    },
    {
     "id": "ghagaroach-venom",
@@ -16031,11 +16016,131 @@
     "immune": [
      "Venom"
     ],
-    "image": null
+    "image": "assets/trait/ghagaroach-venom.webp"
    }
   ],
   "difficulties": 4,
-  "weaknessTest": "First test (David, Reina): her auto attack's first hit on an Airborne target did 473 on the Gale-weak boss vs 320 on the Amplitude boss, about 1.48x, and Airborne built up faster (one skill instead of two or three). One test so far, so treat the number as a first look."
+  "weaknessTest": "First test (David, Reina): her auto attack's first hit on an Airborne target did 473 on the Gale-weak boss vs 320 on the Amplitude boss, about 1.48x, and Airborne built up faster (one skill instead of two or three). One test so far, so treat the number as a first look.",
+  "difficultyLevels": [
+   {
+    "n": 1,
+    "roman": "I",
+    "name": "Normal",
+    "level": 20,
+    "color": "#cbd0d9",
+    "rewards": [
+     [
+      "exp",
+      400
+     ],
+     [
+      "emblem",
+      5
+     ],
+     [
+      "green",
+      10
+     ]
+    ]
+   },
+   {
+    "n": 2,
+    "roman": "II",
+    "name": "Hard",
+    "level": 30,
+    "color": "#7ee07e",
+    "rewards": [
+     [
+      "exp",
+      600
+     ],
+     [
+      "emblem",
+      10
+     ],
+     [
+      "blue",
+      10
+     ],
+     [
+      "green",
+      15
+     ]
+    ]
+   },
+   {
+    "n": 3,
+    "roman": "III",
+    "name": "Very Hard",
+    "level": 40,
+    "color": "#6cc4ff",
+    "rewards": [
+     [
+      "exp",
+      800
+     ],
+     [
+      "emblem",
+      15
+     ],
+     [
+      "blue",
+      15
+     ],
+     [
+      "green",
+      20
+     ]
+    ]
+   },
+   {
+    "n": 4,
+    "roman": "IV",
+    "name": "Extreme",
+    "level": 50,
+    "color": "#c58cff",
+    "rewards": [
+     [
+      "exp",
+      1000
+     ],
+     [
+      "emblem",
+      20
+     ],
+     [
+      "purple",
+      10
+     ],
+     [
+      "blue",
+      20
+     ]
+    ]
+   }
+  ],
+  "rewardItems": {
+   "exp": {
+    "name": "EXP",
+    "icon": "assets/trait/icons/exp.webp"
+   },
+   "emblem": {
+    "name": "Adventurer's Emblem",
+    "icon": "assets/trait/icons/emblem.webp"
+   },
+   "green": {
+    "name": "{arch} trait stone (green)",
+    "icon": "assets/trait/icons/{key}-green.webp"
+   },
+   "blue": {
+    "name": "{arch} trait stone (blue)",
+    "icon": "assets/trait/icons/{key}-blue.webp"
+   },
+   "purple": {
+    "name": "{arch} trait stone (purple)",
+    "icon": "assets/trait/icons/{key}-purple.webp"
+   }
+  }
  },
  "UI_ICONS": {
   "note": "Menu icons from assets/ui, cut out of David's in-game screenshots (white versions, used as masks so they take the menu colour; -gold versions kept for later). exchange, guides and help are spare. A missing entry keeps the text symbol.",
