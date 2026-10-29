@@ -263,6 +263,22 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .profile-gear-detail{color:#cdd5e0;font-size:12px;line-height:1.45;margin-top:5px}
 .profile-gear-piece img{width:62px;height:62px;object-fit:contain;display:block;margin:0 auto 6px}
 
+.nav-svg,.nav-img{width:20px;height:20px;display:block;margin:0 auto;object-fit:contain}
+.simple-page{max-width:1280px;margin:0 auto;padding:22px 28px 36px;color:#edf0f6}
+.simple-empty{padding:30px;text-align:center;color:#aeb6c5;background:#292b32;border:1px solid #383b44}
+.simple-summary{background:#2a2d35;border:1px solid #3a3d46;border-left:4px solid #e9c46a;padding:12px 16px;margin-bottom:14px;font-size:14px;color:#dce1e8}
+.simple-summary b{color:#fff}
+.simple-table-wrap{overflow-x:auto}
+.simple-table{width:100%;border-collapse:collapse;background:#25272e;border:1px solid #3a3d46;font-size:14px}
+.simple-table th{text-align:left;padding:9px 12px;background:#2f333d;color:#dfe7f2;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.simple-table td{padding:8px 12px;border-top:1px solid #33363f;color:#dce1e8}
+.muted{color:#8f98a8}
+.simple-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.simple-card{background:linear-gradient(100deg,#2a2e37,#25272e 60%);border:1px solid #3a3d46;padding:12px 16px;color:#dce1e8;font-size:14px}
+.simple-card h3{margin:0 0 4px;color:#fff;font-size:16px}.simple-meta{font-size:12px;color:#9aa3b2;margin-bottom:6px}
+.trait-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:6px 0}.trait-row>span:first-child{font-size:12px;color:#9aa3b2;min-width:90px}
+.arch-chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:800;color:var(--ac);border:1px solid var(--ac);padding:1px 6px 1px 3px}.arch-chip img{width:16px;height:16px}
+@media(max-width:700px){.simple-page{padding:16px 12px}}
 /* Patch Notes timeline + buff/nerf arrows */
 .pa{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;flex:none;vertical-align:-4px;box-shadow:0 1px 4px #0009}
 .pa svg{width:12px;height:12px;display:block}
@@ -327,6 +343,9 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  <button class="nav-item" data-page="teams"><span class="nav-icon">♟</span><span class="nav-label">Teams</span></button>
  <button class="nav-item" data-page="gear"><span class="nav-icon">◇</span><span class="nav-label">Gear</span></button>
  <button class="nav-item" data-page="karma"><span class="nav-icon">✧</span><span class="nav-label">Karma</span></button>
+ <button class="nav-item" data-page="familiars"><span class="nav-icon" id="navIconFamiliars">♞</span><span class="nav-label">Familiars</span></button>
+ <button class="nav-item" data-page="titles"><span class="nav-icon"><svg class="nav-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor"><path d="M30.08 54.92 L40.95 53.10 L49.57 46.24 L53.79 36.06 L52.54 25.12 L46.14 16.15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><ellipse cx="42.41" cy="56.39" rx="5.6" ry="2.5" transform="rotate(11.0 42.41 56.39)"/><ellipse cx="39.48" cy="49.81" rx="5.6" ry="2.5" transform="rotate(11.0 39.48 49.81)"/><ellipse cx="52.45" cy="48.41" rx="5.6" ry="2.5" transform="rotate(-18.0 52.45 48.41)"/><ellipse cx="46.69" cy="44.07" rx="5.6" ry="2.5" transform="rotate(-18.0 46.69 44.07)"/><ellipse cx="57.35" cy="36.56" rx="5.6" ry="2.5" transform="rotate(-47.0 57.35 36.56)"/><ellipse cx="50.22" cy="35.56" rx="5.6" ry="2.5" transform="rotate(-47.0 50.22 35.56)"/><ellipse cx="55.90" cy="23.83" rx="5.6" ry="2.5" transform="rotate(-76.0 55.90 23.83)"/><ellipse cx="49.18" cy="26.41" rx="5.6" ry="2.5" transform="rotate(-76.0 49.18 26.41)"/><ellipse cx="48.46" cy="13.39" rx="5.6" ry="2.5" transform="rotate(-105.0 48.46 13.39)"/><ellipse cx="43.83" cy="18.90" rx="5.6" ry="2.5" transform="rotate(-105.0 43.83 18.90)"/><ellipse cx="42.33" cy="13.58" rx="5" ry="2.4" transform="rotate(-152.0 42.33 13.58)"/><path d="M33.92 54.92 L23.05 53.10 L14.43 46.24 L10.21 36.06 L11.46 25.12 L17.86 16.15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><ellipse cx="21.59" cy="56.39" rx="5.6" ry="2.5" transform="rotate(-191.0 21.59 56.39)"/><ellipse cx="24.52" cy="49.81" rx="5.6" ry="2.5" transform="rotate(-191.0 24.52 49.81)"/><ellipse cx="11.55" cy="48.41" rx="5.6" ry="2.5" transform="rotate(-162.0 11.55 48.41)"/><ellipse cx="17.31" cy="44.07" rx="5.6" ry="2.5" transform="rotate(-162.0 17.31 44.07)"/><ellipse cx="6.65" cy="36.56" rx="5.6" ry="2.5" transform="rotate(-133.0 6.65 36.56)"/><ellipse cx="13.78" cy="35.56" rx="5.6" ry="2.5" transform="rotate(-133.0 13.78 35.56)"/><ellipse cx="8.10" cy="23.83" rx="5.6" ry="2.5" transform="rotate(-104.0 8.10 23.83)"/><ellipse cx="14.82" cy="26.41" rx="5.6" ry="2.5" transform="rotate(-104.0 14.82 26.41)"/><ellipse cx="15.54" cy="13.39" rx="5.6" ry="2.5" transform="rotate(-75.0 15.54 13.39)"/><ellipse cx="20.17" cy="18.90" rx="5.6" ry="2.5" transform="rotate(-75.0 20.17 18.90)"/><ellipse cx="21.67" cy="13.58" rx="5" ry="2.4" transform="rotate(-28.0 21.67 13.58)"/><path d="M32.00 21.00 L34.47 27.60 L41.51 27.91 L35.99 32.30 L37.88 39.09 L32.00 35.20 L26.12 39.09 L28.01 32.30 L22.49 27.91 L29.53 27.60Z"/></svg></span><span class="nav-label">Titles</span></button>
+ <button class="nav-item" data-page="trait"><span class="nav-icon" id="navIconTrait">⚔</span><span class="nav-label">Trait Dungeons</span></button>
  <button class="nav-item" data-page="patches"><span class="nav-icon">☰</span><span class="nav-label">Patch Notes</span></button>
 </aside>
 <div class="app-content">
@@ -376,6 +395,18 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  <div id="karmaBoard"></div>
  <p class="karma-awakening-note">Trait values at Ascension 0 (Lv. 1) and Ascension 6 (Lv. 70) are from the in-game screenshots. Each Ascension multiplies the A0 value: ×4/3, ×5/3, ×2, ×8/3, ×11/3 and ×5 for A1–A6, measured in-game. Values are rounded like the game: whole % and the nearest 5. Signature-exclusive effects are listed separately. Base stats are Lv. 70 / Ascension 6 values.</p>
 </section>
+<section class="simple-page" id="familiarsPage" hidden>
+ <div class="gear-heading"><h2>FAMILIARS</h2><span>Mounts and companions</span></div>
+ <div id="familiarsBody"></div>
+</section>
+<section class="simple-page" id="titlesPage" hidden>
+ <div class="gear-heading"><h2>TITLES</h2><span>Achievement titles and their passive bonuses</span></div>
+ <div id="titlesBody"></div>
+</section>
+<section class="simple-page" id="traitPage" hidden>
+ <div class="gear-heading"><h2>TRAIT DUNGEONS</h2><span>Bosses weak to some archetypes and immune to others</span></div>
+ <div id="traitBody"></div>
+</section>
 <section class="patches-page" id="patchesPage" hidden>
  <div class="gear-heading"><h2>PATCH NOTES</h2><span>Every update since launch, newest first, from the official Steam notes</span></div>
  <div id="patchesBody"></div>
@@ -395,7 +426,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={};
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={};
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -781,7 +812,7 @@ function setupSearchClearButtons(){
 function openCharacterProfile(name,initialTab='skills'){
  const h=HEROES.find(x=>x.name.toLowerCase()===String(name).toLowerCase());if(!h)return;
  currentProfileName=h.name;hideTip();if(typeof refPinned!=='undefined')refPinned=null;{const kp=$('karmaPopover');kp.hidden=true;kp.innerHTML='';}{const sp=document.getElementById('karmaSkillPopover');if(sp)sp.hidden=true;}
- ['tierPage','heroesPage','teamsPage','gearPage','karmaPage'].forEach(id=>$(id).hidden=true);
+ Object.values(PAGE_IDS).forEach(id=>$(id).hidden=true);
  $('profilePage').hidden=false;
  $('profilePage').style.setProperty('--hero-accent',ARCH_COLORS[h.archetype]||'#68c7d5');
  document.querySelectorAll('.nav-item').forEach(x=>x.classList.toggle('active',x.dataset.page==='tier'));
@@ -1194,13 +1225,8 @@ document.querySelectorAll('.nav-item').forEach(btn=>btn.addEventListener('click'
  document.querySelectorAll('.nav-item').forEach(x=>x.classList.toggle('active',x===btn));
  const page=btn.dataset.page;
  $('profilePage').hidden=true;
- $('tierPage').hidden=page!=='tier';
- $('heroesPage').hidden=page!=='heroes';
- $('teamsPage').hidden=page!=='teams';
- $('gearPage').hidden=page!=='gear';
- $('karmaPage').hidden=page!=='karma';
- $('patchesPage').hidden=page!=='patches';
- const titles={tier:'Visual tier list',heroes:'Heroes',teams:'Teams',gear:'Gear',karma:'Karma',patches:'Patch Notes'};
+ Object.entries(PAGE_IDS).forEach(([k,id])=>{$(id).hidden=k!==page});
+ const titles={tier:'Visual tier list',heroes:'Heroes',teams:'Teams',gear:'Gear',karma:'Karma',patches:'Patch Notes',familiars:'Familiars',titles:'Titles',trait:'Trait Dungeons'};
  document.title='DragonSword: Awakening — '+titles[page];
 }));
 
@@ -1300,6 +1326,23 @@ function renderPatches(){
 function renderProfilePatches(h){const P=PATCH_NOTES||{};const rows=(P.patches||[]).filter(p=>(p.heroChanges||{})[h.name]);if(!rows.length)return '';
  return rows.map(p=>{const c=p.heroChanges[h.name];return `<div class="rv-patch"><div class="rv-patch-head">${patchArrow(c,p.version)} Patch ${profileEsc(p.version)}: ${profileEsc(patchDirLabel(c))}${c.damagePct!=null?` <span class="${c.damagePct>0?'up':c.damagePct<0?'down':''}">(skill damage ${c.damagePct>0?'+':''}${c.damagePct}%)</span>`:''} <small>${patchDate(p.date)}</small></div><ul>${(c.changes||[]).map(x=>`<li><b>${profileEsc(x.skill||'')}</b>: ${x.before!=null?`${x.before}% → ${x.after}%`:colourStatusWords(x.text||'')}</li>`).join('')||`<li>${profileEsc(c.devNote||'')}</li>`}</ul></div>`}).join('')+`<button type="button" class="phd-open" data-open-patches="${profileEsc(h.name)}">See ${profileEsc(h.name)} in Patch Notes →</button>`;}
 
+
+// ---- Simple pages: Familiars, Titles, Trait Dungeons ----
+const PAGE_IDS={tier:'tierPage',heroes:'heroesPage',teams:'teamsPage',gear:'gearPage',karma:'karmaPage',patches:'patchesPage',familiars:'familiarsPage',titles:'titlesPage',trait:'traitPage'};
+function navIcon(id,src){const el=$(id);if(!el||!src)return;const im=new Image();im.onload=()=>{el.textContent='';im.className='nav-img';im.alt='';el.append(im)};im.src=src;}
+function renderFamiliars(){const F=FAMILIARS||{};const list=F.list||[];const root=$('familiarsBody');
+ root.innerHTML=list.length?`<div class="simple-grid">${list.map(f=>`<article class="simple-card"><h3>${profileEsc(f.name)}</h3>${f.obtain?`<div class="simple-meta">How to get: ${profileEsc(f.obtain)}</div>`:''}${(f.effects||[]).length?`<ul>${f.effects.map(e=>`<li>${colourStatusWords(e)}</li>`).join('')}</ul>`:''}</article>`).join('')}</div>`:`<div class="simple-empty">${profileEsc(F.empty||'Familiars are coming soon.')}</div>`;
+ if(F.note)root.insertAdjacentHTML('beforeend',`<p class="profile-note">${profileEsc(F.note)}</p>`);}
+function renderTitles(){const T=TITLES||{};const list=T.list||[];const root=$('titlesBody');const known=list.filter(t=>t.passive).length;
+ const fmt=b=>`${profileEsc(b.stat)} +${b.value}${/Up$|%/.test(b.stat)?'%':''}`;
+ root.innerHTML=`<div class="simple-summary"><b>${T.totalCount||list.length}</b> titles in the game · <b>${list.length}</b> listed here · passive known for <b>${known}</b>. Every title you own gives its passive to <b>all heroes</b>, slotted or not.</div>
+ <div class="simple-table-wrap"><table class="simple-table"><thead><tr><th>Title</th><th>Passive bonus</th></tr></thead><tbody>${list.map(t=>`<tr><td><b>${profileEsc(t.name)}</b></td><td>${t.passive?t.passive.map(fmt).join(', '):'<span class="muted">Not checked yet</span>'}</td></tr>`).join('')}</tbody></table></div>
+ <p class="profile-note">How title bonuses add up (tested in-game): flat bonuses are added to the hero's own stats before % bonuses multiply; % bonuses join the same pool as gear and set %. The full list will grow as titles are checked.</p>`;}
+function renderTrait(){const D=TRAIT_DUNGEONS||{};const list=D.bosses||[];const root=$('traitBody');
+ const archChip=a=>{const h=HEROES.find(x=>x.archetype===a);return `<span class="arch-chip" style="--ac:${ARCH_COLORS[a]||'#888'}">${h?`<img src="${h.archIcon}" alt="">`:''}${profileEsc(a)}</span>`};
+ root.innerHTML=list.length?`<div class="simple-grid">${list.map(b=>`<article class="simple-card"><h3>${profileEsc(b.name)}</h3>${b.level?`<div class="simple-meta">Lv. ${profileEsc(String(b.level))}</div>`:''}<div class="trait-row"><span>Weak against</span>${(b.weak||[]).map(archChip).join('')||'<span class="muted">not recorded</span>'}</div><div class="trait-row"><span>Immune to</span>${(b.immune||[]).map(archChip).join('')||'<span class="muted">not recorded</span>'}</div>${b.note?`<p>${colourStatusWords(b.note)}</p>`:''}</article>`).join('')}</div>`:`<div class="simple-empty">${profileEsc(D.empty||'Trait Dungeon bosses are coming soon.')}</div>`;
+ if(D.note)root.insertAdjacentHTML('beforeend',`<p class="profile-note">${profileEsc(D.note)}</p>`);}
+
 function patchText(){const m=DATA_META||{};return m.balancePatch&&m.balancePatch!==m.patch?`${m.patch} (no balance changes since ${m.balancePatch})`:(m.patch||'');}
 function startApp(){
   setupSearchClearButtons();
@@ -1310,9 +1353,11 @@ function startApp(){
  document.getElementById('heroesSearch').addEventListener('input',renderHeroes);
  renderGear();
  renderPatches();
+ renderFamiliars();renderTitles();renderTrait();
+ navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);
 }
 fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
 </script>

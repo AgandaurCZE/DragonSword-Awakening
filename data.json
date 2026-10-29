@@ -15188,5 +15188,19 @@
     "tierChanges": []
    }
   ]
+ },
+ "FAMILIARS": {
+  "note": "Familiars are mounts and companions. Obtained from Codex > Familiar since patch 1.1.0. Data will be added from in-game screenshots.",
+  "empty": "Familiars will be listed here: how to get each one and its equip effects.",
+  "list": []
+ },
+ "TRAIT_DUNGEONS": {
+  "note": "Trait Dungeon bosses are weak to some archetypes and immune to others; higher difficulties may add immunities. Data comes from David's runs.",
+  "empty": "Trait Dungeon bosses will be listed here with their weaknesses, immunities and the heroes to bring.",
+  "bosses": []
+ },
+ "UI_ICONS": {
+  "note": "Menu icons from assets/ui. A missing or empty entry keeps the text symbol.",
+  "titles": "assets/ui/titles.svg"
  }
 }

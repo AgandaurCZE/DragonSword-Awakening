@@ -1,3 +1,10 @@
+## 2026-10-29 — Claude: Familiars, Titles and Trait Dungeons tabs
+- Three new tabs in the left menu, the foundation for later content:
+  - **Titles:** the laurel-wreath icon (`assets/ui/titles.svg`) and the titles recorded so far with their passive bonuses (only Novice Mercenary Crew's is known).
+  - **Familiars** and **Trait Dungeons:** placeholder pages that fill from the new `FAMILIARS` and `TRAIT_DUNGEONS` keys.
+- `UI_ICONS` in data.json holds the menu icon paths. Familiars (♞) and Trait Dungeons (⚔) keep text symbols until David's icons are added.
+- Page switching now uses one list of pages (`PAGE_IDS`), which also fixes the Patch Notes page staying visible under a character page opened from it.
+
 ## 2026-10-29 — Claude: patch arrow beside the tier chip
 - On Tier List cards the ▲/▼ arrow (and Ryza's NEW) now sits just left of the tier letter in the top-right corner instead of bottom-left.
 
