@@ -1,3 +1,8 @@
+## 2026-10-29 — Claude: boss tabs re-cropped; tag tooltip shown once
+- New tier list preview: the boss tabs are taller (104 px) with shading only behind the text. Furcas's banner now shows his horns, eye and teeth. Vanak's shows his hook, arm and horned helmet (mirrored so the helmet sits clear of the name).
+- `assets/bosses/furcas.png` was empty after the GitHub rename; it's restored from the original upload.
+- Tag and Signature Karma hovers in the preview used `data-tip`, which also triggered the site-wide CSS tooltip, so two boxes appeared. They now use `data-v2tip` and show one tooltip.
+
 ## 2026-10-29 — Claude: in-game icons and boss pictures
 - David's in-game icons were cut out of their dark backgrounds and converted to WebP in `assets/ui/` (white versions plus `-gold`). The menu now uses them for Heroes, Teams, Familiars and Trait Dungeons, coloured like the menu text (grey, blue when selected). Exchange, Guides and Help are kept for later.
 - New tier list preview: the Overall and Bosses mode buttons use David's backgrounds (the in-game badge strip cropped off). Furcas and Vanak the Bloody Hook have wide banner crops for their tabs and full portraits kept for later (`assets/bosses/`; `farkas.png` is stored as `furcas`).
