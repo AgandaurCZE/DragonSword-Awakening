@@ -1,3 +1,6 @@
+## 2026-10-29 — Claude: Insect stamina note
+- The Insect passive box notes that steps 2–4 each add 10% maximum stamina, are believed to add up, and that it isn't tested whether each 10% is of the base or the already raised stamina (`FAMILIARS.passiveNotes`).
+
 ## 2026-10-29 — Claude: Familiar passives and abilities; faction on hero pages; big screenshots removed
 - **Familiars:** each species now has a passive-effect box beside its cards, with numbered diamond badges 1–4 drawn in the game's style (green = unlocked in David's game). Steps that only apply to that species carry a "<Species> only" tag with a hover note. Ability names such as Air Dash are chips with the ability's icon. Hovering (or tapping) one opens a pop-up with the icon, description and cooldown, all read from David's screenshots. Dragon moved to the bottom. One game typo fixed ("consumtion").
 - **Hero pages:** Quick info now also shows Faction, Kit and How to get.

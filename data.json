@@ -15721,7 +15721,10 @@
    "Squirrel": 0,
    "Dragon": 0
   },
-  "passiveNote": "Each species' passive unlocks step by step as you collect more familiars of that species (1 to 4; the Dragon has only one). Steps marked with the species name apply only to that species; the rest apply to all familiars. Text from the game; one typo fixed (\"consumtion\")."
+  "passiveNote": "Each species' passive unlocks step by step as you collect more familiars of that species (1 to 4; the Dragon has only one). Steps marked with the species name apply only to that species; the rest apply to all familiars. Text from the game; one typo fixed (\"consumtion\").",
+  "passiveNotes": {
+   "Insect": "Steps 2 to 4 each add 10% maximum stamina. They're believed to add up, but whether each 10% is of the base or the already raised stamina isn't tested yet."
+  }
  },
  "TRAIT_DUNGEONS": {
   "note": "Trait Dungeon bosses are weak to some archetypes and immune to others; higher difficulties may add immunities. Data comes from David's runs.",
