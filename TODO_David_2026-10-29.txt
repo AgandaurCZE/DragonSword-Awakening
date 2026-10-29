@@ -165,5 +165,5 @@ Apply once every hero is discussed (David, 29 Oct: "apply all we discuss once we
   - Mobile, fast, feels good to play. Damage feels on the low side.
   - Signature Karma (more Kick Storm arrows; now about 5 arrows = one full Bleed stack): if it doubles the arrows, Kick Storm alone could reach 2 stacks and unlock Bleeding Grab's Knockdown sooner. Open: is that a damage loss (2x instead of 3x Bleeding Grab), or a small Knockdown source for the team? (Data: Theresia's conditions are Stun (Divine Arc) and Bleed (Holy Rise), not Knockdown; Knockdown would only add its +100% hit bonus.)
   - Enabler value from the data: her Stun unlocks Theresia's Divine Arc, Astria's Bolt Bombard and Castella's Upper Blow; her Bleed unlocks Theresia's Holy Rise.
-  - Tier: David between A and B, leaning B. Tags proposed: Enabler + Self-sufficient.
+  - TIER AGREED 18:19: B overall (old list A), Single target B, Groups C. Tags: Enabler + Self-sufficient.
 - Tag rules (David, 29 Oct): no "Team-dependent" tag; only Self-sufficient. Heroes like Reina are covered by the Enabler tag. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes.
