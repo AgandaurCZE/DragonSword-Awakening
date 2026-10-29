@@ -12772,7 +12772,7 @@
    "Hits on an enemy that has Poison, Burn, Bleed or Shock deal x1.5, at any stack count: Charlotte 22 -> 33 with Poison, Roxy 24 -> 36 with Bleed, Ornette 17 -> 26 with Shock; Aria with no Karma (71 Attack) hit 19 on a clean goblin and 28 on a burning one (19.x x 1.5 = 28.5, rounded down), the same at 1, 2 or 3 stacks. The Karma results are explained by the status-bonus rule below.",
    "Status hit bonuses add up: +50% for each damage-over-time status (Poison, Bleed, Burn, Shock) and +100% each for Airborne, Knockdown and Stun. Charlotte's small auto-attack hit (22 clean): Poison 33 (x1.5), Poison + Bleed 44 (x2.0), Airborne + Poison 55 (x2.5), Knockdown + Poison + Bleed 66 (x3.0, recheck), Stun + Poison + Bleed 66 (x3.0), Airborne + Knockdown + Poison 77 (x3.5). Reina: Airborne alone x2.0. Exception: Airborne + Knockdown + Poison + Bleed was 77 (x3.5) twice, where adding up gives x4.0, so either x3.5 is a cap or Bleed wasn't on. The two earlier x2.5 results with Poison + Bleed + Airborne/Knockdown were most likely Bleed wearing off. Break not tested.",
    "How the status bonuses work (tested with Burn): a hit on an enemy with the status = k x (Attack + <status> Additional Attack Power) x 1.5 x (1 + <status> Additional Damage). A clean hit is k x Attack, so neither bonus does anything on a clean enemy, and neither changes ticks. One value of k (0.2677-0.2681 for Aria's first auto-attack hit on the goblins) fits all 8 results: no bonus 19 -> 28; +15% 19 -> 32; +4% & +110 102 -> 205; +19% & +110 102 -> 234. With several statuses the bonuses apply to the whole hit: Aria (381 Attack, +110 / +4% Burn) on Bleed + Knockdown + Burn hit 410 = k x 491 x 3.0 x 1.04 (410.1-410.8). Applying them only to Burn's +50% would give about 323. So: hit = k x (Attack + Additional Attack Power of a status the enemy has) x (1 + all status hit bonuses) x (1 + Additional Damage of a status the enemy has). Not tested: bonuses for two different statuses at once (e.g. Burn and Knockdown Additional Damage together: added or multiplied).",
-   "Trait Dungeon weakness (David, 29 Oct 2026, Reina on Mantius bosses): no effect on hits without the status (143 on both bosses). On a boss weak to the hero's archetype, that archetype's status hit bonus goes from +100% to +200% (Airborne: x2.0 to x3.0). Whether it doubles the bonus or adds +100% is still open."
+   "Trait Dungeon weakness (David, 29 Oct 2026, Reina and Johnny, boss only): doubles the hit bonus of the weak archetype's status (Poison +50% -> +100%, Airborne +100% -> +200%). No effect on hits without the status, no effect on DoT ticks. A neutral boss gives the same multiplier as the Training Ground dummy (no resistance on Normal). Airborne also built up faster on the weak boss. Untested: whether higher difficulties add resistances."
   ],
   "tests": [
    {
@@ -13459,7 +13459,44 @@
     "open": [
      "Johnny's gear and Karma at the time (any Poison Additional Attack Power or Additional Damage) are needed to explain the x1.88.",
      "Repeat 2-3 hits per case to rule out a stray crit or a different hit of the combo."
-    ]
+    ],
+    "superseded": "Replaced by the clean repeat below: the Poisoned hit on the neutral boss (272, x1.88) was most likely on a nearby mob, not the boss."
+   },
+   {
+    "test": "Trait Dungeon weakness with Poison, clean repeat",
+    "hero": "Johnny",
+    "date": "2026-10-29",
+    "level": "30 (before breakthrough)",
+    "stats": {
+     "Attack": 645,
+     "Defense": 183,
+     "Max HP": 4483,
+     "Armor Penetration": 17,
+     "Critical Rate": "5%",
+     "Critical Damage": "50%",
+     "Shock Additional Attack Power": 62,
+     "Status Effect Additional Attack Power Increase": "1.94%"
+    },
+    "setup": "2 Ballad of Life + 2 Battle Will + green helmet; Frozen Fortress Lv30 (trait not active: different archetype); no Mastery; Dirty Fight Lv3 (421%). No Poison bonuses.",
+    "skill": "auto attack, first hit; Poison tick (1 stack)",
+    "hits": {
+     "Training Ogre Lv90, clean": 109,
+     "Training Ogre Lv90, Poison": 164,
+     "Training Ogre Lv90, tick": 322,
+     "Mantius of Amplitude (neutral), clean": 145,
+     "Mantius of Amplitude (neutral), Poison": 218,
+     "Mantius of Amplitude (neutral), tick": 322,
+     "Ghagaroach of Thunderbolt (weak to Venom), clean": 145,
+     "Ghagaroach of Thunderbolt (weak to Venom), Poison": 291,
+     "Ghagaroach of Thunderbolt (weak to Venom), tick": 322
+    },
+    "observations": [
+     "Poison hit bonus: x1.50 on the dummy and on the neutral boss, x2.01 on the Venom-weak boss.",
+     "Ticks 322 everywhere = 50% of 645 Attack: weakness doesn't change ticks.",
+     "Neutral boss = dummy multiplier, so no hidden resistance to Venom on Normal.",
+     "Clean hits: 109 on the Lv90 Ogre vs 145 on the Lv30 bosses (the dummy has more Defense)."
+    ],
+    "conclusion": "A Trait Dungeon weakness doubles the matching status's hit bonus: Poison +50% -> +100% (Johnny), Airborne +100% -> +200% (Reina). A flat +100% is ruled out (Poison would be x2.5)."
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
@@ -16069,7 +16106,7 @@
    }
   ],
   "difficulties": 4,
-  "weaknessTest": "Tested by David: a weakness does nothing on its own (same damage on both bosses without the status) and doesn't raise Poison ticks. It boosts the hero's status hit bonus: Reina's Airborne went from ×2.0 to ×3.0 on the Gale-weak boss. With Johnny's Poison the gain was smaller (×1.88 to ×2.01), which is still being checked.",
+  "weaknessTest": "Tested by David with Reina and Johnny: a weakness doubles the hit bonus of that archetype's status. Poison's +50% becomes +100%, Airborne's +100% becomes +200%. It does nothing to hits without the status and doesn't raise damage-over-time ticks. Bosses that aren't weak to you take the same multiplier as the Training Ground dummy. Airborne also built up faster on the weak boss.",
   "difficultyLevels": [
    {
     "n": 1,

@@ -1,3 +1,7 @@
+## 2026-10-29 — Claude: Trait Dungeon weakness solved
+- David's clean Johnny repeat (dummy, neutral boss, Venom-weak boss): Poison ×1.50 / ×1.50 / ×2.01, ticks 322 everywhere. With Reina's test this shows that a weakness **doubles the matching status's hit bonus** (Poison +50% → +100%, Airborne +100% → +200%) and leaves ticks and status-free hits unchanged. Neutral bosses match the dummy.
+- The earlier ×1.88 reading is marked superseded (most likely a mob hit). The Trait Dungeons box and `DAMAGE_TESTS.findings` are updated, and TODO item 11 is reduced to an optional difficulty check.
+
 ## 2026-10-29 — Claude: Johnny Poison weakness test, immunity bubble
 - `DAMAGE_TESTS` has David's Johnny test: no gain without Poison, Poison ticks unchanged (322, 50% of Attack), Poisoned hit ×1.88 on the neutral boss vs ×2.01 on the Venom-weak boss. It's recorded without a conclusion because it doesn't match Reina's result yet.
 - Trait Dungeons: the "What a weakness does" box now covers both tests. The Immune column has a note on what immunity does, from Ghagaroach of Venom: a Venom skill makes the boss raise a bubble that Breaks, exposes and stuns your hero.

@@ -96,14 +96,14 @@ or OBS) and pause on the frame where your hit lands.
    "with Eileen" builds are worth it, and how high Eileen should rank.
 
 
-11. TRAIT DUNGEON WEAKNESS WITH POISON (follow-up)
-   - Johnny: Poisoned hit x1.88 on a neutral boss but x2.01 on the
-     Venom-weak one; Reina's Airborne went x2.0 -> x3.0. Doesn't fit yet.
-   - Send Johnny's Karma (and Ascension) and any gear with Poison
-     bonuses, then repeat 2-3 Poisoned hits on each boss (note crits).
-   - Best of all: the same test with no gear and no Karma on Johnny.
+11. TRAIT DUNGEON - optional
+   - Weakness is solved (doubles the status hit bonus). Left to check only
+     if you're curious: the same Poisoned/Airborne hit on Normal vs Hard of
+     one boss. A lower multiplier on Hard would mean resistances grow with
+     difficulty; a lower plain hit only means more Defense.
 
 -------------------------------------------------------------- DONE (28 Oct)
+- Trait Dungeon weakness (29 Oct): doubles the status hit bonus.
 - Skill level multipliers (all levels), Karma Ascensions A0–A6.
 - Damage: proportional to Attack and skill %; crit = x(1 + Crit Damage);
   no random spread; Armor Penetration / Defense Ignore work (small effect
