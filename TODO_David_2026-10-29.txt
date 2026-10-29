@@ -59,7 +59,7 @@ or OBS) and pause on the frame where your hit lands.
 
 7. STATUS EFFECTS – mostly done (28 Oct)
    Known: Poison, Bleed, Burn, Shock tick 50/75/100% of the first applier's
-   Attack at 1/2/3 stacks (max 3), 4 ticks over ~10 s. Hits on an enemy
+   Attack at 1/2/3 stacks (max 3), 5 ticks over 10 s (at 0 s, then every 2.5 s). Hits on an enemy
    get +50% per damage-over-time status and +100% each for Airborne,
    Knockdown and Stun, added together.
    Still open:

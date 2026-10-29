@@ -1,3 +1,7 @@
+## 2026-10-29 — Claude: DoT ticks are 5, not 4; flat status Attack Power confirmed
+- David noticed that Poison, Bleed, Burn and Shock tick straight away and then every 2.5 s, so **5 ticks** per application, not 4. Fixed in `STATUS_EFFECTS` (the Status Effects box now shows 250/375/500% totals at 1/2/3 stacks), in Charlotte's review, in `DAMAGE_TESTS` and in AGENTS.md.
+- Johnny's new test confirms two separate gear stats: flat "All Status Effect Additional Attack Power" (added to Attack before the status bonus) and the % "Status Effect Additional Attack Power Increase". Neither changes ticks. The values seen on blue gear are recorded in `GEAR_STATS.observedBlue`.
+
 ## 2026-10-29 — Claude: Trait Dungeon weakness solved
 - David's clean Johnny repeat (dummy, neutral boss, Venom-weak boss): Poison ×1.50 / ×1.50 / ×2.01, ticks 322 everywhere. With Reina's test this shows that a weakness **doubles the matching status's hit bonus** (Poison +50% → +100%, Airborne +100% → +200%) and leaves ticks and status-free hits unchanged. Neutral bosses match the dummy.
 - The earlier ×1.88 reading is marked superseded (most likely a mob hit). The Trait Dungeons box and `DAMAGE_TESTS.findings` are updated, and TODO item 11 is reduced to an optional difficulty check.
