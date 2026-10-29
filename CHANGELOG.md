@@ -1,3 +1,14 @@
+## 2026-10-29 — Claude: new tier list foundation (hidden preview)
+- The new tier list is in the code, but visitors still see the old one. Open it with `?tiers=new` at the end of the site address; add `&demo=1` to fill it with sample placements and tags.
+- What's built:
+  - Overall and Bosses modes. The Bosses mode has an All bosses tab, Furcas (Lv.20) and Vanak the Bloody Hook (Lv.25), and locked tabs for the 4 undiscovered Hunt bosses and the Raid.
+  - Role columns (Main DPS, Sub-DPS, Support) and tiers S+ to C, plus an Unrated row.
+  - Tags with icons, the Signature Karma corner badge, the patch arrows, and a Counter tag that appears automatically when a selected boss is weak to the hero's archetype.
+  - Fold-out About, Modes, Tags and Ratings panels.
+  - Hover cards with Overall, Groups and Single target tiers, or every boss's tier.
+  - A "Legacy view" button that switches back to the old tier list.
+- Data lives in the new `TIER_LIST_V2` key. Its `heroes` entry is empty until we decide ratings together. Mode and boss pictures are placeholders until David's screenshots arrive.
+
 ## 2026-10-29 — Claude: Familiars, Titles and Trait Dungeons tabs
 - Three new tabs in the left menu, the foundation for later content:
   - **Titles:** the laurel-wreath icon (`assets/ui/titles.svg`) and the titles recorded so far with their passive bonuses (only Novice Mercenary Crew's is known).

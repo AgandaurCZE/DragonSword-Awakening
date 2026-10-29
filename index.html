@@ -279,6 +279,48 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .trait-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:6px 0}.trait-row>span:first-child{font-size:12px;color:#9aa3b2;min-width:90px}
 .arch-chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:800;color:var(--ac);border:1px solid var(--ac);padding:1px 6px 1px 3px}.arch-chip img{width:16px;height:16px}
 @media(max-width:700px){.simple-page{padding:16px 12px}}
+/* New tier list preview (TIER_LIST_V2) */
+#tierPage>[hidden]{display:none!important}
+.v2-banner{background:#3b2f0e;border:1px solid #f5b942;color:#fde68a;font-size:12px;font-weight:800;letter-spacing:.04em;padding:7px 12px;margin-bottom:12px}
+.v2-banner.preview{background:#0f2e3f;border-color:#19b9ff;color:#bfe9ff}
+.v2-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.v2-head h2{margin:0;font-size:22px;color:#fff}.v2-head h2 span{color:#f5b942}
+.v2-legacy{background:#34363e;color:#d9dce5;border:1px solid #444954;padding:7px 12px;cursor:pointer;font:inherit;font-weight:700;font-size:13px}
+.v2-panel{background:#25272e;border:1px solid #3a3d46;margin-bottom:4px;color:#dce1e8;font-size:14px;line-height:1.6}
+.v2-panel summary{cursor:pointer;padding:10px 14px;font-weight:700;color:#fff;list-style:none;display:flex;justify-content:space-between}
+.v2-panel summary::after{content:"⌄";color:#9aa3b2}.v2-panel[open] summary::after{content:"⌃"}
+.v2-panel>div{padding:4px 16px 12px;border-top:1px solid #3a3d46}.v2-panel p{margin:8px 0}.v2-panel h5{margin:12px 0 4px;color:#fff}
+.v2-tag-table{border-collapse:collapse;width:100%}.v2-tag-table td{padding:6px 8px;border-top:1px solid #33363f;vertical-align:top}.v2-tag-table td:first-child{width:190px}
+.v2-ratings{list-style:none;padding:0;margin:8px 0}.v2-ratings li{display:flex;gap:10px;align-items:center;margin:6px 0}
+.v2-rt{display:inline-grid;place-items:center;min-width:34px;height:26px;font-weight:950;color:#11131a;border-radius:4px}
+.v2-modes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 10px}
+.v2-mode{position:relative;height:96px;border:2px solid #3a3d46;background:var(--bg,linear-gradient(120deg,#26324a,#1b2230)) center/cover;cursor:pointer;color:#fff;font:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;filter:grayscale(.5) brightness(.75);transition:filter .15s}
+.v2-mode.on{border-color:#f5b942;filter:none;box-shadow:0 0 16px #f5b94255}.v2-mode:hover{filter:none}
+.v2-mode-label{font-size:26px;font-weight:950;text-shadow:0 2px 6px #000}.v2-mode-sub{font-size:12px;color:#cbd5e1;text-shadow:0 1px 3px #000}
+.v2-bosses{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin-bottom:10px}
+.v2-boss{position:relative;height:78px;border:2px solid #3a3d46;background:var(--bg,linear-gradient(120deg,#203047,#151b26)) center/cover;cursor:pointer;color:#fff;font:inherit;text-align:left;overflow:hidden;filter:grayscale(.55) brightness(.7)}
+.v2-boss::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b1320f0,#0b1320a0 50%,transparent 85%)}
+.v2-boss.on{border-color:#19b9ff;filter:none;box-shadow:0 0 14px #19b9ff55}.v2-boss:hover{filter:none}
+.v2-boss.all{background:linear-gradient(120deg,#2b3a52,#1a2230)}.v2-boss.locked{cursor:default;background:#22252c;filter:none}.v2-boss.locked::after{display:none}
+.v2-boss-text{position:absolute;left:10px;right:10px;bottom:8px;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.v2-lv{font-size:10px;font-weight:900;color:#1b1406;background:#f5d77a;border-radius:9px;padding:0 6px}
+.v2-boss-name{font-weight:900;font-size:13px;line-height:1.2;text-shadow:0 2px 4px #000}.v2-boss.locked .v2-boss-name{color:#7d8594;text-shadow:none}
+.v2-intro{color:#9aa3b2;font-size:13px;margin:4px 0 10px}
+.v2-filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}.v2-filters input{flex:1 1 220px;background:#292b32;border:1px solid #414650;color:#e8eef4;padding:10px 12px;font:inherit}
+.v2-fgroup{display:flex;flex-wrap:wrap}
+.v2-grid{display:grid;grid-template-columns:64px repeat(var(--cols),minmax(0,1fr));gap:2px;background:#15181e;border:1px solid #2c313a}
+.v2-rolehead{display:flex;align-items:center;justify-content:center;gap:7px;background:#25282f;padding:9px;font-weight:900;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#e5e7eb}.v2-rolehead img{width:20px;height:20px}
+.v2-corner{background:#15181e}
+.v2-tierlabel{display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:950;color:#11131a;min-height:150px;text-align:center}
+.v2-cell{background:#1e2128;display:flex;flex-wrap:wrap;align-content:flex-start;justify-content:center;gap:6px;padding:10px 6px}
+.v2-cell-role{display:none}
+.v2-card{width:104px}.v2-card .hero-name{font-size:13px}
+.v2-tags{display:flex;flex-direction:column;align-items:center;gap:3px;margin-top:4px}
+.v2-tag{display:inline-flex;align-items:center;justify-content:center;gap:4px;font-size:10px;line-height:1.25;font-weight:800;color:var(--c);background:color-mix(in srgb,var(--c) 13%,#1d1f25);border:1px solid color-mix(in srgb,var(--c) 55%,transparent);border-radius:3px;padding:1px 6px 1px 4px;max-width:100%;text-align:center}
+.v2-tag.solid{background:var(--c);color:#1b1406;border-color:var(--c)}.v2-tag svg,.v2-tag img{width:12px;height:12px;flex:none}.v2-tag b{font-weight:900}
+.v2-karma{position:absolute;right:5px;bottom:5px;z-index:2;width:22px;height:22px;border-radius:50%;background:#2a1840ee;border:1px solid #c084fc;color:#d8b4fe;display:grid;place-items:center;box-shadow:0 2px 6px #0009}.v2-karma svg{width:14px;height:14px}.v2-karma.inline{position:static;display:inline-grid}
+.tier-chip.v2-fallback{opacity:.55}
+.v2-tip-tiers{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:6px}.v2-tip-tiers .label{font-size:10px;line-height:1.2;min-height:24px}
+@media(max-width:800px){.v2-grid{grid-template-columns:44px minmax(0,1fr)}.v2-tierlabel{grid-column:1}.v2-cell{grid-column:2}.v2-rolehead,.v2-corner{display:none}.v2-tierlabel{grid-row:span var(--cols);min-height:0;font-size:20px}.v2-cell{justify-content:flex-start}.v2-cell-role{display:block;width:100%;font-size:11px;font-weight:800;color:#9aa3b2;text-transform:uppercase;letter-spacing:.06em}.v2-mode{height:72px}.v2-mode-label{font-size:20px}.v2-card{width:92px}}
 /* Patch Notes timeline + buff/nerf arrows */
 .pa{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;flex:none;vertical-align:-4px;box-shadow:0 1px 4px #0009}
 .pa svg{width:12px;height:12px;display:block}
@@ -426,7 +468,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={};
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={};
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -1343,6 +1385,86 @@ function renderTrait(){const D=TRAIT_DUNGEONS||{};const list=D.bosses||[];const 
  root.innerHTML=list.length?`<div class="simple-grid">${list.map(b=>`<article class="simple-card"><h3>${profileEsc(b.name)}</h3>${b.level?`<div class="simple-meta">Lv. ${profileEsc(String(b.level))}</div>`:''}<div class="trait-row"><span>Weak against</span>${(b.weak||[]).map(archChip).join('')||'<span class="muted">not recorded</span>'}</div><div class="trait-row"><span>Immune to</span>${(b.immune||[]).map(archChip).join('')||'<span class="muted">not recorded</span>'}</div>${b.note?`<p>${colourStatusWords(b.note)}</p>`:''}</article>`).join('')}</div>`:`<div class="simple-empty">${profileEsc(D.empty||'Trait Dungeon bosses are coming soon.')}</div>`;
  if(D.note)root.insertAdjacentHTML('beforeend',`<p class="profile-note">${profileEsc(D.note)}</p>`);}
 
+// ---- New tier list (TIER_LIST_V2): hidden preview, opened with ?tiers=new (add &demo=1 for sample placements) ----
+const V2_ICONS={
+ expert:'<path d="M9 1.5L3.5 9H8l-1 5.5L12.5 7H8z" fill="currentColor"/>',
+ easy:'<path d="M8 13.5S2.5 10 2.5 6.2A2.9 2.9 0 018 4.6a2.9 2.9 0 015.5 1.6C13.5 10 8 13.5 8 13.5z" fill="currentColor"/>',
+ enabler:'<path d="M6 2.5a2 2 0 013.6 0l.4.9h2.5v3h-1a1.6 1.6 0 000 3.2h1v3.9H9v-1a1.6 1.6 0 00-3.2 0v1H2.5V9.6h1a1.6 1.6 0 000-3.2h-1V3.4H5z" fill="currentColor"/>',
+ self:'<circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M5.3 8.2l1.9 1.9 3.6-4" stroke="currentColor" stroke-width="1.8" fill="none"/>',
+ needs:'<path d="M6.5 9.5l3-3M5.2 7.6L3.9 8.9a2.3 2.3 0 003.2 3.2l1.3-1.3M10.8 8.4l1.3-1.3a2.3 2.3 0 00-3.2-3.2L7.6 5.2" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>',
+ buffer:'<path d="M8 2.5l4.5 5H9.6V13H6.4V7.5H3.5z" fill="currentColor"/>',
+ sa:'<path d="M8 1.8l5 2v4c0 3-2.2 5.2-5 6.4-2.8-1.2-5-3.4-5-6.4v-4z" stroke="currentColor" stroke-width="1.4" fill="none"/><path d="M8.6 3.5L7 7.5l2 1-1.6 4" stroke="currentColor" stroke-width="1.4" fill="none"/>',
+ karma:'<rect x="3.5" y="1.8" width="9" height="12.4" rx="1.4" stroke="currentColor" stroke-width="1.4" fill="none"/><path d="M8 5l.9 1.9 2 .3-1.5 1.4.4 2L8 9.6l-1.8 1 .4-2-1.5-1.4 2-.3z" fill="currentColor"/>',
+ early:'<circle cx="8" cy="10.5" r="3" fill="currentColor"/><path d="M8 2.5v2M3.3 5l1.4 1.4M12.7 5l-1.4 1.4M1.5 10.5h2M12.5 10.5h2" stroke="currentColor" stroke-width="1.5"/><path d="M1.5 13.8h13" stroke="currentColor" stroke-width="1.5"/>',
+ late:'<path d="M8 14V7.5M8 8C8 5 6 3.5 3 3.5 3 6.5 5 8 8 8zM8 9.5c0-2.6 1.8-4 4.5-4 0 2.6-1.8 4-4.5 4z" stroke="currentColor" stroke-width="1.4" fill="none"/>',
+ counter:'<circle cx="8" cy="8" r="5.6" stroke="currentColor" stroke-width="1.4" fill="none"/><circle cx="8" cy="8" r="2.6" stroke="currentColor" stroke-width="1.4" fill="none"/><circle cx="8" cy="8" r=".9" fill="currentColor"/>'};
+let V2={mode:'overall',boss:'all',arch:'',role:'',q:'',demo:false};
+function v2Data(){return TIER_LIST_V2||{};}
+function v2Hero(name){const D=v2Data();let H=(D.heroes||{})[name];
+ if(!H&&V2.demo){const h=HEROES.find(x=>x.name===name);const t=h?.tiers?.['End-game'];const ex={Charlotte:{tags:['expert'],expert:{drop:1,reason:'Demo text: her best damage needs Stealth, clone timing and Poison and Airborne kept up.'},needs:[['Airborne']]},Reina:{tags:['enabler','self']},Eileen:{tags:['buffer'],signatureKarma:true},Kalien:{tags:['awk','late'],awk:1,progression:{late:'Demo text: from Awakening 1 (Fox Grab on any Burning target).'}},Lute:{tags:['easy','early'],progression:{early:'Demo text: falls off in the mid-game.'}},Kalsion:{needs:[['Burn','Airborne']],tags:['sa'],signatureKarma:true}}[name]||{};
+  H={overall:{tier:t,groups:t,single:t},bosses:{all:t},...ex};}
+ return H||{};}
+function v2Tier(name){const H=v2Hero(name);if(V2.mode==='overall')return {t:H.overall?.tier};const b=H.bosses||{};if(V2.boss==='all')return {t:b.all};return b[V2.boss]?{t:b[V2.boss]}:{t:b.all,fallback:!!b.all};}
+function v2TierColor(t){return (v2Data().tierColors||{})[t]||tierColor(t);}
+function v2Chip(key,H,h){const T=(v2Data().tags||{})[key];if(!T)return '';const ic=key==='awk'?`<img src="${AWAKENINGS.icon||'assets/awakenings/Awakening_Icon.png'}" alt="">`:`<svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS[key]||''}</svg>`;
+ let label=profileEsc(T.label),tip=T.desc;
+ if(key==='expert'&&H.expert){label+=` −${H.expert.drop}`;tip=H.expert.reason||tip;}
+ if(key==='awk'){label=`Needs A${H.awk||'?'}`;}
+ if(key==='early'&&H.progression?.early)tip=H.progression.early;
+ if(key==='late'&&H.progression?.late)tip=H.progression.late;
+ return `<span class="v2-tag${key==='counter'?' solid':''}" style="--c:${T.color}" data-tip="${profileEsc(tip)}">${ic}<span>${label}</span></span>`;}
+function v2NeedsChip(group){const T=(v2Data().tags||{}).needs||{};const words=group.map(s=>`<b style="color:${ARCH_COLORS[STATUS_ARCHETYPE[s]]||'#fff'}">${profileEsc(s)}</b>`).join(' or ');
+ return `<span class="v2-tag" style="--c:${T.color||'#94a3b8'}" data-tip="${profileEsc(T.desc||'')}"><svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS.needs}</svg><span>Needs ${words}</span></span>`;}
+function v2Counter(h){if(V2.mode!=='bosses'||V2.boss==='all')return false;const b=(v2Data().bosses||[]).find(x=>x.id===V2.boss);return !!b&&(b.weak||[]).includes(h.archetype);}
+function v2Card(h){const H=v2Hero(h.name);const {t,fallback}=v2Tier(h.name);const sig=(KARMA_DATA||[]).find(k=>k.signature===h.name);
+ const tags=[...(H.tags||[]).filter(k=>k!=='counter').slice(0,3).map(k=>v2Chip(k,H,h)),...(H.needs||[]).slice(0,2).map(v2NeedsChip),...(v2Counter(h)?[v2Chip('counter',H,h)]:[])].join('');
+ const kb=H.signatureKarma&&sig?`<span class="v2-karma" data-karma="${profileEsc(sig.name)}" data-tip="${profileEsc(`Signature Karma: ${sig.name}. ${sig.exclusive||''}`)}"><svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS.karma}</svg></span>`:'';
+ const a=latestArrow(h.name);
+ return `<div class="hero-card v2-card" tabindex="0" role="button" data-hero="${profileEsc(h.name)}" style="--tier:${t?v2TierColor(t):'#4b5563'}"><div class="portrait-wrap"><img class="portrait" src="${h.portrait}" alt="${profileEsc(h.name)}" loading="lazy"><span class="arch-badge"><img src="${h.archIcon}" alt="${profileEsc(h.archetype)}"></span>${a?`<span class="patch-arrow" data-patch-hero="${profileEsc(h.name)}">${a}</span>`:''}<span class="tier-chip${fallback?' v2-fallback':''}">${t||'?'}</span>${kb}</div><div class="hero-name">${profileEsc(h.name)}</div>${tags?`<div class="v2-tags">${tags}</div>`:''}</div>`;}
+function v2TipHtml(h){const H=v2Hero(h.name);const D=v2Data();const box=(label,t)=>`<div class="tip-tier"><div class="label">${profileEsc(label)}</div><div class="value" style="background:${t?v2TierColor(t):'#3a3f4a'};${t?'':'color:#cbd0d9'}">${t||'?'}</div></div>`;
+ let tiers='';
+ if(V2.mode==='overall')tiers=box('Overall',H.overall?.tier)+box('Groups',H.overall?.groups)+box('Single target',H.overall?.single);
+ else tiers=box('All bosses',H.bosses?.all)+(D.bosses||[]).map(b=>box(b.name,(H.bosses||{})[b.id])).join('');
+ return `<div class="tip-top"><img class="tip-portrait" src="${h.portrait}" alt=""><div><div class="tip-title">${profileEsc(h.name)}</div><div class="tip-meta"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)} · ${profileEsc(h.role)}</div></div></div><div class="tip-tiers v2-tip-tiers">${tiers}</div>${H.expert?`<div class="tip-note"><b style="color:#ef4444">Expert −${H.expert.drop}:</b> ${profileEsc(H.expert.reason||'')}</div>`:''}<div class="tip-note">${V2.demo?'Demo data, not real ratings.':'Click for the full guide.'}</div>`;}
+function v2ShowTip(h,el){const tip=$('tooltip');tip.innerHTML=v2TipHtml(h);tip.style.setProperty('--tier','#536273');tip.style.display='block';const r=el.getBoundingClientRect();let left=r.right+12;if(left+tip.offsetWidth>window.innerWidth-12)left=r.left-tip.offsetWidth-12;tip.style.left=Math.max(12,left)+'px';tip.style.top=Math.max(12,Math.min(window.innerHeight-tip.offsetHeight-12,r.top-12))+'px';}
+function v2ModeBtn(key){const M=v2Data().modes?.[key]||{};return `<button type="button" class="v2-mode${V2.mode===key?' on':''}" data-v2mode="${key}" style="${M.image?`--bg:url('${M.image}')`:''}"><span class="v2-mode-label">${profileEsc(M.label||key)}</span><span class="v2-mode-sub">${profileEsc(M.sub||'')}</span></button>`;}
+function v2BossTab(b){return `<button type="button" class="v2-boss${V2.boss===b.id?' on':''}" data-v2boss="${b.id}" style="${b.image?`--bg:url('${b.image}')`:''}"><span class="v2-boss-text">${b.level?`<span class="v2-lv">Lv.${b.level}</span>`:''}<span class="v2-boss-name">${profileEsc(b.name)}</span></span></button>`;}
+function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();const tiers=D.tiers||['S','A','B','C'];const roles=D.roles||['Main DPS','Sub-DPS','Support'];
+ const list=HEROES.filter(h=>(!V2.q||h.name.toLowerCase().includes(V2.q))&&(!V2.arch||h.archetype===V2.arch)&&(!V2.role||h.role===V2.role));
+ const M=D.modes?.[V2.mode]||{};const bossName=V2.mode==='bosses'?(V2.boss==='all'?'All bosses':(D.bosses||[]).find(b=>b.id===V2.boss)?.name):'';
+ const tagRows=Object.entries(D.tags||{}).map(([k,T])=>`<tr><td>${k==='needs'?v2NeedsChip(['Airborne']):v2Chip(k,{awk:1,expert:{drop:1}},{})}</td><td>${profileEsc(T.desc)}</td></tr>`).join('');
+ const experts=Object.entries(D.heroes||{}).filter(([,H])=>H.expert).map(([n,H])=>`<li><b>${profileEsc(n)} (−${H.expert.drop}):</b> ${profileEsc(H.expert.reason||'')}</li>`).join('');
+ let html=`${V2.demo?'<div class="v2-banner">DEMO DATA: placements copied from the old End-game tiers and example tags. Not real ratings.</div>':'<div class="v2-banner preview">PREVIEW: hidden from visitors. Ratings are added as we decide them together.</div>'}
+ <div class="v2-head"><h2>Tier List <span>(${profileEsc(M.label||'')}${bossName?' · '+profileEsc(bossName):''})</span></h2><button type="button" class="v2-legacy" id="v2Legacy">Legacy view</button></div>
+ <details class="v2-panel"><summary>About this tier list</summary><div>${(D.about||[]).map(p=>`<p>${profileEsc(p)}</p>`).join('')}</div></details>
+ <details class="v2-panel"><summary>Modes</summary><div>${Object.values(D.modes||{}).map(m=>`<p><b>${profileEsc(m.label)}</b> (${profileEsc(m.sub)}): ${profileEsc(m.intro||'')}</p>`).join('')}</div></details>
+ <details class="v2-panel"><summary>Tags</summary><div><table class="v2-tag-table">${tagRows}<tr><td><span class="v2-karma inline"><svg viewBox="0 0 16 16">${V2_ICONS.karma}</svg></span></td><td>${profileEsc(D.signatureKarmaText||'')}</td></tr></table>${experts?`<h5>Expert reasons</h5><ul>${experts}</ul>`:''}</div></details>
+ <details class="v2-panel"><summary>Ratings</summary><div><ul class="v2-ratings">${(D.ratings||[]).map(r=>`<li><span class="v2-rt" style="background:${v2TierColor(r.tier)}">${profileEsc(r.tier)}</span>${profileEsc(r.text)}</li>`).join('')}</ul></div></details>
+ <div class="v2-modes">${['overall','bosses'].map(v2ModeBtn).join('')}</div>`;
+ if(V2.mode==='bosses'){const un=D.undiscovered||{};const locks=Object.entries(un).flatMap(([type,n])=>Array.from({length:n},()=>`<div class="v2-boss locked"><span class="v2-boss-text"><span class="v2-boss-name">${profileEsc(type)} boss · not reached yet</span></span></div>`));
+  html+=`<div class="v2-bosses"><button type="button" class="v2-boss all${V2.boss==='all'?' on':''}" data-v2boss="all"><span class="v2-boss-text"><span class="v2-boss-name">All bosses</span></span></button>${(D.bosses||[]).map(v2BossTab).join('')}${locks.join('')}</div>`;}
+ html+=`<p class="v2-intro">${profileEsc(M.intro||'')}</p><div class="v2-filters"><input type="search" id="v2Search" placeholder="Search heroes…" value="${profileEsc(V2.q)}" autocomplete="off"><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.arch?' active':''}" data-v2arch="" title="All archetypes"><span class="all-symbol">✱</span></button>${ARCHES.map(a=>{const h=HEROES.find(x=>x.archetype===a);return `<button class="heroes-filter-btn${V2.arch===a?' active':''}" data-v2arch="${profileEsc(a)}" title="${profileEsc(a)}"><img src="${h?.archIcon||''}" alt=""></button>`}).join('')}</div><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.role?' active':''}" data-v2role="" title="All roles"><span class="all-symbol">✱</span></button>${roles.map(r=>`<button class="heroes-filter-btn${V2.role===r?' active':''}" data-v2role="${profileEsc(r)}" title="${profileEsc(r)}"><img src="${ROLE_ICONS[r]||''}" alt=""></button>`).join('')}</div></div>`;
+ const rolesShown=V2.role?[V2.role]:roles;
+ html+=`<div class="v2-grid" style="--cols:${rolesShown.length}"><div class="v2-corner"></div>${rolesShown.map(r=>`<div class="v2-rolehead"><img src="${ROLE_ICONS[r]||''}" alt="">${profileEsc(r)}</div>`).join('')}`;
+ const rows=[...tiers,'?'];
+ rows.forEach(t=>{const inRow=list.filter(h=>(v2Tier(h.name).t||'?')===t);if(t==='?'&&!inRow.length)return;
+  html+=`<div class="v2-tierlabel" style="background:${t==='?'?'#3a3f4a':v2TierColor(t)}">${t==='?'?'Unrated':t}</div>`+rolesShown.map(r=>{const cs=inRow.filter(h=>h.role===r);return `<div class="v2-cell"><div class="v2-cell-role">${profileEsc(r)}</div>${cs.map(v2Card).join('')}</div>`}).join('');});
+ html+=`</div>`;
+ root.innerHTML=html;
+ root.querySelectorAll('[data-v2mode]').forEach(b=>b.onclick=()=>{V2.mode=b.dataset.v2mode;renderTierV2()});
+ root.querySelectorAll('[data-v2boss]').forEach(b=>b.onclick=()=>{V2.boss=b.dataset.v2boss;renderTierV2()});
+ root.querySelectorAll('[data-v2arch]').forEach(b=>b.onclick=()=>{V2.arch=b.dataset.v2arch;renderTierV2()});
+ root.querySelectorAll('[data-v2role]').forEach(b=>b.onclick=()=>{V2.role=b.dataset.v2role;renderTierV2()});
+ const s=$('v2Search');s.oninput=()=>{V2.q=s.value.trim().toLowerCase();const pos=s.selectionStart;renderTierV2();const n=$('v2Search');n.focus();n.setSelectionRange(pos,pos);};
+ $('v2Legacy').onclick=()=>showTierV2(false);
+ root.querySelectorAll('.v2-card').forEach(c=>{const h=HEROES.find(x=>x.name===c.dataset.hero);
+  c.addEventListener('click',e=>{if(e.target.closest('.patch-arrow')){e.stopPropagation();hideTip();openPatchesFor(h.name);return;}if(e.target.closest('.v2-karma')){hideTip();openKarmaByName(e.target.closest('.v2-karma').dataset.karma);return;}hideTip();openCharacterProfile(h.name)});
+  c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCharacterProfile(h.name)}});
+  c.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')v2ShowTip(h,c)});c.addEventListener('pointerleave',hideTip);c.addEventListener('focus',()=>v2ShowTip(h,c));c.addEventListener('blur',hideTip);});
+ root.querySelectorAll('.v2-tag[data-tip],.v2-karma[data-tip]').forEach(el=>{el.addEventListener('pointerenter',e=>{e.stopPropagation();const tip=$('tooltip');tip.innerHTML=`<div class="tip-note" style="margin:0">${profileEsc(el.dataset.tip)}</div>`;tip.style.display='block';const r=el.getBoundingClientRect();tip.style.left=Math.max(12,Math.min(window.innerWidth-tip.offsetWidth-12,r.left))+'px';tip.style.top=Math.min(window.innerHeight-tip.offsetHeight-12,r.bottom+8)+'px';});});}
+function showTierV2(on){const tp=$('tierPage');[...tp.children].forEach(c=>{if(c.id!=='tierV2')c.hidden=on});$('tierV2').hidden=!on;if(on)renderTierV2();else if(!$('v2Back')){const b=document.createElement('button');b.id='v2Back';b.type='button';b.className='v2-legacy';b.textContent='Back to the new tier list (preview)';b.style.margin='0 0 12px';b.onclick=()=>{b.remove();showTierV2(true)};tp.prepend(b);}}
+function initTierV2(){const p=new URLSearchParams(location.search);if(p.get('tiers')!=='new')return;V2.demo=p.get('demo')==='1';const tp=$('tierPage');const box=document.createElement('div');box.id='tierV2';tp.prepend(box);showTierV2(true);}
+
 function patchText(){const m=DATA_META||{};return m.balancePatch&&m.balancePatch!==m.patch?`${m.patch} (no balance changes since ${m.balancePatch})`:(m.patch||'');}
 function startApp(){
   setupSearchClearButtons();
@@ -1353,11 +1475,11 @@ function startApp(){
  document.getElementById('heroesSearch').addEventListener('input',renderHeroes);
  renderGear();
  renderPatches();
- renderFamiliars();renderTitles();renderTrait();
+ renderFamiliars();renderTitles();renderTrait();initTierV2();
  navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);
 }
 fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
 </script>

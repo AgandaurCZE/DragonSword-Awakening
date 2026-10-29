@@ -15202,5 +15202,148 @@
  "UI_ICONS": {
   "note": "Menu icons from assets/ui. A missing or empty entry keeps the text symbol.",
   "titles": "assets/ui/titles.svg"
+ },
+ "TIER_LIST_V2": {
+  "note": "New tier list (preview, hidden behind ?tiers=new until launch). Ratings are decided with David from codex data and in-game testing, never by a formula. heroes[name] = {overall:{tier, groups, single}, bosses:{all, <bossId>: tier}, tags[], needs[[status, ...]], expert:{drop, reason}, signatureKarma, progression:{early?, late?}}. Missing values show as unrated or '?'.",
+  "status": "preview",
+  "tiers": [
+   "S+",
+   "S",
+   "A",
+   "B",
+   "C"
+  ],
+  "tierColors": {
+   "S+": "#ff4fa3"
+  },
+  "roles": [
+   "Main DPS",
+   "Sub-DPS",
+   "Support"
+  ],
+  "modes": {
+   "overall": {
+    "label": "Overall",
+    "sub": "Open world, dungeons and story",
+    "image": null,
+    "intro": "How the hero performs across normal play: the open world, dungeons and the story. Hover a hero for their tiers against groups and single targets."
+   },
+   "bosses": {
+    "label": "Bosses",
+    "sub": "Hunts, Raids and World Bosses",
+    "image": null,
+    "intro": "How the hero performs against big single targets: Super Armor, mounting and grabs. Pick a boss for that fight, or All bosses for the general picture."
+   }
+  },
+  "bosses": [
+   {
+    "id": "furcas",
+    "name": "Furcas the Starving Ghost of Corrosion",
+    "level": 20,
+    "type": "Hunt",
+    "image": null,
+    "weak": [],
+    "immune": []
+   },
+   {
+    "id": "vanak",
+    "name": "Vanak the Bloody Hook",
+    "level": 25,
+    "type": "Hunt",
+    "image": null,
+    "weak": [],
+    "immune": []
+   }
+  ],
+  "undiscovered": {
+   "Hunt": 4,
+   "Raid": 1
+  },
+  "about": [
+   "DragonSword: Awakening is a single-player RPG with no gacha and no energy limits, so every hero is eventually yours. This tier list rates heroes once they're built: level 70, good gear and their signature Karma.",
+   "Ratings are decided by us from the in-game codex, measured damage tests and hands-on play, and they're never moved by a formula. Patch arrows next to the tier letter show whether the latest balance patch buffed (green ▲) or nerfed (red ▼) a hero; amber means mixed.",
+   "Heroes are compared with others in the same role column: a Support is ranked against other Supports, not against damage dealers."
+  ],
+  "ratings": [
+   {
+    "tier": "S+",
+    "text": "Reserved for a hero who, played well, can carry almost any fight on their own. Empty until someone earns it."
+   },
+   {
+    "tier": "S",
+    "text": "Defines the best teams and is strong in every fight of this mode."
+   },
+   {
+    "tier": "A",
+    "text": "Fully reliable; a little less damage, utility or flexibility than S."
+   },
+   {
+    "tier": "B",
+    "text": "Good with the right team or investment."
+   },
+   {
+    "tier": "C",
+    "text": "Works, but another hero does the same job better."
+   }
+  ],
+  "tags": {
+   "expert": {
+    "label": "Expert",
+    "color": "#ef4444",
+    "desc": "Strong only when played well: precise timing, combo order or keeping several conditions up. The number is how many tiers they drop for a casual player (−1 turns S into A). Every Expert tag has its reason listed below."
+   },
+   "easy": {
+    "label": "Easy",
+    "color": "#f472b6",
+    "desc": "Simple loop and forgiving timing, with few activation conditions to set up. Good on controller and for new players."
+   },
+   "enabler": {
+    "label": "Enabler",
+    "color": "#38bdf8",
+    "desc": "Applies the statuses that unlock teammates' conditional skills (the red Activation Conditions lines). Teams fall apart without one."
+   },
+   "self": {
+    "label": "Self-sufficient",
+    "color": "#e2e8f0",
+    "desc": "Meets most of their own activation conditions, so they fit almost any team."
+   },
+   "needs": {
+    "label": "Needs",
+    "color": "#94a3b8",
+    "desc": "Key skills only work once a teammate applies this status. The status is shown in its archetype's colour; \"or\" means either one is enough."
+   },
+   "buffer": {
+    "label": "Team buffer",
+    "color": "#2dd4bf",
+    "desc": "Raises allies' Attack, Crit or Defense."
+   },
+   "sa": {
+    "label": "Super Armor break",
+    "color": "#a78bfa",
+    "desc": "Breaks boss Super Armor faster than most, so the team can mount and grab sooner. Matters most against bosses."
+   },
+   "awk": {
+    "label": "Needs A",
+    "color": "#f59e0b",
+    "desc": "A key part of the kit only arrives with that awakening."
+   },
+   "early": {
+    "label": "Strong early",
+    "color": "#fde047",
+    "desc": "Good from the first hours. Hover the tag to see roughly when they fall off and who replaces them."
+   },
+   "late": {
+    "label": "Late bloomer",
+    "color": "#84cc16",
+    "desc": "Weak until levelled or awakened, worth it once built. Hover the tag to see from when."
+   },
+   "counter": {
+    "label": "Counter",
+    "color": "#facc15",
+    "desc": "Bosses mode only, added automatically: the selected boss is weak to this hero's archetype."
+   }
+  },
+  "signatureKarmaText": "The purple card in a portrait's bottom-right corner means the hero's signature Karma changes how they play, not just their stats. The rating assumes you have it.",
+  "heroes": {}
  }
 }
