@@ -1,3 +1,6 @@
+## 2026-10-29 — Claude: archetype badge lined up with the portrait emblem
+- The archetype badge on hero cards (both tier lists) now sits exactly over the archetype emblem printed in the portrait's top-left corner and scales with the card (23% of its width), instead of a fixed 31 px badge 5 px in. Spotted by David.
+
 ## 2026-10-29 — Claude: kit-type filter on the new tier list (preview only)
 - New icon buttons after the role filter: Damage / Control (crossed swords), Healer (cross), Buffer (arrow), Tank (shield), using `HEROES[].classType`. The search box is shorter so everything fits on one line on desktop.
 
