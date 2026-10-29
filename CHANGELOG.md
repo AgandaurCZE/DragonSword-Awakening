@@ -1,3 +1,6 @@
+## 2026-10-29 — Claude: Breaker weakness doesn't speed up Super Armor break
+- Same-monster test with Castella: 5 hits to break Drosophia of Bloodburst vs 7 on Drosophia of Breaker. Breaks last 8 s, whichever hero breaks it. Recorded on both Drosophia cards, in `DAMAGE_TESTS` and in TODO item 12 (one optional check left: break duration on the Breaker boss).
+
 ## 2026-10-29 — Claude: Super Armor break test
 - Castella's test: breaking Super Armor gives no hit bonus (194 before and after, on two bosses), and the Breaker weakness didn't make breaking faster than on Mantius of Amplitude. Recorded in `DAMAGE_TESTS`, the Drosophia of Breaker card and `STATUS_EFFECTS`. TODO item 12 now asks for the same-family comparison (Drosophia of Breaker vs Drosophia of Bloodburst).
 

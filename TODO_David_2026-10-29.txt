@@ -102,12 +102,12 @@ or OBS) and pause on the frame where your hit lands.
      one boss. A lower multiplier on Hard would mean resistances grow with
      difficulty; a lower plain hit only means more Defense.
 
-12. BREAKER WEAKNESS (follow-up)
-   - Known: breaking Super Armor gives no hit bonus (194 before and after),
-     and Drosophia of Breaker took MORE hits to break than Mantius of
-     Amplitude.
-   - Fair test: same Castella skill on Drosophia of Breaker vs Drosophia of
-     Bloodburst (same monster, no weakness). Count the hits to break.
+12. BREAKER WEAKNESS (last check, optional)
+   - Known: no hit bonus from Break; the weakness doesn't break faster
+     (7 hits on Drosophia of Breaker vs 5 on Drosophia of Bloodburst);
+     a break lasts 8 s on the Bloodburst boss.
+   - Last idea: time the break on Drosophia of Breaker with Castella.
+     Longer than 8 s = that's the weakness. Also 8 s = probably no effect.
 
 -------------------------------------------------------------- DONE (28 Oct)
 - Trait Dungeon weakness (29 Oct): doubles the status hit bonus.
