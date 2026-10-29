@@ -1,3 +1,7 @@
+## 2026-10-29 — Claude: "damage moved between skills" counts as mixed; crit note updated
+- Patch 1.1.0 rating rule: when a hero's total skill damage changed by less than 3% but one skill went up 15% or more and another down 15% or more, the hero is now **mixed** (amber), with impact from the share of damage moved. Charlotte, Kalien and Cerese change from nerf, and Kalsion, Tarte and Astria from adjusted, all to mixed. These are exactly the heroes whose developer notes say their "damage share shifted". Tooltips and the patch detail now say how much damage moved.
+- Build tab: the "over 100%" Crit Rate note now states the 1.1.0 rule (crits happen exactly at your Crit Rate; monsters have no crit resistance) instead of the old untested caveat.
+
 ## 2026-10-29 — Claude: Patch Notes page, buff/nerf arrows, pronoun and data fixes
 - New **Patch Notes** tab: every update from 1.0.0 (launch) to 1.1.2, newest first, with Steam dates and BuildIDs. Each patch shows badges (New hero, Balance, Content, Costumes, Story & quests, Systems & QoL, Bug fixes), the important changes without the developer messages, the bug-fix count and a link to the full official notes. You can filter by badge and by hero.
 - 1.1.0 hero changes use the official before/after numbers. Click a hero for every skill's old and new max-level %, Rage and Super Armor changes and the developer note. Each hero gets a direction (buff, nerf, mixed, adjusted) and an impact (Minor, Moderate, Major) by a fixed rule, stored in `PATCH_NOTES.rating`.

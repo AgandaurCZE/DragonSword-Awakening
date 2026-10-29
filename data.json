@@ -13326,7 +13326,7 @@
    "Moderate",
    "Major"
   ],
-  "rating": "1.1.0 hero ratings come from the official before/after numbers. Base damage values are the patch notes' Lv. 1 multipliers × 175, which equals the codex max-level % (124 of 126 match exactly; the other 2 are Alex's two basic attacks, whose names the notes swap). damagePct is the change in the sum of every damaging skill's max-level %. Direction: buff or nerf when that sum moves 3% or more; if Rage, status-application or Super Armor changes point the other way it's mixed. Under 3% the non-damage changes decide, and with none it's adjusted. Impact: under 5% Minor, 5–10% Moderate, 10% or more Major, one step higher when 2 or more non-damage changes point the same way. Crit buff values changed by the crit rework aren't counted. Ratings for other patches are read from the notes, with no numbers given.",
+  "rating": "1.1.0 hero ratings come from the official before/after numbers. Base damage values are the patch notes' Lv. 1 multipliers × 175, which equals the codex max-level % (124 of 126 match exactly; the other 2 are Alex's two basic attacks, whose names the notes swap). damagePct is the change in the sum of every damaging skill's max-level %. Direction: buff or nerf when that sum moves 3% or more; if Rage, status-application or Super Armor changes point the other way it's mixed. Under 3%, if one skill went up 15% or more and another went down 15% or more, damage was moved between skills and it's mixed, with impact from the share moved (half the sum of all skill changes, as a % of the total; same 5% and 10% bands). Otherwise under 3% the non-damage changes decide, and with none it's adjusted. Impact: under 5% Minor, 5–10% Moderate, 10% or more Major, one step higher when 2 or more non-damage changes point the same way. Crit buff values changed by the crit rework aren't counted. Ratings for other patches are read from the notes, with no numbers given.",
   "patches": [
    {
     "version": "1.1.2",
@@ -13996,8 +13996,8 @@
       ]
      },
      "Kalsion": {
-      "direction": "adjusted",
-      "impact": 1,
+      "direction": "mixed",
+      "impact": 2,
       "damagePct": 0.8,
       "totalBefore": 7050,
       "totalAfter": 7103,
@@ -14039,7 +14039,8 @@
         "before": 1878,
         "after": 2174
        }
-      ]
+      ],
+      "shiftPct": 7.2
      },
      "Othello": {
       "direction": "nerf",
@@ -14104,7 +14105,7 @@
       ]
      },
      "Charlotte": {
-      "direction": "nerf",
+      "direction": "mixed",
       "impact": 2,
       "damagePct": 0.4,
       "totalBefore": 6575,
@@ -14163,7 +14164,8 @@
         "before": 1222,
         "after": 1699
        }
-      ]
+      ],
+      "shiftPct": 8.0
      },
      "Alex": {
       "direction": "buff",
@@ -14282,8 +14284,8 @@
       ]
      },
      "Tarte": {
-      "direction": "adjusted",
-      "impact": 1,
+      "direction": "mixed",
+      "impact": 2,
       "damagePct": -2.7,
       "totalBefore": 5779,
       "totalAfter": 5624,
@@ -14325,10 +14327,11 @@
         "before": 1540,
         "after": 1064
        }
-      ]
+      ],
+      "shiftPct": 8.3
      },
      "Cerese": {
-      "direction": "nerf",
+      "direction": "mixed",
       "impact": 1,
       "damagePct": -1.7,
       "totalBefore": 6747,
@@ -14376,7 +14379,8 @@
         "slot": "Special B",
         "text": "Super Armor break reduced by 50%"
        }
-      ]
+      ],
+      "shiftPct": 4.5
      },
      "Sion": {
       "direction": "buff",
@@ -14435,8 +14439,8 @@
       ]
      },
      "Astria": {
-      "direction": "adjusted",
-      "impact": 1,
+      "direction": "mixed",
+      "impact": 2,
       "damagePct": 1.0,
       "totalBefore": 4289,
       "totalAfter": 4333,
@@ -14472,7 +14476,8 @@
         "before": 1222,
         "after": 1526
        }
-      ]
+      ],
+      "shiftPct": 7.5
      },
      "Dana": {
       "direction": "mixed",
@@ -14537,8 +14542,8 @@
       ]
      },
      "Kalien": {
-      "direction": "nerf",
-      "impact": 1,
+      "direction": "mixed",
+      "impact": 2,
       "damagePct": 0.0,
       "totalBefore": 5391,
       "totalAfter": 5392,
@@ -14585,7 +14590,8 @@
         "before": 1391,
         "after": 1178
        }
-      ]
+      ],
+      "shiftPct": 5.5
      },
      "Ryza": {
       "direction": "new",
