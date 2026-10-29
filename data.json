@@ -13435,6 +13435,31 @@
      "Whether the weakness doubles the status bonus or adds a flat +100%: both give +200% for Airborne. A damage-over-time status (+50%) would tell them apart: doubled gives x2.0, added gives x2.5. Example: Charlotte or Johnny hitting a Poisoned Ghagaroach of Thunderbolt (weak to Venom) vs a Poisoned non-weak boss.",
      "Whether the weakness also raises Poison, Bleed, Burn and Shock tick damage."
     ]
+   },
+   {
+    "test": "Trait Dungeon weakness with Poison, boss only",
+    "hero": "Johnny",
+    "attack": 645,
+    "date": "2026-10-29",
+    "enemy": "Ghagaroach of Thunderbolt (weak to Venom) vs Ghagaroach of Frostbite (neutral to Venom)",
+    "skill": "auto attack, first hit; Poison tick",
+    "hits": {
+     "neutral boss, no Poison": 145,
+     "neutral boss, 1 Poison stack": 272,
+     "neutral boss, Poison tick": 322,
+     "Venom-weak boss, no Poison": 145,
+     "Venom-weak boss, 1 Poison stack": 291,
+     "Venom-weak boss, Poison tick": 322
+    },
+    "observations": [
+     "No Poison: 145 on both bosses, so same Defense and no bonus from the weakness on its own (as with Reina).",
+     "Poison ticks: 322 on both = 50% of 645 Attack (1 stack), so the weakness doesn't raise ticks.",
+     "Poisoned hit: x1.88 on the neutral boss (x1.5 expected from the +50% Poison bonus), x2.01 on the weak boss. The weakness added only about 7% here, vs 50% for Reina's Airborne."
+    ],
+    "open": [
+     "Johnny's gear and Karma at the time (any Poison Additional Attack Power or Additional Damage) are needed to explain the x1.88.",
+     "Repeat 2-3 hits per case to rule out a stray crit or a different hit of the combo."
+    ]
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
@@ -16044,7 +16069,7 @@
    }
   ],
   "difficulties": 4,
-  "weaknessTest": "Tested with Reina (David): a weakness does nothing on its own. Her auto attack did 143 on both bosses without Airborne. It boosts the hero's own status bonus: with Airborne the hit did ×2.0 on a normal boss (287) but ×3.0 on the Gale-weak boss (431), so Airborne's bonus went from +100% to +200%. Airborne also built up faster on the weak boss. Whether Poison, Bleed, Burn and Shock gain the same isn't tested yet.",
+  "weaknessTest": "Tested by David: a weakness does nothing on its own (same damage on both bosses without the status) and doesn't raise Poison ticks. It boosts the hero's status hit bonus: Reina's Airborne went from ×2.0 to ×3.0 on the Gale-weak boss. With Johnny's Poison the gain was smaller (×1.88 to ×2.01), which is still being checked.",
   "difficultyLevels": [
    {
     "n": 1,
@@ -16164,7 +16189,8 @@
     "name": "{arch} trait stone (purple)",
     "icon": "assets/trait/icons/{key}-purple.webp"
    }
-  }
+  },
+  "immunityNote": "Immunity, seen on Ghagaroach of Venom with Johnny: using a Venom skill makes the boss raise a bubble that Breaks your hero, leaving them vulnerable and stunned. The pre-battle screen only lists the weakness, not the immunity."
  },
  "UI_ICONS": {
   "note": "Menu icons from assets/ui, cut out of David's in-game screenshots (white versions, used as masks so they take the menu colour; -gold versions kept for later). exchange, guides and help are spare. A missing entry keeps the text symbol.",

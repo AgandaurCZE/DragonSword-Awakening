@@ -1,3 +1,7 @@
+## 2026-10-29 — Claude: Johnny Poison weakness test, immunity bubble
+- `DAMAGE_TESTS` has David's Johnny test: no gain without Poison, Poison ticks unchanged (322, 50% of Attack), Poisoned hit ×1.88 on the neutral boss vs ×2.01 on the Venom-weak boss. It's recorded without a conclusion because it doesn't match Reina's result yet.
+- Trait Dungeons: the "What a weakness does" box now covers both tests. The Immune column has a note on what immunity does, from Ghagaroach of Venom: a Venom skill makes the boss raise a bubble that Breaks, exposes and stuns your hero.
+
 ## 2026-10-29 — Claude: what a Trait Dungeon weakness does
 - From David's boss-only test with Reina: a weakness does nothing on hits without the status (143 on both bosses). On the weak boss Airborne's hit bonus rises from +100% to +200% (287 → 431). Recorded in `DAMAGE_TESTS` (test and finding), shown in the box on the Trait Dungeons page, and the follow-up test is on David's TODO list (item 11).
 

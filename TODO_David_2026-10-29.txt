@@ -96,14 +96,12 @@ or OBS) and pause on the frame where your hit lands.
    "with Eileen" builds are worth it, and how high Eileen should rank.
 
 
-11. TRAIT DUNGEON WEAKNESS WITH A DAMAGE-OVER-TIME STATUS
-   - Known (Reina): weakness turns Airborne's +100% hit bonus into +200%,
-     and does nothing on hits without the status.
-   - Next: Charlotte or Johnny on Ghagaroach of Thunderbolt (weak to Venom).
-     One auto-attack hit with Poison on the boss, then the same on a boss
-     that isn't weak to Venom (also Poisoned). Note any crits.
-     x2.0 = the bonus is doubled; x2.5 = a flat +100% is added.
-   - If easy: one Poison tick on each boss (does the tick grow too?).
+11. TRAIT DUNGEON WEAKNESS WITH POISON (follow-up)
+   - Johnny: Poisoned hit x1.88 on a neutral boss but x2.01 on the
+     Venom-weak one; Reina's Airborne went x2.0 -> x3.0. Doesn't fit yet.
+   - Send Johnny's Karma (and Ascension) and any gear with Poison
+     bonuses, then repeat 2-3 Poisoned hits on each boss (note crits).
+   - Best of all: the same test with no gear and no Karma on Johnny.
 
 -------------------------------------------------------------- DONE (28 Oct)
 - Skill level multipliers (all levels), Karma Ascensions A0–A6.
