@@ -11277,6 +11277,62 @@
       "Stun Additional Attack Power": 168,
       "Max HP Up": 4.32
      }
+    },
+    {
+     "slot": "Legs",
+     "stat": "Critical Hit Chance",
+     "rarity": "Purple",
+     "date": "2026-10-30",
+     "by": "David (crafted with a Forging Mold)",
+     "byLevel": [
+      2.25,
+      2.7,
+      3.15,
+      3.6,
+      4.05,
+      4.5,
+      4.95,
+      5.4,
+      5.85,
+      6.3,
+      7.2,
+      8.1,
+      9.0
+     ],
+     "subs": {
+      "Airborne Additional Attack Power": 168,
+      "Frost Additional Attack Power": 84,
+      "Bleed Additional Attack Power": 84,
+      "Critical Damage Reduction": 4.21
+     }
+    },
+    {
+     "slot": "Helmet",
+     "stat": "Critical Hit Chance",
+     "rarity": "Purple",
+     "date": "2026-10-30",
+     "by": "David (crafted with a Forging Mold)",
+     "byLevel": [
+      1.75,
+      2.1,
+      2.45,
+      2.8,
+      3.15,
+      3.5,
+      3.85,
+      4.2,
+      4.55,
+      4.9,
+      5.6,
+      6.3,
+      7.0
+     ],
+     "subs": {
+      "Status Effect Additional Attack Power Increase": 2.91,
+      "Max HP Up": 3.35,
+      "Shock Additional Attack Power": 65,
+      "Critical Hit Resistance": 2.87
+     }
     }
    ],
    "rowsFinding": "Every piece reaches exactly 4x its +0 value at max level, whatever the stat. Blue: x1.2, 1.4, 1.6 for +1..+3, then +0.4 per level (2.0 ... 4.0 at +9). Green: x1, 1.4, 2.0, 2.4, 3.2, 3.6, 4.0 (+0..+6). The database Orange table also ends at 4x its +0 (with even +0.2 steps; the in-game step shape for Orange is unknown). Blue +0 = 0.466 x database Orange +0 for most stats (7/15), Green +0 = 0.375 (3/8). Exceptions: Attack Power Up 0.445, and Critical Hit Chance (legs) 0.197: the database Orange Crit Rate main stat (8.88 at +0, 35.5 at +15) is probably far too high. That matters for every damage build. Purple (Legs Max HP Up, 30 Oct): x1.2, 1.4 ... 2.8 for +1..+9 (+0.2 per level), then +0.4 per level to x4.0 at +12. Purple +0 = 0.600 x database Orange +0. Substats by rarity vs database Orange: Blue 0.5, Purple 0.75 (so Orange substats are probably the database values, except Stun Additional Attack Power).",
@@ -11543,7 +11599,8 @@
       }
      }
     ]
-   }
+   },
+   "critRateFinding": "Purple Crit Rate main stat (30 Oct 2026): Legs 2.25 -> 9.00 at +12, Helmet 1.75 -> 7.00 (4x rule holds). That is 0.253 x the database Orange +0 (8.88 legs, 6.90 helmet), where other Purple mains are 0.600. So the database Orange Crit Rate is about 2.37x too high. If Orange = Purple / 0.6 as for other stats, real Orange Crit Rate at +15 would be about: Legs 15.0, Helmet/Gloves/Boots 11.7, Chest 16.7 (estimate) - about 66% from all five main stats, instead of the database's 158%."
   }
  },
  "HERO_STAT_MODEL": {

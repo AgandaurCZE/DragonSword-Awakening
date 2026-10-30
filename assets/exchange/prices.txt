@@ -69,3 +69,13 @@ Where the crafting materials come from:
   Transmute: 2 Tangled Memories and Reminiscences + 1 Crystal of Reverie + 1 Crystal of Oblivion -> 1.
 
 Karma breakthroughs: Trait Stone amounts known only for Lv20 and Lv30 (to add).
+
+SPECIAL MATERIALS (David, 30 Oct 2026)
+- Forging Mold: guarantees the chosen main stat on a crafted piece; 1 per piece at any rarity. Exchange (50); Normal Dungeons (drop rate unknown).
+  Every slot can roll every main stat: Attack, Max HP, Defense, Attack Power Up, Max HP Up, Defense Up, Critical Rate, Critical Damage,
+  Critical Hit Resistance, Critical Damage Reduction.
+- Shape Grinder: reforges (re-rolls) a piece's substats; 1 per reforge for Blue and Purple. Lock substats you want to keep
+  (Purple up to 3, Blue up to 2); only the Gold cost rises: 0 locked 5,000 / 1 locked 10,000 / 2 locked 25,000 / 3 locked 50,000.
+  Exchange (25), Normal Dungeons (probably rare), Raid.
+- Anonymous Artisan's Crafting Tool: 5 unlock one Rune slot. Exchange (100), Raid.
+- Moon Key: opens special locked chests in the open world (usually Legendary). Exchange only (20).
