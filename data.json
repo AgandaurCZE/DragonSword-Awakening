@@ -15830,7 +15830,8 @@
    "More hidden statuses (David, 30 Oct 2026, not in the codex text): Charlotte's Clone explosion applies Airborne as well as Poison; Johnny's Venom Cutter (needs an Airborne target) also makes other enemies it hits Airborne. Roxy's Bleeding Grab gives a full Knockdown at 2+ Bleed stacks, as the codex says.",
    "Difficulty doesn't change the status hit bonus (David, 30 Oct 2026): Johnny's Poison hit bonus on Mantius of Amplitude was x1.85 on Trait Dungeon I and x1.84 on III. Higher difficulty only slows status build-up (and raises enemy Defense: clean hits 168 -> 102, -39%).",
    "'Status Effect Additional Attack Power Increase' (the 1.1.0 % substat) raises your status Additional Attack Power by that % (David, 30 Oct 2026: Charlotte, 359 Attack, 125 Poison + All Status AAP: hit 126 -> 133 with a 3.88% piece = x1.056; predicted x1.050 for 'raises AAP', x1.038 for no effect, x1.078 for the whole hit). It only matters on afflicted targets and is worth little unless the flat status AAP is large.",
-   "Hits on an enemy with several statuses (David, 30 Oct 2026, Charlotte, 359 Attack, All Status AAP 50, Poison AD +15%, Burn AD +15%): clean 52, Poison 103, Poison + Burn 174. Fits only: hit = k x (Attack + sum over the statuses on the target of (that status's AAP + All Status AAP)) x (1 + sum of status hit bonuses) x (1 + sum of those statuses' Additional Damage). So All Status AAP counts once per status on the target, and Additional Damage from different statuses adds (the builds' cautious assumption is right)."
+   "Hits on an enemy with several statuses (David, 30 Oct 2026, Charlotte, 359 Attack, All Status AAP 50, Poison AD +15%, Burn AD +15%): clean 52, Poison 103, Poison + Burn 174. Fits only: hit = k x (Attack + sum over the statuses on the target of (that status's AAP + All Status AAP)) x (1 + sum of status hit bonuses) x (1 + sum of those statuses' Additional Damage). So All Status AAP counts once per status on the target, and Additional Damage from different statuses adds (the builds' cautious assumption is right).",
+   "Super Armor Break and Additional Attack Power (David, 30 Oct 2026): Break gives no hit multiplier, but Break Additional Attack Power and All Status AAP are added to Attack on hits against a broken enemy. Charlotte (359 Attack, Break AAP 400, All Status 50): clean 52 -> broken 118 (= 52 x 809/359). Poison + Break 216, Burn + Break 216, Poison + Burn + Break 345, all as predicted. So Break AAP can more than double hits on broken enemies for low-Attack heroes, and All Status AAP counts for Break too."
   ],
   "tests": [
    {
@@ -17122,6 +17123,28 @@
      "both, All Status once per status, AD multiply": "175.9-179.2"
     },
     "result": "Only one model fits 174: All Status Additional Attack Power counts once for EACH status on the target, and Additional Damage bonuses of different statuses ADD (+15% + +15% = +30%). Multiplying is just outside the rounding range, so one repeat would be welcome."
+   },
+   {
+    "test": "Repeat with Break (goblin dummies)",
+    "date": "2026-10-30",
+    "by": "David",
+    "hero": "Charlotte",
+    "attack": 359,
+    "gear": "same as the previous test; panel also shows Break AAP 400 (Orange legs 225 + Orange gloves 175), All Status 50",
+    "hits": {
+     "clean": 52,
+     "Break": 118,
+     "Poison + Break": 216,
+     "Burn + Break": 216,
+     "Poison + Burn + Break": 345
+    },
+    "predictions": {
+     "Break: (359+400+50)/359, no hit bonus": "117.2-119.5",
+     "Poison + Break": "214.6-218.7",
+     "Poison + Burn + Break, AD add": "342.3-348.9",
+     "Poison + Burn + Break, AD multiply": "348.3-354.9"
+    },
+    "result": "Every hit fits the model: All Status AAP counts once per status on the target (Break included); Additional Damage of different statuses adds; Super Armor Break gives no hit bonus of its own but its Break Additional Attack Power (and All Status) is added on hits against a broken enemy. That explains why Castella's 194 didn't change when breaking (she had no Break AAP)."
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
