@@ -11280,7 +11280,270 @@
     }
    ],
    "rowsFinding": "Every piece reaches exactly 4x its +0 value at max level, whatever the stat. Blue: x1.2, 1.4, 1.6 for +1..+3, then +0.4 per level (2.0 ... 4.0 at +9). Green: x1, 1.4, 2.0, 2.4, 3.2, 3.6, 4.0 (+0..+6). The database Orange table also ends at 4x its +0 (with even +0.2 steps; the in-game step shape for Orange is unknown). Blue +0 = 0.466 x database Orange +0 for most stats (7/15), Green +0 = 0.375 (3/8). Exceptions: Attack Power Up 0.445, and Critical Hit Chance (legs) 0.197: the database Orange Crit Rate main stat (8.88 at +0, 35.5 at +15) is probably far too high. That matters for every damage build. Purple (Legs Max HP Up, 30 Oct): x1.2, 1.4 ... 2.8 for +1..+9 (+0.2 per level), then +0.4 per level to x4.0 at +12. Purple +0 = 0.600 x database Orange +0. Substats by rarity vs database Orange: Blue 0.5, Purple 0.75 (so Orange substats are probably the database values, except Stun Additional Attack Power).",
-   "runes": "Rune slots (David, 30 Oct 2026): some equipment has a locked Rune slot. Unlocking it costs 5 Anonymous Artisan's Crafting Tools (sources: Exchange > Special, Raid). Engraved Runes add extra stats (the tutorial example shows two lines, e.g. Attack and Defense) and can be removed for Gold. Patch notes: Runes have star grades, and 4-star Rune Synthesis can give 5-star Runes."
+   "runes": "Rune slots (David, 30 Oct 2026): some equipment has a locked Rune slot. Unlocking it costs 5 Anonymous Artisan's Crafting Tools (sources: Exchange > Special, Raid). Engraved Runes add extra stats (the tutorial example shows two lines, e.g. Attack and Defense) and can be removed for Gold. Patch notes: Runes have star grades, and 4-star Rune Synthesis can give 5-star Runes.",
+   "subRatios": {
+    "date": "2026-10-30",
+    "by": "David (16 screenshots of his Green/Blue/Purple gear)",
+    "blueVsDatabaseOrange": {
+     "~0.5": [
+      "Attack",
+      "Defense",
+      "Defense Up",
+      "Max HP Up",
+      "Attack Power Up",
+      "Critical Hit Resistance",
+      "Critical Damage Reduction",
+      "Armor Penetration"
+     ],
+     "~0.62": [
+      "Poison / Shock / Bleed / Frost Additional Attack Power",
+      "All Status Effect Additional Attack Power"
+     ],
+     "~1.0": [
+      "Knockdown Additional Attack Power (113 on Blue legs = database Orange 112)"
+     ],
+     "0.25": [
+      "Defense Ignore (0.97 boots, 1.25 legs)"
+     ],
+     "0.21": [
+      "Critical Hit Chance (0.77 on a Blue helmet vs database 3.68)"
+     ]
+    },
+    "notes": [
+     "Substats depend on the slot: Legs and Chest roll about 1.29x Helmet/Gloves/Boots (e.g. Defense Up 2.72 legs vs 2.10 boots; Status Effect Additional Attack Power Increase 2.51 legs vs 1.94 boots), as in the database tables.",
+     "If Blue substats are half of the real Orange ones (as for most stats), the database Orange values are about right for the plain stats, but too high for Critical Hit Chance (~2.4x, main stat and substat alike) and Defense Ignore (2x), and too low for the status Additional Attack Power substats (physical ones about 2x).",
+     "Same stat as main and substat seen on Green (Apprentice Knight Helmet: Defense main, Defense sub), Blue (Blazing Flame Helmet: Max HP main, Max HP sub) and Purple (Venomfog Shade Pants: Max HP Up both). The rule is wrong for every rarity seen. David: hold the build change until Purple/Orange Crit Rate or Crit Damage pieces are seen, then redo the builds once."
+    ],
+    "pieces": [
+     {
+      "set": "Blazing Flames",
+      "slot": "Helmet",
+      "rarity": "Blue",
+      "level": 0,
+      "main": [
+       "Max HP",
+       235
+      ],
+      "subs": [
+       "Attack",
+       "Max HP Up",
+       "Max HP"
+      ]
+     },
+     {
+      "set": "Apprentice Knight",
+      "slot": "Helmet",
+      "rarity": "Green",
+      "level": 0,
+      "main": [
+       "Defense",
+       12
+      ],
+      "subs": [
+       "Defense",
+       "Attack"
+      ]
+     },
+     {
+      "set": "Ballad of Life",
+      "slot": "Legs",
+      "rarity": "Blue",
+      "level": 9,
+      "main": [
+       "Critical Hit Chance",
+       7
+      ],
+      "subs": {
+       "Knockdown Additional Attack Power": 113,
+       "Attack": 16,
+       "Defense Up": 2.72
+      }
+     },
+     {
+      "set": "Venomfog Shade",
+      "slot": "Legs",
+      "rarity": "Blue",
+      "level": 9,
+      "main": [
+       "Critical Damage Reduction",
+       19.68
+      ],
+      "subs": {
+       "Frost Additional Attack Power": 56,
+       "Knockdown Additional Attack Power": 113,
+       "Attack Power Up": 2.05
+      }
+     },
+     {
+      "set": "Venomfog Shade",
+      "slot": "Gloves",
+      "rarity": "Blue",
+      "level": 9,
+      "main": [
+       "Critical Damage Reduction",
+       15.31
+      ],
+      "subs": {
+       "Defense Up": 2.1,
+       "Shock Additional Attack Power": 43,
+       "Poison Additional Attack Power": 43
+      }
+     },
+     {
+      "set": "Venomfog Shade",
+      "slot": "Boots",
+      "rarity": "Blue",
+      "level": 9,
+      "main": [
+       "Attack Power Up",
+       11.13
+      ],
+      "subs": {
+       "Defense": 8,
+       "Bleed Additional Attack Power": 43,
+       "Attack": 12
+      }
+     },
+     {
+      "set": "Battle Will",
+      "slot": "Legs",
+      "rarity": "Blue",
+      "level": 6,
+      "main": [
+       "Defense",
+       55
+      ],
+      "subs": {
+       "Status Effect Additional Attack Power Increase": 2.51,
+       "Armor Penetration": 9
+      }
+     },
+     {
+      "set": "Battle Will",
+      "slot": "Boots",
+      "rarity": "Blue",
+      "level": 6,
+      "main": [
+       "Defense Up",
+       10.33
+      ],
+      "subs": {
+       "Max HP Up": 2.24,
+       "Defense Ignore": 0.97
+      }
+     },
+     {
+      "set": "Battle Will",
+      "slot": "Boots",
+      "rarity": "Blue",
+      "level": 6,
+      "main": [
+       "Attack Power Up",
+       7.79
+      ],
+      "subs": {
+       "Defense Up": 2.1,
+       "Max HP Up": 2.24
+      }
+     },
+     {
+      "set": "Ballad of Life",
+      "slot": "Chest",
+      "rarity": "Blue",
+      "level": 6,
+      "main": [
+       "Attack Power Up",
+       11.13
+      ],
+      "subs": {
+       "Shock Additional Attack Power": 62,
+       "Armor Penetration": 10
+      }
+     },
+     {
+      "set": "Ballad of Life",
+      "slot": "Gloves",
+      "rarity": "Blue",
+      "level": 6,
+      "main": [
+       "Critical Hit Resistance",
+       9.42
+      ],
+      "subs": {
+       "Critical Damage Reduction": 2.18,
+       "Armor Penetration": 7
+      }
+     },
+     {
+      "set": "Ballad of Life",
+      "slot": "Boots",
+      "rarity": "Blue",
+      "level": 6,
+      "main": [
+       "Defense",
+       42
+      ],
+      "subs": {
+       "Defense Up": 2.1,
+       "Armor Penetration": 7
+      }
+     },
+     {
+      "set": "Venomfog Shade",
+      "slot": "Helmet",
+      "rarity": "Blue",
+      "level": 6,
+      "main": [
+       "Critical Damage Reduction",
+       10.71
+      ],
+      "subs": {
+       "All Status Effect Additional Attack Power": 19,
+       "Critical Hit Chance": 0.77
+      }
+     },
+     {
+      "set": "Venomfog Shade",
+      "slot": "Legs",
+      "rarity": "Blue",
+      "level": 6,
+      "main": [
+       "Critical Hit Resistance",
+       12.11
+      ],
+      "subs": {
+       "Attack Power Up": 2.05,
+       "Defense Ignore": 1.25
+      }
+     },
+     {
+      "set": "Battle Will",
+      "slot": "Boots",
+      "rarity": "Blue",
+      "level": 3,
+      "main": [
+       "Critical Damage Reduction",
+       6.12
+      ],
+      "subs": {
+       "Status Effect Additional Attack Power Increase": 1.94
+      }
+     },
+     {
+      "set": "Ballad of Life",
+      "slot": "Legs",
+      "rarity": "Blue",
+      "level": 3,
+      "main": [
+       "Attack",
+       45
+      ],
+      "subs": {
+       "Critical Hit Resistance": 2.48
+      }
+     }
+    ]
+   }
   }
  },
  "HERO_STAT_MODEL": {
