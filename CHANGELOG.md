@@ -1,3 +1,6 @@
+## 2026-10-30 — Claude: Venomfog Shade 3-piece stacks
+- Venomfog Shade's 3-piece Crit Rate bonus stacks up to 3 times (+4% per dodge, 12 s, up to +12%), from David's screenshot. The text now says so.
+
 ## 2026-10-30 — Claude: Trait Dungeons weakness note (preview only)
 - The weakness box now says a weakness also speeds up status build-up (about 2–3×), and that bosses resist build-up more on higher difficulties. From David's Test Kit results (Johnny, Trait Dungeon I and III).
 
