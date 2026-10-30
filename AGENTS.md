@@ -20,6 +20,8 @@ Every commit to `main` goes live about a minute later. There is no build step, n
 | `tools/` | Python scripts for the data (no build step; the site never runs them). See **Tools** below. |
 | Codex pictures | `assets/karma/<slug>.webp`, `assets/heroes/<name>.webp` (portraits) and `assets/familiars/<slug>.webp`, all 392×467, were cut out of David's full Codex screenshots (found by their grey frame, named by OCR, the printed name painted out with OpenCV inpaint inside the text band). The full screenshots were deleted on 29 Oct 2026 at David's request (still in git history). Grey = not collected in David's game. `assets/familiars/abilities/<species>_ability.png` are David's ability screenshots; `<species>.webp` is the round icon cut out of each, and the text is in `FAMILIARS.abilities`. |
 | `assets/patch_notes/<version>.txt` | The official Steam patch notes, word for word (1.0.0 = the launch notice). The source for `PATCH_NOTES`; linked from the Patch Notes page. |
+| `assets/runes/` | Rune type icons and Rune slot circles cut from David's screens, not used yet (see its README). |
+| `assets/exchange/` | Exchange screenshots (`source/`) and `prices.txt`: every Exchange price, what each material does, crafting and skill-upgrade costs. Not used by the page yet. |
 | `CHANGELOG.md` | A record of every change, newest first. |
 
 How the page starts: `index.html` runs `fetch('data.json')`, copies each top-level key into a global variable of the same name (`HEROES`, `TEAM_DATA`, …), then calls `startApp()`, which draws every tab. Opening `index.html` directly from disk (`file://`) fails because browsers block the fetch. Test with a local server instead, e.g. `python3 -m http.server` in the repository folder.
