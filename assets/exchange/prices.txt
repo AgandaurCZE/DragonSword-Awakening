@@ -19,3 +19,29 @@ Special:
   Tangled Forgetfulness and Remembrance 25, Tangled Memories and Reminiscences 10, Red Pyroxene 5
 
 Trait Dungeon emblem rewards per run: I 5, II 10, III 15, IV 20.
+
+WHAT THE PROG. MATERIALS DO (David, 30 Oct 2026)
+- Insignia of <faction>: breakthroughs of that faction's heroes (HEROES[].faction). Item card says Exchange only, but David has many, so likely also Legendary Chests.
+- Chronograph of Ages: Karma breakthroughs. Exchange and treasure chests (probably Legendary only).
+- Fruit of Vitality, Primordial Seed, Drop of Purity, Leaf of Vigor: hero breakthroughs (card doesn't say which hero/archetype uses which). Gathered in the open world; some Normal Dungeons drop them.
+- Crystal of Remembrance / Recollection / Reverie / Oblivion: Karma breakthroughs (card doesn't say which). Mined in the open world; some Normal Dungeons drop them.
+- Record of Battle, Secret Text of the Warrior, Secret Text of Victory, Tome of Insight: skill upgrades (below).
+
+SKILL UPGRADE COSTS (same for every hero and every skill)
+Lv2: 1 Record of Battle + 2,500 Gold
+Lv3: 2 Record of Battle + 5,000 Gold
+Lv4: 3 Record of Battle + 1 Hunt boss material + 10,000 Gold
+Lv5: 1 Secret Text of the Warrior + 1 Hunt boss material + 15,000 Gold
+Lv6: 2 Secret Text of the Warrior + 1 Hunt boss material + 25,000 Gold
+Lv7: 3 Secret Text of the Warrior + 1 Hunt boss material + 35,000 Gold
+Lv8: 1 Secret Text of Victory + 1 Hunt boss material + 50,000 Gold
+Lv9: 2 Secret Text of Victory + 1 Hunt boss material + 65,000 Gold
+Lv10: 3 Secret Text of Victory + 3 Tome of Insight + 90,000 Gold
+Skills that max at Lv7 (Auto, Jump, Dash attack): same path, but Lv7 = 3 Secret Text of the Warrior + 1 Tome of Insight + 35,000 Gold (no boss material).
+Hunt boss materials follow the Hunt screen order: Spiny Fin (Furcas), Blood-stained Hook (Vanak), ... (which level uses which: to confirm).
+
+Totals (calculated from the table above):
+- One Lv10 skill, 1 -> 10: 6 Record, 6 Warrior, 6 Victory, 3 Tome, 6 boss materials, 297,500 Gold.
+- One Lv7 skill, 1 -> 7: 6 Record, 6 Warrior, 1 Tome, 3 boss materials, 92,500 Gold.
+- One hero, all 7 levelable skills maxed (4 x Lv10 + 3 x Lv7): 42 Record, 42 Warrior, 24 Victory, 15 Tome, 33 boss materials, 1,467,500 Gold.
+- In emblems (if bought): Record 10, Warrior/Victory/Tome 20 each -> one hero = 420 + 840 + 480 + 300 = 2,040 emblems.
