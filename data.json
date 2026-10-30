@@ -5236,8 +5236,8 @@
       "maxLevel": 10,
       "attackPct": 811,
       "inflicts": [
-       "Stun",
-       "Burn"
+       "Burn",
+       "Stun"
       ],
       "requiresAny": []
      }
@@ -9840,7 +9840,7 @@
   }
  ],
  "GEAR_STATS": {
-  "note": "Orange values (+0..+15, 30 Oct 2026). Started from an external database (probably the mobile version); corrected with David's in-game pieces. Measured on Orange: Crit Rate main (Helmet, Chest), Crit Damage main (Legs, Gloves), and substats on those four pieces. Rules found: each piece reaches 4x its +0 at max level; Orange rises +0.2x per level; Green/Blue/Purple main stats are 0.375/0.467/0.600 of Orange, substats Blue 0.5 / Purple 0.75. Database values that were wrong and are corrected: Crit Rate (main and sub) x0.4225, Crit Damage x0.607, Stun/Airborne/Knockdown/Break Additional Attack Power x2, other status Additional Attack Power and All Status x1.25, Defense Ignore x0.5 (estimate from Blue). Plain stats (Attack, Defense, HP, their %, Crit resistances) matched the database exactly and are kept. Status Effect Additional Attack Power Increase added (3.88 Helmet/Gloves/Boots measured; 5.02 Chest/Legs estimated from Blue). Values not measured on Orange are marked in valueSources. The original database tables are kept in databaseSlots. A stat CAN be both main stat and substat (seen on every rarity).",
+  "note": "Orange values (+0..+15, 30 Oct 2026). Started from an external database (probably the mobile version); corrected with David's in-game pieces. Measured on Orange: Crit Rate main (Helmet, Chest), Crit Damage main (Legs, Gloves), and substats on those four pieces. Rules found: each piece reaches 4x its +0 at max level; Orange rises +0.2x per level; Green/Blue/Purple main stats are 0.375/0.467/0.600 of Orange, substats Blue 0.5 / Purple 0.75. Database values that were wrong and are corrected: Crit Rate (main and sub) x0.4225, Crit Damage x0.607, Stun/Airborne/Knockdown/Break Additional Attack Power x2, other status Additional Attack Power and All Status x1.25, Defense Ignore x0.5 (estimate from Blue). Plain stats (Attack, Defense, HP, their %, Crit resistances) matched the database exactly and are kept. Status Effect Additional Attack Power Increase added (3.88 Helmet/Gloves/Boots measured; 5.02 Chest/Legs estimated from Blue). Values not measured on Orange are marked in valueSources. The original database tables are kept in databaseSlots. A stat CAN be both main stat and substat (seen on every rarity). Attack Power Up main measured on Orange Chest and Gloves (30 Oct): database x0.954.",
   "percentStats": [
    "Attack Power Up",
    "Critical Damage",
@@ -9938,22 +9938,22 @@
       131.0
      ],
      "Attack Power Up": [
-      6.25,
-      7.5,
-      8.75,
-      10.0,
-      11.25,
-      12.5,
-      13.75,
-      15.0,
-      16.25,
-      17.5,
-      18.75,
-      20.0,
-      21.25,
-      22.5,
-      23.75,
-      25.0
+      5.96,
+      7.16,
+      8.35,
+      9.55,
+      10.74,
+      11.93,
+      13.12,
+      14.32,
+      15.51,
+      16.7,
+      17.9,
+      19.09,
+      20.28,
+      21.48,
+      22.67,
+      23.86
      ],
      "Max HP Up": [
       8.41,
@@ -10068,20 +10068,20 @@
      "Attack": 25.0,
      "Max HP": 269.0,
      "Defense": 17.0,
-     "Attack Power Up": 3.33,
+     "Attack Power Up": 3.18,
      "Max HP Up": 4.48,
      "Defense Up": 4.21,
-     "Stun Additional Attack Power": 174,
-     "Airborne Additional Attack Power": 174,
-     "Knockdown Additional Attack Power": 174,
-     "Bleed Additional Attack Power": 88,
-     "Burn Additional Attack Power": 88,
-     "Frost Additional Attack Power": 88,
+     "Stun Additional Attack Power": 175,
+     "Airborne Additional Attack Power": 175,
+     "Knockdown Additional Attack Power": 175,
+     "Bleed Additional Attack Power": 87,
+     "Burn Additional Attack Power": 87,
+     "Frost Additional Attack Power": 87,
      "Shock Additional Attack Power": 87,
-     "Poison Additional Attack Power": 88,
+     "Poison Additional Attack Power": 87,
      "Critical Hit Resistance": 3.84,
      "Critical Damage Reduction": 4.37,
-     "Break Additional Attack Power": 174,
+     "Break Additional Attack Power": 175,
      "All Status Effect Additional Attack Power": 38,
      "Critical Hit Chance": 1.55,
      "Critical Damage": 2.49,
@@ -10147,22 +10147,22 @@
       187.0
      ],
      "Attack Power Up": [
-      8.92,
-      10.71,
-      12.5,
-      14.28,
-      16.07,
-      17.85,
-      19.64,
-      21.42,
-      23.21,
-      25.0,
-      26.78,
-      28.57,
-      30.35,
-      32.14,
-      33.92,
-      35.71
+      8.52,
+      10.23,
+      11.93,
+      13.64,
+      15.34,
+      17.05,
+      18.75,
+      20.45,
+      22.16,
+      23.86,
+      25.57,
+      27.27,
+      28.98,
+      30.68,
+      32.39,
+      34.09
      ],
      "Max HP Up": [
       12.01,
@@ -10277,7 +10277,7 @@
      "Attack": 35.0,
      "Max HP": 384.0,
      "Defense": 25.0,
-     "Attack Power Up": 4.76,
+     "Attack Power Up": 4.55,
      "Max HP Up": 6.41,
      "Defense Up": 6.02,
      "Stun Additional Attack Power": 250,
@@ -10356,22 +10356,22 @@
       168.0
      ],
      "Attack Power Up": [
-      8.03,
-      9.64,
-      11.25,
-      12.85,
-      14.46,
-      16.07,
-      17.67,
-      19.28,
-      20.89,
-      22.5,
-      24.1,
-      25.71,
-      27.32,
-      28.92,
-      30.53,
-      32.14
+      7.66,
+      9.19,
+      10.72,
+      12.26,
+      13.79,
+      15.32,
+      16.85,
+      18.39,
+      19.92,
+      21.45,
+      22.98,
+      24.51,
+      26.05,
+      27.58,
+      29.11,
+      30.64
      ],
      "Max HP Up": [
       10.81,
@@ -10486,12 +10486,12 @@
      "Attack": 32.0,
      "Max HP": 346.0,
      "Defense": 22.0,
-     "Attack Power Up": 4.28,
+     "Attack Power Up": 4.09,
      "Max HP Up": 5.76,
      "Defense Up": 5.42,
      "Stun Additional Attack Power": 225,
-     "Airborne Additional Attack Power": 224,
-     "Knockdown Additional Attack Power": 224,
+     "Airborne Additional Attack Power": 225,
+     "Knockdown Additional Attack Power": 225,
      "Bleed Additional Attack Power": 112,
      "Burn Additional Attack Power": 112,
      "Frost Additional Attack Power": 112,
@@ -10565,22 +10565,22 @@
       131.0
      ],
      "Attack Power Up": [
-      6.25,
-      7.5,
-      8.75,
-      10.0,
-      11.25,
-      12.5,
-      13.75,
-      15.0,
-      16.25,
-      17.5,
-      18.75,
-      20.0,
-      21.25,
-      22.5,
-      23.75,
-      25.0
+      5.96,
+      7.16,
+      8.35,
+      9.55,
+      10.74,
+      11.93,
+      13.12,
+      14.32,
+      15.51,
+      16.7,
+      17.9,
+      19.09,
+      20.28,
+      21.48,
+      22.67,
+      23.86
      ],
      "Max HP Up": [
       8.41,
@@ -10695,17 +10695,17 @@
      "Attack": 25.0,
      "Max HP": 269.0,
      "Defense": 17.0,
-     "Attack Power Up": 3.33,
+     "Attack Power Up": 3.18,
      "Max HP Up": 4.48,
      "Defense Up": 4.21,
-     "Stun Additional Attack Power": 174,
-     "Airborne Additional Attack Power": 174,
-     "Knockdown Additional Attack Power": 174,
-     "Bleed Additional Attack Power": 88,
-     "Burn Additional Attack Power": 88,
+     "Stun Additional Attack Power": 175,
+     "Airborne Additional Attack Power": 175,
+     "Knockdown Additional Attack Power": 175,
+     "Bleed Additional Attack Power": 87,
+     "Burn Additional Attack Power": 87,
      "Frost Additional Attack Power": 87,
      "Shock Additional Attack Power": 87,
-     "Poison Additional Attack Power": 88,
+     "Poison Additional Attack Power": 87,
      "Critical Hit Resistance": 3.84,
      "Critical Damage Reduction": 4.37,
      "Break Additional Attack Power": 175,
@@ -10774,22 +10774,22 @@
       131.0
      ],
      "Attack Power Up": [
-      6.25,
-      7.5,
-      8.75,
-      10.0,
-      11.25,
-      12.5,
-      13.75,
-      15.0,
-      16.25,
-      17.5,
-      18.75,
-      20.0,
-      21.25,
-      22.5,
-      23.75,
-      25.0
+      5.96,
+      7.16,
+      8.35,
+      9.55,
+      10.74,
+      11.93,
+      13.12,
+      14.32,
+      15.51,
+      16.7,
+      17.9,
+      19.09,
+      20.28,
+      21.48,
+      22.67,
+      23.86
      ],
      "Max HP Up": [
       8.41,
@@ -10904,17 +10904,17 @@
      "Attack": 25.0,
      "Max HP": 269.0,
      "Defense": 17.0,
-     "Attack Power Up": 3.33,
+     "Attack Power Up": 3.18,
      "Max HP Up": 4.48,
      "Defense Up": 4.21,
-     "Stun Additional Attack Power": 174,
-     "Airborne Additional Attack Power": 174,
-     "Knockdown Additional Attack Power": 174,
-     "Bleed Additional Attack Power": 88,
-     "Burn Additional Attack Power": 88,
+     "Stun Additional Attack Power": 175,
+     "Airborne Additional Attack Power": 175,
+     "Knockdown Additional Attack Power": 175,
+     "Bleed Additional Attack Power": 87,
+     "Burn Additional Attack Power": 87,
      "Frost Additional Attack Power": 87,
      "Shock Additional Attack Power": 87,
-     "Poison Additional Attack Power": 88,
+     "Poison Additional Attack Power": 87,
      "Critical Hit Resistance": 3.84,
      "Critical Damage Reduction": 4.37,
      "Break Additional Attack Power": 175,
@@ -12660,7 +12660,12 @@
    "Gloves main Critical Damage": "measured (Orange)",
    "Boots main Critical Hit Chance": "same as measured Helmet (Helmet, Gloves and Boots share tables)",
    "Boots main Critical Damage": "same as measured Gloves (Helmet, Gloves and Boots share tables)",
-   "substats": "Measured on Orange: Helmet (Defense, Shock AAP, All Status AAP, Crit Rate, Status AAP Increase), Chest (Poison/Shock AAP, Crit Damage, Defense Up, Max HP), Legs (Crit Rate, Break/Stun/Frost AAP, All Status AAP), Gloves (Frost/Shock/Break AAP, Crit Damage Reduction, Max HP). Other corrected substats are the database value x the measured ratio; Defense Ignore x0.5 is an estimate from Blue."
+   "substats": "Measured on Orange: Helmet (Defense, Shock AAP, All Status AAP, Crit Rate, Status AAP Increase), Chest (Poison/Shock AAP, Crit Damage, Defense Up, Max HP), Legs (Crit Rate, Break/Stun/Frost AAP, All Status AAP), Gloves (Frost/Shock/Break AAP, Crit Damage Reduction, Max HP). Other corrected substats are the database value x the measured ratio; Defense Ignore x0.5 is an estimate from Blue. Status Additional Attack Power substats measured on Orange (31 Oct 2026): physical (Stun/Airborne/Knockdown/Break) 250 Chest, 225 Legs, 175 Helmet/Gloves/Boots; damage-over-time (Poison/Burn/Bleed/Shock/Frost) half of that: 125 / 112 / 87. Attack Power Up substat x0.955 is an estimate from Blue.",
+   "Chest main Attack Power Up": "measured (Orange)",
+   "Helmet main Attack Power Up": "measured (Orange Gloves; Helmet/Boots share the table)",
+   "Gloves main Attack Power Up": "measured (Orange Gloves; Helmet/Boots share the table)",
+   "Boots main Attack Power Up": "measured (Orange Gloves; Helmet/Boots share the table)",
+   "Legs main Attack Power Up": "estimate: database x 0.954 (ratio measured on Chest and Gloves)"
   }
  },
  "HERO_STAT_MODEL": {
@@ -13049,7 +13054,7 @@
     "threePiece": "Venomfog Shade",
     "vsBattleWill": {
      "The Infiltrator": 3.7,
-     "Azure Gale": 0.8,
+     "Azure Gale": 0.7,
      "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
@@ -13179,17 +13184,17 @@
      "The Infiltrator": 3.1,
      "Battle Will": 0.0,
      "Earthshatterer": -0.5,
-     "Holy Arbiter": -0.6
+     "Holy Arbiter": -0.7
     },
     "statusSetsIfBonusesMultiply": {
      "Earthshatterer": 0.3,
-     "Holy Arbiter": 0.0
+     "Holy Arbiter": -0.0
     }
    }
   },
   "Aria": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +2.4% damage over Battle Will.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +2.3% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -13248,8 +13253,8 @@
     "set": "The Infiltrator",
     "threePiece": "Blazing Flames",
     "vsBattleWill": {
-     "The Infiltrator": 2.4,
-     "Azure Gale": 1.0,
+     "The Infiltrator": 2.3,
+     "Azure Gale": 0.9,
      "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
@@ -13381,13 +13386,13 @@
      "Ruinsbreaker": -0.2
     },
     "statusSetsIfBonusesMultiply": {
-     "Ruinsbreaker": 0.7
+     "Ruinsbreaker": 0.6
     }
    }
   },
   "Roxy": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +3.2% damage over Battle Will.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +3.1% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -13446,8 +13451,8 @@
     "set": "The Infiltrator",
     "threePiece": "Bloodstained Chaser",
     "vsBattleWill": {
-     "The Infiltrator": 3.2,
-     "Holy Arbiter": 1.3,
+     "The Infiltrator": 3.1,
+     "Holy Arbiter": 1.2,
      "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
@@ -13515,7 +13520,7 @@
   },
   "Theresia": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +2.8% damage over Battle Will.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +2.7% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -13574,8 +13579,8 @@
     "set": "The Infiltrator",
     "threePiece": "Bloodstained Chaser",
     "vsBattleWill": {
-     "The Infiltrator": 2.8,
-     "Holy Arbiter": 1.5,
+     "The Infiltrator": 2.7,
+     "Holy Arbiter": 1.4,
      "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
@@ -13645,7 +13650,7 @@
     "threePiece": "Thunderrush",
     "vsBattleWill": {
      "The Infiltrator": 3.4,
-     "Earthshatterer": 0.3,
+     "Earthshatterer": 0.2,
      "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
@@ -13713,7 +13718,7 @@
   },
   "Tarte": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +3.8% damage over Battle Will.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +3.7% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -13772,7 +13777,7 @@
     "set": "The Infiltrator",
     "threePiece": "Thunderrush",
     "vsBattleWill": {
-     "The Infiltrator": 3.8,
+     "The Infiltrator": 3.7,
      "Battle Will": 0.0
     }
    }
@@ -13839,17 +13844,17 @@
     "threePiece": "Blazing Flames",
     "vsBattleWill": {
      "The Infiltrator": 2.9,
-     "Azure Gale": 0.7,
+     "Azure Gale": 0.6,
      "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
-     "Azure Gale": 1.9
+     "Azure Gale": 1.8
     }
    }
   },
   "Cerese": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +2.8% damage over Battle Will.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +2.7% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -13908,8 +13913,8 @@
     "set": "The Infiltrator",
     "threePiece": "Froststorm",
     "vsBattleWill": {
-     "The Infiltrator": 2.8,
-     "Azure Gale": 0.2,
+     "The Infiltrator": 2.7,
+     "Azure Gale": 0.1,
      "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
@@ -13919,7 +13924,7 @@
   },
   "Reina": {
    "type": "Damage",
-   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +4.3% damage over Battle Will.",
+   "why": "Status enabler: applying the status doesn't depend on any gear stat, so the gear goes into damage. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +4.2% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -13978,7 +13983,7 @@
     "set": "The Infiltrator",
     "threePiece": "Azure Gale",
     "vsBattleWill": {
-     "The Infiltrator": 4.3,
+     "The Infiltrator": 4.2,
      "Battle Will": 0.0
     }
    }
@@ -14049,13 +14054,13 @@
      "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
-     "Holy Arbiter": 3.5
+     "Holy Arbiter": 3.4
     }
    }
   },
   "Eileen": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +3.3% damage over Battle Will.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +3.2% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -14114,14 +14119,14 @@
     "set": "The Infiltrator",
     "threePiece": "Azure Gale",
     "vsBattleWill": {
-     "The Infiltrator": 3.3,
+     "The Infiltrator": 3.2,
      "Battle Will": 0.0
     }
    }
   },
   "Othello": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +3.8% damage over Battle Will.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +3.7% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -14180,7 +14185,7 @@
     "set": "The Infiltrator",
     "threePiece": "Froststorm",
     "vsBattleWill": {
-     "The Infiltrator": 3.8,
+     "The Infiltrator": 3.7,
      "Battle Will": 0.0
     }
    }
@@ -14257,7 +14262,7 @@
   },
   "Ryza": {
    "type": "Damage",
-   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +2.4% damage over Battle Will.",
+   "why": "Damage dealer in their teams. Main stats and substats are the mix of Attack Power Up, Crit Rate and Crit Damage that gives the highest Attack × crit value with all six awakenings unlocked (a hit can't crit more than 100% of the time), with Defense Ignore and status Additional Attack Power in the spare substat slots. With the in-game Orange values (corrected 30 Oct 2026), a Crit Rate main stat gives far less than Attack Power Up, so every slot takes Attack Power Up. 2-piece set: The Infiltrator (+9% Crit Rate), about +2.3% damage over Battle Will.",
    "rarity": "Orange",
    "level": 15,
    "pieces": {
@@ -14316,7 +14321,7 @@
     "set": "The Infiltrator",
     "threePiece": "Thunderrush",
     "vsBattleWill": {
-     "The Infiltrator": 2.4,
+     "The Infiltrator": 2.3,
      "Battle Will": 0.0
     }
    }
