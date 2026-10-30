@@ -16704,7 +16704,7 @@
     "date": "2026-10-29",
     "by": "David (Test Kit)",
     "observations": [
-     "Both skills: an even step from Lv. 1 to Lv. 9, then a double step at Lv. 10. Step = (Lv.10 - Lv.1) / 10: Healing Circle +1% (Lv.10 +2%), Invisible +0.5% (Lv.10 +1%).",
+     "All three skills (Healing Circle, Invisible, Holy Circle): an even step from Lv. 1 to Lv. 9, then a double step at Lv. 10. Step = (Lv.10 - Lv.1) / 10: Healing Circle +1%, Invisible +0.5%, Holy Circle +1% (Lv.10 step doubled).",
      "So buff at level L = Lv.1 + step x (L - 1) up to Lv. 9, and Lv.1 + 10 x step at Lv. 10. Damage multipliers also take a bigger step at the last level (x1.58 -> x1.75).",
      "Max / Lv.1 differs per skill (x2.0 heal, x1.5 Crit Damage), so each buff needs its own Lv.1 and max value."
     ],
@@ -16741,6 +16741,23 @@
        13.5,
        14,
        15
+      ]
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Circle (Lv.10)",
+      "value": "Critical Damage % ([Revelation of Dawn])",
+      "byLevel": [
+       20,
+       21,
+       22,
+       23,
+       24,
+       25,
+       26,
+       27,
+       28,
+       30
       ]
      }
     ]
