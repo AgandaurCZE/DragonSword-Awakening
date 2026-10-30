@@ -15828,7 +15828,8 @@
    "Physical statuses on Lv. 90 goblins (David, 30 Oct 2026, Test Kit; one use of a skill = one press): almost every Airborne, Knockdown and Stun skill fills the gauge in one use (Reina's three Airborne skills, Lute's Stun Slash and Swordgrab, Roxy's Crimson Spiral held or pressed, Castella's Stun Blow at 0.2 per hit over 5 hits and Upper Blow, Charlotte's Illusion Kick and Shadow Grab, Johnny's Phantom Slash, Venom Dance and Venom Cutter, Aria's Air Bomb and Rolling Bomb, Ornette's Holy Grab). Weaker: Ornette's Judgment 0.75 Knockdown, Aria's Switch On! 0.5 Airborne per bolt (1.5 with all 3 bolts on one enemy), Aria's Shoot and Bomb 0.1 Airborne. So on mobs the physical enablers differ in how often and how widely they apply, not how much.",
    "Leftover build-up stays on the enemy after a physical status ends (David, 30 Oct 2026): Reina's Rising Cutter fills the Airborne gauge on hit 2 and adds 0.4 on hit 4, and that 0.4 is still there after the enemy lands; the same with Aria's Switch On! (0.5 left over). Reina's Wind Slayer has 2 charges; used back to back it leaves no leftover.",
    "More hidden statuses (David, 30 Oct 2026, not in the codex text): Charlotte's Clone explosion applies Airborne as well as Poison; Johnny's Venom Cutter (needs an Airborne target) also makes other enemies it hits Airborne. Roxy's Bleeding Grab gives a full Knockdown at 2+ Bleed stacks, as the codex says.",
-   "Difficulty doesn't change the status hit bonus (David, 30 Oct 2026): Johnny's Poison hit bonus on Mantius of Amplitude was x1.85 on Trait Dungeon I and x1.84 on III. Higher difficulty only slows status build-up (and raises enemy Defense: clean hits 168 -> 102, -39%)."
+   "Difficulty doesn't change the status hit bonus (David, 30 Oct 2026): Johnny's Poison hit bonus on Mantius of Amplitude was x1.85 on Trait Dungeon I and x1.84 on III. Higher difficulty only slows status build-up (and raises enemy Defense: clean hits 168 -> 102, -39%).",
+   "'Status Effect Additional Attack Power Increase' (the 1.1.0 % substat) raises your status Additional Attack Power by that % (David, 30 Oct 2026: Charlotte, 359 Attack, 125 Poison + All Status AAP: hit 126 -> 133 with a 3.88% piece = x1.056; predicted x1.050 for 'raises AAP', x1.038 for no effect, x1.078 for the whole hit). It only matters on afflicted targets and is worth little unless the flat status AAP is large."
   ],
   "tests": [
    {
@@ -17065,6 +17066,39 @@
     ],
     "gear": "Blue 3-piece Venomfog Shade (Poison Additional Damage +15%), Poison Additional Attack Power 43, Defense Ignore 1.25%, Armor Penetration 0.",
     "attack": 605
+   },
+   {
+    "test": "Status Effect Additional Attack Power Increase (%)",
+    "date": "2026-10-30",
+    "by": "David (Test Kit)",
+    "hero": "Charlotte",
+    "attack": 359,
+    "target": "Training dummy with 1 Poison stack, first auto-attack click, no crits",
+    "without": {
+     "helmet": "Blue Venomfog Shade Helmet (All Status AAP 19)",
+     "statusAAP": "125 Poison + 19 All Status = 144",
+     "hits": [
+      55,
+      55,
+      126
+     ]
+    },
+    "with": {
+     "helmet": "Orange helmet (Status Effect Additional Attack Power Increase 3.88%, All Status AAP 38)",
+     "statusAAP": "125 + 38 = 163",
+     "hits": [
+      58,
+      58,
+      133
+     ]
+    },
+    "predictions": {
+     "no effect": 1.038,
+     "raises status Additional Attack Power by 3.88%": 1.05,
+     "multiplies the whole afflicted hit by 1.0388": 1.078
+    },
+    "measured": "133/126 = 1.056 (display rounding allows 1.047-1.064)",
+    "result": "The % raises the status Additional Attack Power (flat + All Status) by that %. 'No effect' and 'whole hit' fall outside the rounding range. Small numbers, so a second check with bigger values would firm it up."
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
