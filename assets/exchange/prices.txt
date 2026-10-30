@@ -1,0 +1,21 @@
+Exchange prices (David's screenshots, 30 Oct 2026). Screens kept in assets/exchange/source/ for cutting icons later.
+
+KARMA (Karma exchange crystals; David had 595)
+- General Karma: 30 each.
+- Exclusive (signature) Karma: 1 Fragment of Afterimage each.
+  Fragment of Afterimage (Transmute) = 100 Karma exchange crystals + 1 Whirling Thoughts + 100,000 Gold.
+
+MATERIALS (Adventurer's Emblem)
+Prog.:
+- Insignia of the Orbis Kingdom / Organa Order / Johnny Mercenaries / Red Fox Mercenaries / Lentus Rebellion Army: 20 each
+- Chronograph of Ages 20, Tome of Insight 20, Secret Text of Victory 20, Secret Text of the Warrior 20
+- Fruit of Vitality 2, Primordial Seed 2, Drop of Purity 2, Leaf of Vigor 2
+- Crystal of Remembrance 2, Crystal of Recollection 2, Crystal of Reverie 2, Crystal of Oblivion 2
+- Record of Battle 10
+Trait Stone (all 9 archetypes):
+- High-Grade 15, Intermediate 4, Low-Grade 1
+Special:
+- Forging Mold 50, Shape Grinder 25, Anonymous Artisan's Crafting Tool 100 (5 unlock one Rune slot), Moon Key 20,
+  Tangled Forgetfulness and Remembrance 25, Tangled Memories and Reminiscences 10, Red Pyroxene 5
+
+Trait Dungeon emblem rewards per run: I 5, II 10, III 15, IV 20.
