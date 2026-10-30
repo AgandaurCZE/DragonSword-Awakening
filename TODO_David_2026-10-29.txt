@@ -204,3 +204,5 @@ Launch checklist (David, 29 Oct 19:42; for when the project is done)
 Masteries (30 Oct): each needs 10 of a special material from legendary chests; David has 20 and is saving them for big heroes. So Mastery-only effects (Lute's Kick Combo/Dropkick Stun, Ornette's Holy Cutter Knockdown, etc.) stay untested for now. Don't ask for them until he unlocks one.
 
 Karma exchange costs (David, 30 Oct, screenshots): general Karma = 30 Karma exchange crystals each. Signature (exclusive) Karma = 1 Fragment of Afterimage; a Fragment is transmuted from 100 crystals + 1 "Whirling Thoughts" + 100,000 gold (drop source of Whirling Thoughts unknown yet). Could go on the Karma tab's source text later.
+
+Runes (30 Oct): new system to document later (possible page like Familiars): slot unlock = 5 Anonymous Artisan's Crafting Tools (Exchange > Special, Raid); Runes give extra stats, removable for Gold; star grades and synthesis. Useful data: a few Rune items' stats from the inventory (no engraving needed), and the Special exchange price of the Crafting Tool.
