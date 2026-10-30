@@ -15644,9 +15644,10 @@
     },
     "observations": [
      "The Poison hit bonus is the same on both difficulties (x1.851 and x1.843): difficulty slows status build-up but doesn't cut the hit bonus.",
-     "x1.85 instead of the bare x1.5: Johnny's Poison Additional Attack Power / Additional Damage from his gear and Karma at the time, to confirm.",
+     "x1.85 = 1.5 x 1.15 (Poison Additional Damage +15%) x (Attack + 43) / Attack, which fits the known formula if Johnny's Attack was about 580-600 (his earlier tests: 584-658).",
      "Clean hits are 39% lower on Very Hard (168 -> 102): the Lv.40 boss has much more Defense than the Lv.20 one."
-    ]
+    ],
+    "gear": "Blue 3-piece Venomfog Shade (Poison Additional Damage +15%), Poison Additional Attack Power 43, Defense Ignore 1.25%, Armor Penetration 0."
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
