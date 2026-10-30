@@ -213,3 +213,8 @@ GEAR REBUILD: DONE 30 Oct 22:00 (Orange CR/CD pieces measured). Was: when Purple
 After the gear rebuild: (1) Attack Power Up main stat is not measured on Orange yet (Blue ratio 0.445 vs 0.467 hints the database value is ~5% high); every damage build now relies on it, so one Orange/Purple Attack Power Up piece would confirm. (2) Stat-awakening ratings (AWAKENINGS) were modelled with the old crit numbers; Crit Rate awakenings are probably worth more now - re-rate with David.
 Gear values still estimated (30 Oct, low priority, no crafting needed - just note the +0 main stat of any drop before disassembling it; any rarity works: Orange = +0 / 0.375 Green, / 0.467 Blue, / 0.6 Purple):
  1. Legs Attack Power Up (every damage build)  2. Chest Max HP Up, Legs Defense Up (supports)  3. Max HP Up / Defense Up on Helmet, Gloves, Boots (tank)  4. Chest Crit Damage.
+
+Developer roadmap, second half (David's screenshots of the dev stream, 31 Oct 2026):
+- Characters: Ryza (already released), Jerome, Veronica, Logan.
+- Content: Hero Quest, Rift, QoL Update, Combat Controls Update, Balance Fixes.
+Patch notes: Raid [Chase Toward the End] already exists (1.0.10); Hero Quests exist (Kalien, Dana, Theresia); "Rift Fragments" appear in an Elite Mercenary Crew Promotion Quest fix (1.1.0), so Rift may be a mode built on those. Idea for later: a small "Coming next" box on the Patch Notes page (ask David).
