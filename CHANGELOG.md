@@ -1,3 +1,9 @@
+## 2026-10-30 — Claude: real Orange gear values, new builds
+- Gear tables corrected from David's in-game Orange and Purple pieces: Crit Rate main stats and substats were about 2.4x too high in the old database, Crit Damage about 1.65x too high, Stun/Airborne/Knockdown/Break Additional Attack Power substats half the real value, other status Additional Attack Power 0.8x, Defense Ignore about 2x too high (estimate). Plain stats matched and are unchanged. `GEAR_STATS.valueSources` marks what was measured.
+- A stat can now be both main stat and substat (seen in-game on every rarity); the optimiser (Python and the page's live version) and the checker allow it.
+- Builds re-run: with real Crit Rate values, every damage build now takes Attack Power Up in all five slots, with The Infiltrator as the 2-piece. Build explanations updated.
+- Venomfog Shade 3-piece: up to 3 stacks (+12% Crit Rate).
+
 ## 2026-10-30 — Claude: Venomfog Shade 3-piece stacks
 - Venomfog Shade's 3-piece Crit Rate bonus stacks up to 3 times (+4% per dodge, 12 s, up to +12%), from David's screenshot. The text now says so.
 

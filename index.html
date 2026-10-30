@@ -1211,13 +1211,13 @@ function optDamageIndex(name,pieces,extra){const hb=HERO_BASE_STATS[name],k=KARM
  let flat=hb['Attack']+Number(k.base['Attack'])+(kb['Attack']||0),pct=kb['Attack Power Up']||0,cr=hb['Critical Hit Chance']+(kb['Critical Hit Chance']||0),cd=hb['Critical Damage']+(kb['Critical Damage']||0);
  Object.entries(pieces).forEach(([s,p])=>{const G=GEAR_STATS.slots[s];[[p.main,(G.main[p.main]||[])[15]||0],...p.subs.map(x=>[x,G.sub[x]||0])].forEach(([st,v])=>{if(st==='Attack')flat+=v;else if(st==='Attack Power Up')pct+=v;else if(st==='Critical Hit Chance')cr+=v;else if(st==='Critical Damage')cd+=v;});});
  return [flat*(1+pct/100)*(1+Math.min(cr,100)/100*cd/100),cr];}
-function optSubsFor(slot,main,prio){return prio.filter(s=>s!==main&&s in GEAR_STATS.slots[slot].sub).slice(0,5);}
+function optSubsFor(slot,main,prio){return prio.filter(s=>s in GEAR_STATS.slots[slot].sub).slice(0,5);}
 function optBest(name,fixed,dmgSlots,prio,extra){const arch=(HEROES.find(h=>h.name===name)||{}).archetype;const extras=['Defense Ignore',statusOfArch(arch)+' Additional Attack Power','Armor Penetration','All Status Effect Additional Attack Power'];const P=prio.concat(extras);
  const M=['Attack Power Up','Critical Hit Chance','Critical Damage'];let best=null;const n=dmgSlots.length;
  for(let i=0;i<Math.pow(3,n);i++){const combo=[];let x=i;for(let j=n-1;j>=0;j--){combo[j]=M[x%3];x=Math.floor(x/3);}
   const pieces={};Object.entries(fixed).forEach(([s,p])=>pieces[s]={main:p.main,subs:[...p.subs]});dmgSlots.forEach((s,j)=>pieces[s]={main:combo[j],subs:optSubsFor(s,combo[j],P)});
   for(;;){const cr=optDamageIndex(name,pieces,extra)[1];let c=Object.keys(pieces).filter(s=>pieces[s].subs.includes('Critical Hit Chance')).map(s=>[GEAR_STATS.slots[s].sub['Critical Hit Chance'],s]).sort((a,b)=>a[0]-b[0]||(a[1]<b[1]?-1:a[1]>b[1]?1:0)).filter(([v])=>cr-v>=100);if(!c.length)break;
-   const p=pieces[c[0][1]];const rest=P.filter(q=>q!==p.main&&q!=='Critical Hit Chance'&&!p.subs.includes(q));p.subs=p.subs.filter(q=>q!=='Critical Hit Chance').concat(rest.slice(0,1));}
+   const p=pieces[c[0][1]];const rest=P.filter(q=>q!=='Critical Hit Chance'&&!p.subs.includes(q));p.subs=p.subs.filter(q=>q!=='Critical Hit Chance').concat(rest.slice(0,1));}
   const score=optDamageIndex(name,pieces,extra)[0];const key=[Math.round(score*1000)/1000,-Object.values(pieces).filter(p=>p.main==='Critical Hit Chance').length];
   if(!best||key[0]>best[0][0]||(key[0]===best[0][0]&&key[1]>best[0][1]))best=[key,pieces];}
  const out={};GEAR_SLOTS.forEach(s=>out[s]=best[1][s]);return out;}

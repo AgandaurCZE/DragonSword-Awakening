@@ -109,7 +109,6 @@ for n, b in d.get('HERO_BUILDS', {}).items():
         if len(p['subs']) != 5 or len(set(p['subs'])) != 5: bad(f'HERO_BUILDS[{n}].{s}: needs 5 different substats')
         for x in p['subs']:
             if x not in G[s]['sub']: bad(f'HERO_BUILDS[{n}].{s}: substat {x!r} cannot roll on {s}')
-        if p['main'] in p['subs']: bad(f'HERO_BUILDS[{n}].{s}: {p["main"]!r} is both main and substat')
 
 # Base stats
 for n, b in d.get('HERO_BASE_STATS', {}).items():

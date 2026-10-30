@@ -82,7 +82,7 @@ def damage_index(hero, pieces, extra=None):
     return flat * (1 + pct / 100) * (1 + min(cr, 100) / 100 * cd / 100), cr
 
 def subs_for(slot, main, priority, n=5):
-    out = [s for s in priority if s != main and s in G[slot]['sub']][:n]
+    out = [s for s in priority if s in G[slot]['sub']][:n]  # a stat may be main and substat (seen in-game, 30 Oct 2026)
     assert len(out) == n, (slot, main, priority)
     return out
 
@@ -99,7 +99,7 @@ def best_damage(hero, fixed, dmg_slots, priority, extra=None, mult=1.0):
             c = [(v, s) for v, s in c if cr - v >= 100]
             if not c: break
             p = pieces[c[0][1]]
-            rest = [x for x in priority + extras if x not in (p['main'], 'Critical Hit Chance') and x not in p['subs']]
+            rest = [x for x in priority + extras if x != 'Critical Hit Chance' and x not in p['subs']]
             p['subs'] = [x for x in p['subs'] if x != 'Critical Hit Chance'] + rest[:1]
         score, _ = damage_index(hero, pieces, extra)
         key = (round(score * mult, 3), -sum(p['main'] == 'Critical Hit Chance' for p in pieces.values()))
