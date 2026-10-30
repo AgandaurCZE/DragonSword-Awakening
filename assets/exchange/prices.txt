@@ -45,3 +45,27 @@ Totals (calculated from the table above):
 - One Lv7 skill, 1 -> 7: 6 Record, 6 Warrior, 1 Tome, 3 boss materials, 92,500 Gold.
 - One hero, all 7 levelable skills maxed (4 x Lv10 + 3 x Lv7): 42 Record, 42 Warrior, 24 Victory, 15 Tome, 33 boss materials, 1,467,500 Gold.
 - In emblems (if bought): Record 10, Warrior/Victory/Tome 20 each -> one hero = 420 + 840 + 480 + 300 = 2,040 emblems.
+
+TRAIT STONES AND GEAR CRAFTING (David, 30 Oct 2026)
+Trait Stones: one per archetype, three grades: Low-Grade (green), Intermediate (blue), High-Grade (purple).
+Used for Karma breakthroughs (Karma of that archetype) and for crafting that archetype's gear set.
+Transmute: 3 Low-Grade -> 1 Intermediate; 3 Intermediate -> 1 High-Grade (same archetype).
+
+Crafting an archetype set piece (Blue is the lowest craftable rarity):
+- Blue:   1 Low-Grade stone + 3 Red Pyroxene + 2 green Crystals
+- Purple: 2 Intermediate stones + 3 Tangled Memories and Reminiscences + 3 green Crystals
+- Orange: 3 High-Grade stones + 3 Tangled Forgetfulness and Remembrance + 5 Vein Crystals
+Green Crystals (open-world mining only): Binding Crystal (green) for Holy Arbiter, Azure Gale, Earthshatterer and Ruinsbreaker
+(the physical-status sets); Piercing Crystal (purple) for Venomfog Shade, Blazing Flames, Froststorm, Thunderrush and
+Bloodstained Chaser (the damage-over-time sets).
+Vein Crystal (blue): probably minable (not found yet); Transmute 3 Binding + 3 Piercing -> 1 Vein Crystal.
+The three general sets (The Infiltrator, Ballad of Life, Battle Will) drop in Normal Dungeons.
+
+Where the crafting materials come from:
+- Red Pyroxene: Exchange (5 emblems); disassembling Rare (Blue) gear: 3 per +0 piece, 5 per +3 and +6 piece (+1/+2 untested).
+- Tangled Memories and Reminiscences: Exchange (10); disassembling Hero-grade (Purple) gear: 3 per piece at any level +0..+12;
+  Transmute: 2 Red Pyroxene + 1 Crystal of Remembrance + 1 Crystal of Recollection -> 1.
+- Tangled Forgetfulness and Remembrance: Exchange (25); disassembling Orange gear (amount unknown);
+  Transmute: 2 Tangled Memories and Reminiscences + 1 Crystal of Reverie + 1 Crystal of Oblivion -> 1.
+
+Karma breakthroughs: Trait Stone amounts known only for Lv20 and Lv30 (to add).

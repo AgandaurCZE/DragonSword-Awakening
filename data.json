@@ -11270,10 +11270,16 @@
       "Stun Additional Attack Power (+9)",
       "Max HP Up (+12)"
      ],
-     "observation": "Purple +0 = 0.600 x database Orange +0 (6.49 / 10.81). Substats are shown before they unlock. This piece has Max HP Up as BOTH main stat and a substat, which contradicts the 'no same stat as main and substat' rule. It also has a locked Rune slot."
+     "observation": "Purple +0 main = 0.600 x database Orange +0. At +12 the piece really has Max HP Up as main (25.96%) AND as a substat (4.32%): the 'no same stat as main and substat' rule is wrong, at least for Purple. Purple substats = 0.75 x database Orange legs substats (Max HP Up 4.32/5.76, Crit Hit Res 3.70/4.94, Defense 16/22), except Stun Additional Attack Power 168 = 1.5 x database 112, so that database value is probably wrong. Locked Rune slot.",
+     "subs": {
+      "Defense": 16,
+      "Critical Hit Resistance": 3.7,
+      "Stun Additional Attack Power": 168,
+      "Max HP Up": 4.32
+     }
     }
    ],
-   "rowsFinding": "Every piece reaches exactly 4x its +0 value at max level, whatever the stat. Blue: x1.2, 1.4, 1.6 for +1..+3, then +0.4 per level (2.0 ... 4.0 at +9). Green: x1, 1.4, 2.0, 2.4, 3.2, 3.6, 4.0 (+0..+6). The database Orange table also ends at 4x its +0 (with even +0.2 steps; the in-game step shape for Orange is unknown). Blue +0 = 0.466 x database Orange +0 for most stats (7/15), Green +0 = 0.375 (3/8). Exceptions: Attack Power Up 0.445, and Critical Hit Chance (legs) 0.197: the database Orange Crit Rate main stat (8.88 at +0, 35.5 at +15) is probably far too high. That matters for every damage build. Purple (Legs Max HP Up, 30 Oct): x1.2, 1.4 ... 2.8 for +1..+9 (+0.2 per level), then +0.4 per level to x4.0 at +12. Purple +0 = 0.600 x database Orange +0.",
+   "rowsFinding": "Every piece reaches exactly 4x its +0 value at max level, whatever the stat. Blue: x1.2, 1.4, 1.6 for +1..+3, then +0.4 per level (2.0 ... 4.0 at +9). Green: x1, 1.4, 2.0, 2.4, 3.2, 3.6, 4.0 (+0..+6). The database Orange table also ends at 4x its +0 (with even +0.2 steps; the in-game step shape for Orange is unknown). Blue +0 = 0.466 x database Orange +0 for most stats (7/15), Green +0 = 0.375 (3/8). Exceptions: Attack Power Up 0.445, and Critical Hit Chance (legs) 0.197: the database Orange Crit Rate main stat (8.88 at +0, 35.5 at +15) is probably far too high. That matters for every damage build. Purple (Legs Max HP Up, 30 Oct): x1.2, 1.4 ... 2.8 for +1..+9 (+0.2 per level), then +0.4 per level to x4.0 at +12. Purple +0 = 0.600 x database Orange +0. Substats by rarity vs database Orange: Blue 0.5, Purple 0.75 (so Orange substats are probably the database values, except Stun Additional Attack Power).",
    "runes": "Rune slots (David, 30 Oct 2026): some equipment has a locked Rune slot. Unlocking it costs 5 Anonymous Artisan's Crafting Tools (sources: Exchange > Special, Raid). Engraved Runes add extra stats (the tutorial example shows two lines, e.g. Attack and Defense) and can be removed for Gold. Patch notes: Runes have star grades, and 4-star Rune Synthesis can give 5-star Runes."
   }
  },
