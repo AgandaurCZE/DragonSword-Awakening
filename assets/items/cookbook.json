@@ -1,5 +1,5 @@
 {
- "note": "In-game Cookbook (David's videos, 31 Oct 2026). 73 recipes. The list shows discovered dishes first, then the undiscovered ones by method; an undiscovered dish shows only its method, a silhouette and three '?' ingredient slots. Counts read frame by frame: 16 discovered + 18 Grilling, 20 Boiling, 19 Slicing undiscovered. The discovered ones fall in the same method order (7 Grilling, 6 Boiling, 3 Slicing), giving 25 Grilling, 26 Boiling, 22 Slicing (method of Assorted..., Potato Pizza and Grilled Cla... inferred from that order; not seen opened). Names cut off by the game ('...') are kept as shown.",
+ "note": "In-game Cookbook (David's videos, 31 Oct 2026). 73 recipes. The list shows discovered dishes first, then the undiscovered ones by method; an undiscovered dish shows only its method, a silhouette and three '?' ingredient slots. Counts read frame by frame: 16 discovered + 18 Grilling, 20 Boiling, 19 Slicing undiscovered. The discovered ones fall in the same method order (7 Grilling, 6 Boiling, 3 Slicing), giving 25 Grilling, 26 Boiling, 22 Slicing (method of Assorted..., Potato Pizza and Grilled Cla... inferred from that order; not seen opened). Full names read from David's Cookbook details video.",
  "rules": [
   "3 slots, one ingredient each: a recipe uses 1-3 ingredients.",
   "Each slot has a fixed list of substitutes (the swap icon on the slot opens 'Materials to change'); it is not simply the whole category: Meat Stew's Boar Meat slot offered only Beast Meat, though Fox Meat and Aged Game Meat were in the inventory.",
@@ -21,7 +21,11 @@
    "stars": 2,
    "ingredients": [
     "Boar Meat"
-   ]
+   ],
+   "effectsByStars": {
+    "1": "850 HP",
+    "2": "950 HP"
+   }
   },
   {
    "name": "Grilled seafood",
@@ -37,33 +41,76 @@
     "Conch": [
      "Shrimp Flesh"
     ]
+   },
+   "effectsByStars": {
+    "1": "850 HP",
+    "2": "950 HP",
+    "3": "1200 HP"
    }
   },
   {
-   "name": "Grilled Mu...",
+   "name": "Grilled Mushrooms",
    "method": "Grilling",
-   "type": "Recovery"
+   "type": "Recovery",
+   "effectsByStars": {
+    "1": "100 HP/s for 10 s",
+    "2": "125 HP/s for 10 s"
+   },
+   "ingredients": [
+    "Blue Lotus Mushroom"
+   ]
   },
   {
    "name": "Fried Egg",
    "method": "Grilling",
    "type": "Recovery",
-   "effect": "[Personal] Restores 24% of Max HP (David)."
+   "effect": "[Personal] Restores 24% of Max HP (David).",
+   "effectsByStars": {
+    "4": "24% of max HP"
+   },
+   "ingredients": [
+    "Goose Eggs",
+    "Goose Eggs",
+    "Goose Eggs"
+   ]
   },
   {
-   "name": "Assorted ...",
+   "name": "Assorted Grilled Meats",
    "method": "Grilling",
-   "type": "Recovery"
+   "type": "Recovery",
+   "effectsByStars": {
+    "1": "1200 HP",
+    "2": "1400 HP",
+    "3": "1650 HP"
+   },
+   "ingredients": [
+    "Boar Meat",
+    "Blue Lotus Mushroom"
+   ]
   },
   {
    "name": "Potato Pizza",
    "method": "Grilling",
-   "type": "Recovery"
+   "type": "Recovery",
+   "effectsByStars": {
+    "2": "[Team] 800 HP + 1.2% max HP per second for 20 s"
+   },
+   "ingredients": [
+    "Wheat",
+    "Dwarf Potato"
+   ]
   },
   {
-   "name": "Grilled Cla...",
+   "name": "Grilled Clams",
    "method": "Grilling",
-   "type": "Recovery"
+   "type": "Recovery",
+   "effectsByStars": {
+    "2": "1500 HP"
+   },
+   "ingredients": [
+    "Shellfish",
+    "Shellfish"
+   ]
   },
   {
    "name": "Steak Set Meal",
@@ -71,11 +118,16 @@
    "type": "Recovery",
    "stars": 3,
    "ingredients": [
-    "Round Eggplant",
-    "Shrimp Flesh",
-    "Bird Meat"
+    "Boar Meat",
+    "Conch",
+    "Round Eggplant"
    ],
-   "note": "Discovered in David's cooking video."
+   "note": "Discovered in David's cooking video.",
+   "effectsByStars": {
+    "2": "1600 HP",
+    "3": "2000 HP",
+    "4": "2400 HP"
+   }
   },
   {
    "name": "Meat Stew",
@@ -92,6 +144,12 @@
     "Boar Meat": [
      "Beast Meat"
     ]
+   },
+   "effectsByStars": {
+    "2": "Attack +11%",
+    "3": "Attack +15%",
+    "4": "Attack +17%",
+    "5": "Attack +20%"
    }
   },
   {
@@ -111,6 +169,11 @@
      "Whitebloom Carrot",
      "Lantern Gourd"
     ]
+   },
+   "effectsByStars": {
+    "2": "Crit Damage +15%",
+    "3": "Crit Damage +18%",
+    "4": "Crit Damage +21%"
    }
   },
   {
@@ -122,37 +185,173 @@
     "Goose Eggs",
     "Goose Eggs",
     "Goose Eggs"
+   ],
+   "effectsByStars": {
+    "3": "Attack +105",
+    "4": "Attack +130"
+   }
+  },
+  {
+   "name": "Mushroom Soup",
+   "method": "Boiling",
+   "type": "Attack",
+   "effectsByStars": {
+    "1": "Armor Penetration +50",
+    "2": "Armor Penetration +60"
+   },
+   "ingredients": [
+    "Blue Lotus Mushroom"
    ]
   },
   {
-   "name": "Mushroom...",
+   "name": "Tomato Stew",
    "method": "Boiling",
-   "type": "Attack"
-  },
-  {
-   "name": "Tomato St...",
-   "method": "Boiling",
-   "type": "Attack"
+   "type": "Attack",
+   "effectsByStars": {
+    "2": "Defense Ignore +12%"
+   },
+   "ingredients": [
+    "Leaflet Tomato",
+    "Wheat"
+   ]
   },
   {
    "name": "Clam Soup",
    "method": "Boiling",
-   "type": "Attack"
+   "type": "Attack",
+   "effectsByStars": {
+    "1": "Crit Damage +14%"
+   },
+   "ingredients": [
+    "Shellfish"
+   ]
   },
   {
    "name": "Scallop sashimi",
    "method": "Slicing",
-   "note": "Two Seafood of any kind (Conch, Shellfish, Shrimp Flesh, Sand Crab), mixed or the same (David)."
+   "note": "Two Seafood of any kind (Conch, Shellfish, Shrimp Flesh, Sand Crab), mixed or the same (David).",
+   "effectsByStars": {
+    "1": "Dash/swim stamina -10% for 1 min",
+    "2": "-15%",
+    "3": "-20%"
+   },
+   "ingredients": [
+    "Conch",
+    "Conch"
+   ]
   },
   {
    "name": "Salad",
-   "method": "Slicing"
+   "method": "Slicing",
+   "effectsByStars": {
+    "1": "Familiar climb/dash stamina -10% for 1 min",
+    "2": "-15%",
+    "3": "-20%"
+   },
+   "ingredients": [
+    "Round Eggplant",
+    "Round Eggplant"
+   ]
   },
   {
    "name": "Egg Renew",
    "method": "Slicing",
    "type": "Familiar",
-   "effect": "[Team] Instantly restores 40% of the Familiar's Stamina (David)."
+   "effect": "[Team] Instantly restores 40% of the Familiar's Stamina (David).",
+   "effectsByStars": {
+    "3": "Familiar stamina +30%",
+    "4": "+40%"
+   },
+   "ingredients": [
+    "Goose Eggs",
+    "Goose Eggs",
+    "Goose Eggs"
+   ]
   }
- ]
+ ],
+ "starRule": {
+  "rule": "Dish stars = 1 + floor(sum of the ingredients' stars / 3). Checked on 45 combinations in David's Cookbook video (31 Oct 2026), all match.",
+  "table": {
+   "1-2": 1,
+   "3-5": 2,
+   "6-8": 3,
+   "9-11": 4,
+   "12": 5
+  },
+  "consequence": "A 1-ingredient dish can reach at most 2 stars (one 4-star ingredient), a 2-ingredient dish 3 stars, a 3-ingredient dish 5 stars (three 4-star ingredients; Boar Meat is the only 4-star ingredient seen so far)."
+ },
+ "effectsByStars": {
+  "note": "Effect per dish star, read from the Cookbook. No single formula: each dish has its own table. Stamina dishes step by 5 or 10 points.",
+  "Grilled Meat": {
+   "1": "850 HP",
+   "2": "950 HP"
+  },
+  "Grilled seafood": {
+   "1": "850 HP",
+   "2": "950 HP",
+   "3": "1200 HP"
+  },
+  "Grilled Mushrooms": {
+   "1": "100 HP/s for 10 s",
+   "2": "125 HP/s for 10 s"
+  },
+  "Fried Egg": {
+   "4": "24% of max HP"
+  },
+  "Assorted Grilled Meats": {
+   "1": "1200 HP",
+   "2": "1400 HP",
+   "3": "1650 HP"
+  },
+  "Steak Set Meal": {
+   "2": "1600 HP",
+   "3": "2000 HP",
+   "4": "2400 HP"
+  },
+  "Potato Pizza": {
+   "2": "[Team] 800 HP + 1.2% max HP per second for 20 s"
+  },
+  "Grilled Clams": {
+   "2": "1500 HP"
+  },
+  "Meat Stew": {
+   "2": "Attack +11%",
+   "3": "Attack +15%",
+   "4": "Attack +17%",
+   "5": "Attack +20%"
+  },
+  "Seafood Stew": {
+   "2": "Crit Damage +15%",
+   "3": "Crit Damage +18%",
+   "4": "Crit Damage +21%"
+  },
+  "Hard-boiled Egg": {
+   "3": "Attack +105",
+   "4": "Attack +130"
+  },
+  "Mushroom Soup": {
+   "1": "Armor Penetration +50",
+   "2": "Armor Penetration +60"
+  },
+  "Tomato Stew": {
+   "2": "Defense Ignore +12%"
+  },
+  "Clam Soup": {
+   "1": "Crit Damage +14%"
+  },
+  "Scallop sashimi": {
+   "1": "Dash/swim stamina -10% for 1 min",
+   "2": "-15%",
+   "3": "-20%"
+  },
+  "Salad": {
+   "1": "Familiar climb/dash stamina -10% for 1 min",
+   "2": "-15%",
+   "3": "-20%"
+  },
+  "Egg Renew": {
+   "3": "Familiar stamina +30%",
+   "4": "+40%"
+  }
+ }
 }

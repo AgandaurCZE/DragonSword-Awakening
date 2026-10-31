@@ -39,3 +39,5 @@ treasure chest at that location." Each shows its own map; they disappear once th
 COOKBOOK (cookbook.json): 73 recipes = 25 Grilling, 26 Boiling, 22 Slicing; 17 discovered so far, with effects,
 stars, ingredients and slot substitutes where David opened them. Food buffs: Meat Stew [Team] Attack +20% (5 stars),
 Seafood Stew [Team] Crit Damage +21% (4 stars), Hard-boiled Egg [Team] Attack +130 (4 stars), all 15 minutes.
+STAR RULE (45 combinations, all match): dish stars = 1 + floor(sum of ingredient stars / 3), so 1-ingredient dishes max 2 stars,
+2-ingredient 3, 3-ingredient 5. Effects per star are a per-dish table (cookbook.json effectsByStars).
