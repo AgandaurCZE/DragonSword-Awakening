@@ -21,8 +21,11 @@ FLOORS (Tower of Gale)
   The time limits grow with the floor.
   Floor 1: Defeat all monsters / 60 s / 90 s.
   Floor 30: Defeat the Boss Monster / limits blurred in the screenshot (they look like 300 s and 600 s; not confirmed).
-- Each floor's first clear gives a fixed number of Fragment of Memory (David's name for it; floor 1 = 20); the amount
-  rises on higher floors.
+- Each floor's first clear gives a fixed number of Fragment of Memory (David, 31 Oct 2026):
+  Floors  1-10: 20 25 30 35 40 45 45 50 50 55
+  Floors 11-20: 55 60 60 70 70 75 75 80 80 85
+  Floors 21-30: 85 90 90 95 95 100 110 120 130 150
+  Total for all 30 floors: 2170.
 
 CUMULATIVE STAR REWARDS (Tower of Gale; David saw no difference in the other towers)
  Stars  Reward
@@ -44,7 +47,7 @@ CUMULATIVE STAR REWARDS (Tower of Gale; David saw no difference in the other tow
   80     8 Whirling Thoughts
   85     9 Whirling Thoughts
   90    10 Whirling Thoughts
- Total per tower: 520 Fragment of Memory (plus the floors' first-clear rewards) and 55 Whirling Thoughts.
+ Total per tower: 520 Fragment of Memory from stars + 2170 from first clears = 2690, and 55 Whirling Thoughts.
 
 WHY IT MATTERS
 - Whirling Thoughts was the missing source: 1 Whirling Thoughts + 100 Karma exchange crystals + 100,000 Gold
