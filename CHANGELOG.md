@@ -1,3 +1,6 @@
+## 2026-10-31 — Claude: tower quotes (preview only)
+- Towers mode: the in-game quotes for the towers of Crushing and Amplitude (from David).
+
 ## 2026-10-31 — Claude: Towers mode (preview only)
 - New tier list: a third mode, Towers (Tower of Trials), with tabs for the towers of Amplitude, Gale and Crushing, the measured damage bonus (+400% for the tower's status, +100% for damage-over-time), floors and stars, and all rewards. New `TOWER_TRIALS` in data.json; icons for Fragment of Memory and Whirling Thoughts and the mode picture cut from David's screenshots. No tower ratings yet: heroes show their Overall tier faded, and the tower's archetype gets the Counter tag.
 

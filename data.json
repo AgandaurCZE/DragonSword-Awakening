@@ -20550,7 +20550,8 @@
     "archetype": "Amplitude",
     "status": "Stun",
     "measured": true,
-    "pos": "0% 50%"
+    "pos": "0% 50%",
+    "text": "The strong are not merely those who endure, but those who bring down. If you cannot bring it down, you have no right to climb."
    },
    {
     "id": "gale",
@@ -20567,7 +20568,8 @@
     "archetype": "Crushing",
     "status": "Knockdown",
     "measured": false,
-    "pos": "100% 50%"
+    "pos": "100% 50%",
+    "text": "He who severs consciousness shall sever the flow. If you cannot create even a single moment of silence, you will not reach it easily."
    }
   ],
   "image": "assets/ui/mode-towers.webp"
