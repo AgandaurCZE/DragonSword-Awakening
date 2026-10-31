@@ -472,3 +472,6 @@ Grade 5 Veteran: Adventure Quest [80. If He Becomes a Hero] -> Breakthrough Stag
 Adventure Difficulty (world level): 6 stages; stage 1 from the start (Crew level 1), stages 2-6 unlock with the 5 promotions
 (David). Higher difficulty = stronger field monsters and richer rewards; you can lower it.
 Crew Level track: top row 10 items per level, bottom row 100 per 5 levels for levels 1-25 (David).
+
+TRAINING GROUND IN PRACTICE (David, 1 Nov 2026): there's no cooldown setting. ESC restarts the fight (fade-out, fresh dummies,
+all skills charged), which is the only way to reset cooldowns.
