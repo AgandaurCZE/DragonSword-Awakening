@@ -16705,7 +16705,7 @@
     "date": "2026-10-29",
     "by": "David (Test Kit)",
     "observations": [
-     "All three skills (Healing Circle, Invisible, Holy Circle): an even step from Lv. 1 to Lv. 9, then a double step at Lv. 10. Step = (Lv.10 - Lv.1) / 10: Healing Circle +1%, Invisible +0.5%, Holy Circle +1% (Lv.10 step doubled).",
+     "All five skills (Healing Circle, Invisible, Holy Circle, Brave One, Vanguard Banner): an even step from Lv. 1 to Lv. 9, then a double step at Lv. 10. Step = (Lv.10 - Lv.1) / 10.",
      "So buff at level L = Lv.1 + step x (L - 1) up to Lv. 9, and Lv.1 + 10 x step at Lv. 10. Damage multipliers also take a bigger step at the last level (x1.58 -> x1.75).",
      "Max / Lv.1 differs per skill (x2.0 heal, x1.5 Crit Damage), so each buff needs its own Lv.1 and max value."
     ],
@@ -16759,6 +16759,40 @@
        27,
        28,
        30
+      ]
+     },
+     {
+      "hero": "Eileen",
+      "skill": "Brave One (Lv.10)",
+      "value": "Attack Power %",
+      "byLevel": [
+       10,
+       10.5,
+       11,
+       11.5,
+       12,
+       12.5,
+       13,
+       13.5,
+       14,
+       15
+      ]
+     },
+     {
+      "hero": "Eileen",
+      "skill": "Vanguard Banner (Lv.10)",
+      "value": "Critical Rate %",
+      "byLevel": [
+       10,
+       11,
+       12,
+       13,
+       14,
+       15,
+       16,
+       17,
+       18,
+       20
       ]
      }
     ]
@@ -17198,6 +17232,19 @@
      },
      "result": "Frozen gives +50% on hits, like Poison/Bleed/Burn/Shock. All four hits match the model hit = k x (Attack + AAP of the statuses on the target) x (1 + sum of hit bonuses) x (1 + sum of their Additional Damage)."
     }
+   },
+   {
+    "test": "Eileen's team buffs",
+    "date": "2026-10-31",
+    "by": "David",
+    "observations": [
+     "Brave One (Ultimate): the banner stays on the field for 10 s, even after swapping out, and makes a circle on the ground; a hero gets the buff only while standing in it. Lv.1 = +10% Attack Power.",
+     "Vanguard Banner (Special B, needs Brave One active): about 9-9.5 s; Eileen dances around and makes a big blue circle; stand in it for the buff. Lv.1 = +10% Crit Rate.",
+     "Both buffs fade about 2 s after leaving the circle. Teammates only get them by swapping in and stepping into the circle (Eileen stays on the field after a swap).",
+     "Reina (626 Attack): auto attack 171 -> 181 with Brave One Lv.1 (x1.058, display range 1.052-1.064). A +10% multiplier on the hit would give 188, so Brave One adds +10% to the Attack Power Up pool (diluted by the gear %), like a title %.",
+     "Charlotte (412 Attack, 96.42% Crit Damage), crit hits: 51 plain, 56 with Brave One, 56 with Brave One + Vanguard Banner (Crit Rate doesn't change a crit's size, as expected), 59 with Invisible too (+10% Crit Damage at Lv.1: 56 x 2.0642/1.9642 = 58.9).",
+     "Unknown buff on Charlotte after swapping in from Reina, lasts 12 s, doesn't change crit hit size, not seen on Johnny in the same set. 12 s matches Venomfog Shade's 3-piece (+4% Crit Rate for 12 s after dodging) - maybe her swap-in counts as a dodge. To check: her panel Crit Rate or the buff tooltip while it's up."
+    ]
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
