@@ -15843,7 +15843,8 @@
    "Super Armor Break and Additional Attack Power (David, 30 Oct 2026): Break gives no hit multiplier, but Break Additional Attack Power and All Status AAP are added to Attack on hits against a broken enemy. Charlotte (359 Attack, Break AAP 400, All Status 50): clean 52 -> broken 118 (= 52 x 809/359). Poison + Break 216, Burn + Break 216, Poison + Burn + Break 345, all as predicted. So Break AAP can more than double hits on broken enemies for low-Attack heroes, and All Status AAP counts for Break too.",
    "Frost (David, 31 Oct 2026, Cerese + Reina): no damage ticks; 3 stacks Freeze the enemy (can't act); a Frozen enemy takes +50% from hits, added like the other status bonuses (Reina Wind Slayer: clean 1742, Frozen 2613, Airborne 5605, Airborne + Frozen 7006 - all as predicted). Only Cerese's Shattering Touch shatters Frozen enemies / Ice Blocks.",
    "Charlotte's swap-in counts as a dodge for 'when dodging' effects (Venomfog Shade 3-piece: +4% Crit Rate for 12 s, confirmed on her panel, 31 Oct 2026); Johnny's swap-in doesn't. Tip: the U key opens the stat panel during a fight without restarting it.",
-   "Three physical statuses add with no cap (David, 31 Oct 2026, video of Reina's Wind Slayer Lv.1 on Lv.90 goblins; Reina 626 Attack, Stun AAP 250, Airborne AAP 250, Airborne Additional Damage 15%): clean 1742; Stun + Knockdown 7311 (= 1742 x 876/626 x 3, predicted 7313); Stun + Knockdown + Airborne about 14407 (= 1742 x 1126/626 x 4 x 1.15) and the same hit as a crit 21611 (= 14407 x 1.5, Reina's Crit Damage is 50%, confirmed on her panel). Both white hits give the same true Attack of 626.6 (the panel rounds down). So the bonuses keep adding (x4); the earlier x3.5 goblin result was most likely Bleed wearing off."
+   "Three physical statuses add with no cap (David, 31 Oct 2026, video of Reina's Wind Slayer Lv.1 on Lv.90 goblins; Reina 626 Attack, Stun AAP 250, Airborne AAP 250, Airborne Additional Damage 15%): clean 1742; Stun + Knockdown 7311 (= 1742 x 876/626 x 3, predicted 7313); Stun + Knockdown + Airborne about 14407 (= 1742 x 1126/626 x 4 x 1.15) and the same hit as a crit 21611 (= 14407 x 1.5, Reina's Crit Damage is 50%, confirmed on her panel). Both white hits give the same true Attack of 626.6 (the panel rounds down). So the bonuses keep adding (x4); the earlier x3.5 goblin result was most likely Bleed wearing off.",
+   "Tower of Trials adds to the Additional Damage pool (David, 31 Oct 2026, Tower of Gale floor 1, Reina's Ultimate on the archers, no crits). Without Airborne gear stats (384 Attack): clean 1759, Airborne 17593 (x10), Poison 5278 (x3), Airborne + Poison 26390 (x15). That is the normal hit bonus (x2, x1.5, x2.5) times (1 + tower bonus): +400% for Airborne (the tower's own status) and +100% for Poison, added together (x5, x2, x6). With her Airborne gear (626 Attack, Airborne AAP 250, Airborne Additional Damage 15%): clean 2904, Airborne 41843, Poison 8712, Airborne + Poison 62460; the tower bonus joins the same pool as Additional Damage: 2904 x 876.6/626.6 x 2 x (1 + 4 + 0.15) = 41845 and x 2.5 x (1 + 4 + 1 + 0.15) = 62463. All 7 hits fit within 3. Not known yet: whether other statuses get +100% flat or 2x their hit bonus, and whether another tower boosts its own status the same way."
   ],
   "tests": [
    {
@@ -17297,6 +17298,38 @@
      "Armor Penetration 15 and Defense Ignore 0.97% lower the goblins' defence equally on every hit, so they cancel out of these ratios (all hits on the same Lv.90 goblins in one clip)."
     ],
     "source": "David's clip 2026-10-31_04-09-24.mp4, read frame by frame"
+   },
+   {
+    "test": "Tower of Gale status bonus",
+    "date": "2026-10-31",
+    "by": "David",
+    "hero": "Reina",
+    "enemy": "Tower of Gale floor 1 archers (Lv.40)",
+    "skill": "Ultimate",
+    "runs": [
+     {
+      "gear": "Airborne gear: 626 Attack, Armor Penetration 15, Defense Ignore 0.97%, Airborne AAP 250, Airborne Additional Damage 15%",
+      "hits": {
+       "clean": 2904,
+       "Airborne": 41843,
+       "Poison": 8712,
+       "Airborne + Poison": 62460
+      }
+     },
+     {
+      "gear": "+0 Ballad of Life, crit-resistance mains only: 384 Attack, Defense Ignore 0.97%",
+      "hits": {
+       "clean": 1759,
+       "Airborne": 17593,
+       "Poison": 5278,
+       "Airborne + Poison": 26390
+      }
+     }
+    ],
+    "observations": [
+     "Run 2: x10.00, x3.00, x15.00 = (1 + hit bonuses) x (1 + tower bonus), tower bonus +400% Airborne, +100% Poison, added.",
+     "Run 1: the tower bonus adds to Airborne Additional Damage (15%), not multiplying it: predicted 41845 and 62463."
+    ]
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",

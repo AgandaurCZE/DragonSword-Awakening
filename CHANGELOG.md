@@ -1,3 +1,6 @@
+## 2026-10-31 — Claude: Tower of Trials damage bonus
+- `DAMAGE_TESTS`: the Tower of Gale adds +400% to the Additional Damage pool on Airborne hits and +100% on Poison hits (two runs of Reina's Ultimate, all 7 hits fit). Data only.
+
 ## 2026-10-31 — Claude: Tower of Trials notes
 - New `assets/tower/`: David's Tower of Trials screenshots and notes (towers of Amplitude, Gale and Crushing; 30 floors, 3 stars each; cumulative star rewards). Found the source of Whirling Thoughts (55 per tower). Not on the page yet.
 
