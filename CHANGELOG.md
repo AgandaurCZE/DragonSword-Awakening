@@ -1,3 +1,7 @@
+## 2026-10-31 — Claude: David's titles, two stale notes
+- `TITLES`: Environmental Cleaner and Black Wings marked as obtained (5 of 109); cumulative effect matches the game (Defense +10, Max HP +100, Defense Up +1.50%, Critical Rate +1.30%).
+- `STATUS_EFFECTS.damageOverTime.untested` and `HERO_STAT_MODEL.observations.titles` brought up to date (both described tests as missing that are done).
+
 ## 2026-10-31 — Claude: status hit bonuses have no cap
 - `DAMAGE_TESTS`: David's clip of Reina's Wind Slayer on goblins shows Stun + Knockdown + Airborne = ×4 (1742 clean, 7311 with Stun + Knockdown, ~14407 with all three, 21611 as a crit at 50% Crit Damage). Hit bonuses keep adding; the old ×3.5 result was Bleed wearing off. Data only, nothing on the page changes.
 

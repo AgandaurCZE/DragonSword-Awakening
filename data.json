@@ -12806,7 +12806,7 @@
    "statusResistance": "Every status resistance (Stun, Airborne, Knockdown, Shock, Frost, Burn, Poison, Bleed) is 50 on Charlotte with no gear; the same at Lv1.",
    "critRateText": "In-game: 'Increases the chance of a Critical Hit ... The final probability is determined by the target's Critical Hit Resistance.' Nothing says what happens above 100%.",
    "setBonusTest": "Ballad of Life on Charlotte (no other gear stats, no Karma): Max HP 1975 -> 2152 with 2 pieces (+9%) -> 2271 with 3 pieces (+15% = 2-piece + 3-piece) -> 2271 with 5 pieces. Displayed values are rounded down.",
-   "titles": "Titles (achievement rewards, Mercenary Crew > Title) give passive bonuses to every hero, slotted or not. David's 3 of 109 titles give Defense +10, Max HP +50, Defense Up +1.5%; that is exactly why Lv1 shows 71/30/511 with titles vs 71/20/461 without. HERO_BASE_STATS and the level curve exclude titles. The end-game totals don't include titles yet: their effects are only known for these 3."
+   "titles": "Titles (achievement rewards, Mercenary Crew > Title) give passive bonuses to every hero, slotted or not. All 109 titles and their passives are in TITLES (29 Oct 2026). At the Lv1 measurement David had 3 titles (Defense +10, Max HP +50, Defense Up +1.5%), which is exactly why Lv1 showed 71/30/511 with titles vs 71/20/461 without. HERO_BASE_STATS and the level curve exclude titles; the end-game totals add the titles each viewer ticks on the Titles tab."
   }
  },
  "HERO_BASE_STATS": {
@@ -14328,9 +14328,9 @@
   }
  },
  "TITLES": {
-  "note": "All 109 titles, read from David's screen recording of the Title list (29 Oct 2026), in the game's order. Every obtained title's passive applies to all heroes, slotted or not. Flat bonuses are added to the hero's flat stats before % bonuses multiply; % bonuses join the same pool as gear and set % (confirmed in-game). Name colours are the game's: the five colours run from strongest (pink) to weakest (lavender) passives. The game hides the condition once a title is obtained, so Curious Hands and 【777】 have none recorded; Novice Mercenary Crew's is inferred from the other promotion titles.",
+  "note": "All 109 titles, read from David's screen recording of the Title list (29 Oct 2026), in the game's order. Every obtained title's passive applies to all heroes, slotted or not. Flat bonuses are added to the hero's flat stats before % bonuses multiply; % bonuses join the same pool as gear and set % (confirmed in-game). Name colours are the game's: the five colours run from strongest (pink) to weakest (lavender) passives. The game hides the condition once a title is obtained, so Curious Hands and 【777】 have none recorded; Novice Mercenary Crew's is inferred from the other promotion titles. David's titles updated 31 Oct 2026 (5 of 109: Environmental Cleaner and Black Wings added; the game's Cumulative Set Effect, Defense +10, Max HP +100, Defense Up +1.50%, Critical Rate +1.30%, matches the sum).",
   "totalCount": 109,
-  "ownedCount": 3,
+  "ownedCount": 5,
   "ownedCumulative": [
    {
     "stat": "Defense",
@@ -14338,11 +14338,15 @@
    },
    {
     "stat": "Max HP",
-    "value": 50
+    "value": 100
    },
    {
     "stat": "Defense Up",
     "value": 1.5
+   },
+   {
+    "stat": "Critical Hit Chance",
+    "value": 1.3
    }
   ],
   "list": [
@@ -15258,7 +15262,7 @@
    {
     "name": "Environmental Cleaner",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Critical Hit Chance",
@@ -15753,7 +15757,7 @@
    {
     "name": "Black Wings",
     "grade": 5,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
@@ -17326,7 +17330,7 @@
     "Tick damage is rounded down.",
     "Ticks never crit (watched 500 ticks over all four statuses)."
    ],
-   "untested": "Not tested yet: bonuses for two different statuses at once (added or multiplied). Break gives no hit bonus (tested 29 Oct 2026). Frost: no ticks (tested 31 Oct 2026); 3 stacks Freeze the enemy; Frozen = +50% on hits."
+   "untested": "Not tested yet: how fast build-up fills per press (only gauge estimates), and whether one press can add more than one stack. Tested: two different statuses' Additional Damage add (30 Oct 2026); three physical statuses add to x4 with no cap (31 Oct 2026); Break gives no hit bonus (29 Oct 2026); Frost: no ticks, 3 stacks Freeze the enemy, Frozen = +50% on hits (31 Oct 2026)."
   }
  },
  "PATCH_NOTES": {
