@@ -17258,8 +17258,10 @@
     },
     "observations": [
      "377 / 251 = x1.50: the normal Frost hit bonus (+50%) applies to Shattering Touch, even with Frost stacks below Frozen.",
-     "Cerese's Attack and Shattering Touch level not recorded yet, so the skill % can't be checked."
-    ]
+     "251 / (71 x 7.09) = 0.499: the same 0.50 x Attack x skill % as every other single hit on the Training Ogre. So Shattering Touch deals its full 709% (Lv.1) in one hit to each shattered target."
+    ],
+    "attack": 71,
+    "skillLevel": "Lv.1 = 709% (codex max 1241% / 1.75)"
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
