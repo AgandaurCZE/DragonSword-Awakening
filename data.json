@@ -17246,6 +17246,20 @@
      "Charlotte (412 Attack, 96.42% Crit Damage), crit hits: 51 plain, 56 with Brave One, 56 with Brave One + Vanguard Banner (Crit Rate doesn't change a crit's size, as expected), 59 with Invisible too (+10% Crit Damage at Lv.1: 56 x 2.0642/1.9642 = 58.9).",
      "The 12 s buff on Charlotte after swapping in is Venomfog Shade's 3-piece (+4% Crit Rate for 12 s after dodging): confirmed on her stat panel (U key works mid-fight). Her swap-in counts as a dodge; Johnny's doesn't trigger it."
     ]
+   },
+   {
+    "test": "Cerese Shattering Touch on the Training Ogre",
+    "date": "2026-10-31",
+    "by": "David",
+    "setup": "Ice Block from Frozen Spike next to the Ogre, then Shattering Touch",
+    "hits": {
+     "no Frost on the Ogre": 251,
+     "with Frost stack(s) on the Ogre": 377
+    },
+    "observations": [
+     "377 / 251 = x1.50: the normal Frost hit bonus (+50%) applies to Shattering Touch, even with Frost stacks below Frozen.",
+     "Cerese's Attack and Shattering Touch level not recorded yet, so the skill % can't be checked."
+    ]
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
