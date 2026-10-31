@@ -71,8 +71,9 @@ Airborne AD 15%, Airborne AAP 250; no crits)
   Rule: hit = normal hit x (1 + Additional Damage + tower bonus). Tower of Gale: Airborne +400% (its own status),
   Poison +100%; they add (Airborne + Poison: x2.5 x (1 + 4 + 1) = x15). Reina's 15% Airborne Additional Damage joins
   the same pool (run 1 fits within 3). Details in data.json DAMAGE_TESTS.
-- Still open: does every other status get +100%, or 2x its hit bonus (Stun/Knockdown would show it)? Does each tower
-  give its own status +400%?
+- Stun gets NO tower bonus: Stun + Airborne 26390 (x3 x 5 = x15), Stun + Poison + Airborne 36947 (x3.5 x 6 = x21).
+- Still open: why Poison gets +100% (all damage-over-time statuses, or are the archers weak to Poison?) and whether
+  each tower gives its own status +400%.
 
 MAP (source/map-panel.webp): the map shows a "Tower of Trials" point only after the side quest; "Warp" takes you
 there. It isn't in the menu or the Mercenary Guide.
