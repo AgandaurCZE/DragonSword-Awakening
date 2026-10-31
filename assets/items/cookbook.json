@@ -1,0 +1,158 @@
+{
+ "note": "In-game Cookbook (David's videos, 31 Oct 2026). 73 recipes. The list shows discovered dishes first, then the undiscovered ones by method; an undiscovered dish shows only its method, a silhouette and three '?' ingredient slots. Counts read frame by frame: 16 discovered + 18 Grilling, 20 Boiling, 19 Slicing undiscovered. The discovered ones fall in the same method order (7 Grilling, 6 Boiling, 3 Slicing), giving 25 Grilling, 26 Boiling, 22 Slicing (method of Assorted..., Potato Pizza and Grilled Cla... inferred from that order; not seen opened). Names cut off by the game ('...') are kept as shown.",
+ "rules": [
+  "3 slots, one ingredient each: a recipe uses 1-3 ingredients.",
+  "Each slot has a fixed list of substitutes (the swap icon on the slot opens 'Materials to change'); it is not simply the whole category: Meat Stew's Boar Meat slot offered only Beast Meat, though Fox Meat and Aged Game Meat were in the inventory.",
+  "Dish stars follow the ingredients' stars (up to 5): 3x Boar Meat (4 stars) -> 5-star Meat Stew; 3x Bird Eggs (2 stars) -> 3-star Hard-boiled Egg, 3x Goose Eggs (3 stars) -> 4-star.",
+  "Cooking an unknown combination discovers the dish: Round Eggplant + Shrimp Flesh + Bird Meat, Grilling -> Steak Set Meal (3 stars, Recovery).",
+  "Effect badges in the list: red + = Recovery, green sword = Attack (team buffs), teal = Familiar stamina, pink = revive."
+ ],
+ "methodCounts": {
+  "Grilling": 25,
+  "Boiling": 26,
+  "Slicing": 22
+ },
+ "discovered": [
+  {
+   "name": "Grilled Meat",
+   "method": "Grilling",
+   "type": "Recovery",
+   "effect": "[Personal] Immediately restores 950 HP.",
+   "stars": 2,
+   "ingredients": [
+    "Boar Meat"
+   ]
+  },
+  {
+   "name": "Grilled seafood",
+   "method": "Grilling",
+   "type": "Recovery",
+   "effect": "[Personal] Instantly restores 1200 HP.",
+   "stars": 3,
+   "ingredients": [
+    "Conch",
+    "Blue Lotus Mushroom"
+   ],
+   "substitutes": {
+    "Conch": [
+     "Shrimp Flesh"
+    ]
+   }
+  },
+  {
+   "name": "Grilled Mu...",
+   "method": "Grilling",
+   "type": "Recovery"
+  },
+  {
+   "name": "Fried Egg",
+   "method": "Grilling",
+   "type": "Recovery",
+   "effect": "[Personal] Restores 24% of Max HP (David)."
+  },
+  {
+   "name": "Assorted ...",
+   "method": "Grilling",
+   "type": "Recovery"
+  },
+  {
+   "name": "Potato Pizza",
+   "method": "Grilling",
+   "type": "Recovery"
+  },
+  {
+   "name": "Grilled Cla...",
+   "method": "Grilling",
+   "type": "Recovery"
+  },
+  {
+   "name": "Steak Set Meal",
+   "method": "Grilling",
+   "type": "Recovery",
+   "stars": 3,
+   "ingredients": [
+    "Round Eggplant",
+    "Shrimp Flesh",
+    "Bird Meat"
+   ],
+   "note": "Discovered in David's cooking video."
+  },
+  {
+   "name": "Meat Stew",
+   "method": "Boiling",
+   "type": "Attack",
+   "effect": "[Team] Attack power increases by 20% for 15 minutes.",
+   "stars": 5,
+   "ingredients": [
+    "Boar Meat",
+    "Boar Meat",
+    "Boar Meat"
+   ],
+   "substitutes": {
+    "Boar Meat": [
+     "Beast Meat"
+    ]
+   }
+  },
+  {
+   "name": "Seafood Stew",
+   "method": "Boiling",
+   "type": "Attack",
+   "effect": "[Team] Critical Damage is increased by 21% for 15 minutes.",
+   "stars": 4,
+   "ingredients": [
+    "Conch",
+    "Round Eggplant",
+    "Round Eggplant"
+   ],
+   "substitutes": {
+    "Round Eggplant": [
+     "Dwarf Potato",
+     "Whitebloom Carrot",
+     "Lantern Gourd"
+    ]
+   }
+  },
+  {
+   "name": "Hard-boiled Egg",
+   "method": "Boiling",
+   "type": "Attack",
+   "effect": "[Team] Attack power increases by 130 for 15 minutes (4 stars; 105 at 3 stars) (David).",
+   "ingredients": [
+    "Goose Eggs",
+    "Goose Eggs",
+    "Goose Eggs"
+   ]
+  },
+  {
+   "name": "Mushroom...",
+   "method": "Boiling",
+   "type": "Attack"
+  },
+  {
+   "name": "Tomato St...",
+   "method": "Boiling",
+   "type": "Attack"
+  },
+  {
+   "name": "Clam Soup",
+   "method": "Boiling",
+   "type": "Attack"
+  },
+  {
+   "name": "Scallop sashimi",
+   "method": "Slicing",
+   "note": "Two Seafood of any kind (Conch, Shellfish, Shrimp Flesh, Sand Crab), mixed or the same (David)."
+  },
+  {
+   "name": "Salad",
+   "method": "Slicing"
+  },
+  {
+   "name": "Egg Renew",
+   "method": "Slicing",
+   "type": "Familiar",
+   "effect": "[Team] Instantly restores 40% of the Familiar's Stamina (David)."
+  }
+ ]
+}

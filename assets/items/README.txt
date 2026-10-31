@@ -35,3 +35,7 @@ Familiar's Stamina). Dish stars follow the ingredients' rarity: 3x Bird Eggs (2 
 
 TREASURE MAPS (Important tab): e.g. Predator's Treasure Map, "Once you obtain a treasure map, you can open the hidden
 treasure chest at that location." Each shows its own map; they disappear once the chest is opened.
+
+COOKBOOK (cookbook.json): 73 recipes = 25 Grilling, 26 Boiling, 22 Slicing; 17 discovered so far, with effects,
+stars, ingredients and slot substitutes where David opened them. Food buffs: Meat Stew [Team] Attack +20% (5 stars),
+Seafood Stew [Team] Crit Damage +21% (4 stars), Hard-boiled Egg [Team] Attack +130 (4 stars), all 15 minutes.

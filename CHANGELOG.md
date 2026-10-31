@@ -1,3 +1,6 @@
+## 2026-10-31 — Claude: cookbook notes
+- New `assets/items/cookbook.json`: the 73 recipes by method (25 Grilling, 26 Boiling, 22 Slicing), the 17 David has discovered, their effects, ingredients and slot substitutes. Notes only.
+
 ## 2026-10-31 — Claude: materials list
 - New `assets/items/`: all 63 items from David's Materials tab the 9 from his Important tab (`important.json`) and the 31 ingredients (`ingredients.json`, with David's cooking notes in the README) with icons, descriptions, uses and sources (from his inventory video). Notes only, not on the page.
 
