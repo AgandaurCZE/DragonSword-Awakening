@@ -397,6 +397,42 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .tt-cat{display:inline-block;font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;padding:1px 6px;border:1px solid #5b6270;color:#cbd0d9;margin-right:4px}
 .tt-cat[data-c=Combat]{color:#ff8a8f;border-color:#ff8a8f88}.tt-cat[data-c=Explore]{color:#6fd08c;border-color:#6fd08c88}.tt-cat[data-c=Collect]{color:#f5d77a;border-color:#f5d77a88}.tt-cat[data-c=Quest]{color:#b28cff;border-color:#b28cff88}.tt-cat[data-c=Special]{color:#68c7d5;border-color:#68c7d588}.tt-cat[data-c=Promotion]{color:#f5b942;border-color:#f5b94288}
 @media(max-width:700px){.tt-summary{grid-template-columns:1fr}.tt-table th:nth-child(4),.tt-table td:nth-child(4){min-width:180px}}
+/* Cookbook (preview) */
+.cb-intro{color:#9aa3b2;font-size:13px;margin:6px 0 12px;max-width:80ch}
+.cb-prog{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-bottom:12px}
+.cb-pbox{background:#25272e;border:1px solid #3a3d46;padding:10px 12px}.cb-pbox small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:#9aa3b2}.cb-pbox b{font-size:20px;font-variant-numeric:tabular-nums}
+.cb-bar{height:6px;background:#1d1f25;margin-top:6px;overflow:hidden;display:flex}.cb-bar i{display:block;height:100%}.cb-bar i.mine{opacity:.45}
+.cb-filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:#25272e;border:1px solid #3a3d46;padding:10px;margin-bottom:12px}
+.cb-chip{background:#1d1f25;border:1px solid #3a3d46;color:#e6e9ef;font:inherit;font-size:12px;font-weight:700;padding:5px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}.cb-chip.on{border-color:#f5b942;color:#f5b942}
+.cb-dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}.cb-sep{width:1px;align-self:stretch;background:#3a3d46}
+.cb-filters input{flex:1 1 200px;min-width:0;background:#1d1f25;border:1px solid #3a3d46;color:#e6e9ef;font:inherit;padding:6px 10px}
+.cb-main{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:14px;align-items:start}@media(max-width:980px){.cb-main{grid-template-columns:1fr}}
+.cb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:8px}
+.cb-card{background:#25272e;border:1px solid #3a3d46;cursor:pointer;display:flex;flex-direction:column;text-align:left;color:inherit;font:inherit;padding:0;position:relative}
+.cb-card.sel{border-color:#f5b942;box-shadow:0 0 0 1px #f5b942}.cb-card:focus-visible,.cb-chip:focus-visible{outline:2px solid #19b9ff;outline-offset:2px}
+.cb-art{aspect-ratio:300/258;background:#e7e8ea center/cover no-repeat;display:grid;place-items:center;position:relative}
+.cb-unk .cb-art{background:radial-gradient(circle at 50% 45%,#3a3f4b,#23262d 70%)}
+.cb-unk .cb-art:before{content:"";width:58%;aspect-ratio:1.25;border-radius:50%;background:#30333a}
+.cb-unk .cb-art:after{content:"?";position:absolute;font-size:34px;font-weight:900;color:#4a4f59}
+.cb-badge{position:absolute;top:6px;left:6px;width:20px;height:20px;border-radius:5px;display:grid;place-items:center;font-size:12px;font-weight:900;color:#fff;z-index:1}
+.cb-mine{position:absolute;top:6px;right:6px;font-size:10px;font-weight:900;background:#f5b942;color:#1b1406;padding:0 5px;z-index:1}
+.cb-meta{padding:6px 8px 8px;display:grid;gap:3px}.cb-name{font-weight:800;font-size:13px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cb-unk .cb-name{color:#9aa3b2}
+.cb-row{display:flex;justify-content:space-between;align-items:center;gap:4px}.cb-meth{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.cb-stars{color:#f5b942;font-size:12px;letter-spacing:1px;white-space:nowrap}.cb-stars .off{color:#4a4f59}
+.cb-detail{background:#25272e;border:1px solid #3a3d46;padding:14px;display:grid;gap:12px;position:sticky;top:12px}@media(max-width:980px){.cb-detail{position:static}}
+.cb-dh{display:flex;gap:12px;align-items:center}.cb-dh .cb-art{width:110px;flex:none}.cb-dh h3{margin:2px 0;font-size:19px;font-weight:900;color:#fff}
+.cb-eff{font-size:13px;color:#dce1e8;line-height:1.45}
+.cb-h{margin:0;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:#9aa3b2}
+.cb-detail table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:13px}.cb-detail td,.cb-detail th{padding:5px 6px;border-bottom:1px solid #3a3d46;text-align:left}.cb-detail th{color:#9aa3b2;font-size:11px}
+.cb-detail tr.hl td{background:#3b2f0e;color:#fde68a}
+.cb-slots{display:grid;gap:6px}.cb-slot{background:#1d1f25;border:1px solid #3a3d46;padding:8px 6px;text-align:center;font-size:12px;display:grid;justify-items:center;gap:3px}
+.cb-slot img{width:44px;height:44px;border-radius:50%;object-fit:cover}.cb-slot small{color:#9aa3b2}
+.cb-note{color:#9aa3b2;font-size:12px;line-height:1.5}
+.cb-tick{background:#f5b942;color:#1b1406;border:0;font:inherit;font-weight:900;padding:8px 12px;cursor:pointer}.cb-tick.done{background:#1d1f25;color:#f5b942;border:1px solid #f5b942}
+.cb-calc{background:#25272e;border:1px solid #3a3d46;padding:14px;display:grid;gap:10px;margin-top:14px}
+.cb-calc .pick{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.cb-calc select{background:#1d1f25;color:#e6e9ef;border:1px solid #3a3d46;font:inherit;padding:5px 8px}
+.cb-res{font-size:16px;font-weight:900}.cb-res .cb-stars{font-size:18px}
+.cb-empty{color:#9aa3b2;padding:20px;text-align:center;grid-column:1/-1}
 /* Patch Notes timeline + buff/nerf arrows */
 .pa{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;flex:none;vertical-align:-4px;box-shadow:0 1px 4px #0009}
 .pa svg{width:12px;height:12px;display:block}
@@ -464,6 +500,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  <button class="nav-item" data-page="familiars"><span class="nav-icon" id="navIconFamiliars">♞</span><span class="nav-label">Familiars</span></button>
  <button class="nav-item" data-page="titles"><span class="nav-icon"><svg class="nav-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor"><path d="M30.08 54.92 L40.95 53.10 L49.57 46.24 L53.79 36.06 L52.54 25.12 L46.14 16.15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><ellipse cx="42.41" cy="56.39" rx="5.6" ry="2.5" transform="rotate(11.0 42.41 56.39)"/><ellipse cx="39.48" cy="49.81" rx="5.6" ry="2.5" transform="rotate(11.0 39.48 49.81)"/><ellipse cx="52.45" cy="48.41" rx="5.6" ry="2.5" transform="rotate(-18.0 52.45 48.41)"/><ellipse cx="46.69" cy="44.07" rx="5.6" ry="2.5" transform="rotate(-18.0 46.69 44.07)"/><ellipse cx="57.35" cy="36.56" rx="5.6" ry="2.5" transform="rotate(-47.0 57.35 36.56)"/><ellipse cx="50.22" cy="35.56" rx="5.6" ry="2.5" transform="rotate(-47.0 50.22 35.56)"/><ellipse cx="55.90" cy="23.83" rx="5.6" ry="2.5" transform="rotate(-76.0 55.90 23.83)"/><ellipse cx="49.18" cy="26.41" rx="5.6" ry="2.5" transform="rotate(-76.0 49.18 26.41)"/><ellipse cx="48.46" cy="13.39" rx="5.6" ry="2.5" transform="rotate(-105.0 48.46 13.39)"/><ellipse cx="43.83" cy="18.90" rx="5.6" ry="2.5" transform="rotate(-105.0 43.83 18.90)"/><ellipse cx="42.33" cy="13.58" rx="5" ry="2.4" transform="rotate(-152.0 42.33 13.58)"/><path d="M33.92 54.92 L23.05 53.10 L14.43 46.24 L10.21 36.06 L11.46 25.12 L17.86 16.15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><ellipse cx="21.59" cy="56.39" rx="5.6" ry="2.5" transform="rotate(-191.0 21.59 56.39)"/><ellipse cx="24.52" cy="49.81" rx="5.6" ry="2.5" transform="rotate(-191.0 24.52 49.81)"/><ellipse cx="11.55" cy="48.41" rx="5.6" ry="2.5" transform="rotate(-162.0 11.55 48.41)"/><ellipse cx="17.31" cy="44.07" rx="5.6" ry="2.5" transform="rotate(-162.0 17.31 44.07)"/><ellipse cx="6.65" cy="36.56" rx="5.6" ry="2.5" transform="rotate(-133.0 6.65 36.56)"/><ellipse cx="13.78" cy="35.56" rx="5.6" ry="2.5" transform="rotate(-133.0 13.78 35.56)"/><ellipse cx="8.10" cy="23.83" rx="5.6" ry="2.5" transform="rotate(-104.0 8.10 23.83)"/><ellipse cx="14.82" cy="26.41" rx="5.6" ry="2.5" transform="rotate(-104.0 14.82 26.41)"/><ellipse cx="15.54" cy="13.39" rx="5.6" ry="2.5" transform="rotate(-75.0 15.54 13.39)"/><ellipse cx="20.17" cy="18.90" rx="5.6" ry="2.5" transform="rotate(-75.0 20.17 18.90)"/><ellipse cx="21.67" cy="13.58" rx="5" ry="2.4" transform="rotate(-28.0 21.67 13.58)"/><path d="M32.00 21.00 L34.47 27.60 L41.51 27.91 L35.99 32.30 L37.88 39.09 L32.00 35.20 L26.12 39.09 L28.01 32.30 L22.49 27.91 L29.53 27.60Z"/></svg></span><span class="nav-label">Titles</span></button>
  <button class="nav-item" data-page="trait"><span class="nav-icon" id="navIconTrait">⚔</span><span class="nav-label">Trait Dungeons</span></button>
+ <button class="nav-item" data-page="cookbook"><span class="nav-icon" id="navIconCookbook">♨</span><span class="nav-label">Cookbook</span></button>
  <button class="nav-item" data-page="patches"><span class="nav-icon">☰</span><span class="nav-label">Patch Notes</span></button>
 </aside>
 <div class="app-content">
@@ -525,6 +562,10 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  <div class="gear-heading"><h2>TRAIT DUNGEONS</h2><span>Bosses weak to some archetypes and immune to others</span></div>
  <div id="traitBody"></div>
 </section>
+<section class="simple-page" id="cookbookPage" hidden>
+ <div class="gear-heading"><h2>COOKBOOK</h2><span>Every recipe, what it does at each star level, and what you've cooked</span></div>
+ <div id="cookbookBody"></div>
+</section>
 <section class="patches-page" id="patchesPage" hidden>
  <div class="gear-heading"><h2>PATCH NOTES</h2><span>Every update since launch, newest first, from the official Steam notes</span></div>
  <div id="patchesBody"></div>
@@ -544,7 +585,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={};
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={},COOKBOOK={};
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -1479,7 +1520,7 @@ function renderProfilePatches(h){const P=PATCH_NOTES||{};const rows=(P.patches||
 
 
 // ---- Simple pages: Familiars, Titles, Trait Dungeons ----
-const PAGE_IDS={tier:'tierPage',heroes:'heroesPage',teams:'teamsPage',gear:'gearPage',karma:'karmaPage',patches:'patchesPage',familiars:'familiarsPage',titles:'titlesPage',trait:'traitPage'};
+const PAGE_IDS={tier:'tierPage',heroes:'heroesPage',teams:'teamsPage',gear:'gearPage',karma:'karmaPage',patches:'patchesPage',familiars:'familiarsPage',titles:'titlesPage',trait:'traitPage',cookbook:'cookbookPage'};
 function navIcon(id,src){const el=$(id);if(!el||!src)return;const im=new Image();im.onload=()=>{el.textContent='';const m=document.createElement('span');m.className='nav-mask';m.style.webkitMaskImage=m.style.maskImage=`url('${src}')`;el.append(m)};im.src=src;}
 function famAbilityHtml(name){const A=((FAMILIARS||{}).abilities||{})[name];if(!A)return `[${profileEsc(name)}]`;return `<button type="button" class="fam-abil" data-abil="${profileEsc(name)}"><img src="${profileEsc(A.icon)}" alt="">${profileEsc(name)}</button>`;}
 function famPassiveText(t){return profileEsc(t).replace(/\[([^\]]+)\]/g,(m,n)=>famAbilityHtml(n));}
@@ -1639,8 +1680,51 @@ function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();
  root.querySelectorAll('.v2-tag[data-v2tip],.v2-karma[data-v2tip]').forEach(el=>{el.addEventListener('pointerleave',hideTip);el.addEventListener('pointerenter',e=>{e.stopPropagation();const tip=$('tooltip');tip.innerHTML=`<div class="tip-note" style="margin:0">${profileEsc(el.dataset.v2tip)}</div>`;tip.style.display='block';const r=el.getBoundingClientRect();tip.style.left=Math.max(12,Math.min(window.innerWidth-tip.offsetWidth-12,r.left))+'px';tip.style.top=Math.min(window.innerHeight-tip.offsetHeight-12,r.bottom+8)+'px';});});}
 function showTierV2(on){const tp=$('tierPage');[...tp.children].forEach(c=>{if(c.id!=='tierV2')c.hidden=on});$('tierV2').hidden=!on;if(on)renderTierV2();else if(!$('v2Back')){const b=document.createElement('button');b.id='v2Back';b.type='button';b.className='v2-legacy';b.textContent='Back to the new tier list (preview)';b.style.margin='0 0 12px';b.onclick=()=>{b.remove();showTierV2(true)};tp.prepend(b);}}
 const IS_PREVIEW=(()=>{const p=new URLSearchParams(location.search);return p.get('tiers')==='new'||p.get('preview')==='1';})();
+// ---- Cookbook (COOKBOOK in data.json; preview only) ----
+const CB={m:'',e:'',hide:false,q:'',sel:null};
+function cbTicks(){try{return new Set(JSON.parse(localStorage.getItem('dsw.cooked.v1')||'[]'))}catch(e){return new Set()}}
+function cbSaveTicks(t){try{localStorage.setItem('dsw.cooked.v1',JSON.stringify([...t]))}catch(e){}}
+function cbStars(n,max=5){return `<span class="cb-stars">${'★'.repeat(n)}<span class="off">${'★'.repeat(Math.max(0,max-n))}</span></span>`;}
+function cbMax(d){return Math.min(5,1+Math.floor(4*d.slots.length/3));}
+function cbList(){const C=COOKBOOK;const out=[];const M=C.methods||{};
+ Object.keys(M).forEach(m=>{const ds=(C.dishes||[]).filter(d=>d.method===m);ds.forEach(d=>out.push(d));for(let i=ds.length;i<M[m].total;i++)out.push({unk:1,method:m,id:`unk-${m}-${i}`});});return out;}
+function renderCookbook(){const root=$('cookbookBody');if(!root)return;const C=COOKBOOK||{};if(!C.dishes){root.innerHTML='';return}
+ const M=C.methods,E=C.effects,ING=C.ingredients||[],ticks=cbTicks();const all=cbList();const found=(C.dishes||[]).length;
+ const ingByName=n=>ING.find(i=>i.name===n);
+ const q=CB.q.toLowerCase();
+ const list=all.filter(d=>(!CB.m||d.method===CB.m)&&(!CB.e||d.effect===CB.e)&&!(CB.hide&&d.unk)&&(!q||(!d.unk&&(d.name.toLowerCase().includes(q)||[...d.slots,...d.best].some(x=>x.toLowerCase().includes(q))||d.best.some(b=>(ingByName(b)?.category||'').toLowerCase().includes(q))))));
+ if(CB.sel==null)CB.sel=(C.dishes[0]||{}).id;
+ const cookedIn=m=>(C.dishes||[]).filter(d=>(!m||d.method===m)&&ticks.has(d.id)).length;
+ let h=`<p class="cb-intro">${profileEsc(C.intro||'')}</p><div class="cb-prog"><div class="cb-pbox"><small>Discovered</small><b>${found} / ${C.total}</b><div class="cb-bar"><i style="width:${found/C.total*100}%;background:#f5b942"></i></div></div>`+
+  Object.entries(M).map(([m,v])=>{const n=(C.dishes||[]).filter(d=>d.method===m).length;return `<div class="cb-pbox"><small style="color:${v.color}">${m}</small><b>${n} / ${v.total}</b><div class="cb-bar"><i style="width:${n/v.total*100}%;background:${v.color}"></i></div></div>`}).join('')+
+  `<div class="cb-pbox"><small>Cooked by you</small><b>${cookedIn()} / ${found}</b><div class="cb-bar"><i style="width:${found?cookedIn()/found*100:0}%;background:#19b9ff"></i></div></div></div>`;
+ h+=`<div class="cb-filters" role="group" aria-label="Cookbook filters">${['',...Object.keys(M)].map(k=>`<button type="button" class="cb-chip${CB.m===k?' on':''}" data-cbm="${k}">${k?`<span class="cb-dot" style="background:${M[k].color}"></span>${k}`:'All methods'}</button>`).join('')}<span class="cb-sep"></span>${['',...Object.keys(E)].map(k=>`<button type="button" class="cb-chip${CB.e===k?' on':''}" data-cbe="${k}">${k?`<span class="cb-dot" style="background:${E[k].color}"></span>${k}`:'All effects'}</button>`).join('')}<span class="cb-sep"></span><button type="button" class="cb-chip${CB.hide?' on':''}" id="cbHide">Hide undiscovered</button><input type="search" id="cbQ" placeholder="Dish or ingredient… (try “egg”)" value="${profileEsc(CB.q)}" autocomplete="off"></div>`;
+ const card=d=>d.unk?`<button type="button" class="cb-card cb-unk${CB.sel===d.id?' sel':''}" data-cbd="${d.id}" aria-label="Undiscovered ${d.method} dish"><div class="cb-art"></div><div class="cb-meta"><div class="cb-name">???</div><div class="cb-row"><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span></div></div></button>`:
+  `<button type="button" class="cb-card${CB.sel===d.id?' sel':''}" data-cbd="${d.id}"><span class="cb-badge" style="background:${E[d.effect].color}" title="${profileEsc(d.effect)}">${E[d.effect].icon}</span>${ticks.has(d.id)?'<span class="cb-mine">COOKED</span>':''}<div class="cb-art" style="background-image:url('${d.image}')"></div><div class="cb-meta"><div class="cb-name">${profileEsc(d.name)}</div><div class="cb-row"><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span>${cbStars(d.bestStars,cbMax(d))}</div></div></button>`;
+ h+=`<div class="cb-main"><div class="cb-grid">${list.length?list.map(card).join(''):'<div class="cb-empty">No dish matches these filters.</div>'}</div><aside class="cb-detail" aria-live="polite">${cbDetail(all.find(d=>d.id===CB.sel),ticks)}</aside></div>`;
+ h+=`<section class="cb-calc" aria-labelledby="cbCalcH"><h4 class="cb-h" id="cbCalcH">Star calculator</h4><div class="cb-note">${profileEsc(C.starRule||'')}</div><div class="pick">${[4,4,3].map((v,i)=>`<label>Slot ${i+1} <select id="cbS${i}"><option value="0">empty</option>${[1,2,3,4].map(s=>`<option value="${s}"${s===v?' selected':''}>${s}★ ingredient</option>`).join('')}</select></label>`).join('')}</div><div class="cb-res" id="cbRes"></div></section>`;
+ root.innerHTML=h;
+ root.querySelectorAll('[data-cbm]').forEach(b=>b.onclick=()=>{CB.m=b.dataset.cbm;renderCookbook()});
+ root.querySelectorAll('[data-cbe]').forEach(b=>b.onclick=()=>{CB.e=b.dataset.cbe;renderCookbook()});
+ $('cbHide').onclick=()=>{CB.hide=!CB.hide;renderCookbook()};
+ const qi=$('cbQ');qi.oninput=()=>{CB.q=qi.value;const p=qi.selectionStart;renderCookbook();const n=$('cbQ');n.focus();n.setSelectionRange(p,p)};
+ root.querySelectorAll('[data-cbd]').forEach(b=>b.onclick=()=>{CB.sel=b.dataset.cbd;renderCookbook()});
+ const tk=$('cbTick');if(tk)tk.onclick=()=>{const t=cbTicks();t.has(CB.sel)?t.delete(CB.sel):t.add(CB.sel);cbSaveTicks(t);renderCookbook()};
+ const calc=()=>{const v=[0,1,2].map(i=>+$('cbS'+i).value).filter(Boolean);const sum=v.reduce((a,b)=>a+b,0);$('cbRes').innerHTML=v.length?`Sum ${sum} → ${cbStars(Math.min(5,1+Math.floor(sum/3)))} dish`:'Pick at least one ingredient.'};
+ [0,1,2].forEach(i=>$('cbS'+i).onchange=calc);calc();}
+function cbDetail(d,ticks){const C=COOKBOOK,M=C.methods,E=C.effects;if(!d)return '';
+ if(d.unk)return `<div class="cb-dh cb-unk"><div class="cb-art"></div><div><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span><h3>Unknown dish</h3><div class="cb-note">Not discovered yet. Its ingredients and effect show up here once it has been cooked.</div></div></div>`;
+ const ing=n=>(C.ingredients||[]).find(i=>i.name===n);const max=cbMax(d);
+ const tiers=Object.entries(d.tiers);
+ const slot=(s,i)=>{const b=ing(d.best[i]);return `<div class="cb-slot">${b?`<img src="${b.icon}" alt="">`:''}<b>${d.fixed?profileEsc(s):'Any '+profileEsc(s)}</b><small>${b?`best: ${profileEsc(b.name)} ${'★'.repeat(b.stars)}`:''}</small></div>`};
+ return `<div class="cb-dh"><div class="cb-art" style="background-image:url('${d.image}')"></div><div><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span><h3>${profileEsc(d.name)}</h3><div class="cb-eff"><span class="cb-dot" style="background:${E[d.effect].color}"></span> ${profileEsc(d.effect)} · ${profileEsc(d.scope)}${d.duration?' · '+profileEsc(d.duration):''}</div></div></div>
+ <div class="cb-eff">[${profileEsc(d.scope)}] ${profileEsc(d.text.replace('{v}',d.tiers[String(d.bestStars)]||'?'))}</div>
+ <h4 class="cb-h">Effect by stars</h4><table><thead><tr><th>Stars</th><th>Value</th></tr></thead><tbody>${Array.from({length:max},(_,i)=>i+1).filter(s=>s>=1+Math.floor(d.slots.length/3)).map(s=>`<tr class="${s===d.bestStars?'hl':''}"><td>${cbStars(s,max)}</td><td>${d.tiers[String(s)]?profileEsc(d.tiers[String(s)]):'<span class="cb-note">not seen yet</span>'}</td></tr>`).join('')}</tbody></table>
+ <h4 class="cb-h">Ingredients</h4><div class="cb-slots" style="grid-template-columns:repeat(${d.slots.length},minmax(0,1fr))">${d.slots.map(slot).join('')}</div>
+ <div class="cb-note">${d.fixed?'These exact ingredients only (no substitutes in the game).':'Any ingredient of the same category fits each slot; higher-star ingredients give a higher-star dish.'} Highlighted row = the best version cooked so far.</div>
+ <button type="button" class="cb-tick${ticks.has(d.id)?' done':''}" id="cbTick">${ticks.has(d.id)?'Cooked ✓ (click to undo)':'Mark as cooked'}</button>`;}
 // Pages hidden from visitors until launch (David, 29 Oct 2026): shown only in the preview (?tiers=new).
-const PREVIEW_PAGES=['familiars','titles','trait'];
+const PREVIEW_PAGES=['familiars','titles','trait','cookbook'];
 function applyPreviewGate(){if(IS_PREVIEW)return;PREVIEW_PAGES.forEach(pg=>{const b=document.querySelector(`.nav-item[data-page="${pg}"]`);if(b)b.hidden=true;});}
 function initTierV2(){const p=new URLSearchParams(location.search);if(p.get('tiers')!=='new')return;const tp=$('tierPage');const box=document.createElement('div');box.id='tierV2';tp.prepend(box);showTierV2(true);}
 
@@ -1654,11 +1738,11 @@ function startApp(){
  document.getElementById('heroesSearch').addEventListener('input',renderHeroes);
  renderGear();
  renderPatches();
- renderFamiliars();renderTitles();renderTrait();applyPreviewGate();initTierV2();
- navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);navIcon('navIconHeroes',(UI_ICONS||{}).heroes);navIcon('navIconTeams',(UI_ICONS||{}).teams);
+ renderFamiliars();renderTitles();renderTrait();renderCookbook();applyPreviewGate();initTierV2();
+ navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);navIcon('navIconHeroes',(UI_ICONS||{}).heroes);navIcon('navIconTeams',(UI_ICONS||{}).teams);navIcon('navIconCookbook',(UI_ICONS||{}).cookbook);
 }
 fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};TOWER_TRIALS=d.TOWER_TRIALS||{};
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};TOWER_TRIALS=d.TOWER_TRIALS||{};COOKBOOK=d.COOKBOOK||{};
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
 </script>

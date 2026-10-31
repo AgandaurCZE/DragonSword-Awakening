@@ -1,3 +1,6 @@
+## 2026-10-31 — Claude: Cookbook tab (preview only)
+- New Cookbook tab, hidden in the preview: all 73 recipes (17 discovered, the rest as '?' cards), progress per method, effect and method filters, ingredient search, effect at every star level, per-visitor 'Mark as cooked' ticks, and the star calculator (dish stars = 1 + sum of ingredient stars ÷ 3, rounded down). Dish pictures and the chef-hat menu icon cut from David's screenshots and videos.
+
 ## 2026-10-31 — Claude: cookbook notes
 - New `assets/items/cookbook.json`: the 73 recipes by method (25 Grilling, 26 Boiling, 22 Slicing), the 17 David has discovered, their effects, ingredients and slot substitutes. Notes only.
 

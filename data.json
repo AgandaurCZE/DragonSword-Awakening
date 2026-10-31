@@ -20183,7 +20183,8 @@
   "heroes": "assets/ui/hero.webp",
   "teams": "assets/ui/teams.webp",
   "familiars": "assets/ui/familiar.webp",
-  "trait": "assets/ui/trait-dungeons.webp"
+  "trait": "assets/ui/trait-dungeons.webp",
+  "cookbook": "assets/ui/cooking.webp"
  },
  "TIER_LIST_V2": {
   "note": "New tier list (preview, hidden behind ?tiers=new until launch). Ratings are decided with David from codex data and in-game testing, never by a formula. heroes[name] = {overall:{tier, groups, single}, bosses:{all, <bossId>: tier}, tags[], needs[[status, ...]], expert:{drop, reason}, signatureKarma, progression:{early?, late?}}. Missing values show as unrated or '?'.",
@@ -20677,5 +20678,660 @@
    }
   ],
   "image": "assets/ui/mode-towers.webp"
+ },
+ "COOKBOOK": {
+  "note": "Cookbook tab (preview only; renderCookbook()). From David's Cookbook videos (31 Oct 2026); sources in assets/items/cookbook.json. Dish pictures cut from the Cookbook detail panel (assets/cooking/). 'slots' are ingredient categories (any ingredient of that category fits), or fixed ingredient names when 'fixed' is true (no swap icon in the game). 'tiers' = the effect value per dish star, read in-game; only those values are shown, never calculated. 'best' = the best combination David has cooked.",
+  "total": 73,
+  "methods": {
+   "Grilling": {
+    "total": 25,
+    "color": "#f0874a"
+   },
+   "Boiling": {
+    "total": 26,
+    "color": "#4fb6c9"
+   },
+   "Slicing": {
+    "total": 22,
+    "color": "#8ccf6a"
+   }
+  },
+  "effects": {
+   "Recovery": {
+    "color": "#ef4444",
+    "icon": "+"
+   },
+   "Attack": {
+    "color": "#22c55e",
+    "icon": "⚔"
+   },
+   "Stamina Buff": {
+    "color": "#14b8a6",
+    "icon": "S"
+   },
+   "Stamina Recovery": {
+    "color": "#ec4899",
+    "icon": "F"
+   }
+  },
+  "starRule": "Dish stars = 1 + (sum of the ingredients' stars ÷ 3, rounded down). Checked on 45 combinations in the game. One ingredient caps at 2★, two at 3★, three at 5★.",
+  "intro": "Every recipe in the in-game Cookbook. Undiscovered dishes stay hidden, like in the game, until someone cooks them. Tick what you've cooked: it's saved in your browser.",
+  "ingredients": [
+   {
+    "name": "Boar Meat",
+    "category": "Meat",
+    "stars": 4,
+    "icon": "assets/items/icons/boar-meat.webp"
+   },
+   {
+    "name": "Fox Meat",
+    "category": "Meat",
+    "stars": 3,
+    "icon": "assets/items/icons/fox-meat.webp"
+   },
+   {
+    "name": "Aged Game Meat",
+    "category": "Meat",
+    "stars": 3,
+    "icon": "assets/items/icons/aged-game-meat.webp"
+   },
+   {
+    "name": "Conch",
+    "category": "Seafood",
+    "stars": 3,
+    "icon": "assets/items/icons/conch.webp"
+   },
+   {
+    "name": "Goose Eggs",
+    "category": "Eggs",
+    "stars": 3,
+    "icon": "assets/items/icons/goose-eggs.webp"
+   },
+   {
+    "name": "Leaflet Tomato",
+    "category": "Vegetables",
+    "stars": 3,
+    "icon": "assets/items/icons/leaflet-tomato.webp"
+   },
+   {
+    "name": "Round Eggplant",
+    "category": "Vegetables",
+    "stars": 3,
+    "icon": "assets/items/icons/round-eggplant.webp"
+   },
+   {
+    "name": "Blue Lotus Mushroom",
+    "category": "Mushrooms",
+    "stars": 3,
+    "icon": "assets/items/icons/blue-lotus-mushroom.webp"
+   },
+   {
+    "name": "White Dewblossom",
+    "category": "Herbs",
+    "stars": 3,
+    "icon": "assets/items/icons/white-dewblossom.webp"
+   },
+   {
+    "name": "Walnuts",
+    "category": "Natural Foods",
+    "stars": 3,
+    "icon": "assets/items/icons/walnuts.webp"
+   },
+   {
+    "name": "Honey",
+    "category": "Natural Foods",
+    "stars": 3,
+    "icon": "assets/items/icons/honey.webp"
+   },
+   {
+    "name": "Bird Meat",
+    "category": "Meat",
+    "stars": 2,
+    "icon": "assets/items/icons/bird-meat.webp"
+   },
+   {
+    "name": "Shrimp Flesh",
+    "category": "Seafood",
+    "stars": 2,
+    "icon": "assets/items/icons/shrimp-flesh.webp"
+   },
+   {
+    "name": "Shellfish",
+    "category": "Seafood",
+    "stars": 2,
+    "icon": "assets/items/icons/shellfish.webp"
+   },
+   {
+    "name": "Bird Eggs",
+    "category": "Eggs",
+    "stars": 2,
+    "icon": "assets/items/icons/bird-eggs.webp"
+   },
+   {
+    "name": "Aqualily",
+    "category": "Vegetables",
+    "stars": 2,
+    "icon": "assets/items/icons/aqualily.webp"
+   },
+   {
+    "name": "Waveleaf Cabbage",
+    "category": "Vegetables",
+    "stars": 2,
+    "icon": "assets/items/icons/waveleaf-cabbage.webp"
+   },
+   {
+    "name": "Dwarf Potato",
+    "category": "Vegetables",
+    "stars": 2,
+    "icon": "assets/items/icons/dwarf-potato.webp"
+   },
+   {
+    "name": "Cave Mushroom",
+    "category": "Mushrooms",
+    "stars": 2,
+    "icon": "assets/items/icons/cave-mushroom.webp"
+   },
+   {
+    "name": "Wheat",
+    "category": "Grains",
+    "stars": 2,
+    "icon": "assets/items/icons/wheat.webp"
+   },
+   {
+    "name": "Dried Maneflower",
+    "category": "Herbs",
+    "stars": 2,
+    "icon": "assets/items/icons/dried-maneflower.webp"
+   },
+   {
+    "name": "Grave Bellherb",
+    "category": "Herbs",
+    "stars": 2,
+    "icon": "assets/items/icons/grave-bellherb.webp"
+   },
+   {
+    "name": "Peanuts",
+    "category": "Natural Foods",
+    "stars": 2,
+    "icon": "assets/items/icons/peanuts.webp"
+   },
+   {
+    "name": "Beast Meat",
+    "category": "Meat",
+    "stars": 1,
+    "icon": "assets/items/icons/beast-meat.webp"
+   },
+   {
+    "name": "Sand Crab",
+    "category": "Seafood",
+    "stars": 1,
+    "icon": "assets/items/icons/sand-crab.webp"
+   },
+   {
+    "name": "Radish",
+    "category": "Vegetables",
+    "stars": 1,
+    "icon": "assets/items/icons/radish.webp"
+   },
+   {
+    "name": "Whitebloom Carrot",
+    "category": "Vegetables",
+    "stars": 1,
+    "icon": "assets/items/icons/whitebloom-carrot.webp"
+   },
+   {
+    "name": "Lantern Gourd",
+    "category": "Vegetables",
+    "stars": 1,
+    "icon": "assets/items/icons/lantern-gourd.webp"
+   },
+   {
+    "name": "Rock Mushroom",
+    "category": "Mushrooms",
+    "stars": 1,
+    "icon": "assets/items/icons/rock-mushroom.webp"
+   },
+   {
+    "name": "Tree Sap Mushroom",
+    "category": "Mushrooms",
+    "stars": 1,
+    "icon": "assets/items/icons/tree-sap-mushroom.webp"
+   },
+   {
+    "name": "Dawn Lanternleaf",
+    "category": "Herbs",
+    "stars": 1,
+    "icon": "assets/items/icons/dawn-lanternleaf.webp"
+   },
+   {
+    "name": "Rice",
+    "category": "Grains",
+    "stars": 2,
+    "icon": "assets/items/icons/rice.webp"
+   },
+   {
+    "name": "Fish Fillet",
+    "category": "Fish",
+    "stars": 1,
+    "icon": "assets/items/icons/fish-fillet.webp"
+   }
+  ],
+  "dishes": [
+   {
+    "id": "grilled-meat",
+    "name": "Grilled Meat",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Immediately restores {v} HP.",
+    "tiers": {
+     "1": "850",
+     "2": "950"
+    },
+    "slots": [
+     "Meat"
+    ],
+    "fixed": false,
+    "best": [
+     "Boar Meat"
+    ],
+    "bestStars": 2,
+    "image": "assets/cooking/grilled-meat.webp"
+   },
+   {
+    "id": "grilled-seafood",
+    "name": "Grilled Seafood",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} HP.",
+    "tiers": {
+     "1": "850",
+     "2": "950",
+     "3": "1200"
+    },
+    "slots": [
+     "Seafood",
+     "Mushrooms"
+    ],
+    "fixed": false,
+    "best": [
+     "Conch",
+     "Blue Lotus Mushroom"
+    ],
+    "bestStars": 3,
+    "image": "assets/cooking/grilled-seafood.webp"
+   },
+   {
+    "id": "grilled-mushrooms",
+    "name": "Grilled Mushrooms",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Restores {v} HP per second for 10 seconds.",
+    "tiers": {
+     "1": "100",
+     "2": "125"
+    },
+    "slots": [
+     "Mushrooms"
+    ],
+    "fixed": false,
+    "best": [
+     "Blue Lotus Mushroom"
+    ],
+    "bestStars": 2,
+    "image": "assets/cooking/grilled-mushrooms.webp"
+   },
+   {
+    "id": "fried-egg",
+    "name": "Fried Egg",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} of maximum HP.",
+    "tiers": {
+     "4": "24%"
+    },
+    "slots": [
+     "Eggs",
+     "Eggs",
+     "Eggs"
+    ],
+    "fixed": false,
+    "best": [
+     "Goose Eggs",
+     "Goose Eggs",
+     "Goose Eggs"
+    ],
+    "bestStars": 4,
+    "image": "assets/cooking/fried-egg.webp"
+   },
+   {
+    "id": "assorted-grilled-meats",
+    "name": "Assorted Grilled Meats",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} HP.",
+    "tiers": {
+     "1": "1200",
+     "2": "1400",
+     "3": "1650"
+    },
+    "slots": [
+     "Meat",
+     "Mushrooms"
+    ],
+    "fixed": false,
+    "best": [
+     "Boar Meat",
+     "Blue Lotus Mushroom"
+    ],
+    "bestStars": 3,
+    "image": "assets/cooking/assorted-grilled-meats.webp"
+   },
+   {
+    "id": "potato-pizza",
+    "name": "Potato Pizza",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} HP and restores 1.2% of maximum HP per second for 20 seconds.",
+    "tiers": {
+     "2": "800"
+    },
+    "slots": [
+     "Wheat",
+     "Dwarf Potato"
+    ],
+    "fixed": true,
+    "best": [
+     "Wheat",
+     "Dwarf Potato"
+    ],
+    "bestStars": 2,
+    "image": "assets/cooking/potato-pizza.webp"
+   },
+   {
+    "id": "grilled-clams",
+    "name": "Grilled Clams",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} HP.",
+    "tiers": {
+     "2": "1500"
+    },
+    "slots": [
+     "Shellfish",
+     "Shellfish"
+    ],
+    "fixed": true,
+    "best": [
+     "Shellfish",
+     "Shellfish"
+    ],
+    "bestStars": 2,
+    "image": "assets/cooking/grilled-clams.webp"
+   },
+   {
+    "id": "steak-set-meal",
+    "name": "Steak Set Meal",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Immediately restores {v} HP.",
+    "tiers": {
+     "2": "1600",
+     "3": "2000",
+     "4": "2400"
+    },
+    "slots": [
+     "Meat",
+     "Seafood",
+     "Vegetables"
+    ],
+    "fixed": false,
+    "best": [
+     "Boar Meat",
+     "Conch",
+     "Round Eggplant"
+    ],
+    "bestStars": 4,
+    "image": "assets/cooking/steak-set-meal.webp"
+   },
+   {
+    "id": "meat-stew",
+    "name": "Meat Stew",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Attack power increases by {v} for 15 minutes.",
+    "tiers": {
+     "2": "11%",
+     "3": "15%",
+     "4": "17%",
+     "5": "20%"
+    },
+    "slots": [
+     "Meat",
+     "Meat",
+     "Meat"
+    ],
+    "fixed": false,
+    "best": [
+     "Boar Meat",
+     "Boar Meat",
+     "Boar Meat"
+    ],
+    "bestStars": 5,
+    "image": "assets/cooking/meat-stew.webp"
+   },
+   {
+    "id": "seafood-stew",
+    "name": "Seafood Stew",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Critical Damage is increased by {v} for 15 minutes.",
+    "tiers": {
+     "2": "15%",
+     "3": "18%",
+     "4": "21%"
+    },
+    "slots": [
+     "Seafood",
+     "Vegetables",
+     "Vegetables"
+    ],
+    "fixed": false,
+    "best": [
+     "Conch",
+     "Round Eggplant",
+     "Round Eggplant"
+    ],
+    "bestStars": 4,
+    "image": "assets/cooking/seafood-stew.webp"
+   },
+   {
+    "id": "hard-boiled-egg",
+    "name": "Hard-boiled Egg",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Attack power increases by {v} for 15 minutes.",
+    "tiers": {
+     "3": "105",
+     "4": "130"
+    },
+    "slots": [
+     "Eggs",
+     "Eggs",
+     "Eggs"
+    ],
+    "fixed": false,
+    "best": [
+     "Goose Eggs",
+     "Goose Eggs",
+     "Goose Eggs"
+    ],
+    "bestStars": 4,
+    "image": "assets/cooking/hard-boiled-egg.webp"
+   },
+   {
+    "id": "mushroom-soup",
+    "name": "Mushroom Soup",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Armor Penetration increases by {v} for 15 minutes.",
+    "tiers": {
+     "1": "50",
+     "2": "60"
+    },
+    "slots": [
+     "Mushrooms"
+    ],
+    "fixed": false,
+    "best": [
+     "Blue Lotus Mushroom"
+    ],
+    "bestStars": 2,
+    "image": "assets/cooking/mushroom-soup.webp"
+   },
+   {
+    "id": "tomato-stew",
+    "name": "Tomato Stew",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Defense Ignore increases by {v} for 15 minutes.",
+    "tiers": {
+     "2": "12%"
+    },
+    "slots": [
+     "Leaflet Tomato",
+     "Wheat"
+    ],
+    "fixed": true,
+    "best": [
+     "Leaflet Tomato",
+     "Wheat"
+    ],
+    "bestStars": 2,
+    "image": "assets/cooking/tomato-stew.webp"
+   },
+   {
+    "id": "clam-soup",
+    "name": "Clam Soup",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Critical Damage is increased by {v} for 15 minutes.",
+    "tiers": {
+     "1": "14%"
+    },
+    "slots": [
+     "Shellfish"
+    ],
+    "fixed": true,
+    "best": [
+     "Shellfish"
+    ],
+    "bestStars": 1,
+    "image": "assets/cooking/clam-soup.webp"
+   },
+   {
+    "id": "scallop-sashimi",
+    "name": "Scallop Sashimi",
+    "method": "Slicing",
+    "effect": "Stamina Buff",
+    "scope": "Team",
+    "duration": "1 minute",
+    "text": "For 1 minute, the Stamina cost of dashing and swimming for the Hero is reduced by {v}.",
+    "tiers": {
+     "1": "10%",
+     "2": "15%",
+     "3": "20%"
+    },
+    "slots": [
+     "Seafood",
+     "Seafood"
+    ],
+    "fixed": false,
+    "best": [
+     "Conch",
+     "Conch"
+    ],
+    "bestStars": 3,
+    "image": "assets/cooking/scallop-sashimi.webp"
+   },
+   {
+    "id": "salad",
+    "name": "Salad",
+    "method": "Slicing",
+    "effect": "Stamina Buff",
+    "scope": "Team",
+    "duration": "1 minute",
+    "text": "For 1 minute, stamina consumption while climbing or dashing while mounted on a Familiar is reduced by {v}.",
+    "tiers": {
+     "1": "10%",
+     "2": "15%",
+     "3": "20%"
+    },
+    "slots": [
+     "Vegetables",
+     "Vegetables"
+    ],
+    "fixed": false,
+    "best": [
+     "Round Eggplant",
+     "Round Eggplant"
+    ],
+    "bestStars": 3,
+    "image": "assets/cooking/salad.webp"
+   },
+   {
+    "id": "egg-renew",
+    "name": "Egg Renew",
+    "method": "Slicing",
+    "effect": "Stamina Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} of the Familiar's Stamina.",
+    "tiers": {
+     "3": "30%",
+     "4": "40%"
+    },
+    "slots": [
+     "Eggs",
+     "Eggs",
+     "Eggs"
+    ],
+    "fixed": false,
+    "best": [
+     "Goose Eggs",
+     "Goose Eggs",
+     "Goose Eggs"
+    ],
+    "bestStars": 4,
+    "image": "assets/cooking/egg-renew.webp"
+   }
+  ]
  }
 }
