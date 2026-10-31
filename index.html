@@ -295,7 +295,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .v2-tag-table{border-collapse:collapse;width:100%}.v2-tag-table td{padding:6px 8px;border-top:1px solid #33363f;vertical-align:top}.v2-tag-table td:first-child{width:190px}
 .v2-ratings{list-style:none;padding:0;margin:8px 0}.v2-ratings li{display:flex;gap:10px;align-items:center;margin:6px 0}
 .v2-rt{display:inline-grid;place-items:center;min-width:34px;height:26px;font-weight:950;color:#11131a;border-radius:4px}
-.v2-modes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 10px}
+.v2-modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:12px;margin:14px 0 10px}
 .v2-mode{position:relative;height:96px;border:2px solid #3a3d46;background:var(--bg,linear-gradient(120deg,#26324a,#1b2230)) center/cover;cursor:pointer;color:#fff;font:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;filter:grayscale(.5) brightness(.75);transition:filter .15s}
 .v2-mode.on{border-color:#f5b942;filter:none;box-shadow:0 0 16px #f5b94255}.v2-mode::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,#0b1320b0,#0b132040 75%)}.v2-mode>span{position:relative}.v2-mode:hover{filter:none}
 .v2-mode-label{font-size:26px;font-weight:950;text-shadow:0 2px 6px #000}.v2-mode-sub{font-size:12px;color:#cbd5e1;text-shadow:0 1px 3px #000}
@@ -308,6 +308,9 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .v2-lv{font-size:10px;font-weight:900;color:#1b1406;background:#f5d77a;border-radius:9px;padding:0 6px}
 .v2-boss-name{font-weight:900;font-size:13px;line-height:1.2;text-shadow:0 2px 4px #000}.v2-boss.locked .v2-boss-name{color:#7d8594;text-shadow:none}
 .v2-intro{color:#9aa3b2;font-size:13px;margin:4px 0 10px}
+.v2-tower{background-size:auto 100%}.v2-tower.on{border-color:var(--tc)!important;box-shadow:0 0 14px color-mix(in srgb,var(--tc) 40%,transparent)!important}.v2-tlv{display:inline-flex;align-items:center;gap:4px;color:#111}.v2-tlv img{width:14px;height:14px}
+.v2-tnote{color:#9aa3b2;font-size:12.5px}.v2-titem{display:inline-flex;align-items:center;gap:3px;font-weight:800;white-space:nowrap}.v2-titem img{width:22px;height:22px;border-radius:3px}
+.v2-tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:4px;margin:4px 0 8px}.v2-tgrid>span{display:flex;align-items:center;justify-content:space-between;gap:4px;background:#1d1f25;border:1px solid #33363f;padding:3px 6px}.v2-tgrid small{color:#9aa3b2;font-weight:700}
 .v2-filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}.v2-filters input{flex:0 1 200px;min-width:140px;background:#292b32;border:1px solid #414650;color:#e8eef4;padding:10px 12px;font:inherit}
 .v2-fgroup{display:flex;flex-wrap:wrap}
 .v2-kit-btn svg{width:22px;height:22px}
@@ -541,7 +544,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={};
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={};
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -1551,23 +1554,25 @@ const V2_ICONS={
  late:'<path d="M8 14V7.5M8 8C8 5 6 3.5 3 3.5 3 6.5 5 8 8 8zM8 9.5c0-2.6 1.8-4 4.5-4 0 2.6-1.8 4-4.5 4z" stroke="currentColor" stroke-width="1.4" fill="none"/>',
  gather:'<path d="M8 8.2c0-1 .8-1.6 1.7-1.4 1.2.3 1.6 1.8.9 2.8-1 1.4-3.2 1.5-4.4.3C4.6 8.4 5 5.8 6.9 4.9c2.4-1.2 5.3.1 6 2.6.8 2.8-1 5.8-3.9 6.3-3.3.6-6.5-1.6-7-4.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>',
  counter:'<circle cx="8" cy="8" r="5.6" stroke="currentColor" stroke-width="1.4" fill="none"/><circle cx="8" cy="8" r="2.6" stroke="currentColor" stroke-width="1.4" fill="none"/><circle cx="8" cy="8" r=".9" fill="currentColor"/>'};
-let V2={mode:'overall',boss:'all',arch:'',role:'',kit:'',q:''};
+let V2={mode:'overall',boss:'all',tower:'gale',arch:'',role:'',kit:'',q:''};
 const V2_KITS={'Damage / Control':'<path d="M3 2.5l7.5 7.5M2.5 3l1.2-.5L13 11.8l-1 1zM13 2.5L5.5 10M13.5 3l-1.2-.5L3 11.8l1 1M2.5 11.5l2 2M13.5 11.5l-2 2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>','Healer':'<path d="M6.3 2.5h3.4v3.8h3.8v3.4H9.7v3.8H6.3V9.7H2.5V6.3h3.8z" fill="currentColor"/>','Buffer':'<path d="M8 2.5l4.5 5H9.6V13H6.4V7.5H3.5z" fill="currentColor"/>','Tank':'<path d="M8 1.8l5 2v4c0 3-2.2 5.2-5 6.4-2.8-1.2-5-3.4-5-6.4v-4z" fill="currentColor"/>'};
 function v2Data(){return TIER_LIST_V2||{};}
 function v2Hero(name){const D=v2Data();let H=(D.heroes||{})[name];
  return H||{};}
-function v2Tier(name){const H=v2Hero(name);if(V2.mode==='overall')return {t:H.overall?.tier};const b=H.bosses||{};if(V2.boss==='all')return {t:b.all};return b[V2.boss]?{t:b[V2.boss]}:{t:b.all,fallback:!!b.all};}
+function v2Tower(){const L=TOWER_TRIALS.towers||[];return L.find(t=>t.id===V2.tower)||L[0]||{};}
+function v2Tier(name){const H=v2Hero(name);if(V2.mode==='overall')return {t:H.overall?.tier};if(V2.mode==='towers'){const w=(H.towers||{})[v2Tower().id];return w?{t:w}:{t:H.overall?.tier,fallback:!!H.overall?.tier};}const b=H.bosses||{};if(V2.boss==='all')return {t:b.all};return b[V2.boss]?{t:b[V2.boss]}:{t:b.all,fallback:!!b.all};}
 function v2TierColor(t){return (v2Data().tierColors||{})[t]||tierColor(t);}
 function v2Chip(key,H,h){const T=(v2Data().tags||{})[key];if(!T)return '';const ic=key==='awk'?`<img src="${AWAKENINGS.icon||'assets/awakenings/Awakening_Icon.png'}" alt="">`:`<svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS[key]||''}</svg>`;
  let label=profileEsc(T.label),tip=T.desc;
  if(key==='expert'&&H.expert){label+=` −${H.expert.drop}`;tip=H.expert.reason||tip;}
  if(key==='awk'){label=`Needs A${H.awk||'?'}`;}
+ if(key==='counter'&&V2.mode==='towers'){const w=v2Tower();tip=`${w.name} gives ${w.status} +${TOWER_TRIALS.bonus?.own??400}% damage: hits on enemies with ${w.status} deal about 5x as much here.`;}
  if(key==='early'&&H.progression?.early)tip=H.progression.early;
  if(key==='late'&&H.progression?.late)tip=H.progression.late;
  return `<span class="v2-tag${key==='counter'?' solid':''}" style="--c:${T.color}" data-v2tip="${profileEsc(tip)}">${ic}<span>${label}</span></span>`;}
 function v2NeedsChip(group){const T=(v2Data().tags||{}).needs||{};const words=group.map(s=>`<b style="color:${ARCH_COLORS[STATUS_ARCHETYPE[s]]||'#fff'}">${profileEsc(s)}</b>`).join(' or ');
  return `<span class="v2-tag" style="--c:${T.color||'#94a3b8'}" data-v2tip="${profileEsc(T.desc||'')}"><svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS.needs}</svg><span>Needs ${words}</span></span>`;}
-function v2Counter(h){if(V2.mode!=='bosses'||V2.boss==='all')return false;const b=(v2Data().bosses||[]).find(x=>x.id===V2.boss);return !!b&&(b.weak||[]).includes(h.archetype);}
+function v2Counter(h){if(V2.mode==='towers')return !!v2Tower().archetype&&v2Tower().archetype===h.archetype;if(V2.mode!=='bosses'||V2.boss==='all')return false;const b=(v2Data().bosses||[]).find(x=>x.id===V2.boss);return !!b&&(b.weak||[]).includes(h.archetype);}
 function v2Card(h){const H=v2Hero(h.name);const {t,fallback}=v2Tier(h.name);const sig=(KARMA_DATA||[]).find(k=>k.signature===h.name);
  const tags=[...(H.tags||[]).filter(k=>k!=='counter').slice(0,3).map(k=>v2Chip(k,H,h)),...(H.needs||[]).slice(0,2).map(v2NeedsChip),...(v2Counter(h)?[v2Chip('counter',H,h)]:[])].join('');
  const kb=H.signatureKarma&&sig?`<span class="v2-karma" data-karma="${profileEsc(sig.name)}" data-v2tip="${profileEsc(`Signature Karma: ${sig.name}. ${sig.exclusive||''}`)}"><svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS.karma}</svg></span>`:'';
@@ -1576,14 +1581,29 @@ function v2Card(h){const H=v2Hero(h.name);const {t,fallback}=v2Tier(h.name);cons
 function v2TipHtml(h){const H=v2Hero(h.name);const D=v2Data();const box=(label,t)=>`<div class="tip-tier"><div class="label">${profileEsc(label)}</div><div class="value" style="background:${t?v2TierColor(t):'#3a3f4a'};${t?'':'color:#cbd0d9'}">${t||'?'}</div></div>`;
  let tiers='';
  if(V2.mode==='overall')tiers=box('Overall',H.overall?.tier)+box('Groups',H.overall?.groups)+box('Single target',H.overall?.single);
+ else if(V2.mode==='towers')tiers=box('Overall',H.overall?.tier)+(TOWER_TRIALS.towers||[]).map(w=>box(w.name.replace('Tower of ',''),(H.towers||{})[w.id])).join('');
  else tiers=box('All bosses',H.bosses?.all)+(D.bosses||[]).map(b=>box(b.name,(H.bosses||{})[b.id])).join('');
  return `<div class="tip-top"><img class="tip-portrait" src="${h.portrait}" alt=""><div><div class="tip-title">${profileEsc(h.name)}</div><div class="tip-meta"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)} · ${profileEsc(h.role)}</div></div></div><div class="tip-tiers v2-tip-tiers">${tiers}</div>${H.expert?`<div class="tip-note"><b style="color:#ef4444">Expert −${H.expert.drop}:</b> ${profileEsc(H.expert.reason||'')}</div>`:''}<div class="tip-note">Click for the full guide.</div>`;}
 function v2ShowTip(h,el){const tip=$('tooltip');tip.innerHTML=v2TipHtml(h);tip.style.setProperty('--tier','#536273');tip.style.display='block';const r=el.getBoundingClientRect();let left=r.right+12;if(left+tip.offsetWidth>window.innerWidth-12)left=r.left-tip.offsetWidth-12;tip.style.left=Math.max(12,left)+'px';tip.style.top=Math.max(12,Math.min(window.innerHeight-tip.offsetHeight-12,r.top-12))+'px';}
 function v2ModeBtn(key){const M=v2Data().modes?.[key]||{};return `<button type="button" class="v2-mode${V2.mode===key?' on':''}" data-v2mode="${key}" style="${M.image?`--bg:url('${M.image}')`:''}"><span class="v2-mode-label">${profileEsc(M.label||key)}</span><span class="v2-mode-sub">${profileEsc(M.sub||'')}</span></button>`;}
 function v2BossTab(b){return `<button type="button" class="v2-boss${V2.boss===b.id?' on':''}" data-v2boss="${b.id}" style="${b.image?`--bg:url('${b.image}')`:''};${b.focus?`background-position:${b.focus}`:''}"><span class="v2-boss-text">${b.level?`<span class="v2-lv">Lv.${b.level}</span>`:''}<span class="v2-boss-name">${profileEsc(b.name)}</span></span></button>`;}
+// Towers mode (TOWER_TRIALS in data.json): tower tabs and the how-it-works / rewards panels.
+function v2TowersHtml(){const T=TOWER_TRIALS;const L=T.towers||[];const w=v2Tower();const I=T.items||{};const B=T.bonus||{};
+ const col=a=>ARCH_COLORS[a]||'#fff';const st=(s,a)=>`<b style="color:${col(a||STATUS_ARCHETYPE[s])}">${profileEsc(s)}</b>`;
+ const item=(k,n)=>`<span class="v2-titem"><img src="${I[k]?.icon||''}" alt="">${n}</span>`;
+ const tabs=L.map(t=>{const h=HEROES.find(x=>x.archetype===t.archetype);return `<button type="button" class="v2-boss v2-tower${t.id===w.id?' on':''}" data-v2tower="${t.id}" style="--bg:url('${T.image}');background-position:${t.pos||'50% 50%'};--tc:${col(t.archetype)}"><span class="v2-boss-text"><span class="v2-lv v2-tlv" style="background:${col(t.archetype)}">${h?`<img src="${h.archIcon}" alt="">`:''}${profileEsc(t.status)} +${B.own??400}%</span><span class="v2-boss-name">${profileEsc(t.name)}</span></span></button>`}).join('');
+ const dots=(B.dotTested||[]).map(s=>st(s)).join(' and ');
+ const how=`<p>${w.text?`<i>“${profileEsc(w.text)}”</i></p><p>`:''}In the <b>${profileEsc(w.name||'')}</b>, hits on an enemy with ${st(w.status,w.archetype)} deal <b>+${B.own??400}%</b> damage, so ${profileEsc(w.archetype||'')} heroes are close to required. Damage-over-time statuses add <b>+${B.dot??100}%</b> in every tower (measured: ${dots}); other statuses add nothing.${w.measured===false?' <span class="v2-tnote">Not measured in this tower yet: assumed to work like the others.</span>':''}</p><p>${profileEsc(B.text||'')}</p><p class="v2-tnote">${profileEsc(B.example||'')}</p>`;
+ const floors=`<p><b>${T.floors||30} floors</b>, up to ${T.starsPerFloor||3} stars each: ${(T.conditions||[]).map(profileEsc).join('; ')}. ${profileEsc(T.conditionsNote||'')}</p><p>${profileEsc(T.enemyLevels||'')} ${profileEsc(T.entry||'')}</p><p class="v2-tnote">${profileEsc(T.unlock||'')}</p>`;
+ const fr=T.floorRewards||[];const sum=a=>a.reduce((x,y)=>x+y,0);const cm=T.cumulative||[];
+ const cumMem=sum(cm.filter(c=>c[1]==='memory').map(c=>c[2])),cumWh=sum(cm.filter(c=>c[1]==='whirling').map(c=>c[2]));
+ const rewards=`<h5>First clear of each floor</h5><div class="v2-tgrid">${fr.map((n,i)=>`<span><small>${i+1}</small>${item('memory',n)}</span>`).join('')}</div>
+ <h5>Stars collected in this tower</h5><div class="v2-tgrid">${cm.map(c=>`<span><small>★${c[0]}</small>${item(c[1],c[2])}</span>`).join('')}</div>
+ <p>Per tower: ${item('memory',(sum(fr)+cumMem).toLocaleString('en-GB'))} ${profileEsc(I.memory?.name||'')} (${sum(fr).toLocaleString('en-GB')} from floors, ${cumMem} from stars) and ${item('whirling',cumWh)} ${profileEsc(I.whirling?.name||'')}.</p><p class="v2-tnote">${profileEsc(I.whirling?.use||'')}</p>`;
+ return `<div class="v2-bosses">${tabs}</div><details class="v2-panel" open><summary>How the ${profileEsc(w.name||'tower')} works</summary><div>${how}</div></details><details class="v2-panel"><summary>Floors and stars</summary><div>${floors}</div></details><details class="v2-panel"><summary>Rewards</summary><div>${rewards}</div></details>`;}
 function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();const tiers=D.tiers||['S','A','B','C'];const roles=D.roles||['Main DPS','Sub-DPS','Support'];
  const list=HEROES.filter(h=>(!V2.q||h.name.toLowerCase().includes(V2.q))&&(!V2.arch||h.archetype===V2.arch)&&(!V2.role||h.role===V2.role)&&(!V2.kit||h.classType===V2.kit));
- const M=D.modes?.[V2.mode]||{};const bossName=V2.mode==='bosses'?(V2.boss==='all'?'All bosses':(D.bosses||[]).find(b=>b.id===V2.boss)?.name):'';
+ const M=D.modes?.[V2.mode]||{};const bossName=V2.mode==='bosses'?(V2.boss==='all'?'All bosses':(D.bosses||[]).find(b=>b.id===V2.boss)?.name):V2.mode==='towers'?v2Tower().name:'';
  const tagRows=Object.entries(D.tags||{}).map(([k,T])=>`<tr><td>${k==='needs'?v2NeedsChip(['Airborne']):v2Chip(k,{awk:1,expert:{drop:1}},{})}</td><td>${profileEsc(T.desc)}</td></tr>`).join('');
  const experts=Object.entries(D.heroes||{}).filter(([,H])=>H.expert).map(([n,H])=>`<li><b>${profileEsc(n)} (−${H.expert.drop}):</b> ${profileEsc(H.expert.reason||'')}</li>`).join('');
  let html=`<div class="v2-banner preview">PREVIEW: hidden from visitors. Ratings are added as we decide them together.</div>
@@ -1592,7 +1612,8 @@ function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();
  <details class="v2-panel"><summary>Modes</summary><div>${Object.values(D.modes||{}).map(m=>`<p><b>${profileEsc(m.label)}</b> (${profileEsc(m.sub)}): ${profileEsc(m.intro||'')}</p>`).join('')}</div></details>
  <details class="v2-panel"><summary>Tags</summary><div><table class="v2-tag-table">${tagRows}<tr><td><span class="v2-karma inline"><svg viewBox="0 0 16 16">${V2_ICONS.karma}</svg></span></td><td>${profileEsc(D.signatureKarmaText||'')}</td></tr></table>${experts?`<h5>Expert reasons</h5><ul>${experts}</ul>`:''}</div></details>
  <details class="v2-panel"><summary>Ratings</summary><div><ul class="v2-ratings">${(D.ratings||[]).map(r=>`<li><span class="v2-rt" style="background:${v2TierColor(r.tier)}">${profileEsc(r.tier)}</span>${profileEsc(r.text)}</li>`).join('')}</ul></div></details>
- <div class="v2-modes">${['overall','bosses'].map(v2ModeBtn).join('')}</div>`;
+ <div class="v2-modes">${['overall','bosses','towers'].filter(k=>D.modes?.[k]).map(v2ModeBtn).join('')}</div>`;
+ if(V2.mode==='towers')html+=v2TowersHtml();
  if(V2.mode==='bosses'){const un=D.undiscovered||{};const locks=Object.entries(un).flatMap(([type,n])=>Array.from({length:n},()=>`<div class="v2-boss locked"><span class="v2-boss-text"><span class="v2-boss-name">${profileEsc(type)} boss · not reached yet</span></span></div>`));
   html+=`<div class="v2-bosses"><button type="button" class="v2-boss all${V2.boss==='all'?' on':''}" data-v2boss="all"><span class="v2-boss-text"><span class="v2-boss-name">All bosses</span></span></button>${(D.bosses||[]).map(v2BossTab).join('')}${locks.join('')}</div>`;}
  html+=`<p class="v2-intro">${profileEsc(M.intro||'')}</p><div class="v2-filters"><input type="search" id="v2Search" placeholder="Search heroes…" value="${profileEsc(V2.q)}" autocomplete="off"><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.arch?' active':''}" data-v2arch="" title="All archetypes"><span class="all-symbol">✱</span></button>${ARCHES.map(a=>{const h=HEROES.find(x=>x.archetype===a);return `<button class="heroes-filter-btn${V2.arch===a?' active':''}" data-v2arch="${profileEsc(a)}" title="${profileEsc(a)}"><img src="${h?.archIcon||''}" alt=""></button>`}).join('')}</div><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.role?' active':''}" data-v2role="" title="All roles"><span class="all-symbol">✱</span></button>${roles.map(r=>`<button class="heroes-filter-btn${V2.role===r?' active':''}" data-v2role="${profileEsc(r)}" title="${profileEsc(r)}"><img src="${ROLE_ICONS[r]||''}" alt=""></button>`).join('')}</div><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.kit?' active':''}" data-v2kit="" title="All kit types"><span class="all-symbol">✱</span></button>${Object.entries(V2_KITS).map(([k,ic])=>`<button class="heroes-filter-btn v2-kit-btn${V2.kit===k?' active':''}" data-v2kit="${profileEsc(k)}" title="${profileEsc(k)}"><svg viewBox="0 0 16 16" aria-hidden="true">${ic}</svg></button>`).join('')}</div></div>`;
@@ -1605,6 +1626,7 @@ function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();
  root.innerHTML=html;
  root.querySelectorAll('[data-v2mode]').forEach(b=>b.onclick=()=>{V2.mode=b.dataset.v2mode;renderTierV2()});
  root.querySelectorAll('[data-v2boss]').forEach(b=>b.onclick=()=>{V2.boss=b.dataset.v2boss;renderTierV2()});
+ root.querySelectorAll('[data-v2tower]').forEach(b=>b.onclick=()=>{V2.tower=b.dataset.v2tower;renderTierV2()});
  root.querySelectorAll('[data-v2arch]').forEach(b=>b.onclick=()=>{V2.arch=b.dataset.v2arch;renderTierV2()});
  root.querySelectorAll('[data-v2role]').forEach(b=>b.onclick=()=>{V2.role=b.dataset.v2role;renderTierV2()});
  root.querySelectorAll('[data-v2kit]').forEach(b=>b.onclick=()=>{V2.kit=b.dataset.v2kit;renderTierV2()});
@@ -1636,7 +1658,7 @@ function startApp(){
  navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);navIcon('navIconHeroes',(UI_ICONS||{}).heroes);navIcon('navIconTeams',(UI_ICONS||{}).teams);
 }
 fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};TOWER_TRIALS=d.TOWER_TRIALS||{};
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
 </script>

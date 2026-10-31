@@ -20124,6 +20124,12 @@
     "sub": "Hunts, Raids and World Bosses",
     "image": "assets/ui/mode-bosses.webp",
     "intro": "How the hero performs against big single targets: Super Armor, mounting and grabs. Pick a boss for that fight, or All bosses for the general picture."
+   },
+   "towers": {
+    "label": "Towers",
+    "sub": "Tower of Trials",
+    "image": "assets/ui/mode-towers.webp",
+    "intro": "How the hero performs in the Tower of Trials. Each tower massively boosts hits on enemies with its own status, so heroes of that archetype (marked Counter) are close to required. Until a hero is rated for a tower, their Overall tier is shown faded."
    }
   },
   "bosses": [
@@ -20248,7 +20254,7 @@
    "counter": {
     "label": "Counter",
     "color": "#facc15",
-    "desc": "Bosses mode only, added automatically: the selected boss is weak to this hero's archetype."
+    "desc": "Added automatically. Bosses mode: the selected boss is weak to this hero's archetype. Towers mode: the selected tower gives this hero's status +400% damage."
    }
   },
   "signatureKarmaText": "The purple card in a portrait's bottom-right corner means the hero's signature Karma changes how they play, not just their stats. The rating assumes you have it.",
@@ -20377,5 +20383,193 @@
     }
    }
   }
+ },
+ "TOWER_TRIALS": {
+  "note": "Tower of Trials (David, 31 Oct 2026). Unlocked by the side quest 'Barduk's Intentions'; reached only through the map's Tower of Trials point (not in the menu or the Mercenary Guide). Source notes and screenshots: assets/tower/. Shown in the new tier list's Towers mode (preview only).",
+  "unlock": "Unlocked by the side quest Barduk's Intentions. Afterwards the map shows a Tower of Trials point you can warp to; it isn't in the menu or the Mercenary Guide.",
+  "floors": 30,
+  "starsPerFloor": 3,
+  "conditions": [
+   "Defeat all monsters (on boss floors: defeat the boss)",
+   "Clear within a shorter time limit",
+   "Clear within a longer time limit"
+  ],
+  "conditionsNote": "The time limits grow with the floor. Floor 1: 60 s and 90 s.",
+  "enemyLevels": "Lv.40 on floors 1-2, then +5 every two floors (Lv.45 on 3-4, Lv.50 on 5). Seen up to floor 5.",
+  "entry": "Any hero can enter; the deploy screen only marks the tower's archetype as recommended.",
+  "bonus": {
+   "own": 400,
+   "dot": 100,
+   "other": 0,
+   "text": "Each tower adds to the Additional Damage pool of every hit on an enemy that has its status: +400% for the tower's own status, +100% for each damage-over-time status, nothing for other statuses. These add to each other and to Additional Damage from gear.",
+   "example": "Measured with Reina's Ultimate (Tower of Gale floor 1): clean 1,759; Poison 5,278 (x3); Airborne 17,593 (x10); Airborne + Poison 26,390 (x15). The same Airborne hit in the Tower of Amplitude: 3,518 (x2), where Stun gives x10 instead.",
+   "dotTested": [
+    "Poison",
+    "Burn"
+   ]
+  },
+  "items": {
+   "memory": {
+    "name": "Fragment of Memory",
+    "icon": "assets/ui/tower-memory.webp"
+   },
+   "whirling": {
+    "name": "Whirling Thoughts",
+    "icon": "assets/ui/tower-whirling.webp",
+    "use": "1 Whirling Thoughts + 100 Karma exchange crystals + 100,000 Gold = 1 Fragment of Afterimage, which buys a signature Karma at the Exchange."
+   }
+  },
+  "floorRewards": [
+   20,
+   25,
+   30,
+   35,
+   40,
+   45,
+   45,
+   50,
+   50,
+   55,
+   55,
+   60,
+   60,
+   70,
+   70,
+   75,
+   75,
+   80,
+   80,
+   85,
+   85,
+   90,
+   90,
+   95,
+   95,
+   100,
+   110,
+   120,
+   130,
+   150
+  ],
+  "cumulative": [
+   [
+    5,
+    "memory",
+    30
+   ],
+   [
+    10,
+    "memory",
+    40
+   ],
+   [
+    15,
+    "whirling",
+    1
+   ],
+   [
+    20,
+    "memory",
+    50
+   ],
+   [
+    25,
+    "memory",
+    60
+   ],
+   [
+    30,
+    "whirling",
+    2
+   ],
+   [
+    35,
+    "memory",
+    70
+   ],
+   [
+    40,
+    "memory",
+    80
+   ],
+   [
+    45,
+    "whirling",
+    3
+   ],
+   [
+    50,
+    "memory",
+    90
+   ],
+   [
+    55,
+    "memory",
+    100
+   ],
+   [
+    60,
+    "whirling",
+    4
+   ],
+   [
+    65,
+    "whirling",
+    5
+   ],
+   [
+    70,
+    "whirling",
+    6
+   ],
+   [
+    75,
+    "whirling",
+    7
+   ],
+   [
+    80,
+    "whirling",
+    8
+   ],
+   [
+    85,
+    "whirling",
+    9
+   ],
+   [
+    90,
+    "whirling",
+    10
+   ]
+  ],
+  "towers": [
+   {
+    "id": "amplitude",
+    "name": "Tower of Amplitude",
+    "archetype": "Amplitude",
+    "status": "Stun",
+    "measured": true,
+    "pos": "0% 50%"
+   },
+   {
+    "id": "gale",
+    "name": "Tower of Gale",
+    "archetype": "Gale",
+    "status": "Airborne",
+    "measured": true,
+    "pos": "50% 50%",
+    "text": "He who moves first shall control the flow. He who is as light and swift as the wind shall survive and ascend."
+   },
+   {
+    "id": "crushing",
+    "name": "Tower of Crushing",
+    "archetype": "Crushing",
+    "status": "Knockdown",
+    "measured": false,
+    "pos": "100% 50%"
+   }
+  ],
+  "image": "assets/ui/mode-towers.webp"
  }
 }
