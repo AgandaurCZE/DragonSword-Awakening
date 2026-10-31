@@ -1,3 +1,7 @@
+## 2026-11-01 — Claude: achievements, Mercenary Crew Level
+- `assets/items/achievements.json`: 103 achievements with conditions, David's progress and the title each gives. Titles tab: Curious Hands and 【777】 now show their achievements.
+- `assets/merc-crew/`: the free Crew Level reward track (screenshots + notes).
+
 ## 2026-10-31 — Claude: Cookbook tab (preview only)
 - New Cookbook tab, hidden in the preview: all 73 recipes (17 discovered, the rest as '?' cards), progress per method, effect and method filters, ingredient search, effect at every star level, per-visitor 'Mark as cooked' ticks, and the star calculator (dish stars = 1 + sum of ingredient stars ÷ 3, rounded down). Dish pictures and the chef-hat menu icon cut from David's screenshots and videos.
 

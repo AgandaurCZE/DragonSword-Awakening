@@ -6,7 +6,7 @@ materials.json = every item in David's Materials tab (31 Oct 2026, 63 items, gam
 name, type, rarity colour, icon (icons/<slug>.webp, cut from the inventory grid), description, use line, main sources.
 
 WHAT LEVELS WHAT (from the use lines)
-- Hero EXP: Basic Combat Text 500, Advanced Combat Text 2,000. Source: Currency Dungeon "Dragon W...".
+- Hero EXP: Basic Combat Text 500, Advanced Combat Text 2,000, Core Combat Text 6,000. Source: Currency Dungeon "Dragon W...".
 - Karma EXP: Arcana of War 300, Beginnings 1,000, Peace 4,000, the Future 10,000. Source: Currency Dungeons "Trace of t..." / "Residual...".
 - Equipment EXP: Mana Shard 200, Mana Crystal 500, Mana Ore 1,500, Raw Mana Stone 5,000. Source: Currency Dungeons "Endless S..." / "Residual...".
 - Skill enhancement: Record of Battle, Secret Text of the Warrior, Secret Text of Victory (Hunt, Exchange), Tome of Insight
@@ -41,3 +41,5 @@ stars, ingredients and slot substitutes where David opened them. Food buffs: Mea
 Seafood Stew [Team] Crit Damage +21% (4 stars), Hard-boiled Egg [Team] Attack +130 (4 stars), all 15 minutes.
 STAR RULE (45 combinations, all match): dish stars = 1 + floor(sum of ingredient stars / 3), so 1-ingredient dishes max 2 stars,
 2-ingredient 3, 3-ingredient 5. Effects per star are a per-dish table (cookbook.json effectsByStars).
+
+ACHIEVEMENTS (achievements.json): 103 achievements from David's video, by tab; 101 match a title. Curious Hands = 'Anything in Here?', 【777】 = 'Lucky!'.

@@ -1,0 +1,8 @@
+Mercenary Crew Level (free reward track, levels 1-80). David's video, 1 Nov 2026; 21 screenshots here (level-track-NN.webp).
+- Crew EXP comes from quests. David: level 25 (12,130 / 15,000 EXP).
+- Every level gives one item; every 5th level is a bigger milestone (framed on the right).
+- From level 26 on the items rotate between Arcana of Peace (4,000 Karma EXP), Core Combat Text (6,000 Hero EXP)
+  and Mana Ore (1,500 Equipment EXP); the amount rises from 5 to about 20 by level 80.
+- A second row adds 50 or 100 of two crystal currencies on some levels (icons only; not identified yet).
+- Levels 1-25 are already claimed in David's game (ticks cover the amounts).
+Not transcribed level by level yet; do it if a progression page is built.

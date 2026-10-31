@@ -1,0 +1,832 @@
+{
+ "note": "David's Achievements screen (video, 1 Nov 2026), read by OCR; progress is David's at the time. Category follows the in-game tabs (Explore, Quest, Collect, Combat, Special), sorted by content. 'title' = the title that achievement gives (TITLES). Names marked inferred were cut off in the video and matched to the title list by meaning. Each achievement shown gave 10 Fame and one item (icon only). The Fame track: Stage 1 = 50 Fame, reward 100,000 Gold + 50 of a purple crystal.",
+ "items": [
+  {
+   "name": "Oh! Our Goddess",
+   "condition": "Restore the Goddess Statue of Organa",
+   "progress": 7,
+   "target": 13,
+   "category": "Explore",
+   "title": "Restorer of Grace"
+  },
+  {
+   "name": "The Wind Path That Unveils the Unknown",
+   "condition": "Activate Eona's Legacy",
+   "progress": 7,
+   "target": 11,
+   "category": "Explore",
+   "title": "Pioneer of the Wind Path"
+  },
+  {
+   "name": "A Mercenary! Open Up!",
+   "condition": "Activate a Dungeon Gate",
+   "progress": 12,
+   "target": 15,
+   "category": "Explore",
+   "title": "Dungeon Conqueror"
+  },
+  {
+   "name": "Fast Travel Expert",
+   "condition": "Activate a Waypoint",
+   "progress": 8,
+   "target": 20,
+   "category": "Explore",
+   "title": "Guide of the World"
+  },
+  {
+   "name": "Ah, Can't Resist a Chest",
+   "condition": "Obtain Treasure Chest Rewards",
+   "progress": 311,
+   "target": 500,
+   "category": "Explore",
+   "title": "Chest Addict"
+  },
+  {
+   "name": "In Search of Hidden Treasure",
+   "condition": "Use a Treasure Map",
+   "progress": 3,
+   "target": 29,
+   "category": "Explore",
+   "title": "Legendary Explorer"
+  },
+  {
+   "name": "Gotta Open That Suspicious Chest",
+   "condition": "Obtain Treasure Chest Rewards in Dungeons",
+   "progress": 4,
+   "target": 24,
+   "category": "Explore",
+   "title": "Loot Sweeper"
+  },
+  {
+   "name": "There's a Marmot in That Burrow!",
+   "condition": "Clear the Marmot Mini-Game",
+   "progress": 13,
+   "target": 58,
+   "category": "Explore",
+   "title": "Marmot Challenger"
+  },
+  {
+   "name": "Hold On, Stand Right There",
+   "condition": "Clear the Platform Puzzle Mini-Game",
+   "progress": 15,
+   "target": 48,
+   "category": "Explore",
+   "title": "Master of Pressing"
+  },
+  {
+   "name": "Slide to Solve",
+   "condition": "Clear the Slide Puzzle Mini-Game",
+   "progress": 5,
+   "target": 29,
+   "category": "Explore",
+   "title": "Puzzle Solved by Pushing"
+  },
+  {
+   "name": "A Long Tail Gets Caught",
+   "condition": "Defeat a Fox",
+   "progress": 8,
+   "target": 500,
+   "category": "Explore",
+   "title": "Tail Tracker"
+  },
+  {
+   "name": "You Charged First?",
+   "condition": "Defeat a Boar",
+   "progress": 7,
+   "target": 500,
+   "category": "Explore",
+   "title": "Victim and Perpetrator"
+  },
+  {
+   "name": "You Could've Just Walked By",
+   "condition": "Defeat a Rabbit",
+   "progress": 13,
+   "target": 500,
+   "category": "Explore",
+   "title": "A Small White Pang of Conscience"
+  },
+  {
+   "name": "The Goose Won't Take It",
+   "condition": "Defeat a Goose",
+   "progress": 17,
+   "target": 500,
+   "category": "Explore",
+   "title": "Uninvited Guest of the Nest"
+  },
+  {
+   "name": "Today's Menu Is Everything",
+   "condition": "Cooking Progress",
+   "progress": 34,
+   "target": 1000,
+   "category": "Explore",
+   "title": "World Traveling Chef"
+  },
+  {
+   "name": "The Pickaxe Is Just a Helper",
+   "condition": "Mining Count",
+   "progress": 361,
+   "target": 1000,
+   "category": "Explore",
+   "title": "One Who Walks the Vein"
+  },
+  {
+   "name": "I'm here to order equipment",
+   "condition": "Equipment Crafting",
+   "progress": 20,
+   "target": 1000,
+   "category": "Explore",
+   "title": "Patron of the Workshop"
+  },
+  {
+   "name": "A Towering Threat Brought Down",
+   "condition": "Clear a Raid",
+   "progress": 0,
+   "target": 10,
+   "category": "Explore",
+   "title": "A Hero's Beginning"
+  },
+  {
+   "name": "May I Have Your Name?",
+   "condition": "Complete a Sudden Mission",
+   "progress": 9,
+   "target": 10,
+   "category": "Explore",
+   "title": "One Who Erases Names"
+  },
+  {
+   "name": "If I See Grass, I Pull It First",
+   "condition": "Gathering Count",
+   "progress": 388,
+   "target": 1000,
+   "category": "Explore",
+   "title": "Abundance Upon the Land"
+  },
+  {
+   "name": "Anything in Here?",
+   "condition": "Obtain Treasure Chest Rewards",
+   "progress": 100,
+   "target": 100,
+   "category": "Explore",
+   "title": null
+  },
+  {
+   "name": "What Was Kept and What Was Lost",
+   "condition": "Complete 50 Adventure Quests",
+   "progress": 0,
+   "target": 1,
+   "category": "Quest",
+   "title": "Impregnable"
+  },
+  {
+   "name": "A Hero's Beginning",
+   "condition": "Complete 80 Adventure Quests",
+   "progress": 0,
+   "target": 1,
+   "category": "Quest",
+   "title": "One Who Connects The Six Heroes"
+  },
+  {
+   "name": "A Mercenary as of Today",
+   "condition": "Complete Anne's Bond Quest",
+   "progress": 0,
+   "target": 1,
+   "category": "Quest",
+   "title": "I Want to Do Missions"
+  },
+  {
+   "name": "Dreams Come True",
+   "condition": "Complete Bart's Bond Quest",
+   "progress": 0,
+   "target": 1,
+   "category": "Quest",
+   "title": "Master of Mushroom Cuisine"
+  },
+  {
+   "name": "One Strawberry Flavor, as Ordered",
+   "condition": "Complete Dana's Hero Quest",
+   "progress": 0,
+   "target": 1,
+   "category": "Quest",
+   "title": "Snow Alchemist"
+  },
+  {
+   "name": "No One Will Know, Right?",
+   "condition": "Complete Ornette's Hero Quest",
+   "progress": 0,
+   "target": 1,
+   "category": "Quest",
+   "title": "Saintess of the Dawn"
+  },
+  {
+   "name": "The End of the White Mistblossom",
+   "condition": "Complete Theresia's Hero Quest",
+   "progress": 0,
+   "target": 1,
+   "category": "Quest",
+   "title": "Inquisitor"
+  },
+  {
+   "name": "Savior of the De-monworld",
+   "condition": "Complete Marmot King Hog's Bond Quest",
+   "progress": 0,
+   "target": 1,
+   "category": "Quest",
+   "title": "Awaken, Hero"
+  },
+  {
+   "name": "Warmth for Frozen Wisdom",
+   "condition": "Complete Cerese's Hero Quest",
+   "progress": 0,
+   "target": 1,
+   "category": "Quest",
+   "title": "Sage of the Blue Moon"
+  },
+  {
+   "name": "A Tale Carried on the Embers",
+   "condition": "Complete Kalien's Hero Quest",
+   "progress": 0,
+   "target": 1,
+   "category": "Quest",
+   "title": "Red Fox"
+  },
+  {
+   "name": "Struck Up a Chat, Got a Job",
+   "condition": "Complete Area Quests",
+   "progress": 37,
+   "target": 50,
+   "category": "Quest",
+   "title": "Kind"
+  },
+  {
+   "name": "We Solve Anything",
+   "condition": "Complete Area Quests",
+   "progress": 37,
+   "target": 147,
+   "category": "Quest",
+   "title": "Fixer"
+  },
+  {
+   "name": "Awakened Heart",
+   "condition": "Complete 30 Adventure Quests",
+   "progress": 1,
+   "target": 1,
+   "category": "Quest",
+   "title": "Black Wings"
+  },
+  {
+   "name": "An Unforgettable Encounter",
+   "condition": "Complete Ninian's Bond Quest",
+   "progress": 1,
+   "target": 1,
+   "category": "Quest",
+   "title": "Doting Parent"
+  },
+  {
+   "name": "Beast Meat Collector",
+   "condition": "Obtain Beast Meat",
+   "progress": 6,
+   "target": 300,
+   "category": "Collect",
+   "title": "Rabbit Hunter"
+  },
+  {
+   "name": "Fox Meat Collector",
+   "condition": "Obtain Fox Meat",
+   "progress": 8,
+   "target": 300,
+   "category": "Collect",
+   "title": "Fox Hunter"
+  },
+  {
+   "name": "Trout Fillet Collector",
+   "condition": "Obtain Trout Fillet",
+   "progress": 0,
+   "target": 300,
+   "category": "Collect",
+   "title": "Riverside Angler"
+  },
+  {
+   "name": "Bird Meat Collector",
+   "condition": "Obtain Bird Meat",
+   "progress": 25,
+   "target": 300,
+   "category": "Collect",
+   "title": "Goose Hunter"
+  },
+  {
+   "name": "Silverwing Fillet Collector",
+   "condition": "Obtain Silverwing Fillet",
+   "progress": 0,
+   "target": 300,
+   "category": "Collect",
+   "title": "Silver Angler"
+  },
+  {
+   "name": "Sand Crab Collector",
+   "condition": "Obtain Sand Crab",
+   "progress": 53,
+   "target": 300,
+   "category": "Collect",
+   "title": "Sand Gatherer"
+  },
+  {
+   "name": "Shrimp Flesh Collector",
+   "condition": "Obtain Shrimp Flesh",
+   "progress": 6,
+   "target": 300,
+   "category": "Collect",
+   "title": "Waterside Gatherer"
+  },
+  {
+   "name": "Shellfish Collector",
+   "condition": "Obtain Shellfish",
+   "progress": 44,
+   "target": 300,
+   "category": "Collect",
+   "title": "Beach Gatherer"
+  },
+  {
+   "name": "Salmon Fillet Collector",
+   "condition": "Obtain Salmon Fillet",
+   "progress": 0,
+   "target": 300,
+   "category": "Collect",
+   "title": "Upstream Angler"
+  },
+  {
+   "name": "Conch Collector",
+   "condition": "Obtain Conch",
+   "progress": 28,
+   "target": 300,
+   "category": "Collect",
+   "title": "Wave Gatherer"
+  },
+  {
+   "name": "Radish Collector",
+   "condition": "Obtain Radish",
+   "progress": 8,
+   "target": 300,
+   "category": "Collect",
+   "title": "Root Gatherer"
+  },
+  {
+   "name": "Aqualily Collector",
+   "condition": "Obtain Aqualily",
+   "progress": 8,
+   "target": 300,
+   "category": "Collect",
+   "title": "Water Gatherer"
+  },
+  {
+   "name": "Leaflet Tomato Collector",
+   "condition": "Obtain Leaflet Tomato",
+   "progress": 8,
+   "target": 300,
+   "category": "Collect",
+   "title": "Crimson Gatherer"
+  },
+  {
+   "name": "Wild Onion Collector",
+   "condition": "Obtain Wild Onion",
+   "progress": 0,
+   "target": 300,
+   "category": "Collect",
+   "title": "Fragrant Gatherer"
+  },
+  {
+   "name": "Dwarf Potato Collector",
+   "condition": "Obtain Dwarf Potato",
+   "progress": 5,
+   "target": 300,
+   "category": "Collect",
+   "title": "Small Gatherer"
+  },
+  {
+   "name": "Waveleaf Cabbage Collector",
+   "condition": "Obtain Waveleaf Cabbage",
+   "progress": 30,
+   "target": 300,
+   "category": "Collect",
+   "title": "Blue Gatherer"
+  },
+  {
+   "name": "Whitebloom Carrot Collector",
+   "condition": "Obtain Whitebloom Carrot",
+   "progress": 60,
+   "target": 300,
+   "category": "Collect",
+   "title": "Pure White Gatherer"
+  },
+  {
+   "name": "Lantern Gourd Collector",
+   "condition": "Obtain Lantern Gourd",
+   "progress": 52,
+   "target": 300,
+   "category": "Collect",
+   "title": "Verdant Gatherer"
+  },
+  {
+   "name": "Round Eggplant Collector",
+   "condition": "Obtain Round Eggplant",
+   "progress": 36,
+   "target": 300,
+   "category": "Collect",
+   "title": "Violet Gatherer"
+  },
+  {
+   "name": "Rock Mushroom Collector",
+   "condition": "Obtain Rock Mushroom",
+   "progress": 63,
+   "target": 300,
+   "category": "Collect",
+   "title": "Hardy Gatherer"
+  },
+  {
+   "name": "Tree Sap Mushroom Collector",
+   "condition": "Obtain Tree Sap Mushroom",
+   "progress": 25,
+   "target": 300,
+   "category": "Collect",
+   "title": "Nature Gatherer"
+  },
+  {
+   "name": "Wheat Collector",
+   "condition": "Obtain Wheat",
+   "progress": 292,
+   "target": 300,
+   "category": "Collect",
+   "title": "Wheat Farmer"
+  },
+  {
+   "name": "Rice Collector",
+   "condition": "Obtain Rice",
+   "progress": 1,
+   "target": 300,
+   "category": "Collect",
+   "title": "Rice Farmer"
+  },
+  {
+   "name": "Peanut Collector",
+   "condition": "Obtain Peanuts",
+   "progress": 3,
+   "target": 300,
+   "category": "Collect",
+   "title": "Peanut Patrol"
+  },
+  {
+   "name": "Blue Lotus Mushroom Collector",
+   "condition": "Obtain Blue Lotus Mushroom",
+   "progress": 6,
+   "target": 300,
+   "category": "Collect",
+   "title": "Serene Gatherer"
+  },
+  {
+   "name": "Dawn Lanternleaf Collector",
+   "condition": "Obtain Dawn Lanternleaf",
+   "progress": 20,
+   "target": 300,
+   "category": "Collect",
+   "title": "Dawn Gatherer"
+  },
+  {
+   "name": "Grave Bellherb Collector",
+   "condition": "Obtain Grave Bellherb",
+   "progress": 18,
+   "target": 300,
+   "category": "Collect",
+   "title": "Strange Gatherer"
+  },
+  {
+   "name": "Dried Maneflower Collector",
+   "condition": "Obtain Dried Maneflower",
+   "progress": 4,
+   "target": 300,
+   "category": "Collect",
+   "title": "Delicate Gatherer"
+  },
+  {
+   "name": "White Dewblossom Collector",
+   "condition": "Obtain White Dewblossom",
+   "progress": 20,
+   "target": 300,
+   "category": "Collect",
+   "title": "Pure Gatherer"
+  },
+  {
+   "name": "Honey Collector",
+   "condition": "Obtain Honey",
+   "progress": 5,
+   "target": 300,
+   "category": "Collect",
+   "title": "Beekeeper"
+  },
+  {
+   "name": "Bird Egg Collector",
+   "condition": "Obtain Bird Egg",
+   "progress": 16,
+   "target": 300,
+   "category": "Collect",
+   "title": "Bird Egg Gatherer"
+  },
+  {
+   "name": "Goose Egg Collector",
+   "condition": "Obtain Goose Egg",
+   "progress": 20,
+   "target": 300,
+   "category": "Collect",
+   "title": "Goose Egg Gatherer"
+  },
+  {
+   "name": "Boar Meat Collector",
+   "condition": "Obtain Boar Meat",
+   "progress": 22,
+   "target": 300,
+   "category": "Collect",
+   "title": "Boar Hunter"
+  },
+  {
+   "name": "Cave Mushroom Collector",
+   "condition": "Obtain Cave Mushroom",
+   "progress": 32,
+   "target": 300,
+   "category": "Collect",
+   "title": "Suspicious Gatherer"
+  },
+  {
+   "name": "Nut Confiscation Raid",
+   "condition": "Defeat a Squirrel",
+   "progress": 16,
+   "target": 500,
+   "category": "Combat",
+   "title": "Nut Patrol"
+  },
+  {
+   "name": "Conqueror of Vanak",
+   "condition": "Defeat Vanak the Bloody Hook on Nightmare difficulty",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Conqueror of Vanak"
+  },
+  {
+   "name": "Conqueror of Gallore the Collapse",
+   "condition": "Defeat Gallore the Collapse on Nightmare difficulty",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Conqueror of Gallore the Collapse"
+  },
+  {
+   "name": "Conqueror of Ghoul Greed",
+   "condition": "Defeat Ghoul Greed on Nightmare difficulty",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Conqueror of Ghoul Greed"
+  },
+  {
+   "name": "Subduer of Horg",
+   "condition": "Defeat Horg the Roamer",
+   "progress": 2,
+   "target": 3,
+   "category": "Combat",
+   "title": "The Roamer"
+  },
+  {
+   "name": "Subduer of Andras",
+   "condition": "Defeat Andras the Cave Predator",
+   "progress": 0,
+   "target": 3,
+   "category": "Combat",
+   "title": "The Predator"
+  },
+  {
+   "name": "Subduer of Pakirus",
+   "condition": "Defeat Pakirus the Specter of Thirst",
+   "progress": 1,
+   "target": 3,
+   "category": "Combat",
+   "title": "Specter of Thirst"
+  },
+  {
+   "name": "Subduer of Hagen",
+   "condition": "Defeat Hagen the Dark Necromancer",
+   "progress": 0,
+   "target": 3,
+   "category": "Combat",
+   "title": "Dark Necromancer"
+  },
+  {
+   "name": "Subduer of Brack",
+   "condition": "Defeat Scraping Brack",
+   "progress": 0,
+   "target": 3,
+   "category": "Combat",
+   "title": "Scraping"
+  },
+  {
+   "name": "Subduer of Karon",
+   "condition": "Defeat Karon the Tyrant",
+   "progress": 0,
+   "target": 3,
+   "category": "Combat",
+   "title": "Tyrant"
+  },
+  {
+   "name": "Subduer of Lavanis",
+   "condition": "Defeat Flaming Ash Feather Lavanis",
+   "progress": 0,
+   "target": 3,
+   "category": "Combat",
+   "title": "Feather of Burning Ashes"
+  },
+  {
+   "name": "Subduer of Octavia",
+   "condition": "Defeat Hungry Eyes Octavia",
+   "progress": 0,
+   "target": 3,
+   "category": "Combat",
+   "title": "Hungry Eye"
+  },
+  {
+   "name": "Conqueror of Gauron",
+   "condition": "Defeat Gauron on Very Hard difficulty",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "One Who Broke the Dragon Horn"
+  },
+  {
+   "name": "Subduer of Barpedin",
+   "condition": "Defeat Barpedin, the Crushing Darkness",
+   "progress": 0,
+   "target": 3,
+   "category": "Combat",
+   "title": "Crushing Darkness"
+  },
+  {
+   "name": "Conqueror of Ursula",
+   "condition": "Defeat Ursula on Very Hard difficulty",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "One Who Broke the Thunderbolt"
+  },
+  {
+   "name": "Conqueror of Barduk",
+   "condition": "Defeat Barduk the Corrupted on Nightmare difficulty",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Conqueror of Barduk"
+  },
+  {
+   "name": "This World's Janitor",
+   "condition": "Defeat Any Monster",
+   "progress": 1000,
+   "target": 1000,
+   "category": "Combat",
+   "title": "Environmental Cleaner"
+  },
+  {
+   "name": "Who Cast the Frenzy?",
+   "condition": "Defeat Braheim, the Heretic's Guide, with Logmol's attack",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Turning the Enemy Against Itself"
+  },
+  {
+   "name": "There Was an Arm, and Then There Wasn't",
+   "condition": "Destroy the arm of Gallore the Collapse",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Destroyer"
+  },
+  {
+   "name": "Status Effect Master",
+   "condition": "Apply 5 or more status effects simultaneously",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Status Effect Master"
+  },
+  {
+   "name": "Assassin Grid",
+   "condition": "Defeat Ghoul Greed with a surprise grab",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Master of Ambush"
+  },
+  {
+   "name": "Gas! Gas! Gas!",
+   "condition": "Defeat Karon the Tyrant by detonating his smoke breath",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Architect"
+  },
+  {
+   "name": "The One Who Roots Out the Source of Harm",
+   "condition": "Defeat 5 enemies simultaneously with Lute's [Swordgrab]",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Instagrab"
+  },
+  {
+   "name": "Is Stomping Your Hobby?",
+   "condition": "Successfully perform [Air Stomp] 10 times in a row as Roxy",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "One Whose Hobby Is Stomping"
+  },
+  {
+   "name": "I'll Stand in the Sky",
+   "condition": "Attack an airborne monster for 30 seconds as Reina",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "One Who Defies Gravity"
+  },
+  {
+   "name": "Conqueror of Furcas",
+   "condition": "Defeat Furcas the Starving Ghost of Corrosion on Nightmare difficulty",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Conqueror of Furcas"
+  },
+  {
+   "name": "Conqueror of the Earthlander",
+   "condition": "Defeat Earthlander of the Ravenous Earth on Nightmare difficulty",
+   "progress": 0,
+   "target": 1,
+   "category": "Combat",
+   "title": "Conqueror of the Earthlander"
+  },
+  {
+   "name": "This Is Eye Level Between You and Me",
+   "condition": "Drop Andras the Cave Predator, hanging from the ceiling, to the ground",
+   "progress": 0,
+   "target": 1,
+   "inferred": true,
+   "category": "Combat",
+   "title": "Falling"
+  },
+  {
+   "name": "Round and Round",
+   "condition": "Maintain [Heretic Judgment] for 30 seconds or longer as Theresia",
+   "progress": 0,
+   "target": 1,
+   "inferred": true,
+   "category": "Combat",
+   "title": "Carousel"
+  },
+  {
+   "name": "Hunt Squad, Open for Business",
+   "condition": "Clear a Hunt",
+   "progress": 4,
+   "target": 10,
+   "category": "Combat",
+   "title": "Skilled Hunter"
+  },
+  {
+   "name": "Heh, Perfect Landing!",
+   "condition": "Jump from a high place as Johnny, take damage equal to 90% or more of your maximum HP, and survive",
+   "progress": 0,
+   "target": 1,
+   "inferred": true,
+   "category": "Combat",
+   "title": "Near-Death State"
+  },
+  {
+   "name": "Dragon Sword?",
+   "condition": "Collect 100 Titles",
+   "progress": 7,
+   "target": 100,
+   "category": "Special",
+   "title": "Dragon's Word"
+  },
+  {
+   "name": "Lucky!",
+   "condition": "Deal exactly 777, 7777, or 77777 damage in a single hit",
+   "progress": 1,
+   "target": 1,
+   "category": "Special",
+   "title": null
+  },
+  {
+   "name": "10,000,000!",
+   "condition": "Collect 10,000,000 Gold",
+   "progress": 4508011,
+   "target": 10000000,
+   "category": "Special",
+   "title": "Tycoon"
+  }
+ ]
+}
