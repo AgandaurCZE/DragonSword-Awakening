@@ -1,0 +1,756 @@
+{
+ "note": "David's inventory, Materials tab (video, 31 Oct 2026), in the game's order. Text read by OCR from the item details panel: punctuation (quotes, apostrophes) may be slightly off; the game itself cuts long source names with '...'. Several dungeon sources appear three times in the game (probably the three difficulties); listed once here. Rarity = the item's background colour (Orange, Purple, Blue, Green, Grey), read by eye. Not used by the page yet.",
+ "items": [
+  {
+   "name": "Forbidden Grimoire",
+   "type": "Hero Growth Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/forbidden-grimoire.webp",
+   "description": "A grimoire containing forbidden knowledge. Created by a pioneer, this pitch-black grimoire contains inscriptions that only the chosen ones can read. It is said that those who read these inscriptions can achieve Ascension.",
+   "use": "Used when enhancing skills",
+   "sources": [
+    "Opening Legendary Treasure C..."
+   ]
+  },
+  {
+   "name": "Chronograph of Ages",
+   "type": "Karma Growth Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/chronograph-of-ages.webp",
+   "description": "A mysterious hourglass that holds the very essence of flowing time. Though the sand flows from top to bottom, the time neither decreases nor accumulates. It is said that this tool, which seems to have stopped the flow of time, evokes a strange sensation where the past and future are intertwined.",
+   "use": "Used during the Karma Breakthrough",
+   "sources": [
+    "[Exchange] Prog.",
+    "[Treasure Chest]"
+   ]
+  },
+  {
+   "name": "Arcana of the Future",
+   "type": "Karma Growth Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/arcana-of-the-future.webp",
+   "description": "An Arcana depicting the form of a human. It tells the story of the era yet to be forged. “Though a time of struggle may flow for now, in the future! The future we will someday reach! The Age of the Goddess, with the awakened Goddess by our side, will return!\"",
+   "use": "Gain 10,000 Karma EXP upon use",
+   "sources": [
+    "[Currency Dungeon] Residual..."
+   ]
+  },
+  {
+   "name": "Raw Mana Stone",
+   "type": "Equipment Growth Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/raw-mana-stone.webp",
+   "description": "A legendary magic ore containing infinite potential. Imbued with memories of various pieces of equipment, it possesses the mysterious ability to change its form to match the equipment being enhanced.",
+   "use": "Use to gain 5,000 Equipment EXP",
+   "sources": [
+    "[Currency Dungeon] Residual..."
+   ]
+  },
+  {
+   "name": "Insignia of the Orbis Kingdom",
+   "type": "Insignia",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/insignia-of-the-orbis-kingdom.webp",
+   "description": "A golden token engraved with the Insignia of the Orbis Kingdom. It symbolizes the dedication and honor of the Royal Knights, and the token holds the memories of countless battles fought in defense of the kingdom. These memories can only be shared by those deeply connected to the Knights, and only to them does the token's true power manifest.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "[Exchange] Prog."
+   ]
+  },
+  {
+   "name": "Insignia of the Organa Order",
+   "type": "Insignia",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/insignia-of-the-organa-order.webp",
+   "description": "A blue token engraved with the Insignia of the Organa Order. It symbolizes the sanctity and devotion of the Order, and the token is imbued with the Goddess's blessings and the Order's glorious history. This mystical power manifests only in those with a deep bond to the Order, bestowing special value upon those who follow the Goddess's will.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "[Exchange] Prog."
+   ]
+  },
+  {
+   "name": "Insignia of the Johnny Mercenaries",
+   "type": "Insignia",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/insignia-of-the-johnny-mercenaries.webp",
+   "description": "A green insignia engraved with the Insignia of the Johnny Mercenaries. It symbolizes the strong will and solidarity of the Mercenary Crew, as pursued by its captain, Johnny. The insignia contains the condensed memories of countless battles the Crew has fought. These memories can only be shared by members of the Crew, and the insignia's power is only unleashed upon them.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "[Exchange] Prog."
+   ]
+  },
+  {
+   "name": "Insignia of the Red Fox Mercenaries",
+   "type": "Insignia",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/insignia-of-the-red-fox-mercenaries.webp",
+   "description": "A red insignia engraved with a fox. Its intense glow symbolizes the passion and unity of the Mercenary Crew pursued by Captain Roxy. The insignia contains the condensed memories of countless battles the Crew has fought. These memories can only be shared by members of the Crew, and the insignia's power is only activated for them.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "[Exchange] Prog."
+   ]
+  },
+  {
+   "name": "Insignia of the Lentus Rebellion Army",
+   "type": "Insignia",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/insignia-of-the-lentus-rebellion-army.webp",
+   "description": "Insignia of the Lentus Rebellion Army engraved with a lion emblem. This blood-stained insignia symbolizes the Rebellion Army's indomitable will and their yearning for freedom. The insignia embodies the history of the struggles the Rebellion Army has endured, and it unleashes its true power only to those deeply allied with the Rebellion Army.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "[Exchange] Prog."
+   ]
+  },
+  {
+   "name": "Tome of Insight",
+   "type": "Hero Growth Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/tome-of-insight.webp",
+   "description": "A grimoire containing the insights of past warriors. It helps you inherit their strength and will by reading the insights accumulated over many years. But remember, a hero is not made simply by reading a book.",
+   "use": "Used when enhancing skills",
+   "sources": [
+    "[Sudden Mission Completed]",
+    "[Exchange] Prog."
+   ]
+  },
+  {
+   "name": "Secret Text of Victory",
+   "type": "Hero Growth Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/secret-text-of-victory.webp",
+   "description": "A tome containing strategies and wisdom for certain victory. However, simply reading this book will not make you the strongest. You must constantly strive and train based on this knowledge to achieve true victory, so do not rely solely on the tome.",
+   "use": "Use when enhancing skills",
+   "sources": [
+    "Hunt",
+    "[Exchange] Prog."
+   ]
+  },
+  {
+   "name": "Arcana of Peace",
+   "type": "Karma Growth Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/arcana-of-peace.webp",
+   "description": "An Arcana depicting the goddess. It tells the story of the goddess who fell into a deep slumber after a fierce battle with the Dark Dragon. “Everything is as it should be. That is the flow and the will of the universe. Therefore, soon...\"",
+   "use": "Upon use, gain 4,000 Karma EXP",
+   "sources": [
+    "[Currency Dungeon] Trace of t...",
+    "[Currency Dungeon] Residual..."
+   ]
+  },
+  {
+   "name": "Mana Ore",
+   "type": "Equipment Growth Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/mana-ore.webp",
+   "description": "A lump of magical ore so rare that even renowned artisans rarely see it. The sparks that fly when it is reforged emit a beautiful glow, making it regarded as a precious work of art in its own right.",
+   "use": "Gain 1,500 Equipment EXP when used",
+   "sources": [
+    "[Currency Dungeon] Endless S...",
+    "[Currency Dungeon] Residual..."
+   ]
+  },
+  {
+   "name": "Spiny Fin",
+   "type": "Monster Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/spiny-fin.webp",
+   "description": "A spiny fin that fell from the head of a giant starving ghost. Normally folded, it unfolds menacingly when the creature is hunting or agitated. The hard, sharp spines retain their intensity over time, reminding observers of the starving ghost's grotesque appearance.",
+   "use": "Used to enhance skills",
+   "sources": [
+    "[Hunt] Furcas the Starving Gho..."
+   ]
+  },
+  {
+   "name": "Blood-stained Hook",
+   "type": "Monster Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/blood-stained-hook.webp",
+   "description": "A hook far too massive for a human to wield. As if frozen in the very moment it mercilessly snatched its prey, a faint scent of blood wafts from the tip of the hook. The traces that remain, undimmed by the passage of time, hint at just how many lives this hook has taken.",
+   "use": "Used when enhancing skills",
+   "sources": [
+    "[Hunt] Vanak the Bloody Hook"
+   ]
+  },
+  {
+   "name": "Sage's Blood",
+   "type": "Monster Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/sage-s-blood.webp",
+   "description": "Born when the blood of a once-great sage merged with the power of a dragon. This blood, which neither cools nor congeals over time, flows endlessly, resembling the primordial power that yearns for circulation. The sage's memories have melted away into this blood, but his power alone still lingers within.",
+   "use": "Used to enhance skills.",
+   "sources": [
+    "[Hunt] Barduk the Corrupted"
+   ]
+  },
+  {
+   "name": "Tangled Memories and Reminiscences",
+   "type": "Equipment Crafting Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/tangled-memories-and-reminiscences.webp",
+   "description": "A mysterious substance formed from the intertwining of memories and recollections. When a genius blacksmith used this substance to craft armor, its performance skyrocketed, yet no one has been able to uncover the principle behind it. The genius blacksmith speculated that the reason might be someone's desperate memory of yearning for power, contained within the crystal.",
+   "use": "Used in equipment crafting",
+   "sources": [
+    "[Disassemble] Hero-grade Equi...",
+    "[Transmute] Shanoa",
+    "[Exchange] Special"
+   ]
+  },
+  {
+   "name": "Advanced Combat Text",
+   "type": "Hero Growth Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/advanced-combat-text.webp",
+   "description": "A book containing advanced knowledge necessary for full-scale combat. It systematically covers the techniques and strategies required in actual battle, making it an essential reference for warriors looking to advance to the next level. However, be especially careful, as the dry writing style may make you drowsy while reading.",
+   "use": "Gain 2,000 Hero EXP upon use",
+   "sources": [
+    "[Currency Dungeon] Dragon W..."
+   ]
+  },
+  {
+   "name": "Secret Text of the Warrior",
+   "type": "Hero Growth Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+   "description": "A mysterious scroll containing the requirements to become a warrior. While it appears to be simple text at first glance, a closer read reveals secrets and practical tips for becoming a powerful warrior. It is said that its meaning varies depending on the reader, and those who fully comprehend it can reach new heights on the battlefield.",
+   "use": "Used to enhance skills",
+   "sources": [
+    "Hunt",
+    "[Exchange] Prog."
+   ]
+  },
+  {
+   "name": "Arcana of Beginnings",
+   "type": "Karma Growth Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/arcana-of-beginnings.webp",
+   "description": "An Arcana of Beginnings depicting the beginning of history. It tells the story of the conclusion of the battle between the Goddess and the Dark Dragon. “The shards of power born from the collision spread throughout this world, heralding the dawn of a new era.\"",
+   "use": "Gain 1,000 Karma EXP upon use",
+   "sources": [
+    "[Currency Dungeon] Trace of t..."
+   ]
+  },
+  {
+   "name": "Mana Crystal",
+   "type": "Equipment Growth Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/mana-crystal.webp",
+   "description": "A Mana Crystal widely used for enhancing various equipment. It maintains a small yet solid crystalline form, making it easy to handle and significantly increasing the efficiency of the enhancement process.",
+   "use": "Gain 500 Equipment EXP upon use",
+   "sources": [
+    "[Currency Dungeon] Endless S..."
+   ]
+  },
+  {
+   "name": "Intermediate Monster Hide",
+   "type": "Monster Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-monster-hide.webp",
+   "description": "Intermediate Monster Hide. This intermediate monster hide stands out for its soft and supple texture. It's easy to process and boasts excellent durability, making it extremely popular for crafting armor. It's in high demand in the market and trades actively, being reborn as magnificent works in the hands of skilled artisans. It is used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Undergroun..."
+   ]
+  },
+  {
+   "name": "Intermediate Monster Carapace",
+   "type": "Monster Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-monster-carapace.webp",
+   "description": "A massive carapace that once encased the monster's skin. With few scars and cleanly removed, it holds high market value. Its hard, smooth surface seems to confidently proclaim, ‘I'm still going strong!) It is used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Silver Tusk..."
+   ]
+  },
+  {
+   "name": "Crystal of Remembrance",
+   "type": "Mining Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/crystal-of-remembrance.webp",
+   "description": "A mysterious crystal said to contain all memories. It is said that holding this crystal in your hand preserves everything—from memories you wish to forget to those you never want to lose. Though exactly how this crystal works remains a mystery, it is said that once used, one can never forget its weight and depth.",
+   "use": "Used during Karma Breakthrough",
+   "sources": [
+    "Mining in the Wild",
+    "[Exchange] Prog.",
+    "[Normal Dungeon] Collapsed S..."
+   ]
+  },
+  {
+   "name": "Crystal of Recollection",
+   "type": "Mining Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/crystal-of-recollection.webp",
+   "description": "A crystal said to capture one's most cherished moments. It is said that simply gazing at the crystal brings back long-forgotten happy memories, warming the heart. However, that sense of happiness does not linger long, so people refer to this crystal as ‘brief but intense happiness.,",
+   "use": "Used during Karma Breakthrough",
+   "sources": [
+    "Mining in the Wild",
+    "[Exchange] Prog.",
+    "[Normal Dungeon] Rock Tribe B..."
+   ]
+  },
+  {
+   "name": "Crystal of Reverie",
+   "type": "Mining Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/crystal-of-reverie.webp",
+   "description": "A crystal of Remembrance said to evoke recent memories. It is said that gazing at it helps you recall the location of recently lost items or things you've forgotten. While it feels like piecing together lost fragments one by one, it is also said that sometimes it brings back memories you'd rather not recall.",
+   "use": "Used during Karma Breakthrough",
+   "sources": [
+    "Mining in the Wild",
+    "[Exchange] Prog.",
+    "[Normal Dungeon] Dark Swam..."
+   ]
+  },
+  {
+   "name": "Crystal of Oblivion",
+   "type": "Mining Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/crystal-of-oblivion.webp",
+   "description": "An ominous Crystal of Remembrance said to erase all memories. It is said that while gazing at it, one can feel the memories in their mind slowly fading away. Though it may appear to be a comforting object that covers past pain, many warn that only an empty void remains in its wake.",
+   "use": "Used during Karma Breakthrough",
+   "sources": [
+    "Mining in the Wild",
+    "[Exchange] Prog.",
+    "[Normal Dungeon] Forest of En..."
+   ]
+  },
+  {
+   "name": "Fruit of Vitality",
+   "type": "Gathering Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/fruit-of-vitality.webp",
+   "description": "A mysterious Fruit of Vitality said to restore vitality to the body simply by eating it. The life force condensed within is said to be powerful enough to revive even the fallen. It possesses a sweet yet refreshing taste, and ancient legends tell of people who set out on adventures to obtain this fruit.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Gathering in the Wild",
+    "[Exchange] Prog.",
+    "[Normal Dungeon] Warg Enclo..."
+   ]
+  },
+  {
+   "name": "Primordial Seed",
+   "type": "Gathering Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/primordial-seed.webp",
+   "description": "A precious Primordial Seed said to contain the essence of the primordial age. Despite its small and ordinary appearance, it is said to harbor unimaginable potential within. It is a mysterious object that seems capable of manifesting powerful life energy simply by being planted.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Gathering in the Wild",
+    "[Exchange] Prog.",
+    "[Normal Dungeon] Coastal Cliff..."
+   ]
+  },
+  {
+   "name": "Drop of Purity",
+   "type": "Gathering Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/drop-of-purity.webp",
+   "description": "A mysterious flower that holds tiny droplets within its petals. Even in fierce wind and rain, the petals protect the droplets and do not fall, making it a symbol of untainted purity. The clear droplets within seem to hold the essence of pure life, evoking both wonder and awe in those who behold them.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Gathering in the Wild",
+    "[Exchange] Prog.",
+    "[Normal Dungeon] Fang Bandit..."
+   ]
+  },
+  {
+   "name": "Leaf of Vigor",
+   "type": "Gathering Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/leaf-of-vigor.webp",
+   "description": "The leaf of a mysterious plant that has grown imbued with magical power. It is said that consuming it allows one to feel a powerful force welling up from deep within the body. However, excessive consumption can actually be toxic to the body, so it is wise to stop at a moderate amount.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Gathering in the Wild",
+    "[Exchange] Prog.",
+    "[Normal Dungeon] Rusted Tus..."
+   ]
+  },
+  {
+   "name": "Intermediate Amplitude Stone",
+   "type": "Trait Stone",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-amplitude-stone.webp",
+   "description": "A precious stone that draws out the owner's potential to an even greater degree. The pattern emits a subtle glow, and if it matches the user's abilities, the power dormant within the stone becomes more clearly evident. It severely disrupts the enemy's consciousness, causing confusion and dizziness.",
+   "use": "Used for Karma Breakthrough and Equipment Crafting",
+   "sources": [
+    "[Trait Dungeon] Mantius of Am...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Intermediate Crushing Stone",
+   "type": "Trait Stone",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-crushing-stone.webp",
+   "description": "A precious stone that further unlocks the owner's potential. The pattern emits a subtle glow, and if it matches the user's abilities, the power dormant within the stone becomes more clearly evident. It presses down heavily on the enemy's body, forcing them to kneel and fall.",
+   "use": "Used for Karma Breakthrough and equipment crafting",
+   "sources": [
+    "[Trait Dungeon] Mantius of Cru...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Intermediate Gale Stone",
+   "type": "Trait Stone",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-gale-stone.webp",
+   "description": "A precious stone that further unlocks the owner's potential. The pattern emits a subtle glow, and if it matches the user's abilities, the power dormant within the stone becomes more clearly evident. It uses its immense power to launch the enemy high into the air, keeping them suspended there.",
+   "use": "Used for Karma Breakthrough and equipment crafting",
+   "sources": [
+    "[Trait Dungeon] Mantius of Gal...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Intermediate Breaker Stone",
+   "type": "Trait Stone",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-breaker-stone.webp",
+   "description": "A precious stone that further unlocks the owner's potential. The pattern emits a subtle glow, and if it matches the user's abilities, the power dormant within the stone becomes more clearly evident. It shatters the enemy's defenses with a powerful shock, exposing their weaknesses.",
+   "use": "Used for Karma Breakthrough and equipment crafting",
+   "sources": [
+    "[Trait Dungeon] Drosophia of B...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Intermediate Blazeflame Stone",
+   "type": "Trait Stone",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-blazeflame-stone.webp",
+   "description": "A precious stone that further unlocks the owner's potential. The pattern emits a subtle glow, and if it matches the user's abilities, the power dormant within the stone becomes more clearly evident. Intense flames engulf the enemy, inflicting sustained burns.",
+   "use": "Used for Karma Breakthrough and equipment crafting",
+   "sources": [
+    "[Trait Dungeon] Ghagaroach of...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Intermediate Frostbite Stone",
+   "type": "Trait Stone",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-frostbite-stone.webp",
+   "description": "A precious stone that further unlocks the owner's potential. The pattern emits a subtle glow, and if it aligns with the user's abilities, the power dormant within the stone becomes more clearly evident. The power of frost freezes enemies solid, immobilizing them.",
+   "use": "Used for Karma Breakthrough and equipment crafting",
+   "sources": [
+    "[Trait Dungeon] Ghagaroach of...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Intermediate Thunderbolt Stone",
+   "type": "Trait Stone",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-thunderbolt-stone.webp",
+   "description": "A precious stone that further unlocks the owner's potential. The pattern emits a subtle glow, and if it matches the user's abilities, the power dormant within the stone becomes more clearly evident. A powerful surge of lightning shocks the enemy, causing their body to tremble.",
+   "use": "Used for Karma Breakthrough and equipment crafting",
+   "sources": [
+    "[Trait Dungeon] Ghagaroach of...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Red Pyroxene",
+   "type": "Equipment Crafting Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/red-pyroxene.webp",
+   "description": "A mysterious substance found within the bodies of powerful monsters. Since its formation process remains unknown, it is commonly referred to as a monster's gallstone. It boasts exceptional hardness and is primarily used in the crafting of armor. Its distinctive red hue is believed to be a trace of condensed monster power, adding to its decorative value and making it highly prized.",
+   "use": "Used when crafting equipment",
+   "sources": [
+    "[Disassemble] Rare-grade Equi...",
+    "[Exchange] Special"
+   ]
+  },
+  {
+   "name": "Basic Combat Text",
+   "type": "Hero Growth Materials",
+   "rarity": "Green",
+   "icon": "assets/items/icons/basic-combat-text.webp",
+   "description": "A textbook covering the fundamentals of combat. Filled with the basic knowledge and skills needed in actual battle, reading this book alone is enough to allow you to confidently call yourself a warrior anywhere. It is considered an essential guide for beginners.",
+   "use": "Upon use, gain 500 Hero EXP",
+   "sources": [
+    "[Currency Dungeon] Dragon W..."
+   ]
+  },
+  {
+   "name": "Record of Battle",
+   "type": "Hero Growth Materials",
+   "rarity": "Green",
+   "icon": "assets/items/icons/record-of-battle.webp",
+   "description": "An antique scroll containing records of countless battles. The moment you unroll it, the fierce battlefield and the heroes' valor come vividly to life. It is said that simply reading it makes the tactics and strategies of battle seem to seep into your mind.",
+   "use": "Used when enhancing skills",
+   "sources": [
+    "Hunt",
+    "[Exchange] Prog."
+   ]
+  },
+  {
+   "name": "Arcana of War",
+   "type": "Karma Growth Materials",
+   "rarity": "Green",
+   "icon": "assets/items/icons/arcana-of-war.webp",
+   "description": "An Arcana of War depicting the beginning of the Great War. It tells the story of a dragon that rebelled against the Goddess. “Darkness devoured the light, devoured life, and stretched its evil claws toward the Goddess.\"",
+   "use": "Upon use, gain 300 Karma EXP",
+   "sources": [
+    "[Currency Dungeon] Trace of t..."
+   ]
+  },
+  {
+   "name": "Mana Shard",
+   "type": "Equipment Growth Materials",
+   "rarity": "Green",
+   "icon": "assets/items/icons/mana-shard.webp",
+   "description": "A magic fragment used by apprentice blacksmiths. It contains many impurities, making it difficult to work with. As a material requiring delicate handling, it is a particularly challenging task for beginners.",
+   "use": "Use to gain 200 Equipment EXP",
+   "sources": [
+    "[Currency Dungeon] Endless S..."
+   ]
+  },
+  {
+   "name": "Low-Grade Monster Essence",
+   "type": "Monster Materials",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-monster-essence.webp",
+   "description": "Low-Grade Monster Essence, it glistens inside a small vial. It's a material that novice mercenaries treasure and collect, depending on how it's used, the ordinary can become extraordinary. The saying, 'One vial isn't enough to make you strong, but ten vials are a different story,, didn't come out of nowhere. It is used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Goblin Band..."
+   ]
+  },
+  {
+   "name": "Low-grade Monster Hide",
+   "type": "Monster Materials",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-monster-hide.webp",
+   "description": "Low-grade monster hide. While less stiff, this low-grade monster hide still feels somewhat lacking, leaving a sense of disappointment. It's often seen in the market, but few buyers are interested. Still, rumor has it that with proper preparation, it can be quite useful—so why not give it a try and see what you can do with it? Used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Undergroun..."
+   ]
+  },
+  {
+   "name": "Low-grade Monster Bone Fragment",
+   "type": "Monster Materials",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-monster-bone-fragment.webp",
+   "description": "A shattered bone fragment from a low- tier monster. It is said that the condition of the bone reveals the skill level of the mercenary who hunted it. Whether it is a source of pride or a trace of failure, this single fragment seems to hold its own story. It is used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Corrupted B..."
+   ]
+  },
+  {
+   "name": "Low-Grade Monster Carapace",
+   "type": "Monster Materials",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-monster-carapace.webp",
+   "description": "A carapace that protected the monster's skin. It looks clean at first glance, but upon closer inspection, it is densely covered with tiny scars. It feels as though it is subtly boasting, ‘I'm covered in wounds, but | held up pretty well., It is used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Silver Tusk..."
+   ]
+  },
+  {
+   "name": "Low-Grade Monster Claw",
+   "type": "Monster Materials",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-monster-claw.webp",
+   "description": "A sharp monster claw. It's serviceable enough to use as a weapon in a pinch. However, if you misjudge the direction, you might end up hurting yourself first. You might end up learning the lesson ‘Always be careful with claws!) It is used as a material to boost power and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Warg Cave [..."
+   ]
+  },
+  {
+   "name": "Binding Crystal",
+   "type": "Mining Materials",
+   "rarity": "Green",
+   "icon": "assets/items/icons/binding-crystal.webp",
+   "description": "A hard ore with a unique crystalline structure that disperses impact. It effectively absorbs and distributes strong external blows, making it an indispensable material for armor crafting. Its hardness and durability remain unchanged over time, making it particularly favored by artisans seeking to maximize defensive capabilities on the battlefield.",
+   "use": "Used in equipment crafting",
+   "sources": [
+    "Mining in the Wild"
+   ]
+  },
+  {
+   "name": "Piercing Crystal",
+   "type": "Mining Materials",
+   "rarity": "Green",
+   "icon": "assets/items/icons/piercing-crystal.webp",
+   "description": "A special ore with a pointed shape that is easy to sharpen. Its excellent workability makes it ideal for crafting or enhancing sharp weapons. Thanks to its unique hardness and sharpness, it retains its edge even after prolonged use. Piercing Crystal is regarded by craftsmen as an essential material for creating the finest weapons.",
+   "use": "Used in equipment crafting",
+   "sources": [
+    "Mining in the Wild"
+   ]
+  },
+  {
+   "name": "Low-Grade Amplitude Stone",
+   "type": "Trait Stone",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-amplitude-stone.webp",
+   "description": "A small stone with the basic ability to stimulate the owner's latent power. The pattern engraved on the stone glows faintly, allowing the user to confirm their harmony with their own energy. It slightly disrupts the enemy's consciousness, causing them to lose their balance for a brief moment.",
+   "use": "Used for Karma Breakthrough and Equipment Crafting",
+   "sources": [
+    "[Trait Dungeon] Mantius of Am...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Low-Grade Crushing Stone",
+   "type": "Trait Stone",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-crushing-stone.webp",
+   "description": "A small stone with basic properties that stimulate the owner's latent power. The pattern engraved on the stone glows faintly, allowing the user to confirm harmony with their own energy. It momentarily makes the enemy's legs stagger, causing them to lose their balance.",
+   "use": "Used for Karma Breakthrough and Equipment Crafting",
+   "sources": [
+    "[Trait Dungeon] Mantius of Cru...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Low-Grade Gale Stone",
+   "type": "Trait Stone",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-gale-stone.webp",
+   "description": "A small stone with basic abilities that stimulate the owner's latent power. The pattern engraved on the stone glows faintly, allowing the user to confirm harmony with their own energy. It causes the enemy's body to rise slightly, causing them to lose their balance.",
+   "use": "Used for Karma Breakthrough and equipment crafting",
+   "sources": [
+    "[Trait Dungeon] Mantius of Gal...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Low-Grade Breaker Stone",
+   "type": "Trait Stone",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-breaker-stone.webp",
+   "description": "A small stone with basic properties that stimulate the owner's latent power. The pattern engraved on the stone glows faintly, allowing the user to confirm harmony with their own energy. It slightly disrupts the enemy's defense, creating an opening.",
+   "use": "Used for Karma Breakthrough and equipment crafting",
+   "sources": [
+    "[Trait Dungeon] Drosophia of B...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Low-Grade Bloodburst Stone",
+   "type": "Trait Stone",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-bloodburst-stone.webp",
+   "description": "A small stone with basic properties that stimulate the owner's latent power. The pattern engraved on the stone glows faintly, allowing the user to confirm harmony with their own energy. It tears the enemy's wounds slightly deeper, leaving traces of pain.",
+   "use": "Used for Karma Breakthrough and equipment crafting",
+   "sources": [
+    "[Trait Dungeon] Drosophia of B...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Low-Grade Blazeflame Stone",
+   "type": "Trait Stone",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-blazeflame-stone.webp",
+   "description": "A small stone with basic abilities that stimulate the owner's latent power. The pattern engraved on the stone glows faintly, allowing the user to confirm harmony with their own energy. It lightly sears the enemy's skin, leaving behind searing pain.",
+   "use": "Used for Karma Breakthrough and Equipment Crafting",
+   "sources": [
+    "[Trait Dungeon] Ghagaroach of...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Low-Grade Frostbite Stone",
+   "type": "Trait Stone",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-frostbite-stone.webp",
+   "description": "A small stone with basic abilities that stimulate the owner's latent power. The pattern engraved on the stone glows faintly, allowing the user to confirm harmony with their own energy. A cold aura temporarily slows the enemy's movements.",
+   "use": "Used for Karma Breakthrough and Equipment Crafting",
+   "sources": [
+    "[Trait Dungeon] Ghagaroach of...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Low-Grade Thunderbolt Stone",
+   "type": "Trait Stone",
+   "rarity": "Green",
+   "icon": "assets/items/icons/low-grade-thunderbolt-stone.webp",
+   "description": "A small stone with basic abilities that stimulate the owner's latent power. The pattern engraved on the stone glows faintly, allowing the user to confirm harmony with their own energy. A faint electric current brushes against the enemy's body, causing mild paralysis.",
+   "use": "Used for Karma Breakthrough and equipment crafting",
+   "sources": [
+    "[Trait Dungeon] Ghagaroach of...",
+    "[Exchange] Trait Stone"
+   ]
+  },
+  {
+   "name": "Lowest-Grade Monster Essence",
+   "type": "Monster Materials",
+   "rarity": "Grey",
+   "icon": "assets/items/icons/lowest-grade-monster-essence.webp",
+   "description": "Lowest-Grade Monster Essence. It is common since it can be easily obtained from weak monsters, but as the saying goes, 'Small beginnings lead to great things;—the more you learn about it, the more interesting this material becomes. They say it's the most commonly found treasure in novice mercenaries’ pockets. It is used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Goblin Band...",
+    "[Shop] Klonie"
+   ]
+  },
+  {
+   "name": "Lowest-Grade Monster Hide",
+   "type": "Monster Materials",
+   "rarity": "Grey",
+   "icon": "assets/items/icons/lowest-grade-monster-hide.webp",
+   "description": "The stiff and tough hide of a low-tier monster, likely due to malnutrition. Though difficult to work with and sold cheaply, novice mercenaries always seem to have a sheet or two in their bags. They say this hide has its uses if handled properly, so don't throw it away—give it a try. Used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Undergroun...",
+    "[Shop] Klonie"
+   ]
+  },
+  {
+   "name": "Lowest-Grade Monster Bone Fragment",
+   "type": "Monster Materials",
+   "rarity": "Grey",
+   "icon": "assets/items/icons/lowest-grade-monster-bone-fragment.webp",
+   "description": "Broken bone fragments from low-tier monsters. These are primarily obtained from monsters composed of bone, and judging by their shattered appearance, they seem to have taken quite a heavy blow. They are one of the common spoils of war that novice mercenaries proudly bring back, exclaiming, “I did it!\" They are used as materials to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Corrupted B...",
+    "[Shop] Klonie"
+   ]
+  },
+  {
+   "name": "Lowest-Grade Monster Carapace",
+   "type": "Monster Materials",
+   "rarity": "Grey",
+   "icon": "assets/items/icons/lowest-grade-monster-carapace.webp",
+   "description": "A small piece of carapace that once covered a monster's skin. Deep scars from frequent battles and rough, torn edges are clearly visible. Although it is hard, its appearance makes it difficult to value highly. It seems to say, 'I used to be in good shape, too., It is used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Silver Tusk...",
+    "[Shop] Klonie"
+   ]
+  },
+  {
+   "name": "Lowest-Grade Monster Claw",
+   "type": "Monster Materials",
+   "rarity": "Grey",
+   "icon": "assets/items/icons/lowest-grade-monster-claw.webp",
+   "description": "A monster's claw with a blunt tip and missing teeth. It's hard to call it threatening, but a claw is still a claw. If you let your guard down while handling it, you might end up with a surprisingly painful experience. Be careful if you don't want this to end up as a laughing matter with people asking, 'Is that all it took to hurt you?, It is used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Warg Cave [...",
+    "[Shop] Klonie"
+   ]
+  }
+ ]
+}
