@@ -1,3 +1,6 @@
+## 2026-10-31 — Claude: Status Effects box: no cap
+- Status Effects box on character pages: the line saying 3.5x was the highest seen (and suggesting a cap) now says bonuses add with no cap, with Stun + Knockdown + Airborne measured at 4x.
+
 ## 2026-10-31 — Claude: David's titles, two stale notes
 - `TITLES`: Environmental Cleaner and Black Wings marked as obtained (5 of 109); cumulative effect matches the game (Defense +10, Max HP +100, Defense Up +1.50%, Critical Rate +1.30%).
 - `STATUS_EFFECTS.damageOverTime.untested` and `HERO_STAT_MODEL.observations.titles` brought up to date (both described tests as missing that are done).
