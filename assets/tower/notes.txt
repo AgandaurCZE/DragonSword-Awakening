@@ -72,8 +72,10 @@ Airborne AD 15%, Airborne AAP 250; no crits)
   Poison +100%; they add (Airborne + Poison: x2.5 x (1 + 4 + 1) = x15). Reina's 15% Airborne Additional Damage joins
   the same pool (run 1 fits within 3). Details in data.json DAMAGE_TESTS.
 - Stun gets NO tower bonus: Stun + Airborne 26390 (x3 x 5 = x15), Stun + Poison + Airborne 36947 (x3.5 x 6 = x21).
-- Still open: why Poison gets +100% (all damage-over-time statuses, or are the archers weak to Poison?) and whether
-  each tower gives its own status +400%.
+- Burn gets +100% like Poison: Burn + Airborne 26390 (x2.5 x 6 = x15). So: Airborne +400%, damage-over-time
+  statuses +100% (Poison, Burn; Bleed and Shock not tested), Stun 0.
+- Still open: does each tower give its own status +400% (e.g. Stun in the Tower of Amplitude)? Is the +100% from the
+  tower or from these archers?
 
 MAP (source/map-panel.webp): the map shows a "Tower of Trials" point only after the side quest; "Warp" takes you
 there. It isn't in the menu or the Mercenary Guide.
