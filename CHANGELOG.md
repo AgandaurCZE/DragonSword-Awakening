@@ -1,3 +1,6 @@
+## 2026-10-31 — Claude: tower crests (preview only)
+- Towers mode: each tower tab shows its crest, cut from David's deploy-screen Recommendations icons.
+
 ## 2026-10-31 — Claude: tower quotes (preview only)
 - Towers mode: the in-game quotes for the towers of Crushing and Amplitude (from David).
 

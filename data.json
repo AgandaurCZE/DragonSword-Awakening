@@ -20551,7 +20551,8 @@
     "status": "Stun",
     "measured": true,
     "pos": "0% 50%",
-    "text": "The strong are not merely those who endure, but those who bring down. If you cannot bring it down, you have no right to climb."
+    "text": "The strong are not merely those who endure, but those who bring down. If you cannot bring it down, you have no right to climb.",
+    "crest": "assets/ui/crest-amplitude.webp"
    },
    {
     "id": "gale",
@@ -20560,7 +20561,8 @@
     "status": "Airborne",
     "measured": true,
     "pos": "50% 50%",
-    "text": "He who moves first shall control the flow. He who is as light and swift as the wind shall survive and ascend."
+    "text": "He who moves first shall control the flow. He who is as light and swift as the wind shall survive and ascend.",
+    "crest": "assets/ui/crest-gale.webp"
    },
    {
     "id": "crushing",
@@ -20569,7 +20571,8 @@
     "status": "Knockdown",
     "measured": false,
     "pos": "100% 50%",
-    "text": "He who severs consciousness shall sever the flow. If you cannot create even a single moment of silence, you will not reach it easily."
+    "text": "He who severs consciousness shall sever the flow. If you cannot create even a single moment of silence, you will not reach it easily.",
+    "crest": "assets/ui/crest-crushing.webp"
    }
   ],
   "image": "assets/ui/mode-towers.webp"
