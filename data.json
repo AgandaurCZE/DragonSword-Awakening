@@ -20240,6 +20240,19 @@
      "enabler",
      "easy"
     ]
+   },
+   "Eileen": {
+    "overall": {
+     "tier": "S"
+    },
+    "tags": [
+     "buffer",
+     "expert"
+    ],
+    "expert": {
+     "drop": 1,
+     "reason": "Her buffs only reach teammates who swap in and stand in her circles (Brave One 10 s, Vanguard Banner ~9.5 s, fade ~2 s after leaving). Played well: about +17-21% damage for the whole team plus an Airborne lock on everything her banner dance sweeps."
+    }
    }
   }
  }
