@@ -220,7 +220,7 @@
     "Mid-game": "A",
     "End-game": "A"
    },
-   "owned": false,
+   "owned": true,
    "role": "Support",
    "classType": "Buffer",
    "obtain": {
@@ -258,7 +258,7 @@
     "Mid-game": "S",
     "End-game": "S"
    },
-   "owned": false,
+   "owned": true,
    "role": "Main DPS",
    "classType": "Damage / Control",
    "obtain": {
@@ -12739,6 +12739,26 @@
     13,
     207
    ],
+   "Lv40 pre-breakthrough Johnny/Reina": [
+    433,
+    135,
+    2898
+   ],
+   "Lv40 pre-breakthrough Charlotte": [
+    447,
+    130,
+    2823
+   ],
+   "Lv40 breakthrough Johnny/Reina": [
+    35,
+    18,
+    276
+   ],
+   "Lv40 breakthrough Charlotte": [
+    43,
+    15,
+    230
+   ],
    "order": [
     "Attack",
     "Defense",
@@ -12746,21 +12766,21 @@
    ]
   },
   "levelCurve": {
-   "formula": "a + b*(exp(r*(L-1)) - 1); least-squares fit to Lv1, Lv10, Lv20, Lv30 (largest error 0.7 Attack, 0.3 Defense, 5 Max HP). A quadratic fits worse (1.1 / 0.4 / 7). Level 40 will decide: this curve predicts 371 / 103 / 2402 before breakthrough bonuses.",
+   "formula": "a + b*(exp(r*(L-1)) - 1); least-squares fit to the level part (stats minus earlier breakthrough bonuses) at Lv1, Lv10, Lv20, Lv30 and Lv40 (31 Oct 2026; largest error 1.3 Attack, 0.6 Defense, 9 Max HP). The Lv40 level part was 378 / 106 / 2448 for both profiles; the old 4-point fit had predicted 371 / 103 / 2402, so the curve was refitted.",
    "Attack": {
-    "a": 71.28566,
-    "b": 252.30228,
-    "r": 0.02009
+    "a": 71.84059,
+    "b": 217.09618,
+    "r": 0.0225357
    },
    "Defense": {
-    "a": 20.1047,
-    "b": 66.36601,
-    "r": 0.02077
+    "a": 20.36456,
+    "b": 52.15977,
+    "r": 0.0248728
    },
    "Max HP": {
-    "a": 463.02195,
-    "b": 1606.58316,
-    "r": 0.0203
+    "a": 466.86608,
+    "b": 1369.85292,
+    "r": 0.0229141
    }
   },
   "breakthroughProfiles": {
@@ -12769,17 +12789,20 @@
     "Attack": {
      "Lv20": 32,
      "Lv30": 37,
-     "perTierIncrease": 5
+     "perTierIncrease": 5.5,
+     "Lv40": 43
     },
     "Defense": {
      "Lv20": 11,
      "Lv30": 13,
-     "perTierIncrease": 2
+     "perTierIncrease": 2,
+     "Lv40": 15
     },
     "Max HP": {
      "Lv20": 173,
      "Lv30": 202,
-     "perTierIncrease": 29
+     "perTierIncrease": 28.5,
+     "Lv40": 230
     }
    },
    "B": {
@@ -12787,17 +12810,20 @@
     "Attack": {
      "Lv20": 25,
      "Lv30": 30,
-     "perTierIncrease": 5
+     "perTierIncrease": 5,
+     "Lv40": 35
     },
     "Defense": {
      "Lv20": 13,
      "Lv30": 16,
-     "perTierIncrease": 3
+     "perTierIncrease": 2.5,
+     "Lv40": 18
     },
     "Max HP": {
      "Lv20": 207,
      "Lv30": 243,
-     "perTierIncrease": 36
+     "perTierIncrease": 34.5,
+     "Lv40": 276
     }
    }
   },
@@ -12807,184 +12833,185 @@
    "critRateText": "In-game: 'Increases the chance of a Critical Hit ... The final probability is determined by the target's Critical Hit Resistance.' Nothing says what happens above 100%.",
    "setBonusTest": "Ballad of Life on Charlotte (no other gear stats, no Karma): Max HP 1975 -> 2152 with 2 pieces (+9%) -> 2271 with 3 pieces (+15% = 2-piece + 3-piece) -> 2271 with 5 pieces. Displayed values are rounded down.",
    "titles": "Titles (achievement rewards, Mercenary Crew > Title) give passive bonuses to every hero, slotted or not. All 109 titles and their passives are in TITLES (29 Oct 2026). At the Lv1 measurement David had 3 titles (Defense +10, Max HP +50, Defense Up +1.5%), which is exactly why Lv1 showed 71/30/511 with titles vs 71/20/461 without. HERO_BASE_STATS and the level curve exclude titles; the end-game totals add the titles each viewer ticks on the Titles tab."
-  }
+  },
+  "breakthroughNote": "Lv20, Lv30 and Lv40 bonuses are measured (Lv40 on Johnny, Reina and Charlotte, 31 Oct 2026). Lv50 and Lv60 are estimates: the last measured bonus plus perTierIncrease, the average step from Lv20 to Lv40."
  },
  "HERO_BASE_STATS": {
   "Johnny": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Lute": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Castella": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Aria": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Dana": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Kalien": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Roxy": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Alex": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Theresia": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Ornette": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Sion": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Tarte": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Kalsion": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Cerese": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Reina": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Astria": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Eileen": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Othello": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Charlotte": {
-   "Attack": 1038,
-   "Defense": 307,
-   "Max HP": 6531,
+   "Attack": 1097,
+   "Defense": 333,
+   "Max HP": 6905,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "A"
   },
   "Ryza": {
-   "Attack": 1003,
-   "Defense": 327,
-   "Max HP": 6771,
+   "Attack": 1058,
+   "Defense": 349,
+   "Max HP": 7136,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -14330,23 +14357,27 @@
  "TITLES": {
   "note": "All 109 titles, read from David's screen recording of the Title list (29 Oct 2026), in the game's order. Every obtained title's passive applies to all heroes, slotted or not. Flat bonuses are added to the hero's flat stats before % bonuses multiply; % bonuses join the same pool as gear and set % (confirmed in-game). Name colours are the game's: the five colours run from strongest (pink) to weakest (lavender) passives. The game hides the condition once a title is obtained, so Curious Hands and 【777】 have none recorded; Novice Mercenary Crew's is inferred from the other promotion titles. David's titles updated 31 Oct 2026 (5 of 109: Environmental Cleaner and Black Wings added; the game's Cumulative Set Effect, Defense +10, Max HP +100, Defense Up +1.50%, Critical Rate +1.30%, matches the sum).",
   "totalCount": 109,
-  "ownedCount": 5,
+  "ownedCount": 7,
   "ownedCumulative": [
+   {
+    "stat": "Critical Hit Chance",
+    "value": 2.6
+   },
+   {
+    "stat": "Critical Damage",
+    "value": 1
+   },
    {
     "stat": "Defense",
     "value": 10
-   },
-   {
-    "stat": "Max HP",
-    "value": 100
    },
    {
     "stat": "Defense Up",
     "value": 1.5
    },
    {
-    "stat": "Critical Hit Chance",
-    "value": 1.3
+    "stat": "Max HP",
+    "value": 200
    }
   ],
   "list": [
@@ -14595,7 +14626,7 @@
    {
     "name": "Doting Parent",
     "grade": 2,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Critical Hit Chance",
@@ -15171,7 +15202,7 @@
    {
     "name": "Intermediate Mercenary Crew",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
@@ -15844,7 +15875,9 @@
    "Frost (David, 31 Oct 2026, Cerese + Reina): no damage ticks; 3 stacks Freeze the enemy (can't act); a Frozen enemy takes +50% from hits, added like the other status bonuses (Reina Wind Slayer: clean 1742, Frozen 2613, Airborne 5605, Airborne + Frozen 7006 - all as predicted). Only Cerese's Shattering Touch shatters Frozen enemies / Ice Blocks.",
    "Charlotte's swap-in counts as a dodge for 'when dodging' effects (Venomfog Shade 3-piece: +4% Crit Rate for 12 s, confirmed on her panel, 31 Oct 2026); Johnny's swap-in doesn't. Tip: the U key opens the stat panel during a fight without restarting it.",
    "Three physical statuses add with no cap (David, 31 Oct 2026, video of Reina's Wind Slayer Lv.1 on Lv.90 goblins; Reina 626 Attack, Stun AAP 250, Airborne AAP 250, Airborne Additional Damage 15%): clean 1742; Stun + Knockdown 7311 (= 1742 x 876/626 x 3, predicted 7313); Stun + Knockdown + Airborne about 14407 (= 1742 x 1126/626 x 4 x 1.15) and the same hit as a crit 21611 (= 14407 x 1.5, Reina's Crit Damage is 50%, confirmed on her panel). Both white hits give the same true Attack of 626.6 (the panel rounds down). So the bonuses keep adding (x4); the earlier x3.5 goblin result was most likely Bleed wearing off.",
-   "Tower of Trials adds to the Additional Damage pool (David, 31 Oct 2026, Tower of Gale floor 1, Reina's Ultimate on the archers, no crits). Without Airborne gear stats (384 Attack): clean 1759, Airborne 17593 (x10), Poison 5278 (x3), Airborne + Poison 26390 (x15). That is the normal hit bonus (x2, x1.5, x2.5) times (1 + tower bonus): +400% for Airborne (the tower's own status) and +100% for Poison, added together (x5, x2, x6). With her Airborne gear (626 Attack, Airborne AAP 250, Airborne Additional Damage 15%): clean 2904, Airborne 41843, Poison 8712, Airborne + Poison 62460; the tower bonus joins the same pool as Additional Damage: 2904 x 876.6/626.6 x 2 x (1 + 4 + 0.15) = 41845 and x 2.5 x (1 + 4 + 1 + 0.15) = 62463. All 7 hits fit within 3. Stun gets no tower bonus: Stun + Airborne 26390 (= x3 x (1 + 4) = x15), Stun + Poison + Airborne 36947 (= x3.5 x (1 + 4 + 1) = x21). Burn gets +100% like Poison: Burn + Airborne 26390 (= x2.5 x (1 + 4 + 1) = x15). So in the Tower of Gale: Airborne +400%, damage-over-time statuses (Poison, Burn; Bleed and Shock not tested) +100%, Stun 0. Tower of Amplitude, same Reina setup: clean 1759, Poison 5278 (x3), Airborne 3518 (x2, no tower bonus), Poison + Airborne 8796 (x2.5 x (1 + 1) = x5). So the +100% for damage-over-time statuses is the towers, not the archers, and Airborne only gets +400% in its own tower. Stun in the Tower of Amplitude: Stun 17593 (x10 = x2 x (1 + 4)), Stun + Airborne 26390 (x3 x 5 = x15), Stun + Airborne + Poison 36947 (x3.5 x 6 = x21): the mirror of the Tower of Gale. Rule: each tower gives its own status +400% and damage-over-time statuses +100%, other statuses nothing, all added to the Additional Damage pool. A second enemy in each tower took about 4% less (Airborne 3379 vs 3518; a harpy's Poison + Airborne 25345 vs the archers' 26390): different Defense, the same ratio both times."
+   "Tower of Trials adds to the Additional Damage pool (David, 31 Oct 2026, Tower of Gale floor 1, Reina's Ultimate on the archers, no crits). Without Airborne gear stats (384 Attack): clean 1759, Airborne 17593 (x10), Poison 5278 (x3), Airborne + Poison 26390 (x15). That is the normal hit bonus (x2, x1.5, x2.5) times (1 + tower bonus): +400% for Airborne (the tower's own status) and +100% for Poison, added together (x5, x2, x6). With her Airborne gear (626 Attack, Airborne AAP 250, Airborne Additional Damage 15%): clean 2904, Airborne 41843, Poison 8712, Airborne + Poison 62460; the tower bonus joins the same pool as Additional Damage: 2904 x 876.6/626.6 x 2 x (1 + 4 + 0.15) = 41845 and x 2.5 x (1 + 4 + 1 + 0.15) = 62463. All 7 hits fit within 3. Stun gets no tower bonus: Stun + Airborne 26390 (= x3 x (1 + 4) = x15), Stun + Poison + Airborne 36947 (= x3.5 x (1 + 4 + 1) = x21). Burn gets +100% like Poison: Burn + Airborne 26390 (= x2.5 x (1 + 4 + 1) = x15). So in the Tower of Gale: Airborne +400%, damage-over-time statuses (Poison, Burn; Bleed and Shock not tested) +100%, Stun 0. Tower of Amplitude, same Reina setup: clean 1759, Poison 5278 (x3), Airborne 3518 (x2, no tower bonus), Poison + Airborne 8796 (x2.5 x (1 + 1) = x5). So the +100% for damage-over-time statuses is the towers, not the archers, and Airborne only gets +400% in its own tower. Stun in the Tower of Amplitude: Stun 17593 (x10 = x2 x (1 + 4)), Stun + Airborne 26390 (x3 x 5 = x15), Stun + Airborne + Poison 36947 (x3.5 x 6 = x21): the mirror of the Tower of Gale. Rule: each tower gives its own status +400% and damage-over-time statuses +100%, other statuses nothing, all added to the Additional Damage pool. A second enemy in each tower took about 4% less (Airborne 3379 vs 3518; a harpy's Poison + Airborne 25345 vs the archers' 26390): different Defense, the same ratio both times.",
+   "Sion (David, 31 Oct 2026, Test Kit): Bless gives Attack Power +10% at Lv.1 rising +0.5% per level to 14% at Lv.9 and 15% at Lv.10; the Defense version is the same (10-15%). Even steps then a double step at max, like every buff measured so far. How the field works (David): the Ultimate's relic field lasts as long as Sion stays on the field, and he can switch it between the Attack and Defense buff; it is about twice the size of Eileen's Brave One circle; after Sion swaps out it stays for 10 s, and swapping him back in during those 10 s refreshes it, so played right the buff never drops. A buff lingers 2 s after you switch it or leave the field, like Eileen's.",
+   "Team buff stacking (David, 31 Oct 2026, Test Kit): a hero with 71 Attack had 78 with Eileen's Brave One, 78 with Sion's Bless and 85 with both (both at 10%). Adding predicts 85.2 and multiplying 85.9; displayed stats round down, so both show 85 unless the true Attack is 71.07 or more. The result fits adding (and Brave One is already known to join the Attack Power Up pool) but doesn't prove it: the same test at a higher Attack (about 400+) would separate the two (adding vs multiplying differ by about 1%). Vanguard Banner lasted 10 s in this test."
   ],
   "tests": [
    {
@@ -17351,6 +17384,42 @@
      "Burn + Airborne x15.00 = x2.5 x 6: Burn gets the same +100% tower bonus as Poison.",
      "Tower of Amplitude: Poison x3.00, Airborne x2.00, Poison + Airborne x5.00: damage-over-time +100% in both towers; Airborne gets no tower bonus outside the Tower of Gale.",
      "Tower of Amplitude: Stun x10.00, Stun + Airborne x15.00, Stun + Airborne + Poison x21.00: Stun +400% in its own tower, Airborne 0, Poison +100%. Confirmed rule for both towers."
+    ]
+   },
+   {
+    "test": "Level 40 base stats",
+    "date": "2026-10-31",
+    "by": "David",
+    "hits": {},
+    "heroes": {
+     "Johnny/Reina (profile B)": {
+      "pre": [
+       433,
+       135,
+       2898
+      ],
+      "post": [
+       468,
+       153,
+       3174
+      ]
+     },
+     "Charlotte (profile A)": {
+      "pre": [
+       447,
+       130,
+       2823
+      ],
+      "post": [
+       490,
+       145,
+       3053
+      ]
+     }
+    },
+    "observations": [
+     "Level part (minus the Lv20 and Lv30 bonuses) is 378 / 106 / 2448 for both profiles; the old curve predicted 371 / 103 / 2402, so HERO_STAT_MODEL.levelCurve was refitted.",
+     "Lv40 breakthrough: B +35 / +18 / +276, A +43 / +15 / +230."
     ]
    }
   ],
@@ -19352,7 +19421,7 @@
     "name": "Shadow Wing Cat",
     "group": "Cat",
     "image": "assets/familiars/shadow-wing-cat.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "task",
      "label": "Open Treasure Chest",
@@ -19476,7 +19545,7 @@
     "name": "Fierce Rhinoceros Beetle",
     "group": "Insect",
     "image": "assets/familiars/fierce-rhinoceros-beetle.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "currency",
      "currency": "emblem",
@@ -19488,7 +19557,7 @@
     "name": "Cowardly Firefly",
     "group": "Insect",
     "image": "assets/familiars/cowardly-firefly.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "task",
      "label": "Mining",
@@ -19532,7 +19601,7 @@
     "name": "Sandstorm Sky Wolf",
     "group": "Sky Wolf",
     "image": "assets/familiars/sandstorm-sky-wolf.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "currency",
      "currency": "gold",
@@ -19601,7 +19670,7 @@
     "name": "Maple Flying Squirrel",
     "group": "Squirrel",
     "image": "assets/familiars/maple-flying-squirrel.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "promotion",
      "label": "Intermediate Mercenary Crew Promotion"
@@ -19827,12 +19896,12 @@
   },
   "owned": {
    "Bird": 1,
-   "Cat": 0,
+   "Cat": 1,
    "Direwolf": 0,
    "Griffon": 0,
-   "Insect": 1,
-   "Sky Wolf": 1,
-   "Squirrel": 0,
+   "Insect": 3,
+   "Sky Wolf": 2,
+   "Squirrel": 1,
    "Dragon": 0
   },
   "passiveNote": "Each species' passive unlocks step by step as you collect more familiars of that species (1 to 4; the Dragon has only one). Steps marked with the species name apply only to that species; the rest apply to all familiars. Text from the game; one typo fixed (\"consumtion\").",
@@ -20162,10 +20231,20 @@
     "weak": [],
     "immune": [],
     "portrait": "assets/bosses/barduk.webp"
+   },
+   {
+    "id": "gallore",
+    "name": "Gallore the Collapse",
+    "level": 35,
+    "type": "Hunt",
+    "image": "assets/bosses/gallore-banner.webp",
+    "weak": [],
+    "immune": [],
+    "portrait": "assets/bosses/gallore.webp"
    }
   ],
   "undiscovered": {
-   "Hunt": 3,
+   "Hunt": 2,
    "Raid": 1
   },
   "about": [

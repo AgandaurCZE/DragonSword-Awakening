@@ -1,0 +1,65 @@
+Common chest drop table:
+Mercenary Crew EXP: 50
+Gold: 1000
+Two of either (usually):
+Arcana of War: 6
+Basic Combat Text:
+Mana Shard
+Mana Crystal
+Arcana of War
+
+Uncommon chest drop table:
+Mercenary Crew EXP: 100
+Gold: 3000
+Two of either (usually) :
+Advanced Combat: 17
+Basic Combat Text
+Arcana of War
+Arcana of Beginnings
+Mana Shard
+Mana Ore
+
+Rare chest drop table:
+Mercenary Crew EXP: 150
+Gold: 5000
+Fragment of Sacrifice: 10
+Two of either (usually) :
+Advanced Combat Text: 18
+Basic Combat Text
+Forging Mold: 1	or: Insignia: 1
+Blue rarity trait stones: 2
+Mana Shards ?
+Mana Ore ?
+Arcana of Power ?
+Arcana of Beginnings ?
+Arcana of Peace ?
+
+Epic chest drop table:
+Mercenary Crew EXP: 1000
+Gold: 30000
+Fragment of Sacrifice: 15
+Three+ of either (usually) :
+Mana Ore: 5
+Core Combat Text: 9
+Chronograph of Ages: 2
+Arcana of Peace ?
+Insignia: 1
+
+Legendary chest drop table:
+Mercenary Crew EXP: 1000
+Gold: 30000
+Fragment of Sacrifice: 25
+Four+ of either (usually) :
+Arcana of the Future: 5
+Insignia (different kinds) in total: 2 (1+1)
+Stigma Awaken Stone 2x (Seems only to be from specific chests from some side-activities only)	
+Forbidden Grimoire (From chests found only by Treasure Maps)
+Mana Ore: 6
+Arcana of Future ?
+Raw Mana Stone ?
+
+- The higher the rarity of material the less you get
+- Locked chests (Needs Moon Key) seem to have one additional reward (Epic and Legendary chests only) otherwise same.
+
+Statue restoration: 500exp, 1 moon key, 25 Fragment of Sacred Light, 10 Advanced Combat Text
+Eona's legacy (Equivalent to like radio towers in Far Cry or Statue of The Seven from Genshin where it discovers the region it's in):  300exp, 10000gold, 1 Moon Key, 25 Fragment of Sacred Light, 10 Mana Crystal 

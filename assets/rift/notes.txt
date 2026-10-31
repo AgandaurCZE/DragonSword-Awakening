@@ -1,0 +1,17 @@
+Rift (not released as a mode yet). David's notes, 31 Oct 2026, from the voiced side-quest line unlocked after story
+chapter 4 (17 quests). rift-portal.webp: a Rift portal in the open world, with one Corrupted Entity on screen.
+
+STORY
+- During the quests the MC (Lute) pulls a child named Ninian out of the Rift; she sees him as her father. At the end she
+  evolves like the Corrupted monsters do, but glowing gold, because she was loved. The line ends with her leaving the
+  MC asleep in a field of flowers where she evolved. (Title "Doting Parent" came from this line.)
+
+CORRUPTED ENTITIES (official name)
+- Never-seen models, black with purple glowing veins. The Rift spawns them.
+- On death a Corrupted Entity always drops a black crystal, Crystal of Erosion (official name).
+- Other Corrupted Entities can eat these crystals: they turn into an undamageable cocoon and come out as an evolved,
+  bigger version, with their HP fully restored.
+  Small eats 1 crystal -> Medium. Medium eats 2 -> Large. Large ignores crystals (final stage).
+- Resistance rises a lot with each stage (Lv.50 enemies; Reina, uses needed for Airborne):
+  Ultimate: Small 1, Medium 2, Large 4. Skill: Small 1, Medium 2, Large 4. All halved when the enemy is Broken.
+- Super Armor seems much higher than usual: Lv.90 training goblins break in one hit, these don't.

@@ -42,8 +42,17 @@ def level_part(stat, L=70):
     return c['a'] + c['b'] * (math.exp(c['r'] * (L - 1)) - 1)
 
 def breakthroughs(profile, stat):
+    # measured tiers (Lv20, Lv30, Lv40, ...) as they are; later tiers = last measured + perTierIncrease per tier
     p = M['breakthroughProfiles'][profile][stat]
-    return sum(p['Lv20'] + p['perTierIncrease'] * i for i in range(len(M['breakthroughs'])))
+    total, last, k = 0, None, 0
+    for lv in M['breakthroughs']:
+        if f'Lv{lv}' in p:
+            last, k = p[f'Lv{lv}'], 0
+            total += last
+        else:
+            k += 1
+            total += last + p['perTierIncrease'] * k
+    return total
 
 base = json.loads(json.dumps(d['HERO_BASE_STATS']))
 for n, b in base.items():

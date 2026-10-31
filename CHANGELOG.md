@@ -1,3 +1,10 @@
+## 2026-10-31 — Claude: level 40, Kalsion, Sion, Gallore, familiars, Rift notes
+- Level-70 estimates: refitted the level curve with David's level-40 measurements and stored the Lv.40 breakthroughs (B +35/+18/+276, Charlotte +43/+15/+230). Every hero's estimated base stats rose (profile B 1003/327/6771 -> 1058/349/7136); no build changed. `tools/hero_stats.py` now uses every measured breakthrough tier.
+- Kalsion and Sion owned, with colour portraits. Familiars in colour: Fierce Rhinoceros Beetle, Cowardly Firefly, Maple Flying Squirrel, Shadow Wing Cat, Sandstorm Sky Wolf (passive steps updated). Titles 7/109.
+- New tier list (preview): Gallore the Collapse (Lv.35) as the fourth Hunt boss tab.
+- `DAMAGE_TESTS`: Sion's Bless by level (10-15%), how his field works, and the first team-buff stacking test.
+- Notes only: `assets/rift/` (Rift and Corrupted Entities), `assets/exchange/chest-drops.txt`. David's source PNGs deleted after cutting.
+
 ## 2026-10-31 — Claude: tower crests (preview only)
 - Towers mode: each tower tab shows its crest, cut from David's deploy-screen Recommendations icons.
 

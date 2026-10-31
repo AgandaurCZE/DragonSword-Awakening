@@ -232,3 +232,10 @@ Team idea (David, 31 Oct): Eileen + a "gatherer" for groups - pull enemies into 
 TOWER OF TRIALS (found 31 Oct, side quest "Barduk's Intentions"): towers of Amplitude, Gale and Crushing so far; 30 floors x 3 stars each; cumulative star rewards give Fragment of Memory and Whirling Thoughts (55 per tower). Notes and screens in assets/tower/. Possible later: a preview-only Tower of Trials tab (ask David first), and which heroes fit each tower once the floors' rules/enemies are known.
 
 BREAK / SUPER ARMOR (31 Oct, David + in-game Help, see assets/help/notes.txt): Break adds no damage (Charlotte 52 -> 118 fully explained by AAP). Physical statuses still apply under Super Armor (slower, enemy keeps acting); after Break they actually control the enemy. Possible later: one line on this in the Status Effects box, in the game's words (ask David first).
+
+31 Oct evening (story chapter 4 done):
+- Level 40 measured (Johnny/Reina, Charlotte): curve refitted, Lv40 breakthroughs stored, all level-70 estimates rerun (about +5% Attack). Kalsion and Sion owned (to rate). Titles 7/109 (Intermediate Mercenary Crew, Doting Parent).
+- 4th Hunt boss Gallore the Collapse (Lv.35, material Stilled Core of Collapse) added to the Bosses tabs; 2 Hunt bosses left undiscovered.
+- OPEN: the Hunt list shows Furcas at Lv.35 again (data says 20; Vanak 25, Barduk 30, Gallore 35). Is Lv.35 Furcas's current difficulty? Ask David.
+- Rift notes in assets/rift/ (not released yet). Chest drops in assets/exchange/chest-drops.txt.
+- Team buffs: first test fits adding but can't prove it (71 Attack too small); redo with a 1,000+ damage hit.

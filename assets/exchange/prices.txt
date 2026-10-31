@@ -80,3 +80,7 @@ SPECIAL MATERIALS (David, 30 Oct 2026)
   Exchange (25), Normal Dungeons (probably rare), Raid.
 - Anonymous Artisan's Crafting Tool: 5 unlock one Rune slot. Exchange (100), Raid.
 - Moon Key: opens special locked chests in the open world (usually Legendary). Exchange only (20).
+
+HUNT BOSS MATERIALS (David): Furcas -> Spiny Fin, Vanak -> Blood-stained Hook, Barduk -> Sage's Blood,
+Gallore the Collapse (4th Hunt boss, Lv.35, found 31 Oct) -> Stilled Core of Collapse.
+Gallore Normal rewards shown: 700 EXP, 1 / 10 / 20 of three items (icons only in the screenshot).
