@@ -1,3 +1,6 @@
+## 2026-10-31 — Claude: team buffs add
+- `DAMAGE_TESTS`: Eileen's Brave One and Sion's Bless add to each other (Reina: 2,094 / 2,231 / 2,369 damage; adding predicts 2,368, multiplying 2,377). Data only.
+
 ## 2026-10-31 — Claude: level 40, Kalsion, Sion, Gallore, familiars, Rift notes
 - Level-70 estimates: refitted the level curve with David's level-40 measurements and stored the Lv.40 breakthroughs (B +35/+18/+276, Charlotte +43/+15/+230). Every hero's estimated base stats rose (profile B 1003/327/6771 -> 1058/349/7136); no build changed. `tools/hero_stats.py` now uses every measured breakthrough tier.
 - Kalsion and Sion owned, with colour portraits. Familiars in colour: Fierce Rhinoceros Beetle, Cowardly Firefly, Maple Flying Squirrel, Shadow Wing Cat, Sandstorm Sky Wolf (passive steps updated). Titles 7/109.

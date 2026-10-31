@@ -15877,7 +15877,7 @@
    "Three physical statuses add with no cap (David, 31 Oct 2026, video of Reina's Wind Slayer Lv.1 on Lv.90 goblins; Reina 626 Attack, Stun AAP 250, Airborne AAP 250, Airborne Additional Damage 15%): clean 1742; Stun + Knockdown 7311 (= 1742 x 876/626 x 3, predicted 7313); Stun + Knockdown + Airborne about 14407 (= 1742 x 1126/626 x 4 x 1.15) and the same hit as a crit 21611 (= 14407 x 1.5, Reina's Crit Damage is 50%, confirmed on her panel). Both white hits give the same true Attack of 626.6 (the panel rounds down). So the bonuses keep adding (x4); the earlier x3.5 goblin result was most likely Bleed wearing off.",
    "Tower of Trials adds to the Additional Damage pool (David, 31 Oct 2026, Tower of Gale floor 1, Reina's Ultimate on the archers, no crits). Without Airborne gear stats (384 Attack): clean 1759, Airborne 17593 (x10), Poison 5278 (x3), Airborne + Poison 26390 (x15). That is the normal hit bonus (x2, x1.5, x2.5) times (1 + tower bonus): +400% for Airborne (the tower's own status) and +100% for Poison, added together (x5, x2, x6). With her Airborne gear (626 Attack, Airborne AAP 250, Airborne Additional Damage 15%): clean 2904, Airborne 41843, Poison 8712, Airborne + Poison 62460; the tower bonus joins the same pool as Additional Damage: 2904 x 876.6/626.6 x 2 x (1 + 4 + 0.15) = 41845 and x 2.5 x (1 + 4 + 1 + 0.15) = 62463. All 7 hits fit within 3. Stun gets no tower bonus: Stun + Airborne 26390 (= x3 x (1 + 4) = x15), Stun + Poison + Airborne 36947 (= x3.5 x (1 + 4 + 1) = x21). Burn gets +100% like Poison: Burn + Airborne 26390 (= x2.5 x (1 + 4 + 1) = x15). So in the Tower of Gale: Airborne +400%, damage-over-time statuses (Poison, Burn; Bleed and Shock not tested) +100%, Stun 0. Tower of Amplitude, same Reina setup: clean 1759, Poison 5278 (x3), Airborne 3518 (x2, no tower bonus), Poison + Airborne 8796 (x2.5 x (1 + 1) = x5). So the +100% for damage-over-time statuses is the towers, not the archers, and Airborne only gets +400% in its own tower. Stun in the Tower of Amplitude: Stun 17593 (x10 = x2 x (1 + 4)), Stun + Airborne 26390 (x3 x 5 = x15), Stun + Airborne + Poison 36947 (x3.5 x 6 = x21): the mirror of the Tower of Gale. Rule: each tower gives its own status +400% and damage-over-time statuses +100%, other statuses nothing, all added to the Additional Damage pool. A second enemy in each tower took about 4% less (Airborne 3379 vs 3518; a harpy's Poison + Airborne 25345 vs the archers' 26390): different Defense, the same ratio both times.",
    "Sion (David, 31 Oct 2026, Test Kit): Bless gives Attack Power +10% at Lv.1 rising +0.5% per level to 14% at Lv.9 and 15% at Lv.10; the Defense version is the same (10-15%). Even steps then a double step at max, like every buff measured so far. How the field works (David): the Ultimate's relic field lasts as long as Sion stays on the field, and he can switch it between the Attack and Defense buff; it is about twice the size of Eileen's Brave One circle; after Sion swaps out it stays for 10 s, and swapping him back in during those 10 s refreshes it, so played right the buff never drops. A buff lingers 2 s after you switch it or leave the field, like Eileen's.",
-   "Team buff stacking (David, 31 Oct 2026, Test Kit): a hero with 71 Attack had 78 with Eileen's Brave One, 78 with Sion's Bless and 85 with both (both at 10%). Adding predicts 85.2 and multiplying 85.9; displayed stats round down, so both show 85 unless the true Attack is 71.07 or more. The result fits adding (and Brave One is already known to join the Attack Power Up pool) but doesn't prove it: the same test at a higher Attack (about 400+) would separate the two (adding vs multiplying differ by about 1%). Vanguard Banner lasted 10 s in this test."
+   "Team buffs add (David, 31 Oct 2026, Test Kit): Eileen's Brave One and Sion's Bless (both Lv.2) on Reina, no status on the enemy. Attack 748 -> 797 with either buff -> 847 with both (+49, +50: adding; multiplying would give 849). The same skill hit: 2,094 -> 2,231 -> 2,369; adding predicts 2,368, multiplying 2,377. Both buffs join the Attack Power Up pool with gear and each other. (A first try at 71 Attack, 78 / 78 / 85, was too small to tell.) Vanguard Banner lasted 10 s."
   ],
   "tests": [
    {
@@ -17420,6 +17420,28 @@
     "observations": [
      "Level part (minus the Lv20 and Lv30 bonuses) is 378 / 106 / 2448 for both profiles; the old curve predicted 371 / 103 / 2402, so HERO_STAT_MODEL.levelCurve was refitted.",
      "Lv40 breakthrough: B +35 / +18 / +276, A +43 / +15 / +230."
+    ]
+   },
+   {
+    "test": "Team buff stacking",
+    "date": "2026-10-31",
+    "by": "David",
+    "hero": "Reina",
+    "buffs": "Eileen Brave One Lv.2, Sion Bless Lv.2",
+    "attack": {
+     "none": 748,
+     "Brave One": 797,
+     "Bless": 797,
+     "both": 847
+    },
+    "hits": {
+     "none": 2094,
+     "Brave One": 2231,
+     "Bless": 2231,
+     "both": 2369
+    },
+    "observations": [
+     "Adding predicts 2368 / 846; multiplying 2377 / 849. The buffs add."
     ]
    }
   ],

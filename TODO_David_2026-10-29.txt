@@ -236,6 +236,6 @@ BREAK / SUPER ARMOR (31 Oct, David + in-game Help, see assets/help/notes.txt): B
 31 Oct evening (story chapter 4 done):
 - Level 40 measured (Johnny/Reina, Charlotte): curve refitted, Lv40 breakthroughs stored, all level-70 estimates rerun (about +5% Attack). Kalsion and Sion owned (to rate). Titles 7/109 (Intermediate Mercenary Crew, Doting Parent).
 - 4th Hunt boss Gallore the Collapse (Lv.35, material Stilled Core of Collapse) added to the Bosses tabs; 2 Hunt bosses left undiscovered.
-- OPEN: the Hunt list shows Furcas at Lv.35 again (data says 20; Vanak 25, Barduk 30, Gallore 35). Is Lv.35 Furcas's current difficulty? Ask David.
+- ANSWERED: the Hunt list shows the level of the highest difficulty selected on that boss's tab (Furcas Lv.35 = a higher difficulty; Lv.20 on Normal stays).
 - Rift notes in assets/rift/ (not released yet). Chest drops in assets/exchange/chest-drops.txt.
-- Team buffs: first test fits adding but can't prove it (71 Attack too small); redo with a 1,000+ damage hit.
+- Team buffs: CONFIRMED ADD (Reina 2094 / 2231 / 2369; Attack 748 / 797 / 847).
