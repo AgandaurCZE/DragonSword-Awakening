@@ -1,5 +1,5 @@
 {
- "note": "David's inventory, Ingredients tab (video, 31 Oct 2026): 31 ingredients in the game's order. stars = the ingredient's rarity (1-4). Goose Eggs and Bird Eggs showed no Main Sources. 'eat' = the effect when eaten raw (the red + badge in the grid). Text read by OCR. Cooking (David): 3 methods (Grilling, Boiling, Slicing), 73 recipes in the in-game Cookbook; a recipe takes 1-3 ingredients, one per slot; many accept any ingredient of the same category (e.g. Scallop Sashimi: any two Seafood); the dish's star level follows the ingredients' rarity (3x Bird Eggs 2-star -> 3-star Hard-boiled Egg, Attack +105 for 15 min; 3x Goose Eggs 3-star -> 4-star, Attack +130).",
+ "note": "David's inventory, Ingredients tab (video, 31 Oct 2026): 31 ingredients in the game's order. stars = the ingredient's rarity (1-4). Goose Eggs and Bird Eggs showed no Main Sources. 'eat' = the effect when eaten raw (the red + badge in the grid). Text read by OCR. Cooking (David): 3 methods (Grilling, Boiling, Slicing), 73 recipes in the in-game Cookbook; a recipe takes 1-3 ingredients, one per slot; many accept any ingredient of the same category (e.g. Scallop Sashimi: any two Seafood); the dish's star level follows the ingredients' rarity (3x Bird Eggs 2-star -> 3-star Hard-boiled Egg, Attack +105 for 15 min; 3x Goose Eggs 3-star -> 4-star, Attack +130). Rice and Fish Fillet added from David's screenshots (31 Oct 2026, bought from vendors); Fish is a ninth category.",
  "items": [
   {
    "name": "Boar Meat",
@@ -325,6 +325,27 @@
    "description": "This is a medicinal herb said to grow under the moonlight of dawn. It symbolizes stability and balance, and is used in both cooking and alchemy when seeking stable results. There is a story that it glows as it absorbs the moonlight when bathed in the dawn's moonlight.",
    "sources": [
     "Gathering in the Wild"
+   ]
+  },
+  {
+   "name": "Rice",
+   "category": "Grains",
+   "stars": 2,
+   "icon": "assets/items/icons/rice.webp",
+   "description": "This is a major grain with a long history. It requires a lot of care to grow individually, so it is cultivated through professional farming. If not washed properly before cooking, you may end up chewing on stones.",
+   "sources": [
+    "Gathering at the Farm",
+    "[Shop] Erena"
+   ]
+  },
+  {
+   "name": "Fish Fillet",
+   "category": "Fish",
+   "stars": 1,
+   "icon": "assets/items/icons/fish-fillet.webp",
+   "description": "Meat obtained from freshly caught fish. If not stored properly, it spoils quickly.",
+   "sources": [
+    "[Shop] Lizzie"
    ]
   }
  ]

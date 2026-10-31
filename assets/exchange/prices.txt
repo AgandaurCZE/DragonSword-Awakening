@@ -84,3 +84,9 @@ SPECIAL MATERIALS (David, 30 Oct 2026)
 HUNT BOSS MATERIALS (David): Furcas -> Spiny Fin, Vanak -> Blood-stained Hook, Barduk -> Sage's Blood,
 Gallore the Collapse (4th Hunt boss, Lv.35, found 31 Oct) -> Stilled Core of Collapse.
 Gallore Normal rewards shown: 700 EXP, 1 / 10 / 20 of three items (icons only in the screenshot).
+
+GOLD SHOP (David, 31 Oct 2026; the only non-food vendor on his map so far; stock unlimited)
+- Chronograph of Ages 150,000 Gold
+- Insignia of the Orbis Kingdom / Organa Order / Johnny Mercenaries / Red Fox Mercenaries / Lentus Rebellion Army: 100,000 Gold each
+- Lowest-Grade Monster Essence / Hide / Bone Fragment / Carapace / Claw: 1,000 Gold each
+FOOD VENDORS: Erena (Rice, Whitebloom Carrot), Lizzie (Fish Fillet, Shrimp Flesh, Sand Crab), Harben (Wheat, Lantern Gourd).
