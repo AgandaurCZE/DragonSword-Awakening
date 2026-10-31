@@ -60,6 +60,17 @@ ENTRY AND ENEMIES (David, 31 Oct 2026, Tower of Gale floors 1-5)
   weakness (Reina hits very hard there). NOT measured yet. Test: Reina's same hit on the same tower enemy, clean and
   Airborne. x2 = normal; x3 = Airborne's +100% doubled, like a weakness. Johnny's Poison as a check: x1.5 = no boost.
 
+FIRST DAMAGE TEST (David, 31 Oct 2026, Tower of Gale; Reina 626 Attack, Armor Penetration 15, Defense Ignore 0.97%,
+Airborne AD 15%, Airborne AAP 250; no crits)
+- Clean 2904 | Airborne 41843 | Poison 8712 | Airborne + Poison 62460.
+- Outside the tower these would be about x3.2 (Airborne), x1.5 (Poison) and x4.0 (both) of the clean hit.
+  Here: x14.4, x3.0 and x21.5. So the tower raises status hits a lot, and not only for Airborne.
+- The four numbers don't fit one formula yet (Airborne + Poison is only x1.49 of Airborne alone). Still to check:
+  same enemy and same hit for all four? (normal mob vs Named/boss changes the clean hit).
+
+MAP (source/map-panel.webp): the map shows a "Tower of Trials" point only after the side quest; "Warp" takes you
+there. It isn't in the menu or the Mercenary Guide.
+
 WHY IT MATTERS
 - Whirling Thoughts was the missing source: 1 Whirling Thoughts + 100 Karma exchange crystals + 100,000 Gold
   = 1 Fragment of Afterimage = 1 signature (exclusive) Karma at the Exchange (see ../exchange/prices.txt).
