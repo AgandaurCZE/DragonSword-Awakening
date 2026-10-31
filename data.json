@@ -15836,7 +15836,8 @@
    "Difficulty doesn't change the status hit bonus (David, 30 Oct 2026): Johnny's Poison hit bonus on Mantius of Amplitude was x1.85 on Trait Dungeon I and x1.84 on III. Higher difficulty only slows status build-up (and raises enemy Defense: clean hits 168 -> 102, -39%).",
    "'Status Effect Additional Attack Power Increase' (the 1.1.0 % substat) raises your status Additional Attack Power by that % (David, 30 Oct 2026: Charlotte, 359 Attack, 125 Poison + All Status AAP: hit 126 -> 133 with a 3.88% piece = x1.056; predicted x1.050 for 'raises AAP', x1.038 for no effect, x1.078 for the whole hit). It only matters on afflicted targets and is worth little unless the flat status AAP is large.",
    "Hits on an enemy with several statuses (David, 30 Oct 2026, Charlotte, 359 Attack, All Status AAP 50, Poison AD +15%, Burn AD +15%): clean 52, Poison 103, Poison + Burn 174. Fits only: hit = k x (Attack + sum over the statuses on the target of (that status's AAP + All Status AAP)) x (1 + sum of status hit bonuses) x (1 + sum of those statuses' Additional Damage). So All Status AAP counts once per status on the target, and Additional Damage from different statuses adds (the builds' cautious assumption is right).",
-   "Super Armor Break and Additional Attack Power (David, 30 Oct 2026): Break gives no hit multiplier, but Break Additional Attack Power and All Status AAP are added to Attack on hits against a broken enemy. Charlotte (359 Attack, Break AAP 400, All Status 50): clean 52 -> broken 118 (= 52 x 809/359). Poison + Break 216, Burn + Break 216, Poison + Burn + Break 345, all as predicted. So Break AAP can more than double hits on broken enemies for low-Attack heroes, and All Status AAP counts for Break too."
+   "Super Armor Break and Additional Attack Power (David, 30 Oct 2026): Break gives no hit multiplier, but Break Additional Attack Power and All Status AAP are added to Attack on hits against a broken enemy. Charlotte (359 Attack, Break AAP 400, All Status 50): clean 52 -> broken 118 (= 52 x 809/359). Poison + Break 216, Burn + Break 216, Poison + Burn + Break 345, all as predicted. So Break AAP can more than double hits on broken enemies for low-Attack heroes, and All Status AAP counts for Break too.",
+   "Frost (David, 31 Oct 2026, Cerese + Reina): no damage ticks; 3 stacks Freeze the enemy (can't act); a Frozen enemy takes +50% from hits, added like the other status bonuses (Reina Wind Slayer: clean 1742, Frozen 2613, Airborne 5605, Airborne + Frozen 7006 - all as predicted). Only Cerese's Shattering Touch shatters Frozen enemies / Ice Blocks."
   ],
   "tests": [
    {
@@ -17167,6 +17168,36 @@
      "Poison + Burn + Break, AD multiply": "348.3-354.9"
     },
     "result": "Every hit fits the model: All Status AAP counts once per status on the target (Break included); Additional Damage of different statuses adds; Super Armor Break gives no hit bonus of its own but its Break Additional Attack Power (and All Status) is added on hits against a broken enemy. That explains why Castella's 194 didn't change when breaking (she had no Break AAP)."
+   },
+   {
+    "test": "Frost",
+    "date": "2026-10-31",
+    "by": "David (Test Kit)",
+    "applier": "Cerese",
+    "observations": [
+     "Frost does no damage ticks (0 seen).",
+     "Frost builds up like the other statuses; at 3 stacks the enemy is Frozen in an ice pillar and can't act.",
+     "Shattering Touch (Cerese's Special B) is the only way seen to shatter Ice Blocks / Frozen enemies; Reina couldn't."
+    ],
+    "hitTest": {
+     "hero": "Reina",
+     "skill": "Wind Slayer Lv.1 (549%)",
+     "attack": 626,
+     "airborneAdditionalDamage": 15,
+     "airborneAdditionalAttackPower": 250,
+     "hits": {
+      "clean": 1742,
+      "Frozen": 2613,
+      "Airborne": 5605,
+      "Airborne + Frozen": 7006
+     },
+     "predicted": {
+      "Frozen": 2613,
+      "Airborne": 5607,
+      "Airborne+Frozen": 7008
+     },
+     "result": "Frozen gives +50% on hits, like Poison/Bleed/Burn/Shock. All four hits match the model hit = k x (Attack + AAP of the statuses on the target) x (1 + sum of hit bonuses) x (1 + sum of their Additional Damage)."
+    }
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
@@ -17200,7 +17231,7 @@
     "Tick damage is rounded down.",
     "Ticks never crit (watched 500 ticks over all four statuses)."
    ],
-   "untested": "Not tested yet: bonuses for two different statuses at once (added or multiplied). Break gives no hit bonus (tested 29 Oct 2026)."
+   "untested": "Not tested yet: bonuses for two different statuses at once (added or multiplied). Break gives no hit bonus (tested 29 Oct 2026). Frost: no ticks (tested 31 Oct 2026); 3 stacks Freeze the enemy; Frozen = +50% on hits."
   }
  },
  "PATCH_NOTES": {
