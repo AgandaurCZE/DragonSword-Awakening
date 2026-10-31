@@ -15844,7 +15844,7 @@
    "Frost (David, 31 Oct 2026, Cerese + Reina): no damage ticks; 3 stacks Freeze the enemy (can't act); a Frozen enemy takes +50% from hits, added like the other status bonuses (Reina Wind Slayer: clean 1742, Frozen 2613, Airborne 5605, Airborne + Frozen 7006 - all as predicted). Only Cerese's Shattering Touch shatters Frozen enemies / Ice Blocks.",
    "Charlotte's swap-in counts as a dodge for 'when dodging' effects (Venomfog Shade 3-piece: +4% Crit Rate for 12 s, confirmed on her panel, 31 Oct 2026); Johnny's swap-in doesn't. Tip: the U key opens the stat panel during a fight without restarting it.",
    "Three physical statuses add with no cap (David, 31 Oct 2026, video of Reina's Wind Slayer Lv.1 on Lv.90 goblins; Reina 626 Attack, Stun AAP 250, Airborne AAP 250, Airborne Additional Damage 15%): clean 1742; Stun + Knockdown 7311 (= 1742 x 876/626 x 3, predicted 7313); Stun + Knockdown + Airborne about 14407 (= 1742 x 1126/626 x 4 x 1.15) and the same hit as a crit 21611 (= 14407 x 1.5, Reina's Crit Damage is 50%, confirmed on her panel). Both white hits give the same true Attack of 626.6 (the panel rounds down). So the bonuses keep adding (x4); the earlier x3.5 goblin result was most likely Bleed wearing off.",
-   "Tower of Trials adds to the Additional Damage pool (David, 31 Oct 2026, Tower of Gale floor 1, Reina's Ultimate on the archers, no crits). Without Airborne gear stats (384 Attack): clean 1759, Airborne 17593 (x10), Poison 5278 (x3), Airborne + Poison 26390 (x15). That is the normal hit bonus (x2, x1.5, x2.5) times (1 + tower bonus): +400% for Airborne (the tower's own status) and +100% for Poison, added together (x5, x2, x6). With her Airborne gear (626 Attack, Airborne AAP 250, Airborne Additional Damage 15%): clean 2904, Airborne 41843, Poison 8712, Airborne + Poison 62460; the tower bonus joins the same pool as Additional Damage: 2904 x 876.6/626.6 x 2 x (1 + 4 + 0.15) = 41845 and x 2.5 x (1 + 4 + 1 + 0.15) = 62463. All 7 hits fit within 3. Stun gets no tower bonus: Stun + Airborne 26390 (= x3 x (1 + 4) = x15), Stun + Poison + Airborne 36947 (= x3.5 x (1 + 4 + 1) = x21). Burn gets +100% like Poison: Burn + Airborne 26390 (= x2.5 x (1 + 4 + 1) = x15). So in the Tower of Gale: Airborne +400%, damage-over-time statuses (Poison, Burn; Bleed and Shock not tested) +100%, Stun 0. Not known yet: whether another tower boosts its own status the same way, and whether the +100% is the tower or these archers."
+   "Tower of Trials adds to the Additional Damage pool (David, 31 Oct 2026, Tower of Gale floor 1, Reina's Ultimate on the archers, no crits). Without Airborne gear stats (384 Attack): clean 1759, Airborne 17593 (x10), Poison 5278 (x3), Airborne + Poison 26390 (x15). That is the normal hit bonus (x2, x1.5, x2.5) times (1 + tower bonus): +400% for Airborne (the tower's own status) and +100% for Poison, added together (x5, x2, x6). With her Airborne gear (626 Attack, Airborne AAP 250, Airborne Additional Damage 15%): clean 2904, Airborne 41843, Poison 8712, Airborne + Poison 62460; the tower bonus joins the same pool as Additional Damage: 2904 x 876.6/626.6 x 2 x (1 + 4 + 0.15) = 41845 and x 2.5 x (1 + 4 + 1 + 0.15) = 62463. All 7 hits fit within 3. Stun gets no tower bonus: Stun + Airborne 26390 (= x3 x (1 + 4) = x15), Stun + Poison + Airborne 36947 (= x3.5 x (1 + 4 + 1) = x21). Burn gets +100% like Poison: Burn + Airborne 26390 (= x2.5 x (1 + 4 + 1) = x15). So in the Tower of Gale: Airborne +400%, damage-over-time statuses (Poison, Burn; Bleed and Shock not tested) +100%, Stun 0. Tower of Amplitude, same Reina setup: clean 1759, Poison 5278 (x3), Airborne 3518 (x2, no tower bonus), Poison + Airborne 8796 (x2.5 x (1 + 1) = x5). So the +100% for damage-over-time statuses is the towers, not the archers, and Airborne only gets +400% in its own tower. Not measured yet: Stun in the Tower of Amplitude (expected x10 if every tower gives its own status +400%). A second enemy in each tower took about 4% less (Airborne 3379 vs 3518; a harpy's Poison + Airborne 25345 vs the archers' 26390): different Defense, the same ratio both times."
   ],
   "tests": [
    {
@@ -17325,7 +17325,19 @@
        "Airborne + Poison": 26390,
        "Stun + Airborne": 26390,
        "Stun + Poison + Airborne": 36947,
-       "Burn + Airborne": 26390
+       "Burn + Airborne": 26390,
+       "Poison + Airborne (harpy)": 25345
+      }
+     },
+     {
+      "tower": "Tower of Amplitude",
+      "gear": "same as run 2 (384 Attack)",
+      "hits": {
+       "clean": 1759,
+       "Poison": 5278,
+       "Airborne": 3518,
+       "Airborne (second enemy)": 3379,
+       "Poison + Airborne": 8796
       }
      }
     ],
@@ -17333,7 +17345,8 @@
      "Run 2: x10.00, x3.00, x15.00 = (1 + hit bonuses) x (1 + tower bonus), tower bonus +400% Airborne, +100% Poison, added.",
      "Run 1: the tower bonus adds to Airborne Additional Damage (15%), not multiplying it: predicted 41845 and 62463.",
      "Stun + Airborne x15.00 and Stun + Poison + Airborne x21.00: Stun adds its normal +100% hit bonus but no tower bonus.",
-     "Burn + Airborne x15.00 = x2.5 x 6: Burn gets the same +100% tower bonus as Poison."
+     "Burn + Airborne x15.00 = x2.5 x 6: Burn gets the same +100% tower bonus as Poison.",
+     "Tower of Amplitude: Poison x3.00, Airborne x2.00, Poison + Airborne x5.00: damage-over-time +100% in both towers; Airborne gets no tower bonus outside the Tower of Gale."
     ]
    }
   ],

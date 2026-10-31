@@ -74,8 +74,12 @@ Airborne AD 15%, Airborne AAP 250; no crits)
 - Stun gets NO tower bonus: Stun + Airborne 26390 (x3 x 5 = x15), Stun + Poison + Airborne 36947 (x3.5 x 6 = x21).
 - Burn gets +100% like Poison: Burn + Airborne 26390 (x2.5 x 6 = x15). So: Airborne +400%, damage-over-time
   statuses +100% (Poison, Burn; Bleed and Shock not tested), Stun 0.
-- Still open: does each tower give its own status +400% (e.g. Stun in the Tower of Amplitude)? Is the +100% from the
-  tower or from these archers?
+- Tower of Amplitude (same setup): clean 1759, Poison 5278 (x3), Airborne 3518 (x2), Poison + Airborne 8796 (x5).
+  So damage-over-time +100% is a tower rule (both towers, different enemies), and Airborne gets nothing outside its
+  own tower. A second enemy type took ~4% less in both towers (3379 vs 3518; harpy 25345 vs archers 26390): Defense.
+- David (31 Oct): without the tower's own status your damage "doesn't exist"; one star on Amplitude floor 1 was hard
+  without a Stun hero. The recommended archetype is close to required.
+- Still open: Stun in the Tower of Amplitude (expected x10 = x2 x (1 + 4)).
 
 MAP (source/map-panel.webp): the map shows a "Tower of Trials" point only after the side quest; "Warp" takes you
 there. It isn't in the menu or the Mercenary Guide.
