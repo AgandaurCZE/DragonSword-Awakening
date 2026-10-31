@@ -31,3 +31,6 @@ HOW THIS FITS THE MEASUREMENTS (data.json DAMAGE_TESTS)
   Additional Attack Power. There is no room for a hidden Defense reduction in that result.
 - What Break does instead (game text): opens the enemy to Stun / Airborne / Knockdown. Elemental statuses make the
   enemy easier to break.
+- How it plays (David, 31 Oct 2026, from big bosses): physical statuses CAN be applied while Super Armor is up, just
+  more slowly, but the enemy keeps moving and attacking. Only after Break does the status actually control it
+  (knocked down, launched, stunned in place). So Break turns physical statuses into crowd control; it adds no damage.
