@@ -1,0 +1,51 @@
+Tower of Trials (David, 31 Oct 2026, unlocked through a side quest: "Barduk's Intentions"). Screens in source/.
+Not used by the page yet.
+
+WHAT IT IS (in-game help)
+- "Challenge content based on designated traits. Form your team to match the Status Effect each tower requires."
+- "Clearing a trial lets you earn up to 3 stars per floor, and you can receive additional rewards based on the
+  cumulative number of stars earned in each tower."
+
+TOWERS SEEN SO FAR
+- Tower of Amplitude, Tower of Gale, Tower of Crushing (entrance doors coloured like the archetypes).
+- Tower of Gale text: "He who moves first shall control the flow. He who is as light and swift as the wind
+  shall survive and ascend."
+- The other archetypes' towers aren't open (yet).
+
+FLOORS (Tower of Gale)
+- 30 floors shown. Cumulative rewards go up to 90 stars = 30 floors x 3, so probably no more floors.
+- 3 stars per floor, 1 star per condition. The same three kinds of condition on every floor:
+  1. Defeat all monsters (boss floors: Defeat the Boss Monster)
+  2. Clear within X seconds (shorter limit)
+  3. Clear within Y seconds (longer limit)
+  The time limits grow with the floor.
+  Floor 1: Defeat all monsters / 60 s / 90 s.
+  Floor 30: Defeat the Boss Monster / limits blurred in the screenshot (they look like 300 s and 600 s; not confirmed).
+- Each floor's first clear gives a fixed number of Fragment of Memory (David's name for it; floor 1 = 20); the amount
+  rises on higher floors.
+
+CUMULATIVE STAR REWARDS (Tower of Gale; David saw no difference in the other towers)
+ Stars  Reward
+   5    30 Fragment of Memory
+  10    40 Fragment of Memory
+  15     1 Whirling Thoughts
+  20    50 Fragment of Memory
+  25    60 Fragment of Memory
+  30     2 Whirling Thoughts
+  35    70 Fragment of Memory
+  40    80 Fragment of Memory
+  45     3 Whirling Thoughts
+  50    90 Fragment of Memory
+  55   100 Fragment of Memory
+  60     4 Whirling Thoughts
+  65     5 Whirling Thoughts
+  70     6 Whirling Thoughts
+  75     7 Whirling Thoughts
+  80     8 Whirling Thoughts
+  85     9 Whirling Thoughts
+  90    10 Whirling Thoughts
+ Total per tower: 520 Fragment of Memory (plus the floors' first-clear rewards) and 55 Whirling Thoughts.
+
+WHY IT MATTERS
+- Whirling Thoughts was the missing source: 1 Whirling Thoughts + 100 Karma exchange crystals + 100,000 Gold
+  = 1 Fragment of Afterimage = 1 signature (exclusive) Karma at the Exchange (see ../exchange/prices.txt).

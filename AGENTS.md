@@ -22,6 +22,7 @@ Every commit to `main` goes live about a minute later. There is no build step, n
 | `assets/patch_notes/<version>.txt` | The official Steam patch notes, word for word (1.0.0 = the launch notice). The source for `PATCH_NOTES`; linked from the Patch Notes page. |
 | `assets/runes/` | Rune type icons and Rune slot circles cut from David's screens, not used yet (see its README). |
 | `assets/exchange/` | Exchange screenshots (`source/`) and `prices.txt`: every Exchange price, what each material does, crafting and skill-upgrade costs. Not used by the page yet. |
+| `assets/tower/` | Tower of Trials screenshots (`source/`) and `notes.txt`: towers seen, floor conditions, cumulative star rewards (the source of Whirling Thoughts). Not used by the page yet. |
 | `CHANGELOG.md` | A record of every change, newest first. |
 
 How the page starts: `index.html` runs `fetch('data.json')`, copies each top-level key into a global variable of the same name (`HEROES`, `TEAM_DATA`, …), then calls `startApp()`, which draws every tab. Opening `index.html` directly from disk (`file://`) fails because browsers block the fetch. Test with a local server instead, e.g. `python3 -m http.server` in the repository folder.

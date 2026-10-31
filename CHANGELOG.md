@@ -1,3 +1,6 @@
+## 2026-10-31 — Claude: Tower of Trials notes
+- New `assets/tower/`: David's Tower of Trials screenshots and notes (towers of Amplitude, Gale and Crushing; 30 floors, 3 stars each; cumulative star rewards). Found the source of Whirling Thoughts (55 per tower). Not on the page yet.
+
 ## 2026-10-31 — Claude: Status Effects box: no cap
 - Status Effects box on character pages: the line saying 3.5x was the highest seen (and suggesting a cap) now says bonuses add with no cap, with Stun + Knockdown + Airborne measured at 4x.
 

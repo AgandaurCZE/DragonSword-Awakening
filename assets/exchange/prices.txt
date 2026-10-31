@@ -4,6 +4,7 @@ KARMA (Karma exchange crystals; David had 595)
 - General Karma: 30 each.
 - Exclusive (signature) Karma: 1 Fragment of Afterimage each.
   Fragment of Afterimage (Transmute) = 100 Karma exchange crystals + 1 Whirling Thoughts + 100,000 Gold.
+  Whirling Thoughts come from the Tower of Trials cumulative star rewards (55 per tower; see ../tower/notes.txt).
 
 MATERIALS (Adventurer's Emblem)
 Prog.:
