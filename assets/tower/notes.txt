@@ -49,6 +49,17 @@ CUMULATIVE STAR REWARDS (Tower of Gale; David saw no difference in the other tow
   90    10 Whirling Thoughts
  Total per tower: 520 Fragment of Memory from stars + 2170 from first clears = 2690, and 55 Whirling Thoughts.
 
+ENTRY AND ENEMIES (David, 31 Oct 2026, Tower of Gale floors 1-5)
+- Any hero can enter. The deploy screen only shows "Recommendations" with the tower's archetype icon
+  (source/deploy-recommendations.webp).
+- Other statuses work: Johnny's Poison applied normally. No immunity bubble, and nothing broke anyone.
+- Named (elite) enemies and the floor-5 boss weren't immune to Poison. Poison was harder to build up on the boss,
+  but that may be normal boss resistance (David hadn't fought that boss before).
+- Enemy level rises by 5 every 2 floors: floors 1-2 Lv.40, floors 3-4 Lv.45, floor 5 Lv.50. Only floors 1-5 seen.
+- David's impression: the tower's own archetype gets a boost, probably the same doubled hit bonus as a Trait Dungeon
+  weakness (Reina hits very hard there). NOT measured yet. Test: Reina's same hit on the same tower enemy, clean and
+  Airborne. x2 = normal; x3 = Airborne's +100% doubled, like a weakness. Johnny's Poison as a check: x1.5 = no boost.
+
 WHY IT MATTERS
 - Whirling Thoughts was the missing source: 1 Whirling Thoughts + 100 Karma exchange crystals + 100,000 Gold
   = 1 Fragment of Afterimage = 1 signature (exclusive) Karma at the Exchange (see ../exchange/prices.txt).
