@@ -1,3 +1,6 @@
+## 2026-11-01 — Claude: Help pages and Crew grades
+- `assets/help/`: David's Help screenshots (converted to WebP) with their text in `notes.txt`, plus the five Mercenary Crew promotions (requirements, unlocks, rewards). Notes only.
+
 ## 2026-11-01 — Claude: achievements, Mercenary Crew Level
 - `assets/items/achievements.json`: 103 achievements with conditions, David's progress and the title each gives. Titles tab: Curious Hands and 【777】 now show their achievements.
 - `assets/merc-crew/`: the free Crew Level reward track (screenshots + notes).

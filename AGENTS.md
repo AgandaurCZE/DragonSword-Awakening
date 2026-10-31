@@ -24,7 +24,7 @@ Every commit to `main` goes live about a minute later. There is no build step, n
 | `assets/patch_notes/<version>.txt` | The official Steam patch notes, word for word (1.0.0 = the launch notice). The source for `PATCH_NOTES`; linked from the Patch Notes page. |
 | `assets/runes/` | Rune type icons and Rune slot circles cut from David's screens, not used yet (see its README). |
 | `assets/exchange/` | Exchange screenshots (`source/`) and `prices.txt`: every Exchange price, what each material does, crafting and skill-upgrade costs, Hunt boss materials, and `chest-drops.txt` (David's notes on what world chests drop). Not used by the page yet. |
-| `assets/help/` | David's screenshots of the in-game Help pages on status effects and Super Armor, with the text word for word in `notes.txt`. Not used by the page. |
+| `assets/help/` | David's screenshots of the in-game Help pages (status effects, Super Armor and ~30 other topics, plus the five Mercenary Crew Grade screens), with the text in `notes.txt`. Not used by the page. |
 | `assets/rift/` | The Rift (not released as a mode yet): `rift-portal.webp` and `notes.txt` with David's notes on Corrupted Entities. Not used by the page. |
 | `assets/tower/` | Tower of Trials screenshots (`source/`) and `notes.txt`: towers seen, floor conditions, cumulative star rewards (the source of Whirling Thoughts). Not used by the page yet. |
 | `CHANGELOG.md` | A record of every change, newest first. |

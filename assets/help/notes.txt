@@ -34,3 +34,441 @@ HOW THIS FITS THE MEASUREMENTS (data.json DAMAGE_TESTS)
 - How it plays (David, 31 Oct 2026, from big bosses): physical statuses CAN be applied while Super Armor is up, just
   more slowly, but the enemy keeps moving and attacking. Only after Break does the status actually control it
   (knocked down, launched, stunned in place). So Break turns physical statuses into crowd control; it adds no damage.
+
+
+OTHER HELP PAGES (David's screenshots, 1 Nov 2026; read by OCR, lightly cleaned; files *.webp here)
+
+## Collect 1
+Various gatherable resources are scattered throughout the world and
+can be obtained by interacting with them.
+
+You can also dive underwater to catch fish or gather coastal creatures.
+Gathered resources will respawn after a certain amount of time has
+passed since they were obtained.
+
+## Collect 2
+Some crops, such as wheat, can be harvested using a slashing attack.
+
+## Collect 3
+You can obtain minerals by striking ore veins scattered throughout the
+world.
+
+Destroyed ore veins regenerate after a certain amount of time has
+passed since they were destroyed.
+
+## Collect 4
+Various wild animals, such as rabbits, geese, foxes, boars, and squirrels,
+inhabit various parts of the world.
+You can obtain cooking ingredients by hunting wild animals.
+
+## Cooking 1
+You can cook at the fire pits located throughout the world.
+
+Various dishes are created depending on the selected ingredients and
+cooking method, and even within the same ingredient group, using
+higher-quality ingredients will increase the grade of the finished dish.
+There are multiple ingredient combinations for creating a single dish, and
+[...] cooking method, and even within the same ingredient group, using
+higher-quality ingredients will increase the grade of the finished dish.
+There are multiple ingredient combinations for creating a single dish, and
+the corresponding recipe is automatically registered in the Cookbook
+based on the selected ingredients.
+
+You can mass-produce dishes bv utilizina the Cookbook.
+
+## Cooking 2
+You can use completed dishes immediately from your inventory or
+register them in the Quick Slot for quick use during combat.
+
+You can register dishes in the Quick Slot by pressing the Register button
+in the Food tab of your inventory.
+
+Completed dishes share a cooldown based on the three cooking
+methods baking, boiling, and slicing.
+
+## Craft 1
+You can craft equipment through Modan, the village blacksmith.
+
+Select the desired Set Effect and part to craft equipment: its Main Option
+and Secondary Options will be randomly determined from the options
+that can be granted.
+
+## Craft 2
+If you use a Forging Mold as material, you can craft equipment with a
+designated main option of your choice.
+
+## Disassemble 1
+You can salvage equipment or Karma from your inventory.
+
+Using the Auto-Select feature allows you to quickly choose items to
+salvage.
+
+salvaged items cannot be recovered, so choose carefully.
+
+Additionally, items in a Locked state cannot be salvaged.
+
+salvage Equipment > Obtain Magic Power, an Equipment EXP material
+salvage Karma > Obtain Arcana, a Karma EXP material
+
+## Dungeon 1
+The World features Normal Dungeons, Currency Dungeons, and Trait
+Dungeons.
+
+Clearing a dungeon unlocks higher difficulty levels, and the reward tiers
+also increase.
+
+When entering a Normal Dungeon, your team's HP and incapacitated
+status are carried over, so caution is advised.
+
+## Eona's Legacy 1
+You can discover Eona's Legacy throughout the world.
+Activating Eona's Legacy clears the fog from the world map of that area
+and enables warping.
+
+## Eona's Legacy 2
+You can use Wind Paths at activated Eona's Legacy.
+
+If you enter a Wind Path while mounted on a Familiar, you can travel
+quickly along a predetermined route.
+
+Wind Paths can be found throughout the world, not just at Eona's
+Legacy.
+
+## Equipment Growth 1
+You can enhance equipment by consuming the growth material Mana.
+Each piece of equipment has a main option and sub-options, which are
+randomly assigned when the equipment is obtained.
+
+Enhancing equipment increases the main option, and sub-options are
+activated each time the enhancement level reaches +3, +6, +9, +12, and
++15.
+
+[...] activated each time the enhancement level reaches +3, +6, +9, +12, and
++15.
+
+The higher the equipment's grade, the greater its maximum growth level
+and number of sub-options.
+
+If the experience gained exceeds the maximum level, the remaining
+experience is refunded as Mana, so you can use it without worry.
+
+## Equipment Growth 2
+Equipment of a certain grade or higher has unique set effects.
+Wearing the same set of equipment activates set effects based on the
+number of pieces worn.
+
+Set effects include 2-piece and 3-piece effects.
+
+When wearing 2 pieces of the same set > 2-piece effect activated
+When wearing 3 pieces of the same set > Both 2-piece and 3-piece
+[...] 
+Set effects include 2-piece and 3-piece effects.
+
+When wearing 2 pieces of the same set > 2-piece effect activated
+When wearing 3 pieces of the same set > Both 2-piece and 3-piece
+effects activated
+
+We recommend combining two different sets of equipment to suit your
+combat style.
+
+## Equipment Growth 3
+Equipment that has been upgraded to the maximum level can be
+reforged using the Shape Polisher.
+Reforging allows you to change the equipment's secondary stats.
+
+## Hero Growth 1
+In the Info tab of Hero, you can use Battle Manuals obtained through
+adventures to level up your heroes.
+
+As their level increases, the hero's primary stats will improve accordingly.
+If the EXP earned exceed the maximum level, the remaining EXP are
+refunded as Battle Manuals, so you can use them without worry.
+
+## Hero Growth 2
+Heroes who have reached the maximum level can expand their level cap
+through Breakthrough.
+
+To proceed with Breakthrough, you need a certain level
+
+of [Mercenary Crew Grade] and Breakthrough materials.
+
+## Hero Growth 3
+In the Awakening tab of Hero Management, you can awaken up to 6
+times using the Stigma Awaken Stone.
+Upon awakening, skills are enhanced or additional stats are gained.
+
+## Hero Growth 4
+You can enhance skills in the Skills tab of Hero.
+The maximum skill level is limited by the hero's Breakthrough stage.
+
+## Hero Traits 1
+Every hero possesses unique traits.
+
+Traits are categorized into Amplitude, Crushing, Gale, Breaker, Frostbite,
+Blazeflame, Thunderbolt, Venom, and Bloodburst, each corresponding
+to [Super Armor Breaker], [Physical Status Effects
+
+, [Elemental Status Effects], and other major combat effects.
+
+## Hunt 1
+A Hunt is co-op content that up to 2 players can take on together.
+Defeating each Hunt boss yields unique monster materials, mainly used
+for leveling up skills.
+
+## Hunt 2
+Defeat a Hunt boss to earn points.
+
+The shorter your clear time, the higher your score and the better your
+rank.
+
+Bonus points can be earned through Perfect Dodges, inflicting status
+effects, and breaking Super Armor. In Multiplayer Mode, the points
+earned from Perfect Dodges differ.
+
+## Hunt 3
+After clearing a Hunt, you can achieve a rank based on the points you
+earned.
+
+After achieving a rank, select the difficulty of the Hunt boss you cleared
+on the Hunt screen to claim the designated rank rewards.
+
+However, if your clear time exceeds 15 minutes, all earned points are
+[...] 
+After achieving a rank, select the difficulty of the Hunt boss you cleared
+on the Hunt screen to claim the designated rank rewards.
+
+However, if your clear time exceeds 15 minutes, all earned points are
+reset and you will achieve Rank D.
+
+If you fail the dungeon, you earn no points and therefore cannot achieve
+a rank.
+
+## Karma Growth 1
+Karma is an item that enhances a weapon's performance when equipped
+on a hero's weapon.
+You can equip or unequip Karma in the Karma tab of Hero.
+
+## Karma Growth 2
+You can level up Karma by consuming Arcana, a growth material.
+As its level increases, the Karma's stats will rise.
+
+If the EXP gained exceeds the max level, the remaining EXP will be
+refunded as Arcana, so you can use it without worry.
+
+## Karma Growth 3
+Karma that has reached the maximum level can expand its level cap
+through Breakthrough.
+
+Breakthrough requires a certain level of [Mercenary Crew Grade] and
+Breakthrough materials.
+
+## Karma Growth 4
+You can Ascend a Karma up to 6 stages by using the same Karma as
+material.
+
+Only Lv.1 non-Ascended Karma can be used as material.
+
+Upon Ascension, its trait effects are enhanced.
+
+## Karma Growth 5
+lf a Karma shares the same trait as an equipped Hero, the corresponding
+trait effect will be activated.
+Traits can be further enhanced through Karma Ascension.
+
+## Karma Growth 6
+Some Karmas have exclusive effects that only activate for specific
+characters.
+
+Equipping a Karma on a character that is the target of the exclusive
+effect will activate that effect.
+
+## Mercenary Crew 1
+You can earn Mercenary Crew EXP through various content such as Hunt
+and Quests to raise your level.
+When your level increases, you can claim level achievement rewards.
+
+## Mercenary Crew 2
+By completing Adventure Quests up to a certain level or reaching a
+Mercenary Crew level, you can take on Promotion Quests.
+
+Completing a Promotion Quest raises your Mercenary Crew Grade and
+unlocks [Hero Breakthrough] and [Karma Breakthrough].
+
+## Mercenary Crew 3
+Adventure difficulty rises according to your Mercenary Crew Grade.
+
+As adventure difficulty increases, field monsters grow stronger and you
+can obtain richer rewards.
+
+You can also lower the difficulty for a more comfortable adventure.
+
+## Mercenary Crew 4
+Titles are registered for use in the Mercenary Crew as soon as they are
+obtained.
+Registered titles can be applied from the Mercenary Crew menu.
+
+## Mercenary Guide 1
+You can complete tasks assigned for each training stage and receive
+special rewards.
+
+Once you complete all tasks for a stage, you can proceed to the next
+stage.
+
+## Mercenary Guide 2
+In Regional Missions, you can check the lists, rewards, and locations of
+World Bosses and Sudden Missions.
+
+Monsters that are part of Regional Missions reappear 2 hours after being
+defeated.
+
+## Mercenary Guide 3
+In Special Challenges, you can check reward information for various
+content such as dungeons, Hunts, and raids, and easily access them
+through the location-check feature.
+
+## Mount 2
+If you tag to another hero while mounted, the mounted hero will not
+disappear but will automatically continue to perform mounted attacks for
+a certain period of time.
+
+## Raid 1
+A Raid is co-op content that up to 3 players can take on together.
+In a Raid, each player can field a team of 3 heroes.
+
+## Rune 1
+Some equipment has slots where runes can be engraved, and you can
+open rune slots using the Anonymous Artisan's Crafting Tool.
+
+You can engrave runes into the opened slots to grant additional stats to
+your equipment.
+
+Engraved runes can be removed by consuming gold.
+
+## Skill 1
+Each hero has 2 active skills.
+
+After using an active skill, you must recover Rage to use it again.
+
+The amount of Rage required varies by skill, and Rage automatically
+regenerates over time.
+
+Hitting an enemy with an attack grants additional Rage, allowing you to
+reduce the cooldown time more quickly.
+
+## Skill 2
+A Signal Skill is a conditional active skill that can be used when specific
+activation conditions are met, such as a [status effect].
+
+You can check the activation conditions on each hero's skill info screen.
+When a hero on standby meets a Signal Skill's activation conditions, you
+can use a Tag Combo, which activates instantly regardless of the Hero
+Swap cooldown.
+
+[...] 
+You can check the activation conditions on each hero's skill info screen.
+When a hero on standby meets a Signal Skill's activation conditions, you
+can use a Tag Combo, which activates instantly regardless of the Hero
+
+Swap cooldown.
+
+Signal Skills can be used quickly via the Quick Signal Skill.
+
+## Skill 3
+Once your Hero reaches Lv. 30, you can activate Master Skills.
+Master Skills have powerful effects that enhance specific skills or
+actions.
+
+Unlocking a Master Skill requires a Forbidden Grimoire, which can be
+obtained by opening Legendary-grade treasure chests found with
+Treasure Maps.
+
+## Stamina 1
+Heroes and Familiars each have their own Stamina.
+
+Stamina is consumed during special actions such as dashing, climbing,
+gliding, and swimming, and gradually recovers if not used for a certain
+period of time.
+
+## Statue of Organa 1
+While exploring, you may discover a broken Statue of Organa.
+Interacting with the statue allows you to check the number of broken
+pieces, and you can collect pieces from the surrounding area to restore
+the statue.
+
+You can warp to the restored Statue of Organa and use the Goddess's
+Blessing.
+
+## Statue of Organa 2
+Using the Goddess's Blessing at the Statue of Organa revives fallen
+heroes and restores their HP.
+
+## Sudden Missions 1
+When you enter a specific zone during exploration, a Sudden Mission
+begins, completed by defeating the zone's Named Monster.
+
+Some Named Monsters only appear under set conditions.
+
+Defeating them rewards you with loot, and defeated monsters reappear
+2 hours later.
+
+## Tower of Trials 1
+The Tower of Trials is a challenge-based content featuring three distinct
+attriputes: Amplitude, Gale, and Crushing.
+
+We recommend forming a team tailored to the status effects required by
+each tower to tackle the challenge.
+
+If you clear the trial within the time limit, you can earn up to 3 stars per
+floor, and additional rewards are available based on the cumulative
+
+## Training Ground 1
+You can enter the Training Ground through Edric, the Training Ground
+Keeper in the village.
+
+In the Training Ground, heroes do not fall and monsters do not die.
+Inside the Training Ground, you can set monster spawns and behavior,
+and reduce Active Skill cooldowns.
+
+You can use dishes, and any dishes used will be consumed.
+
+## Transmute 1
+You can Transmute items through Shanoa, the village alchemist.
+You can Transmute Exclusive Karma Exchange Materials, Equipment
+Crafting Materials, or various materials needed for growth.
+
+## Treasure Chest 1
+While exploring the world, you can discover various treasure chests.
+Some discovered treasure chests can be opened immediately, but
+others require meeting specific conditions, such as defeating nearby
+monsters.
+
+Also, some chests require a Moon Key to open, and Moon Keys can be
+purchased at the [Exchange].
+
+## Treasure Chest 2
+Some treasure chests are hidden and can be discovered by
+solving [puzzles] in the field, through excavation, or by defeating
+monsters.
+
+## World Boss 1
+Powerful World Bosses appear in dangerous areas throughout the world.
+Finding and defeating a World Boss rewards you with loot, and defeated
+World Bosses reappear 2 hours later.
+
+You can check and track their locations in the [Regional Missions] tab of
+the Mercenary Guide.
+
+## Mount (from Mount_1 and Mount_2)
+Grab Skill: "This skill performs a grapple action, such as grabbing and slamming the target. When used on a giant monster,
+it switches to a mounted state." Mount Tag Combo: tagging to another hero while mounted keeps the mounted hero attacking
+for a while. No damage multiplier is shown.
+
+## Mercenary Crew Grades (promotions)
+Grade 1 Novice: Adventure Quest [20. The Hero's Quest] -> Hero/Karma Breakthrough Stage 1. Rewards: 2 items (claimed).
+Grade 2 Intermediate: Adventure Quest [40. The Coming Crisis] -> Breakthrough Stage 2. Rewards: 2 items (claimed).
+Grade 3 Advanced: Adventure Quest [50. Everyone's Preparations] -> Breakthrough Stage 3. Rewards: a blue item + a cat familiar.
+Grade 4 Elite: Adventure Quest [60. The Life of a Mercenary] -> Breakthrough Stage 4. Rewards: a purple item + a bird/griffon familiar.
+Grade 5 Veteran: Adventure Quest [80. If He Becomes a Hero] -> Breakthrough Stage 5. Rewards: an orange item + a wolf familiar.
+Adventure Difficulty (world level): 6 stages; stage 1 from the start (Crew level 1), stages 2-6 unlock with the 5 promotions
+(David). Higher difficulty = stronger field monsters and richer rewards; you can lower it.
+Crew Level track: top row 10 items per level, bottom row 100 per 5 levels for levels 1-25 (David).
