@@ -20119,6 +20119,11 @@
     "color": "#a78bfa",
     "desc": "Breaks boss Super Armor faster than most, so the team can mount and grab sooner. Matters most against bosses."
    },
+   "gather": {
+    "label": "Gatherer",
+    "color": "#22d3ee",
+    "desc": "Pulls enemies together into one spot, so area skills, damage-over-time and circles like Eileen's buffs hit the whole group."
+   },
    "awk": {
     "label": "Needs A",
     "color": "#f59e0b",

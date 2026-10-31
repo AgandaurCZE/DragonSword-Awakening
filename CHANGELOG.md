@@ -1,3 +1,6 @@
+## 2026-10-31 — Claude: Gatherer tag (preview only)
+- New tier-list tag "Gatherer" (cyan, vortex icon) for heroes that pull enemies together. Not given to anyone yet; to be decided after testing how big each pull is.
+
 ## 2026-10-31 — Claude: third Hunt boss (preview only)
 - New tier list, Bosses mode: Barduk the Corrupted (Lv.30) added as the third Hunt boss tab (banner cut from David's screenshot); 3 Hunt bosses left undiscovered. Cerese marked as owned.
 
