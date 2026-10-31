@@ -1,4 +1,5 @@
-Items (not used by the page yet). important.json = the Important tab (9 items: Fragment of Sacred Light, Fragment of Memory,
+Items (not used by the page yet). ingredients.json = the Ingredients tab.
+ important.json = the Important tab (9 items: Fragment of Sacred Light, Fragment of Memory,
 Anonymous Artisan's Crafting Tool (unlocks Rune Slots; Exchange Special, Raid), Stigma Awaken Stone (Exchange Awaken),
 Whirling Thoughts (Transmutation; Tower of Trials), Forging Mold, Shape Grinder, Moon Key, Adventurer's Emblem).
 materials.json = every item in David's Materials tab (31 Oct 2026, 63 items, game order):
@@ -19,3 +20,18 @@ WHAT LEVELS WHAT (from the use lines)
 
 NOT IN DAVID'S INVENTORY YET: Intermediate Venom and Bloodburst stones, any Venom low-grade stone, High-Grade trait stones,
 Vein Crystal, Tangled Forgetfulness and Remembrance, Stilled Core of Collapse, Fragment of Sacrifice.
+
+INGREDIENTS (ingredients.json, 31 ingredients): category (Meat, Seafood, Eggs, Vegetables, Mushrooms, Herbs, Grains,
+Natural Foods), stars 1-4, description, sources (hunting the animal, gathering, farm, shops: Lizzie, Harben, Erena).
+Walnuts, Honey and Peanuts can also be eaten raw (red + badge): Walnuts 80 HP, Peanuts 20 HP/s for 5 s, Honey 5% HP on revive.
+
+COOKING (David, 31 Oct 2026): 3 methods (Grilling, Boiling, Slicing); the in-game Cookbook lists 73 recipes and shows
+only a silhouette, '?' ingredients and the method until you cook one. 3 slots, one ingredient per slot, so 1-3
+ingredients. Many recipes take any ingredient of a category (Scallop Sashimi: any two Seafood, mixed or the same).
+Each ingredient gives a different dish per method (eggs: Grilled = Fried Egg [Personal] restores 24% Max HP;
+Boiled = Hard-boiled Egg [Team] Attack +130 for 15 min at 4 stars; Sliced = Egg Renew [Team] restores 40% of the
+Familiar's Stamina). Dish stars follow the ingredients' rarity: 3x Bird Eggs (2 stars) -> 3-star dish (+105 Attack),
+3x Goose Eggs (3 stars) -> 4-star dish (+130 Attack).
+
+TREASURE MAPS (Important tab): e.g. Predator's Treasure Map, "Once you obtain a treasure map, you can open the hidden
+treasure chest at that location." Each shows its own map; they disappear once the chest is opened.
