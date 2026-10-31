@@ -277,7 +277,7 @@
     "Mid-game": "A",
     "End-game": "A"
    },
-   "owned": false,
+   "owned": true,
    "role": "Sub-DPS",
    "classType": "Damage / Control",
    "obtain": {
@@ -19961,10 +19961,20 @@
     "weak": [],
     "immune": [],
     "portrait": "assets/bosses/vanak.webp"
+   },
+   {
+    "id": "barduk",
+    "name": "Barduk the Corrupted",
+    "level": 30,
+    "type": "Hunt",
+    "image": "assets/bosses/barduk-banner.webp",
+    "weak": [],
+    "immune": [],
+    "portrait": "assets/bosses/barduk.webp"
    }
   ],
   "undiscovered": {
-   "Hunt": 4,
+   "Hunt": 3,
    "Raid": 1
   },
   "about": [

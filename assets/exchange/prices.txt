@@ -38,7 +38,7 @@ Lv8: 1 Secret Text of Victory + 1 Hunt boss material + 50,000 Gold
 Lv9: 2 Secret Text of Victory + 1 Hunt boss material + 65,000 Gold
 Lv10: 3 Secret Text of Victory + 3 Tome of Insight + 90,000 Gold
 Skills that max at Lv7 (Auto, Jump, Dash attack): same path, but Lv7 = 3 Secret Text of the Warrior + 1 Tome of Insight + 35,000 Gold (no boss material).
-Hunt boss materials, one boss per level in Hunt screen order (confirmed by David): Lv4 Spiny Fin (Furcas), Lv5 Blood-stained Hook (Vanak), Lv6-Lv9 the 3rd-6th Hunt bosses (not reached yet). So how far skills can be levelled depends on which Hunt bosses you have unlocked.
+Hunt boss materials, one boss per level in Hunt screen order (confirmed by David): Lv4 Spiny Fin (Furcas), Lv5 Blood-stained Hook (Vanak), Lv6 Sage's Blood (Barduk the Corrupted), Lv7-Lv9 the 4th-6th Hunt bosses (not reached yet). So how far skills can be levelled depends on which Hunt bosses you have unlocked.
 
 Totals (calculated from the table above):
 - One Lv10 skill, 1 -> 10: 6 Record, 6 Warrior, 6 Victory, 3 Tome, 6 boss materials, 297,500 Gold.

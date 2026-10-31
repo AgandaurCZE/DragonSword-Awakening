@@ -1,3 +1,6 @@
+## 2026-10-31 — Claude: third Hunt boss (preview only)
+- New tier list, Bosses mode: Barduk the Corrupted (Lv.30) added as the third Hunt boss tab (banner cut from David's screenshot); 3 Hunt bosses left undiscovered. Cerese marked as owned.
+
 ## 2026-10-30 — Claude: real Orange gear values, new builds
 - Gear tables corrected from David's in-game Orange and Purple pieces: Crit Rate main stats and substats were about 2.4x too high in the old database, Crit Damage about 1.65x too high, Stun/Airborne/Knockdown/Break Additional Attack Power substats half the real value, other status Additional Attack Power 0.8x, Defense Ignore about 2x too high (estimate). Plain stats matched and are unchanged. `GEAR_STATS.valueSources` marks what was measured.
 - A stat can now be both main stat and substat (seen in-game on every rarity); the optimiser (Python and the page's live version) and the checker allow it.
