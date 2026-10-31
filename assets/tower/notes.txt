@@ -79,7 +79,10 @@ Airborne AD 15%, Airborne AAP 250; no crits)
   own tower. A second enemy type took ~4% less in both towers (3379 vs 3518; harpy 25345 vs archers 26390): Defense.
 - David (31 Oct): without the tower's own status your damage "doesn't exist"; one star on Amplitude floor 1 was hard
   without a Stun hero. The recommended archetype is close to required.
-- Still open: Stun in the Tower of Amplitude (expected x10 = x2 x (1 + 4)).
+- CONFIRMED in the Tower of Amplitude: Stun 17593 (x10), Stun + Airborne 26390 (x15), Stun + Airborne + Poison 36947
+  (x21), the mirror of the Tower of Gale.
+  RULE: each tower adds +400% to the Additional Damage pool on hits against enemies with its own status, +100% for
+  each damage-over-time status (Poison, Burn tested), nothing for other statuses. Crushing assumed the same (Knockdown).
 
 MAP (source/map-panel.webp): the map shows a "Tower of Trials" point only after the side quest; "Warp" takes you
 there. It isn't in the menu or the Mercenary Guide.
