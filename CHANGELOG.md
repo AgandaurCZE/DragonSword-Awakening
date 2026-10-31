@@ -1,5 +1,5 @@
 ## 2026-10-31 — Claude: materials list
-- New `assets/items/`: all 63 items from David's Materials tab with icons, descriptions, uses and sources (from his inventory video). Notes only, not on the page.
+- New `assets/items/`: all 63 items from David's Materials tab and the 9 from his Important tab (`important.json`) with icons, descriptions, uses and sources (from his inventory video). Notes only, not on the page.
 
 ## 2026-10-31 — Claude: team buffs add
 - `DAMAGE_TESTS`: Eileen's Brave One and Sion's Bless add to each other (Reina: 2,094 / 2,231 / 2,369 damage; adding predicts 2,368, multiplying 2,377). Data only.

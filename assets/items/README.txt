@@ -1,4 +1,7 @@
-Items (not used by the page yet). materials.json = every item in David's Materials tab (31 Oct 2026, 63 items, game order):
+Items (not used by the page yet). important.json = the Important tab (9 items: Fragment of Sacred Light, Fragment of Memory,
+Anonymous Artisan's Crafting Tool (unlocks Rune Slots; Exchange Special, Raid), Stigma Awaken Stone (Exchange Awaken),
+Whirling Thoughts (Transmutation; Tower of Trials), Forging Mold, Shape Grinder, Moon Key, Adventurer's Emblem).
+materials.json = every item in David's Materials tab (31 Oct 2026, 63 items, game order):
 name, type, rarity colour, icon (icons/<slug>.webp, cut from the inventory grid), description, use line, main sources.
 
 WHAT LEVELS WHAT (from the use lines)
@@ -15,5 +18,4 @@ WHAT LEVELS WHAT (from the use lines)
 - Equipment crafting: Binding and Piercing Crystal (mining), Red Pyroxene, Tangled Memories and Reminiscences, trait stones.
 
 NOT IN DAVID'S INVENTORY YET: Intermediate Venom and Bloodburst stones, any Venom low-grade stone, High-Grade trait stones,
-Vein Crystal, Tangled Forgetfulness and Remembrance, Stilled Core of Collapse, Fragment of Sacrifice / Sacred Light,
-Stigma Awaken Stone (other inventory tabs may hold some of these).
+Vein Crystal, Tangled Forgetfulness and Remembrance, Stilled Core of Collapse, Fragment of Sacrifice.

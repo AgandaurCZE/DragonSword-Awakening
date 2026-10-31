@@ -1,0 +1,113 @@
+{
+ "note": "David's inventory, Important tab (video, 31 Oct 2026), in the game's order; same method as materials.json. The two treasure maps at the start of the tab weren't opened.",
+ "items": [
+  {
+   "name": "Fragment of Sacred Light",
+   "type": "Exchange Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/fragment-of-sacred-light.webp",
+   "description": "A fragment of stone that once held mighty power. Though most of its immense power has faded, a faint trace of the remaining force can still be sensed.",
+   "use": "Used at the Exchange",
+   "sources": [
+    "[Sudden Mission Completed]"
+   ]
+  },
+  {
+   "name": "Fragment of Memory",
+   "type": "Exchange Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/fragment-of-memory.webp",
+   "description": "A mysterious fragment formed from the outpouring and condensing of memories of the past. These memories, gathered and piled up, will become the key that opens a path toward a new way forward.",
+   "use": "Used at the Exchange",
+   "sources": [
+    "[Treasure Chest]",
+    "[Tower of Trials]"
+   ]
+  },
+  {
+   "name": "Anonymous Artisan's Crafting Tool",
+   "type": "Special Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/anonymous-artisan-s-crafting-tool.webp",
+   "description": "A tool imbued with the spirit of a craftsman whose precision was unmatched. Though he never left his name in the world, the tool carrying his finely crafted techniques has been passed down to this day. Using this tool, you can complete the preparations to imbue equipment with new abilities. He carved away everything to complete his own gear. He repeated the work of pouring his entire spirit into his fingertips, infusing his equipment with power. This tool can be seen as the crystallization of his efforts.",
+   "use": "Used to unlock Rune Slots",
+   "sources": [
+    "[Exchange] Special",
+    "Raid"
+   ]
+  },
+  {
+   "name": "Stigma Awaken Stone",
+   "type": "Exchange Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/stigma-awaken-stone.webp",
+   "description": "An Awakening Stone refined from the faint remnants of holy power. The faint stigma engraved on the stone seeps into a hero's body and soul, opening the door to a higher realm.",
+   "use": "Used for Character Awakening",
+   "sources": [
+    "[Exchange] Awaken"
+   ]
+  },
+  {
+   "name": "Whirling Thoughts",
+   "type": "Exchange Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/whirling-thoughts.webp",
+   "description": "A rare spirit found in slain monsters. A spirit that refuses to let go even in death creates an endless, deep, and dark vortex. Thanks to its ability to suck in and absorb anything, it is used as a binding agent to fuse substances that are difficult to mix.",
+   "use": "Used in Transmutation",
+   "sources": [
+    "[Tower of Trials]"
+   ]
+  },
+  {
+   "name": "Forging Mold",
+   "type": "Special Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/forging-mold.webp",
+   "description": "A basic mold used for crafting equipment. At first glance, its complex shape may raise concerns about whether the item will turn out properly, but it is said to be a miraculous mold that perfectly creates the item exactly as the crafter desires when imbued with a powerful wish. However, because it lacks the durability to withstand such a powerful wish, it is destroyed after a single use.",
+   "use": "Used when crafting equipment",
+   "sources": [
+    "[Exchange] Special",
+    "[Normal Dungeon] The Gravey..."
+   ]
+  },
+  {
+   "name": "Shape Grinder",
+   "type": "Special Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/shape-grinder.webp",
+   "description": "A precision tool that erases the flow of power engraved on equipment and overlays a new form upon it. Once the completed form is fixed to the equipment, new abilities will be imbued according to that design.",
+   "use": "Use when reforging equipment",
+   "sources": [
+    "[Exchange] Special",
+    "[Normal Dungeon] Ashen Ruins...",
+    "Raid"
+   ]
+  },
+  {
+   "name": "Moon Key",
+   "type": "Treasure Key",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/moon-key.webp",
+   "description": "A mysterious key that glows softly like moonlight. It can break the magical seal on a special chest.",
+   "use": "Use when opening a Hero-grade Treasure Chest",
+   "sources": [
+    "[Exchange] Special"
+   ]
+  },
+  {
+   "name": "Adventurer's Emblem",
+   "type": "Exchange Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/adventurer-s-emblem.webp",
+   "description": "A special token that can only be obtained through adventure. This Emblem symbolizes the journey and experience of an adventurer, holding the value accumulated through countless challenges and victories. At the Exchange, this token can be exchanged for rare goods, and many adventurers undertake long and arduous journeys to obtain it.",
+   "use": "Used at the Exchange",
+   "sources": [
+    "Normal Dungeon",
+    "Trait Dungeon",
+    "Currency Dungeon",
+    "Hunt",
+    "Raid"
+   ]
+  }
+ ]
+}
