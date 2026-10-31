@@ -334,7 +334,7 @@
     "Mid-game": "A",
     "End-game": "A"
    },
-   "owned": false,
+   "owned": true,
    "role": "Sub-DPS",
    "classType": "Buffer",
    "obtain": {
