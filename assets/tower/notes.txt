@@ -65,8 +65,11 @@ Airborne AD 15%, Airborne AAP 250; no crits)
 - Clean 2904 | Airborne 41843 | Poison 8712 | Airborne + Poison 62460.
 - Outside the tower these would be about x3.2 (Airborne), x1.5 (Poison) and x4.0 (both) of the clean hit.
   Here: x14.4, x3.0 and x21.5. So the tower raises status hits a lot, and not only for Airborne.
-- The four numbers don't fit one formula yet (Airborne + Poison is only x1.49 of Airborne alone). Still to check:
-  same enemy and same hit for all four? (normal mob vs Named/boss changes the clean hit).
+- All four on the same enemy type (floor 1 archers; the harpies were killed first), all with Reina's Ultimate.
+- Poison alone x3.0 fits Poison's hit bonus being 4x its normal size (+50% -> +200%).
+- Airborne doesn't fit a simple rule. If the bonuses still add, the two Airborne numbers give: Airborne bonus about
+  +300% (x4.06 with Poison's +200% added on top) and an extra x3.55 on Airborne hits, of which the normal Airborne
+  AAP and Additional Damage explain only x1.61. Unexplained; needs a hit without Reina's Airborne gear stats.
 
 MAP (source/map-panel.webp): the map shows a "Tower of Trials" point only after the side quest; "Warp" takes you
 there. It isn't in the menu or the Mercenary Guide.
