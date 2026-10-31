@@ -15818,7 +15818,7 @@
    "Poison tick by stacks, as a share of the FIRST applier's Attack: 1 stack 50%, 2 stacks 75%, 3 stacks 100% (+25% per extra stack). The other appliers' Attack doesn't matter. 2 stacks: Charlotte (658) first -> 493, Johnny (645) first -> 484, whoever applied the second. 3 stacks (goblin dummies, order not tracked): ticks of 645 and 658, exactly the two heroes' Attack. Poison stops at 3 stacks (no 4th). Stacks last about 10 seconds (timed by eye); the ticks are 2.5 seconds apart, 5 in total including one on applying (corrected 29 Oct 2026). Bleed, Burn and Shock stack exactly the same way, also to a maximum of 3 (Lv.1 heroes, 71 Attack: 35 / 53 / 71). They also last about 10 seconds (a tick every ~2.5 s).",
    "Burn Additional Damage (+4%) and Burn Additional Attack Power (+110) don't change Burn ticks: Aria with 381 Attack ticked 190 / 285 / 381 = 50 / 75 / 100% of 381, rounded down. So these status bonuses must do something else, most likely raise hits against enemies that have the status (not tested yet).",
    "Hits on an enemy that has Poison, Burn, Bleed or Shock deal x1.5, at any stack count: Charlotte 22 -> 33 with Poison, Roxy 24 -> 36 with Bleed, Ornette 17 -> 26 with Shock; Aria with no Karma (71 Attack) hit 19 on a clean goblin and 28 on a burning one (19.x x 1.5 = 28.5, rounded down), the same at 1, 2 or 3 stacks. The Karma results are explained by the status-bonus rule below.",
-   "Status hit bonuses add up: +50% for each damage-over-time status (Poison, Bleed, Burn, Shock) and +100% each for Airborne, Knockdown and Stun. Charlotte's small auto-attack hit (22 clean): Poison 33 (x1.5), Poison + Bleed 44 (x2.0), Airborne + Poison 55 (x2.5), Knockdown + Poison + Bleed 66 (x3.0, recheck), Stun + Poison + Bleed 66 (x3.0), Airborne + Knockdown + Poison 77 (x3.5). Reina: Airborne alone x2.0. Clean check on the Training Ogre (Charlotte, 22 clean): Stun 44 (x2.0), Airborne 44 (x2.0), Stun + Airborne 66 (x3.0). Exception: Airborne + Knockdown + Poison + Bleed was 77 (x3.5) twice, where adding up gives x4.0, so either x3.5 is a cap or Bleed wasn't on. The two earlier x2.5 results with Poison + Bleed + Airborne/Knockdown were most likely Bleed wearing off. Break not tested.",
+   "Status hit bonuses add up: +50% for each damage-over-time status (Poison, Bleed, Burn, Shock) and +100% each for Airborne, Knockdown and Stun. Charlotte's small auto-attack hit (22 clean): Poison 33 (x1.5), Poison + Bleed 44 (x2.0), Airborne + Poison 55 (x2.5), Knockdown + Poison + Bleed 66 (x3.0, recheck), Stun + Poison + Bleed 66 (x3.0), Airborne + Knockdown + Poison 77 (x3.5). Reina: Airborne alone x2.0. Clean check on the Training Ogre (Charlotte, 22 clean): Stun 44 (x2.0), Airborne 44 (x2.0), Stun + Airborne 66 (x3.0). Exception: Airborne + Knockdown + Poison + Bleed was 77 (x3.5) twice, where adding up gives x4.0, so either x3.5 is a cap or Bleed wasn't on. Settled 31 Oct 2026: no cap (Stun + Knockdown + Airborne = x4, see below), so Bleed wasn't on. The two earlier x2.5 results with Poison + Bleed + Airborne/Knockdown were most likely Bleed wearing off. Break not tested.",
    "How the status bonuses work (tested with Burn): a hit on an enemy with the status = k x (Attack + <status> Additional Attack Power) x 1.5 x (1 + <status> Additional Damage). A clean hit is k x Attack, so neither bonus does anything on a clean enemy, and neither changes ticks. One value of k (0.2677-0.2681 for Aria's first auto-attack hit on the goblins) fits all 8 results: no bonus 19 -> 28; +15% 19 -> 32; +4% & +110 102 -> 205; +19% & +110 102 -> 234. With several statuses the bonuses apply to the whole hit: Aria (381 Attack, +110 / +4% Burn) on Bleed + Knockdown + Burn hit 410 = k x 491 x 3.0 x 1.04 (410.1-410.8). Applying them only to Burn's +50% would give about 323. So: hit = k x (Attack + Additional Attack Power of a status the enemy has) x (1 + all status hit bonuses) x (1 + Additional Damage of a status the enemy has). Not tested: bonuses for two different statuses at once (e.g. Burn and Knockdown Additional Damage together: added or multiplied).",
    "Trait Dungeon weakness (David, 29 Oct 2026, Reina and Johnny, boss only): doubles the hit bonus of the weak archetype's status (Poison +50% -> +100%, Airborne +100% -> +200%). No effect on hits without the status, no effect on DoT ticks. A neutral boss gives the same multiplier as the Training Ground dummy (no resistance on Normal). Airborne also built up faster on the weak boss. Untested: whether higher difficulties add resistances.",
    "Two different gear stats exist: 'All Status Effect Additional Attack Power' is flat (25 on a blue legs substat) and is added to Attack on hits against an enemy with any status; 'Status Effect Additional Attack Power Increase' is a % (1.94% on blue boots +3), the 1.1.0 sub-option that raises all status Additional Attack Power. Neither affects DoT ticks.",
@@ -15838,7 +15838,8 @@
    "Hits on an enemy with several statuses (David, 30 Oct 2026, Charlotte, 359 Attack, All Status AAP 50, Poison AD +15%, Burn AD +15%): clean 52, Poison 103, Poison + Burn 174. Fits only: hit = k x (Attack + sum over the statuses on the target of (that status's AAP + All Status AAP)) x (1 + sum of status hit bonuses) x (1 + sum of those statuses' Additional Damage). So All Status AAP counts once per status on the target, and Additional Damage from different statuses adds (the builds' cautious assumption is right).",
    "Super Armor Break and Additional Attack Power (David, 30 Oct 2026): Break gives no hit multiplier, but Break Additional Attack Power and All Status AAP are added to Attack on hits against a broken enemy. Charlotte (359 Attack, Break AAP 400, All Status 50): clean 52 -> broken 118 (= 52 x 809/359). Poison + Break 216, Burn + Break 216, Poison + Burn + Break 345, all as predicted. So Break AAP can more than double hits on broken enemies for low-Attack heroes, and All Status AAP counts for Break too.",
    "Frost (David, 31 Oct 2026, Cerese + Reina): no damage ticks; 3 stacks Freeze the enemy (can't act); a Frozen enemy takes +50% from hits, added like the other status bonuses (Reina Wind Slayer: clean 1742, Frozen 2613, Airborne 5605, Airborne + Frozen 7006 - all as predicted). Only Cerese's Shattering Touch shatters Frozen enemies / Ice Blocks.",
-   "Charlotte's swap-in counts as a dodge for 'when dodging' effects (Venomfog Shade 3-piece: +4% Crit Rate for 12 s, confirmed on her panel, 31 Oct 2026); Johnny's swap-in doesn't. Tip: the U key opens the stat panel during a fight without restarting it."
+   "Charlotte's swap-in counts as a dodge for 'when dodging' effects (Venomfog Shade 3-piece: +4% Crit Rate for 12 s, confirmed on her panel, 31 Oct 2026); Johnny's swap-in doesn't. Tip: the U key opens the stat panel during a fight without restarting it.",
+   "Three physical statuses add with no cap (David, 31 Oct 2026, video of Reina's Wind Slayer Lv.1 on Lv.90 goblins; Reina 626 Attack, Stun AAP 250, Airborne AAP 250, Airborne Additional Damage 15%): clean 1742; Stun + Knockdown 7311 (= 1742 x 876/626 x 3, predicted 7313); Stun + Knockdown + Airborne about 14407 (= 1742 x 1126/626 x 4 x 1.15) and the same hit as a crit 21611 (= 14407 x 1.5, Reina's Crit Damage is 50%, confirmed on her panel). Both white hits give the same true Attack of 626.6 (the panel rounds down). So the bonuses keep adding (x4); the earlier x3.5 goblin result was most likely Bleed wearing off."
   ],
   "tests": [
    {
@@ -17262,6 +17263,36 @@
     ],
     "attack": 71,
     "skillLevel": "Lv.1 = 709% (codex max 1241% / 1.75)"
+   },
+   {
+    "test": "Stun + Knockdown + Airborne on goblins (is there a cap?)",
+    "date": "2026-10-31",
+    "by": "David",
+    "hero": "Reina",
+    "enemy": "Lv.90 goblins (Trait Dungeon area)",
+    "skill": "Wind Slayer Lv.1",
+    "attack": 626,
+    "stats": {
+     "Stun Additional Attack Power": 250,
+     "Airborne Additional Attack Power": 250,
+     "Airborne Additional Damage %": 15,
+     "Critical Damage %": 50,
+     "Armor Penetration": 15,
+     "Defense Ignore %": 0.97
+    },
+    "hits": {
+     "clean": 1742,
+     "Stun + Knockdown": 7311,
+     "Stun + Knockdown + Airborne": 14407,
+     "Stun + Knockdown + Airborne (crit)": 21611
+    },
+    "observations": [
+     "7311 / 1742 = 4.197 = (626.6 + 250) / 626.6 x 3: Stun and Knockdown add (+100% each) and Stun's Additional Attack Power counts.",
+     "14407 (David read it as about 14407; hard to spot) = 1742 x (626.6 + 500) / 626.6 x 4 x 1.15: three physical statuses give x4, no cap; both AAPs and Airborne's +15% Additional Damage apply.",
+     "21611 / 14407 = 1.50: the crit is x(1 + 50% Crit Damage), matching Reina's panel (50%).",
+     "Armor Penetration 15 and Defense Ignore 0.97% lower the goblins' defence equally on every hit, so they cancel out of these ratios (all hits on the same Lv.90 goblins in one clip)."
+    ],
+    "source": "David's clip 2026-10-31_04-09-24.mp4, read frame by frame"
    }
   ],
   "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",

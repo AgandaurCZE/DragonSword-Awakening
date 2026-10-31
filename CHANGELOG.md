@@ -1,3 +1,6 @@
+## 2026-10-31 — Claude: status hit bonuses have no cap
+- `DAMAGE_TESTS`: David's clip of Reina's Wind Slayer on goblins shows Stun + Knockdown + Airborne = ×4 (1742 clean, 7311 with Stun + Knockdown, ~14407 with all three, 21611 as a crit at 50% Crit Damage). Hit bonuses keep adding; the old ×3.5 result was Bleed wearing off. Data only, nothing on the page changes.
+
 ## 2026-10-31 — Claude: Gatherer tag (preview only)
 - New tier-list tag "Gatherer" (cyan, vortex icon) for heroes that pull enemies together. Not given to anyone yet; to be decided after testing how big each pull is.
 
