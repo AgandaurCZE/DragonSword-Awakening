@@ -17539,7 +17539,8 @@
      "hero": "Cerese",
      "skill": "Frozen Spike",
      "status": "Frost",
-     "ogre": 0.1
+     "ogre": 0.1,
+     "goblins": 0.25
     },
     {
      "hero": "Cerese",
@@ -17569,7 +17570,8 @@
      "hero": "Cerese",
      "skill": "Ice Storm",
      "status": "Frost",
-     "ogre": 0.25
+     "ogre": 0.25,
+     "goblins": 1.25
     },
     {
      "hero": "Charlotte",
@@ -17695,7 +17697,8 @@
      "hero": "Kalsion",
      "skill": "Flame Wave (press)",
      "status": "Burn",
-     "ogre": 0.333
+     "ogre": 0.333,
+     "goblins": 1.0
     },
     {
      "hero": "Kalsion",
@@ -17719,7 +17722,8 @@
      "hero": "Kalsion",
      "skill": "Weapon Blaze",
      "status": "Burn",
-     "ogre": 0.083
+     "ogre": 0.083,
+     "goblins": 0.333
     },
     {
      "hero": "Lute",
@@ -17911,7 +17915,8 @@
      "status": "Shock",
      "ogre": 0.1
     }
-   ]
+   ],
+   "goblinVsOgre": "Goblins (Lv.90) vs Training Ogre, same skill: for presses well under one stack on the goblins the ratio is about 5x (Holy Circle 5, Holy Cutter 5, Kick Storm 5, Venom Dance 5, Ice Storm 5, Weapon Blaze 4, Shoot and Bomb 5-6, Illusion Kick, Poison Step and Fatal Sting 5.4-5.9). Some skills are lower (Frozen Spike 2.5, Crimson Spiral 2.7, Judgment 3, Bloody Shower 3.3), so it isn't one fixed factor; values at or above 1 on the goblins are read from a capped or overflowing gauge and aren't comparable. The goblins also break in one hit, which doubles physical build-up. Use the Ogre values to compare heroes."
   }
  },
  "STATUS_EFFECTS": {
