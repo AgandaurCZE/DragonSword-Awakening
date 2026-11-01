@@ -5,6 +5,10 @@
 
 
 
+
+## 1 Nov 2026 — Dungeons data for the planned page
+- `DUNGEONS` key in data.json (Normal and Currency Dungeons, with material icons).
+- `docs/TASK_dungeons_page.md`: brief for building the Dungeons pages in the preview.
 ## 1 Nov 2026 — Normal Dungeon rewards
 - `assets/dungeons/dungeons.json` and `notes.txt`: gear set, slots, rarities, EXP, Adventurer's Emblems and materials for all 15 Normal Dungeons on all three difficulties.
 ## 1 Nov 2026 — Small fixes
