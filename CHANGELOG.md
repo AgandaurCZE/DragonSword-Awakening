@@ -1,6 +1,10 @@
 ## 2026-11-01 — Claude: Help pages and Crew grades
 - `assets/help/`: David's Help screenshots (converted to WebP) with their text in `notes.txt`, plus the five Mercenary Crew promotions (requirements, unlocks, rewards). Notes only.
 
+
+## 1 Nov 2026 — Gauron raid tab
+- Raid boss tab glows red and its name is red with a black outline (`theme: "raid"`).
+- New boss info panels under the boss tabs (The fights, Strategy, Rewards), filled for Gauron from David's raid screenshots and notes.
 ## 1 Nov 2026 — Story chapter 5 batch
 - Colour portraits for Kalien and Othello (now owned); Dawn Wing Cat familiar (owned).
 - Titles 11/109: Impregnable, One Who Erases Names, I Want to Do Missions, High-Ranking Mercenary Crew.

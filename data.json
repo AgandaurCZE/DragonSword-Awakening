@@ -20770,7 +20770,60 @@
     "weak": [],
     "immune": [],
     "portrait": "assets/bosses/gauron.webp",
-    "stage": "Steelheart Fortress Defense"
+    "stage": "Steelheart Fortress Defense",
+    "theme": "raid",
+    "info": {
+     "intro": "Co-op Raid for up to 3 players (Multiplayer Mode with an Invite Code, or Solo Mode). Rewards: equipment, Runes and special equipment materials.",
+     "fights": [
+      {
+       "name": "Ogre",
+       "text": "Boss on the bridge before the fortress."
+      },
+      {
+       "name": "Gauron · phase 1",
+       "text": "Humanoid form."
+      },
+      {
+       "name": "Gauron · phase 2",
+       "text": "Dragon form."
+      }
+     ],
+     "fightsNote": "HP carries over between the three fights, so bring healing food.",
+     "difficulties": [
+      {
+       "name": "Normal",
+       "level": 50,
+       "rewards": [
+        "Infiltrator gear",
+        "Intact Runes (all 5 types)",
+        "Damaged Runes (all 5 types)",
+        "EXP 800",
+        "Gold 150,000",
+        "3 more items (not identified yet)"
+       ]
+      },
+      {
+       "name": "Hard",
+       "level": 70,
+       "rewards": [
+        "Ballad of Life gear",
+        "Infiltrator gear",
+        "Radiant Runes (all 5 types)",
+        "Refined Runes (all 5 types)"
+       ]
+      },
+      {
+       "name": "Very Hard",
+       "level": 90,
+       "rewards": [
+        "Perfect Runes (all 5 types)",
+        "EXP, Gold and materials"
+       ]
+      }
+     ],
+     "rewardsNote": "Read from the reward lists in David's screenshots; the lists scroll, so some entries may be missing. Members: 1–3 on every difficulty.",
+     "strategy": []
+    }
    }
   ],
   "undiscovered": {
