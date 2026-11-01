@@ -109,3 +109,24 @@ Treat names and enum strings as foreign keys: hero names must agree across HEROE
 - CHANGELOG.md is newest-first and is the historical narrative of Claude's work. Read its latest entries before any task to understand recent changes and avoid undoing them.
 - David's TODO_David_2026-10-29.txt contains his detailed V2 tier-list rationale; never override those decisions without discussing them.
 - CLAUDE.md is effectively empty (11 bytes); substantive Claude instructions/history are in AGENTS.md, CHANGELOG.md, TODO_David_2026-10-29.txt and the asset-folder notes/readmes.
+
+
+## Active handoff — Normal Dungeons page (David confirmed, 2 Nov 2026)
+
+David explicitly approved starting implementation using the design recorded in `docs/TASK_dungeons_page.md`. If this conversation/call ends, continue from that task file rather than asking him to repeat the requirements.
+
+### Confirmed UI decisions
+- The card's main background must be based on the in-game Normal Dungeons menu screenshot: retain the pale ornate title-panel texture/background; remove the original title lettering, large gear/reward tiles and Location button; reconstruct/fill the removed area with matching adjacent colour/texture so the panel looks intentional.
+- Draw the dungeon name as live HTML text, centred in the title area and larger than the sketch. Allow long names to wrap/scale without clipping.
+- Difficulty controls are three small circles at the **top-left**, side by side: grey I = Normal, green II = Hard, blue III = Very Hard. Reuse Trait Dungeons `.tr-diff` visual style/interaction pattern, but make them operate on Normal Dungeon data only.
+- Small square reward icons go at the **bottom-left**, using the existing extracted item icons in `assets/items/icons/`.
+- Per-card difficulty state: changing one dungeon must update only that card's rewards (gear rarity, EXP, Adventurer's Emblems, materials and quantities).
+- Keep the existing Trait Dungeons page and behaviour intact. Currency Dungeons is a navigation entry only for now. Do not implement the deferred Gear-page links yet.
+
+### Implementation and safety constraints
+- All 15 Normal Dungeons and all three difficulty reward tiers are already present in `data.json`; use those values as the source of truth. Do not invent or alter reward values.
+- Work directly on `main`. All new pages, navigation items, visual changes and functionality must be gated behind `?tiers=new`; the normal public URL without that parameter must remain unchanged until David explicitly approves promotion.
+- Reuse the existing Trait Dungeons controls and repository item icons where suitable. Match the site's dark panels/turquoise accents and compact card styling.
+- Before finishing, validate data, test the selector/filter interactions and preview gate, re-fetch committed files, and report clearly what was and was not browser-tested.
+
+The detailed original task and acceptance checks remain in `docs/TASK_dungeons_page.md`.
