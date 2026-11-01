@@ -19,6 +19,19 @@ If something you need isn't in the data, add it to `data.json` (and to the key t
 - `TRAIT_DUNGEONS`: the existing Trait Dungeons page. Don't change its data or rendering.
 - Rarity colours: reuse `gxRarColor()` in `index.html` (Green/Blue/Purple/Orange). Don't add another colour table.
 
+## David's confirmed card design (2 Nov 2026)
+
+The Normal Dungeons cards must use the in-game Normal Dungeon menu screenshot as their visual source, not a generic blank rectangle:
+
+- Preserve the pale, ornate title-panel background from the left side of each in-game dungeon row.
+- Remove/mask the original dungeon-name lettering, the large gear/reward tiles, and the Location button. Fill the removed right-hand area with the matching adjacent panel colour/texture so there is no obvious empty cut-out.
+- Render the dungeon name as live website text, larger and horizontally/vertically centred in the title panel. This allows long names to scale or wrap cleanly.
+- Put the three difficulty circles at the top-left, side by side: grey I = Normal, green II = Hard, blue III = Very Hard. Reuse the visual style and interaction pattern of Trait Dungeons' .tr-diff controls, but bind each card to its own selected difficulty and its own Normal Dungeon reward data.
+- Put small square reward/item icons at the bottom-left, using the existing extracted item icons in assets/items/icons/ (not the large screenshot tiles).
+- Keep the card title text, controls and reward icons legible; the earlier assistant sketch was only a layout guide, not the intended final background.
+
+This design is specific to Normal Dungeons. Do not change the existing Trait Dungeons rendering or behaviour. Currency Dungeons remains a navigation entry only for now, unless David asks otherwise.
+
 ## What to build
 
 ### 1. A collapsible "Dungeons" group in the left menu
