@@ -1,0 +1,766 @@
+{
+ "note": "Normal Dungeons, from David's Special Challenges screenshots (Drops1-5_<difficulty>.webp; Normal = grey I, Hard = green II, Very Hard = blue III) and his gear notes (1 Nov 2026). exp/emblem/material are the listed rewards; gear = rarities of the dungeon's set that can drop; slots = the gear pieces it drops. Materials identified by matching icons against assets/items/icons and confirmed by the items' own Main Sources.",
+ "emblem": "Adventurer's Emblem",
+ "dungeons": [
+  {
+   "name": "Warg Cave",
+   "farm": "Monster materials",
+   "set": "Ballad of Life",
+   "slots": [
+    "Helmet",
+    "Chest",
+    "Gloves"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Blue"
+     ],
+     "exp": 200,
+     "emblem": 5,
+     "material": [
+      "Lowest-Grade Monster Claw",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 500,
+     "emblem": 10,
+     "material": [
+      "Low-Grade Monster Claw",
+      10
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 800,
+     "emblem": 20,
+     "material": [
+      "Intermediate Monster Claw",
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Goblin Bandits' Cave",
+   "farm": "Monster materials",
+   "set": "Ballad of Life",
+   "slots": [
+    "Legs",
+    "Boots"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Blue"
+     ],
+     "exp": 200,
+     "emblem": 5,
+     "material": [
+      "Lowest-Grade Monster Essence",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 500,
+     "emblem": 10,
+     "material": [
+      "Low-Grade Monster Essence",
+      10
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 800,
+     "emblem": 20,
+     "material": [
+      "Intermediate Monster Essence",
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Corrupted Bedchamber",
+   "farm": "Monster materials",
+   "set": "Battle Will",
+   "slots": [
+    "Helmet",
+    "Chest",
+    "Gloves"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Blue"
+     ],
+     "exp": 300,
+     "emblem": 5,
+     "material": [
+      "Lowest-Grade Monster Bone Fragment",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 600,
+     "emblem": 15,
+     "material": [
+      "Low-Grade Monster Bone Fragment",
+      10
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Purple"
+     ],
+     "exp": 900,
+     "emblem": 20,
+     "material": [
+      "Intermediate Monster Bone Fragment",
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Underground Goblin Village",
+   "farm": "Monster materials",
+   "set": "Battle Will",
+   "slots": [
+    "Legs",
+    "Boots"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Blue"
+     ],
+     "exp": 300,
+     "emblem": 5,
+     "material": [
+      "Lowest-Grade Monster Hide",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 600,
+     "emblem": 15,
+     "material": [
+      "Low-Grade Monster Hide",
+      10
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Purple"
+     ],
+     "exp": 900,
+     "emblem": 20,
+     "material": [
+      "Intermediate Monster Hide",
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Silver Tusk Bandits' Supply Depot",
+   "farm": "Monster materials",
+   "set": "The Infiltrator",
+   "slots": [
+    "Legs",
+    "Boots"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Blue"
+     ],
+     "exp": 500,
+     "emblem": 10,
+     "material": [
+      "Lowest-Grade Monster Carapace",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 700,
+     "emblem": 15,
+     "material": [
+      "Low-Grade Monster Carapace",
+      10
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Purple"
+     ],
+     "exp": 900,
+     "emblem": 20,
+     "material": [
+      "Intermediate Monster Carapace",
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Warg Enclosure",
+   "farm": "Gathering materials",
+   "set": "Ballad of Life",
+   "slots": [
+    "Legs",
+    "Boots"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Blue"
+     ],
+     "exp": 600,
+     "emblem": 15,
+     "material": [
+      "Fruit of Vitality",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 800,
+     "emblem": 20,
+     "material": [
+      "Fruit of Vitality",
+      15
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Purple"
+     ],
+     "exp": 1000,
+     "emblem": 25,
+     "material": [
+      "Fruit of Vitality",
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Coastal Cliff Cave Outpost",
+   "farm": "Gathering materials",
+   "set": "The Infiltrator",
+   "slots": [
+    "Helmet",
+    "Chest",
+    "Gloves"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Blue"
+     ],
+     "exp": 600,
+     "emblem": 15,
+     "material": [
+      "Primordial Seed",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 800,
+     "emblem": 20,
+     "material": [
+      "Primordial Seed",
+      15
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Purple"
+     ],
+     "exp": 1000,
+     "emblem": 25,
+     "material": [
+      "Primordial Seed",
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Rusted Tusk Bandits' Treasure Vault",
+   "farm": "Gathering materials",
+   "set": "Battle Will",
+   "slots": [
+    "Legs",
+    "Boots"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 700,
+     "emblem": 15,
+     "material": [
+      "Leaf of Vigor",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Purple"
+     ],
+     "exp": 900,
+     "emblem": 20,
+     "material": [
+      "Leaf of Vigor",
+      15
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 1100,
+     "emblem": 25,
+     "material": [
+      "Leaf of Vigor",
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Fang Bandits' Arena",
+   "farm": "Gathering materials",
+   "set": "The Infiltrator",
+   "slots": [
+    "Legs",
+    "Boots"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 700,
+     "emblem": 15,
+     "material": [
+      "Drop of Purity",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Purple"
+     ],
+     "exp": 900,
+     "emblem": 20,
+     "material": [
+      "Drop of Purity",
+      15
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 1100,
+     "emblem": 25,
+     "material": [
+      "Drop of Purity",
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Dark Swamp",
+   "farm": "Mining materials",
+   "set": "Ballad of Life",
+   "slots": [
+    "Helmet",
+    "Chest",
+    "Gloves"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 800,
+     "emblem": 20,
+     "material": [
+      "Crystal of Reverie",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Purple"
+     ],
+     "exp": 1000,
+     "emblem": 25,
+     "material": [
+      "Crystal of Reverie",
+      15
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 1200,
+     "emblem": 30,
+     "material": [
+      "Crystal of Reverie",
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Forest of Entangled Roots",
+   "farm": "Mining materials",
+   "set": "Battle Will",
+   "slots": [
+    "Helmet",
+    "Chest",
+    "Gloves"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Blue",
+      "Purple"
+     ],
+     "exp": 800,
+     "emblem": 20,
+     "material": [
+      "Crystal of Oblivion",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Purple"
+     ],
+     "exp": 1000,
+     "emblem": 25,
+     "material": [
+      "Crystal of Oblivion",
+      15
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 1200,
+     "emblem": 30,
+     "material": [
+      "Crystal of Oblivion",
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Rock Tribe Base",
+   "farm": "Mining materials",
+   "set": "The Infiltrator",
+   "slots": [
+    "Helmet",
+    "Chest",
+    "Gloves"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Purple"
+     ],
+     "exp": 900,
+     "emblem": 20,
+     "material": [
+      "Crystal of Recollection",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 1100,
+     "emblem": 25,
+     "material": [
+      "Crystal of Recollection",
+      15
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 1300,
+     "emblem": 30,
+     "material": [
+      "Crystal of Recollection",
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Collapsed Sanctuary",
+   "farm": "Mining materials",
+   "set": "Ballad of Life",
+   "slots": [
+    "Helmet",
+    "Chest",
+    "Gloves",
+    "Legs",
+    "Boots"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 900,
+     "emblem": 25,
+     "material": [
+      "Crystal of Remembrance",
+      10
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 1100,
+     "emblem": 30,
+     "material": [
+      "Crystal of Remembrance",
+      15
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Orange"
+     ],
+     "exp": 1300,
+     "emblem": 35,
+     "material": [
+      "Crystal of Remembrance",
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "name": "The Graveyard Where Tragedy Sleeps",
+   "farm": "Forging Mold",
+   "set": "Battle Will",
+   "slots": [
+    "Helmet",
+    "Chest",
+    "Gloves",
+    "Legs",
+    "Boots"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 1200,
+     "emblem": 30,
+     "material": [
+      "Forging Mold",
+      1
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 1300,
+     "emblem": 30,
+     "material": [
+      "Forging Mold",
+      2
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Orange"
+     ],
+     "exp": 1400,
+     "emblem": 35,
+     "material": [
+      "Forging Mold",
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Ashen Ruins",
+   "farm": "Shape Grinder",
+   "set": "The Infiltrator",
+   "slots": [
+    "Helmet",
+    "Chest",
+    "Gloves",
+    "Legs",
+    "Boots"
+   ],
+   "difficulties": [
+    {
+     "name": "Normal",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 1200,
+     "emblem": 30,
+     "material": [
+      "Shape Grinder",
+      1
+     ]
+    },
+    {
+     "name": "Hard",
+     "gear": [
+      "Purple",
+      "Orange"
+     ],
+     "exp": 1300,
+     "emblem": 30,
+     "material": [
+      "Shape Grinder",
+      3
+     ]
+    },
+    {
+     "name": "Very Hard",
+     "gear": [
+      "Orange"
+     ],
+     "exp": 1400,
+     "emblem": 35,
+     "material": [
+      "Shape Grinder",
+      5
+     ]
+    }
+   ]
+  }
+ ],
+ "currency": [
+  {
+   "name": "Dragon Worshipper Ruins",
+   "gives": "Hero growth materials (EXP texts)"
+  },
+  {
+   "name": "Endless Summoning Grounds",
+   "gives": "Equipment growth materials (Mana Shard, Crystal, Ore, Raw Mana Stone)"
+  },
+  {
+   "name": "Trace of the Giant",
+   "gives": "Karma growth materials (Arcanas)"
+  }
+ ],
+ "currencyNote": "Growth materials up to Purple; amounts differ per difficulty. Two more Currency Dungeons not discovered yet."
+}

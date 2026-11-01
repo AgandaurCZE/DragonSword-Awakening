@@ -4,6 +4,9 @@
 
 
 
+
+## 1 Nov 2026 — Normal Dungeon rewards
+- `assets/dungeons/dungeons.json` and `notes.txt`: gear set, slots, rarities, EXP, Adventurer's Emblems and materials for all 15 Normal Dungeons on all three difficulties.
 ## 1 Nov 2026 — Small fixes
 - Gauron's tab fade follows the clock, so switching tabs or views no longer restarts it.
 - Runes box uses the in-game type icons (tab order from David).

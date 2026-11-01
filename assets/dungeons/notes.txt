@@ -1,28 +1,73 @@
-Dungeons (from David, 1 Nov 2026)
+Normal Dungeons (David, 1 Nov 2026). Full data: dungeons.json. Screenshots: Drops1-5_<Normal|Hard|VeryHard>.webp
 
-[Normal Dungeons]
-No Orange gear at max difficulty (farm these for Monster materials, e.g. Monster Claw:
-  Normal drops Grey, Hard Green, Very Hard Blue quality):
-  Warg Cave
-  Goblin Bandits' Cave
-  Corrupted Bedchamber
-  Underground Goblin Village
-  Silver Tusk Bandits' Supply Depot
-  Warg Enclosure
-  Coastal Cliff Cave Outpost
-Orange and Purple gear at max difficulty (farm these for Gathering and Mining materials):
-  Rusted Tusk Bandits' Treasure Vault
-  Fang Bandits' Arena
-  Dark Swamp
-  Forest of Entangled Roots
-  Rock Tribe Base
-Only Orange gear at max difficulty, plus rare rewards:
-  Collapsed Sanctuary                  Crystal of Remembrance (a mining material)
-  The Graveyard Where Tragedy Sleeps   Forging Mold
-  Ashen Ruins                          Shape Grinder
+Warg Cave  [Monster materials]  set: Ballad of Life  slots: Helmet, Chest, Gloves
+  Normal    gear Blue          EXP   200  Adventurer's Emblem   5  10x Lowest-Grade Monster Claw
+  Hard      gear Blue/Purple   EXP   500  Adventurer's Emblem  10  10x Low-Grade Monster Claw
+  Very Hard gear Blue/Purple   EXP   800  Adventurer's Emblem  20  10x Intermediate Monster Claw
+Goblin Bandits' Cave  [Monster materials]  set: Ballad of Life  slots: Legs, Boots
+  Normal    gear Blue          EXP   200  Adventurer's Emblem   5  10x Lowest-Grade Monster Essence
+  Hard      gear Blue/Purple   EXP   500  Adventurer's Emblem  10  10x Low-Grade Monster Essence
+  Very Hard gear Blue/Purple   EXP   800  Adventurer's Emblem  20  10x Intermediate Monster Essence
+Corrupted Bedchamber  [Monster materials]  set: Battle Will  slots: Helmet, Chest, Gloves
+  Normal    gear Blue          EXP   300  Adventurer's Emblem   5  10x Lowest-Grade Monster Bone Fragment
+  Hard      gear Blue/Purple   EXP   600  Adventurer's Emblem  15  10x Low-Grade Monster Bone Fragment
+  Very Hard gear Purple        EXP   900  Adventurer's Emblem  20  10x Intermediate Monster Bone Fragment
+Underground Goblin Village  [Monster materials]  set: Battle Will  slots: Legs, Boots
+  Normal    gear Blue          EXP   300  Adventurer's Emblem   5  10x Lowest-Grade Monster Hide
+  Hard      gear Blue/Purple   EXP   600  Adventurer's Emblem  15  10x Low-Grade Monster Hide
+  Very Hard gear Purple        EXP   900  Adventurer's Emblem  20  10x Intermediate Monster Hide
+Silver Tusk Bandits' Supply Depot  [Monster materials]  set: The Infiltrator  slots: Legs, Boots
+  Normal    gear Blue          EXP   500  Adventurer's Emblem  10  10x Lowest-Grade Monster Carapace
+  Hard      gear Blue/Purple   EXP   700  Adventurer's Emblem  15  10x Low-Grade Monster Carapace
+  Very Hard gear Purple        EXP   900  Adventurer's Emblem  20  10x Intermediate Monster Carapace
+Warg Enclosure  [Gathering materials]  set: Ballad of Life  slots: Legs, Boots
+  Normal    gear Blue          EXP   600  Adventurer's Emblem  15  10x Fruit of Vitality
+  Hard      gear Blue/Purple   EXP   800  Adventurer's Emblem  20  15x Fruit of Vitality
+  Very Hard gear Purple        EXP  1000  Adventurer's Emblem  25  20x Fruit of Vitality
+Coastal Cliff Cave Outpost  [Gathering materials]  set: The Infiltrator  slots: Helmet, Chest, Gloves
+  Normal    gear Blue          EXP   600  Adventurer's Emblem  15  10x Primordial Seed
+  Hard      gear Blue/Purple   EXP   800  Adventurer's Emblem  20  15x Primordial Seed
+  Very Hard gear Purple        EXP  1000  Adventurer's Emblem  25  20x Primordial Seed
+Rusted Tusk Bandits' Treasure Vault  [Gathering materials]  set: Battle Will  slots: Legs, Boots
+  Normal    gear Blue/Purple   EXP   700  Adventurer's Emblem  15  10x Leaf of Vigor
+  Hard      gear Purple        EXP   900  Adventurer's Emblem  20  15x Leaf of Vigor
+  Very Hard gear Purple/Orange EXP  1100  Adventurer's Emblem  25  20x Leaf of Vigor
+Fang Bandits' Arena  [Gathering materials]  set: The Infiltrator  slots: Legs, Boots
+  Normal    gear Blue/Purple   EXP   700  Adventurer's Emblem  15  10x Drop of Purity
+  Hard      gear Purple        EXP   900  Adventurer's Emblem  20  15x Drop of Purity
+  Very Hard gear Purple/Orange EXP  1100  Adventurer's Emblem  25  20x Drop of Purity
+Dark Swamp  [Mining materials]  set: Ballad of Life  slots: Helmet, Chest, Gloves
+  Normal    gear Blue/Purple   EXP   800  Adventurer's Emblem  20  10x Crystal of Reverie
+  Hard      gear Purple        EXP  1000  Adventurer's Emblem  25  15x Crystal of Reverie
+  Very Hard gear Purple/Orange EXP  1200  Adventurer's Emblem  30  20x Crystal of Reverie
+Forest of Entangled Roots  [Mining materials]  set: Battle Will  slots: Helmet, Chest, Gloves
+  Normal    gear Blue/Purple   EXP   800  Adventurer's Emblem  20  10x Crystal of Oblivion
+  Hard      gear Purple        EXP  1000  Adventurer's Emblem  25  15x Crystal of Oblivion
+  Very Hard gear Purple/Orange EXP  1200  Adventurer's Emblem  30  20x Crystal of Oblivion
+Rock Tribe Base  [Mining materials]  set: The Infiltrator  slots: Helmet, Chest, Gloves
+  Normal    gear Purple        EXP   900  Adventurer's Emblem  20  10x Crystal of Recollection
+  Hard      gear Purple/Orange EXP  1100  Adventurer's Emblem  25  15x Crystal of Recollection
+  Very Hard gear Purple/Orange EXP  1300  Adventurer's Emblem  30  20x Crystal of Recollection
+Collapsed Sanctuary  [Mining materials]  set: Ballad of Life  slots: Helmet, Chest, Gloves, Legs, Boots
+  Normal    gear Purple/Orange EXP   900  Adventurer's Emblem  25  10x Crystal of Remembrance
+  Hard      gear Purple/Orange EXP  1100  Adventurer's Emblem  30  15x Crystal of Remembrance
+  Very Hard gear Orange        EXP  1300  Adventurer's Emblem  35  20x Crystal of Remembrance
+The Graveyard Where Tragedy Sleeps  [Forging Mold]  set: Battle Will  slots: Helmet, Chest, Gloves, Legs, Boots
+  Normal    gear Purple/Orange EXP  1200  Adventurer's Emblem  30  1x Forging Mold
+  Hard      gear Purple/Orange EXP  1300  Adventurer's Emblem  30  2x Forging Mold
+  Very Hard gear Orange        EXP  1400  Adventurer's Emblem  35  3x Forging Mold
+Ashen Ruins  [Shape Grinder]  set: The Infiltrator  slots: Helmet, Chest, Gloves, Legs, Boots
+  Normal    gear Purple/Orange EXP  1200  Adventurer's Emblem  30  1x Shape Grinder
+  Hard      gear Purple/Orange EXP  1300  Adventurer's Emblem  30  3x Shape Grinder
+  Very Hard gear Orange        EXP  1400  Adventurer's Emblem  35  5x Shape Grinder
 
-[Currency Dungeons]  (growth materials up to Purple)
-  Dragon Worshipper Ruins       Hero growth materials (EXP texts; differ per difficulty)
-  Endless Summoning Grounds     Equipment growth materials (Mana Shard/Crystal/Ore/Raw Mana Stone, ores; differ per difficulty)
-  Trace of the Giant            Karma growth materials (Arcanas; differ per difficulty)
+Groups: Monster materials (Grey/Green/Blue = Normal/Hard/Very Hard): Warg Cave, Goblin Bandits' Cave, Corrupted Bedchamber, Underground Goblin Village, Silver Tusk Bandits' Supply Depot.
+Gathering: Warg Enclosure, Coastal Cliff Cave Outpost, Rusted Tusk Bandits' Treasure Vault, Fang Bandits' Arena.
+Mining: Dark Swamp, Forest of Entangled Roots, Rock Tribe Base, Collapsed Sanctuary.
+Graveyard: Forging Mold. Ashen Ruins: Shape Grinder.
+
+[Currency Dungeons]  (growth materials up to Purple; amounts differ per difficulty)
+  Dragon Worshipper Ruins      Hero growth materials (EXP texts)
+  Endless Summoning Grounds    Equipment growth materials (Mana Shard, Crystal, Ore, Raw Mana Stone)
+  Trace of the Giant           Karma growth materials (Arcanas)
   2 more not discovered yet
