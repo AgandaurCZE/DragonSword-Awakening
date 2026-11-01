@@ -475,3 +475,5 @@ Crew Level track: top row 10 items per level, bottom row 100 per 5 levels for le
 
 TRAINING GROUND IN PRACTICE (David, 1 Nov 2026): there's no cooldown setting. ESC restarts the fight (fade-out, fresh dummies,
 all skills charged), which is the only way to reset cooldowns.
+
+BREAK AND BUILD-UP (David, 1 Nov 2026): Break doubles physical status build-up (Stun, Knockdown, Airborne); damage-over-time statuses are unaffected.
