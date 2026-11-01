@@ -1,24 +1,25 @@
 Dungeons (from David, 1 Nov 2026)
 
 [Normal Dungeons]
-No Orange gear at max difficulty:
+No Orange gear at max difficulty (farm these for Monster materials, e.g. Monster Claw:
+  Normal drops Grey, Hard Green, Very Hard Blue quality):
   Warg Cave
   Goblin Bandits' Cave
   Corrupted Bedchamber
   Underground Goblin Village
   Silver Tusk Bandits' Supply Depot
-  Warg Enclosure            (David wrote "Warg Enclousure"; check the in-game spelling)
+  Warg Enclosure
   Coastal Cliff Cave Outpost
-Orange and Purple gear at max difficulty:
+Orange and Purple gear at max difficulty (farm these for Gathering and Mining materials):
   Rusted Tusk Bandits' Treasure Vault
   Fang Bandits' Arena
   Dark Swamp
   Forest of Entangled Roots
   Rock Tribe Base
 Only Orange gear at max difficulty, plus rare rewards:
-  Collapsed Sanctuary
-  The Graveyard Where Tragedy Sleeps
-  Ashen Ruins
+  Collapsed Sanctuary                  Crystal of Remembrance (a mining material)
+  The Graveyard Where Tragedy Sleeps   Forging Mold
+  Ashen Ruins                          Shape Grinder
 
 [Currency Dungeons]  (growth materials up to Purple)
   Dragon Worshipper Ruins       Hero growth materials (EXP texts; differ per difficulty)

@@ -28,3 +28,6 @@ Synthesis (CORRECTED): 5 runes of the same grade (types can be mixed) -> 1 rando
   The "10" on the screen is the most syntheses you can queue at once, not a 10-rune requirement.
 synthesis-screen.webp: the Synthesis pop-up (5 Damaged runes -> 1 unknown Intact rune).
 The same file also has every Disassemble return and upgrade EXP/Gold cost; those are in data.json GEAR_UPGRADE.
+
+Tab order on the Rune Engraving screen (David, 1 Nov 2026): type-1 Determination, type-2 Protection, type-3 Vitality, type-4 Focus, type-5 Amplification. Used as RUNES.types[].icon.
+Disassemble typos in runes_gear_information.txt, confirmed by David: Purple +1..+3 return 1/2/1 Mana Shard (not a second Mana Ore); Orange archetype +5 returns 3 Tangled Forgetfulness and Remembrance.

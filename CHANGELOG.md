@@ -3,6 +3,11 @@
 
 
 
+
+## 1 Nov 2026 — Small fixes
+- Gauron's tab fade follows the clock, so switching tabs or views no longer restarts it.
+- Runes box uses the in-game type icons (tab order from David).
+- Disassemble typos confirmed by David; dungeon notes: what each group of Normal Dungeons is farmed for.
 ## 1 Nov 2026 — Gear upgrade calculator, Disassemble, Runes (preview)
 - Gear page (preview only): upgrade calculator (EXP, Gold and auto-selected materials per level and in total), Disassemble returns (80% of EXP spent plus base materials), and a Runes box (types, stats, grades, values seen, Synthesis).
 - New data keys `GEAR_UPGRADE` and `RUNES` from David's runes_gear_information.txt.

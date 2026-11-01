@@ -22169,7 +22169,7 @@
     "Blue": 500,
     "Green": 200
    },
-   "check": "Matches all 85 single-piece rows (normal and archetype sets) in David's notes and his 2x/4x Purple +12 and 2x/4x Blue +6 batches, after two corrections: Purple +1 to +3 list Mana Ore twice (the second is Mana Shard), and Orange archetype +5 lists 5 Tangled Forgetfulness and Remembrance where every other archetype row has 3."
+   "check": "Matches all 85 single-piece rows (normal and archetype sets) and the 2x/4x Purple +12 and 2x/4x Blue +6 batches in David's notes. Two typos in the notes were confirmed by David (1 Nov 2026): Purple +1 to +3 return a Mana Shard (not a second Mana Ore), and Orange archetype +5 returns 3 Tangled Forgetfulness and Remembrance."
   },
   "crafting": {
    "Orange": {
@@ -22197,32 +22197,37 @@
     "name": "Determination",
     "line": "Resolve",
     "color": "#e0414b",
-    "stat": "Attack"
+    "stat": "Attack",
+    "icon": "assets/runes/type-1.webp"
    },
    {
     "name": "Protection",
     "line": "Guardian",
     "color": "#3d8ff0",
-    "stat": "Defense"
+    "stat": "Defense",
+    "icon": "assets/runes/type-2.webp"
    },
    {
     "name": "Vitality",
     "line": "Vitality",
     "color": "#2fc58f",
-    "stat": "Max HP"
+    "stat": "Max HP",
+    "icon": "assets/runes/type-3.webp"
    },
    {
     "name": "Focus",
     "line": "Focus",
     "color": "#e7b23a",
     "stat": "Critical Hit Chance",
-    "gameStat": "Critical Rate"
+    "gameStat": "Critical Rate",
+    "icon": "assets/runes/type-4.webp"
    },
    {
     "name": "Amplification",
     "line": "Amplification",
     "color": "#a45ae6",
-    "stat": "Critical Damage"
+    "stat": "Critical Damage",
+    "icon": "assets/runes/type-5.webp"
    }
   ],
   "grades": [
