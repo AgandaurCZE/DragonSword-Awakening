@@ -12665,7 +12665,52 @@
    "Helmet main Attack Power Up": "measured (Orange Gloves; Helmet/Boots share the table)",
    "Gloves main Attack Power Up": "measured (Orange Gloves; Helmet/Boots share the table)",
    "Boots main Attack Power Up": "measured (Orange Gloves; Helmet/Boots share the table)",
-   "Legs main Attack Power Up": "estimate: database x 0.954 (ratio measured on Chest and Gloves)"
+   "Legs main Attack Power Up": "estimate: database x 0.954 (ratio measured on Chest and Gloves)",
+   "testKitRows": {
+    "checked": "2026-11-01",
+    "note": "Every main-stat row David saved in Test Kit test 03 (+0 to max) matches the tables within display rounding (Green Defense +6 is 49 vs 48).",
+    "rows": [
+     "Blue Helmet Defense Up",
+     "Blue Helmet Critical Hit Resistance",
+     "Blue Helmet Attack Power Up",
+     "Blue Helmet Max HP",
+     "Green Helmet Defense",
+     "Blue Chest Max HP Up",
+     "Blue Chest Max HP",
+     "Green Legs Max HP",
+     "Blue Legs Attack",
+     "Blue Legs Critical Rate",
+     "Blue Gloves Critical Damage Reduction",
+     "Blue Gloves Critical Hit Resistance",
+     "Purple Legs Max HP Up",
+     "Purple Legs Critical Rate",
+     "Purple Helmet Critical Rate",
+     "Purple Chest Critical Damage",
+     "Purple Gloves Critical Damage",
+     "Orange Helmet Critical Rate",
+     "Orange Chest Critical Rate",
+     "Orange Legs Critical Damage",
+     "Orange Gloves Critical Damage",
+     "Orange Chest Attack Power Up",
+     "Orange Gloves Attack Power Up",
+     "Orange Chest Max HP",
+     "Orange Legs Critical Hit Resistance",
+     "Orange Gloves Critical Rate",
+     "Purple Boots Attack Power Up",
+     "Purple Boots Max HP Up",
+     "Orange Boots Attack",
+     "Orange Legs Attack Power Up",
+     "Purple Helmet Critical Damage Reduction",
+     "Purple Chest Attack Power Up",
+     "Blue Chest Critical Rate",
+     "Purple Gloves Critical Damage Reduction",
+     "Orange Helmet Attack Power Up",
+     "Orange Boots Attack Power Up",
+     "Orange Helmet Critical Hit Resistance",
+     "Orange Gloves Critical Damage Reduction",
+     "Orange Boots Defense"
+    ]
+   }
   }
  },
  "HERO_STAT_MODEL": {
@@ -15906,7 +15951,8 @@
    "Tower of Trials adds to the Additional Damage pool (David, 31 Oct 2026, Tower of Gale floor 1, Reina's Ultimate on the archers, no crits). Without Airborne gear stats (384 Attack): clean 1759, Airborne 17593 (x10), Poison 5278 (x3), Airborne + Poison 26390 (x15). That is the normal hit bonus (x2, x1.5, x2.5) times (1 + tower bonus): +400% for Airborne (the tower's own status) and +100% for Poison, added together (x5, x2, x6). With her Airborne gear (626 Attack, Airborne AAP 250, Airborne Additional Damage 15%): clean 2904, Airborne 41843, Poison 8712, Airborne + Poison 62460; the tower bonus joins the same pool as Additional Damage: 2904 x 876.6/626.6 x 2 x (1 + 4 + 0.15) = 41845 and x 2.5 x (1 + 4 + 1 + 0.15) = 62463. All 7 hits fit within 3. Stun gets no tower bonus: Stun + Airborne 26390 (= x3 x (1 + 4) = x15), Stun + Poison + Airborne 36947 (= x3.5 x (1 + 4 + 1) = x21). Burn gets +100% like Poison: Burn + Airborne 26390 (= x2.5 x (1 + 4 + 1) = x15). So in the Tower of Gale: Airborne +400%, damage-over-time statuses (Poison, Burn; Bleed and Shock not tested) +100%, Stun 0. Tower of Amplitude, same Reina setup: clean 1759, Poison 5278 (x3), Airborne 3518 (x2, no tower bonus), Poison + Airborne 8796 (x2.5 x (1 + 1) = x5). So the +100% for damage-over-time statuses is the towers, not the archers, and Airborne only gets +400% in its own tower. Stun in the Tower of Amplitude: Stun 17593 (x10 = x2 x (1 + 4)), Stun + Airborne 26390 (x3 x 5 = x15), Stun + Airborne + Poison 36947 (x3.5 x 6 = x21): the mirror of the Tower of Gale. Rule: each tower gives its own status +400% and damage-over-time statuses +100%, other statuses nothing, all added to the Additional Damage pool. A second enemy in each tower took about 4% less (Airborne 3379 vs 3518; a harpy's Poison + Airborne 25345 vs the archers' 26390): different Defense, the same ratio both times.",
    "Sion (David, 31 Oct 2026, Test Kit): Bless gives Attack Power +10% at Lv.1 rising +0.5% per level to 14% at Lv.9 and 15% at Lv.10; the Defense version is the same (10-15%). Even steps then a double step at max, like every buff measured so far. How the field works (David): the Ultimate's relic field lasts as long as Sion stays on the field, and he can switch it between the Attack and Defense buff; it is about twice the size of Eileen's Brave One circle; after Sion swaps out it stays for 10 s, and swapping him back in during those 10 s refreshes it, so played right the buff never drops. A buff lingers 2 s after you switch it or leave the field, like Eileen's.",
    "Team buffs add (David, 31 Oct 2026, Test Kit): Eileen's Brave One and Sion's Bless (both Lv.2) on Reina, no status on the enemy. Attack 748 -> 797 with either buff -> 847 with both (+49, +50: adding; multiplying would give 849). The same skill hit: 2,094 -> 2,231 -> 2,369; adding predicts 2,368, multiplying 2,377. Both buffs join the Attack Power Up pool with gear and each other. (A first try at 71 Attack, 78 / 78 / 85, was too small to tell.) Vanguard Banner lasted 10 s.",
-   "Super Armor Break and status build-up (David, 1 Nov 2026, Training Ogre, Test Kit): Break doubles the build-up of physical statuses only (Stun, Knockdown, Airborne). Measured unbroken -> broken per press: Reina Rising Cutter and Wind Slayer 0.167 -> 0.333 Airborne, Johnny Phantom Slash 0.167 -> 0.333 Airborne, Eileen Barraging Spear 0.25 -> 0.5 Airborne, Lute Stun Slash and Sion Divine Smash 0.167 -> 0.333 Stun. Frost is not affected: Cerese Ice Storm 0.25 both ways; damage-over-time statuses (Poison, Bleed, Burn, Shock) are not affected either (David). Matches the Rift: physical statuses needed half as many uses on a Broken enemy. So status tests are done unbroken; broken physical values = 2x."
+   "Super Armor Break and status build-up (David, 1 Nov 2026, Training Ogre, Test Kit): Break doubles the build-up of physical statuses only (Stun, Knockdown, Airborne). Measured unbroken -> broken per press: Reina Rising Cutter and Wind Slayer 0.167 -> 0.333 Airborne, Johnny Phantom Slash 0.167 -> 0.333 Airborne, Eileen Barraging Spear 0.25 -> 0.5 Airborne, Lute Stun Slash and Sion Divine Smash 0.167 -> 0.333 Stun. Frost is not affected: Cerese Ice Storm 0.25 both ways; damage-over-time statuses (Poison, Bleed, Burn, Shock) are not affected either (David). Matches the Rift: physical statuses needed half as many uses on a Broken enemy. So status tests are done unbroken; broken physical values = 2x.",
+   "Defense Ignore 20% (Earthshatterer 3-piece), Reina, Attack 2445, Armor Penetration 66, Critical Damage 55.71%, Wind Sword Lv.3 first hit on the Training Ogre with no statuses (1 Nov 2026): non-crit 743 -> 829 (+11.6%), crit 1157 -> 1291 (+11.6%); crit / non-crit = 1.557 = 1 + Crit Damage. If damage taken scales as K / (K + Defense x (1 - Defense Ignore)), this means the dummy's Defense is about 1.08 x K at Armor Penetration 66 (it blocks about 52% before Defense Ignore). That also predicts about +0.5% for the earlier 0.97% test (+0.4% seen). The form of the formula is still an assumption."
   ],
   "tests": [
    {
@@ -20785,7 +20831,7 @@
       },
       {
        "name": "Gauron · phase 2",
-       "text": "Dragon form."
+       "text": "Dragon form (the tab fades between both forms)."
       }
      ],
      "fightsNote": "HP carries over between the three fights, so bring healing food.",
@@ -20823,7 +20869,8 @@
      ],
      "rewardsNote": "Read from the reward lists in David's screenshots; the lists scroll, so some entries may be missing. Members: 1–3 on every difficulty.",
      "strategy": []
-    }
+    },
+    "image2": "assets/bosses/gauron-dragon-banner.webp"
    }
   ],
   "undiscovered": {
@@ -21899,5 +21946,347 @@
     "image": "assets/cooking/egg-renew.webp"
    }
   ]
+ },
+ "GEAR_UPGRADE": {
+  "note": "From David's runes_gear_information.txt (1 Nov 2026). EXP and Gold to reach each level, per rarity; the same for every slot and set. Green +1 and +2 EXP are inferred from the Disassemble returns (see refund), Green Gold is unknown.",
+  "expMaterials": [
+   {
+    "name": "Raw Mana Stone",
+    "exp": 5000,
+    "icon": "assets/items/icons/raw-mana-stone.webp",
+    "rarity": "Orange"
+   },
+   {
+    "name": "Mana Ore",
+    "exp": 1500,
+    "icon": "assets/items/icons/mana-ore.webp",
+    "rarity": "Purple"
+   },
+   {
+    "name": "Mana Crystal",
+    "exp": 500,
+    "icon": "assets/items/icons/mana-crystal.webp",
+    "rarity": "Blue"
+   },
+   {
+    "name": "Mana Shard",
+    "exp": 200,
+    "icon": "assets/items/icons/mana-shard.webp",
+    "rarity": "Green"
+   }
+  ],
+  "levels": {
+   "Orange": [
+    [
+     1200,
+     1700
+    ],
+    [
+     1300,
+     1700
+    ],
+    [
+     1500,
+     2000
+    ],
+    [
+     3000,
+     2300
+    ],
+    [
+     3300,
+     2900
+    ],
+    [
+     3700,
+     4800
+    ],
+    [
+     4800,
+     4900
+    ],
+    [
+     5200,
+     5100
+    ],
+    [
+     6000,
+     4600
+    ],
+    [
+     9000,
+     10400
+    ],
+    [
+     9800,
+     9900
+    ],
+    [
+     11200,
+     9700
+    ],
+    [
+     9000,
+     10400
+    ],
+    [
+     9700,
+     9600
+    ],
+    [
+     11300,
+     10000
+    ]
+   ],
+   "Purple": [
+    [
+     900,
+     1300
+    ],
+    [
+     900,
+     1300
+    ],
+    [
+     1000,
+     1400
+    ],
+    [
+     2100,
+     2600
+    ],
+    [
+     2200,
+     3100
+    ],
+    [
+     2500,
+     3300
+    ],
+    [
+     3300,
+     4300
+    ],
+    [
+     3500,
+     4700
+    ],
+    [
+     4100,
+     5400
+    ],
+    [
+     6100,
+     8300
+    ],
+    [
+     6700,
+     8900
+    ],
+    [
+     7700,
+     10100
+    ]
+   ],
+   "Blue": [
+    [
+     600,
+     1000
+    ],
+    [
+     600,
+     700
+    ],
+    [
+     800,
+     1300
+    ],
+    [
+     1500,
+     2000
+    ],
+    [
+     1600,
+     2000
+    ],
+    [
+     1900,
+     2600
+    ],
+    [
+     2400,
+     3100
+    ],
+    [
+     2600,
+     3600
+    ],
+    [
+     3000,
+     4000
+    ]
+   ],
+   "Green": [
+    [
+     300,
+     null
+    ],
+    [
+     500,
+     null
+    ],
+    [
+     600,
+     null
+    ],
+    [
+     1100,
+     null
+    ],
+    [
+     1100,
+     null
+    ],
+    [
+     1400,
+     null
+    ]
+   ]
+  },
+  "inferred": {
+   "Green": [
+    0,
+    1
+   ]
+  },
+  "levelsNote": "Each row is [EXP, Gold] for going from the level before to this one (+1 first). Orange +12 needing more EXP than +13 is how the game shows it (checked by David).",
+  "refund": {
+   "rate": 0.8,
+   "text": "Disassembling a piece returns its base materials plus 80% of the Equipment EXP spent on it, paid out in the largest Equipment EXP materials that fit (Raw Mana Stone 5,000, Mana Ore 1,500, Mana Crystal 500, Mana Shard 200). What is left under 200 EXP is lost. Pieces disassembled together are added up first, so their leftovers combine: that is the extra Mana Shard per pair. Gold is not returned.",
+   "base": {
+    "Orange": 5000,
+    "Purple": 1500,
+    "Blue": 500,
+    "Green": 200
+   },
+   "check": "Matches all 85 single-piece rows (normal and archetype sets) in David's notes and his 2x/4x Purple +12 and 2x/4x Blue +6 batches, after two corrections: Purple +1 to +3 list Mana Ore twice (the second is Mana Shard), and Orange archetype +5 lists 5 Tangled Forgetfulness and Remembrance where every other archetype row has 3."
+  },
+  "crafting": {
+   "Orange": {
+    "normal": "5 Tangled Forgetfulness and Remembrance",
+    "archetype": "3 Tangled Forgetfulness and Remembrance + 1–3 High-Grade stone of the set's archetype"
+   },
+   "Purple": {
+    "normal": "5 Tangled Memories and Reminiscences",
+    "archetype": "3 Tangled Memories and Reminiscences + 1–2 Intermediate stone of the set's archetype"
+   },
+   "Blue": {
+    "normal": "5 Red Pyroxene",
+    "archetype": "3 Red Pyroxene + 0–1 Low-Grade stone of the set's archetype"
+   },
+   "Green": {
+    "normal": "nothing else (Green archetype gear doesn't exist)"
+   }
+  },
+  "craftingNote": "Returned at any upgrade level, on top of the EXP materials. There is no Grey gear."
+ },
+ "RUNES": {
+  "note": "Runes drop only in the Raid. Each rune type has one main stat; the value is random within its grade. The values below are the ones seen so far, not the full range.",
+  "types": [
+   {
+    "name": "Determination",
+    "line": "Resolve",
+    "color": "#e0414b",
+    "stat": "Attack"
+   },
+   {
+    "name": "Protection",
+    "line": "Guardian",
+    "color": "#3d8ff0",
+    "stat": "Defense"
+   },
+   {
+    "name": "Vitality",
+    "line": "Vitality",
+    "color": "#2fc58f",
+    "stat": "Max HP"
+   },
+   {
+    "name": "Focus",
+    "line": "Focus",
+    "color": "#e7b23a",
+    "stat": "Critical Hit Chance",
+    "gameStat": "Critical Rate"
+   },
+   {
+    "name": "Amplification",
+    "line": "Amplification",
+    "color": "#a45ae6",
+    "stat": "Critical Damage"
+   }
+  ],
+  "grades": [
+   {
+    "name": "Damaged",
+    "color": "#8b8f98",
+    "raid": "Normal"
+   },
+   {
+    "name": "Intact",
+    "color": "#2fa86a",
+    "raid": "Normal"
+   },
+   {
+    "name": "Refined",
+    "color": "#3d8ff0",
+    "raid": "Hard"
+   },
+   {
+    "name": "Radiant",
+    "color": "#a45ae6",
+    "raid": "Hard"
+   },
+   {
+    "name": "Perfect",
+    "color": "#e08a2c",
+    "raid": "Very Hard"
+   }
+  ],
+  "seen": {
+   "Damaged": {
+    "Determination": [
+     "28"
+    ],
+    "Protection": [
+     "25"
+    ],
+    "Vitality": [
+     "308",
+     "385"
+    ],
+    "Amplification": [
+     "1.80%",
+     "2.40%",
+     "3.00%"
+    ]
+   },
+   "Intact": {
+    "Focus": [
+     "2.40%",
+     "3.00%"
+    ],
+    "Amplification": [
+     "3.60%",
+     "4.50%"
+    ]
+   }
+  },
+  "rules": [
+   "Runes can't be upgraded.",
+   "Synthesis: 5 runes of one grade (types can be mixed) become 1 random rune of the next grade. Up to 10 syntheses at once.",
+   "Removing an engraved Damaged rune costs 10,000 Gold (other grades not seen yet).",
+   "Unlocking a rune slot costs 5 Anonymous Artisan's Crafting Tools."
+  ],
+  "image": "assets/runes/synthesis-screen.webp"
  }
 }

@@ -310,6 +310,20 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .v2-boss.raid.on{border-color:#ff3b47}
 @keyframes v2raid{0%,100%{box-shadow:0 0 8px 1px #c4142b88,0 0 18px 2px #c4142b44}50%{box-shadow:0 0 14px 3px #ff2a3acc,0 0 30px 6px #ff2a3a55}}
 .v2-binfo h5{margin:10px 0 4px}.v2-fights{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px}.v2-fights div{border:1px solid #3a3d46;padding:8px;border-radius:4px}.v2-fights b{display:block;color:#ff6b74}
+.v2-boss-alt{position:absolute;inset:0;background:center 40%/cover no-repeat;opacity:0;animation:v2alt 60s ease-in-out infinite}
+@keyframes v2alt{0%,47%{opacity:0}50%,97%{opacity:1}100%{opacity:0}}
+.gx{margin-top:26px;display:grid;gap:16px}.gx-box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.gx-box h3{margin:0 0 4px}.gx-sub{color:var(--muted);margin:0 0 12px;font-size:14px}.gx-tag{font-size:11px;font-weight:800;color:#ffcf5a;border:1px solid #ffcf5a66;border-radius:4px;padding:1px 6px;margin-left:8px;vertical-align:middle}
+.gx-ctl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}.gx-ctl select{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font:inherit}
+.gx-rar{display:flex;gap:6px}.gx-rar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 12px;font:inherit;font-weight:700;cursor:pointer}.gx-rar button.on{border-color:var(--rc);box-shadow:inset 0 0 0 1px var(--rc);color:var(--rc)}
+.gx-tbl{width:100%;border-collapse:collapse;font-size:14px}.gx-tbl th,.gx-tbl td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}.gx-tbl th{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em}.gx-tbl td.n{text-align:right;font-variant-numeric:tabular-nums}.gx-tbl tr.tot td{font-weight:800;border-top:2px solid var(--line)}
+.gx-mats{display:flex;flex-wrap:wrap;gap:8px}.gx-mat{display:inline-flex;align-items:center;gap:4px;font-weight:700;white-space:nowrap}.gx-mat img{width:24px;height:24px;border-radius:4px;background:#0003}
+.gx-est{color:#ffcf5a;font-size:12px}.gx-note{color:var(--muted);font-size:13px;margin:8px 0 0}.gx-ret{margin-top:12px;padding:10px 12px;border-left:3px solid #5fd38d;background:#5fd38d12;border-radius:4px}
+.gx-wrap{overflow-x:auto}.gx-ret .gx-mats{display:inline-flex;vertical-align:middle;margin:3px 0}
+.rn-types{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}.rn-type{border:1px solid var(--line);border-top:3px solid var(--c);border-radius:8px;padding:10px;background:var(--panel2)}.rn-type b{color:var(--c);display:block}.rn-type small{color:var(--muted)}
+.rn-grades{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}.rn-grade{border:1px solid var(--c);color:var(--c);border-radius:999px;padding:3px 10px;font-weight:800;font-size:13px}
+.rn-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,320px);gap:16px;align-items:start}.rn-cols img{width:100%;border-radius:8px;border:1px solid var(--line)}
+@media(max-width:760px){.rn-cols{grid-template-columns:1fr}}
 .v2-boss-text{position:absolute;left:10px;right:10px;bottom:8px;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:3px}
 .v2-lv{font-size:10px;font-weight:900;color:#1b1406;background:#f5d77a;border-radius:9px;padding:0 6px}
 .v2-boss-name{font-weight:900;font-size:13px;line-height:1.2;text-shadow:0 2px 4px #000}.v2-boss.locked .v2-boss-name{color:#7d8594;text-shadow:none}
@@ -543,6 +557,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  <div class="gear-heading"><h2>GEAR SETS</h2><span id="gearCount">Showing 12 Gear Sets</span></div>
  <div class="gear-controls"><input id="gearSearch" type="search" placeholder="Search gear sets..." autocomplete="off" aria-label="Search gear sets"><button class="gear-filter active" data-gear-filter="all">✱ All</button><button class="gear-filter" data-gear-filter="Normal Dungeons">Normal Dungeons</button><button class="gear-filter" data-gear-filter="Blacksmith">Blacksmith</button><button class="gear-filter" id="gearReset">× Reset</button></div>
  <div id="gearGrid"></div>
+ <div id="gearPreview" hidden></div>
  <p class="profile-note">Gear names, acquisition and effects are transcribed from the workbook’s “Gear Sets &amp; Acquisition” sheet. The three general sets are grouped as Normal Dungeons; the other nine are crafted at the Blacksmith.</p>
 </section>
 
@@ -591,7 +606,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={},COOKBOOK={};
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={},COOKBOOK={},GEAR_UPGRADE={levels:{},expMaterials:[],refund:{base:{}},crafting:{}},RUNES=null;
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -1211,6 +1226,41 @@ function renderGear(){
  makeSection('General sets',general,true);
  makeSection('Archetype sets',archetypeSets,false);
 }
+
+/* Gear page extras (preview only): upgrade calculator, Disassemble returns, Runes */
+const GX={rar:'Orange',from:0,to:15};
+function gxGreedy(x){const out=[];(GEAR_UPGRADE.expMaterials||[]).forEach(m=>{const k=Math.floor(x/m.exp);if(k){out.push([m,k]);x-=k*m.exp;}});return out;}
+function gxFeed(x){const out=gxGreedy(x);const left=x-out.reduce((a,[m,k])=>a+m.exp*k,0);if(left>0){const sh=GEAR_UPGRADE.expMaterials[GEAR_UPGRADE.expMaterials.length-1];const e=out.find(([m])=>m===sh);e?e[1]++:out.push([sh,1]);}return out;}
+function gxMats(list){return list.length?`<span class="gx-mats">${list.map(([m,k])=>`<span class="gx-mat" title="${profileEsc(m.name)} (${m.exp.toLocaleString('en-GB')} EXP)"><img src="${m.icon}" alt="">${k}× <span class="gx-mname">${profileEsc(m.name)}</span></span>`).join('')}</span>`:'—';}
+function gxAdd(acc,list){list.forEach(([m,k])=>{const e=acc.find(([x])=>x===m);e?e[1]+=k:acc.push([m,k]);});return acc.sort((a,b)=>b[0].exp-a[0].exp);}
+function gxReturn(rar,lv){const U=GEAR_UPGRADE,L=U.levels[rar]||[];const inv=L.slice(0,lv).reduce((a,x)=>a+x[0],0);return gxGreedy((U.refund.base[rar]||0)+Math.floor(inv*U.refund.rate));}
+function gxRarColor(r){return {Green:'#5fd38d',Blue:'#4aa3ff',Purple:'#b77cf2',Orange:'#ff9f43'}[r]||'#fff';}
+function renderGearPreview(){const root=$('gearPreview');if(!root||!IS_PREVIEW||typeof GEAR_UPGRADE==='undefined')return;root.hidden=false;
+ const U=GEAR_UPGRADE,L=U.levels[GX.rar]||[];const max=L.length;GX.to=Math.min(Math.max(GX.to,1),max);GX.from=Math.min(GX.from,GX.to-1);
+ const inf=(U.inferred||{})[GX.rar]||[];let eT=0,gT=0,gUnknown=false;const matT=[];
+ const rows=[];for(let i=GX.from;i<GX.to;i++){const [e,g]=L[i];const feed=gxFeed(e);eT+=e;if(g==null)gUnknown=true;else gT+=g;gxAdd(matT,feed);
+  rows.push(`<tr><td>+${i} → +${i+1}</td><td class="n">${e.toLocaleString('en-GB')}${inf.includes(i)?' <span class="gx-est">(inferred)</span>':''}</td><td class="n">${g==null?'?':g.toLocaleString('en-GB')}</td><td>${gxMats(feed)}</td></tr>`);}
+ const opt=(n,sel,lo,hi)=>Array.from({length:hi-lo+1},(_,k)=>k+lo).map(v=>`<option value="${v}"${v===sel?' selected':''}>+${v}</option>`).join('');
+ const C=U.crafting[GX.rar]||{};
+ const R=typeof RUNES!=='undefined'?RUNES:null;
+ const runes=R?`<section class="gx-box"><h3>Runes<span class="gx-tag">PREVIEW</span></h3><p class="gx-sub">${profileEsc(R.note)}</p>
+  <div class="rn-types">${R.types.map(t=>`<div class="rn-type" style="--c:${t.color}"><b>Rune of ${profileEsc(t.name)}</b><small>${profileEsc(t.line)}</small><div>${profileEsc(t.gameStat||t.stat)}</div></div>`).join('')}</div>
+  <div class="rn-cols"><div><h4 style="margin:0">Grades</h4><div class="rn-grades">${R.grades.map(g=>`<span class="rn-grade" style="--c:${g.color}" title="Raid: ${profileEsc(g.raid)}">${profileEsc(g.name)}</span>`).join('<span style="color:var(--muted)">›</span>')}</div>
+  <div class="gx-wrap"><table class="gx-tbl"><tr><th>Values seen</th>${R.types.map(t=>`<th style="color:${t.color}">${profileEsc(t.name)}</th>`).join('')}</tr>${R.grades.map(g=>`<tr><td style="color:${g.color};font-weight:800">${profileEsc(g.name)}<br><small style="color:var(--muted);font-weight:400">Raid ${profileEsc(g.raid)}</small></td>${R.types.map(t=>`<td>${((R.seen[g.name]||{})[t.name]||[]).join(', ')||'<span style="color:var(--muted)">–</span>'}</td>`).join('')}</tr>`).join('')}</table></div>
+  <ul>${R.rules.map(x=>`<li>${profileEsc(x)}</li>`).join('')}</ul></div>${R.image?`<figure style="margin:0"><img src="${R.image}" alt="Rune Synthesis screen" loading="lazy"><figcaption class="gx-note">Synthesis: five Damaged runes of mixed types give one random Intact rune.</figcaption></figure>`:''}</div></section>`:'';
+ root.innerHTML=`<div class="gx"><section class="gx-box"><h3>Upgrade calculator<span class="gx-tag">PREVIEW</span></h3><p class="gx-sub">Equipment EXP and Gold per upgrade level. The same for every slot and set.</p>
+  <div class="gx-ctl"><div class="gx-rar">${Object.keys(U.levels).reverse().map(r=>`<button type="button" data-gxrar="${r}" style="--rc:${gxRarColor(r)}" class="${r===GX.rar?'on':''}">${r}</button>`).join('')}</div>
+  <label>From <select id="gxFrom">${opt(0,GX.from,0,max-1)}</select></label><label>to <select id="gxTo">${opt(0,GX.to,1,max)}</select></label></div>
+  <div class="gx-wrap"><table class="gx-tbl"><tr><th>Level</th><th class="n">EXP</th><th class="n">Gold</th><th>Materials (as the game auto-selects)</th></tr>${rows.join('')}
+  <tr class="tot"><td>Total</td><td class="n">${eT.toLocaleString('en-GB')}</td><td class="n">${gT.toLocaleString('en-GB')}${gUnknown?' + ?':''}</td><td>${gxMats(matT)}</td></tr></table></div>
+  <p class="gx-note">Materials: the game fills each level with the largest Equipment EXP materials that don't overshoot the bar, then one Mana Shard if anything is left (it overshoots by 100). Whether that 100 carries over to the next level hasn't been checked.</p>
+  <div class="gx-ret"><b>Disassemble returns</b> 80% of the Equipment EXP spent on a piece, plus its base materials. Gold isn't returned, and anything under 200 EXP is lost, so disassemble several pieces at once (their leftovers add up: the extra Mana Shard per pair).<br>
+  ${GX.rar} at +${GX.from}: ${gxMats(gxReturn(GX.rar,GX.from))}<br>${GX.rar} at +${GX.to}: ${gxMats(gxReturn(GX.rar,GX.to))}<br>
+  <span class="gx-note">Plus ${profileEsc(C.normal||'')}${C.archetype?`; archetype sets: ${profileEsc(C.archetype)}`:''}.</span></div>
+  <p class="gx-note">Upgrading a piece you'll scrap later loses 20% of the EXP you put in and all of the Gold, at every level, so no level is a better point to disassemble at. Upgrade only what you'll keep.</p></section>${runes}</div>`;
+ root.querySelectorAll('[data-gxrar]').forEach(b=>b.onclick=()=>{GX.rar=b.dataset.gxrar;GX.from=0;GX.to=(U.levels[GX.rar]||[]).length;renderGearPreview();});
+ $('gxFrom').onchange=e=>{GX.from=+e.target.value;if(GX.to<=GX.from)GX.to=GX.from+1;renderGearPreview();};
+ $('gxTo').onchange=e=>{GX.to=+e.target.value;if(GX.from>=GX.to)GX.from=GX.to-1;renderGearPreview();};}
 $('gearSearch').addEventListener('input',renderGear);
 document.querySelectorAll('[data-gear-filter]').forEach(b=>b.addEventListener('click',()=>{activeGearFilter=b.dataset.gearFilter;document.querySelectorAll('[data-gear-filter]').forEach(x=>x.classList.toggle('active',x===b));renderGear()}));
 $('gearReset').addEventListener('click',()=>{$('gearSearch').value='';activeGearFilter='all';document.querySelectorAll('[data-gear-filter]').forEach(x=>x.classList.toggle('active',x.dataset.gearFilter==='all'));renderGear()});
@@ -1633,7 +1683,7 @@ function v2TipHtml(h){const H=v2Hero(h.name);const D=v2Data();const box=(label,t
  return `<div class="tip-top"><img class="tip-portrait" src="${h.portrait}" alt=""><div><div class="tip-title">${profileEsc(h.name)}</div><div class="tip-meta"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)} · ${profileEsc(h.role)}</div></div></div><div class="tip-tiers v2-tip-tiers">${tiers}</div>${H.expert?`<div class="tip-note"><b style="color:#ef4444">Expert −${H.expert.drop}:</b> ${profileEsc(H.expert.reason||'')}</div>`:''}<div class="tip-note">Click for the full guide.</div>`;}
 function v2ShowTip(h,el){const tip=$('tooltip');tip.innerHTML=v2TipHtml(h);tip.style.setProperty('--tier','#536273');tip.style.display='block';const r=el.getBoundingClientRect();let left=r.right+12;if(left+tip.offsetWidth>window.innerWidth-12)left=r.left-tip.offsetWidth-12;tip.style.left=Math.max(12,left)+'px';tip.style.top=Math.max(12,Math.min(window.innerHeight-tip.offsetHeight-12,r.top-12))+'px';}
 function v2ModeBtn(key){const M=v2Data().modes?.[key]||{};return `<button type="button" class="v2-mode${V2.mode===key?' on':''}" data-v2mode="${key}" style="${M.image?`--bg:url('${M.image}')`:''}"><span class="v2-mode-label">${profileEsc(M.label||key)}</span><span class="v2-mode-sub">${profileEsc(M.sub||'')}</span></button>`;}
-function v2BossTab(b){return `<button type="button" class="v2-boss${b.theme?' '+b.theme:''}${V2.boss===b.id?' on':''}" data-v2boss="${b.id}" style="${b.image?`--bg:url('${b.image}')`:''};${b.focus?`background-position:${b.focus}`:''}"><span class="v2-boss-text">${b.level?`<span class="v2-lv">Lv.${b.level}</span>`:''}<span class="v2-boss-name">${profileEsc(b.name)}</span></span></button>`;}
+function v2BossTab(b){return `<button type="button" class="v2-boss${b.theme?' '+b.theme:''}${V2.boss===b.id?' on':''}" data-v2boss="${b.id}" style="${b.image?`--bg:url('${b.image}')`:''};${b.focus?`background-position:${b.focus}`:''}">${b.image2?`<span class="v2-boss-alt" style="background-image:url('${b.image2}')"></span>`:''}<span class="v2-boss-text">${b.level?`<span class="v2-lv">Lv.${b.level}</span>`:''}<span class="v2-boss-name">${profileEsc(b.name)}</span></span></button>`;}
 // Towers mode (TOWER_TRIALS in data.json): tower tabs and the how-it-works / rewards panels.
 function v2TowersHtml(){const T=TOWER_TRIALS;const L=T.towers||[];const w=v2Tower();const I=T.items||{};const B=T.bonus||{};
  const col=a=>ARCH_COLORS[a]||'#fff';const st=(s,a)=>`<b style="color:${col(a||STATUS_ARCHETYPE[s])}">${profileEsc(s)}</b>`;
@@ -1747,13 +1797,13 @@ function startApp(){
  document.getElementById('karmaSearch').addEventListener('input',renderKarmas);
  renderHeroesFilters();renderHeroes();
  document.getElementById('heroesSearch').addEventListener('input',renderHeroes);
- renderGear();
+ renderGear();renderGearPreview();
  renderPatches();
  renderFamiliars();renderTitles();renderTrait();renderCookbook();applyPreviewGate();initTierV2();
  navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);navIcon('navIconHeroes',(UI_ICONS||{}).heroes);navIcon('navIconTeams',(UI_ICONS||{}).teams);navIcon('navIconCookbook',(UI_ICONS||{}).cookbook);
 }
 fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};TOWER_TRIALS=d.TOWER_TRIALS||{};COOKBOOK=d.COOKBOOK||{};
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};TOWER_TRIALS=d.TOWER_TRIALS||{};COOKBOOK=d.COOKBOOK||{};GEAR_UPGRADE=d.GEAR_UPGRADE||GEAR_UPGRADE;RUNES=d.RUNES||null;
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
 </script>

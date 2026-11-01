@@ -1,0 +1,228 @@
+Runes:
+	Damaged:
+Determination: Attack (28,
+Protection: Defense (25, 
+Vitality: Max HP (385, 308
+Focus: Critical Rate
+Amplification: Critical Damage (1.80%, 2.40%, 3%
+	Intact:
+Determination: Attack
+Protection: Defense
+Vitality:  Max HP
+Focus: Critical Rate (3%, 2.40%, 
+Amplification: Critical Damage (3.60%, 4.50%, 
+	Refined:
+Determination: Attack
+Protection: Defense
+Vitality: Max HP
+Focus: Critical Rate
+Amplification: Critical Damage
+	Radiant:
+Determination: Attack
+Protection: Defense
+Vitality: Max HP
+Focus: Critical Rate
+Amplification: Critical Damage
+	Perfect:
+Determination: Attack
+Protection: Defense
+Vitality: Max HP
+Focus: Critical Rate
+Amplification: Critical Damage
+
+Synthesis:
+Previous assumption of needing 10 Runes for it was wrong, Number 10 represents the maximum amouth of Synthesis done at one time.
+Needs 5 of the lower grade Runes to turn into a random one tier higher Rune
+5 - Damaged Runes = 1 Intact Rune
+5 - Intact Runes = 1 Refined Rune
+..and so on..
+
+So far acquired:
+4x Amplification rune (2x Intact, 2x damaged - same main stat)
+2x Focus rune (2x Intact - same main stat)
+1x Protection rune (1x Damaged)
+1x Determination rune (1x Damaged)
+3x Vitality rune (3x Damaged - same main stat)
+Only difference seem to be the value granted, each tier has different
+
+Disassemble Gear - materials acquired:
+Explanation: ([set] = If blazeflame set - grants Blazeflame Stone, if Venom set - grants Venom Stone and so on)
+There's no difference between gear types for the amouths yielded or EXP needed
+LEGENDARY (orange) rarity:
+(Normal set):
++0 = 1x Raw Mana Stone, 5x Tangled Forgetfulness and Remembrance
++1 = 1x Raw Mana Stone, 1x Mana Crystal, 2x Mana Shard, 5x Tangled Forgetfulness and Remembrance
++2 = 1x Raw Mana Stone, 1x Mana Ore, 1x Mana Crystal, 5x Tangled Forgetfulness and Remembrance
++3 = 1x Raw Mana Stone, 2x Mana Ore, 1x Mana Shard, 5x Tangled Forgetfulness and Remembrance
++4 = 2x Raw Mana Stone, 1x Mana Crystal, 5x Tangled Forgetfulness and Remembrance
++5 = 2x Raw Mana Stone, 2x Mana Ore, 1x Mana Shard, 5x Tangled Forgetfulness and Remembrance
++6 = 3x Raw Mana Stone, 2x Mana Crystal, 1x Mana Shard, 5x Tangled Forgetfulness and Remembrance
++7 = 4x Raw Mana Stone, 5x Tangled Forgetfulness and Remembrance
++8 = 4x Raw Mana Stone, 2x Mana Ore, 2x Mana Crystal, 1x Mana Shard, 5x Tangled Forgetfulness and Remembrance
++9 = 5x Raw Mana Stone, 2x Mana Ore, 2x Mana Crystal, 5x Tangled Forgetfulness and Remembrance
++10 = 7x Raw Mana Stone, 2x Mana Crystal, 1x Mana Shard, 5x Tangled Forgetfulness and Remembrance
++11 = 8x Raw Mana Stone, 2x Mana Ore, 2x Mana Crystal, 5x Tangled Forgetfulness and Remembrance
++12 = 10x Raw Mana Stone, 2x Mana Ore, 5x Tangled Forgetfulness and Remembrance
++13 = 12x Raw Mana Stone, 1x Mana Shard, 5x Tangled Forgetfulness and Remembrance
++14 = 13x Raw Mana Stone, 1x Mana Ore, 2x Mana Crystal, 2x Mana Shard, 5x Tangled Forgetfulness and Remembrance
++15 = 15x Raw Mana Stone, 1x Mana Ore, 1x Mana Crystal, 5x Tangled Forgetfulness and Remembrance
+(Archtype set):
++0 = 1x Raw Mana Stone, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++1 = 1x Raw Mana Stone, 1x Mana Crystal, 2x Mana Shard, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++2 = 1x Raw Mana Stone, 1x Mana Ore, 1x Mana Crystal, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++3 = 1x Raw Mana Stone, 2x Mana Ore, 1x Mana Shard, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++4 = 2x Raw Mana Stone, 1x Mana Crystal, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++5 = 2x Raw Mana Stone, 2x Mana Ore, 1x Mana Shard, 5x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++6 = 3x Raw Mana Stone, 2x Mana Crystal, 1x Mana Shard, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++7 = 4x Raw Mana Stone, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++8 = 4x Raw Mana Stone, 2x Mana Ore, 2x Mana Crystal, 1x Mana Shard, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++9 = 5x Raw Mana Stone, 2x Mana Ore, 2x Mana Crystal, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++10 = 7x Raw Mana Stone, 2x Mana Crystal, 1x Mana Shard, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++11 = 8x Raw Mana Stone, 2x Mana Ore, 2x Mana Crystal, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++12 = 10x Raw Mana Stone, 2x Mana Ore, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++13 = 12x Raw Mana Stone, 1x Mana Shard, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++14 = 13x Raw Mana Stone, 1x Mana Ore, 2x Mana Crystal, 2x Mana Shard, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
++15 = 15x Raw Mana Stone, 1x Mana Ore, 1x Mana Crystal, 3x Tangled Forgetfulness and Remembrance, 1-3 High-Grade [set] Stone
+
+Extra notice:
+In this case there's no additional EXP item granted with 2 Equipments, 4 Equipments, 6 Equipments... for Disassemble
+
+EPIC (Purple) rarity:
+(Normal set):
++0 = 1x Mana Ore, 5x Tangled Memories and Reminiscences
++1 = 1x Mana Ore, 1x Mana Crystal, 1x Mana Ore, 5x Tangled Memories and Reminiscences
++2 = 1x Mana Ore, 2x Mana Crystal, 2x Mana Ore, 5x Tangled Memories and Reminiscences
++3 = 2x Mana Ore, 1x Mana Crystal, 1x Mana Ore, 5x Tangled Memories and Reminiscences
++4 = 1x Raw Mana Stone, 2x Mana Shard, 5x Tangled Memories and Reminiscences
++5 = 1x Raw Mana Stone, 1x Mana Ore, 1x Mana Crystal, 5x Tangled Memories and Reminiscences
++6 = 1x Raw Mana Stone, 2x Mana Ore, 2x Mana Crystal, 5x Tangled Memories and Reminiscences
++7 = 2x Raw Mana Stone, 1x Mana Ore, 1x Mana Shard, 5x Tangled Memories and Reminiscences
++8 = 2x Raw Mana Stone, 3x Mana Ore, 5x Tangled Memories and Reminiscences
++9 = 3x Raw Mana Stone, 1x Mana Ore, 2x Mana Crystal, 2x Mana Shard, 5x Tangled Memories and Reminiscences
++10 = 4x Raw Mana Stone, 1x Mana Ore, 2x Mana Crystal, 1x Mana Shard, 5x Tangled Memories and Reminiscences
++11 = 5x Raw Mana Stone, 2x Mana Ore, 5x Tangled Memories and Reminiscences
++12 = 6x Raw Mana Stone, 2x Mana Ore, 2x Mana Crystal, 1x Mana Shard, 5x Tangled Memories and Reminiscences
+(Archtype set):
++0 = 1x Mana Ore, 3x Tangled Memories and Reminiscences, 1-2x Intermidiate [set] Stone
++1 = 1x Mana Ore, 1x Mana Crystal, 1x Mana Ore, 3x Tangled Memories and Reminiscences, 1-2x Intermidiate [set] Stone
++2 = 1x Mana Ore, 2x Mana Crystal, 2x Mana Ore, 3x Tangled Memories and Reminiscences, 1-2x Intermidiate [set] Stone
++3 = 2x Mana Ore, 1x Mana Crystal, 1x Mana Ore, 3x Tangled Memories and Reminiscences, 1-2x Intermidiate [set] Stone
++4 = 1x Raw Mana Stone, 2x Mana Shard, 3x Tangled Memories and Reminiscences, 1-2x Intermidiate [set] Stone
++5 = 1x Raw Mana Stone, 1x Mana Ore, 1x Mana Crystal, 3x Tangled Memories and Reminiscences, 1-2x Intermidiate [set] Stone
++6 = 1x Raw Mana Stone, 2x Mana Ore, 2x Mana Crystal, 3x Tangled Memories and Reminiscences, 1-2x Intermidiate [set] Stone
++7 = 2x Raw Mana Stone, 1x Mana Ore, 1x Mana Shard, 3x Tangled Memories and Reminiscences, 1-2x Intermidiate [set] Stone
++8 = 2x Raw Mana Stone, 3x Mana Ore, 3x Tangled Memories and Reminiscences, 1-2x Intermidiate [set] Stone
++9 = 3x Raw Mana Stone, 1x Mana Ore, 2x Mana Crystal, 2x Mana Shard, 3x Tangled Memories and Reminiscences, 1-2x Intermidiate [set] Stone
++10 = 4x Raw Mana Stone, 1x Mana Ore, 2x Mana Crystal, 1x Mana Shard, 3x Tangled Memories and Reminiscences, 1-2x Intermidiate [set] Stone
++11 = 5x Raw Mana Stone, 2x Mana Ore, 3x Tangled Memories and Reminiscences, 1-2 Intermediate [set] Stone
++12 = 6x Raw Mana Stone, 2x Mana Ore, 2x Mana Crystal, 1x Mana Shard, 3x Tangled Memories and Reminiscences, 1-2 Intermediate [set] Stone
+
+Extra notice:
+If Disassembling more than one piece it seems to add +1 Mana Shard to the rewards per 2 Equipment items (Example that I can see: Dissasemble 2x +12 gear = 13x Raw Mana Stone, 2x Mana Ore, 1 Mana Crystal, 10x Tangled Memories and Reminiscences if 4x +12 gear = 27x Raw Mana Stone, 1x Mana Ore, 1x Mana Crystal, 1x Mana Shard, 10x Tangled Memories and Reminiscences)
+
+RARE (Blue) rarity:
+(Normal set):
++0 = 1x Mana Crystal, 5x Red Pyroxene
++1 = 1x Mana Crystal, 2x Mana Shard, 5x Red Pyroxene
++2 = 2x Mana Crystal, 2x Mana Shard, 5x Red Pyroxene
++3 = 1x Mana Ore, 1x Mana Crystal, 5x Red Pyroxene
++4 = 2x Mana Ore, 1x Mana Shard, 5x Red Pyroxene
++5 = 3x Mana Ore, 5x Red Pyroxene
++6 = 1x Raw Mana Stone, 2x Mana Crystal, 5x Red Pyroxene
++7 = 1x Raw Mana Stone, 2x Mana Ore, 5x Red Pyroxene
++8 = 2x Raw Mana Stone, 5x Red Pyroxene
++9 = 2x Raw Mana Stone, 1x Mana Ore, 2x Mana Crystal, 5x Red Pyroxene
+(Archtype set):
++0 = 1x Mana Crystal, 3x Red Pyroxene, 0-1x Low-Grade [set] Stone
++1 = 1x Mana Crystal, 2x Mana Shard, 3x Red Pyroxene, 0-1x Low-Grade [set] Stone
++2 = 2x Mana Crystal, 2x Mana Shard, 3x Red Pyroxene, 0-1x Low-Grade [set] Stone
++3 = 1x Mana Ore, 1x Mana Crystal, 3x Red Pyroxene, 0-1x Low-Grade [set] Stone
++4 = 2x Mana Ore, 1x Mana Shard, 3x Red Pyroxene, 0-1x Low-Grade [set] Stone
++5 = 3x Mana Ore, 3x Red Pyroxene, 0-1x Low-Grade [set] Stone
++6 = 1x Raw Mana Stone, 2x Mana Crystal, 3x Red Pyroxene, 0-1x Low-Grade [set] Stone
++7 = 1x Raw Mana Stone, 2x Mana Ore, 3x Red Pyroxene, 0-1x Low-Grade [set] Stone
++8 = 2x Raw Mana Stone, 3x Red Pyroxene, 0-1x Low-Grade [set] Stone
++9 = 2x Raw Mana Stone, 1x Mana Ore, 2x Mana Crystal, 3x Red Pyroxene, 0-1x Low-Grade [set] Stone
+
+Extra notice:
+If Disassembling more than one piece it seems to add +1 Mana Shard to the rewards per 2 Equipment items (Example that I can see: Dissasemble 2x +6 gear = 2x Raw Mana Stone, 1x Mana Ore, 1x Mana Crystal, 1x Mana Shard, 10x Red Pyroxene if 4x +6 gear = 4x Raw Mana Stone, 2x Mana Ore, 2x Mana Crystal, 2x Mana Shard, 20x Red Pyroxene)
+
+UNCOMMON (Green) rarity:
+(Normal set only):
++0 = 1x Mana Shard
++1 = 2x Mana Shard
++2 = 1x Mana Crystal, 1x Mana Shard
++3 = 2x Mana Crystal, 1x Mana Shard
++4 = 1x Mana Ore, 1x Mana Crystal, 1x Mana Shard
++5 = 2x Mana Ore
++6 = 2x Mana Ore, 2x Mana Crystal, 1x Mana Shard
+
+COMMON (Grey) rarity:
+Gear of this rarity doesn't exist.
+
+EXP needed to level a gear piece:
+LEGENDARY (Orange) rarity:
++1 = 1200EXP | Gold: 1700
++2 = 1300EXP | Gold: 1700
++3 = 1500EXP | Gold: 2000
++4 = 3000EXP | Gold: 2300
++5 = 3300EXP | Gold: 2900
++6 = 3700EXP | Gold: 4800
++7 = 4800EXP | Gold: 4900
++8 = 5200EXP | Gold: 5100
++9 = 6000EXP | Gold: 4600
++10 = 9000EXP | Gold: 10400
++11 = 9800EXP | Gold: 9900
++12 = 11200EXP | Gold: 9700 ( <-- This EXP value is not a typo, it really is for some reason like this. )
++13 = 9000EXP | Gold: 10400
++14 = 9700EXP | Gold: 9600
++15 = 11300EXP | Gold: 10000
+
+EPIC (Purple) rarity:
++1 = 900EXP | Gold: 1300
++2 = 900EXP | Gold: 1300
++3 = 1000EXP | Gold: 1400
++4 = 2100EXP | Gold: 2600
++5 = 2200EXP | Gold: 3100
++6 = 2500EXP | Gold: 3300
++7 = 3300EXP | Gold: 4300
++8 = 3500EXP | Gold: 4700
++9 = 4100EXP | Gold: 5400
++10 = 6100EXP | Gold: 8300
++11 = 6700EXP | Gold: 8900
++12 = 7700EXP | Gold: 10100
+
+RARE (Blue) rarity:
++1 = 600EXP | Gold: 1000
++2 = 600EXP | Gold: 700
++3 = 800EXP | Gold: 1300
++4 = 1500EXP | Gold: 2000
++5 = 1600EXP | Gold: 2000
++6 = 1900EXP | Gold: 2600
++7 = 2400EXP | Gold: 3100
++8 = 2600EXP | Gold: 3600
++9 = 3000EXP | Gold: 4000
+
+UNCOMMON (Green) rarity:
++1 = ???EXP | Gold: ??? 
++2 = ???EXP | Gold: ???
++3 = 600EXP | Gold: ???
++4 = 1100EXP | Gold: ???
++5 = 1100EXP | Gold: ???
++6 = 1400EXP | Gold: ???
+
+(Didn't save the gold per level when leveling up my only +2 piece, doesn't seem green gear drops anywhere specific so I can't test this further at this moment.)
+
+COMMON (Grey) rarity:
+Gear of this rarity doesn't exist.
+
+Questions I would like to have answered with this data:
+If User started to upgrade gear past +0, and wants to Disassemble that piece, is it better to do so at any level or does each rarity have a specific point when it grants back enough material that it's better to push it up to a specific +Level? (Means if I have +2 Helmet, does for example give me back a bit more EXP resources if I push it to +6 than do it on that +2 compared to the amouth needed vs returned?)
+
+If you can explain the additional +200EXP when Dissasembling 2 pieces of gear, then +400EXP if 4 pieces of gear and so on.
+
+Would it be possible to create a tool that shows what kind of materials is needed per +1 level to upgrade gear, with gold cost and if user chooses more levels at once it will show the final value of everything? Put that tool on site, or if it would mean too much usage% of yours will get used just make a note for ChatGPT how he is supposed to create it so it's not just hard-coded shit as he likes to do.
+(For this the game always try to use the highest quality material first if it fits into the value - example: Item needs 5500EXP to level up, game automatically selects 1 Raw Mana Stone and 1 Mana Crystal, if user have those, otherwise it uses whatever is the highest rarity next, never going over the EXP bar (If value is not even it uses the Mana Shard, that would possibly explain why with Purple and Rare gear the game gives +200EXP more per pair of gear in Disassemble?)
+ Tool would be part of Gear page - only in the preview
+
+Please somewhere where it fits I would love to see a line telling the Users how much of each material used the game returns when Disassembled.

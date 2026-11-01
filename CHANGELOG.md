@@ -2,6 +2,14 @@
 - `assets/help/`: David's Help screenshots (converted to WebP) with their text in `notes.txt`, plus the five Mercenary Crew promotions (requirements, unlocks, rewards). Notes only.
 
 
+
+## 1 Nov 2026 — Gear upgrade calculator, Disassemble, Runes (preview)
+- Gear page (preview only): upgrade calculator (EXP, Gold and auto-selected materials per level and in total), Disassemble returns (80% of EXP spent plus base materials), and a Runes box (types, stats, grades, values seen, Synthesis).
+- New data keys `GEAR_UPGRADE` and `RUNES` from David's runes_gear_information.txt.
+- Gauron's boss tab fades to his dragon form and back once a minute.
+- `DAMAGE_TESTS`: Reina's 20% Defense Ignore test (+11.6%).
+- All 39 main-stat rows in the Test Kit match the gear tables (`GEAR_STATS.valueSources.testKitRows`).
+- `assets/dungeons/notes.txt`: Normal and Currency Dungeon list.
 ## 1 Nov 2026 — Gauron raid tab
 - Raid boss tab glows red and its name is red with a black outline (`theme: "raid"`).
 - New boss info panels under the boss tabs (The fights, Strategy, Rewards), filled for Gauron from David's raid screenshots and notes.

@@ -1,0 +1,27 @@
+Dungeons (from David, 1 Nov 2026)
+
+[Normal Dungeons]
+No Orange gear at max difficulty:
+  Warg Cave
+  Goblin Bandits' Cave
+  Corrupted Bedchamber
+  Underground Goblin Village
+  Silver Tusk Bandits' Supply Depot
+  Warg Enclosure            (David wrote "Warg Enclousure"; check the in-game spelling)
+  Coastal Cliff Cave Outpost
+Orange and Purple gear at max difficulty:
+  Rusted Tusk Bandits' Treasure Vault
+  Fang Bandits' Arena
+  Dark Swamp
+  Forest of Entangled Roots
+  Rock Tribe Base
+Only Orange gear at max difficulty, plus rare rewards:
+  Collapsed Sanctuary
+  The Graveyard Where Tragedy Sleeps
+  Ashen Ruins
+
+[Currency Dungeons]  (growth materials up to Purple)
+  Dragon Worshipper Ruins       Hero growth materials (EXP texts; differ per difficulty)
+  Endless Summoning Grounds     Equipment growth materials (Mana Shard/Crystal/Ore/Raw Mana Stone, ores; differ per difficulty)
+  Trace of the Giant            Karma growth materials (Arcanas; differ per difficulty)
+  2 more not discovered yet
