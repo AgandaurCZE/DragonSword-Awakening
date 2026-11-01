@@ -751,6 +751,42 @@
     "[Normal Dungeon] Warg Cave [...",
     "[Shop] Klonie"
    ]
+  },
+  {
+   "name": "Intermediate Monster Bone Fragment",
+   "type": "Monster Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-monster-bone-fragment.webp",
+   "description": "The shattered skeletal remains of an intermediate-level monster. It exudes a heavy presence just by looking at it, and the extent of the damage reveals that the mercenary who hunted it was no ordinary fighter. Anyone holding this bone fragment has likely already survived a fierce battle. It is used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Corrupted Bedchamber [Very Hard]"
+   ]
+  },
+  {
+   "name": "Intermediate Monster Claw",
+   "type": "Monster Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-monster-claw.webp",
+   "description": "A sharp claw that sends a chill down your spine just looking at it. Its sharp enough to slice through paper with a single swipe. The moment you handle it, you'll feel like you've become the prey rather than the hunter—its that terrifying. You might find yourself wondering, 'Is it really okay for me to use this?' It is used as a material to boost power and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Warg Cave [Very Hard]"
+   ]
+  },
+  {
+   "name": "Intermediate Monster Essence",
+   "type": "Monster Materials",
+   "rarity": "Blue",
+   "icon": "assets/items/icons/intermediate-monster-essence.webp",
+   "description": "Standard Monster Essence, its appearance in a large bottle sets it apart. To obtain this, one must face boss-level monsters—and any mercenary capable of such a feat is already far from ordinary. The deep, flowing light creates a mysterious atmosphere, as if it holds the memories of the battlefield. It is used as a material to boost strength and enhance combat skills.",
+   "use": "Used during Hero Breakthrough",
+   "sources": [
+    "Defeating World Monsters",
+    "[Normal Dungeon] Goblin Bandits' Cave [Very Hard]"
+   ]
   }
  ]
 }

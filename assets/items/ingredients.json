@@ -347,6 +347,16 @@
    "sources": [
     "[Shop] Lizzie"
    ]
+  },
+  {
+   "name": "Wild Onion",
+   "category": "Vegetables",
+   "stars": 2,
+   "icon": "assets/items/icons/wild-onion.webp",
+   "description": "A magical vegetable that greatly enhances the flavor of any dish. It is rich in nutrients and easy to store. There is a story that if you hold your nose while eating it, you cannot tell the difference from an apple.",
+   "sources": [
+    "Gathering in the Wild"
+   ]
   }
  ]
 }

@@ -126,7 +126,7 @@
     "Mid-game": "B",
     "End-game": "B"
    },
-   "owned": false,
+   "owned": true,
    "role": "Support",
    "classType": "Damage / Control",
    "obtain": {
@@ -353,7 +353,7 @@
     "Mid-game": "B",
     "End-game": "B"
    },
-   "owned": false,
+   "owned": true,
    "role": "Main DPS",
    "classType": "Damage / Control",
    "obtain": {
@@ -757,7 +757,7 @@
    "archetype": "Amplitude",
    "name": "Merciful Death Sentence",
    "signature": "Theresia",
-   "source": "exclusive shop exchange",
+   "source": "Theresia's Hero Quest reward (or exclusive shop exchange)",
    "exclusive": "The damage of the Divine Arc skill is increased. When entering Heretic Judgment mode, movement speed increases, and Theresia's Bleed attacks inflict an additional Bleed status effect.",
    "traits": [
     {
@@ -1494,7 +1494,7 @@
    "archetype": "Blazeflame",
    "name": "The Chosen One of the Crimson Flame",
    "signature": "Kalien",
-   "source": "exclusive shop exchange",
+   "source": "Kalien's Hero Quest reward (or exclusive shop exchange)",
    "exclusive": "The number of foxes summoned by the Fox Grab skill increases.",
    "traits": [
     {
@@ -1669,7 +1669,7 @@
    "archetype": "Frostbite",
    "name": "The Spear That Fells the Sun",
    "signature": "Othello",
-   "source": "exclusive shop exchange",
+   "source": "Othello's Hero Quest reward (or exclusive shop exchange)",
    "exclusive": "Frozen Stinger is enhanced: the range and damage of its final attack are increased. Pressing the attack button again casts the final attack faster.",
    "traits": [
     {
@@ -1706,7 +1706,7 @@
    "archetype": "Frostbite",
    "name": "Eternal Blizzard",
    "signature": "Cerese",
-   "source": "exclusive shop exchange",
+   "source": "Cerese's Hero Quest reward (or exclusive shop exchange)",
    "exclusive": "When the Ice Storm skill ends, the storm moves toward the nearest enemy. If the targeted enemy is defeated, the storm remains at that location.",
    "traits": [
     {
@@ -1743,7 +1743,7 @@
    "archetype": "Frostbite",
    "name": "A Sparkling Tea Time",
    "signature": "Dana",
-   "source": "exclusive shop exchange",
+   "source": "Dana's Hero Quest reward (or exclusive shop exchange)",
    "exclusive": "When Chako is summoned, frost spikes rise at the summoning point depending on the size of the Ice Clump on Chako's back. The frost spikes deal continuous damage to the target and inflict the Frost status effect.",
    "traits": [
     {
@@ -1955,7 +1955,7 @@
    "archetype": "Thunderbolt",
    "name": "Sacred Lightning Baptism",
    "signature": "Ornette",
-   "source": "exclusive shop exchange",
+   "source": "Ornette's Hero Quest reward (or exclusive shop exchange)",
    "exclusive": "When using the Holy Cross skill within the area created by the Holy Circle skill, the cross becomes larger and the number of attacks increases.",
    "traits": [
     {
@@ -12759,6 +12759,26 @@
     15,
     230
    ],
+   "Lv50 pre-breakthrough Reina": [
+    609,
+    192,
+    4082
+   ],
+   "Lv50 breakthrough Reina": [
+    38,
+    20,
+    312
+   ],
+   "Lv50 pre-breakthrough Charlotte": [
+    631,
+    184,
+    3961
+   ],
+   "Lv50 breakthrough Charlotte": [
+    48,
+    17,
+    260
+   ],
    "order": [
     "Attack",
     "Defense",
@@ -12766,21 +12786,21 @@
    ]
   },
   "levelCurve": {
-   "formula": "a + b*(exp(r*(L-1)) - 1); least-squares fit to the level part (stats minus earlier breakthrough bonuses) at Lv1, Lv10, Lv20, Lv30 and Lv40 (31 Oct 2026; largest error 1.3 Attack, 0.6 Defense, 9 Max HP). The Lv40 level part was 378 / 106 / 2448 for both profiles; the old 4-point fit had predicted 371 / 103 / 2402, so the curve was refitted.",
+   "formula": "a + b*(exp(r*(L-1)) - 1); least-squares fit to the level part (stats minus earlier breakthrough bonuses) at Lv1, 10, 20, 30, 40 and 50 (1 Nov 2026; largest error 1.8 Attack, 0.6 Defense, 11.8 Max HP). The Lv50 level part was 519 / 145 / 3356 for both profiles (the Lv40 fit had predicted 510 / 145 / 3307).",
    "Attack": {
-    "a": 71.84059,
-    "b": 217.09618,
-    "r": 0.0225357
+    "a": 72.77985,
+    "b": 192.91667,
+    "r": 0.0244163
    },
    "Defense": {
-    "a": 20.36456,
-    "b": 52.15977,
-    "r": 0.0248728
+    "a": 20.39824,
+    "b": 51.40224,
+    "r": 0.0251151
    },
    "Max HP": {
-    "a": 466.86608,
-    "b": 1369.85292,
-    "r": 0.0229141
+    "a": 471.79136,
+    "b": 1245.34276,
+    "r": 0.0244403
    }
   },
   "breakthroughProfiles": {
@@ -12789,20 +12809,23 @@
     "Attack": {
      "Lv20": 32,
      "Lv30": 37,
-     "perTierIncrease": 5.5,
-     "Lv40": 43
+     "perTierIncrease": 5.33,
+     "Lv40": 43,
+     "Lv50": 48
     },
     "Defense": {
      "Lv20": 11,
      "Lv30": 13,
-     "perTierIncrease": 2,
-     "Lv40": 15
+     "perTierIncrease": 2.0,
+     "Lv40": 15,
+     "Lv50": 17
     },
     "Max HP": {
      "Lv20": 173,
      "Lv30": 202,
-     "perTierIncrease": 28.5,
-     "Lv40": 230
+     "perTierIncrease": 29.0,
+     "Lv40": 230,
+     "Lv50": 260
     }
    },
    "B": {
@@ -12810,20 +12833,23 @@
     "Attack": {
      "Lv20": 25,
      "Lv30": 30,
-     "perTierIncrease": 5,
-     "Lv40": 35
+     "perTierIncrease": 4.33,
+     "Lv40": 35,
+     "Lv50": 38
     },
     "Defense": {
      "Lv20": 13,
      "Lv30": 16,
-     "perTierIncrease": 2.5,
-     "Lv40": 18
+     "perTierIncrease": 2.33,
+     "Lv40": 18,
+     "Lv50": 20
     },
     "Max HP": {
      "Lv20": 207,
      "Lv30": 243,
-     "perTierIncrease": 34.5,
-     "Lv40": 276
+     "perTierIncrease": 35.0,
+     "Lv40": 276,
+     "Lv50": 312
     }
    }
   },
@@ -12834,184 +12860,184 @@
    "setBonusTest": "Ballad of Life on Charlotte (no other gear stats, no Karma): Max HP 1975 -> 2152 with 2 pieces (+9%) -> 2271 with 3 pieces (+15% = 2-piece + 3-piece) -> 2271 with 5 pieces. Displayed values are rounded down.",
    "titles": "Titles (achievement rewards, Mercenary Crew > Title) give passive bonuses to every hero, slotted or not. All 109 titles and their passives are in TITLES (29 Oct 2026). At the Lv1 measurement David had 3 titles (Defense +10, Max HP +50, Defense Up +1.5%), which is exactly why Lv1 showed 71/30/511 with titles vs 71/20/461 without. HERO_BASE_STATS and the level curve exclude titles; the end-game totals add the titles each viewer ticks on the Titles tab."
   },
-  "breakthroughNote": "Lv20, Lv30 and Lv40 bonuses are measured (Lv40 on Johnny, Reina and Charlotte, 31 Oct 2026). Lv50 and Lv60 are estimates: the last measured bonus plus perTierIncrease, the average step from Lv20 to Lv40."
+  "breakthroughNote": "Lv20-Lv50 bonuses are measured (Lv50 on Reina and Charlotte, 1 Nov 2026). Lv60 is an estimate: the Lv50 bonus plus perTierIncrease, the average step from Lv20 to Lv50."
  },
  "HERO_BASE_STATS": {
   "Johnny": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Lute": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Castella": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Aria": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Dana": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Kalien": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Roxy": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Alex": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Theresia": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Ornette": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Sion": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Tarte": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Kalsion": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Cerese": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Reina": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Astria": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Eileen": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Othello": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Charlotte": {
-   "Attack": 1097,
-   "Defense": 333,
-   "Max HP": 6905,
+   "Attack": 1133,
+   "Defense": 335,
+   "Max HP": 7105,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "A"
   },
   "Ryza": {
-   "Attack": 1058,
+   "Attack": 1090,
    "Defense": 349,
-   "Max HP": 7136,
+   "Max HP": 7336,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -14357,7 +14383,7 @@
  "TITLES": {
   "note": "All 109 titles, read from David's screen recording of the Title list (29 Oct 2026), in the game's order. Every obtained title's passive applies to all heroes, slotted or not. Flat bonuses are added to the hero's flat stats before % bonuses multiply; % bonuses join the same pool as gear and set % (confirmed in-game). Name colours are the game's: the five colours run from strongest (pink) to weakest (lavender) passives. The game hides the condition once a title is obtained, Curious Hands (Anything in Here?) and 【777】 (Lucky!) were filled in from David's Achievements video, 1 Nov 2026; Novice Mercenary Crew's is inferred from the other promotion titles. David's titles updated 31 Oct 2026 (5 of 109: Environmental Cleaner and Black Wings added; the game's Cumulative Set Effect, Defense +10, Max HP +100, Defense Up +1.50%, Critical Rate +1.30%, matches the sum).",
   "totalCount": 109,
-  "ownedCount": 7,
+  "ownedCount": 11,
   "ownedCumulative": [
    {
     "stat": "Critical Hit Chance",
@@ -14365,19 +14391,19 @@
    },
    {
     "stat": "Critical Damage",
-    "value": 1
+    "value": 2.5
+   },
+   {
+    "stat": "Max HP",
+    "value": 450
    },
    {
     "stat": "Defense",
-    "value": 10
+    "value": 15
    },
    {
     "stat": "Defense Up",
     "value": 1.5
-   },
-   {
-    "stat": "Max HP",
-    "value": 200
    }
   ],
   "list": [
@@ -14656,7 +14682,7 @@
    {
     "name": "High-Ranking Mercenary Crew",
     "grade": 3,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
@@ -15308,7 +15334,7 @@
    {
     "name": "One Who Erases Names",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Critical Damage",
@@ -15542,7 +15568,7 @@
    {
     "name": "I Want to Do Missions",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Defense",
@@ -15568,7 +15594,7 @@
    {
     "name": "Impregnable",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
@@ -19924,7 +19950,7 @@
     "name": "Dawn Wing Cat",
     "group": "Cat",
     "image": "assets/familiars/dawn-wing-cat.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "promotion",
      "label": "Advanced Mercenary Crew Promotion"
@@ -20388,7 +20414,7 @@
   },
   "owned": {
    "Bird": 1,
-   "Cat": 1,
+   "Cat": 2,
    "Direwolf": 0,
    "Griffon": 0,
    "Insect": 3,
@@ -20734,6 +20760,17 @@
     "weak": [],
     "immune": [],
     "portrait": "assets/bosses/gallore.webp"
+   },
+   {
+    "id": "gauron",
+    "name": "Gauron",
+    "level": 50,
+    "type": "Raid",
+    "image": "assets/bosses/gauron-banner.webp",
+    "weak": [],
+    "immune": [],
+    "portrait": "assets/bosses/gauron.webp",
+    "stage": "Steelheart Fortress Defense"
    }
   ],
   "undiscovered": {
@@ -21384,6 +21421,12 @@
     "category": "Fish",
     "stars": 1,
     "icon": "assets/items/icons/fish-fillet.webp"
+   },
+   {
+    "name": "Wild Onion",
+    "category": "Vegetables",
+    "stars": 2,
+    "icon": "assets/items/icons/wild-onion.webp"
    }
   ],
   "dishes": [

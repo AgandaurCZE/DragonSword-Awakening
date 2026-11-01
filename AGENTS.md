@@ -22,9 +22,10 @@ Every commit to `main` goes live about a minute later. There is no build step, n
 | `assets/items/` | `materials.json`, `important.json`, `ingredients.json`, `achievements.json` and `cookbook.json` (73 recipes, the 17 discovered): every item in David's Materials, Important and Ingredients tabs (name, type, rarity colour, description, use, main sources; read by OCR from his inventory video, 31 Oct 2026) with icons in `icons/`, and `README.txt` summarising what levels what. Not used by the page yet. |
 | `assets/merc-crew/` | Mercenary Crew Level reward track screenshots and `notes.txt`. Not used by the page. |
 | `assets/patch_notes/<version>.txt` | The official Steam patch notes, word for word (1.0.0 = the launch notice). The source for `PATCH_NOTES`; linked from the Patch Notes page. |
-| `assets/runes/` | Rune type icons and Rune slot circles cut from David's screens, not used yet (see its README). |
+| `assets/runes/` | Rune type icons and Rune slot circles cut from David's screens, not used yet. Its README lists the five types, five grades, raid drops and rules (no upgrades, Synthesis needs 10, removing a Damaged rune costs 10,000 Gold). |
 | `assets/exchange/` | Exchange screenshots (`source/`) and `prices.txt`: every Exchange price, what each material does, crafting and skill-upgrade costs, Hunt boss materials, and `chest-drops.txt` (David's notes on what world chests drop). Not used by the page yet. |
 | `assets/help/` | David's screenshots of the in-game Help pages (status effects, Super Armor and ~30 other topics, plus the five Mercenary Crew Grade screens), with the text in `notes.txt`. Not used by the page. |
+| `assets/raid/` | Raid screenshots (introduction, Gauron rewards per difficulty, Raid menu icons white/gold) and `notes.txt` (difficulties, rewards, the Ogre → Gauron phase 1 → phase 2 structure with HP carried over). Gauron is a Raid boss tab in `TIER_LIST_V2.bosses`. |
 | `assets/rift/` | The Rift (not released as a mode yet): `rift-portal.webp` and `notes.txt` with David's notes on Corrupted Entities. Not used by the page. |
 | `assets/tower/` | Tower of Trials screenshots (`source/`) and `notes.txt`: towers seen, floor conditions, cumulative star rewards (the source of Whirling Thoughts). Not used by the page yet. |
 | `CHANGELOG.md` | A record of every change, newest first. |

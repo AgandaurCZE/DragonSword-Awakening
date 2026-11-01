@@ -1,6 +1,15 @@
 ## 2026-11-01 — Claude: Help pages and Crew grades
 - `assets/help/`: David's Help screenshots (converted to WebP) with their text in `notes.txt`, plus the five Mercenary Crew promotions (requirements, unlocks, rewards). Notes only.
 
+## 1 Nov 2026 — Story chapter 5 batch
+- Colour portraits for Kalien and Othello (now owned); Dawn Wing Cat familiar (owned).
+- Titles 11/109: Impregnable, One Who Erases Names, I Want to Do Missions, High-Ranking Mercenary Crew.
+- Cerese, Othello, Ornette, Kalien, Dana and Theresia's signature Karmas: source is now their Hero Quest reward.
+- Items: Wild Onion ingredient; Intermediate Monster Bone Fragment, Claw and Essence materials.
+- Level 50 measurements (Reina, Charlotte): level curve refitted on L1–L50, L50 breakthroughs measured for both profiles; `hero_stats.py --write` rerun.
+- Raid: Gauron added as the first Raid boss tab in the new tier list (preview); `assets/raid/` screenshots converted to WebP with `notes.txt`.
+- Runes: five types and five grades recorded in `assets/runes/README.txt` from David's Raid video.
+
 ## 2026-11-01 — Claude: achievements, Mercenary Crew Level
 - `assets/items/achievements.json`: 103 achievements with conditions, David's progress and the title each gives. Titles tab: Curious Hands and 【777】 now show their achievements.
 - `assets/merc-crew/`: the free Crew Level reward track (screenshots + notes).

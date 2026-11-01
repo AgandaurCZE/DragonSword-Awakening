@@ -1,0 +1,17 @@
+Raid (from David's screenshots and notes, 1 Nov 2026, story chapter 5)
+
+Introduction (in-game): "Raid is co-op content that up to 3 players can challenge together."
+"As raid rewards, you can obtain various equipment, Runes, and special equipment-related materials."
+Modes: Multiplayer Mode (Invite Code) and Solo Mode.
+
+Raid 1: Gauron, stage "Steelheart Fortress Defense". Members 1-3.
+  Normal     recommended Lv.50  rewards: Damaged + Intact Runes (all 5 types), EXP 800, Gold 150,000, materials (1, 1-3, 30)
+  Hard       recommended Lv.70  rewards: Ballad of Life and Infiltrator gear (Orange), Refined + Radiant Runes
+  Very Hard  recommended Lv.90  rewards: Perfect Runes, EXP, Gold, materials
+  Battle Will gear is also in the reward lists (Raid_Gauron_Rewards_*.webp).
+Structure (David): an Ogre boss on the bridge, then Gauron phase 1 (humanoid), then Gauron phase 2 (dragon).
+  HP carries over between the fights, so healing food matters.
+Raid 2: locked; unlocks after story chapter 8.
+
+Pictures: Raid_Introduction_1/2, Raid_Gauron_Rewards_<difficulty>_1-3, Raid_Icon_White/Gold (menu icons).
+Boss art for the tier list: assets/bosses/gauron.webp and gauron-banner.webp.
