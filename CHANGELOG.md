@@ -1,3 +1,10 @@
+## 2 Nov 2026 — Final four Normal Dungeon artwork sets
+
+- Added twelve 1672×240 WebP banners for Rock Tribe Base, Collapsed Sanctuary, The Graveyard Where Tragedy Sleeps and Ashen Ruins. Added only their per-difficulty banner paths in data.json; rewards, names, renderer, frames and preview gating remain unchanged.
+- Rock Tribe uses corruption/inferno; Sanctuary uses escalating lich necromancy; Graveyard progresses from sleeping skeletal dragon to gathering spirits to spectral awakening; Ashen Ruins combines the skeleton commander, spiders and an undead troll with a venomous greed curse. David clarified that Tomb of Greed was a naming typo and Ashen Ruins is correct.
+- Artwork generated using built-in imagegen. Production fitting preserves subject proportions with separate environment/subject framing and one consistent transform per dungeon across difficulties. Illustration masters remain saved locally.
+- Validation: repository data validator passed; structural comparison against HEAD confirms only twelve banner paths changed. Browser checked all twelve difficulty selections at 1920×1080 and 2560×1440, including corresponding rewards and constant card size. Reviewed framed exports and local browser fit, browser error log empty; normal public URL hides dungeon navigation. index.html unchanged. Deployment wait intentionally omitted.
+
 ## 2 Nov 2026 — Match dungeon frame geometry across difficulties
 
 ## 2 Nov 2026 — Four more dungeon backgrounds

@@ -36,3 +36,11 @@
 - Village: elevated scouting viewpoint; everyday settlement to primitive war camp to timber stronghold. Depot: stolen supplies to leaking contraband to buckling chained cargo; preserve distinct non-inferno palette. Enclosure: harsh breeding pens to bloodstained corruption to Ironclad-led pack.
 - Coastal: keep blue Tribal Hero and throne positioned clear of central title; II adds whispering human Dragon Worshipper and spreading control; III shows destructive granted power consuming his home. David rejected fused nose/mouth anatomy: use the corrected Normal reference, with separate nostrils/nose, mouth, jaw and chin on Hero and both archers.
 - Continue approving one Normal preview at a time, then collect 3–4 completed dungeon sets for one integration batch. Do not publish each dungeon independently during collection.
+
+## Final four-dungeon artwork batch (2 November 2026)
+
+- Integrated three difficulties each for Rock Tribe Base, Collapsed Sanctuary, The Graveyard Where Tragedy Sleeps and Ashen Ruins behind the existing preview gate.
+- Ashen Ruins is the correct name; David clarified Tomb of Greed was a typo. Use its existing rewards unchanged.
+- Sanctuary escalates lich/soul magic without fire. Graveyard II preserves the sleeping dragon; III raises its head in spectral rage while body and landmarks stay anchored. Ashen Ruins reuses the commander with spiders and an undead troll, escalating venom and a greed curse.
+- Keep shared subject framing across each set. Local original masters and prompt summaries are in the Rock Tribe chat outputs/dungeon-art-batch-3 folder.
+- All 15 dungeon sets now have artwork. The previously recorded Goblin Bandits Cave I alignment fix remains the next pending artwork correction.
