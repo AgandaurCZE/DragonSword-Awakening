@@ -22403,7 +22403,8 @@
        "name": "Lowest-Grade Monster Essence",
        "amount": 10,
        "icon": "assets/items/icons/lowest-grade-monster-essence.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/goblin-bandits-cave-normal.webp"
      },
      {
       "name": "Hard",
@@ -22417,7 +22418,8 @@
        "name": "Low-Grade Monster Essence",
        "amount": 10,
        "icon": "assets/items/icons/low-grade-monster-essence.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/goblin-bandits-cave-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22431,7 +22433,8 @@
        "name": "Intermediate Monster Essence",
        "amount": 10,
        "icon": "assets/items/icons/intermediate-monster-essence.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/goblin-bandits-cave-very-hard.webp"
      }
     ]
    },
