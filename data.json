@@ -23666,8 +23666,25 @@
     "difficulties": [
      {
       "name": "Normal",
-      "rewards": [],
-      "rewardsKnown": false
+      "rewards": [
+       [
+        "exp",
+        600
+       ],
+       [
+        "gold",
+        75000
+       ],
+       [
+        "emblem",
+        10
+       ],
+       [
+        "arcanaOfWar",
+        100
+       ]
+      ],
+      "rewardsKnown": true
      },
      {
       "name": "Hard",
