@@ -1,3 +1,9 @@
+## 2 Nov 2026 — Match dungeon frame geometry across difficulties
+
+- `index.html`: all difficulties now share the blue frame master; purple/red colour filters affect only the frame. Removed the old per-frame crop offsets so backgrounds use one opening, and preserved the existing controls and rewards.
+- `docs/DUNGEON_ARTWORK_WORKFLOW.md`: recorded the shared geometry rule and David's instruction to finish review tasks immediately after pushing.
+- Validation: JavaScript syntax check passed; local browser checked independent Normal/Hard selections alongside Very Hard, identical frame source, dimensions and clip paths; visually inspected all three colours. No dungeon artwork regenerated or data changed.
+
 ## 2 Nov 2026 — Correct dungeon background clipping for each frame
 - `index.html`: give the purple and red frames their own background clipping insets. All frame images have a 1672×240 canvas, but the painted top edges differ (blue around y=14, purple y=22, red y=20–21). The old shared crop started at y=18, exposing artwork above II/III. Updated both the illustration and tint/pending-art overlay clipping; purple's bottom crop also stays within its painted edge. Card/frame dimensions, control positions, game data and artwork files are unchanged.
 - `docs/DUNGEON_ARTWORK_WORKFLOW.md`: recorded composition/framing lessons, the one-preview Proceed/Stop flow, and the Difficulty I goblin position/scale mismatch as a deferred fix due ASAP after all backgrounds are completed.

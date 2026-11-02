@@ -18,3 +18,8 @@
 ## Deferred fix — ASAP after all dungeon backgrounds are completed
 
 - **Goblin Bandits' Cave, Difficulty I:** align both goblins' position/scale with II and III. In I, the left goblin has less of its head/body visible. David explicitly requested this be deferred until all backgrounds are done, then fixed as soon as possible. Preserve the approved cave scene.
+
+## Shared frame geometry (2 November 2026)
+
+- All three difficulties render the blue frame master at 1672 × 240; purple and red are colour treatments on the frame layer only. Keep the same alpha silhouette, inner opening, circle positions and background crop across difficulties. Do not restore the independently generated purple/red frames, whose geometry differs.
+- For commits intended for David's visual review, complete checks before pushing and end the task immediately after the push; do not wait for Pages deployment.
