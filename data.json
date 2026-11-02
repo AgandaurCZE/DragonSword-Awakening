@@ -23628,8 +23628,25 @@
     "difficulties": [
      {
       "name": "Normal",
-      "rewards": [],
-      "rewardsKnown": false
+      "rewards": [
+       [
+        "exp",
+        400
+       ],
+       [
+        "gold",
+        50000
+       ],
+       [
+        "emblem",
+        5
+       ],
+       [
+        "manaShard",
+        100
+       ]
+      ],
+      "rewardsKnown": true
      },
      {
       "name": "Hard",
