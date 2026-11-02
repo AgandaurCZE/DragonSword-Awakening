@@ -1,3 +1,8 @@
+## 2 Nov 2026 — Visually verified dungeon control and reward placement
+- `index.html`: moved only Difficulty III's overlay slightly right and down (18.36%, 33.7%) to align with the existing painted circle; I and II remain unchanged. Inset the lower-left reward row to 6% from the left and 20% from the bottom, including the mobile override; quantity badges now sit inside their boxes. Existing artwork, data, interactions and preview gating are preserved.
+- `CHANGELOG.md`: recorded this fix and validation.
+- Validation: inspected local HTTP preview screenshots at 1920×1080 and 2560×1440, including blue/purple/red frames; exercised Warg Cave's I/II/III rewards and the Ballad of Life filter (5 cards); confirmed Dungeons navigation is hidden without preview. No browser console errors were captured. `tools/validate_data.py` passed with the referenced assets present; inline JavaScript passed `node --check` and is unchanged; CSS braces balanced and targeted diff reviewed.
+
 ## 2 Nov 2026 — Fine alignment of dungeon difficulty II and III
 - `index.html`: nudged the Difficulty II button overlay horizontally from 12.42% to 12.58% and III from 18.07% to 18.22% to better match the painted circle centres in both supplied fullscreen screenshots. Difficulty I, ring styling, banners and rewards are unchanged.
 - Validation: verified only these two selectors changed; the inline JavaScript passed syntax parsing and was unchanged, CSS braces were balanced. Live browser render/interactions were not tested.
