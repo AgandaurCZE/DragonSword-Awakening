@@ -1,3 +1,7 @@
+## 2 Nov 2026 — Fine alignment of dungeon difficulty II and III
+- `index.html`: nudged the Difficulty II button overlay horizontally from 12.42% to 12.58% and III from 18.07% to 18.22% to better match the painted circle centres in both supplied fullscreen screenshots. Difficulty I, ring styling, banners and rewards are unchanged.
+- Validation: verified only these two selectors changed; the inline JavaScript passed syntax parsing and was unchanged, CSS braces were balanced. Live browser render/interactions were not tested.
+
 ## 2 Nov 2026 — Normal Dungeons visual alignment
 - `index.html`: aligned the three difficulty-button overlays more closely with their painted frame circles; replaced the selected button's outside glow with an inset highlight and softened unselected shading.
 - Repositioned the reward row inside the ornate banner and inset quantity badges to keep them clear of the bottom border. Mobile override now retains relative banner alignment instead of applying fixed offsets.
