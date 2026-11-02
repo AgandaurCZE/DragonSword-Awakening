@@ -23178,6 +23178,12 @@
     "gives": "Karma growth materials (Arcanas)"
    }
   ],
+  "currencyRewardItems": {
+   "gold": {
+    "name": "Gold",
+    "icon": "assets/ui/gold.webp"
+   }
+  },
   "currencyNote": "Growth materials up to Purple; amounts differ per difficulty. Two more Currency Dungeons not discovered yet.",
   "undiscovered": {
    "currency": 2
