@@ -23701,6 +23701,10 @@
    "emblem": {
     "name": "Adventurer's Emblem",
     "icon": "assets/ui/adventurers-emblem.webp"
+   },
+   "coreCombatText": {
+    "name": "Core Combat Text",
+    "icon": "assets/items/icons/core-combat-text.webp"
    }
   },
   "currencyNote": "Growth materials up to Purple; amounts differ per difficulty. Two more Currency Dungeons not discovered yet.",

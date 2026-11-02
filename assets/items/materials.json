@@ -207,6 +207,18 @@
    ]
   },
   {
+   "name": "Core Combat Text",
+   "type": "Hero Growth Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/core-combat-text.webp",
+   "description": "A thick tome packed with essential information, ranging from how to efficiently fight monsters to tips on gathering materials. Though its sheer thickness is enough to make one dizzy just looking at it, rumor has it that there are warriors who have memorized its entire contents.",
+   "use": "Gains 6,000 Hero EXP upon use",
+   "sources": [
+    "[Currency Dungeon] Dragon W...",
+    "[Currency Dungeon] Residual..."
+   ]
+  },
+  {
    "name": "Secret Text of the Warrior",
    "type": "Hero Growth Materials",
    "rarity": "Blue",
