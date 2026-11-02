@@ -22731,7 +22731,8 @@
        "name": "Leaf of Vigor",
        "amount": 10,
        "icon": "assets/items/icons/leaf-of-vigor.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/rusted-tusk-treasure-vault-normal.webp"
      },
      {
       "name": "Hard",
@@ -22744,7 +22745,8 @@
        "name": "Leaf of Vigor",
        "amount": 15,
        "icon": "assets/items/icons/leaf-of-vigor.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/rusted-tusk-treasure-vault-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22758,7 +22760,8 @@
        "name": "Leaf of Vigor",
        "amount": 20,
        "icon": "assets/items/icons/leaf-of-vigor.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/rusted-tusk-treasure-vault-very-hard.webp"
      }
     ]
    },
@@ -22783,7 +22786,8 @@
        "name": "Drop of Purity",
        "amount": 10,
        "icon": "assets/items/icons/drop-of-purity.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/fang-bandits-arena-normal.webp"
      },
      {
       "name": "Hard",
@@ -22796,7 +22800,8 @@
        "name": "Drop of Purity",
        "amount": 15,
        "icon": "assets/items/icons/drop-of-purity.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/fang-bandits-arena-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22810,7 +22815,8 @@
        "name": "Drop of Purity",
        "amount": 20,
        "icon": "assets/items/icons/drop-of-purity.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/fang-bandits-arena-very-hard.webp"
      }
     ]
    },
@@ -22836,7 +22842,8 @@
        "name": "Crystal of Reverie",
        "amount": 10,
        "icon": "assets/items/icons/crystal-of-reverie.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/dark-swamp-normal.webp"
      },
      {
       "name": "Hard",
@@ -22849,7 +22856,8 @@
        "name": "Crystal of Reverie",
        "amount": 15,
        "icon": "assets/items/icons/crystal-of-reverie.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/dark-swamp-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22863,7 +22871,8 @@
        "name": "Crystal of Reverie",
        "amount": 20,
        "icon": "assets/items/icons/crystal-of-reverie.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/dark-swamp-very-hard.webp"
      }
     ]
    },
@@ -22889,7 +22898,8 @@
        "name": "Crystal of Oblivion",
        "amount": 10,
        "icon": "assets/items/icons/crystal-of-oblivion.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/forest-of-entangled-roots-normal.webp"
      },
      {
       "name": "Hard",
@@ -22902,7 +22912,8 @@
        "name": "Crystal of Oblivion",
        "amount": 15,
        "icon": "assets/items/icons/crystal-of-oblivion.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/forest-of-entangled-roots-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22916,7 +22927,8 @@
        "name": "Crystal of Oblivion",
        "amount": 20,
        "icon": "assets/items/icons/crystal-of-oblivion.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/forest-of-entangled-roots-very-hard.webp"
      }
     ]
    },

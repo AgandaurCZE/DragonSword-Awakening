@@ -1,5 +1,9 @@
 ## 2 Nov 2026 — Match dungeon frame geometry across difficulties
 
+## 2 Nov 2026 — Four more dungeon backgrounds
+
+- Added all three difficulty backgrounds for Rusted Tusk Treasure Vault, Fang Bandits Arena, Dark Swamp and Forest of Entangled Roots. Existing frame colours, sizes, controls and rewards are unchanged.
+
 ## 2 Nov 2026 — Four-dungeon artwork batch
 
 - Added twelve 1672×240 WebP backgrounds for Underground Goblin Village, Silver Tusk Bandits' Supply Depot, Warg Enclosure and Coastal Cliff Cave Outpost.
