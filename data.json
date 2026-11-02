@@ -23659,7 +23659,7 @@
    },
    {
     "name": "Endless Summoning Grounds",
-    "gives": "Equipment growth materials (Mana Shard, Crystal, Ore, Raw Mana Stone)",
+    "gives": "Equipment growth materials (Mana Shard, Mana Crystal, Mana Ore)",
     "difficulties": [
      {
       "name": "Normal",
