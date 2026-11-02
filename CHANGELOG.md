@@ -369,3 +369,10 @@
 - Kept all existing portrait paths and `data.json` connections unchanged. Encoded the recovered artwork as WebP at the original card aspect ratios for the existing card and profile layouts.
 - Validation: recovered and inspected the three original uploads, checked their image dimensions, verified the portrait paths in `data.json`, and prepared valid WebP replacements. Live browser rendering has not been tested in this session.
 
+
+
+## 2026-11-02 — Normal Dungeons banner restyle (preview)
+- Replaced the paper-like Normal Dungeon tiles with wide cinematic banner cards, using independent I/II/III selectors styled after Trait Dungeons, real per-difficulty reward icons/amounts, and rarity chips.
+- Added farm-group-specific heading typography and a consistent pending-artwork state for dungeons without a banner.
+- Added the first Warg Cave banner asset at `assets/dungeons/banners/warg-cave.svg` and connected it through `DUNGEONS.normal[].banner`. Other dungeons intentionally remain artwork placeholders.
+- Preview only; no public-page behavior change. Browser rendering and GitHub Pages deployment still need visual confirmation.
