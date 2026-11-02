@@ -23778,8 +23778,25 @@
      },
      {
       "name": "Very Hard",
-      "rewards": [],
-      "rewardsKnown": false
+      "rewards": [
+       [
+        "exp",
+        1000
+       ],
+       [
+        "gold",
+        250000
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "arcanaOfPeace",
+        100
+       ]
+      ],
+      "rewardsKnown": true
      }
     ]
    }
@@ -23828,6 +23845,10 @@
    "manaOre": {
     "name": "Mana Ore",
     "icon": "assets/items/icons/mana-ore.webp"
+   },
+   "arcanaOfPeace": {
+    "name": "Arcana of Peace",
+    "icon": "assets/items/icons/arcana-of-peace.webp"
    }
   },
   "currencyNote": "Growth materials up to Purple; amounts differ per difficulty. Two more Currency Dungeons not discovered yet.",
