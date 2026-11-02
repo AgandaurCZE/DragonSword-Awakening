@@ -1,3 +1,8 @@
+## 2 Nov 2026 — Goblin Bandits' Cave difficulty artwork
+- `assets/dungeons/banners/goblin-bandits-cave-{normal,hard,very-hard}.webp`: added the approved Normal preview and matching purple-corruption and red-inferno variants, generated from David's goblin screenshots and the approved cave composition. All three are 1672×240 and contain no UI.
+- `data.json`: added only the three optional difficulty banner paths for Goblin Bandits' Cave. Existing rewards, frames, controls, preview gating, other dungeons and renderer are unchanged.
+- Validation: `tools/validate_data.py` passed; compared parsed data with the previous version and confirmed only these image references changed. Exercised all three selectors and verified their background URLs and existing reward values, inspected rendered screenshots at 1920×1080 and 2560×1440, and checked the browser console (no captured errors).
+
 ## 2 Nov 2026 — Warg Cave artwork for each difficulty
 - `assets/dungeons/banners/warg-cave-{normal,hard,very-hard}.webp`: added three 1672×240 AI-generated, reference-based cavern backgrounds without baked-in UI. Normal uses cool teal lighting, Hard adds a purple aura, and Very Hard adds an inferno and a skull integrated into the cave.
 - `data.json`: linked Warg Cave's existing difficulties to their artwork via optional `difficulties[].banner`, with the Normal image as the dungeon fallback. Game rewards and all other content are unchanged.
