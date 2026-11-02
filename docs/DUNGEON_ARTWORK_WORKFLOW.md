@@ -29,3 +29,10 @@
 - Difficulty II corruption is associated with human Dragon Worshippers: concealed faces, dark cloaks, necromancy and control of beasts/orcs. Introduce these as occasional background details where appropriate.
 - Difficulty III may suggest dragons or beings with their traits. Existing Furcas, Barduk and especially Gauron's dragon form are visual references; don't assume every dungeon needs a literal dragon.
 - Corrupted Bedchamber is an underground tomb in a graveyard near the Royal Capital. David says an Origin Dragon recently descended and destroyed a Goddess statue. Its approved art uses constructed crypt masonry, broken Goddess statuary, bronze-green armoured skeletons and a torchlit door; preserve the same two foreground skeleton positions in all variants.
+
+## Four-dungeon artwork batch (2 November 2026)
+
+- Approved and integrated: Underground Goblin Village, Silver Tusk Bandits' Supply Depot, Warg Enclosure and Coastal Cliff Cave Outpost, three variants each.
+- Village: elevated scouting viewpoint; everyday settlement to primitive war camp to timber stronghold. Depot: stolen supplies to leaking contraband to buckling chained cargo; preserve distinct non-inferno palette. Enclosure: harsh breeding pens to bloodstained corruption to Ironclad-led pack.
+- Coastal: keep blue Tribal Hero and throne positioned clear of central title; II adds whispering human Dragon Worshipper and spreading control; III shows destructive granted power consuming his home. David rejected fused nose/mouth anatomy: use the corrected Normal reference, with separate nostrils/nose, mouth, jaw and chin on Hero and both archers.
+- Continue approving one Normal preview at a time, then collect 3–4 completed dungeon sets for one integration batch. Do not publish each dungeon independently during collection.

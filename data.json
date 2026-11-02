@@ -22513,7 +22513,8 @@
        "name": "Lowest-Grade Monster Hide",
        "amount": 10,
        "icon": "assets/items/icons/lowest-grade-monster-hide.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/underground-goblin-village-normal.webp"
      },
      {
       "name": "Hard",
@@ -22527,7 +22528,8 @@
        "name": "Low-Grade Monster Hide",
        "amount": 10,
        "icon": "assets/items/icons/low-grade-monster-hide.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/underground-goblin-village-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22540,7 +22542,8 @@
        "name": "Intermediate Monster Hide",
        "amount": 10,
        "icon": "assets/items/icons/intermediate-monster-hide.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/underground-goblin-village-very-hard.webp"
      }
     ]
    },
@@ -22564,7 +22567,8 @@
        "name": "Lowest-Grade Monster Carapace",
        "amount": 10,
        "icon": "assets/items/icons/lowest-grade-monster-carapace.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/silver-tusk-supply-depot-normal.webp"
      },
      {
       "name": "Hard",
@@ -22578,7 +22582,8 @@
        "name": "Low-Grade Monster Carapace",
        "amount": 10,
        "icon": "assets/items/icons/low-grade-monster-carapace.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/silver-tusk-supply-depot-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22591,7 +22596,8 @@
        "name": "Intermediate Monster Carapace",
        "amount": 10,
        "icon": "assets/items/icons/intermediate-monster-carapace.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/silver-tusk-supply-depot-very-hard.webp"
      }
     ]
    },
@@ -22615,7 +22621,8 @@
        "name": "Fruit of Vitality",
        "amount": 10,
        "icon": "assets/items/icons/fruit-of-vitality.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/warg-enclosure-normal.webp"
      },
      {
       "name": "Hard",
@@ -22629,7 +22636,8 @@
        "name": "Fruit of Vitality",
        "amount": 15,
        "icon": "assets/items/icons/fruit-of-vitality.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/warg-enclosure-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22642,7 +22650,8 @@
        "name": "Fruit of Vitality",
        "amount": 20,
        "icon": "assets/items/icons/fruit-of-vitality.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/warg-enclosure-very-hard.webp"
      }
     ]
    },
@@ -22667,7 +22676,8 @@
        "name": "Primordial Seed",
        "amount": 10,
        "icon": "assets/items/icons/primordial-seed.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/coastal-cliff-cave-outpost-normal.webp"
      },
      {
       "name": "Hard",
@@ -22681,7 +22691,8 @@
        "name": "Primordial Seed",
        "amount": 15,
        "icon": "assets/items/icons/primordial-seed.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/coastal-cliff-cave-outpost-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22694,7 +22705,8 @@
        "name": "Primordial Seed",
        "amount": 20,
        "icon": "assets/items/icons/primordial-seed.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/coastal-cliff-cave-outpost-very-hard.webp"
      }
     ]
    },

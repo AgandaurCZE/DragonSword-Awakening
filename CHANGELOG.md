@@ -1,5 +1,14 @@
 ## 2 Nov 2026 — Match dungeon frame geometry across difficulties
 
+## 2 Nov 2026 — Four-dungeon artwork batch
+
+- Added twelve 1672×240 WebP backgrounds for Underground Goblin Village, Silver Tusk Bandits' Supply Depot, Warg Enclosure and Coastal Cliff Cave Outpost.
+- `data.json`: added only their twelve per-difficulty banner paths. No rewards, existing artwork, frame geometry/colours or preview gating changed.
+- Coastal artwork uses the corrected separate goblin nose/mouth anatomy approved by David; its variants add the whispering Dragon Worshipper and destructive power consuming the throne room. Other sets keep their distinct village, contraband and breeding-pen themes.
+- `docs/DUNGEON_ARTWORK_WORKFLOW.md`: recorded batch publication and facial-anatomy lesson. Original illustration masters remain saved locally; production assets use consistent per-dungeon framing for difficulty switching.
+- Validation: JSON/data validator passed; exact browser-edited JSON matches the validated local data; structural comparison confirmed only the twelve new banner paths. Tested every new card at all three difficulties at 1920×1080 and 2560×1440; selected artwork and reward values switch independently. Local visual screenshots reviewed; deployment wait omitted at David's request.
+
+
 ## 2 Nov 2026 — Corrupted Bedchamber difficulty artwork
 
 - Added three 1672×240 WebP banners under `assets/dungeons/banners/`: the approved royal crypt and armoured skeletons, violet Dragon Worshipper necromancy for Hard, and an ember-red draconic presence for Very Hard (visually inspired by Gauron's dragon reference).
