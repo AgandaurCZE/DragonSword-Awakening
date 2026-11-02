@@ -519,9 +519,9 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .dng-card{--dc:#59d9e9;--dng-art:none;position:relative;min-height:154px;height:clamp(150px,13vw,190px);border:1px solid color-mix(in srgb,var(--dc) 80%,#fff);border-radius:14px;overflow:hidden;background:linear-gradient(90deg,#07131de8 0%,#07131d33 45%,#07131d55 100%),var(--dng-art),linear-gradient(110deg,#10283b,#142337 55%,#0b1420);background-size:cover;background-position:center;color:#f7f8fb;box-shadow:0 0 0 1px #ffffff18 inset,0 8px 22px #0008,0 0 18px color-mix(in srgb,var(--dc) 28%,transparent);isolation:isolate}
 .dng-card:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#07121bd9 0%,#07121b66 34%,transparent 66%,#07121b55),linear-gradient(0deg,color-mix(in srgb,var(--dc) 18%,transparent),transparent 60%);pointer-events:none}
 .dng-card:after{content:"";position:absolute;inset:5px;border:1px solid color-mix(in srgb,var(--dc) 45%,#fff3);border-radius:10px;pointer-events:none}
-.dng-card[data-difficulty="0"]{--dc:#54d9e8;filter:saturate(.94)}
-.dng-card[data-difficulty="1"]{--dc:#a66aff;filter:saturate(1.12)}
-.dng-card[data-difficulty="2"]{--dc:#ff514f;filter:saturate(1.28)}
+.dng-card[data-difficulty="0"]{--dc:#54d9e8}.dng-card[data-difficulty="0"]:before{background:linear-gradient(90deg,#07121bd9,transparent 62%),linear-gradient(0deg,#54d9e81c,transparent 70%)}
+.dng-card[data-difficulty="1"]{--dc:#a66aff}.dng-card[data-difficulty="1"]:before{background:linear-gradient(90deg,#10091dd9,transparent 62%),linear-gradient(0deg,#a66aff35,transparent 70%)}
+.dng-card[data-difficulty="2"]{--dc:#ff514f}.dng-card[data-difficulty="2"]:before{background:linear-gradient(90deg,#1d080bd9,transparent 62%),linear-gradient(0deg,#ff514f3d,transparent 70%)}
 .dng-card.pending{background-image:linear-gradient(90deg,#081522e8,#101c30aa),radial-gradient(ellipse at 75% 50%,color-mix(in srgb,var(--dc) 45%,#182238),transparent 55%),linear-gradient(120deg,#10253b,#111827)}
 .dng-card.pending:before{background:repeating-linear-gradient(135deg,#ffffff06 0 2px,transparent 2px 12px),linear-gradient(90deg,#07121bd9,transparent 65%)}
 .dng-card .dng-diffs{position:absolute;left:18px;top:15px;display:flex;gap:7px;z-index:3}
