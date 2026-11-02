@@ -22325,6 +22325,7 @@
    "icon": "assets/ui/adventurers-emblem.webp"
   },
   "expLabel": "EXP",
+  "expIcon": "assets/trait/icons/exp.webp",
   "normal": [
    {
     "name": "Warg Cave",
