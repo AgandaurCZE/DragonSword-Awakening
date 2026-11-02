@@ -1,3 +1,8 @@
+## 2 Nov 2026 — Normal Dungeons visual alignment
+- `index.html`: aligned the three difficulty-button overlays more closely with their painted frame circles; replaced the selected button's outside glow with an inset highlight and softened unselected shading.
+- Repositioned the reward row inside the ornate banner and inset quantity badges to keep them clear of the bottom border. Mobile override now retains relative banner alignment instead of applying fixed offsets.
+- Validation: checked the JavaScript in the inline `<script>` with a parser-equivalent syntax check and confirmed CSS braces balanced. Reviewed each targeted CSS replacement against the previous text. Browser screenshot/rendered interaction testing was not available in this session.
+
 ## 2 Nov 2026 — ChatGPT: first Dungeons preview implementation
 - `index.html`: added a collapsible Dungeons navigation group with Normal, Trait and Currency sub-pages; the new pages and menu entries are gated by `?tiers=new`, while the existing Trait Dungeons renderer/data remain unchanged.
 - Normal Dungeons: renders all data-driven dungeon cards grouped by farm category, per-card I/II/III difficulty selection, gear rarity chips, EXP/emblem/material rewards, and search/set/slot/farm/Orange filters.
