@@ -376,3 +376,6 @@
 - Added farm-group-specific heading typography and a consistent pending-artwork state for dungeons without a banner.
 - Added the first Warg Cave banner asset at `assets/dungeons/banners/warg-cave.svg` and connected it through `DUNGEONS.normal[].banner`. Other dungeons intentionally remain artwork placeholders.
 - Preview only; no public-page behavior change. Browser rendering and GitHub Pages deployment still need visual confirmation.
+
+## 2026-11-02
+- Normal Dungeon cards: removed the visible set/slot text while retaining the underlying set and slot filter data; added the correct Gear set icon as a fourth reward, tinted by the highest rarity available at the selected difficulty. Moved rarity chips and EXP to the card's top-right corner.
