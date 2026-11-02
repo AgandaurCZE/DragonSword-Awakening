@@ -23722,8 +23722,25 @@
      },
      {
       "name": "Hard",
-      "rewards": [],
-      "rewardsKnown": false
+      "rewards": [
+       [
+        "exp",
+        800
+       ],
+       [
+        "gold",
+        150000
+       ],
+       [
+        "emblem",
+        15
+       ],
+       [
+        "arcanaOfBeginnings",
+        100
+       ]
+      ],
+      "rewardsKnown": true
      },
      {
       "name": "Very Hard",
