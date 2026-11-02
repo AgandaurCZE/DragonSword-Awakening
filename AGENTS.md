@@ -216,6 +216,7 @@ Run these from the repository root with Python 3; they need no extra packages.
 
 
 ## Normal Dungeon banner implementation (2 Nov 2026)
+- Frames (fixed by Claude, 2 Nov 2026): `assets/ui/dungeon-frame-{blue,purple,red}.webp` (I/II/III), all resized to exactly 1672×240 so the card (`aspect-ratio:1672 / 240`) never changes size when the difficulty changes. The I/II/III circles are part of the frame image; the buttons are invisible circles placed exactly on them (centres 6.9% / 12.42% / 18.07% across, 33.3% down, 5.6% wide, measured from the frame image). The selected one gets a thin white ring; the others are darkened. If the frame image changes, re-measure these numbers. The banner art sits in `.dng-art`, clipped to the inside of the frame (`clip-path` inset with round ends), so it never shows outside the frame.
 - Banner cards now use `DUNGEONS.normal[].banner` when present. The Warg Cave entry points to `assets/dungeons/banners/warg-cave.svg`; all other entries intentionally have no banner yet and render the styled pending-artwork state.
 - Difficulty controls are I/II/III and each dungeon keeps its own selection in `DNG.selected`. Rewards, gear rarity, EXP, emblem and material are rendered from the selected difficulty data.
 - The new Warg Cave SVG is a hand-authored vector fallback concept, not a crop from the game or the previously generated AI mockup. Replace it with approved standalone artwork when available.

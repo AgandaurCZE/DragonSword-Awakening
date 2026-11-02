@@ -5,6 +5,10 @@
 - Added `openDungeons({set, material, slot})` for filtered navigation and a temporary highlight.
 - Validation in this session: re-fetched the committed `index.html` and confirmed the new renderer is present. Browser interaction, JavaScript parser validation and visual comparison against the source screenshot have not yet been performed. The card currently uses a neutral reconstructed panel, not a final screenshot-derived crop; visual refinement remains.
 
+
+## 2 Nov 2026 — Dungeon banner frames fixed
+- Difficulty buttons sit exactly on the frame's I/II/III circles; unselected ones are dimmed, the selected one has a thin ring.
+- All three frames are the same size (WebP), so cards don't change height between difficulties; banner art is clipped to the inside of the frame.
 ## 2026-11-01 — Claude: Help pages and Crew grades
 - `assets/help/`: David's Help screenshots (converted to WebP) with their text in `notes.txt`, plus the five Mercenary Crew promotions (requirements, unlocks, rewards). Notes only.
 
