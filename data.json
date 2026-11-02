@@ -23586,15 +23586,83 @@
   "currency": [
    {
     "name": "Dragon Worshipper Ruins",
-    "gives": "Hero growth materials (EXP texts)"
+    "gives": "Hero growth materials (EXP texts)",
+    "difficulties": [
+     {
+      "name": "Normal",
+      "rewards": [
+       [
+        "exp",
+        300
+       ],
+       [
+        "gold",
+        40000
+       ],
+       [
+        "emblem",
+        5
+       ],
+       [
+        "basicCombatText",
+        100
+       ]
+      ],
+      "rewardsKnown": true
+     },
+     {
+      "name": "Hard",
+      "rewards": [],
+      "rewardsKnown": false
+     },
+     {
+      "name": "Very Hard",
+      "rewards": [],
+      "rewardsKnown": false
+     }
+    ]
    },
    {
     "name": "Endless Summoning Grounds",
-    "gives": "Equipment growth materials (Mana Shard, Crystal, Ore, Raw Mana Stone)"
+    "gives": "Equipment growth materials (Mana Shard, Crystal, Ore, Raw Mana Stone)",
+    "difficulties": [
+     {
+      "name": "Normal",
+      "rewards": [],
+      "rewardsKnown": false
+     },
+     {
+      "name": "Hard",
+      "rewards": [],
+      "rewardsKnown": false
+     },
+     {
+      "name": "Very Hard",
+      "rewards": [],
+      "rewardsKnown": false
+     }
+    ]
    },
    {
     "name": "Trace of the Giant",
-    "gives": "Karma growth materials (Arcanas)"
+    "gives": "Karma growth materials (Arcanas)",
+    "difficulties": [
+     {
+      "name": "Normal",
+      "rewards": [],
+      "rewardsKnown": false
+     },
+     {
+      "name": "Hard",
+      "rewards": [],
+      "rewardsKnown": false
+     },
+     {
+      "name": "Very Hard",
+      "rewards": [],
+      "rewardsKnown": false
+     }
+    ]
    }
   ],
   "currencyRewardItems": {
@@ -23613,6 +23681,26 @@
    "arcanaOfWar": {
     "name": "Arcana of War",
     "icon": "assets/items/icons/arcana-of-war.webp"
+   },
+   "advancedCombatText": {
+    "name": "Advanced Combat Text",
+    "icon": "assets/items/icons/advanced-combat-text.webp"
+   },
+   "manaCrystal": {
+    "name": "Mana Crystal",
+    "icon": "assets/items/icons/mana-crystal.webp"
+   },
+   "arcanaOfBeginnings": {
+    "name": "Arcana of Beginnings",
+    "icon": "assets/items/icons/arcana-of-beginnings.webp"
+   },
+   "exp": {
+    "name": "EXP",
+    "icon": "assets/trait/icons/exp.webp"
+   },
+   "emblem": {
+    "name": "Adventurer's Emblem",
+    "icon": "assets/ui/adventurers-emblem.webp"
    }
   },
   "currencyNote": "Growth materials up to Purple; amounts differ per difficulty. Two more Currency Dungeons not discovered yet.",
