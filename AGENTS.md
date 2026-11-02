@@ -213,3 +213,10 @@ Run these from the repository root with Python 3; they need no extra packages.
 - Before committing:
   - run `python3 tools/validate_data.py`;
   - check the page on a local server: no console errors, and the changed tab looks right.
+
+
+## Normal Dungeon banner implementation (2 Nov 2026)
+- Banner cards now use `DUNGEONS.normal[].banner` when present. The Warg Cave entry points to `assets/dungeons/banners/warg-cave.svg`; all other entries intentionally have no banner yet and render the styled pending-artwork state.
+- Difficulty controls are I/II/III and each dungeon keeps its own selection in `DNG.selected`. Rewards, gear rarity, EXP, emblem and material are rendered from the selected difficulty data.
+- The new Warg Cave SVG is a hand-authored vector fallback concept, not a crop from the game or the previously generated AI mockup. Replace it with approved standalone artwork when available.
+- Keep all dungeon additions behind the existing `?tiers=new` preview gate. Do not alter Trait Dungeon rendering.
