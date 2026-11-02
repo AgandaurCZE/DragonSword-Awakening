@@ -23667,8 +23667,25 @@
      },
      {
       "name": "Hard",
-      "rewards": [],
-      "rewardsKnown": false
+      "rewards": [
+       [
+        "exp",
+        700
+       ],
+       [
+        "gold",
+        140000
+       ],
+       [
+        "emblem",
+        10
+       ],
+       [
+        "manaCrystal",
+        100
+       ]
+      ],
+      "rewardsKnown": true
      },
      {
       "name": "Very Hard",
