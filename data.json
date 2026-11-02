@@ -23186,6 +23186,14 @@
    "basicCombatText": {
     "name": "Basic Combat Text",
     "icon": "assets/items/icons/basic-combat-text.webp"
+   },
+   "manaShard": {
+    "name": "Mana Shard",
+    "icon": "assets/items/icons/mana-shard.webp"
+   },
+   "arcanaOfWar": {
+    "name": "Arcana of War",
+    "icon": "assets/items/icons/arcana-of-war.webp"
    }
   },
   "currencyNote": "Growth materials up to Purple; amounts differ per difficulty. Two more Currency Dungeons not discovered yet.",
