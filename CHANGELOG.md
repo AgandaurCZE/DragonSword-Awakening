@@ -1,3 +1,10 @@
+## 2 Nov 2026 — ChatGPT: first Dungeons preview implementation
+- `index.html`: added a collapsible Dungeons navigation group with Normal, Trait and Currency sub-pages; the new pages and menu entries are gated by `?tiers=new`, while the existing Trait Dungeons renderer/data remain unchanged.
+- Normal Dungeons: renders all data-driven dungeon cards grouped by farm category, per-card I/II/III difficulty selection, gear rarity chips, EXP/emblem/material rewards, and search/set/slot/farm/Orange filters.
+- Currency Dungeons: renders the three recorded entries and two locked undiscovered placeholders; no amounts are invented.
+- Added `openDungeons({set, material, slot})` for filtered navigation and a temporary highlight.
+- Validation in this session: re-fetched the committed `index.html` and confirmed the new renderer is present. Browser interaction, JavaScript parser validation and visual comparison against the source screenshot have not yet been performed. The card currently uses a neutral reconstructed panel, not a final screenshot-derived crop; visual refinement remains.
+
 ## 2026-11-01 — Claude: Help pages and Crew grades
 - `assets/help/`: David's Help screenshots (converted to WebP) with their text in `notes.txt`, plus the five Mercenary Crew promotions (requirements, unlocks, rewards). Notes only.
 
