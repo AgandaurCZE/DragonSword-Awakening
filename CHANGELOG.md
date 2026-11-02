@@ -1,5 +1,5 @@
 ## 2 Nov 2026 — Goblin Bandits' Cave difficulty artwork
-- `assets/dungeons/banners/goblin-bandits-cave-{normal,hard,very-hard}.webp`: added the approved Normal preview and matching purple-corruption and red-inferno variants, generated from David's goblin screenshots and the approved cave composition. All three are 1672×240 and contain no UI.
+- `assets/dungeons/banners/goblin-bandits-cave-{normal,hard,very-hard}.webp`: added the approved Normal preview and matching purple-corruption and red-inferno variants, generated from David's goblin screenshots and the approved cave composition. All three are 1672×240 and contain no UI; the goblin portraits are inset to keep both faces clear of the existing frame.
 - `data.json`: added only the three optional difficulty banner paths for Goblin Bandits' Cave. Existing rewards, frames, controls, preview gating, other dungeons and renderer are unchanged.
 - Validation: `tools/validate_data.py` passed; compared parsed data with the previous version and confirmed only these image references changed. Exercised all three selectors and verified their background URLs and existing reward values, inspected rendered screenshots at 1920×1080 and 2560×1440, and checked the browser console (no captured errors).
 
