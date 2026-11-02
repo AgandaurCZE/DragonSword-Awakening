@@ -1,3 +1,11 @@
+## David's main-only preview workflow — confirmed 2 Nov 2026
+
+- Work directly on `main`. Do not create additional branches for planned work unless David explicitly requests an exception.
+- The public URL without a query parameter must retain its current appearance, content and behaviour. All planned Codex/Claude changes belong behind `?tiers=new` on the same main branch. This is a runtime preview gate, not a separate branch or separate deployment.
+- Commits to main deploy the shared files, but deployment must not promote preview features to public visitors. Verify both URLs whenever relevant. Do not treat main-only publishing as a request to launch the preview publicly.
+- Once David and Claude's planned work is complete, David will approve converting the preview into the new public main site. Do not remove the gate before that approval.
+- Before ending each task or reaching a chat limit, update repository Markdown handoff notes AND `docs/PROJECT_HANDOFF.txt`: request/scope, decisions/approvals, actual changes and files, validation and limitations, publication commits, completed versus pending work, and exact next steps. Update CHANGELOG.md for changes. Do not rely on chat memory or local-only outputs as the sole handoff.
+
 # ChatGPT-specific project workflow
 
 Read `AGENTS.md` before making changes; it is the repository's source of truth. Do not modify `AGENTS.md` or `CLAUDE.md` unless the user explicitly asks.
@@ -132,3 +140,7 @@ David explicitly approved starting implementation using the design recorded in `
 - Before finishing, validate data, test the selector/filter interactions and preview gate, re-fetch committed files, and report clearly what was and was not browser-tested.
 
 The detailed original task and acceptance checks remain in `docs/TASK_dungeons_page.md`.
+
+## Completed artwork handoff
+
+Read `docs/PROJECT_HANDOFF.txt` for the full four-dungeon task, approvals, exact publication commits, verification, publication obstacles and still-pending Goblin I alignment correction. All twelve final backgrounds are published; public promotion is not authorised.

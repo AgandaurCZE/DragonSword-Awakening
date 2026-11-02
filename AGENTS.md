@@ -2,6 +2,16 @@
 
 Read this before changing anything in this repository.
 
+## David's main-only preview workflow — confirmed 2 Nov 2026
+
+- Work directly on `main`. Do not create additional branches for planned work unless David explicitly requests an exception.
+- The public URL without a query parameter must retain its current appearance, content and behaviour. All planned Codex/Claude changes belong behind `?tiers=new` on the same main branch. This is a runtime preview gate, not a separate branch or separate deployment.
+- Commits to main deploy the shared files, but deployment must not promote preview features to public visitors. Verify both URLs whenever relevant. Do not treat main-only publishing as a request to launch the preview publicly.
+- Once David and Claude's planned work is complete, David will approve converting the preview into the new public main site. Do not remove the gate before that approval.
+- Before ending each task or reaching a chat limit, update repository Markdown handoff notes AND `docs/PROJECT_HANDOFF.txt`: request/scope, decisions/approvals, actual changes and files, validation and limitations, publication commits, completed versus pending work, and exact next steps. Update CHANGELOG.md for changes. Do not rely on chat memory or local-only outputs as the sole handoff.
+
+
+
 ## What this is
 
 A fan-made guide for the game **DragonSword: Awakening** (HOUND13, PC/Steam). It's a single static web page hosted on **GitHub Pages** from the `main` branch, root folder:
@@ -209,7 +219,7 @@ Run these from the repository root with Python 3; they need no extra packages.
 - **New hero:** add a portrait to `assets/heroes/`, then add entries to `HEROES` and `CHARACTER_PROFILE_DATA`, the hero's Karma to `KARMA_DATA`, and team slots to `TEAM_DATA` if needed.
 - **Make small commits with clear messages** (e.g. "Update Theresia Karma values"), so a single change can be reverted.
 - `main` is protected against force-pushes and deletion. Don't try to rewrite history; use `git revert`.
-- For larger or experimental work, use a branch and open a pull request instead of pushing straight to `main`.
+- Work directly on `main` under David's main-only preview workflow above; do not create extra branches unless he explicitly requests them.
 - Before committing:
   - run `python3 tools/validate_data.py`;
   - check the page on a local server: no console errors, and the changed tab looks right.

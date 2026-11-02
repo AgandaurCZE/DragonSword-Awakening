@@ -1,3 +1,9 @@
+## 2 Nov 2026 — Main-only preview policy and durable handoff
+
+- Updated AGENTS.md and CHATGPT.md with David's explicit main-only / ?tiers=new development policy, replacing conflicting branch advice. Added docs/PROJECT_HANDOFF.txt with the completed four-dungeon request, decisions, files, validation, publication method/commits and pending work.
+- Removed three obsolete artwork staging branches after confirming no open PRs and all their banner references already present on main. Main retained.
+- Validation: documentation-only changes; reviewed policy consistency and recorded completed versus pending work. Branch inventory and committed note contents verified after publication. Site code/data/assets unchanged in this task.
+
 ## 2 Nov 2026 — Final four Normal Dungeon artwork sets
 
 - Added twelve 1672×240 WebP banners for Rock Tribe Base, Collapsed Sanctuary, The Graveyard Where Tragedy Sleeps and Ashen Ruins. Added only their per-difficulty banner paths in data.json; rewards, names, renderer, frames and preview gating remain unchanged.
