@@ -1547,6 +1547,7 @@ function hideTip(){$('tooltip').style.display='none'}
 const dToggle=$('navDungeonsToggle');if(dToggle)dToggle.addEventListener('click',()=>{const sub=$('navDungeonsSubgroup'),open=sub.hidden;sub.hidden=!open;dToggle.setAttribute('aria-expanded',String(open));dToggle.classList.toggle('active',open);});
 document.querySelectorAll('.nav-item[data-page]').forEach(btn=>btn.addEventListener('click',()=>{
  const page=btn.dataset.page;
+ if(page!=='currency'&&!$('currencyPage').hidden){CURRENCY_DNG_STATE.selected={};renderCurrencyDungeons();}
  if(page!=='dungeons'&&!$('dungeonsPage').hidden)resetDungeonFilters();
  document.querySelectorAll('.nav-item[data-page]').forEach(x=>x.classList.toggle('active',x===btn));
  if(['dungeons','trait','currency'].includes(page)){ $('navDungeonsSubgroup').hidden=false;$('navDungeonsToggle').setAttribute('aria-expanded','true');$('navDungeonsToggle').classList.add('active');}else{$('navDungeonsToggle').classList.remove('active');}
