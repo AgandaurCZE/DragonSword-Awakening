@@ -1,3 +1,9 @@
+## 2 Nov 2026 — Warg Cave artwork for each difficulty
+- `assets/dungeons/banners/warg-cave-{normal,hard,very-hard}.webp`: added three 1672×240 AI-generated, reference-based cavern backgrounds without baked-in UI. Normal uses cool teal lighting, Hard adds a purple aura, and Very Hard adds an inferno and a skull integrated into the cave.
+- `data.json`: linked Warg Cave's existing difficulties to their artwork via optional `difficulties[].banner`, with the Normal image as the dungeon fallback. Game rewards and all other content are unchanged.
+- `index.html`: prefer the selected difficulty's banner, falling back to the dungeon banner; reduce the old placeholder darkening on cards with artwork. Existing frames, controls, rewards, pending cards and preview gating remain intact.
+- Validation: `tools/validate_data.py` and extracted inline JavaScript `node --check` passed; CSS braces balanced; reviewed the targeted source/data diff and verified game data is unchanged apart from image paths. Inspected all three rendered states at 1920×1080 and 2560×1440, checked the corresponding background URL and reward values, confirmed card size remains stable, the Ballad of Life filter returns 5 cards, and another dungeon's selection remains unchanged. No browser console errors were captured.
+
 ## 2 Nov 2026 — Visually verified dungeon control and reward placement
 - `index.html`: moved only Difficulty III's overlay slightly right and down (18.36%, 33.7%) to align with the existing painted circle; I and II remain unchanged. Inset the lower-left reward row to 6% from the left and 20% from the bottom, including the mobile override; quantity badges now sit inside their boxes. Existing artwork, data, interactions and preview gating are preserved.
 - `CHANGELOG.md`: recorded this fix and validation.
