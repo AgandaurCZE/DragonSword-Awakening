@@ -23654,7 +23654,8 @@
       ],
       "rewardsKnown": true
      }
-    ]
+    ],
+    "banner": "assets/dungeons/currency/dragon-worshipper-ruins.webp"
    },
    {
     "name": "Endless Summoning Grounds",
@@ -23726,7 +23727,8 @@
       ],
       "rewardsKnown": true
      }
-    ]
+    ],
+    "banner": "assets/dungeons/currency/endless-summoning-grounds.webp"
    },
    {
     "name": "Trace of the Giant",
@@ -23798,7 +23800,8 @@
       ],
       "rewardsKnown": true
      }
-    ]
+    ],
+    "banner": "assets/dungeons/currency/trace-of-the-giant.webp"
    }
   ],
   "currencyRewardItems": {
