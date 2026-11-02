@@ -3,9 +3,9 @@
 All files are PNG with RGBA transparency, extracted from the supplied source sheet.
 
 ## Banner frames
-- `banner-frame-blue.png` — blue frame, with I / II / III medallions integrated at top-left
-- `banner-frame-purple.png` — purple frame, with I / II / III medallions integrated at top-left
-- `banner-frame-red.png` — red frame, with I / II / III medallions integrated at top-left
+- `dungeon-frame-blue.webp` — blue frame, with I / II / III medallions integrated at top-left
+- `dungeon-frame-purple.webp` — purple frame, with I / II / III medallions integrated at top-left
+- `dungeon-frame-red.webp` — red frame, with I / II / III medallions integrated at top-left
 
 These are complete overlays. Place the dungeon artwork/background underneath them.
 Do not render a second set of difficulty buttons on top of the integrated medallions.
