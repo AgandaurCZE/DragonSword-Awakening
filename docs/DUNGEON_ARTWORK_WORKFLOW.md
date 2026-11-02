@@ -21,5 +21,5 @@
 
 ## Shared frame geometry (2 November 2026)
 
-- All three difficulties render the blue frame master at 1672 × 240; purple and red are colour treatments on the frame layer only. Keep the same alpha silhouette, inner opening, circle positions and background crop across difficulties. Do not restore the independently generated purple/red frames, whose geometry differs.
+- Preserve the original blue, purple and red frame artwork and colours. Purple/red use measured vertical size and position corrections to match the blue outer corner span (source y=8…239); all cards retain the same dimensions and shared background crop. Do not recolour the blue frame with hue filters: David wants the original purple and fiery red appearance.
 - For commits intended for David's visual review, complete checks before pushing and end the task immediately after the push; do not wait for Pages deployment.

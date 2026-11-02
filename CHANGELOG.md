@@ -1,5 +1,12 @@
 ## 2 Nov 2026 — Match dungeon frame geometry across difficulties
 
+## 2 Nov 2026 — Restore original dungeon frame colours
+
+- `index.html`: restored the original purple and red frame assets without colour filters. Applied measured vertical size/position corrections to keep their outer corner spans matched to blue; retained the shared card dimensions and background crop.
+- `docs/DUNGEON_ARTWORK_WORKFLOW.md`: corrected the frame rule to preserve the original colours.
+- Validation: JavaScript syntax check passed; reviewed the three-line renderer diff; local browser comparison confirmed original assets, no colour filter, equal card heights and identical background clip paths. Visually inspected a three-frame comparison.
+
+
 - `index.html`: all difficulties now share the blue frame master; purple/red colour filters affect only the frame. Removed the old per-frame crop offsets so backgrounds use one opening, and preserved the existing controls and rewards.
 - `docs/DUNGEON_ARTWORK_WORKFLOW.md`: recorded the shared geometry rule and David's instruction to finish review tasks immediately after pushing.
 - Validation: JavaScript syntax check passed; local browser checked independent Normal/Hard selections alongside Very Hard, identical frame source, dimensions and clip paths; visually inspected all three colours. No dungeon artwork regenerated or data changed.
