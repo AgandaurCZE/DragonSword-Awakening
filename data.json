@@ -22347,7 +22347,8 @@
        "name": "Lowest-Grade Monster Claw",
        "amount": 10,
        "icon": "assets/items/icons/lowest-grade-monster-claw.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/warg-cave-normal.webp"
      },
      {
       "name": "Hard",
@@ -22361,7 +22362,8 @@
        "name": "Low-Grade Monster Claw",
        "amount": 10,
        "icon": "assets/items/icons/low-grade-monster-claw.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/warg-cave-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22375,10 +22377,11 @@
        "name": "Intermediate Monster Claw",
        "amount": 10,
        "icon": "assets/items/icons/intermediate-monster-claw.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/warg-cave-very-hard.webp"
      }
     ],
-    "banner": "assets/dungeons/banners/warg-cave.svg"
+    "banner": "assets/dungeons/banners/warg-cave-normal.webp"
    },
    {
     "name": "Goblin Bandits' Cave",
