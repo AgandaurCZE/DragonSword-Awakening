@@ -1534,9 +1534,10 @@ function hideTip(){$('tooltip').style.display='none'}
 ['search','classType','phase'].forEach(id=>$(id).addEventListener('input',render));
 const dToggle=$('navDungeonsToggle');if(dToggle)dToggle.addEventListener('click',()=>{const sub=$('navDungeonsSubgroup'),open=sub.hidden;sub.hidden=!open;dToggle.setAttribute('aria-expanded',String(open));dToggle.classList.toggle('active',open);});
 document.querySelectorAll('.nav-item[data-page]').forEach(btn=>btn.addEventListener('click',()=>{
- document.querySelectorAll('.nav-item[data-page]').forEach(x=>x.classList.toggle('active',x===btn));
- if(['dungeons','trait','currency'].includes(btn.dataset.page)){ $('navDungeonsSubgroup').hidden=false;$('navDungeonsToggle').setAttribute('aria-expanded','true');$('navDungeonsToggle').classList.add('active');}else{$('navDungeonsToggle').classList.remove('active');}
  const page=btn.dataset.page;
+ if(page!=='dungeons'&&!$('dungeonsPage').hidden)resetDungeonFilters();
+ document.querySelectorAll('.nav-item[data-page]').forEach(x=>x.classList.toggle('active',x===btn));
+ if(['dungeons','trait','currency'].includes(page)){ $('navDungeonsSubgroup').hidden=false;$('navDungeonsToggle').setAttribute('aria-expanded','true');$('navDungeonsToggle').classList.add('active');}else{$('navDungeonsToggle').classList.remove('active');}
  $('profilePage').hidden=true;
  Object.entries(PAGE_IDS).forEach(([k,id])=>{$(id).hidden=k!==page});
  const titles={tier:'Visual tier list',heroes:'Heroes',teams:'Teams',gear:'Gear',karma:'Karma',patches:'Patch Notes',familiars:'Familiars',titles:'Titles',dungeons:'Normal Dungeons',trait:'Trait Dungeons',currency:'Currency Dungeons'};
@@ -1685,6 +1686,10 @@ function renderTitles(){const T=TITLES||{};const list=T.list||[];const root=$('t
 
 // Normal and Currency Dungeons are preview-only; all content is read from data.json.
 const DNG={q:'',set:'',slot:'',farm:'',orange:false,selected:{},hashLoaded:false};
+function resetDungeonFilters(){
+ DNG.q='';DNG.set='';DNG.slot='';DNG.farm='';DNG.orange=false;
+ if(location.hash.startsWith('#dungeons'))history.replaceState(null,'',location.pathname+location.search);
+}
 function preloadDungeonBanners(){
  if(!IS_PREVIEW)return Promise.resolve();
  const D=DUNGEONS||{};
