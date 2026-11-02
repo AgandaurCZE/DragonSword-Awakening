@@ -34,6 +34,13 @@ Every commit to `main` goes live about a minute later. There is no build step, n
 
 How the page starts: `index.html` runs `fetch('data.json')`, copies each top-level key into a global variable of the same name (`HEROES`, `TEAM_DATA`, …), then calls `startApp()`, which draws every tab. Opening `index.html` directly from disk (`file://`) fails because browsers block the fetch. Test with a local server instead, e.g. `python3 -m http.server` in the repository folder.
 
+## Preview-only Dungeons pages (added 2 Nov 2026)
+
+- `?tiers=new` also exposes the collapsible Dungeons navigation group: `dungeons` (Normal), `trait` (existing Trait Dungeons), and `currency` (Currency). Without the preview query, the group header, toggle and all three submenu items are hidden by `applyPreviewGate()`.
+- `DUNGEONS` in `data.json` is the sole content source. `renderDungeons()` groups the 15 Normal Dungeon cards by `farmGroups`; each card has independent difficulty state and reads rewards from its own `difficulties[]`. `renderCurrencyDungeons()` shows recorded entries and the `undiscovered.currency` placeholders without invented rewards.
+- `openDungeons({set, material, slot})` is the intended cross-page entry point. Keep future links to it preview-only. Existing `renderTrait()` and `TRAIT_DUNGEONS` must remain unchanged.
+- Current first pass is functional scaffolding, not final art: the Normal Dungeon card panel is a neutral CSS reconstruction. The planned screenshot-derived ornate background/crop and visual review still need to be completed. Browser testing and JS parser validation were not performed in the initial commit; do not claim them.
+
 ## Preview (hidden until launch)
 
 David's decision (29 Oct 2026): new work stays hidden as a surprise until launch. Visitors see Heroes, the old Tier List, Teams, Gear, Karma and Patch Notes. **Familiars, Titles, Trait Dungeons and Cookbook** (and the new tier list) only appear with `?tiers=new` (or `?preview=1`) in the URL: `PREVIEW_PAGES` and `applyPreviewGate()` in `index.html` hide their menu buttons otherwise, and title ticks only count in the preview. Add any new tab to `PREVIEW_PAGES` until David says to launch.
