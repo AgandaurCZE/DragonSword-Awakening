@@ -23182,6 +23182,10 @@
    "gold": {
     "name": "Gold",
     "icon": "assets/ui/gold.webp"
+   },
+   "basicCombatText": {
+    "name": "Basic Combat Text",
+    "icon": "assets/items/icons/basic-combat-text.webp"
    }
   },
   "currencyNote": "Growth materials up to Purple; amounts differ per difficulty. Two more Currency Dungeons not discovered yet.",
