@@ -1,5 +1,13 @@
 ## 2 Nov 2026 — Match dungeon frame geometry across difficulties
 
+## 2 Nov 2026 — Corrupted Bedchamber difficulty artwork
+
+- Added three 1672×240 WebP banners under `assets/dungeons/banners/`: the approved royal crypt and armoured skeletons, violet Dragon Worshipper necromancy for Hard, and an ember-red draconic presence for Very Hard (visually inspired by Gauron's dragon reference).
+- `data.json`: added only the three per-difficulty banner paths for Corrupted Bedchamber. Rewards and other dungeon records are unchanged. Existing frame colours, geometry and preview gate are unchanged.
+- `docs/DUNGEON_ARTWORK_WORKFLOW.md`: saved David's Dragon Worshipper/dragon art direction and the tomb's location/story context.
+- Validation: JSON/data validator passed; exact browser-edited JSON matched the local validated data; structural comparison confirmed only the intended banner fields changed. Checked all three difficulty selections, frames, rewards and artwork at 1920×1080 and 2560×1440 in the local browser. Used the built-in image generation tool, with shared positioning and frame-fit exports.
+
+
 ## 2 Nov 2026 — Restore original dungeon frame colours
 
 - `index.html`: restored the original purple and red frame assets without colour filters. Applied measured vertical size/position corrections to keep their outer corner spans matched to blue; retained the shared card dimensions and background crop.

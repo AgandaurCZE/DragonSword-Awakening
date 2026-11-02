@@ -22459,7 +22459,8 @@
        "name": "Lowest-Grade Monster Bone Fragment",
        "amount": 10,
        "icon": "assets/items/icons/lowest-grade-monster-bone-fragment.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/corrupted-bedchamber-normal.webp"
      },
      {
       "name": "Hard",
@@ -22473,7 +22474,8 @@
        "name": "Low-Grade Monster Bone Fragment",
        "amount": 10,
        "icon": "assets/items/icons/low-grade-monster-bone-fragment.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/corrupted-bedchamber-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22486,7 +22488,8 @@
        "name": "Intermediate Monster Bone Fragment",
        "amount": 10,
        "icon": "assets/items/icons/intermediate-monster-bone-fragment.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/corrupted-bedchamber-very-hard.webp"
      }
     ]
    },

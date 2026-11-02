@@ -23,3 +23,9 @@
 
 - Preserve the original blue, purple and red frame artwork and colours. Purple/red use measured vertical size and position corrections to match the blue outer corner span (source y=8…239); all cards retain the same dimensions and shared background crop. Do not recolour the blue frame with hue filters: David wants the original purple and fiery red appearance.
 - For commits intended for David's visual review, complete checks before pushing and end the task immediately after the push; do not wait for Pages deployment.
+
+## Corruption art direction supplied by David
+
+- Difficulty II corruption is associated with human Dragon Worshippers: concealed faces, dark cloaks, necromancy and control of beasts/orcs. Introduce these as occasional background details where appropriate.
+- Difficulty III may suggest dragons or beings with their traits. Existing Furcas, Barduk and especially Gauron's dragon form are visual references; don't assume every dungeon needs a literal dragon.
+- Corrupted Bedchamber is an underground tomb in a graveyard near the Royal Capital. David says an Origin Dragon recently descended and destroyed a Goddess statue. Its approved art uses constructed crypt masonry, broken Goddess statuary, bronze-green armoured skeletons and a torchlit door; preserve the same two foreground skeleton positions in all variants.
