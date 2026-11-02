@@ -1,3 +1,9 @@
+## 2 Nov 2026 — Correct dungeon background clipping for each frame
+- `index.html`: give the purple and red frames their own background clipping insets. All frame images have a 1672×240 canvas, but the painted top edges differ (blue around y=14, purple y=22, red y=20–21). The old shared crop started at y=18, exposing artwork above II/III. Updated both the illustration and tint/pending-art overlay clipping; purple's bottom crop also stays within its painted edge. Card/frame dimensions, control positions, game data and artwork files are unchanged.
+- `docs/DUNGEON_ARTWORK_WORKFLOW.md`: recorded composition/framing lessons, the one-preview Proceed/Stop flow, and the Difficulty I goblin position/scale mismatch as a deferred fix due ASAP after all backgrounds are completed.
+- `CHATGPT.md`: linked the artwork workflow so future work picks it up.
+- Validation: inline JavaScript passed `node --check` and is unchanged; CSS braces balanced and targeted diff reviewed. Inspected purple/red illustrated cards and a blue pending card at 1920×1080 and 2560×1440; all cards measured 1224×175.6875 CSS pixels at both viewport sizes. Confirmed each difficulty's computed clip and existing rewards; no captured console errors. No images were regenerated.
+
 ## 2 Nov 2026 — Goblin Bandits' Cave difficulty artwork
 - `assets/dungeons/banners/goblin-bandits-cave-{normal,hard,very-hard}.webp`: added the approved Normal preview and matching purple-corruption and red-inferno variants, generated from David's goblin screenshots and the approved cave composition. All three are 1672×240 and contain no UI; the goblin portraits are inset to keep both faces clear of the existing frame.
 - `data.json`: added only the three optional difficulty banner paths for Goblin Bandits' Cave. Existing rewards, frames, controls, preview gating, other dungeons and renderer are unchanged.
