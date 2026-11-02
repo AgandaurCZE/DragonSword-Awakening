@@ -1,0 +1,11 @@
+# Preview Normal Dungeon frame controls
+
+## Normal Dungeon frame controls — 2 Nov 2026
+
+David approved the no-circles sample and explicitly requested implementation/publishing directly on main, with all new visuals and behaviour restricted to the exact `?tiers=new` query. This is not approval to promote preview pages to public visitors.
+
+- Original `assets/ui/dungeon-frame-{blue,purple,red}.webp` files remain untouched and recoverable at the same paths. New independent `dungeon-frame-{blue,purple,red}-no-circles.webp` assets remove the painted medallions by a local transparent cutout and cloned rail from the same colour frame, without AI regeneration. All are lossless RGBA 1672×240; corner jewels, lower rail and geometry remain the original pixels outside the retouched upper-left patch. The local alpha changes where the medallions are removed; all pixels outside that patch are identical. A very subtle vertical join below the bright top rail may be visible when enlarged.
+- `renderDungeons()` adds `dng-clean-frame` only when `new URLSearchParams(location.search).get('tiers') === 'new'`. Only this class swaps frame assets and reveals the real I/II/III labels. Other queries retain the existing markup/control appearance. Global preview gating stays unchanged.
+- Controls use the Trait-style 30px circles, 5px spacing and 12px Georgia bold: I neutral gray, II green, III blue, with selected fill/glow and a focus outline. They sit inside the banner at left 7%, top 23%, clear of the top rail and corner bevel. No IV button. DNG.selected and the existing click/reward/banner paths are retained. Trait and Currency code/styles are unchanged. data.json is untouched.
+- Validation before publication: JavaScript parse checks; all 15 cards/45 labelled controls; all three Warg Cave reward/banner states; independent second-card state; non-tiers=new rendered markup matches the previous renderer exactly; untouched Currency/Trait functions; source-blob checks and RGBA/lossless/patch-bounds checks for all three frames. Browser verification of the deployed preview and plain public URL follows the publication step; do not describe that as passed until actually checked.
+- Pending unrelated work from prior handoff remains pending. No public launch authorised.

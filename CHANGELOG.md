@@ -1,3 +1,9 @@
+## 2 Nov 2026 — Preview Normal Dungeon frames and standalone controls
+
+- Added three separate lossless 1672×240 RGBA frame variants without painted difficulty medallions; retained the three original frame files untouched as backups.
+- Normal Dungeons now uses visible Trait-style I/II/III buttons inside the frame (left 7%, top 23%) only for the exact ?tiers=new preview query. Selection styling is gray/green/blue; per-card difficulty, artwork and reward switching stay intact. Other URL modes retain the old markup and assets.
+- data.json, Trait Dungeons and Currency Dungeons unchanged. Local renderer/selection/gate tests and lossless/pixel-bound checks passed. Deployed preview/public browser verification is the next step after publication. Details: docs/NORMAL_DUNGEON_FRAME_CONTROLS.md.
+
 ## 2 Nov 2026 — Main-only preview policy and durable handoff
 
 - Updated AGENTS.md and CHATGPT.md with David's explicit main-only / ?tiers=new development policy, replacing conflicting branch advice. Added docs/PROJECT_HANDOFF.txt with the completed four-dungeon request, decisions, files, validation, publication method/commits and pending work.

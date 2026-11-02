@@ -18,3 +18,10 @@ All 15 Normal Dungeons now have three artwork variants. Previously deferred Gobl
 
 BRANCH CLEANUP
 David requested removal only of unused branches. No open PRs. Three old branches each contained only data.json banner paths now already present on main: codex/corrupted-bedchamber-art (806561f), codex/four-dungeon-art-batch (7143a9a), codex/second-four-dungeon-art-batch (e500f50). Their commits diverged but their content was already incorporated; they were obsolete staging branches, not unfinished work. Deleted via GitHub branch UI; main preserved. Verify branch inventory after cleanup.
+
+NORMAL DUNGEON FRAME CONTROLS — 2 November 2026
+Request/authority: David approved the sample and explicitly requested putting all three no-circles frames and small inset I/II/III controls on the preview page, directly on main. No public launch authorised.
+Changes: new assets/ui/dungeon-frame-{blue,purple,red}-no-circles.webp; existing originals untouched; exact tiers=new class/asset/visible-label gate in renderDungeons; inset 30px Trait-style controls. data.json, Trait and Currency unchanged. Details/limitations/validation in docs/NORMAL_DUNGEON_FRAME_CONTROLS.md and AGENTS.md; CHANGELOG.md updated.
+Local checks passed: parsed all scripts; 15 cards/45 controls; all Warg Cave difficulty reward/art states; independent second-card state; byte-identical non-preview markup; preserved Trait/Currency code; source-blob, canvas, lossless RGBA and patch bounds for all frame variants. Visual asset inspection completed; faint rail join accepted by David can be seen at high magnification.
+Publication: prepared for a direct-main connector commit based on 90c38fe97cf97567bf9fc7709192ac95c4f9e9c8. Exact published hash and live-browser verification are recorded in a follow-up status entry once publication completes. Do not infer deployment success from this prepared entry.
+Next: publish the reviewed changes, verify deployed preview including all three colours, independent switching and small-screen placement; verify plain public URL still hides Dungeons and retains its previous UI. Existing unrelated pending work remains unchanged.
