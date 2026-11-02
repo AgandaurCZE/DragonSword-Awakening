@@ -22953,7 +22953,8 @@
        "name": "Crystal of Recollection",
        "amount": 10,
        "icon": "assets/items/icons/crystal-of-recollection.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/rock-tribe-base-normal.webp"
      },
      {
       "name": "Hard",
@@ -22967,7 +22968,8 @@
        "name": "Crystal of Recollection",
        "amount": 15,
        "icon": "assets/items/icons/crystal-of-recollection.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/rock-tribe-base-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -22981,7 +22983,8 @@
        "name": "Crystal of Recollection",
        "amount": 20,
        "icon": "assets/items/icons/crystal-of-recollection.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/rock-tribe-base-very-hard.webp"
      }
     ]
    },
@@ -23009,7 +23012,8 @@
        "name": "Crystal of Remembrance",
        "amount": 10,
        "icon": "assets/items/icons/crystal-of-remembrance.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/collapsed-sanctuary-normal.webp"
      },
      {
       "name": "Hard",
@@ -23023,7 +23027,8 @@
        "name": "Crystal of Remembrance",
        "amount": 15,
        "icon": "assets/items/icons/crystal-of-remembrance.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/collapsed-sanctuary-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -23036,7 +23041,8 @@
        "name": "Crystal of Remembrance",
        "amount": 20,
        "icon": "assets/items/icons/crystal-of-remembrance.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/collapsed-sanctuary-very-hard.webp"
      }
     ]
    },
@@ -23064,7 +23070,8 @@
        "name": "Forging Mold",
        "amount": 1,
        "icon": "assets/items/icons/forging-mold.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/graveyard-where-tragedy-sleeps-normal.webp"
      },
      {
       "name": "Hard",
@@ -23078,7 +23085,8 @@
        "name": "Forging Mold",
        "amount": 2,
        "icon": "assets/items/icons/forging-mold.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/graveyard-where-tragedy-sleeps-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -23091,7 +23099,8 @@
        "name": "Forging Mold",
        "amount": 3,
        "icon": "assets/items/icons/forging-mold.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/graveyard-where-tragedy-sleeps-very-hard.webp"
      }
     ]
    },
@@ -23119,7 +23128,8 @@
        "name": "Shape Grinder",
        "amount": 1,
        "icon": "assets/items/icons/shape-grinder.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/ashen-ruins-normal.webp"
      },
      {
       "name": "Hard",
@@ -23133,7 +23143,8 @@
        "name": "Shape Grinder",
        "amount": 3,
        "icon": "assets/items/icons/shape-grinder.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/ashen-ruins-hard.webp"
      },
      {
       "name": "Very Hard",
@@ -23146,7 +23157,8 @@
        "name": "Shape Grinder",
        "amount": 5,
        "icon": "assets/items/icons/shape-grinder.webp"
-      }
+      },
+      "banner": "assets/dungeons/banners/ashen-ruins-very-hard.webp"
      }
     ]
    }
