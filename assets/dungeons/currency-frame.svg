@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" preserveAspectRatio="none"><defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d4e2ec"/><stop offset=".22" stop-color="#627d91"/><stop offset=".5" stop-color="#bdd0dc"/><stop offset=".78" stop-color="#526a7e"/><stop offset="1" stop-color="#d1e1eb"/></linearGradient></defs><path d="M20 5H980L995 20V230L980 245H20L5 230V20Z" fill="none" stroke="url(#metal)" stroke-width="4" opacity=".94"/><path d="M27 11H973L989 27V223L973 239H27L11 223V27Z" fill="none" stroke="#d7e6ee" stroke-width="1.4" opacity=".62"/><path d="M5 20L28 5L19 29L5 41M995 20L972 5L981 29L995 41M5 230L28 245L19 221L5 209M995 230L972 245L981 221L995 209" fill="#31485b" fill-opacity=".72" stroke="url(#metal)" stroke-width="2.5"/><path d="M10 37L37 10M990 37L963 10M10 213L37 240M990 213L963 240" fill="none" stroke="#d9e7ef" stroke-width="1.5" opacity=".76"/><path d="M5 124H14M986 124H995" stroke="#b7cbd8" stroke-width="2" opacity=".58"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#d4e2ec"/>
+      <stop offset=".22" stop-color="#627d91"/>
+      <stop offset=".5" stop-color="#bdd0dc"/>
+      <stop offset=".78" stop-color="#526a7e"/>
+      <stop offset="1" stop-color="#d1e1eb"/>
+    </linearGradient>
+  </defs>
+  <rect x="7" y="7" width="986" height="236" rx="17" fill="none" stroke="url(#metal)" stroke-width="4" opacity=".94"/>
+  <rect x="13" y="13" width="974" height="224" rx="13" fill="none" stroke="#d7e6ee" stroke-width="1.4" opacity=".62"/>
+  <path d="M25 8H92M908 8H975M25 242H92M908 242H975" fill="none" stroke="#d9e7ef" stroke-width="1.5" stroke-linecap="round" opacity=".76"/>
+  <path d="M8 116V134M992 116V134" stroke="#b7cbd8" stroke-width="2" stroke-linecap="round" opacity=".58"/>
+</svg>
