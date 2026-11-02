@@ -23612,8 +23612,25 @@
      },
      {
       "name": "Hard",
-      "rewards": [],
-      "rewardsKnown": false
+      "rewards": [
+       [
+        "exp",
+        600
+       ],
+       [
+        "gold",
+        115000
+       ],
+       [
+        "emblem",
+        10
+       ],
+       [
+        "advancedCombatText",
+        100
+       ]
+      ],
+      "rewardsKnown": true
      },
      {
       "name": "Very Hard",
