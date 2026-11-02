@@ -22320,12 +22320,116 @@
    "Forging Mold",
    "Shape Grinder"
   ],
-  "emblem": {
-   "name": "Adventurer's Emblem",
-   "icon": "assets/ui/adventurers-emblem.webp"
+  "rewardItems": {
+   "exp": {
+    "name": "EXP",
+    "icon": "assets/trait/icons/exp.webp"
+   },
+   "emblem": {
+    "name": "Adventurer's Emblem",
+    "icon": "assets/ui/adventurers-emblem.webp"
+   },
+   "lowestradeonsterlaw": {
+    "name": "Lowest-Grade Monster Claw",
+    "icon": "assets/items/icons/lowest-grade-monster-claw.webp"
+   },
+   "lowradeonsterlaw": {
+    "name": "Low-Grade Monster Claw",
+    "icon": "assets/items/icons/low-grade-monster-claw.webp"
+   },
+   "intermediateonsterlaw": {
+    "name": "Intermediate Monster Claw",
+    "icon": "assets/items/icons/intermediate-monster-claw.webp"
+   },
+   "lowestradeonsterssence": {
+    "name": "Lowest-Grade Monster Essence",
+    "icon": "assets/items/icons/lowest-grade-monster-essence.webp"
+   },
+   "lowradeonsterssence": {
+    "name": "Low-Grade Monster Essence",
+    "icon": "assets/items/icons/low-grade-monster-essence.webp"
+   },
+   "intermediateonsterssence": {
+    "name": "Intermediate Monster Essence",
+    "icon": "assets/items/icons/intermediate-monster-essence.webp"
+   },
+   "lowestradeonsteroneragment": {
+    "name": "Lowest-Grade Monster Bone Fragment",
+    "icon": "assets/items/icons/lowest-grade-monster-bone-fragment.webp"
+   },
+   "lowradeonsteroneragment": {
+    "name": "Low-Grade Monster Bone Fragment",
+    "icon": "assets/items/icons/low-grade-monster-bone-fragment.webp"
+   },
+   "intermediateonsteroneragment": {
+    "name": "Intermediate Monster Bone Fragment",
+    "icon": "assets/items/icons/intermediate-monster-bone-fragment.webp"
+   },
+   "lowestradeonsteride": {
+    "name": "Lowest-Grade Monster Hide",
+    "icon": "assets/items/icons/lowest-grade-monster-hide.webp"
+   },
+   "lowradeonsteride": {
+    "name": "Low-Grade Monster Hide",
+    "icon": "assets/items/icons/low-grade-monster-hide.webp"
+   },
+   "intermediateonsteride": {
+    "name": "Intermediate Monster Hide",
+    "icon": "assets/items/icons/intermediate-monster-hide.webp"
+   },
+   "lowestradeonsterarapace": {
+    "name": "Lowest-Grade Monster Carapace",
+    "icon": "assets/items/icons/lowest-grade-monster-carapace.webp"
+   },
+   "lowradeonsterarapace": {
+    "name": "Low-Grade Monster Carapace",
+    "icon": "assets/items/icons/low-grade-monster-carapace.webp"
+   },
+   "intermediateonsterarapace": {
+    "name": "Intermediate Monster Carapace",
+    "icon": "assets/items/icons/intermediate-monster-carapace.webp"
+   },
+   "fruitfitality": {
+    "name": "Fruit of Vitality",
+    "icon": "assets/items/icons/fruit-of-vitality.webp"
+   },
+   "primordialeed": {
+    "name": "Primordial Seed",
+    "icon": "assets/items/icons/primordial-seed.webp"
+   },
+   "leaffigor": {
+    "name": "Leaf of Vigor",
+    "icon": "assets/items/icons/leaf-of-vigor.webp"
+   },
+   "dropfurity": {
+    "name": "Drop of Purity",
+    "icon": "assets/items/icons/drop-of-purity.webp"
+   },
+   "crystalfeverie": {
+    "name": "Crystal of Reverie",
+    "icon": "assets/items/icons/crystal-of-reverie.webp"
+   },
+   "crystalfblivion": {
+    "name": "Crystal of Oblivion",
+    "icon": "assets/items/icons/crystal-of-oblivion.webp"
+   },
+   "crystalfecollection": {
+    "name": "Crystal of Recollection",
+    "icon": "assets/items/icons/crystal-of-recollection.webp"
+   },
+   "crystalfemembrance": {
+    "name": "Crystal of Remembrance",
+    "icon": "assets/items/icons/crystal-of-remembrance.webp"
+   },
+   "forgingold": {
+    "name": "Forging Mold",
+    "icon": "assets/items/icons/forging-mold.webp"
+   },
+   "shaperinder": {
+    "name": "Shape Grinder",
+    "icon": "assets/items/icons/shape-grinder.webp"
+   }
   },
-  "expLabel": "EXP",
-  "expIcon": "assets/trait/icons/exp.webp",
   "normal": [
    {
     "name": "Warg Cave",
@@ -22342,14 +22446,21 @@
       "gear": [
        "Blue"
       ],
-      "exp": 200,
-      "emblem": 5,
-      "material": {
-       "name": "Lowest-Grade Monster Claw",
-       "amount": 10,
-       "icon": "assets/items/icons/lowest-grade-monster-claw.webp"
-      },
-      "banner": "assets/dungeons/banners/warg-cave-normal.webp"
+      "banner": "assets/dungeons/banners/warg-cave-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        200
+       ],
+       [
+        "emblem",
+        5
+       ],
+       [
+        "lowestradeonsterlaw",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
@@ -22357,14 +22468,21 @@
        "Blue",
        "Purple"
       ],
-      "exp": 500,
-      "emblem": 10,
-      "material": {
-       "name": "Low-Grade Monster Claw",
-       "amount": 10,
-       "icon": "assets/items/icons/low-grade-monster-claw.webp"
-      },
-      "banner": "assets/dungeons/banners/warg-cave-hard.webp"
+      "banner": "assets/dungeons/banners/warg-cave-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        500
+       ],
+       [
+        "emblem",
+        10
+       ],
+       [
+        "lowradeonsterlaw",
+        10
+       ]
+      ]
      },
      {
       "name": "Very Hard",
@@ -22372,14 +22490,21 @@
        "Blue",
        "Purple"
       ],
-      "exp": 800,
-      "emblem": 20,
-      "material": {
-       "name": "Intermediate Monster Claw",
-       "amount": 10,
-       "icon": "assets/items/icons/intermediate-monster-claw.webp"
-      },
-      "banner": "assets/dungeons/banners/warg-cave-very-hard.webp"
+      "banner": "assets/dungeons/banners/warg-cave-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        800
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "intermediateonsterlaw",
+        10
+       ]
+      ]
      }
     ],
     "banner": "assets/dungeons/banners/warg-cave-normal.webp"
@@ -22398,14 +22523,21 @@
       "gear": [
        "Blue"
       ],
-      "exp": 200,
-      "emblem": 5,
-      "material": {
-       "name": "Lowest-Grade Monster Essence",
-       "amount": 10,
-       "icon": "assets/items/icons/lowest-grade-monster-essence.webp"
-      },
-      "banner": "assets/dungeons/banners/goblin-bandits-cave-normal.webp"
+      "banner": "assets/dungeons/banners/goblin-bandits-cave-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        200
+       ],
+       [
+        "emblem",
+        5
+       ],
+       [
+        "lowestradeonsterssence",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
@@ -22413,14 +22545,21 @@
        "Blue",
        "Purple"
       ],
-      "exp": 500,
-      "emblem": 10,
-      "material": {
-       "name": "Low-Grade Monster Essence",
-       "amount": 10,
-       "icon": "assets/items/icons/low-grade-monster-essence.webp"
-      },
-      "banner": "assets/dungeons/banners/goblin-bandits-cave-hard.webp"
+      "banner": "assets/dungeons/banners/goblin-bandits-cave-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        500
+       ],
+       [
+        "emblem",
+        10
+       ],
+       [
+        "lowradeonsterssence",
+        10
+       ]
+      ]
      },
      {
       "name": "Very Hard",
@@ -22428,14 +22567,21 @@
        "Blue",
        "Purple"
       ],
-      "exp": 800,
-      "emblem": 20,
-      "material": {
-       "name": "Intermediate Monster Essence",
-       "amount": 10,
-       "icon": "assets/items/icons/intermediate-monster-essence.webp"
-      },
-      "banner": "assets/dungeons/banners/goblin-bandits-cave-very-hard.webp"
+      "banner": "assets/dungeons/banners/goblin-bandits-cave-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        800
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "intermediateonsterssence",
+        10
+       ]
+      ]
      }
     ]
    },
@@ -22454,14 +22600,21 @@
       "gear": [
        "Blue"
       ],
-      "exp": 300,
-      "emblem": 5,
-      "material": {
-       "name": "Lowest-Grade Monster Bone Fragment",
-       "amount": 10,
-       "icon": "assets/items/icons/lowest-grade-monster-bone-fragment.webp"
-      },
-      "banner": "assets/dungeons/banners/corrupted-bedchamber-normal.webp"
+      "banner": "assets/dungeons/banners/corrupted-bedchamber-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        300
+       ],
+       [
+        "emblem",
+        5
+       ],
+       [
+        "lowestradeonsteroneragment",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
@@ -22469,28 +22622,42 @@
        "Blue",
        "Purple"
       ],
-      "exp": 600,
-      "emblem": 15,
-      "material": {
-       "name": "Low-Grade Monster Bone Fragment",
-       "amount": 10,
-       "icon": "assets/items/icons/low-grade-monster-bone-fragment.webp"
-      },
-      "banner": "assets/dungeons/banners/corrupted-bedchamber-hard.webp"
+      "banner": "assets/dungeons/banners/corrupted-bedchamber-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        600
+       ],
+       [
+        "emblem",
+        15
+       ],
+       [
+        "lowradeonsteroneragment",
+        10
+       ]
+      ]
      },
      {
       "name": "Very Hard",
       "gear": [
        "Purple"
       ],
-      "exp": 900,
-      "emblem": 20,
-      "material": {
-       "name": "Intermediate Monster Bone Fragment",
-       "amount": 10,
-       "icon": "assets/items/icons/intermediate-monster-bone-fragment.webp"
-      },
-      "banner": "assets/dungeons/banners/corrupted-bedchamber-very-hard.webp"
+      "banner": "assets/dungeons/banners/corrupted-bedchamber-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        900
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "intermediateonsteroneragment",
+        10
+       ]
+      ]
      }
     ]
    },
@@ -22508,14 +22675,21 @@
       "gear": [
        "Blue"
       ],
-      "exp": 300,
-      "emblem": 5,
-      "material": {
-       "name": "Lowest-Grade Monster Hide",
-       "amount": 10,
-       "icon": "assets/items/icons/lowest-grade-monster-hide.webp"
-      },
-      "banner": "assets/dungeons/banners/underground-goblin-village-normal.webp"
+      "banner": "assets/dungeons/banners/underground-goblin-village-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        300
+       ],
+       [
+        "emblem",
+        5
+       ],
+       [
+        "lowestradeonsteride",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
@@ -22523,28 +22697,42 @@
        "Blue",
        "Purple"
       ],
-      "exp": 600,
-      "emblem": 15,
-      "material": {
-       "name": "Low-Grade Monster Hide",
-       "amount": 10,
-       "icon": "assets/items/icons/low-grade-monster-hide.webp"
-      },
-      "banner": "assets/dungeons/banners/underground-goblin-village-hard.webp"
+      "banner": "assets/dungeons/banners/underground-goblin-village-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        600
+       ],
+       [
+        "emblem",
+        15
+       ],
+       [
+        "lowradeonsteride",
+        10
+       ]
+      ]
      },
      {
       "name": "Very Hard",
       "gear": [
        "Purple"
       ],
-      "exp": 900,
-      "emblem": 20,
-      "material": {
-       "name": "Intermediate Monster Hide",
-       "amount": 10,
-       "icon": "assets/items/icons/intermediate-monster-hide.webp"
-      },
-      "banner": "assets/dungeons/banners/underground-goblin-village-very-hard.webp"
+      "banner": "assets/dungeons/banners/underground-goblin-village-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        900
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "intermediateonsteride",
+        10
+       ]
+      ]
      }
     ]
    },
@@ -22562,14 +22750,21 @@
       "gear": [
        "Blue"
       ],
-      "exp": 500,
-      "emblem": 10,
-      "material": {
-       "name": "Lowest-Grade Monster Carapace",
-       "amount": 10,
-       "icon": "assets/items/icons/lowest-grade-monster-carapace.webp"
-      },
-      "banner": "assets/dungeons/banners/silver-tusk-supply-depot-normal.webp"
+      "banner": "assets/dungeons/banners/silver-tusk-supply-depot-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        500
+       ],
+       [
+        "emblem",
+        10
+       ],
+       [
+        "lowestradeonsterarapace",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
@@ -22577,28 +22772,42 @@
        "Blue",
        "Purple"
       ],
-      "exp": 700,
-      "emblem": 15,
-      "material": {
-       "name": "Low-Grade Monster Carapace",
-       "amount": 10,
-       "icon": "assets/items/icons/low-grade-monster-carapace.webp"
-      },
-      "banner": "assets/dungeons/banners/silver-tusk-supply-depot-hard.webp"
+      "banner": "assets/dungeons/banners/silver-tusk-supply-depot-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        700
+       ],
+       [
+        "emblem",
+        15
+       ],
+       [
+        "lowradeonsterarapace",
+        10
+       ]
+      ]
      },
      {
       "name": "Very Hard",
       "gear": [
        "Purple"
       ],
-      "exp": 900,
-      "emblem": 20,
-      "material": {
-       "name": "Intermediate Monster Carapace",
-       "amount": 10,
-       "icon": "assets/items/icons/intermediate-monster-carapace.webp"
-      },
-      "banner": "assets/dungeons/banners/silver-tusk-supply-depot-very-hard.webp"
+      "banner": "assets/dungeons/banners/silver-tusk-supply-depot-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        900
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "intermediateonsterarapace",
+        10
+       ]
+      ]
      }
     ]
    },
@@ -22616,14 +22825,21 @@
       "gear": [
        "Blue"
       ],
-      "exp": 600,
-      "emblem": 15,
-      "material": {
-       "name": "Fruit of Vitality",
-       "amount": 10,
-       "icon": "assets/items/icons/fruit-of-vitality.webp"
-      },
-      "banner": "assets/dungeons/banners/warg-enclosure-normal.webp"
+      "banner": "assets/dungeons/banners/warg-enclosure-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        600
+       ],
+       [
+        "emblem",
+        15
+       ],
+       [
+        "fruitfitality",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
@@ -22631,28 +22847,42 @@
        "Blue",
        "Purple"
       ],
-      "exp": 800,
-      "emblem": 20,
-      "material": {
-       "name": "Fruit of Vitality",
-       "amount": 15,
-       "icon": "assets/items/icons/fruit-of-vitality.webp"
-      },
-      "banner": "assets/dungeons/banners/warg-enclosure-hard.webp"
+      "banner": "assets/dungeons/banners/warg-enclosure-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        800
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "fruitfitality",
+        15
+       ]
+      ]
      },
      {
       "name": "Very Hard",
       "gear": [
        "Purple"
       ],
-      "exp": 1000,
-      "emblem": 25,
-      "material": {
-       "name": "Fruit of Vitality",
-       "amount": 20,
-       "icon": "assets/items/icons/fruit-of-vitality.webp"
-      },
-      "banner": "assets/dungeons/banners/warg-enclosure-very-hard.webp"
+      "banner": "assets/dungeons/banners/warg-enclosure-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1000
+       ],
+       [
+        "emblem",
+        25
+       ],
+       [
+        "fruitfitality",
+        20
+       ]
+      ]
      }
     ]
    },
@@ -22671,14 +22901,21 @@
       "gear": [
        "Blue"
       ],
-      "exp": 600,
-      "emblem": 15,
-      "material": {
-       "name": "Primordial Seed",
-       "amount": 10,
-       "icon": "assets/items/icons/primordial-seed.webp"
-      },
-      "banner": "assets/dungeons/banners/coastal-cliff-cave-outpost-normal.webp"
+      "banner": "assets/dungeons/banners/coastal-cliff-cave-outpost-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        600
+       ],
+       [
+        "emblem",
+        15
+       ],
+       [
+        "primordialeed",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
@@ -22686,28 +22923,42 @@
        "Blue",
        "Purple"
       ],
-      "exp": 800,
-      "emblem": 20,
-      "material": {
-       "name": "Primordial Seed",
-       "amount": 15,
-       "icon": "assets/items/icons/primordial-seed.webp"
-      },
-      "banner": "assets/dungeons/banners/coastal-cliff-cave-outpost-hard.webp"
+      "banner": "assets/dungeons/banners/coastal-cliff-cave-outpost-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        800
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "primordialeed",
+        15
+       ]
+      ]
      },
      {
       "name": "Very Hard",
       "gear": [
        "Purple"
       ],
-      "exp": 1000,
-      "emblem": 25,
-      "material": {
-       "name": "Primordial Seed",
-       "amount": 20,
-       "icon": "assets/items/icons/primordial-seed.webp"
-      },
-      "banner": "assets/dungeons/banners/coastal-cliff-cave-outpost-very-hard.webp"
+      "banner": "assets/dungeons/banners/coastal-cliff-cave-outpost-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1000
+       ],
+       [
+        "emblem",
+        25
+       ],
+       [
+        "primordialeed",
+        20
+       ]
+      ]
      }
     ]
    },
@@ -22726,28 +22977,42 @@
        "Blue",
        "Purple"
       ],
-      "exp": 700,
-      "emblem": 15,
-      "material": {
-       "name": "Leaf of Vigor",
-       "amount": 10,
-       "icon": "assets/items/icons/leaf-of-vigor.webp"
-      },
-      "banner": "assets/dungeons/banners/rusted-tusk-treasure-vault-normal.webp"
+      "banner": "assets/dungeons/banners/rusted-tusk-treasure-vault-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        700
+       ],
+       [
+        "emblem",
+        15
+       ],
+       [
+        "leaffigor",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
       "gear": [
        "Purple"
       ],
-      "exp": 900,
-      "emblem": 20,
-      "material": {
-       "name": "Leaf of Vigor",
-       "amount": 15,
-       "icon": "assets/items/icons/leaf-of-vigor.webp"
-      },
-      "banner": "assets/dungeons/banners/rusted-tusk-treasure-vault-hard.webp"
+      "banner": "assets/dungeons/banners/rusted-tusk-treasure-vault-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        900
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "leaffigor",
+        15
+       ]
+      ]
      },
      {
       "name": "Very Hard",
@@ -22755,14 +23020,21 @@
        "Purple",
        "Orange"
       ],
-      "exp": 1100,
-      "emblem": 25,
-      "material": {
-       "name": "Leaf of Vigor",
-       "amount": 20,
-       "icon": "assets/items/icons/leaf-of-vigor.webp"
-      },
-      "banner": "assets/dungeons/banners/rusted-tusk-treasure-vault-very-hard.webp"
+      "banner": "assets/dungeons/banners/rusted-tusk-treasure-vault-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1100
+       ],
+       [
+        "emblem",
+        25
+       ],
+       [
+        "leaffigor",
+        20
+       ]
+      ]
      }
     ]
    },
@@ -22781,28 +23053,42 @@
        "Blue",
        "Purple"
       ],
-      "exp": 700,
-      "emblem": 15,
-      "material": {
-       "name": "Drop of Purity",
-       "amount": 10,
-       "icon": "assets/items/icons/drop-of-purity.webp"
-      },
-      "banner": "assets/dungeons/banners/fang-bandits-arena-normal.webp"
+      "banner": "assets/dungeons/banners/fang-bandits-arena-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        700
+       ],
+       [
+        "emblem",
+        15
+       ],
+       [
+        "dropfurity",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
       "gear": [
        "Purple"
       ],
-      "exp": 900,
-      "emblem": 20,
-      "material": {
-       "name": "Drop of Purity",
-       "amount": 15,
-       "icon": "assets/items/icons/drop-of-purity.webp"
-      },
-      "banner": "assets/dungeons/banners/fang-bandits-arena-hard.webp"
+      "banner": "assets/dungeons/banners/fang-bandits-arena-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        900
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "dropfurity",
+        15
+       ]
+      ]
      },
      {
       "name": "Very Hard",
@@ -22810,14 +23096,21 @@
        "Purple",
        "Orange"
       ],
-      "exp": 1100,
-      "emblem": 25,
-      "material": {
-       "name": "Drop of Purity",
-       "amount": 20,
-       "icon": "assets/items/icons/drop-of-purity.webp"
-      },
-      "banner": "assets/dungeons/banners/fang-bandits-arena-very-hard.webp"
+      "banner": "assets/dungeons/banners/fang-bandits-arena-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1100
+       ],
+       [
+        "emblem",
+        25
+       ],
+       [
+        "dropfurity",
+        20
+       ]
+      ]
      }
     ]
    },
@@ -22837,28 +23130,42 @@
        "Blue",
        "Purple"
       ],
-      "exp": 800,
-      "emblem": 20,
-      "material": {
-       "name": "Crystal of Reverie",
-       "amount": 10,
-       "icon": "assets/items/icons/crystal-of-reverie.webp"
-      },
-      "banner": "assets/dungeons/banners/dark-swamp-normal.webp"
+      "banner": "assets/dungeons/banners/dark-swamp-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        800
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "crystalfeverie",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
       "gear": [
        "Purple"
       ],
-      "exp": 1000,
-      "emblem": 25,
-      "material": {
-       "name": "Crystal of Reverie",
-       "amount": 15,
-       "icon": "assets/items/icons/crystal-of-reverie.webp"
-      },
-      "banner": "assets/dungeons/banners/dark-swamp-hard.webp"
+      "banner": "assets/dungeons/banners/dark-swamp-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1000
+       ],
+       [
+        "emblem",
+        25
+       ],
+       [
+        "crystalfeverie",
+        15
+       ]
+      ]
      },
      {
       "name": "Very Hard",
@@ -22866,14 +23173,21 @@
        "Purple",
        "Orange"
       ],
-      "exp": 1200,
-      "emblem": 30,
-      "material": {
-       "name": "Crystal of Reverie",
-       "amount": 20,
-       "icon": "assets/items/icons/crystal-of-reverie.webp"
-      },
-      "banner": "assets/dungeons/banners/dark-swamp-very-hard.webp"
+      "banner": "assets/dungeons/banners/dark-swamp-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1200
+       ],
+       [
+        "emblem",
+        30
+       ],
+       [
+        "crystalfeverie",
+        20
+       ]
+      ]
      }
     ]
    },
@@ -22893,28 +23207,42 @@
        "Blue",
        "Purple"
       ],
-      "exp": 800,
-      "emblem": 20,
-      "material": {
-       "name": "Crystal of Oblivion",
-       "amount": 10,
-       "icon": "assets/items/icons/crystal-of-oblivion.webp"
-      },
-      "banner": "assets/dungeons/banners/forest-of-entangled-roots-normal.webp"
+      "banner": "assets/dungeons/banners/forest-of-entangled-roots-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        800
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "crystalfblivion",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
       "gear": [
        "Purple"
       ],
-      "exp": 1000,
-      "emblem": 25,
-      "material": {
-       "name": "Crystal of Oblivion",
-       "amount": 15,
-       "icon": "assets/items/icons/crystal-of-oblivion.webp"
-      },
-      "banner": "assets/dungeons/banners/forest-of-entangled-roots-hard.webp"
+      "banner": "assets/dungeons/banners/forest-of-entangled-roots-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1000
+       ],
+       [
+        "emblem",
+        25
+       ],
+       [
+        "crystalfblivion",
+        15
+       ]
+      ]
      },
      {
       "name": "Very Hard",
@@ -22922,14 +23250,21 @@
        "Purple",
        "Orange"
       ],
-      "exp": 1200,
-      "emblem": 30,
-      "material": {
-       "name": "Crystal of Oblivion",
-       "amount": 20,
-       "icon": "assets/items/icons/crystal-of-oblivion.webp"
-      },
-      "banner": "assets/dungeons/banners/forest-of-entangled-roots-very-hard.webp"
+      "banner": "assets/dungeons/banners/forest-of-entangled-roots-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1200
+       ],
+       [
+        "emblem",
+        30
+       ],
+       [
+        "crystalfblivion",
+        20
+       ]
+      ]
      }
     ]
    },
@@ -22948,14 +23283,21 @@
       "gear": [
        "Purple"
       ],
-      "exp": 900,
-      "emblem": 20,
-      "material": {
-       "name": "Crystal of Recollection",
-       "amount": 10,
-       "icon": "assets/items/icons/crystal-of-recollection.webp"
-      },
-      "banner": "assets/dungeons/banners/rock-tribe-base-normal.webp"
+      "banner": "assets/dungeons/banners/rock-tribe-base-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        900
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "crystalfecollection",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
@@ -22963,14 +23305,21 @@
        "Purple",
        "Orange"
       ],
-      "exp": 1100,
-      "emblem": 25,
-      "material": {
-       "name": "Crystal of Recollection",
-       "amount": 15,
-       "icon": "assets/items/icons/crystal-of-recollection.webp"
-      },
-      "banner": "assets/dungeons/banners/rock-tribe-base-hard.webp"
+      "banner": "assets/dungeons/banners/rock-tribe-base-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1100
+       ],
+       [
+        "emblem",
+        25
+       ],
+       [
+        "crystalfecollection",
+        15
+       ]
+      ]
      },
      {
       "name": "Very Hard",
@@ -22978,14 +23327,21 @@
        "Purple",
        "Orange"
       ],
-      "exp": 1300,
-      "emblem": 30,
-      "material": {
-       "name": "Crystal of Recollection",
-       "amount": 20,
-       "icon": "assets/items/icons/crystal-of-recollection.webp"
-      },
-      "banner": "assets/dungeons/banners/rock-tribe-base-very-hard.webp"
+      "banner": "assets/dungeons/banners/rock-tribe-base-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1300
+       ],
+       [
+        "emblem",
+        30
+       ],
+       [
+        "crystalfecollection",
+        20
+       ]
+      ]
      }
     ]
    },
@@ -23007,14 +23363,21 @@
        "Purple",
        "Orange"
       ],
-      "exp": 900,
-      "emblem": 25,
-      "material": {
-       "name": "Crystal of Remembrance",
-       "amount": 10,
-       "icon": "assets/items/icons/crystal-of-remembrance.webp"
-      },
-      "banner": "assets/dungeons/banners/collapsed-sanctuary-normal.webp"
+      "banner": "assets/dungeons/banners/collapsed-sanctuary-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        900
+       ],
+       [
+        "emblem",
+        25
+       ],
+       [
+        "crystalfemembrance",
+        10
+       ]
+      ]
      },
      {
       "name": "Hard",
@@ -23022,28 +23385,42 @@
        "Purple",
        "Orange"
       ],
-      "exp": 1100,
-      "emblem": 30,
-      "material": {
-       "name": "Crystal of Remembrance",
-       "amount": 15,
-       "icon": "assets/items/icons/crystal-of-remembrance.webp"
-      },
-      "banner": "assets/dungeons/banners/collapsed-sanctuary-hard.webp"
+      "banner": "assets/dungeons/banners/collapsed-sanctuary-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1100
+       ],
+       [
+        "emblem",
+        30
+       ],
+       [
+        "crystalfemembrance",
+        15
+       ]
+      ]
      },
      {
       "name": "Very Hard",
       "gear": [
        "Orange"
       ],
-      "exp": 1300,
-      "emblem": 35,
-      "material": {
-       "name": "Crystal of Remembrance",
-       "amount": 20,
-       "icon": "assets/items/icons/crystal-of-remembrance.webp"
-      },
-      "banner": "assets/dungeons/banners/collapsed-sanctuary-very-hard.webp"
+      "banner": "assets/dungeons/banners/collapsed-sanctuary-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1300
+       ],
+       [
+        "emblem",
+        35
+       ],
+       [
+        "crystalfemembrance",
+        20
+       ]
+      ]
      }
     ]
    },
@@ -23065,14 +23442,21 @@
        "Purple",
        "Orange"
       ],
-      "exp": 1200,
-      "emblem": 30,
-      "material": {
-       "name": "Forging Mold",
-       "amount": 1,
-       "icon": "assets/items/icons/forging-mold.webp"
-      },
-      "banner": "assets/dungeons/banners/graveyard-where-tragedy-sleeps-normal.webp"
+      "banner": "assets/dungeons/banners/graveyard-where-tragedy-sleeps-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        1200
+       ],
+       [
+        "emblem",
+        30
+       ],
+       [
+        "forgingold",
+        1
+       ]
+      ]
      },
      {
       "name": "Hard",
@@ -23080,28 +23464,42 @@
        "Purple",
        "Orange"
       ],
-      "exp": 1300,
-      "emblem": 30,
-      "material": {
-       "name": "Forging Mold",
-       "amount": 2,
-       "icon": "assets/items/icons/forging-mold.webp"
-      },
-      "banner": "assets/dungeons/banners/graveyard-where-tragedy-sleeps-hard.webp"
+      "banner": "assets/dungeons/banners/graveyard-where-tragedy-sleeps-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1300
+       ],
+       [
+        "emblem",
+        30
+       ],
+       [
+        "forgingold",
+        2
+       ]
+      ]
      },
      {
       "name": "Very Hard",
       "gear": [
        "Orange"
       ],
-      "exp": 1400,
-      "emblem": 35,
-      "material": {
-       "name": "Forging Mold",
-       "amount": 3,
-       "icon": "assets/items/icons/forging-mold.webp"
-      },
-      "banner": "assets/dungeons/banners/graveyard-where-tragedy-sleeps-very-hard.webp"
+      "banner": "assets/dungeons/banners/graveyard-where-tragedy-sleeps-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1400
+       ],
+       [
+        "emblem",
+        35
+       ],
+       [
+        "forgingold",
+        3
+       ]
+      ]
      }
     ]
    },
@@ -23123,14 +23521,21 @@
        "Purple",
        "Orange"
       ],
-      "exp": 1200,
-      "emblem": 30,
-      "material": {
-       "name": "Shape Grinder",
-       "amount": 1,
-       "icon": "assets/items/icons/shape-grinder.webp"
-      },
-      "banner": "assets/dungeons/banners/ashen-ruins-normal.webp"
+      "banner": "assets/dungeons/banners/ashen-ruins-normal.webp",
+      "rewards": [
+       [
+        "exp",
+        1200
+       ],
+       [
+        "emblem",
+        30
+       ],
+       [
+        "shaperinder",
+        1
+       ]
+      ]
      },
      {
       "name": "Hard",
@@ -23138,28 +23543,42 @@
        "Purple",
        "Orange"
       ],
-      "exp": 1300,
-      "emblem": 30,
-      "material": {
-       "name": "Shape Grinder",
-       "amount": 3,
-       "icon": "assets/items/icons/shape-grinder.webp"
-      },
-      "banner": "assets/dungeons/banners/ashen-ruins-hard.webp"
+      "banner": "assets/dungeons/banners/ashen-ruins-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1300
+       ],
+       [
+        "emblem",
+        30
+       ],
+       [
+        "shaperinder",
+        3
+       ]
+      ]
      },
      {
       "name": "Very Hard",
       "gear": [
        "Orange"
       ],
-      "exp": 1400,
-      "emblem": 35,
-      "material": {
-       "name": "Shape Grinder",
-       "amount": 5,
-       "icon": "assets/items/icons/shape-grinder.webp"
-      },
-      "banner": "assets/dungeons/banners/ashen-ruins-very-hard.webp"
+      "banner": "assets/dungeons/banners/ashen-ruins-very-hard.webp",
+      "rewards": [
+       [
+        "exp",
+        1400
+       ],
+       [
+        "emblem",
+        35
+       ],
+       [
+        "shaperinder",
+        5
+       ]
+      ]
      }
     ]
    }
