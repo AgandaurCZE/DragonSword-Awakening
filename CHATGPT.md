@@ -121,25 +121,21 @@ Treat names and enum strings as foreign keys: hero names must agree across HEROE
 - CLAUDE.md is effectively empty (11 bytes); substantive Claude instructions/history are in AGENTS.md, CHANGELOG.md, TODO_David_2026-10-29.txt and the asset-folder notes/readmes.
 
 
-## Active handoff — Normal Dungeons page (David confirmed, 2 Nov 2026)
+## Completed Dungeons work — 3 Nov 2026
 
-David explicitly approved starting implementation using the design recorded in `docs/TASK_dungeons_page.md`. If this conversation/call ends, continue from that task file rather than asking him to repeat the requirements.
+The earlier `docs/TASK_dungeons_page.md` is a historical task brief; it predates implementation and contains obsolete instructions (for example, that Currency Dungeons are only a navigation entry and that Normal artwork is unfinished). Use `AGENTS.md`, this completed handoff and `docs/PROJECT_HANDOFF.txt` for current state.
 
-### Confirmed UI decisions
-- The card's main background must be based on the in-game Normal Dungeons menu screenshot: retain the pale ornate title-panel texture/background; remove the original title lettering, large gear/reward tiles and Location button; reconstruct/fill the removed area with matching adjacent colour/texture so the panel looks intentional.
-- Draw the dungeon name as live HTML text, centred in the title area and larger than the sketch. Allow long names to wrap/scale without clipping.
-- Difficulty controls are three small circles at the **top-left**, side by side: grey I = Normal, green II = Hard, blue III = Very Hard. Reuse Trait Dungeons `.tr-diff` visual style/interaction pattern, but make them operate on Normal Dungeon data only.
-- Small square reward icons go at the **bottom-left**, using the existing extracted item icons in `assets/items/icons/`.
-- Per-card difficulty state: changing one dungeon must update only that card's rewards (gear rarity, EXP, Adventurer's Emblems, materials and quantities).
-- Keep the existing Trait Dungeons page and behaviour intact. Currency Dungeons is a navigation entry only for now. Do not implement the deferred Gear-page links yet.
+### Provenance and completed changes
+- David clarified that the original Normal Dungeons structure and visual foundation were produced by him with the ChatGPT chat version. Do not attribute that foundation to this project. In the subsequent work here, the Normal reward records were migrated to the shared Trait-style key/count format, and their item labels/icons—including EXP—were resolved from `DUNGEONS.rewardItems`; set icons remain linked through `GEAR_DATA`.
+- The 15 Normal Dungeon cards, per-difficulty I/II/III selection, reward display and three background variants per dungeon are present in the preview. The Goblin Bandits' Cave Difficulty I artwork alignment remains recorded as a pending visual correction in `docs/DUNGEON_ARTWORK_WORKFLOW.md`.
+- Currency Dungeons has three discovered entries and two locked placeholders. The three discovered entries have key/count rewards for all three difficulties, item labels/icons resolve through `currencyRewardItems`, selectors reset to Normal when leaving the page, and each card has its approved custom background. The frame is a separate overlay; its slight corner alignment issue is deferred to David's separate graphics pass.
+- The Currency reward data includes EXP, Gold, Adventurer's Emblem, Basic/Advanced/Core Combat Text, Mana Shard/Crystal/Ore and Arcana of War/Beginnings/Peace. Values were dictated and confirmed by David; do not infer amounts for the two locked dungeons.
+- Trait Dungeons keeps its existing data and rendering. Nine preview banners were added and assigned in menu order to three Mantius, two Drosophia and four Ghagaroach variants. Archetype marks follow the explicit per-boss direction, including the agreed Bloodburst and Ghagaroach exceptions.
+- The earlier Gear-menu links from General Sets and three named sets to Normal Dungeons are also part of the completed preview work; set links apply a data-derived filter, which clears on leaving Normal Dungeons while difficulty choices are otherwise retained as specified.
 
-### Implementation and safety constraints
-- All 15 Normal Dungeons and all three difficulty reward tiers are already present in `data.json`; use those values as the source of truth. Do not invent or alter reward values.
-- Work directly on `main`. All new pages, navigation items, visual changes and functionality must be gated behind `?tiers=new`; the normal public URL without that parameter must remain unchanged until David explicitly approves promotion.
-- Reuse the existing Trait Dungeons controls and repository item icons where suitable. Match the site's dark panels/turquoise accents and compact card styling.
-- Before finishing, validate data, test the selector/filter interactions and preview gate, re-fetch committed files, and report clearly what was and was not browser-tested.
-
-The detailed original task and acceptance checks remain in `docs/TASK_dungeons_page.md`.
+### Release boundary
+- All these additions are served from `main` but gated by `?tiers=new`. The plain public URL must remain unchanged. Do not remove the preview gate or publish the preview publicly without David's explicit approval.
+- Currency frame corner polish is deferred to David/Claude. The Goblin Bandits' Cave I alignment correction is separately pending. No other work is currently implied by this handoff.
 
 ## Completed artwork handoff
 

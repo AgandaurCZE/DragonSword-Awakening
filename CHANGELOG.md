@@ -1,3 +1,11 @@
+## 3 Nov 2026 — Reconcile Dungeons handoff and project notes
+
+- Updated `AGENTS.md`, `CHATGPT.md` and `docs/PROJECT_HANDOFF.txt` to describe the shipped preview state instead of the obsolete pre-implementation Dungeons brief. Marked `docs/TASK_dungeons_page.md` as historical so future contributors do not follow superseded scope.
+- Provenance: David clarified that he created the original Normal Dungeons foundation with the ChatGPT chat version. This project separately migrated Normal rewards to the Trait-style key/count model and data-driven item label/icon map, including EXP.
+- Recorded current Normal page/artwork and the pending Goblin Bandits' Cave Difficulty I alignment; Currency's three discovered entries, two locked entries, complete confirmed reward tiers, data-driven icons, selection reset and approved backgrounds; and the nine Trait boss banner assignments.
+- Preserved the release boundary: all new Dungeons content stays gated behind `?tiers=new`; the public no-query page is unchanged. Currency frame corner polish remains deferred to David's separate graphics pass.
+- Documentation-only update; website code, data and artwork were not changed. Validation: reviewed diffs and confirmed the notes distinguish completed, pending and prior ChatGPT-authored work.
+
 ## 2 Nov 2026 — Main-only preview policy and durable handoff
 
 - Updated AGENTS.md and CHATGPT.md with David's explicit main-only / ?tiers=new development policy, replacing conflicting branch advice. Added docs/PROJECT_HANDOFF.txt with the completed four-dungeon request, decisions, files, validation, publication method/commits and pending work.

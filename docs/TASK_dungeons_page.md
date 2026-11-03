@@ -1,5 +1,7 @@
 # Task: Dungeons section (preview only)
 
+> **Historical brief — implementation is complete.** This 1 Nov 2026 request predates the current Normal, Trait and Currency Dungeons implementation and contains superseded scope, data-shape and artwork instructions. Do not resume this checklist as an open task. See `AGENTS.md`, `CHATGPT.md` and `docs/PROJECT_HANDOFF.txt` for the current state and remaining work.
+
 Written by Claude for whichever assistant builds this (1 Nov 2026). Read `AGENTS.md` first: every rule in it applies here.
 
 ## The one rule that matters most

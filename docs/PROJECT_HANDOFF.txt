@@ -1,4 +1,13 @@
-PROJECT HANDOFF — 2 November 2026
+PROJECT HANDOFF — updated 3 November 2026
+
+CURRENT DUNGEONS STATUS (supersedes the older task notes below where they conflict)
+David clarified that the original Normal Dungeons foundation was made by him with the ChatGPT chat version. This project later migrated Normal Dungeon rewards into the same key/count model used by Trait Dungeons, with a data map for names/icons including EXP. The Normal page has 15 cards, I/II/III selectors, per-difficulty rewards and three background variants per dungeon. Goblin Bandits' Cave Difficulty I alignment remains a pending artwork correction in docs/DUNGEON_ARTWORK_WORKFLOW.md.
+
+Currency Dungeons is implemented in the preview: three discovered entries, two locked placeholders, all three confirmed difficulty reward tiers for the discovered entries, item names/icons resolved by keys, per-card difficulty selection reset to Normal on leaving the menu, approved backgrounds, and a separate frame overlay. The slight frame-corner mismatch is deferred to David's graphics pass. Confirmed reward values are in data.json; do not invent values for locked entries.
+
+Trait Dungeons retains its existing data/rendering and now has nine preview banners assigned to the three Mantius, two Drosophia and four Ghagaroach menu entries. Follow the explicit boss/archetype mark mapping recorded in AGENTS.md. Earlier preview-only Gear links from General Sets and three set names to Normal Dungeon filters are also complete; the temporary filter clears when leaving that page.
+
+All these additions remain gated behind ?tiers=new on main. The no-query public page must stay unchanged until David explicitly approves promotion. The Normal frame and currency frame history below is retained for provenance; newer sections in AGENTS.md/CHATGPT.md describe the present implementation. This current update was explicitly authorized to update AGENTS.md, CHANGELOG.md, CHATGPT.md and project handoff documents.
 
 WORKFLOW (David confirmed)
 All planned development is done directly on main; no extra branches unless explicitly requested. The plain public URL must remain unchanged. Planned work is visible through ?tiers=new using the existing runtime preview gate on the same branch. Main deploys both views; it is not a separate preview deployment. Promote the preview to the public site only when David approves after all work planned with Codex and Claude is complete.
