@@ -1,0 +1,182 @@
+Karma level up cost:
+Lvl.2: EXP 200 | Gold 150
+Lvl.3: EXP 200 | Gold 150
+Lvl.4: EXP 500 | Gold 150
+Lvl.5: EXP 700 | Gold 250
+Lvl.6: EXP 1000 | Gold 400
+Lvl.7: EXP 1400 | Gold 700
+Lvl.8: EXP 1800 | Gold 350
+Lvl.9: EXP 2200 | Gold 950
+Lvl.10: EXP 2700 | Gold 750
+Lvl.11: EXP 3300 | Gold 1050
+Lvl.12: EXP 3900 | Gold 1150
+Lvl.13: EXP 4600 | Gold 1550
+Lvl.14: EXP 5300 | Gold 1850
+Lvl.15: EXP 6000 | Gold 1800
+Lvl.16: EXP 6800 | Gold 2150
+Lvl.17: EXP 7700 | Gold 2450
+Lvl.18: EXP 8600 | Gold 2900
+Lvl.19: EXP 9500 | Gold 3250
+Lvl.20: EXP 10500 | Gold 3250
+
+Lvl.20: Breakthrough cost: 5000 Gold
+
+Lvl.21: EXP xxx | Gold xxx
+Lvl.22: EXP xxx | Gold xxx
+Lvl.23: EXP xxx | Gold xxx
+Lvl.24: EXP xxx | Gold xxx
+Lvl.25: EXP xxx | Gold xxx
+Lvl.26: EXP xxx | Gold xxx
+Lvl.27: EXP xxx | Gold xxx
+Lvl.28: EXP xxx | Gold xxx
+Lvl.29: EXP xxx | Gold xxx
+Lvl.30: EXP xxx | Gold xxx
+
+Lvl.30: Breakthrough cost: 
+
+Lvl.31: EXP xxx | Gold xxx
+Lvl.32: EXP xxx | Gold xxx
+Lvl.33: EXP xxx | Gold xxx
+Lvl.34: EXP xxx | Gold xxx
+Lvl.35: EXP xxx | Gold xxx
+Lvl.36: EXP xxx | Gold xxx
+Lvl.37: EXP xxx | Gold xxx
+Lvl.38: EXP xxx | Gold xxx
+Lvl.39: EXP xxx | Gold xxx
+Lvl.40: EXP xxx | Gold xxx
+
+Lvl.40: Breakthrough cost: 
+
+Lvl.41: EXP xxx | Gold xxx
+Lvl.42: EXP xxx | Gold xxx
+Lvl.43: EXP xxx | Gold xxx
+Lvl.44: EXP xxx | Gold xxx
+Lvl.45: EXP xxx | Gold xxx
+Lvl.46: EXP xxx | Gold xxx
+Lvl.47: EXP xxx | Gold xxx
+Lvl.48: EXP xxx | Gold xxx
+Lvl.49: EXP xxx | Gold xxx
+Lvl.50: EXP xxx | Gold xxx
+
+Lvl.50: Breakthrough cost: 
+
+Lvl.51: EXP xxx | Gold xxx
+Lvl.52: EXP xxx | Gold xxx
+Lvl.53: EXP xxx | Gold xxx
+Lvl.54: EXP xxx | Gold xxx
+Lvl.55: EXP xxx | Gold xxx
+Lvl.56: EXP xxx | Gold xxx
+Lvl.57: EXP xxx | Gold xxx
+Lvl.58: EXP xxx | Gold xxx
+Lvl.59: EXP xxx | Gold xxx
+Lvl.60: EXP xxx | Gold xxx
+
+Lvl.60: Breakthrough cost: 
+
+Lvl.61: EXP xxx | Gold xxx
+Lvl.62: EXP xxx | Gold xxx
+Lvl.63: EXP xxx | Gold xxx
+Lvl.64: EXP xxx | Gold xxx
+Lvl.65: EXP xxx | Gold xxx
+Lvl.66: EXP xxx | Gold xxx
+Lvl.67: EXP xxx | Gold xxx
+Lvl.68: EXP xxx | Gold xxx
+Lvl.69: EXP xxx | Gold xxx
+Lvl.70: EXP xxx | Gold xxx
+
+Hero level up cost:
+Lvl.2: EXP 150 | Gold 100
+Lvl.3: EXP 250 | Gold 100
+Lvl.4: EXP 500 | Gold 200 
+Lvl.5: EXP 700 | Gold 400 
+Lvl.6: EXP 1000 | Gold 250 
+Lvl.7: EXP 1400 | Gold 400 
+Lvl.8: EXP 1800 | Gold 650 
+Lvl.9: EXP 2200 | Gold 500 
+Lvl.10: EXP 2700 | Gold 900 
+Lvl.11: EXP 3300 | Gold 900 
+Lvl.12: EXP 3900 | Gold 1 300 
+Lvl.13: EXP 4600 | Gold 1 200 
+Lvl.14: EXP 5300 | Gold 1 750 
+Lvl.15: EXP 6000 | Gold 1 800 
+Lvl.16: EXP 6800 | Gold 2050
+Lvl.17: EXP 7700 | Gold 2400
+Lvl.18: EXP 8600 | Gold 2 350 
+Lvl.19: EXP 9500 | Gold 3 050
+Lvl.20: EXP 10500 | Gold 3 300
+
+Lvl.20: Breakthrough cost: 4000 Gold
+
+Lvl.21: EXP xxx | Gold xxx
+Lvl.22: EXP xxx | Gold xxx
+Lvl.23: EXP xxx | Gold xxx
+Lvl.24: EXP xxx | Gold xxx
+Lvl.25: EXP xxx | Gold xxx
+Lvl.26: EXP xxx | Gold xxx
+Lvl.27: EXP xxx | Gold xxx
+Lvl.28: EXP xxx | Gold xxx
+Lvl.29: EXP xxx | Gold xxx
+Lvl.30: EXP xxx | Gold xxx
+
+Lvl.30: Breakthrough cost: 
+
+Lvl.31: EXP xxx | Gold xxx
+Lvl.32: EXP xxx | Gold xxx
+Lvl.33: EXP xxx | Gold xxx
+Lvl.34: EXP xxx | Gold xxx
+Lvl.35: EXP xxx | Gold xxx
+Lvl.36: EXP xxx | Gold xxx
+Lvl.37: EXP xxx | Gold xxx
+Lvl.38: EXP xxx | Gold xxx
+Lvl.39: EXP xxx | Gold xxx
+Lvl.40: EXP xxx | Gold xxx
+
+Lvl.40: Breakthrough cost: 
+
+Lvl.41: EXP xxx | Gold xxx
+Lvl.42: EXP xxx | Gold xxx
+Lvl.43: EXP xxx | Gold xxx
+Lvl.44: EXP xxx | Gold xxx
+Lvl.45: EXP xxx | Gold xxx
+Lvl.46: EXP xxx | Gold xxx
+Lvl.47: EXP xxx | Gold xxx
+Lvl.48: EXP xxx | Gold xxx
+Lvl.49: EXP xxx | Gold xxx
+Lvl.50: EXP xxx | Gold xxx
+
+Lvl.50: Breakthrough cost: 
+
+Lvl.51: EXP xxx | Gold xxx
+Lvl.52: EXP xxx | Gold xxx
+Lvl.53: EXP xxx | Gold xxx
+Lvl.54: EXP xxx | Gold xxx
+Lvl.55: EXP xxx | Gold xxx
+Lvl.56: EXP xxx | Gold xxx
+Lvl.57: EXP xxx | Gold xxx
+Lvl.58: EXP xxx | Gold xxx
+Lvl.59: EXP xxx | Gold xxx
+Lvl.60: EXP xxx | Gold xxx
+
+Lvl.60: Breakthrough cost: 
+
+Lvl.61: EXP xxx | Gold xxx
+Lvl.62: EXP xxx | Gold xxx
+Lvl.63: EXP xxx | Gold xxx
+Lvl.64: EXP xxx | Gold xxx
+Lvl.65: EXP xxx | Gold xxx
+Lvl.66: EXP xxx | Gold xxx
+Lvl.67: EXP xxx | Gold xxx
+Lvl.68: EXP xxx | Gold xxx
+Lvl.69: EXP xxx | Gold xxx
+Lvl.70: EXP xxx | Gold xxx
+
+Skill level up cost:
+Lvl.2: Gold: 2500
+Lvl.3: 
+Lvl.4: 
+Lvl.5: 
+Lvl.6: 
+Lvl.7: 
+Lvl.8: 
+Lvl.9: 
+Lvl.10: 
