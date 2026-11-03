@@ -7,6 +7,7 @@ Read this before changing anything in this repository.
 ## David's main-only preview workflow — confirmed 2 Nov 2026
 
 - Work directly on `main`. Do not create additional branches for planned work unless David explicitly requests an exception.
+- Before starting changes, fetch the latest remote commits and check available deployment status. Apply our work on top of the latest `origin/main`, preserving newer data, other assistants' changes and existing local work. Fetch again before pushing; integrate any intervening commits without force-pushing. Verify the resulting remote commit after pushing and check deployment status separately; if deployment status is unavailable, report that limitation rather than claiming deployment succeeded.
 - The public URL without a query parameter must retain its current appearance, content and behaviour. All planned Codex/Claude changes belong behind `?tiers=new` on the same main branch. This is a runtime preview gate, not a separate branch or separate deployment.
 - Commits to main deploy the shared files, but deployment must not promote preview features to public visitors. Verify both URLs whenever relevant. Do not treat main-only publishing as a request to launch the preview publicly.
 - Once David and Claude's planned work is complete, David will approve converting the preview into the new public main site. Do not remove the gate before that approval.
