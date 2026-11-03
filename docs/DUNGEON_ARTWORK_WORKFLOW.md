@@ -45,4 +45,4 @@
 - Ashen Ruins is the correct name; David clarified Tomb of Greed was a typo. Use its existing rewards unchanged.
 - Sanctuary escalates lich/soul magic without fire. Graveyard II preserves the sleeping dragon; III raises its head in spectral rage while body and landmarks stay anchored. Ashen Ruins reuses the commander with spiders and an undead troll, escalating venom and a greed curse.
 - Keep shared subject framing across each set. Local original masters and prompt summaries are in the Rock Tribe chat outputs/dungeon-art-batch-3 folder.
-- All 15 dungeon sets now have artwork. The previously recorded Goblin Bandits Cave I alignment fix remains the next pending artwork correction.
+- All 15 dungeon sets now have artwork. The Goblin Bandits' Cave replacement is documented above; the former Difficulty I alignment item was completed on 3 Nov 2026.

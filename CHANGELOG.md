@@ -1,3 +1,9 @@
+## 3 Nov 2026 — Fit Currency Dungeon backgrounds inside the frame
+
+- Inset the Currency Dungeon background image layer 9px with rounded clipping so it sits within the existing frame on all sides. This affects the three discovered preview cards; locked placeholders and frame artwork are unchanged.
+- Updated `index.html`, `CHATGPT.md`, `docs/PROJECT_HANDOFF.txt` and `docs/DUNGEON_ARTWORK_WORKFLOW.md`; the change remains behind the existing `?tiers=new` preview gate. No data, frame asset or locked placeholder changed.
+- Validation: inspected the frame SVG geometry and CSS stacking, reviewed the focused diff. Live browser rendering was unavailable in this session.
+
 ## 3 Nov 2026 — Replace Goblin Bandits' Cave preview banners
 
 - Replaced the existing Normal, Hard and Very Hard Goblin Bandits' Cave banner images with David's three supplied variants. Kept the existing filenames and data.json paths.

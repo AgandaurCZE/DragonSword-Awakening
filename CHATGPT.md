@@ -127,15 +127,15 @@ The earlier `docs/TASK_dungeons_page.md` is a historical task brief; it predates
 
 ### Provenance and completed changes
 - David clarified that the original Normal Dungeons structure and visual foundation were produced by him with the ChatGPT chat version. Do not attribute that foundation to this project. In the subsequent work here, the Normal reward records were migrated to the shared Trait-style key/count format, and their item labels/icons—including EXP—were resolved from `DUNGEONS.rewardItems`; set icons remain linked through `GEAR_DATA`.
-- The 15 Normal Dungeon cards, per-difficulty I/II/III selection, reward display and three background variants per dungeon are present in the preview. The Goblin Bandits' Cave Difficulty I artwork alignment remains recorded as a pending visual correction in `docs/DUNGEON_ARTWORK_WORKFLOW.md`.
-- Currency Dungeons has three discovered entries and two locked placeholders. The three discovered entries have key/count rewards for all three difficulties, item labels/icons resolve through `currencyRewardItems`, selectors reset to Normal when leaving the page, and each card has its approved custom background. The frame is a separate overlay; its slight corner alignment issue is deferred to David's separate graphics pass.
+- The 15 Normal Dungeon cards, per-difficulty I/II/III selection, reward display and three background variants per dungeon are present in the preview. The Goblin Bandits' Cave Normal/Hard/Very Hard banners were replaced on 3 Nov with one shared pixel crop; their difficulty alignment correction is complete.
+- Currency Dungeons has three discovered entries and two locked placeholders. The three discovered entries have key/count rewards for all three difficulties, item labels/icons resolve through `currencyRewardItems`, selectors reset to Normal when leaving the page, and each card has its approved custom background. The frame is a separate overlay; backgrounds are inset 9px inside it so artwork does not cover the border.
 - The Currency reward data includes EXP, Gold, Adventurer's Emblem, Basic/Advanced/Core Combat Text, Mana Shard/Crystal/Ore and Arcana of War/Beginnings/Peace. Values were dictated and confirmed by David; do not infer amounts for the two locked dungeons.
 - Trait Dungeons keeps its existing data and rendering. Nine preview banners were added and assigned in menu order to three Mantius, two Drosophia and four Ghagaroach variants. Archetype marks follow the explicit per-boss direction, including the agreed Bloodburst and Ghagaroach exceptions.
 - The earlier Gear-menu links from General Sets and three named sets to Normal Dungeons are also part of the completed preview work; set links apply a data-derived filter, which clears on leaving Normal Dungeons while difficulty choices are otherwise retained as specified.
 
 ### Release boundary
 - All these additions are served from `main` but gated by `?tiers=new`. The plain public URL must remain unchanged. Do not remove the preview gate or publish the preview publicly without David's explicit approval.
-- Currency frame corner polish is deferred to David/Claude. The Goblin Bandits' Cave I alignment correction is separately pending. No other work is currently implied by this handoff.
+- Currency background fitting and the Goblin Bandits' Cave banner alignment are complete; both remain behind the existing preview gate.
 
 ## Completed artwork handoff
 
