@@ -799,6 +799,17 @@
     "Defeating World Monsters",
     "[Normal Dungeon] Goblin Bandits' Cave [Very Hard]"
    ]
+  },
+  {
+   "name": "Necklace Soaked in Greed",
+   "type": "Monster Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/necklace-soaked-in-greed.webp",
+   "description": "A necklace once owned by someone whose fate remains unknown. Though worn and faded from years of neglect, the radiant beauty within still captivates the eye. The golden ornaments and dazzling gems hint at the owner's once-lustful nature, and a subtle aura can be felt on the fingertips whenever it is touched.",
+   "use": "Used when enhancing skills",
+   "sources": [
+    "[Hunt] Ghoul Greed"
+   ]
   }
  ]
 }

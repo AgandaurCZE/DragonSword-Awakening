@@ -391,14 +391,16 @@
     "Mid-game": "B",
     "End-game": "A"
    },
-   "owned": false,
+   "owned": true,
    "role": "Main DPS",
    "classType": "Damage / Control",
    "obtain": {
     "method": "Story Quests",
-    "cost": "Adventure Quest 53. Reunion"
+    "cost": "Adventure Quest 53. Reunion",
+    "note": "Main story quest 53 (Chapter 6). The Codex lists her under Other; her in-game profile says The Six Heroes."
    },
-   "faction": "Other"
+   "faction": "Other",
+   "profileFaction": "The Six Heroes"
   }
  ],
  "ROLE_ICONS": {
@@ -12734,7 +12736,8 @@
      "Orange Boots Critical Hit Resistance",
      "Orange Gloves Max HP Up"
     ]
-   }
+   },
+   "flatLowerRarityNote": "4 Nov 2026: two flat-stat rows sit ~1–2% above the ratio estimate: Purple Chest Defense +0 28 (estimate 27.6), +12 112 (110.4); Blue Helmet Attack +0 21 (21.5), +9 87 (85.9). The 0.467/0.6 ratios may be slightly off for flat stats; all % stats match. Not changed yet."
   }
  },
  "HERO_STAT_MODEL": {
@@ -14452,8 +14455,12 @@
  "TITLES": {
   "note": "All 109 titles, read from David's screen recording of the Title list (29 Oct 2026), in the game's order. Every obtained title's passive applies to all heroes, slotted or not. Flat bonuses are added to the hero's flat stats before % bonuses multiply; % bonuses join the same pool as gear and set % (confirmed in-game). Name colours are the game's: the five colours run from strongest (pink) to weakest (lavender) passives. The game hides the condition once a title is obtained, Curious Hands (Anything in Here?) and 【777】 (Lucky!) were filled in from David's Achievements video, 1 Nov 2026; Novice Mercenary Crew's is inferred from the other promotion titles. David's titles updated 31 Oct 2026 (5 of 109: Environmental Cleaner and Black Wings added; the game's Cumulative Set Effect, Defense +10, Max HP +100, Defense Up +1.50%, Critical Rate +1.30%, matches the sum).",
   "totalCount": 109,
-  "ownedCount": 20,
+  "ownedCount": 21,
   "ownedCumulative": [
+   {
+    "stat": "Max HP",
+    "value": 740
+   },
    {
     "stat": "Critical Hit Chance",
     "value": 5.9
@@ -14461,10 +14468,6 @@
    {
     "stat": "Critical Damage",
     "value": 6.2
-   },
-   {
-    "stat": "Max HP",
-    "value": 550
    },
    {
     "stat": "Attack",
@@ -14543,7 +14546,7 @@
    {
     "name": "Elite Mercenary Crew",
     "grade": 2,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
@@ -20127,7 +20130,7 @@
     "name": "Knightage Griffon",
     "group": "Griffon",
     "image": "assets/familiars/knightage-griffon.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "promotion",
      "label": "Elite Mercenary Crew Promotion"
@@ -20490,7 +20493,7 @@
    "Bird": 1,
    "Cat": 2,
    "Direwolf": 1,
-   "Griffon": 1,
+   "Griffon": 2,
    "Insect": 3,
    "Sky Wolf": 2,
    "Squirrel": 1,
@@ -20845,6 +20848,17 @@
     "portrait": "assets/bosses/gallore.webp"
    },
    {
+    "id": "ghoul-greed",
+    "name": "Ghoul Greed",
+    "level": 45,
+    "type": "Hunt",
+    "image": "assets/bosses/ghoul-greed-banner.webp",
+    "weak": [],
+    "immune": [],
+    "portrait": "assets/bosses/ghoul-greed.webp",
+    "note": "5th Hunt boss, unlocked after story Chapter 6. Normal: Lv.45, 1–2 members. Rewards: EXP 900, Necklace Soaked in Greed 1, Adventurer's Emblem 15, and two more items (10 and 20)."
+   },
+   {
     "id": "gauron",
     "name": "Gauron",
     "level": 50,
@@ -20911,7 +20925,7 @@
    }
   ],
   "undiscovered": {
-   "Hunt": 2,
+   "Hunt": 1,
    "Raid": 1
   },
   "about": [
@@ -21128,6 +21142,46 @@
      "late": "Her signature Karma (the storm follows the nearest enemy when Ice Storm ends) and A1 (bigger, longer Ice Storm) build on her strongest skill; the devs moved her damage into Ice Storm in 1.1.0 for exactly this. Likely a tier higher with both."
     }
    }
+  },
+  "huntRatingRewards": {
+   "note": "Rating rewards for a Hunt run: the same for every Hunt boss and every difficulty (David, 4 Nov 2026).",
+   "ranks": [
+    {
+     "rank": "S",
+     "points": 36000,
+     "item": "Stigma Awaken Stone",
+     "amount": 1,
+     "icon": "assets/items/icons/stigma-awaken-stone.webp"
+    },
+    {
+     "rank": "A",
+     "points": 27000,
+     "item": "Fragment of Sacred Light",
+     "amount": 50,
+     "icon": "assets/items/icons/fragment-of-sacred-light.webp"
+    },
+    {
+     "rank": "B",
+     "points": 21000,
+     "item": "Fragment of Sacred Light",
+     "amount": 25,
+     "icon": "assets/items/icons/fragment-of-sacred-light.webp"
+    },
+    {
+     "rank": "C",
+     "points": 12000,
+     "item": "Fragment of Sacred Light",
+     "amount": 15,
+     "icon": "assets/items/icons/fragment-of-sacred-light.webp"
+    },
+    {
+     "rank": "D",
+     "points": 0,
+     "item": "Fragment of Sacred Light",
+     "amount": 10,
+     "icon": "assets/items/icons/fragment-of-sacred-light.webp"
+    }
+   ]
   }
  },
  "TOWER_TRIALS": {
@@ -21992,7 +22046,7 @@
     "exp": 5000,
     "icon": "assets/items/icons/raw-mana-stone.webp",
     "rarity": "Orange",
-    "gold": null
+    "gold": 5000
    },
    {
     "name": "Mana Ore",
@@ -22305,6 +22359,8 @@
      "28"
     ],
     "Protection": [
+     "15",
+     "20",
      "25"
     ],
     "Vitality": [
@@ -22322,6 +22378,7 @@
    },
    "Intact": {
     "Focus": [
+     "1.80%",
      "2.40%",
      "3.00%"
     ],
@@ -23852,6 +23909,67 @@
      }
     ],
     "banner": "assets/dungeons/currency/trace-of-the-giant.webp"
+   },
+   {
+    "name": "Eroded Underground Cemetery",
+    "gives": "Gold",
+    "description": "They say that thoughts do not fade easily. It is said that the dead yearn for the living to become beings just like themselves.",
+    "difficulties": [
+     {
+      "name": "Normal",
+      "rewards": [
+       [
+        "exp",
+        800
+       ],
+       [
+        "gold",
+        500000
+       ],
+       [
+        "emblem",
+        15
+       ]
+      ],
+      "rewardsKnown": true
+     },
+     {
+      "name": "Hard",
+      "rewards": [
+       [
+        "exp",
+        1000
+       ],
+       [
+        "gold",
+        950000
+       ],
+       [
+        "emblem",
+        20
+       ]
+      ],
+      "rewardsKnown": true
+     },
+     {
+      "name": "Very Hard",
+      "rewards": [
+       [
+        "exp",
+        1200
+       ],
+       [
+        "gold",
+        1500000
+       ],
+       [
+        "emblem",
+        25
+       ]
+      ],
+      "rewardsKnown": true
+     }
+    ]
    }
   ],
   "currencyRewardItems": {
@@ -23904,13 +24022,13 @@
     "icon": "assets/items/icons/arcana-of-peace.webp"
    }
   },
-  "currencyNote": "Growth materials up to Purple; amounts differ per difficulty. Two more Currency Dungeons not discovered yet.",
+  "currencyNote": "Growth materials up to Purple; amounts differ per difficulty. One more Currency Dungeon not discovered yet.",
   "undiscovered": {
-   "currency": 2
+   "currency": 1
   }
  },
  "LEVEL_COSTS": {
-  "note": "Measured by David in Test Kit test 05 (3 Nov 2026), one level at a time: Kalien (Hero 1→20), Rock-Splitting Ice (Karma 1→20), Azure Gale Boots (Orange gear +0→+15). Gold is not a price per level: every EXP item has its own Gold price, paid when it is used. All 52 recorded item steps match these prices exactly.",
+  "note": "Measured by David in Test Kit test 05 (3 Nov 2026), one level at a time: Kalien (Hero 1→20), Rock-Splitting Ice (Karma 1→20), Azure Gale Boots (Orange gear +0→+15). Gold is not a price per level: every EXP item has its own Gold price, paid when it is used. All 52 recorded item steps match these prices exactly. Raw Mana Stone = 5,000 Gold (Battle Will Helmet +1→+4, 4 Nov 2026).",
   "pickRule": "The game auto-picks the largest item whose EXP fits in what the bar still needs, repeats, and finishes with the smallest item if anything is left (that last item overshoots; the extra EXP carries over to the next level). Seen in every step where David had the items.",
   "items": {
    "hero": [
@@ -23971,7 +24089,7 @@
     {
      "name": "Raw Mana Stone",
      "exp": 5000,
-     "gold": null
+     "gold": 5000
     }
    ]
   },
@@ -24117,7 +24235,7 @@
    }
   },
   "unknown": [
-   "Gold for Arcana of the Future and Raw Mana Stone",
+   "Gold for Arcana of the Future",
    "EXP per level above 40",
    "Hero breakthrough at 60; Karma breakthroughs at 50 and 60",
    "Which material each hero/card uses at each breakthrough (the pattern behind it)"
@@ -24256,5 +24374,146 @@
    ],
    "levelsNote": "materials = for a Lv.10 skill; maxLv7 = what a Lv.7 skill (Auto/Dash/Jump attack) uses for its last level instead. Total Gold: Lv.1→7 = 92,500; Lv.1→10 = 297,500."
   }
+ },
+ "SKILL_BUFF_LEVELS": {
+  "note": "Buff values per skill level (Lv.1→Lv.10), from David's Test Kit test 02. Every one follows the same pattern: +5% (or +10%) of the Lv.1 value per level up to Lv.9, then a double step at Lv.10, ending at 1.5× (or 2×) Lv.1. Not used by the page yet.",
+  "skills": [
+   {
+    "hero": "Lute",
+    "skill": "Healing Circle",
+    "effect": "Restores % of Max HP",
+    "values": [
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     20
+    ]
+   },
+   {
+    "hero": "Charlotte",
+    "skill": "Invisible",
+    "effect": "Critical Damage %",
+    "values": [
+     10,
+     10.5,
+     11,
+     11.5,
+     12,
+     12.5,
+     13,
+     13.5,
+     14,
+     15
+    ]
+   },
+   {
+    "hero": "Ornette",
+    "skill": "Holy Circle",
+    "effect": "Critical Damage %",
+    "values": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     30
+    ]
+   },
+   {
+    "hero": "Eileen",
+    "skill": "Brave One",
+    "effect": "Attack Power %",
+    "values": [
+     10,
+     10.5,
+     11,
+     11.5,
+     12,
+     12.5,
+     13,
+     13.5,
+     14,
+     15
+    ]
+   },
+   {
+    "hero": "Eileen",
+    "skill": "Vanguard Banner",
+    "effect": "Critical Rate %",
+    "values": [
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     20
+    ]
+   },
+   {
+    "hero": "Sion",
+    "skill": "Bless",
+    "effect": "Attack Power %",
+    "values": [
+     10,
+     10.5,
+     11,
+     11.5,
+     12,
+     12.5,
+     13,
+     13.5,
+     14,
+     15
+    ]
+   },
+   {
+    "hero": "Sion",
+    "skill": "Bless",
+    "effect": "Defense %",
+    "values": [
+     10,
+     10.5,
+     11,
+     11.5,
+     12,
+     12.5,
+     13,
+     13.5,
+     14,
+     15
+    ]
+   },
+   {
+    "hero": "Kalsion",
+    "skill": "Weapon Blaze",
+    "effect": "Attack Power %",
+    "values": [
+     10,
+     10.5,
+     11,
+     11.5,
+     12,
+     12.5,
+     13,
+     13.5,
+     14,
+     15
+    ]
+   }
+  ]
  }
 }

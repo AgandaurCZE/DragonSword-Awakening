@@ -2,6 +2,15 @@
 
 David requested always checking for newer commits and deployments, and applying this chat's work on top of them. Added the rule to AGENTS.md, including preserving other assistants' changes, checking again before pushing, and verifying the remote result. Fetched origin/main: b4f9bfe was current. GitHub deployment API returned Forbidden, so deployment status could not be independently verified. Documentation only; no application or data changes.
 
+
+## 4 Nov 2026 — David's Chapter 6 batch (Claude)
+- New Hunt boss tab Ghoul Greed (Lv.45, preview tier list); the second Hunt slot stays undiscovered. Hunt bosses now show a Rating rewards panel (S 36,000 pts: 1 Stigma Awaken Stone; A–D: 50/25/15/10 Fragment of Sacred Light), from `TIER_LIST_V2.huntRatingRewards`.
+- Necklace Soaked in Greed added to `assets/items/materials.json` with its icon.
+- New Currency Dungeon Eroded Underground Cemetery (Gold), with description and rewards for I/II/III; banner art to come. One Currency Dungeon left undiscovered.
+- Ryza owned (colour portrait); `profileFaction: The Six Heroes` (Codex group stays Other). Knightage Griffon owned (Griffon 2/4). Titles 21/109 (Elite Mercenary Crew, +190 Max HP).
+- Runes seen: Damaged Protection 15 and 20, Intact Focus 1.80%.
+- Raw Mana Stone costs 5,000 Gold per use (gear calculator updated). New `SKILL_BUFF_LEVELS` with the 8 buff rows from Test Kit test 02 (Kalsion's Weapon Blaze added).
+- Gear rows: all % main stats match; Purple Defense and Blue Attack read ~1–2% above the estimate (noted in `GEAR_STATS.valueSources.flatLowerRarityNote`, tables unchanged).
 ## 3 Nov 2026 — Restore original index.html line endings
 
 Restored LF line endings without changing page content, and added an explicit preservation rule to AGENTS.md. Applied on top of the latest main changes. Verified identical content after newline normalisation and ran the data validator. User requested committing and applying the fix to GitHub.
