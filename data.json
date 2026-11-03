@@ -23997,7 +23997,27 @@
      7700,
      8600,
      9500,
-     10500
+     10500,
+     11600,
+     12700,
+     13900,
+     15100,
+     16300,
+     17600,
+     19000,
+     20400,
+     21800,
+     23300,
+     24900,
+     26500,
+     28200,
+     29900,
+     31600,
+     33400,
+     35300,
+     37200,
+     39100,
+     41100
     ]
    },
    "karma": {
@@ -24021,29 +24041,86 @@
      7700,
      8600,
      9500,
-     10500
+     10500,
+     11600,
+     12700,
+     13900,
+     15100,
+     16300,
+     17600,
+     19000,
+     20400,
+     21800,
+     23300,
+     24900,
+     26500,
+     28200,
+     29900,
+     31600,
+     33400,
+     35300,
+     37200,
+     39100,
+     41100
     ]
    }
   },
-  "expNote": "toNext[i] = EXP from level i+1 to i+2 (measured up to level 20; higher levels not recorded yet). Gear EXP per level is in GEAR_UPGRADE.levels.",
+  "expNote": "toNext[i] = EXP from level i+1 to i+2, measured up to level 40 (Kalien; A Path That Leads to the Wind and A Flame That Cuts Through the Moment). Heroes and Karma need the same EXP from level 3 on; only the first two levels differ (Hero 150, 250; Karma 200, 200). Gear EXP per level is in GEAR_UPGRADE.levels.",
   "breakthroughs": {
+   "note": "Gold seems fixed per breakthrough level; the materials depend on the hero or card (monster materials, a gathering/mining material, the hero's faction Insignia; Karma uses its archetype's trait stones). Recorded examples only.",
    "hero": {
     "20": {
      "gold": 4000,
-     "materials": "5 Lowest-Grade Monster Claw (Kalien; may differ per hero)"
+     "examples": {
+      "Kalien": "5 Lowest-Grade Monster Claw"
+     }
+    },
+    "30": {
+     "gold": 6400,
+     "examples": {
+      "Kalien": "10 Lowest-Grade Monster Claw, 5 Low-Grade Monster Claw, 5 Primordial Seed"
+     }
+    },
+    "40": {
+     "gold": 16000,
+     "examples": {
+      "Kalsion": "10 Low-Grade Monster Claw, 10 Primordial Seed, 3 Insignia of the Orbis Kingdom"
+     }
+    },
+    "50": {
+     "gold": 32000,
+     "examples": {
+      "Reina": "15 Low-Grade Monster Claw, 10 Intermediate Monster Claw, 15 Primordial Seed, 5 Insignia of the Orbis Kingdom"
+     }
     }
    },
    "karma": {
     "20": {
      "gold": 5000,
-     "materials": "5 Crystal of Remembrance (Rock-Splitting Ice; may differ per card)"
+     "examples": {
+      "Rock-Splitting Ice": "5 Crystal of Remembrance"
+     }
+    },
+    "30": {
+     "gold": 10000,
+     "examples": {
+      "A Path That Leads to the Wind": "10 Crystal of Reverie, 5 Low-Grade Gale Stone",
+      "A Flame That Cuts Through the Moment": "10 Crystal of Recollection, 5 Low-Grade Blazeflame Stone"
+     }
+    },
+    "40": {
+     "gold": 20000,
+     "examples": {
+      "A Flame That Cuts Through the Moment": "15 Orb of Recollection, 10 Low-Grade Blazeflame Stone, 5 Intermediate Blazeflame Stone, 1 Chronograph of Ages"
+     }
     }
    }
   },
   "unknown": [
-   "Gold for Arcana of the Future and Raw Mana Stone (never used in the test)",
-   "EXP per level above 20 for Heroes and Karma",
-   "Breakthroughs at 30, 40, 50 and 60"
+   "Gold for Arcana of the Future and Raw Mana Stone",
+   "EXP per level above 40",
+   "Hero breakthrough at 60; Karma breakthroughs at 50 and 60",
+   "Which material each hero/card uses at each breakthrough (the pattern behind it)"
   ],
   "skills": {
    "note": "Measured by David (3 Nov 2026) on Kalien: Explosion (max Lv.10) and Great Rush (max Lv.7). Both cost the same up to Lv.6; only the Lv.7 materials differ. No EXP: a fixed Gold price and fixed materials per level. Confirmed by David the same day: every hero uses the same Gold and materials (checked in the in-game preview on heroes of 5 archetypes, Lv.10 and Lv.7 skills).",

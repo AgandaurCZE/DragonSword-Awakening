@@ -7,6 +7,9 @@
 
 
 
+
+## 3 Nov 2026 — Hero/Karma EXP to level 40, breakthrough costs (Claude)
+- `LEVEL_COSTS`: EXP per level up to 40 and breakthrough Gold with material examples, from David's Test Kit entries.
 ## 3 Nov 2026 — Skill level costs (Claude)
 - `LEVEL_COSTS.skills`: Gold and materials for every skill level, measured by David on Kalien (Explosion to Lv.10, Great Rush to Lv.7).
 ## 3 Nov 2026 — Level-up costs measured (Claude)
