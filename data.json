@@ -24043,11 +24043,10 @@
   "unknown": [
    "Gold for Arcana of the Future and Raw Mana Stone (never used in the test)",
    "EXP per level above 20 for Heroes and Karma",
-   "Breakthroughs at 30, 40, 50 and 60",
-   "Whether skill materials differ per hero"
+   "Breakthroughs at 30, 40, 50 and 60"
   ],
   "skills": {
-   "note": "Measured by David (3 Nov 2026) on Kalien: Explosion (max Lv.10) and Great Rush (max Lv.7). Both cost the same up to Lv.6; only the Lv.7 materials differ. No EXP: a fixed Gold price and fixed materials per level. The monster/boss materials (Spiny Fin, Blood-stained Hook, …) may be different for other heroes; not checked yet.",
+   "note": "Measured by David (3 Nov 2026) on Kalien: Explosion (max Lv.10) and Great Rush (max Lv.7). Both cost the same up to Lv.6; only the Lv.7 materials differ. No EXP: a fixed Gold price and fixed materials per level. Confirmed by David the same day: every hero uses the same Gold and materials (checked in the in-game preview on heroes of 5 archetypes, Lv.10 and Lv.7 skills).",
    "levels": [
     {
      "to": 2,
