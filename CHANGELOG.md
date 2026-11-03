@@ -4,6 +4,14 @@
 - Updated `index.html`, `CHATGPT.md`, `docs/PROJECT_HANDOFF.txt` and `docs/DUNGEON_ARTWORK_WORKFLOW.md`; the change remains behind the existing `?tiers=new` preview gate. No data, frame asset or locked placeholder changed.
 - Validation: inspected the frame SVG geometry and CSS stacking, reviewed the focused diff, then David confirmed on the live preview that all three discovered backgrounds fit inside the frame and difficulty switching works. Live visual verification was performed by David after GitHub checks completed.
 
+
+## 3 Nov 2026 — David's 3 Nov batch (Claude)
+- Titles: 20/109 (Dungeon Conqueror, Specter of Thirst, The Roamer, Tyrant, Falling, Skilled Hunter, The Predator, Scraping, Dark Necromancer added); cumulative bonuses recalculated from the passives.
+- Karma: 21 cards now in colour and marked owned (23 owned), cut from David's Codex screenshots (name painted out as before); source PNGs deleted.
+- Familiars: Abyssal Direwolf, Guardian Griffon and Brave Baby Dragon in colour and owned; species counts updated, so their first passive step now shows as unlocked.
+- Runes: new values seen (Damaged Determination 21, Damaged Focus 1.60%, Refined Determination 49); removing an engraved Intact or Refined rune also costs 10,000 Gold. Rune screenshots converted to WebP.
+- Gear: all 63 Test Kit main-stat rows match the gear tables (`GEAR_STATS.valueSources.testKitRows`).
+- Checked the page after the ChatGPT/Codex changes: every page opens in the preview with no console errors; data.json validates.
 ## 3 Nov 2026 — Replace Goblin Bandits' Cave preview banners
 
 - Replaced the existing Normal, Hard and Very Hard Goblin Bandits' Cave banner images with David's three supplied variants. Kept the existing filenames and data.json paths.

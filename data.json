@@ -820,7 +820,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/i-ll-knock-you-out-myself.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Amplitude",
@@ -857,7 +857,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/every-rose-has-its-thorn.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Amplitude",
@@ -926,7 +926,7 @@
    },
    "statType": "Defense",
    "image": "assets/karma/pounding-heart.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Crushing",
@@ -1101,7 +1101,7 @@
    },
    "statType": "Defense",
    "image": "assets/karma/scattered-pulse.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Gale",
@@ -1249,7 +1249,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/become-a-star-in-that-sky.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Gale",
@@ -1281,7 +1281,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/a-path-that-leads-to-the-wind.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Gale",
@@ -1313,7 +1313,7 @@
    },
    "statType": "Defense",
    "image": "assets/karma/wings-of-the-sky.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Bloodburst",
@@ -1382,7 +1382,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/fangs-lurking-in-the-thicket.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Bloodburst",
@@ -1419,7 +1419,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/a-soldier-s-basic-qualities.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Bloodburst",
@@ -1451,7 +1451,7 @@
    },
    "statType": "Defense",
    "image": "assets/karma/blooming-blood.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Blazeflame",
@@ -1594,7 +1594,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/the-burning-taste-of-fire.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Blazeflame",
@@ -1843,7 +1843,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/rock-splitting-ice.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Frostbite",
@@ -1875,7 +1875,7 @@
    },
    "statType": "Defense",
    "image": "assets/karma/season-of-bitter-cold.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Thunderbolt",
@@ -2060,7 +2060,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/a-flash-of-invention.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Thunderbolt",
@@ -2092,7 +2092,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/the-one-chosen-by-lightning.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Thunderbolt",
@@ -2129,7 +2129,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/the-agent-of-divine-punishment.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Thunderbolt",
@@ -2161,7 +2161,7 @@
    },
    "statType": "Defense",
    "image": "assets/karma/flash-claws.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Venom",
@@ -2272,7 +2272,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/defeating-poison-with-poison.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Venom",
@@ -2309,7 +2309,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/a-spectacular-poison.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Venom",
@@ -2341,7 +2341,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/so-good-it-s-to-die-for.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Venom",
@@ -2553,7 +2553,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/a-reckless-charge.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Breaker",
@@ -12667,8 +12667,8 @@
    "Boots main Attack Power Up": "measured (Orange Gloves; Helmet/Boots share the table)",
    "Legs main Attack Power Up": "estimate: database x 0.954 (ratio measured on Chest and Gloves)",
    "testKitRows": {
-    "checked": "2026-11-01",
-    "note": "Every main-stat row David saved in Test Kit test 03 (+0 to max) matches the tables within display rounding (Green Defense +6 is 49 vs 48).",
+    "checked": "2026-11-03",
+    "note": "All 63 main-stat rows David saved in Test Kit test 03 match the tables within display rounding (Green Defense +6 is 49 vs 48).",
     "rows": [
      "Blue Helmet Defense Up",
      "Blue Helmet Critical Hit Resistance",
@@ -12708,7 +12708,31 @@
      "Orange Boots Attack Power Up",
      "Orange Helmet Critical Hit Resistance",
      "Orange Gloves Critical Damage Reduction",
-     "Orange Boots Defense"
+     "Orange Boots Defense",
+     "Purple Chest Attack",
+     "Purple Gloves Critical Rate",
+     "Blue Gloves Critical Rate",
+     "Blue Legs Critical Damage Reduction",
+     "Blue Legs Max HP",
+     "Blue Boots Attack Power Up",
+     "Purple Legs Max HP",
+     "Blue Legs Critical Hit Resistance",
+     "Blue Boots Critical Damage Reduction",
+     "Purple Helmet Critical Hit Resistance",
+     "Purple Gloves Max HP",
+     "Blue Chest Critical Damage Reduction",
+     "Blue Boots Defense Up",
+     "Purple Legs Attack",
+     "Purple Chest Defense Up",
+     "Purple Chest Max HP Up",
+     "Purple Helmet Defense",
+     "Purple Legs Critical Hit Resistance",
+     "Purple Legs Defense Up",
+     "Orange Legs Defense",
+     "Purple Chest Critical Rate",
+     "Purple Helmet Attack",
+     "Orange Boots Critical Hit Resistance",
+     "Orange Gloves Max HP Up"
     ]
    }
   }
@@ -14428,19 +14452,23 @@
  "TITLES": {
   "note": "All 109 titles, read from David's screen recording of the Title list (29 Oct 2026), in the game's order. Every obtained title's passive applies to all heroes, slotted or not. Flat bonuses are added to the hero's flat stats before % bonuses multiply; % bonuses join the same pool as gear and set % (confirmed in-game). Name colours are the game's: the five colours run from strongest (pink) to weakest (lavender) passives. The game hides the condition once a title is obtained, Curious Hands (Anything in Here?) and 【777】 (Lucky!) were filled in from David's Achievements video, 1 Nov 2026; Novice Mercenary Crew's is inferred from the other promotion titles. David's titles updated 31 Oct 2026 (5 of 109: Environmental Cleaner and Black Wings added; the game's Cumulative Set Effect, Defense +10, Max HP +100, Defense Up +1.50%, Critical Rate +1.30%, matches the sum).",
   "totalCount": 109,
-  "ownedCount": 11,
+  "ownedCount": 20,
   "ownedCumulative": [
    {
     "stat": "Critical Hit Chance",
-    "value": 2.6
+    "value": 5.9
    },
    {
     "stat": "Critical Damage",
-    "value": 2.5
+    "value": 6.2
    },
    {
     "stat": "Max HP",
-    "value": 450
+    "value": 550
+   },
+   {
+    "stat": "Attack",
+    "value": 35
    },
    {
     "stat": "Defense",
@@ -14448,7 +14476,7 @@
    },
    {
     "stat": "Defense Up",
-    "value": 1.5
+    "value": 3.0
    }
   ],
   "list": [
@@ -14844,7 +14872,7 @@
    {
     "name": "Dark Necromancer",
     "grade": 3,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Critical Hit Chance",
@@ -14857,7 +14885,7 @@
    {
     "name": "Tyrant",
     "grade": 3,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Critical Damage",
@@ -14870,7 +14898,7 @@
    {
     "name": "Scraping",
     "grade": 3,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Attack",
@@ -15288,7 +15316,7 @@
    {
     "name": "Falling",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Defense Up",
@@ -15314,7 +15342,7 @@
    {
     "name": "Specter of Thirst",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Critical Damage",
@@ -15340,7 +15368,7 @@
    {
     "name": "The Predator",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Critical Hit Chance",
@@ -15353,7 +15381,7 @@
    {
     "name": "The Roamer",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Attack",
@@ -15392,7 +15420,7 @@
    {
     "name": "Skilled Hunter",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Attack",
@@ -15678,7 +15706,7 @@
    {
     "name": "Dungeon Conqueror",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
@@ -20016,7 +20044,7 @@
     "name": "Abyssal Direwolf",
     "group": "Direwolf",
     "image": "assets/familiars/abyssal-direwolf.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "dlc",
      "label": "Purchase DLC",
@@ -20052,7 +20080,7 @@
     "name": "Brave Baby Dragon",
     "group": "Dragon",
     "image": "assets/familiars/brave-baby-dragon.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "dlc",
      "label": "Deluxe Edition",
@@ -20064,7 +20092,7 @@
     "name": "Guardian Griffon",
     "group": "Griffon",
     "image": "assets/familiars/guardian-griffon.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "task",
      "label": "Defeat World Boss",
@@ -20461,12 +20489,12 @@
   "owned": {
    "Bird": 1,
    "Cat": 2,
-   "Direwolf": 0,
-   "Griffon": 0,
+   "Direwolf": 1,
+   "Griffon": 1,
    "Insect": 3,
    "Sky Wolf": 2,
    "Squirrel": 1,
-   "Dragon": 0
+   "Dragon": 1
   },
   "passiveNote": "Each species' passive unlocks step by step as you collect more familiars of that species (1 to 4; the Dragon has only one). Steps marked with the species name apply only to that species; the rest apply to all familiars. Text from the game; one typo fixed (\"consumtion\").",
   "passiveNotes": {
@@ -22269,6 +22297,7 @@
   "seen": {
    "Damaged": {
     "Determination": [
+     "21",
      "28"
     ],
     "Protection": [
@@ -22277,6 +22306,9 @@
     "Vitality": [
      "308",
      "385"
+    ],
+    "Focus": [
+     "1.60%"
     ],
     "Amplification": [
      "1.80%",
@@ -22293,12 +22325,17 @@
      "3.60%",
      "4.50%"
     ]
+   },
+   "Refined": {
+    "Determination": [
+     "49"
+    ]
    }
   },
   "rules": [
    "Runes can't be upgraded.",
    "Synthesis: 5 runes of one grade (types can be mixed) become 1 random rune of the next grade. Up to 10 syntheses at once.",
-   "Removing an engraved Damaged rune costs 10,000 Gold (other grades not seen yet).",
+   "Removing an engraved rune costs 10,000 Gold (seen for Damaged, Intact and Refined).",
    "Unlocking a rune slot costs 5 Anonymous Artisan's Crafting Tools."
   ],
   "image": "assets/runes/synthesis-screen.webp"
