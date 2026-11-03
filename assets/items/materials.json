@@ -810,6 +810,42 @@
    "sources": [
     "[Hunt] Ghoul Greed"
    ]
+  },
+  {
+   "name": "Tangled Forgetfulness and Remembrance",
+   "type": "Equipment Crafting Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/tangled-forgetfulness-and-remembrance.webp",
+   "description": "A mysterious substance formed from the intertwining of oblivion and recollection. When a genius mage applied this substance to armor, its performance skyrocketed, yet the underlying principle remained a mystery. The genius mage speculated that this was because oblivion erased the unnecessary, while recollection strengthened what was essential.",
+   "use": "Used in equipment crafting",
+   "sources": [
+    "[Disassemble] Legendary-grade Equipment",
+    "[Transmute] Shanoa",
+    "[Exchange] Special"
+   ]
+  },
+  {
+   "name": "Stilled Core of Collapse",
+   "type": "Monster Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/stilled-core-of-collapse.webp",
+   "description": "The source and core of the power that once moved the colossal golem. Though shattered and having lost most of its functions, the potent energy remaining within still overwhelms the surroundings. Its surface appears unstable, yet the faint light emanating from it proves the residual power of the core.",
+   "use": "Used when enhancing skills",
+   "sources": [
+    "[Hunt] Gallore the Collapse"
+   ]
+  },
+  {
+   "name": "High-Grade Venom Stone",
+   "type": "Trait Stone",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/high-grade-venom-stone.webp",
+   "description": "A rare stone that maximizes the owners hidden abilities. The pattern engraved on the stone glows intensely, and its true power is fully unleashed for those whose energy resonates with it. A lethal toxin completely consumes the enemy's body, inducing a severe state of poisoning.",
+   "use": "Used for Karma Breakthrough and equipment crafting",
+   "sources": [
+    "[Trait Dungeon] Ghagaroach of Venom [Extreme]",
+    "[Exchange] Trait Stone"
+   ]
   }
  ]
 }

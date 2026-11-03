@@ -3,6 +3,10 @@
 David requested always checking for newer commits and deployments, and applying this chat's work on top of them. Added the rule to AGENTS.md, including preserving other assistants' changes, checking again before pushing, and verifying the remote result. Fetched origin/main: b4f9bfe was current. GitHub deployment API returned Forbidden, so deployment status could not be independently verified. Documentation only; no application or data changes.
 
 
+
+## 4 Nov 2026 — Item list additions (Claude)
+- `assets/items/materials.json`: Tangled Forgetfulness and Remembrance, Stilled Core of Collapse (Gallore the Collapse) and High-Grade Venom Stone, with icons, descriptions and sources from David's inventory screenshots.
+- Ghoul Greed's note now names its last two rewards: Secret Text of the Warrior ×10, Record of Battle ×20.
 ## 4 Nov 2026 — David's Chapter 6 batch (Claude)
 - New Hunt boss tab Ghoul Greed (Lv.45, preview tier list); the second Hunt slot stays undiscovered. Hunt bosses now show a Rating rewards panel (S 36,000 pts: 1 Stigma Awaken Stone; A–D: 50/25/15/10 Fragment of Sacred Light), from `TIER_LIST_V2.huntRatingRewards`.
 - Necklace Soaked in Greed added to `assets/items/materials.json` with its icon.
