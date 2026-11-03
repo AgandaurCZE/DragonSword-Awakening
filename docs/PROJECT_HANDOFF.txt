@@ -1,7 +1,7 @@
 PROJECT HANDOFF — updated 3 November 2026
 
 CURRENT DUNGEONS STATUS (supersedes the older task notes below where they conflict)
-David clarified that the original Normal Dungeons foundation was made by him with the ChatGPT chat version. This project later migrated Normal Dungeon rewards into the same key/count model used by Trait Dungeons, with a data map for names/icons including EXP. The Normal page has 15 cards, I/II/III selectors, per-difficulty rewards and three background variants per dungeon. Goblin Bandits' Cave Difficulty I alignment remains a pending artwork correction in docs/DUNGEON_ARTWORK_WORKFLOW.md.
+David clarified that the original Normal Dungeons foundation was made by him with the ChatGPT chat version. This project later migrated Normal Dungeon rewards into the same key/count model used by Trait Dungeons, with a data map for names/icons including EXP. The Normal page has 15 cards, I/II/III selectors, per-difficulty rewards and three background variants per dungeon. Goblin Bandits' Cave's three user-supplied banners were replaced on 3 Nov 2026 using one identical pixel crop and the existing asset names; the former Difficulty I alignment item is complete. See docs/DUNGEON_ARTWORK_WORKFLOW.md.
 
 Currency Dungeons is implemented in the preview: three discovered entries, two locked placeholders, all three confirmed difficulty reward tiers for the discovered entries, item names/icons resolved by keys, per-card difficulty selection reset to Normal on leaving the menu, approved backgrounds, and a separate frame overlay. The slight frame-corner mismatch is deferred to David's graphics pass. Confirmed reward values are in data.json; do not invent values for locked entries.
 

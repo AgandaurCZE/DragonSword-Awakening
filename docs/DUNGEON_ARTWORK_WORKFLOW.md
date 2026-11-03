@@ -15,9 +15,11 @@
 - Check the art inside the real frame before making all variants; compare the same dungeon in I/II/III at 1920×1080 and 2560×1440 before committing.
 - Frame files share a 1672×240 canvas, but their painted borders have different internal insets. Respect the per-frame CSS clipping; don't assume identical canvas dimensions mean identical visible openings.
 
-## Deferred fix — ASAP after all dungeon backgrounds are completed
+## Completed replacement — Goblin Bandits' Cave (3 November 2026)
 
-- **Goblin Bandits' Cave, Difficulty I:** align both goblins' position/scale with II and III. In I, the left goblin has less of its head/body visible. David explicitly requested this be deferred until all backgrounds are done, then fixed as soon as possible. Preserve the approved cave scene.
+- David supplied replacement artwork for Normal, Hard and Very Hard after the original Normal banner showed the left goblin at a different position/scale. The three source images share the same 2172×724 canvas and goblin placement.
+- Replaced the three existing files using one pixel-identical crop for every variant: source rectangle x=0, y=250, width=2172, height=312; resized each to the required 1672×240 banner canvas. Existing asset names and data.json references were retained.
+- The previous Difficulty I alignment correction is complete; all three difficulty variants now keep the goblins anchored to matching positions.
 
 ## Shared frame geometry (2 November 2026)
 

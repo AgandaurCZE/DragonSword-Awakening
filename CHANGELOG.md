@@ -1,3 +1,10 @@
+## 3 Nov 2026 — Replace Goblin Bandits' Cave preview banners
+
+- Replaced the existing Normal, Hard and Very Hard Goblin Bandits' Cave banner images with David's three supplied variants. Kept the existing filenames and data.json paths.
+- All sources were 2172×724. Applied the same source-pixel crop to each (x=0, y=250, width=2172, height=312), then resized to the site's 1672×240 banner canvas. Blue is Normal, purple is Hard, and red is Very Hard.
+- Preview-only dungeon visibility and the live public no-query view are unchanged; no HTML or guide data changed.
+- Validation: confirmed all three source dimensions, output dimensions, matching crop geometry and aligned goblin placement in a comparison image; reviewed the diff. Browser rendering was not available in this task.
+
 ## 3 Nov 2026 — Reconcile Dungeons handoff and project notes
 
 - Updated `AGENTS.md`, `CHATGPT.md` and `docs/PROJECT_HANDOFF.txt` to describe the shipped preview state instead of the obsolete pre-implementation Dungeons brief. Marked `docs/TASK_dungeons_page.md` as historical so future contributors do not follow superseded scope.
