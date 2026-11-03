@@ -1313,7 +1313,7 @@ function gxRarColor(r){return {Green:'#5fd38d',Blue:'#4aa3ff',Purple:'#b77cf2',O
 function renderGearPreview(){const root=$('gearPreview');if(!root||!IS_PREVIEW||typeof GEAR_UPGRADE==='undefined')return;root.hidden=false;
  const U=GEAR_UPGRADE,L=U.levels[GX.rar]||[];const max=L.length;GX.to=Math.min(Math.max(GX.to,1),max);GX.from=Math.min(GX.from,GX.to-1);
  const inf=(U.inferred||{})[GX.rar]||[];let eT=0,gT=0,gUnknown=false;const matT=[];
- const rows=[];for(let i=GX.from;i<GX.to;i++){const [e,g]=L[i];const feed=gxFeed(e);eT+=e;if(g==null)gUnknown=true;else gT+=g;gxAdd(matT,feed);
+ const rows=[];for(let i=GX.from;i<GX.to;i++){const [e,g0]=L[i];const feed=gxFeed(e);const gi=feed.every(([m])=>m.gold!=null)?feed.reduce((a,[m,k])=>a+m.gold*k,0):null;const g=gi??g0;eT+=e;if(g==null)gUnknown=true;else gT+=g;gxAdd(matT,feed);
   rows.push(`<tr><td>+${i} → +${i+1}</td><td class="n">${e.toLocaleString('en-GB')}${inf.includes(i)?' <span class="gx-est">(inferred)</span>':''}</td><td class="n">${g==null?'?':g.toLocaleString('en-GB')}</td><td>${gxMats(feed)}</td></tr>`);}
  const opt=(n,sel,lo,hi)=>Array.from({length:hi-lo+1},(_,k)=>k+lo).map(v=>`<option value="${v}"${v===sel?' selected':''}>+${v}</option>`).join('');
  const C=U.crafting[GX.rar]||{};
@@ -1328,7 +1328,7 @@ function renderGearPreview(){const root=$('gearPreview');if(!root||!IS_PREVIEW||
   <label>From <select id="gxFrom">${opt(0,GX.from,0,max-1)}</select></label><label>to <select id="gxTo">${opt(0,GX.to,1,max)}</select></label></div>
   <div class="gx-wrap"><table class="gx-tbl"><tr><th>Level</th><th class="n">EXP</th><th class="n">Gold</th><th>Materials (as the game auto-selects)</th></tr>${rows.join('')}
   <tr class="tot"><td>Total</td><td class="n">${eT.toLocaleString('en-GB')}</td><td class="n">${gT.toLocaleString('en-GB')}${gUnknown?' + ?':''}</td><td>${gxMats(matT)}</td></tr></table></div>
-  <p class="gx-note">Materials: the game fills each level with the largest Equipment EXP materials that don't overshoot the bar, then one Mana Shard if anything is left (it overshoots by 100). Whether that 100 carries over to the next level hasn't been checked.</p>
+  <p class="gx-note">Materials: the game fills each level with the largest Equipment EXP materials that don't overshoot the bar, then one Mana Shard if anything is left (it overshoots by 100). The extra EXP carries over to the next level (measured), which this table doesn't follow, so it can be a little off. Gold is paid per item used (Mana Shard 300, Crystal 700, Ore 2,000), so it's worked out from the items picked; where a Raw Mana Stone is picked the game's own figure is shown, as its Gold price isn't known yet.</p>
   <div class="gx-ret"><b>Disassemble returns</b> 80% of the Equipment EXP spent on a piece, plus its base materials. Gold isn't returned, and anything under 200 EXP is lost, so disassemble several pieces at once (their leftovers add up: the extra Mana Shard per pair).<br>
   ${GX.rar} at +${GX.from}: ${gxMats(gxReturn(GX.rar,GX.from))}<br>${GX.rar} at +${GX.to}: ${gxMats(gxReturn(GX.rar,GX.to))}<br>
   <span class="gx-note">Plus ${profileEsc(C.normal||'')}${C.archetype?`; archetype sets: ${profileEsc(C.archetype)}`:''}.</span></div>

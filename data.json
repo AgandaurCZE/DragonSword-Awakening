@@ -21991,25 +21991,29 @@
     "name": "Raw Mana Stone",
     "exp": 5000,
     "icon": "assets/items/icons/raw-mana-stone.webp",
-    "rarity": "Orange"
+    "rarity": "Orange",
+    "gold": null
    },
    {
     "name": "Mana Ore",
     "exp": 1500,
     "icon": "assets/items/icons/mana-ore.webp",
-    "rarity": "Purple"
+    "rarity": "Purple",
+    "gold": 2000
    },
    {
     "name": "Mana Crystal",
     "exp": 500,
     "icon": "assets/items/icons/mana-crystal.webp",
-    "rarity": "Blue"
+    "rarity": "Blue",
+    "gold": 700
    },
    {
     "name": "Mana Shard",
     "exp": 200,
     "icon": "assets/items/icons/mana-shard.webp",
-    "rarity": "Green"
+    "rarity": "Green",
+    "gold": 300
    }
   ],
   "levels": {
@@ -22196,7 +22200,7 @@
     1
    ]
   },
-  "levelsNote": "Each row is [EXP, Gold] for going from the level before to this one (+1 first). Orange +12 needing more EXP than +13 is how the game shows it (checked by David).",
+  "levelsNote": "Each row is [EXP, Gold] for going from the level before to this one (+1 first). Orange +12 needing more EXP than +13 is how the game shows it (checked by David). The Gold in each row is what the game showed for its own pick of items at the time; Gold is really paid per item (LEVEL_COSTS), so the calculator works Gold out from the items it picks.",
   "refund": {
    "rate": 0.8,
    "text": "Disassembling a piece returns its base materials plus 80% of the Equipment EXP spent on it, paid out in the largest Equipment EXP materials that fit (Raw Mana Stone 5,000, Mana Ore 1,500, Mana Crystal 500, Mana Shard 200). What is left under 200 EXP is lost. Pieces disassembled together are added up first, so their leftovers combine: that is the extra Mana Shard per pair. Gold is not returned.",
@@ -23904,5 +23908,143 @@
   "undiscovered": {
    "currency": 2
   }
+ },
+ "LEVEL_COSTS": {
+  "note": "Measured by David in Test Kit test 05 (3 Nov 2026), one level at a time: Kalien (Hero 1→20), Rock-Splitting Ice (Karma 1→20), Azure Gale Boots (Orange gear +0→+15). Gold is not a price per level: every EXP item has its own Gold price, paid when it is used. All 52 recorded item steps match these prices exactly.",
+  "pickRule": "The game auto-picks the largest item whose EXP fits in what the bar still needs, repeats, and finishes with the smallest item if anything is left (that last item overshoots; the extra EXP carries over to the next level). Seen in every step where David had the items.",
+  "items": {
+   "hero": [
+    {
+     "name": "Basic Combat Text",
+     "exp": 500,
+     "gold": 200
+    },
+    {
+     "name": "Advanced Combat Text",
+     "exp": 2000,
+     "gold": 650
+    },
+    {
+     "name": "Core Combat Text",
+     "exp": 6000,
+     "gold": 1800
+    }
+   ],
+   "karma": [
+    {
+     "name": "Arcana of War",
+     "exp": 300,
+     "gold": 150
+    },
+    {
+     "name": "Arcana of Beginnings",
+     "exp": 1000,
+     "gold": 400
+    },
+    {
+     "name": "Arcana of Peace",
+     "exp": 4000,
+     "gold": 1300
+    },
+    {
+     "name": "Arcana of the Future",
+     "exp": 10000,
+     "gold": null
+    }
+   ],
+   "gear": [
+    {
+     "name": "Mana Shard",
+     "exp": 200,
+     "gold": 300
+    },
+    {
+     "name": "Mana Crystal",
+     "exp": 500,
+     "gold": 700
+    },
+    {
+     "name": "Mana Ore",
+     "exp": 1500,
+     "gold": 2000
+    },
+    {
+     "name": "Raw Mana Stone",
+     "exp": 5000,
+     "gold": null
+    }
+   ]
+  },
+  "exp": {
+   "hero": {
+    "from": 1,
+    "toNext": [
+     150,
+     250,
+     500,
+     700,
+     1000,
+     1400,
+     1800,
+     2200,
+     2700,
+     3300,
+     3900,
+     4600,
+     5300,
+     6000,
+     6800,
+     7700,
+     8600,
+     9500,
+     10500
+    ]
+   },
+   "karma": {
+    "from": 1,
+    "toNext": [
+     200,
+     200,
+     500,
+     700,
+     1000,
+     1400,
+     1800,
+     2200,
+     2700,
+     3300,
+     3900,
+     4600,
+     5300,
+     6000,
+     6800,
+     7700,
+     8600,
+     9500,
+     10500
+    ]
+   }
+  },
+  "expNote": "toNext[i] = EXP from level i+1 to i+2 (measured up to level 20; higher levels not recorded yet). Gear EXP per level is in GEAR_UPGRADE.levels.",
+  "breakthroughs": {
+   "hero": {
+    "20": {
+     "gold": 4000,
+     "materials": "5 Lowest-Grade Monster Claw (Kalien; may differ per hero)"
+    }
+   },
+   "karma": {
+    "20": {
+     "gold": 5000,
+     "materials": "5 Crystal of Remembrance (Rock-Splitting Ice; may differ per card)"
+    }
+   }
+  },
+  "unknown": [
+   "Gold for Arcana of the Future and Raw Mana Stone (never used in the test)",
+   "EXP per level above 20 for Heroes and Karma",
+   "Breakthroughs at 30, 40, 50 and 60",
+   "Skill level costs"
+  ]
  }
 }

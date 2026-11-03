@@ -5,6 +5,11 @@
 - Validation: inspected the frame SVG geometry and CSS stacking, reviewed the focused diff, then David confirmed on the live preview that all three discovered backgrounds fit inside the frame and difficulty switching works. Live visual verification was performed by David after GitHub checks completed.
 
 
+
+## 3 Nov 2026 — Level-up costs measured (Claude)
+- Test Kit test 05 (David): Hero 1→20, Karma 1→20, Orange gear +0→+15. Gold is a price per EXP item: Basic/Advanced/Core Combat Text 200/650/1,800; Arcana of War/Beginnings/Peace 150/400/1,300; Mana Shard/Crystal/Ore 300/700/2,000. All 52 steps match. New key `LEVEL_COSTS`.
+- Gear upgrade calculator (preview) now works Gold out from the items it picks.
+- Fixed 19 Test Kit entries saved as Hero that were Karma (Rock-Splitting Ice).
 ## 3 Nov 2026 — David's 3 Nov batch (Claude)
 - Titles: 20/109 (Dungeon Conqueror, Specter of Thirst, The Roamer, Tyrant, Falling, Skilled Hunter, The Predator, Scraping, Dark Necromancer added); cumulative bonuses recalculated from the passives.
 - Karma: 21 cards now in colour and marked owned (23 owned), cut from David's Codex screenshots (name painted out as before); source PNGs deleted.
