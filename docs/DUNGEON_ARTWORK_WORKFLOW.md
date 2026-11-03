@@ -26,6 +26,11 @@
 - Preserve the original blue, purple and red frame artwork and colours. Purple/red use measured vertical size and position corrections to match the blue outer corner span (source y=8…239); all cards retain the same dimensions and shared background crop. Do not recolour the blue frame with hue filters: David wants the original purple and fiery red appearance.
 - For commits intended for David's visual review, complete checks before pushing and end the task immediately after the push; do not wait for Pages deployment.
 
+## Currency Dungeon background fit (3 November 2026)
+
+- The three discovered Currency Dungeon cards keep the existing full-card SVG frame overlay. The preview background layer (`.dng-currency-preview:before`) is inset 9px and clipped to an 8px corner radius so the artwork sits inside the frame. Its `cover` fit, card content and frame asset are unchanged; the two locked placeholders are unaffected.
+- David checked the live preview after GitHub checks completed: the artwork fits the frame in the difficulty states and switching difficulties works. Mark this fit correction complete.
+
 ## Corruption art direction supplied by David
 
 - Difficulty II corruption is associated with human Dragon Worshippers: concealed faces, dark cloaks, necromancy and control of beasts/orcs. Introduce these as occasional background details where appropriate.
