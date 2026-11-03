@@ -6,6 +6,9 @@
 
 
 
+
+## 3 Nov 2026 — Skill level costs (Claude)
+- `LEVEL_COSTS.skills`: Gold and materials for every skill level, measured by David on Kalien (Explosion to Lv.10, Great Rush to Lv.7).
 ## 3 Nov 2026 — Level-up costs measured (Claude)
 - Test Kit test 05 (David): Hero 1→20, Karma 1→20, Orange gear +0→+15. Gold is a price per EXP item: Basic/Advanced/Core Combat Text 200/650/1,800; Arcana of War/Beginnings/Peace 150/400/1,300; Mana Shard/Crystal/Ore 300/700/2,000. All 52 steps match. New key `LEVEL_COSTS`.
 - Gear upgrade calculator (preview) now works Gold out from the items it picks.
