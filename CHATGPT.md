@@ -1,3 +1,7 @@
+## 3 Nov 2026 — Restore original index.html line endings
+
+Restored LF line endings without changing page content, and added an explicit preservation rule to AGENTS.md. Applied on top of the latest main changes. Verified identical content after newline normalisation and ran the data validator. User requested committing and applying the fix to GitHub.
+
 ## David's main-only preview workflow — confirmed 2 Nov 2026
 
 - Work directly on `main`. Do not create additional branches for planned work unless David explicitly requests an exception.

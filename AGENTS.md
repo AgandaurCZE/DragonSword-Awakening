@@ -2,6 +2,8 @@
 
 Read this before changing anything in this repository.
 
+- Preserve existing line endings when editing files. `index.html` uses LF (Unix) line endings; never convert it to CRLF or rewrite unrelated lines.
+
 ## David's main-only preview workflow — confirmed 2 Nov 2026
 
 - Work directly on `main`. Do not create additional branches for planned work unless David explicitly requests an exception.

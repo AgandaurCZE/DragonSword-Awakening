@@ -1,3 +1,7 @@
+## 3 Nov 2026 — Restore original index.html line endings
+
+Restored LF line endings without changing page content, and added an explicit preservation rule to AGENTS.md. Applied on top of the latest main changes. Verified identical content after newline normalisation and ran the data validator. User requested committing and applying the fix to GitHub.
+
 ## 3 Nov 2026 — Fit Currency Dungeon backgrounds inside the frame
 
 - Inset the Currency Dungeon background image layer 9px with rounded clipping so it sits within the existing frame on all sides. This affects the three discovered preview cards; locked placeholders and frame artwork are unchanged.
