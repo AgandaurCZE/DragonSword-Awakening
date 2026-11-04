@@ -35,13 +35,14 @@ Paste this whole file into the first message of a new chat. It replaces the memo
 
 ## Tools that live outside the repo
 - **Test Kit** (Claude artifact, David's measurement notebook): https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt
-  - Its results are in the artifact database, collection `results`, field `testId`: `apply`, `buffs`, `gear`, `defign`, `lvlcost`. Read them with the ArtifactData tool (query with `out_dir` to save files).
+  - Its results are in the artifact database, collection `results`, field `testId`: `apply`, `buffs`, `gear`, `defign`, `lvlcost`, `enemydef`. Read them with the ArtifactData tool (query with `out_dir` to save files).
   - Tests:
     - 01: status application.
     - 02: skill buffs by level.
     - 03: gear main-stat rows. Has a coverage panel showing which main stats are saved per slot and rarity.
     - 04: Defense Ignore and Armor Penetration (done 4 Nov 2026; off the page, entries kept).
     - 05: level-up cost, one step at a time (Hero, Karma, Gear, Skill, breakthroughs).
+    - 06: Enemy Defense: one clean Wind Sword hit gives an enemy's Defense. Has a green/red table by enemy type, which David will extend with bosses.
   - A backup copy of the page is in the repo at `docs/testkit/dragonsword-test-kit.html`.
   - To change it, edit that file and publish to the same artifact URL (Artifact tool, `url` = the link above). A new chat must read the artifact first.
 - **Image tools** (`tools/image/`), used for cutting colour Codex cards out of David's screenshots:
@@ -62,7 +63,7 @@ Paste this whole file into the first message of a new chat. It replaces the memo
   - Dungeons (Normal, Trait, Currency, including the new Eroded Underground Cemetery, still without banner art).
   - Familiars, Titles (25/109), Cookbook.
   - Guides: 8 categories of placeholder cards.
-  - Tools (empty) and News (disabled).
+  - Tools (damage calculator) and News (disabled).
   - Item Database (tabs Materials, Ingredients, Important, Quest; Quest has no data yet).
   - Achievements tracker (per-browser ticks).
 - **Measured mechanics** (see `DAMAGE_TESTS`, `DEFENSE_MODEL`, `LEVEL_COSTS`, `SKILL_BUFF_LEVELS`, `GEAR_UPGRADE`):

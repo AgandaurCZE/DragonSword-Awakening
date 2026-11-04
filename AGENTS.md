@@ -34,7 +34,7 @@ New work stays hidden until David says to launch. It appears only with `?tiers=n
 | Tiers and teams | `TIER_LIST_V2`, `TOWER_TRIALS`, `TEAM_DATA`, `TIER_ORDER`, `TIER_COLORS` |
 | Karma | `KARMA_DATA`, `KARMA_ASCENSION`, `KARMA_LEVELLING`, `GENERIC_KARMA` |
 | Gear | `GEAR_DATA`, `GEAR_STATS`, `GEAR_UPGRADE`, `RUNES` |
-| Mechanics | `DAMAGE_TESTS`, `DEFENSE_MODEL`, `STATUS_EFFECTS`, `LEVEL_COSTS` |
+| Mechanics | `DAMAGE_TESTS`, `DEFENSE_MODEL`, `DAMAGE_CALC`, `STATUS_EFFECTS`, `LEVEL_COSTS` |
 | Other pages | `DUNGEONS`, `TRAIT_DUNGEONS`, `FAMILIARS`, `TITLES`, `COOKBOOK`, `GUIDES`, `PATCH_NOTES` |
 | Shared | `meta`, `schemaVersion`, `ARCHES`, `ARCH_COLORS`, `STATUS_ARCHETYPE`, `ROLE_ICONS`, `UI_ICONS` |
 

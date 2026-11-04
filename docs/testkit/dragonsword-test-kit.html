@@ -78,6 +78,11 @@ details.log summary{cursor:pointer;padding:12px 18px;font:700 1.1rem var(--displ
 details.log ul{margin:0;padding:0 18px 16px 2.2em;display:grid;gap:8px}
 details.log li b{font-weight:600}
 details.log li span{color:var(--ok);font:600 .75rem var(--mono);margin-left:6px}
+.ecov{border:1px solid var(--line);border-radius:4px;padding:10px 12px;display:grid;gap:8px;min-width:0}
+.ecov h4{margin:0;font:700 .8rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.ecov .r{display:grid;grid-template-columns:9em minmax(0,1fr);gap:8px;align-items:start}.ecov .r>b{font:600 .8rem var(--mono);padding-top:4px}.ecov .cs{display:flex;flex-wrap:wrap;gap:5px;min-width:0}
+.ecov .c{font:600 .78rem var(--body);background:transparent;border:1px solid currentColor;border-radius:3px;padding:2px 7px;text-align:left;cursor:pointer}.ecov .c.y{color:var(--ok)}.ecov .c.n{color:var(--bad)}.ecov .c.y::before{content:"✓ "}.ecov .c.n::before{content:"✗ "}.ecov .c small{font:500 .72rem var(--mono);margin-left:4px}.ecov .c.cur{outline:2px solid var(--accent);outline-offset:1px}
+@media (max-width:560px){.ecov .r{grid-template-columns:minmax(0,1fr);gap:3px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 .gcov{border:1px solid var(--line);border-radius:4px;background:var(--panel);padding:10px 12px;font-size:.88rem}
 .gcov h4{margin:0 0 6px;font:700 .8rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
@@ -139,6 +144,16 @@ const DONE=[
  ['Status ticks and crits','Ticks never crit: 0 crits in about 500 ticks of Poison, Bleed, Burn and Shock at 1–3 stacks.']
 ];
 
+// Enemy species and types for test 06. 'Other' lets you name a new one, and it joins the table once saved.
+const ENEMY_TYPES={"Goblins": ["Goblin", "Goblin Archer", "Goblin Berserker", "Goblin Chief"], "Wargs": ["Warg", "Armored Warg", "Warg boss"], "Orcs": ["Orc", "Armored Orc"], "Harpies": ["Harpy"], "Undead": ["Skeleton", "Axe-throwing Skeleton", "Ghoul", "Skeleton Commander", "Lich"], "Dragons": ["Lesser Dragon", "Greater Dragon"], "Worms": ["Worm"], "Trolls": ["Troll"], "Elementals": ["Elemental", "Elemental Stone"], "Insects": ["Insect minion", "Mantius of Amplitude", "Mantius of Crushing", "Mantius of Gale", "Drosophia of Breaker", "Drosophia of Bloodburst", "Ghagaroach of Blazeflame", "Ghagaroach of Frostbite", "Ghagaroach of Thunderbolt", "Ghagaroach of Venom"], "Spiders": ["Spider"], "Hunt and Raid bosses": ["Furcas the Starving Ghost of Corrosion", "Vanak the Bloody Hook", "Barduk the Corrupted", "Gallore the Collapse", "Ghoul Greed", "Gauron"], "World bosses": ["Berpedin, the Crushing Darkness"], "Dummies": ["Training Ogre"], "Other": []};
+const ENEMY_OTHER='Other (name it)',ENEMY_SPECIES=Object.keys(ENEMY_TYPES),enemyList=sp=>[...(ENEMY_TYPES[sp]||[]),ENEMY_OTHER];
+// Already measured in test 04.
+const ENEMY_KNOWN={'Training Ogre':[{lv:90,def:1000}],'Berpedin, the Crushing Darkness':[{lv:80,def:1197}]};
+// Wind Sword first hit = 58.78% of Attack at Lv.3 (test 04); other levels follow the Lv.7 skill table.
+const WS_LEVELS=[1,1.1,1.2,1.33,1.45,1.6,1.75];
+function enemyDef(v,hit){const lv=Math.round(num(v.wslv)||3),m=WS_LEVELS[lv-1],a=num(v.atk),h=hit==null?num(v.hit):hit,ap=num(v.ap)||0,di=num(v.di)||0;if(!m||!(a>0)||!(h>0)||di>=100)return null;return(a*0.5878*m/1.2*1000/h-1000+ap)/(1-di/100);}
+const enemyName=v=>v.en===ENEMY_OTHER?String(v.name||'').trim():v.en;
+
 const TESTS=[
 /* ---------------- Most useful ---------------- */
 {id:'apply',grp:'Most useful',multi:1,title:'Status application per skill',why:'How much of a stack each skill puts on. This decides who counts as an Enabler, and comparing enemies shows whether resistance grows with enemy level.',
@@ -181,6 +196,16 @@ const TESTS=[
   String(v.items||'').split(',').map(x=>x.trim()).filter(Boolean).forEach(x=>{const m=x.match(/^(\d+)\s*x?\s*(.+)$/i);const n=m?+m[1]:1,nm=(m?m[2]:x).trim().toLowerCase();const e=X[nm]??X[Object.keys(X).find(k=>k.startsWith(nm)||nm.startsWith(k))];e?fed+=n*e:unk.push(x);});
   const need=String(v.need||'').split(/[,;]/).map(x=>parseFloat(x.replace(/\s/g,''))).filter(x=>x>0).reduce((a,b)=>a+b,0),bar=parseFloat(v.inbar)||0;
   return{cls:unk.length?'warn':'ok',verdict:fed?`${f(fed,0)} EXP fed for ${f(g,0)} Gold = ${f(g/fed,3)} Gold per EXP.`:`${f(g,0)} Gold recorded.`,lines:[need>0&&fed?`Overflow expected: ${f(bar+fed-need,0)} EXP (check it against the bar after levelling).`:'',unk.length?`Not recognised: ${unk.join(', ')}. Check the spelling.`:'']}}},
+{id:'enemydef',no:6,grp:'When you can',multi:1,title:'Enemy Defense',why:'Every enemy has its own Defense, and the damage calculator needs it. One clean hit on an enemy gives its Defense straight away. Testing the same enemy on each difficulty shows how Defense grows with level.',
+ known:'Measured so far: Training Ogre Lv.90: 1,000. Berpedin Lv.80: about 1,197. The table below shows what is tested: green is done, red is still open. Click an enemy to select it.',
+ steps:['Use Reina\'s first auto-attack hit (Wind Sword) with nothing on the enemy: no statuses and no Break.','Pick the enemy and write its level. Dungeons are a quick way to test one enemy at three levels.','Write Attack, Armor Penetration and Defense Ignore from the stats panel. They stay filled in for the next entry, so only change them if your gear or buffs change.','Write the non-crit damage. The form keeps the enemy, so you only need the new level and hit for the next difficulty.'],
+ fields:[{k:'sp',l:'Enemy type',t:'select',o:ENEMY_SPECIES},{k:'en',l:'Enemy',t:'select',o:enemyList(ENEMY_SPECIES[0])},{k:'name',l:'Name, if Other',t:'text'},{k:'lv',l:'Enemy level',t:'num'},{k:'atk',l:'Attack (stats panel)',t:'num'},{k:'ap',l:'Armor Penetration',t:'num'},{k:'di',l:'Defense Ignore %',t:'num'},{k:'wslv',l:'Wind Sword level (blank = 3)',t:'num'},{k:'hit',l:'Non-crit damage',t:'num'},{k:'where',l:'Where (dungeon, difficulty)',t:'text'},{k:'note',l:'Notes',t:'text'}],
+ keep:['sp','en','name','atk','ap','di','wslv','where'],
+ label:v=>`${enemyName(v)||'?'} · Lv. ${v.lv||'?'} · ${v.hit||'?'} at ${v.atk||'?'} Attack${v.where?' · '+v.where:''}`,
+ dupKey:v=>[v.sp,enemyName(v).toLowerCase(),String(v.lv||'').trim()].join('|'),
+ run(v){const n=enemyName(v),d=enemyDef(v);if(d==null||!n)return null;const h=num(v.hit),lo=enemyDef(v,h+.5),hi=enemyDef(v,h-.5);if(d<-20)return{cls:'warn',verdict:`This gives a Defense below zero (${f(d,0)}).`,lines:['Check that the hit had no status or crit on it, and that Attack is from the same setup.']};
+  const others=enemyLevels(n).filter(x=>String(x.lv)!==String(v.lv));
+  return{cls:'ok',verdict:`${n}${v.lv?' Lv. '+v.lv:''}: Defense about ${f(Math.max(d,0),0)} (${f(Math.max(lo,0),0)}–${f(Math.max(hi,0),0)} from rounding).`,lines:[others.length?`Other levels: <span class="v">${others.map(x=>`Lv. ${x.lv}: ${f(x.def,0)}`).join(' · ')}</span>`:'',v.lv?'':'Add the enemy level before saving.']}}},
 /* ---------------- Later ---------------- */
 ];
 
@@ -212,7 +237,7 @@ function build(){let n=0;
   document.addEventListener('input',e=>{if(e.target.dataset.lv!=null){syncLevels();update('gear');draft();return;}const el=e.target.closest('[data-t]');if(!el)return;(state[el.dataset.t]??={})[el.dataset.k]=el.value;if(el.dataset.t==='gear'&&el.dataset.k==='rar'){syncLevels();renderLevels();}update(el.dataset.t);draft();});
   document.addEventListener('click',e=>{const b=e.target.closest('[data-del]');if(!b)return;if(b.dataset.armed){b.textContent='Deleting…';db&&db.doc('results/'+b.dataset.del).delete().catch(()=>{b.textContent='Couldn\'t delete';});}else{b.dataset.armed='1';b.textContent='Delete? Click again';setTimeout(()=>{if(b.isConnected){delete b.dataset.armed;b.textContent='Delete';}},4000);}});
   document.addEventListener('click',e=>{const b=e.target.closest('[data-save]');if(b)save(b.dataset.save);});
-  TESTS.forEach(t=>update(t.id));renderLevels();initGearCov();}
+  initEnemyCov();TESTS.forEach(t=>update(t.id));renderLevels();initGearCov();}
 const GEAR_MAINS=['Attack','Max HP','Defense','Attack Power Up','Max HP Up','Defense Up','Critical Rate','Critical Damage','Critical Hit Resistance','Critical Damage Reduction'];
 const GEAR_SLOTS_T=['Helmet','Chest','Legs','Gloves','Boots'],GEAR_RARS=['Green','Blue','Purple','Orange'];
 function normMain(x){x=String(x||'').trim().toLowerCase().replace(/\s+/g,' ');return x==='critical hit chance'?'critical rate':x;}
@@ -226,12 +251,21 @@ function initGearCov(){const art=$('#gear');if(!art)return;const fl=art.querySel
  if('IntersectionObserver' in window)new IntersectionObserver(es=>es.forEach(e=>box.classList.toggle('vis',e.isIntersecting)),{threshold:0}).observe(art);else box.classList.add('vis');
  box.addEventListener('click',e=>{const b=e.target.closest('[data-gpick]');if(!b)return;const [sl,r]=b.dataset.gpick.split('|');fill('gear',{slot:sl,rar:r});draft();});
  renderGearCov();}
-function update(id){if(id==='gear')renderGearCov();const t=TESTS.find(x=>x.id===id);if(!t)return;const v=state[id]||{};const out=$('#res-'+id);
+function enemyLevels(n){const m={};(ENEMY_KNOWN[n]||[]).forEach(x=>m[x.lv]=x);(savedDocs.enemydef||[]).forEach(d=>{const v=d.inputs||{};if(enemyName(v)!==n)return;const x=enemyDef(v);if(x!=null)m[v.lv||'?']={lv:v.lv||'?',def:Math.max(x,0)};});return Object.values(m).sort((a,b)=>(parseFloat(a.lv)||0)-(parseFloat(b.lv)||0));}
+function syncEnemyOpts(){const sel=$('#enemydef-en');if(!sel)return;const v=state.enemydef??={};const sp=ENEMY_SPECIES.includes(v.sp)?v.sp:ENEMY_SPECIES[0],L=enemyList(sp);v.sp=sp;if(sel.dataset.sp!==sp){sel.innerHTML=L.map(o=>`<option>${o}</option>`).join('');sel.dataset.sp=sp;}if(!L.includes(v.en))v.en=L[0];sel.value=v.en;}
+function renderEnemyCov(){const box=$('#ecov');if(!box)return;const v=state.enemydef||{},cur=enemyName(v);let all=0,done=0;const esc=x=>{const t=document.createElement('i');t.textContent=x;return t.innerHTML};
+ const rows=ENEMY_SPECIES.map(sp=>{const extra=[...new Set((savedDocs.enemydef||[]).filter(d=>(d.inputs||{}).sp===sp&&(d.inputs||{}).en===ENEMY_OTHER).map(d=>enemyName(d.inputs)).filter(Boolean))];const L=[...ENEMY_TYPES[sp],...extra.filter(x=>!ENEMY_TYPES[sp].includes(x))];if(!L.length)return'';
+  return`<div class="r"><b>${esc(sp)}</b><div class="cs">${L.map(n=>{const lv=enemyLevels(n);all++;if(lv.length)done++;const std=ENEMY_TYPES[sp].includes(n);return`<button type="button" class="c ${lv.length?'y':'n'}${n===cur&&v.sp===sp?' cur':''}" data-esp="${esc(sp)}" data-een="${esc(std?n:ENEMY_OTHER)}" data-ename="${std?'':esc(n)}">${esc(n)}${lv.length?`<small>${lv.map(x=>`Lv.${esc(x.lv)}: ${f(x.def,0)}`).join(' · ')}</small>`:''}</button>`}).join('')}</div></div>`}).join('');
+ box.innerHTML=`<h4>${done} of ${all} enemies tested</h4>${rows}`;}
+function initEnemyCov(){const art=$('#enemydef');if(!art)return;const box=document.createElement('aside');box.id='ecov';box.className='ecov';box.setAttribute('aria-label','Enemies tested');art.querySelector('.fields').after(box);
+ box.addEventListener('click',e=>{const b=e.target.closest('[data-esp]');if(!b)return;fill('enemydef',{sp:b.dataset.esp,en:b.dataset.een,name:b.dataset.ename});draft();});renderEnemyCov();}
+function update(id){if(id==='gear')renderGearCov();if(id==='enemydef')syncEnemyOpts();const t=TESTS.find(x=>x.id===id);if(!t)return;const v=state[id]||{};const out=$('#res-'+id);
   t.fields.forEach(fd=>{if(fd.t==='select'&&v[fd.k]==null)v[fd.k]=fd.o[0];});state[id]=v;
   let r=null;try{r=t.run(v)}catch(e){r=null}
   if(!r){out.className='result';out.innerHTML='<p class="note">Fill in the fields to see the result.</p>';}
   else{out.className='result '+r.cls;out.innerHTML=`<p class="verdict">${r.verdict}</p>`+r.lines.filter(Boolean).map(l=>`<p>${l}</p>`).join('');}
   const dp=$('#dup-'+id);if(dp){const k=t.dupKey&&t.dupKey(v);const hit=k&&(savedDocs[id]||[]).find(d=>t.dupKey(d.inputs||{})===k);dp.hidden=!hit;if(hit)dp.textContent='Already saved: '+t.label(hit.inputs)+' ('+String(hit.savedAt).slice(0,10)+'). Saving again adds a second entry.';}
+  if(id==='enemydef')renderEnemyCov();
   $('#save-'+id).disabled=!db;}
 function fill(id,v){if(!TESTS.find(x=>x.id===id))return;Object.entries(v||{}).forEach(([k,val])=>{const el=document.getElementById(`${id}-${k}`);if(el)el.value=val;});state[id]={...(state[id]||{}),...v};if(id==='gear')renderLevels();update(id);}
 function resetTest(t){const keep={};(t.keep||[]).forEach(k=>{if(state[t.id]&&state[t.id][k]!=null)keep[k]=state[t.id][k];});state[t.id]={};

@@ -24732,5 +24732,68 @@
    "orangeSubstats": "With the current Orange substat values (Armor Penetration 15, Defense Ignore 1.94%, the latter an estimate), Defense Ignore is worth more only above about 773 enemy Defense."
   },
   "note": "Not used by the page yet. Ticks ignore Defense (see DAMAGE_TESTS). Rough enemies are worked out from older tests, not measured with this test. Defense does not follow enemy level alone: Lv.80 Berpedin is above the Lv.90 dummies and goblins. Unknown: what else sets it; what happens if Armor Penetration exceeds remaining Defense."
+ },
+ "DAMAGE_CALC": {
+  "note": "Rules for the preview damage calculator (renderDamageCalc, dcCompute). Hit bonuses, stacking and the order of the pools come from DAMAGE_TESTS.findings; Defense from DEFENSE_MODEL.",
+  "formula": "Damage = (Attack + status Additional Attack Power) × skill % × 1000 / (1000 + Defense × (1 − Defense Ignore) − Armor Penetration) × (1 + hit bonuses) × (1 + Additional Damage). A crit multiplies that by (1 + Critical Damage).",
+  "intro": "Predicts a skill's damage from the stats on your in-game panel. Damage has no random spread, so the same setup always deals the same number.",
+  "statsHint": "Copy these from the stats panel. Include anything active, such as sets and buffs: the U key opens the panel during a fight.",
+  "buffHint": "For a buff you can't read on your panel, such as Bless, Brave One or an Attack Power set bonus. Buffs join the Attack Power Up pool, so both numbers are needed.",
+  "statusHint": "Tick what is on the enemy when the hit lands. Hit bonuses add together, with no cap. Additional Attack Power and Additional Damage only count for ticked statuses.",
+  "emptyHint": "Enter your Attack to see the damage.",
+  "overNote": "Your Armor Penetration is higher than the enemy's remaining Defense. What happens then isn't tested, so it's treated as zero Defense.",
+  "weaknessUntested": "Weakness is measured for Poison and Airborne; for this status it's assumed to double the hit bonus too.",
+  "weaknessMeasured": [
+   "Poison",
+   "Airborne"
+  ],
+  "weaknessMultiplier": 2,
+  "towerUntested": "This tower's bonus isn't measured; it's assumed to match the other towers.",
+  "towerDotUntested": "The tower's damage-over-time bonus is measured for Poison and Burn; Bleed and Shock are assumed to match.",
+  "roughNote": "This enemy's Defense is a rough figure from older tests, not a direct measurement.",
+  "notes": [
+   "Whole skill, with all its hits added up, so it can differ from the game by a few points of rounding. Each hit rolls its own crit, so Crit is the figure if every hit crits.",
+   "Not included: Mastery and awakening effects that aren't on your panel, and hits that miss or don't connect."
+  ],
+  "statuses": [
+   {
+    "name": "Poison",
+    "hitBonus": 50
+   },
+   {
+    "name": "Bleed",
+    "hitBonus": 50
+   },
+   {
+    "name": "Burn",
+    "hitBonus": 50
+   },
+   {
+    "name": "Shock",
+    "hitBonus": 50
+   },
+   {
+    "name": "Frozen",
+    "hitBonus": 50,
+    "untested": "Untested: Frost Additional Attack Power and Additional Damage are assumed to count on a Frozen enemy. Its +50% hit bonus is measured."
+   },
+   {
+    "name": "Airborne",
+    "hitBonus": 100
+   },
+   {
+    "name": "Knockdown",
+    "hitBonus": 100
+   },
+   {
+    "name": "Stun",
+    "hitBonus": 100
+   },
+   {
+    "name": "Break",
+    "hitBonus": 0,
+    "untested": "Untested: Break Additional Damage is assumed to join the Additional Damage pool. Break Additional Attack Power is measured."
+   }
+  ]
  }
 }

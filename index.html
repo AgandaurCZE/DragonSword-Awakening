@@ -319,6 +319,13 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .gx-tbl{width:100%;border-collapse:collapse;font-size:14px}.gx-tbl th,.gx-tbl td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}.gx-tbl th{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em}.gx-tbl td.n{text-align:right;font-variant-numeric:tabular-nums}.gx-tbl tr.tot td{font-weight:800;border-top:2px solid var(--line)}
 .gx-mats{display:flex;flex-wrap:wrap;gap:8px}.gx-mat{display:inline-flex;align-items:center;gap:4px;font-weight:700;white-space:nowrap}.gx-mat img{width:24px;height:24px;border-radius:4px;background:#0003}
 .gx-est{color:#ffcf5a;font-size:12px}.gx-note{color:var(--muted);font-size:13px;margin:8px 0 0}.gx-ret{margin-top:12px;padding:10px 12px;border-left:3px solid #5fd38d;background:#5fd38d12;border-radius:4px}
+.dc{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px;align-items:start;margin-top:16px}.dc-in{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;min-width:0}.dc-head{margin-top:4px}.dc-out{position:sticky;top:16px}
+.dc-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;align-items:end}.dc-f{display:grid;gap:4px;font-size:13px;color:var(--muted);min-width:0}.dc-w{grid-column:span 2}
+.dc input[type=number],.dc select{width:100%;box-sizing:border-box;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font:inherit}
+.dc-st input[type=number]{min-width:72px}.dc-st td{white-space:nowrap}.dc-on{display:inline-flex;gap:8px;align-items:center;cursor:pointer}.dc-mute{color:var(--muted)}.dc-more{margin-top:12px}.dc-more summary{cursor:pointer;color:var(--muted);font-size:13px}.dc-more .dc-g{margin-top:8px}
+.dc-big{display:grid;gap:10px;margin:10px 0 12px}.dc-big span{display:block;font-size:12px;color:var(--muted)}.dc-big b{font-size:30px;line-height:1.15;font-variant-numeric:tabular-nums}.dc-big b.dc-c{color:#ffcf5a}
+.dc-small{font-size:12px;line-height:1.5;color:var(--muted);margin:0 0 10px}.dc-warn{color:#ffcf5a}.dc-reset{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:5px 10px;font:inherit;font-size:13px;cursor:pointer}
+@media (max-width:900px){.dc{grid-template-columns:minmax(0,1fr)}.dc-out{position:static}.dc-w{grid-column:span 1}}
 .gx-wrap{overflow-x:auto}.gx-ret .gx-mats{display:inline-flex;vertical-align:middle;margin:3px 0}
 .rn-types{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}.rn-type{border:1px solid var(--line);border-top:3px solid var(--c);border-radius:8px;padding:10px;background:var(--panel2)}.rn-type b{color:var(--c);display:block}.rn-ico{float:right;width:34px;height:34px;background:var(--c);-webkit-mask:center/contain no-repeat;mask:center/contain no-repeat}.rn-type small{color:var(--muted)}
 .rn-grades{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}.rn-grade{border:1px solid var(--c);color:var(--c);border-radius:999px;padding:3px 10px;font-weight:800;font-size:13px}
@@ -679,7 +686,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  <div id="guidesBody"></div>
 </section>
 <section class="simple-page" id="toolsPage" hidden>
- <div class="gear-heading"><h2>TOOLS</h2><span>Calculators and tools. Coming soon.</span></div>
+ <div class="gear-heading"><h2>TOOLS</h2><span>Calculators and tools</span></div>
  <div id="toolsBody"><p class="gd-empty">Nothing here yet.</p></div>
 </section>
 <section class="simple-page" id="cookbookPage" hidden>
@@ -705,7 +712,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={},COOKBOOK={},GEAR_UPGRADE={levels:{},expMaterials:[],refund:{base:{}},crafting:{}},RUNES=null,GUIDES={categories:[]};
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={},COOKBOOK={},GEAR_UPGRADE={levels:{},expMaterials:[],refund:{base:{}},crafting:{}},RUNES=null,GUIDES={categories:[]},DAMAGE_CALC=null,DEFENSE_MODEL=null;
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -1944,6 +1951,64 @@ async function renderAchievements(){const root=$('achBody');if(!root)return;if(!
  ${list.map(x=>`<label class="ach-row${T[x.name]?' done':''}"><input type="checkbox" data-ach="${E(x.name)}"${T[x.name]?' checked':''}><span><b>${E(x.name)}</b><small>${E(x.category||'')}${x.target?' · target '+E(x.target):''}${x.title?' · title: '+E(x.title):''}</small><br>${E(x.condition||'')}</span></label>`).join('')||'<p class="gd-empty">No achievements match.</p>'}`;
  root.querySelectorAll('[data-ach]').forEach(c=>c.onchange=()=>{const t=achTicks();c.checked?t[c.dataset.ach]=1:delete t[c.dataset.ach];try{localStorage.setItem('dsw.achievements.v1',JSON.stringify(t))}catch(e){}renderAchievements();});
  const qi=$('achQ');qi.oninput=()=>{ITEMDB.aq=qi.value;const p=qi.selectionStart;renderAchievements().then(()=>{const n=$('achQ');n.focus();n.setSelectionRange(p,p);});};$('achCat').onchange=e=>{ITEMDB.acat=e.target.value;renderAchievements();};$('achOwn').onchange=e=>{ITEMDB.aown=e.target.value;renderAchievements();};}
+// Damage calculator (Tools page, preview only). Rules and notes come from DAMAGE_CALC and DEFENSE_MODEL.
+function dcCompute(i){const C=DAMAGE_CALC,K=DEFENSE_MODEL.K,N=x=>Number(x)||0;
+ const apu=N(i.apu),atk=N(i.attack)*(1+(apu+N(i.buff))/100)/(1+apu/100),dots=(STATUS_EFFECTS.damageOverTime||{}).statuses||[],tb=TOWER_TRIALS.bonus||{};
+ const tower=(TOWER_TRIALS.towers||[]).find(t=>t.id===i.tower);let aap=0,hit=0,ad=0;const on=[];
+ C.statuses.forEach(s=>{const r=(i.st||{})[s.name];if(!r||!r.on)return;on.push(s);
+  aap+=(N(r.aap)+N(i.all))*(1+N(i.inc)/100);hit+=s.hitBonus*(i.weak===s.name?C.weaknessMultiplier:1);ad+=N(r.ad)/100;
+  if(tower)ad+=(tower.status===s.name?N(tb.own):dots.includes(s.name)?N(tb.dot):N(tb.other))/100;});
+ const def=N(i.def),di=N(i.di),ap=N(i.ap),eff=(d,p)=>Math.max(0,def*(1-d/100)-p),fac=(d,p)=>K/(K+eff(d,p));
+ const base=(atk+aap)*N(i.pct)/100*(1+hit/100)*(1+ad),cd=N(i.cd)/100,cr=Math.min(N(i.cr),100)/100,non=base*fac(di,ap);
+ return{atk,aap,hit,ad,on,non,crit:non*(1+cd),avg:non*(1+cr*cd),block:1-fac(di,ap),noAp:base*fac(di,0),noDi:base*fac(0,ap),none:base*fac(0,0),over:def*(1-di/100)<ap,dots:on.filter(s=>dots.includes(s.name))};}
+const DC_DEF={hero:'',skill:'',lv:'',pct:'',attack:'',cd:50,cr:5,ap:0,di:0,apu:'',buff:'',enemy:'0',def:'',weak:'',tower:'',all:0,inc:0,st:{}};
+let DC_S=null;
+function dcSave(){try{localStorage.setItem('dsw.dmgcalc.v1',JSON.stringify(DC_S));}catch(e){}}
+function dcSkills(h){return((CHARACTER_PROFILE_DATA[h]||{}).skills||[]).filter(s=>s.meta&&s.meta.attackPct);}
+function dcPct(s,lv){const m=s.meta.maxLevel;return!m||m<2?s.meta.attackPct:skillLevelValue(s.meta.attackPct,skillLevelFactor(lv,m).factor);}
+function renderDamageCalc(){const root=$('toolsBody');if(!root||!DAMAGE_CALC||!DEFENSE_MODEL)return;const E=profileEsc,C=DAMAGE_CALC;
+ let saved=null;try{saved=JSON.parse(localStorage.getItem('dsw.dmgcalc.v1')||'null');}catch(e){}
+ const S=DC_S={...DC_DEF,...(saved||{})};S.st=S.st||{};
+ if(!CHARACTER_PROFILE_DATA[S.hero])S.hero=(HEROES[0]||{}).name||'';
+ const enemies=DEFENSE_MODEL.enemies||[];if(S.enemy!=='custom'&&!enemies[+S.enemy])S.enemy='0';
+ if(S.def===''&&S.enemy!=='custom')S.def=enemies[+S.enemy].defense;
+ const num=(k,l,ph)=>`<label class="dc-f"><span>${l}</span><input type="number" min="0" step="any" inputmode="decimal" data-k="${k}" value="${E(S[k])}"${ph?` placeholder="${E(ph)}"`:''}></label>`;
+ const rows=C.statuses.map(s=>{const c=ARCH_COLORS[STATUS_ARCHETYPE[s.name]]||'var(--text)';const r=S.st[s.name]||{};return`<tr><td><label class="dc-on"><input type="checkbox" data-st="${E(s.name)}" data-f="on"${r.on?' checked':''}><b style="color:${c}">${E(s.name)}</b></label></td><td class="n dc-mute">${s.hitBonus?'+'+s.hitBonus+'%':'none'}</td><td><input type="number" min="0" step="any" inputmode="decimal" data-st="${E(s.name)}" data-f="aap" aria-label="${E(s.name)} Additional Attack Power" value="${E(r.aap??'')}"></td><td><input type="number" min="0" step="any" inputmode="decimal" data-st="${E(s.name)}" data-f="ad" aria-label="${E(s.name)} Additional Damage %" value="${E(r.ad??'')}"></td></tr>`;}).join('');
+ root.innerHTML=`<div class="gx-box dc-head"><h3>Damage calculator <span class="gx-tag">PREVIEW</span></h3><p class="gx-sub">${E(C.intro)}</p></div><div class="dc"><div class="dc-in">
+ <div class="gx-box"><h3>Skill</h3><div class="dc-g"><label class="dc-f"><span>Hero</span><select id="dcHero">${HEROES.map(h=>`<option${h.name===S.hero?' selected':''}>${E(h.name)}</option>`).join('')}</select></label><label class="dc-f dc-w"><span>Skill</span><select id="dcSkill"></select></label><label class="dc-f"><span>Skill level</span><select id="dcLv"></select></label>${num('pct','Skill %')}</div><p class="gx-note" id="dcSkillNote"></p></div>
+ <div class="gx-box"><h3>Your stats</h3><p class="gx-sub">${E(C.statsHint)}</p><div class="dc-g">${num('attack','Attack')}${num('cd','Critical Damage %')}${num('cr','Critical Rate %')}${num('ap','Armor Penetration')}${num('di','Defense Ignore %')}${num('all','All Status Additional Attack Power')}${num('inc','Status Additional Attack Power Increase %')}</div>
+ <details class="dc-more"><summary>Attack buff not on your panel</summary><p class="gx-note">${E(C.buffHint)}</p><div class="dc-g">${num('apu','Attack Power Up on panel %')}${num('buff','Extra Attack Power %')}</div></details></div>
+ <div class="gx-box"><h3>Enemy</h3><div class="dc-g"><label class="dc-f dc-w"><span>Enemy</span><select id="dcEnemy">${enemies.map((e,n)=>`<option value="${n}"${String(n)===String(S.enemy)?' selected':''}>${E(e.name)}${e.level?' (Lv.'+e.level+')':''}: ${e.rough?'about ':''}${e.defense.toLocaleString('en-GB')}</option>`).join('')}<option value="custom"${S.enemy==='custom'?' selected':''}>Other (type its Defense)</option></select></label>${num('def','Enemy Defense')}<label class="dc-f"><span>Weak to (Trait Dungeons)</span><select data-k="weak"><option value="">None</option>${C.statuses.filter(s=>s.hitBonus).map(s=>`<option${S.weak===s.name?' selected':''}>${E(s.name)}</option>`).join('')}</select></label><label class="dc-f"><span>Tower of Trials</span><select data-k="tower"><option value="">Not in a tower</option>${(TOWER_TRIALS.towers||[]).map(t=>`<option value="${E(t.id)}"${S.tower===t.id?' selected':''}>${E(t.name)}</option>`).join('')}</select></label></div></div>
+ <div class="gx-box"><h3>Statuses on the enemy</h3><p class="gx-sub">${E(C.statusHint)}</p><div class="gx-wrap"><table class="gx-tbl dc-st"><thead><tr><th>On enemy</th><th>Hit bonus</th><th>Additional Attack Power</th><th>Additional Damage %</th></tr></thead><tbody>${rows}</tbody></table></div></div>
+ </div><aside class="gx-box dc-out" id="dcOut" aria-live="polite"></aside></div>`;
+ const skSel=$('dcSkill'),lvSel=$('dcLv');
+ function fillLv(s,keep){const m=s&&s.meta.maxLevel>1?s.meta.maxLevel:1;const lv=keep&&+S.lv>=1&&+S.lv<=m?+S.lv:m;lvSel.innerHTML=Array.from({length:m},(_,n)=>`<option${n+1===lv?' selected':''}>${n+1}</option>`).join('');S.lv=lv;}
+ function setPct(s){if(!s)return;S.pct=dcPct(s,+S.lv);const p=root.querySelector('[data-k="pct"]');if(p)p.value=S.pct;}
+ function skillNote(s){const b=[];if(s&&s.meta.requiresAny&&s.meta.requiresAny.length)b.push('Needs '+s.meta.requiresAny.join(' or ')+' on the enemy.');if(s&&s.meta.inflicts&&s.meta.inflicts.length)b.push('Inflicts '+s.meta.inflicts.join(', ')+'; tick it below for the hits that land after that.');$('dcSkillNote').textContent=b.join(' ');}
+ function fillSkills(keep){const L=dcSkills(S.hero);if(!keep||!L.some(s=>s.skill===S.skill&&s.slot===S.slotName))S.skill=(L[0]||{}).skill||'',S.slotName=(L[0]||{}).slot||'',keep=false;
+  skSel.innerHTML=L.map((s,n)=>`<option value="${n}"${s.skill===S.skill&&s.slot===S.slotName?' selected':''}>${E(s.slot)}: ${E(s.skill.replace(/\s*\(Lv\.\d+\)\s*$/,''))}</option>`).join('');
+  const cur=L[+skSel.value];fillLv(cur,keep);if(!keep||S.pct==='')setPct(cur);skillNote(cur);}
+ fillSkills(!!saved);
+ function draw(){const r=dcCompute(S),out=$('dcOut'),fmt=x=>Math.round(x).toLocaleString('en-GB');if(!(+S.attack>0)||!(+S.pct>0)){out.innerHTML=`<h3>Result</h3><p class="gx-sub">${E(C.emptyHint)}</p>`;return;}
+  const pc=(a,b)=>b>0?(a/b-1)*100:0,small=[];
+  if(+S.ap>0)small.push(`Armor Penetration ${E(S.ap)} adds +${pc(r.non,r.noAp).toFixed(1)}% (+${fmt(r.non-r.noAp)} damage).`);
+  if(+S.di>0)small.push(`Defense Ignore ${E(S.di)}% adds +${pc(r.non,r.noDi).toFixed(1)}% (+${fmt(r.non-r.noDi)} damage).`);
+  if(+S.ap>0&&+S.di>0)small.push(`Together +${pc(r.non,r.none).toFixed(1)}% (+${fmt(r.non-r.none)} damage).`);
+  small.push(`This enemy's Defense still blocks ${(r.block*100).toFixed(1)}% of the hit.`);
+  if(r.over)small.push(C.overNote);
+  if(r.dots.length){const t=(STATUS_EFFECTS.damageOverTime||{}).tickPctByStacks||[];small.push(`${r.dots.map(s=>s.name).join(', ')} ticks: ${t.map(p=>fmt(Math.floor(r.atk*p/100))).join(' / ')} at ${t.map((_,n)=>n+1).join(' / ')} stacks, ${(STATUS_EFFECTS.damageOverTime||{}).ticks} ticks each. They ignore Defense and never crit.`);}
+  const un=[];r.on.forEach(s=>{if(s.untested)un.push(s.untested);});if(S.weak&&!(C.weaknessMeasured||[]).includes(S.weak)&&r.on.some(s=>s.name===S.weak))un.push(C.weaknessUntested);
+  const tw=(TOWER_TRIALS.towers||[]).find(t=>t.id===S.tower);if(tw&&tw.measured===false)un.push(C.towerUntested);if(tw&&r.dots.some(s=>!((TOWER_TRIALS.bonus||{}).dotTested||[]).includes(s.name)))un.push(C.towerDotUntested);
+  const e=enemies[+S.enemy];if(S.enemy!=='custom'&&e&&e.rough&&+S.def===e.defense)un.push(C.roughNote);
+  out.innerHTML=`<h3>Result</h3><div class="dc-big"><div><span>Non-crit</span><b>${fmt(r.non)}</b></div><div><span>Crit</span><b class="dc-c">${fmt(r.crit)}</b></div>${+S.cr>0?`<div><span>Average at ${E(Math.min(+S.cr,100))}% Crit Rate</span><b>${fmt(r.avg)}</b></div>`:''}</div>
+  <p class="dc-small">${small.join('<br>')}</p>${un.length?`<p class="dc-small dc-warn">${[...new Set(un)].map(E).join('<br>')}</p>`:''}<p class="dc-small">${(C.notes||[]).map(E).join('<br>')}</p><p class="dc-small">${E(C.formula)}</p><button type="button" class="dc-reset" id="dcReset">Reset</button>`;
+  $('dcReset').onclick=()=>{try{localStorage.removeItem('dsw.dmgcalc.v1');}catch(x){}renderDamageCalc();};}
+ $('dcHero').onchange=e=>{S.hero=e.target.value;fillSkills(false);draw();dcSave();};
+ skSel.onchange=()=>{const s=dcSkills(S.hero)[+skSel.value];S.skill=s.skill;S.slotName=s.slot;fillLv(s,false);setPct(s);skillNote(s);draw();dcSave();};
+ lvSel.onchange=()=>{S.lv=+lvSel.value;setPct(dcSkills(S.hero)[+skSel.value]);draw();dcSave();};
+ $('dcEnemy').onchange=e=>{S.enemy=e.target.value;if(S.enemy!=='custom'){S.def=enemies[+S.enemy].defense;root.querySelector('[data-k="def"]').value=S.def;}else root.querySelector('[data-k="def"]').focus();draw();dcSave();};
+ root.oninput=root.onchange=e=>{const t=e.target;if(t.dataset.k){S[t.dataset.k]=t.value;if(t.dataset.k==='def'&&S.enemy!=='custom'&&+t.value!==enemies[+S.enemy].defense){S.enemy='custom';$('dcEnemy').value='custom';}}else if(t.dataset.st){const r=S.st[t.dataset.st]=S.st[t.dataset.st]||{};r[t.dataset.f]=t.type==='checkbox'?t.checked:t.value;}else return;draw();dcSave();};
+ draw();}
 function renderGuides(){const root=$('guidesBody');if(!root)return;const G=(typeof GUIDES!=='undefined'&&GUIDES)||{};const E=profileEsc;
  root.innerHTML=(G.categories||[]).map(c=>`<section class="gd-cat"><h3>${E(c.name)}</h3><div class="gd-grid">${(c.items||[]).length?(c.items||[]).map(it=>`<button type="button" class="gd-card${it.ready?'':' soon'}" ${it.ready?'':'disabled'}>${it.image?`<img src="${E(it.image)}" alt="">`:'<span class="gd-ph"></span>'}<span>${E(it.title)}</span>${it.ready?'<span class="gd-arrow">→</span>':'<span class="gd-soon">soon</span>'}</button>`).join(''):'<p class="gd-empty">No guides yet.</p>'}</div></section>`).join('');}
 const PREVIEW_PAGES=['familiars','titles','dungeons','trait','currency','cookbook','guides','tools','news','items','achievements'];
@@ -1960,11 +2025,11 @@ function startApp(){
  document.getElementById('heroesSearch').addEventListener('input',renderHeroes);
  renderGear();renderGearPreview();
  renderPatches();
- renderFamiliars();renderTitles();renderDungeons();renderCurrencyDungeons();renderTrait();renderCookbook();renderGuides();if(IS_PREVIEW){renderItems();renderAchievements();}applyPreviewGate();initTierV2();
+ renderFamiliars();renderTitles();renderDungeons();renderCurrencyDungeons();renderTrait();renderCookbook();renderGuides();if(IS_PREVIEW){renderItems();renderAchievements();renderDamageCalc();}applyPreviewGate();initTierV2();
  navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);navIcon('navIconHeroes',(UI_ICONS||{}).heroes);navIcon('navIconTeams',(UI_ICONS||{}).teams);navIcon('navIconCookbook',(UI_ICONS||{}).cookbook);
 }
 fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(async d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};DUNGEONS=d.DUNGEONS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};TOWER_TRIALS=d.TOWER_TRIALS||{};COOKBOOK=d.COOKBOOK||{};GEAR_UPGRADE=d.GEAR_UPGRADE||GEAR_UPGRADE;RUNES=d.RUNES||null;GUIDES=d.GUIDES||{categories:[]};
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};DUNGEONS=d.DUNGEONS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};TOWER_TRIALS=d.TOWER_TRIALS||{};COOKBOOK=d.COOKBOOK||{};GEAR_UPGRADE=d.GEAR_UPGRADE||GEAR_UPGRADE;RUNES=d.RUNES||null;GUIDES=d.GUIDES||{categories:[]};DAMAGE_CALC=d.DAMAGE_CALC||null;DEFENSE_MODEL=d.DEFENSE_MODEL||null;
  await preloadDungeonBanners();
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});

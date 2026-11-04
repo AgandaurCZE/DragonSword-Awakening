@@ -1,3 +1,7 @@
+## 4 Nov 2026 — Damage calculator and Enemy Defense test (preview, Claude)
+- Tools page: damage calculator from panel stats (non-crit, crit, average), with small print for what Armor Penetration and Defense Ignore add. New key `DAMAGE_CALC`. Public page unchanged.
+- Checked against 41 of David's recorded hits: all within 0.21%. 23 use the clean hit as their baseline, so they test the bonuses rather than Defense.
+- Test Kit: new test 06 Enemy Defense, with a green/red table by enemy type.
 ## 4 Nov 2026 — AGENTS.md trimmed, test 04 done (Claude)
 - `AGENTS.md` is now rules, workflow and a key index (loaded with every message). All the detail moved unchanged to the new `docs/DATA_REFERENCE.md`.
 - `DEFENSE_MODEL`: Berpedin is Lv.80, above the Lv.90 dummies' Defense, so Defense doesn't follow level alone.
