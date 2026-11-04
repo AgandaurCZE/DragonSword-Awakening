@@ -63,7 +63,7 @@ Paste this whole file into the first message of a new chat. It replaces the memo
   - Dungeons (Normal, Trait, Currency, including the new Eroded Underground Cemetery, still without banner art).
   - Familiars, Titles (25/109), Cookbook.
   - Guides: 8 categories of placeholder cards.
-  - Tools (damage calculator) and News (disabled).
+  - Tools (damage calculator with an enemy type + level picker) and News (disabled).
   - Item Database (tabs Materials, Ingredients, Important, Quest; Quest has no data yet).
   - Achievements tracker (per-browser ticks).
 - **Measured mechanics** (see `DAMAGE_TESTS`, `DEFENSE_MODEL`, `LEVEL_COSTS`, `SKILL_BUFF_LEVELS`, `GEAR_UPGRADE`):

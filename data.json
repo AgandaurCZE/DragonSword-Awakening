@@ -16019,7 +16019,8 @@
    "Defense on a real enemy (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Berpedin the Crushing Darkness Lv.80, 4 Nov 2026): Attack 2160, AP 0, DI 0%: 578; Attack 2418, AP 85, DI 0%: 673; Attack 1503, AP 0, DI 11.09%: 428. With K = 1,000 and the Ogre's hit share (58.78% of Attack, 14% of Wind Sword Lv.3's 420%) these give Defense 1,197 (1,193–1,201), all three hits within 0.1 damage. K left free gives 915–1125, so K = 1,000 is a constant of the formula, not of the dummy, and the formula holds on a real boss. Full model in DEFENSE_MODEL.",
    "Enemy Defense follows level × enemy type (Test Kit test 06, Reina Wind Sword Lv.3 first hit, 2427 Attack, Armor Penetration 0, Defense Ignore 0%, 4 Nov 2026). Goblin and Warg hit identically at every shared level: 1402, 1380, 1298, 1232, 1084, 1003 and 960 at Lv.10, 15, 25, 30, 40, 45 and 52, which is Defense 18, 34, 99, 158, 316, 422 and 486. Goblin Archer = x0.8, Goblin Barbarian = x1.1 (one level), Fierce Ironclad Warg and Sharpshooter Goblin Archer = x1.3. The Sharpshooter is not a basic archer: at Lv.40 it took 1012, where x0.8 predicts 1139. Break doesn't lower Defense: Goblin Archer Lv.52 went 1027 -> 1134 when broken with All Status AAP 76 and Break AAP 175; added Attack alone predicts 1133, and zero Defense would give about 1574.",
    "Enemy Defense, second batch (Test Kit test 06, same setup, 4 Nov 2026). Dungeon bosses are x1.3 of the basic enemy: Fierce Ironclad Warg, Sharpshooter Goblin Archer, Veteran Goblin Barbarian, Proud Goblin Tribal Hero and Sargon, 13 hits within about 1 damage. Also x0.8 Axe-throwing Skeleton, x1.04 Agile Ironclad Warg, x1.1 Skeleton Commander (Skeleton taken as basic). World enemies are lower than dungeon ones: Warg and Goblin Lv.52 world 486, Warg Lv.50 dungeon 569. World bosses don't share one multiplier: Horg 374 and Andras 421 at Lv.40, Karon 836 and Scraping Back 1,257 at Lv.60, Octavia 1,195 and Berpedin about 1,197 at Lv.80. Named enemies: Kuaku the Mad Lv.56 549, about x1.1 like the Goblin Barbarian he looks like; Igniter Snickrak Lv.55 590, well above an archer's x0.8.",
-   "Enemy Defense, third batch (Test Kit test 06, 4 Nov 2026). Species doesn't seem to matter: Skeleton and Orc match Goblin and Warg at every shared dungeon level (Skeleton Lv.15, 30, 45; Orc Lv.45; Orc matches Skeleton at Lv.65). World enemies are about x0.8 of dungeon ones: basic 486, 503, 532 and 542 at Lv.52, 54, 57 and 58, against a dungeon curve of 569, 642 and 702 at Lv.50, 55 and 60. Dungeon bosses x1.3: Brave Skeleton Commander (Lv.15, 30, 45) and Orc Barbarian (Lv.55) too; Agile Ironclad Warg is a boss in a duo fight but x1.04. Named enemies with visible changes, Igniter Snickrak and Corroded Knight Kalvaros, are about x1.15 of a basic world enemy whatever model they share (two examples)."
+   "Enemy Defense, third batch (Test Kit test 06, 4 Nov 2026). Species doesn't seem to matter: Skeleton and Orc match Goblin and Warg at every shared dungeon level (Skeleton Lv.15, 30, 45; Orc Lv.45; Orc matches Skeleton at Lv.65). World enemies are about x0.8 of dungeon ones: basic 486, 503, 532 and 542 at Lv.52, 54, 57 and 58, against a dungeon curve of 569, 642 and 702 at Lv.50, 55 and 60. Dungeon bosses x1.3: Brave Skeleton Commander (Lv.15, 30, 45) and Orc Barbarian (Lv.55) too; Agile Ironclad Warg is a boss in a duo fight but x1.04. Named enemies with visible changes, Igniter Snickrak and Corroded Knight Kalvaros, are about x1.15 of a basic world enemy whatever model they share (two examples).",
+   "Enemy Defense, fourth batch (Test Kit test 06, 4 Nov 2026). Trait Dungeons: minions x1.6 and bosses x3.2 of the basic dungeon enemy at Lv.30, 40 and 50 (minion 251, 505, 912; boss 506, 1,012, 1,825), the same for Mantius, Drosophia and Ghagaroach where tested. World, relative to a basic world enemy: Goblin Berserker x1.1, Goblin Barbarian, Harpy and Spider x1.05, Troll x1.1, Ghoul and Worm x1.0, Lesser Dragon x1.2, Greater Dragon x1.5, Elemental Stone x1.0 (purple and red x1.1). Most of these are single tests."
   ],
   "tests": [
    {
@@ -24715,13 +24716,7 @@
     "basis": "Measured: Test Kit test 04, 7 hits, plus Reina's Wind Slayer Lv.1 (916 at 333 Attack = 0.50 × Attack × 549%), which sets K = Defense on this dummy."
    },
    {
-    "name": "Goblins (Trait Dungeon area)",
-    "level": 90,
-    "defense": 1000,
-    "basis": "Worked out from one hit: Wind Slayer Lv.1, 1,742 at 626 Attack, Armor Penetration 15, Defense Ignore 0.97% (gives 999.5). Same hero and skill as the Ogre check."
-   },
-   {
-    "name": "Berpedin, the Crushing Darkness (hardest World Boss)",
+    "name": "Berpedin, the Crushing Darkness",
     "level": 80,
     "defense": 1197,
     "range": [
@@ -24759,27 +24754,6 @@
     "level": 40,
     "defense": 374,
     "basis": "Measured: Test Kit test 06, one hit. World bosses keep a fixed level."
-   },
-   {
-    "name": "Mantius of Amplitude, Trait Dungeon I",
-    "level": 20,
-    "defense": 210,
-    "rough": true,
-    "basis": "Rough (±10): Johnny's clean hits (168 vs 109 on the Ogre), different gear on the two days, assumes no other damage reduction."
-   },
-   {
-    "name": "Mantius of Amplitude, Trait Dungeon III",
-    "level": 40,
-    "defense": 1000,
-    "rough": true,
-    "basis": "Rough (±20): Johnny's clean hits (102 vs 109 on the Ogre), different gear on the two days, assumes no other damage reduction."
-   },
-   {
-    "name": "Mantius of Amplitude, difficulty not recorded",
-    "level": null,
-    "defense": 505,
-    "rough": true,
-    "basis": "Rough (±15): Johnny's clean hit (145 vs 109 on the Ogre, same gear), assumes no other damage reduction."
    }
   ],
   "fitPoints": 10,
@@ -24795,57 +24769,163 @@
    "defenseIgnore": "Each 1% removes 1% of the enemy's Defense: +0.50% on the Ogre, +0.54% on Berpedin, +0.17% at 210 Defense.",
    "orangeSubstats": "With the current Orange substat values (Armor Penetration 15, Defense Ignore 1.94%, the latter an estimate), Defense Ignore is worth more only above about 773 enemy Defense."
   },
-  "note": "Not used by the page yet. Ticks ignore Defense (see DAMAGE_TESTS). Rough enemies are worked out from older tests, not measured with this test. Defense does not follow enemy level alone: Lv.80 Berpedin is above the Lv.90 dummies and goblins. Unknown: what else sets it; what happens if Armor Penetration exceeds remaining Defense.",
+  "note": "Not used for ticks: they ignore Defense (see DAMAGE_TESTS). The calculator uses enemies (fixed values) and levelCurve × worldFactor × types[].mult. Unknown: levels above 70 and what happens if Armor Penetration exceeds remaining Defense.",
   "levelCurve": {
-   "note": "Defense of a basic enemy, Test Kit test 06. Goblin, Warg, Skeleton and Orc match wherever two or more were tested at one level, so species doesn't seem to matter. World enemies are about 0.8 of the dungeon value at the same level (0.80–0.81 at Lv.52–58). Not used by the page yet.",
+   "note": "Defense of a basic enemy in a dungeon, from Test Kit test 06. Species doesn't seem to matter. World enemies are about worldFactor of this. Lv.52, 54, 57, 58 and 63 are world hits ÷ worldFactor; Lv.90 is the Lv.90 goblins and Training Ogre (1,000) ÷ worldFactor, and the least certain point. Levels in between are estimated in a straight line.",
    "dungeon": {
-    "10": 18,
-    "15": 34,
-    "25": 99,
-    "30": 158,
-    "40": 316,
-    "45": 422,
-    "50": 569,
-    "55": 642,
-    "60": 702,
-    "65": 783,
-    "70": 850
-   },
-   "world": {
-    "52": 486,
-    "54": 503,
-    "57": 532,
-    "58": 542
+    "10": 17.5,
+    "15": 33.8,
+    "25": 99.1,
+    "30": 157.9,
+    "40": 316.0,
+    "45": 422.3,
+    "50": 569.4,
+    "52": 607.5,
+    "54": 629.1,
+    "55": 641.6,
+    "57": 665.4,
+    "58": 677.8,
+    "60": 702.4,
+    "63": 758.2,
+    "65": 783.2,
+    "70": 850.3,
+    "90": 1250.0
    },
    "worldFactor": 0.8
   },
-  "typeMultipliers": {
-   "note": "Defense = basic enemy's Defense at that level and place × this. Not used by the page yet.",
-   "basic": 1,
-   "Goblin Archer": 0.8,
-   "Skeleton Commander": 1.1,
-   "Agile Ironclad Warg": 1.04,
-   "namedWithVisibleChanges": 1.15,
-   "namedExamples": [
-    "Igniter Snickrak",
-    "Corroded Knight Kalvaros"
-   ],
-   "dungeonBoss": 1.3,
-   "dungeonBossesTested": [
-    "Fierce Ironclad Warg",
-    "Sharpshooter Goblin Archer",
-    "Veteran Goblin Barbarian",
-    "Proud Goblin Tribal Hero",
-    "Sargon, the Scream-Devourer",
-    "Brave Skeleton Commander",
-    "Orc Barbarian"
-   ],
-   "unclear": {
-    "Axe-throwing Skeleton": "About 1.05 in Corrupted Bedchamber and the world, 0.8 in The Graveyard Where Tragedy Sleeps.",
-    "Goblin Barbarian": "1.1 at Lv.52, 1.05 at Lv.57 (world). Kuaku the Mad, same model, about 1.05 at Lv.56.",
-    "Orc Lv.53": "Hit 924 is about 1.1 of basic for that level, so it may be another type."
+  "types": [
+   {
+    "group": "Goblins",
+    "name": "Goblin",
+    "mult": 1
+   },
+   {
+    "group": "Goblins",
+    "name": "Goblin Archer",
+    "mult": 0.8
+   },
+   {
+    "group": "Goblins",
+    "name": "Goblin Barbarian",
+    "mult": 1.05
+   },
+   {
+    "group": "Goblins",
+    "name": "Goblin Berserker",
+    "mult": 1.1
+   },
+   {
+    "group": "Wargs and Orcs",
+    "name": "Warg",
+    "mult": 1
+   },
+   {
+    "group": "Wargs and Orcs",
+    "name": "Orc",
+    "mult": 1
+   },
+   {
+    "group": "Undead",
+    "name": "Skeleton",
+    "mult": 1
+   },
+   {
+    "group": "Undead",
+    "name": "Ghoul",
+    "mult": 1,
+    "once": true
+   },
+   {
+    "group": "Undead",
+    "name": "Axe-throwing Skeleton",
+    "mult": 1.05,
+    "note": "This enemy measured ×0.8 in The Graveyard Where Tragedy Sleeps, not ×1.05."
+   },
+   {
+    "group": "Undead",
+    "name": "Skeleton Commander",
+    "mult": 1.1
+   },
+   {
+    "group": "Other enemies",
+    "name": "Worm",
+    "mult": 1,
+    "once": true
+   },
+   {
+    "group": "Other enemies",
+    "name": "Elemental Stone (no colour)",
+    "mult": 1,
+    "once": true
+   },
+   {
+    "group": "Other enemies",
+    "name": "Elemental Stone (purple or red)",
+    "mult": 1.1,
+    "once": true
+   },
+   {
+    "group": "Other enemies",
+    "name": "Harpy",
+    "mult": 1.05,
+    "once": true,
+    "note": "One unidentified Harpy took damage as ×1.0."
+   },
+   {
+    "group": "Other enemies",
+    "name": "Spider",
+    "mult": 1.05,
+    "once": true
+   },
+   {
+    "group": "Other enemies",
+    "name": "Troll",
+    "mult": 1.1,
+    "once": true
+   },
+   {
+    "group": "Other enemies",
+    "name": "Lesser Dragon",
+    "mult": 1.2,
+    "once": true
+   },
+   {
+    "group": "Other enemies",
+    "name": "Greater Dragon",
+    "mult": 1.5,
+    "once": true
+   },
+   {
+    "group": "Named enemies and bosses",
+    "name": "Named enemy with visible changes",
+    "mult": 1.15,
+    "note": "Based on two named enemies. Named enemies with no visible changes match their normal version."
+   },
+   {
+    "group": "Named enemies and bosses",
+    "name": "Dungeon boss",
+    "mult": 1.3,
+    "place": "dungeon"
+   },
+   {
+    "group": "Named enemies and bosses",
+    "name": "Agile Ironclad Warg (duo boss)",
+    "mult": 1.04,
+    "place": "dungeon"
+   },
+   {
+    "group": "Trait Dungeons",
+    "name": "Trait Dungeon minion",
+    "mult": 1.6,
+    "place": "dungeon"
+   },
+   {
+    "group": "Trait Dungeons",
+    "name": "Trait Dungeon boss",
+    "mult": 3.2,
+    "place": "dungeon"
    }
-  }
+  ]
  },
  "DAMAGE_CALC": {
   "note": "Rules for the preview damage calculator (renderDamageCalc, dcCompute). Hit bonuses, stacking and the order of the pools come from DAMAGE_TESTS.findings; Defense from DEFENSE_MODEL.",
@@ -24864,7 +24944,6 @@
   "weaknessMultiplier": 2,
   "towerUntested": "This tower's bonus isn't measured; it's assumed to match the other towers.",
   "towerDotUntested": "The tower's damage-over-time bonus is measured for Poison and Burn; Bleed and Shock are assumed to match.",
-  "roughNote": "This enemy's Defense is a rough figure from older tests, not a direct measurement.",
   "notes": [
    "Whole skill, with all its hits added up, so it can differ from the game by a few points of rounding. Each hit rolls its own crit, so Crit is the figure if every hit crits.",
    "Not included: Mastery and awakening effects that aren't on your panel, and hits that miss or don't connect."
@@ -24908,6 +24987,11 @@
     "hitBonus": 0,
     "untested": "Untested: Break Additional Damage is assumed to join the Additional Damage pool. Break Additional Attack Power is measured."
    }
-  ]
+  ],
+  "onceNote": "This enemy type's multiplier comes from a single test.",
+  "levelEstNote": "Level between tested points, so its Defense is an estimate.",
+  "levelFarNote": "Levels above 70 and below 10 are rough estimates: no basic enemy has been tested there, apart from the Lv.90 goblins.",
+  "fixedGroup": "Fixed level (World Bosses, dummy)",
+  "fixedNote": "Measured directly: this enemy's level is fixed."
  }
 }

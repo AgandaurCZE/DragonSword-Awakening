@@ -1,3 +1,7 @@
+## 4 Nov 2026 — Calculator enemy picker (preview, Claude)
+- Damage calculator: pick enemy type, dungeon or world and level, and it works out Defense from test 06 (`dcEnemyDef()`). World Bosses and the dummy stay fixed values; typing a Defense still works. Rough Mantius entries removed, now covered by Trait Dungeon types.
+- `DEFENSE_MODEL`: `levelCurve` merged into one curve with `worldFactor`; new `types` list replaces `typeMultipliers`. New finding in `DAMAGE_TESTS`.
+- Back-test on all 101 entries: 93 within 1 damage, 96 within 1%. The 5 misses are listed in `docs/PROJECT_HANDOFF.txt`.
 ## 4 Nov 2026 — Enemy Defense: third test batch, gear rows (Claude)
 - `DEFENSE_MODEL`: dungeon curve to Lv.70, world curve at about x0.8, updated type multipliers and open questions. New finding in `DAMAGE_TESTS`. Not used by the page yet.
 - `GEAR_STATS.valueSources`: 93 Test Kit rows checked against the tables, upgrade steps per rarity recorded. The "flat stats 1–2% high" note is resolved: it came from comparing with 4x the +0 value.
