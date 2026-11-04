@@ -1,0 +1,272 @@
+<title>DragonSword Test Kit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a lab notebook. Open tests grouped by priority, each card = steps, inputs, live verdict; finished tests collapse into a results log. */
+:root{
+  --bg:#f3f1ec; --panel:#fffdf8; --ink:#1f2328; --muted:#5d6670; --line:#ddd7cc;
+  --accent:#a2650b; --ok:#1d7a45; --warn:#9a5b00; --bad:#b3261e; --field:#ffffff;
+  --display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#16191f; --panel:#1f232b; --ink:#e7eaf0; --muted:#9aa4b2; --line:#343a45;
+  --accent:#ffc46b; --ok:#5fd38d; --warn:#ffb86f; --bad:#ff6b6b; --field:#15181e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#16191f; --panel:#1f232b; --ink:#e7eaf0; --muted:#9aa4b2; --line:#343a45;
+  --accent:#ffc46b; --ok:#5fd38d; --warn:#ffb86f; --bad:#ff6b6b; --field:#15181e; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:18px}
+header h1{font:700 2rem/1.1 var(--display);letter-spacing:.01em;margin:0;text-wrap:balance}
+header p{margin:.4rem 0 0;color:var(--muted);max-width:65ch}
+.status{font:600 .8rem var(--mono);color:var(--muted)}
+.status.ok{color:var(--ok)} .status.bad{color:var(--bad)}
+nav{display:grid;gap:6px}
+nav .grp{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+nav .grp b{font:600 .72rem var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);min-width:9.5em}
+nav a{font:600 .8rem var(--mono);color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:3px 8px;border-radius:3px;background:var(--panel)}
+nav a.done{border-color:var(--ok);color:var(--ok)}
+nav a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.section{display:grid;gap:14px}
+.section>h2{font:700 1rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:8px 0 0;border-bottom:1px solid var(--line);padding-bottom:6px}
+.section>p.intro{margin:-6px 0 0;color:var(--muted);font-size:.9rem}
+.test{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:18px;display:grid;gap:12px;min-width:0}
+.test h3{font:700 1.35rem/1.2 var(--display);margin:0;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.test h3 .no{font:600 .85rem var(--mono);color:var(--accent)}
+.test h3 .saved{margin-left:auto;font:600 .75rem var(--mono);color:var(--muted)}
+.why{margin:0;color:var(--muted);max-width:70ch}
+.known{margin:0;font-size:.9rem;max-width:70ch}
+.known b{font-weight:600}
+ol.steps{margin:0;padding-left:1.3em;display:grid;gap:3px}
+.fields{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.fields label{display:grid;gap:3px;font-size:.85rem;color:var(--muted);min-width:0}
+.fields label.wide{grid-column:1/-1}
+input,select,textarea{font:1rem var(--mono);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:3px;padding:6px 8px;width:100%;box-sizing:border-box;font-variant-numeric:tabular-nums}
+textarea{min-height:70px;resize:vertical}
+.result{border-left:3px solid var(--line);padding:6px 0 6px 12px;display:grid;gap:4px;font-variant-numeric:tabular-nums}
+.result.ok{border-color:var(--ok)} .result.warn{border-color:var(--warn)} .result.bad{border-color:var(--bad)}
+.result p{margin:0}
+.result .v{font-family:var(--mono);font-weight:600}
+.verdict{font-weight:600}
+.result.ok .verdict{color:var(--ok)} .result.warn .verdict{color:var(--warn)} .result.bad .verdict{color:var(--bad)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+button{font:600 .9rem var(--body);background:var(--accent);color:var(--bg);border:0;border-radius:3px;padding:7px 14px;cursor:pointer}
+button.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+button:disabled{opacity:.5;cursor:default}
+.note{font-size:.85rem;color:var(--muted)}
+.lvgrid{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:6px}
+.lvgrid label{display:flex;align-items:center;gap:6px;font:600 .8rem var(--mono);color:var(--muted)}
+.lvgrid label span{min-width:2.4em;text-align:right}
+.lvgrid input{padding:5px 6px}
+.saved-list{border-top:1px dashed var(--line);padding-top:10px;display:grid;gap:6px}
+.saved-list h4{margin:0;font:600 .75rem var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.saved-list ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.saved-list li{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;font-size:.9rem;min-width:0}
+.saved-list li .d{font:.75rem var(--mono);color:var(--muted)}
+.saved-list details>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px}.saved-list details>summary::-webkit-details-marker{display:none}
+.saved-list details>summary::before{content:'▸';color:var(--muted);font-size:.8rem}.saved-list details[open]>summary::before{content:'▾'}
+.saved-list details>ul{margin-top:6px}.saved-list h4 .cov{text-transform:none;letter-spacing:0;color:var(--ink);font-weight:500;margin-left:6px}
+.tag-ok{font:600 .75rem var(--mono);color:var(--ok)}.tag-miss{font:600 .75rem var(--mono);color:var(--bad)}
+.saved-list li button{margin-left:auto;padding:2px 8px;font-size:.75rem}
+.dup{color:var(--warn);font-weight:600;font-size:.85rem;margin:0}
+.multi{font:600 .72rem var(--mono);color:var(--accent);border:1px solid var(--accent);border-radius:3px;padding:1px 6px}
+details.log{background:var(--panel);border:1px solid var(--line);border-radius:4px}
+details.log summary{cursor:pointer;padding:12px 18px;font:700 1.1rem var(--display)}
+details.log ul{margin:0;padding:0 18px 16px 2.2em;display:grid;gap:8px}
+details.log li b{font-weight:600}
+details.log li span{color:var(--ok);font:600 .75rem var(--mono);margin-left:6px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.gcov{border:1px solid var(--line);border-radius:4px;background:var(--panel);padding:10px 12px;font-size:.88rem}
+.gcov h4{margin:0 0 6px;font:700 .8rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.gcov ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}.gcov li{font:600 .82rem var(--mono)}
+.gcov li.y{color:var(--ok)}.gcov li.n{color:var(--bad)}.gcov li.y::before{content:"✓ "}.gcov li.n::before{content:"✗ "}
+.gcov table{border-collapse:collapse;margin-top:8px;font:600 .72rem var(--mono)}.gcov th,.gcov td{padding:2px 5px;text-align:center;border:1px solid var(--line)}
+.gcov td.full{color:var(--ok)}.gcov td.part{color:var(--warn)}.gcov td.none{color:var(--bad)}.gcov td.cur{outline:2px solid var(--accent);outline-offset:-2px}
+.gcov td button{all:unset;cursor:pointer}
+@media (min-width:1540px){.gcov{position:fixed;right:16px;top:90px;width:300px;max-height:calc(100vh - 110px);overflow:auto;box-shadow:0 4px 18px #0003;opacity:0;pointer-events:none;transition:opacity .2s;z-index:5}.gcov.vis{opacity:1;pointer-events:auto}}
+</style>
+
+<div class="wrap">
+<header>
+  <h1>DragonSword Test Kit</h1>
+  <p>In-game tests for the guide. Fill in what you see and the verdict updates as you type. <strong>Save</strong> stores the result so Claude can read it back. Tests marked <span class="multi">many</span> save a new entry each time, so you can log several heroes or enemies. Record video so you can pause on the numbers.</p>
+  <p class="status" id="dbStatus">Connecting to storage…</p>
+</header>
+<nav id="toc" aria-label="Tests"></nav>
+<div id="tests"></div>
+<details class="log" id="doneLog"><summary>Already answered (17 tests)</summary><ul id="doneList"></ul></details>
+<p class="note">Updated 29 Oct 2026 (patch 1.1.2) from everything you've measured so far. A result that disagrees with the guide is good news: it means the guide can be corrected.</p>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const num=v=>{const n=parseFloat(String(v??'').replace(',','.'));return Number.isFinite(n)?n:null};
+const nums=v=>String(v||'').split(/[\s,;]+/).map(num).filter(n=>n!==null);
+const f=(n,d=1)=>n==null?'—':n.toLocaleString('en-GB',{maximumFractionDigits:d,minimumFractionDigits:0});
+const P=(n,d=1)=>n==null?'—':f(n,d)+'%';
+const near=(a,b,tolPct)=>Math.abs(a-b)<=Math.abs(b)*tolPct/100;
+const sgn=n=>(n>=0?'+':'')+f(n,1);
+
+const HEROES=['Johnny','Charlotte','Reina','Roxy','Aria','Ornette','Castella','Lute','Cerese','Eileen','Kalsion','Sion','Other'];
+// Heroes whose skill text shows a buff, heal, debuff or duration number (from the codex)
+const BUFF_HEROES=['Eileen','Charlotte','Lute','Ornette','Sion','Tarte','Theresia','Alex','Kalsion','Astria','Other'];
+const STATUSES=['Poison','Bleed','Burn','Shock','Frost','Airborne','Knockdown','Stun'];
+const ENEMIES=['Training Ogre','Goblin dummies','Open-world mob','Trait Dungeon I (Normal)','Trait Dungeon II (Hard)','Trait Dungeon III (Very Hard)','Trait Dungeon IV (Extreme)','Hunt boss','Other'];
+// Hit bonus while the status is on the target (DAMAGE_TESTS, measured)
+const HIT_BONUS={Poison:50,Bleed:50,Burn:50,Shock:50,Frost:50,Airborne:100,Knockdown:100,Stun:100};
+const LV40={exp:{B:[426,132,2852],A:[440,127,2777]},quad:{B:[421,130,2817],A:[435,125,2742]},bt40:{B:[35,19,279],A:[42,15,231]}};
+
+const DONE=[
+ ['Team buff stacking','Buffs add: Brave One and Bless on Reina gave 2,094 → 2,231 → 2,369 (adding predicts 2,368, multiplying 2,377). Vanguard Banner lasts about 10 s.'],
+ ['Level 40 base stats','Measured on Johnny, Reina and Charlotte. The level curve was refitted and the Lv.40 breakthroughs (+35 / +18 / +276, Charlotte +43 / +15 / +230) are now in every level-70 estimate.'],
+ ['Three physical statuses','No cap: Stun + Knockdown + Airborne = ×4 (Reina\'s Wind Slayer on goblins: 1742 clean, 7311 with Stun + Knockdown, ~14407 with all three, 21611 crit).'],
+ ['Damage spread','Damage is fixed: the same hit always deals the same number.'],
+ ['Attack scaling','Damage rises exactly with Attack (Charlotte 684 → 637 Attack, hits ×0.931).'],
+ ['Crit damage','A crit deals normal × (1 + Crit Damage). Each hit of a multi-hit attack rolls its own crit.'],
+ ['Crit chance','Settled by patch 1.1.0: crits land at exactly your Crit Rate, and monsters no longer resist crits.'],
+ ['Enemy defense','Armor Penetration and Defense Ignore both raise damage a little on the dummy (about +0.05% per Armor Penetration point).'],
+ ['Status bonuses','Hits on an enemy with Poison, Bleed, Burn or Shock deal ×1.5; Airborne, Knockdown and Stun ×2. Bonuses add: Stun + Airborne = ×3. Additional Attack Power adds to Attack and Additional Damage multiplies, on afflicted hits only.'],
+ ['Status ticks','Poison, Bleed, Burn and Shock tick 5 times over 10 s for 50 / 75 / 100% of the first applier\'s Attack at 1 / 2 / 3 stacks.'],
+ ['Trait Dungeon weakness','A weak boss doubles that status\'s hit bonus (Poison +100%, Airborne +200%). Ticks and other hits are unchanged.'],
+ ['Skill levels','Every level from Lv. 1 to max is measured, and the same for every hero.'],
+ ['Difficulty and status bonuses','Difficulty doesn\'t change the hit bonus (Johnny ×1.85 on Trait Dungeon I and III). It slows build-up instead: Very Hard roughly halves it, and a weakness speeds it up 2–3×.'],
+ ['Status Additional Attack Power Increase (%)','It raises your status Additional Attack Power by that %: Charlotte\'s Poisoned hit went 126 → 133 with a 3.88% piece, matching that and nothing else.'],
+ ['Several statuses at once','Additional Damage from different statuses adds (+15% + +15% = +30%), and All Status Additional Attack Power counts once per status on the target. Break adds its Break and All Status Additional Attack Power but no multiplier (Charlotte: clean 52, broken 118, Poison + Burn + Break 345).'],
+ ['Frost','No ticks. 3 stacks Freeze the enemy (it can\'t act), and a Frozen enemy takes +50% from hits, added like every other status bonus (Reina: 1742 clean, 2613 Frozen, 7006 Airborne + Frozen).'],
+ ['Status ticks and crits','Ticks never crit: 0 crits in about 500 ticks of Poison, Bleed, Burn and Shock at 1–3 stacks.']
+];
+
+const TESTS=[
+/* ---------------- Most useful ---------------- */
+{id:'apply',grp:'Most useful',multi:1,title:'Status application per skill',why:'How much of a stack each skill puts on. This decides who counts as an Enabler, and comparing enemies shows whether resistance grows with enemy level.',
+ known:'<b>So far:</b> Johnny 2.5–3 Poison stacks on low-level mobs but 1.5–2 on Lv. 90 goblins. Charlotte\'s Ultimate = 1 stack. Roxy\'s Skill ≈ 1 stack, her dash attack ≈ ⅓.',
+ steps:['Start on an enemy with no stacks of the status.','Stun, Airborne, Knockdown and Break have no stacks: if the game shows a gauge, write how full it gets (0.5 = half); if it just triggers, write 1 and put how many presses it took in Presses.','Use one skill once (or the number of presses you note) and read the stack gauge. Estimate fractions: ½, ⅓, ¼ are fine.','Save, then repeat for the next skill or enemy. Each save is a new entry.'],
+ fields:[{k:'hero',l:'Hero',t:'select',o:HEROES},{k:'skill',l:'Skill',t:'text'},{k:'st',l:'Status',t:'select',o:[...STATUSES,'Break (Super Armor)']},{k:'enemy',l:'Enemy',t:'select',o:ENEMIES},{k:'lv',l:'Enemy level (if shown)'},{k:'broken',l:'Super Armor',t:'select',o:['Not broken','Broken']},{k:'presses',l:'Presses'},{k:'stacks',l:'Stacks afterwards'},{k:'note',l:'Notes (which hit triggers it, leftovers, anything odd)',t:'text',wide:1}],
+ keep:['hero','enemy','lv','st','broken'],
+ label:v=>`${v.hero} · ${v.skill||'?'} · ${v.enemy}${v.lv?' Lv. '+v.lv:''}${v.broken==='Broken'?' (broken)':''} · ${v.stacks||'?'} stacks / ${v.presses||1} press`,
+ run(v){const p=num(v.presses)||1,s=num(v.stacks);if(s==null||!v.skill)return null;const per=s/p;
+  return{cls:'ok',verdict:`${v.skill}: ${f(per,2)} ${v.st} stack${per===1?'':'s'} per press on ${v.enemy}${num(v.lv)?' (Lv. '+v.lv+')':''}.`,
+   lines:[per>=1?'A full stack or more per press: strong applier.':per>=0.5?'Half a stack or more per press.':'Under half a stack per press: a weak source on this enemy.']}}},
+/* ---------------- When you get the chance ---------------- */
+{id:'buffs',grp:'When you can',multi:1,title:'Skill buffs by level',why:'The level slider only changes damage %. With these numbers it can show buffs, heals and durations at every level too.',
+ known:'<b>So far:</b> Invisible\'s Crit Damage buff is +10% at Lv. 1 and +15% at Lv. 10 (×1.5, not ×1.75 like damage).',
+ steps:['Pick a skill whose buff, heal or duration shows a number (Invisible is the easiest).','Write the value at every level you can see, Lv. 1 first.'],
+ fields:[{k:'hero',l:'Hero',t:'select',o:BUFF_HEROES},{k:'skill',l:'Skill',t:'text'},{k:'what',l:'What changes (e.g. Crit Damage %)',t:'text'},{k:'vals',l:'Values from Lv. 1 upwards',t:'area',wide:1}],
+ keep:['hero'],
+ label:v=>`${v.hero} · ${v.skill||'?'} · ${v.what||''}`,
+ dupKey:v=>[v.hero,(v.skill||'').trim().toLowerCase()].join('|'),
+ run(v){const x=nums(v.vals);if(x.length<2||!v.skill)return null;const r=x.map(z=>z/x[0]);
+  return{cls:'ok',verdict:`${v.skill}: ${x.length} levels recorded.`,lines:[`Each level ÷ Lv. 1: <span class="v">${r.map(z=>f(z,3)).join(' · ')}</span>`]}}},
+{id:'gear',grp:'When you can',multi:1,title:'Gear upgrade row',why:'Blue, Purple and Green main stats don\'t follow one ratio to Orange. A full row for one piece pins the table down.',
+ steps:['Take one piece and note its main stat at every upgrade level you reach (+0, +1, …).','Pick the rarity first: it sets how many levels the boxes show. Substats are optional.'],
+ fields:[{k:'slot',l:'Slot',t:'select',o:['Helmet','Chest','Legs','Gloves','Boots']},{k:'rar',l:'Rarity',t:'select',o:['Green','Blue','Purple','Orange']},{k:'main',l:'Main stat name',t:'text',list:'gear-mains'},
+  {k:'vals',l:'Main stat at each upgrade level (Tab moves to the next)',t:'levels'},{k:'subs',l:'Substats (name and value, optional)',t:'area',wide:1}],
+ keep:['slot','rar'],
+ label:v=>`${v.rar} ${v.slot} · ${v.main||'?'} · ${String(v.vals||'').split(',').filter(s=>s.trim()).length} levels`,
+ dupKey:v=>[v.slot,v.rar,(v.main||'').trim().toLowerCase()].join('|'),
+ run(v){const x=nums(v.vals);if(x.length<2||!v.main)return null;const d=x.slice(1).map((z,i)=>z-x[i]);
+  return{cls:'ok',verdict:`${v.rar} ${v.slot}, ${v.main}: +0 to +${x.length-1} recorded.`,lines:[`Step per upgrade: <span class="v">${d.map(z=>f(z,2)).join(' · ')}</span>`]}}},
+{id:'defign',grp:'When you can',multi:1,title:'Defense Ignore and Armor Penetration',why:'Your 20% Defense Ignore test fits a standard defence formula, but one result fits many formulas. Four runs that change Armor Penetration and Defense Ignore separately show how the two work together, and from that how much each point is worth.',
+ known:'Already measured: Attack 2445, Armor Penetration 66: Defense Ignore 0% → 743, 20% → 829 (Wind Sword Lv.3, first hit).',
+ steps:['Same hero, same hit every time: Reina\'s first auto-attack hit (Wind Sword) on the Training Ogre, nothing on the dummy.','Run 1: Armor Penetration as high as you can, Defense Ignore 0%. Run 2: same gear with Earthshatterer active (20%).','Run 3 and 4: take off the pieces with Armor Penetration (as close to 0 as you can), then again without and with Earthshatterer.','For every run, write Attack from the stats panel (swapping gear changes it; the result is divided by Attack) and the non-crit number.'],
+ fields:[{k:'atk',l:'Attack (stats panel)',t:'num'},{k:'ap',l:'Armor Penetration',t:'num'},{k:'di',l:'Defense Ignore %',t:'num'},{k:'hit',l:'Non-crit damage',t:'num'},{k:'crit',l:'Crit damage (optional)',t:'num'},{k:'note',l:'Notes (skill level, anything unusual)',t:'text'}],
+ keep:['atk','ap'],
+ label:v=>`AP ${v.ap||'?'} · DI ${v.di||0}% · ${v.hit||'?'} at ${v.atk||'?'} Attack`,
+ dupKey:v=>[String(v.ap).trim(),String(v.di||0).trim(),String(v.atk).trim()].join('|'),
+ run(v){const a=parseFloat(v.atk),h=parseFloat(v.hit),c=parseFloat(v.crit);if(!(a>0)||!(h>0)||v.ap===''||v.ap==null)return null;const r=h/a*1000;
+  return{cls:'ok',verdict:`${f(r,2)} damage per 1,000 Attack (Armor Penetration ${v.ap}, Defense Ignore ${v.di||0}%).`,lines:[c>0?`Crit ÷ non-crit: <span class="v">${f(c/h,3)}</span> (should be 1 + your Critical Damage)`:'']}}},
+{id:'lvlcost',grp:'When you can',multi:1,title:'Level-up cost, one step at a time',why:'Gold isn\'t a price per level: the game charges Gold for each EXP item you feed. Writing down exactly which items one level used, and the Gold shown, lets Claude work out the Gold per item. After that, the cost of any level range can be calculated from the EXP table alone, without anyone listing their items.',
+ known:'Item EXP (from your inventory): Hero: Basic Combat Text 500, Advanced 2,000, Core 6,000. Karma: Arcana of War 300, Beginnings 1,000, Peace 4,000, Future 10,000. Gear: Mana Shard 200, Crystal 500, Ore 1,500, Raw Mana Stone 5,000.',
+ steps:['Level exactly one step: from level N to N+1 (or +N to +N+1 on gear).','Before confirming, note the EXP bar: how much it needs for the next level, and how much is already in it (left over from the last level).','Write the items the game selected, like "2 Basic Combat Text, 1 Advanced Combat Text", and the Gold it shows.','Confirm the level-up and check how much EXP is left in the bar afterwards (the overflow).','Breakthroughs (20, 30, 40, 50, 60) and skill levels: put the Gold and the materials in the breakthrough / skill fields instead.'],
+ fields:[{k:'what',l:'What',t:'select',o:['Hero','Karma','Gear','Skill','Hero breakthrough','Karma breakthrough']},{k:'name',l:'Hero / Karma / piece (optional)',t:'text'},{k:'from',l:'From level',t:'num'},{k:'to',l:'To level (where it ended up)',t:'num'},{k:'need',l:'EXP needed for each level passed (e.g. 150, 250)',t:'text'},{k:'inbar',l:'EXP already in the bar',t:'num'},{k:'items',l:'Items used (e.g. 2 Basic Combat Text, 1 Advanced Combat Text)',t:'text',wide:1},{k:'gold',l:'Gold shown',t:'num'},{k:'after',l:'EXP left in the bar after levelling',t:'num'},{k:'mats',l:'Breakthrough / skill materials (if any)',t:'text',wide:1}],
+ keep:['what','name'],
+ label:v=>`${v.what} ${v.name?v.name+' ':''}${v.from||'?'}→${v.to||(+v.from||0)+1} · ${v.gold||'?'} Gold${v.items?' · '+v.items:''}`,
+ dupKey:v=>[v.what,(v.name||'').trim().toLowerCase(),String(v.from).trim()].join('|'),
+ run(v){const X={'basic combat text':500,'advanced combat text':2000,'core combat text':6000,'arcana of war':300,'arcana of beginnings':1000,'arcana of peace':4000,'arcana of the future':10000,'mana shard':200,'mana crystal':500,'mana ore':1500,'raw mana stone':5000};
+  const g=parseFloat(v.gold);if(!(v.from>0)||!(g>=0))return null;let fed=0,unk=[];
+  String(v.items||'').split(',').map(x=>x.trim()).filter(Boolean).forEach(x=>{const m=x.match(/^(\d+)\s*x?\s*(.+)$/i);const n=m?+m[1]:1,nm=(m?m[2]:x).trim().toLowerCase();const e=X[nm]??X[Object.keys(X).find(k=>k.startsWith(nm)||nm.startsWith(k))];e?fed+=n*e:unk.push(x);});
+  const need=String(v.need||'').split(/[,;]/).map(x=>parseFloat(x.replace(/\s/g,''))).filter(x=>x>0).reduce((a,b)=>a+b,0),bar=parseFloat(v.inbar)||0;
+  return{cls:unk.length?'warn':'ok',verdict:fed?`${f(fed,0)} EXP fed for ${f(g,0)} Gold = ${f(g/fed,3)} Gold per EXP.`:`${f(g,0)} Gold recorded.`,lines:[need>0&&fed?`Overflow expected: ${f(bar+fed-need,0)} EXP (check it against the bar after levelling).`:'',unk.length?`Not recognised: ${unk.join(', ')}. Check the spelling.`:'']}}},
+/* ---------------- Later ---------------- */
+];
+
+const GROUPS=[['Most useful','Do these first: they change tiers, tags and every level-70 stat on the site.'],['When you can','Smaller corrections to builds and the level slider.']];
+const state={},saved={},savedDocs={};let db=null;
+function fieldHtml(t,fd){const id=`${t.id}-${fd.k}`;const lab=`<label class="${fd.wide?'wide':''}" for="${id}">${fd.l}`;
+  if(fd.t==='select')return `${lab}<select id="${id}" data-t="${t.id}" data-k="${fd.k}">${fd.o.map(o=>`<option>${o}</option>`).join('')}</select></label>`;
+  if(fd.t==='levels')return `<p class="note" style="grid-column:1/-1;margin:0">${fd.l}</p><div class="lvgrid" id="${id}" role="group" aria-label="${fd.l}"></div>`;
+  if(fd.t==='area')return `${lab}<textarea id="${id}" data-t="${t.id}" data-k="${fd.k}"></textarea></label>`;
+  return `${lab}<input id="${id}" data-t="${t.id}" data-k="${fd.k}"${fd.list?` list="${fd.list}"`:''} type="text" ${fd.t==='text'?'':'inputmode="decimal"'} autocomplete="off"></label>`;}
+const MAXLV={Green:6,Blue:9,Purple:12,Orange:15};
+function renderLevels(){const g=$('#gear-vals');if(!g)return;const v=state.gear||{};const max=MAXLV[v.rar||'Green'];const cur=String(v.vals||'').split(',').map(s=>s.trim());
+  g.innerHTML=Array.from({length:max+1},(_,i)=>`<label for="gear-lv${i}"><span>+${i}</span><input id="gear-lv${i}" data-lv="${i}" type="text" inputmode="decimal" autocomplete="off" value="${(cur[i]||'').replace(/"/g,'')}"></label>`).join('');}
+function syncLevels(){const ins=[...document.querySelectorAll('#gear-vals input')];const vals=ins.map(x=>x.value.trim());while(vals.length&&!vals[vals.length-1])vals.pop();(state.gear??={}).vals=vals.join(', ');}
+const OPEN_LISTS=new Set();const DUMMIES=['Training Ogre','Goblin dummies'];
+document.addEventListener('toggle',e=>{const d=e.target;if(d.dataset&&d.dataset.list){d.open?OPEN_LISTS.add(d.dataset.list):OPEN_LISTS.delete(d.dataset.list);}},true);
+function skillKey(v){return [v.hero,(v.skill||'').trim().toLowerCase(),v.st].join('|');}
+function applyCoverage(list){const m={};list.forEach(d=>{const v=d.inputs||{};if(!DUMMIES.includes(v.enemy))return;(m[skillKey(v)]??=new Set()).add(v.enemy);});const keys=Object.keys(m);return{m,total:keys.length,done:keys.filter(k=>m[k].size===DUMMIES.length).length};}
+function coverTag(cov,v){if(!DUMMIES.includes(v.enemy))return '';const have=cov.m[skillKey(v)]||new Set();const miss=DUMMIES.filter(x=>!have.has(x));return miss.length?`<span class="tag-miss">Missing: ${miss.join(', ')}</span>`:'<span class="tag-ok">Tested on both dummies</span>';}
+function build(){let n=0;
+  $('#toc').innerHTML=GROUPS.map(([g])=>`<div class="grp"><b>${g}</b>${TESTS.filter(t=>t.grp===g).map(t=>`<a href="#${t.id}" id="toc-${t.id}">${t.title}</a>`).join('')}</div>`).join('');
+  $('#tests').innerHTML=GROUPS.map(([g,intro])=>`<section class="section"><h2>${g}</h2><p class="intro">${intro}</p>${TESTS.filter(t=>t.grp===g).map(t=>{n++;return `<article class="test" id="${t.id}" aria-labelledby="h-${t.id}">
+   <h3 id="h-${t.id}"><span class="no">TEST ${String(n).padStart(2,'0')}</span>${t.title}${t.multi?' <span class="multi">many</span>':''}<span class="saved" id="saved-${t.id}"></span></h3>
+   <p class="why">${t.why}</p>${t.known?`<p class="known">${t.known}</p>`:''}<ol class="steps">${t.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+   <div class="fields">${t.fields.map(fd=>fieldHtml(t,fd)).join('')}</div>
+   <div class="result" id="res-${t.id}"><p class="note">Fill in the fields to see the result.</p></div>
+   <p class="dup" id="dup-${t.id}" hidden></p><div class="row"><button id="save-${t.id}" data-save="${t.id}" disabled>${t.multi?'Save as new entry':'Save'}</button><span class="note" id="msg-${t.id}"></span></div><div class="saved-list" id="list-${t.id}" hidden></div></article>`}).join('')}</section>`).join('');
+  $('#doneList').innerHTML=DONE.map(([a,b])=>`<li><b>${a}</b><span>done</span><br>${b}</li>`).join('');
+  document.addEventListener('input',e=>{if(e.target.dataset.lv!=null){syncLevels();update('gear');draft();return;}const el=e.target.closest('[data-t]');if(!el)return;(state[el.dataset.t]??={})[el.dataset.k]=el.value;if(el.dataset.t==='gear'&&el.dataset.k==='rar'){syncLevels();renderLevels();}update(el.dataset.t);draft();});
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-del]');if(!b)return;if(b.dataset.armed){b.textContent='Deleting…';db&&db.doc('results/'+b.dataset.del).delete().catch(()=>{b.textContent='Couldn\'t delete';});}else{b.dataset.armed='1';b.textContent='Delete? Click again';setTimeout(()=>{if(b.isConnected){delete b.dataset.armed;b.textContent='Delete';}},4000);}});
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-save]');if(b)save(b.dataset.save);});
+  TESTS.forEach(t=>update(t.id));renderLevels();initGearCov();}
+const GEAR_MAINS=['Attack','Max HP','Defense','Attack Power Up','Max HP Up','Defense Up','Critical Rate','Critical Damage','Critical Hit Resistance','Critical Damage Reduction'];
+const GEAR_SLOTS_T=['Helmet','Chest','Legs','Gloves','Boots'],GEAR_RARS=['Green','Blue','Purple','Orange'];
+function normMain(x){x=String(x||'').trim().toLowerCase().replace(/\s+/g,' ');return x==='critical hit chance'?'critical rate':x;}
+function gearHave(slot,rar){const h=new Set();(savedDocs.gear||[]).forEach(d=>{const v=d.inputs||{};if(v.slot===slot&&v.rar===rar)h.add(normMain(v.main));});return h;}
+function renderGearCov(){const box=$('#gcov');if(!box)return;const v=state.gear||{};const slot=v.slot||'Helmet',rar=v.rar||'Green';const h=gearHave(slot,rar);
+ const n=GEAR_MAINS.filter(m=>h.has(normMain(m))).length;const extra=[...h].filter(x=>x&&!GEAR_MAINS.some(m=>normMain(m)===x));
+ const grid=`<table><tr><th></th>${GEAR_RARS.map(r=>`<th>${r}</th>`).join('')}</tr>${GEAR_SLOTS_T.map(sl=>`<tr><th>${sl}</th>${GEAR_RARS.map(r=>{const k=GEAR_MAINS.filter(m=>gearHave(sl,r).has(normMain(m))).length;return `<td class="${k===GEAR_MAINS.length?'full':k?'part':'none'}${sl===slot&&r===rar?' cur':''}"><button type="button" data-gpick="${sl}|${r}" title="Show ${r} ${sl}">${k}/${GEAR_MAINS.length}</button></td>`}).join('')}</tr>`).join('')}</table>`;
+ box.innerHTML=`<h4>${rar} ${slot}: ${n}/${GEAR_MAINS.length} main stats saved</h4><ul>${GEAR_MAINS.map(m=>`<li class="${h.has(normMain(m))?'y':'n'}">${m}</li>`).join('')}</ul>${extra.length?`<p class="note" style="margin:6px 0 0">Also saved under other names: ${extra.join(', ')}</p>`:''}${grid}`;}
+function initGearCov(){const art=$('#gear');if(!art)return;const fl=art.querySelector('.fields');const box=document.createElement('aside');box.id='gcov';box.className='gcov';box.setAttribute('aria-label','Main stats saved for this slot and rarity');fl.after(box);
+ const dl=document.createElement('datalist');dl.id='gear-mains';dl.innerHTML=GEAR_MAINS.map(m=>`<option value="${m}">`).join('');document.body.appendChild(dl);
+ if('IntersectionObserver' in window)new IntersectionObserver(es=>es.forEach(e=>box.classList.toggle('vis',e.isIntersecting)),{threshold:0}).observe(art);else box.classList.add('vis');
+ box.addEventListener('click',e=>{const b=e.target.closest('[data-gpick]');if(!b)return;const [sl,r]=b.dataset.gpick.split('|');fill('gear',{slot:sl,rar:r});draft();});
+ renderGearCov();}
+function update(id){if(id==='gear')renderGearCov();const t=TESTS.find(x=>x.id===id);if(!t)return;const v=state[id]||{};const out=$('#res-'+id);
+  t.fields.forEach(fd=>{if(fd.t==='select'&&v[fd.k]==null)v[fd.k]=fd.o[0];});state[id]=v;
+  let r=null;try{r=t.run(v)}catch(e){r=null}
+  if(!r){out.className='result';out.innerHTML='<p class="note">Fill in the fields to see the result.</p>';}
+  else{out.className='result '+r.cls;out.innerHTML=`<p class="verdict">${r.verdict}</p>`+r.lines.filter(Boolean).map(l=>`<p>${l}</p>`).join('');}
+  const dp=$('#dup-'+id);if(dp){const k=t.dupKey&&t.dupKey(v);const hit=k&&(savedDocs[id]||[]).find(d=>t.dupKey(d.inputs||{})===k);dp.hidden=!hit;if(hit)dp.textContent='Already saved: '+t.label(hit.inputs)+' ('+String(hit.savedAt).slice(0,10)+'). Saving again adds a second entry.';}
+  $('#save-'+id).disabled=!db;}
+function fill(id,v){if(!TESTS.find(x=>x.id===id))return;Object.entries(v||{}).forEach(([k,val])=>{const el=document.getElementById(`${id}-${k}`);if(el)el.value=val;});state[id]={...(state[id]||{}),...v};if(id==='gear')renderLevels();update(id);}
+function resetTest(t){const keep={};(t.keep||[]).forEach(k=>{if(state[t.id]&&state[t.id][k]!=null)keep[k]=state[t.id][k];});state[t.id]={};
+  t.fields.forEach(fd=>{const el=document.getElementById(`${t.id}-${fd.k}`);if(!el||fd.t==='levels')return;if(keep[fd.k]!=null)el.value=keep[fd.k];else el.value=fd.t==='select'?fd.o[0]:'';state[t.id][fd.k]=el.value;});
+  if(t.id==='gear'){state.gear.vals='';renderLevels();}update(t.id);draft();}
+function draft(){try{localStorage.setItem('ds-testkit-draft-v2',JSON.stringify(state))}catch(e){}}
+function result(id){const t=TESTS.find(x=>x.id===id);try{return t.run(state[id]||{})}catch(e){return null}}
+async function save(id){const msg=$('#msg-'+id);if(!db)return;const t=TESTS.find(x=>x.id===id);msg.textContent='Saving…';
+  const r=result(id);const tmp=document.createElement('div');
+  const plain=r?[r.verdict,...r.lines.filter(Boolean)].map(s=>{tmp.innerHTML=s;return tmp.textContent}).join(' | '):'';
+  const docId=t.multi?`${id}-${Date.now()}`:id;
+  try{await db.doc('results/'+docId).set({test:t.title,testId:id,inputs:{...(state[id]||{})},summary:plain,savedAt:new Date().toISOString()});
+    msg.textContent=t.multi?'Saved as a new entry. The form is cleared for the next one.':'Saved. Claude can read this now. The form is cleared.';resetTest(t);}
+  catch(e){msg.textContent=e&&e.code==='quota_exceeded'?'Storage is full.':'Couldn\'t save. Your entries are still on this page; try again.';}}
+build();
+try{const d=JSON.parse(localStorage.getItem('ds-testkit-draft-v2')||'{}');Object.entries(d).forEach(([id,v])=>fill(id,v))}catch(e){}
+(async()=>{const s=$('#dbStatus');
+  db=window.claude?.use?await window.claude.use('db'):null;
+  if(!db){s.textContent='Saving is unavailable in this view. Results still calculate; tell Claude the numbers directly.';s.className='status bad';TESTS.forEach(t=>update(t.id));return;}
+  s.textContent='Saving is on. Saved tests are marked green.';s.className='status ok';TESTS.forEach(t=>update(t.id));
+  db.collection('results').onSnapshot(snap=>{Object.keys(savedDocs).forEach(k=>delete savedDocs[k]);
+     snap.docs.forEach(d=>{const v=d.data()||{};const tid=v.testId||d.id;(savedDocs[tid]??=[]).push({...v,_id:d.id});});
+     TESTS.forEach(t=>{const list=(savedDocs[t.id]||[]).sort((a,b)=>String(b.savedAt).localeCompare(String(a.savedAt)));const el=$('#saved-'+t.id),toc=$('#toc-'+t.id),box=$('#list-'+t.id);
+      if(el)el.textContent=list.length?(t.multi?`${list.length} saved`:'saved '+String(list[0].savedAt||'').slice(0,10)):'';if(toc)toc.classList.toggle('done',!!list.length);
+      if(box){box.hidden=!list.length;const tmp=document.createElement('div');const cov=t.id==='apply'?applyCoverage(list):null;box.innerHTML=`<details${OPEN_LISTS.has(t.id)?' open':''} data-list="${t.id}"><summary><h4>Saved (${list.length})${cov?` <span class="cov">${cov.done} of ${cov.total} skills on both dummies</span>`:''}</h4></summary><ul>${list.map(d=>{const txt=t.label?t.label(d.inputs||{}):(d.summary||'').split(' | ')[0];tmp.textContent=txt;const tag=cov?coverTag(cov,d.inputs||{}):'';return `<li><span>${tmp.innerHTML}</span>${tag}<span class="d">${String(d.savedAt||'').slice(0,16).replace('T',' ')}</span><button type="button" class="ghost" data-del="${d._id}">Delete</button></li>`}).join('')}</ul></details>`;}
+      update(t.id);});},
+   ()=>{s.textContent='Lost the connection to storage. Reload the page to save again.';s.className='status bad';});
+})();
+</script>

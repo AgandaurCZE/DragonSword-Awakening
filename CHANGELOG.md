@@ -7,6 +7,9 @@ David requested always checking for newer commits and deployments, and applying 
 
 
 
+
+## 4 Nov 2026 — Handoff files (Claude)
+- `docs/NEW_CHAT_BRIEFING.md` (briefing for a new chat), `docs/testkit/dragonsword-test-kit.html` (Test Kit backup), `tools/image/` (Codex card-cutting scripts).
 ## 4 Nov 2026 — Defense formula, costs to level 50, titles 25/109 (Claude)
 - New `DEFENSE_MODEL`: damage ∝ K / (K + Defense × (1 − Defense Ignore) − Armor Penetration); Training Ogre Defense 1,000, K 1,000; fits all 7 test points within 0.06%.
 - `LEVEL_COSTS`: Arcana of the Future 3,000 Gold; Hero/Karma EXP to level 50; breakthrough examples (Karma 50 = 50,000 Gold).
