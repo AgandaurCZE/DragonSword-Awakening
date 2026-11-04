@@ -1,3 +1,7 @@
+## 4 Nov 2026 — AGENTS.md trimmed, test 04 done (Claude)
+- `AGENTS.md` is now rules, workflow and a key index (loaded with every message). All the detail moved unchanged to the new `docs/DATA_REFERENCE.md`.
+- `DEFENSE_MODEL`: Berpedin is Lv.80, above the Lv.90 dummies' Defense, so Defense doesn't follow level alone.
+- Test Kit: test 04 moved to Already answered (entries kept in storage); the level-up test keeps number 05.
 ## 4 Nov 2026 — Defence formula confirmed on a World Boss; notes brought up to date (Claude)
 - `DEFENSE_MODEL`: from David's 3 Test Kit hits on Berpedin, the Crushing Darkness: K = 1,000 is a constant and Berpedin has about 1,197 Defense (1,193–1,201). All 10 test hits fit within 0.5 damage. Added enemies (rough ones marked), checks and what each point is worth. New finding in `DAMAGE_TESTS`. Not on the page.
 - Stale notes fixed in `AGENTS.md`, `CHATGPT.md`, `docs/PROJECT_HANDOFF.txt` and `docs/NEW_CHAT_BRIEFING.md`: Goblin alignment done, Currency now 4 discovered and 1 locked, full preview page list, item catalogues in use, levelling calculator waits on levels 51–70. This file's newest-first order fixed.

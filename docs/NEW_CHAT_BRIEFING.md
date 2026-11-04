@@ -17,7 +17,7 @@ Paste this whole file into the first message of a new chat. It replaces the memo
 ## The project
 - **Site:** https://agandaurcze.github.io/DragonSword-Awakening/ (GitHub Pages, repo `AgandaurCZE/DragonSword-Awakening`, branch `main`). Every push goes live in about a minute.
 - **Clone:** `/home/claude/dragonsword-awakening`. Attach the repo with the add_repo tool if the new session doesn't have it.
-- **Read `AGENTS.md` first.** It is the full manual: every data.json key, the rules, the tools and the workflow. `docs/PROJECT_HANDOFF.txt` and `CHANGELOG.md` record everything done, newest notes at the end and top respectively.
+- **`AGENTS.md`** has the rules, a key index and the workflow. `docs/DATA_REFERENCE.md` is the full manual: open only the section a task needs. `docs/PROJECT_HANDOFF.txt` and `CHANGELOG.md` record everything done, newest notes at the end and top respectively.
 - **Rules from AGENTS.md:**
   - Work on `main` only.
   - Before work: `git pull`. Before push: `git fetch` + rebase.
@@ -40,7 +40,7 @@ Paste this whole file into the first message of a new chat. It replaces the memo
     - 01: status application.
     - 02: skill buffs by level.
     - 03: gear main-stat rows. Has a coverage panel showing which main stats are saved per slot and rarity.
-    - 04: Defense Ignore and Armor Penetration.
+    - 04: Defense Ignore and Armor Penetration (done 4 Nov 2026; off the page, entries kept).
     - 05: level-up cost, one step at a time (Hero, Karma, Gear, Skill, breakthroughs).
   - A backup copy of the page is in the repo at `docs/testkit/dragonsword-test-kit.html`.
   - To change it, edit that file and publish to the same artifact URL (Artifact tool, `url` = the link above). A new chat must read the artifact first.
@@ -88,7 +88,6 @@ Paste this whole file into the first message of a new chat. It replaces the memo
 ## Open / next steps
 - **From David:**
   - EXP for levels 51–70 and the breakthrough at 60.
-  - Berpedin's level (for how Defense scales with level).
   - Fame stage rewards and the "Name of the Strong" icon.
   - Quest items.
   - The Guides icon (Codex book).

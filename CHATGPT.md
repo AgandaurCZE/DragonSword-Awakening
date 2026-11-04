@@ -16,7 +16,7 @@ Restored LF line endings without changing page content, and added an explicit pr
 
 # ChatGPT-specific project workflow
 
-Read `AGENTS.md` before making changes; it is the repository's source of truth. Do not modify `AGENTS.md` or `CLAUDE.md` unless the user explicitly asks.
+Read `AGENTS.md` before making changes; it is the repository's source of truth, with the detail in `docs/DATA_REFERENCE.md`. Do not modify `AGENTS.md` or `CLAUDE.md` unless the user explicitly asks.
 
 For dungeon artwork, read [the workflow and pending fixes](docs/DUNGEON_ARTWORK_WORKFLOW.md). It records David's Proceed/Stop approval flow, the character/framing lessons, and the Difficulty I goblin alignment fix (completed 3 Nov 2026).
 

@@ -127,7 +127,7 @@ const DONE=[
  ['Attack scaling','Damage rises exactly with Attack (Charlotte 684 → 637 Attack, hits ×0.931).'],
  ['Crit damage','A crit deals normal × (1 + Crit Damage). Each hit of a multi-hit attack rolls its own crit.'],
  ['Crit chance','Settled by patch 1.1.0: crits land at exactly your Crit Rate, and monsters no longer resist crits.'],
- ['Enemy defense','Armor Penetration and Defense Ignore both raise damage a little on the dummy (about +0.05% per Armor Penetration point).'],
+ ['Defense Ignore and Armor Penetration (test 04)','Damage = Attack × skill % × 1000 / (1000 + Defense × (1 − Defense Ignore) − Armor Penetration). All 10 hits fit within 0.5 damage. Training Ogre Defense 1,000; Berpedin Lv.80 about 1,197. Your 8 saved entries are kept in storage.'],
  ['Status bonuses','Hits on an enemy with Poison, Bleed, Burn or Shock deal ×1.5; Airborne, Knockdown and Stun ×2. Bonuses add: Stun + Airborne = ×3. Additional Attack Power adds to Attack and Additional Damage multiplies, on afflicted hits only.'],
  ['Status ticks','Poison, Bleed, Burn and Shock tick 5 times over 10 s for 50 / 75 / 100% of the first applier\'s Attack at 1 / 2 / 3 stacks.'],
  ['Trait Dungeon weakness','A weak boss doubles that status\'s hit bonus (Poison +100%, Airborne +200%). Ticks and other hits are unchanged.'],
@@ -169,16 +169,7 @@ const TESTS=[
  dupKey:v=>[v.slot,v.rar,(v.main||'').trim().toLowerCase()].join('|'),
  run(v){const x=nums(v.vals);if(x.length<2||!v.main)return null;const d=x.slice(1).map((z,i)=>z-x[i]);
   return{cls:'ok',verdict:`${v.rar} ${v.slot}, ${v.main}: +0 to +${x.length-1} recorded.`,lines:[`Step per upgrade: <span class="v">${d.map(z=>f(z,2)).join(' · ')}</span>`]}}},
-{id:'defign',grp:'When you can',multi:1,title:'Defense Ignore and Armor Penetration',why:'Your 20% Defense Ignore test fits a standard defence formula, but one result fits many formulas. Four runs that change Armor Penetration and Defense Ignore separately show how the two work together, and from that how much each point is worth.',
- known:'Already measured: Attack 2445, Armor Penetration 66: Defense Ignore 0% → 743, 20% → 829 (Wind Sword Lv.3, first hit).',
- steps:['Same hero, same hit every time: Reina\'s first auto-attack hit (Wind Sword) on the Training Ogre, nothing on the dummy.','Run 1: Armor Penetration as high as you can, Defense Ignore 0%. Run 2: same gear with Earthshatterer active (20%).','Run 3 and 4: take off the pieces with Armor Penetration (as close to 0 as you can), then again without and with Earthshatterer.','For every run, write Attack from the stats panel (swapping gear changes it; the result is divided by Attack) and the non-crit number.'],
- fields:[{k:'atk',l:'Attack (stats panel)',t:'num'},{k:'ap',l:'Armor Penetration',t:'num'},{k:'di',l:'Defense Ignore %',t:'num'},{k:'hit',l:'Non-crit damage',t:'num'},{k:'crit',l:'Crit damage (optional)',t:'num'},{k:'note',l:'Notes (skill level, anything unusual)',t:'text'}],
- keep:['atk','ap'],
- label:v=>`AP ${v.ap||'?'} · DI ${v.di||0}% · ${v.hit||'?'} at ${v.atk||'?'} Attack`,
- dupKey:v=>[String(v.ap).trim(),String(v.di||0).trim(),String(v.atk).trim()].join('|'),
- run(v){const a=parseFloat(v.atk),h=parseFloat(v.hit),c=parseFloat(v.crit);if(!(a>0)||!(h>0)||v.ap===''||v.ap==null)return null;const r=h/a*1000;
-  return{cls:'ok',verdict:`${f(r,2)} damage per 1,000 Attack (Armor Penetration ${v.ap}, Defense Ignore ${v.di||0}%).`,lines:[c>0?`Crit ÷ non-crit: <span class="v">${f(c/h,3)}</span> (should be 1 + your Critical Damage)`:'']}}},
-{id:'lvlcost',grp:'When you can',multi:1,title:'Level-up cost, one step at a time',why:'Gold isn\'t a price per level: the game charges Gold for each EXP item you feed. Writing down exactly which items one level used, and the Gold shown, lets Claude work out the Gold per item. After that, the cost of any level range can be calculated from the EXP table alone, without anyone listing their items.',
+{id:'lvlcost',no:5,grp:'When you can',multi:1,title:'Level-up cost, one step at a time',why:'Gold isn\'t a price per level: the game charges Gold for each EXP item you feed. Writing down exactly which items one level used, and the Gold shown, lets Claude work out the Gold per item. After that, the cost of any level range can be calculated from the EXP table alone, without anyone listing their items.',
  known:'Item EXP (from your inventory): Hero: Basic Combat Text 500, Advanced 2,000, Core 6,000. Karma: Arcana of War 300, Beginnings 1,000, Peace 4,000, Future 10,000. Gear: Mana Shard 200, Crystal 500, Ore 1,500, Raw Mana Stone 5,000.',
  steps:['Level exactly one step: from level N to N+1 (or +N to +N+1 on gear).','Before confirming, note the EXP bar: how much it needs for the next level, and how much is already in it (left over from the last level).','Write the items the game selected, like "2 Basic Combat Text, 1 Advanced Combat Text", and the Gold it shows.','Confirm the level-up and check how much EXP is left in the bar afterwards (the overflow).','Breakthroughs (20, 30, 40, 50, 60) and skill levels: put the Gold and the materials in the breakthrough / skill fields instead.'],
  fields:[{k:'what',l:'What',t:'select',o:['Hero','Karma','Gear','Skill','Hero breakthrough','Karma breakthrough']},{k:'name',l:'Hero / Karma / piece (optional)',t:'text'},{k:'from',l:'From level',t:'num'},{k:'to',l:'To level (where it ended up)',t:'num'},{k:'need',l:'EXP needed for each level passed (e.g. 150, 250)',t:'text'},{k:'inbar',l:'EXP already in the bar',t:'num'},{k:'items',l:'Items used (e.g. 2 Basic Combat Text, 1 Advanced Combat Text)',t:'text',wide:1},{k:'gold',l:'Gold shown',t:'num'},{k:'after',l:'EXP left in the bar after levelling',t:'num'},{k:'mats',l:'Breakthrough / skill materials (if any)',t:'text',wide:1}],
@@ -212,7 +203,7 @@ function coverTag(cov,v){if(!DUMMIES.includes(v.enemy))return '';const have=cov.
 function build(){let n=0;
   $('#toc').innerHTML=GROUPS.map(([g])=>`<div class="grp"><b>${g}</b>${TESTS.filter(t=>t.grp===g).map(t=>`<a href="#${t.id}" id="toc-${t.id}">${t.title}</a>`).join('')}</div>`).join('');
   $('#tests').innerHTML=GROUPS.map(([g,intro])=>`<section class="section"><h2>${g}</h2><p class="intro">${intro}</p>${TESTS.filter(t=>t.grp===g).map(t=>{n++;return `<article class="test" id="${t.id}" aria-labelledby="h-${t.id}">
-   <h3 id="h-${t.id}"><span class="no">TEST ${String(n).padStart(2,'0')}</span>${t.title}${t.multi?' <span class="multi">many</span>':''}<span class="saved" id="saved-${t.id}"></span></h3>
+   <h3 id="h-${t.id}"><span class="no">TEST ${String(t.no||n).padStart(2,'0')}</span>${t.title}${t.multi?' <span class="multi">many</span>':''}<span class="saved" id="saved-${t.id}"></span></h3>
    <p class="why">${t.why}</p>${t.known?`<p class="known">${t.known}</p>`:''}<ol class="steps">${t.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
    <div class="fields">${t.fields.map(fd=>fieldHtml(t,fd)).join('')}</div>
    <div class="result" id="res-${t.id}"><p class="note">Fill in the fields to see the result.</p></div>
