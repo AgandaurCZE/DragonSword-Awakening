@@ -570,6 +570,12 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .gd-card:hover{border-color:var(--accent)}.gd-card img,.gd-card .gd-ph{width:76px;height:76px;object-fit:cover;flex:none;background:var(--panel2)}
 .gd-card .gd-arrow{margin-left:auto;color:var(--muted)}.gd-card.soon{opacity:.6;cursor:default}.gd-card .gd-soon{font-size:11px;font-weight:800;color:#ffcf5a;margin-left:auto}
 .gd-empty{color:var(--muted);text-align:center;padding:16px;grid-column:1/-1;margin:0}.nav-item.nav-soon{opacity:.45;cursor:default}
+.it-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}.it-bar input,.it-bar select{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:7px 9px;font:inherit}.it-bar input{flex:1 1 260px;min-width:200px;width:auto!important}.it-bar select{flex:0 0 auto;width:auto!important}
+.it-tab{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:7px 12px;font:inherit;font-weight:700;cursor:pointer}.it-tab.on{border-color:var(--accent);color:var(--accent)}
+.it-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}.it-card{display:flex;gap:10px;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--rc,#666);border-radius:8px;padding:10px}.it-card img{width:56px;height:56px;border-radius:6px;flex:none;background:#0003}
+.it-card b{display:block}.it-card small{color:var(--muted)}.it-card p{margin:4px 0 0;font-size:13px}.it-src{font-size:12px;color:#9fd3e0}
+.ach-row{display:flex;gap:10px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px;margin-bottom:6px}.ach-row.done{border-color:#5fd38d88}.ach-row input{width:18px;height:18px;margin-top:2px}
+.ach-row b{display:block}.ach-row small{color:var(--muted)}.ach-note{background:var(--panel);border:1px dashed var(--line);border-radius:8px;padding:10px 12px;margin:10px 0;font-size:14px}
 </style>
 </head>
 <body>
@@ -591,6 +597,8 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
   <button class="nav-item nav-subitem" data-page="currency"><span class="nav-icon">◇</span><span class="nav-label">Currency Dungeons</span></button>
  </div>
  <button class="nav-item" data-page="cookbook"><span class="nav-icon" id="navIconCookbook">♨</span><span class="nav-label">Cookbook</span></button>
+ <button class="nav-item" data-page="items"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span class="nav-label">Item Database</span></button>
+ <button class="nav-item" data-page="achievements"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span><span class="nav-label">Achievements</span></button>
  <button class="nav-item" data-page="guides"><span class="nav-icon" id="navIconGuides"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span><span class="nav-label">Guides</span></button>
  <button class="nav-item" data-page="tools"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><span class="nav-label">Tools</span></button>
  <button class="nav-item nav-soon" data-page="news" disabled title="Coming later"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0V11h4"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg></span><span class="nav-label">News</span></button>
@@ -657,6 +665,14 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <section class="simple-page" id="traitPage" hidden>
  <div class="gear-heading"><h2>TRAIT DUNGEONS</h2><span>Bosses weak to some archetypes and immune to others</span></div>
  <div id="traitBody"></div>
+</section>
+<section class="simple-page" id="itemsPage" hidden>
+ <div class="gear-heading"><h2>ITEM DATABASE</h2><span>Every item recorded from the game: what it does and where to get it</span></div>
+ <div id="itemsBody"></div>
+</section>
+<section class="simple-page" id="achievementsPage" hidden>
+ <div class="gear-heading"><h2>ACHIEVEMENTS</h2><span>Tick the ones you have; your ticks are saved in this browser</span></div>
+ <div id="achBody"></div>
 </section>
 <section class="simple-page" id="guidesPage" hidden>
  <div class="gear-heading"><h2>GUIDES</h2><span>Guides by topic. Work in progress: cards marked "soon" are placeholders.</span></div>
@@ -1672,7 +1688,7 @@ function renderProfilePatches(h){const P=PATCH_NOTES||{};const rows=(P.patches||
 
 
 // ---- Simple pages: Familiars, Titles, Trait Dungeons ----
-const PAGE_IDS={tier:'tierPage',heroes:'heroesPage',teams:'teamsPage',gear:'gearPage',karma:'karmaPage',patches:'patchesPage',familiars:'familiarsPage',titles:'titlesPage',dungeons:'dungeonsPage',trait:'traitPage',currency:'currencyPage',cookbook:'cookbookPage',guides:'guidesPage',tools:'toolsPage'};
+const PAGE_IDS={tier:'tierPage',heroes:'heroesPage',teams:'teamsPage',gear:'gearPage',karma:'karmaPage',patches:'patchesPage',familiars:'familiarsPage',titles:'titlesPage',dungeons:'dungeonsPage',trait:'traitPage',currency:'currencyPage',cookbook:'cookbookPage',guides:'guidesPage',items:'itemsPage',achievements:'achievementsPage',tools:'toolsPage'};
 function navIcon(id,src){const el=$(id);if(!el||!src)return;const im=new Image();im.onload=()=>{el.textContent='';const m=document.createElement('span');m.className='nav-mask';m.style.webkitMaskImage=m.style.maskImage=`url('${src}')`;el.append(m)};im.src=src;}
 function famAbilityHtml(name){const A=((FAMILIARS||{}).abilities||{})[name];if(!A)return `[${profileEsc(name)}]`;return `<button type="button" class="fam-abil" data-abil="${profileEsc(name)}"><img src="${profileEsc(A.icon)}" alt="">${profileEsc(name)}</button>`;}
 function famPassiveText(t){return profileEsc(t).replace(/\[([^\]]+)\]/g,(m,n)=>famAbilityHtml(n));}
@@ -1906,9 +1922,31 @@ function cbDetail(d,ticks){const C=COOKBOOK,M=C.methods,E=C.effects;if(!d)return
  <div class="cb-note">${d.fixed?'These exact ingredients only (no substitutes in the game).':'Any ingredient of the same category fits each slot; higher-star ingredients give a higher-star dish.'} Highlighted row = the best version cooked so far.</div>
  <button type="button" class="cb-tick${ticks.has(d.id)?' done':''}" id="cbTick">${ticks.has(d.id)?'Cooked ✓ (click to undo)':'Mark as cooked'}</button>`;}
 // Pages hidden from visitors until launch (David, 29 Oct 2026): shown only in the preview (?tiers=new).
+const ITEMDB={tab:'materials',q:'',rar:'',data:{},ach:null,aq:'',acat:'',aown:''};
+const ITEM_TABS=[['materials','Materials'],['ingredients','Ingredients'],['important','Important'],['quest','Quest']];
+function itemRarColor(r){return {Grey:'#9aa3ad',Green:'#5fd38d',Blue:'#4aa3ff',Purple:'#b77cf2',Orange:'#ff9f43'}[r]||'#666';}
+async function itemLoad(k){if(ITEMDB.data[k]!==undefined)return;try{const r=await fetch(`assets/items/${k}.json`);ITEMDB.data[k]=r.ok?((await r.json()).items||[]):[];}catch(e){ITEMDB.data[k]=[];}}
+async function renderItems(){const root=$('itemsBody');if(!root)return;await itemLoad(ITEMDB.tab);const E=profileEsc;const L=ITEMDB.data[ITEMDB.tab]||[];
+ const rars=[...new Set(L.map(x=>x.rarity).filter(Boolean))];const q=ITEMDB.q.toLowerCase();
+ const list=L.filter(x=>(!q||(x.name+' '+(x.type||'')+' '+(x.description||'')+' '+(x.use||'')+' '+(x.sources||[]).join(' ')).toLowerCase().includes(q))&&(!ITEMDB.rar||x.rarity===ITEMDB.rar));
+ root.innerHTML=`<div class="it-bar">${ITEM_TABS.map(([k,l])=>`<button type="button" class="it-tab${k===ITEMDB.tab?' on':''}" data-ittab="${k}">${l}</button>`).join('')}</div>
+ <div class="it-bar"><input id="itQ" placeholder="Search name, use or source…" value="${E(ITEMDB.q)}"><select id="itRar"><option value="">All rarities</option>${rars.map(r=>`<option${r===ITEMDB.rar?' selected':''}>${E(r)}</option>`).join('')}</select><span class="gx-note">${list.length} of ${L.length}</span></div>
+ ${L.length?`<div class="it-grid">${list.map(x=>`<div class="it-card" style="--rc:${itemRarColor(x.rarity)}">${x.icon?`<img src="${E(x.icon)}" alt="" loading="lazy">`:''}<div><b>${E(x.name)}</b><small>${E(x.type||'')}${x.rarity?' · '+E(x.rarity):''}</small>${x.use?`<p>${E(x.use)}</p>`:''}${x.description?`<p style="color:var(--muted)">${E(x.description)}</p>`:''}${(x.sources||[]).length?`<p class="it-src">Where to get: ${x.sources.map(E).join(', ')}</p>`:''}</div></div>`).join('')}</div>`:'<p class="gd-empty">No items recorded in this tab yet.</p>'}`;
+ root.querySelectorAll('[data-ittab]').forEach(b=>b.onclick=()=>{ITEMDB.tab=b.dataset.ittab;ITEMDB.rar='';renderItems();});
+ const qi=$('itQ');qi.oninput=()=>{ITEMDB.q=qi.value;const p=qi.selectionStart;renderItems().then(()=>{const n=$('itQ');n.focus();n.setSelectionRange(p,p);});};$('itRar').onchange=e=>{ITEMDB.rar=e.target.value;renderItems();};}
+function achTicks(){try{return JSON.parse(localStorage.getItem('dsw.achievements.v1')||'{}')}catch(e){return {}}}
+async function renderAchievements(){const root=$('achBody');if(!root)return;if(!ITEMDB.ach){try{ITEMDB.ach=await (await fetch('assets/items/achievements.json')).json();}catch(e){ITEMDB.ach={items:[]};}}
+ const E=profileEsc,A=ITEMDB.ach,L=A.items||[],T=achTicks(),q=ITEMDB.aq.toLowerCase();const cats=['Explore','Quest','Collect','Combat','Special'].filter(c=>L.some(x=>x.category===c));
+ const list=L.filter(x=>(!q||(x.name+' '+(x.condition||'')+' '+(x.title||'')).toLowerCase().includes(q))&&(!ITEMDB.acat||x.category===ITEMDB.acat)&&(!ITEMDB.aown||(ITEMDB.aown==='yes')===!!T[x.name]));
+ const done=L.filter(x=>T[x.name]).length;
+ root.innerHTML=`<div class="ach-note"><b>Fame stage rewards</b> (Name of the Strong): ${E((A.fame&&A.fame.text)||'Stage 1 = 50 Fame: 100,000 Gold + 50 of a purple crystal. Further stages not recorded yet.')}</div>
+ <div class="it-bar"><input id="achQ" placeholder="Search achievement, condition or title…" value="${E(ITEMDB.aq)}"><select id="achCat"><option value="">All categories</option>${cats.map(c=>`<option${c===ITEMDB.acat?' selected':''}>${c}</option>`).join('')}</select><select id="achOwn"><option value="">All</option><option value="yes"${ITEMDB.aown==='yes'?' selected':''}>Ticked</option><option value="no"${ITEMDB.aown==='no'?' selected':''}>Not ticked</option></select><span class="gx-note">${done} of ${L.length} ticked</span></div>
+ ${list.map(x=>`<label class="ach-row${T[x.name]?' done':''}"><input type="checkbox" data-ach="${E(x.name)}"${T[x.name]?' checked':''}><span><b>${E(x.name)}</b><small>${E(x.category||'')}${x.target?' · target '+E(x.target):''}${x.title?' · title: '+E(x.title):''}</small><br>${E(x.condition||'')}</span></label>`).join('')||'<p class="gd-empty">No achievements match.</p>'}`;
+ root.querySelectorAll('[data-ach]').forEach(c=>c.onchange=()=>{const t=achTicks();c.checked?t[c.dataset.ach]=1:delete t[c.dataset.ach];try{localStorage.setItem('dsw.achievements.v1',JSON.stringify(t))}catch(e){}renderAchievements();});
+ const qi=$('achQ');qi.oninput=()=>{ITEMDB.aq=qi.value;const p=qi.selectionStart;renderAchievements().then(()=>{const n=$('achQ');n.focus();n.setSelectionRange(p,p);});};$('achCat').onchange=e=>{ITEMDB.acat=e.target.value;renderAchievements();};$('achOwn').onchange=e=>{ITEMDB.aown=e.target.value;renderAchievements();};}
 function renderGuides(){const root=$('guidesBody');if(!root)return;const G=(typeof GUIDES!=='undefined'&&GUIDES)||{};const E=profileEsc;
  root.innerHTML=(G.categories||[]).map(c=>`<section class="gd-cat"><h3>${E(c.name)}</h3><div class="gd-grid">${(c.items||[]).length?(c.items||[]).map(it=>`<button type="button" class="gd-card${it.ready?'':' soon'}" ${it.ready?'':'disabled'}>${it.image?`<img src="${E(it.image)}" alt="">`:'<span class="gd-ph"></span>'}<span>${E(it.title)}</span>${it.ready?'<span class="gd-arrow">→</span>':'<span class="gd-soon">soon</span>'}</button>`).join(''):'<p class="gd-empty">No guides yet.</p>'}</div></section>`).join('');}
-const PREVIEW_PAGES=['familiars','titles','dungeons','trait','currency','cookbook','guides','tools','news'];
+const PREVIEW_PAGES=['familiars','titles','dungeons','trait','currency','cookbook','guides','tools','news','items','achievements'];
 function applyPreviewGate(){if(IS_PREVIEW)return;PREVIEW_PAGES.forEach(pg=>{const b=document.querySelector(`.nav-item[data-page="${pg}"]`);if(b)b.hidden=true;});const g=$('navDungeonsGroup'),t=$('navDungeonsToggle');if(g)g.hidden=true;if(t)t.hidden=true;}
 function initTierV2(){const p=new URLSearchParams(location.search);if(p.get('tiers')!=='new')return;const tp=$('tierPage');const box=document.createElement('div');box.id='tierV2';tp.prepend(box);showTierV2(true);}
 
@@ -1922,7 +1960,7 @@ function startApp(){
  document.getElementById('heroesSearch').addEventListener('input',renderHeroes);
  renderGear();renderGearPreview();
  renderPatches();
- renderFamiliars();renderTitles();renderDungeons();renderCurrencyDungeons();renderTrait();renderCookbook();renderGuides();applyPreviewGate();initTierV2();
+ renderFamiliars();renderTitles();renderDungeons();renderCurrencyDungeons();renderTrait();renderCookbook();renderGuides();if(IS_PREVIEW){renderItems();renderAchievements();}applyPreviewGate();initTierV2();
  navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);navIcon('navIconHeroes',(UI_ICONS||{}).heroes);navIcon('navIconTeams',(UI_ICONS||{}).teams);navIcon('navIconCookbook',(UI_ICONS||{}).cookbook);
 }
 fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(async d=>{

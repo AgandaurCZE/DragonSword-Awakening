@@ -5,6 +5,10 @@ David requested always checking for newer commits and deployments, and applying 
 
 
 
+
+## 4 Nov 2026 — Item Database and Achievements (preview, Claude)
+- Item Database page: tabs Materials / Ingredients / Important / Quest (Quest has no data yet), search, rarity filter; reads `assets/items/<tab>.json` when opened.
+- Achievements page: search, category and ticked filters, a tick per achievement saved in the viewer's browser (`dsw.achievements.v1`), and a Fame stage rewards box (only Stage 1 recorded).
 ## 4 Nov 2026 — Guides, Tools and News menus (preview, Claude)
 - New preview-only menu entries: Guides (book icon placeholder until David's Codex icon), Tools (wrench, empty page) and News (newspaper, disabled for now). Guides shows 8 categories from the new `GUIDES` key with placeholder 'soon' cards. Public page unchanged (checked).
 ## 4 Nov 2026 — Item list additions (Claude)
