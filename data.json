@@ -16020,7 +16020,8 @@
    "Enemy Defense follows level × enemy type (Test Kit test 06, Reina Wind Sword Lv.3 first hit, 2427 Attack, Armor Penetration 0, Defense Ignore 0%, 4 Nov 2026). Goblin and Warg hit identically at every shared level: 1402, 1380, 1298, 1232, 1084, 1003 and 960 at Lv.10, 15, 25, 30, 40, 45 and 52, which is Defense 18, 34, 99, 158, 316, 422 and 486. Goblin Archer = x0.8, Goblin Barbarian = x1.1 (one level), Fierce Ironclad Warg and Sharpshooter Goblin Archer = x1.3. The Sharpshooter is not a basic archer: at Lv.40 it took 1012, where x0.8 predicts 1139. Break doesn't lower Defense: Goblin Archer Lv.52 went 1027 -> 1134 when broken with All Status AAP 76 and Break AAP 175; added Attack alone predicts 1133, and zero Defense would give about 1574.",
    "Enemy Defense, second batch (Test Kit test 06, same setup, 4 Nov 2026). Dungeon bosses are x1.3 of the basic enemy: Fierce Ironclad Warg, Sharpshooter Goblin Archer, Veteran Goblin Barbarian, Proud Goblin Tribal Hero and Sargon, 13 hits within about 1 damage. Also x0.8 Axe-throwing Skeleton, x1.04 Agile Ironclad Warg, x1.1 Skeleton Commander (Skeleton taken as basic). World enemies are lower than dungeon ones: Warg and Goblin Lv.52 world 486, Warg Lv.50 dungeon 569. World bosses don't share one multiplier: Horg 374 and Andras 421 at Lv.40, Karon 836 and Scraping Back 1,257 at Lv.60, Octavia 1,195 and Berpedin about 1,197 at Lv.80. Named enemies: Kuaku the Mad Lv.56 549, about x1.1 like the Goblin Barbarian he looks like; Igniter Snickrak Lv.55 590, well above an archer's x0.8.",
    "Enemy Defense, third batch (Test Kit test 06, 4 Nov 2026). Species doesn't seem to matter: Skeleton and Orc match Goblin and Warg at every shared dungeon level (Skeleton Lv.15, 30, 45; Orc Lv.45; Orc matches Skeleton at Lv.65). World enemies are about x0.8 of dungeon ones: basic 486, 503, 532 and 542 at Lv.52, 54, 57 and 58, against a dungeon curve of 569, 642 and 702 at Lv.50, 55 and 60. Dungeon bosses x1.3: Brave Skeleton Commander (Lv.15, 30, 45) and Orc Barbarian (Lv.55) too; Agile Ironclad Warg is a boss in a duo fight but x1.04. Named enemies with visible changes, Igniter Snickrak and Corroded Knight Kalvaros, are about x1.15 of a basic world enemy whatever model they share (two examples).",
-   "Enemy Defense, fourth batch (Test Kit test 06, 4 Nov 2026). Trait Dungeons: minions x1.6 and bosses x3.2 of the basic dungeon enemy at Lv.30, 40 and 50 (minion 251, 505, 912; boss 506, 1,012, 1,825), the same for Mantius, Drosophia and Ghagaroach where tested. World, relative to a basic world enemy: Goblin Berserker x1.1, Goblin Barbarian, Harpy and Spider x1.05, Troll x1.1, Ghoul and Worm x1.0, Lesser Dragon x1.2, Greater Dragon x1.5, Elemental Stone x1.0 (purple and red x1.1). Most of these are single tests."
+   "Enemy Defense, fourth batch (Test Kit test 06, 4 Nov 2026). Trait Dungeons: minions x1.6 and bosses x3.2 of the basic dungeon enemy at Lv.30, 40 and 50 (minion 251, 505, 912; boss 506, 1,012, 1,825), the same for Mantius, Drosophia and Ghagaroach where tested. World, relative to a basic world enemy: Goblin Berserker x1.1, Goblin Barbarian, Harpy and Spider x1.05, Troll x1.1, Ghoul and Worm x1.0, Lesser Dragon x1.2, Greater Dragon x1.5, Elemental Stone x1.0 (purple and red x1.1). Most of these are single tests.",
+   "Whole skills against the calculator (David, 5 Nov 2026, Training Ogre, no statuses, no crits; predicted -> real). Reina: Wind Slayer single hit 7330 -> 7332; Rising Cutter 6 hits 11249 -> 11588 (x1.03). Kalsion: Weapon Blaze single hit 5711 -> 5711, once its own Attack buff is counted, as it applies before the skill's damage; Flame Wave press 5 hits 8361 -> 8362, hold 3 hits 7109 (x0.85); Royal Flame Flame Wave press 9 hits 8797 -> 9202 (x1.046), hold 3 hits 7476 (x0.85). The codex % is right for single hits and the 5-hit press. Not known why Rising Cutter and the 9-hit press run higher, or whether these ratios hold at other skill levels. The codex gives one % for press and hold."
   ],
   "tests": [
    {
@@ -24947,6 +24948,70 @@
   "notes": [
    "Whole skill, with all its hits added up, so it can differ from the game by a few points of rounding. Each hit rolls its own crit, so Crit is the figure if every hit crits.",
    "Not included: Mastery and awakening effects that aren't on your panel, and hits that miss or don't connect."
+  ],
+  "variantNote": "This skill's real damage differs from its codex %, so Skill % is adjusted. Measured once, at one skill level.",
+  "skillAdjust": [
+   {
+    "hero": "Reina",
+    "slots": [
+     "Skill"
+    ],
+    "variants": [
+     {
+      "label": "Full skill",
+      "mult": 1.03
+     }
+    ]
+   },
+   {
+    "hero": "Kalsion",
+    "slots": [
+     "Skill"
+    ],
+    "note": "Royal Flame's Attack buff applies before this skill's damage, so use your Attack with the buff on."
+   },
+   {
+    "hero": "Kalsion",
+    "slots": [
+     "Ultimate"
+    ],
+    "variants": [
+     {
+      "label": "Press (5 hits)",
+      "mult": 1
+     },
+     {
+      "label": "Hold (3 hits)",
+      "mult": 0.85
+     }
+    ]
+   },
+   {
+    "hero": "Kalsion",
+    "slots": [
+     "Ultimate (Royal Flame mode)"
+    ],
+    "note": "Use your Attack with the Royal Flame buff on.",
+    "variants": [
+     {
+      "label": "Press (9 hits)",
+      "mult": 1.046
+     },
+     {
+      "label": "Hold (3 hits)",
+      "mult": 0.85
+     }
+    ]
+   },
+   {
+    "hero": "Kalsion",
+    "slots": [
+     "Auto attack (Royal Flame mode)",
+     "Jump attack (Royal Flame mode)",
+     "Dash attack (Royal Flame mode)"
+    ],
+    "note": "Use your Attack with the Royal Flame buff on."
+   }
   ],
   "statuses": [
    {

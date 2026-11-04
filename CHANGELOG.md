@@ -1,3 +1,5 @@
+## 5 Nov 2026 — Calculator: press and hold, measured skill corrections (preview, Claude)
+- David's whole-skill tests on Reina and Kalsion: new `DAMAGE_CALC.skillAdjust`, a "How it's used" choice for Flame Wave, and notes on Royal Flame's Attack buff. New finding in `DAMAGE_TESTS`.
 ## 4 Nov 2026 — Calculator enemy picker (preview, Claude)
 - Damage calculator: pick enemy type, dungeon or world and level, and it works out Defense from test 06 (`dcEnemyDef()`). World Bosses and the dummy stay fixed values; typing a Defense still works. Rough Mantius entries removed, now covered by Trait Dungeon types.
 - `DEFENSE_MODEL`: `levelCurve` merged into one curve with `worldFactor`; new `types` list replaces `typeMultipliers`. New finding in `DAMAGE_TESTS`.
