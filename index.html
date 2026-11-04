@@ -564,6 +564,12 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .dng-card.dng-clean-frame .dng-diff:not(.on):hover{background:color-mix(in srgb,var(--dc) 15%,#0b1320);border-color:var(--dc)}
 .dng-card.dng-clean-frame .dng-diff.on{border-color:var(--dc);color:#fff;background:color-mix(in srgb,var(--dc) 30%,#0b1320);box-shadow:0 0 8px color-mix(in srgb,var(--dc) 60%,transparent)}
 .dng-card.dng-clean-frame .dng-diff:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.gd-cat{margin:22px 0 10px}.gd-cat h3{text-align:center;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#cfe3ee;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.gd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.gd-card{display:flex;align-items:center;gap:14px;min-height:76px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:0 16px 0 0;color:var(--text);text-align:left;font:inherit;font-weight:700;cursor:pointer;overflow:hidden}
+.gd-card:hover{border-color:var(--accent)}.gd-card img,.gd-card .gd-ph{width:76px;height:76px;object-fit:cover;flex:none;background:var(--panel2)}
+.gd-card .gd-arrow{margin-left:auto;color:var(--muted)}.gd-card.soon{opacity:.6;cursor:default}.gd-card .gd-soon{font-size:11px;font-weight:800;color:#ffcf5a;margin-left:auto}
+.gd-empty{color:var(--muted);text-align:center;padding:16px;grid-column:1/-1;margin:0}.nav-item.nav-soon{opacity:.45;cursor:default}
 </style>
 </head>
 <body>
@@ -585,6 +591,9 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
   <button class="nav-item nav-subitem" data-page="currency"><span class="nav-icon">◇</span><span class="nav-label">Currency Dungeons</span></button>
  </div>
  <button class="nav-item" data-page="cookbook"><span class="nav-icon" id="navIconCookbook">♨</span><span class="nav-label">Cookbook</span></button>
+ <button class="nav-item" data-page="guides"><span class="nav-icon" id="navIconGuides"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span><span class="nav-label">Guides</span></button>
+ <button class="nav-item" data-page="tools"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><span class="nav-label">Tools</span></button>
+ <button class="nav-item nav-soon" data-page="news" disabled title="Coming later"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0V11h4"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg></span><span class="nav-label">News</span></button>
  <button class="nav-item" data-page="patches"><span class="nav-icon">☰</span><span class="nav-label">Patch Notes</span></button>
 </aside>
 <div class="app-content">
@@ -649,6 +658,14 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  <div class="gear-heading"><h2>TRAIT DUNGEONS</h2><span>Bosses weak to some archetypes and immune to others</span></div>
  <div id="traitBody"></div>
 </section>
+<section class="simple-page" id="guidesPage" hidden>
+ <div class="gear-heading"><h2>GUIDES</h2><span>Guides by topic. Work in progress: cards marked "soon" are placeholders.</span></div>
+ <div id="guidesBody"></div>
+</section>
+<section class="simple-page" id="toolsPage" hidden>
+ <div class="gear-heading"><h2>TOOLS</h2><span>Calculators and tools. Coming soon.</span></div>
+ <div id="toolsBody"><p class="gd-empty">Nothing here yet.</p></div>
+</section>
 <section class="simple-page" id="cookbookPage" hidden>
  <div class="gear-heading"><h2>COOKBOOK</h2><span>Every recipe, what it does at each star level, and what you've cooked</span></div>
  <div id="cookbookBody"></div>
@@ -672,7 +689,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={},COOKBOOK={},GEAR_UPGRADE={levels:{},expMaterials:[],refund:{base:{}},crafting:{}},RUNES=null;
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={},COOKBOOK={},GEAR_UPGRADE={levels:{},expMaterials:[],refund:{base:{}},crafting:{}},RUNES=null,GUIDES={categories:[]};
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -1655,7 +1672,7 @@ function renderProfilePatches(h){const P=PATCH_NOTES||{};const rows=(P.patches||
 
 
 // ---- Simple pages: Familiars, Titles, Trait Dungeons ----
-const PAGE_IDS={tier:'tierPage',heroes:'heroesPage',teams:'teamsPage',gear:'gearPage',karma:'karmaPage',patches:'patchesPage',familiars:'familiarsPage',titles:'titlesPage',dungeons:'dungeonsPage',trait:'traitPage',currency:'currencyPage',cookbook:'cookbookPage'};
+const PAGE_IDS={tier:'tierPage',heroes:'heroesPage',teams:'teamsPage',gear:'gearPage',karma:'karmaPage',patches:'patchesPage',familiars:'familiarsPage',titles:'titlesPage',dungeons:'dungeonsPage',trait:'traitPage',currency:'currencyPage',cookbook:'cookbookPage',guides:'guidesPage',tools:'toolsPage'};
 function navIcon(id,src){const el=$(id);if(!el||!src)return;const im=new Image();im.onload=()=>{el.textContent='';const m=document.createElement('span');m.className='nav-mask';m.style.webkitMaskImage=m.style.maskImage=`url('${src}')`;el.append(m)};im.src=src;}
 function famAbilityHtml(name){const A=((FAMILIARS||{}).abilities||{})[name];if(!A)return `[${profileEsc(name)}]`;return `<button type="button" class="fam-abil" data-abil="${profileEsc(name)}"><img src="${profileEsc(A.icon)}" alt="">${profileEsc(name)}</button>`;}
 function famPassiveText(t){return profileEsc(t).replace(/\[([^\]]+)\]/g,(m,n)=>famAbilityHtml(n));}
@@ -1889,7 +1906,9 @@ function cbDetail(d,ticks){const C=COOKBOOK,M=C.methods,E=C.effects;if(!d)return
  <div class="cb-note">${d.fixed?'These exact ingredients only (no substitutes in the game).':'Any ingredient of the same category fits each slot; higher-star ingredients give a higher-star dish.'} Highlighted row = the best version cooked so far.</div>
  <button type="button" class="cb-tick${ticks.has(d.id)?' done':''}" id="cbTick">${ticks.has(d.id)?'Cooked ✓ (click to undo)':'Mark as cooked'}</button>`;}
 // Pages hidden from visitors until launch (David, 29 Oct 2026): shown only in the preview (?tiers=new).
-const PREVIEW_PAGES=['familiars','titles','dungeons','trait','currency','cookbook'];
+function renderGuides(){const root=$('guidesBody');if(!root)return;const G=(typeof GUIDES!=='undefined'&&GUIDES)||{};const E=profileEsc;
+ root.innerHTML=(G.categories||[]).map(c=>`<section class="gd-cat"><h3>${E(c.name)}</h3><div class="gd-grid">${(c.items||[]).length?(c.items||[]).map(it=>`<button type="button" class="gd-card${it.ready?'':' soon'}" ${it.ready?'':'disabled'}>${it.image?`<img src="${E(it.image)}" alt="">`:'<span class="gd-ph"></span>'}<span>${E(it.title)}</span>${it.ready?'<span class="gd-arrow">→</span>':'<span class="gd-soon">soon</span>'}</button>`).join(''):'<p class="gd-empty">No guides yet.</p>'}</div></section>`).join('');}
+const PREVIEW_PAGES=['familiars','titles','dungeons','trait','currency','cookbook','guides','tools','news'];
 function applyPreviewGate(){if(IS_PREVIEW)return;PREVIEW_PAGES.forEach(pg=>{const b=document.querySelector(`.nav-item[data-page="${pg}"]`);if(b)b.hidden=true;});const g=$('navDungeonsGroup'),t=$('navDungeonsToggle');if(g)g.hidden=true;if(t)t.hidden=true;}
 function initTierV2(){const p=new URLSearchParams(location.search);if(p.get('tiers')!=='new')return;const tp=$('tierPage');const box=document.createElement('div');box.id='tierV2';tp.prepend(box);showTierV2(true);}
 
@@ -1903,11 +1922,11 @@ function startApp(){
  document.getElementById('heroesSearch').addEventListener('input',renderHeroes);
  renderGear();renderGearPreview();
  renderPatches();
- renderFamiliars();renderTitles();renderDungeons();renderCurrencyDungeons();renderTrait();renderCookbook();applyPreviewGate();initTierV2();
+ renderFamiliars();renderTitles();renderDungeons();renderCurrencyDungeons();renderTrait();renderCookbook();renderGuides();applyPreviewGate();initTierV2();
  navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);navIcon('navIconHeroes',(UI_ICONS||{}).heroes);navIcon('navIconTeams',(UI_ICONS||{}).teams);navIcon('navIconCookbook',(UI_ICONS||{}).cookbook);
 }
 fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(async d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};DUNGEONS=d.DUNGEONS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};TOWER_TRIALS=d.TOWER_TRIALS||{};COOKBOOK=d.COOKBOOK||{};GEAR_UPGRADE=d.GEAR_UPGRADE||GEAR_UPGRADE;RUNES=d.RUNES||null;
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};DUNGEONS=d.DUNGEONS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};TOWER_TRIALS=d.TOWER_TRIALS||{};COOKBOOK=d.COOKBOOK||{};GEAR_UPGRADE=d.GEAR_UPGRADE||GEAR_UPGRADE;RUNES=d.RUNES||null;GUIDES=d.GUIDES||{categories:[]};
  await preloadDungeonBanners();
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});

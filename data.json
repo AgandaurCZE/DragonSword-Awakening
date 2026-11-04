@@ -24515,5 +24515,125 @@
     ]
    }
   ]
+ },
+ "GUIDES": {
+  "note": "Guides page (preview only). Categories in display order; each item {title, ready, image?, page?}. ready:false shows a 'soon' placeholder card. Content still to be written.",
+  "categories": [
+   {
+    "name": "Newbies section",
+    "items": [
+     {
+      "title": "Getting started",
+      "ready": false
+     },
+     {
+      "title": "What to spend resources on first",
+      "ready": false
+     }
+    ]
+   },
+   {
+    "name": "General Guides",
+    "items": [
+     {
+      "title": "Daily and weekly routine",
+      "ready": false
+     },
+     {
+      "title": "Currencies and the Exchange",
+      "ready": false
+     }
+    ]
+   },
+   {
+    "name": "Game Mechanics",
+    "items": [
+     {
+      "title": "Damage and status effects",
+      "ready": false
+     },
+     {
+      "title": "Break and Super Armor",
+      "ready": false
+     },
+     {
+      "title": "Defense, Armor Penetration and Defense Ignore",
+      "ready": false
+     }
+    ]
+   },
+   {
+    "name": "Gear",
+    "items": [
+     {
+      "title": "Gear rarities and main stats",
+      "ready": false
+     },
+     {
+      "title": "Upgrading and Disassembling",
+      "ready": false
+     },
+     {
+      "title": "Runes",
+      "ready": false
+     }
+    ]
+   },
+   {
+    "name": "World Boss",
+    "items": []
+   },
+   {
+    "name": "Hunt",
+    "items": [
+     {
+      "title": "Hunt overview and rating rewards",
+      "ready": false
+     },
+     {
+      "title": "Furcas the Starving Ghost of Corrosion",
+      "ready": false
+     },
+     {
+      "title": "Vanak the Bloody Hook",
+      "ready": false
+     },
+     {
+      "title": "Barduk the Corrupted",
+      "ready": false
+     },
+     {
+      "title": "Gallore the Collapse",
+      "ready": false
+     },
+     {
+      "title": "Ghoul Greed",
+      "ready": false
+     }
+    ]
+   },
+   {
+    "name": "Raid",
+    "items": [
+     {
+      "title": "Raid overview",
+      "ready": false
+     },
+     {
+      "title": "Gauron (Steelheart Fortress Defense)",
+      "ready": false
+     }
+    ]
+   },
+   {
+    "name": "Tower",
+    "items": [
+     {
+      "title": "Tower of Trials overview",
+      "ready": false
+     }
+    ]
+   }
+  ]
  }
 }

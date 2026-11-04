@@ -4,6 +4,9 @@ David requested always checking for newer commits and deployments, and applying 
 
 
 
+
+## 4 Nov 2026 — Guides, Tools and News menus (preview, Claude)
+- New preview-only menu entries: Guides (book icon placeholder until David's Codex icon), Tools (wrench, empty page) and News (newspaper, disabled for now). Guides shows 8 categories from the new `GUIDES` key with placeholder 'soon' cards. Public page unchanged (checked).
 ## 4 Nov 2026 — Item list additions (Claude)
 - `assets/items/materials.json`: Tangled Forgetfulness and Remembrance, Stilled Core of Collapse (Gallore the Collapse) and High-Grade Venom Stone, with icons, descriptions and sources from David's inventory screenshots.
 - Ghoul Greed's note now names its last two rewards: Secret Text of the Warrior ×10, Record of Battle ×20.
