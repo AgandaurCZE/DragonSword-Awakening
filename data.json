@@ -15985,7 +15985,8 @@
    "Super Armor Break and status build-up (David, 1 Nov 2026, Training Ogre, Test Kit): Break doubles the build-up of physical statuses only (Stun, Knockdown, Airborne). Measured unbroken -> broken per press: Reina Rising Cutter and Wind Slayer 0.167 -> 0.333 Airborne, Johnny Phantom Slash 0.167 -> 0.333 Airborne, Eileen Barraging Spear 0.25 -> 0.5 Airborne, Lute Stun Slash and Sion Divine Smash 0.167 -> 0.333 Stun. Frost is not affected: Cerese Ice Storm 0.25 both ways; damage-over-time statuses (Poison, Bleed, Burn, Shock) are not affected either (David). Matches the Rift: physical statuses needed half as many uses on a Broken enemy. So status tests are done unbroken; broken physical values = 2x.",
    "Defense Ignore 20% (Earthshatterer 3-piece), Reina, Attack 2445, Armor Penetration 66, Critical Damage 55.71%, Wind Sword Lv.3 first hit on the Training Ogre with no statuses (1 Nov 2026): non-crit 743 -> 829 (+11.6%), crit 1157 -> 1291 (+11.6%); crit / non-crit = 1.557 = 1 + Crit Damage. If damage taken scales as K / (K + Defense x (1 - Defense Ignore)), this means the dummy's Defense is about 1.08 x K at Armor Penetration 66 (it blocks about 52% before Defense Ignore). That also predicts about +0.5% for the earlier 0.97% test (+0.4% seen). The form of the formula is still an assumption.",
    "Defense test (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Training Ogre, 4 Nov 2026), damage per Attack: AP 0/DI 6.65% 0.3042; AP 0/DI 26.65% 0.3389; AP 70/DI 0% 0.3044; AP 70/DI 20% 0.3400; AP 85/DI 0% 0.3069 (plus 1 Nov: AP 66/DI 0% 0.3039, AP 66/DI 20% 0.3391). Best fit: damage ∝ K / (K + Defense × (1 − Defense Ignore) − Armor Penetration), with this dummy's Defense = 1,000 and K = 1,000 (best fit on a grid search; same units as Armor Penetration). Fits all 7 points within 0.06%; applying Armor Penetration before Defense Ignore fits worse (up to 1%). On this dummy: 1 Armor Penetration ≈ 1 Defense point ≈ +0.05% damage; 1% Defense Ignore ≈ 10 Defense points ≈ +0.5%. The dummy blocks about half the damage. K and the dummy's Defense are fitted values; whether K changes with the attacker's level, and the Defense of real bosses, are unknown.",
-   "Defense on a real enemy (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Berpedin the Crushing Darkness Lv.80, 4 Nov 2026): Attack 2160, AP 0, DI 0%: 578; Attack 2418, AP 85, DI 0%: 673; Attack 1503, AP 0, DI 11.09%: 428. With K = 1,000 and the Ogre's hit share (58.78% of Attack, 14% of Wind Sword Lv.3's 420%) these give Defense 1,197 (1,193–1,201), all three hits within 0.1 damage. K left free gives 915–1125, so K = 1,000 is a constant of the formula, not of the dummy, and the formula holds on a real boss. Full model in DEFENSE_MODEL."
+   "Defense on a real enemy (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Berpedin the Crushing Darkness Lv.80, 4 Nov 2026): Attack 2160, AP 0, DI 0%: 578; Attack 2418, AP 85, DI 0%: 673; Attack 1503, AP 0, DI 11.09%: 428. With K = 1,000 and the Ogre's hit share (58.78% of Attack, 14% of Wind Sword Lv.3's 420%) these give Defense 1,197 (1,193–1,201), all three hits within 0.1 damage. K left free gives 915–1125, so K = 1,000 is a constant of the formula, not of the dummy, and the formula holds on a real boss. Full model in DEFENSE_MODEL.",
+   "Enemy Defense follows level × enemy type (Test Kit test 06, Reina Wind Sword Lv.3 first hit, 2427 Attack, Armor Penetration 0, Defense Ignore 0%, 4 Nov 2026). Goblin and Warg hit identically at every shared level: 1402, 1380, 1298, 1232, 1084, 1003 and 960 at Lv.10, 15, 25, 30, 40, 45 and 52, which is Defense 18, 34, 99, 158, 316, 422 and 486. Goblin Archer = x0.8, Goblin Berserker = x1.1 (one level), Fierce Ironclad Warg and Sharpshooter Goblin Archer = x1.3. The Sharpshooter is not a basic archer: at Lv.40 it took 1012, where x0.8 predicts 1139. Break doesn't lower Defense: Goblin Archer Lv.52 went 1027 -> 1134 when broken with All Status AAP 76 and Break AAP 175; added Attack alone predicts 1133, and zero Defense would give about 1574."
   ],
   "tests": [
    {
@@ -24731,7 +24732,28 @@
    "defenseIgnore": "Each 1% removes 1% of the enemy's Defense: +0.50% on the Ogre, +0.54% on Berpedin, +0.17% at 210 Defense.",
    "orangeSubstats": "With the current Orange substat values (Armor Penetration 15, Defense Ignore 1.94%, the latter an estimate), Defense Ignore is worth more only above about 773 enemy Defense."
   },
-  "note": "Not used by the page yet. Ticks ignore Defense (see DAMAGE_TESTS). Rough enemies are worked out from older tests, not measured with this test. Defense does not follow enemy level alone: Lv.80 Berpedin is above the Lv.90 dummies and goblins. Unknown: what else sets it; what happens if Armor Penetration exceeds remaining Defense."
+  "note": "Not used by the page yet. Ticks ignore Defense (see DAMAGE_TESTS). Rough enemies are worked out from older tests, not measured with this test. Defense does not follow enemy level alone: Lv.80 Berpedin is above the Lv.90 dummies and goblins. Unknown: what else sets it; what happens if Armor Penetration exceeds remaining Defense.",
+  "levelCurve": {
+   "note": "Defense of a basic enemy (Goblin or Warg, identical at all 7 shared levels), Test Kit test 06, 4 Nov 2026. Levels 10–45 are from dungeons, level 52 from the world. The rise slows between 45 and 52: not yet known whether that is the curve or a dungeon/world difference. Not used by the page yet.",
+   "defenseByLevel": {
+    "10": 18,
+    "15": 34,
+    "25": 99,
+    "30": 158,
+    "40": 316,
+    "45": 422,
+    "52": 486
+   }
+  },
+  "typeMultipliers": {
+   "note": "Defense = basic enemy's Defense at that level × this. Fits every hit within about 1 damage (test 06). Not used by the page yet.",
+   "Goblin": 1,
+   "Warg": 1,
+   "Goblin Archer": 0.8,
+   "Goblin Berserker": 1.1,
+   "Fierce Ironclad Warg": 1.3,
+   "Sharpshooter Goblin Archer": 1.3
+  }
  },
  "DAMAGE_CALC": {
   "note": "Rules for the preview damage calculator (renderDamageCalc, dcCompute). Hit bonuses, stacking and the order of the pools come from DAMAGE_TESTS.findings; Defense from DEFENSE_MODEL.",

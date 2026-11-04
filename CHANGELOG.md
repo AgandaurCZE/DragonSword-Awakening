@@ -1,3 +1,5 @@
+## 4 Nov 2026 — Enemy Defense: first test batch (Claude)
+- `DEFENSE_MODEL`: new `levelCurve` and `typeMultipliers` from Test Kit test 06; new finding in `DAMAGE_TESTS`, including that Break doesn't lower Defense. Not used by the page yet.
 ## 4 Nov 2026 — Damage calculator and Enemy Defense test (preview, Claude)
 - Tools page: damage calculator from panel stats (non-crit, crit, average), with small print for what Armor Penetration and Defense Ignore add. New key `DAMAGE_CALC`. Public page unchanged.
 - Checked against 41 of David's recorded hits: all within 0.21%. 23 use the clean hit as their baseline, so they test the bonuses rather than Defense.
