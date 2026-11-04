@@ -1,3 +1,6 @@
+## 4 Nov 2026 — Enemy Defense: second test batch (Claude)
+- `DEFENSE_MODEL`: separate dungeon and world curves, more type multipliers, dungeon bosses x1.3, and 5 World Bosses added (they now appear in the calculator's enemy list). New finding in `DAMAGE_TESTS`.
+- Test Kit test 06: Goblin Barbarian replaces Goblin Chief, Reaper added, Fierce Ironclad Warg replaces the Warg boss placeholder.
 ## 4 Nov 2026 — Enemy Defense: first test batch (Claude)
 - `DEFENSE_MODEL`: new `levelCurve` and `typeMultipliers` from Test Kit test 06; new finding in `DAMAGE_TESTS`, including that Break doesn't lower Defense. Not used by the page yet.
 ## 4 Nov 2026 — Damage calculator and Enemy Defense test (preview, Claude)
