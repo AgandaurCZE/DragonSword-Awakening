@@ -1,3 +1,7 @@
+## 4 Nov 2026 — Enemy Defense: third test batch, gear rows (Claude)
+- `DEFENSE_MODEL`: dungeon curve to Lv.70, world curve at about x0.8, updated type multipliers and open questions. New finding in `DAMAGE_TESTS`. Not used by the page yet.
+- `GEAR_STATS.valueSources`: 93 Test Kit rows checked against the tables, upgrade steps per rarity recorded. The "flat stats 1–2% high" note is resolved: it came from comparing with 4x the +0 value.
+- Test Kit test 06: Save button now sits above the enemy table.
 ## 4 Nov 2026 — Enemy Defense: second test batch (Claude)
 - `DEFENSE_MODEL`: separate dungeon and world curves, more type multipliers, dungeon bosses x1.3, and 5 World Bosses added (they now appear in the calculator's enemy list). New finding in `DAMAGE_TESTS`.
 - Test Kit test 06: Goblin Barbarian replaces Goblin Chief, Reaper added, Fierce Ironclad Warg replaces the Warg boss placeholder.
