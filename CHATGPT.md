@@ -18,7 +18,7 @@ Restored LF line endings without changing page content, and added an explicit pr
 
 Read `AGENTS.md` before making changes; it is the repository's source of truth. Do not modify `AGENTS.md` or `CLAUDE.md` unless the user explicitly asks.
 
-For dungeon artwork, read [the workflow and pending fixes](docs/DUNGEON_ARTWORK_WORKFLOW.md). It records David's Proceed/Stop approval flow, the character/framing lessons, and the deferred Difficulty I goblin alignment fix.
+For dungeon artwork, read [the workflow and pending fixes](docs/DUNGEON_ARTWORK_WORKFLOW.md). It records David's Proceed/Stop approval flow, the character/framing lessons, and the Difficulty I goblin alignment fix (completed 3 Nov 2026).
 
 ## Mandatory post-change checks
 
@@ -45,7 +45,7 @@ I reviewed the current main branch at HEAD 0417c53a2a89426b0b50b95033a9f5f506fa8
 - Startup is at the bottom of index.html: fetch('data.json?v='+Date.now(), {cache:'no-store'}), parse JSON, destructure selected top-level values into globals, assign remaining keys to globals with fallbacks, then call startApp(). Do not open the page using file://; use a local HTTP server for browser testing.
 - startApp() renders the legacy tier list, teams, Karma, Heroes, Gear, patch notes, Familiars, Titles, Trait Dungeons and Cookbook; applies the preview gate; and optionally initialises Tier List V2.
 - PAGE_IDS maps navigation keys to page DOM IDs. Character profiles are opened dynamically from CHARACTER_PROFILE_DATA and use the same page shell rather than a separate HTML file.
-- ?tiers=new (also ?preview=1 for the general preview flag) is a deliberate unreleased-preview mechanism. PREVIEW_PAGES currently hides Familiars, Titles, Trait Dungeons and Cookbook from ordinary visitors; Tier List V2 is switched on by ?tiers=new. New unreleased tabs/features must respect this gate unless David explicitly says to launch them.
+- ?tiers=new (also ?preview=1 for the general preview flag) is a deliberate unreleased-preview mechanism. PREVIEW_PAGES currently hides Familiars, Titles, the Dungeons group, Cookbook, Guides, Tools, News, Item Database and Achievements from ordinary visitors; Tier List V2 is switched on by ?tiers=new. New unreleased tabs/features must respect this gate unless David explicitly says to launch them.
 - Data changes normally mean editing data.json only. Change index.html only when a genuinely new rendering/interaction/layout behaviour is required, not to insert character-specific values, item records, ratings, text, numbers, paths or other content.
 
 ## Data loading and binding
@@ -136,8 +136,8 @@ The earlier `docs/TASK_dungeons_page.md` is a historical task brief; it predates
 ### Provenance and completed changes
 - David clarified that the original Normal Dungeons structure and visual foundation were produced by him with the ChatGPT chat version. Do not attribute that foundation to this project. In the subsequent work here, the Normal reward records were migrated to the shared Trait-style key/count format, and their item labels/icons—including EXP—were resolved from `DUNGEONS.rewardItems`; set icons remain linked through `GEAR_DATA`.
 - The 15 Normal Dungeon cards, per-difficulty I/II/III selection, reward display and three background variants per dungeon are present in the preview. The Goblin Bandits' Cave Normal/Hard/Very Hard banners were replaced on 3 Nov with one shared pixel crop; their difficulty alignment correction is complete.
-- Currency Dungeons has three discovered entries and two locked placeholders. The three discovered entries have key/count rewards for all three difficulties, item labels/icons resolve through `currencyRewardItems`, selectors reset to Normal when leaving the page, and each card has its approved custom background. The frame is a separate overlay; its CSS background layer uses a 9px inset and 8px corner radius. David confirmed on the live preview that the backgrounds fit and difficulty switching works.
-- The Currency reward data includes EXP, Gold, Adventurer's Emblem, Basic/Advanced/Core Combat Text, Mana Shard/Crystal/Ore and Arcana of War/Beginnings/Peace. Values were dictated and confirmed by David; do not infer amounts for the two locked dungeons.
+- Currency Dungeons has four discovered entries and one locked placeholder (updated 4 Nov 2026; Eroded Underground Cemetery has no banner art yet). The discovered entries have key/count rewards for all three difficulties, item labels/icons resolve through `currencyRewardItems`, selectors reset to Normal when leaving the page, and the first three cards have their approved custom backgrounds. The frame is a separate overlay; its CSS background layer uses a 9px inset and 8px corner radius. David confirmed on the live preview that the backgrounds fit and difficulty switching works.
+- The Currency reward data includes EXP, Gold, Adventurer's Emblem, Basic/Advanced/Core Combat Text, Mana Shard/Crystal/Ore and Arcana of War/Beginnings/Peace. Values were dictated and confirmed by David; do not infer amounts for the locked dungeon.
 - Trait Dungeons keeps its existing data and rendering. Nine preview banners were added and assigned in menu order to three Mantius, two Drosophia and four Ghagaroach variants. Archetype marks follow the explicit per-boss direction, including the agreed Bloodburst and Ghagaroach exceptions.
 - The earlier Gear-menu links from General Sets and three named sets to Normal Dungeons are also part of the completed preview work; set links apply a data-derived filter, which clears on leaving Normal Dungeons while difficulty choices are otherwise retained as specified.
 
@@ -147,4 +147,4 @@ The earlier `docs/TASK_dungeons_page.md` is a historical task brief; it predates
 
 ## Completed artwork handoff
 
-Read `docs/PROJECT_HANDOFF.txt` for the full four-dungeon task, approvals, exact publication commits, verification, publication obstacles and still-pending Goblin I alignment correction. All twelve final backgrounds are published; public promotion is not authorised.
+Read `docs/PROJECT_HANDOFF.txt` for the full four-dungeon task, approvals, exact publication commits, verification, publication obstacles and the Goblin I alignment correction (completed 3 Nov 2026). All twelve final backgrounds are published; public promotion is not authorised.

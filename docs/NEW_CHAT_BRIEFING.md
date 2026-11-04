@@ -69,7 +69,7 @@ Paste this whole file into the first message of a new chat. It replaces the memo
   - **Damage:** ∝ Attack × skill %; crit ×(1 + Crit Damage); status hit bonuses add.
   - **Damage-over-time ticks:** 50/75/100% of Attack at 1/2/3 stacks.
   - **Towers:** +400% for the tower's own status, +100% for DoT statuses.
-  - **Defence:** damage ∝ 1000 / (1000 + Defense × (1 − Defense Ignore) − Armor Penetration). The Training Ogre has 1,000 Defense.
+  - **Defence:** damage ∝ 1000 / (1000 + Defense × (1 − Defense Ignore) − Armor Penetration). K = 1,000 is a constant. The Training Ogre has 1,000 Defense and World Boss Berpedin about 1,197.
   - **Level-up Gold is per item:**
     - Hero texts: 200 / 650 / 1,800.
     - Arcanas: 150 / 400 / 1,300 / 3,000.
@@ -88,7 +88,7 @@ Paste this whole file into the first message of a new chat. It replaces the memo
 ## Open / next steps
 - **From David:**
   - EXP for levels 51–70 and the breakthrough at 60.
-  - Defence test on another enemy (is 1,000 a constant?).
+  - Berpedin's level (for how Defense scales with level).
   - Fame stage rewards and the "Name of the Strong" icon.
   - Quest items.
   - The Guides icon (Codex book).

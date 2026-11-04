@@ -1,13 +1,6 @@
-## 3 Nov 2026 — Keep work current with GitHub
-
-David requested always checking for newer commits and deployments, and applying this chat's work on top of them. Added the rule to AGENTS.md, including preserving other assistants' changes, checking again before pushing, and verifying the remote result. Fetched origin/main: b4f9bfe was current. GitHub deployment API returned Forbidden, so deployment status could not be independently verified. Documentation only; no application or data changes.
-
-
-
-
-
-
-
+## 4 Nov 2026 — Defence formula confirmed on a World Boss; notes brought up to date (Claude)
+- `DEFENSE_MODEL`: from David's 3 Test Kit hits on Berpedin, the Crushing Darkness: K = 1,000 is a constant and Berpedin has about 1,197 Defense (1,193–1,201). All 10 test hits fit within 0.5 damage. Added enemies (rough ones marked), checks and what each point is worth. New finding in `DAMAGE_TESTS`. Not on the page.
+- Stale notes fixed in `AGENTS.md`, `CHATGPT.md`, `docs/PROJECT_HANDOFF.txt` and `docs/NEW_CHAT_BRIEFING.md`: Goblin alignment done, Currency now 4 discovered and 1 locked, full preview page list, item catalogues in use, levelling calculator waits on levels 51–70. This file's newest-first order fixed.
 ## 4 Nov 2026 — Handoff files (Claude)
 - `docs/NEW_CHAT_BRIEFING.md` (briefing for a new chat), `docs/testkit/dragonsword-test-kit.html` (Test Kit backup), `tools/image/` (Codex card-cutting scripts).
 ## 4 Nov 2026 — Defense formula, costs to level 50, titles 25/109 (Claude)
@@ -30,6 +23,10 @@ David requested always checking for newer commits and deployments, and applying 
 - Runes seen: Damaged Protection 15 and 20, Intact Focus 1.80%.
 - Raw Mana Stone costs 5,000 Gold per use (gear calculator updated). New `SKILL_BUFF_LEVELS` with the 8 buff rows from Test Kit test 02 (Kalsion's Weapon Blaze added).
 - Gear rows: all % main stats match; Purple Defense and Blue Attack read ~1–2% above the estimate (noted in `GEAR_STATS.valueSources.flatLowerRarityNote`, tables unchanged).
+## 3 Nov 2026 — Keep work current with GitHub
+
+David requested always checking for newer commits and deployments, and applying this chat's work on top of them. Added the rule to AGENTS.md, including preserving other assistants' changes, checking again before pushing, and verifying the remote result. Fetched origin/main: b4f9bfe was current. GitHub deployment API returned Forbidden, so deployment status could not be independently verified. Documentation only; no application or data changes.
+
 ## 3 Nov 2026 — Restore original index.html line endings
 
 Restored LF line endings without changing page content, and added an explicit preservation rule to AGENTS.md. Applied on top of the latest main changes. Verified identical content after newline normalisation and ran the data validator. User requested committing and applying the fix to GitHub.

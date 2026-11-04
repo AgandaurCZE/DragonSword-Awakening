@@ -15984,7 +15984,8 @@
    "Team buffs add (David, 31 Oct 2026, Test Kit): Eileen's Brave One and Sion's Bless (both Lv.2) on Reina, no status on the enemy. Attack 748 -> 797 with either buff -> 847 with both (+49, +50: adding; multiplying would give 849). The same skill hit: 2,094 -> 2,231 -> 2,369; adding predicts 2,368, multiplying 2,377. Both buffs join the Attack Power Up pool with gear and each other. (A first try at 71 Attack, 78 / 78 / 85, was too small to tell.) Vanguard Banner lasted 10 s.",
    "Super Armor Break and status build-up (David, 1 Nov 2026, Training Ogre, Test Kit): Break doubles the build-up of physical statuses only (Stun, Knockdown, Airborne). Measured unbroken -> broken per press: Reina Rising Cutter and Wind Slayer 0.167 -> 0.333 Airborne, Johnny Phantom Slash 0.167 -> 0.333 Airborne, Eileen Barraging Spear 0.25 -> 0.5 Airborne, Lute Stun Slash and Sion Divine Smash 0.167 -> 0.333 Stun. Frost is not affected: Cerese Ice Storm 0.25 both ways; damage-over-time statuses (Poison, Bleed, Burn, Shock) are not affected either (David). Matches the Rift: physical statuses needed half as many uses on a Broken enemy. So status tests are done unbroken; broken physical values = 2x.",
    "Defense Ignore 20% (Earthshatterer 3-piece), Reina, Attack 2445, Armor Penetration 66, Critical Damage 55.71%, Wind Sword Lv.3 first hit on the Training Ogre with no statuses (1 Nov 2026): non-crit 743 -> 829 (+11.6%), crit 1157 -> 1291 (+11.6%); crit / non-crit = 1.557 = 1 + Crit Damage. If damage taken scales as K / (K + Defense x (1 - Defense Ignore)), this means the dummy's Defense is about 1.08 x K at Armor Penetration 66 (it blocks about 52% before Defense Ignore). That also predicts about +0.5% for the earlier 0.97% test (+0.4% seen). The form of the formula is still an assumption.",
-   "Defense test (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Training Ogre, 4 Nov 2026), damage per Attack: AP 0/DI 6.65% 0.3042; AP 0/DI 26.65% 0.3389; AP 70/DI 0% 0.3044; AP 70/DI 20% 0.3400; AP 85/DI 0% 0.3069 (plus 1 Nov: AP 66/DI 0% 0.3039, AP 66/DI 20% 0.3391). Best fit: damage ∝ K / (K + Defense × (1 − Defense Ignore) − Armor Penetration), with this dummy's Defense = 1,000 and K = 1,000 (best fit on a grid search; same units as Armor Penetration). Fits all 7 points within 0.06%; applying Armor Penetration before Defense Ignore fits worse (up to 1%). On this dummy: 1 Armor Penetration ≈ 1 Defense point ≈ +0.05% damage; 1% Defense Ignore ≈ 10 Defense points ≈ +0.5%. The dummy blocks about half the damage. K and the dummy's Defense are fitted values; whether K changes with the attacker's level, and the Defense of real bosses, are unknown."
+   "Defense test (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Training Ogre, 4 Nov 2026), damage per Attack: AP 0/DI 6.65% 0.3042; AP 0/DI 26.65% 0.3389; AP 70/DI 0% 0.3044; AP 70/DI 20% 0.3400; AP 85/DI 0% 0.3069 (plus 1 Nov: AP 66/DI 0% 0.3039, AP 66/DI 20% 0.3391). Best fit: damage ∝ K / (K + Defense × (1 − Defense Ignore) − Armor Penetration), with this dummy's Defense = 1,000 and K = 1,000 (best fit on a grid search; same units as Armor Penetration). Fits all 7 points within 0.06%; applying Armor Penetration before Defense Ignore fits worse (up to 1%). On this dummy: 1 Armor Penetration ≈ 1 Defense point ≈ +0.05% damage; 1% Defense Ignore ≈ 10 Defense points ≈ +0.5%. The dummy blocks about half the damage. K and the dummy's Defense are fitted values; whether K changes with the attacker's level, and the Defense of real bosses, are unknown.",
+   "Defense on a real enemy (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Berpedin the Crushing Darkness, 4 Nov 2026): Attack 2160, AP 0, DI 0%: 578; Attack 2418, AP 85, DI 0%: 673; Attack 1503, AP 0, DI 11.09%: 428. With K = 1,000 and the Ogre's hit share (58.78% of Attack, 14% of Wind Sword Lv.3's 420%) these give Defense 1,197 (1,193–1,201), all three hits within 0.1 damage. K left free gives 915–1125, so K = 1,000 is a constant of the formula, not of the dummy, and the formula holds on a real boss. Full model in DEFENSE_MODEL."
   ],
   "tests": [
    {
@@ -24666,14 +24667,70 @@
   ]
  },
  "DEFENSE_MODEL": {
-  "formula": "damage ∝ K / (K + Defense × (1 − DefenseIgnore) − ArmorPenetration)",
+  "formula": "damage = Attack × skill % × K / (K + Defense × (1 − DefenseIgnore) − ArmorPenetration), K = 1000",
+  "K": 1000,
   "trainingOgre": {
    "defense": 1000,
    "K": 1000
   },
-  "fitPoints": 7,
-  "maxError": "0.06%",
+  "enemies": [
+   {
+    "name": "Training Ogre",
+    "level": 90,
+    "defense": 1000,
+    "basis": "Measured: Test Kit test 04, 7 hits, plus Reina's Wind Slayer Lv.1 (916 at 333 Attack = 0.50 × Attack × 549%), which sets K = Defense on this dummy."
+   },
+   {
+    "name": "Goblins (Trait Dungeon area)",
+    "level": 90,
+    "defense": 1000,
+    "basis": "Worked out from one hit: Wind Slayer Lv.1, 1,742 at 626 Attack, Armor Penetration 15, Defense Ignore 0.97% (gives 999.5). Same hero and skill as the Ogre check."
+   },
+   {
+    "name": "Berpedin, the Crushing Darkness (hardest World Boss)",
+    "level": null,
+    "defense": 1197,
+    "range": [
+     1193,
+     1201
+    ],
+    "basis": "Measured: Test Kit test 04, 3 hits. Best fit 1,197; 1,200 can't be ruled out, as displayed Attack is rounded down. Level not recorded."
+   },
+   {
+    "name": "Mantius of Amplitude, Trait Dungeon I",
+    "level": 20,
+    "defense": 210,
+    "rough": true,
+    "basis": "Rough (±10): Johnny's clean hits (168 vs 109 on the Ogre), different gear on the two days, assumes no other damage reduction."
+   },
+   {
+    "name": "Mantius of Amplitude, Trait Dungeon III",
+    "level": 40,
+    "defense": 1000,
+    "rough": true,
+    "basis": "Rough (±20): Johnny's clean hits (102 vs 109 on the Ogre), different gear on the two days, assumes no other damage reduction."
+   },
+   {
+    "name": "Mantius of Amplitude, difficulty not recorded",
+    "level": null,
+    "defense": 505,
+    "rough": true,
+    "basis": "Rough (±15): Johnny's clean hit (145 vs 109 on the Ogre, same gear), assumes no other damage reduction."
+   }
+  ],
+  "fitPoints": 10,
+  "maxError": "0.5 damage on all 10 hits (Ogre and Berpedin), i.e. within display rounding",
   "measured": "2026-11-04",
-  "note": "Fitted from Test Kit test 04; see DAMAGE_TESTS.findings. Whether K is a fixed 1,000 or depends on level is unknown. Not used by the page yet."
+  "checks": [
+   "Armor Penetration works the same on Berpedin as on the Ogre: its slope alone gives K × skill share 590, against 588 on the Ogre.",
+   "Fitting Berpedin alone with K left free gives K 915–1125, which includes 1,000. K is therefore not a property of the Ogre.",
+   "K didn't change with the attacker: the same 1,000 fits Reina at 333, 626 and about 2,400 Attack."
+  ],
+  "worth": {
+   "armorPenetration": "Each point removes 1 Defense. About +0.05% damage at 1,000–1,200 Defense, +0.08% at 210.",
+   "defenseIgnore": "Each 1% removes 1% of the enemy's Defense: +0.50% on the Ogre, +0.54% on Berpedin, +0.17% at 210 Defense.",
+   "orangeSubstats": "With the current Orange substat values (Armor Penetration 15, Defense Ignore 1.94%, the latter an estimate), Defense Ignore is worth more only above about 773 enemy Defense."
+  },
+  "note": "Not used by the page yet. Ticks ignore Defense (see DAMAGE_TESTS). Rough enemies are worked out from older tests, not measured with this test. Unknown: how Defense scales with enemy level; what happens if Armor Penetration exceeds remaining Defense."
  }
 }
