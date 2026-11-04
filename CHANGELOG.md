@@ -6,6 +6,11 @@ David requested always checking for newer commits and deployments, and applying 
 
 
 
+
+## 4 Nov 2026 — Defense formula, costs to level 50, titles 25/109 (Claude)
+- New `DEFENSE_MODEL`: damage ∝ K / (K + Defense × (1 − Defense Ignore) − Armor Penetration); Training Ogre Defense 1,000, K 1,000; fits all 7 test points within 0.06%.
+- `LEVEL_COSTS`: Arcana of the Future 3,000 Gold; Hero/Karma EXP to level 50; breakthrough examples (Karma 50 = 50,000 Gold).
+- Titles 25/109 (Restorer of Grace, Pioneer of the Wind Path, Guide of the World, Tycoon). 8 more gear rows match the tables.
 ## 4 Nov 2026 — Item Database and Achievements (preview, Claude)
 - Item Database page: tabs Materials / Ingredients / Important / Quest (Quest has no data yet), search, rarity filter; reads `assets/items/<tab>.json` when opened.
 - Achievements page: search, category and ticked filters, a tick per achievement saved in the viewer's browser (`dsw.achievements.v1`), and a Fame stage rewards box (only Stage 1 recorded).

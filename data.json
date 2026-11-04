@@ -14455,11 +14455,11 @@
  "TITLES": {
   "note": "All 109 titles, read from David's screen recording of the Title list (29 Oct 2026), in the game's order. Every obtained title's passive applies to all heroes, slotted or not. Flat bonuses are added to the hero's flat stats before % bonuses multiply; % bonuses join the same pool as gear and set % (confirmed in-game). Name colours are the game's: the five colours run from strongest (pink) to weakest (lavender) passives. The game hides the condition once a title is obtained, Curious Hands (Anything in Here?) and 【777】 (Lucky!) were filled in from David's Achievements video, 1 Nov 2026; Novice Mercenary Crew's is inferred from the other promotion titles. David's titles updated 31 Oct 2026 (5 of 109: Environmental Cleaner and Black Wings added; the game's Cumulative Set Effect, Defense +10, Max HP +100, Defense Up +1.50%, Critical Rate +1.30%, matches the sum).",
   "totalCount": 109,
-  "ownedCount": 21,
+  "ownedCount": 25,
   "ownedCumulative": [
    {
     "stat": "Max HP",
-    "value": 740
+    "value": 1040
    },
    {
     "stat": "Critical Hit Chance",
@@ -14470,16 +14470,16 @@
     "value": 6.2
    },
    {
+    "stat": "Defense Up",
+    "value": 5.3
+   },
+   {
     "stat": "Attack",
     "value": 35
    },
    {
     "stat": "Defense",
     "value": 15
-   },
-   {
-    "stat": "Defense Up",
-    "value": 3.0
    }
   ],
   "list": [
@@ -14784,7 +14784,7 @@
    {
     "name": "Tycoon",
     "grade": 3,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Defense Up",
@@ -15722,7 +15722,7 @@
    {
     "name": "Guide of the World",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
@@ -15735,7 +15735,7 @@
    {
     "name": "Pioneer of the Wind Path",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
@@ -15748,7 +15748,7 @@
    {
     "name": "Restorer of Grace",
     "grade": 4,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
@@ -15983,7 +15983,8 @@
    "Sion (David, 31 Oct 2026, Test Kit): Bless gives Attack Power +10% at Lv.1 rising +0.5% per level to 14% at Lv.9 and 15% at Lv.10; the Defense version is the same (10-15%). Even steps then a double step at max, like every buff measured so far. How the field works (David): the Ultimate's relic field lasts as long as Sion stays on the field, and he can switch it between the Attack and Defense buff; it is about twice the size of Eileen's Brave One circle; after Sion swaps out it stays for 10 s, and swapping him back in during those 10 s refreshes it, so played right the buff never drops. A buff lingers 2 s after you switch it or leave the field, like Eileen's.",
    "Team buffs add (David, 31 Oct 2026, Test Kit): Eileen's Brave One and Sion's Bless (both Lv.2) on Reina, no status on the enemy. Attack 748 -> 797 with either buff -> 847 with both (+49, +50: adding; multiplying would give 849). The same skill hit: 2,094 -> 2,231 -> 2,369; adding predicts 2,368, multiplying 2,377. Both buffs join the Attack Power Up pool with gear and each other. (A first try at 71 Attack, 78 / 78 / 85, was too small to tell.) Vanguard Banner lasted 10 s.",
    "Super Armor Break and status build-up (David, 1 Nov 2026, Training Ogre, Test Kit): Break doubles the build-up of physical statuses only (Stun, Knockdown, Airborne). Measured unbroken -> broken per press: Reina Rising Cutter and Wind Slayer 0.167 -> 0.333 Airborne, Johnny Phantom Slash 0.167 -> 0.333 Airborne, Eileen Barraging Spear 0.25 -> 0.5 Airborne, Lute Stun Slash and Sion Divine Smash 0.167 -> 0.333 Stun. Frost is not affected: Cerese Ice Storm 0.25 both ways; damage-over-time statuses (Poison, Bleed, Burn, Shock) are not affected either (David). Matches the Rift: physical statuses needed half as many uses on a Broken enemy. So status tests are done unbroken; broken physical values = 2x.",
-   "Defense Ignore 20% (Earthshatterer 3-piece), Reina, Attack 2445, Armor Penetration 66, Critical Damage 55.71%, Wind Sword Lv.3 first hit on the Training Ogre with no statuses (1 Nov 2026): non-crit 743 -> 829 (+11.6%), crit 1157 -> 1291 (+11.6%); crit / non-crit = 1.557 = 1 + Crit Damage. If damage taken scales as K / (K + Defense x (1 - Defense Ignore)), this means the dummy's Defense is about 1.08 x K at Armor Penetration 66 (it blocks about 52% before Defense Ignore). That also predicts about +0.5% for the earlier 0.97% test (+0.4% seen). The form of the formula is still an assumption."
+   "Defense Ignore 20% (Earthshatterer 3-piece), Reina, Attack 2445, Armor Penetration 66, Critical Damage 55.71%, Wind Sword Lv.3 first hit on the Training Ogre with no statuses (1 Nov 2026): non-crit 743 -> 829 (+11.6%), crit 1157 -> 1291 (+11.6%); crit / non-crit = 1.557 = 1 + Crit Damage. If damage taken scales as K / (K + Defense x (1 - Defense Ignore)), this means the dummy's Defense is about 1.08 x K at Armor Penetration 66 (it blocks about 52% before Defense Ignore). That also predicts about +0.5% for the earlier 0.97% test (+0.4% seen). The form of the formula is still an assumption.",
+   "Defense test (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Training Ogre, 4 Nov 2026), damage per Attack: AP 0/DI 6.65% 0.3042; AP 0/DI 26.65% 0.3389; AP 70/DI 0% 0.3044; AP 70/DI 20% 0.3400; AP 85/DI 0% 0.3069 (plus 1 Nov: AP 66/DI 0% 0.3039, AP 66/DI 20% 0.3391). Best fit: damage ∝ K / (K + Defense × (1 − Defense Ignore) − Armor Penetration), with this dummy's Defense = 1,000 and K = 1,000 (best fit on a grid search; same units as Armor Penetration). Fits all 7 points within 0.06%; applying Armor Penetration before Defense Ignore fits worse (up to 1%). On this dummy: 1 Armor Penetration ≈ 1 Defense point ≈ +0.05% damage; 1% Defense Ignore ≈ 10 Defense points ≈ +0.5%. The dummy blocks about half the damage. K and the dummy's Defense are fitted values; whether K changes with the attacker's level, and the Defense of real bosses, are unknown."
   ],
   "tests": [
    {
@@ -24028,7 +24029,7 @@
   }
  },
  "LEVEL_COSTS": {
-  "note": "Measured by David in Test Kit test 05 (3 Nov 2026), one level at a time: Kalien (Hero 1→20), Rock-Splitting Ice (Karma 1→20), Azure Gale Boots (Orange gear +0→+15). Gold is not a price per level: every EXP item has its own Gold price, paid when it is used. All 52 recorded item steps match these prices exactly. Raw Mana Stone = 5,000 Gold (Battle Will Helmet +1→+4, 4 Nov 2026).",
+  "note": "Measured by David in Test Kit test 05 (3 Nov 2026), one level at a time: Kalien (Hero 1→20), Rock-Splitting Ice (Karma 1→20), Azure Gale Boots (Orange gear +0→+15). Gold is not a price per level: every EXP item has its own Gold price, paid when it is used. All 52 recorded item steps match these prices exactly. Raw Mana Stone = 5,000 Gold (Battle Will Helmet +1→+4, 4 Nov 2026). Arcana of the Future = 3,000 Gold (4 Nov 2026; checked on two steps).",
   "pickRule": "The game auto-picks the largest item whose EXP fits in what the bar still needs, repeats, and finishes with the smallest item if anything is left (that last item overshoots; the extra EXP carries over to the next level). Seen in every step where David had the items.",
   "items": {
    "hero": [
@@ -24067,7 +24068,7 @@
     {
      "name": "Arcana of the Future",
      "exp": 10000,
-     "gold": null
+     "gold": 3000
     }
    ],
    "gear": [
@@ -24135,7 +24136,17 @@
      35300,
      37200,
      39100,
-     41100
+     41100,
+     43200,
+     45300,
+     47500,
+     49700,
+     51900,
+     54200,
+     56600,
+     59000,
+     61400,
+     63900
     ]
    },
    "karma": {
@@ -24179,11 +24190,21 @@
      35300,
      37200,
      39100,
-     41100
+     41100,
+     43200,
+     45300,
+     47500,
+     49700,
+     51900,
+     54200,
+     56600,
+     59000,
+     61400,
+     63900
     ]
    }
   },
-  "expNote": "toNext[i] = EXP from level i+1 to i+2, measured up to level 40 (Kalien; A Path That Leads to the Wind and A Flame That Cuts Through the Moment). Heroes and Karma need the same EXP from level 3 on; only the first two levels differ (Hero 150, 250; Karma 200, 200). Gear EXP per level is in GEAR_UPGRADE.levels.",
+  "expNote": "toNext[i] = EXP from level i+1 to i+2, measured up to level 50 (Kalien; A Path That Leads to the Wind and A Flame That Cuts Through the Moment). Heroes and Karma need the same EXP from level 3 on; only the first two levels differ (Hero 150, 250; Karma 200, 200). Gear EXP per level is in GEAR_UPGRADE.levels.",
   "breakthroughs": {
    "note": "Gold seems fixed per breakthrough level; the materials depend on the hero or card (monster materials, a gathering/mining material, the hero's faction Insignia; Karma uses its archetype's trait stones). Recorded examples only.",
    "hero": {
@@ -24202,13 +24223,15 @@
     "40": {
      "gold": 16000,
      "examples": {
-      "Kalsion": "10 Low-Grade Monster Claw, 10 Primordial Seed, 3 Insignia of the Orbis Kingdom"
+      "Kalsion": "10 Low-Grade Monster Claw, 10 Primordial Seed, 3 Insignia of the Orbis Kingdom",
+      "Kalien": "10 Low-Grade Monster Claw, 10 Primordial Seed, 3 Insignia of the Red Fox Mercenaries"
      }
     },
     "50": {
      "gold": 32000,
      "examples": {
-      "Reina": "15 Low-Grade Monster Claw, 10 Intermediate Monster Claw, 15 Primordial Seed, 5 Insignia of the Orbis Kingdom"
+      "Reina": "15 Low-Grade Monster Claw, 10 Intermediate Monster Claw, 15 Primordial Seed, 5 Insignia of the Orbis Kingdom",
+      "Kalien": "15 Low-Grade Monster Claw, 10 Intermediate Monster Claw, 15 Primordial Seed, 1 Insignia of the Red Fox Mercenaries"
      }
     }
    },
@@ -24229,15 +24252,21 @@
     "40": {
      "gold": 20000,
      "examples": {
-      "A Flame That Cuts Through the Moment": "15 Orb of Recollection, 10 Low-Grade Blazeflame Stone, 5 Intermediate Blazeflame Stone, 1 Chronograph of Ages"
+      "A Flame That Cuts Through the Moment": "15 Orb of Recollection, 10 Low-Grade Blazeflame Stone, 5 Intermediate Blazeflame Stone, 1 Chronograph of Ages",
+      "A Path That Leads to the Wind": "15 Crystal of Reverie, 10 Low-Grade Gale Stone, 5 Intermediate Gale Stone, 1 Chronograph of Ages"
+     }
+    },
+    "50": {
+     "gold": 50000,
+     "examples": {
+      "So Good It's to Die For": "20 Crystal of Oblivion, 15 Intermediate Venom Stone, 3 Chronograph of Ages"
      }
     }
    }
   },
   "unknown": [
-   "Gold for Arcana of the Future",
-   "EXP per level above 40",
-   "Hero breakthrough at 60; Karma breakthroughs at 50 and 60",
+   "EXP per level above 50",
+   "Hero breakthrough at 60; Karma breakthrough at 60",
    "Which material each hero/card uses at each breakthrough (the pattern behind it)"
   ],
   "skills": {
@@ -24635,5 +24664,16 @@
     ]
    }
   ]
+ },
+ "DEFENSE_MODEL": {
+  "formula": "damage ∝ K / (K + Defense × (1 − DefenseIgnore) − ArmorPenetration)",
+  "trainingOgre": {
+   "defense": 1000,
+   "K": 1000
+  },
+  "fitPoints": 7,
+  "maxError": "0.06%",
+  "measured": "2026-11-04",
+  "note": "Fitted from Test Kit test 04; see DAMAGE_TESTS.findings. Whether K is a fixed 1,000 or depends on level is unknown. Not used by the page yet."
  }
 }
