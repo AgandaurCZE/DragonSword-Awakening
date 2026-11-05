@@ -20846,7 +20846,7 @@
     "label": "Towers",
     "sub": "Tower of Trials",
     "image": "assets/ui/mode-towers.webp",
-    "intro": "How the hero performs in the Tower of Trials. Each tower massively boosts hits on enemies with its own status, so heroes of that archetype (marked Counter) are close to required. Until a hero is rated for a tower, their Overall tier is shown faded."
+    "intro": "How the hero performs in the Tower of Trials. Each tower massively boosts hits on enemies with its own status, so heroes of that archetype (marked Counter) are close to required. Heroes stay Unrated here until they're rated for a tower."
    }
   },
   "bosses": [

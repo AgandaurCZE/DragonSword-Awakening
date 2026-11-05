@@ -1800,7 +1800,7 @@ function v2Data(){return TIER_LIST_V2||{};}
 function v2Hero(name){const D=v2Data();let H=(D.heroes||{})[name];
  return H||{};}
 function v2Tower(){const L=TOWER_TRIALS.towers||[];return L.find(t=>t.id===V2.tower)||L[0]||{};}
-function v2Tier(name){const H=v2Hero(name);if(V2.mode==='overall')return {t:H.overall?.tier};if(V2.mode==='towers'){const w=(H.towers||{})[v2Tower().id];return w?{t:w}:{t:H.overall?.tier,fallback:!!H.overall?.tier};}const b=H.bosses||{};if(V2.boss==='all')return {t:b.all};return b[V2.boss]?{t:b[V2.boss]}:{t:b.all,fallback:!!b.all};}
+function v2Tier(name){const H=v2Hero(name);if(V2.mode==='overall')return {t:H.overall?.tier};if(V2.mode==='towers'){const w=(H.towers||{})[v2Tower().id];return {t:w};}const b=H.bosses||{};if(V2.boss==='all')return {t:b.all};return b[V2.boss]?{t:b[V2.boss]}:{t:b.all,fallback:!!b.all};}
 function v2TierColor(t){return (v2Data().tierColors||{})[t]||tierColor(t);}
 function v2Chip(key,H,h){const T=(v2Data().tags||{})[key];if(!T)return '';const ic=key==='awk'?`<img src="${AWAKENINGS.icon||'assets/awakenings/Awakening_Icon.png'}" alt="">`:`<svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS[key]||''}</svg>`;
  let label=profileEsc(T.label),tip=T.desc;

@@ -1,3 +1,5 @@
+## 5 Nov 2026 — Towers start Unrated (preview, Claude)
+- New tier list, Towers mode: heroes are Unrated until rated for that tower, rather than showing their Overall tier faded.
 ## 5 Nov 2026 — Sion rated (preview, Claude)
 - `TIER_LIST_V2`: Sion B overall, B single target, A groups, Team buffer, Enabler, Needs A1. New finding in `DAMAGE_TESTS`; Divine Smash corrected from Stun to Knockdown there and in the Test Kit.
 ## 5 Nov 2026 — Ryza rated (preview, Claude)
