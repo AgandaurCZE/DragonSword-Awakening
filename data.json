@@ -16022,7 +16022,8 @@
    "Enemy Defense, third batch (Test Kit test 06, 4 Nov 2026). Species doesn't seem to matter: Skeleton and Orc match Goblin and Warg at every shared dungeon level (Skeleton Lv.15, 30, 45; Orc Lv.45; Orc matches Skeleton at Lv.65). World enemies are about x0.8 of dungeon ones: basic 486, 503, 532 and 542 at Lv.52, 54, 57 and 58, against a dungeon curve of 569, 642 and 702 at Lv.50, 55 and 60. Dungeon bosses x1.3: Brave Skeleton Commander (Lv.15, 30, 45) and Orc Barbarian (Lv.55) too; Agile Ironclad Warg is a boss in a duo fight but x1.04. Named enemies with visible changes, Igniter Snickrak and Corroded Knight Kalvaros, are about x1.15 of a basic world enemy whatever model they share (two examples).",
    "Enemy Defense, fourth batch (Test Kit test 06, 4 Nov 2026). Trait Dungeons: minions x1.6 and bosses x3.2 of the basic dungeon enemy at Lv.30, 40 and 50 (minion 251, 505, 912; boss 506, 1,012, 1,825), the same for Mantius, Drosophia and Ghagaroach where tested. World, relative to a basic world enemy: Goblin Berserker x1.1, Goblin Barbarian, Harpy and Spider x1.05, Troll x1.1, Ghoul and Worm x1.0, Lesser Dragon x1.2, Greater Dragon x1.5, Elemental Stone x1.0 (purple and red x1.1). Most of these are single tests.",
    "Whole skills against the calculator (David, 5 Nov 2026, Training Ogre, no statuses, no crits; predicted -> real). Reina: Wind Slayer single hit 7330 -> 7332; Rising Cutter 6 hits 11249 -> 11588 (x1.03). Kalsion: Weapon Blaze single hit 5711 -> 5711, once its own Attack buff is counted, as it applies before the skill's damage; Flame Wave press 5 hits 8361 -> 8362, hold 3 hits 7109 (x0.85); Royal Flame Flame Wave press 9 hits 8797 -> 9202 (x1.046), hold 3 hits 7476 (x0.85). The codex % is right for single hits and the 5-hit press. Not known why Rising Cutter and the 9-hit press run higher, or whether these ratios hold at other skill levels. The codex gives one % for press and hold.",
-   "Kalsion's Explosion on an Airborne Training Ogre (David, 5 Nov 2026, Attack 1119, Lv.7 = 1714%, no gear, no buffs, no crits, Airborne up throughout): press = 4 hits of 1438 + a last hit of 5753 = 11505; hold = 14 hits of 1438 + the same last hit = 25885. Taking Airborne's x2 as applying to every hit, each small hit is 7.5% and the last hit 30% of the codex %, so press is 60% and hold 135% of the codex % (2173% at Lv.10 means about 1304% press and 2934% hold). Formula with those: 11508 and 25893. Runs with crits: hold 26693 (one crit) and 28489 (a few)."
+   "Kalsion's Explosion on an Airborne Training Ogre (David, 5 Nov 2026, Attack 1119, Lv.7 = 1714%, no gear, no buffs, no crits, Airborne up throughout): press = 4 hits of 1438 + a last hit of 5753 = 11505; hold = 14 hits of 1438 + the same last hit = 25885. Taking Airborne's x2 as applying to every hit, each small hit is 7.5% and the last hit 30% of the codex %, so press is 60% and hold 135% of the codex % (2173% at Lv.10 means about 1304% press and 2934% hold). Formula with those: 11508 and 25893. Runs with crits: hold 26693 (one crit) and 28489 (a few).",
+   "Kalsion in play (David, 5 Nov 2026, A0, no signature). Royal Flame's buff stays on when he swaps out. Burst Grab needs 2 Burn stacks for its triple mounted attack; at 1 stack it is one hit. With Reina (skill, Ultimate twice) and Eileen (skill), one combo fills the Airborne gauge on a boss, and his held Explosion then deals about as much as that whole combo. On a broken enemy his Flame Wave press applies about half an Airborne gauge, which fits Break doubling physical build-up."
   ],
   "tests": [
    {
@@ -20968,7 +20969,7 @@
    "Raid": 1
   },
   "about": [
-   "DragonSword: Awakening is a single-player RPG with no gacha and no energy limits, so every hero is eventually yours. This tier list rates heroes once they're built: level 70, good gear and their signature Karma.",
+   "DragonSword: Awakening is a single-player RPG with no gacha and no energy limits, so every hero is eventually yours. This tier list rates heroes on their base kit, before awakenings and signature Karma. A \"Needs A\" tag or the purple card shows what could lift a hero higher.",
    "Ratings are decided by us from the in-game codex, measured damage tests and hands-on play, and they're never moved by a formula. Patch arrows next to the tier letter show whether the latest balance patch buffed (green ▲) or nerfed (red ▼) a hero; amber means mixed.",
    "Heroes are compared with others in the same role column: a Support is ranked against other Supports, not against damage dealers."
   ],
@@ -21056,7 +21057,7 @@
     "desc": "Added automatically. Bosses mode: the selected boss is weak to this hero's archetype. Towers mode: the selected tower gives this hero's status +400% damage."
    }
   },
-  "signatureKarmaText": "The purple card in a portrait's bottom-right corner means the hero's signature Karma changes how they play, not just their stats. The rating assumes you have it.",
+  "signatureKarmaText": "The purple card in a portrait's bottom-right corner means the hero's signature Karma changes how they play, not just their stats. It could lift them above the rating shown.",
   "heroes": {
    "Reina": {
     "overall": {
@@ -21180,6 +21181,21 @@
     "progression": {
      "late": "Her signature Karma (the storm follows the nearest enemy when Ice Storm ends) and A1 (bigger, longer Ice Storm) build on her strongest skill; the devs moved her damage into Ice Storm in 1.1.0 for exactly this. Likely a tier higher with both."
     }
+   },
+   "Kalsion": {
+    "overall": {
+     "tier": "A",
+     "single": "B",
+     "groups": "S"
+    },
+    "tags": [
+     "gather"
+    ],
+    "needs": [
+     [
+      "Airborne"
+     ]
+    ]
    }
   },
   "huntRatingRewards": {

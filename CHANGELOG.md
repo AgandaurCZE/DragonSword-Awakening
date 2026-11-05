@@ -1,3 +1,6 @@
+## 5 Nov 2026 — Kalsion rated; ratings are for base kits (preview, Claude)
+- `TIER_LIST_V2`: Kalsion A overall, B single target, S groups, Gatherer, Needs Airborne. The About text and signature Karma text now say heroes are rated on their base kit.
+- New `docs/LAUNCH_CHANGES.md`: Kalsion's corrections that touch public pages.
 ## 5 Nov 2026 — Calculator: Explosion press and hold (preview, Claude)
 - `DAMAGE_CALC.skillAdjust`: Kalsion's Explosion, press 5 hits x0.6 and hold 15 hits x1.35 of the codex %, measured from David's hit numbers with Airborne up. New finding in `DAMAGE_TESTS`.
 ## 5 Nov 2026 — Calculator: press and hold, measured skill corrections (preview, Claude)
