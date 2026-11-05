@@ -1,3 +1,5 @@
+## 5 Nov 2026 — Test 01 entries from the rating chat (Claude)
+- Test Kit: 47 status entries saved from David's rating discussions, marked as estimates; Kalien, Othello and Ryza added to the hero lists.
 ## 5 Nov 2026 — Othello rated (preview, Claude)
 - `TIER_LIST_V2`: Othello B overall, B single target, A groups, Gatherer, Self-sufficient, Expert −1. New finding in `DAMAGE_TESTS`: Ryza and Othello at equal Attack. Public text changes added to `docs/LAUNCH_CHANGES.md`.
 ## 5 Nov 2026 — Towers start Unrated (preview, Claude)
