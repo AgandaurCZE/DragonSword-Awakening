@@ -1,3 +1,5 @@
+## 5 Nov 2026 — Sion rated (preview, Claude)
+- `TIER_LIST_V2`: Sion B overall, B single target, A groups, Team buffer, Enabler, Needs A1. New finding in `DAMAGE_TESTS`; Divine Smash corrected from Stun to Knockdown there and in the Test Kit.
 ## 5 Nov 2026 — Ryza rated (preview, Claude)
 - `TIER_LIST_V2`: Ryza A overall, A single target, S groups, Gatherer, Self-sufficient, Expert −1. New finding in `DAMAGE_TESTS`. Public text changes added to `docs/LAUNCH_CHANGES.md`.
 ## 5 Nov 2026 — Kalien rated (preview, Claude)

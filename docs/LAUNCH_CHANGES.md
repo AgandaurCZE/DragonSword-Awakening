@@ -12,3 +12,7 @@ These touch public pages, so they can't go in until David approves the launch. H
 ## Ryza
 - Verdict and pros: "Good later", "A tier at end-game" and "isn't a starter in any team" no longer match. New rating: A overall, A single target, S groups; Gatherer, Self-sufficient, Expert −1.
 - Review: mention the 17–20 second Shock stack alone, and that a Shock teammate makes it easier and reaches 2 stacks for the mount.
+
+## Sion
+- Review and verdict: match the new rating, B overall, B single target, A groups; Team buffer, Enabler, Needs A1. His old tiers are A from mid-game.
+- `TEAM_DATA` and review text: check that they describe Divine Smash and Justice Fall as Knockdown.
