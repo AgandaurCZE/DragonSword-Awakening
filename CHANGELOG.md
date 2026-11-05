@@ -1,5 +1,5 @@
 ## 5 Nov 2026 — Calculator: Explosion press and hold (preview, Claude)
-- `DAMAGE_CALC.skillAdjust`: Kalsion's Explosion, press 5 hits x1.2 and hold 15 hits x2.7 of the codex value, measured with Airborne on the enemy. New finding in `DAMAGE_TESTS`.
+- `DAMAGE_CALC.skillAdjust`: Kalsion's Explosion, press 5 hits x0.6 and hold 15 hits x1.35 of the codex %, measured from David's hit numbers with Airborne up. New finding in `DAMAGE_TESTS`.
 ## 5 Nov 2026 — Calculator: press and hold, measured skill corrections (preview, Claude)
 - David's whole-skill tests on Reina and Kalsion: new `DAMAGE_CALC.skillAdjust`, a "How it's used" choice for Flame Wave, and notes on Royal Flame's Attack buff. New finding in `DAMAGE_TESTS`.
 ## 4 Nov 2026 — Calculator enemy picker (preview, Claude)
