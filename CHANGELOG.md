@@ -1,3 +1,5 @@
+## 5 Nov 2026 — Levelling calculator (preview, Claude)
+- Tools page: Hero and Karma levelling calculator, using the game's item-picking rule, with tabs for the two tools. `LEVEL_COSTS` has Karma EXP to 70, the Karma breakthrough at 60 and item icons.
 ## 5 Nov 2026 — Hero EXP to 70, Tome of Heroes (preview, Claude)
 - `LEVEL_COSTS`: Hero EXP measured to level 70, hero breakthrough at 60 (80,000 Gold), Tome of Heroes at 5,000 Gold. Icon added to the Currency Dungeon and the Item Database.
 ## 5 Nov 2026 — Barpedin, Tome of Heroes (preview, Claude)

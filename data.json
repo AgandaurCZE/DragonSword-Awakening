@@ -24367,66 +24367,78 @@
     {
      "name": "Basic Combat Text",
      "exp": 500,
-     "gold": 200
+     "gold": 200,
+     "icon": "assets/items/icons/basic-combat-text.webp"
     },
     {
      "name": "Advanced Combat Text",
      "exp": 2000,
-     "gold": 650
+     "gold": 650,
+     "icon": "assets/items/icons/advanced-combat-text.webp"
     },
     {
      "name": "Core Combat Text",
      "exp": 6000,
-     "gold": 1800
+     "gold": 1800,
+     "icon": "assets/items/icons/core-combat-text.webp"
     },
     {
      "name": "Tome of Heroes",
      "exp": 20000,
-     "gold": 5000
+     "gold": 5000,
+     "icon": "assets/items/icons/tome-of-heroes.webp"
     }
    ],
    "karma": [
     {
      "name": "Arcana of War",
      "exp": 300,
-     "gold": 150
+     "gold": 150,
+     "icon": "assets/items/icons/arcana-of-war.webp"
     },
     {
      "name": "Arcana of Beginnings",
      "exp": 1000,
-     "gold": 400
+     "gold": 400,
+     "icon": "assets/items/icons/arcana-of-beginnings.webp"
     },
     {
      "name": "Arcana of Peace",
      "exp": 4000,
-     "gold": 1300
+     "gold": 1300,
+     "icon": "assets/items/icons/arcana-of-peace.webp"
     },
     {
      "name": "Arcana of the Future",
      "exp": 10000,
-     "gold": 3000
+     "gold": 3000,
+     "icon": "assets/items/icons/arcana-of-the-future.webp"
     }
    ],
    "gear": [
     {
      "name": "Mana Shard",
      "exp": 200,
-     "gold": 300
+     "gold": 300,
+     "icon": "assets/items/icons/mana-shard.webp"
     },
     {
      "name": "Mana Crystal",
      "exp": 500,
-     "gold": 700
+     "gold": 700,
+     "icon": "assets/items/icons/mana-crystal.webp"
     },
     {
      "name": "Mana Ore",
      "exp": 1500,
-     "gold": 2000
+     "gold": 2000,
+     "icon": "assets/items/icons/mana-ore.webp"
     },
     {
      "name": "Raw Mana Stone",
      "exp": 5000,
-     "gold": 5000
+     "gold": 5000,
+     "icon": "assets/items/icons/raw-mana-stone.webp"
     }
    ]
   },
@@ -24556,11 +24568,31 @@
      56600,
      59000,
      61400,
-     63900
+     63900,
+     66500,
+     69100,
+     71800,
+     74500,
+     77200,
+     80000,
+     82900,
+     85800,
+     88700,
+     91700,
+     94800,
+     97900,
+     101100,
+     104300,
+     107500,
+     110800,
+     114200,
+     117600,
+     121000,
+     124500
     ]
    }
   },
-  "expNote": "toNext[i] = EXP from level i+1 to i+2. Hero: measured to level 70 (Kalien to 50 and from 50 to 60, Kalsion from 60 to 70). Karma: measured to level 50; Hero and Karma need the same EXP from level 3 to 50, and only the first two levels differ (Hero 150, 250; Karma 200, 200). Gear EXP per level is in GEAR_UPGRADE.levels.",
+  "expNote": "toNext[i] = EXP from level i+1 to i+2, measured to level 70 for Hero and Karma (Kalien, Kalsion; A Path That Leads to the Wind, A Flame That Cuts Through the Moment). Heroes and Karma need the same EXP from level 3 on; only the first two levels differ (Hero 150, 250; Karma 200, 200). EXP left over at a level cap is lost: every run ending at 60 or 70 had an empty bar. Gear EXP per level is in GEAR_UPGRADE.levels.",
   "breakthroughs": {
    "note": "Gold seems fixed per breakthrough level; the materials depend on the hero or card (monster materials, a gathering/mining material, the hero's faction Insignia; Karma uses its archetype's trait stones). Recorded examples only.",
    "hero": {
@@ -24624,12 +24656,16 @@
      "examples": {
       "So Good It's to Die For": "20 Crystal of Oblivion, 15 Intermediate Venom Stone, 3 Chronograph of Ages"
      }
+    },
+    "60": {
+     "gold": 100000,
+     "examples": {
+      "A Flame That Cuts Through the Moment": "25 Crystal of Recollection, 20 Intermediate Blazeflame Stone, 10 High-Grade Blazeflame Stone, 5 Chronograph of Ages"
+     }
     }
    }
   },
   "unknown": [
-   "Karma EXP above 50 (probably the same as Hero, not measured)",
-   "Karma breakthrough at 60",
    "Which material each hero/card uses at each breakthrough (the pattern behind it)"
   ],
   "skills": {
@@ -24765,6 +24801,13 @@
     }
    ],
    "levelsNote": "materials = for a Lv.10 skill; maxLv7 = what a Lv.7 skill (Auto/Dash/Jump attack) uses for its last level instead. Total Gold: Lv.1→7 = 92,500; Lv.1→10 = 297,500."
+  },
+  "calc": {
+   "intro": "EXP, items and Gold for any level range. It picks items the way the game does: the largest that fits, finishing with the smallest.",
+   "itemsHint": "Untick anything you don't have or want to save. The game only uses what you own, so this changes the Gold.",
+   "noItems": "Tick at least one item.",
+   "btNote": "Breakthrough Gold is the same for everyone. Materials depend on the hero or Karma; this is one recorded example.",
+   "note": "Each section between level caps is worked out separately. It doesn't check how many items you own."
   }
  },
  "SKILL_BUFF_LEVELS": {

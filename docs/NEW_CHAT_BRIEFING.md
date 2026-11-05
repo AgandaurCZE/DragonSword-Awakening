@@ -63,7 +63,7 @@ Paste this whole file into the first message of a new chat. It replaces the memo
   - Dungeons (Normal, Trait, Currency, including the new Eroded Underground Cemetery, still without banner art).
   - Familiars, Titles (25/109), Cookbook.
   - Guides: 8 categories of placeholder cards.
-  - Tools (damage calculator with an enemy type + level picker) and News (disabled).
+  - Tools (damage calculator with an enemy type + level picker; levelling calculator) and News (disabled).
   - Item Database (tabs Materials, Ingredients, Important, Quest; Quest has no data yet).
   - Achievements tracker (per-browser ticks).
 - **Measured mechanics** (see `DAMAGE_TESTS`, `DEFENSE_MODEL`, `LEVEL_COSTS`, `SKILL_BUFF_LEVELS`, `GEAR_UPGRADE`):
@@ -88,7 +88,6 @@ Paste this whole file into the first message of a new chat. It replaces the memo
 
 ## Open / next steps
 - **From David:**
-  - Karma EXP above 50 and the Karma breakthrough at 60 (Hero data is complete to 70).
   - Fame stage rewards and the "Name of the Strong" icon.
   - Quest items.
   - The Guides icon (Codex book).

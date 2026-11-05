@@ -326,6 +326,9 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .gx-mats{display:flex;flex-wrap:wrap;gap:8px}.gx-mat{display:inline-flex;align-items:center;gap:4px;font-weight:700;white-space:nowrap}.gx-mat img{width:24px;height:24px;border-radius:4px;background:#0003}
 .gx-est{color:#ffcf5a;font-size:12px}.gx-note{color:var(--muted);font-size:13px;margin:8px 0 0}.gx-ret{margin-top:12px;padding:10px 12px;border-left:3px solid #5fd38d;background:#5fd38d12;border-radius:4px}
 .dc{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px;align-items:start;margin-top:16px}.dc-in{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;min-width:0}.dc-head{margin-top:4px}.dc-out{position:sticky;top:16px}
+.tl-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}.tl-tabs button{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer}.tl-tabs button.on{border-color:var(--accent,#3aa0ff);color:var(--accent,#3aa0ff)}
+.lv-items{display:grid;gap:8px}.lv-items img,.lv-row img{width:28px;height:28px;border-radius:4px;background:#0003}.lv-skip{margin-top:12px;font-size:14px}
+.lv-row{display:flex;align-items:center;gap:8px;padding:3px 0;font-size:14px}.lv-row b{margin-left:auto;font-variant-numeric:tabular-nums}.lv-bt{display:grid;grid-template-columns:auto auto;justify-content:space-between;gap:0 8px;padding:3px 0;font-size:14px}.lv-bt small{grid-column:1/-1;font-size:12px}.dc-out h5{margin:10px 0 4px}
 .dc-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;align-items:end}.dc-f{display:grid;gap:4px;font-size:13px;color:var(--muted);min-width:0}.dc-w{grid-column:span 2}
 .dc input[type=number],.dc select{width:100%;box-sizing:border-box;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font:inherit}
 .dc-st input[type=number]{min-width:72px}.dc-st td{white-space:nowrap}.dc-on{display:inline-flex;gap:8px;align-items:center;cursor:pointer}.dc-mute{color:var(--muted)}.dc-more{margin-top:12px}.dc-more summary{cursor:pointer;color:var(--muted);font-size:13px}.dc-more .dc-g{margin-top:8px}
@@ -693,7 +696,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 </section>
 <section class="simple-page" id="toolsPage" hidden>
  <div class="gear-heading"><h2>TOOLS</h2><span>Calculators and tools</span></div>
- <div id="toolsBody"><p class="gd-empty">Nothing here yet.</p></div>
+ <div id="toolsBody"><div class="tl-tabs" id="toolTabs"></div><div id="dcRoot"></div><div id="lvRoot" hidden></div></div>
 </section>
 <section class="simple-page" id="cookbookPage" hidden>
  <div class="gear-heading"><h2>COOKBOOK</h2><span>Every recipe, what it does at each star level, and what you've cooked</span></div>
@@ -718,7 +721,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
-let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={},COOKBOOK={},GEAR_UPGRADE={levels:{},expMaterials:[],refund:{base:{}},crafting:{}},RUNES=null,GUIDES={categories:[]},DAMAGE_CALC=null,DEFENSE_MODEL=null;
+let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={},COOKBOOK={},GEAR_UPGRADE={levels:{},expMaterials:[],refund:{base:{}},crafting:{}},RUNES=null,GUIDES={categories:[]},DAMAGE_CALC=null,DEFENSE_MODEL=null,LEVEL_COSTS=null;
 let activeArch='';
 let activeRole='';
 const $=id=>document.getElementById(id);
@@ -1977,7 +1980,7 @@ let DC_S=null;
 function dcSave(){try{localStorage.setItem('dsw.dmgcalc.v1',JSON.stringify(DC_S));}catch(e){}}
 function dcSkills(h){return((CHARACTER_PROFILE_DATA[h]||{}).skills||[]).filter(s=>s.meta&&s.meta.attackPct);}
 function dcPct(s,lv){const m=s.meta.maxLevel;return!m||m<2?s.meta.attackPct:skillLevelValue(s.meta.attackPct,skillLevelFactor(lv,m).factor);}
-function renderDamageCalc(){const root=$('toolsBody');if(!root||!DAMAGE_CALC||!DEFENSE_MODEL)return;const E=profileEsc,C=DAMAGE_CALC;
+function renderDamageCalc(){const root=$('dcRoot');if(!root||!DAMAGE_CALC||!DEFENSE_MODEL)return;const E=profileEsc,C=DAMAGE_CALC;
  let saved=null;try{saved=JSON.parse(localStorage.getItem('dsw.dmgcalc.v1')||'null');}catch(e){}
  const S=DC_S={...DC_DEF,...(saved||{})};S.st=S.st||{};
  if(!CHARACTER_PROFILE_DATA[S.hero])S.hero=(HEROES[0]||{}).name||'';
@@ -2032,6 +2035,36 @@ function renderDamageCalc(){const root=$('toolsBody');if(!root||!DAMAGE_CALC||!D
  $('dcElv').oninput=e=>{if(+e.target.value>0){S.elv=+e.target.value;applyEnemy();draw();dcSave();}};
  root.oninput=root.onchange=e=>{const t=e.target;if(t.dataset.k){S[t.dataset.k]=t.value;if(t.dataset.k==='def'&&S.enemy!=='custom'){S.enemy='custom';$('dcEnemy').value='custom';applyEnemy();}}else if(t.dataset.st){const r=S.st[t.dataset.st]=S.st[t.dataset.st]||{};r[t.dataset.f]=t.type==='checkbox'?t.checked:t.value;}else return;draw();dcSave();};
  applyEnemy();draw();}
+// Levelling calculator (Tools page, preview only). Follows the game's item-picking rule; data from LEVEL_COSTS.
+function lvPlan(kind,from,to,bar,names,skipFirst){const L=LEVEL_COSTS,T=L.exp[kind].toNext,all=L.items[kind],items=all.filter(i=>names.includes(i.name)).sort((a,b)=>b.exp-a.exp),caps=Object.keys(L.breakthroughs[kind]).map(Number).sort((a,b)=>a-b);
+ const counts={},done=[];let total=0,lost=0,left=0,s=from,first=true;const small=items[items.length-1];
+ while(s<to&&small){const cap=caps.find(c=>c>s),e=cap&&cap<to?cap:to;let need=0;for(let l=s;l<e;l++)need+=T[l-1];total+=need;if(first){need=Math.max(0,need-bar);first=false;}
+  items.forEach(i=>{const n=Math.floor(need/i.exp);if(n){counts[i.name]=(counts[i.name]||0)+n;need-=n*i.exp;}});
+  let over=0;if(need>0){counts[small.name]=(counts[small.name]||0)+1;over=small.exp-need;}
+  if(caps.includes(e)||e===L.exp[kind].toNext.length+1)lost+=over;else left=over;s=e;}
+ caps.forEach(c=>{if(c>=from&&c<to&&!(c===from&&skipFirst))done.push(c);});
+ const itemGold=Object.entries(counts).reduce((g,[n,k])=>g+k*all.find(i=>i.name===n).gold,0),btGold=done.reduce((g,c)=>g+L.breakthroughs[kind][c].gold,0);
+ return{counts,total,lost,left,itemGold,btGold,breakthroughs:done};}
+const LV_DEF={kind:'hero',from:1,to:70,bar:0,skip:false,off:[]};
+function lvSave(S){try{localStorage.setItem('dsw.lvcalc.v1',JSON.stringify(S));}catch(e){}}
+function renderLevelCalc(){const root=$('lvRoot');if(!root||!LEVEL_COSTS||!LEVEL_COSTS.calc)return;const E=profileEsc,L=LEVEL_COSTS,C=L.calc,fmt=n=>Number(n).toLocaleString('en-GB');let saved=null;try{saved=JSON.parse(localStorage.getItem('dsw.lvcalc.v1')||'null');}catch(e){}
+ const S={...LV_DEF,...(saved||{})};const max=()=>L.exp[S.kind].toNext.length+1;
+ root.innerHTML=`<div class="gx-box dc-head"><h3>Levelling calculator <span class="gx-tag">PREVIEW</span></h3><p class="gx-sub">${E(C.intro)}</p></div><div class="dc"><div class="dc-in"><div class="gx-box"><h3>Level range</h3><div class="dc-g"><label class="dc-f"><span>Levelling</span><select id="lvKind"><option value="hero"${S.kind==='hero'?' selected':''}>Hero</option><option value="karma"${S.kind==='karma'?' selected':''}>Karma</option></select></label><label class="dc-f"><span>From level</span><input type="number" min="1" step="1" id="lvFrom" value="${E(S.from)}"></label><label class="dc-f"><span>To level</span><input type="number" min="2" step="1" id="lvTo" value="${E(S.to)}"></label><label class="dc-f"><span>EXP already in the bar</span><input type="number" min="0" step="1" id="lvBar" value="${E(S.bar)}"></label></div><label class="dc-on lv-skip" id="lvSkipW"><input type="checkbox" id="lvSkip"${S.skip?' checked':''}><span id="lvSkipT"></span></label></div><div class="gx-box"><h3>Items to use</h3><p class="gx-sub">${E(C.itemsHint)}</p><div class="lv-items" id="lvItems"></div></div></div><aside class="gx-box dc-out" id="lvOut" aria-live="polite"></aside></div>`;
+ function items(){$('lvItems').innerHTML=L.items[S.kind].map(i=>`<label class="dc-on"><input type="checkbox" data-lvi="${E(i.name)}"${S.off.includes(i.name)?'':' checked'}><img src="${E(i.icon)}" alt=""><span>${E(i.name)} <small class="dc-mute">${fmt(i.exp)} EXP · ${fmt(i.gold)} Gold</small></span></label>`).join('');}
+ function draw(){S.from=Math.min(Math.max(1,Math.round(+S.from)||1),max()-1);S.to=Math.min(Math.max(S.from+1,Math.round(+S.to)||2),max());const caps=L.breakthroughs[S.kind],isCap=!!caps[S.from];$('lvSkipW').style.display=isCap?'':'none';if(isCap)$('lvSkipT').textContent=`Breakthrough at level ${S.from} is already done`;
+  const names=L.items[S.kind].filter(i=>!S.off.includes(i.name)).map(i=>i.name),out=$('lvOut');if(!names.length){out.innerHTML=`<h3>Result</h3><p class="gx-sub">${E(C.noItems)}</p>`;return;}
+  const r=lvPlan(S.kind,S.from,S.to,Math.max(0,+S.bar||0),names,isCap&&S.skip),rows=L.items[S.kind].filter(i=>r.counts[i.name]).map(i=>`<div class="lv-row"><img src="${E(i.icon)}" alt=""><span>${E(i.name)}</span><b>${fmt(r.counts[i.name])}×</b></div>`).join('');
+  const bt=r.breakthroughs.map(c=>{const b=caps[c],ex=Object.entries(b.examples||{})[0];return`<div class="lv-bt"><span>Level ${c}</span><b>${fmt(b.gold)} Gold</b>${ex?`<small class="dc-mute">${E(ex[0])}: ${E(ex[1])}</small>`:''}</div>`;}).join('');
+  out.innerHTML=`<h3>Result</h3><div class="dc-big"><div><span>Total Gold</span><b>${fmt(r.itemGold+r.btGold)}</b></div><div><span>Total EXP</span><b>${fmt(r.total)}</b></div></div><p class="dc-small">Items ${fmt(r.itemGold)} Gold${r.btGold?` · breakthroughs ${fmt(r.btGold)} Gold`:''}</p>${rows?`<h5>Items</h5>${rows}`:''}${bt?`<h5>Breakthroughs</h5>${bt}<p class="dc-small">${E(C.btNote)}</p>`:''}${r.left?`<p class="dc-small">${fmt(r.left)} EXP left in the bar afterwards.</p>`:''}${r.lost?`<p class="dc-small">${fmt(r.lost)} EXP wasted at level caps, where the last item overshoots.</p>`:''}<p class="dc-small">${E(C.note)}</p>`;}
+ const save=()=>{draw();lvSave(S);};items();
+ $('lvKind').onchange=e=>{S.kind=e.target.value;S.off=[];items();save();};
+ [['lvFrom','from'],['lvTo','to'],['lvBar','bar']].forEach(([id,k])=>{$(id).oninput=e=>{if(e.target.value!==''){S[k]=+e.target.value;save();}};$(id).onblur=e=>{e.target.value=S[k];};});
+ $('lvSkip').onchange=e=>{S.skip=e.target.checked;save();};
+ $('lvItems').onchange=e=>{const n=e.target.dataset.lvi;if(!n)return;S.off=S.off.filter(x=>x!==n);if(!e.target.checked)S.off.push(n);save();};
+ draw();}
+function renderTools(){const t=$('toolTabs');if(!t)return;let cur='damage';try{cur=localStorage.getItem('dsw.tool')||cur;}catch(e){}const tabs=[['damage','Damage calculator'],['level','Levelling calculator']];
+ const show=()=>{t.innerHTML=tabs.map(([k,l])=>`<button type="button" class="${k===cur?'on':''}" data-tool="${k}">${profileEsc(l)}</button>`).join('');$('dcRoot').hidden=cur!=='damage';$('lvRoot').hidden=cur!=='level';};
+ t.onclick=e=>{const k=e.target.dataset.tool;if(!k)return;cur=k;try{localStorage.setItem('dsw.tool',k);}catch(x){}show();};renderDamageCalc();renderLevelCalc();show();}
 function renderGuides(){const root=$('guidesBody');if(!root)return;const G=(typeof GUIDES!=='undefined'&&GUIDES)||{};const E=profileEsc;
  root.innerHTML=(G.categories||[]).map(c=>`<section class="gd-cat"><h3>${E(c.name)}</h3><div class="gd-grid">${(c.items||[]).length?(c.items||[]).map(it=>`<button type="button" class="gd-card${it.ready?'':' soon'}" ${it.ready?'':'disabled'}>${it.image?`<img src="${E(it.image)}" alt="">`:'<span class="gd-ph"></span>'}<span>${E(it.title)}</span>${it.ready?'<span class="gd-arrow">→</span>':'<span class="gd-soon">soon</span>'}</button>`).join(''):'<p class="gd-empty">No guides yet.</p>'}</div></section>`).join('');}
 const PREVIEW_PAGES=['familiars','titles','dungeons','trait','currency','cookbook','guides','tools','news','items','achievements'];
@@ -2048,11 +2081,11 @@ function startApp(){
  document.getElementById('heroesSearch').addEventListener('input',renderHeroes);
  renderGear();renderGearPreview();
  renderPatches();
- renderFamiliars();renderTitles();renderDungeons();renderCurrencyDungeons();renderTrait();renderCookbook();renderGuides();if(IS_PREVIEW){renderItems();renderAchievements();renderDamageCalc();}applyPreviewGate();initTierV2();
+ renderFamiliars();renderTitles();renderDungeons();renderCurrencyDungeons();renderTrait();renderCookbook();renderGuides();if(IS_PREVIEW){renderItems();renderAchievements();renderTools();}applyPreviewGate();initTierV2();
  navIcon('navIconFamiliars',(UI_ICONS||{}).familiars);navIcon('navIconTrait',(UI_ICONS||{}).trait);navIcon('navIconHeroes',(UI_ICONS||{}).heroes);navIcon('navIconTeams',(UI_ICONS||{}).teams);navIcon('navIconCookbook',(UI_ICONS||{}).cookbook);
 }
 fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(async d=>{
- ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};DUNGEONS=d.DUNGEONS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};TOWER_TRIALS=d.TOWER_TRIALS||{};COOKBOOK=d.COOKBOOK||{};GEAR_UPGRADE=d.GEAR_UPGRADE||GEAR_UPGRADE;RUNES=d.RUNES||null;GUIDES=d.GUIDES||{categories:[]};DAMAGE_CALC=d.DAMAGE_CALC||null;DEFENSE_MODEL=d.DEFENSE_MODEL||null;
+ ({HEROES,ROLE_ICONS,ARCHES,TIER_ORDER,TIER_COLORS,TEAM_DATA,KARMA_DATA,CHARACTER_PROFILE_DATA,GEAR_DATA}=d);ARCH_COLORS=d.ARCH_COLORS||{};STATUS_ARCHETYPE=d.STATUS_ARCHETYPE||{};GEAR_STATS=d.GEAR_STATS||GEAR_STATS;HERO_BASE_STATS=d.HERO_BASE_STATS||{};HERO_BUILDS=d.HERO_BUILDS||{};HERO_STAT_MODEL=d.HERO_STAT_MODEL||{};TITLES=d.TITLES||TITLES;AWAKENINGS=d.AWAKENINGS||AWAKENINGS;GENERIC_KARMA=d.GENERIC_KARMA||{};SKILL_LEVEL_MULTIPLIERS=d.SKILL_LEVEL_MULTIPLIERS||SKILL_LEVEL_MULTIPLIERS;KARMA_ASCENSION=d.KARMA_ASCENSION||KARMA_ASCENSION;STATUS_EFFECTS=d.STATUS_EFFECTS||{};DATA_META=d.meta||{};PATCH_NOTES=d.PATCH_NOTES||{};FAMILIARS=d.FAMILIARS||{};DUNGEONS=d.DUNGEONS||{};TRAIT_DUNGEONS=d.TRAIT_DUNGEONS||{};UI_ICONS=d.UI_ICONS||{};TIER_LIST_V2=d.TIER_LIST_V2||{};TOWER_TRIALS=d.TOWER_TRIALS||{};COOKBOOK=d.COOKBOOK||{};GEAR_UPGRADE=d.GEAR_UPGRADE||GEAR_UPGRADE;RUNES=d.RUNES||null;GUIDES=d.GUIDES||{categories:[]};LEVEL_COSTS=d.LEVEL_COSTS||null;DAMAGE_CALC=d.DAMAGE_CALC||null;DEFENSE_MODEL=d.DEFENSE_MODEL||null;
  await preloadDungeonBanners();
  startApp();
 }).catch(err=>{console.error(err);$('board').innerHTML='<div class="no-results">Could not load data.json ('+String(err.message||err)+'). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';});
