@@ -1,3 +1,5 @@
+## 5 Nov 2026 — Ryza rated (preview, Claude)
+- `TIER_LIST_V2`: Ryza A overall, A single target, S groups, Gatherer, Self-sufficient, Expert −1. New finding in `DAMAGE_TESTS`. Public text changes added to `docs/LAUNCH_CHANGES.md`.
 ## 5 Nov 2026 — Kalien rated (preview, Claude)
 - `TIER_LIST_V2`: Kalien B overall, C single target, A groups, Enabler, Needs A1, signature card. About text: Masteries aren't part of the base kit. New finding in `DAMAGE_TESTS`, including that ticks keep the Attack from when Burn was applied.
 ## 5 Nov 2026 — Kalsion rated; ratings are for base kits (preview, Claude)

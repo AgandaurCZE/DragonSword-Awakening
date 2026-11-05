@@ -8,3 +8,7 @@ These touch public pages, so they can't go in until David approves the launch. H
 - Cons: remove "noticeably weaker while Royal Flame is down"; David opens with it and it stays on when he swaps out.
 - Cons or review: Burn adds a lot (hit bonus x2 to x2.5 with Airborne) but his own application is slow on bosses, about 0.42 of a stack per skill and Flame Wave press.
 - Verdict and review: "S tier at every stage" no longer matches. New rating: A overall, B single target, S groups. Best for bosses with Reina and Eileen.
+
+## Ryza
+- Verdict and pros: "Good later", "A tier at end-game" and "isn't a starter in any team" no longer match. New rating: A overall, A single target, S groups; Gatherer, Self-sufficient, Expert −1.
+- Review: mention the 17–20 second Shock stack alone, and that a Shock teammate makes it easier and reaches 2 stacks for the mount.
