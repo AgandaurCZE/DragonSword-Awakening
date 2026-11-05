@@ -16022,7 +16022,7 @@
    "Enemy Defense, third batch (Test Kit test 06, 4 Nov 2026). Species doesn't seem to matter: Skeleton and Orc match Goblin and Warg at every shared dungeon level (Skeleton Lv.15, 30, 45; Orc Lv.45; Orc matches Skeleton at Lv.65). World enemies are about x0.8 of dungeon ones: basic 486, 503, 532 and 542 at Lv.52, 54, 57 and 58, against a dungeon curve of 569, 642 and 702 at Lv.50, 55 and 60. Dungeon bosses x1.3: Brave Skeleton Commander (Lv.15, 30, 45) and Orc Barbarian (Lv.55) too; Agile Ironclad Warg is a boss in a duo fight but x1.04. Named enemies with visible changes, Igniter Snickrak and Corroded Knight Kalvaros, are about x1.15 of a basic world enemy whatever model they share (two examples).",
    "Enemy Defense, fourth batch (Test Kit test 06, 4 Nov 2026). Trait Dungeons: minions x1.6 and bosses x3.2 of the basic dungeon enemy at Lv.30, 40 and 50 (minion 251, 505, 912; boss 506, 1,012, 1,825), the same for Mantius, Drosophia and Ghagaroach where tested. World, relative to a basic world enemy: Goblin Berserker x1.1, Goblin Barbarian, Harpy and Spider x1.05, Troll x1.1, Ghoul and Worm x1.0, Lesser Dragon x1.2, Greater Dragon x1.5, Elemental Stone x1.0 (purple and red x1.1). Most of these are single tests.",
    "Whole skills against the calculator (David, 5 Nov 2026, Training Ogre, no statuses, no crits; predicted -> real). Reina: Wind Slayer single hit 7330 -> 7332; Rising Cutter 6 hits 11249 -> 11588 (x1.03). Kalsion: Weapon Blaze single hit 5711 -> 5711, once its own Attack buff is counted, as it applies before the skill's damage; Flame Wave press 5 hits 8361 -> 8362, hold 3 hits 7109 (x0.85); Royal Flame Flame Wave press 9 hits 8797 -> 9202 (x1.046), hold 3 hits 7476 (x0.85). The codex % is right for single hits and the 5-hit press. Not known why Rising Cutter and the 9-hit press run higher, or whether these ratios hold at other skill levels. The codex gives one % for press and hold.",
-   "Kalsion's Explosion on an Airborne enemy (David, 5 Nov 2026, no gear, no buffs): press 5 hits 11505; hold 15 hits 26693 (one crit) and 28489 (a few crits). If the second run had 3 crits, each crit adds about 898 (a hit of about 1,796, close to the 1,720 average), so a clean hold is about 25,800, or about x2.24 of press. An estimate, as no clean hold has been recorded and Attack and skill level for the press weren't noted."
+   "Kalsion's Explosion on an Airborne enemy (David, 5 Nov 2026, no gear, no buffs, no crits): press 5 hits 11505 (twice); hold 15 hits 25885, so hold = x2.25 of press. Runs with crits: 26693 (one crit) and 28489 (a few). Attack and skill level weren't noted, so press hasn't been checked against the codex %."
   ],
   "tests": [
    {
@@ -25018,7 +25018,7 @@
     "slots": [
      "Special B"
     ],
-    "note": "Tick Airborne below: Explosion only activates on an Airborne enemy. Hold is an estimate from two runs with crits.",
+    "note": "Tick Airborne below: Explosion only activates on an Airborne enemy.",
     "variants": [
      {
       "label": "Press (5 hits)",
@@ -25026,7 +25026,7 @@
      },
      {
       "label": "Hold (15 hits)",
-      "mult": 2.24
+      "mult": 2.25
      }
     ]
    }
