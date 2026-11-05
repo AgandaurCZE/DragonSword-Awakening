@@ -10888,13 +10888,13 @@
       9.84,
       11.48,
       13.12,
-      14.76,
-      16.4,
-      18.04,
-      19.68,
-      21.32,
-      22.96,
-      24.6,
+      14.77,
+      16.41,
+      18.05,
+      19.69,
+      21.33,
+      22.97,
+      24.61,
       26.25,
       27.89,
       29.53,
@@ -12670,7 +12670,7 @@
    "Legs main Attack Power Up": "estimate: database x 0.954 (ratio measured on Chest and Gloves)",
    "testKitRows": {
     "checked": "2026-11-04",
-    "note": "93 main-stat rows from Test Kit test 03 checked against the tables at +0 and at max level, using 0.375 / 0.467 / 0.600 of Orange: within 1 point for flat stats and 0.05 for % stats. Exceptions, all Legs Max HP: Green +0 242 vs 243.4, Green max 969 vs 973.5, Blue +0 302 vs 303.1, Blue max 1211 vs 1212.3.",
+    "note": "96 main-stat rows from Test Kit test 03 checked against the tables at +0 and at max level, using 0.375 / 0.467 / 0.600 of Orange: within 1 point for flat stats and 0.05 for % stats. Exceptions, all Legs Max HP: Green +0 242 vs 243.4, Green max 969 vs 973.5, Blue +0 302 vs 303.1, Blue max 1211 vs 1212.3.",
     "rows": [
      "Blue Helmet Defense Up",
      "Blue Helmet Critical Hit Resistance",
@@ -12764,7 +12764,10 @@
      "Purple Boots Critical Damage Reduction",
      "Purple Boots Critical Hit Resistance",
      "Purple Boots Attack",
-     "Orange Chest Defense Up"
+     "Orange Chest Defense Up",
+     "Orange Helmet Attack",
+     "Orange Gloves Max HP",
+     "Orange Boots Critical Damage Reduction"
     ]
    },
    "flatLowerRarityNote": "4 Nov 2026: resolved. The flat rows that looked 1–2% high were compared with 4x their +0 value; the table's own +0 and +15 values at 0.467 / 0.600 match them after rounding.",
@@ -14486,11 +14489,11 @@
  "TITLES": {
   "note": "All 109 titles, read from David's screen recording of the Title list (29 Oct 2026), in the game's order. Every obtained title's passive applies to all heroes, slotted or not. Flat bonuses are added to the hero's flat stats before % bonuses multiply; % bonuses join the same pool as gear and set % (confirmed in-game). Name colours are the game's: the five colours run from strongest (pink) to weakest (lavender) passives. The game hides the condition once a title is obtained, Curious Hands (Anything in Here?) and 【777】 (Lucky!) were filled in from David's Achievements video, 1 Nov 2026; Novice Mercenary Crew's is inferred from the other promotion titles. David's titles updated 31 Oct 2026 (5 of 109: Environmental Cleaner and Black Wings added; the game's Cumulative Set Effect, Defense +10, Max HP +100, Defense Up +1.50%, Critical Rate +1.30%, matches the sum).",
   "totalCount": 109,
-  "ownedCount": 25,
+  "ownedCount": 28,
   "ownedCumulative": [
    {
     "stat": "Max HP",
-    "value": 1040
+    "value": 1575
    },
    {
     "stat": "Critical Hit Chance",
@@ -14506,7 +14509,7 @@
    },
    {
     "stat": "Attack",
-    "value": 35
+    "value": 50
    },
    {
     "stat": "Defense",
@@ -14517,7 +14520,7 @@
    {
     "name": "Veteran Mercenary Crew",
     "grade": 1,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
@@ -14945,7 +14948,7 @@
    {
     "name": "A Hero's Beginning",
     "grade": 3,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Attack",
@@ -15166,7 +15169,7 @@
    {
     "name": "One Who Connects The Six Heroes",
     "grade": 3,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Max HP",
@@ -16027,7 +16030,8 @@
    "Kalien in play (David, 5 Nov 2026, A0, no signature, no Mastery). On groups a full combo gives 3 Burn stacks and 1.5 Stun gauges, halved on scattered enemies. On a boss, after breaking it, a full combo gives 3/4 of a Burn stack and 1/4 of a Stun gauge, about 1/3 of a Burn stack without Break; Fox Grab on a giant boss about 1/2 Burn and 1/3 Stun. Aria with Skill and Ultimate on a boss gives 1/3 Burn and 1/4 Airborne, about 90% of a Burn stack with Airborne up. Burn ticks use the first applier's Attack as it was when applied: Kalsion 1510 and Kalien 344 (689 Attack) at 1 stack; Kalsion's ticks stayed the same when Burn was applied with about a second of Royal Flame left and the buff then ended.",
    "Ryza in play (David, 5 Nov 2026, A0, no signature, no Mastery; estimates from the gauges). Groups: Stormbringer gives 1 to 1.8 Shock stacks and 1.7 to 1.99 Airborne gauges, and its lightning pulls enemies in; Flash about 0.6 Shock, then about 0.5 on the second hit, and it only fills up to the next whole stack; Thunder Grab about 3/4 of a Knockdown gauge on the first slam, and the second fills the rest. Full combo at level 1 with no gear on 9 goblin dummies: about 25k, against about 15k for Ornette. Boss: about 65% of a Shock stack and 10–15% of an Airborne gauge per combo; a full Shock stack alone in about 17–20 seconds with good play, as her Skill recharges per hit. Mount at 1 Shock: about 0.25–0.30 Shock and 10–15% Knockdown; at 2 Shock a six-hitter dealing about double Skill plus Flash.",
    "Sion in play (David, 5 Nov 2026, A0, no signature, no Mastery; estimates from the gauges). Groups: Divine Crash pulls and can give a full Shock stack, its return about 1/3; Divine Smash and Justice Fall a full Knockdown gauge in a small area; Divine Crash with the relic planted about 1.25 Shock. Boss: Divine Crash about 0.24 Shock, about 0.26-0.27 with the relic planted; Divine Smash about 0.20 Knockdown; Justice Fall about 0.25 Knockdown; Bless about 0.04 Shock per cast. The buff circle is large, and the relic plants itself back within the 2 seconds before the buff fades, so the spin leaves no gap. To keep the buff he must swap back within 10 seconds or use Justice Fall, which needs Shock.",
-   "Ryza against Othello (David, 5 Nov 2026, level 1, 106 Attack, no gear or Karma, same targets). Boss, 60 s: Ryza 19159, Othello 14305. Groups, 16 s: Ryza 66k, Othello 55k. Earlier Othello runs had a Lv.20 Karma with its trait on (+236 Attack, +110 Frost Additional Attack Power, +4% Frost Additional Damage, +2% Crit Rate): 240k in groups, 102k out of order. The formula explains the gap: (106 + 236 + 110) / 106 x 1.04 = x4.4 on Frost hits, against x4.4 measured (240k / 55k). So level 1 comparisons need the same Karma on both heroes."
+   "Ryza against Othello (David, 5 Nov 2026, level 1, 106 Attack, no gear or Karma, same targets). Boss, 60 s: Ryza 19159, Othello 14305. Groups, 16 s: Ryza 66k, Othello 55k. Earlier Othello runs had a Lv.20 Karma with its trait on (+236 Attack, +110 Frost Additional Attack Power, +4% Frost Additional Damage, +2% Crit Rate): 240k in groups, 102k out of order. The formula explains the gap: (106 + 236 + 110) / 106 x 1.04 = x4.4 on Frost hits, against x4.4 measured (240k / 55k). So level 1 comparisons need the same Karma on both heroes.",
+   "End of the story (David, 5 Nov 2026). World Difficulty 6 appears to add +10 levels: East enemies at Lv.65 during the Veteran promotion are Lv.75 now. The East has recoloured variants that apply statuses, for example hooded purple Goblin Archers applying Shock per arrow, and much tougher animals such as an oversized red boar. Their Defense is untested."
   ],
   "tests": [
    {
@@ -20081,7 +20085,7 @@
     "name": "Stormy Direwolf",
     "group": "Direwolf",
     "image": "assets/familiars/stormy-direwolf.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "promotion",
      "label": "Veteran Mercenary Crew Promotion"
@@ -20536,7 +20540,7 @@
   "owned": {
    "Bird": 1,
    "Cat": 2,
-   "Direwolf": 1,
+   "Direwolf": 2,
    "Griffon": 2,
    "Insect": 3,
    "Sky Wolf": 2,
@@ -20903,6 +20907,17 @@
     "note": "5th Hunt boss, unlocked after story Chapter 6. Normal: Lv.45, 1–2 members. Rewards: EXP 900, Necklace Soaked in Greed 1, Adventurer's Emblem 15, Secret Text of the Warrior 10, Record of Battle 20."
    },
    {
+    "id": "earthlander",
+    "name": "Earthlander of the Ravenous Earth",
+    "level": 50,
+    "type": "Hunt",
+    "image": "assets/bosses/earthlander-banner.webp",
+    "weak": [],
+    "immune": [],
+    "portrait": "assets/bosses/earthlander.webp",
+    "note": "6th and last Hunt boss, unlocked after story Chapter 8. Normal: Lv.50, 1–2 members. Rewards: EXP 1,000, Gigantic Tooth 1, Adventurer's Emblem 20, Secret Text of the Warrior 10, Record of Battle 20."
+   },
+   {
     "id": "gauron",
     "name": "Gauron",
     "level": 50,
@@ -20966,12 +20981,81 @@
      "strategy": []
     },
     "image2": "assets/bosses/gauron-dragon-banner.webp"
+   },
+   {
+    "id": "ursula",
+    "name": "Ursula",
+    "level": 60,
+    "type": "Raid",
+    "image": "assets/bosses/ursula-banner.webp",
+    "weak": [],
+    "immune": [],
+    "portrait": "assets/bosses/ursula.webp",
+    "stage": "Chase Toward the End",
+    "theme": "raid succubus",
+    "info": {
+     "intro": "Co-op Raid for up to 3 players (Multiplayer Mode with an Invite Code, or Solo Mode), unlocked after story Chapter 8. Rewards: Runes and special equipment materials.",
+     "fights": [
+      {
+       "name": "Ursula · phase 1",
+       "text": "Humanoid form."
+      },
+      {
+       "name": "Ursula · phase 2",
+       "text": "Dragon form (the tab fades between both forms)."
+      }
+     ],
+     "fightsNote": "Unlike Gauron, there's no Ogre before the real fight.",
+     "difficulties": [
+      {
+       "name": "Normal",
+       "level": 60,
+       "rewards": [
+        "Refined Runes (all 5 types)",
+        "Intact Runes (all 5 types)",
+        "EXP 800",
+        "Gold 200,000",
+        "Anonymous Artisan's Crafting Tool 1",
+        "Shape Grinder 1–3",
+        "Adventurer's Emblem 40"
+       ]
+      },
+      {
+       "name": "Hard",
+       "level": 80,
+       "rewards": [
+        "Radiant Runes (all 5 types)",
+        "Refined Runes (all 5 types)",
+        "EXP 1,500",
+        "Gold 300,000",
+        "Anonymous Artisan's Crafting Tool 2",
+        "Shape Grinder 3–5",
+        "Adventurer's Emblem 60"
+       ]
+      },
+      {
+       "name": "Very Hard",
+       "level": 90,
+       "rewards": [
+        "Perfect Runes (all 5 types)",
+        "EXP 2,500",
+        "Gold 350,000",
+        "Anonymous Artisan's Crafting Tool 3",
+        "Shape Grinder 5–7",
+        "Adventurer's Emblem 70"
+       ]
+      }
+     ],
+     "rewardsNote": "Read from the reward lists in David's screenshots. The Very Hard list may scroll, so entries could be missing there. Members: 1–3 on every difficulty.",
+     "strategy": [
+      "One of the hardest fights in the game (David, first clear).",
+      "Dodging at the right moments is crucial: she has many grab attacks and can easily stun-lock you."
+     ]
+    },
+    "image2": "assets/bosses/ursula-dragon-banner.webp"
    }
   ],
-  "undiscovered": {
-   "Hunt": 1,
-   "Raid": 1
-  },
+  "undiscovered": {},
   "about": [
    "DragonSword: Awakening is a single-player RPG with no gacha and no energy limits, so every hero is eventually yours. This tier list rates heroes on their base kit, before awakenings, Masteries and signature Karma. A \"Needs A\" tag or the purple card shows what could lift a hero higher.",
    "Ratings are decided by us from the in-game codex, measured damage tests and hands-on play, and they're never moved by a formula. Patch arrows next to the tier letter show whether the latest balance patch buffed (green ▲) or nerfed (red ▼) a hero; amber means mixed.",
@@ -22446,7 +22530,7 @@
    {
     "name": "Damaged",
     "color": "#8b8f98",
-    "raid": "Normal"
+    "raid": "Gauron Normal"
    },
    {
     "name": "Intact",
@@ -22456,7 +22540,7 @@
    {
     "name": "Refined",
     "color": "#3d8ff0",
-    "raid": "Hard"
+    "raid": "Gauron Hard, Ursula Normal"
    },
    {
     "name": "Radiant",
@@ -22502,11 +22586,34 @@
     "Amplification": [
      "3.60%",
      "4.50%"
+    ],
+    "Determination": [
+     "30",
+     "40",
+     "50"
+    ],
+    "Protection": [
+     "28"
     ]
    },
    "Refined": {
     "Determination": [
-     "49"
+     "49",
+     "70"
+    ],
+    "Protection": [
+     "40",
+     "50"
+    ],
+    "Vitality": [
+     "525"
+    ],
+    "Focus": [
+     "3.15%",
+     "4.50%"
+    ],
+    "Amplification": [
+     "4.90%"
     ]
    }
   },
@@ -24087,6 +24194,102 @@
       "rewardsKnown": true
      }
     ]
+   },
+   {
+    "name": "Residual Worm Cleanup Zone",
+    "gives": "Hero, Karma and gear materials",
+    "difficulties": [
+     {
+      "name": "Normal",
+      "rewards": [
+       [
+        "exp",
+        900
+       ],
+       [
+        "gold",
+        210000
+       ],
+       [
+        "emblem",
+        15
+       ],
+       [
+        "coreCombatText",
+        60
+       ],
+       [
+        "arcanaOfPeace",
+        80
+       ],
+       [
+        "manaOre",
+        60
+       ]
+      ],
+      "rewardsKnown": true
+     },
+     {
+      "name": "Hard",
+      "rewards": [
+       [
+        "exp",
+        1100
+       ],
+       [
+        "gold",
+        330000
+       ],
+       [
+        "emblem",
+        20
+       ],
+       [
+        "coreCombatText",
+        90
+       ],
+       [
+        "arcanaOfPeace",
+        120
+       ],
+       [
+        "manaOre",
+        90
+       ]
+      ],
+      "rewardsKnown": true
+     },
+     {
+      "name": "Very Hard",
+      "rewards": [
+       [
+        "exp",
+        1300
+       ],
+       [
+        "gold",
+        500000
+       ],
+       [
+        "emblem",
+        25
+       ],
+       [
+        "tomeOfHeroes",
+        45
+       ],
+       [
+        "arcanaOfTheFuture",
+        60
+       ],
+       [
+        "rawManaStone",
+        45
+       ]
+      ],
+      "rewardsKnown": true
+     }
+    ]
    }
   ],
   "currencyRewardItems": {
@@ -24137,11 +24340,22 @@
    "arcanaOfPeace": {
     "name": "Arcana of Peace",
     "icon": "assets/items/icons/arcana-of-peace.webp"
+   },
+   "tomeOfHeroes": {
+    "name": "Tome of Heroes"
+   },
+   "arcanaOfTheFuture": {
+    "name": "Arcana of the Future",
+    "icon": "assets/items/icons/arcana-of-the-future.webp"
+   },
+   "rawManaStone": {
+    "name": "Raw Mana Stone",
+    "icon": "assets/items/icons/raw-mana-stone.webp"
    }
   },
   "currencyNote": "Growth materials up to Purple; amounts differ per difficulty. One more Currency Dungeon not discovered yet.",
   "undiscovered": {
-   "currency": 1
+   "currency": 0
   }
  },
  "LEVEL_COSTS": {

@@ -812,6 +812,17 @@
    ]
   },
   {
+   "name": "Gigantic Tooth",
+   "type": "Monster Materials",
+   "rarity": "Purple",
+   "icon": "assets/items/icons/gigantic-tooth.webp",
+   "description": "A massive, black fang. Though its tip is blunt, its hardness is formidable. Like a blade capable of cutting through steel, it seems capable of slicing or shattering any object. The fine scratches and marks left on the fang reveal that it once endured fierce hunts and battles.",
+   "use": "Used when enhancing skills",
+   "sources": [
+    "[Hunt] Earthlander of the Rave..."
+   ]
+  },
+  {
    "name": "Tangled Forgetfulness and Remembrance",
    "type": "Equipment Crafting Materials",
    "rarity": "Orange",

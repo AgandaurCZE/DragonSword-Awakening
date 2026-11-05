@@ -1,3 +1,8 @@
+## 5 Nov 2026 — Chapter 8: last bosses, dungeon, familiar, titles, runes (preview, Claude)
+- Tier list: Hunt boss Earthlander of the Ravenous Earth and Raid boss Ursula, whose tab fades between her two forms in purple, with a new self-hosted font. No locked boss tabs left.
+- Currency Dungeons: Residual Worm Cleanup Zone, no locked entry left. Tome of Heroes shows as text until it has an icon.
+- Stormy Direwolf in colour and owned; `TITLES` at 28; `RUNES` values added; Gigantic Tooth in the Item Database; 3 more gear rows checked.
+- Uploaded PNGs converted to WebP and deleted.
 ## 5 Nov 2026 — Test 01 entries from the rating chat (Claude)
 - Test Kit: 47 status entries saved from David's rating discussions, marked as estimates; Kalien, Othello and Ryza added to the hero lists.
 ## 5 Nov 2026 — Othello rated (preview, Claude)

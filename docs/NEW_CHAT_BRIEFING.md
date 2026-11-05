@@ -101,3 +101,6 @@ Paste this whole file into the first message of a new chat. It replaces the memo
 
 ## Waiting for launch
 Changes to public pages are listed in `docs/LAUNCH_CHANGES.md`.
+
+## Story status (5 Nov 2026)
+David finished the main story (chapter 8). All Hunt bosses, Raids and Currency Dungeons are discovered. Open: Tome of Heroes icon and EXP, banner art for Eroded Underground Cemetery and Residual Worm Cleanup Zone, Earthlander's rating rewards, Barpedin or Berpedin spelling.

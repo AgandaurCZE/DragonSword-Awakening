@@ -2,7 +2,7 @@ Items (not used by the page yet). ingredients.json = the Ingredients tab.
  important.json = the Important tab (9 items: Fragment of Sacred Light, Fragment of Memory,
 Anonymous Artisan's Crafting Tool (unlocks Rune Slots; Exchange Special, Raid), Stigma Awaken Stone (Exchange Awaken),
 Whirling Thoughts (Transmutation; Tower of Trials), Forging Mold, Shape Grinder, Moon Key, Adventurer's Emblem).
-materials.json = every item in David's Materials tab (31 Oct 2026, 63 items, game order):
+materials.json = every item in David's Materials tab (31 Oct 2026, 63 items, game order; Gigantic Tooth added 5 Nov 2026):
 name, type, rarity colour, icon (icons/<slug>.webp, cut from the inventory grid), description, use line, main sources.
 
 WHAT LEVELS WHAT (from the use lines)

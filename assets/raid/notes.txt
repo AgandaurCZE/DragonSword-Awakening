@@ -11,7 +11,11 @@ Raid 1: Gauron, stage "Steelheart Fortress Defense". Members 1-3.
   Battle Will gear is also in the reward lists (Raid_Gauron_Rewards_*.webp).
 Structure (David): an Ogre boss on the bridge, then Gauron phase 1 (humanoid), then Gauron phase 2 (dragon).
   HP carries over between the fights, so healing food matters.
-Raid 2: locked; unlocks after story chapter 8.
+Raid 2: Ursula, stage "Chase Toward the End", unlocked after story chapter 8. Members 1-3.
+  Normal     recommended Lv.60  rewards: Refined + Intact Runes, EXP 800, Gold 200,000, Anonymous Artisan's Crafting Tool 1, Shape Grinder 1-3, Emblem 40
+  Hard       recommended Lv.80  rewards: Radiant + Refined Runes, EXP 1,500, Gold 300,000, Tool 2, Shape Grinder 3-5, Emblem 60
+  Very Hard  recommended Lv.90  rewards: Perfect Runes, EXP 2,500, Gold 350,000, Tool 3, Shape Grinder 5-7, Emblem 70
+Structure: humanoid phase, then dragon phase, with no Ogre first.
 
 Pictures: Raid_Introduction_1/2, Raid_Gauron_Rewards_<difficulty>_1-3, Raid_Icon_White/Gold (menu icons).
-Boss art for the tier list: assets/bosses/gauron.webp and gauron-banner.webp.
+Boss art for the tier list: assets/bosses/gauron*.webp and ursula*.webp. Ursula's rewards: Raid_Ursula_Rewards_<difficulty>.
