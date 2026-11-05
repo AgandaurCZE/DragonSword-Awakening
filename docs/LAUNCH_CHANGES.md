@@ -16,3 +16,9 @@ These touch public pages, so they can't go in until David approves the launch. H
 ## Sion
 - Review and verdict: match the new rating, B overall, B single target, A groups; Team buffer, Enabler, Needs A1. His old tiers are A from mid-game.
 - `TEAM_DATA` and review text: check that they describe Divine Smash and Justice Fall as Knockdown.
+
+## Othello
+- `HEROES[].obtain`: story reward for finishing chapter 5 (David, 5 Nov 2026).
+- Review and verdict: match the new rating, B overall, B single target, A groups; Gatherer, Self-sufficient, Expert −1.
+- Cons: "In the Crushing team he has no Frost partner, so his Frozen-only skills fire less often" no longer holds; he reaches Frozen alone.
+- `TEAM_DATA`, Frostbite team: David found Cerese gets in his way (explodes his prison and Frozen enemies, lifts Knockdown targets). Review with Dana once he owns her.

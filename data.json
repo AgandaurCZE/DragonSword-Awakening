@@ -16026,7 +16026,8 @@
    "Kalsion in play (David, 5 Nov 2026, A0, no signature). Royal Flame's buff stays on when he swaps out. Burst Grab needs 2 Burn stacks for its triple mounted attack; at 1 stack it is one hit. With Reina (skill, Ultimate twice) and Eileen (skill), one combo fills the Airborne gauge on a boss, and his held Explosion then deals about as much as that whole combo. On a broken enemy his Flame Wave press applies about half an Airborne gauge, which fits Break doubling physical build-up.",
    "Kalien in play (David, 5 Nov 2026, A0, no signature, no Mastery). On groups a full combo gives 3 Burn stacks and 1.5 Stun gauges, halved on scattered enemies. On a boss, after breaking it, a full combo gives 3/4 of a Burn stack and 1/4 of a Stun gauge, about 1/3 of a Burn stack without Break; Fox Grab on a giant boss about 1/2 Burn and 1/3 Stun. Aria with Skill and Ultimate on a boss gives 1/3 Burn and 1/4 Airborne, about 90% of a Burn stack with Airborne up. Burn ticks use the first applier's Attack as it was when applied: Kalsion 1510 and Kalien 344 (689 Attack) at 1 stack; Kalsion's ticks stayed the same when Burn was applied with about a second of Royal Flame left and the buff then ended.",
    "Ryza in play (David, 5 Nov 2026, A0, no signature, no Mastery; estimates from the gauges). Groups: Stormbringer gives 1 to 1.8 Shock stacks and 1.7 to 1.99 Airborne gauges, and its lightning pulls enemies in; Flash about 0.6 Shock, then about 0.5 on the second hit, and it only fills up to the next whole stack; Thunder Grab about 3/4 of a Knockdown gauge on the first slam, and the second fills the rest. Full combo at level 1 with no gear on 9 goblin dummies: about 25k, against about 15k for Ornette. Boss: about 65% of a Shock stack and 10–15% of an Airborne gauge per combo; a full Shock stack alone in about 17–20 seconds with good play, as her Skill recharges per hit. Mount at 1 Shock: about 0.25–0.30 Shock and 10–15% Knockdown; at 2 Shock a six-hitter dealing about double Skill plus Flash.",
-   "Sion in play (David, 5 Nov 2026, A0, no signature, no Mastery; estimates from the gauges). Groups: Divine Crash pulls and can give a full Shock stack, its return about 1/3; Divine Smash and Justice Fall a full Knockdown gauge in a small area; Divine Crash with the relic planted about 1.25 Shock. Boss: Divine Crash about 0.24 Shock, about 0.26-0.27 with the relic planted; Divine Smash about 0.20 Knockdown; Justice Fall about 0.25 Knockdown; Bless about 0.04 Shock per cast. The buff circle is large, and the relic plants itself back within the 2 seconds before the buff fades, so the spin leaves no gap. To keep the buff he must swap back within 10 seconds or use Justice Fall, which needs Shock."
+   "Sion in play (David, 5 Nov 2026, A0, no signature, no Mastery; estimates from the gauges). Groups: Divine Crash pulls and can give a full Shock stack, its return about 1/3; Divine Smash and Justice Fall a full Knockdown gauge in a small area; Divine Crash with the relic planted about 1.25 Shock. Boss: Divine Crash about 0.24 Shock, about 0.26-0.27 with the relic planted; Divine Smash about 0.20 Knockdown; Justice Fall about 0.25 Knockdown; Bless about 0.04 Shock per cast. The buff circle is large, and the relic plants itself back within the 2 seconds before the buff fades, so the spin leaves no gap. To keep the buff he must swap back within 10 seconds or use Justice Fall, which needs Shock.",
+   "Ryza against Othello (David, 5 Nov 2026, level 1, 106 Attack, no gear or Karma, same targets). Boss, 60 s: Ryza 19159, Othello 14305. Groups, 16 s: Ryza 66k, Othello 55k. Earlier Othello runs had a Lv.20 Karma with its trait on (+236 Attack, +110 Frost Additional Attack Power, +4% Frost Additional Damage, +2% Crit Rate): 240k in groups, 102k out of order. The formula explains the gap: (106 + 236 + 110) / 106 x 1.04 = x4.4 on Frost hits, against x4.4 measured (240k / 55k). So level 1 comparisons need the same Karma on both heroes."
   ],
   "tests": [
    {
@@ -21241,6 +21242,22 @@
      "awk"
     ],
     "awk": 1
+   },
+   "Othello": {
+    "overall": {
+     "tier": "B",
+     "single": "B",
+     "groups": "A"
+    },
+    "tags": [
+     "gather",
+     "self",
+     "expert"
+    ],
+    "expert": {
+     "drop": 1,
+     "reason": "Frozen Burst only pays off after setting up Ice Spears, the ice prison and Frozen enemies in the right order. Played out of order he dealt well under half the damage in the same time."
+    }
    }
   },
   "huntRatingRewards": {

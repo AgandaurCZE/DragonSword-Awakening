@@ -54,7 +54,7 @@ Paste this whole file into the first message of a new chat. It replaces the memo
 - **Tier lists:**
   - New tier list v2 with Overall, Bosses and Towers modes. Bosses: 5 Hunt bosses including Ghoul Greed, plus Raid Gauron with a red glow and a dragon fade.
   - Hunt bosses have a Rating rewards panel. Gauron has fights, strategy and rewards panels.
-  - Hero ratings: 14 agreed heroes, rated on base kits (A0, no signature, no Mastery). Othello is owned and still to rate.
+  - Hero ratings: all 15 owned heroes agreed, rated on base kits (A0, no signature, no Mastery). Dana, Alex, Theresia, Tarte and Astria wait until he owns them.
 - **Gear page:**
   - Upgrade calculator: Gold is worked out per item (gear items: Mana Shard 300, Crystal 700, Ore 2,000, Raw Mana Stone 5,000 Gold).
   - Disassemble returns: 80% of EXP spent plus the piece's base materials, paid out in the largest materials; leftovers under 200 EXP are lost; pieces disassembled together are pooled.
@@ -92,7 +92,6 @@ Paste this whole file into the first message of a new chat. It replaces the memo
   - Fame stage rewards and the "Name of the Strong" icon.
   - Quest items.
   - The Guides icon (Codex book).
-  - Rating for Othello.
 - **For Claude:**
   - Use `DEFENSE_MODEL` in builds (value of Armor Penetration and Defense Ignore substats).
   - Hero/Karma levelling calculator (Tools page), once EXP data is complete.

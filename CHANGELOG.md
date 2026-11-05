@@ -1,3 +1,5 @@
+## 5 Nov 2026 — Othello rated (preview, Claude)
+- `TIER_LIST_V2`: Othello B overall, B single target, A groups, Gatherer, Self-sufficient, Expert −1. New finding in `DAMAGE_TESTS`: Ryza and Othello at equal Attack. Public text changes added to `docs/LAUNCH_CHANGES.md`.
 ## 5 Nov 2026 — Towers start Unrated (preview, Claude)
 - New tier list, Towers mode: heroes are Unrated until rated for that tower, rather than showing their Overall tier faded.
 ## 5 Nov 2026 — Sion rated (preview, Claude)
