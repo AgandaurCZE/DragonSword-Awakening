@@ -70,7 +70,7 @@ Paste this whole file into the first message of a new chat. It replaces the memo
   - **Damage:** ∝ Attack × skill %; crit ×(1 + Crit Damage); status hit bonuses add.
   - **Damage-over-time ticks:** 50/75/100% of Attack at 1/2/3 stacks.
   - **Towers:** +400% for the tower's own status, +100% for DoT statuses.
-  - **Defence:** damage ∝ 1000 / (1000 + Defense × (1 − Defense Ignore) − Armor Penetration). K = 1,000 is a constant. The Training Ogre has 1,000 Defense and World Boss Berpedin about 1,197.
+  - **Defence:** damage ∝ 1000 / (1000 + Defense × (1 − Defense Ignore) − Armor Penetration). K = 1,000 is a constant. The Training Ogre has 1,000 Defense and World Boss Barpedin about 1,197.
   - **Level-up Gold is per item:**
     - Hero texts: 200 / 650 / 1,800.
     - Arcanas: 150 / 400 / 1,300 / 3,000.
@@ -103,4 +103,4 @@ Paste this whole file into the first message of a new chat. It replaces the memo
 Changes to public pages are listed in `docs/LAUNCH_CHANGES.md`.
 
 ## Story status (5 Nov 2026)
-David finished the main story (chapter 8). All Hunt bosses, Raids and Currency Dungeons are discovered. Open: Tome of Heroes icon and EXP, banner art for Eroded Underground Cemetery and Residual Worm Cleanup Zone, Earthlander's rating rewards, Barpedin or Berpedin spelling.
+David finished the main story (chapter 8). All Hunt bosses, Raids and Currency Dungeons are discovered. Open: Tome of Heroes icon (20,000 Hero EXP; David shares it once he has one) and its Gold price; banner art for Eroded Underground Cemetery and Residual Worm Cleanup Zone (next week, via ChatGPT); Hunt rating rewards, which differ a little per boss (David shares them later). David's plan: max his main team, run the new Currency Dungeon, do the remaining Hero Quests and test those heroes, then choose the next priority together. Keep marking titles he reports as obtained in `TITLES`.

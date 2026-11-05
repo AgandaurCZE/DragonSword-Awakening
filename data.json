@@ -16019,9 +16019,9 @@
    "Super Armor Break and status build-up (David, 1 Nov 2026, Training Ogre, Test Kit): Break doubles the build-up of physical statuses only (Stun, Knockdown, Airborne). Measured unbroken -> broken per press: Reina Rising Cutter and Wind Slayer 0.167 -> 0.333 Airborne, Johnny Phantom Slash 0.167 -> 0.333 Airborne, Eileen Barraging Spear 0.25 -> 0.5 Airborne, Lute Stun Slash 0.167 -> 0.333 Stun, Sion Divine Smash 0.167 -> 0.333 Knockdown. Frost is not affected: Cerese Ice Storm 0.25 both ways; damage-over-time statuses (Poison, Bleed, Burn, Shock) are not affected either (David). Matches the Rift: physical statuses needed half as many uses on a Broken enemy. So status tests are done unbroken; broken physical values = 2x.",
    "Defense Ignore 20% (Earthshatterer 3-piece), Reina, Attack 2445, Armor Penetration 66, Critical Damage 55.71%, Wind Sword Lv.3 first hit on the Training Ogre with no statuses (1 Nov 2026): non-crit 743 -> 829 (+11.6%), crit 1157 -> 1291 (+11.6%); crit / non-crit = 1.557 = 1 + Crit Damage. If damage taken scales as K / (K + Defense x (1 - Defense Ignore)), this means the dummy's Defense is about 1.08 x K at Armor Penetration 66 (it blocks about 52% before Defense Ignore). That also predicts about +0.5% for the earlier 0.97% test (+0.4% seen). The form of the formula is still an assumption.",
    "Defense test (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Training Ogre, 4 Nov 2026), damage per Attack: AP 0/DI 6.65% 0.3042; AP 0/DI 26.65% 0.3389; AP 70/DI 0% 0.3044; AP 70/DI 20% 0.3400; AP 85/DI 0% 0.3069 (plus 1 Nov: AP 66/DI 0% 0.3039, AP 66/DI 20% 0.3391). Best fit: damage ∝ K / (K + Defense × (1 − Defense Ignore) − Armor Penetration), with this dummy's Defense = 1,000 and K = 1,000 (best fit on a grid search; same units as Armor Penetration). Fits all 7 points within 0.06%; applying Armor Penetration before Defense Ignore fits worse (up to 1%). On this dummy: 1 Armor Penetration ≈ 1 Defense point ≈ +0.05% damage; 1% Defense Ignore ≈ 10 Defense points ≈ +0.5%. The dummy blocks about half the damage. K and the dummy's Defense are fitted values; whether K changes with the attacker's level, and the Defense of real bosses, are unknown.",
-   "Defense on a real enemy (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Berpedin the Crushing Darkness Lv.80, 4 Nov 2026): Attack 2160, AP 0, DI 0%: 578; Attack 2418, AP 85, DI 0%: 673; Attack 1503, AP 0, DI 11.09%: 428. With K = 1,000 and the Ogre's hit share (58.78% of Attack, 14% of Wind Sword Lv.3's 420%) these give Defense 1,197 (1,193–1,201), all three hits within 0.1 damage. K left free gives 915–1125, so K = 1,000 is a constant of the formula, not of the dummy, and the formula holds on a real boss. Full model in DEFENSE_MODEL.",
+   "Defense on a real enemy (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Barpedin the Crushing Darkness Lv.80, 4 Nov 2026): Attack 2160, AP 0, DI 0%: 578; Attack 2418, AP 85, DI 0%: 673; Attack 1503, AP 0, DI 11.09%: 428. With K = 1,000 and the Ogre's hit share (58.78% of Attack, 14% of Wind Sword Lv.3's 420%) these give Defense 1,197 (1,193–1,201), all three hits within 0.1 damage. K left free gives 915–1125, so K = 1,000 is a constant of the formula, not of the dummy, and the formula holds on a real boss. Full model in DEFENSE_MODEL.",
    "Enemy Defense follows level × enemy type (Test Kit test 06, Reina Wind Sword Lv.3 first hit, 2427 Attack, Armor Penetration 0, Defense Ignore 0%, 4 Nov 2026). Goblin and Warg hit identically at every shared level: 1402, 1380, 1298, 1232, 1084, 1003 and 960 at Lv.10, 15, 25, 30, 40, 45 and 52, which is Defense 18, 34, 99, 158, 316, 422 and 486. Goblin Archer = x0.8, Goblin Barbarian = x1.1 (one level), Fierce Ironclad Warg and Sharpshooter Goblin Archer = x1.3. The Sharpshooter is not a basic archer: at Lv.40 it took 1012, where x0.8 predicts 1139. Break doesn't lower Defense: Goblin Archer Lv.52 went 1027 -> 1134 when broken with All Status AAP 76 and Break AAP 175; added Attack alone predicts 1133, and zero Defense would give about 1574.",
-   "Enemy Defense, second batch (Test Kit test 06, same setup, 4 Nov 2026). Dungeon bosses are x1.3 of the basic enemy: Fierce Ironclad Warg, Sharpshooter Goblin Archer, Veteran Goblin Barbarian, Proud Goblin Tribal Hero and Sargon, 13 hits within about 1 damage. Also x0.8 Axe-throwing Skeleton, x1.04 Agile Ironclad Warg, x1.1 Skeleton Commander (Skeleton taken as basic). World enemies are lower than dungeon ones: Warg and Goblin Lv.52 world 486, Warg Lv.50 dungeon 569. World bosses don't share one multiplier: Horg 374 and Andras 421 at Lv.40, Karon 836 and Scraping Back 1,257 at Lv.60, Octavia 1,195 and Berpedin about 1,197 at Lv.80. Named enemies: Kuaku the Mad Lv.56 549, about x1.1 like the Goblin Barbarian he looks like; Igniter Snickrak Lv.55 590, well above an archer's x0.8.",
+   "Enemy Defense, second batch (Test Kit test 06, same setup, 4 Nov 2026). Dungeon bosses are x1.3 of the basic enemy: Fierce Ironclad Warg, Sharpshooter Goblin Archer, Veteran Goblin Barbarian, Proud Goblin Tribal Hero and Sargon, 13 hits within about 1 damage. Also x0.8 Axe-throwing Skeleton, x1.04 Agile Ironclad Warg, x1.1 Skeleton Commander (Skeleton taken as basic). World enemies are lower than dungeon ones: Warg and Goblin Lv.52 world 486, Warg Lv.50 dungeon 569. World bosses don't share one multiplier: Horg 374 and Andras 421 at Lv.40, Karon 836 and Scraping Back 1,257 at Lv.60, Octavia 1,195 and Barpedin about 1,197 at Lv.80. Named enemies: Kuaku the Mad Lv.56 549, about x1.1 like the Goblin Barbarian he looks like; Igniter Snickrak Lv.55 590, well above an archer's x0.8.",
    "Enemy Defense, third batch (Test Kit test 06, 4 Nov 2026). Species doesn't seem to matter: Skeleton and Orc match Goblin and Warg at every shared dungeon level (Skeleton Lv.15, 30, 45; Orc Lv.45; Orc matches Skeleton at Lv.65). World enemies are about x0.8 of dungeon ones: basic 486, 503, 532 and 542 at Lv.52, 54, 57 and 58, against a dungeon curve of 569, 642 and 702 at Lv.50, 55 and 60. Dungeon bosses x1.3: Brave Skeleton Commander (Lv.15, 30, 45) and Orc Barbarian (Lv.55) too; Agile Ironclad Warg is a boss in a duo fight but x1.04. Named enemies with visible changes, Igniter Snickrak and Corroded Knight Kalvaros, are about x1.15 of a basic world enemy whatever model they share (two examples).",
    "Enemy Defense, fourth batch (Test Kit test 06, 4 Nov 2026). Trait Dungeons: minions x1.6 and bosses x3.2 of the basic dungeon enemy at Lv.30, 40 and 50 (minion 251, 505, 912; boss 506, 1,012, 1,825), the same for Mantius, Drosophia and Ghagaroach where tested. World, relative to a basic world enemy: Goblin Berserker x1.1, Goblin Barbarian, Harpy and Spider x1.05, Troll x1.1, Ghoul and Worm x1.0, Lesser Dragon x1.2, Greater Dragon x1.5, Elemental Stone x1.0 (purple and red x1.1). Most of these are single tests.",
    "Whole skills against the calculator (David, 5 Nov 2026, Training Ogre, no statuses, no crits; predicted -> real). Reina: Wind Slayer single hit 7330 -> 7332; Rising Cutter 6 hits 11249 -> 11588 (x1.03). Kalsion: Weapon Blaze single hit 5711 -> 5711, once its own Attack buff is counted, as it applies before the skill's damage; Flame Wave press 5 hits 8361 -> 8362, hold 3 hits 7109 (x0.85); Royal Flame Flame Wave press 9 hits 8797 -> 9202 (x1.046), hold 3 hits 7476 (x0.85). The codex % is right for single hits and the 5-hit press. Not known why Rising Cutter and the 9-hit press run higher, or whether these ratios hold at other skill levels. The codex gives one % for press and hold.",
@@ -21046,7 +21046,7 @@
        ]
       }
      ],
-     "rewardsNote": "Read from the reward lists in David's screenshots. The Very Hard list may scroll, so entries could be missing there. Members: 1–3 on every difficulty.",
+     "rewardsNote": "Read from the reward lists in David's screenshots. Members: 1–3 on every difficulty.",
      "strategy": [
       "One of the hardest fights in the game (David, first clear).",
       "Dodging at the right moments is crucial: she has many grab attacks and can easily stun-lock you."
@@ -24342,7 +24342,8 @@
     "icon": "assets/items/icons/arcana-of-peace.webp"
    },
    "tomeOfHeroes": {
-    "name": "Tome of Heroes"
+    "name": "Tome of Heroes",
+    "exp": 20000
    },
    "arcanaOfTheFuture": {
     "name": "Arcana of the Future",
@@ -24377,6 +24378,11 @@
      "name": "Core Combat Text",
      "exp": 6000,
      "gold": 1800
+    },
+    {
+     "name": "Tome of Heroes",
+     "exp": 20000,
+     "gold": null
     }
    ],
    "karma": [
@@ -25010,7 +25016,7 @@
     "basis": "Measured: Test Kit test 04, 7 hits, plus Reina's Wind Slayer Lv.1 (916 at 333 Attack = 0.50 × Attack × 549%), which sets K = Defense on this dummy."
    },
    {
-    "name": "Berpedin, the Crushing Darkness",
+    "name": "Barpedin, the Crushing Darkness",
     "level": 80,
     "defense": 1197,
     "range": [
@@ -25051,16 +25057,16 @@
    }
   ],
   "fitPoints": 10,
-  "maxError": "0.5 damage on all 10 hits (Ogre and Berpedin), i.e. within display rounding",
+  "maxError": "0.5 damage on all 10 hits (Ogre and Barpedin), i.e. within display rounding",
   "measured": "2026-11-04",
   "checks": [
-   "Armor Penetration works the same on Berpedin as on the Ogre: its slope alone gives K × skill share 590, against 588 on the Ogre.",
-   "Fitting Berpedin alone with K left free gives K 915–1125, which includes 1,000. K is therefore not a property of the Ogre.",
+   "Armor Penetration works the same on Barpedin as on the Ogre: its slope alone gives K × skill share 590, against 588 on the Ogre.",
+   "Fitting Barpedin alone with K left free gives K 915–1125, which includes 1,000. K is therefore not a property of the Ogre.",
    "K didn't change with the attacker: the same 1,000 fits Reina at 333, 626 and about 2,400 Attack."
   ],
   "worth": {
    "armorPenetration": "Each point removes 1 Defense. About +0.05% damage at 1,000–1,200 Defense, +0.08% at 210.",
-   "defenseIgnore": "Each 1% removes 1% of the enemy's Defense: +0.50% on the Ogre, +0.54% on Berpedin, +0.17% at 210 Defense.",
+   "defenseIgnore": "Each 1% removes 1% of the enemy's Defense: +0.50% on the Ogre, +0.54% on Barpedin, +0.17% at 210 Defense.",
    "orangeSubstats": "With the current Orange substat values (Armor Penetration 15, Defense Ignore 1.94%, the latter an estimate), Defense Ignore is worth more only above about 773 enemy Defense."
   },
   "note": "Not used for ticks: they ignore Defense (see DAMAGE_TESTS). The calculator uses enemies (fixed values) and levelCurve × worldFactor × types[].mult. Unknown: levels above 70 and what happens if Armor Penetration exceeds remaining Defense.",

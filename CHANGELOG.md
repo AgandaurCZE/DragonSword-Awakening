@@ -1,3 +1,5 @@
+## 5 Nov 2026 — Barpedin, Tome of Heroes (preview, Claude)
+- World Boss spelling corrected to Barpedin. Tome of Heroes added to `LEVEL_COSTS` at 20,000 Hero EXP (Gold unknown) and to Test Kit test 05.
 ## 5 Nov 2026 — Chapter 8: last bosses, dungeon, familiar, titles, runes (preview, Claude)
 - Tier list: Hunt boss Earthlander of the Ravenous Earth and Raid boss Ursula, whose tab fades between her two forms in purple, with a new self-hosted font. No locked boss tabs left.
 - Currency Dungeons: Residual Worm Cleanup Zone, no locked entry left. Tome of Heroes shows as text until it has an icon.
