@@ -2,6 +2,17 @@
  "note": "David's inventory, Materials tab (video, 31 Oct 2026), in the game's order. Text read by OCR from the item details panel: punctuation (quotes, apostrophes) may be slightly off; the game itself cuts long source names with '...'. Several dungeon sources appear three times in the game (probably the three difficulties); listed once here. Rarity = the item's background colour (Orange, Purple, Blue, Green, Grey), read by eye. Not used by the page yet.",
  "items": [
   {
+   "name": "Tome of Heroes",
+   "type": "Hero Growth Materials",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/tome-of-heroes.webp",
+   "description": "A book containing the stories of heroes who saved the world. Written in an engaging, novel-like style, it is easy to read and highly immersive, giving you the vivid sensation of standing right in the middle of a battlefield. This book offers a valuable experience that allows you to develop a sense of combat situations just by reading it.",
+   "use": "Gain 20,000 Hero EXP upon use",
+   "sources": [
+    "[Currency Dungeon] Residual..."
+   ]
+  },
+  {
    "name": "Forbidden Grimoire",
    "type": "Hero Growth Materials",
    "rarity": "Orange",

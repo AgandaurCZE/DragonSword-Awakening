@@ -88,7 +88,7 @@ Paste this whole file into the first message of a new chat. It replaces the memo
 
 ## Open / next steps
 - **From David:**
-  - EXP for levels 51–70 and the breakthrough at 60.
+  - Karma EXP above 50 and the Karma breakthrough at 60 (Hero data is complete to 70).
   - Fame stage rewards and the "Name of the Strong" icon.
   - Quest items.
   - The Guides icon (Codex book).
@@ -103,4 +103,4 @@ Paste this whole file into the first message of a new chat. It replaces the memo
 Changes to public pages are listed in `docs/LAUNCH_CHANGES.md`.
 
 ## Story status (5 Nov 2026)
-David finished the main story (chapter 8). All Hunt bosses, Raids and Currency Dungeons are discovered. Open: Tome of Heroes icon (20,000 Hero EXP; David shares it once he has one) and its Gold price; banner art for Eroded Underground Cemetery and Residual Worm Cleanup Zone (next week, via ChatGPT); Hunt rating rewards, which differ a little per boss (David shares them later). David's plan: max his main team, run the new Currency Dungeon, do the remaining Hero Quests and test those heroes, then choose the next priority together. Keep marking titles he reports as obtained in `TITLES`.
+David finished the main story (chapter 8). All Hunt bosses, Raids and Currency Dungeons are discovered. Open: banner art for Eroded Underground Cemetery and Residual Worm Cleanup Zone (next week, via ChatGPT); Hunt rating rewards, which differ a little per boss (David shares them later). David's plan: max his main team, run the new Currency Dungeon, do the remaining Hero Quests and test those heroes, then choose the next priority together. Keep marking titles he reports as obtained in `TITLES`.

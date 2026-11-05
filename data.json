@@ -24343,7 +24343,7 @@
    },
    "tomeOfHeroes": {
     "name": "Tome of Heroes",
-    "exp": 20000
+    "icon": "assets/items/icons/tome-of-heroes.webp"
    },
    "arcanaOfTheFuture": {
     "name": "Arcana of the Future",
@@ -24382,7 +24382,7 @@
     {
      "name": "Tome of Heroes",
      "exp": 20000,
-     "gold": null
+     "gold": 5000
     }
    ],
    "karma": [
@@ -24482,7 +24482,27 @@
      56600,
      59000,
      61400,
-     63900
+     63900,
+     66500,
+     69100,
+     71800,
+     74500,
+     77200,
+     80000,
+     82900,
+     85800,
+     88700,
+     91700,
+     94800,
+     97900,
+     101100,
+     104300,
+     107500,
+     110800,
+     114200,
+     117600,
+     121000,
+     124500
     ]
    },
    "karma": {
@@ -24540,7 +24560,7 @@
     ]
    }
   },
-  "expNote": "toNext[i] = EXP from level i+1 to i+2, measured up to level 50 (Kalien; A Path That Leads to the Wind and A Flame That Cuts Through the Moment). Heroes and Karma need the same EXP from level 3 on; only the first two levels differ (Hero 150, 250; Karma 200, 200). Gear EXP per level is in GEAR_UPGRADE.levels.",
+  "expNote": "toNext[i] = EXP from level i+1 to i+2. Hero: measured to level 70 (Kalien to 50 and from 50 to 60, Kalsion from 60 to 70). Karma: measured to level 50; Hero and Karma need the same EXP from level 3 to 50, and only the first two levels differ (Hero 150, 250; Karma 200, 200). Gear EXP per level is in GEAR_UPGRADE.levels.",
   "breakthroughs": {
    "note": "Gold seems fixed per breakthrough level; the materials depend on the hero or card (monster materials, a gathering/mining material, the hero's faction Insignia; Karma uses its archetype's trait stones). Recorded examples only.",
    "hero": {
@@ -24568,6 +24588,13 @@
      "examples": {
       "Reina": "15 Low-Grade Monster Claw, 10 Intermediate Monster Claw, 15 Primordial Seed, 5 Insignia of the Orbis Kingdom",
       "Kalien": "15 Low-Grade Monster Claw, 10 Intermediate Monster Claw, 15 Primordial Seed, 1 Insignia of the Red Fox Mercenaries"
+     }
+    },
+    "60": {
+     "gold": 80000,
+     "examples": {
+      "Johnny": "15 Intermediate Monster Claw, 20 Leaf of Vigor, 10 Insignia of the Johnny Mercenaries",
+      "Kalsion": "15 Intermediate Monster Claw, 20 Primordial Seed, 10 Insignia of the Orbis Kingdom"
      }
     }
    },
@@ -24601,8 +24628,8 @@
    }
   },
   "unknown": [
-   "EXP per level above 50",
-   "Hero breakthrough at 60; Karma breakthrough at 60",
+   "Karma EXP above 50 (probably the same as Hero, not measured)",
+   "Karma breakthrough at 60",
    "Which material each hero/card uses at each breakthrough (the pattern behind it)"
   ],
   "skills": {

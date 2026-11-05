@@ -1,3 +1,5 @@
+## 5 Nov 2026 — Hero EXP to 70, Tome of Heroes (preview, Claude)
+- `LEVEL_COSTS`: Hero EXP measured to level 70, hero breakthrough at 60 (80,000 Gold), Tome of Heroes at 5,000 Gold. Icon added to the Currency Dungeon and the Item Database.
 ## 5 Nov 2026 — Barpedin, Tome of Heroes (preview, Claude)
 - World Boss spelling corrected to Barpedin. Tome of Heroes added to `LEVEL_COSTS` at 20,000 Hero EXP (Gold unknown) and to Test Kit test 05.
 ## 5 Nov 2026 — Chapter 8: last bosses, dungeon, familiar, titles, runes (preview, Claude)
