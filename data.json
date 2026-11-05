@@ -24592,7 +24592,7 @@
     ]
    }
   },
-  "expNote": "toNext[i] = EXP from level i+1 to i+2, measured to level 70 for Hero and Karma (Kalien, Kalsion; A Path That Leads to the Wind, A Flame That Cuts Through the Moment). Heroes and Karma need the same EXP from level 3 on; only the first two levels differ (Hero 150, 250; Karma 200, 200). EXP left over at a level cap is lost: every run ending at 60 or 70 had an empty bar. Gear EXP per level is in GEAR_UPGRADE.levels.",
+  "expNote": "toNext[i] = EXP from level i+1 to i+2, measured to level 70 for Hero and Karma (Kalien, Kalsion; A Path That Leads to the Wind, A Flame That Cuts Through the Moment). Heroes and Karma need the same EXP from level 3 on; only the first two levels differ (Hero 150, 250; Karma 200, 200). EXP left over at a breakthrough level is lost, and the bar restarts at 0 after the breakthrough (confirmed by David, 5 Nov 2026). Gear EXP per level is in GEAR_UPGRADE.levels.",
   "breakthroughs": {
    "note": "Gold seems fixed per breakthrough level; the materials depend on the hero or card (monster materials, a gathering/mining material, the hero's faction Insignia; Karma uses its archetype's trait stones). Recorded examples only.",
    "hero": {
