@@ -25386,7 +25386,7 @@
     "slots": [
      "Special B"
     ],
-    "note": "Tick Airborne below: Explosion only activates on an Airborne enemy, and it stays up for the whole skill.",
+    "note": "Airborne stays up for the whole skill.",
     "variants": [
      {
       "label": "Press (5 hits)",
@@ -25443,6 +25443,15 @@
   "levelEstNote": "Level between tested points, so its Defense is an estimate.",
   "levelFarNote": "Levels above 70 and below 10 are rough estimates: no basic enemy has been tested there, apart from the Lv.90 goblins.",
   "fixedGroup": "Fixed level (World Bosses, dummy)",
-  "fixedNote": "Measured directly: this enemy's level is fixed."
+  "fixedNote": "Measured directly: this enemy's level is fixed.",
+  "requireAlias": {
+   "Super Armor Break": "Break"
+  },
+  "requireNoLock": [
+   "Frost",
+   "Frozen",
+   "Stealth"
+  ],
+  "lockTitle": "This skill can't be used without this status."
  }
 }

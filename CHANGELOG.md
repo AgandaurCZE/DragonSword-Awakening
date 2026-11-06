@@ -1,3 +1,5 @@
+## 6 Nov 2026 — Calculator locks required statuses (preview, Claude)
+- Damage calculator: choosing a skill that needs a status ticks and locks it. Your own ticks come back when you change skill.
 ## 5 Nov 2026 — Levelling calculator (preview, Claude)
 - Tools page: Hero and Karma levelling calculator, using the game's item-picking rule, with tabs for the two tools. `LEVEL_COSTS` has Karma EXP to 70, the Karma breakthrough at 60 and item icons.
 ## 5 Nov 2026 — Hero EXP to 70, Tome of Heroes (preview, Claude)
