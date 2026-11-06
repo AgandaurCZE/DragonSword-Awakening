@@ -22775,6 +22775,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 10,
       "gear": [
        "Blue"
       ],
@@ -22796,6 +22797,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 25,
       "gear": [
        "Blue",
        "Purple"
@@ -22818,6 +22820,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 40,
       "gear": [
        "Blue",
        "Purple"
@@ -22852,6 +22855,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 10,
       "gear": [
        "Blue"
       ],
@@ -22873,6 +22877,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 25,
       "gear": [
        "Blue",
        "Purple"
@@ -22895,6 +22900,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 40,
       "gear": [
        "Blue",
        "Purple"
@@ -22929,6 +22935,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 15,
       "gear": [
        "Blue"
       ],
@@ -22950,6 +22957,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 30,
       "gear": [
        "Blue",
        "Purple"
@@ -22972,6 +22980,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 45,
       "gear": [
        "Purple"
       ],
@@ -23004,6 +23013,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 15,
       "gear": [
        "Blue"
       ],
@@ -23025,6 +23035,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 30,
       "gear": [
        "Blue",
        "Purple"
@@ -23047,6 +23058,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 45,
       "gear": [
        "Purple"
       ],
@@ -23079,6 +23091,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 25,
       "gear": [
        "Blue"
       ],
@@ -23100,6 +23113,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 35,
       "gear": [
        "Blue",
        "Purple"
@@ -23122,6 +23136,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 45,
       "gear": [
        "Purple"
       ],
@@ -23154,6 +23169,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 30,
       "gear": [
        "Blue"
       ],
@@ -23175,6 +23191,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 40,
       "gear": [
        "Blue",
        "Purple"
@@ -23197,6 +23214,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 50,
       "gear": [
        "Purple"
       ],
@@ -23230,6 +23248,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 30,
       "gear": [
        "Blue"
       ],
@@ -23251,6 +23270,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 40,
       "gear": [
        "Blue",
        "Purple"
@@ -23273,6 +23293,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 50,
       "gear": [
        "Purple"
       ],
@@ -23305,6 +23326,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 35,
       "gear": [
        "Blue",
        "Purple"
@@ -23327,6 +23349,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 45,
       "gear": [
        "Purple"
       ],
@@ -23348,6 +23371,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 55,
       "gear": [
        "Purple",
        "Orange"
@@ -23381,6 +23405,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 35,
       "gear": [
        "Blue",
        "Purple"
@@ -23403,6 +23428,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 45,
       "gear": [
        "Purple"
       ],
@@ -23424,6 +23450,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 55,
       "gear": [
        "Purple",
        "Orange"
@@ -23458,6 +23485,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 40,
       "gear": [
        "Blue",
        "Purple"
@@ -23480,6 +23508,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 50,
       "gear": [
        "Purple"
       ],
@@ -23501,6 +23530,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 60,
       "gear": [
        "Purple",
        "Orange"
@@ -23535,6 +23565,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 40,
       "gear": [
        "Blue",
        "Purple"
@@ -23557,6 +23588,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 50,
       "gear": [
        "Purple"
       ],
@@ -23578,6 +23610,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 60,
       "gear": [
        "Purple",
        "Orange"
@@ -23612,6 +23645,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 45,
       "gear": [
        "Purple"
       ],
@@ -23633,6 +23667,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 55,
       "gear": [
        "Purple",
        "Orange"
@@ -23655,6 +23690,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 65,
       "gear": [
        "Purple",
        "Orange"
@@ -23691,6 +23727,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 55,
       "gear": [
        "Purple",
        "Orange"
@@ -23713,6 +23750,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 65,
       "gear": [
        "Purple",
        "Orange"
@@ -23735,6 +23773,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 70,
       "gear": [
        "Orange"
       ],
@@ -23770,6 +23809,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 60,
       "gear": [
        "Purple",
        "Orange"
@@ -23792,6 +23832,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 65,
       "gear": [
        "Purple",
        "Orange"
@@ -23814,6 +23855,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 70,
       "gear": [
        "Orange"
       ],
@@ -23849,6 +23891,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 60,
       "gear": [
        "Purple",
        "Orange"
@@ -23871,6 +23914,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 65,
       "gear": [
        "Purple",
        "Orange"
@@ -23893,6 +23937,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 70,
       "gear": [
        "Orange"
       ],
@@ -23922,6 +23967,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 15,
       "rewards": [
        [
         "exp",
@@ -23944,6 +23990,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 30,
       "rewards": [
        [
         "exp",
@@ -23966,6 +24013,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 45,
       "rewards": [
        [
         "exp",
@@ -23995,6 +24043,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 20,
       "rewards": [
        [
         "exp",
@@ -24017,6 +24066,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 35,
       "rewards": [
        [
         "exp",
@@ -24039,6 +24089,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 50,
       "rewards": [
        [
         "exp",
@@ -24068,6 +24119,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 30,
       "rewards": [
        [
         "exp",
@@ -24090,6 +24142,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 40,
       "rewards": [
        [
         "exp",
@@ -24112,6 +24165,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 50,
       "rewards": [
        [
         "exp",
@@ -24142,6 +24196,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 40,
       "rewards": [
        [
         "exp",
@@ -24160,6 +24215,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 50,
       "rewards": [
        [
         "exp",
@@ -24178,6 +24234,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 60,
       "rewards": [
        [
         "exp",
@@ -24202,6 +24259,7 @@
     "difficulties": [
      {
       "name": "Normal",
+      "enemyLevel": 45,
       "rewards": [
        [
         "exp",
@@ -24232,6 +24290,7 @@
      },
      {
       "name": "Hard",
+      "enemyLevel": 55,
       "rewards": [
        [
         "exp",
@@ -24262,6 +24321,7 @@
      },
      {
       "name": "Very Hard",
+      "enemyLevel": 65,
       "rewards": [
        [
         "exp",

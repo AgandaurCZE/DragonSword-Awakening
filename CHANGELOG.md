@@ -1,3 +1,5 @@
+## 6 Nov 2026 — Enemy levels for all dungeons (preview, Claude)
+- `enemyLevel` recorded for all 15 Normal and 5 Currency Dungeons at each difficulty, from David's in-game checks.
 ## 6 Nov 2026 — Enemy level bar on dungeon cards (preview, Claude)
 - Normal and Currency Dungeon cards show a small "Enemy Lv." bar beside the I/II/III circles, which follows the chosen difficulty. It shows `?` until David's levels are recorded in `enemyLevel`.
 ## 6 Nov 2026 — Calculator locks required statuses (preview, Claude)
