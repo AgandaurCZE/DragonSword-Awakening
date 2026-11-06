@@ -1,3 +1,5 @@
+## 6 Nov 2026 — Calculator: Where switch and Boss checkbox (preview, Claude)
+- Damage calculator's enemy section now has World (default), Normal Dungeon, Trait Dungeon and Currency Dungeon switches, with a Boss checkbox except in Currency. New `DEFENSE_MODEL.places`; dungeon entries left `types`.
 ## 6 Nov 2026 — Hidden enemy variants, Troll merged (preview, Claude)
 - `DEFENSE_MODEL`: identical-looking Harpies measured at both ×1.0 and ×1.05, noted on the curve. Troll merged back to one entry at ×1.1, as David confirmed the earlier ×1.1 hits were blue.
 ## 6 Nov 2026 — Currency Dungeon Defense confirmed, Ent and Troll colours (preview, Claude)

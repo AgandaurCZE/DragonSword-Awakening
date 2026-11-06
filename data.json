@@ -25271,6 +25271,57 @@
    },
    "worldFactor": 0.8
   },
+  "places": [
+   {
+    "id": "world",
+    "label": "World"
+   },
+   {
+    "id": "normal",
+    "label": "Normal Dungeon",
+    "bossMult": 1.3,
+    "enemies": [
+     {
+      "name": "Basic enemy",
+      "mult": 1,
+      "note": "Goblins, Wargs, Skeletons and Orcs measured as basic in Normal Dungeons. Other species are assumed to match."
+     },
+     {
+      "name": "Goblin Archer",
+      "mult": 0.8
+     },
+     {
+      "name": "Axe-throwing Skeleton",
+      "mult": 1.05
+     },
+     {
+      "name": "Axe-throwing Skeleton (The Graveyard Where Tragedy Sleeps)",
+      "mult": 0.8
+     },
+     {
+      "name": "Skeleton Commander (not the boss)",
+      "mult": 1.1
+     },
+     {
+      "name": "Agile Ironclad Warg (duo boss)",
+      "mult": 1.04,
+      "note": "This boss measured ×1.04, unlike other bosses at ×1.3. Its partner, Veteran Goblin Barbarian, is a normal ×1.3."
+     }
+    ]
+   },
+   {
+    "id": "trait",
+    "label": "Trait Dungeon",
+    "mobMult": 1.6,
+    "bossMult": 3.2
+   },
+   {
+    "id": "currency",
+    "label": "Currency Dungeon",
+    "factor": 0.4,
+    "note": "Currency Dungeons: enemy type and bosses make no difference. Measured in Endless Summoning Grounds and Trace of the Giant; the other three are assumed to match."
+   }
+  ],
   "types": [
    {
     "group": "Goblins",
@@ -25332,8 +25383,7 @@
    {
     "group": "Undead",
     "name": "Axe-throwing Skeleton",
-    "mult": 1.05,
-    "note": "This enemy measured ×0.8 in The Graveyard Where Tragedy Sleeps, not ×1.05."
+    "mult": 1.05
    },
    {
     "group": "Undead",
@@ -25399,34 +25449,10 @@
     "once": true
    },
    {
-    "group": "Named enemies and bosses",
+    "group": "Named enemies",
     "name": "Named enemy with visible changes",
     "mult": 1.15,
     "note": "Based on two named enemies. Named enemies with no visible changes match their normal version."
-   },
-   {
-    "group": "Named enemies and bosses",
-    "name": "Dungeon boss",
-    "mult": 1.3,
-    "place": "dungeon"
-   },
-   {
-    "group": "Named enemies and bosses",
-    "name": "Agile Ironclad Warg (duo boss)",
-    "mult": 1.04,
-    "place": "dungeon"
-   },
-   {
-    "group": "Trait Dungeons",
-    "name": "Trait Dungeon minion",
-    "mult": 1.6,
-    "place": "dungeon"
-   },
-   {
-    "group": "Trait Dungeons",
-    "name": "Trait Dungeon boss",
-    "mult": 3.2,
-    "place": "dungeon"
    }
   ]
  },
@@ -25577,6 +25603,8 @@
   "levelFarNote": "Levels above 75 and below 10 are rough estimates: no basic enemy has been tested there, apart from the Lv.90 goblins.",
   "fixedGroup": "Fixed level (World Bosses, dummy)",
   "fixedNote": "Measured directly: this enemy's level is fixed.",
+  "customLabel": "Other (type its Defense)",
+  "typedNote": "Using the Defense you typed. Pick an enemy, change the level or change the switch to go back.",
   "requireAlias": {
    "Super Armor Break": "Break"
   },
