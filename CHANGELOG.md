@@ -1,3 +1,5 @@
+## 7 Nov 2026 — Notes on upcoming heroes and content (Claude)
+- New `assets/upcoming/` with David's notes on Jerome, Veronica, Logan and Viola, the story premise and announced expansions, plus his Veronica screenshot. Not shown on the site.
 ## 6 Nov 2026 — Title Sage of the Blue Moon (Claude)
 - `TITLES`: Sage of the Blue Moon obtained, 31 of 109.
 ## 6 Nov 2026 — Ogre added (preview, Claude)

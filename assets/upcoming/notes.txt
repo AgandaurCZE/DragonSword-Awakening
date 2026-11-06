@@ -1,0 +1,22 @@
+Upcoming heroes and content. David's notes, 7 Nov 2026. Not used by the page.
+Everything below is what David saw in-game or read elsewhere; archetypes are his guesses from looks and icons, not confirmed.
+
+DEV STREAM ROADMAP (David's screenshots, 31 Oct 2026)
+- Characters: Ryza (already released), Jerome, Veronica, Logan.
+- Content: Hero Quest, Rift, QoL Update, Combat Controls Update, Balance Fixes.
+
+UPCOMING HEROES (from Othello's Hero Quest)
+- Jerome: member of the rebel faction (Othello, Charlotte). Probably a new race: often calls himself "Taril"; a smaller human with animal ears and tail. Guess from looks: Blazeflame.
+- Veronica: member of the rebel faction. Brown-skinned human woman, lighter than Castella. Carries syringes that look like her weapon, also in her roadmap portrait. Briefly playable in Othello's Hero Quest (screenshot veronica-othello-quest.webp): could move, but not open the character screen or use attacks or skills. Skill icon looks physical, or a buff/effect on herself; the Ultimate icon is Amplitude-coloured (Amplitude inflicts Stun). First guess from looks was Venom; the icons point to Amplitude.
+- Logan (?): not mentioned by name yet; wears the rebels' colours, so probably a rebel too (unconfirmed). Muscular human man with a big shield; appeared only in a cutscene at the end of the quest. Guess: Crushing, like Alex.
+- Viola: pink-haired girl from the teaser after the main story ends, chasing a new goat-looking monster. Name and playable status come from datamining (David's report, not seen in-game).
+
+STORY PREMISE SO FAR
+- The revolution army and Dragon Dust addiction; experiments by both the rebels and the Dragon Worshippers.
+- Rebels: seem addicted and desperate for a cure, possibly from using it to fight the Orbis Kingdom to escape (not explained yet).
+- Dragon Worshippers: make others addicted and experiment on them to power themselves up; failed experiments become ghouls for their armies.
+- Hinted in the last Promotion Quest and in Othello's Hero Quest. The post-story teaser (Viola) doesn't fit this thread.
+
+ANNOUNCED EXPANSIONS (David's report)
+- A story DLC that finishes the Orbis Kingdom story (paid or free unknown).
+- A full expansion adding a new region called Floating Island.
