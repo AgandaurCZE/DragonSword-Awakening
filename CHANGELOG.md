@@ -1,3 +1,5 @@
+## 6 Nov 2026 — Currency Dungeon Defense confirmed, Ent and Troll colours (preview, Claude)
+- `DEFENSE_MODEL`: Currency Dungeons confirmed at ×0.4 in two dungeons, curve gains Lv.20 and Lv.35 from them. Ent ×1.05 added; Troll split into blue ×1.05 and purple ×1.1.
 ## 6 Nov 2026 — Enemy Defense: recolours, new types, Currency Dungeons (preview, Claude)
 - `DEFENSE_MODEL.types`: Goblin Barbarian ×1.05 → ×1.1, Spider ×1.05 → ×1.0, new Armored Warg, Orc Barbarian and Sand Claw at ×1.1. Curve note records recolour results, Sand Claw Dragus and the low Currency Dungeon Defense. Test Kit: Orc Barbarian and Sand Claw added to test 06.
 ## 6 Nov 2026 — Enemy Defense at Lv.75 (preview, Claude)

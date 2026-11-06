@@ -25246,12 +25246,14 @@
   },
   "note": "Not used for ticks: they ignore Defense (see DAMAGE_TESTS). The calculator uses enemies (fixed values) and levelCurve × worldFactor × types[].mult. Unknown: levels above 75 and what happens if Armor Penetration exceeds remaining Defense.",
   "levelCurve": {
-   "note": "Defense of a basic enemy in a dungeon, from Test Kit test 06. Species doesn't seem to matter. World enemies are about worldFactor of this. Lv.52, 54, 57, 58, 63 and 75 are world hits ÷ worldFactor (Lv.75: Skeleton and Warg at 841, both World; the rise from Lv.70 is steep and no level from 71 to 74 has been tested); Lv.90 is the Lv.90 goblins and Training Ogre (1,000) ÷ worldFactor, and the least certain point. Levels in between are estimated in a straight line. David visited every waypoint (6 Nov 2026): the highest basic World enemy is Lv.75; named enemies run a few levels higher. Currency Dungeons don't follow this curve. Endless Summoning Grounds gave Defense 26 at Lv.20 and 85 at Lv.35 for every enemy, boss included; Trace of the Giant gave 63 for an Orc at Lv.30, which is 0.4 × the 158 of a normal dungeon. ×0.4 is an unconfirmed idea from that one direct comparison, and the calculator doesn't use it. Recolours kept their type's multiplier at Lv.75 (yellow Goblin, red Orc, purple Archer, blue Berserker), and each type's Lv.75 value sits on the same 841 base, so the rise from Lv.70 is about level, not a regional bonus. No basic enemy between Lv.71 and 74 has been found. Named Sand Claw Dragus (Lv.71) measured 815; at the usual ×1.15 that implies about 709 at Lv.71, close to the straight line's 712.",
+   "note": "Defense of a basic enemy in a dungeon, from Test Kit test 06. Species doesn't seem to matter. World enemies are about worldFactor of this. Lv.52, 54, 57, 58, 63 and 75 are world hits ÷ worldFactor (Lv.75: Skeleton and Warg at 841, both World; the rise from Lv.70 is steep and no level from 71 to 74 has been tested); Lv.90 is the Lv.90 goblins and Training Ogre (1,000) ÷ worldFactor, and the least certain point. Levels in between are estimated in a straight line. David visited every waypoint (6 Nov 2026): the highest basic World enemy is Lv.75; named enemies run a few levels higher. Currency Dungeons don't follow this curve. Endless Summoning Grounds gave Defense 26 at Lv.20 and 85 at Lv.35 for every enemy, boss included; Trace of the Giant gave 63 for an Orc at Lv.30 and both gave 228 at Lv.50, boss included. That is ×0.4 of the normal 158 and 569, with no type or boss multiplier; the other three Currency Dungeons are untested. Lv.20 and Lv.35 on the curve are those Endless Summoning Grounds hits ÷ 0.4, not measured in a normal dungeon. The calculator has no Currency Dungeon option yet. David's view: the waves are lowered so growth-material runs don't waste players' time. Recolours kept their type's multiplier at Lv.75 (yellow Goblin, red Orc, purple Archer, blue Berserker), and each type's Lv.75 value sits on the same 841 base, so the rise from Lv.70 is about level, not a regional bonus. No basic enemy between Lv.71 and 74 has been found. Named Sand Claw Dragus (Lv.71) measured 815; at the usual ×1.15 that implies about 709 at Lv.71, close to the straight line's 712.",
    "dungeon": {
     "10": 17.5,
     "15": 33.8,
+    "20": 65.0,
     "25": 99.1,
     "30": 157.9,
+    "35": 212.5,
     "40": 316.0,
     "45": 422.3,
     "50": 569.4,
@@ -25362,9 +25364,15 @@
    },
    {
     "group": "Other enemies",
+    "name": "Ent",
+    "mult": 1.05,
+    "note": "Lv.67 and Lv.75."
+   },
+   {
+    "group": "Other enemies",
     "name": "Harpy",
     "mult": 1.05,
-    "note": "×1.05 at Lv.55, ×1.0 at Lv.66, ×1.05 at Lv.75 (light pink). David has seen other colours, not yet tested."
+    "note": "×1.05 at Lv.55, ×1.0 at Lv.66, ×1.05 at Lv.75 (light pink). David found only the pink ones at 4 World locations, so colour doesn't explain this."
    },
    {
     "group": "Other enemies",
@@ -25374,9 +25382,17 @@
    },
    {
     "group": "Other enemies",
-    "name": "Troll",
+    "name": "Troll (blue)",
+    "mult": 1.05,
+    "once": true,
+    "note": "Lv.75. Earlier Lv.57 and 63 Trolls, colour not recorded, were ×1.1."
+   },
+   {
+    "group": "Other enemies",
+    "name": "Troll (purple)",
     "mult": 1.1,
-    "note": "×1.1 at Lv.57 and 63, but ×1.05 at Lv.75 (blue). A purple variant exists, not yet tested."
+    "once": true,
+    "note": "Lv.75. Earlier Lv.57 and 63 Trolls, colour not recorded, were also ×1.1."
    },
    {
     "group": "Other enemies",
