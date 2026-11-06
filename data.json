@@ -25246,7 +25246,7 @@
   },
   "note": "Not used for ticks: they ignore Defense (see DAMAGE_TESTS). The calculator uses enemies (fixed values) and levelCurve × worldFactor × types[].mult. Unknown: levels above 70 and what happens if Armor Penetration exceeds remaining Defense.",
   "levelCurve": {
-   "note": "Defense of a basic enemy in a dungeon, from Test Kit test 06. Species doesn't seem to matter. World enemies are about worldFactor of this. Lv.52, 54, 57, 58 and 63 are world hits ÷ worldFactor; Lv.90 is the Lv.90 goblins and Training Ogre (1,000) ÷ worldFactor, and the least certain point. Levels in between are estimated in a straight line.",
+   "note": "Defense of a basic enemy in a dungeon, from Test Kit test 06. Species doesn't seem to matter. World enemies are about worldFactor of this. Lv.52, 54, 57, 58 and 63 are world hits ÷ worldFactor; Lv.90 is the Lv.90 goblins and Training Ogre (1,000) ÷ worldFactor, and the least certain point. Levels in between are estimated in a straight line. David visited every waypoint (6 Nov 2026): the highest basic World enemy is Lv.75; named enemies run a few levels higher.",
    "dungeon": {
     "10": 17.5,
     "15": 33.8,
