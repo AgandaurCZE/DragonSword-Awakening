@@ -22627,6 +22627,7 @@
  },
  "DUNGEONS": {
   "note": "Normal Dungeons, from David's Special Challenges screenshots (assets/dungeons/Drops1-5_<difficulty>.webp; Normal = grey I, Hard = green II, Very Hard = blue III) and his gear notes (1 Nov 2026). exp/emblem/material are the listed rewards; gear = rarities of the dungeon's set that can drop; slots = the gear pieces it drops. Materials identified by matching icons against assets/items/icons and confirmed by the items' own Main Sources.",
+  "enemyLevelLabel": "Enemy Lv.",
   "difficulties": [
    {
     "name": "Normal",

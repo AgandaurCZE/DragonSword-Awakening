@@ -1,3 +1,5 @@
+## 6 Nov 2026 — Enemy level bar on dungeon cards (preview, Claude)
+- Normal and Currency Dungeon cards show a small "Enemy Lv." bar beside the I/II/III circles, which follows the chosen difficulty. It shows `?` until David's levels are recorded in `enemyLevel`.
 ## 6 Nov 2026 — Calculator locks required statuses (preview, Claude)
 - Damage calculator: choosing a skill that needs a status ticks and locks it. Your own ticks come back when you change skill.
 ## 5 Nov 2026 — Levelling calculator (preview, Claude)
