@@ -1,3 +1,5 @@
+## 6 Nov 2026 — Hidden enemy variants, Troll merged (preview, Claude)
+- `DEFENSE_MODEL`: identical-looking Harpies measured at both ×1.0 and ×1.05, noted on the curve. Troll merged back to one entry at ×1.1, as David confirmed the earlier ×1.1 hits were blue.
 ## 6 Nov 2026 — Currency Dungeon Defense confirmed, Ent and Troll colours (preview, Claude)
 - `DEFENSE_MODEL`: Currency Dungeons confirmed at ×0.4 in two dungeons, curve gains Lv.20 and Lv.35 from them. Ent ×1.05 added; Troll split into blue ×1.05 and purple ×1.1.
 ## 6 Nov 2026 — Enemy Defense: recolours, new types, Currency Dungeons (preview, Claude)
