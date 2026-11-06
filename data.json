@@ -24663,10 +24663,54 @@
       "A Flame That Cuts Through the Moment": "25 Crystal of Recollection, 20 Intermediate Blazeflame Stone, 10 High-Grade Blazeflame Stone, 5 Chronograph of Ages"
      }
     }
+   },
+   "heroPattern": {
+    "note": "From David's 15 owned heroes, 6 Nov 2026. Second material follows the archetype with no exceptions. Bone Fragment fits all three Healer and Buffer heroes among them. Claw against Hide isn't explained. Insignia follows the faction; Ryza (faction Other) uses none.",
+    "secondMaterial": {
+     "Thunderbolt": "Drop of Purity",
+     "Frostbite": "Drop of Purity",
+     "Blazeflame": "Primordial Seed",
+     "Bloodburst": "Primordial Seed",
+     "Gale": "Primordial Seed",
+     "Venom": "Leaf of Vigor",
+     "Breaker": "Leaf of Vigor",
+     "Amplitude": "Fruit of Vitality"
+    },
+    "monsterMaterial": {
+     "Monster Claw": [
+      "Johnny",
+      "Kalien",
+      "Roxy",
+      "Ornette",
+      "Kalsion",
+      "Reina",
+      "Othello",
+      "Ryza"
+     ],
+     "Monster Hide": [
+      "Aria",
+      "Cerese",
+      "Charlotte"
+     ],
+     "Bone Fragment": [
+      "Lute",
+      "Sion",
+      "Eileen"
+     ],
+     "Monster Essence": [
+      "Castella"
+     ]
+    },
+    "predictions": {
+     "Dana": "Drop of Purity, Bone Fragment",
+     "Tarte": "Drop of Purity, Bone Fragment",
+     "Theresia": "Fruit of Vitality",
+     "Astria": "Leaf of Vigor"
+    }
    }
   },
   "unknown": [
-   "Which material each hero/card uses at each breakthrough (the pattern behind it)"
+   "Why heroes use Monster Claw or Monster Hide; Crushing's second material (Alex)"
   ],
   "skills": {
    "note": "Measured by David (3 Nov 2026) on Kalien: Explosion (max Lv.10) and Great Rush (max Lv.7). Both cost the same up to Lv.6; only the Lv.7 materials differ. No EXP: a fixed Gold price and fixed materials per level. Confirmed by David the same day: every hero uses the same Gold and materials (checked in the in-game preview on heroes of 5 archetypes, Lv.10 and Lv.7 skills).",
