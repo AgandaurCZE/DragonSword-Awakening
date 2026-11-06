@@ -1,3 +1,5 @@
+## 6 Nov 2026 — Enemy Defense: recolours, new types, Currency Dungeons (preview, Claude)
+- `DEFENSE_MODEL.types`: Goblin Barbarian ×1.05 → ×1.1, Spider ×1.05 → ×1.0, new Armored Warg, Orc Barbarian and Sand Claw at ×1.1. Curve note records recolour results, Sand Claw Dragus and the low Currency Dungeon Defense. Test Kit: Orc Barbarian and Sand Claw added to test 06.
 ## 6 Nov 2026 — Enemy Defense at Lv.75 (preview, Claude)
 - `DEFENSE_MODEL`: World Lv.75 basic enemy measured at 841 and added to the curve. Notes added to Ghoul, Harpy, Spider and Troll, whose hits disagree across levels. Endless Summoning Grounds noted as not following the curve.
 ## 6 Nov 2026 — Enemy levels for all dungeons (preview, Claude)
