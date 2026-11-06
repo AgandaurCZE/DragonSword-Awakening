@@ -1,3 +1,5 @@
+## 6 Nov 2026 — Ogre added (preview, Claude)
+- `DEFENSE_MODEL.types`: Ogre ×1.1 from one Lv.75 World hit; Harpy note adds Lv.67.
 ## 6 Nov 2026 — Calculator: Where switch and Boss checkbox (preview, Claude)
 - Damage calculator's enemy section now has World (default), Normal Dungeon, Trait Dungeon and Currency Dungeon switches, with a Boss checkbox except in Currency. New `DEFENSE_MODEL.places`; dungeon entries left `types`.
 ## 6 Nov 2026 — Hidden enemy variants, Troll merged (preview, Claude)
