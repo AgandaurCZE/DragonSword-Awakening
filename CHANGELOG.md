@@ -1,3 +1,5 @@
+## 6 Nov 2026 — Enemy Defense at Lv.75 (preview, Claude)
+- `DEFENSE_MODEL`: World Lv.75 basic enemy measured at 841 and added to the curve. Notes added to Ghoul, Harpy, Spider and Troll, whose hits disagree across levels. Endless Summoning Grounds noted as not following the curve.
 ## 6 Nov 2026 — Enemy levels for all dungeons (preview, Claude)
 - `enemyLevel` recorded for all 15 Normal and 5 Currency Dungeons at each difficulty, from David's in-game checks.
 ## 6 Nov 2026 — Enemy level bar on dungeon cards (preview, Claude)

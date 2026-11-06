@@ -1978,7 +1978,7 @@ function dcCompute(i){const C=DAMAGE_CALC,K=DEFENSE_MODEL.K,N=x=>Number(x)||0;
 function dcEnemyDef(t,place,lv){const c=DEFENSE_MODEL.levelCurve,P=Object.keys(c.dungeon).map(Number).sort((a,b)=>a-b),v=x=>c.dungeon[String(x)];let base;
  const last=P[P.length-1],tested=c.dungeon[String(lv)]!=null;
  if(lv<=P[0])base=v(P[0])*lv/P[0];else if(lv>=last)base=v(last)*lv/last;else{const hi=P.findIndex(x=>x>=lv),a=P[hi-1],b=P[hi];base=v(a)+(v(b)-v(a))*(lv-a)/(b-a);}
- const world=place==='world'&&!t.place;return{base,world,def:base*(world?c.worldFactor:1)*t.mult,est:!tested,far:lv<P[0]||lv>70};}
+ const world=place==='world'&&!t.place;return{base,world,def:base*(world?c.worldFactor:1)*t.mult,est:!tested,far:lv<P[0]||lv>75};}
 const DC_DEF={hero:'',skill:'',lv:'',pct:'',attack:'',cd:50,cr:5,ap:0,di:0,apu:'',buff:'',enemy:'type:0',place:'dungeon',elv:50,def:'',weak:'',tower:'',all:0,inc:0,st:{}};
 let DC_S=null;
 function dcSave(){try{localStorage.setItem('dsw.dmgcalc.v1',JSON.stringify(DC_S));}catch(e){}}
