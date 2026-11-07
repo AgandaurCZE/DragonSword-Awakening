@@ -1,3 +1,5 @@
+## 7 Nov 2026 — Alex rated (preview, Claude)
+- `TIER_LIST_V2.heroes.Alex`: C overall, B single, C groups, Team buffer and Expert (−1), agreed with David. Team buffer tag text now includes lowering the enemy's Defense.
 ## 7 Nov 2026 — Finding: Defense debuffs multiply with Defense Ignore (Claude)
 - `DAMAGE_TESTS.findings`: Alex's Guard Counter debuff (−10% Lv.1, −20% Lv.10, about 10 s, carries over on swap) multiplies with Earthshatterer's Defense Ignore. The calculator has no debuff input yet.
 ## 7 Nov 2026 — Tarte rated (preview, Claude)
