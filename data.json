@@ -21389,6 +21389,22 @@
      "drop": 1,
      "reason": "His team value comes from Guard Counter, a parry that needs exact timing against an enemy attack. A successful one lowers the enemy's Defense by 20% for about 10 s (+11% damage for the whole team on a 1000-Defense boss). Missed parries mean no debuff and very little damage."
     }
+   },
+   "Theresia": {
+    "overall": {
+     "tier": "A",
+     "single": "B",
+     "groups": "S+"
+    },
+    "tags": [
+     "gather"
+    ],
+    "needs": [
+     [
+      "Stun",
+      "Bleed"
+     ]
+    ]
    }
   },
   "huntRatingRewards": {
