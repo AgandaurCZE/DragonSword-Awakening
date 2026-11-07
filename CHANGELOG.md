@@ -1,3 +1,5 @@
+## 7 Nov 2026 — Applies chip, Johnny to Sub-DPS (preview, Claude)
+- New `applies{main, also}` on Enablers and Enabler-tagged heroes, shown as an Applies chip in archetype colours (main in bold). Johnny moved to Sub-DPS with the Enabler tag.
 ## 7 Nov 2026 — Tier list roles: Main DPS, Sub-DPS, Enabler, Support (preview, Claude)
 - New tier list has four role columns. Preview roles live in `TIER_LIST_V2.heroes[].role` (public `HEROES.role` unchanged). New Enabler role icon `assets/roles/enabler.webp` (the Enabler tag's puzzle piece on a blue circle). The Enabler tag is removed from heroes whose role is now Enabler and kept for Lute and Sion; its description now says it's an extra on top of the main role.
 ## 7 Nov 2026 — Theresia rated; all 20 heroes rated (preview, Claude)

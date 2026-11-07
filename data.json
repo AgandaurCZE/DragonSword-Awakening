@@ -21112,6 +21112,11 @@
     "color": "#94a3b8",
     "desc": "Relies on a teammate for this status: their own source is too rare to keep their key skills going. The status is shown in its archetype's colour; \"or\" means either one is enough."
    },
+   "applies": {
+    "label": "Applies",
+    "color": "#38bdf8",
+    "desc": "Statuses this hero applies for the team. Bold: what they apply most; plain: also applies. Shown for Enablers and heroes with the Enabler tag."
+   },
    "buffer": {
     "label": "Team buffer",
     "color": "#2dd4bf",
@@ -21160,18 +21165,33 @@
     "tags": [
      "self",
      "easy"
-    ]
+    ],
+    "applies": {
+     "main": [
+      "Airborne"
+     ],
+     "also": []
+    }
    },
    "Johnny": {
-    "role": "Enabler",
+    "role": "Sub-DPS",
     "overall": {
      "tier": "A",
      "single": "A",
      "groups": "S"
     },
     "tags": [
+     "enabler",
      "self"
-    ]
+    ],
+    "applies": {
+     "main": [
+      "Poison"
+     ],
+     "also": [
+      "Airborne"
+     ]
+    }
    },
    "Charlotte": {
     "role": "Main DPS",
@@ -21202,7 +21222,15 @@
     },
     "tags": [
      "easy"
-    ]
+    ],
+    "applies": {
+     "main": [
+      "Stun"
+     ],
+     "also": [
+      "Airborne"
+     ]
+    }
    },
    "Roxy": {
     "role": "Enabler",
@@ -21211,7 +21239,16 @@
      "single": "B",
      "groups": "C"
     },
-    "tags": []
+    "tags": [],
+    "applies": {
+     "main": [
+      "Bleed"
+     ],
+     "also": [
+      "Stun",
+      "Knockdown"
+     ]
+    }
    },
    "Aria": {
     "role": "Enabler",
@@ -21220,7 +21257,14 @@
      "single": "B",
      "groups": "A"
     },
-    "tags": []
+    "tags": [],
+    "applies": {
+     "main": [
+      "Burn",
+      "Airborne"
+     ],
+     "also": []
+    }
    },
    "Ornette": {
     "role": "Sub-DPS",
@@ -21243,7 +21287,14 @@
     "tags": [
      "enabler",
      "easy"
-    ]
+    ],
+    "applies": {
+     "main": [
+      "Stun",
+      "Knockdown"
+     ],
+     "also": []
+    }
    },
    "Eileen": {
     "role": "Support",
@@ -21303,7 +21354,15 @@
      "awk"
     ],
     "awk": 1,
-    "signatureKarma": true
+    "signatureKarma": true,
+    "applies": {
+     "main": [
+      "Burn"
+     ],
+     "also": [
+      "Stun"
+     ]
+    }
    },
    "Ryza": {
     "role": "Main DPS",
@@ -21334,7 +21393,15 @@
      "enabler",
      "awk"
     ],
-    "awk": 1
+    "awk": 1,
+    "applies": {
+     "main": [
+      "Shock"
+     ],
+     "also": [
+      "Knockdown"
+     ]
+    }
    },
    "Othello": {
     "role": "Main DPS",
@@ -21383,7 +21450,15 @@
      "single": "C",
      "groups": "B"
     },
-    "tags": []
+    "tags": [],
+    "applies": {
+     "main": [
+      "Shock"
+     ],
+     "also": [
+      "Stun"
+     ]
+    }
    },
    "Alex": {
     "role": "Support",

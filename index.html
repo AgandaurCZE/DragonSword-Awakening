@@ -358,7 +358,7 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .v2-cell{background:#1e2128;display:flex;flex-wrap:wrap;align-content:flex-start;justify-content:center;gap:6px;padding:10px 6px}
 .v2-cell-role{display:none}
 .v2-card{width:104px}.v2-card .hero-name{font-size:13px}
-.v2-tags{display:flex;flex-direction:column;align-items:center;gap:3px;margin-top:4px}
+.v2-also{font-weight:500;opacity:.8}.v2-tags{display:flex;flex-direction:column;align-items:center;gap:3px;margin-top:4px}
 .v2-tag{display:inline-flex;align-items:center;justify-content:center;gap:4px;font-size:10px;line-height:1.25;font-weight:800;color:var(--c);background:color-mix(in srgb,var(--c) 13%,#1d1f25);border:1px solid color-mix(in srgb,var(--c) 55%,transparent);border-radius:3px;padding:1px 6px 1px 4px;max-width:100%;text-align:center}
 .v2-tag.solid{background:var(--c);color:#1b1406;border-color:var(--c)}.v2-tag svg,.v2-tag img{width:12px;height:12px;flex:none}.v2-tag b{font-weight:900}
 .v2-karma{position:absolute;right:5px;bottom:5px;z-index:2;width:22px;height:22px;border-radius:50%;background:#2a1840ee;border:1px solid #c084fc;color:#d8b4fe;display:grid;place-items:center;box-shadow:0 2px 6px #0009}.v2-karma svg{width:14px;height:14px}.v2-karma.inline{position:static;display:inline-grid}
@@ -1824,11 +1824,13 @@ function v2Chip(key,H,h){const T=(v2Data().tags||{})[key];if(!T)return '';const 
  if(key==='early'&&H.progression?.early)tip=H.progression.early;
  if(key==='late'&&H.progression?.late)tip=H.progression.late;
  return `<span class="v2-tag${key==='counter'?' solid':''}" style="--c:${T.color}" data-v2tip="${profileEsc(tip)}">${ic}<span>${label}</span></span>`;}
+function v2AppliesChip(A){const T=(v2Data().tags||{}).applies||{},c=s=>ARCH_COLORS[STATUS_ARCHETYPE[s]]||'#fff';const w=[...(A.main||[]).map(s=>`<b style="color:${c(s)}">${profileEsc(s)}</b>`),...(A.also||[]).map(s=>`<span class="v2-also" style="color:${c(s)}">${profileEsc(s)}</span>`)].join(', ');
+ return `<span class="v2-tag" style="--c:${T.color||'#38bdf8'}" data-v2tip="${profileEsc(T.desc||'')}"><svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS.enabler}</svg><span>Applies ${w}</span></span>`;}
 function v2NeedsChip(group){const T=(v2Data().tags||{}).needs||{};const words=group.map(s=>`<b style="color:${ARCH_COLORS[STATUS_ARCHETYPE[s]]||'#fff'}">${profileEsc(s)}</b>`).join(' or ');
  return `<span class="v2-tag" style="--c:${T.color||'#94a3b8'}" data-v2tip="${profileEsc(T.desc||'')}"><svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS.needs}</svg><span>Needs ${words}</span></span>`;}
 function v2Counter(h){if(V2.mode==='towers')return !!v2Tower().archetype&&v2Tower().archetype===h.archetype;if(V2.mode!=='bosses'||V2.boss==='all')return false;const b=(v2Data().bosses||[]).find(x=>x.id===V2.boss);return !!b&&(b.weak||[]).includes(h.archetype);}
 function v2Card(h){const H=v2Hero(h.name);const {t,fallback}=v2Tier(h.name);const sig=(KARMA_DATA||[]).find(k=>k.signature===h.name);
- const tags=[...(H.tags||[]).filter(k=>k!=='counter').slice(0,3).map(k=>v2Chip(k,H,h)),...(H.needs||[]).slice(0,2).map(v2NeedsChip),...(v2Counter(h)?[v2Chip('counter',H,h)]:[])].join('');
+ const tags=[...(H.tags||[]).filter(k=>k!=='counter').slice(0,3).map(k=>v2Chip(k,H,h)),...(H.applies?[v2AppliesChip(H.applies)]:[]),...(H.needs||[]).slice(0,2).map(v2NeedsChip),...(v2Counter(h)?[v2Chip('counter',H,h)]:[])].join('');
  const kb=H.signatureKarma&&sig?`<span class="v2-karma" data-karma="${profileEsc(sig.name)}" data-v2tip="${profileEsc(`Signature Karma: ${sig.name}. ${sig.exclusive||''}`)}"><svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS.karma}</svg></span>`:'';
  const a=latestArrow(h.name);
  return `<div class="hero-card v2-card" tabindex="0" role="button" data-hero="${profileEsc(h.name)}" style="--tier:${t?v2TierColor(t):'#4b5563'}"><div class="portrait-wrap"><img class="portrait" src="${h.portrait}" alt="${profileEsc(h.name)}" loading="lazy"><span class="arch-badge"><img src="${h.archIcon}" alt="${profileEsc(h.archetype)}"></span>${a?`<span class="patch-arrow" data-patch-hero="${profileEsc(h.name)}">${a}</span>`:''}<span class="tier-chip${fallback?' v2-fallback':''}">${t||'?'}</span>${kb}</div><div class="hero-name">${profileEsc(h.name)}</div>${tags?`<div class="v2-tags">${tags}</div>`:''}</div>`;}
