@@ -1,3 +1,5 @@
+## 7 Nov 2026 — Dana rated (preview, Claude)
+- `TIER_LIST_V2.heroes.Dana`: A overall, A single, S groups, Easy, agreed with David at base (Lv.1, not yet built). He'll revisit once she's built like the others.
 ## 7 Nov 2026 — Astria rated (preview, Claude)
 - `TIER_LIST_V2.heroes.Astria`: C overall, C single, C groups, Needs A? (level untested) and signature Karma, agreed with David after debate.
 ## 7 Nov 2026 — Coloured heroes, Refreshing Canary, titles, tower selector (Claude)

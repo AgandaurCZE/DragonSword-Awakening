@@ -21353,6 +21353,16 @@
      "awk"
     ],
     "signatureKarma": true
+   },
+   "Dana": {
+    "overall": {
+     "tier": "A",
+     "single": "A",
+     "groups": "S"
+    },
+    "tags": [
+     "easy"
+    ]
    }
   },
   "huntRatingRewards": {
