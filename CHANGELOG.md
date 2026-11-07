@@ -1,3 +1,5 @@
+## 7 Nov 2026 — Team Planner artifact (Claude)
+- New shared planner (https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD, source `docs/testkit/dragonsword-planner.html`): 9 team ideas and a 20-hero Signature Karma farming order, editable by David, stored in its db (`teams`, `sigs`).
 ## 7 Nov 2026 — Tier list Overall / Single target / Groups switch (preview, Claude)
 - In the Overall view, a switch re-sorts the grid by single-target or group ratings, without hovering.
 ## 7 Nov 2026 — Tag toggles, Castella applies Break (preview, Claude)

@@ -1,0 +1,142 @@
+<title>DragonSword Team Planner</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: the Test Kit's lab notebook, two tabs. Teams are cards of three hero slots with a verdict; Signature Karmas are a ranked list David can reorder. */
+:root{
+  --bg:#f3f1ec; --panel:#fffdf8; --ink:#1f2328; --muted:#5d6670; --line:#ddd7cc;
+  --accent:#a2650b; --ok:#1d7a45; --warn:#9a5b00; --bad:#b3261e; --info:#1f6fa8; --field:#ffffff;
+  --main:#c2410c; --sub:#6d4fd6; --enab:#0b84b8; --supp:#1d8a4e;
+  --display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#16191f; --panel:#1f232b; --ink:#e7eaf0; --muted:#9aa4b2; --line:#343a45;
+  --accent:#ffc46b; --ok:#5fd38d; --warn:#ffb86f; --bad:#ff6b6b; --info:#7cc4f5; --field:#15181e;
+  --main:#ff8a5c; --sub:#a996ff; --enab:#5cc8f5; --supp:#5fd38d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#16191f; --panel:#1f232b; --ink:#e7eaf0; --muted:#9aa4b2; --line:#343a45;
+  --accent:#ffc46b; --ok:#5fd38d; --warn:#ffb86f; --bad:#ff6b6b; --info:#7cc4f5; --field:#15181e;
+  --main:#ff8a5c; --sub:#a996ff; --enab:#5cc8f5; --supp:#5fd38d; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
+.wrap{max-width:900px;margin:0 auto;display:grid;gap:18px}
+header h1{font:700 2rem/1.1 var(--display);margin:0;text-wrap:balance}
+header p{margin:.4rem 0 0;color:var(--muted);max-width:68ch}
+.status{font:600 .8rem var(--mono);color:var(--muted)}
+.status.ok{color:var(--ok)}.status.bad{color:var(--bad)}
+.tabs{display:flex;gap:0;border:1px solid var(--line);width:max-content;max-width:100%;border-radius:4px;overflow:hidden}
+.tabs button{font:600 .9rem var(--mono);background:var(--panel);color:var(--muted);border:0;border-left:1px solid var(--line);padding:8px 16px;cursor:pointer}
+.tabs button:first-child{border-left:0}
+.tabs button.on{background:var(--accent);color:var(--bg)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.intro{margin:0;color:var(--muted);font-size:.92rem;max-width:72ch}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font:600 .75rem var(--mono);color:var(--muted)}
+.list{display:grid;gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:16px;display:grid;gap:12px;min-width:0}
+.card.st-works{border-left:4px solid var(--ok)}.card.st-no{border-left:4px solid var(--bad)}.card.st-test{border-left:4px solid var(--warn)}
+.top{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.top .num{font:600 .85rem var(--mono);color:var(--accent)}
+input.name{font:700 1.3rem/1.2 var(--display);border:1px solid transparent;background:transparent;color:var(--ink);padding:2px 4px;flex:1 1 14rem;min-width:0}
+input.name:hover,input.name:focus{border-color:var(--line);background:var(--field)}
+select,input,textarea{font:inherit;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:3px;padding:5px 7px;min-width:0}
+textarea{width:100%;resize:vertical;min-height:2.6em;font-size:.95rem;box-sizing:border-box}
+.slots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.slot{display:grid;gap:4px;border:1px solid var(--line);border-radius:3px;padding:8px;border-top:3px solid var(--line)}
+.slot.r-main{border-top-color:var(--main)}.slot.r-sub{border-top-color:var(--sub)}.slot.r-enab{border-top-color:var(--enab)}.slot.r-supp{border-top-color:var(--supp)}
+.slot select{width:100%}
+.slot select.role{font:600 .78rem var(--mono)}
+label.f{display:grid;gap:3px;font:600 .72rem var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-left:auto}
+.btn{font:600 .8rem var(--mono);border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:3px;padding:5px 10px;cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.btn.danger{color:var(--bad)}
+.btn.add{justify-self:start;border-style:dashed;padding:8px 14px}
+.pill{font:600 .78rem var(--mono)}
+.sig{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 14px;align-items:start}
+.rank{display:grid;gap:4px;justify-items:center}
+.rank b{font:700 1.4rem/1 var(--display);color:var(--accent);font-variant-numeric:tabular-nums;min-width:2ch;text-align:center}
+.rank button{width:30px;height:24px;padding:0;line-height:1}
+.sig h3{margin:0;font:700 1.25rem/1.2 var(--display);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.sig .eff{margin:2px 0 0;color:var(--muted);font-size:.92rem}
+.sig .ctl{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.pri-High{color:var(--bad)}.pri-Medium{color:var(--warn)}.pri-Low{color:var(--muted)}
+.empty{color:var(--muted);font-style:italic}
+.confirm{display:flex;gap:6px;align-items:center;font:600 .8rem var(--mono);color:var(--bad)}
+@media (max-width:640px){.slots{grid-template-columns:1fr}.notes{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <h1>DragonSword Team Planner</h1>
+  <p>Team ideas and the Signature Karma farming order, for David and Claude to fill in together. Everything you change here saves straight away, and Claude can read it.</p>
+  <div class="status" id="status">Connecting…</div>
+</header>
+
+<div class="tabs" role="tablist">
+  <button type="button" role="tab" id="tabTeams" aria-selected="true" class="on">Teams</button>
+  <button type="button" role="tab" id="tabSigs" aria-selected="false">Signature Karmas</button>
+</div>
+
+<section id="paneTeams" class="list" aria-labelledby="tabTeams">
+  <p class="intro">Claude's suggestions, worked out from each hero's statuses and Activation Conditions, not from the guide's Teams page. None are tested unless the verdict says so. A team doesn't need a Main DPS: two Sub-DPS with an Enabler, or one Sub-DPS with two Enablers, are fine if the synergy is there.</p>
+  <div class="legend"><span style="color:var(--main)">■ Main DPS</span><span style="color:var(--sub)">■ Sub-DPS</span><span style="color:var(--enab)">■ Enabler</span><span style="color:var(--supp)">■ Support</span></div>
+  <div id="teams" class="list"><p class="empty">Team ideas will appear here once they load. You can also add one with the button below.</p></div>
+  <button type="button" class="btn add" id="addTeam">+ Add a team</button>
+</section>
+
+<section id="paneSigs" class="list" aria-labelledby="tabSigs" hidden>
+  <p class="intro">Which Signature Karma to farm first: the ones most likely to change a hero's playstyle, damage or application come first. The order is Claude's first draft; move heroes with the arrows and set the status as you go.</p>
+  <div id="sigs" class="list"><p class="empty">The Signature Karma list will appear here once it loads.</p></div>
+</section>
+</div>
+
+<script>
+const HEROES=["Alex","Aria","Astria","Castella","Cerese","Charlotte","Dana","Eileen","Johnny","Kalien","Kalsion","Lute","Ornette","Othello","Reina","Roxy","Ryza","Sion","Tarte","Theresia"];
+const ROLES=[["Main DPS","main"],["Sub-DPS","sub"],["Enabler","enab"],["Support","supp"]];
+const TEAM_ST=[["idea","Idea"],["test","To test"],["works","Works"],["no","Doesn't work"]];
+const SIG_ST=["Not owned","Farming","Owned","Tested"];
+const PRI=["High","Medium","Low"];
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let db=null,teams=[],sigs=[],readOnly=false,pendingDel=null;
+function setStatus(t,c){const s=$('status');s.textContent=t;s.className='status'+(c?' '+c:'');}
+function tab(which){const t=which==='sigs';$('tabTeams').classList.toggle('on',!t);$('tabSigs').classList.toggle('on',t);$('tabTeams').setAttribute('aria-selected',!t);$('tabSigs').setAttribute('aria-selected',t);$('paneTeams').hidden=t;$('paneSigs').hidden=!t;try{localStorage.setItem('planner.tab',which)}catch(e){}}
+$('tabTeams').onclick=()=>tab('teams');$('tabSigs').onclick=()=>tab('sigs');
+try{if(localStorage.getItem('planner.tab')==='sigs')tab('sigs')}catch(e){}
+const roleKey=r=>(ROLES.find(x=>x[0]===r)||[])[1]||'';
+function renderTeams(){const el=$('teams');if(!teams.length){el.innerHTML='<p class="empty">No teams yet. Add the first one with the button below.</p>';return;}
+ el.innerHTML=teams.map((t,i)=>{const d=t.data,hs=(d.heroes||[]).concat([{},{},{}]).slice(0,3);
+  return `<article class="card st-${esc(d.status||'idea')}" data-id="${esc(t.id)}"><div class="top"><span class="num">${String(i+1).padStart(2,'0')}</span><input class="name" id="n-${esc(t.id)}" data-f="name" value="${esc(d.name)}" aria-label="Team name"${readOnly?' disabled':''}>
+  <div class="row-actions"><label class="pill">Verdict <select data-f="status" id="s-${esc(t.id)}"${readOnly?' disabled':''}>${TEAM_ST.map(([k,l])=>`<option value="${k}"${d.status===k?' selected':''}>${l}</option>`).join('')}</select></label>${readOnly?'':pendingDel===t.id?`<span class="confirm">Delete this team? <button type="button" class="btn danger" data-act="del-yes">Delete</button><button type="button" class="btn" data-act="del-no">Keep</button></span>`:`<button type="button" class="btn danger" data-act="del">Delete</button>`}</div></div>
+  <div class="slots">${hs.map((h,k)=>`<div class="slot r-${roleKey(h.role)}"><select data-slot="${k}" data-sf="hero" id="h-${esc(t.id)}-${k}" aria-label="Hero ${k+1}"${readOnly?' disabled':''}><option value="">Pick a hero</option>${HEROES.map(n=>`<option${h.hero===n?' selected':''}>${n}</option>`).join('')}</select><select class="role" data-slot="${k}" data-sf="role" id="r-${esc(t.id)}-${k}" aria-label="Role in this team"${readOnly?' disabled':''}><option value="">Role in team</option>${ROLES.map(([r])=>`<option${h.role===r?' selected':''}>${r}</option>`).join('')}</select></div>`).join('')}</div>
+  <label class="f">Why it should work<textarea data-f="why" id="w-${esc(t.id)}"${readOnly?' disabled':''}>${esc(d.why)}</textarea></label>
+  <div class="notes"><label class="f">David's notes<textarea data-f="davidNote" id="d-${esc(t.id)}" placeholder="What you saw when you tried it"${readOnly?' disabled':''}>${esc(d.davidNote)}</textarea></label><label class="f">Claude's notes<textarea data-f="claudeNote" id="c-${esc(t.id)}"${readOnly?' disabled':''}>${esc(d.claudeNote)}</textarea></label></div></article>`;}).join('');}
+function renderSigs(){const el=$('sigs');if(!sigs.length){el.innerHTML='<p class="empty">No heroes in the list yet.</p>';return;}
+ el.innerHTML=sigs.map((s,i)=>{const d=s.data;return `<article class="card sig" data-id="${esc(s.id)}"><div class="rank"><button type="button" class="btn" data-act="up" aria-label="Move ${esc(d.hero)} up"${i===0||readOnly?' disabled':''}>▲</button><b>${i+1}</b><button type="button" class="btn" data-act="down" aria-label="Move ${esc(d.hero)} down"${i===sigs.length-1||readOnly?' disabled':''}>▼</button></div>
+ <div><h3>${esc(d.hero)} <span class="pill pri-${esc(d.priority)}">${esc(d.priority)} priority</span></h3><p class="eff"><b>${esc(d.karma)}:</b> ${esc(d.effect)}</p>
+ <div class="ctl"><label class="pill">Priority <select data-f="priority" id="p-${esc(s.id)}"${readOnly?' disabled':''}>${PRI.map(p=>`<option${d.priority===p?' selected':''}>${p}</option>`).join('')}</select></label><label class="pill">Status <select data-f="status" id="ss-${esc(s.id)}"${readOnly?' disabled':''}>${SIG_ST.map(p=>`<option${d.status===p?' selected':''}>${p}</option>`).join('')}</select></label></div>
+ <div class="notes" style="margin-top:8px"><label class="f">Why this place<textarea data-f="why" id="sw-${esc(s.id)}"${readOnly?' disabled':''}>${esc(d.why)}</textarea></label><label class="f">Test notes<textarea data-f="notes" id="sn-${esc(s.id)}" placeholder="What changed with it"${readOnly?' disabled':''}>${esc(d.notes)}</textarea></label></div></div></article>`;}).join('');}
+async function save(col,id,patch){if(!db||readOnly)return;setStatus('Saving…');try{await db.collection(col).doc(id).update(patch);setStatus('Saved','ok');}catch(e){if(e&&e.code==='invalid_argument'){readOnly=true;renderTeams();renderSigs();setStatus('You can view this planner but not change it.','bad');}else setStatus('Couldn\'t save. Check your connection and try again.','bad');}}
+$('teams').addEventListener('change',e=>{const c=e.target.closest('.card');if(!c)return;const id=c.dataset.id,t=teams.find(x=>x.id===id);if(!t)return;
+ if(e.target.dataset.f){save('teams',id,{[e.target.dataset.f]:e.target.value});}
+ else if(e.target.dataset.slot!=null){const hs=(t.data.heroes||[]).concat([{},{},{}]).slice(0,3).map(h=>({hero:h.hero||'',role:h.role||''}));hs[+e.target.dataset.slot][e.target.dataset.sf]=e.target.value;save('teams',id,{heroes:hs});}});
+$('teams').addEventListener('click',async e=>{const b=e.target.closest('[data-act]');if(!b)return;const id=b.closest('.card').dataset.id;
+ if(b.dataset.act==='del'){pendingDel=id;renderTeams();}else if(b.dataset.act==='del-no'){pendingDel=null;renderTeams();}
+ else if(b.dataset.act==='del-yes'){pendingDel=null;try{await db.collection('teams').doc(id).delete();setStatus('Team deleted','ok');}catch(err){setStatus('Couldn\'t delete the team. Try again.','bad');}}});
+$('sigs').addEventListener('change',e=>{const c=e.target.closest('.card');if(c&&e.target.dataset.f)save('sigs',c.dataset.id,{[e.target.dataset.f]:e.target.value});});
+$('sigs').addEventListener('click',async e=>{const b=e.target.closest('[data-act]');if(!b||readOnly)return;const i=sigs.findIndex(s=>s.id===b.closest('.card').dataset.id),j=b.dataset.act==='up'?i-1:i+1;if(j<0||j>=sigs.length)return;
+ const a=sigs[i],c=sigs[j],ra=a.data.rank,rc=c.data.rank;setStatus('Saving…');try{await db.collection('sigs').doc(a.id).update({rank:rc});await db.collection('sigs').doc(c.id).update({rank:ra});setStatus('Saved','ok');}catch(err){setStatus('Couldn\'t move it. Try again.','bad');}});
+$('addTeam').onclick=async()=>{if(!db||readOnly)return;const order=teams.reduce((m,t)=>Math.max(m,t.data.order||0),0)+1;try{await db.collection('teams').add({order,name:'New team',heroes:[{hero:'',role:''},{hero:'',role:''},{hero:'',role:''}],why:'',status:'idea',davidNote:'',claudeNote:''});setStatus('Team added','ok');}catch(e){setStatus('Couldn\'t add a team. Try again.','bad');}};
+function focused(){const a=document.activeElement;return a&&a.closest&&a.closest('.card')&&/TEXTAREA|INPUT/.test(a.tagName);}
+(async()=>{db=await claude.use("db");if(!db){setStatus('Sign in to claude.ai to see and edit the planner.','bad');$('addTeam').hidden=true;return;}
+ const user=await claude.use("user");if(user){const w=await user.can("data.write");if(w===false){readOnly=true;$('addTeam').hidden=true;}}
+ setStatus(readOnly?'Read-only view':'Connected','ok');
+ db.collection('teams').orderBy('order').onSnapshot(s=>{teams=s.docs.map(d=>({id:d.id,data:d.data()}));if(!focused())renderTeams();},()=>setStatus('Lost the connection. Reload the page.','bad'));
+ db.collection('sigs').orderBy('rank').onSnapshot(s=>{sigs=s.docs.map(d=>({id:d.id,data:d.data()}));if(!focused())renderSigs();},()=>setStatus('Lost the connection. Reload the page.','bad'));
+})();
+</script>
