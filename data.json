@@ -21363,6 +21363,16 @@
     "tags": [
      "easy"
     ]
+   },
+   "Tarte": {
+    "overall": {
+     "tier": "C",
+     "single": "C",
+     "groups": "B"
+    },
+    "tags": [
+     "enabler"
+    ]
    }
   },
   "huntRatingRewards": {
