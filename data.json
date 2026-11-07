@@ -21342,6 +21342,17 @@
      "drop": 1,
      "reason": "Frozen Burst only pays off after setting up Ice Spears, the ice prison and Frozen enemies in the right order. Played out of order he dealt well under half the damage in the same time."
     }
+   },
+   "Astria": {
+    "overall": {
+     "tier": "C",
+     "single": "C",
+     "groups": "C"
+    },
+    "tags": [
+     "awk"
+    ],
+    "signatureKarma": true
    }
   },
   "huntRatingRewards": {

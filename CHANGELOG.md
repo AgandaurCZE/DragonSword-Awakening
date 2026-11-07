@@ -1,3 +1,5 @@
+## 7 Nov 2026 — Astria rated (preview, Claude)
+- `TIER_LIST_V2.heroes.Astria`: C overall, C single, C groups, Needs A? (level untested) and signature Karma, agreed with David after debate.
 ## 7 Nov 2026 — Coloured heroes, Refreshing Canary, titles, tower selector (Claude)
 - Dana, Alex, Theresia, Tarte and Astria: colour portraits cut from David's Codex screenshots with `tools/image/codex_recolor.py`, now owned (all 20 heroes). Refreshing Canary: colour picture, owned; Bird group 2/4. Titles: Snow Alchemist, Saintess of the Dawn, Red Fox obtained (34/109). Source PNGs removed (in git history).
 - Damage calculator (preview): the Tower of Trials selector shows, and counts, only with the World switch on, ready for a separate Tower switch once tower Defense is tested.
