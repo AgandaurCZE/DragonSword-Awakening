@@ -406,7 +406,8 @@
  "ROLE_ICONS": {
   "Main DPS": "assets/roles/main-dps.webp",
   "Sub-DPS": "assets/roles/sub-dps.webp",
-  "Support": "assets/roles/support.webp"
+  "Support": "assets/roles/support.webp",
+  "Enabler": "assets/roles/enabler.webp"
  },
  "ARCHES": [
   "Venom",
@@ -20833,6 +20834,7 @@
   "roles": [
    "Main DPS",
    "Sub-DPS",
+   "Enabler",
    "Support"
   ],
   "modes": {
@@ -21098,7 +21100,7 @@
    "enabler": {
     "label": "Enabler",
     "color": "#38bdf8",
-    "desc": "Applies the statuses that unlock teammates' conditional skills (the red Activation Conditions lines). Teams fall apart without one."
+    "desc": "Also applies the statuses that unlock teammates' conditional skills (the red Activation Conditions lines), on top of their main role. Judged on bosses."
    },
    "self": {
     "label": "Self-sufficient",
@@ -21149,29 +21151,30 @@
   "signatureKarmaText": "The purple card in a portrait's bottom-right corner means the hero's signature Karma changes how they play, not just their stats. It could lift them above the rating shown.",
   "heroes": {
    "Reina": {
+    "role": "Enabler",
     "overall": {
      "tier": "S",
      "single": "S",
      "groups": "S+"
     },
     "tags": [
-     "enabler",
      "self",
      "easy"
     ]
    },
    "Johnny": {
+    "role": "Enabler",
     "overall": {
      "tier": "A",
      "single": "A",
      "groups": "S"
     },
     "tags": [
-     "enabler",
      "self"
     ]
    },
    "Charlotte": {
+    "role": "Main DPS",
     "overall": {
      "tier": "A",
      "single": "A",
@@ -21191,37 +21194,36 @@
     }
    },
    "Castella": {
+    "role": "Enabler",
     "overall": {
      "tier": "B",
      "single": "B",
      "groups": "B"
     },
     "tags": [
-     "easy",
-     "enabler"
+     "easy"
     ]
    },
    "Roxy": {
+    "role": "Enabler",
     "overall": {
      "tier": "B",
      "single": "B",
      "groups": "C"
     },
-    "tags": [
-     "enabler"
-    ]
+    "tags": []
    },
    "Aria": {
+    "role": "Enabler",
     "overall": {
      "tier": "B",
      "single": "B",
      "groups": "A"
     },
-    "tags": [
-     "enabler"
-    ]
+    "tags": []
    },
    "Ornette": {
+    "role": "Sub-DPS",
     "overall": {
      "tier": "B",
      "single": "B",
@@ -21232,6 +21234,7 @@
     ]
    },
    "Lute": {
+    "role": "Support",
     "overall": {
      "tier": "C",
      "single": "C",
@@ -21243,6 +21246,7 @@
     ]
    },
    "Eileen": {
+    "role": "Support",
     "overall": {
      "tier": "S",
      "single": "S",
@@ -21258,6 +21262,7 @@
     }
    },
    "Cerese": {
+    "role": "Sub-DPS",
     "overall": {
      "tier": "B",
      "groups": "A",
@@ -21272,6 +21277,7 @@
     }
    },
    "Kalsion": {
+    "role": "Sub-DPS",
     "overall": {
      "tier": "A",
      "single": "B",
@@ -21287,19 +21293,20 @@
     ]
    },
    "Kalien": {
+    "role": "Enabler",
     "overall": {
      "tier": "B",
      "single": "C",
      "groups": "A"
     },
     "tags": [
-     "enabler",
      "awk"
     ],
     "awk": 1,
     "signatureKarma": true
    },
    "Ryza": {
+    "role": "Main DPS",
     "overall": {
      "tier": "A",
      "single": "A",
@@ -21316,6 +21323,7 @@
     }
    },
    "Sion": {
+    "role": "Support",
     "overall": {
      "tier": "B",
      "single": "B",
@@ -21329,6 +21337,7 @@
     "awk": 1
    },
    "Othello": {
+    "role": "Main DPS",
     "overall": {
      "tier": "B",
      "single": "B",
@@ -21345,6 +21354,7 @@
     }
    },
    "Astria": {
+    "role": "Sub-DPS",
     "overall": {
      "tier": "C",
      "single": "C",
@@ -21356,6 +21366,7 @@
     "signatureKarma": true
    },
    "Dana": {
+    "role": "Main DPS",
     "overall": {
      "tier": "A",
      "single": "A",
@@ -21366,16 +21377,16 @@
     ]
    },
    "Tarte": {
+    "role": "Enabler",
     "overall": {
      "tier": "C",
      "single": "C",
      "groups": "B"
     },
-    "tags": [
-     "enabler"
-    ]
+    "tags": []
    },
    "Alex": {
+    "role": "Support",
     "overall": {
      "tier": "C",
      "single": "B",
@@ -21391,6 +21402,7 @@
     }
    },
    "Theresia": {
+    "role": "Main DPS",
     "overall": {
      "tier": "A",
      "single": "B",

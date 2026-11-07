@@ -1815,6 +1815,7 @@ function v2Hero(name){const D=v2Data();let H=(D.heroes||{})[name];
 function v2Tower(){const L=TOWER_TRIALS.towers||[];return L.find(t=>t.id===V2.tower)||L[0]||{};}
 function v2Tier(name){const H=v2Hero(name);if(V2.mode==='overall')return {t:H.overall?.tier};if(V2.mode==='towers'){const w=(H.towers||{})[v2Tower().id];return {t:w};}const b=H.bosses||{};if(V2.boss==='all')return {t:b.all};return b[V2.boss]?{t:b[V2.boss]}:{t:b.all,fallback:!!b.all};}
 function v2TierColor(t){return (v2Data().tierColors||{})[t]||tierColor(t);}
+function v2Role(h){return ((v2Data().heroes||{})[h.name]||{}).role||h.role;}
 function v2Chip(key,H,h){const T=(v2Data().tags||{})[key];if(!T)return '';const ic=key==='awk'?`<img src="${AWAKENINGS.icon||'assets/awakenings/Awakening_Icon.png'}" alt="">`:`<svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS[key]||''}</svg>`;
  let label=profileEsc(T.label),tip=T.desc;
  if(key==='expert'&&H.expert){label+=` −${H.expert.drop}`;tip=H.expert.reason||tip;}
@@ -1836,7 +1837,7 @@ function v2TipHtml(h){const H=v2Hero(h.name);const D=v2Data();const box=(label,t
  if(V2.mode==='overall')tiers=box('Overall',H.overall?.tier)+box('Groups',H.overall?.groups)+box('Single target',H.overall?.single);
  else if(V2.mode==='towers')tiers=box('Overall',H.overall?.tier)+(TOWER_TRIALS.towers||[]).map(w=>box(w.name.replace('Tower of ',''),(H.towers||{})[w.id])).join('');
  else tiers=box('All bosses',H.bosses?.all)+(D.bosses||[]).map(b=>box(b.name,(H.bosses||{})[b.id])).join('');
- return `<div class="tip-top"><img class="tip-portrait" src="${h.portrait}" alt=""><div><div class="tip-title">${profileEsc(h.name)}</div><div class="tip-meta"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)} · ${profileEsc(h.role)}</div></div></div><div class="tip-tiers v2-tip-tiers">${tiers}</div>${H.expert?`<div class="tip-note"><b style="color:#ef4444">Expert −${H.expert.drop}:</b> ${profileEsc(H.expert.reason||'')}</div>`:''}<div class="tip-note">Click for the full guide.</div>`;}
+ return `<div class="tip-top"><img class="tip-portrait" src="${h.portrait}" alt=""><div><div class="tip-title">${profileEsc(h.name)}</div><div class="tip-meta"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)} · ${profileEsc(v2Role(h))}</div></div></div><div class="tip-tiers v2-tip-tiers">${tiers}</div>${H.expert?`<div class="tip-note"><b style="color:#ef4444">Expert −${H.expert.drop}:</b> ${profileEsc(H.expert.reason||'')}</div>`:''}<div class="tip-note">Click for the full guide.</div>`;}
 function v2ShowTip(h,el){const tip=$('tooltip');tip.innerHTML=v2TipHtml(h);tip.style.setProperty('--tier','#536273');tip.style.display='block';const r=el.getBoundingClientRect();let left=r.right+12;if(left+tip.offsetWidth>window.innerWidth-12)left=r.left-tip.offsetWidth-12;tip.style.left=Math.max(12,left)+'px';tip.style.top=Math.max(12,Math.min(window.innerHeight-tip.offsetHeight-12,r.top-12))+'px';}
 function v2ModeBtn(key){const M=v2Data().modes?.[key]||{};return `<button type="button" class="v2-mode${V2.mode===key?' on':''}" data-v2mode="${key}" style="${M.image?`--bg:url('${M.image}')`:''}"><span class="v2-mode-label">${profileEsc(M.label||key)}</span><span class="v2-mode-sub">${profileEsc(M.sub||'')}</span></button>`;}
 function v2BossTab(b){return `<button type="button" class="v2-boss${b.theme?' '+b.theme:''}${V2.boss===b.id?' on':''}" data-v2boss="${b.id}" style="${b.image?`--bg:url('${b.image}')`:''};${b.focus?`background-position:${b.focus}`:''}">${b.image2?`<span class="v2-boss-alt" style="background-image:url('${b.image2}');animation-delay:-${((Date.now()/1000)%60).toFixed(2)}s"></span>`:''}<span class="v2-boss-text">${b.level?`<span class="v2-lv">Lv.${b.level}</span>`:''}<span class="v2-boss-name">${profileEsc(b.name)}</span></span></button>`;}
@@ -1861,7 +1862,7 @@ function v2BossInfo(b){const I=b&&b.info;if(!I)return v2HuntRanks(b);const E=pro
  const strat=(I.strategy||[]).length?`<ul>${I.strategy.map(t=>`<li>${E(t)}</li>`).join('')}</ul>`:'<p class="v2-tnote">Signature moves and tips will be added once recorded.</p>';
  return `<details class="v2-panel v2-binfo" open><summary>${E(b.name)}${b.stage?' · '+E(b.stage):''}: the fights</summary><div>${fights}</div></details><details class="v2-panel v2-binfo"><summary>Strategy</summary><div>${strat}</div></details><details class="v2-panel v2-binfo"><summary>Rewards</summary><div>${rew}</div></details>`;}
 function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();const tiers=D.tiers||['S','A','B','C'];const roles=D.roles||['Main DPS','Sub-DPS','Support'];
- const list=HEROES.filter(h=>(!V2.q||h.name.toLowerCase().includes(V2.q))&&(!V2.arch||h.archetype===V2.arch)&&(!V2.role||h.role===V2.role)&&(!V2.kit||h.classType===V2.kit));
+ const list=HEROES.filter(h=>(!V2.q||h.name.toLowerCase().includes(V2.q))&&(!V2.arch||h.archetype===V2.arch)&&(!V2.role||v2Role(h)===V2.role)&&(!V2.kit||h.classType===V2.kit));
  const M=D.modes?.[V2.mode]||{};const bossName=V2.mode==='bosses'?(V2.boss==='all'?'All bosses':(D.bosses||[]).find(b=>b.id===V2.boss)?.name):V2.mode==='towers'?v2Tower().name:'';
  const tagRows=Object.entries(D.tags||{}).map(([k,T])=>`<tr><td>${k==='needs'?v2NeedsChip(['Airborne']):v2Chip(k,{awk:1,expert:{drop:1}},{})}</td><td>${profileEsc(T.desc)}</td></tr>`).join('');
  const experts=Object.entries(D.heroes||{}).filter(([,H])=>H.expert).map(([n,H])=>`<li><b>${profileEsc(n)} (−${H.expert.drop}):</b> ${profileEsc(H.expert.reason||'')}</li>`).join('');
@@ -1880,7 +1881,7 @@ function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();
  html+=`<div class="v2-grid" style="--cols:${rolesShown.length}"><div class="v2-corner"></div>${rolesShown.map(r=>`<div class="v2-rolehead"><img src="${ROLE_ICONS[r]||''}" alt="">${profileEsc(r)}</div>`).join('')}`;
  const rows=[...tiers,'?'];
  rows.forEach(t=>{const inRow=list.filter(h=>(v2Tier(h.name).t||'?')===t);if(t==='?'&&!inRow.length)return;
-  html+=`<div class="v2-tierlabel${t==='?'?' unrated':''}" style="background:${t==='?'?'#3a3f4a':v2TierColor(t)}">${t==='?'?'Unrated':t}</div>`+rolesShown.map(r=>{const cs=inRow.filter(h=>h.role===r);return `<div class="v2-cell"><div class="v2-cell-role">${profileEsc(r)}</div>${cs.map(v2Card).join('')}</div>`}).join('');});
+  html+=`<div class="v2-tierlabel${t==='?'?' unrated':''}" style="background:${t==='?'?'#3a3f4a':v2TierColor(t)}">${t==='?'?'Unrated':t}</div>`+rolesShown.map(r=>{const cs=inRow.filter(h=>v2Role(h)===r);return `<div class="v2-cell"><div class="v2-cell-role">${profileEsc(r)}</div>${cs.map(v2Card).join('')}</div>`}).join('');});
  html+=`</div>`;
  root.innerHTML=html;
  root.querySelectorAll('[data-v2mode]').forEach(b=>b.onclick=()=>{V2.mode=b.dataset.v2mode;renderTierV2()});
