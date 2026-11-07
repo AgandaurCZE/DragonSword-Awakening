@@ -1,3 +1,5 @@
+## 7 Nov 2026 — Tier list Overall / Single target / Groups switch (preview, Claude)
+- In the Overall view, a switch re-sorts the grid by single-target or group ratings, without hovering.
 ## 7 Nov 2026 — Tag toggles, Castella applies Break (preview, Claude)
 - New tier list: a small arrow under each hero with tags shows or hides that hero's tags, and a Tags button beside the filters shows or hides all of them (remembered per browser). Castella's Applies chip: Break in bold, then Stun and Airborne.
 ## 7 Nov 2026 — Applies chip, Johnny to Sub-DPS (preview, Claude)
