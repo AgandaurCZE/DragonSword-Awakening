@@ -1,3 +1,5 @@
+## 7 Nov 2026 — Calculator: Weak to only in Trait Dungeons (preview, Claude)
+- The Weak to selector shows, and counts, only with the Trait Dungeon switch on.
 ## 7 Nov 2026 — Calculator: coloured tower and weakness bonuses (preview, Claude)
 - Status table shows a gold +xx% badge, with a hover note, beside the hit bonus when the Trait Dungeon weakness is set and beside Additional Damage when a Tower of Trials is chosen. Display only; the maths is unchanged.
 ## 7 Nov 2026 — Notes on upcoming heroes and content (Claude)
