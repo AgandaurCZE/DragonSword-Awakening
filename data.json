@@ -21225,9 +21225,10 @@
     ],
     "applies": {
      "main": [
-      "Stun"
+      "Break"
      ],
      "also": [
+      "Stun",
       "Airborne"
      ]
     }

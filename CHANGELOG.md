@@ -1,3 +1,5 @@
+## 7 Nov 2026 — Tag toggles, Castella applies Break (preview, Claude)
+- New tier list: a small arrow under each hero with tags shows or hides that hero's tags, and a Tags button beside the filters shows or hides all of them (remembered per browser). Castella's Applies chip: Break in bold, then Stun and Airborne.
 ## 7 Nov 2026 — Applies chip, Johnny to Sub-DPS (preview, Claude)
 - New `applies{main, also}` on Enablers and Enabler-tagged heroes, shown as an Applies chip in archetype colours (main in bold). Johnny moved to Sub-DPS with the Enabler tag.
 ## 7 Nov 2026 — Tier list roles: Main DPS, Sub-DPS, Enabler, Support (preview, Claude)
