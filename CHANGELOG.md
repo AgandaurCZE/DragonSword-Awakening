@@ -1,3 +1,5 @@
+## 7 Nov 2026 — Hero Quest signature Karmas owned (Claude)
+- `KARMA_DATA`: Cerese, Othello, Ornette, Dana and Theresia signature Karmas marked owned (Hero Quest rewards), with Kalien, Kalsion and Charlotte: 8 of 20.
 ## 7 Nov 2026 — Title Inquisitor, signature Karmas owned (Claude)
 - `TITLES`: Inquisitor obtained, 35/109. `KARMA_DATA`: Kalien, Kalsion and Charlotte signature Karmas marked owned.
 ## 7 Nov 2026 — Team Planner artifact (Claude)

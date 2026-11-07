@@ -791,7 +791,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/merciful-death-sentence.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Amplitude",
@@ -1703,7 +1703,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/the-spear-that-fells-the-sun.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Frostbite",
@@ -1740,7 +1740,7 @@
    },
    "statType": "High Attack",
    "image": "assets/karma/eternal-blizzard.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Frostbite",
@@ -1777,7 +1777,7 @@
    },
    "statType": "High Attack",
    "image": "assets/karma/a-sparkling-tea-time.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Frostbite",
@@ -1989,7 +1989,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/sacred-lightning-baptism.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Thunderbolt",
