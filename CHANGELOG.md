@@ -1,3 +1,5 @@
+## 7 Nov 2026 — Calculator: coloured tower and weakness bonuses (preview, Claude)
+- Status table shows a gold +xx% badge, with a hover note, beside the hit bonus when the Trait Dungeon weakness is set and beside Additional Damage when a Tower of Trials is chosen. Display only; the maths is unchanged.
 ## 7 Nov 2026 — Notes on upcoming heroes and content (Claude)
 - New `assets/upcoming/` with David's notes on Jerome, Veronica, Logan and Viola, the story premise and announced expansions, plus his Veronica screenshot. Not shown on the site.
 ## 6 Nov 2026 — Title Sage of the Blue Moon (Claude)

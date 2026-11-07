@@ -25478,6 +25478,10 @@
    "Airborne"
   ],
   "weaknessMultiplier": 2,
+  "weakTip": "Trait Dungeon weakness: the enemy is weak to {s}, so its hit bonus counts ×{m}.",
+  "towerTip": "{t}: {w}. Added to the Additional Damage you typed.",
+  "towerOwn": "the tower's own status adds +400%",
+  "towerDot": "damage-over-time statuses add +100%",
   "towerUntested": "This tower's bonus isn't measured; it's assumed to match the other towers.",
   "towerDotUntested": "The tower's damage-over-time bonus is measured for Poison and Burn; Bleed and Shock are assumed to match.",
   "notes": [
