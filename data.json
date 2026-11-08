@@ -12891,6 +12891,11 @@
     335,
     7157
    ],
+   "Lv70 Johnny (titles removed)": [
+    1100,
+    350,
+    7388
+   ],
    "order": [
     "Attack",
     "Defense",
@@ -12898,21 +12903,21 @@
    ]
   },
   "levelCurve": {
-   "formula": "a + b*(exp(r*(L-1)) - 1); least-squares fit to the level part (stats minus earlier breakthrough bonuses) at Lv1, 10, 20, 30, 40 and 50 (1 Nov 2026; largest error 1.8 Attack, 0.6 Defense, 11.8 Max HP). The Lv50 level part was 519 / 145 / 3356 for both profiles (the Lv40 fit had predicted 510 / 145 / 3307).",
+   "formula": "a + b*(exp(r*(L-1)) - 1); least-squares fit to the level part (stats minus earlier breakthrough bonuses) at Lv1, 10, 20, 30, 40 and 50 (1 Nov 2026; largest error 1.8 Attack, 0.6 Defense, 11.8 Max HP). The Lv50 level part was 519 / 145 / 3356 for both profiles (the Lv40 fit had predicted 510 / 145 / 3307). Refitted 8 Nov 2026 with Lv70 added: Charlotte and Johnny, no gear or Karma, titles removed, both gave a level part of 929.7 / 260 / 6003 after their breakthroughs (Lv60 breakthrough still estimated). Earlier levels entered as the previous fit's values.",
    "Attack": {
-    "a": 72.77985,
-    "b": 192.91667,
-    "r": 0.0244163
+    "a": 73.43664,
+    "b": 184.84105,
+    "r": 0.0250472
    },
    "Defense": {
-    "a": 20.39824,
-    "b": 51.40224,
-    "r": 0.0251151
+    "a": 20.43503,
+    "b": 50.96657,
+    "r": 0.0252419
    },
    "Max HP": {
-    "a": 471.79136,
-    "b": 1245.34276,
-    "r": 0.0244403
+    "a": 475.25406,
+    "b": 1202.62045,
+    "r": 0.024955
    }
   },
   "breakthroughProfiles": {
@@ -12976,162 +12981,163 @@
  },
  "HERO_BASE_STATS": {
   "Johnny": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7388,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
-   "estimated": true,
-   "profile": "B"
+   "estimated": false,
+   "profile": "B",
+   "source": "Measured by David at Lv.70, no gear or Karma, 8 Nov 2026: panel 1245 / 400 / 8963 minus owned titles (Attack +145, Max HP +1,575, Defense +30 then Defense Up +5.3%)."
   },
   "Lute": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Castella": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Aria": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Dana": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Kalien": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Roxy": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Alex": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Theresia": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Ornette": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Sion": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Tarte": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Kalsion": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Cerese": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Reina": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Astria": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Eileen": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Othello": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13148,9 +13154,9 @@
    "source": "Measured by David at Lv.70, no gear or Karma, 8 Nov 2026: panel 1288 / 384 / 8732 minus owned titles (Attack +145, Max HP +1,575, Defense +30 then Defense Up +5.3%)."
   },
   "Ryza": {
-   "Attack": 1090,
-   "Defense": 349,
-   "Max HP": 7336,
+   "Attack": 1100,
+   "Defense": 350,
+   "Max HP": 7386,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13221,10 +13227,10 @@
     "vsBattleWill": {
      "The Infiltrator": 3.7,
      "Azure Gale": 0.7,
-     "Battle Will": 0
+     "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
-     "Azure Gale": 2
+     "Azure Gale": 2.0
     }
    }
   },
@@ -13348,13 +13354,13 @@
     "threePiece": "Ruinsbreaker",
     "vsBattleWill": {
      "The Infiltrator": 3.1,
-     "Battle Will": 0,
+     "Battle Will": 0.0,
      "Earthshatterer": -0.5,
      "Holy Arbiter": -0.7
     },
     "statusSetsIfBonusesMultiply": {
      "Earthshatterer": 0.3,
-     "Holy Arbiter": 0
+     "Holy Arbiter": -0.0
     }
    }
   },
@@ -13421,7 +13427,7 @@
     "vsBattleWill": {
      "The Infiltrator": 2.3,
      "Azure Gale": 0.9,
-     "Battle Will": 0
+     "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
      "Azure Gale": 2.3
@@ -13548,7 +13554,7 @@
     "threePiece": "Blazing Flames",
     "vsBattleWill": {
      "The Infiltrator": 3.2,
-     "Battle Will": 0,
+     "Battle Will": 0.0,
      "Ruinsbreaker": -0.2
     },
     "statusSetsIfBonusesMultiply": {
@@ -13619,7 +13625,7 @@
     "vsBattleWill": {
      "The Infiltrator": 3.1,
      "Holy Arbiter": 1.2,
-     "Battle Will": 0
+     "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
      "Holy Arbiter": 2.7
@@ -13747,7 +13753,7 @@
     "vsBattleWill": {
      "The Infiltrator": 2.7,
      "Holy Arbiter": 1.4,
-     "Battle Will": 0
+     "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
      "Holy Arbiter": 1.9
@@ -13817,7 +13823,7 @@
     "vsBattleWill": {
      "The Infiltrator": 3.4,
      "Earthshatterer": 0.2,
-     "Battle Will": 0
+     "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
      "Earthshatterer": 1.3
@@ -13944,7 +13950,7 @@
     "threePiece": "Thunderrush",
     "vsBattleWill": {
      "The Infiltrator": 3.7,
-     "Battle Will": 0
+     "Battle Will": 0.0
     }
    }
   },
@@ -14011,7 +14017,7 @@
     "vsBattleWill": {
      "The Infiltrator": 2.9,
      "Azure Gale": 0.6,
-     "Battle Will": 0
+     "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
      "Azure Gale": 1.8
@@ -14081,7 +14087,7 @@
     "vsBattleWill": {
      "The Infiltrator": 2.7,
      "Azure Gale": 0.1,
-     "Battle Will": 0
+     "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
      "Azure Gale": 1.2
@@ -14150,7 +14156,7 @@
     "threePiece": "Azure Gale",
     "vsBattleWill": {
      "The Infiltrator": 4.2,
-     "Battle Will": 0
+     "Battle Will": 0.0
     }
    }
   },
@@ -14217,7 +14223,7 @@
     "vsBattleWill": {
      "The Infiltrator": 2.9,
      "Holy Arbiter": 1.8,
-     "Battle Will": 0
+     "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
      "Holy Arbiter": 3.4
@@ -14286,7 +14292,7 @@
     "threePiece": "Azure Gale",
     "vsBattleWill": {
      "The Infiltrator": 3.2,
-     "Battle Will": 0
+     "Battle Will": 0.0
     }
    }
   },
@@ -14352,7 +14358,7 @@
     "threePiece": "Froststorm",
     "vsBattleWill": {
      "The Infiltrator": 3.7,
-     "Battle Will": 0
+     "Battle Will": 0.0
     }
    }
   },
@@ -14418,8 +14424,8 @@
     "threePiece": "Venomfog Shade",
     "vsBattleWill": {
      "The Infiltrator": 3.9,
-     "Azure Gale": 1,
-     "Battle Will": 0
+     "Azure Gale": 1.0,
+     "Battle Will": 0.0
     },
     "statusSetsIfBonusesMultiply": {
      "Azure Gale": 2.4
@@ -14488,7 +14494,7 @@
     "threePiece": "Thunderrush",
     "vsBattleWill": {
      "The Infiltrator": 2.3,
-     "Battle Will": 0
+     "Battle Will": 0.0
     }
    }
   }

@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Johnny's Lv.70 stats measured; level curve refitted (Claude)
+- `HERO_BASE_STATS.Johnny`: 1100 / 350 / 7388 measured (David; no gear or Karma, titles removed). Charlotte and Johnny, on different breakthrough profiles, came out with the same level part at Lv.70 (929.7 / 260 / 6003), so the level curve, not the Lv.60 breakthrough, was low. `HERO_STAT_MODEL.levelCurve` refitted with Lv.70 added; `hero_stats.py --write` raised every estimated hero by about +10 Attack, +1 Defense and +50 Max HP (profile B now 1100 / 350 / 7386).
 ## 8 Nov 2026 — Charlotte's Lv.70 base stats measured (Claude)
 - `HERO_BASE_STATS.Charlotte`: 1143 / 335 / 7157 (Attack / Defense / Max HP), measured by David with no gear or Karma and the owned titles taken off. The estimate was 1133 / 335 / 7105 (Attack 0.9% and HP 0.7% low). First measured Lv.70 hero.
 ## 8 Nov 2026 — A cup for every achievement category (Claude)
