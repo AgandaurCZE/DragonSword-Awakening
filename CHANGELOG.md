@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Six more Lv.70 heroes measured (Claude)
+- `HERO_BASE_STATS`: Ryza, Theresia, Castella profile B (1100 / 350 / 7388); Roxy, Sion profile A (1143 / 335 / 7157); Tarte profile C (1186 / 320 / 6927). 11 of 20 heroes now measured.
 ## 8 Nov 2026 — Reina and Kalsion Lv.70 measured (Claude)
 - `HERO_BASE_STATS`: Reina 1100 / 350 / 7388 (same as Johnny, profile B); Kalsion 1099 / 350 / 7388, one Attack lower for an unknown reason.
 ## 8 Nov 2026 — Kalien Lv.50–70 measured: a third breakthrough profile (Claude)
