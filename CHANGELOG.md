@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Reina's status application and Super Armor gauge (Claude)
+- Test 01: 11 Reina entries at Lv.70 (David). Airborne 0.20–0.25 per skill (Wind Slayer per charge, 2 charges); Wind Grab 11% gauge, everything else 2.5–4%. Whole gauge in about 50 s.
 ## 8 Nov 2026 — Test 01 cleared for David's Lv.70 redo; Charlotte recorded (Claude)
 - Test Kit storage: the 201 older Test 01 entries removed at David's request (he is redoing every hero); all 254 entries as they were are kept in `docs/testkit/test01-apply-backup-2026-11-08.json`. Kept: today's Castella gauge, Kalsion and Kalien. Added 15 Charlotte entries: Poison Dagger 0.50 Poison, Shadow Grab 10% gauge as her best, whole gauge in about 40–41 s.
 ## 8 Nov 2026 — Kalien's status application and Super Armor gauge (Claude)
