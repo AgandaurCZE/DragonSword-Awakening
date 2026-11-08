@@ -102,8 +102,8 @@ details.log li span{color:var(--ok);font:600 .75rem var(--mono);margin-left:6px}
 </header>
 <nav id="toc" aria-label="Tests"></nav>
 <div id="tests"></div>
-<details class="log" id="doneLog"><summary>Already answered (17 tests)</summary><ul id="doneList"></ul></details>
-<p class="note">Updated 29 Oct 2026 (patch 1.1.2) from everything you've measured so far. A result that disagrees with the guide is good news: it means the guide can be corrected.</p>
+<details class="log" id="doneLog"><summary>Already answered (19 tests)</summary><ul id="doneList"></ul></details>
+<p class="note">Updated 8 Nov 2026 from everything you've measured so far. A result that disagrees with the guide is good news: it means the guide can be corrected.</p>
 </div>
 
 <script>
@@ -115,7 +115,7 @@ const P=(n,d=1)=>n==null?'—':f(n,d)+'%';
 const near=(a,b,tolPct)=>Math.abs(a-b)<=Math.abs(b)*tolPct/100;
 const sgn=n=>(n>=0?'+':'')+f(n,1);
 
-const HEROES=['Johnny','Charlotte','Reina','Roxy','Aria','Ornette','Castella','Lute','Cerese','Eileen','Kalsion','Kalien','Sion','Othello','Ryza','Other'];
+const HEROES=['Alex','Aria','Astria','Castella','Cerese','Charlotte','Dana','Eileen','Johnny','Kalien','Kalsion','Lute','Ornette','Othello','Reina','Roxy','Ryza','Sion','Tarte','Theresia','Other'];
 // Heroes whose skill text shows a buff, heal, debuff or duration number (from the codex)
 const BUFF_HEROES=['Eileen','Charlotte','Lute','Ornette','Sion','Tarte','Theresia','Alex','Kalsion','Astria','Kalien','Othello','Ryza','Other'];
 const STATUSES=['Poison','Bleed','Burn','Shock','Frost','Airborne','Knockdown','Stun'];
@@ -141,6 +141,8 @@ const DONE=[
  ['Status Additional Attack Power Increase (%)','It raises your status Additional Attack Power by that %: Charlotte\'s Poisoned hit went 126 → 133 with a 3.88% piece, matching that and nothing else.'],
  ['Several statuses at once','Additional Damage from different statuses adds (+15% + +15% = +30%), and All Status Additional Attack Power counts once per status on the target. Break adds its Break and All Status Additional Attack Power but no multiplier (Charlotte: clean 52, broken 118, Poison + Burn + Break 345).'],
  ['Frost','No ticks. 3 stacks Freeze the enemy (it can\'t act), and a Frozen enemy takes +50% from hits, added like every other status bonus (Reina: 1742 clean, 2613 Frozen, 7006 Airborne + Frozen).'],
+ ['Level-up costs (test 05)','Gold is charged per EXP item, and the game picks the largest item that fits, finishing with the smallest; overflow is lost at breakthrough levels. The levelling calculator on the Tools page matched 43 of your 45 entries exactly (the other 2 ran out of items). Your entries are kept in storage.'],
+ ['Enemy Defense debuffs','Alex\'s parry lowers Defense by 10% at skill Lv.1 and 20% at Lv.10 for about 10 s, on the enemy, so it carries over when you swap. It multiplies with Defense Ignore: 1000 × 0.8 × 0.9, not 1000 × 0.7 (Reina: 37,534 → 39,317).'],
  ['Status ticks and crits','Ticks never crit: 0 crits in about 500 ticks of Poison, Bleed, Burn and Shock at 1–3 stacks.']
 ];
 
@@ -157,7 +159,7 @@ const enemyName=v=>v.en===ENEMY_OTHER?String(v.name||'').trim():v.en;
 const TESTS=[
 /* ---------------- Most useful ---------------- */
 {id:'apply',grp:'Most useful',multi:1,title:'Status application per skill',why:'How much of a stack each skill puts on. This decides who counts as an Enabler, and comparing enemies shows whether resistance grows with enemy level.',
- known:'<b>So far:</b> Johnny 2.5–3 Poison stacks on low-level mobs but 1.5–2 on Lv. 90 goblins. Charlotte\'s Ultimate = 1 stack. Roxy\'s Skill ≈ 1 stack, her dash attack ≈ ⅓.',
+ known:'<b>So far:</b> Johnny 2.5–3 Poison stacks on low-level mobs, 1.5–2 on Lv. 90 goblins. On the Training Ogre: Tarte 0.75–0.8 Shock per charged Skill after her Ultimate (a full stack in 17–18 s); Theresia 0.27 Bleed per Skill, 0.20 Stun per Ultimate; Astria 0.25 Stun per 8 Precision shots; Alex 0.20 Knockdown per Skill, 0.33–0.35 per parry. <b>Still useful:</b> boss numbers for the heroes rated without them (Reina, Aria, Roxy, Castella, Johnny, Lute, Sion), as Enabler is judged on bosses.',
  steps:['Start on an enemy with no stacks of the status.','Stun, Airborne, Knockdown and Break have no stacks: if the game shows a gauge, write how full it gets (0.5 = half); if it just triggers, write 1 and put how many presses it took in Presses.','Use one skill once (or the number of presses you note) and read the stack gauge. Estimate fractions: ½, ⅓, ¼ are fine.','Save, then repeat for the next skill or enemy. Each save is a new entry.'],
  fields:[{k:'hero',l:'Hero',t:'select',o:HEROES},{k:'skill',l:'Skill',t:'text'},{k:'st',l:'Status',t:'select',o:[...STATUSES,'Break (Super Armor)']},{k:'enemy',l:'Enemy',t:'select',o:ENEMIES},{k:'lv',l:'Enemy level (if shown)'},{k:'broken',l:'Super Armor',t:'select',o:['Not broken','Broken']},{k:'presses',l:'Presses'},{k:'stacks',l:'Stacks afterwards'},{k:'note',l:'Notes (which hit triggers it, leftovers, anything odd)',t:'text',wide:1}],
  keep:['hero','enemy','lv','st','broken'],
@@ -167,7 +169,7 @@ const TESTS=[
    lines:[per>=1?'A full stack or more per press: strong applier.':per>=0.5?'Half a stack or more per press.':'Under half a stack per press: a weak source on this enemy.']}}},
 /* ---------------- When you get the chance ---------------- */
 {id:'buffs',grp:'When you can',multi:1,title:'Skill buffs by level',why:'The level slider only changes damage %. With these numbers it can show buffs, heals and durations at every level too.',
- known:'<b>So far:</b> Invisible\'s Crit Damage buff is +10% at Lv. 1 and +15% at Lv. 10 (×1.5, not ×1.75 like damage).',
+ known:'<b>So far:</b> Invisible\'s Crit Damage buff is +10% at Lv. 1 and +15% at Lv. 10 (×1.5, not ×1.75 like damage). Alex\'s Guard Counter Defense debuff is 10% at Lv. 1 and 20% at Lv. 10 (×2).',
  steps:['Pick a skill whose buff, heal or duration shows a number (Invisible is the easiest).','Write the value at every level you can see, Lv. 1 first.'],
  fields:[{k:'hero',l:'Hero',t:'select',o:BUFF_HEROES},{k:'skill',l:'Skill',t:'text'},{k:'what',l:'What changes (e.g. Crit Damage %)',t:'text'},{k:'vals',l:'Values from Lv. 1 upwards',t:'area',wide:1}],
  keep:['hero'],
@@ -184,21 +186,9 @@ const TESTS=[
  dupKey:v=>[v.slot,v.rar,(v.main||'').trim().toLowerCase()].join('|'),
  run(v){const x=nums(v.vals);if(x.length<2||!v.main)return null;const d=x.slice(1).map((z,i)=>z-x[i]);
   return{cls:'ok',verdict:`${v.rar} ${v.slot}, ${v.main}: +0 to +${x.length-1} recorded.`,lines:[`Step per upgrade: <span class="v">${d.map(z=>f(z,2)).join(' · ')}</span>`]}}},
-{id:'lvlcost',no:5,grp:'When you can',multi:1,title:'Level-up cost, one step at a time',why:'Gold isn\'t a price per level: the game charges Gold for each EXP item you feed. Writing down exactly which items one level used, and the Gold shown, lets Claude work out the Gold per item. After that, the cost of any level range can be calculated from the EXP table alone, without anyone listing their items.',
- known:'Item EXP (from your inventory): Hero: Basic Combat Text 500, Advanced 2,000, Core 6,000, Tome of Heroes 20,000. Karma: Arcana of War 300, Beginnings 1,000, Peace 4,000, Future 10,000. Gear: Mana Shard 200, Crystal 500, Ore 1,500, Raw Mana Stone 5,000.',
- steps:['Level exactly one step: from level N to N+1 (or +N to +N+1 on gear).','Before confirming, note the EXP bar: how much it needs for the next level, and how much is already in it (left over from the last level).','Write the items the game selected, like "2 Basic Combat Text, 1 Advanced Combat Text", and the Gold it shows.','Confirm the level-up and check how much EXP is left in the bar afterwards (the overflow).','Breakthroughs (20, 30, 40, 50, 60) and skill levels: put the Gold and the materials in the breakthrough / skill fields instead.'],
- fields:[{k:'what',l:'What',t:'select',o:['Hero','Karma','Gear','Skill','Hero breakthrough','Karma breakthrough']},{k:'name',l:'Hero / Karma / piece (optional)',t:'text'},{k:'from',l:'From level',t:'num'},{k:'to',l:'To level (where it ended up)',t:'num'},{k:'need',l:'EXP needed for each level passed (e.g. 150, 250)',t:'text'},{k:'inbar',l:'EXP already in the bar',t:'num'},{k:'items',l:'Items used (e.g. 2 Basic Combat Text, 1 Advanced Combat Text)',t:'text',wide:1},{k:'gold',l:'Gold shown',t:'num'},{k:'after',l:'EXP left in the bar after levelling',t:'num'},{k:'mats',l:'Breakthrough / skill materials (if any)',t:'text',wide:1}],
- keep:['what','name'],
- label:v=>`${v.what} ${v.name?v.name+' ':''}${v.from||'?'}→${v.to||(+v.from||0)+1} · ${v.gold||'?'} Gold${v.items?' · '+v.items:''}`,
- dupKey:v=>[v.what,(v.name||'').trim().toLowerCase(),String(v.from).trim()].join('|'),
- run(v){const X={'basic combat text':500,'advanced combat text':2000,'core combat text':6000,'tome of heroes':20000,'arcana of war':300,'arcana of beginnings':1000,'arcana of peace':4000,'arcana of the future':10000,'mana shard':200,'mana crystal':500,'mana ore':1500,'raw mana stone':5000};
-  const g=parseFloat(v.gold);if(!(v.from>0)||!(g>=0))return null;let fed=0,unk=[];
-  String(v.items||'').split(',').map(x=>x.trim()).filter(Boolean).forEach(x=>{const m=x.match(/^(\d+)\s*x?\s*(.+)$/i);const n=m?+m[1]:1,nm=(m?m[2]:x).trim().toLowerCase();const e=X[nm]??X[Object.keys(X).find(k=>k.startsWith(nm)||nm.startsWith(k))];e?fed+=n*e:unk.push(x);});
-  const need=String(v.need||'').split(/[,;]/).map(x=>parseFloat(x.replace(/\s/g,''))).filter(x=>x>0).reduce((a,b)=>a+b,0),bar=parseFloat(v.inbar)||0;
-  return{cls:unk.length?'warn':'ok',verdict:fed?`${f(fed,0)} EXP fed for ${f(g,0)} Gold = ${f(g/fed,3)} Gold per EXP.`:`${f(g,0)} Gold recorded.`,lines:[need>0&&fed?`Overflow expected: ${f(bar+fed-need,0)} EXP (check it against the bar after levelling).`:'',unk.length?`Not recognised: ${unk.join(', ')}. Check the spelling.`:'']}}},
 {id:'enemydef',no:6,grp:'When you can',multi:1,title:'Enemy Defense',why:'Every enemy has its own Defense, and the damage calculator needs it. One clean hit on an enemy gives its Defense straight away. Testing the same enemy on each difficulty shows how Defense grows with level.',
- known:'Measured so far: Training Ogre Lv.90: 1,000. Barpedin Lv.80: about 1,197. The table below shows what is tested: green is done, red is still open. Click an enemy to select it.',
- steps:['Use Reina\'s first auto-attack hit (Wind Sword) with nothing on the enemy: no statuses and no Break.','Pick the enemy and write its level. Dungeons are a quick way to test one enemy at three levels.','Write Attack, Armor Penetration and Defense Ignore from the stats panel. They stay filled in for the next entry, so only change them if your gear or buffs change.','Write the non-crit damage. The form keeps the enemy, so you only need the new level and hit for the next difficulty.'],
+ known:'<b>Done so far:</b> the basic curve from Lv.10 to 75 (dungeon and World ×0.8), most enemy types, World Bosses, and Currency Dungeons (×0.4, no type or boss bonus). The highest basic World enemy is Lv.75. <b>Still open:</b> enemies inside the Towers of Trials (does a tower floor change Defense?), and any enemy type not yet in the table. Green in the table is done, red is open; click an enemy to select it.',
+ steps:['Use Reina\'s first auto-attack hit (Wind Sword) with nothing on the enemy: no statuses and no Break.','Pick the enemy and write its level. In a Tower of Trials, write the tower and floor in Where.','Write Attack, Armor Penetration and Defense Ignore from the stats panel. They stay filled in for the next entry, so only change them if your gear or buffs change.','Write the non-crit damage. The form keeps the enemy, so you only need the new level and hit for the next difficulty.'],
  fields:[{k:'sp',l:'Enemy type',t:'select',o:ENEMY_SPECIES},{k:'en',l:'Enemy',t:'select',o:enemyList(ENEMY_SPECIES[0])},{k:'name',l:'Name, if Other',t:'text'},{k:'lv',l:'Enemy level',t:'num'},{k:'atk',l:'Attack (stats panel)',t:'num'},{k:'ap',l:'Armor Penetration',t:'num'},{k:'di',l:'Defense Ignore %',t:'num'},{k:'wslv',l:'Wind Sword level (blank = 3)',t:'num'},{k:'hit',l:'Non-crit damage',t:'num'},{k:'where',l:'Where (dungeon, difficulty)',t:'text'},{k:'note',l:'Notes',t:'text'}],
  keep:['sp','en','name','atk','ap','di','wslv','where'],
  label:v=>`${enemyName(v)||'?'} · Lv. ${v.lv||'?'} · ${v.hit||'?'} at ${v.atk||'?'} Attack${v.where?' · '+v.where:''}`,
@@ -206,6 +196,15 @@ const TESTS=[
  run(v){const n=enemyName(v),d=enemyDef(v);if(d==null||!n)return null;const h=num(v.hit),lo=enemyDef(v,h+.5),hi=enemyDef(v,h-.5);if(d<-20)return{cls:'warn',verdict:`This gives a Defense below zero (${f(d,0)}).`,lines:['Check that the hit had no status or crit on it, and that Attack is from the same setup.']};
   const others=enemyLevels(n).filter(x=>String(x.lv)!==String(v.lv));
   return{cls:'ok',verdict:`${n}${v.lv?' Lv. '+v.lv:''}: Defense about ${f(Math.max(d,0),0)} (${f(Math.max(lo,0),0)}–${f(Math.max(hi,0),0)} from rounding).`,lines:[others.length?`Other levels: <span class="v">${others.map(x=>`Lv. ${x.lv}: ${f(x.def,0)}`).join(' · ')}</span>`:'',v.lv?'':'Add the enemy level before saving.']}}},
+{id:'huntweak',no:7,grp:'Most useful',multi:1,title:'Hunt boss weakness (Nightmare and up)',why:'From Nightmare, Hunt bosses get a very large damage resistance buff, and applying a status they are weak to removes it. Which status works on which boss decides the boss ratings and teams.',
+ known:'<b>So far:</b> Furcas: Burn removed the buff; Venom (Poison) and Airborne didn\'t. Unknown: whether a boss has more than one weakness, how big the resistance is, and whether the weak status also adds damage.',
+ steps:['Record the fight, so you can check the numbers afterwards instead of alt-tabbing.','Apply one status at a time and watch whether the buff disappears. A status that fails still counts: save it as "No".','If you can, note the same skill\'s damage just before and just after the buff drops: that gives the size of the resistance.'],
+ fields:[{k:'boss',l:'Hunt boss',t:'select',o:['Furcas the Starving Ghost of Corrosion','Vanak the Bloody Hook','Barduk the Corrupted','Gallore the Collapse','Ghoul Greed','Earthlander of the Ravenous Earth','Other']},{k:'diff',l:'Difficulty',t:'select',o:['Nightmare','Hell','Other (write in Notes)']},{k:'st',l:'Status applied',t:'select',o:[...STATUSES,'Break (Super Armor)']},{k:'gone',l:'Did the buff disappear?',t:'select',o:['Yes','No','Not sure']},{k:'hero',l:'Hero who applied it',t:'select',o:HEROES},{k:'before',l:'Hit before the buff dropped (optional)',t:'num'},{k:'after',l:'Same hit after it dropped (optional)',t:'num'},{k:'note',l:'Notes',t:'text',wide:1}],
+ keep:['boss','diff','hero'],
+ label:v=>`${v.boss} · ${v.diff} · ${v.st}: ${v.gone}`,
+ dupKey:v=>[v.boss,v.diff,v.st].join('|'),
+ run(v){if(!v.st)return null;const b=num(v.before),a=num(v.after);const lines=[];if(b>0&&a>0)lines.push(`The same hit went from ${f(b,0)} to ${f(a,0)}: the buff cut damage by about ${P((1-b/a)*100,1)}.`);
+  return{cls:v.gone==='Yes'?'ok':v.gone==='No'?'bad':'warn',verdict:v.gone==='Yes'?`${v.boss.split(' ')[0]} is weak to ${v.st}.`:v.gone==='No'?`${v.st} doesn't remove ${v.boss.split(' ')[0]}'s buff.`:`${v.st} on ${v.boss.split(' ')[0]}: not sure yet.`,lines}}},
 /* ---------------- Later ---------------- */
 ];
 

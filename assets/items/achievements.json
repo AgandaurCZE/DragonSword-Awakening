@@ -828,5 +828,12 @@
    "category": "Special",
    "title": "Tycoon"
   }
- ]
+ ],
+ "fame": {
+  "name": "Name of Prowess",
+  "type": "Achievement Points",
+  "icon": "assets/items/icons/name-of-prowess.webp",
+  "description": "To build skill, one must cultivate a sincere mindset forged with unwavering resolve and make tireless efforts. A name earned in this way holds value in and of itself. The reputation built in this way becomes an achievement, and that achievement is the mark an individual leaves on this world.",
+  "text": "Each achievement gives 10 points and one item. Every category (Explore, Quest, Collect, Combat, Special) has its own Accumulated Fame track: Stage 1 at 50, Stage 2 at 100, Stage 3 at 150. Each of stages 1 to 3 gives 100,000 Gold + 50 of a purple crystal (David, 8 Nov 2026). Stages above 3 not recorded yet."
+ }
 }

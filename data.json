@@ -20810,13 +20810,14 @@
   "immunityNote": "Immunity, seen on Ghagaroach of Venom with Johnny: using a Venom skill makes the boss raise a bubble that Breaks your hero, leaving them vulnerable and stunned. The pre-battle screen only lists the weakness, not the immunity."
  },
  "UI_ICONS": {
-  "note": "Menu icons from assets/ui, cut out of David's in-game screenshots (white versions, used as masks so they take the menu colour; -gold versions kept for later). exchange, guides and help are spare. A missing entry keeps the text symbol.",
+  "note": "Menu icons from assets/ui, cut out of David's in-game screenshots (white versions, used as masks so they take the menu colour; -gold versions kept for later). exchange and help are spare; guides is the Codex book, recut from David's menu screenshot on 8 Nov 2026. A missing entry keeps the text symbol.",
   "titles": "assets/ui/titles.svg",
   "heroes": "assets/ui/hero.webp",
   "teams": "assets/ui/teams.webp",
   "familiars": "assets/ui/familiar.webp",
   "trait": "assets/ui/trait-dungeons.webp",
-  "cookbook": "assets/ui/cooking.webp"
+  "cookbook": "assets/ui/cooking.webp",
+  "guides": "assets/ui/guides.webp"
  },
  "TIER_LIST_V2": {
   "note": "New tier list (preview, hidden behind ?tiers=new until launch). Ratings are decided with David from codex data and in-game testing, never by a formula. heroes[name] = {overall:{tier, groups, single}, bosses:{all, <bossId>: tier}, tags[], needs[[status, ...]], expert:{drop, reason}, signatureKarma, progression:{early?, late?}}. Missing values show as unrated or '?'.",

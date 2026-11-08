@@ -1,3 +1,10 @@
+## 8 Nov 2026 — Quest item, Name of Prowess, Codex icon, Test Kit refresh (Claude)
+- Item Database Quest tab: new `assets/items/quest.json` with A Thank-You Note from the Phantom Thief of Dawn and its icon; descriptions keep their paragraph breaks.
+- Achievements: Fame note now read from `achievements.json` `fame` (renamed Name of Prowess, with its cup icon cut out and the stage rewards: stages 1 to 3 at 50/100/150 Fame per category, each 100,000 Gold + 50 purple crystals).
+- Menu: Guides uses the Codex book icon, recut from David's menu screenshot (`assets/ui/guides.webp`, `UI_ICONS.guides`).
+- `docs/LAUNCH_CHANGES.md`: Kalsion's obtain confirmed as Chapter 4, Adventure Quest 40; Cerese's (Adventure Quest 30, end of Chapter 3) added.
+- Test Kit: test 05 (level costs) and the Defense debuff stacking moved to Already answered; all 20 heroes in the hero lists; tests 01, 02 and 06 updated to what's still open (boss application, Towers of Trials Defense); new test 07, Hunt boss weakness on Nightmare and up.
+- Uploaded screenshots in `assets/ToDo_NeedsToBeSorted/` removed after cutting (in git history).
 ## 8 Nov 2026 — Levelling calculator: Karma materials by archetype (preview, Claude)
 - In Karma mode, pick an archetype icon to see the crystal, Trait Stones and Chronographs for the range, with runs (crystal from its Normal Dungeon, stones from the archetype's Trait Dungeon boss), Chronograph prices (Klonie 150,000 Gold or 20 Adventurer's Emblems each) and EXP runs of Residual Worm Cleanup Zone on Very Hard (60 Arcana of the Future each). New `karmaPattern.table`; the Lv.40 example's 'Orb of Recollection' typo fixed.
 ## 8 Nov 2026 — Titles 38/109; calculator level cap and Insignia prices (Claude)

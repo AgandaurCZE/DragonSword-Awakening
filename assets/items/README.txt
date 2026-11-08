@@ -43,3 +43,6 @@ STAR RULE (45 combinations, all match): dish stars = 1 + floor(sum of ingredient
 2-ingredient 3, 3-ingredient 5. Effects per star are a per-dish table (cookbook.json effectsByStars).
 
 ACHIEVEMENTS (achievements.json): 103 achievements from David's video, by tab; 101 match a title. Curious Hands = 'Anything in Here?', 【777】 = 'Lucky!'.
+
+QUEST (quest.json, 8 Nov 2026): the Quest tab. 1 item so far: A Thank-You Note from the Phantom Thief of Dawn (the game labels it Important; description copied exactly, including its typo 'well meet').
+ACHIEVEMENTS: achievements.json 'fame' holds the Name of Prowess points (cup icon icons/name-of-prowess.webp, cut from the Quest tab's popup; each tab has its own cup design) and the stage rewards.

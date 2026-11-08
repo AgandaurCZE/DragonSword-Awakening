@@ -1,0 +1,12 @@
+{
+ "note": "David's inventory, Quest tab (screenshots, 8 Nov 2026). The game labels these items Important.",
+ "items": [
+  {
+   "name": "A Thank-You Note from the Phantom Thief of Dawn",
+   "type": "Important",
+   "rarity": "Orange",
+   "icon": "assets/items/icons/a-thank-you-note-from-the-phantom-thief-of-dawn.webp",
+   "description": "[O Dragon, Dawn Does Not Welcome You]\nEveryone who has had their belongings stolen by the Thief of Dawn receives this message card. However, there is one additional line of text added here.\n\n[Thank you for your help, my trusted assistant]\nA letter written with sincere feelings by the Thief of Dawn, who has carried a great secret and fought a lonely battle all alone.\nThis is a token of the bond and trust between the Lute and the Thief of Dawn.\n\nLet's look forward to the next Dawn when well meet her again."
+  }
+ ]
+}
