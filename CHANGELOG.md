@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Astria's status application and Super Armor gauge (Claude)
+- Test 01: 10 Astria entries at Lv.70 (David), normal and Precision Shot mode. Wide Shot 17.5% (22.5% in the mode), Bolt Bombard 18%, basic 6 bolts 12% (0.20 Stun and 35% in the mode). Whole gauge in about 18 s, tied with Castella.
 ## 8 Nov 2026 — Aria's status application and Super Armor gauge (Claude)
 - Test 01: 16 Aria entries at Lv.70 (David). Air Bomb 0.22 Burn, 0.20 Airborne and 12% gauge; Rolling Bomb 0.23 Burn, 0.10 Airborne, 6%; Switch On! with 3 bolts 0.20 Burn, 0.10 Airborne, 6% (a basic Bomb Arrow explodes like one bolt). Whole gauge in about 50 s. Lute's Healing Circle corrected to 0.25% gauge.
 ## 8 Nov 2026 — Lute's status application and Super Armor gauge; mastery retest list (Claude)
