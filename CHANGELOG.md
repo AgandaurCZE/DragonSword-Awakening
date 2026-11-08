@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Test 01 entries for the five newest heroes (Claude)
+- Test Kit storage: 33 status-application entries for Theresia, Tarte, Dana, Alex and Astria, taken from David's training-ground reports during the rating debates (Lv.1 heroes, marked 'From chat with Claude, estimate'). Test 01's note corrected: Reina, Aria, Roxy, Johnny, Lute and Sion already had boss entries.
 ## 8 Nov 2026 — Six more Lv.70 heroes measured (Claude)
 - `HERO_BASE_STATS`: Ryza, Theresia, Castella profile B (1100 / 350 / 7388); Roxy, Sion profile A (1143 / 335 / 7157); Tarte profile C (1186 / 320 / 6927). 11 of 20 heroes now measured.
 ## 8 Nov 2026 — Reina and Kalsion Lv.70 measured (Claude)
