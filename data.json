@@ -24877,7 +24877,7 @@
     }
    },
    "heroPattern": {
-    "note": "From David's heroes, 6 and 8 Nov 2026 (19 of 20; Dana not yet recorded). Second material follows the archetype with no exceptions; Crushing (Alex) uses Fruit of Vitality, like Amplitude. First material: Bone Fragment for Lute, Sion and Eileen, but Tarte, a healer, uses Monster Hide, so it isn't simply Healers and Buffers. Monster Essence for Castella, Astria (both Breaker) and Theresia; Monster Carapace only for Alex. David's leader/member theory for Claw and Hide doesn't explain Essence or Carapace, and Theresia and Astria didn't land in either. Insignia follows the faction; Ryza (faction Other) uses none.",
+    "note": "From David's heroes, 6 and 8 Nov 2026 (all 20). Second material follows the archetype with no exceptions; Crushing (Alex) uses Fruit of Vitality, like Amplitude. First material: Bone Fragment for Lute, Sion and Eileen, but Tarte, a healer, uses Monster Hide, so it isn't simply Healers and Buffers. Monster Essence for Castella, Astria (both Breaker) and Theresia (the Order's executioner, not a leader); Monster Carapace only for Alex. David's leader/member theory for Claw and Hide doesn't explain Essence or Carapace, and Theresia and Astria didn't land in either. Insignia follows the faction; Ryza (faction Other) uses none. David's conclusion: the first material looks hand-picked per hero, with no rule.",
     "secondMaterial": {
      "Thunderbolt": "Drop of Purity",
      "Frostbite": "Drop of Purity",
@@ -24904,7 +24904,8 @@
       "Aria",
       "Cerese",
       "Charlotte",
-      "Tarte"
+      "Tarte",
+      "Dana"
      ],
      "Bone Fragment": [
       "Lute",
@@ -24919,9 +24920,6 @@
      "Monster Carapace": [
       "Alex"
      ]
-    },
-    "predictions": {
-     "Dana": "Drop of Purity (archetype rule)"
     }
    }
   },

@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Dana's breakthrough materials; all 20 recorded (Claude)
+- `LEVEL_COSTS.breakthroughs.heroPattern`: Dana uses Monster Hide + Drop of Purity. All 20 heroes recorded; first material has no rule.
 ## 8 Nov 2026 — Breakthrough materials for Alex, Theresia, Tarte, Sion, Astria (Claude)
 - `LEVEL_COSTS.breakthroughs.heroPattern`: 19 of 20 heroes recorded. New first material Monster Carapace (Alex); Monster Essence adds Theresia and Astria; Tarte uses Monster Hide; Crushing uses Fruit of Vitality.
 ## 7 Nov 2026 — Hero Quest signature Karmas owned (Claude)
