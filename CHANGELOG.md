@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Levelling calculator: Karma materials by archetype (preview, Claude)
+- In Karma mode, pick an archetype icon to see the crystal, Trait Stones and Chronographs for the range, with runs (crystal from its Normal Dungeon, stones from the archetype's Trait Dungeon boss), Chronograph prices (Klonie 150,000 Gold or 20 Adventurer's Emblems each) and EXP runs of Residual Worm Cleanup Zone on Very Hard (60 Arcana of the Future each). New `karmaPattern.table`; the Lv.40 example's 'Orb of Recollection' typo fixed.
 ## 8 Nov 2026 — Titles 38/109; calculator level cap and Insignia prices (Claude)
 - `TITLES`: Feather of Burning Ashes, Hungry Eye, Crushing Darkness obtained (38/109).
 - Levelling calculator (preview): From and To level boxes stop at 70 (`calc.maxLevel`). Insignia lines show the price from Klonie in Orbis Castle (100,000 Gold each) or the Exchange (20 Adventurer's Emblems each), from `calc.insigniaBuy`.

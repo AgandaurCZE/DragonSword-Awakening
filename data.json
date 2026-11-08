@@ -24917,7 +24917,7 @@
     "40": {
      "gold": 20000,
      "examples": {
-      "A Flame That Cuts Through the Moment": "15 Orb of Recollection, 10 Low-Grade Blazeflame Stone, 5 Intermediate Blazeflame Stone, 1 Chronograph of Ages",
+      "A Flame That Cuts Through the Moment": "15 Crystal of Recollection, 10 Low-Grade Blazeflame Stone, 5 Intermediate Blazeflame Stone, 1 Chronograph of Ages",
       "A Path That Leads to the Wind": "15 Crystal of Reverie, 10 Low-Grade Gale Stone, 5 Intermediate Gale Stone, 1 Chronograph of Ages"
      }
     },
@@ -24999,6 +24999,63 @@
      "Crushing": "Crystal of Recollection",
      "Thunderbolt": "Crystal of Remembrance",
      "Breaker": "Crystal of Remembrance"
+    },
+    "table": {
+     "20": {
+      "crystal": 5
+     },
+     "30": {
+      "crystal": 10,
+      "stones": [
+       [
+        "Low-Grade",
+        5
+       ]
+      ]
+     },
+     "40": {
+      "crystal": 15,
+      "stones": [
+       [
+        "Low-Grade",
+        10
+       ],
+       [
+        "Intermediate",
+        5
+       ]
+      ],
+      "chronograph": 1
+     },
+     "50": {
+      "crystal": 20,
+      "stones": [
+       [
+        "Intermediate",
+        15
+       ]
+      ],
+      "chronograph": 3
+     },
+     "60": {
+      "crystal": 25,
+      "stones": [
+       [
+        "Intermediate",
+        20
+       ],
+       [
+        "High-Grade",
+        10
+       ]
+      ],
+      "chronograph": 5
+     }
+    },
+    "stoneColour": {
+     "Low-Grade": "green",
+     "Intermediate": "blue",
+     "High-Grade": "purple"
     }
    }
   },
@@ -25161,7 +25218,22 @@
     "vendor": "Klonie, Orbis Castle",
     "gold": 100000,
     "emblems": 20
-   }
+   },
+   "chronographBuy": {
+    "vendor": "Klonie, Orbis Castle",
+    "gold": 150000,
+    "emblems": 20
+   },
+   "farmExpKarma": {
+    "dungeon": "Residual Worm Cleanup Zone",
+    "difficulty": 2,
+    "reward": "arcanaOfTheFuture",
+    "item": "Arcana of the Future"
+   },
+   "karmaPick": "Karma archetype",
+   "karmaPickHint": "Every Karma of one archetype uses the same materials, signatures included. Pick the archetype to see them and how many runs they take.",
+   "karmaNone": "Pick an archetype above to see the breakthrough materials.",
+   "farmNoteKarma": "Runs are rounded up and each item is counted on its own, though one Trait Dungeon run gives two grades of stone. EXP runs count only the Arcana of the Future from Residual Worm Cleanup Zone on Very Hard; Gold isn't counted."
   }
  },
  "SKILL_BUFF_LEVELS": {
