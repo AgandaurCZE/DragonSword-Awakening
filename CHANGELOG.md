@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Ornette's status application and Super Armor gauge (Claude)
+- Test 01: 17 Ornette entries at Lv.70 (David). Holy Cross 0.24 Shock and 5% from the swing, 0.10 and 7.5% from the moving cross; Holy Circle 0.22 Shock; Judgment 0.25 Knockdown at 1 Shock stack, 0.40 at 2, 10% gauge; Holy Grab 0.28 Shock and 12.5%, no Airborne on the boss. Whole gauge in about 30 s.
 ## 8 Nov 2026 — Cerese's status application and Super Armor gauge (Claude)
 - Test 01: 16 Cerese entries at Lv.70 (David). Ice Storm (full 5 s tornado) 0.25 Frost, 0.20 Airborne, 15% gauge; Frozen Needles 0.25 Frost; the rest under 5%. Whole gauge in about 40 s. Othello's 20 s break explained (short cooldowns, quick dash attack, Ice Grab mount in about 10 s).
 ## 8 Nov 2026 — Othello's status application and Super Armor gauge (Claude)
