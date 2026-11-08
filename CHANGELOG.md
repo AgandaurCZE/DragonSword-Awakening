@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Breakthrough materials for Alex, Theresia, Tarte, Sion, Astria (Claude)
+- `LEVEL_COSTS.breakthroughs.heroPattern`: 19 of 20 heroes recorded. New first material Monster Carapace (Alex); Monster Essence adds Theresia and Astria; Tarte uses Monster Hide; Crushing uses Fruit of Vitality.
 ## 7 Nov 2026 — Hero Quest signature Karmas owned (Claude)
 - `KARMA_DATA`: Cerese, Othello, Ornette, Dana and Theresia signature Karmas marked owned (Hero Quest rewards), with Kalien, Kalsion and Charlotte: 8 of 20.
 ## 7 Nov 2026 — Title Inquisitor, signature Karmas owned (Claude)

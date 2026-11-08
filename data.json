@@ -24877,7 +24877,7 @@
     }
    },
    "heroPattern": {
-    "note": "From David's 15 owned heroes, 6 Nov 2026. Second material follows the archetype with no exceptions. Bone Fragment fits all three Healer and Buffer heroes among them. Claw against Hide isn't explained. Insignia follows the faction; Ryza (faction Other) uses none. David's theory: Claw is for leader figures (Johnny, Kalien, Roxy, Ornette, Kalsion, Reina, Othello, Ryza) and Hide for members (Aria, Cerese, Charlotte). Worked out after seeing the list, so unproven; Theresia, Astria and Alex will test it.",
+    "note": "From David's heroes, 6 and 8 Nov 2026 (19 of 20; Dana not yet recorded). Second material follows the archetype with no exceptions; Crushing (Alex) uses Fruit of Vitality, like Amplitude. First material: Bone Fragment for Lute, Sion and Eileen, but Tarte, a healer, uses Monster Hide, so it isn't simply Healers and Buffers. Monster Essence for Castella, Astria (both Breaker) and Theresia; Monster Carapace only for Alex. David's leader/member theory for Claw and Hide doesn't explain Essence or Carapace, and Theresia and Astria didn't land in either. Insignia follows the faction; Ryza (faction Other) uses none.",
     "secondMaterial": {
      "Thunderbolt": "Drop of Purity",
      "Frostbite": "Drop of Purity",
@@ -24886,7 +24886,8 @@
      "Gale": "Primordial Seed",
      "Venom": "Leaf of Vigor",
      "Breaker": "Leaf of Vigor",
-     "Amplitude": "Fruit of Vitality"
+     "Amplitude": "Fruit of Vitality",
+     "Crushing": "Fruit of Vitality"
     },
     "monsterMaterial": {
      "Monster Claw": [
@@ -24902,7 +24903,8 @@
      "Monster Hide": [
       "Aria",
       "Cerese",
-      "Charlotte"
+      "Charlotte",
+      "Tarte"
      ],
      "Bone Fragment": [
       "Lute",
@@ -24910,14 +24912,16 @@
       "Eileen"
      ],
      "Monster Essence": [
-      "Castella"
+      "Castella",
+      "Theresia",
+      "Astria"
+     ],
+     "Monster Carapace": [
+      "Alex"
      ]
     },
     "predictions": {
-     "Dana": "Drop of Purity, Bone Fragment",
-     "Tarte": "Drop of Purity, Bone Fragment",
-     "Theresia": "Fruit of Vitality",
-     "Astria": "Leaf of Vigor"
+     "Dana": "Drop of Purity (archetype rule)"
     }
    }
   },
