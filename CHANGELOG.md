@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Kalien Lv.50–70 measured: a third breakthrough profile (Claude)
+- `HERO_BASE_STATS.Kalien` measured at Lv.70 (1186 / 320 / 6927), profile C: her breakthroughs add more Attack and less Defense and HP than A or B (192 / 45 / 692 up to Lv.50, then +65 / +15 / +231 at Lv.60). Her 21 levels from 50 to 70 follow the shared level curve within 2 Attack and 12 HP; curve refitted on them. Other estimates moved by up to +9 Max HP.
 ## 8 Nov 2026 — Johnny's Lv.70 stats measured; level curve refitted (Claude)
 - `HERO_BASE_STATS.Johnny`: 1100 / 350 / 7388 measured (David; no gear or Karma, titles removed). Charlotte and Johnny, on different breakthrough profiles, came out with the same level part at Lv.70 (929.7 / 260 / 6003), so the level curve, not the Lv.60 breakthrough, was low. `HERO_STAT_MODEL.levelCurve` refitted with Lv.70 added; `hero_stats.py --write` raised every estimated hero by about +10 Attack, +1 Defense and +50 Max HP (profile B now 1100 / 350 / 7386).
 ## 8 Nov 2026 — Charlotte's Lv.70 base stats measured (Claude)

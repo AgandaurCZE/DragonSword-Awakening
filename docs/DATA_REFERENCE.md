@@ -176,7 +176,9 @@ Every hero levels identically; only breakthrough bonuses differ.
 - **Breakthroughs** happen at levels 20, 30, 40, 50 and 60. Two profiles have been measured so far:
   - **Profile A** (Charlotte only): +32/+11/+173 at level 20, +37/+13/+202 at level 30, +43/+15/+230 at level 40 and +48/+17/+260 at level 50.
   - **Profile B** (measured on Johnny, Reina, Castella and Lute; used for everyone except Charlotte): +25/+13/+207, +30/+16/+243, +35/+18/+276 and +38/+20/+312 (level 50, measured on Reina). The profile isn't tied to role: Castella is a Main DPS and Lute a healer.
-- The level 60 breakthrough is an estimate: the level-50 bonus plus the average step from level 20 to 40 (`perTierIncrease`) per tier. `tools/hero_stats.py` uses every measured tier as it is.
+  - **Profile C** (Kalien only): breakthroughs to Lv.50 add 192/45/692 in total (not split by tier) and Lv.60 adds +65/+15/+231. Kalien's stats are measured, so the tool doesn't need it.
+- Lv.70 is measured on Charlotte (A), Johnny (B) and Kalien (C, every level 50–70): all three share the same level curve, so only breakthroughs differ. The levelling screen shows stats without titles; the stats panel adds them (flat, then Defense Up %).
+- The level 60 breakthrough is measured only on Kalien; for profiles A and B it is still an estimate: the level-50 bonus plus the average step from level 20 to 40 (`perTierIncrease`) per tier. `tools/hero_stats.py` uses every measured tier as it is.
 
 ## Open tasks (for any assistant)
 

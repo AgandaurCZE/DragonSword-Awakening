@@ -12896,6 +12896,26 @@
     350,
     7388
    ],
+   "Lv50 post-breakthrough Kalien": [
+    711,
+    190,
+    4048
+   ],
+   "Lv60 pre-breakthrough Kalien": [
+    892,
+    241,
+    5216
+   ],
+   "Lv60 breakthrough Kalien": [
+    65,
+    15,
+    231
+   ],
+   "Lv70 Kalien": [
+    1186,
+    320,
+    6927
+   ],
    "order": [
     "Attack",
     "Defense",
@@ -12903,21 +12923,21 @@
    ]
   },
   "levelCurve": {
-   "formula": "a + b*(exp(r*(L-1)) - 1); least-squares fit to the level part (stats minus earlier breakthrough bonuses) at Lv1, 10, 20, 30, 40 and 50 (1 Nov 2026; largest error 1.8 Attack, 0.6 Defense, 11.8 Max HP). The Lv50 level part was 519 / 145 / 3356 for both profiles (the Lv40 fit had predicted 510 / 145 / 3307). Refitted 8 Nov 2026 with Lv70 added: Charlotte and Johnny, no gear or Karma, titles removed, both gave a level part of 929.7 / 260 / 6003 after their breakthroughs (Lv60 breakthrough still estimated). Earlier levels entered as the previous fit's values.",
+   "formula": "a + b*(exp(r*(L-1)) - 1); least-squares fit to the level part (stats minus earlier breakthrough bonuses) at Lv1, 10, 20, 30, 40 and 50 (1 Nov 2026; largest error 1.8 Attack, 0.6 Defense, 11.8 Max HP). The Lv50 level part was 519 / 145 / 3356 for both profiles (the Lv40 fit had predicted 510 / 145 / 3307). Refitted 8 Nov 2026 with Lv70 added: Charlotte and Johnny, no gear or Karma, titles removed, both gave a level part of 929.7 / 260 / 6003 after their breakthroughs (Lv60 breakthrough still estimated). Earlier levels entered as the previous fit's values. Refitted again 8 Nov 2026 with Kalien's every level from 50 to 70 (David), after her own breakthroughs.",
    "Attack": {
-    "a": 73.43664,
-    "b": 184.84105,
-    "r": 0.0250472
+    "a": 73.17915,
+    "b": 185.65366,
+    "r": 0.0250078
    },
    "Defense": {
-    "a": 20.43503,
-    "b": 50.96657,
-    "r": 0.0252419
+    "a": 20.37803,
+    "b": 51.24973,
+    "r": 0.0251744
    },
    "Max HP": {
-    "a": 475.25406,
-    "b": 1202.62045,
-    "r": 0.024955
+    "a": 473.83406,
+    "b": 1204.25842,
+    "r": 0.0249596
    }
   },
   "breakthroughProfiles": {
@@ -12968,6 +12988,11 @@
      "Lv40": 276,
      "Lv50": 312
     }
+   },
+   "C": {
+    "label": "Attack-leaning, more than A (measured on Kalien)",
+    "measuredOnly": true,
+    "note": "Breakthroughs to Lv.50 add 192 / 45 / 692 in total (Lv.20–50 not split); Lv.60 adds 65 / 15 / 231. Kalien's stats are measured, so the estimate tool doesn't use this profile."
    }
   },
   "profileRule": "Profile A only for Charlotte (measured); profile B for everyone else. Castella (Main DPS) and Lute (healer) both measured as B, so the profile is not tied to role.",
@@ -12993,7 +13018,7 @@
   "Lute": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13002,7 +13027,7 @@
   "Castella": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13011,7 +13036,7 @@
   "Aria": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13020,25 +13045,26 @@
   "Dana": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
    "profile": "B"
   },
   "Kalien": {
-   "Attack": 1100,
-   "Defense": 350,
-   "Max HP": 7386,
+   "Attack": 1186,
+   "Defense": 320,
+   "Max HP": 6927,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
-   "estimated": true,
-   "profile": "B"
+   "estimated": false,
+   "profile": "C",
+   "source": "Measured by David at Lv.70, 8 Nov 2026 (levelling screen shows stats without titles; with titles 1331 / 368 / 8502)."
   },
   "Roxy": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13047,7 +13073,7 @@
   "Alex": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13056,7 +13082,7 @@
   "Theresia": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13065,7 +13091,7 @@
   "Ornette": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13074,7 +13100,7 @@
   "Sion": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13083,7 +13109,7 @@
   "Tarte": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13092,7 +13118,7 @@
   "Kalsion": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13101,7 +13127,7 @@
   "Cerese": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13110,7 +13136,7 @@
   "Reina": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13119,7 +13145,7 @@
   "Astria": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13128,7 +13154,7 @@
   "Eileen": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13137,7 +13163,7 @@
   "Othello": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
@@ -13156,7 +13182,7 @@
   "Ryza": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7386,
+   "Max HP": 7395,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
    "estimated": true,
