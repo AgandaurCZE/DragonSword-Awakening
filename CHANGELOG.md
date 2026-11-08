@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Kalsion's status application and Super Armor gauge (Claude)
+- Test 01: 27 Kalsion entries on the Training Ogre at Lv.70 (David, % overlay for the gauge): every skill with and without Royal Flame. Best gauge damage: Explosion charge and Flame Wave long-range charge, 12% each. Royal Flame Flame Wave press: 0.33 Burn, 0.20 Airborne, 10% gauge.
 ## 8 Nov 2026 — Castella's Super Armor gauge damage (Claude)
 - Test 01: 9 Castella entries on the Training Ogre, measured with David's % overlay on the boss bar (Skill ~23%, Ultimate ~15%, whole gauge in 18 s). `DAMAGE_TESTS.findings`: application and gauge damage don't depend on hero or skill level.
 ## 8 Nov 2026 — Test 01 entries for the five newest heroes (Claude)
