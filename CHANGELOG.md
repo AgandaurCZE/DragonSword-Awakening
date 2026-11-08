@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Theresia's status application and Super Armor gauge (Claude)
+- Test 01: 19 Theresia entries at Lv.70 (David), normal and Heretic Judgment mode. Consecration 0.15 Bleed and 4% gauge plus the 10 s blood aura (0.12 Bleed, 2%); Celestial Verdict 0.20 Stun and 10% gauge, 0.25 and 15% in the mode; Holy Rise 0.20 Airborne. Whole gauge in about 27 s.
 ## 8 Nov 2026 — Ryza's status application and Super Armor gauge (Claude)
 - Test 01: 17 Ryza entries at Lv.70 (David). Shock 0.06–0.33 (Stormbringer 0.33 with 0.20 Airborne); Thunder Grab Knockdown 0.20 at 1 stack, 0.25 at 2; gauge 10–12% on Stormbringer and Thunder Grab, 5% on basic and jump. Whole gauge in about 25 s.
 ## 8 Nov 2026 — Johnny's status application and Super Armor gauge (Claude)
