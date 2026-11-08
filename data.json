@@ -12886,6 +12886,11 @@
     17,
     260
    ],
+   "Lv70 Charlotte (titles removed)": [
+    1143,
+    335,
+    7157
+   ],
    "order": [
     "Attack",
     "Defense",
@@ -13133,13 +13138,14 @@
    "profile": "B"
   },
   "Charlotte": {
-   "Attack": 1133,
+   "Attack": 1143,
    "Defense": 335,
-   "Max HP": 7105,
+   "Max HP": 7157,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
-   "estimated": true,
-   "profile": "A"
+   "estimated": false,
+   "profile": "A",
+   "source": "Measured by David at Lv.70, no gear or Karma, 8 Nov 2026: panel 1288 / 384 / 8732 minus owned titles (Attack +145, Max HP +1,575, Defense +30 then Defense Up +5.3%)."
   },
   "Ryza": {
    "Attack": 1090,

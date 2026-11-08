@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Charlotte's Lv.70 base stats measured (Claude)
+- `HERO_BASE_STATS.Charlotte`: 1143 / 335 / 7157 (Attack / Defense / Max HP), measured by David with no gear or Karma and the owned titles taken off. The estimate was 1133 / 335 / 7105 (Attack 0.9% and HP 0.7% low). First measured Lv.70 hero.
 ## 8 Nov 2026 — A cup for every achievement category (Claude)
 - `achievements.json` `fame.categories`: Pioneer's Title (Explore), Name of Prowess (Quest), Title of Wisdom (Collect), Name of the Strong (Combat), The Fame of the Challenger (Special), each with its cup icon, description, points per achievement and the stages seen. The Achievements page shows all five. Special gives 25 points per achievement and its Stage 1 needs 100 Fame. Name of Prowess recut to match the others; uploads removed.
 ## 8 Nov 2026 — David's priority to-do list updated (Claude)
