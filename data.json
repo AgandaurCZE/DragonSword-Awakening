@@ -12916,6 +12916,16 @@
     320,
     6927
    ],
+   "Lv70 Reina (titles removed)": [
+    1100,
+    350,
+    7388
+   ],
+   "Lv70 Kalsion (titles removed)": [
+    1099,
+    350,
+    7388
+   ],
    "order": [
     "Attack",
     "Defense",
@@ -13116,13 +13126,14 @@
    "profile": "B"
   },
   "Kalsion": {
-   "Attack": 1100,
+   "Attack": 1099,
    "Defense": 350,
-   "Max HP": 7395,
+   "Max HP": 7388,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
-   "estimated": true,
-   "profile": "B"
+   "estimated": false,
+   "profile": "B",
+   "source": "Measured by David at Lv.70, no gear or Karma, 8 Nov 2026: panel 1244 / 400 / 8963 minus owned titles (Attack +145, Max HP +1,575, Defense +30 then Defense Up +5.3%). One Attack below Johnny and Reina; cause unknown (rounding of a fractional value, or a slightly different breakthrough)."
   },
   "Cerese": {
    "Attack": 1100,
@@ -13136,11 +13147,12 @@
   "Reina": {
    "Attack": 1100,
    "Defense": 350,
-   "Max HP": 7395,
+   "Max HP": 7388,
    "Critical Hit Chance": 5,
    "Critical Damage": 50,
-   "estimated": true,
-   "profile": "B"
+   "estimated": false,
+   "profile": "B",
+   "source": "Measured by David at Lv.70, no gear or Karma, 8 Nov 2026: panel 1245 / 400 / 8963 minus owned titles (Attack +145, Max HP +1,575, Defense +30 then Defense Up +5.3%)."
   },
   "Astria": {
    "Attack": 1100,

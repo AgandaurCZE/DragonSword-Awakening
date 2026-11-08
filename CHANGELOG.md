@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Reina and Kalsion Lv.70 measured (Claude)
+- `HERO_BASE_STATS`: Reina 1100 / 350 / 7388 (same as Johnny, profile B); Kalsion 1099 / 350 / 7388, one Attack lower for an unknown reason.
 ## 8 Nov 2026 — Kalien Lv.50–70 measured: a third breakthrough profile (Claude)
 - `HERO_BASE_STATS.Kalien` measured at Lv.70 (1186 / 320 / 6927), profile C: her breakthroughs add more Attack and less Defense and HP than A or B (192 / 45 / 692 up to Lv.50, then +65 / +15 / +231 at Lv.60). Her 21 levels from 50 to 70 follow the shared level curve within 2 Attack and 12 HP; curve refitted on them. Other estimates moved by up to +9 Max HP.
 ## 8 Nov 2026 — Johnny's Lv.70 stats measured; level curve refitted (Claude)
