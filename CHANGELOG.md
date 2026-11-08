@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Lute's status application and Super Armor gauge; mastery retest list (Claude)
+- Test 01: 10 Lute entries at Lv.70 (David). Stun Slash 0.20 Stun; Swordgrab 0.25 Knockdown and 10% gauge; the rest 0.05–3%. Whole gauge in about 75 s. David's to-do page now lists a mastery retest for each tested hero, naming the skill to test first, then the all-out break time.
 ## 8 Nov 2026 — Sion's status application and Super Armor gauge (Claude)
 - Test 01: 17 Sion entries at Lv.70 (David). Divine Crash 0.25 Shock and 12.5% gauge with no relic placed, 0.27 and 2.5% with one; Divine Smash and Justice Fall 0.20 Knockdown each; the rest under 2% gauge. Whole gauge in about 50 s.
 ## 8 Nov 2026 — Tarte's status application and Super Armor gauge; Theresia retest noted (Claude)
