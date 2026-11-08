@@ -165,3 +165,5 @@ Completed: implementation, main publication, live preview and public gate checks
 
 9 Nov 2026 (Claude): Theresia signature maths (Lv.1 Karma: Attack +80, Defense Ignore 2%, Stun AAP +210, Bleed AAP +105; her panel Attack 1245; Training Ogre Defense 1000, K 1000): her own hits x1.075 no status, x1.160 Bleed up, x1.331 Bleed+Stun up. Stats explain at most ~40k (Bleed only) to ~83k (Bleed+Stun always) of the +130k, even if she dealt all 250k; at least ~47k is the exclusive effect. Theresia's share of team damage unknown. Saved in planner sigs/theresia notes.
 
+9 Nov 2026 (Claude): Holy Bleed with signatures: Theresia+Roxy sigs with Castella 350k (lower than 380k with Theresia's only: run variance or Roxy's sig adds little); Theresia-Roxy-Kalien with all three sigs 500k. Added planner team t11 'Holy Bleed with Kalien' (status test).
+
