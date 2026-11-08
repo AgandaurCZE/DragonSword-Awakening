@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Dana's status application and Super Armor gauge (Claude)
+- Test 01: 17 Dana entries at Lv.70 (David). Chako Knuckle 0.25 Frost and 22% gauge at 1 stack, 35% as the single blow (2 stacks, Knockdown or Ice Block); Chako Spin 0.15 Frost, 17.5%; Summon Chako 0.15 Frost, 0.10 Knockdown, 12%. Whole gauge in about 23 s alone, about 7 s in the freeze team.
 ## 8 Nov 2026 — Astria's status application and Super Armor gauge (Claude)
 - Test 01: 10 Astria entries at Lv.70 (David), normal and Precision Shot mode. Wide Shot 17.5% (22.5% in the mode), Bolt Bombard 18%, basic 6 bolts 12% (0.20 Stun and 35% in the mode). Whole gauge in about 18 s, tied with Castella.
 ## 8 Nov 2026 — Aria's status application and Super Armor gauge (Claude)
