@@ -1,3 +1,5 @@
+## 8 Nov 2026 — David's priority to-do list updated (Claude)
+- `docs/dragonsword_david_todo_by_priority.html`: done items removed (ratings, combo check, Test 05, obtain info, Fame icon, Quest items, Codex icon, Barbarian and region checks); new items for levelling to 70, Lv.70 team tests, Hunt weakness (Test 07), signature tests, Tower Defense and boss application. Now kept in the repo so it isn't lost again.
 ## 8 Nov 2026 — Quest item, Name of Prowess, Codex icon, Test Kit refresh (Claude)
 - Item Database Quest tab: new `assets/items/quest.json` with A Thank-You Note from the Phantom Thief of Dawn and its icon; descriptions keep their paragraph breaks.
 - Achievements: Fame note now read from `achievements.json` `fame` (renamed Name of Prowess, with its cup icon cut out and the stage rewards: stages 1 to 3 at 50/100/150 Fame per category, each 100,000 Gold + 50 purple crystals).
