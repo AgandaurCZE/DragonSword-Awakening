@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Aria's status application and Super Armor gauge (Claude)
+- Test 01: 16 Aria entries at Lv.70 (David). Air Bomb 0.22 Burn, 0.20 Airborne and 12% gauge; Rolling Bomb 0.23 Burn, 0.10 Airborne, 6%; Switch On! with 3 bolts 0.20 Burn, 0.10 Airborne, 6% (a basic Bomb Arrow explodes like one bolt). Whole gauge in about 50 s. Lute's Healing Circle corrected to 0.25% gauge.
 ## 8 Nov 2026 — Lute's status application and Super Armor gauge; mastery retest list (Claude)
 - Test 01: 10 Lute entries at Lv.70 (David). Stun Slash 0.20 Stun; Swordgrab 0.25 Knockdown and 10% gauge; the rest 0.05–3%. Whole gauge in about 75 s. David's to-do page now lists a mastery retest for each tested hero, naming the skill to test first, then the all-out break time.
 ## 8 Nov 2026 — Sion's status application and Super Armor gauge (Claude)
