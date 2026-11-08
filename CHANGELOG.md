@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Alex's status application and Super Armor gauge; Test 01 redo complete (Claude)
+- Test 01: 13 Alex entries at Lv.70 (David). Knockdown Smash 0.20 Knockdown; Guard Counter 0.33 Knockdown and 8% on a parry, 4% when it fails; about 1% per hit blocked in Guard Stance. Whole gauge in about 45 s. All 20 heroes now redone at Lv.70; the to-do page keeps the mastery retests.
 ## 8 Nov 2026 — Ornette's status application and Super Armor gauge (Claude)
 - Test 01: 17 Ornette entries at Lv.70 (David). Holy Cross 0.24 Shock and 5% from the swing, 0.10 and 7.5% from the moving cross; Holy Circle 0.22 Shock; Judgment 0.25 Knockdown at 1 Shock stack, 0.40 at 2, 10% gauge; Holy Grab 0.28 Shock and 12.5%, no Airborne on the boss. Whole gauge in about 30 s.
 ## 8 Nov 2026 — Cerese's status application and Super Armor gauge (Claude)
