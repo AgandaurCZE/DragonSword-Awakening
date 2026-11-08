@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Ryza's status application and Super Armor gauge (Claude)
+- Test 01: 17 Ryza entries at Lv.70 (David). Shock 0.06–0.33 (Stormbringer 0.33 with 0.20 Airborne); Thunder Grab Knockdown 0.20 at 1 stack, 0.25 at 2; gauge 10–12% on Stormbringer and Thunder Grab, 5% on basic and jump. Whole gauge in about 25 s.
 ## 8 Nov 2026 — Johnny's status application and Super Armor gauge (Claude)
 - Test 01: 17 Johnny entries at Lv.70 (David). Poison 0.12–0.25 and Airborne 0.20–0.25 on four skills; Poison Grab 10% gauge at 1 or 2 stacks, the rest 1.5–6%. Whole gauge in about 39 s.
 ## 8 Nov 2026 — Roxy's status application and Super Armor gauge (Claude)
