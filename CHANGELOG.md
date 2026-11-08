@@ -1,3 +1,6 @@
+## 8 Nov 2026 — Titles 38/109; calculator level cap and Insignia prices (Claude)
+- `TITLES`: Feather of Burning Ashes, Hungry Eye, Crushing Darkness obtained (38/109).
+- Levelling calculator (preview): From and To level boxes stop at 70 (`calc.maxLevel`). Insignia lines show the price from Klonie in Orbis Castle (100,000 Gold each) or the Exchange (20 Adventurer's Emblems each), from `calc.insigniaBuy`.
 ## 8 Nov 2026 — Levelling calculator: hero picker, materials and dungeon runs (preview, Claude)
 - Pick an archetype icon, then a hero portrait (both with hover names), to see that hero's breakthrough materials for the level range and how many runs of each Normal Dungeon difficulty they take. EXP shows runs of Residual Worm Cleanup Zone on Very Hard (45 Tomes of Heroes each); Insignia are shown as Exchange only; Gold isn't counted. New `breakthroughs.heroTable` and `heroPattern.insignia`. Kalien's Lv.50 example corrected to 5 Insignia (David).
 ## 8 Nov 2026 — Dana's breakthrough materials; all 20 recorded (Claude)
