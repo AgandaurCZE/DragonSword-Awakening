@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Super Armor break tag for Castella, Astria, Dana and Kalien (Claude)
+- `TIER_LIST_V2.heroes`: `sa` tag added to Castella, Astria, Dana and Kalien (break the gauge alone in 25 s or less). Othello and Ryza also qualify but already have three tags, so they go without; Theresia (27 s) waits for her mastery retest. The tag's description now states the rule. Preview only.
 ## 8 Nov 2026 — Alex's status application and Super Armor gauge; Test 01 redo complete (Claude)
 - Test 01: 13 Alex entries at Lv.70 (David). Knockdown Smash 0.20 Knockdown; Guard Counter 0.33 Knockdown and 8% on a parry, 4% when it fails; about 1% per hit blocked in Guard Stance. Whole gauge in about 45 s. All 20 heroes now redone at Lv.70; the to-do page keeps the mastery retests.
 ## 8 Nov 2026 — Ornette's status application and Super Armor gauge (Claude)
