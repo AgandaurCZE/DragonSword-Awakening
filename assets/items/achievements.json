@@ -830,10 +830,66 @@
   }
  ],
  "fame": {
-  "name": "Name of Prowess",
   "type": "Achievement Points",
-  "icon": "assets/items/icons/name-of-prowess.webp",
-  "description": "To build skill, one must cultivate a sincere mindset forged with unwavering resolve and make tireless efforts. A name earned in this way holds value in and of itself. The reputation built in this way becomes an achievement, and that achievement is the mark an individual leaves on this world.",
-  "text": "Each achievement gives 10 points and one item. Every category (Explore, Quest, Collect, Combat, Special) has its own Accumulated Fame track: Stage 1 at 50, Stage 2 at 100, Stage 3 at 150. Each of stages 1 to 3 gives 100,000 Gold + 50 of a purple crystal (David, 8 Nov 2026). Stages above 3 not recorded yet."
+  "note": "David, 8 Nov 2026. Each category has its own points, cup and Accumulated Fame track. Stages 1 to 3 each give 100,000 Gold + 50 of a purple crystal.",
+  "categories": [
+   {
+    "category": "Explore",
+    "name": "Pioneer's Title",
+    "icon": "assets/items/icons/pioneers-title.webp",
+    "points": 10,
+    "stages": [
+     50,
+     100,
+     150
+    ],
+    "description": "Those who explore the world and make their name known far and wide earn a reputation for uncovering its secrets. A name made known in this way holds value in and of itself. This reputation becomes a legacy, and that legacy is the mark an individual leaves on this world."
+   },
+   {
+    "category": "Quest",
+    "name": "Name of Prowess",
+    "icon": "assets/items/icons/name-of-prowess.webp",
+    "points": 10,
+    "stages": [
+     50,
+     100,
+     150
+    ],
+    "description": "To build skill, one must cultivate a sincere mindset forged with unwavering resolve and make tireless efforts. A name earned in this way holds value in and of itself. The reputation built in this way becomes an achievement, and that achievement is the mark an individual leaves on this world."
+   },
+   {
+    "category": "Collect",
+    "name": "Title of Wisdom",
+    "icon": "assets/items/icons/title-of-wisdom.webp",
+    "points": 10,
+    "stages": [
+     50
+    ],
+    "description": "Those who make a name for themselves through wisdom do not merely store knowledge from books but put it into practice to make it their own. Only such people can share their wisdom and earn a name of value. The reputation built in this way becomes an achievement, and that achievement is the mark an individual leaves on this world."
+   },
+   {
+    "category": "Combat",
+    "name": "Name of the Strong",
+    "icon": "assets/items/icons/name-of-the-strong.webp",
+    "points": 10,
+    "stages": [
+     50,
+     100,
+     150
+    ],
+    "description": "The name of one who possesses great strength quickly becomes known throughout the region. If everyone comes to know their name, it gains value in and of itself. The reputation built in this way becomes an achievement, and that achievement is the mark an individual leaves on this world."
+   },
+   {
+    "category": "Special",
+    "name": "The Fame of the Challenger",
+    "icon": "assets/items/icons/the-fame-of-the-challenger.webp",
+    "points": 25,
+    "stages": [
+     100
+    ],
+    "description": "A challenge that fails is nothing more than an attempt. The names of successful challengers endure, gaining value in and of themselves. The reputation built in this way becomes an achievement, and that achievement is the mark an individual leaves on this world."
+   }
+  ],
+  "text": "Every achievement gives points to its own category's Accumulated Fame track. Each of stages 1 to 3 gives 100,000 Gold + 50 of a purple crystal. Stages not seen yet are left out."
  }
 }

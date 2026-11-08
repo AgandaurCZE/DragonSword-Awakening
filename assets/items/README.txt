@@ -45,4 +45,4 @@ STAR RULE (45 combinations, all match): dish stars = 1 + floor(sum of ingredient
 ACHIEVEMENTS (achievements.json): 103 achievements from David's video, by tab; 101 match a title. Curious Hands = 'Anything in Here?', 【777】 = 'Lucky!'.
 
 QUEST (quest.json, 8 Nov 2026): the Quest tab. 1 item so far: A Thank-You Note from the Phantom Thief of Dawn (the game labels it Important; description copied exactly, including its typo 'well meet').
-ACHIEVEMENTS: achievements.json 'fame' holds the Name of Prowess points (cup icon icons/name-of-prowess.webp, cut from the Quest tab's popup; each tab has its own cup design) and the stage rewards.
+ACHIEVEMENTS: achievements.json 'fame.categories' holds each tab's points, cup and stages: Explore Pioneer's Title, Quest Name of Prowess, Collect Title of Wisdom, Combat Name of the Strong (10 points each), Special The Fame of the Challenger (25 points, Stage 1 at 100). Cups cut from David's popups with the Explore cup's clean rim as a template (the popup titles overlap the rims).

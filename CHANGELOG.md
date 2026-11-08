@@ -1,3 +1,5 @@
+## 8 Nov 2026 — A cup for every achievement category (Claude)
+- `achievements.json` `fame.categories`: Pioneer's Title (Explore), Name of Prowess (Quest), Title of Wisdom (Collect), Name of the Strong (Combat), The Fame of the Challenger (Special), each with its cup icon, description, points per achievement and the stages seen. The Achievements page shows all five. Special gives 25 points per achievement and its Stage 1 needs 100 Fame. Name of Prowess recut to match the others; uploads removed.
 ## 8 Nov 2026 — David's priority to-do list updated (Claude)
 - `docs/dragonsword_david_todo_by_priority.html`: done items removed (ratings, combo check, Test 05, obtain info, Fame icon, Quest items, Codex icon, Barbarian and region checks); new items for levelling to 70, Lv.70 team tests, Hunt weakness (Test 07), signature tests, Tower Defense and boss application. Now kept in the repo so it isn't lost again.
 ## 8 Nov 2026 — Quest item, Name of Prowess, Codex icon, Test Kit refresh (Claude)
