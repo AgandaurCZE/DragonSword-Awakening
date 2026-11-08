@@ -1,0 +1,4237 @@
+{
+ "apply-1793310397775": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Johnny",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Venom Dance",
+   "st": "Poison",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T21:46:37.775Z",
+  "summary": "Venom Dance: 1 Poison stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793310420062": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Johnny",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Poison Grab",
+   "st": "Poison",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T21:47:00.062Z",
+  "summary": "Poison Grab: 1 Poison stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793310490691": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Johnny",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Venom Cutter",
+   "st": "Poison",
+   "stacks": "1 and ¼"
+  },
+  "savedAt": "2026-10-29T21:48:10.691Z",
+  "summary": "Venom Cutter: 1 Poison stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793310544136": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Johnny",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Fatal Sting",
+   "st": "Poison",
+   "stacks": "0.75"
+  },
+  "savedAt": "2026-10-29T21:49:04.136Z",
+  "summary": "Fatal Sting: 0.75 Poison stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793310593392": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Charlotte",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Poison Step",
+   "st": "Poison",
+   "stacks": "0.45"
+  },
+  "savedAt": "2026-10-29T21:49:53.392Z",
+  "summary": "Poison Step: 0.45 Poison stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793310723853": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Charlotte",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Invisible (clone explosion)",
+   "st": "Poison",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T21:52:03.853Z",
+  "summary": "Invisible (clone explosion): 1 Poison stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793310757223": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Charlotte",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Illusion Kick",
+   "st": "Poison",
+   "stacks": "0.60"
+  },
+  "savedAt": "2026-10-29T21:52:37.223Z",
+  "summary": "Illusion Kick: 0.6 Poison stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793310861882": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Roxy",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Bleeding Grab",
+   "st": "Bleed",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T21:54:21.882Z",
+  "summary": "Bleeding Grab: 1 Bleed stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793310909904": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Roxy",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Crimson Spiral (Holding)",
+   "st": "Bleed",
+   "stacks": "0.99"
+  },
+  "savedAt": "2026-10-29T21:55:09.904Z",
+  "summary": "Crimson Spiral (Holding): 0.99 Bleed stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793310921787": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Roxy",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Bloody Shower",
+   "st": "Bleed",
+   "stacks": "1.10"
+  },
+  "savedAt": "2026-10-29T21:55:21.787Z",
+  "summary": "Bloody Shower: 1.1 Bleed stacks per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793310951386": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Roxy",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Crimson Spiral (Press)",
+   "st": "Bleed",
+   "stacks": "0.45"
+  },
+  "savedAt": "2026-10-29T21:55:51.386Z",
+  "summary": "Crimson Spiral (Press): 0.45 Bleed stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793311001507": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Roxy",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Sliding Shot",
+   "st": "Bleed",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-10-29T21:56:41.507Z",
+  "summary": "Sliding Shot: 0.25 Bleed stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793311069183": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Roxy",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Kick Storm",
+   "st": "Bleed",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T21:57:49.183Z",
+  "summary": "Kick Storm: 1 Bleed stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793311112180": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Aria",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Shoot and Bomb",
+   "st": "Burn",
+   "stacks": "0.45"
+  },
+  "savedAt": "2026-10-29T21:58:32.180Z",
+  "summary": "Shoot and Bomb: 0.45 Burn stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793311120315": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Aria",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Air Bomb",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T21:58:40.315Z",
+  "summary": "Air Bomb: 1 Burn stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793311170213": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Aria",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Rolling Bomb",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T21:59:30.213Z",
+  "summary": "Rolling Bomb: 1 Burn stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793311209761": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Aria",
+   "lv": "90",
+   "presses": "3",
+   "skill": "Switch On!",
+   "st": "Burn",
+   "stacks": "0.75"
+  },
+  "savedAt": "2026-10-29T22:00:09.761Z",
+  "summary": "Switch On!: 0.25 Burn stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793311256079": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Ornette",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Holy Cross",
+   "st": "Shock",
+   "stacks": "1.5"
+  },
+  "savedAt": "2026-10-29T22:00:56.079Z",
+  "summary": "Holy Cross: 1.5 Shock stacks per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793311281496": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Ornette",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Holy Cutter",
+   "st": "Shock",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-10-29T22:01:21.496Z",
+  "summary": "Holy Cutter: 0.5 Shock stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793311313212": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Ornette",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Holy Circle",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T22:01:53.212Z",
+  "summary": "Holy Circle: 1 Shock stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793311342509": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Ornette",
+   "lv": "90",
+   "presses": "1",
+   "skill": "Holy Grab",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T22:02:22.509Z",
+  "summary": "Holy Grab: 1 Poison stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793313399853": {
+  "inputs": {
+   "enemy": "Trait Dungeon I (Normal)",
+   "hero": "Johnny",
+   "lv": "20 (Venom weakness)",
+   "presses": "1",
+   "skill": "Poison Grab",
+   "st": "Poison",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T22:36:39.853Z",
+  "summary": "Poison Grab: 1 Poison stack per press on Trait Dungeon I (Normal) (Lv. 20 (Venom weakness)). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793313420058": {
+  "inputs": {
+   "enemy": "Trait Dungeon I (Normal)",
+   "hero": "Johnny",
+   "lv": "20 (Venom weakness)",
+   "presses": "1",
+   "skill": "Venom Dance",
+   "st": "Poison",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T22:37:00.058Z",
+  "summary": "Venom Dance: 1 Poison stack per press on Trait Dungeon I (Normal) (Lv. 20 (Venom weakness)). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793313695080": {
+  "inputs": {
+   "enemy": "Trait Dungeon I (Normal)",
+   "hero": "Johnny",
+   "lv": "20 (No Venom weakness)",
+   "presses": "1",
+   "skill": "Poison grab",
+   "st": "Poison",
+   "stacks": "0.6"
+  },
+  "savedAt": "2026-10-29T22:41:35.080Z",
+  "summary": "Poison grab: 0.6 Poison stacks per press on Trait Dungeon I (Normal) (Lv. 20 (No Venom weakness)). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793313792137": {
+  "inputs": {
+   "enemy": "Trait Dungeon I (Normal)",
+   "hero": "Johnny",
+   "lv": "20 (No Venom weakness)",
+   "presses": "1",
+   "skill": "Venom Dance",
+   "st": "Poison",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-10-29T22:43:12.137Z",
+  "summary": "Venom Dance: 0.5 Poison stacks per press on Trait Dungeon I (Normal) (Lv. 20 (No Venom weakness)). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793314070064": {
+  "inputs": {
+   "enemy": "Trait Dungeon III (Very Hard)",
+   "hero": "Johnny",
+   "lv": "40 (Venom weakness)",
+   "presses": "1",
+   "skill": "Venom Cutter",
+   "st": "Poison",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T22:47:50.064Z",
+  "summary": "Venom Cutter: 1 Poison stack per press on Trait Dungeon III (Very Hard) (Lv. 40 (Venom weakness)). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793314078711": {
+  "inputs": {
+   "enemy": "Trait Dungeon III (Very Hard)",
+   "hero": "Johnny",
+   "lv": "40 (Venom weakness)",
+   "presses": "1",
+   "skill": "Poison Grab",
+   "st": "Poison",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T22:47:58.711Z",
+  "summary": "Poison Grab: 1 Poison stack per press on Trait Dungeon III (Very Hard) (Lv. 40 (Venom weakness)). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793314372021": {
+  "inputs": {
+   "enemy": "Trait Dungeon III (Very Hard)",
+   "hero": "Johnny",
+   "lv": "40 (Venom weakness)",
+   "presses": "1",
+   "skill": "Venom Dance",
+   "st": "Poison",
+   "stacks": "0.75"
+  },
+  "savedAt": "2026-10-29T22:52:52.021Z",
+  "summary": "Venom Dance: 0.75 Poison stacks per press on Trait Dungeon III (Very Hard) (Lv. 40 (Venom weakness)). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793314678390": {
+  "inputs": {
+   "enemy": "Trait Dungeon III (Very Hard)",
+   "hero": "Johnny",
+   "lv": "40 (No Venom weakness)",
+   "presses": "1",
+   "skill": "Venom Dance",
+   "st": "Poison",
+   "stacks": "0.30 +/-"
+  },
+  "savedAt": "2026-10-29T22:57:58.390Z",
+  "summary": "Venom Dance: 0.3 Poison stacks per press on Trait Dungeon III (Very Hard) (Lv. 40 (No Venom weakness)). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793314708504": {
+  "inputs": {
+   "enemy": "Trait Dungeon III (Very Hard)",
+   "hero": "Johnny",
+   "lv": "40 (No Venom weakness)",
+   "presses": "1",
+   "skill": "Poison Grab",
+   "st": "Poison",
+   "stacks": "0.30 +/-"
+  },
+  "savedAt": "2026-10-29T22:58:28.504Z",
+  "summary": "Poison Grab: 0.3 Poison stacks per press on Trait Dungeon III (Very Hard) (Lv. 40 (No Venom weakness)). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793314743677": {
+  "inputs": {
+   "enemy": "Trait Dungeon III (Very Hard)",
+   "hero": "Johnny",
+   "lv": "40 (No Venom weakness)",
+   "presses": "1",
+   "skill": "Venom Cutter",
+   "st": "Poison",
+   "stacks": "0.40 +/-"
+  },
+  "savedAt": "2026-10-29T22:59:03.677Z",
+  "summary": "Venom Cutter: 0.4 Poison stacks per press on Trait Dungeon III (Very Hard) (Lv. 40 (No Venom weakness)). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793315681624": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "2 hitter each for 0.5 stack",
+   "presses": "1",
+   "skill": "Wind Grab",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:14:41.624Z",
+  "summary": "Wind Grab: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793315718631": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "4 hitter (2nd hit for 1.0 stack, fourth for 0.4) the over stack stays on enemy after Airborne effect is over",
+   "presses": "1",
+   "skill": "Rising Cutter",
+   "st": "Airborne",
+   "stacks": "1.4"
+  },
+  "savedAt": "2026-10-29T23:15:18.631Z",
+  "summary": "Rising Cutter: 1.4 Airborne stacks per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793315795755": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "Has 2 charges, if used right after each other doesn't leave any buildup",
+   "presses": "1",
+   "skill": "Wind Slayer",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:16:35.755Z",
+  "summary": "Wind Slayer: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793315936177": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Swordgrab",
+   "st": "Knockdown",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:18:56.177Z",
+  "summary": "Swordgrab: 1 Knockdown stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793315951545": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Stun Slash",
+   "st": "Stun",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:19:11.545Z",
+  "summary": "Stun Slash: 1 Stun stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316028445": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "Full stun for both Charge and press mode",
+   "presses": "1",
+   "skill": "Crimson Spiral",
+   "st": "Stun",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:20:28.445Z",
+  "summary": "Crimson Spiral: 1 Stun stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316090651": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "After 2 bleed stacks applies full Knockdown on one enemy",
+   "presses": "1",
+   "skill": "Bleeding Grab",
+   "st": "Knockdown",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:21:30.651Z",
+  "summary": "Bleeding Grab: 1 Stun stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316156475": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "5 Hitter - 0.20 per hit",
+   "presses": "1",
+   "skill": "Stun Blow",
+   "st": "Stun",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:22:36.475Z",
+  "summary": "Stun Blow: 1 Stun stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316179877": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Upper Blow",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:22:59.877Z",
+  "summary": "Upper Blow: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316217098": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Judgment",
+   "st": "Knockdown",
+   "stacks": "0.75"
+  },
+  "savedAt": "2026-10-29T23:23:37.098Z",
+  "summary": "Judgment: 0.75 Knockdown stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316264901": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Holy Grab",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:24:24.901Z",
+  "summary": "Holy Grab: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316524074": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "2 attacks, only second hit applies burn (0.45) and airborne (0.10)",
+   "presses": "1",
+   "skill": "Shoot and Bomb",
+   "st": "Airborne",
+   "stacks": "0.10"
+  },
+  "savedAt": "2026-10-29T23:28:44.074Z",
+  "summary": "Shoot and Bomb: 0.1 Airborne stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316562825": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Air Bomb",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:29:22.825Z",
+  "summary": "Air Bomb: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316571593": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Rolling Bomb",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:29:31.593Z",
+  "summary": "Rolling Bomb: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316629410": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "Explodes 3 bolts from Multiple Bolt skill, if all 3 bolts are on one enemy he gets a total of 1.5 Airborne stacks, with the 0.5 staying up after airborne ends",
+   "presses": "1",
+   "skill": "Switch On!",
+   "st": "Airborne",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-10-29T23:30:29.410Z",
+  "summary": "Switch On!: 0.5 Airborne stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316706175": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Illusion Kick",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:31:46.175Z",
+  "summary": "Illusion Kick: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316719162": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Shadow Grab",
+   "st": "Knockdown",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:31:59.162Z",
+  "summary": "Shadow Grab: 1 Knockdown stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316766875": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "Clone Explosion does apply both Poison AND Airborne",
+   "presses": "1",
+   "skill": "Invisible",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:32:46.875Z",
+  "summary": "Invisible: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316796807": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Phantom Slash",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:33:16.807Z",
+  "summary": "Phantom Slash: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316840099": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Venom Dance",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:34:00.099Z",
+  "summary": "Venom Dance: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793316888465": {
+  "inputs": {
+   "enemy": "Goblin dummies",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "It targets an enemy that is Airborne but IF enemies that are not in airborne gets hit by this Special A skill, they get the status too.",
+   "presses": "1",
+   "skill": "Venom Cutter",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-10-29T23:34:48.465Z",
+  "summary": "Venom Cutter: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491192738": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "4 hitter - Only 2nd hit and 3rd hit applies, second hit applies most of the value, third hit adds a tiny bit (probably something like 0.17 or 0.27)",
+   "presses": "1",
+   "skill": "Rising Cutter",
+   "st": "Airborne",
+   "stacks": "0.167"
+  },
+  "savedAt": "2026-10-31T23:59:52.738Z",
+  "summary": "Rising Cutter: 0.17 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491209170": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Rising Cutter",
+   "st": "Airborne",
+   "stacks": "0.333"
+  },
+  "savedAt": "2026-11-01T00:00:09.170Z",
+  "summary": "Rising Cutter: 0.33 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491321248": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Wind Slayer",
+   "st": "Airborne",
+   "stacks": "0.167"
+  },
+  "savedAt": "2026-11-01T00:02:01.248Z",
+  "summary": "Wind Slayer: 0.17 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491333148": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Wind Slayer",
+   "st": "Airborne",
+   "stacks": "0.333"
+  },
+  "savedAt": "2026-11-01T00:02:13.148Z",
+  "summary": "Wind Slayer: 0.33 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491637474": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Stun Slash",
+   "st": "Stun",
+   "stacks": "0.167"
+  },
+  "savedAt": "2026-11-01T00:07:17.474Z",
+  "summary": "Stun Slash: 0.17 Stun stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491646133": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Stun Slash",
+   "st": "Stun",
+   "stacks": "0.333"
+  },
+  "savedAt": "2026-11-01T00:07:26.133Z",
+  "summary": "Stun Slash: 0.33 Stun stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491661507": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Divine Smash",
+   "st": "Knockdown",
+   "stacks": "0.167"
+  },
+  "savedAt": "2026-11-01T00:07:41.507Z",
+  "summary": "Divine Smash: 0.17 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491680041": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Divine Smash",
+   "st": "Knockdown",
+   "stacks": "0.333"
+  },
+  "savedAt": "2026-11-01T00:08:00.042Z",
+  "summary": "Divine Smash: 0.33 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491769950": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Ice Storm",
+   "st": "Frost",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-01T00:09:29.950Z",
+  "summary": "Ice Storm: 0.25 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491775389": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Ice Storm",
+   "st": "Frost",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-01T00:09:35.389Z",
+  "summary": "Ice Storm: 0.25 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491962607": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Phantom Slash",
+   "st": "Airborne",
+   "stacks": "0.167"
+  },
+  "savedAt": "2026-11-01T00:12:42.607Z",
+  "summary": "Phantom Slash: 0.17 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491970485": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Phantom Slash",
+   "st": "Airborne",
+   "stacks": "0.333"
+  },
+  "savedAt": "2026-11-01T00:12:50.485Z",
+  "summary": "Phantom Slash: 0.33 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793491990657": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Barraging Spear",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-01T00:13:10.657Z",
+  "summary": "Barraging Spear: 0.25 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793492030219": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Barraging Spear",
+   "st": "Airborne",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-11-01T00:13:50.219Z",
+  "summary": "Barraging Spear: 0.5 Airborne stacks per press on Training Ogre (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793492336124": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Stun Blow",
+   "st": "Stun",
+   "stacks": "0.333"
+  },
+  "savedAt": "2026-11-01T00:18:56.124Z",
+  "summary": "Stun Blow: 0.33 Stun stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793492348587": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Upper Blow",
+   "st": "Airborne",
+   "stacks": "0.333"
+  },
+  "savedAt": "2026-11-01T00:19:08.587Z",
+  "summary": "Upper Blow: 0.33 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793492404677": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Illusion Kick",
+   "st": "Airborne",
+   "stacks": "0.167"
+  },
+  "savedAt": "2026-11-01T00:20:04.677Z",
+  "summary": "Illusion Kick: 0.17 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793492529915": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "Triple hitter - each hit applies a bit (about 0.0256410256410x3)",
+   "presses": "1",
+   "skill": "Poison Step",
+   "st": "Poison",
+   "stacks": "0.076"
+  },
+  "savedAt": "2026-11-01T00:22:09.915Z",
+  "summary": "Poison Step: 0.08 Poison stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793492802616": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "Maybe 0.112? Needs 9 total uses to apply whole poison stack",
+   "presses": "1",
+   "skill": "Illusion Kick",
+   "st": "Poison",
+   "stacks": "0.111"
+  },
+  "savedAt": "2026-11-01T00:26:42.616Z",
+  "summary": "Illusion Kick: 0.11 Poison stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793492836462": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Poison Dagger",
+   "st": "Poison",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-11-01T00:27:16.462Z",
+  "summary": "Poison Dagger: 0.5 Poison stacks per press on Training Ogre (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793492973202": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "Needs to press left click 3 times to apply 0.25 stack total, then she detaches.",
+   "presses": "3",
+   "skill": "Mount attack (Wind Grab)",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-01T00:29:33.202Z",
+  "summary": "Mount attack (Wind Grab): 0.08 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493135477": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "6 hitter each hit applies a bit totaling around 0.140 (needs total of 8 uses for whole stack and a there's a bit of second stack charged)",
+   "presses": "1",
+   "skill": "Fatal Sting",
+   "st": "Poison",
+   "stacks": "0.140"
+  },
+  "savedAt": "2026-11-01T00:32:15.477Z",
+  "summary": "Fatal Sting: 0.14 Poison stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493245900": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "I realised I do not have to do the math myself and just type how many times it takes to get one stack... im so stupid",
+   "presses": "5",
+   "skill": "Venom Dance",
+   "st": "Poison",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:34:05.900Z",
+  "summary": "Venom Dance: 0.2 Poison stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493340049": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "",
+   "presses": "4",
+   "skill": "Venom Cutter",
+   "st": "Poison",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:35:40.049Z",
+  "summary": "Venom Cutter: 0.25 Poison stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493415114": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "Yes, it's not a typo for some reason it does just Airborne",
+   "presses": "3",
+   "skill": "Mount attack (Poison Grab)",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-01T00:36:55.114Z",
+  "summary": "Mount attack (Poison Grab): 0.08 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493472445": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "",
+   "presses": "3",
+   "skill": "Mount attack (Swordgrab)",
+   "st": "Knockdown",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-01T00:37:52.445Z",
+  "summary": "Mount attack (Swordgrab): 0.08 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493532090": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "",
+   "presses": "3",
+   "skill": "Mount attack (Bleeding Grab)",
+   "st": "Knockdown",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-01T00:38:52.090Z",
+  "summary": "Mount attack (Bleeding Grab): 0.08 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493657367": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "",
+   "presses": "6",
+   "skill": "Crimson Spiral (Press)",
+   "st": "Stun",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:40:57.367Z",
+  "summary": "Crimson Spiral (Press): 0.17 Stun stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493667240": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "",
+   "presses": "12",
+   "skill": "Crimson Spiral (Press)",
+   "st": "Bleed",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:41:07.240Z",
+  "summary": "Crimson Spiral (Press): 0.08 Bleed stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493759051": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "",
+   "presses": "6",
+   "skill": "Crimson Spiral (Hold)",
+   "st": "Stun",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:42:39.052Z",
+  "summary": "Crimson Spiral (Hold): 0.17 Stun stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493763792": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "",
+   "presses": "6",
+   "skill": "Crimson Spiral (Press)",
+   "st": "Bleed",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:42:43.793Z",
+  "summary": "Crimson Spiral (Press): 0.17 Bleed stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493796858": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "",
+   "presses": "3",
+   "skill": "Bloody Shower",
+   "st": "Bleed",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:43:16.858Z",
+  "summary": "Bloody Shower: 0.33 Bleed stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793493958053": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "",
+   "presses": "5",
+   "skill": "Kick Storm",
+   "st": "Bleed",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:45:58.054Z",
+  "summary": "Kick Storm: 0.2 Bleed stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494160247": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "",
+   "presses": "50",
+   "skill": "Shoot and Bomb",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:49:20.247Z",
+  "summary": "Shoot and Bomb: 0.02 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494170198": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "",
+   "presses": "13",
+   "skill": "Shoot and Bomb",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:49:30.198Z",
+  "summary": "Shoot and Bomb: 0.08 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494188311": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "",
+   "presses": "5",
+   "skill": "Switch On!",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:49:48.311Z",
+  "summary": "Switch On!: 0.2 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494255974": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "",
+   "presses": "6",
+   "skill": "Air Bomb",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:50:55.974Z",
+  "summary": "Air Bomb: 0.17 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494268290": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "",
+   "presses": "6",
+   "skill": "Air Bomb",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:51:08.290Z",
+  "summary": "Air Bomb: 0.17 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494351406": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "",
+   "presses": "12",
+   "skill": "Rolling Bomb",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:52:31.406Z",
+  "summary": "Rolling Bomb: 0.08 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494376097": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "",
+   "presses": "5",
+   "skill": "Rolling Bomb",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:52:56.097Z",
+  "summary": "Rolling Bomb: 0.2 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494427845": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "",
+   "presses": "4",
+   "skill": "Divine Crash",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:53:47.846Z",
+  "summary": "Divine Crash: 0.25 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494552362": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "Can be done faster, the sphere at the end explodes and applies more shock, could be probaby done in 5 presses if done right. (It's hard)",
+   "presses": "10",
+   "skill": "Sliding Bolt",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:55:52.362Z",
+  "summary": "Sliding Bolt: 0.1 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494559940": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "",
+   "presses": "4",
+   "skill": "Justice Fall",
+   "st": "Knockdown",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:55:59.940Z",
+  "summary": "Justice Fall: 0.25 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494658680": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "",
+   "presses": "25",
+   "skill": "Bless",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T00:57:38.680Z",
+  "summary": "Bless: 0.04 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494864852": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "",
+   "presses": "10",
+   "skill": "Holy Cutter",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:01:04.852Z",
+  "summary": "Holy Cutter: 0.1 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793494972381": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "",
+   "presses": "4",
+   "skill": "Mount Attack (Holy Grab)",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:02:52.381Z",
+  "summary": "Mount Attack (Holy Grab): 0.25 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495069495": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "Could be about 0.30 if Holy Cross is precisely cast to hit every single of it's hit.",
+   "presses": "4",
+   "skill": "Holy Cross",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:04:29.495Z",
+  "summary": "Holy Cross: 0.25 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495076108": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "",
+   "presses": "5",
+   "skill": "Holy Circle",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:04:36.108Z",
+  "summary": "Holy Circle: 0.2 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495151746": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "",
+   "presses": "4",
+   "skill": "Judgment",
+   "st": "Knockdown",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:05:51.746Z",
+  "summary": "Judgment: 0.25 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495614978": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "",
+   "presses": "17",
+   "skill": "Ice Ball (Charge)",
+   "st": "Frost",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:13:34.978Z",
+  "summary": "Ice Ball (Charge): 0.06 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495622580": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "",
+   "presses": "130",
+   "skill": "Ice Ball (Press)",
+   "st": "Frost",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:13:42.580Z",
+  "summary": "Ice Ball (Press): 0.01 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495630299": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "",
+   "presses": "18",
+   "skill": "Glacial Wave",
+   "st": "Frost",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:13:50.299Z",
+  "summary": "Glacial Wave: 0.06 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495679298": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "Could be probably done in little over 20, dash attack leaves a frozen trail that slowly applies frost, gets replaced with new dash attack",
+   "presses": "36",
+   "skill": "Frozen Road",
+   "st": "Frost",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:14:39.298Z",
+  "summary": "Frozen Road: 0.03 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495686694": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "",
+   "presses": "4",
+   "skill": "Frozen Needles",
+   "st": "Frost",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:14:46.694Z",
+  "summary": "Frozen Needles: 0.25 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495728034": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "",
+   "presses": "10",
+   "skill": "Frozen Spike",
+   "st": "Frost",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:15:28.034Z",
+  "summary": "Frozen Spike: 0.1 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495739889": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "",
+   "presses": "10",
+   "skill": "Frozen Spike",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:15:39.889Z",
+  "summary": "Frozen Spike: 0.1 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495842112": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "Has to be aimed for boss, as the vortex moves away",
+   "presses": "4",
+   "skill": "Ice Storm",
+   "st": "Frost",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:17:22.112Z",
+  "summary": "Ice Storm: 0.25 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495905267": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "",
+   "presses": "4",
+   "skill": "Mount Attack (Burst Grab)",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:18:25.267Z",
+  "summary": "Mount Attack (Burst Grab): 0.25 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793495972274": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "",
+   "presses": "4",
+   "skill": "Mount Attack (Burst Grab)",
+   "st": "Burn",
+   "stacks": "1.10"
+  },
+  "savedAt": "2026-11-01T01:19:32.274Z",
+  "summary": "Mount Attack (Burst Grab): 0.28 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793496094657": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "",
+   "presses": "12",
+   "skill": "Weapon Blaze",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:21:34.657Z",
+  "summary": "Weapon Blaze: 0.08 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793496154415": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "",
+   "presses": "70",
+   "skill": "Great Rush",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:22:34.415Z",
+  "summary": "Great Rush: 0.01 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793496239504": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "",
+   "presses": "23",
+   "skill": "Circular Slash",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:23:59.504Z",
+  "summary": "Circular Slash: 0.04 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793496284889": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "",
+   "presses": "10",
+   "skill": "Circle Cleave",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:24:44.889Z",
+  "summary": "Circle Cleave: 0.1 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793496341162": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "",
+   "presses": "3",
+   "skill": "Flame Wave (press)",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:25:41.162Z",
+  "summary": "Flame Wave (press): 0.33 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793496348768": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "",
+   "presses": "4",
+   "skill": "Flame Wave (Charge)",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:25:48.768Z",
+  "summary": "Flame Wave (Charge): 0.25 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793496769221": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Ice Storm",
+   "st": "Frost",
+   "stacks": "1.25"
+  },
+  "savedAt": "2026-11-01T01:32:49.221Z",
+  "summary": "Ice Storm: 1.25 Frost stacks per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793496823168": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "Some 1.5 stack",
+   "presses": "1",
+   "skill": "Flame Wave (press)",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:33:43.168Z",
+  "summary": "Flame Wave (press): 1 Burn stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793496893533": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "",
+   "presses": "3",
+   "skill": "Weapon Blaze",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:34:53.533Z",
+  "summary": "Weapon Blaze: 0.33 Burn stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793496959161": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "",
+   "presses": "4",
+   "skill": "Frozen Spike",
+   "st": "Frost",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-01T01:35:59.161Z",
+  "summary": "Frozen Spike: 0.25 Frost stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860800000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Small pull, usually a whole Burn stack too",
+   "presses": "1",
+   "skill": "Flame Wave (press), Royal Flame",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-05T06:40:00.000Z",
+  "summary": "Flame Wave (press), Royal Flame: 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860801000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Pushes enemies away; sometimes 2 stacks",
+   "presses": "1",
+   "skill": "Flame Wave (Charge)",
+   "st": "Burn",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-05T06:40:01.000Z",
+  "summary": "Flame Wave (Charge): 1 Burn stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860802000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 1/5",
+   "presses": "1",
+   "skill": "Flame Wave (press), Royal Flame",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-05T06:40:02.000Z",
+  "summary": "Flame Wave (press), Royal Flame: 0.2 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860803000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About half",
+   "presses": "1",
+   "skill": "Flame Wave (press), Royal Flame",
+   "st": "Airborne",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-11-05T06:40:03.000Z",
+  "summary": "Flame Wave (press), Royal Flame: 0.5 Airborne stacks per press on Training Ogre (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860804000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Grouped; about 1.5 if enemies are scattered",
+   "presses": "1",
+   "skill": "Full combo",
+   "st": "Burn",
+   "stacks": "3"
+  },
+  "savedAt": "2026-11-05T06:40:04.000Z",
+  "summary": "Full combo: 3 Burn stacks per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860805000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Grouped; about 0.5 if enemies are scattered",
+   "presses": "1",
+   "skill": "Full combo",
+   "st": "Stun",
+   "stacks": "1.5"
+  },
+  "savedAt": "2026-11-05T06:40:05.000Z",
+  "summary": "Full combo: 1.5 Stun stacks per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860806000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 1/3; also described as about half",
+   "presses": "1",
+   "skill": "Full combo",
+   "st": "Burn",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-05T06:40:06.000Z",
+  "summary": "Full combo: 0.33 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860807000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 3/4, teammate breaks the boss first",
+   "presses": "1",
+   "skill": "Full combo",
+   "st": "Burn",
+   "stacks": "0.75"
+  },
+  "savedAt": "2026-11-05T06:40:07.000Z",
+  "summary": "Full combo: 0.75 Burn stacks per press on Training Ogre (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860808000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 1/4",
+   "presses": "1",
+   "skill": "Full combo",
+   "st": "Stun",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-05T06:40:08.000Z",
+  "summary": "Full combo: 0.25 Stun stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860809000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About half",
+   "presses": "1",
+   "skill": "Fox Grab (mount)",
+   "st": "Burn",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-11-05T06:40:09.000Z",
+  "summary": "Fox Grab (mount): 0.5 Burn stacks per press on Training Ogre (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860810000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 1/3",
+   "presses": "1",
+   "skill": "Fox Grab (mount)",
+   "st": "Stun",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-05T06:40:10.000Z",
+  "summary": "Fox Grab (mount): 0.33 Stun stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860811000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 0.35 to 0.40; hits one enemy",
+   "presses": "1",
+   "skill": "Lightning Javelin",
+   "st": "Shock",
+   "stacks": "0.375"
+  },
+  "savedAt": "2026-11-05T06:40:11.000Z",
+  "summary": "Lightning Javelin: 0.38 Shock stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860812000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Whole Ultimate 1 to 1.8",
+   "presses": "1",
+   "skill": "Stormbringer (spin)",
+   "st": "Shock",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-11-05T06:40:12.000Z",
+  "summary": "Stormbringer (spin): 0.5 Shock stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860813000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. 0.7 to 0.9",
+   "presses": "1",
+   "skill": "Stormbringer (spin)",
+   "st": "Airborne",
+   "stacks": "0.8"
+  },
+  "savedAt": "2026-11-05T06:40:13.000Z",
+  "summary": "Stormbringer (spin): 0.8 Airborne stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860814000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Pulls; anything under a whole stack is kept",
+   "presses": "1",
+   "skill": "Stormbringer (lightning)",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-05T06:40:14.000Z",
+  "summary": "Stormbringer (lightning): 1 Shock stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860815000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Pulled enemies; whole Ultimate 1.7 to 1.99",
+   "presses": "1",
+   "skill": "Stormbringer (lightning)",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-05T06:40:15.000Z",
+  "summary": "Stormbringer (lightning): 1 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860816000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Only fills up to the next whole stack",
+   "presses": "1",
+   "skill": "Flash (first charge)",
+   "st": "Shock",
+   "stacks": "0.6"
+  },
+  "savedAt": "2026-11-05T06:40:16.000Z",
+  "summary": "Flash (first charge): 0.6 Shock stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860817000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Only fills up to the next whole stack",
+   "presses": "1",
+   "skill": "Flash (second charge)",
+   "st": "Shock",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-11-05T06:40:17.000Z",
+  "summary": "Flash (second charge): 0.5 Shock stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860818000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Second slam only fills the gauge",
+   "presses": "1",
+   "skill": "Thunder Grab (first slam)",
+   "st": "Knockdown",
+   "stacks": "0.75"
+  },
+  "savedAt": "2026-11-05T06:40:18.000Z",
+  "summary": "Thunder Grab (first slam): 0.75 Knockdown stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860819000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. At 1 Shock stack, about half",
+   "presses": "1",
+   "skill": "Thunder Grab",
+   "st": "Shock",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-11-05T06:40:19.000Z",
+  "summary": "Thunder Grab: 0.5 Shock stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860820000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 65%; a full stack alone in 17 to 20 s",
+   "presses": "1",
+   "skill": "Full combo",
+   "st": "Shock",
+   "stacks": "0.65"
+  },
+  "savedAt": "2026-11-05T06:40:20.000Z",
+  "summary": "Full combo: 0.65 Shock stacks per press on Training Ogre (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860821000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. 10 to 15%",
+   "presses": "1",
+   "skill": "Full combo",
+   "st": "Airborne",
+   "stacks": "0.125"
+  },
+  "savedAt": "2026-11-05T06:40:21.000Z",
+  "summary": "Full combo: 0.12 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860822000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Around 0.30",
+   "presses": "1",
+   "skill": "Stormbringer",
+   "st": "Airborne",
+   "stacks": "0.3"
+  },
+  "savedAt": "2026-11-05T06:40:22.000Z",
+  "summary": "Stormbringer: 0.3 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860823000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. 0.25 to 0.30",
+   "presses": "1",
+   "skill": "Thunder Grab (mount, 1 Shock)",
+   "st": "Shock",
+   "stacks": "0.275"
+  },
+  "savedAt": "2026-11-05T06:40:23.000Z",
+  "summary": "Thunder Grab (mount, 1 Shock): 0.28 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860824000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. 10 to 15%",
+   "presses": "1",
+   "skill": "Thunder Grab (mount, 1 Shock)",
+   "st": "Knockdown",
+   "stacks": "0.125"
+  },
+  "savedAt": "2026-11-05T06:40:24.000Z",
+  "summary": "Thunder Grab (mount, 1 Shock): 0.12 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860825000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Six hits; about 0.25",
+   "presses": "1",
+   "skill": "Thunder Grab (mount, 2 Shock)",
+   "st": "Knockdown",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-05T06:40:25.000Z",
+  "summary": "Thunder Grab (mount, 2 Shock): 0.25 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860826000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Enemies sucked in from the cast",
+   "presses": "1",
+   "skill": "Divine Crash (cast, pulled in)",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-05T06:40:26.000Z",
+  "summary": "Divine Crash (cast, pulled in): 1 Shock stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860827000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 1/3; knocks enemies down and breaks them",
+   "presses": "1",
+   "skill": "Divine Crash (return)",
+   "st": "Shock",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-05T06:40:27.000Z",
+  "summary": "Divine Crash (return): 0.33 Shock stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860828000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "From chat with Claude, estimate.",
+   "presses": "1",
+   "skill": "Divine Crash (relic planted)",
+   "st": "Shock",
+   "stacks": "1.25"
+  },
+  "savedAt": "2026-11-05T06:40:28.000Z",
+  "summary": "Divine Crash (relic planted): 1.25 Shock stacks per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860829000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Small area",
+   "presses": "1",
+   "skill": "Divine Smash",
+   "st": "Knockdown",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-05T06:40:29.000Z",
+  "summary": "Divine Smash: 1 Knockdown stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860830000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Five casts for a stack; pulls around the relic",
+   "presses": "5",
+   "skill": "Bless",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-05T06:40:30.000Z",
+  "summary": "Bless: 0.2 Shock stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860831000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Works the same as Divine Smash",
+   "presses": "1",
+   "skill": "Justice Fall",
+   "st": "Knockdown",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-05T06:40:31.000Z",
+  "summary": "Justice Fall: 1 Knockdown stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860832000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 0.26 to 0.27",
+   "presses": "1",
+   "skill": "Divine Crash (relic planted)",
+   "st": "Shock",
+   "stacks": "0.265"
+  },
+  "savedAt": "2026-11-05T06:40:32.000Z",
+  "summary": "Divine Crash (relic planted): 0.27 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860833000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About half a stack",
+   "presses": "1",
+   "skill": "Half-Moon Cutter",
+   "st": "Frost",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-11-05T06:40:33.000Z",
+  "summary": "Half-Moon Cutter: 0.5 Frost stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860834000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. If all hits land on one enemy",
+   "presses": "1",
+   "skill": "Frozen Stinger",
+   "st": "Frost",
+   "stacks": "0.8"
+  },
+  "savedAt": "2026-11-05T06:40:34.000Z",
+  "summary": "Frozen Stinger: 0.8 Frost stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860835000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. 0.10 to 0.25",
+   "presses": "1",
+   "skill": "Ice Crown (cast)",
+   "st": "Frost",
+   "stacks": "0.175"
+  },
+  "savedAt": "2026-11-05T06:40:35.000Z",
+  "summary": "Ice Crown (cast): 0.17 Frost stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860836000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Pulls to the centre",
+   "presses": "1",
+   "skill": "Ice Crown (cast)",
+   "st": "Knockdown",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-05T06:40:36.000Z",
+  "summary": "Ice Crown (cast): 1 Knockdown stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860837000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. 0.5 to 0.75 while it lasts",
+   "presses": "1",
+   "skill": "Ice Crown (prison)",
+   "st": "Frost",
+   "stacks": "0.625"
+  },
+  "savedAt": "2026-11-05T06:40:37.000Z",
+  "summary": "Ice Crown (prison): 0.62 Frost stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860838000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Same at 1 or 2 Frost, or on Knockdown",
+   "presses": "1",
+   "skill": "Ice Grab",
+   "st": "Frost",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-05T06:40:38.000Z",
+  "summary": "Ice Grab: 0.25 Frost stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860839000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Area a bit bigger on Knockdown",
+   "presses": "1",
+   "skill": "Ice Grab (2 Frost or on Knockdown)",
+   "st": "Knockdown",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-05T06:40:39.000Z",
+  "summary": "Ice Grab (2 Frost or on Knockdown): 1 Knockdown stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860840000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 10 uses for a stack",
+   "presses": "10",
+   "skill": "Half-Moon Cutter",
+   "st": "Frost",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-05T06:40:40.000Z",
+  "summary": "Half-Moon Cutter: 0.1 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860841000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. Leaves 3 spears",
+   "presses": "1",
+   "skill": "Frozen Stinger",
+   "st": "Frost",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-05T06:40:41.000Z",
+  "summary": "Frozen Stinger: 0.15 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860842000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 0.20 if left for the whole duration",
+   "presses": "1",
+   "skill": "Ice Crown (cast)",
+   "st": "Frost",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-05T06:40:42.000Z",
+  "summary": "Ice Crown (cast): 0.05 Frost stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860843000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate.",
+   "presses": "1",
+   "skill": "Ice Crown (cast)",
+   "st": "Knockdown",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-05T06:40:43.000Z",
+  "summary": "Ice Crown (cast): 0.1 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860844000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. 3 slow thrusts, leaves 3 spears",
+   "presses": "1",
+   "skill": "Ice Grab (mount)",
+   "st": "Knockdown",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-05T06:40:44.000Z",
+  "summary": "Ice Grab (mount): 0.25 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860845000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 1/3; about 90% with Airborne up",
+   "presses": "1",
+   "skill": "Skill + Ultimate",
+   "st": "Burn",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-05T06:40:45.000Z",
+  "summary": "Skill + Ultimate: 0.33 Burn stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1793860846000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "From chat with Claude, estimate. About 1/4",
+   "presses": "1",
+   "skill": "Skill + Ultimate",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-05T06:40:46.000Z",
+  "summary": "Skill + Ultimate: 0.25 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Whole duration. Alone she takes about 60 s to a full Bleed on the boss",
+   "presses": "1",
+   "skill": "Consecration (Bleed)",
+   "st": "Bleed",
+   "stacks": "0.27"
+  },
+  "savedAt": "2026-11-08T17:30:00.000Z",
+  "summary": "Consecration (Bleed): 0.27 Bleed stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Alone she takes about 30 s to Stun the boss",
+   "presses": "1",
+   "skill": "Celestial Verdict (Stun)",
+   "st": "Stun",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T17:30:05.000Z",
+  "summary": "Celestial Verdict (Stun): 0.2 Stun stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1.",
+   "presses": "1",
+   "skill": "Celestial Verdict, second cast from Divine Arc",
+   "st": "Stun",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T17:30:10.000Z",
+  "summary": "Celestial Verdict, second cast from Divine Arc: 0.2 Stun stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Also some Bleed",
+   "presses": "1",
+   "skill": "Holy Rise (Bleed)",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T17:30:15.000Z",
+  "summary": "Holy Rise (Bleed): 0.25 Airborne stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1.",
+   "presses": "1",
+   "skill": "Consecration (Bleed)",
+   "st": "Bleed",
+   "stacks": "0.6"
+  },
+  "savedAt": "2026-11-08T17:30:20.000Z",
+  "summary": "Consecration (Bleed): 0.6 Bleed stacks per press on Goblin dummies (Lv. 90). | Half a stack or more per press.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Also pulls enemies to the centre",
+   "presses": "1",
+   "skill": "Celestial Verdict (Stun)",
+   "st": "Stun",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T17:30:25.000Z",
+  "summary": "Celestial Verdict (Stun): 1.0 Stun stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. About 10 s of enhanced basics from zero; Bleed in 11-12 s",
+   "presses": "1",
+   "skill": "Judgment Spiral (Heretic Judgment)",
+   "st": "Stun",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T17:30:30.000Z",
+  "summary": "Judgment Spiral (Heretic Judgment): 1.0 Stun stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Refreshes Heretic Judgment and gives a second Ultimate",
+   "presses": "1",
+   "skill": "Divine Arc (Bleed)",
+   "st": "Bleed",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T17:30:35.000Z",
+  "summary": "Divine Arc (Bleed): 1.0 Bleed stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Double hit: first hit Stuns, second adds 0.6 kept after the Stun ends",
+   "presses": "1",
+   "skill": "Celestial Verdict, second cast from Divine Arc",
+   "st": "Stun",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T17:30:40.000Z",
+  "summary": "Celestial Verdict, second cast from Divine Arc: 1.0 Stun stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Also 0.6 Bleed",
+   "presses": "1",
+   "skill": "Holy Rise (Bleed)",
+   "st": "Airborne",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T17:30:45.000Z",
+  "summary": "Holy Rise (Bleed): 1.0 Airborne stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1.",
+   "presses": "3",
+   "skill": "Spiky Bolt (Shock), full jump sequence",
+   "st": "Shock",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T17:31:00.000Z",
+  "summary": "Spiky Bolt (Shock), full jump sequence: 0.08 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1.",
+   "presses": "2",
+   "skill": "Cannon Bolt (Shock), exploding at the boss",
+   "st": "Shock",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T17:31:05.000Z",
+  "summary": "Cannon Bolt (Shock), exploding at the boss: 0.12 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. About 0.34 with 8 orbs under the boss, about 0.6 after the Ultimate",
+   "presses": "1",
+   "skill": "Lightning Shock (press)",
+   "st": "Shock",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T17:31:10.000Z",
+  "summary": "Lightning Shock (press): 0.25 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. About 0.6 with 8 orbs, 0.75-0.8 after the Ultimate",
+   "presses": "1",
+   "skill": "Lightning Shock (charged)",
+   "st": "Shock",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T17:31:15.000Z",
+  "summary": "Lightning Shock (charged): 0.33 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Also 0.25 Stun",
+   "presses": "1",
+   "skill": "Thunderbolt (Shock)",
+   "st": "Shock",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T17:31:20.000Z",
+  "summary": "Thunderbolt (Shock): 0.15 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1.",
+   "presses": "1",
+   "skill": "Thunderbolt (Shock)",
+   "st": "Stun",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T17:31:25.000Z",
+  "summary": "Thunderbolt (Shock): 0.25 Stun stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. A little under 0.5. Full Shock stack in 17-18 s with Ultimate, charged Skill and 3 dash attacks",
+   "presses": "1",
+   "skill": "Bolt Bubble orbs popped by dash or jump",
+   "st": "Shock",
+   "stacks": "0.45"
+  },
+  "savedAt": "2026-11-08T17:31:30.000Z",
+  "summary": "Bolt Bubble orbs popped by dash or jump: 0.45 Shock stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200017000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Somewhere from 0.3 to 0.4",
+   "presses": "1",
+   "skill": "Spiky Bolt (Shock), third jump hit",
+   "st": "Shock",
+   "stacks": "0.35"
+  },
+  "savedAt": "2026-11-08T17:31:35.000Z",
+  "summary": "Spiky Bolt (Shock), third jump hit: 0.35 Shock stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200018000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Explosion at the end hits twice as hard",
+   "presses": "1",
+   "skill": "Cannon Bolt (Shock)",
+   "st": "Shock",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T17:31:40.000Z",
+  "summary": "Cannon Bolt (Shock): 0.25 Shock stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200019000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Up to 1.6 with orbs around",
+   "presses": "1",
+   "skill": "Lightning Shock (press)",
+   "st": "Shock",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T17:31:45.000Z",
+  "summary": "Lightning Shock (press): 1.0 Shock stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200020000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Up to 2.6 with orbs, 3 after the Ultimate",
+   "presses": "1",
+   "skill": "Lightning Shock (charged)",
+   "st": "Shock",
+   "stacks": "1.8"
+  },
+  "savedAt": "2026-11-08T17:32:00.000Z",
+  "summary": "Lightning Shock (charged): 1.8 Shock stacks per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200021000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Up to 4 bolts, 0.25 Shock each, guaranteed Stun",
+   "presses": "1",
+   "skill": "Thunderbolt (Shock)",
+   "st": "Stun",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T17:32:05.000Z",
+  "summary": "Thunderbolt (Shock): 1.0 Stun stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200022000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1.",
+   "presses": "1",
+   "skill": "Snow Pop (Frost), charged",
+   "st": "Frost",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T17:32:10.000Z",
+  "summary": "Snow Pop (Frost), charged: 0.2 Frost stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200023000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1.",
+   "presses": "4",
+   "skill": "Freezy Pop (Frost)",
+   "st": "Frost",
+   "stacks": "1.2"
+  },
+  "savedAt": "2026-11-08T17:32:15.000Z",
+  "summary": "Freezy Pop (Frost): 0.3 Frost stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200024000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Two small tornadoes, 1-1.2 over three hits if enemies stay in",
+   "presses": "1",
+   "skill": "Snow Step (Frost)",
+   "st": "Frost",
+   "stacks": "1.1"
+  },
+  "savedAt": "2026-11-08T17:32:20.000Z",
+  "summary": "Snow Step (Frost): 1.1 Frost stacks per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200025000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Knockdown 6.5-7 s, plus 0.5 Frost",
+   "presses": "1",
+   "skill": "Summon Chako (Frost)",
+   "st": "Knockdown",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T17:32:25.000Z",
+  "summary": "Summon Chako (Frost): 1.0 Knockdown stack per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200026000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Goblins went from 0.5 to 1.6-1.7",
+   "presses": "1",
+   "skill": "Chako Knuckle (Frost)",
+   "st": "Frost",
+   "stacks": "1.15"
+  },
+  "savedAt": "2026-11-08T17:32:30.000Z",
+  "summary": "Chako Knuckle (Frost): 1.15 Frost stacks per press on Goblin dummies (Lv. 90). | A full stack or more per press: strong applier.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200027000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Whole spin about 0.2-0.25; pulls enemies to Chako",
+   "presses": "1",
+   "skill": "Chako Spin (Frost)",
+   "st": "Frost",
+   "stacks": "0.22"
+  },
+  "savedAt": "2026-11-08T17:32:35.000Z",
+  "summary": "Chako Spin (Frost): 0.22 Frost stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200028000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1.",
+   "presses": "1",
+   "skill": "Summon Chako (Frost)",
+   "st": "Knockdown",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T17:32:40.000Z",
+  "summary": "Summon Chako (Frost): 0.1 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200029000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1.",
+   "presses": "1",
+   "skill": "Knockdown Smash (Knockdown)",
+   "st": "Knockdown",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T17:32:45.000Z",
+  "summary": "Knockdown Smash (Knockdown): 0.2 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200030000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. Perfect parry only; 0.33-0.35",
+   "presses": "1",
+   "skill": "Guard Counter (Knockdown)",
+   "st": "Knockdown",
+   "stacks": "0.34"
+  },
+  "savedAt": "2026-11-08T17:33:00.000Z",
+  "summary": "Guard Counter (Knockdown): 0.34 Knockdown stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200031000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. About half a Break gauge in 15 s",
+   "presses": "8",
+   "skill": "Ballista Shot (Stun), Precision Shot",
+   "st": "Stun",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T17:33:05.000Z",
+  "summary": "Ballista Shot (Stun), Precision Shot: 0.03 Stun stacks per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794200032000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Goblin dummies",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "From chat with Claude, estimate, hero Lv.1. 3 shots for a full Stun on small goblins",
+   "presses": "1",
+   "skill": "Ballista Shot (Stun), Precision Shot",
+   "st": "Stun",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T17:33:10.000Z",
+  "summary": "Ballista Shot (Stun), Precision Shot: 0.33 Stun stacks per press on Goblin dummies (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 23% of the Super Armor gauge (David's % overlay on the boss bar). Whole gauge in 18 s.",
+   "presses": "1",
+   "skill": "Whirlwind (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.23"
+  },
+  "savedAt": "2026-11-08T17:55:00.000Z",
+  "summary": "Whirlwind (Skill): 0.23 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 15% of the Super Armor gauge.",
+   "presses": "1",
+   "skill": "Howling (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T17:55:05.000Z",
+  "summary": "Howling (Ultimate): 0.15 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240002000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "Only usable once the boss is broken, so its gauge damage can't be measured.",
+   "presses": "1",
+   "skill": "Stun Blow (Special A)",
+   "st": "Stun",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T17:55:10.000Z",
+  "summary": "Stun Blow (Special A): 0.33 Stun per press on Training Ogre (Lv. 90), broken. | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240003000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Upper Blow (Special B)",
+   "st": "Airborne",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T17:55:15.000Z",
+  "summary": "Upper Blow (Special B): 0.33 Airborne per press on Training Ogre (Lv. 90), broken. | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 6% of the Super Armor gauge.",
+   "presses": "1",
+   "skill": "Upper Blow (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T17:55:20.000Z",
+  "summary": "Upper Blow (Special B): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 4.5% of the gauge per full combo.",
+   "presses": "1",
+   "skill": "Wild Blow (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.045"
+  },
+  "savedAt": "2026-11-08T17:55:25.000Z",
+  "summary": "Wild Blow (whole basic combo): 0.045 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 5%.",
+   "presses": "1",
+   "skill": "Wild Crash (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T17:55:30.000Z",
+  "summary": "Wild Crash (jump attack): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 3%.",
+   "presses": "1",
+   "skill": "Shoulder Crusher (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T17:55:35.000Z",
+  "summary": "Shoulder Crusher (dash attack): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 14%. The dash after the last jump hit leads straight into the basic sequence.",
+   "presses": "1",
+   "skill": "Full combo: basic, jump sequence, dash, back into basic",
+   "st": "Break (Super Armor)",
+   "stacks": "0.14"
+  },
+  "savedAt": "2026-11-08T17:55:40.000Z",
+  "summary": "Full combo: 0.14 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Weapon Blaze (Skill)",
+   "st": "Burn",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:20:00.000Z",
+  "summary": "Weapon Blaze (Skill): 0.1 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Weapon Blaze (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.02"
+  },
+  "savedAt": "2026-11-08T18:20:05.000Z",
+  "summary": "Weapon Blaze (Skill): 0.02 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Flame Wave (Ultimate, press)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:20:10.000Z",
+  "summary": "Flame Wave (Ultimate, press): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Flame Wave (Ultimate, charge, close range)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T18:20:15.000Z",
+  "summary": "Flame Wave (Ultimate, charge, close range): 0.08 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Flame Wave (Ultimate, charge, long range)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.12"
+  },
+  "savedAt": "2026-11-08T18:20:20.000Z",
+  "summary": "Flame Wave (Ultimate, charge, long range): 0.12 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Burst Grab (Special A, at 1 Burn stack)",
+   "st": "Burn",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T18:20:25.000Z",
+  "summary": "Burst Grab (Special A, at 1 Burn stack): 0.15 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Burst Grab (Special A, at 1 Burn stack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T18:20:30.000Z",
+  "summary": "Burst Grab (Special A, at 1 Burn stack): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence)",
+   "st": "Burn",
+   "stacks": "0.27"
+  },
+  "savedAt": "2026-11-08T18:20:35.000Z",
+  "summary": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence): 0.27 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence)",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T18:20:40.000Z",
+  "summary": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence): 0.25 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:20:45.000Z",
+  "summary": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Explosion (Special B, press)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T18:21:00.000Z",
+  "summary": "Explosion (Special B, press): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Explosion (Special B, charge)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.12"
+  },
+  "savedAt": "2026-11-08T18:21:05.000Z",
+  "summary": "Explosion (Special B, charge): 0.12 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Great Rush (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T18:21:10.000Z",
+  "summary": "Great Rush (whole basic combo): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Circle Cleave (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T18:21:15.000Z",
+  "summary": "Circle Cleave (jump attack): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Circular Slash (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.015"
+  },
+  "savedAt": "2026-11-08T18:21:20.000Z",
+  "summary": "Circular Slash (dash attack): 0.015 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, press)",
+   "st": "Burn",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T18:21:25.000Z",
+  "summary": "Flame Wave (Royal Flame, press): 0.33 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, press)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T18:21:30.000Z",
+  "summary": "Flame Wave (Royal Flame, press): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250017000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, press)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:21:35.000Z",
+  "summary": "Flame Wave (Royal Flame, press): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250018000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, charge, close or long range)",
+   "st": "Burn",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T18:21:40.000Z",
+  "summary": "Flame Wave (Royal Flame, charge, close or long range): 0.25 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250019000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, charge, close or long range)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T18:21:45.000Z",
+  "summary": "Flame Wave (Royal Flame, charge, close or long range): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250020000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, charge, close or long range)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T18:22:00.000Z",
+  "summary": "Flame Wave (Royal Flame, charge, close or long range): 0.08 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250021000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Great Rush (Royal Flame, whole basic combo)",
+   "st": "Burn",
+   "stacks": "0.09"
+  },
+  "savedAt": "2026-11-08T18:22:05.000Z",
+  "summary": "Great Rush (Royal Flame, whole basic combo): 0.09 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250022000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Great Rush (Royal Flame, whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T18:22:10.000Z",
+  "summary": "Great Rush (Royal Flame, whole basic combo): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250023000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Circle Cleave (Royal Flame, jump attack)",
+   "st": "Burn",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:22:15.000Z",
+  "summary": "Circle Cleave (Royal Flame, jump attack): 0.1 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250024000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Circle Cleave (Royal Flame, jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T18:22:20.000Z",
+  "summary": "Circle Cleave (Royal Flame, jump attack): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250025000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Circular Slash (Royal Flame, dash attack)",
+   "st": "Burn",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T18:22:25.000Z",
+  "summary": "Circular Slash (Royal Flame, dash attack): 0.05 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250026000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Circular Slash (Royal Flame, dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T18:22:30.000Z",
+  "summary": "Circular Slash (Royal Flame, dash attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250027000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 30 s going all out (Castella: 18 s).",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T18:19:00.000Z",
+  "summary": "Kalsion breaks the Training Ogre's whole Super Armor gauge in about 30 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Fox Parade (Skill)",
+   "st": "Burn",
+   "stacks": "0.23"
+  },
+  "savedAt": "2026-11-08T18:32:00.000Z",
+  "summary": "Fox Parade (Skill): 0.23 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Fox Parade (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:32:10.000Z",
+  "summary": "Fox Parade (Skill): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Fox Chase (Ultimate)",
+   "st": "Burn",
+   "stacks": "0.23"
+  },
+  "savedAt": "2026-11-08T18:32:20.000Z",
+  "summary": "Fox Chase (Ultimate): 0.23 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Fox Chase (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.125"
+  },
+  "savedAt": "2026-11-08T18:32:30.000Z",
+  "summary": "Fox Chase (Ultimate): 0.125 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Fox Grab (Special A)",
+   "st": "Burn",
+   "stacks": "0.3"
+  },
+  "savedAt": "2026-11-08T18:32:40.000Z",
+  "summary": "Fox Grab (Special A): 0.3 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Fox Grab (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T18:32:50.000Z",
+  "summary": "Fox Grab (Special A): 0.15 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Finale (Special B)",
+   "st": "Burn",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T18:33:00.000Z",
+  "summary": "Finale (Special B): 0.25 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Finale (Special B)",
+   "st": "Stun",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T18:33:10.000Z",
+  "summary": "Finale (Special B): 0.2 Stun per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Uncertain: timed at the end of break recovery, may have hit before Super Armor was back.",
+   "presses": "1",
+   "skill": "Finale (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T18:33:20.000Z",
+  "summary": "Finale (Special B): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Burn per sequence: 0.25 ÷ number of sequences needed, rounded down to 2 decimals. Real value about 0.0156 (0.015625).",
+   "presses": "1",
+   "skill": "Firefox (whole basic combo)",
+   "st": "Burn",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T18:33:30.000Z",
+  "summary": "Firefox (whole basic combo): 0.01 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Firefox (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T18:33:40.000Z",
+  "summary": "Firefox (whole basic combo): 0.01 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Burn per sequence: 0.25 ÷ number of sequences needed, rounded down to 2 decimals.",
+   "presses": "1",
+   "skill": "Pyro-Fang (jump attack)",
+   "st": "Burn",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T18:33:50.000Z",
+  "summary": "Pyro-Fang (jump attack): 0.03 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Pyro-Fang (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T18:34:00.000Z",
+  "summary": "Pyro-Fang (jump attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Burn per sequence: 0.25 ÷ number of sequences needed, rounded down to 2 decimals.",
+   "presses": "1",
+   "skill": "Twin Tails (dash attack)",
+   "st": "Burn",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T18:34:10.000Z",
+  "summary": "Twin Tails (dash attack): 0.08 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Twin Tails (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T18:34:20.000Z",
+  "summary": "Twin Tails (dash attack): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 25 s going all out.",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T18:35:00.000Z",
+  "summary": "Kalien breaks the Training Ogre's whole Super Armor gauge in about 25 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ }
+}

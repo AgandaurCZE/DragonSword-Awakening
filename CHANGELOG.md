@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Test 01 cleared for David's Lv.70 redo; Charlotte recorded (Claude)
+- Test Kit storage: the 201 older Test 01 entries removed at David's request (he is redoing every hero); all 254 entries as they were are kept in `docs/testkit/test01-apply-backup-2026-11-08.json`. Kept: today's Castella gauge, Kalsion and Kalien. Added 15 Charlotte entries: Poison Dagger 0.50 Poison, Shadow Grab 10% gauge as her best, whole gauge in about 40–41 s.
 ## 8 Nov 2026 — Kalien's status application and Super Armor gauge (Claude)
 - Test 01: 16 Kalien entries on the Training Ogre at Lv.70 (David). Big skills 0.23–0.30 Burn and 10–15% gauge; Finale adds 0.20 Stun; small attacks 1–3% gauge. Whole gauge in about 25 s going all out.
 ## 8 Nov 2026 — Kalsion's status application and Super Armor gauge (Claude)
