@@ -24831,7 +24831,7 @@
      "gold": 32000,
      "examples": {
       "Reina": "15 Low-Grade Monster Claw, 10 Intermediate Monster Claw, 15 Primordial Seed, 5 Insignia of the Orbis Kingdom",
-      "Kalien": "15 Low-Grade Monster Claw, 10 Intermediate Monster Claw, 15 Primordial Seed, 1 Insignia of the Red Fox Mercenaries"
+      "Kalien": "15 Low-Grade Monster Claw, 10 Intermediate Monster Claw, 15 Primordial Seed, 5 Insignia of the Red Fox Mercenaries"
      }
     },
     "60": {
@@ -24840,6 +24840,64 @@
       "Johnny": "15 Intermediate Monster Claw, 20 Leaf of Vigor, 10 Insignia of the Johnny Mercenaries",
       "Kalsion": "15 Intermediate Monster Claw, 20 Primordial Seed, 10 Insignia of the Orbis Kingdom"
      }
+    }
+   },
+   "heroTable": {
+    "note": "Same amounts for every hero (David, 8 Nov 2026). The monster material and second material depend on the hero (heroPattern); Insignia follows the faction.",
+    "20": {
+     "monster": [
+      [
+       "Lowest-Grade",
+       5
+      ]
+     ]
+    },
+    "30": {
+     "monster": [
+      [
+       "Lowest-Grade",
+       10
+      ],
+      [
+       "Low-Grade",
+       5
+      ]
+     ],
+     "second": 5
+    },
+    "40": {
+     "monster": [
+      [
+       "Low-Grade",
+       10
+      ]
+     ],
+     "second": 10,
+     "insignia": 3
+    },
+    "50": {
+     "monster": [
+      [
+       "Low-Grade",
+       15
+      ],
+      [
+       "Intermediate",
+       10
+      ]
+     ],
+     "second": 15,
+     "insignia": 5
+    },
+    "60": {
+     "monster": [
+      [
+       "Intermediate",
+       15
+      ]
+     ],
+     "second": 20,
+     "insignia": 10
     }
    },
    "karma": {
@@ -24920,6 +24978,13 @@
      "Monster Carapace": [
       "Alex"
      ]
+    },
+    "insignia": {
+     "Johnny Mercenaries": "Insignia of the Johnny Mercenaries",
+     "Red Fox Mercenaries": "Insignia of the Red Fox Mercenaries",
+     "Organa Order": "Insignia of the Organa Order",
+     "Orbis Kingdom": "Insignia of the Orbis Kingdom",
+     "Lentus Rebellion": "Insignia of the Lentus Rebellion Army"
     }
    }
   },
@@ -25065,7 +25130,19 @@
    "itemsHint": "Untick anything you don't have or want to save. The game only uses what you own, so this changes the Gold.",
    "noItems": "Tick at least one item.",
    "btNote": "Breakthrough Gold is the same for everyone. Materials depend on the hero or Karma; this is one recorded example.",
-   "note": "Each section between level caps is worked out separately. It doesn't check how many items you own."
+   "note": "Each section between level caps is worked out separately. It doesn't check how many items you own.",
+   "heroPick": "Hero",
+   "heroPickHint": "Pick an archetype, then a hero, to see their breakthrough materials and how many dungeon runs they take.",
+   "heroNone": "Pick a hero above to see their breakthrough materials.",
+   "matsTitle": "Breakthrough materials",
+   "insigniaSource": "Exchange only",
+   "farmExp": {
+    "dungeon": "Residual Worm Cleanup Zone",
+    "difficulty": 2,
+    "reward": "tomeOfHeroes",
+    "item": "Tome of Heroes"
+   },
+   "farmNote": "Runs are rounded up. EXP runs count only the Tomes of Heroes from Residual Worm Cleanup Zone on Very Hard; Gold isn't counted."
   }
  },
  "SKILL_BUFF_LEVELS": {

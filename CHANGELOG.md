@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Levelling calculator: hero picker, materials and dungeon runs (preview, Claude)
+- Pick an archetype icon, then a hero portrait (both with hover names), to see that hero's breakthrough materials for the level range and how many runs of each Normal Dungeon difficulty they take. EXP shows runs of Residual Worm Cleanup Zone on Very Hard (45 Tomes of Heroes each); Insignia are shown as Exchange only; Gold isn't counted. New `breakthroughs.heroTable` and `heroPattern.insignia`. Kalien's Lv.50 example corrected to 5 Insignia (David).
 ## 8 Nov 2026 — Dana's breakthrough materials; all 20 recorded (Claude)
 - `LEVEL_COSTS.breakthroughs.heroPattern`: Dana uses Monster Hide + Drop of Purity. All 20 heroes recorded; first material has no rule.
 ## 8 Nov 2026 — Breakthrough materials for Alex, Theresia, Tarte, Sion, Astria (Claude)
