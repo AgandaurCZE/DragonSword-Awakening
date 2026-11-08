@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Othello's status application and Super Armor gauge (Claude)
+- Test 01: 20 Othello entries at Lv.70 (David). Frozen Stinger 0.20 Frost; Ice Crown 0.15 Knockdown and Frost rising from 0.05 to 0.20 over the Ice Prison (about 20 s); Ice Grab 0.20 Frost at 1 stack, 0.25 Knockdown at 2; Frozen Burst per source. Gauge 1–10% per skill, yet the whole gauge goes in about 20 s. With his Ice Prison, Dana fits at most 4 Ice Block Chako Knuckles.
 ## 8 Nov 2026 — Dana's status application and Super Armor gauge (Claude)
 - Test 01: 17 Dana entries at Lv.70 (David). Chako Knuckle 0.25 Frost and 22% gauge at 1 stack, 35% as the single blow (2 stacks, Knockdown or Ice Block); Chako Spin 0.15 Frost, 17.5%; Summon Chako 0.15 Frost, 0.10 Knockdown, 12%. Whole gauge in about 23 s alone, about 7 s in the freeze team.
 ## 8 Nov 2026 — Astria's status application and Super Armor gauge (Claude)
