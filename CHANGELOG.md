@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Tarte's status application and Super Armor gauge; Theresia retest noted (Claude)
+- Test 01: 20 Tarte entries at Lv.70 (David). Lightning Shock press 0.25 Shock (0.60 with all 26 Bolt Bubble orbs), charge 0.33 (about 0.50 with 8 basic orbs, 0.90 with 26 Ultimate orbs); Thunderbolt 0.15 Shock and 0.25 Stun; gauge at most 7.5%. Only 50% of the gauge after about 67 s. Theresia: basic in Heretic Judgment mode 4% gauge (same as outside); dash rotation 35 s; retest after her mastery is unlocked added to David's to-do page, whose Test 01 item now lists the heroes still to redo.
 ## 8 Nov 2026 — Theresia's status application and Super Armor gauge (Claude)
 - Test 01: 19 Theresia entries at Lv.70 (David), normal and Heretic Judgment mode. Consecration 0.15 Bleed and 4% gauge plus the 10 s blood aura (0.12 Bleed, 2%); Celestial Verdict 0.20 Stun and 10% gauge, 0.25 and 15% in the mode; Holy Rise 0.20 Airborne. Whole gauge in about 27 s.
 ## 8 Nov 2026 — Ryza's status application and Super Armor gauge (Claude)
