@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Cerese's status application and Super Armor gauge (Claude)
+- Test 01: 16 Cerese entries at Lv.70 (David). Ice Storm (full 5 s tornado) 0.25 Frost, 0.20 Airborne, 15% gauge; Frozen Needles 0.25 Frost; the rest under 5%. Whole gauge in about 40 s. Othello's 20 s break explained (short cooldowns, quick dash attack, Ice Grab mount in about 10 s).
 ## 8 Nov 2026 — Othello's status application and Super Armor gauge (Claude)
 - Test 01: 20 Othello entries at Lv.70 (David). Frozen Stinger 0.20 Frost; Ice Crown 0.15 Knockdown and Frost rising from 0.05 to 0.20 over the Ice Prison (about 20 s); Ice Grab 0.20 Frost at 1 stack, 0.25 Knockdown at 2; Frozen Burst per source. Gauge 1–10% per skill, yet the whole gauge goes in about 20 s. With his Ice Prison, Dana fits at most 4 Ice Block Chako Knuckles.
 ## 8 Nov 2026 — Dana's status application and Super Armor gauge (Claude)
