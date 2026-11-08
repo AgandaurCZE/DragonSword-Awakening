@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Roxy's status application and Super Armor gauge (Claude)
+- Test 01: 19 Roxy entries at Lv.70 (David). Bleed 0.06–0.33 per skill, Crimson Spiral 0.20 Stun, Bleeding Grab at 2 stacks 0.25 Knockdown and 10% gauge; the rest 1–7.5%. Whole gauge in about 50 s. Eileen's Rolling Upper confirmed: launches enemies without the Airborne status.
 ## 8 Nov 2026 — Eileen's status application and Super Armor gauge (Claude)
 - Test 01: 9 Eileen entries at Lv.70 (David). Barraging Spear 0.25 Airborne; Vanguard Banner 15% gauge (spread over time), the rest 0.5–4%. Whole gauge in about 61 s.
 ## 8 Nov 2026 — Reina's status application and Super Armor gauge (Claude)
