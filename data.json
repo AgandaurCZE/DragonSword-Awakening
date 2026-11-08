@@ -24986,6 +24986,20 @@
      "Orbis Kingdom": "Insignia of the Orbis Kingdom",
      "Lentus Rebellion": "Insignia of the Lentus Rebellion Army"
     }
+   },
+   "karmaPattern": {
+    "note": "David, 8 Nov 2026: every Karma is orange since the Buy-to-Play change, and signature Karmas use the same materials and amounts. Materials depend only on the archetype: its crystal and its own trait stones.",
+    "crystal": {
+     "Venom": "Crystal of Oblivion",
+     "Gale": "Crystal of Reverie",
+     "Amplitude": "Crystal of Oblivion",
+     "Blazeflame": "Crystal of Recollection",
+     "Frostbite": "Crystal of Remembrance",
+     "Bloodburst": "Crystal of Reverie",
+     "Crushing": "Crystal of Recollection",
+     "Thunderbolt": "Crystal of Remembrance",
+     "Breaker": "Crystal of Remembrance"
+    }
    }
   },
   "unknown": [
