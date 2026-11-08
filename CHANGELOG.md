@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Johnny's status application and Super Armor gauge (Claude)
+- Test 01: 17 Johnny entries at Lv.70 (David). Poison 0.12–0.25 and Airborne 0.20–0.25 on four skills; Poison Grab 10% gauge at 1 or 2 stacks, the rest 1.5–6%. Whole gauge in about 39 s.
 ## 8 Nov 2026 — Roxy's status application and Super Armor gauge (Claude)
 - Test 01: 19 Roxy entries at Lv.70 (David). Bleed 0.06–0.33 per skill, Crimson Spiral 0.20 Stun, Bleeding Grab at 2 stacks 0.25 Knockdown and 10% gauge; the rest 1–7.5%. Whole gauge in about 50 s. Eileen's Rolling Upper confirmed: launches enemies without the Airborne status.
 ## 8 Nov 2026 — Eileen's status application and Super Armor gauge (Claude)
