@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Castella's Super Armor gauge damage (Claude)
+- Test 01: 9 Castella entries on the Training Ogre, measured with David's % overlay on the boss bar (Skill ~23%, Ultimate ~15%, whole gauge in 18 s). `DAMAGE_TESTS.findings`: application and gauge damage don't depend on hero or skill level.
 ## 8 Nov 2026 — Test 01 entries for the five newest heroes (Claude)
 - Test Kit storage: 33 status-application entries for Theresia, Tarte, Dana, Alex and Astria, taken from David's training-ground reports during the rating debates (Lv.1 heroes, marked 'From chat with Claude, estimate'). Test 01's note corrected: Reina, Aria, Roxy, Johnny, Lute and Sion already had boss entries.
 ## 8 Nov 2026 — Six more Lv.70 heroes measured (Claude)
