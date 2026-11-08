@@ -1,3 +1,5 @@
+## 8 Nov 2026 — Kalien's status application and Super Armor gauge (Claude)
+- Test 01: 16 Kalien entries on the Training Ogre at Lv.70 (David). Big skills 0.23–0.30 Burn and 10–15% gauge; Finale adds 0.20 Stun; small attacks 1–3% gauge. Whole gauge in about 25 s going all out.
 ## 8 Nov 2026 — Kalsion's status application and Super Armor gauge (Claude)
 - Test 01: 27 Kalsion entries on the Training Ogre at Lv.70 (David, % overlay for the gauge): every skill with and without Royal Flame. Best gauge damage: Explosion charge and Flame Wave long-range charge, 12% each. Royal Flame Flame Wave press: 0.33 Burn, 0.20 Airborne, 10% gauge. Whole gauge in about 30 s going all out (Castella 18 s).
 ## 8 Nov 2026 — Castella's Super Armor gauge damage (Claude)
