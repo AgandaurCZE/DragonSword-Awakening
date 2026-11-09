@@ -39,12 +39,13 @@ Back to the library: [docs/README.md](../README.md). Evidence for each rule: `DA
 
 ### 2.1 Hero base stats (`HERO_STAT_MODEL`, `HERO_BASE_STATS`)
 - Every hero follows one level curve: **stat(L) = a + b × (e^(r(L−1)) − 1)** per stat (Attack, Defense, Max HP), plus their breakthrough bonuses.
-- Breakthrough bonuses come in three profiles; nothing visible decides which a hero gets:
-  - **A:** Lv.70 base 1143 / 335 / 7157 (Charlotte, Roxy, Sion).
-  - **B:** 1100 / 350 / 7388 (Johnny, Reina, Ryza, Theresia, Castella; Kalsion 1099 Attack, unexplained).
-  - **C:** 1186 / 320 / 6927 (Kalien, Tarte).
+- Breakthrough bonuses come in **four profiles**, all 20 heroes measured at Lv.70 (9 Nov, Test Kit test 08; Attack / Defense / Max HP without titles):
+  - **B (melee):** 1100 / 350 / 7388: Johnny, Lute, Castella, Theresia, Kalsion, Reina, Eileen, Othello, Ryza. Every B hero's basic attack is a melee weapon swing.
+  - **C (ranged):** 1186 / 319 / 6927: Aria, Dana, Kalien, Tarte, Cerese, Astria. Every C hero's basic attack is a projectile.
+  - **A:** 1143 / 335 / 7157: Charlotte, Roxy, Sion, Ornette. **Exactly halfway between B and C** (to rounding).
+  - **D (Defender):** 1014 / 379 / 7850: Alex only, the game's only Tank. **B minus the C−B step.**
+  - So the profiles lie on **one axis** from defence to offence: D = −1, B = 0, A = ½, C = +1 step, where one step is +86 Attack, −31 Defense, −461 Max HP. Melee and ranged fit B and C; why Charlotte, Roxy, Sion and Ornette sit halfway is open (their basic attacks are 2 melee, 2 ranged). Not decided by monster material, second material, archetype, faction, game role or how the hero is obtained (checked 9 Nov).
 - Base Crit Rate 5%, Crit Damage 50%. Every status resistance is 50 with no gear.
-- Nine heroes are still estimates (`estimated: true`): measure them **before awakenings** ([STATUS.md](STATUS.md)).
 
 ### 2.2 Titles (`TITLES`)
 - Titles give passives to every hero, slotted or not. David's current set: Attack +145, Max HP +1,575 flat; Defense +30 flat then Defense Up +5.3%.
@@ -122,8 +123,16 @@ Terms:
 - Spare substats go to Defense Ignore, then the hero's own status AAP.
 - The Python script and the JS port must stay identical (AGENTS.md rule 4).
 
+### 4.1 Endgame gear analysis, 9 Nov (`tools/endgame_gear.py`)
+Full hit formula (3.1) against Defense **1825** (Lv.50 Trait Dungeon boss, the highest recorded), with all 109 titles (Attack +235, Attack Power Up +11.6%, Crit Rate +27%, Crit Damage +32.3%, Armor Penetration +85, Defense Ignore +2.7%), signature Karma A6, all awakenings, Orange +15. Target carries the hero's own status and one physical status; every set effect counted as active. Checked on Johnny, Ryza, Kalsion, Dana, Theresia.
+- **Main stats:** Attack Power Up stays best on almost every slot; at most one Crit main. The optimum lands around **52–74% Crit Rate and 82–120% Crit Damage**, not higher.
+- **Forcing 80% Crit Rate / 150% Crit Damage** (Crit Rate and Crit Damage on every piece, plus Crit mains): **−3.6%** with status Additional Attack Power substats allowed, **−8.3%** without (Johnny).
+- **Substats:** at high Defense, **Defense Ignore is the first substat on every piece**, and when the statuses are on the target, own-status and physical-status Additional Attack Power beat Attack Power Up substats. The stored builds (`HERO_BUILDS`, scored by Attack × crit only) come out 8.5–9.3% below the best build with the same sets.
+- **3-piece sets** (best 2-piece added; all five heroes agree within 1.5%): **Earthshatterer best**; Blazing Flames −6 to −8%, Ruinsbreaker −8 to −9%, Thunderrush −8 to −9%, Venomfog Shade −8 to −9%, Froststorm and Azure Gale −12 to −13%, Holy Arbiter and Bloodstained Chaser −12 to −14%, The Infiltrator −14 to −17%, Battle Will −19 to −22%. The 2-piece: any status set whose status is on the target (+15% Additional Damage), in practice the hero's own.
+- **Caveat:** Earthshatterer's +20% Defense Ignore lasts 10 s after a Signal skill. It's worth +17 to +19% damage while active, so it stays ahead of Blazing Flames only above about **52–57% uptime**. All 3-piece triggers were counted as always on.
+
 ## 5. Known unknowns
 - Levels 71–74 enemy Defense; what happens when Armor Penetration exceeds the remaining Defense; Crit above 100%.
 - Hunt boss weaknesses and immunities (Test 07); Crushing tower bonus; Bleed and Shock tower DoT bonus (assumed like Poison and Burn).
-- Why heroes get breakthrough profile A, B or C; Kalsion's −1 Attack.
+- Why Charlotte, Roxy, Sion and Ornette get the halfway profile A (B = melee, C = ranged, D = Defender are explained). Kalsion's old −1 Attack is gone: his 9 Nov panel gives 1100.
 - Whether skill-damage adjustments hold at other skill levels.

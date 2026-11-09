@@ -1,17 +1,18 @@
-# Status: where things stand (9 Nov 2026)
+# Status: where things stand (9 Nov 2026, evening)
 
 Back to the library: [docs/README.md](../README.md). Update this file during and at the end of every session; it's the first thing the next chat reads after [WORKING_WITH_DAVID.md](WORKING_WITH_DAVID.md). Finished items move to [DONE.md](DONE.md). Site tasks are in [SITE.md](SITE.md).
 
 ## What David is doing in the game
-- **11 heroes are Lv.70:** Charlotte, Roxy, Sion, Johnny, Reina, Kalsion, Ryza, Theresia, Castella, Kalien, Tarte (all measured in `HERO_BASE_STATS`).
-- **9 are not Lv.70 yet:** Aria, Ornette, Lute, Eileen, Cerese, Othello, Dana, Alex, Astria. David is levelling them now (9 Nov). An earlier chat wrongly wrote that all 20 were Lv.70; corrected 9 Nov.
+- **All 20 heroes are Lv.70** (9 Nov evening). All 20 measured with Test Kit test 08; the 9 new ones aren't in `data.json` yet (waiting on David's answer, below).
 - No awakenings and no masteries taken on any hero yet. They **can't be undone**.
 
-## Current task
-Levelling the 9 heroes above to 70. Claude waits for their Lv.70 stats (test 08).
+## Current task (Claude, 9 Nov evening)
+- Done: breakthrough profiles explained (GAME_MATH 2.1: one axis, B melee, C ranged, A halfway, D Alex); skill buffs checked; 19 new gear rows checked (all match); endgame gear and set analysis (GAME_MATH 4.1).
+- **Waiting on David:** (1) may the 9 measured base stats and profile D go into `data.json` now (hero pages are public and show base stats)? (2) Astria's Siege Assault Attack Power values Lv.1–10; (3) should the optimiser and the public builds move to the full model (Defense Ignore and status AAP substats), now or at launch; (4) how much of a fight a Signal skill's 10 s window covers (Earthshatterer uptime).
+- Next for David: team tests or Signature Karma test 09 (Claude recommends test 09 first: it's one of the two before-awakening tasks).
 
 ## Must be done BEFORE any awakening or mastery
-1. **Lv.70 base stats (Test Kit test 08)** for the 9 heroes above, once each reaches 70. For each: no gear, no Karma, panel Attack, Defense and Max HP. Subtract titles (Attack +145, Max HP +1,575, Defense +30 then Defense Up +5.3%) and save in `HERO_BASE_STATS` with `estimated: false` and the matching profile (A, B or C, [GAME_MATH.md](GAME_MATH.md) 2.1). Then run `tools/hero_stats.py` (inspect first, then `--write`).
+1. ~~Lv.70 base stats (test 08)~~ done 9 Nov for all 20 (Test Kit). Still to do: copy the 9 new ones into `HERO_BASE_STATS` (`estimated: false`, profiles from GAME_MATH 2.1) once David agrees, then run `tools/hero_stats.py`.
 2. **Signature Karma tests (Test Kit test 09):** the same hero with the signature Karma (all are Lv.1), then with any Lv.1 normal Karma of the same archetype. On a boss: Ryza, Theresia, Charlotte. Groups as well: Kalsion, Dana, Cerese, Ornette. The 9 Nov runs compared signature vs **no** Karma, so they include the Karma's stats and don't replace this test.
 3. Optional: Theresia, Roxy and Kalien with **no** signatures, the one missing run to isolate Theresia's signature.
 

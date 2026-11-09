@@ -1,3 +1,10 @@
+## 9 Nov 2026 (evening) — Lv.70 profiles explained, gear rows checked, endgame gear analysis (Claude)
+- **Test 08, all 20 heroes at Lv.70** (Test Kit, David): the 11 already measured match their records (Sion's entry reads 1142 Attack, 1 below his stored 1143; rounding). The 9 new heroes: B Eileen, Lute, Othello; C Aria, Cerese, Astria, Dana; A Ornette; **new profile D: Alex 1014 / 379 / 7850**. Not in `data.json` yet (asked David first, because hero pages show base stats).
+- **Profiles explained** (GAME_MATH 2.1): one defence-to-offence axis; B = all melee basic attacks, C = all ranged, A = exactly halfway, D = one step below B. Monster material, second material, archetype, faction, role and source ruled out.
+- **Skill buffs** (Test 02): every scaling buff on a levellable skill is recorded except Astria's Siege Assault (+40% Attack Power at Lv.10) and two hostility values on Alex (no damage effect). Mastery passives don't level.
+- **Gear rows** (Test 03): 19 new rows (Blue, Purple, Orange) all match the tables within rounding. Values confirmed by the new rows: Legs Attack Power Up (was an estimate), Legs Max HP Up, Helmet and Boots Defense Up, Boots Crit Rate and Crit Damage.
+- **Endgame analysis** (GAME_MATH 4.1, new `tools/endgame_gear.py`): against Defense 1825, Attack Power Up mains are still best; the optimum is about 52–74% Crit Rate and 82–120% Crit Damage; forcing 80/150 costs 3.6–8.3%. Defense Ignore is the top substat, and status AAP substats beat Attack Power Up substats when the statuses are up. Earthshatterer is the best 3-piece for all five heroes tested (next best 6–9% behind) if its 10 s window is up more than about 52–57% of the time.
+- No change to `data.json`, `index.html` or the site.
 ## 9 Nov 2026 — David's answers recorded (Claude)
 - Hero level doesn't change Super Armor gauge damage (Castella Lv.20 vs Lv.70), so all Test 01 break times stand (TESTING, GAME_MATH).
 - All team tests wait until every hero is Lv.70 (STATUS).
