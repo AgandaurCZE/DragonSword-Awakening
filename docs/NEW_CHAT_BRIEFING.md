@@ -1,5 +1,7 @@
 # Briefing for a new Claude chat (written by Claude, 4 Nov 2026)
 
+**Superseded in part (9 Nov 2026): start at the library index [docs/README.md](README.md), then [library/WORKING_WITH_DAVID.md](library/WORKING_WITH_DAVID.md) and [library/STATUS.md](library/STATUS.md). This file stays for the project overview, the tools outside the repo and the measured mechanics; its "Open / next steps" section is out of date.**
+
 Paste this whole file into the first message of a new chat. It replaces the memory of the old chat.
 
 ## Who you're working with

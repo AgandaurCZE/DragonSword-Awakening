@@ -1,5 +1,7 @@
 # Changes waiting for launch
 
+Library index: [docs/README.md](README.md). Current state: [library/STATUS.md](library/STATUS.md).
+
 These touch public pages, so they can't go in until David approves the launch. Hero pages and `HEROES` are public.
 
 ## Kalsion

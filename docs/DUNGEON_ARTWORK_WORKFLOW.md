@@ -1,5 +1,7 @@
 # Dungeon artwork workflow and pending fixes
 
+Library index: [docs/README.md](README.md). Current state: [library/STATUS.md](library/STATUS.md).
+
 ## Required workflow
 
 - Generate one Normal-difficulty preview first. Show it once, then present exactly two choices: **Proceed** or **Stop**.

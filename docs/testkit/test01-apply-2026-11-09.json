@@ -1,0 +1,5391 @@
+{
+ "apply-1794240000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 23% of the Super Armor gauge (David's % overlay on the boss bar). Whole gauge in 18 s.",
+   "presses": "1",
+   "skill": "Whirlwind (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.23"
+  },
+  "savedAt": "2026-11-08T17:55:00.000Z",
+  "summary": "Whirlwind (Skill): 0.23 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 15% of the Super Armor gauge.",
+   "presses": "1",
+   "skill": "Howling (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T17:55:05.000Z",
+  "summary": "Howling (Ultimate): 0.15 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240002000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "Only usable once the boss is broken, so its gauge damage can't be measured.",
+   "presses": "1",
+   "skill": "Stun Blow (Special A)",
+   "st": "Stun",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T17:55:10.000Z",
+  "summary": "Stun Blow (Special A): 0.33 Stun per press on Training Ogre (Lv. 90), broken. | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240003000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Upper Blow (Special B)",
+   "st": "Airborne",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T17:55:15.000Z",
+  "summary": "Upper Blow (Special B): 0.33 Airborne per press on Training Ogre (Lv. 90), broken. | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 6% of the Super Armor gauge.",
+   "presses": "1",
+   "skill": "Upper Blow (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T17:55:20.000Z",
+  "summary": "Upper Blow (Special B): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 4.5% of the gauge per full combo.",
+   "presses": "1",
+   "skill": "Wild Blow (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.045"
+  },
+  "savedAt": "2026-11-08T17:55:25.000Z",
+  "summary": "Wild Blow (whole basic combo): 0.045 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 5%.",
+   "presses": "1",
+   "skill": "Wild Crash (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T17:55:30.000Z",
+  "summary": "Wild Crash (jump attack): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 3%.",
+   "presses": "1",
+   "skill": "Shoulder Crusher (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T17:55:35.000Z",
+  "summary": "Shoulder Crusher (dash attack): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794240008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 14%. The dash after the last jump hit leads straight into the basic sequence.",
+   "presses": "1",
+   "skill": "Full combo: basic, jump sequence, dash, back into basic",
+   "st": "Break (Super Armor)",
+   "stacks": "0.14"
+  },
+  "savedAt": "2026-11-08T17:55:40.000Z",
+  "summary": "Full combo: 0.14 Break (Super Armor) per press on Training Ogre (Lv. 90). | Under half a stack per press: a weak source on this enemy.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Weapon Blaze (Skill)",
+   "st": "Burn",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:20:00.000Z",
+  "summary": "Weapon Blaze (Skill): 0.1 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Weapon Blaze (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.02"
+  },
+  "savedAt": "2026-11-08T18:20:05.000Z",
+  "summary": "Weapon Blaze (Skill): 0.02 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Flame Wave (Ultimate, press)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:20:10.000Z",
+  "summary": "Flame Wave (Ultimate, press): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Flame Wave (Ultimate, charge, close range)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T18:20:15.000Z",
+  "summary": "Flame Wave (Ultimate, charge, close range): 0.08 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Flame Wave (Ultimate, charge, long range)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.12"
+  },
+  "savedAt": "2026-11-08T18:20:20.000Z",
+  "summary": "Flame Wave (Ultimate, charge, long range): 0.12 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Burst Grab (Special A, at 1 Burn stack)",
+   "st": "Burn",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T18:20:25.000Z",
+  "summary": "Burst Grab (Special A, at 1 Burn stack): 0.15 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Burst Grab (Special A, at 1 Burn stack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T18:20:30.000Z",
+  "summary": "Burst Grab (Special A, at 1 Burn stack): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence)",
+   "st": "Burn",
+   "stacks": "0.27"
+  },
+  "savedAt": "2026-11-08T18:20:35.000Z",
+  "summary": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence): 0.27 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence)",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T18:20:40.000Z",
+  "summary": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence): 0.25 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:20:45.000Z",
+  "summary": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Explosion (Special B, press)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T18:21:00.000Z",
+  "summary": "Explosion (Special B, press): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Explosion (Special B, charge)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.12"
+  },
+  "savedAt": "2026-11-08T18:21:05.000Z",
+  "summary": "Explosion (Special B, charge): 0.12 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Great Rush (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T18:21:10.000Z",
+  "summary": "Great Rush (whole basic combo): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Circle Cleave (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T18:21:15.000Z",
+  "summary": "Circle Cleave (jump attack): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Circular Slash (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.015"
+  },
+  "savedAt": "2026-11-08T18:21:20.000Z",
+  "summary": "Circular Slash (dash attack): 0.015 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, press)",
+   "st": "Burn",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T18:21:25.000Z",
+  "summary": "Flame Wave (Royal Flame, press): 0.33 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, press)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T18:21:30.000Z",
+  "summary": "Flame Wave (Royal Flame, press): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250017000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, press)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:21:35.000Z",
+  "summary": "Flame Wave (Royal Flame, press): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250018000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, charge, close or long range)",
+   "st": "Burn",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T18:21:40.000Z",
+  "summary": "Flame Wave (Royal Flame, charge, close or long range): 0.25 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250019000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, charge, close or long range)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T18:21:45.000Z",
+  "summary": "Flame Wave (Royal Flame, charge, close or long range): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250020000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, charge, close or long range)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T18:22:00.000Z",
+  "summary": "Flame Wave (Royal Flame, charge, close or long range): 0.08 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250021000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Great Rush (Royal Flame, whole basic combo)",
+   "st": "Burn",
+   "stacks": "0.09"
+  },
+  "savedAt": "2026-11-08T18:22:05.000Z",
+  "summary": "Great Rush (Royal Flame, whole basic combo): 0.09 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250022000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Great Rush (Royal Flame, whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T18:22:10.000Z",
+  "summary": "Great Rush (Royal Flame, whole basic combo): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250023000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Circle Cleave (Royal Flame, jump attack)",
+   "st": "Burn",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:22:15.000Z",
+  "summary": "Circle Cleave (Royal Flame, jump attack): 0.1 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250024000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Circle Cleave (Royal Flame, jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T18:22:20.000Z",
+  "summary": "Circle Cleave (Royal Flame, jump attack): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250025000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Circular Slash (Royal Flame, dash attack)",
+   "st": "Burn",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T18:22:25.000Z",
+  "summary": "Circular Slash (Royal Flame, dash attack): 0.05 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250026000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Circular Slash (Royal Flame, dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T18:22:30.000Z",
+  "summary": "Circular Slash (Royal Flame, dash attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794250027000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 30 s going all out (Castella: 18 s).",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T18:19:00.000Z",
+  "summary": "Kalsion breaks the Training Ogre's whole Super Armor gauge in about 30 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Fox Parade (Skill)",
+   "st": "Burn",
+   "stacks": "0.23"
+  },
+  "savedAt": "2026-11-08T18:32:00.000Z",
+  "summary": "Fox Parade (Skill): 0.23 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Fox Parade (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:32:10.000Z",
+  "summary": "Fox Parade (Skill): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Fox Chase (Ultimate)",
+   "st": "Burn",
+   "stacks": "0.23"
+  },
+  "savedAt": "2026-11-08T18:32:20.000Z",
+  "summary": "Fox Chase (Ultimate): 0.23 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Fox Chase (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.125"
+  },
+  "savedAt": "2026-11-08T18:32:30.000Z",
+  "summary": "Fox Chase (Ultimate): 0.125 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Fox Grab (Special A)",
+   "st": "Burn",
+   "stacks": "0.3"
+  },
+  "savedAt": "2026-11-08T18:32:40.000Z",
+  "summary": "Fox Grab (Special A): 0.3 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Fox Grab (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T18:32:50.000Z",
+  "summary": "Fox Grab (Special A): 0.15 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Finale (Special B)",
+   "st": "Burn",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T18:33:00.000Z",
+  "summary": "Finale (Special B): 0.25 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Finale (Special B)",
+   "st": "Stun",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T18:33:10.000Z",
+  "summary": "Finale (Special B): 0.2 Stun per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Uncertain: timed at the end of break recovery, may have hit before Super Armor was back.",
+   "presses": "1",
+   "skill": "Finale (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T18:33:20.000Z",
+  "summary": "Finale (Special B): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Burn per sequence: 0.25 ÷ number of sequences needed, rounded down to 2 decimals. Real value about 0.0156 (0.015625).",
+   "presses": "1",
+   "skill": "Firefox (whole basic combo)",
+   "st": "Burn",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T18:33:30.000Z",
+  "summary": "Firefox (whole basic combo): 0.01 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Firefox (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T18:33:40.000Z",
+  "summary": "Firefox (whole basic combo): 0.01 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Burn per sequence: 0.25 ÷ number of sequences needed, rounded down to 2 decimals.",
+   "presses": "1",
+   "skill": "Pyro-Fang (jump attack)",
+   "st": "Burn",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T18:33:50.000Z",
+  "summary": "Pyro-Fang (jump attack): 0.03 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Pyro-Fang (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T18:34:00.000Z",
+  "summary": "Pyro-Fang (jump attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Burn per sequence: 0.25 ÷ number of sequences needed, rounded down to 2 decimals.",
+   "presses": "1",
+   "skill": "Twin Tails (dash attack)",
+   "st": "Burn",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T18:34:10.000Z",
+  "summary": "Twin Tails (dash attack): 0.08 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Twin Tails (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T18:34:20.000Z",
+  "summary": "Twin Tails (dash attack): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794260015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 25 s going all out.",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T18:35:00.000Z",
+  "summary": "Kalien breaks the Training Ogre's whole Super Armor gauge in about 25 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Invisible (Skill, clone explosion)",
+   "st": "Poison",
+   "stacks": "0.24"
+  },
+  "savedAt": "2026-11-08T18:42:00.000Z",
+  "summary": "Invisible (Skill, clone explosion): 0.24 Poison per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Invisible (Skill, clone explosion)",
+   "st": "Airborne",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:42:10.000Z",
+  "summary": "Invisible (Skill, clone explosion): 0.1 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Invisible (Skill, clone explosion)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.055"
+  },
+  "savedAt": "2026-11-08T18:42:20.000Z",
+  "summary": "Invisible (Skill, clone explosion): 0.055 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Poison Dagger (Ultimate)",
+   "st": "Poison",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-11-08T18:42:30.000Z",
+  "summary": "Poison Dagger (Ultimate): 0.5 Poison per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Poison Dagger (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T18:42:40.000Z",
+  "summary": "Poison Dagger (Ultimate): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Illusion Kick (Special A)",
+   "st": "Poison",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T18:42:50.000Z",
+  "summary": "Illusion Kick (Special A): 0.15 Poison per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Illusion Kick (Special A)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T18:43:00.000Z",
+  "summary": "Illusion Kick (Special A): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Illusion Kick (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T18:43:10.000Z",
+  "summary": "Illusion Kick (Special A): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Shadow Grab (Special B)",
+   "st": "Knockdown",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T18:43:20.000Z",
+  "summary": "Shadow Grab (Special B): 0.25 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Shadow Grab (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T18:43:30.000Z",
+  "summary": "Shadow Grab (Special B): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Shadow Dance (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T18:43:40.000Z",
+  "summary": "Shadow Dance (whole basic combo): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Shadow Leaf (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.02"
+  },
+  "savedAt": "2026-11-08T18:43:50.000Z",
+  "summary": "Shadow Leaf (jump attack): 0.02 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Poison Step (dash attack)",
+   "st": "Poison",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T18:44:00.000Z",
+  "summary": "Poison Step (dash attack): 0.08 Poison per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Poison Step (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T18:44:10.000Z",
+  "summary": "Poison Step (dash attack): 0.01 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794270014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 40–41 s going all out.",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T18:44:20.000Z",
+  "summary": "Charlotte breaks the Training Ogre's whole Super Armor gauge in about 40–41 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794280000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Rising Cutter (Skill)",
+   "st": "Airborne",
+   "stacks": "0.24"
+  },
+  "savedAt": "2026-11-08T18:53:00.000Z",
+  "summary": "Rising Cutter (Skill): 0.24 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794280001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Rising Cutter (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.035"
+  },
+  "savedAt": "2026-11-08T18:53:10.000Z",
+  "summary": "Rising Cutter (Skill): 0.035 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794280002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Per charge; 2 charges, so 0.40 if both are used.",
+   "presses": "1",
+   "skill": "Wind Slayer (Ultimate, per charge)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T18:53:20.000Z",
+  "summary": "Wind Slayer (Ultimate, per charge): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794280003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Per charge; 2 charges, so 5% if both are used.",
+   "presses": "1",
+   "skill": "Wind Slayer (Ultimate, per charge)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T18:53:30.000Z",
+  "summary": "Wind Slayer (Ultimate, per charge): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794280004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Tempest (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T18:53:40.000Z",
+  "summary": "Tempest (Special A): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794280005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Wind Grab (Special B)",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T18:53:50.000Z",
+  "summary": "Wind Grab (Special B): 0.25 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794280006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Wind Grab (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.11"
+  },
+  "savedAt": "2026-11-08T18:54:00.000Z",
+  "summary": "Wind Grab (Special B): 0.11 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794280007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Wind Sword (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T18:54:10.000Z",
+  "summary": "Wind Sword (whole basic combo): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794280008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Silphid Spike (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T18:54:20.000Z",
+  "summary": "Silphid Spike (jump attack): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794280009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Winchester (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T18:54:30.000Z",
+  "summary": "Winchester (dash attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794280010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 50 s going all out.",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T18:54:40.000Z",
+  "summary": "Reina breaks the Training Ogre's whole Super Armor gauge in about 50 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794290000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Barraging Spear (Skill)",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T19:00:00.000Z",
+  "summary": "Barraging Spear (Skill): 0.25 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794290001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Barraging Spear (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T19:00:10.000Z",
+  "summary": "Barraging Spear (Skill): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794290002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Brave One (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.005"
+  },
+  "savedAt": "2026-11-08T19:00:20.000Z",
+  "summary": "Brave One (Ultimate): 0.005 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794290003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Rolling Upper (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T19:00:30.000Z",
+  "summary": "Rolling Upper (Special A): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794290004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Spread over some time.",
+   "presses": "1",
+   "skill": "Vanguard Banner (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T19:00:40.000Z",
+  "summary": "Vanguard Banner (Special B): 0.15 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794290005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Grand Spear (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T19:00:50.000Z",
+  "summary": "Grand Spear (whole basic combo): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794290006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Spin Presser (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T19:01:00.000Z",
+  "summary": "Spin Presser (jump attack): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794290007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Spiral Shave (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T19:01:10.000Z",
+  "summary": "Spiral Shave (dash attack): 0.01 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794290008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 61 s going all out. Vanguard Banner does a lot, but spread over some time.",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T19:01:20.000Z",
+  "summary": "Eileen breaks the Training Ogre's whole Super Armor gauge in about 61 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Crimson Spiral (Skill, press)",
+   "st": "Bleed",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T19:12:00.000Z",
+  "summary": "Crimson Spiral (Skill, press): 0.1 Bleed per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Crimson Spiral (Skill, press)",
+   "st": "Stun",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:12:10.000Z",
+  "summary": "Crimson Spiral (Skill, press): 0.2 Stun per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Crimson Spiral (Skill, press)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T19:12:20.000Z",
+  "summary": "Crimson Spiral (Skill, press): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Crimson Spiral (Skill, charge)",
+   "st": "Bleed",
+   "stacks": "0.24"
+  },
+  "savedAt": "2026-11-08T19:12:30.000Z",
+  "summary": "Crimson Spiral (Skill, charge): 0.24 Bleed per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Crimson Spiral (Skill, charge)",
+   "st": "Stun",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:12:40.000Z",
+  "summary": "Crimson Spiral (Skill, charge): 0.2 Stun per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Crimson Spiral (Skill, charge)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.075"
+  },
+  "savedAt": "2026-11-08T19:12:50.000Z",
+  "summary": "Crimson Spiral (Skill, charge): 0.075 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Bloody Shower (Ultimate)",
+   "st": "Bleed",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T19:13:00.000Z",
+  "summary": "Bloody Shower (Ultimate): 0.33 Bleed per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Bloody Shower (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T19:13:10.000Z",
+  "summary": "Bloody Shower (Ultimate): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Kick Storm (Special A)",
+   "st": "Bleed",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T19:13:20.000Z",
+  "summary": "Kick Storm (Special A): 0.15 Bleed per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Kick Storm (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.035"
+  },
+  "savedAt": "2026-11-08T19:13:30.000Z",
+  "summary": "Kick Storm (Special A): 0.035 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Bleeding Grab (Special B, at 1 Bleed stack)",
+   "st": "Bleed",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:13:40.000Z",
+  "summary": "Bleeding Grab (Special B, at 1 Bleed stack): 0.2 Bleed per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Bleeding Grab (Special B, at 1 Bleed stack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T19:13:50.000Z",
+  "summary": "Bleeding Grab (Special B, at 1 Bleed stack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Bleeding Grab (Special B, at 2 Bleed stacks)",
+   "st": "Knockdown",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T19:14:00.000Z",
+  "summary": "Bleeding Grab (Special B, at 2 Bleed stacks): 0.25 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Bleeding Grab (Special B, at 2 Bleed stacks)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T19:14:10.000Z",
+  "summary": "Bleeding Grab (Special B, at 2 Bleed stacks): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Bow Shot (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.015"
+  },
+  "savedAt": "2026-11-08T19:14:20.000Z",
+  "summary": "Bow Shot (whole basic combo): 0.015 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Double Shot (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T19:14:30.000Z",
+  "summary": "Double Shot (jump attack): 0.01 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Sliding Shot (dash attack)",
+   "st": "Bleed",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T19:14:40.000Z",
+  "summary": "Sliding Shot (dash attack): 0.06 Bleed per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300017000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Sliding Shot (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.015"
+  },
+  "savedAt": "2026-11-08T19:14:50.000Z",
+  "summary": "Sliding Shot (dash attack): 0.015 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794300018000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 50 s going all out.",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T19:15:00.000Z",
+  "summary": "Roxy breaks the Training Ogre's whole Super Armor gauge in about 50 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Venom Dance (Skill)",
+   "st": "Poison",
+   "stacks": "0.24"
+  },
+  "savedAt": "2026-11-08T19:20:00.000Z",
+  "summary": "Venom Dance (Skill): 0.24 Poison per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Venom Dance (Skill)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:20:10.000Z",
+  "summary": "Venom Dance (Skill): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Venom Dance (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T19:20:20.000Z",
+  "summary": "Venom Dance (Skill): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Phantom Slash (Ultimate)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:20:30.000Z",
+  "summary": "Phantom Slash (Ultimate): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Phantom Slash (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T19:20:40.000Z",
+  "summary": "Phantom Slash (Ultimate): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Venom Cutter (Special A)",
+   "st": "Poison",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T19:20:50.000Z",
+  "summary": "Venom Cutter (Special A): 0.25 Poison per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Venom Cutter (Special A)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:21:00.000Z",
+  "summary": "Venom Cutter (Special A): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Venom Cutter (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T19:21:10.000Z",
+  "summary": "Venom Cutter (Special A): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Poison Grab (Special B, at 1 Poison stack)",
+   "st": "Poison",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:21:20.000Z",
+  "summary": "Poison Grab (Special B, at 1 Poison stack): 0.2 Poison per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Poison Grab (Special B, at 1 Poison stack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T19:21:30.000Z",
+  "summary": "Poison Grab (Special B, at 1 Poison stack): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Poison Grab (Special B, at 2 Poison stacks)",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T19:21:40.000Z",
+  "summary": "Poison Grab (Special B, at 2 Poison stacks): 0.25 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Poison Grab (Special B, at 2 Poison stacks)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T19:21:50.000Z",
+  "summary": "Poison Grab (Special B, at 2 Poison stacks): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Dirty Fight (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T19:22:00.000Z",
+  "summary": "Dirty Fight (whole basic combo): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Piercing Step (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.015"
+  },
+  "savedAt": "2026-11-08T19:22:10.000Z",
+  "summary": "Piercing Step (jump attack): 0.015 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Fatal Sting (dash attack)",
+   "st": "Poison",
+   "stacks": "0.12"
+  },
+  "savedAt": "2026-11-08T19:22:20.000Z",
+  "summary": "Fatal Sting (dash attack): 0.12 Poison per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Fatal Sting (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T19:22:30.000Z",
+  "summary": "Fatal Sting (dash attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794310016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 39 s going all out.",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T19:22:40.000Z",
+  "summary": "Johnny breaks the Training Ogre's whole Super Armor gauge in about 39 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Per charge; 2 charges, so 0.20 if both are used.",
+   "presses": "1",
+   "skill": "Lightning Javelin (Skill, per charge)",
+   "st": "Shock",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T19:29:00.000Z",
+  "summary": "Lightning Javelin (Skill, per charge): 0.1 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Per charge; 2 charges, so 4% if both are used.",
+   "presses": "1",
+   "skill": "Lightning Javelin (Skill, per charge)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.02"
+  },
+  "savedAt": "2026-11-08T19:29:10.000Z",
+  "summary": "Lightning Javelin (Skill, per charge): 0.02 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Stormbringer (Ultimate)",
+   "st": "Shock",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T19:29:20.000Z",
+  "summary": "Stormbringer (Ultimate): 0.33 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Stormbringer (Ultimate)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:29:30.000Z",
+  "summary": "Stormbringer (Ultimate): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Stormbringer (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T19:29:40.000Z",
+  "summary": "Stormbringer (Ultimate): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Flash (Special A)",
+   "st": "Shock",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T19:29:50.000Z",
+  "summary": "Flash (Special A): 0.1 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Flash (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T19:30:00.000Z",
+  "summary": "Flash (Special A): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Thunder Grab (Special B, at 1 Shock stack)",
+   "st": "Shock",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:30:10.000Z",
+  "summary": "Thunder Grab (Special B, at 1 Shock stack): 0.2 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Thunder Grab (Special B, at 1 Shock stack)",
+   "st": "Knockdown",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:30:20.000Z",
+  "summary": "Thunder Grab (Special B, at 1 Shock stack): 0.2 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Thunder Grab (Special B, at 1 Shock stack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.12"
+  },
+  "savedAt": "2026-11-08T19:30:30.000Z",
+  "summary": "Thunder Grab (Special B, at 1 Shock stack): 0.12 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Thunder Grab (Special B, at 2 Shock stacks)",
+   "st": "Knockdown",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T19:30:40.000Z",
+  "summary": "Thunder Grab (Special B, at 2 Shock stacks): 0.25 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Thunder Grab (Special B, at 2 Shock stacks)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T19:30:50.000Z",
+  "summary": "Thunder Grab (Special B, at 2 Shock stacks): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Volt Thrust (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T19:31:00.000Z",
+  "summary": "Volt Thrust (whole basic combo): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Lightning Flow (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T19:31:10.000Z",
+  "summary": "Lightning Flow (jump attack): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Lightning Step (dash attack)",
+   "st": "Shock",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T19:31:20.000Z",
+  "summary": "Lightning Step (dash attack): 0.06 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Lightning Step (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T19:31:30.000Z",
+  "summary": "Lightning Step (dash attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794320016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 25 s going all out.",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T19:31:40.000Z",
+  "summary": "Ryza breaks the Training Ogre's whole Super Armor gauge in about 25 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. With the 10 s Heretic Judgment aura it comes to 0.27.",
+   "presses": "1",
+   "skill": "Consecration (Skill, the skill's own hits)",
+   "st": "Bleed",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T19:46:00.000Z",
+  "summary": "Consecration (Skill, the skill's own hits): 0.15 Bleed per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. With the 10 s Heretic Judgment aura it comes to 6%.",
+   "presses": "1",
+   "skill": "Consecration (Skill, the skill's own hits)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T19:46:10.000Z",
+  "summary": "Consecration (Skill, the skill's own hits): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Aura on her maces, works passively during all attacks for the 10 s of the mode.",
+   "presses": "1",
+   "skill": "Heretic Judgment blood aura (whole 10 s mode)",
+   "st": "Bleed",
+   "stacks": "0.12"
+  },
+  "savedAt": "2026-11-08T19:46:20.000Z",
+  "summary": "Heretic Judgment blood aura (whole 10 s mode): 0.12 Bleed per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Aura on her maces over the 10 s mode.",
+   "presses": "1",
+   "skill": "Heretic Judgment blood aura (whole 10 s mode)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.02"
+  },
+  "savedAt": "2026-11-08T19:46:30.000Z",
+  "summary": "Heretic Judgment blood aura (whole 10 s mode): 0.02 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Celestial Verdict (Ultimate)",
+   "st": "Stun",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:46:40.000Z",
+  "summary": "Celestial Verdict (Ultimate): 0.2 Stun per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Celestial Verdict (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T19:46:50.000Z",
+  "summary": "Celestial Verdict (Ultimate): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Divine Arc (Special A)",
+   "st": "Bleed",
+   "stacks": "0.23"
+  },
+  "savedAt": "2026-11-08T19:47:00.000Z",
+  "summary": "Divine Arc (Special A): 0.23 Bleed per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Divine Arc (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T19:47:10.000Z",
+  "summary": "Divine Arc (Special A): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Holy Rise (Special B)",
+   "st": "Bleed",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T19:47:20.000Z",
+  "summary": "Holy Rise (Special B): 0.1 Bleed per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Holy Rise (Special B)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T19:47:30.000Z",
+  "summary": "Holy Rise (Special B): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Holy Rise (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T19:47:40.000Z",
+  "summary": "Holy Rise (Special B): 0.08 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Judgment Spiral (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T19:47:50.000Z",
+  "summary": "Judgment Spiral (whole basic combo): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Celestial Dive (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T19:48:00.000Z",
+  "summary": "Celestial Dive (jump attack): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Heaven's Flick (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.015"
+  },
+  "savedAt": "2026-11-08T19:48:10.000Z",
+  "summary": "Heaven's Flick (dash attack): 0.015 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Celestial Verdict (Ultimate, Heretic Judgment mode)",
+   "st": "Stun",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T19:48:20.000Z",
+  "summary": "Celestial Verdict (Ultimate, Heretic Judgment mode): 0.25 Stun per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Celestial Verdict (Ultimate, Heretic Judgment mode)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T19:48:30.000Z",
+  "summary": "Celestial Verdict (Ultimate, Heretic Judgment mode): 0.15 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge same as outside the mode (4%); the mode only adds the Stun.",
+   "presses": "1",
+   "skill": "Judgment Spiral (whole basic combo, Heretic Judgment mode)",
+   "st": "Stun",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T19:48:40.000Z",
+  "summary": "Judgment Spiral (whole basic combo, Heretic Judgment mode): 0.01 Stun per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330017000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Heaven's Flick (dash attack, Heretic Judgment mode)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.015"
+  },
+  "savedAt": "2026-11-08T19:48:50.000Z",
+  "summary": "Heaven's Flick (dash attack, Heretic Judgment mode): 0.015 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330018000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 27 s going all out; a dash-attack rotation took about 35 s. Mastery not unlocked yet: retest once it is (dodging in Heretic Judgment mode raises Super Armor reduction).",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T19:49:00.000Z",
+  "summary": "Theresia breaks the Training Ogre's whole Super Armor gauge in about 27 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794330019000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Same as outside the mode.",
+   "presses": "1",
+   "skill": "Judgment Spiral (whole basic combo, Heretic Judgment mode)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T20:10:00.000Z",
+  "summary": "Judgment Spiral (whole basic combo, Heretic Judgment mode): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Holy Orbs from the basic attack do not raise the press.",
+   "presses": "1",
+   "skill": "Lightning Shock (Skill, press, no orbs)",
+   "st": "Shock",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T20:10:10.000Z",
+  "summary": "Lightning Shock (Skill, press, no orbs): 0.25 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Lightning Shock (Skill, press)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T20:10:20.000Z",
+  "summary": "Lightning Shock (Skill, press): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Lightning Shock (Skill, press, with all 26 Bolt Bubble orbs)",
+   "st": "Shock",
+   "stacks": "0.6"
+  },
+  "savedAt": "2026-11-08T20:10:30.000Z",
+  "summary": "Lightning Shock (Skill, press, with all 26 Bolt Bubble orbs): 0.6 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Lightning Shock (Skill, charge, no orbs)",
+   "st": "Shock",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T20:10:40.000Z",
+  "summary": "Lightning Shock (Skill, charge, no orbs): 0.33 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Unchanged by orbs.",
+   "presses": "1",
+   "skill": "Lightning Shock (Skill, charge)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.075"
+  },
+  "savedAt": "2026-11-08T20:10:50.000Z",
+  "summary": "Lightning Shock (Skill, charge): 0.075 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. A tiny bit over 0.50.",
+   "presses": "1",
+   "skill": "Lightning Shock (Skill, charge, with 8 orbs from the basic attack)",
+   "st": "Shock",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-11-08T20:11:00.000Z",
+  "summary": "Lightning Shock (Skill, charge, with 8 orbs from the basic attack): 0.5 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Lightning Shock (Skill, charge, with all 26 Bolt Bubble orbs)",
+   "st": "Shock",
+   "stacks": "0.9"
+  },
+  "savedAt": "2026-11-08T20:11:10.000Z",
+  "summary": "Lightning Shock (Skill, charge, with all 26 Bolt Bubble orbs): 0.9 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. The orbs' own damage only, no explosions.",
+   "presses": "1",
+   "skill": "Bolt Bubble (Ultimate, 26 orbs, none exploded)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T20:11:20.000Z",
+  "summary": "Bolt Bubble (Ultimate, 26 orbs, none exploded): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Thunderbolt (Special A)",
+   "st": "Shock",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T20:11:30.000Z",
+  "summary": "Thunderbolt (Special A): 0.15 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Thunderbolt (Special A)",
+   "st": "Stun",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T20:11:40.000Z",
+  "summary": "Thunderbolt (Special A): 0.25 Stun per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Thunderbolt (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T20:11:50.000Z",
+  "summary": "Thunderbolt (Special A): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. About 0.25%.",
+   "presses": "1",
+   "skill": "Bolt Orb (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.0025"
+  },
+  "savedAt": "2026-11-08T20:12:00.000Z",
+  "summary": "Bolt Orb (whole basic combo): 0.0025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. About 0.25% across 5 s.",
+   "presses": "1",
+   "skill": "One Holy Orb (over its 5 s)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.0025"
+  },
+  "savedAt": "2026-11-08T20:12:10.000Z",
+  "summary": "One Holy Orb (over its 5 s): 0.0025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Spiky Bolt (jump attack)",
+   "st": "Shock",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T20:12:20.000Z",
+  "summary": "Spiky Bolt (jump attack): 0.08 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Spiky Bolt (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.0125"
+  },
+  "savedAt": "2026-11-08T20:12:30.000Z",
+  "summary": "Spiky Bolt (jump attack): 0.0125 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Hitting with both the moving orb and its explosion is very hard; usually only one of the two lands.",
+   "presses": "1",
+   "skill": "Cannon Bolt (dash attack, big orb moving)",
+   "st": "Shock",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T20:12:40.000Z",
+  "summary": "Cannon Bolt (dash attack, big orb moving): 0.1 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Cannon Bolt (dash attack, big orb moving)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.0125"
+  },
+  "savedAt": "2026-11-08T20:12:50.000Z",
+  "summary": "Cannon Bolt (dash attack, big orb moving): 0.0125 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340017000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Hitting with both the moving orb and its explosion is very hard; usually only one of the two lands.",
+   "presses": "1",
+   "skill": "Cannon Bolt (dash attack, big orb explosion)",
+   "st": "Shock",
+   "stacks": "0.125"
+  },
+  "savedAt": "2026-11-08T20:13:00.000Z",
+  "summary": "Cannon Bolt (dash attack, big orb explosion): 0.125 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340018000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Cannon Bolt (dash attack, big orb explosion)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.0125"
+  },
+  "savedAt": "2026-11-08T20:13:10.000Z",
+  "summary": "Cannon Bolt (dash attack, big orb explosion): 0.0125 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794340019000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. About 67 s just to bring the gauge to 50%, so he stopped there. At that rate a full break would take about 2 min 15 s.",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to half the gauge)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.5"
+  },
+  "savedAt": "2026-11-08T20:13:20.000Z",
+  "summary": "Tarte brings the Training Ogre's Super Armor gauge to 50% in about 67 s going all out (stopped there, not a full break).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Divine Crash (Skill, no relic placed)",
+   "st": "Shock",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T20:25:00.000Z",
+  "summary": "Divine Crash (Skill, no relic placed): 0.25 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Divine Crash (Skill, no relic placed)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.125"
+  },
+  "savedAt": "2026-11-08T20:25:10.000Z",
+  "summary": "Divine Crash (Skill, no relic placed): 0.125 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Divine Crash (Skill, with a relic placed)",
+   "st": "Shock",
+   "stacks": "0.27"
+  },
+  "savedAt": "2026-11-08T20:25:20.000Z",
+  "summary": "Divine Crash (Skill, with a relic placed): 0.27 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Divine Crash (Skill, with a relic placed)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T20:25:30.000Z",
+  "summary": "Divine Crash (Skill, with a relic placed): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Divine Smash (Ultimate)",
+   "st": "Knockdown",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T20:25:40.000Z",
+  "summary": "Divine Smash (Ultimate): 0.2 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Divine Smash (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T20:25:50.000Z",
+  "summary": "Divine Smash (Ultimate): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Bless (Special A)",
+   "st": "Shock",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T20:26:00.000Z",
+  "summary": "Bless (Special A): 0.04 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Bless (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.008"
+  },
+  "savedAt": "2026-11-08T20:26:10.000Z",
+  "summary": "Bless (Special A): 0.008 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Justice Fall (Special B)",
+   "st": "Knockdown",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T20:26:20.000Z",
+  "summary": "Justice Fall (Special B): 0.2 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Justice Fall (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.02"
+  },
+  "savedAt": "2026-11-08T20:26:30.000Z",
+  "summary": "Justice Fall (Special B): 0.02 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Divine Bolt (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.016"
+  },
+  "savedAt": "2026-11-08T20:26:40.000Z",
+  "summary": "Divine Bolt (whole basic combo): 0.016 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Air Bolt (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T20:26:50.000Z",
+  "summary": "Air Bolt (jump attack): 0.01 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. As with Tarte, usually only the moving sphere or its explosion lands; if both, fewer moving hits connect.",
+   "presses": "1",
+   "skill": "Sliding Bolt (dash attack, sphere moving, all 6 hits)",
+   "st": "Shock",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T20:27:00.000Z",
+  "summary": "Sliding Bolt (dash attack, sphere moving, all 6 hits): 0.1 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Sliding Bolt (dash attack, sphere moving, all 6 hits)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.0125"
+  },
+  "savedAt": "2026-11-08T20:27:10.000Z",
+  "summary": "Sliding Bolt (dash attack, sphere moving, all 6 hits): 0.0125 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Usually only the moving sphere or its explosion lands.",
+   "presses": "1",
+   "skill": "Sliding Bolt (dash attack, sphere explosion)",
+   "st": "Shock",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T20:27:20.000Z",
+  "summary": "Sliding Bolt (dash attack, sphere explosion): 0.08 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Sliding Bolt (dash attack, sphere explosion)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.005"
+  },
+  "savedAt": "2026-11-08T20:27:30.000Z",
+  "summary": "Sliding Bolt (dash attack, sphere explosion): 0.005 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794350016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 50 s going all out. Mastery not unlocked yet: retest once it is (blessing areas get bigger and also apply Shock).",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T20:27:40.000Z",
+  "summary": "Sion breaks the Training Ogre's whole Super Armor gauge in about 50 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794360000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Stun Slash (Skill)",
+   "st": "Stun",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T20:36:00.000Z",
+  "summary": "Stun Slash (Skill): 0.2 Stun per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794360001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Stun Slash (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T20:36:10.000Z",
+  "summary": "Stun Slash (Skill): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794360002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. About 0.25% (corrected from 0.05%).",
+   "presses": "1",
+   "skill": "Healing Circle (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.0025"
+  },
+  "savedAt": "2026-11-08T20:36:20.000Z",
+  "summary": "Healing Circle (Ultimate): 0.0025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794360003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Swordgrab (Special A)",
+   "st": "Knockdown",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T20:36:30.000Z",
+  "summary": "Swordgrab (Special A): 0.25 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794360004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Swordgrab (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T20:36:40.000Z",
+  "summary": "Swordgrab (Special A): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794360005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Relic Fall (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T20:36:50.000Z",
+  "summary": "Relic Fall (Special B): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794360006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Sword Slash (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T20:37:00.000Z",
+  "summary": "Sword Slash (whole basic combo): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794360007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Dropkick (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T20:37:10.000Z",
+  "summary": "Dropkick (jump attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794360008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Mastery not unlocked: retest Kick Combo once it is (more hits, adds Stun).",
+   "presses": "1",
+   "skill": "Kick Combo (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.016"
+  },
+  "savedAt": "2026-11-08T20:37:20.000Z",
+  "summary": "Kick Combo (dash attack): 0.016 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794360009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 75 s going all out. Retest after the mastery (Kick Combo).",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T20:37:30.000Z",
+  "summary": "Lute breaks the Training Ogre's whole Super Armor gauge in about 75 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Air Bomb (Skill)",
+   "st": "Burn",
+   "stacks": "0.22"
+  },
+  "savedAt": "2026-11-08T20:50:00.000Z",
+  "summary": "Air Bomb (Skill): 0.22 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Air Bomb (Skill)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T20:50:10.000Z",
+  "summary": "Air Bomb (Skill): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Air Bomb (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.12"
+  },
+  "savedAt": "2026-11-08T20:50:20.000Z",
+  "summary": "Air Bomb (Skill): 0.12 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Rolling Bomb (Ultimate)",
+   "st": "Burn",
+   "stacks": "0.23"
+  },
+  "savedAt": "2026-11-08T20:50:30.000Z",
+  "summary": "Rolling Bomb (Ultimate): 0.23 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Rolling Bomb (Ultimate)",
+   "st": "Airborne",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T20:50:40.000Z",
+  "summary": "Rolling Bomb (Ultimate): 0.1 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Rolling Bomb (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T20:50:50.000Z",
+  "summary": "Rolling Bomb (Ultimate): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Multiple Bolt (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T20:51:00.000Z",
+  "summary": "Multiple Bolt (Special A): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. One bolt is a third of this (about 0.067); a Bomb Arrow from the basic combo explodes for the same as one bolt.",
+   "presses": "1",
+   "skill": "Switch On! (Special B, all 3 bolts on one target)",
+   "st": "Burn",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T20:51:10.000Z",
+  "summary": "Switch On! (Special B, all 3 bolts on one target): 0.2 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. One bolt is a third of this (about 0.033); a Bomb Arrow from the basic combo explodes for the same as one bolt.",
+   "presses": "1",
+   "skill": "Switch On! (Special B, all 3 bolts on one target)",
+   "st": "Airborne",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T20:51:20.000Z",
+  "summary": "Switch On! (Special B, all 3 bolts on one target): 0.1 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. One bolt is a third of this (2%); a Bomb Arrow from the basic combo explodes for the same as one bolt.",
+   "presses": "1",
+   "skill": "Switch On! (Special B, all 3 bolts on one target)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T20:51:30.000Z",
+  "summary": "Switch On! (Special B, all 3 bolts on one target): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. The Bomb Arrow explosion counts as one Switch On! bolt.",
+   "presses": "1",
+   "skill": "Bolt Shot (whole basic combo, without the Bomb Arrow explosion)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.008"
+  },
+  "savedAt": "2026-11-08T20:51:40.000Z",
+  "summary": "Bolt Shot (whole basic combo, without the Bomb Arrow explosion): 0.008 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Mastery not unlocked: retest once it is (throws another bomb).",
+   "presses": "1",
+   "skill": "Shoot and Bomb (jump attack)",
+   "st": "Burn",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T20:51:50.000Z",
+  "summary": "Shoot and Bomb (jump attack): 0.08 Burn per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Shoot and Bomb (jump attack)",
+   "st": "Airborne",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T20:52:00.000Z",
+  "summary": "Shoot and Bomb (jump attack): 0.01 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Shoot and Bomb (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.008"
+  },
+  "savedAt": "2026-11-08T20:52:10.000Z",
+  "summary": "Shoot and Bomb (jump attack): 0.008 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Rapid Shot (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.0125"
+  },
+  "savedAt": "2026-11-08T20:52:20.000Z",
+  "summary": "Rapid Shot (dash attack): 0.0125 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794370015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 50 s going all out. Retest after the mastery (Shoot and Bomb).",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T20:52:30.000Z",
+  "summary": "Aria breaks the Training Ogre's whole Super Armor gauge in about 50 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794380000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Wide Shot (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.175"
+  },
+  "savedAt": "2026-11-08T21:02:00.000Z",
+  "summary": "Wide Shot (Ultimate): 0.175 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794380001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Bolt Bombard (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.18"
+  },
+  "savedAt": "2026-11-08T21:02:10.000Z",
+  "summary": "Bolt Bombard (Special A): 0.18 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794380002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. All 6 bolts take about 4 s.",
+   "presses": "1",
+   "skill": "Ballista Shot (whole basic combo, 6 bolts)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.12"
+  },
+  "savedAt": "2026-11-08T21:02:20.000Z",
+  "summary": "Ballista Shot (whole basic combo, 6 bolts): 0.12 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794380003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Stunt Shot (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T21:02:30.000Z",
+  "summary": "Stunt Shot (jump attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794380004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Mastery not unlocked: retest once it is (Slide enhanced).",
+   "presses": "1",
+   "skill": "Slide (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.016"
+  },
+  "savedAt": "2026-11-08T21:02:40.000Z",
+  "summary": "Slide (dash attack): 0.016 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794380005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. All 6 bolts take about 8 s.",
+   "presses": "1",
+   "skill": "Ballista Shot (whole basic combo, 6 bolts, Precision Shot mode)",
+   "st": "Stun",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T21:02:50.000Z",
+  "summary": "Ballista Shot (whole basic combo, 6 bolts, Precision Shot mode): 0.2 Stun per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794380006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. All 6 bolts take about 8 s.",
+   "presses": "1",
+   "skill": "Ballista Shot (whole basic combo, 6 bolts, Precision Shot mode)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.35"
+  },
+  "savedAt": "2026-11-08T21:03:00.000Z",
+  "summary": "Ballista Shot (whole basic combo, 6 bolts, Precision Shot mode): 0.35 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794380007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Wide Shot (Ultimate, Precision Shot mode)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.225"
+  },
+  "savedAt": "2026-11-08T21:03:10.000Z",
+  "summary": "Wide Shot (Ultimate, Precision Shot mode): 0.225 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794380008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Probably more in theory, but the mode's extra explosions spread so far that they basically never hit.",
+   "presses": "1",
+   "skill": "Bolt Bombard (Special A, Precision Shot mode)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.18"
+  },
+  "savedAt": "2026-11-08T21:03:20.000Z",
+  "summary": "Bolt Bombard (Special A, Precision Shot mode): 0.18 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794380009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 18 s going all out. Retest after the mastery (Slide; Dodge reloads an arrow in Precision Shot mode).",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T21:03:30.000Z",
+  "summary": "Astria breaks the Training Ogre's whole Super Armor gauge in about 18 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Summon Chako (Skill)",
+   "st": "Frost",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T21:15:00.000Z",
+  "summary": "Summon Chako (Skill): 0.15 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Summon Chako (Skill)",
+   "st": "Knockdown",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T21:15:10.000Z",
+  "summary": "Summon Chako (Skill): 0.1 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Summon Chako (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.12"
+  },
+  "savedAt": "2026-11-08T21:15:20.000Z",
+  "summary": "Summon Chako (Skill): 0.12 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Chako Shield (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T21:15:30.000Z",
+  "summary": "Chako Shield (Ultimate): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Chako Knuckle (Special A, at 1 Frost stack)",
+   "st": "Frost",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T21:15:40.000Z",
+  "summary": "Chako Knuckle (Special A, at 1 Frost stack): 0.25 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Chako Knuckle (Special A, at 1 Frost stack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.22"
+  },
+  "savedAt": "2026-11-08T21:15:50.000Z",
+  "summary": "Chako Knuckle (Special A, at 1 Frost stack): 0.22 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. The powerful single blow.",
+   "presses": "1",
+   "skill": "Chako Knuckle (Special A, at 2 Frost stacks, Knockdown or Ice Block)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.35"
+  },
+  "savedAt": "2026-11-08T21:16:00.000Z",
+  "summary": "Chako Knuckle (Special A, at 2 Frost stacks, Knockdown or Ice Block): 0.35 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Chako Spin (Special B)",
+   "st": "Frost",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T21:16:10.000Z",
+  "summary": "Chako Spin (Special B): 0.15 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Chako Spin (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.175"
+  },
+  "savedAt": "2026-11-08T21:16:20.000Z",
+  "summary": "Chako Spin (Special B): 0.175 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Snow Pop (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.02"
+  },
+  "savedAt": "2026-11-08T21:16:30.000Z",
+  "summary": "Snow Pop (whole basic combo): 0.02 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Snow Pop (charged basic)",
+   "st": "Frost",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T21:16:40.000Z",
+  "summary": "Snow Pop (charged basic): 0.04 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Snow Pop (charged basic)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T21:16:50.000Z",
+  "summary": "Snow Pop (charged basic): 0.01 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Freezy Pop (jump attack)",
+   "st": "Frost",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T21:17:00.000Z",
+  "summary": "Freezy Pop (jump attack): 0.05 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Freezy Pop (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T21:17:10.000Z",
+  "summary": "Freezy Pop (jump attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Snow Step (dash attack)",
+   "st": "Frost",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T21:17:20.000Z",
+  "summary": "Snow Step (dash attack): 0.08 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Snow Step (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T21:17:30.000Z",
+  "summary": "Snow Step (dash attack): 0.01 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794390016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 23 s going all out alone; about 7 s in the freeze team: after Othello's Ultimate she cast 3 Chako Knuckles back to back as the Ice Block version, 35% each. Othello's Ice Prison lasts about 20 s; 4 Ice Block Knuckles in total seems to be the maximum.",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T21:17:40.000Z",
+  "summary": "Dana breaks the Training Ogre's whole Super Armor gauge in about 23 s going all out (about 7 s in the freeze team).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Frozen Stinger (Skill)",
+   "st": "Frost",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T21:32:00.000Z",
+  "summary": "Frozen Stinger (Skill): 0.2 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Frozen Stinger (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.075"
+  },
+  "savedAt": "2026-11-08T21:32:10.000Z",
+  "summary": "Frozen Stinger (Skill): 0.075 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. 0.05 at cast, rising to 0.20 during the Ice Prison (about 20 s).",
+   "presses": "1",
+   "skill": "Ice Crown (Ultimate, whole Ice Prison)",
+   "st": "Frost",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T21:32:20.000Z",
+  "summary": "Ice Crown (Ultimate, whole Ice Prison): 0.2 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Ice Crown (Ultimate)",
+   "st": "Knockdown",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T21:32:30.000Z",
+  "summary": "Ice Crown (Ultimate): 0.15 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Ice Crown (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.075"
+  },
+  "savedAt": "2026-11-08T21:32:40.000Z",
+  "summary": "Ice Crown (Ultimate): 0.075 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Ice Grab (Special A, at 1 Frost stack)",
+   "st": "Frost",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T21:32:50.000Z",
+  "summary": "Ice Grab (Special A, at 1 Frost stack): 0.2 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Ice Grab (Special A, at 1 Frost stack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.07"
+  },
+  "savedAt": "2026-11-08T21:33:00.000Z",
+  "summary": "Ice Grab (Special A, at 1 Frost stack): 0.07 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Ice Grab (Special A, at 2 Frost stacks)",
+   "st": "Knockdown",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T21:33:10.000Z",
+  "summary": "Ice Grab (Special A, at 2 Frost stacks): 0.25 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Ice Grab (Special A, at 2 Frost stacks)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T21:33:20.000Z",
+  "summary": "Ice Grab (Special A, at 2 Frost stacks): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Frozen Burst (Special B, shattering the Ice Grab spear)",
+   "st": "Frost",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T21:33:30.000Z",
+  "summary": "Frozen Burst (Special B, shattering the Ice Grab spear): 0.1 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Frozen Burst (Special B, shattering the Ice Grab spear)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T21:33:40.000Z",
+  "summary": "Frozen Burst (Special B, shattering the Ice Grab spear): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Per spear; Frozen Stinger leaves 3 per cast.",
+   "presses": "1",
+   "skill": "Frozen Burst (Special B, per Frozen Stinger spear)",
+   "st": "Frost",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T21:33:50.000Z",
+  "summary": "Frozen Burst (Special B, per Frozen Stinger spear): 0.01 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Per spear; Frozen Stinger leaves 3 per cast.",
+   "presses": "1",
+   "skill": "Frozen Burst (Special B, per Frozen Stinger spear)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T21:34:00.000Z",
+  "summary": "Frozen Burst (Special B, per Frozen Stinger spear): 0.01 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. All 5 explosions; one is a fifth (0.02).",
+   "presses": "1",
+   "skill": "Frozen Burst (Special B, shattering the Ice Prison, all 5 explosions)",
+   "st": "Frost",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T21:34:10.000Z",
+  "summary": "Frozen Burst (Special B, shattering the Ice Prison, all 5 explosions): 0.1 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. All 5 explosions; one is a fifth (1%).",
+   "presses": "1",
+   "skill": "Frozen Burst (Special B, shattering the Ice Prison, all 5 explosions)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T21:34:20.000Z",
+  "summary": "Frozen Burst (Special B, shattering the Ice Prison, all 5 explosions): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Avenger Circle (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T21:34:30.000Z",
+  "summary": "Avenger Circle (whole basic combo): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Piercing Spike (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T21:34:40.000Z",
+  "summary": "Piercing Spike (jump attack): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400017000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Mastery not unlocked: retest once it is (becomes a charge attack).",
+   "presses": "1",
+   "skill": "Half-Moon Cutter (dash attack)",
+   "st": "Frost",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T21:34:50.000Z",
+  "summary": "Half-Moon Cutter (dash attack): 0.1 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400018000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Half-Moon Cutter (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T21:35:00.000Z",
+  "summary": "Half-Moon Cutter (dash attack): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794400019000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 20 s going all out. Why so fast with small hits: short cooldowns, a very quick dash attack to spam, and one Frost stack for the Ice Grab mount in about 10 s. Retest after the mastery (Half-Moon Cutter).",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T21:35:10.000Z",
+  "summary": "Othello breaks the Training Ogre's whole Super Armor gauge in about 20 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. The tornado has to be cast for the full 5 s.",
+   "presses": "1",
+   "skill": "Ice Storm (Skill, full 5 s tornado)",
+   "st": "Frost",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T21:47:00.000Z",
+  "summary": "Ice Storm (Skill, full 5 s tornado): 0.25 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Ice Storm (Skill, full 5 s tornado)",
+   "st": "Airborne",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T21:47:10.000Z",
+  "summary": "Ice Storm (Skill, full 5 s tornado): 0.2 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Ice Storm (Skill, full 5 s tornado)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-08T21:47:20.000Z",
+  "summary": "Ice Storm (Skill, full 5 s tornado): 0.15 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Frozen Spike (Ultimate)",
+   "st": "Frost",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T21:47:30.000Z",
+  "summary": "Frozen Spike (Ultimate): 0.05 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Frozen Spike (Ultimate)",
+   "st": "Airborne",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T21:47:40.000Z",
+  "summary": "Frozen Spike (Ultimate): 0.1 Airborne per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Frozen Spike (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T21:47:50.000Z",
+  "summary": "Frozen Spike (Ultimate): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Frozen Needles (Special A)",
+   "st": "Frost",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T21:48:00.000Z",
+  "summary": "Frozen Needles (Special A): 0.25 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Frozen Needles (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T21:48:10.000Z",
+  "summary": "Frozen Needles (Special A): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Shattering Touch (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T21:48:20.000Z",
+  "summary": "Shattering Touch (Special B): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Ice Ball (whole basic combo)",
+   "st": "Frost",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T21:48:30.000Z",
+  "summary": "Ice Ball (whole basic combo): 0.01 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Ice Ball (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.007"
+  },
+  "savedAt": "2026-11-08T21:48:40.000Z",
+  "summary": "Ice Ball (whole basic combo): 0.007 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Glacial Wave (jump attack)",
+   "st": "Frost",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-08T21:48:50.000Z",
+  "summary": "Glacial Wave (jump attack): 0.06 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Glacial Wave (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T21:49:00.000Z",
+  "summary": "Glacial Wave (jump attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Mastery not unlocked: retest once it is (longer path, adds Frost to enemies hit).",
+   "presses": "1",
+   "skill": "Frozen Road (dash attack)",
+   "st": "Frost",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T21:49:10.000Z",
+  "summary": "Frozen Road (dash attack): 0.05 Frost per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Frozen Road (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.0025"
+  },
+  "savedAt": "2026-11-08T21:49:20.000Z",
+  "summary": "Frozen Road (dash attack): 0.0025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794410015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 40 s going all out. Retest after the mastery (Frozen Road).",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T21:49:30.000Z",
+  "summary": "Cerese breaks the Training Ogre's whole Super Armor gauge in about 40 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Without the moving cross.",
+   "presses": "1",
+   "skill": "Holy Cross (Skill, the swing itself)",
+   "st": "Shock",
+   "stacks": "0.24"
+  },
+  "savedAt": "2026-11-08T22:01:00.000Z",
+  "summary": "Holy Cross (Skill, the swing itself): 0.24 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Holy Cross (Skill, the swing itself)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T22:01:10.000Z",
+  "summary": "Holy Cross (Skill, the swing itself): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Holy Cross (Skill, the moving cross)",
+   "st": "Shock",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T22:01:20.000Z",
+  "summary": "Holy Cross (Skill, the moving cross): 0.1 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Holy Cross (Skill, the moving cross)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.075"
+  },
+  "savedAt": "2026-11-08T22:01:30.000Z",
+  "summary": "Holy Cross (Skill, the moving cross): 0.075 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Holy Circle (Ultimate)",
+   "st": "Shock",
+   "stacks": "0.22"
+  },
+  "savedAt": "2026-11-08T22:01:40.000Z",
+  "summary": "Holy Circle (Ultimate): 0.22 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Holy Circle (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T22:01:50.000Z",
+  "summary": "Holy Circle (Ultimate): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Judgment (Special A, at 1 Shock stack)",
+   "st": "Knockdown",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-08T22:02:00.000Z",
+  "summary": "Judgment (Special A, at 1 Shock stack): 0.25 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Judgment (Special A, at 1 Shock stack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T22:02:10.000Z",
+  "summary": "Judgment (Special A, at 1 Shock stack): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Judgment (Special A, at 2 Shock stacks)",
+   "st": "Knockdown",
+   "stacks": "0.4"
+  },
+  "savedAt": "2026-11-08T22:02:20.000Z",
+  "summary": "Judgment (Special A, at 2 Shock stacks): 0.4 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Judgment (Special A, at 2 Shock stacks)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T22:02:30.000Z",
+  "summary": "Judgment (Special A, at 2 Shock stacks): 0.1 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. No Airborne against the boss.",
+   "presses": "1",
+   "skill": "Holy Grab (Special B)",
+   "st": "Shock",
+   "stacks": "0.28"
+  },
+  "savedAt": "2026-11-08T22:02:40.000Z",
+  "summary": "Holy Grab (Special B): 0.28 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Holy Grab (Special B)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.125"
+  },
+  "savedAt": "2026-11-08T22:02:50.000Z",
+  "summary": "Holy Grab (Special B): 0.125 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Pray (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-08T22:03:00.000Z",
+  "summary": "Pray (whole basic combo): 0.03 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Shining Spin (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-08T22:03:10.000Z",
+  "summary": "Shining Spin (jump attack): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Mastery not unlocked: retest once it is (extra swing adds Shock and Knockdown).",
+   "presses": "1",
+   "skill": "Holy Cutter (dash attack)",
+   "st": "Shock",
+   "stacks": "0.1"
+  },
+  "savedAt": "2026-11-08T22:03:20.000Z",
+  "summary": "Holy Cutter (dash attack): 0.1 Shock per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Holy Cutter (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T22:03:30.000Z",
+  "summary": "Holy Cutter (dash attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794420016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 30 s going all out. Retest after the mastery (Holy Cutter).",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T22:03:40.000Z",
+  "summary": "Ornette breaks the Training Ogre's whole Super Armor gauge in about 30 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Knockdown Smash (Skill)",
+   "st": "Knockdown",
+   "stacks": "0.2"
+  },
+  "savedAt": "2026-11-08T22:09:00.000Z",
+  "summary": "Knockdown Smash (Skill): 0.2 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Knockdown Smash (Skill)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T22:09:10.000Z",
+  "summary": "Knockdown Smash (Skill): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Pounding Grab (Special A)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T22:09:20.000Z",
+  "summary": "Pounding Grab (Special A): 0.08 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken.",
+   "presses": "1",
+   "skill": "Guard Counter (Special B, successful parry)",
+   "st": "Knockdown",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-08T22:09:30.000Z",
+  "summary": "Guard Counter (Special B, successful parry): 0.33 Knockdown per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Guard Counter (Special B, successful parry)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-08T22:09:40.000Z",
+  "summary": "Guard Counter (Special B, successful parry): 0.08 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Guard Counter (Special B, failed parry)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T22:09:50.000Z",
+  "summary": "Guard Counter (Special B, failed parry): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay. Each hit taken while blocking also takes about 1% (the counter shockwave).",
+   "presses": "1",
+   "skill": "Guard Stance (Ultimate)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.01"
+  },
+  "savedAt": "2026-11-08T22:10:00.000Z",
+  "summary": "Guard Stance (Ultimate): 0.01 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Brandish (whole basic combo)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T22:10:10.000Z",
+  "summary": "Brandish (whole basic combo): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Dive Kick (jump attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T22:10:20.000Z",
+  "summary": "Dive Kick (jump attack): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Dodge Combo (dash attack)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.02"
+  },
+  "savedAt": "2026-11-08T22:10:30.000Z",
+  "summary": "Dodge Combo (dash attack): 0.02 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Brandish (whole basic combo, Defensive Stance)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-08T22:10:40.000Z",
+  "summary": "Brandish (whole basic combo, Defensive Stance): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70, boss not broken. Gauge read with his % overlay.",
+   "presses": "1",
+   "skill": "Dodge Combo (dash attack, Defensive Stance)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-08T22:10:50.000Z",
+  "summary": "Dodge Combo (dash attack, Defensive Stance): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90).",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794430012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Alex",
+   "lv": "90",
+   "note": "David, 8 Nov 2026, Lv.70. Whole gauge broken in about 45 s going all out. Depends on how many parries land; a perfect run might be about 10 s faster (not tested).",
+   "presses": "1",
+   "skill": "Full rotation, going all out (time to break)",
+   "st": "Break (Super Armor)",
+   "stacks": "1"
+  },
+  "savedAt": "2026-11-08T22:11:00.000Z",
+  "summary": "Alex breaks the Training Ogre's whole Super Armor gauge in about 45 s going all out.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ }
+}

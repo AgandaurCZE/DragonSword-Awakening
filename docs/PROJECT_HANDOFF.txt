@@ -1,3 +1,5 @@
+Library index: docs/README.md. Current state: docs/library/STATUS.md. This log is history (newest last).
+
 ## 3 Nov 2026 — Keep work current with GitHub
 
 David requested always checking for newer commits and deployments, and applying this chat's work on top of them. Added the rule to AGENTS.md, including preserving other assistants' changes, checking again before pushing, and verifying the remote result. Fetched origin/main: b4f9bfe was current. GitHub deployment API returned Forbidden, so deployment status could not be independently verified. Documentation only; no application or data changes.
@@ -174,3 +176,4 @@ Completed: implementation, main publication, live preview and public gate checks
 9 Nov 2026 (Claude): signature team runs (Lv.70, no gear, 1 min): Storm 400k (Ryza sig; 330k none); Fox and wind 560k (Kalsion+Kalien sigs; 390/460k none); Airborne burst 510k (Kalsion sig; 420k none); Shadow Poison 560k (Charlotte sig; 440k none); Break and burn 380k (Kalsion+Kalien sigs; 330k none). Saved in planner davidNote.
 
 9 Nov 2026 (Claude): David is about to take awakenings and masteries (irreversible). Must be done BEFORE: to-do item 5 (Lv.70 stats for the 9 estimated heroes) and item 4 (signature vs a normal Karma of the same level; 9 Nov runs were signature vs no Karma, so they include the Karma's stats). To-do page items 4 and 5 now say so. Can wait: Test 07, Test 06, Test 03, Test 02, ratings; mastery retests come after. I first wrongly told David the signature tests could wait.
+9 Nov 2026 (Claude): David asked for a sorted notes library because chat memory was failing. Built docs/README.md + docs/library/ (STATUS, WORKING_WITH_DAVID, TESTING, TEST01_RESULTS, TEAM_TESTS, DECISIONS) and JSON copies of Test 01 and the Team Planner. Next chat: start at docs/README.md.

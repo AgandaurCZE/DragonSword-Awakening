@@ -1,5 +1,7 @@
 # DragonSword: Awakening guide — data and system reference
 
+Library index: [docs/README.md](README.md). Current state: [library/STATUS.md](library/STATUS.md).
+
 The detail behind `AGENTS.md`. Open it when a task touches the data keys, text formats, builds or assets, and read only the section you need. Keep it up to date: a new or changed data key is documented here, not in `AGENTS.md`.
 
 ## Files

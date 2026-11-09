@@ -3,8 +3,9 @@
 Read this before changing anything in this repository.
 
 - Preserve existing line endings when editing files. `index.html` uses LF (Unix) line endings; never convert it to CRLF or rewrite unrelated lines.
+- **Start at the library index `docs/README.md`.** It lists every note file by topic; `docs/library/STATUS.md` says where things stand and `docs/library/WORKING_WITH_DAVID.md` how David works and which mistakes to avoid. Keep both up to date.
 - **Detail lives in `docs/DATA_REFERENCE.md`:** every data key's shape and renderer, text formats, the full data rules, the build and base-stat methods, assets and tool details. Read the relevant section before editing that data or code. Document new or changed keys there.
-- New chat? `docs/NEW_CHAT_BRIEFING.md` has how David likes to work, the Test Kit and the open items. History: `CHANGELOG.md` (newest first) and `docs/PROJECT_HANDOFF.txt` (newest last).
+- New chat? Read `docs/library/WORKING_WITH_DAVID.md` and `docs/library/STATUS.md` (the older `docs/NEW_CHAT_BRIEFING.md` keeps the project overview and tools). History: `CHANGELOG.md` (newest first) and `docs/PROJECT_HANDOFF.txt` (newest last).
 
 ## David's main-only preview workflow — confirmed 2 Nov 2026
 

@@ -1,0 +1,448 @@
+{
+ "teams": [
+  {
+   "claudeNote": "The team David has been playing for the last few days.",
+   "davidNote": "8 Nov: 2 million in 1 min, no signatures, all Lv.70 with full builds.\n9 Nov: 420k in 1 min, all Lv.70, no gear, no Karma.\n9 Nov: 510k with Kalsion's signature on (Johnny and Reina without).",
+   "heroes": [
+    {
+     "hero": "Reina",
+     "role": "Enabler"
+    },
+    {
+     "hero": "Kalsion",
+     "role": "Sub-DPS"
+    },
+    {
+     "hero": "Johnny",
+     "role": "Sub-DPS"
+    }
+   ],
+   "name": "Airborne burst",
+   "order": 1,
+   "status": "works",
+   "why": "Reina keeps enemies Airborne almost whenever you want, which unlocks Kalsion's Explosion and Johnny's Venom Cutter. Johnny's Poison comes on top. Two Sub-DPS and an Enabler."
+  },
+  {
+   "claudeNote": "",
+   "davidNote": "8 Nov: 2 million in 1 min, no signatures. Charlotte Lv.50 with some gear, Johnny and Reina Lv.70 built.\n9 Nov: 440k in 1 min, all Lv.70, no gear, no Karma.\n9 Nov: 560k with Charlotte's signature on (Johnny and Reina without).",
+   "heroes": [
+    {
+     "hero": "Charlotte",
+     "role": "Main DPS"
+    },
+    {
+     "hero": "Johnny",
+     "role": "Sub-DPS"
+    },
+    {
+     "hero": "Reina",
+     "role": "Enabler"
+    }
+   ],
+   "name": "Shadow Poison",
+   "order": 2,
+   "status": "idea",
+   "why": "Charlotte's Illusion Kick needs Poison or Stealth and her Shadow Grab needs Airborne. Johnny brings Poison and some Airborne, Reina brings the rest, so Charlotte can spend her time picking targets in Stealth."
+  },
+  {
+   "claudeNote": "David plans team tests with Roxy; Roxy may count as Sub-DPS here.",
+   "davidNote": "8 Nov: 45k in 1 min, no signatures. Theresia and Roxy Lv.1, Castella Lv.20.\n9 Nov: 250k in 1 min, all Lv.70, no gear, no Karma.\n9 Nov: 350k with Theresia's and Roxy's signatures on.\n9 Nov: 330k with only Theresia's signature on.\nDavid: hard team (big run-to-run spread).",
+   "heroes": [
+    {
+     "hero": "Theresia",
+     "role": "Main DPS"
+    },
+    {
+     "hero": "Roxy",
+     "role": "Enabler"
+    },
+    {
+     "hero": "Castella",
+     "role": "Enabler"
+    }
+   ],
+   "name": "Holy Bleed",
+   "order": 3,
+   "status": "test",
+   "why": "On bosses Theresia needs Stun or Bleed from someone else. Roxy applies both, and Theresia's Stun in turn opens Roxy's Kick Storm. Castella breaks Super Armor fast, which opens her own Stun. One damage dealer and two Enablers."
+  },
+  {
+   "claudeNote": "",
+   "davidNote": "8 Nov: 42k in 1 min, no signatures, all Lv.1.",
+   "heroes": [
+    {
+     "hero": "Othello",
+     "role": "Main DPS"
+    },
+    {
+     "hero": "Dana",
+     "role": "Sub-DPS"
+    },
+    {
+     "hero": "Cerese",
+     "role": "Sub-DPS"
+    }
+   ],
+   "name": "Deep Frost",
+   "order": 4,
+   "status": "idea",
+   "why": "Othello's Frozen Burst needs Frozen enemies. Dana stacks Frost fast and Chako keeps fighting while she's swapped out; Cerese gathers with her tornado, adds Frost and shatters. Othello doesn't strictly need either of them, so this is about speed."
+  },
+  {
+   "claudeNote": "Ryza can stack Shock alone, so check whether Tarte's opener actually speeds her up.",
+   "davidNote": "8 Nov: 50k in 1 min, no signatures, all Lv.1.\n9 Nov: 330k in 1 min, all Lv.70, no gear, no Karma, after runs of 250k and 300k; the Expert tag at its best, and still could do more.\n9 Nov: 400k with Ryza's signature on.",
+   "heroes": [
+    {
+     "hero": "Ryza",
+     "role": "Main DPS"
+    },
+    {
+     "hero": "Tarte",
+     "role": "Enabler"
+    },
+    {
+     "hero": "Sion",
+     "role": "Support"
+    }
+   ],
+   "name": "Storm",
+   "order": 5,
+   "status": "idea",
+   "why": "Tarte builds a full Shock stack in about 17–18 s and her Ultimate's orbs keep coming after you swap out; Ryza's Shock hits pop them. Sion adds +15% team Attack and more Shock. Ryza's Thunder Grab needs Shock."
+  },
+  {
+   "claudeNote": "David wants to see whether Ryza and Ornette work together at all.",
+   "davidNote": "",
+   "heroes": [
+    {
+     "hero": "Ryza",
+     "role": "Main DPS"
+    },
+    {
+     "hero": "Ornette",
+     "role": "Sub-DPS"
+    },
+    {
+     "hero": "Sion",
+     "role": "Support"
+    }
+   ],
+   "name": "Thunder pair",
+   "order": 6,
+   "status": "test",
+   "why": "Ornette's Judgment needs Shock and her Holy Grab needs Knockdown. Ryza supplies Shock, Sion supplies Shock and Knockdown plus the Attack buff."
+  },
+  {
+   "claudeNote": "",
+   "davidNote": "8 Nov: 1.1 million in 1 min, no signatures. Kalien Lv.50 no gear, Aria Lv.1 no gear, Kalsion Lv.70 built.",
+   "heroes": [
+    {
+     "hero": "Kalsion",
+     "role": "Sub-DPS"
+    },
+    {
+     "hero": "Aria",
+     "role": "Enabler"
+    },
+    {
+     "hero": "Kalien",
+     "role": "Enabler"
+    }
+   ],
+   "name": "Burn chain",
+   "order": 7,
+   "status": "idea",
+   "why": "A Burn team without Reina. Aria applies Burn and Airborne, Kalien stacks more Burn. Kalsion's Burst Grab needs Burn and his Explosion needs Airborne, both covered."
+  },
+  {
+   "claudeNote": "A variant of Burn chain for bosses with a big Super Armor gauge.",
+   "davidNote": "9 Nov: 330k in 1 min, all Lv.70, no gear, no Karma.\n9 Nov: 380k with Kalsion's and Kalien's signatures on (Castella has none).",
+   "heroes": [
+    {
+     "hero": "Castella",
+     "role": "Enabler"
+    },
+    {
+     "hero": "Kalien",
+     "role": "Enabler"
+    },
+    {
+     "hero": "Kalsion",
+     "role": "Sub-DPS"
+    }
+   ],
+   "name": "Break and burn",
+   "order": 8,
+   "status": "idea",
+   "why": "Kalien's Fox Grab needs Break, and Castella breaks Super Armor fastest. Castella's Upper Blow then launches the enemy, giving Kalsion the Airborne for Explosion."
+  },
+  {
+   "claudeNote": "Both Supports are Expert: timing matters a lot here.",
+   "davidNote": "",
+   "heroes": [
+    {
+     "hero": "Ryza",
+     "role": "Main DPS"
+    },
+    {
+     "hero": "Eileen",
+     "role": "Support"
+    },
+    {
+     "hero": "Alex",
+     "role": "Support"
+    }
+   ],
+   "name": "Nightmare support",
+   "order": 9,
+   "status": "idea",
+   "why": "For the hardest bosses. Eileen adds +15% Attack and +20% Crit Rate; Alex's parry lowers the boss's Defense by 20% for 10 s (about +11% team damage, and it stacks with Earthshatterer). Two Supports around one damage dealer."
+  },
+  {
+   "claudeNote": "Compare with Burn chain: swapping Reina (Lv.70 built) for Aria (Lv.1) gave slightly more, not less.",
+   "davidNote": "8 Nov: 1 million in 1 min, no signatures. Kalien Lv.50 no gear, Kalsion and Reina Lv.70 built.\n9 Nov: 390k and 460k in 1 min (two runs), all Lv.70, no gear, no Karma.\n9 Nov: 560k with Kalsion's and Kalien's signatures on (Reina without).",
+   "heroes": [
+    {
+     "hero": "Kalien",
+     "role": "Enabler"
+    },
+    {
+     "hero": "Kalsion",
+     "role": "Sub-DPS"
+    },
+    {
+     "hero": "Reina",
+     "role": "Enabler"
+    }
+   ],
+   "name": "Fox and wind",
+   "order": 10,
+   "status": "test",
+   "why": "David's own test: Kalien's Burn and Reina's Airborne both feed Kalsion."
+  },
+  {
+   "claudeNote": "Holy Bleed with Castella: 250k with no signatures, 350k with Theresia's and Roxy's.",
+   "davidNote": "9 Nov: 380k in 1 min, all Lv.70, no gear, with only Theresia's signature Karma on.\n9 Nov: 350k with Theresia's and Kalien's signatures, Roxy's off.\n9 Nov: 500k and 430k (two runs) with Theresia's, Roxy's and Kalien's signature Karmas on (no other Karma).\nDavid: hard team (big run-to-run spread).",
+   "heroes": [
+    {
+     "hero": "Theresia",
+     "role": "Main DPS"
+    },
+    {
+     "hero": "Roxy",
+     "role": "Enabler"
+    },
+    {
+     "hero": "Kalien",
+     "role": "Enabler"
+    }
+   ],
+   "name": "Holy Bleed with Kalien",
+   "order": 11,
+   "status": "test",
+   "why": "Holy Bleed with Kalien in Castella's slot: Kalien's Finale adds Stun with no condition, plus Burn."
+  }
+ ],
+ "sigs": [
+  {
+   "effect": "When casting Guard Stance, Super Armor resistance is increased by 100% for a set time. While in Defensive Stance mode, damage taken by you and allies within range is reduced by 10% (same at minimum and max).",
+   "hero": "Alex",
+   "karma": "Loyalty Amidst Lethargy",
+   "notes": "",
+   "priority": "Low",
+   "rank": 20,
+   "status": "Not owned",
+   "why": "David: doesn't help him with anything."
+  },
+  {
+   "effect": "When the Switch On! skill is used, a larger explosion occurs, inflicting additional Burn and Airborne status effects on hit enemies.",
+   "hero": "Aria",
+   "karma": "Explosion Is Art",
+   "notes": "",
+   "priority": "Medium",
+   "rank": 6,
+   "status": "Not owned",
+   "why": "A bigger Switch On! explosion that adds Burn and Airborne: more application for an Enabler."
+  },
+  {
+   "effect": "In Precision Shooting mode, the Ballista Shot skill changes to a charge action, allowing you to unleash a powerful single shot by holding down the skill key to fire all loaded arrows.",
+   "hero": "Astria",
+   "karma": "Wildflowers Bloom Through the Wind",
+   "notes": "",
+   "priority": "High",
+   "rank": 1,
+   "status": "Not owned",
+   "why": "Her charged shot of all loaded arrows may be the fix for her single target and Stun. David thinks she needs it."
+  },
+  {
+   "effect": "The Howling skill has been changed to a Hold Action, so holding the skill key increases the skill duration.",
+   "hero": "Castella",
+   "karma": "Noisy Duet",
+   "notes": "",
+   "priority": "Low",
+   "rank": 16,
+   "status": "Not owned",
+   "why": "Howling becomes a hold action for a longer duration."
+  },
+  {
+   "effect": "When the Ice Storm skill ends, the storm moves toward the nearest enemy. If the targeted enemy is defeated, the storm remains at that location.",
+   "hero": "Cerese",
+   "karma": "Eternal Blizzard",
+   "notes": "",
+   "priority": "Medium",
+   "rank": 11,
+   "status": "Owned",
+   "why": "Her Ice Storm moves to the nearest enemy when it ends."
+  },
+  {
+   "effect": "The Invisible skill is changed: reusing the skill instantly detonates the summoned Clone.",
+   "hero": "Charlotte",
+   "karma": "The Conviction Left in Darkness",
+   "notes": "",
+   "priority": "High",
+   "rank": 4,
+   "status": "Owned",
+   "why": "Changes her playstyle: re-using Invisible detonates the clone at once. Worth seeing on an Expert Main DPS."
+  },
+  {
+   "effect": "When Chako is summoned, frost spikes rise at the summoning point depending on the size of the Ice Clump on Chako's back. The frost spikes deal continuous damage to the target and inflict the Frost status effect.",
+   "hero": "Dana",
+   "karma": "A Sparkling Tea Time",
+   "notes": "",
+   "priority": "Low",
+   "rank": 15,
+   "status": "Owned",
+   "why": "David: not a must, and it needs enemies grouped first."
+  },
+  {
+   "effect": "When using the Banner Maid skill within the area created by the Brave One skill, Critical Rate and Critical Damage are further increased.",
+   "hero": "Eileen",
+   "karma": "Between Chivalry and Bookmarks",
+   "notes": "",
+   "priority": "Low",
+   "rank": 13,
+   "status": "Not owned",
+   "why": "Already S. More Crit inside Brave One, so strong but not urgent."
+  },
+  {
+   "effect": "When using the Phantom Slash skill, blades are generated along the path, dealing additional damage to enemies within the area and inflicting the Poison status effect on hit.",
+   "hero": "Johnny",
+   "karma": "Wandering Blade",
+   "notes": "",
+   "priority": "Medium",
+   "rank": 7,
+   "status": "Not owned",
+   "why": "Phantom Slash leaves blades that add damage and Poison."
+  },
+  {
+   "effect": "The number of foxes summoned by the Fox Grab skill increases.",
+   "hero": "Kalien",
+   "karma": "The Chosen One of the Crimson Flame",
+   "notes": "",
+   "priority": "High",
+   "rank": 2,
+   "status": "Owned",
+   "why": "The tier list already marks her as needing it: more foxes from Fox Grab, her key skill."
+  },
+  {
+   "effect": "The attack range and damage of the Explosion skill are increased.",
+   "hero": "Kalsion",
+   "karma": "The Sun Blazes Again",
+   "notes": "",
+   "priority": "High",
+   "rank": 3,
+   "status": "Owned",
+   "why": "Explosion is his main damage. More range and damage on an A-tier hero that sits in several Airborne teams."
+  },
+  {
+   "effect": "The number of relics summoned by the Relic Fall skill increases.",
+   "hero": "Lute",
+   "karma": "A Sword Summoned for a Friend",
+   "notes": "",
+   "priority": "Low",
+   "rank": 19,
+   "status": "Not owned",
+   "why": "More relics from Relic Fall."
+  },
+  {
+   "effect": "When using the Holy Cross skill within the area created by the Holy Circle skill, the cross becomes larger and the number of attacks increases.",
+   "hero": "Ornette",
+   "karma": "Sacred Lightning Baptism",
+   "notes": "",
+   "priority": "Medium",
+   "rank": 12,
+   "status": "Owned",
+   "why": "Holy Cross gets bigger with more hits inside Holy Circle."
+  },
+  {
+   "effect": "Frozen Stinger is enhanced: the range and damage of its final attack are increased. Pressing the attack button again casts the final attack faster.",
+   "hero": "Othello",
+   "karma": "The Spear That Fells the Sun",
+   "notes": "",
+   "priority": "Medium",
+   "rank": 9,
+   "status": "Owned",
+   "why": "Frozen Stinger's final hit gets bigger and faster."
+  },
+  {
+   "effect": "The Tempest skill changes to emit a sword aura.",
+   "hero": "Reina",
+   "karma": "The Wind That Protects the Kingdom",
+   "notes": "",
+   "priority": "Low",
+   "rank": 14,
+   "status": "Not owned",
+   "why": "Already S. Tempest becomes a sword aura."
+  },
+  {
+   "effect": "The number of arrows fired by the Kick Storm skill increases.",
+   "hero": "Roxy",
+   "karma": "The Noble Lady's Wild Hobby",
+   "notes": "",
+   "priority": "Medium",
+   "rank": 8,
+   "status": "Not owned",
+   "why": "More arrows from Kick Storm, her Stun-gated skill."
+  },
+  {
+   "effect": "After using the Flash skill, pressing the attack key again unleashes a powerful thrust attack.",
+   "hero": "Ryza",
+   "karma": "The Scar Lightning Left Behind",
+   "notes": "",
+   "priority": "Medium",
+   "rank": 5,
+   "status": "Farming",
+   "why": "Adds a new thrust attack after Flash on our strongest Main DPS."
+  },
+  {
+   "effect": "When retrieving the sacred relic, a set amount of Rage for the Divine Crash and Divine Smash skills is restored.",
+   "hero": "Sion",
+   "karma": "Fate Spoke to the Boy",
+   "notes": "",
+   "priority": "Low",
+   "rank": 17,
+   "status": "Not owned",
+   "why": "Restores some Rage when retrieving the relic."
+  },
+  {
+   "effect": "When the Cure skill is used, the magic circle that appears remains active for a certain period and expands in range. It immediately removes physical status effects from allies within the magic circle's range and continuously heals them.",
+   "hero": "Tarte",
+   "karma": "A Helping Hand for Good Kids",
+   "notes": "",
+   "priority": "Low",
+   "rank": 18,
+   "status": "Not owned",
+   "why": "David: not needed. It only improves her heal."
+  },
+  {
+   "effect": "The damage of the Divine Arc skill is increased. When entering Heretic Judgment mode, movement speed increases, and Theresia's Bleed attacks inflict an additional Bleed status effect.",
+   "hero": "Theresia",
+   "karma": "Merciful Death Sentence",
+   "notes": "9 Nov (Lv.70, no gear, 1 min): Theresia-Roxy-Kalien 380k with only her signature on; Theresia-Roxy-Castella 250k with none and 350k with hers and Roxy's. Not yet measured alone: the same team with and without only her signature. Claude's maths for the Karma's Lv.1 stats (Attack +80 on her 1245, Defense Ignore 2% on the Training Ogre's 1000 Defense, Bleed / Stun Additional Attack Power +105 / +210 while those statuses are up): her own hits +7.5% with no status, +16% with Bleed up, +33% with Bleed and Stun up.",
+   "priority": "Medium",
+   "rank": 10,
+   "status": "Owned",
+   "why": "David: not needed, but a big boost to Heretic Judgment."
+  }
+ ]
+}
