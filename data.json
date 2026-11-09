@@ -25343,7 +25343,7 @@
   }
  },
  "SKILL_BUFF_LEVELS": {
-  "note": "Buff values per skill level (Lv.1→Lv.10), from David's Test Kit test 02. Every one follows the same pattern: +5% (or +10%) of the Lv.1 value per level up to Lv.9, then a double step at Lv.10, ending at 1.5× (or 2×) Lv.1. Not used by the page yet.",
+  "note": "Buff values per skill level (Lv.1→Lv.10), from David's Test Kit test 02. Every one follows the same pattern: +5% (or +10%) of the Lv.1 value per level up to Lv.9, then a double step at Lv.10, ending at 1.5× (or 2×) Lv.1. Complete for every scaling buff on a levellable skill (9 Nov 2026) except Alex's two hostility values (no damage effect). Not used by the page yet.",
   "skills": [
    {
     "hero": "Lute",
@@ -25479,6 +25479,74 @@
      13.5,
      14,
      15
+    ]
+   },
+   {
+    "hero": "Tarte",
+    "skill": "Cure",
+    "effect": "Restores % of allies' Max HP",
+    "values": [
+     5,
+     5.5,
+     6,
+     6.5,
+     7,
+     7.5,
+     8,
+     8.5,
+     9,
+     10
+    ]
+   },
+   {
+    "hero": "Alex",
+    "skill": "Guard Counter",
+    "effect": "Reduces the target's Defense %",
+    "values": [
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     20
+    ]
+   },
+   {
+    "hero": "Astria",
+    "skill": "Reload",
+    "effect": "Movement speed %",
+    "values": [
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     20
+    ]
+   },
+   {
+    "hero": "Astria",
+    "skill": "Siege Assault",
+    "effect": "Attack Power % (Precision Shot mode)",
+    "values": [
+     20,
+     22,
+     24,
+     26,
+     28,
+     30,
+     32,
+     34,
+     36,
+     40
     ]
    }
   ]

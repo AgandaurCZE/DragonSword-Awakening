@@ -9,9 +9,8 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 ## Current task (Claude, 9 Nov evening)
 - Done: breakthrough profiles explained (GAME_MATH 2.1: one axis, B melee, C ranged, A halfway, D Alex); skill buffs checked; 19 new gear rows checked (all match); endgame gear and set analysis (GAME_MATH 4.1).
 - David's answers (9 Nov): base stats written to data.json (done). Builds: switch to the full model **in the preview now, public at launch**. Signal uptime: almost always on in groups; on bosses from about half to most of the fight, depending on the team.
-- **Next site task (Claude):** preview-only builds from the full model (`tools/endgame_gear.py` logic, ported to JS behind `?tiers=new`, Python and JS kept identical). Defaults to agree with David before building: target Defense (1825?), which statuses are on the target per hero, and whether Earthshatterer's window counts as always on.
-- **Waiting on David:** Astria's Siege Assault Attack Power values Lv.1–10 (Test Kit test 02).
-- Next for David: team tests or Signature Karma test 09 (Claude recommends test 09 first: it's one of the two before-awakening tasks).
+- **Next site task (Claude):** preview-only builds from the full model (`tools/endgame_gear.py` logic, ported to JS behind `?tiers=new`, Python and JS kept identical). Agreed defaults (David, 9 Nov): toughest boss (Defense 1825) with a switch to the Training Ogre (1000); statuses = only those the hero applies themselves (a solo measurement; teams belong in the calculator), open point below; set effects always on, or a chart showing always-on and half of a 60 s fight. Open: count every status the hero applies at once, or own status plus one physical (Claude's suggestion, 9 Nov)?
+- **Next for David: Signature Karma test 09** (agreed 9 Nov), then team tests.
 
 ## Must be done BEFORE any awakening or mastery
 1. ~~Lv.70 base stats (test 08)~~ done 9 Nov for all 20, written to `data.json`.

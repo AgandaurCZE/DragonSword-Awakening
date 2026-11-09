@@ -1,3 +1,6 @@
+## 9 Nov 2026 (late) — Skill buffs complete; build-model defaults agreed (Claude)
+- `SKILL_BUFF_LEVELS`: added Tarte's Cure, Alex's Guard Counter, Astria's Reload and Siege Assault (20% → 40% Attack Power). Every scaling buff on a levellable skill is now recorded.
+- Defaults David set for the preview builds: toughest boss with a Training Ogre switch; only statuses the hero applies; set effects always on, or always on and half of a 60 s fight side by side (STATUS).
 ## 9 Nov 2026 (late) — All 20 Lv.70 base stats in data.json (Claude)
 - With David's OK: `HERO_BASE_STATS` for Eileen, Lute, Othello (B), Aria, Cerese, Astria, Dana (C), Ornette (A) and Alex (new profile D) are now measured (`estimated: false`). All C heroes are stored with Defense 320 (the panel gives 319.5). `HERO_STAT_MODEL` gets profile D, profile labels (melee, ranged, halfway, Defender) and an updated note.
 - `tools/hero_stats.py`: no build changes. Validator OK. Local check: plain and `?tiers=new` load with no console errors.
