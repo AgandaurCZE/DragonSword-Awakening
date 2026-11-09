@@ -1,3 +1,12 @@
+## 9 Nov 2026 — Team Planner checked: teams rebuilt independently, false claims fixed, 5 new teams (Claude)
+- At David's request, Claude built teams from the hero data alone (skills, statuses needed and applied, Test 01 rates, roles) before reading the planner, then compared. Matches: Airborne burst (t01), Shadow Poison (t02), Thunder pair (t06), Holy Bleed with Kalien (t11); each got a second, dated Claude note with what's new (Airborne per rotation, hit bonus totals, Charlotte's own Poison making Johnny's mostly redundant).
+- Fixed (Why or note):
+  - t03 said Theresia needs Stun or Bleed "from someone else"; she applies both, slowly.
+  - t04 claimed Chako keeps fighting while Dana is swapped out (not in the codex), and listed Cerese's shattering as a plus (David found it works against Othello).
+  - t05's "17–18 s" came from a superseded Lv.1 estimate; "orbs keep coming after you swap out" isn't in the codex (asked David).
+  - t10's note compared runs at different levels and gear; replaced.
+- New ideas, status Idea: t12 Fire and venom (Kalsion, Johnny, Aria), t13 Double blessing (Ryza, Sion, Eileen), t14 Ice Prison (Dana, Othello, Sion), t15 Fox and crossbow (Kalsion, Kalien, Astria), t16 Frost tornado (Dana, Cerese, Reina).
+- Repo: `docs/library/TEAM_TESTS.md` teams section regenerated from the planner; `docs/testkit/planner-backup-2026-11-09.json` teams refreshed; STATUS updated.
 ## 9 Nov 2026 — Notes cleaned up: one source of truth, finished work separated (Claude)
 - David asked for every note to hold only current information, finished work moved to its own file, and `CHANGELOG.md` as the only log.
 - **Correction:** only 11 heroes are Lv.70 (the 11 measured in `HERO_BASE_STATS`). Aria, Ornette, Lute, Eileen, Cerese, Othello, Dana, Alex and Astria are being levelled now. An earlier chat had written "all 20 heroes are Lv.70". Fixed in STATUS, TESTING, TEST01_RESULTS and the to-do page (item 1 is now "level the last 9 to 70, then measure"). Test 01 numbers stand, because application doesn't depend on hero level.

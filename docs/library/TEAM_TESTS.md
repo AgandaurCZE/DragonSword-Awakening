@@ -2,7 +2,7 @@
 
 Back to the library: [docs/README.md](../README.md). Where things stand: [STATUS.md](STATUS.md).
 
-Live data is in the **Team Planner** artifact https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD (collections `teams`, doc ids `t01`…`t11` = order number, and `sigs`, doc id = hero name in lower case; source page `docs/testkit/dragonsword-planner.html`). This file is a snapshot taken 9 Nov 2026; JSON copy: `docs/testkit/planner-backup-2026-11-09.json`. If the artifact and this file disagree, the artifact is newer.
+Live data is in the **Team Planner** artifact https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD (collections `teams`, doc ids `t01`…`t11` = order number, and `sigs`, doc id = hero name in lower case; source page `docs/testkit/dragonsword-planner.html`). This file is a snapshot taken 9 Nov 2026 (teams refreshed 04:45 after Claude's second check: teams 12–16 added, false or unverified claims in the Why texts of 3, 4 and 5 removed, and an invalid comparison in team 10's note replaced); JSON copy: `docs/testkit/planner-backup-2026-11-09.json`. If the artifact and this file disagree, the artifact is newer.
 
 ## Team statuses
 
@@ -30,7 +30,10 @@ Results (David):
 - 9 Nov: 420k in 1 min, all Lv.70, no gear, no Karma.
 - 9 Nov: 510k with Kalsion's signature on (Johnny and Reina without).
 
-Claude's note: The team David has been playing for the last few days.
+Claude's notes:
+
+- Claude (8 Nov): The team David has been playing for the last few days.
+- Claude (9 Nov, second check, built this team independently): Airborne comes from two heroes here. Reina adds about 0.89 of the gauge per rotation (Rising Cutter 0.24, Wind Slayer 0.40 with both charges, Wind Grab 0.25), Johnny about 0.6 (Venom Dance, Phantom Slash, Venom Cutter 0.20 each). With Burn, Poison and Airborne up, every hit gets +200% (x3).
 
 ### 2. Shadow Poison (t02, status: idea)
 
@@ -44,11 +47,15 @@ Results (David):
 - 9 Nov: 440k in 1 min, all Lv.70, no gear, no Karma.
 - 9 Nov: 560k with Charlotte's signature on (Johnny and Reina without).
 
-### 3. Holy Bleed (t03, status: test)
+Claude's notes:
+
+- Claude (9 Nov, built this team independently): Charlotte applies Poison herself on 4 skills (Test 01: Poison Dagger 0.50, clone explosion 0.24, Illusion Kick 0.15, Poison Step 0.08), so Johnny's Poison is mostly redundant here. His real value is Airborne (about 0.6 per rotation) for Shadow Grab, plus his own damage. Her only own Airborne is Illusion Kick (0.20) on a long cooldown, which is why the agreed rating says she needs it.
+
+### 3. Holy Bleed (t03, status: to test)
 
 Heroes: Theresia (Main DPS), Roxy (Enabler), Castella (Enabler).
 
-Why: On bosses Theresia needs Stun or Bleed from someone else. Roxy applies both, and Theresia's Stun in turn opens Roxy's Kick Storm. Castella breaks Super Armor fast, which opens her own Stun. One damage dealer and two Enablers.
+Why: Theresia's Divine Arc needs Stun and her Holy Rise needs Bleed. She applies both herself, but slowly on a boss, so Roxy adds both, and Theresia's Stun in turn opens Roxy's Kick Storm. Castella breaks Super Armor fast, which opens her own Stun. One damage dealer and two Enablers.
 
 Results (David):
 
@@ -58,23 +65,30 @@ Results (David):
 - 9 Nov: 330k with only Theresia's signature on.
 - David: hard team (big run-to-run spread).
 
-Claude's note: David plans team tests with Roxy; Roxy may count as Sub-DPS here.
+Claude's notes:
+
+- Claude (8 Nov): David plans team tests with Roxy; Roxy may count as Sub-DPS here.
+- Claude (9 Nov check): fixed the Why. It said Theresia needs Stun or Bleed "from someone else", but Test 01 has her own: Celestial Verdict 0.20 Stun (0.25 in Heretic Judgment), Consecration 0.15 Bleed plus 0.12 from the 10 s aura. Castella's Stun Blow (0.33) only works on a broken boss.
 
 ### 4. Deep Frost (t04, status: idea)
 
 Heroes: Othello (Main DPS), Dana (Sub-DPS), Cerese (Sub-DPS).
 
-Why: Othello's Frozen Burst needs Frozen enemies. Dana stacks Frost fast and Chako keeps fighting while she's swapped out; Cerese gathers with her tornado, adds Frost and shatters. Othello doesn't strictly need either of them, so this is about speed.
+Why: Othello's Frozen Burst needs Frozen enemies. Dana stacks Frost fast; Cerese gathers with her tornado and adds Frost. Othello doesn't strictly need either of them, so this is about speed.
 
 Results (David):
 
 - 8 Nov: 42k in 1 min, no signatures, all Lv.1.
 
+Claude's notes:
+
+- Claude (9 Nov check): two claims removed from the Why because the codex doesn't say them: that Chako keeps fighting while Dana is swapped out, and Cerese's shattering as a plus. David found Cerese gets in Othello's way (she explodes his prison and Frozen enemies, and lifts his Knockdown targets; see LAUNCH_CHANGES). Dana is now rated higher than Othello (A vs B). My version without Cerese is t14, Ice Prison.
+
 ### 5. Storm (t05, status: idea)
 
 Heroes: Ryza (Main DPS), Tarte (Enabler), Sion (Support).
 
-Why: Tarte builds a full Shock stack in about 17–18 s and her Ultimate's orbs keep coming after you swap out; Ryza's Shock hits pop them. Sion adds +15% team Attack and more Shock. Ryza's Thunder Grab needs Shock.
+Why: Tarte builds Shock fast and her Bolt Bubble orbs explode with Shock when a Shock attack from her or an ally hits them, so Ryza's Shock hits pop them. Sion adds team Attack (+15% at Lv.10, while a relic is placed) and more Shock. Ryza's Thunder Grab needs Shock.
 
 Results (David):
 
@@ -82,15 +96,21 @@ Results (David):
 - 9 Nov: 330k in 1 min, all Lv.70, no gear, no Karma, after runs of 250k and 300k; the Expert tag at its best, and still could do more.
 - 9 Nov: 400k with Ryza's signature on.
 
-Claude's note: Ryza can stack Shock alone, so check whether Tarte's opener actually speeds her up.
+Claude's notes:
 
-### 6. Thunder pair (t06, status: test)
+- Claude (8 Nov): Ryza can stack Shock alone, so check whether Tarte's opener actually speeds her up.
+- Claude (9 Nov check): removed two claims from the Why. "Full Shock stack in about 17–18 s" came from a Lv.1 estimate in the superseded Test 01 entries. "Orbs keep coming after you swap out" isn't in the codex text; David, is it true in game? The Lv.70 Test 01 has Tarte's charged Skill at 0.90 Shock with all 26 orbs.
+
+### 6. Thunder pair (t06, status: to test)
 
 Heroes: Ryza (Main DPS), Ornette (Sub-DPS), Sion (Support).
 
 Why: Ornette's Judgment needs Shock and her Holy Grab needs Knockdown. Ryza supplies Shock, Sion supplies Shock and Knockdown plus the Attack buff.
 
-Claude's note: David wants to see whether Ryza and Ornette work together at all.
+Claude's notes:
+
+- Claude (8 Nov): David wants to see whether Ryza and Ornette work together at all.
+- Claude (9 Nov, built this team independently): all three apply Shock, and Knockdown comes from three sources (Ryza's Thunder Grab 0.20–0.25, Ornette's Judgment 0.25, or 0.40 at 2 Shock stacks, Sion's Divine Smash and Justice Fall 0.20 each). Shock and Knockdown give +150% on hits. Almost no Airborne: Ryza's Stormbringer 0.20, and Ornette's Holy Grab didn't apply it on the boss.
 
 ### 7. Burn chain (t07, status: idea)
 
@@ -113,7 +133,9 @@ Results (David):
 - 9 Nov: 330k in 1 min, all Lv.70, no gear, no Karma.
 - 9 Nov: 380k with Kalsion's and Kalien's signatures on (Castella has none).
 
-Claude's note: A variant of Burn chain for bosses with a big Super Armor gauge.
+Claude's notes:
+
+- A variant of Burn chain for bosses with a big Super Armor gauge.
 
 ### 9. Nightmare support (t09, status: idea)
 
@@ -121,9 +143,11 @@ Heroes: Ryza (Main DPS), Eileen (Support), Alex (Support).
 
 Why: For the hardest bosses. Eileen adds +15% Attack and +20% Crit Rate; Alex's parry lowers the boss's Defense by 20% for 10 s (about +11% team damage, and it stacks with Earthshatterer). Two Supports around one damage dealer.
 
-Claude's note: Both Supports are Expert: timing matters a lot here.
+Claude's notes:
 
-### 10. Fox and wind (t10, status: test)
+- Both Supports are Expert: timing matters a lot here.
+
+### 10. Fox and wind (t10, status: to test)
 
 Heroes: Kalien (Enabler), Kalsion (Sub-DPS), Reina (Enabler).
 
@@ -135,9 +159,11 @@ Results (David):
 - 9 Nov: 390k and 460k in 1 min (two runs), all Lv.70, no gear, no Karma.
 - 9 Nov: 560k with Kalsion's and Kalien's signatures on (Reina without).
 
-Claude's note: Compare with Burn chain: swapping Reina (Lv.70 built) for Aria (Lv.1) gave slightly more, not less.
+Claude's notes:
 
-### 11. Holy Bleed with Kalien (t11, status: test)
+- Claude (9 Nov check): the earlier note said swapping Reina for Aria gave slightly more damage (Burn chain 1.1M vs this team 1M on 8 Nov). That comparison doesn't hold. Those runs had different levels and gear (Aria Lv.1 no gear, Kalien Lv.50, Reina built), so more than one thing changed. Compare the two teams only at the same level, with no gear.
+
+### 11. Holy Bleed with Kalien (t11, status: to test)
 
 Heroes: Theresia (Main DPS), Roxy (Enabler), Kalien (Enabler).
 
@@ -150,7 +176,60 @@ Results (David):
 - 9 Nov: 500k and 430k (two runs) with Theresia's, Roxy's and Kalien's signature Karmas on (no other Karma).
 - David: hard team (big run-to-run spread).
 
-Claude's note: Holy Bleed with Castella: 250k with no signatures, 350k with Theresia's and Roxy's.
+Claude's notes:
+
+- Claude (8 Nov): Holy Bleed with Castella: 250k with no signatures, 350k with Theresia's and Roxy's.
+- Claude (9 Nov, built this team independently): Kalien's Finale gives Stun (0.20) with no condition, and her Burn adds a second damage-over-time status: Bleed, Burn and Stun give +200% on hits. Her Fox Grab needs Break and nobody here is a Breaker, but Kalien (25 s) and Theresia (27 s) break the gauge fast alone.
+
+### 12. Fire and venom (t12, status: idea)
+
+Heroes: Kalsion (Sub-DPS), Johnny (Sub-DPS), Aria (Enabler).
+
+Why: Airborne burst without Reina. Aria applies both statuses Kalsion needs (Burn for Burst Grab, Airborne for Explosion); Johnny adds Airborne for both Explosion and his own Venom Cutter, plus Poison.
+
+Claude's notes:
+
+- Claude (9 Nov): Aria alone gives about 0.4 Airborne per rotation (Air Bomb 0.20, Rolling Bomb 0.10, Switch On! 0.10), less than half of Reina's 0.89. With Johnny's 0.6 the two together come close to Reina, and Aria adds Burn (about 0.65 per rotation). Burn, Poison and Airborne: +200% on hits. Frees Reina for another team.
+
+### 13. Double blessing (t13, status: idea)
+
+Heroes: Ryza (Main DPS), Sion (Support), Eileen (Support).
+
+Why: Ryza covers her own needs, so both partners add damage: Sion's Bless and Eileen's Brave One each give +15% Attack (Lv.10) and add together, the banner gives +20% Crit Rate, and Sion adds Shock and Knockdown.
+
+Claude's notes:
+
+- Claude (9 Nov): a variant of Nightmare support (t09) with Sion instead of Alex. Alex's parry is about +11% team damage on a 1000-Defense boss and needs exact timing. Sion's +15% Attack needs a relic placed but no timing, and he adds statuses. Only one Expert here (Eileen). Teammates must stand in the buff circles.
+
+### 14. Ice Prison (t14, status: idea)
+
+Heroes: Dana (Main DPS), Othello (Sub-DPS), Sion (Support).
+
+Why: Othello's Ice Crown makes the Ice Prison (about 20 s); Dana's Chako Knuckle on Ice Block hits 35% of the Super Armor gauge each, up to 4 in one prison. Sion adds Knockdown for Dana's Chako Spin, Shock, and team Attack.
+
+Claude's notes:
+
+- Claude (9 Nov): Deep Frost (t04) without Cerese, since she breaks Othello's prison and Frozen enemies, and with Dana as the Main DPS (rated A, Othello B). Measured: Dana broke the whole gauge in about 7 s after Othello's Ultimate. Knockdown and Shock: +150% on hits, plus +50% while Frozen.
+
+### 15. Fox and crossbow (t15, status: idea)
+
+Heroes: Kalsion (Sub-DPS), Kalien (Enabler), Astria (Sub-DPS).
+
+Why: Kalien and Astria unlock each other: Kalien's Finale gives Stun, which Astria's Bolt Bombard needs; Astria breaks Super Armor in about 18 s, which Kalien's Fox Grab needs. Both feed Kalsion Burn.
+
+Claude's notes:
+
+- Claude (9 Nov): Break and burn (t08) with Astria in Castella's slot. Weak spot: little Airborne for Kalsion's Explosion (only his own Burst Grab 0.25 and Royal Flame's Flame Wave 0.20), where Castella adds Upper Blow (0.33 Airborne). Worth one run to see whether Astria's own damage makes up for it.
+
+### 16. Frost tornado (t16, status: idea)
+
+Heroes: Dana (Main DPS), Cerese (Sub-DPS), Reina (Enabler).
+
+Why: For groups. Cerese gathers with Ice Storm; her Frozen Needles needs Airborne and Frost, which Reina and Dana supply. Dana's Frost brings enemies to Frozen for Cerese's Shattering Touch.
+
+Claude's notes:
+
+- Claude (9 Nov): untested question: does Airborne keep or end Frozen and Ice Blocks? If it ends them, swap Reina for Sion. Dana groups S, Cerese groups A, Reina groups S+.
 
 ## Signature Karma priority list
 
