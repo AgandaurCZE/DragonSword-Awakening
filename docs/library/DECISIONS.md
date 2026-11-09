@@ -11,6 +11,7 @@ Back to the library: [docs/README.md](../README.md). Data shape: `TIER_LIST_V2` 
 Four roles: **Main DPS, Sub-DPS, Enabler, Support**. Enabler has the blue icon (`assets/roles/enabler.webp`).
 - Johnny is Sub-DPS with the Enabler tag. Reina, Castella and Roxy are Enablers. Ornette is Sub-DPS.
 - The Applies chip (`applies{main, also}`) shows a hero's statuses: bold = main. Castella's chain is Break, then Stun, then Airborne. Johnny's Airborne stays plain.
+- **A hero who applies their own needed status slowly still needs an enabler** to reach full potential fast (David, 9 Nov; e.g. Theresia's own Stun and Bleed are too slow on a boss).
 - Enabler is judged on bosses. Caveat agreed 9 Nov: a hero who must build their own setup first (Othello: Ice Grab Knockdown needs 2 Frost stacks) enables later than one who applies from the first second (Reina).
 
 ## Tags: rules agreed with David

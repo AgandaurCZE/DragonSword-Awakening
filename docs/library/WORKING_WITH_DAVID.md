@@ -31,6 +31,7 @@ Back to the library: [docs/README.md](../README.md). Repository rules: [AGENTS.m
 - Other assistants (ChatGPT, mainly for artwork) work on the same repo. Leave them notes in `CHATGPT.md`; be kind, and check their changes rather than undoing them.
 
 ## Mistakes past chats made: don't repeat them
+- **Removing in-game facts because the codex text doesn't state them** (9 Nov: Tarte's orbs after a swap, Chako after a swap). David's play knowledge is a source. If something isn't in the repo, ask him; don't delete it.
 - **Writing that all 20 heroes were Lv.70** (9 Nov) when only 11 were. Check `HERO_BASE_STATS` (`estimated`) and STATUS before stating levels.
 - **Forgetting agreed plans.** On 9 Nov a chat didn't recognise the gearless Lv.70 team redo it had planned itself, and twice left out the Signature Karma tests when asked what must happen before awakenings. Before answering "what's left" or "what is this", read [STATUS.md](STATUS.md) and the to-do page (`docs/dragonsword_david_todo_by_priority.html`).
 - **Drawing conclusions from runs that changed two things at once** (Theresia's signature and Kalien for Castella in the same comparison). Check what changed between two numbers before explaining the gap.

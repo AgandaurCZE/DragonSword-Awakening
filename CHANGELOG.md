@@ -1,3 +1,6 @@
+## 9 Nov 2026 — Team Planner: in-game facts restored (Claude)
+- David confirmed in game what Claude's check had wrongly removed: Tarte's Bolt Bubble keeps casting after she swaps out (the next hero's Shock detonates the orbs), and Chako keeps fighting while Dana is swapped out. He also confirmed that Cerese shatters Othello's Ice Prison. Restored in planner teams t04 and t05. t03 now states David's rule: a hero who applies their own needed status slowly still needs an enabler (Theresia).
+- Recorded in GAME_MATH (3.3), DECISIONS (roles), WORKING_WITH_DAVID (mistake: don't delete in-game facts the codex doesn't state; ask). TEAM_TESTS and the planner backup refreshed.
 ## 9 Nov 2026 — Team Planner checked: teams rebuilt independently, false claims fixed, 5 new teams (Claude)
 - At David's request, Claude built teams from the hero data alone (skills, statuses needed and applied, Test 01 rates, roles) before reading the planner, then compared. Matches: Airborne burst (t01), Shadow Poison (t02), Thunder pair (t06), Holy Bleed with Kalien (t11); each got a second, dated Claude note with what's new (Airborne per rotation, hit bonus totals, Charlotte's own Poison making Johnny's mostly redundant).
 - Fixed (Why or note):

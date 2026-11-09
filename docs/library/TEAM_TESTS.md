@@ -2,7 +2,7 @@
 
 Back to the library: [docs/README.md](../README.md). Where things stand: [STATUS.md](STATUS.md).
 
-Live data is in the **Team Planner** artifact https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD (collections `teams`, doc ids `t01`…`t11` = order number, and `sigs`, doc id = hero name in lower case; source page `docs/testkit/dragonsword-planner.html`). This file is a snapshot taken 9 Nov 2026 (teams refreshed 04:45 after Claude's second check: teams 12–16 added, false or unverified claims in the Why texts of 3, 4 and 5 removed, and an invalid comparison in team 10's note replaced); JSON copy: `docs/testkit/planner-backup-2026-11-09.json`. If the artifact and this file disagree, the artifact is newer.
+Live data is in the **Team Planner** artifact https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD (collections `teams`, doc ids `t01`…`t11` = order number, and `sigs`, doc id = hero name in lower case; source page `docs/testkit/dragonsword-planner.html`). This file is a snapshot taken 9 Nov 2026 (teams refreshed 04:45 after Claude's second check: teams 12–16 added, an outdated Lv.1 number removed from team 5 and an invalid comparison in team 10's note replaced; facts David confirmed in game restored in 4 and 5); JSON copy: `docs/testkit/planner-backup-2026-11-09.json`. If the artifact and this file disagree, the artifact is newer.
 
 ## Team statuses
 
@@ -55,7 +55,7 @@ Claude's notes:
 
 Heroes: Theresia (Main DPS), Roxy (Enabler), Castella (Enabler).
 
-Why: Theresia's Divine Arc needs Stun and her Holy Rise needs Bleed. She applies both herself, but slowly on a boss, so Roxy adds both, and Theresia's Stun in turn opens Roxy's Kick Storm. Castella breaks Super Armor fast, which opens her own Stun. One damage dealer and two Enablers.
+Why: Theresia's Divine Arc needs Stun and her Holy Rise needs Bleed. She applies both herself, but slowly on a boss, so she needs an enabler to reach her full potential fast: Roxy adds both, and Theresia's Stun in turn opens Roxy's Kick Storm. Castella breaks Super Armor fast, which opens her own Stun. One damage dealer and two Enablers.
 
 Results (David):
 
@@ -68,13 +68,13 @@ Results (David):
 Claude's notes:
 
 - Claude (8 Nov): David plans team tests with Roxy; Roxy may count as Sub-DPS here.
-- Claude (9 Nov check): fixed the Why. It said Theresia needs Stun or Bleed "from someone else", but Test 01 has her own: Celestial Verdict 0.20 Stun (0.25 in Heretic Judgment), Consecration 0.15 Bleed plus 0.12 from the 10 s aura. Castella's Stun Blow (0.33) only works on a broken boss.
+- Claude (9 Nov check): her own sources per Test 01: Celestial Verdict 0.20 Stun (0.25 in Heretic Judgment), Consecration 0.15 Bleed plus 0.12 from the 10 s aura. Too slow on a boss, which is why she needs an enabler (David's rule: a hero who applies their own needs slowly still needs an enabler). Castella's Stun Blow (0.33) only works on a broken boss.
 
 ### 4. Deep Frost (t04, status: idea)
 
 Heroes: Othello (Main DPS), Dana (Sub-DPS), Cerese (Sub-DPS).
 
-Why: Othello's Frozen Burst needs Frozen enemies. Dana stacks Frost fast; Cerese gathers with her tornado and adds Frost. Othello doesn't strictly need either of them, so this is about speed.
+Why: Othello's Frozen Burst needs Frozen enemies. Dana stacks Frost fast and Chako keeps fighting while she's swapped out; Cerese gathers with her tornado and adds Frost. Othello doesn't strictly need either of them, so this is about speed.
 
 Results (David):
 
@@ -82,13 +82,13 @@ Results (David):
 
 Claude's notes:
 
-- Claude (9 Nov check): two claims removed from the Why because the codex doesn't say them: that Chako keeps fighting while Dana is swapped out, and Cerese's shattering as a plus. David found Cerese gets in Othello's way (she explodes his prison and Frozen enemies, and lifts his Knockdown targets; see LAUNCH_CHANGES). Dana is now rated higher than Othello (A vs B). My version without Cerese is t14, Ice Prison.
+- Claude (9 Nov check): Cerese shatters Othello's Ice Prison if she's played after him (David confirmed), and lifts his Knockdown targets, so she works against his setup. Dana is now rated higher than Othello (A vs B). My version without Cerese is t14, Ice Prison.
 
 ### 5. Storm (t05, status: idea)
 
 Heroes: Ryza (Main DPS), Tarte (Enabler), Sion (Support).
 
-Why: Tarte builds Shock fast and her Bolt Bubble orbs explode with Shock when a Shock attack from her or an ally hits them, so Ryza's Shock hits pop them. Sion adds team Attack (+15% at Lv.10, while a relic is placed) and more Shock. Ryza's Thunder Grab needs Shock.
+Why: Tarte builds Shock fast, and her Bolt Bubble keeps casting after she swaps out, so orbs keep coming while the main damage dealer is on the field; a Shock attack from any ally explodes them for big damage and more Shock, so Ryza's Shock hits detonate them. Sion adds team Attack (+15% at Lv.10, while a relic is placed) and more Shock. Ryza's Thunder Grab needs Shock.
 
 Results (David):
 
@@ -99,7 +99,7 @@ Results (David):
 Claude's notes:
 
 - Claude (8 Nov): Ryza can stack Shock alone, so check whether Tarte's opener actually speeds her up.
-- Claude (9 Nov check): removed two claims from the Why. "Full Shock stack in about 17–18 s" came from a Lv.1 estimate in the superseded Test 01 entries. "Orbs keep coming after you swap out" isn't in the codex text; David, is it true in game? The Lv.70 Test 01 has Tarte's charged Skill at 0.90 Shock with all 26 orbs.
+- Claude (9 Nov check): David confirmed the orbs keep coming after Tarte swaps out. The old "full Shock stack in about 17–18 s" came from a Lv.1 estimate in the superseded Test 01 entries, so it stays out until it's measured at Lv.70 (the Lv.70 Test 01 has her charged Skill at 0.90 Shock with all 26 orbs).
 
 ### 6. Thunder pair (t06, status: to test)
 

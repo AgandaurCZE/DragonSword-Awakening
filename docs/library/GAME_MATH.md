@@ -96,6 +96,7 @@ Terms:
 - Bosses resist build-up more than mobs, and more at higher difficulty (Trait Dungeon I to III roughly halves it). A weakness raises build-up about 2–3× and doubles that status's hit bonus.
 - Leftover build-up stays on the enemy after a physical status ends.
 - Some skills apply statuses the codex doesn't mention (Charlotte's Illusion Kick and Clone explosion apply Poison and Airborne; Johnny's Venom Cutter spreads Airborne).
+- **Effects that continue after a swap or interact across heroes** (David, in game, 9 Nov; not in the codex text): Tarte's Bolt Bubble keeps casting after she swaps out, so orbs keep coming while the next hero is on the field and that hero's Shock hits detonate them. Dana's Chako keeps fighting while she's swapped out. Cerese's Shattering Touch shatters Othello's Ice Prison if she's played after him.
 
 ### 3.4 Places and game modes (`DEFENSE_MODEL.places`, `levelCurve`, `types`)
 - **Enemy Defense = level curve × place factor × type multiplier.**
