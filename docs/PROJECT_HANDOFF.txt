@@ -171,3 +171,5 @@ Completed: implementation, main publication, live preview and public gate checks
 
 9 Nov 2026 (Claude): more Holy Bleed runs: Castella team, Theresia sig only 330k; Kalien team, Theresia+Kalien sigs 350k; Kalien team all sigs 430k (second run; first was 500k). David: hard team, large run-to-run spread (~70k seen). Signature effects can't be separated from this spread without several runs per setup.
 
+9 Nov 2026 (Claude): signature team runs (Lv.70, no gear, 1 min): Storm 400k (Ryza sig; 330k none); Fox and wind 560k (Kalsion+Kalien sigs; 390/460k none); Airborne burst 510k (Kalsion sig; 420k none); Shadow Poison 560k (Charlotte sig; 440k none); Break and burn 380k (Kalsion+Kalien sigs; 330k none). Saved in planner davidNote.
+
