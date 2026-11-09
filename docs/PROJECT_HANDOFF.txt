@@ -169,3 +169,5 @@ Completed: implementation, main publication, live preview and public gate checks
 
 9 Nov 2026 (Claude): CORRECTION: the 380k run was Theresia-Roxy-KALIEN (Kalien no signature) with only Theresia's signature, not the Castella team. So the 250k -> 380k comparison and the 'at least ~47k from the exclusive effect' conclusion are void (two changes at once). Planner fixed: t03 Castella 250k none / 350k Theresia+Roxy sigs; t11 Kalien 380k Theresia sig / 500k all three sigs. Missing to isolate her signature: Theresia-Roxy-Kalien with no signatures.
 
+9 Nov 2026 (Claude): more Holy Bleed runs: Castella team, Theresia sig only 330k; Kalien team, Theresia+Kalien sigs 350k; Kalien team all sigs 430k (second run; first was 500k). David: hard team, large run-to-run spread (~70k seen). Signature effects can't be separated from this spread without several runs per setup.
+
