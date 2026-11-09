@@ -1,3 +1,6 @@
+## 10 Nov 2026 — Signature Karma test 09 results saved (Claude)
+- David's runs (9 Nov evening, Test Kit): Ryza +10–14% in three teams; Theresia +21%; Ornette +8% and Roxy +6% (both within chance); the Kalien team +41% with all three signatures. Table in TEAM_TESTS; Ryza's and Roxy's signatures are now marked Owned.
+- STATUS: test 09 remaining runs; build status rule agreed (own status + the physical the hero needs).
 ## 9 Nov 2026 (late) — Skill buffs complete; build-model defaults agreed (Claude)
 - `SKILL_BUFF_LEVELS`: added Tarte's Cure, Alex's Guard Counter, Astria's Reload and Siege Assault (20% → 40% Attack Power). Every scaling buff on a levellable skill is now recorded.
 - Defaults David set for the preview builds: toughest boss with a Training Ogre switch; only statuses the hero applies; set effects always on, or always on and half of a 60 s fight side by side (STATUS).

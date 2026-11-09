@@ -9,12 +9,12 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 ## Current task (Claude, 9 Nov evening)
 - Done: breakthrough profiles explained (GAME_MATH 2.1: one axis, B melee, C ranged, A halfway, D Alex); skill buffs checked; 19 new gear rows checked (all match); endgame gear and set analysis (GAME_MATH 4.1).
 - David's answers (9 Nov): base stats written to data.json (done). Builds: switch to the full model **in the preview now, public at launch**. Signal uptime: almost always on in groups; on bosses from about half to most of the fight, depending on the team.
-- **Next site task (Claude):** preview-only builds from the full model (`tools/endgame_gear.py` logic, ported to JS behind `?tiers=new`, Python and JS kept identical). Agreed defaults (David, 9 Nov): toughest boss (Defense 1825) with a switch to the Training Ogre (1000); statuses = only those the hero applies themselves (a solo measurement; teams belong in the calculator), open point below; set effects always on, or a chart showing always-on and half of a 60 s fight. Open: count every status the hero applies at once, or own status plus one physical (Claude's suggestion, 9 Nov)?
+- **Next site task (Claude):** preview-only builds from the full model (`tools/endgame_gear.py` logic, ported to JS behind `?tiers=new`, Python and JS kept identical). Agreed defaults (David, 9 Nov): toughest boss (Defense 1825) with a switch to the Training Ogre (1000); statuses = only those the hero applies themselves (a solo measurement; teams belong in the calculator), open point below; set effects always on, or a chart showing always-on and half of a 60 s fight. Agreed 10 Nov: own archetype status plus the one physical status the hero needs. No new application test needed: Test 01 already has every skill's application. Enablers like Reina and Alex count one status; the builds pick gear and never set ratings, so this doesn't undervalue them (label any damage shown as solo).
 - **Next for David: Signature Karma test 09** (agreed 9 Nov), then team tests.
 
 ## Must be done BEFORE any awakening or mastery
 1. ~~Lv.70 base stats (test 08)~~ done 9 Nov for all 20, written to `data.json`.
-2. **Signature Karma tests (Test Kit test 09):** the same hero with the signature Karma (all are Lv.1), then with any Lv.1 normal Karma of the same archetype. On a boss: Ryza, Theresia, Charlotte. Groups as well: Kalsion, Dana, Cerese, Ornette. The 9 Nov runs compared signature vs **no** Karma, so they include the Karma's stats and don't replace this test.
+2. **Signature Karma tests (Test Kit test 09):** done 9 Nov for Ryza, Theresia, Ornette, Roxy and the Kalien team (results in [TEAM_TESTS.md](TEAM_TESTS.md)). Still to do: Charlotte on a boss; group runs for Kalsion, Dana, Cerese, Ornette.
 3. Optional: Theresia, Roxy and Kalien with **no** signatures, the one missing run to isolate Theresia's signature.
 
 ## After awakenings and masteries: mastery retests

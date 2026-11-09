@@ -239,10 +239,10 @@ Claude's notes:
 | 2 | Kalien | The Chosen One of the Crimson Flame | High | Owned | The tier list already marks her as needing it: more foxes from Fox Grab, her key skill. |
 | 3 | Kalsion | The Sun Blazes Again | High | Owned | Explosion is his main damage. More range and damage on an A-tier hero that sits in several Airborne teams. |
 | 4 | Charlotte | The Conviction Left in Darkness | High | Owned | Changes her playstyle: re-using Invisible detonates the clone at once. Worth seeing on an Expert Main DPS. |
-| 5 | Ryza | The Scar Lightning Left Behind | Medium | Farming | Adds a new thrust attack after Flash on our strongest Main DPS. |
+| 5 | Ryza | The Scar Lightning Left Behind | Medium | Owned | Adds a new thrust attack after Flash on our strongest Main DPS. |
 | 6 | Aria | Explosion Is Art | Medium | Not owned | A bigger Switch On! explosion that adds Burn and Airborne: more application for an Enabler. |
 | 7 | Johnny | Wandering Blade | Medium | Not owned | Phantom Slash leaves blades that add damage and Poison. |
-| 8 | Roxy | The Noble Lady's Wild Hobby | Medium | Not owned | More arrows from Kick Storm, her Stun-gated skill. |
+| 8 | Roxy | The Noble Lady's Wild Hobby | Medium | Owned | More arrows from Kick Storm, her Stun-gated skill. |
 | 9 | Othello | The Spear That Fells the Sun | Medium | Owned | Frozen Stinger's final hit gets bigger and faster. |
 | 10 | Theresia | Merciful Death Sentence | Medium | Owned | David: not needed, but a big boost to Heretic Judgment. 9 Nov (Lv.70, no gear, 1 min): Theresia-Roxy-Kalien 380k with only her signature on; Theresia-Roxy-Castella 250k with none and 350k with hers and Roxy's. Not yet measured alone: the same team with and without only her signature. Claude's maths for the Karma's Lv.1 stats (Attack +80 on her 1245, Defense Ignore 2% on the Training Ogre's 1000 Defense, Bleed / Stun Additional Attack Power +105 / +210 while those statuses are up): her own hits +7.5% with no status, +16% with Bleed up, +33% with Bleed and Stun up. |
 | 11 | Cerese | Eternal Blizzard | Medium | Owned | Her Ice Storm moves to the nearest enemy when it ends. |
@@ -255,3 +255,20 @@ Claude's notes:
 | 18 | Tarte | A Helping Hand for Good Kids | Low | Not owned | David: not needed. It only improves her heal. |
 | 19 | Lute | A Sword Summoned for a Friend | Low | Not owned | More relics from Relic Fall. |
 | 20 | Alex | Loyalty Amidst Lethargy | Low | Not owned | David: doesn't help him with anything. |
+
+### Test 09 results (David, 9 Nov evening)
+Training Ogre, every hero Lv.70, no gear, 1 minute. Every hero wears a Lv.1 normal Karma; then only the named hero swaps to their Lv.1 signature. One run each side, so a gap under about 70k may be chance; Ryza's gain repeats in three teams, so it is the most reliable.
+
+| Hero | Team | Normal Karma | Signature | Gain |
+|---|---|---|---|---|
+| Ryza | Ryza, Castella, Sion | 360k | 410k | +14% (with it the boss ends each rotation at a full Shock stack; about 75% without) |
+| Ryza | Ryza, Tarte, Sion | 380k | 430k | +13% |
+| Ryza | Ryza, Ornette, Sion | 500k | 550k | +10% |
+| Ornette | Ryza, Ornette, Sion | 500k | 540k | +8% (within chance) |
+| Ryza + Ornette | Ryza, Ornette, Sion | 550k (Ryza's alone) | 580k (both) | +5.5% for Ornette's on top (within chance) |
+| Theresia | Theresia, Roxy, Castella | 330k | 400k | +21% |
+| Roxy | Theresia, Roxy, Castella | 330k | 350k | +6% (within chance) |
+| Theresia + Roxy | Theresia, Roxy, Castella | 400k (Theresia's alone) | 420k (both) | +5% for Roxy's on top (within chance) |
+| Kalien, Theresia, Roxy | Theresia, Roxy, Kalien | 320k (all normal) | 450k (all three signatures) | +41% for all three together; Kalien's own share not split (David's choice) |
+
+Reading: Ryza's and Theresia's signatures are clear gains (about +10–14% and +21% team damage). Roxy's and Ornette's are small or within chance. Still open: Charlotte on a boss; group runs for Kalsion, Dana, Cerese and Ornette.
