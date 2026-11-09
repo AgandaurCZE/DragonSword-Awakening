@@ -3,16 +3,18 @@
 Back to the library: [docs/README.md](../README.md). Update this file during and at the end of every session; it's the first thing the next chat reads after [WORKING_WITH_DAVID.md](WORKING_WITH_DAVID.md). Finished items move to [DONE.md](DONE.md). Site tasks are in [SITE.md](SITE.md).
 
 ## What David is doing in the game
-- **All 20 heroes are Lv.70** (9 Nov evening). All 20 measured with Test Kit test 08; the 9 new ones aren't in `data.json` yet (waiting on David's answer, below).
+- **All 20 heroes are Lv.70** (9 Nov evening), all measured (test 08) and in `HERO_BASE_STATS` (`estimated: false` for all 20).
 - No awakenings and no masteries taken on any hero yet. They **can't be undone**.
 
 ## Current task (Claude, 9 Nov evening)
 - Done: breakthrough profiles explained (GAME_MATH 2.1: one axis, B melee, C ranged, A halfway, D Alex); skill buffs checked; 19 new gear rows checked (all match); endgame gear and set analysis (GAME_MATH 4.1).
-- **Waiting on David:** (1) may the 9 measured base stats and profile D go into `data.json` now (hero pages are public and show base stats)? (2) Astria's Siege Assault Attack Power values Lv.1–10; (3) should the optimiser and the public builds move to the full model (Defense Ignore and status AAP substats), now or at launch; (4) how much of a fight a Signal skill's 10 s window covers (Earthshatterer uptime).
+- David's answers (9 Nov): base stats written to data.json (done). Builds: switch to the full model **in the preview now, public at launch**. Signal uptime: almost always on in groups; on bosses from about half to most of the fight, depending on the team.
+- **Next site task (Claude):** preview-only builds from the full model (`tools/endgame_gear.py` logic, ported to JS behind `?tiers=new`, Python and JS kept identical). Defaults to agree with David before building: target Defense (1825?), which statuses are on the target per hero, and whether Earthshatterer's window counts as always on.
+- **Waiting on David:** Astria's Siege Assault Attack Power values Lv.1–10 (Test Kit test 02).
 - Next for David: team tests or Signature Karma test 09 (Claude recommends test 09 first: it's one of the two before-awakening tasks).
 
 ## Must be done BEFORE any awakening or mastery
-1. ~~Lv.70 base stats (test 08)~~ done 9 Nov for all 20 (Test Kit). Still to do: copy the 9 new ones into `HERO_BASE_STATS` (`estimated: false`, profiles from GAME_MATH 2.1) once David agrees, then run `tools/hero_stats.py`.
+1. ~~Lv.70 base stats (test 08)~~ done 9 Nov for all 20, written to `data.json`.
 2. **Signature Karma tests (Test Kit test 09):** the same hero with the signature Karma (all are Lv.1), then with any Lv.1 normal Karma of the same archetype. On a boss: Ryza, Theresia, Charlotte. Groups as well: Kalsion, Dana, Cerese, Ornette. The 9 Nov runs compared signature vs **no** Karma, so they include the Karma's stats and don't replace this test.
 3. Optional: Theresia, Roxy and Kalien with **no** signatures, the one missing run to isolate Theresia's signature.
 

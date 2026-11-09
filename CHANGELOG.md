@@ -1,3 +1,7 @@
+## 9 Nov 2026 (late) — All 20 Lv.70 base stats in data.json (Claude)
+- With David's OK: `HERO_BASE_STATS` for Eileen, Lute, Othello (B), Aria, Cerese, Astria, Dana (C), Ornette (A) and Alex (new profile D) are now measured (`estimated: false`). All C heroes are stored with Defense 320 (the panel gives 319.5). `HERO_STAT_MODEL` gets profile D, profile labels (melee, ranged, halfway, Defender) and an updated note.
+- `tools/hero_stats.py`: no build changes. Validator OK. Local check: plain and `?tiers=new` load with no console errors.
+- David's answers recorded: full-model builds go into the preview now and public at launch (SITE, LAUNCH_CHANGES); Signal uptime (GAME_MATH 4.1).
 ## 9 Nov 2026 (evening) — Lv.70 profiles explained, gear rows checked, endgame gear analysis (Claude)
 - **Test 08, all 20 heroes at Lv.70** (Test Kit, David): the 11 already measured match their records (Sion's entry reads 1142 Attack, 1 below his stored 1143; rounding). The 9 new heroes: B Eileen, Lute, Othello; C Aria, Cerese, Astria, Dana; A Ornette; **new profile D: Alex 1014 / 379 / 7850**. Not in `data.json` yet (asked David first, because hero pages show base stats).
 - **Profiles explained** (GAME_MATH 2.1): one defence-to-offence axis; B = all melee basic attacks, C = all ranged, A = exactly halfway, D = one step below B. Monster material, second material, archetype, faction, role and source ruled out.

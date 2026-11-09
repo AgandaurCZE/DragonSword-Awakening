@@ -9,9 +9,10 @@ These touch public pages, so they can't go in until David approves the launch. H
 2. Footer: replace the current line (it still cites the old 27 Oct workbook) with the credit line: "Fan-made guide. Not affiliated with or endorsed by HOUND13. DragonSword: Awakening and all game assets belong to their respective owners."
 3. Corner links: Discord (David's server; ask him for the invite link), GitHub (the repo), and a Claude credit ("Built with Claude" linking to claude.ai, unless Anthropic's brand rules allow the logo). Check each brand's current logo rules first (web search, with David's OK).
 4. Optional: a short "how this was made" note (David's in-game testing, the data, open questions).
-5. Teams page: rebuild `TEAM_DATA` from the tested and rated planner teams (David, 9 Nov). Teams that don't work are deleted and replaced; later, testing against real enemies adds the real feel.
-6. Remove the preview gate (`PREVIEW_PAGES`) and make the new tier list the default.
-7. Post on the game's subreddit.
+5. Hero builds: switch the public builds to the full damage model from the preview (David, 9 Nov).
+6. Teams page: rebuild `TEAM_DATA` from the tested and rated planner teams (David, 9 Nov). Teams that don't work are deleted and replaced; later, testing against real enemies adds the real feel.
+7. Remove the preview gate (`PREVIEW_PAGES`) and make the new tier list the default.
+8. Post on the game's subreddit.
 
 ## Kalsion
 - `HEROES[].obtain`: story reward for completing Chapter 4, Adventure Quest 40 (David, 8 Nov 2026).

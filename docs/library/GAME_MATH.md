@@ -41,7 +41,7 @@ Back to the library: [docs/README.md](../README.md). Evidence for each rule: `DA
 - Every hero follows one level curve: **stat(L) = a + b × (e^(r(L−1)) − 1)** per stat (Attack, Defense, Max HP), plus their breakthrough bonuses.
 - Breakthrough bonuses come in **four profiles**, all 20 heroes measured at Lv.70 (9 Nov, Test Kit test 08; Attack / Defense / Max HP without titles):
   - **B (melee):** 1100 / 350 / 7388: Johnny, Lute, Castella, Theresia, Kalsion, Reina, Eileen, Othello, Ryza. Every B hero's basic attack is a melee weapon swing.
-  - **C (ranged):** 1186 / 319 / 6927: Aria, Dana, Kalien, Tarte, Cerese, Astria. Every C hero's basic attack is a projectile.
+  - **C (ranged):** 1186 / 320 / 6927 (panels give 319.5; stored as 320, as measured on Kalien on 8 Nov): Aria, Dana, Kalien, Tarte, Cerese, Astria. Every C hero's basic attack is a projectile.
   - **A:** 1143 / 335 / 7157: Charlotte, Roxy, Sion, Ornette. **Exactly halfway between B and C** (to rounding).
   - **D (Defender):** 1014 / 379 / 7850: Alex only, the game's only Tank. **B minus the C−B step.**
   - So the profiles lie on **one axis** from defence to offence: D = −1, B = 0, A = ½, C = +1 step, where one step is +86 Attack, −31 Defense, −461 Max HP. Melee and ranged fit B and C; why Charlotte, Roxy, Sion and Ornette sit halfway is open (their basic attacks are 2 melee, 2 ranged). Not decided by monster material, second material, archetype, faction, game role or how the hero is obtained (checked 9 Nov).
@@ -129,7 +129,7 @@ Full hit formula (3.1) against Defense **1825** (Lv.50 Trait Dungeon boss, the h
 - **Forcing 80% Crit Rate / 150% Crit Damage** (Crit Rate and Crit Damage on every piece, plus Crit mains): **−3.6%** with status Additional Attack Power substats allowed, **−8.3%** without (Johnny).
 - **Substats:** at high Defense, **Defense Ignore is the first substat on every piece**, and when the statuses are on the target, own-status and physical-status Additional Attack Power beat Attack Power Up substats. The stored builds (`HERO_BUILDS`, scored by Attack × crit only) come out 8.5–9.3% below the best build with the same sets.
 - **3-piece sets** (best 2-piece added; all five heroes agree within 1.5%): **Earthshatterer best**; Blazing Flames −6 to −8%, Ruinsbreaker −8 to −9%, Thunderrush −8 to −9%, Venomfog Shade −8 to −9%, Froststorm and Azure Gale −12 to −13%, Holy Arbiter and Bloodstained Chaser −12 to −14%, The Infiltrator −14 to −17%, Battle Will −19 to −22%. The 2-piece: any status set whose status is on the target (+15% Additional Damage), in practice the hero's own.
-- **Caveat:** Earthshatterer's +20% Defense Ignore lasts 10 s after a Signal skill. It's worth +17 to +19% damage while active, so it stays ahead of Blazing Flames only above about **52–57% uptime**. All 3-piece triggers were counted as always on.
+- **Caveat:** Earthshatterer's +20% Defense Ignore lasts 10 s after a Signal skill. It's worth +17 to +19% damage while active, so it stays ahead of Blazing Flames only above about **52–57% uptime**. David (9 Nov): Signal skills come from applying statuses, so in groups the window is almost always on; on bosses it runs from about half to most of the fight, depending on how fast the team breaks the boss and applies statuses. All 3-piece triggers were counted as always on.
 
 ## 5. Known unknowns
 - Levels 71–74 enemy Defense; what happens when Armor Penetration exceeds the remaining Defense; Crit above 100%.

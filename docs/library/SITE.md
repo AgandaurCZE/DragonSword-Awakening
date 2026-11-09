@@ -55,5 +55,6 @@ Game-side tasks and David's to-do list are in [STATUS.md](STATUS.md). Site work 
 - **Karma:** a Karma level slider once Karma stats for levels 40–70 are measured (`KARMA_LEVELLING`); coloured signature Karma icons when David uploads them.
 - **Dungeons:** banner art for Eroded Underground Cemetery and Residual Worm Cleanup Zone.
 - **Guides:** the 8 categories are placeholder cards; content not written. News page is disabled and comes last.
+- **Preview builds from the full damage model** (David, 9 Nov: preview now, public at launch): port `tools/endgame_gear.py` to JS behind `?tiers=new`; agree the defaults first (STATUS).
 - **Optional, only if David asks:** Test 01 application and gauge table in each hero profile (preview); a Super Armor gauge column in the damage calculator; a short line in the Status Effects box that physical statuses still build up under Super Armor and only control the enemy after Break (in the game's words, `assets/help/notes.txt`); Karma exchange costs on the Karma tab (`assets/exchange/prices.txt`); a small "Coming next" box on the Patch Notes page (`assets/upcoming/notes.txt`).
 - **Not worth doing yet:** quest tracker, interactive map.
