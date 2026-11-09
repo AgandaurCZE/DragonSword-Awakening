@@ -3,18 +3,20 @@
 Back to the library: [docs/README.md](../README.md). Results: [TEST01_RESULTS.md](TEST01_RESULTS.md), [TEAM_TESTS.md](TEAM_TESTS.md). Measured mechanics in the data: `DAMAGE_TESTS`, `DEFENSE_MODEL` (see [DATA_REFERENCE.md](../DATA_REFERENCE.md)).
 
 ## The Test Kit artifact
-- Live page: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt (David's measurement notebook; v32 as of 8 Nov). Source: `docs/testkit/dragonsword-test-kit.html`. To change it, edit the source and publish to the same URL; a new chat must read the artifact first.
+- Live page: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt (David's measurement notebook; version 33, 9 Nov). Sections: Before awakenings (08, 09), Most useful (01, 07), When you can (02, 03, 06), and Already answered. Source: `docs/testkit/dragonsword-test-kit.html`. To change it, edit the source and publish to the same URL; a new chat must read the artifact first.
 - Storage: collection `results`; each entry has `testId`, `test`, `savedAt`, `inputs{}`, `summary`. Read with ArtifactData `query` (`where testId == …`, `out_dir` to save files). Writes to an existing document need `if_version`. New entry ids: `<testId>-<timestamp>`, e.g. `apply-1794430012000`.
 
 | Test | `testId` | Status |
 |---|---|---|
 | 01 Status application per skill | `apply` | Lv.70 redo complete for all 20 heroes (8 Nov). Mastery retests pending. |
 | 02 Skill buffs by level | `buffs` | Eight rows, 7 skills. More when David can. |
-| 03 Gear upgrade row | `gear` | Open. |
+| 03 Gear upgrade row | `gear` | 93 rows; tables match apart from two small misses. Add more only if a number looks wrong. |
 | 04 Defense Ignore and Armor Penetration | `defign` | Done 4 Nov; off the page, entries kept. |
 | 05 Level-up cost | `lvlcost` | Answered; moved to Already answered. |
 | 06 Enemy Defense | `enemydef` | Ongoing: new enemies as David meets them; tower floors open. |
-| 07 Hunt boss weakness (Nightmare and up) | `huntweak` | Not started. |
+| 07 Hunt boss weakness (Nightmare and up) | `huntweak` | Not started (only Furcas known: Burn). |
+| 08 Hero stats at level 70 | `stats70` | Added 9 Nov. Before awakenings: the 9 estimated heroes. The page takes titles off (Attack −145, Max HP −1,575, Defense ÷ 1.053 − 30) and names the matching profile. Copy results into `HERO_BASE_STATS`. |
+| 09 Signature Karma against a normal Karma | `sigtest` | Added 9 Nov. Before awakenings. Fields: hero, normal Karma, Karma level, target, team, damage with each (several runs comma-separated); shows the average gain. Copy results into the Team Planner `sigs` notes. |
 
 ## Test 01 conventions (Lv.70 redo)
 - Enemy: **Training Ogre**, Lv.90 boss dummy, Super Armor **not broken**. Hero Lv.70, no gear, no Karma, no awakenings, no masteries.

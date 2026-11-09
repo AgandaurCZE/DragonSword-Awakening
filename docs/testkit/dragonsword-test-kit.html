@@ -103,7 +103,7 @@ details.log li span{color:var(--ok);font:600 .75rem var(--mono);margin-left:6px}
 <nav id="toc" aria-label="Tests"></nav>
 <div id="tests"></div>
 <details class="log" id="doneLog"><summary>Already answered (19 tests)</summary><ul id="doneList"></ul></details>
-<p class="note">Updated 8 Nov 2026 from everything you've measured so far. A result that disagrees with the guide is good news: it means the guide can be corrected.</p>
+<p class="note">Updated 9 Nov 2026 from everything you've measured so far. A result that disagrees with the guide is good news: it means the guide can be corrected.</p>
 </div>
 
 <script>
@@ -157,10 +157,30 @@ function enemyDef(v,hit){const lv=Math.round(num(v.wslv)||3),m=WS_LEVELS[lv-1],a
 const enemyName=v=>v.en===ENEMY_OTHER?String(v.name||'').trim():v.en;
 
 const TESTS=[
+/* ---------------- Before awakenings ---------------- */
+{id:'stats70',no:8,grp:'Before awakenings',multi:1,title:'Hero stats at level 70',why:'The build planner needs every hero\'s Lv.70 base stats. Stat awakenings change the panel for good, so read it before taking any.',
+ known:'<b>Measured:</b> Castella, Charlotte, Johnny, Kalien, Kalsion, Reina, Roxy, Ryza, Sion, Tarte, Theresia. <b>Still needed:</b> Aria, Ornette, Lute, Eileen, Cerese, Othello, Dana, Alex, Astria. Profiles so far: A 1143 / 335 / 7157, B 1100 / 350 / 7388, C 1186 / 320 / 6927.',
+ steps:['Hero at Lv.70 with no gear and no Karma, and no awakening taken.','Open the stats panel and write Attack, Defense and Max HP as shown (titles included).','The result takes your titles off (Attack +145, Max HP +1,575, Defense +30 then +5.3%) and names the matching profile.'],
+ fields:[{k:'hero',l:'Hero',t:'select',o:HEROES},{k:'atk',l:'Attack (panel)',t:'num'},{k:'def',l:'Defense (panel)',t:'num'},{k:'hp',l:'Max HP (panel)',t:'num'},{k:'note',l:'Notes',t:'text',wide:1}],
+ keep:[],
+ label:v=>`${v.hero} · ${v.atk||'?'} / ${v.def||'?'} / ${v.hp||'?'} (panel)`,
+ dupKey:v=>v.hero,
+ run(v){const a=num(v.atk),d=num(v.def),h=num(v.hp);if(a==null||d==null||h==null)return null;const ba=a-145,bd=d/1.053-30,bh=h-1575;
+  const prof={A:[1143,335,7157],B:[1100,350,7388],C:[1186,320,6927]};const m=Object.entries(prof).find(([k,x])=>Math.abs(x[0]-ba)<=2&&Math.abs(x[1]-bd)<=2&&Math.abs(x[2]-bh)<=3);
+  return{cls:m?'ok':'warn',verdict:`${v.hero}: base ${f(ba,0)} / ${f(bd,0)} / ${f(bh,0)} without titles.`,lines:[m?`Matches profile ${m[0]}.`:'Matches no known profile: a new one, or check the panel numbers and that no gear, Karma or awakening is on.']}}},
+{id:'sigtest',no:9,grp:'Before awakenings',multi:1,title:'Signature Karma against a normal Karma',why:'Shows what a signature\'s exclusive effect is really worth. Comparing with a normal Karma of the same level cancels out the Karma\'s own stats, which a run with no Karma can\'t.',
+ known:'<b>Planned heroes:</b> on a boss Ryza, Theresia and Charlotte; in groups as well Kalsion, Dana, Cerese and Ornette. <b>So far (signature vs no Karma, Lv.70, no gear, 1 min):</b> Shadow Poison 440k to 560k (Charlotte), Airborne burst 420k to 510k (Kalsion), Storm 330k to 400k (Ryza), Holy Bleed with Castella 250k to 330k (Theresia). Runs vary by up to about 70k on hard teams, so do two or three of each.',
+ steps:['Same team, same hero levels, no gear. Only the tested hero\'s Karma changes.','Run 1 minute with the signature Karma, then with a normal Karma of the same level (ideally the same stat type).','Write each result. Two or three runs each are best; write them all, separated by commas.'],
+ fields:[{k:'hero',l:'Hero',t:'select',o:HEROES},{k:'normal',l:'Normal Karma used',t:'text'},{k:'klv',l:'Karma level',t:'num'},{k:'where',l:'Target',t:'select',o:['Boss (Training Ogre)','Groups','Other (write in Notes)']},{k:'team',l:'Team',t:'text'},{k:'sig',l:'Damage with the signature (k)',t:'text'},{k:'norm',l:'Damage with the normal Karma (k)',t:'text'},{k:'note',l:'Notes',t:'text',wide:1}],
+ keep:['hero','klv','where','team'],
+ label:v=>`${v.hero} · ${v.where} · signature ${v.sig||'?'} vs ${v.normal||'normal'} ${v.norm||'?'}`,
+ dupKey:v=>[v.hero,v.where].join('|'),
+ run(v){const s=nums(v.sig),n=nums(v.norm);if(!s.length||!n.length)return null;const av=x=>x.reduce((a,b)=>a+b,0)/x.length;const a=av(s),b=av(n);
+  return{cls:a>b?'ok':'warn',verdict:`${v.hero}: signature ${f(a,0)}k against ${f(b,0)}k with a normal Karma (${sgn((a/b-1)*100)}%).`,lines:[s.length<2||n.length<2?'One run on a side: differences under about 70k may be chance.':`Averages of ${s.length} and ${n.length} runs.`]}}},
 /* ---------------- Most useful ---------------- */
-{id:'apply',grp:'Most useful',multi:1,title:'Status application per skill',why:'How much of a stack each skill puts on. This decides who counts as an Enabler, and comparing enemies shows whether resistance grows with enemy level.',
- known:'<b>So far:</b> Johnny 2.5–3 Poison stacks on low-level mobs, 1.5–2 on Lv. 90 goblins. On the Training Ogre: Tarte 0.75–0.8 Shock per charged Skill after her Ultimate (a full stack in 17–18 s); Theresia 0.27 Bleed per Skill, 0.20 Stun per Ultimate; Astria 0.25 Stun per 8 Precision shots; Alex 0.20 Knockdown per Skill, 0.33–0.35 per parry. Castella breaks the Training Ogre\'s Super Armor in 18 s (Skill ≈23%, Ultimate ≈15%). Hero and skill level don\'t change application, only damage and buffs. <b>Still useful:</b> Super Armor gauge % per skill for the other heroes, as with Castella. Enabler is judged on bosses.',
- steps:['Start on an enemy with no stacks of the status.','Stun, Airborne, Knockdown and Break have no stacks: if the game shows a gauge, write how full it gets (0.5 = half); if it just triggers, write 1 and put how many presses it took in Presses.','Use one skill once (or the number of presses you note) and read the stack gauge. Estimate fractions: ½, ⅓, ¼ are fine.','Save, then repeat for the next skill or enemy. Each save is a new entry.'],
+{id:'apply',no:1,grp:'Most useful',multi:1,title:'Status application per skill',why:'How much of a stack each skill puts on. This decides who counts as an Enabler, and comparing enemies shows whether resistance grows with enemy level.',
+ known:'<b>Lv.70 redo done (8 Nov 2026):</b> all 20 heroes on the Training Ogre, no gear, no Karma, no awakenings or masteries: every skill\'s application, its Super Armor gauge % and the all-out break time (full table in the repo: docs/library/TEST01_RESULTS.md). Hero and skill level don\'t change application, only damage and buffs. <b>Next:</b> after unlocking a mastery, retest the skill it changes, then the all-out break time (list in docs/library/STATUS.md). Enabler is judged on bosses.',
+ steps:['Start on an enemy with no stacks of the status.','Stun, Airborne, Knockdown and Break have no stacks: if the game shows a gauge, write how full it gets (0.5 = half); if it just triggers, write 1 and put how many presses it took in Presses.','Use one skill once (or the number of presses you note) and read the stack gauge. Estimate fractions: ½, ⅓, ¼ are fine.','Super Armor gauge: pick Break (Super Armor) and write the share of the gauge the skill removed (0.12 = 12%). For the all-out break time, write Full rotation as the skill, 1 as stacks and the seconds in Notes.','Save, then repeat for the next skill or enemy. Each save is a new entry.'],
  fields:[{k:'hero',l:'Hero',t:'select',o:HEROES},{k:'skill',l:'Skill',t:'text'},{k:'st',l:'Status',t:'select',o:[...STATUSES,'Break (Super Armor)']},{k:'enemy',l:'Enemy',t:'select',o:ENEMIES},{k:'lv',l:'Enemy level (if shown)'},{k:'broken',l:'Super Armor',t:'select',o:['Not broken','Broken']},{k:'presses',l:'Presses'},{k:'stacks',l:'Stacks afterwards'},{k:'note',l:'Notes (which hit triggers it, leftovers, anything odd)',t:'text',wide:1}],
  keep:['hero','enemy','lv','st','broken'],
  label:v=>`${v.hero} · ${v.skill||'?'} · ${v.enemy}${v.lv?' Lv. '+v.lv:''}${v.broken==='Broken'?' (broken)':''} · ${v.stacks||'?'} stacks / ${v.presses||1} press`,
@@ -168,7 +188,7 @@ const TESTS=[
   return{cls:'ok',verdict:`${v.skill}: ${f(per,2)} ${v.st} stack${per===1?'':'s'} per press on ${v.enemy}${num(v.lv)?' (Lv. '+v.lv+')':''}.`,
    lines:[per>=1?'A full stack or more per press: strong applier.':per>=0.5?'Half a stack or more per press.':'Under half a stack per press: a weak source on this enemy.']}}},
 /* ---------------- When you get the chance ---------------- */
-{id:'buffs',grp:'When you can',multi:1,title:'Skill buffs by level',why:'The level slider only changes damage %. With these numbers it can show buffs, heals and durations at every level too.',
+{id:'buffs',no:2,grp:'When you can',multi:1,title:'Skill buffs by level',why:'The level slider only changes damage %. With these numbers it can show buffs, heals and durations at every level too.',
  known:'<b>So far:</b> Invisible\'s Crit Damage buff is +10% at Lv. 1 and +15% at Lv. 10 (×1.5, not ×1.75 like damage). Alex\'s Guard Counter Defense debuff is 10% at Lv. 1 and 20% at Lv. 10 (×2).',
  steps:['Pick a skill whose buff, heal or duration shows a number (Invisible is the easiest).','Write the value at every level you can see, Lv. 1 first.'],
  fields:[{k:'hero',l:'Hero',t:'select',o:BUFF_HEROES},{k:'skill',l:'Skill',t:'text'},{k:'what',l:'What changes (e.g. Crit Damage %)',t:'text'},{k:'vals',l:'Values from Lv. 1 upwards',t:'area',wide:1}],
@@ -177,7 +197,7 @@ const TESTS=[
  dupKey:v=>[v.hero,(v.skill||'').trim().toLowerCase()].join('|'),
  run(v){const x=nums(v.vals);if(x.length<2||!v.skill)return null;const r=x.map(z=>z/x[0]);
   return{cls:'ok',verdict:`${v.skill}: ${x.length} levels recorded.`,lines:[`Each level ÷ Lv. 1: <span class="v">${r.map(z=>f(z,3)).join(' · ')}</span>`]}}},
-{id:'gear',grp:'When you can',multi:1,title:'Gear upgrade row',why:'Blue, Purple and Green main stats don\'t follow one ratio to Orange. A full row for one piece pins the table down.',
+{id:'gear',no:3,grp:'When you can',multi:1,title:'Gear upgrade row',why:'Blue, Purple and Green main stats don\'t follow one ratio to Orange. A full row for one piece pins the table down.',
  steps:['Take one piece and note its main stat at every upgrade level you reach (+0, +1, …).','Pick the rarity first: it sets how many levels the boxes show. Substats are optional.'],
  fields:[{k:'slot',l:'Slot',t:'select',o:['Helmet','Chest','Legs','Gloves','Boots']},{k:'rar',l:'Rarity',t:'select',o:['Green','Blue','Purple','Orange']},{k:'main',l:'Main stat name',t:'text',list:'gear-mains'},
   {k:'vals',l:'Main stat at each upgrade level (Tab moves to the next)',t:'levels'},{k:'subs',l:'Substats (name and value, optional)',t:'area',wide:1}],
@@ -208,7 +228,7 @@ const TESTS=[
 /* ---------------- Later ---------------- */
 ];
 
-const GROUPS=[['Most useful','Do these first: they change tiers, tags and every level-70 stat on the site.'],['When you can','Smaller corrections to builds and the level slider.']];
+const GROUPS=[['Before awakenings','Do these before taking any awakening or mastery: they can\'t be undone.'],['Most useful','Do these first: they change tiers, tags and every level-70 stat on the site.'],['When you can','Smaller corrections to builds and the level slider.']];
 const state={},saved={},savedDocs={};let db=null;
 function fieldHtml(t,fd){const id=`${t.id}-${fd.k}`;const lab=`<label class="${fd.wide?'wide':''}" for="${id}">${fd.l}`;
   if(fd.t==='select')return `${lab}<select id="${id}" data-t="${t.id}" data-k="${fd.k}">${fd.o.map(o=>`<option>${o}</option>`).join('')}</select></label>`;
@@ -289,7 +309,7 @@ try{const d=JSON.parse(localStorage.getItem('ds-testkit-draft-v2')||'{}');Object
      snap.docs.forEach(d=>{const v=d.data()||{};const tid=v.testId||d.id;(savedDocs[tid]??=[]).push({...v,_id:d.id});});
      TESTS.forEach(t=>{const list=(savedDocs[t.id]||[]).sort((a,b)=>String(b.savedAt).localeCompare(String(a.savedAt)));const el=$('#saved-'+t.id),toc=$('#toc-'+t.id),box=$('#list-'+t.id);
       if(el)el.textContent=list.length?(t.multi?`${list.length} saved`:'saved '+String(list[0].savedAt||'').slice(0,10)):'';if(toc)toc.classList.toggle('done',!!list.length);
-      if(box){box.hidden=!list.length;const tmp=document.createElement('div');const cov=t.id==='apply'?applyCoverage(list):null;box.innerHTML=`<details${OPEN_LISTS.has(t.id)?' open':''} data-list="${t.id}"><summary><h4>Saved (${list.length})${cov?` <span class="cov">${cov.done} of ${cov.total} skills on both dummies</span>`:''}</h4></summary><ul>${list.map(d=>{const txt=t.label?t.label(d.inputs||{}):(d.summary||'').split(' | ')[0];tmp.textContent=txt;const tag=cov?coverTag(cov,d.inputs||{}):'';return `<li><span>${tmp.innerHTML}</span>${tag}<span class="d">${String(d.savedAt||'').slice(0,16).replace('T',' ')}</span><button type="button" class="ghost" data-del="${d._id}">Delete</button></li>`}).join('')}</ul></details>`;}
+      if(box){box.hidden=!list.length;const tmp=document.createElement('div');const cov=null;box.innerHTML=`<details${OPEN_LISTS.has(t.id)?' open':''} data-list="${t.id}"><summary><h4>Saved (${list.length})${cov?` <span class="cov">${cov.done} of ${cov.total} skills on both dummies</span>`:''}</h4></summary><ul>${list.map(d=>{const txt=t.label?t.label(d.inputs||{}):(d.summary||'').split(' | ')[0];tmp.textContent=txt;const tag=cov?coverTag(cov,d.inputs||{}):'';return `<li><span>${tmp.innerHTML}</span>${tag}<span class="d">${String(d.savedAt||'').slice(0,16).replace('T',' ')}</span><button type="button" class="ghost" data-del="${d._id}">Delete</button></li>`}).join('')}</ul></details>`;}
       update(t.id);});},
    ()=>{s.textContent='Lost the connection to storage. Reload the page to save again.';s.className='status bad';});
 })();
