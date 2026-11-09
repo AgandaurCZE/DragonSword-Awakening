@@ -16,10 +16,10 @@ Back to the library: [docs/README.md](../README.md). Results: [TEST01_RESULTS.md
 | 06 Enemy Defense | `enemydef` | Ongoing: new enemies as David meets them; tower floors open. |
 | 07 Hunt boss weakness (Nightmare and up) | `huntweak` | Not started (only Furcas known: Burn). |
 | 08 Hero stats at level 70 | `stats70` | Added 9 Nov. Before awakenings: the 9 estimated heroes, once each reaches Lv.70 (David is levelling them, 9 Nov). The page takes titles off (Attack −145, Max HP −1,575, Defense ÷ 1.053 − 30) and names the matching profile. Copy results into `HERO_BASE_STATS`. |
-| 09 Signature Karma against a normal Karma | `sigtest` | Added 9 Nov. Before awakenings. Fields: hero, normal Karma, Karma level, target, team, damage with each (several runs comma-separated); shows the average gain. Copy results into the Team Planner `sigs` notes. |
+| 09 Signature Karma against a normal Karma | `sigtest` | Added 9 Nov. Before awakenings. Fields: hero, normal Karma, Karma level (all of David's signatures are Lv.1, so compare with any Lv.1 normal Karma of the same archetype), target, team, damage with each (several runs comma-separated); shows the average gain. Copy results into the Team Planner `sigs` notes. |
 
 ## Test 01 conventions (Lv.70 redo)
-- Enemy: **Training Ogre**, Lv.90 boss dummy, Super Armor **not broken**. No gear, no Karma, no awakenings, no masteries. The redo was recorded as Lv.70, but only 11 heroes were Lv.70 on 9 Nov (see STATUS); the other 9 were tested below 70. Application and gauge don't depend on hero level (David, 8 Nov), so their numbers stand. Whether hero level changes the all-out break time hasn't been tested.
+- Enemy: **Training Ogre**, Lv.90 boss dummy, Super Armor **not broken**. No gear, no Karma, no awakenings, no masteries. The redo was recorded as Lv.70, but only 11 heroes were Lv.70 on 9 Nov (see STATUS); the other 9 were tested below 70. Application and gauge don't depend on hero level (David, 8 Nov), so their numbers stand. Break times stand too: hero level doesn't change Super Armor gauge damage (David, 9 Nov: Castella removed the same gauge at Lv.20 as at Lv.70).
 - One entry per skill and status: `inputs{hero, skill, st, enemy, lv:"90", broken:"Not broken", presses:"1", stacks, note}`.
 - `stacks` = fraction of one stack the skill adds (0.25 = a quarter).
 - **Super Armor gauge** is stored as `st: "Break (Super Armor)"`, `stacks` = fraction of the gauge (0.12 = 12%), read with David's % overlay.

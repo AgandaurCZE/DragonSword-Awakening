@@ -91,7 +91,7 @@ Terms:
 
 ### 3.3 Status build-up (Test 01; [TEST01_RESULTS.md](TEST01_RESULTS.md))
 - Each skill adds a fixed fraction of one stack (or of the gauge, for Airborne, Knockdown and Stun, which fill once and trigger). Values per skill are in TEST01_RESULTS.
-- Not affected by hero or skill level.
+- Not affected by hero or skill level, and neither is Super Armor gauge damage (Castella removed the same gauge at Lv.20 as at Lv.70).
 - **Super Armor Break doubles the build-up of physical statuses** (Stun, Knockdown, Airborne), not Frost or DoTs.
 - Bosses resist build-up more than mobs, and more at higher difficulty (Trait Dungeon I to III roughly halves it). A weakness raises build-up about 2–3× and doubles that status's hit bonus.
 - Leftover build-up stays on the enemy after a physical status ends.

@@ -1,3 +1,8 @@
+## 9 Nov 2026 — David's answers recorded (Claude)
+- Hero level doesn't change Super Armor gauge damage (Castella Lv.20 vs Lv.70), so all Test 01 break times stand (TESTING, GAME_MATH).
+- All team tests wait until every hero is Lv.70 (STATUS).
+- Test 09: the signatures are Lv.1, so compare with any Lv.1 normal Karma of the same archetype (TESTING, STATUS).
+- Launch checklist: rebuild the public Teams page (`TEAM_DATA`) from the tested and rated planner teams (LAUNCH_CHANGES).
 ## 9 Nov 2026 — Team Planner: in-game facts restored (Claude)
 - David confirmed in game what Claude's check had wrongly removed: Tarte's Bolt Bubble keeps casting after she swaps out (the next hero's Shock detonates the orbs), and Chako keeps fighting while Dana is swapped out. He also confirmed that Cerese shatters Othello's Ice Prison. Restored in planner teams t04 and t05. t03 now states David's rule: a hero who applies their own needed status slowly still needs an enabler (Theresia).
 - Recorded in GAME_MATH (3.3), DECISIONS (roles), WORKING_WITH_DAVID (mistake: don't delete in-game facts the codex doesn't state; ask). TEAM_TESTS and the planner backup refreshed.
