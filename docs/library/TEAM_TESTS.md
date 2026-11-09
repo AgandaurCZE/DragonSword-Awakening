@@ -4,13 +4,17 @@ Back to the library: [docs/README.md](../README.md). Where things stand: [STATUS
 
 Live data is in the **Team Planner** artifact https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD (collections `teams`, doc ids `t01`…`t11` = order number, and `sigs`, doc id = hero name in lower case; source page `docs/testkit/dragonsword-planner.html`). This file is a snapshot taken 9 Nov 2026; JSON copy: `docs/testkit/planner-backup-2026-11-09.json`. If the artifact and this file disagree, the artifact is newer.
 
+## Team statuses
+
+Each planner team has one of four statuses, chosen with the drop-down on its card: **Idea** (proposed on paper from the skill data, never played; the default for a new team), **To test** (David plans to run it), **Works** (tested and good), **Doesn't work** (tested and dropped). Claude set the first statuses when it wrote the teams on 8 Nov; David sets them from now on. Shadow Poison, Storm and Break and burn have results but still say Idea.
+
 ## Test conditions
 
 - **8 Nov runs:** mixed levels and gear (written per team). Damage in 1 minute on the Training Ogre.
 - **9 Nov runs (the planned gearless redo, to-do item 2):** all three heroes Lv.70, **no gear, no Karma**, damage in 1 minute. Runs marked "with signature" have only the named signature Karmas on and no other Karma.
 - One run each unless stated. David calls Holy Bleed a hard team: the same setup gave 500k and 430k, so gaps under about 70k between single runs mean little.
 - Main lesson (David, 9 Nov): application speed decides these teams. Reina applies Airborne from the first second with no condition; Castella's Stun only comes after Super Armor is broken, so she adds little. Kalien beats Castella in every comparison.
-- Signature runs so far compare signature vs **no** Karma, so they include the Karma's own stats. The planned clean test (to-do item 4: signature vs a normal Karma of the same level) is **not done yet** and must happen before awakenings.
+- Signature runs so far compare signature vs **no** Karma, so they include the Karma's own stats. The planned clean test (to-do item 2, Test Kit test 09: signature vs a normal Karma of the same level) is **not done yet** and must happen before awakenings.
 
 ## Teams
 

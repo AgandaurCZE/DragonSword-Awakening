@@ -5,7 +5,8 @@ Read this before changing anything in this repository.
 - Preserve existing line endings when editing files. `index.html` uses LF (Unix) line endings; never convert it to CRLF or rewrite unrelated lines.
 - **Start at the library index `docs/README.md`.** It lists every note file by topic; `docs/library/STATUS.md` says where things stand and `docs/library/WORKING_WITH_DAVID.md` how David works and which mistakes to avoid. Keep both up to date.
 - **Detail lives in `docs/DATA_REFERENCE.md`:** every data key's shape and renderer, text formats, the full data rules, the build and base-stat methods, assets and tool details. Read the relevant section before editing that data or code. Document new or changed keys there.
-- New chat? Read `docs/library/WORKING_WITH_DAVID.md` and `docs/library/STATUS.md` (the older `docs/NEW_CHAT_BRIEFING.md` keeps the project overview and tools). History: `CHANGELOG.md` (newest first) and `docs/PROJECT_HANDOFF.txt` (newest last).
+- New chat? Read `docs/library/WORKING_WITH_DAVID.md` and `docs/library/STATUS.md`. History: `CHANGELOG.md` (newest first); finished tasks: `docs/library/DONE.md`.
+- **The GitHub repo is the only source of truth.** All numbers come from David's in-game measurements, screenshots and the codex, stored here; no outside data unless David asks.
 
 ## David's main-only preview workflow — confirmed 2 Nov 2026
 
@@ -14,7 +15,7 @@ Read this before changing anything in this repository.
 - The public URL without a query parameter must retain its current appearance, content and behaviour. All planned Codex/Claude changes belong behind `?tiers=new` on the same main branch. This is a runtime preview gate, not a separate branch or separate deployment.
 - Commits to main deploy the shared files, but deployment must not promote preview features to public visitors. Verify both URLs whenever relevant. Do not treat main-only publishing as a request to launch the preview publicly.
 - Once David and Claude's planned work is complete, David will approve converting the preview into the new public main site. Do not remove the gate before that approval.
-- Before ending each task or reaching a chat limit, update repository Markdown handoff notes AND `docs/PROJECT_HANDOFF.txt`: request/scope, decisions/approvals, actual changes and files, validation and limitations, publication commits, completed versus pending work, and exact next steps. Update CHANGELOG.md for changes. Do not rely on chat memory or local-only outputs as the sole handoff.
+- During each task and before ending it or reaching a chat limit, record in the repo: `CHANGELOG.md` (what changed, files, validation, commits), `docs/library/STATUS.md` (current task, what's pending, exact next steps) and `docs/library/DONE.md` (tasks that finished). Do not rely on chat memory or local-only outputs. (`docs/PROJECT_HANDOFF.txt` was retired on 9 Nov 2026.)
 
 ## What this is
 

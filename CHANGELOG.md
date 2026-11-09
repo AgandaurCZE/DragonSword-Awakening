@@ -1,3 +1,17 @@
+## 9 Nov 2026 — Notes cleaned up: one source of truth, finished work separated (Claude)
+- David asked for every note to hold only current information, finished work moved to its own file, and `CHANGELOG.md` as the only log.
+- **Correction:** only 11 heroes are Lv.70 (the 11 measured in `HERO_BASE_STATS`). Aria, Ornette, Lute, Eileen, Cerese, Othello, Dana, Alex and Astria are being levelled now. An earlier chat had written "all 20 heroes are Lv.70". Fixed in STATUS, TESTING, TEST01_RESULTS and the to-do page (item 1 is now "level the last 9 to 70, then measure"). Test 01 numbers stand, because application doesn't depend on hero level.
+- New `docs/library/DONE.md`: finished tasks and answered questions. The to-do page's Done block and the completed parts of the old notes moved there.
+- Retired, with their content moved: `docs/PROJECT_HANDOFF.txt` (the log now lives only in CHANGELOG), `docs/NEW_CHAT_BRIEFING.md`, `docs/TASK_dungeons_page.md`, `TODO_David_2026-10-29.txt`. The old to-do file's rating reasoning went to DECISIONS. Its launch checklist and three agreed-but-unapplied hero fixes went to LAUNCH_CHANGES: Charlotte's wrong "only 2 skills apply Poison" con, hidden statuses for Charlotte and Johnny, and Castella's review points. Its parked site ideas went to SITE.
+- `DATA_REFERENCE.md`: the two dungeon sections are merged into one, and outdated lines are fixed:
+  - `HERO_BASE_STATS` is no longer described as all estimates.
+  - `TIER_LIST_V2` lists all 20 heroes as rated.
+  - `DEFENSE_MODEL` and `LEVEL_COSTS` are shown as used by the calculators.
+  - The title note is updated.
+  - The old base-stat estimates and "open tasks" sections are replaced by a pointer to GAME_MATH and a short Procedures list.
+- STATUS has a current-task line, the still-estimated gear values and the Crit Rate awakening re-check (both from the old to-do file). WORKING_WITH_DAVID has David's 9 Nov rules: the repo is the only source of truth; ask before touching folders or his PC; uploaded PNGs may be deleted after processing; say when the chat is compacted. TEAM_TESTS explains the planner statuses (Idea, To test, Works, Doesn't work). GAME_MATH records the mastery material cost. DUNGEON_ARTWORK_WORKFLOW keeps only the rules and the two open banners.
+- `CHATGPT.md` was shortened: the architecture summary that duplicated AGENTS, SITE and DATA_REFERENCE is replaced by pointers, and a note from Claude explains the changes. `AGENTS.md` and `docs/README.md` were updated to match.
+- Validation: `tools/validate_data.py` OK; no change to `data.json`, `index.html` or assets.
 ## 9 Nov 2026 — Game math and site notes; Test Kit v33; planner and to-do refreshed (Claude)
 - New `docs/library/GAME_MATH.md` (every measured formula: levelling, EXP items, breakthroughs, skill levels, gear upgrades, stats, titles, Karma, the hit formula with definitions, DoT, status build-up, places and game modes, towers, Hunt bosses, Super Armor, the optimiser, known unknowns) and `docs/library/SITE.md` (how the page works, code map, data structure, GitHub and publishing, open site tasks). Both listed in `docs/README.md`.
 - Test Kit v33 (artifact and `docs/testkit/dragonsword-test-kit.html`): new Before awakenings section with test 08 (Lv.70 stats: takes titles off and names the profile) and test 09 (signature vs a normal Karma, average gain); Test 01 text says the Lv.70 redo is done and explains gauge and break-time entries; the goblin-dummy coverage tag is off; tests 01–03 have fixed numbers.

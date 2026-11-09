@@ -23,3 +23,25 @@ Four roles: **Main DPS, Sub-DPS, Enabler, Support**. Enabler has the blue icon (
 - Castella "doesn't provide anything useful" in team runs (David, 9 Nov): her Stun Blow (0.33) only works once Super Armor is broken, and Reina or Kalien score far higher in the same slot.
 - Kalien beat Castella in every comparison, with fewer signatures on.
 - Stun sources besides Castella and Lute for Theresia: Roxy (Crimson Spiral 0.20; also Bleed), Kalien (Finale 0.20, needs clones), Tarte (Thunderbolt 0.25, needs Shock), Astria (Precision Shot basic 0.20 over 8 s).
+
+## Rating reasoning from the first debates (29 Oct – 3 Nov)
+Moved here on 9 Nov from David's old `TODO_David_2026-10-29.txt` (retired; still in git history). This is the reasoning behind the ratings at the time. **The current tiers and tags are the ones in `TIER_LIST_V2.heroes`; where they differ, data.json wins.**
+
+- **Tag rules (29 Oct):** no "Team-dependent" tag; Enabler covers heroes like Reina. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes. **Self-sufficient** (new bar, 29 Oct 18:38): only heroes who run their whole kit alone **and** are strong doing it (Roxy and Aria lost it then). Claude must say so whenever a proposed tag doesn't meet its definition.
+- **How Airborne plays (David, from Reina):** the bonus lasts only while the enemy is in the air, and single lifts are short. Rotating everyone's Specials in a team built to keep enemies up keeps them up much longer, so Airborne heroes are much stronger in such a team than alone.
+- **Status application depends on the enemy:** Johnny puts 2.5–3 Poison stacks on low-level mobs but about 1.5–2 on Lv.90 goblins. Bosses resist more than mobs (see GAME_MATH 3.3).
+- **Reina:** S (single S, groups S+). Applies Airborne so fast you can swap and rotate; Wind Slayer has two charges. Needs A3 only when played as a damage dealer.
+- **Johnny:** A (single A, groups S). Within Venom he'd be S: Charlotte doesn't reach her numbers without him; he works without her. Enabler (Poison, far more than Charlotte) and Self-sufficient (he lifts for Venom Cutter and stacks his own Poison). No Needs Airborne tag: he covers it himself. Review cons to use: his Airborne slashes can carry him away from the fight, and a badly timed swap drags the next hero along Venom Cutter's path.
+- **Charlotte:** A, Expert −1 (casual B); single A, groups B, groups A possible with her signature. Needs Airborne: her only own source is Illusion Kick (needs Poison or Stealth, long cooldown). Shadow Grab is her key single-target hit; the slam barely hurts others. Her Clone explodes after about 15 s for a big AoE and breaks small enemies, but most groups are dead by then. Rage gain can only be raised by hero-specific sources (Sion's signature, Alex A1/A6, Lute's Mastery, Just Dodge).
+- **Castella:** B (single B, groups B). Really a Breaker: too slow as Main or Sub-DPS. Easy: broken enemies don't act for 8 s, which helps newer players. A1 (Knockdown on Stun Blow) lets her stand in for a Knockdown enabler.
+- **Lute:** C. His only real plus is Stun Slash's one-press Stun (small cone); Swordgrab's Knockdown is slow and single target; Relic Fall needs Knockdown and can pick a far-off target. The heal suits casual players. Enabler (Stun) and Easy. A1 untested.
+- **Roxy:** B (single B, groups C). Unlocks her whole kit herself (Skill, Special A, 3× Special B, Ultimate) but damage is on the low side. Her Stun unlocks Theresia's Divine Arc, Astria's Bolt Bombard and Castella's Upper Blow; her Bleed unlocks Theresia's Holy Rise.
+- **Aria:** B (single B only thanks to Multiple Bolt, groups A). Air Bomb gives Burn and Airborne at once; play Skill, Ultimate, Special A, then swap. Her Burn helps Kalien's Fox Grab only with Kalien's A1.
+- **Ornette:** B (single B, groups B), Easy. Loops Judgment and Holy Grab on her own Shock and Knockdown, so no Needs Shock tag; numbers feel small. A1 makes Holy Cross aimable; A3's bigger, longer Holy Circle could make her an off-field damage dealer.
+- **Kalien:** needs Awakening 1 (David: close to unplayable without it; Fox Grab needs Break before A1).
+- **Eileen (31 Oct):** S, Team buffer + Expert −1 (casual A). Not Enabler: her banner keeps enemies Airborne but she barely applies it. Brave One (+15% Attack) and Vanguard Banner (+20% Crit Rate) together about +17–21% team damage at end game (modelled). Works best with a Gatherer.
+- **Cerese (31 Oct):** B (groups A, single C). Gatherer (Ice Storm pulls everyone; not in the codex text) and Late bloomer (signature and A1 improve Ice Storm). Weak Frost build-up on bosses.
+- **Gatherers seen (31 Oct):** Kalien (Twin Tails), Kalsion (Explosion), Cerese (Ice Storm), a little from Roxy's held Crimson Spiral; awakenings Charlotte A3, Sion A3, Ornette A6.
+
+## Team-building observations (not used on the site yet)
+- Teams where several heroes apply the same status (Charlotte, Johnny and Reina all apply some Airborne) can spam freely; teams that rely on two specific skills to fill a stack on a broken boss need Break-bar timing (David, 8 Nov). Candidate for a team-difficulty note.

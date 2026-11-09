@@ -37,7 +37,7 @@ Back to the library: [docs/README.md](../README.md). Rules: [AGENTS.md](../../AG
   - Other pages: `DUNGEONS`, `TRAIT_DUNGEONS`, `FAMILIARS`, `TITLES`, `COOKBOOK`, `GUIDES`, `PATCH_NOTES`.
   - Shared: `meta`, `schemaVersion`, `ARCHES`, `ARCH_COLORS`, `STATUS_ARCHETYPE`, `ROLE_ICONS`, `UI_ICONS`.
 - `assets/`: images and source notes by topic (heroes, karma, gear, items, bosses, dungeons, tower, raid, roles, ui, upcoming …). Portraits are `.webp`; delete David's source PNGs after cutting.
-- `tools/`: `validate_data.py` (run before every commit), `hero_stats.py` (base stats and builds; run without `--write` first), `skill_meta.py --write` (after editing skill text or Karma/gear sentences), `tools/image/` (codex card cutting: `codex_recolor.py`, `detect.py`, `final.py`).
+- `tools/`: `validate_data.py` (run before every commit), `hero_stats.py` (base stats and builds; run without `--write` first), `skill_meta.py --write` (after editing skill text or Karma/gear sentences), `tools/image/` (codex card cutting: `codex_recolor.py <karma|familiars|heroes> <file.webp,...>` matches each card in David's screenshots in `assets/<kind>/*.png` to the existing card by shape and overwrites the named ones, using `detect.py` `cards()` and `final.py` `clean()`, which paints out the printed name; afterwards set `owned: true` in data.json and delete the PNGs).
 - `docs/`: notes (this library) and the artifact sources and backups in `docs/testkit/`.
 
 ## GitHub and publishing
@@ -45,15 +45,15 @@ Back to the library: [docs/README.md](../README.md). Rules: [AGENTS.md](../../AG
 - Before work: `git pull`. Before pushing: fetch and rebase onto `origin/main`, keeping others' changes (David also uses ChatGPT/Codex on this repo; check its work for data damage, e.g. CRLF in `index.html`).
 - Small commits with clear messages, ending with the trailer lines in the current session's instructions.
 - Every push to `main` deploys in about a minute (`pages build and deployment`; `gh run list -R AgandaurCZE/DragonSword-Awakening -L 1`). A failed deploy on GitHub's side was fixed twice by a new push. Report if deploy status can't be checked.
-- Before ending a task: update `CHANGELOG.md` (newest first), `docs/PROJECT_HANDOFF.txt` (newest last), [STATUS.md](STATUS.md) and DATA_REFERENCE for new or changed keys.
+- During and before ending a task: update `CHANGELOG.md` (newest first), [STATUS.md](STATUS.md), [DONE.md](DONE.md) for finished tasks, and DATA_REFERENCE for new or changed keys. (`docs/PROJECT_HANDOFF.txt` was retired on 9 Nov; its history is in CHANGELOG and git.)
 
 ## Open site tasks
 Game-side tasks and David's to-do list are in [STATUS.md](STATUS.md). Site work still open:
-- **Launch** (David's approval needed): remove the preview gate so the preview becomes the public site; first apply the public text changes in [LAUNCH_CHANGES.md](../LAUNCH_CHANGES.md) (Kalsion, Cerese, Ryza, Sion, Othello).
+- **Launch** (David's approval needed): the checklist and the public text changes waiting for it are in [LAUNCH_CHANGES.md](../LAUNCH_CHANGES.md).
 - **Tier list:** boss ratings (`bosses.all` empty for every hero) and tower ratings, after Test 07; review texts and verdicts to match the new ratings.
 - **Builds:** use `DEFENSE_MODEL` in builds (the value of Armor Penetration and Defense Ignore substats); refresh `HERO_BASE_STATS` when the 9 estimated heroes are measured and rerun `tools/hero_stats.py`.
 - **Karma:** a Karma level slider once Karma stats for levels 40–70 are measured (`KARMA_LEVELLING`); coloured signature Karma icons when David uploads them.
 - **Dungeons:** banner art for Eroded Underground Cemetery and Residual Worm Cleanup Zone.
 - **Guides:** the 8 categories are placeholder cards; content not written. News page is disabled and comes last.
-- **Optional, only if David asks:** Test 01 application and gauge table in each hero profile (preview); a Super Armor gauge column in the damage calculator.
+- **Optional, only if David asks:** Test 01 application and gauge table in each hero profile (preview); a Super Armor gauge column in the damage calculator; a short line in the Status Effects box that physical statuses still build up under Super Armor and only control the enemy after Break (in the game's words, `assets/help/notes.txt`); Karma exchange costs on the Karma tab (`assets/exchange/prices.txt`); a small "Coming next" box on the Patch Notes page (`assets/upcoming/notes.txt`).
 - **Not worth doing yet:** quest tracker, interactive map.

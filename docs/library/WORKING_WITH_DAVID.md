@@ -6,16 +6,32 @@ Back to the library: [docs/README.md](../README.md). Repository rules: [AGENTS.m
 - David, UK English, Prague time. He runs this fan guide and plays DragonSword: Awakening daily to collect the data. He often tests for many hours at a stretch; respect his time and memory.
 - He checks claims. Never state anything the data can't back up, and **never invent numbers**.
 
+## Source of truth
+- **The GitHub repository is the only source of truth.** Every number comes from David's in-game measurements, screenshots and the codex, stored in the repo (and the Test Kit and Team Planner artifacts, backed up in `docs/testkit/`). AIs make sense of those numbers; they don't add outside data. No web or wiki data unless David asks.
+- If two notes disagree, `data.json` wins, then the newest library file. Fix the older one; don't keep both.
+
 ## How he wants to work
-- Make the edits he asks for without asking permission. Flag anything you changed that he didn't ask for.
+- He wants a working relationship, not order and serve: discuss, give your own view, and tell him plainly if something he says doesn't add up (point to the file, number or formula).
+- Make the edits he asks for without asking permission. Flag anything you changed that he didn't ask for. **Ask first when a task is unclear.**
 - **Debate first.** Ratings, tags and roles are agreed by discussion; he confirms only after hearing your reply. Never set a tier by formula.
 - Short, direct, warm replies, like a colleague. Tables when comparing. Say plainly what's done, what isn't and what you need from him.
 - Be usage-efficient: batch work, don't re-read big files, **don't use agents**, don't search the web unless he asks, don't add tasks he didn't ask for.
 - Use the correct pronouns: `CHARACTER_PROFILE_DATA[hero].review.pronoun`. Lute is male.
-- When he sends test numbers, save them in the right place straight away (Test Kit storage, Team Planner) **and** in the repo notes (CHANGELOG, `PROJECT_HANDOFF.txt`, the library files). He relies on the repo, not on chat memory.
+- When he sends test numbers, save them in the right place straight away (Test Kit storage, Team Planner) **and** in the repo (CHANGELOG and the library files). He relies on the repo, not on chat memory.
 - Whenever a hero's **mastery** would change measured numbers, note a retest naming the skill it changes (he tests that skill first, then the all-out break time). The list is in [STATUS.md](STATUS.md).
 
+## Permissions (David, 9 Nov)
+- **Folders:** ask before creating, moving, deleting or changing the contents of any folder, unless it's part of the task.
+- **His uploads:** PNGs he sends for cutting or converting to WebP may be deleted afterwards, with their folder if it's no longer needed, without asking.
+- **His PC:** ask him personally before looking through it. GitHub: look anywhere.
+- **Site changes:** only behind the preview (`?tiers=new`). The plain URL must not change.
+
+## Keeping memory in the repo
+- Long chats get compacted (older messages summarised). Tell David when it happens, and keep everything needed in the repo as you go, not only at the end: [STATUS.md](STATUS.md) (current task and next steps), `CHANGELOG.md` (every change), [DONE.md](DONE.md) (finished tasks). There is no separate handoff file any more (retired 9 Nov).
+- Other assistants (ChatGPT, mainly for artwork) work on the same repo. Leave them notes in `CHATGPT.md`; be kind, and check their changes rather than undoing them.
+
 ## Mistakes past chats made: don't repeat them
+- **Writing that all 20 heroes were Lv.70** (9 Nov) when only 11 were. Check `HERO_BASE_STATS` (`estimated`) and STATUS before stating levels.
 - **Forgetting agreed plans.** On 9 Nov a chat didn't recognise the gearless Lv.70 team redo it had planned itself, and twice left out the Signature Karma tests when asked what must happen before awakenings. Before answering "what's left" or "what is this", read [STATUS.md](STATUS.md) and the to-do page (`docs/dragonsword_david_todo_by_priority.html`).
 - **Drawing conclusions from runs that changed two things at once** (Theresia's signature and Kalien for Castella in the same comparison). Check what changed between two numbers before explaining the gap.
 - **Calling a hero an Enabler without the caveat** that they must build their own setup first (Othello only applies Knockdown via Ice Grab after 2 Frost stacks).

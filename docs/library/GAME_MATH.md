@@ -26,7 +26,7 @@ Back to the library: [docs/README.md](../README.md). Evidence for each rule: `DA
 
 ### 1.4 Skill levels (`LEVEL_COSTS.skills`, `SKILL_LEVEL_MULTIPLIERS`)
 - Costs: fixed Gold and materials per level, the same for every hero and skill (Lv.7 materials differ between max-7 and max-10 skills).
-- Max level 10 for Skill, Ultimate, Special A and B; 7 for basic, jump and dash attacks; dodge stays Lv.1; mastery can't be levelled.
+- Max level 10 for Skill, Ultimate, Special A and B; 7 for basic, jump and dash attacks; dodge stays Lv.1; mastery can't be levelled. A mastery is unlocked with 10 of a special material from legendary chests (David, 30 Oct).
 - **Skill % at level L = Lv.1 value × multiplier(L)**: max-10 skills ×1, 1.05, 1.1, 1.15, 1.23, 1.3, 1.38, 1.48, 1.58, **1.75**; max-7 skills ×1, 1.1, 1.2, 1.33, 1.45, 1.6, **1.75**. The page only knows the max value, so it uses `round(max / 1.75 × multiplier)` (47 of 57 checks exact, the rest 1 off).
 - Buffs scale with level too, in even steps then a double step at max (Sion's Bless +10% at Lv.1 to +15% at Lv.10; Invisible's Crit Damage +10% to +15%).
 - Skill level does **not** change status application or Super Armor gauge damage.

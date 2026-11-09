@@ -1,8 +1,8 @@
-# Test 01 results: status application and Super Armor gauge (Lv.70 redo)
+# Test 01 results: status application and Super Armor gauge (8 Nov redo)
 
 Back to the library: [docs/README.md](../README.md). Method and rules: [TESTING.md](TESTING.md). Mastery retests: [STATUS.md](STATUS.md).
 
-David's redo, 8 Nov 2026: every hero at Lv.70, no gear, no Karma, no awakenings, no masteries, on the **Training Ogre (Lv.90 boss dummy), Super Armor not broken**. Status numbers are the fraction of one stack a skill adds (0.25 = a quarter of a stack). Gauge % is how much of the Super Armor gauge the skill removes, read with David's % overlay (stored in the Test Kit as status `Break (Super Armor)`, stacks = fraction of the gauge). Application and gauge don't depend on hero or skill level (David). Source: Test Kit storage (collection `results`, `testId: apply`); JSON copy: `docs/testkit/test01-apply-2026-11-09.json`. Pre-redo entries are in `docs/testkit/test01-apply-backup-2026-11-08.json` and are superseded.
+David's redo, 8 Nov 2026: no gear, no Karma, no awakenings, no masteries, on the **Training Ogre (Lv.90 boss dummy), Super Armor not broken**. Status numbers are the fraction of one stack a skill adds (0.25 = a quarter of a stack). Gauge % is how much of the Super Armor gauge the skill removes, read with David's % overlay (stored in the Test Kit as status `Break (Super Armor)`, stacks = fraction of the gauge). Application and gauge don't depend on hero or skill level (David). Source: Test Kit storage (collection `results`, `testId: apply`); JSON copy: `docs/testkit/test01-apply-2026-11-09.json`. Pre-redo entries are in `docs/testkit/test01-apply-backup-2026-11-08.json` and are superseded.
 
 ## All-out break time (whole gauge, hero alone)
 
