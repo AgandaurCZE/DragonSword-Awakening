@@ -45,7 +45,7 @@ Back to the library: [docs/README.md](../README.md). Rules: [AGENTS.md](../../AG
 - Repo `AgandaurCZE/DragonSword-Awakening`, branch **`main` only** (no other branches unless David asks). `main` is protected against force-push and deletion; undo with `git revert`.
 - Before work: `git pull`. Before pushing: fetch and rebase onto `origin/main`, keeping others' changes (David also uses ChatGPT/Codex on this repo; check its work for data damage, e.g. CRLF in `index.html`).
 - Small commits with clear messages, ending with the trailer lines in the current session's instructions.
-- Every push to `main` deploys in about a minute (`pages build and deployment`; `gh run list -R AgandaurCZE/DragonSword-Awakening -L 1`). A failed deploy on GitHub's side was fixed twice by a new push. Report if deploy status can't be checked.
+- Every push to `main` deploys in about a minute (`pages build and deployment`; `gh run list -R AgandaurCZE/DragonSword-Awakening -L 1`). A failed deploy on GitHub's side was fixed twice by a new push. Deploy time varies on GitHub's side (10 Nov: 48 s to 6 min for similar pushes); it doesn't track repo size. Report if deploy status can't be checked.
 - During and before ending a task: update `CHANGELOG.md` (newest first), [STATUS.md](STATUS.md), [DONE.md](DONE.md) for finished tasks, and DATA_REFERENCE for new or changed keys. (`docs/PROJECT_HANDOFF.txt` was retired on 9 Nov; its history is in CHANGELOG and git.)
 
 ## Open site tasks · updated 10 Nov
