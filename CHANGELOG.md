@@ -1,3 +1,6 @@
+## 10 Nov 2026 — Mastery retests saved (Claude)
+- David's retests with all 16 masteries (no gear, no Karma, Training Ogre): 27 new Test Kit entries (`apply`), also in `docs/testkit/test01-apply-2026-11-09.json`; new Mastery retests section in TEST01_RESULTS (before → after, break times, David's notes). Biggest change: Lute 75 → 41 s.
+- Castella's and Theresia's mastery buffs protect their own Super Armor, not the enemy's break (David). STATUS and DONE updated.
 ## 10 Nov 2026 — Chest Addict, Red Ladybug (Claude)
 - `TITLES`: Chest Addict obtained (Defense +15; owned titles now Defense +45 flat, GAME_MATH 2.2). `FAMILIARS`: Red Ladybug owned; `assets/familiars/red-ladybug.webp` replaced with the colour card cut from David's `insect.png` by `tools/image/codex_recolor.py` (same 392×467 size and style, checked by eye next to the other beetles), then the PNG was deleted.
 - STATUS: David has materials for all 16 masteries; solo retests with no gear and no Karma.

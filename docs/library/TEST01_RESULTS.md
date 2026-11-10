@@ -29,6 +29,38 @@ David's redo, 8 Nov 2026: no gear, no Karma, no awakenings, no masteries, on the
 | Ornette | Whole gauge broken in about 30 s going all out. Retest after the mastery (Holy Cutter). |
 | Alex | Whole gauge broken in about 45 s going all out. Depends on how many parries land; a perfect run might be about 10 s faster (not tested). |
 
+## Mastery retests (David, 10 Nov)
+
+Same setup as above (Training Ogre, no gear, no Karma, no awakenings), all 16 masteries unlocked. Saved in the Test Kit (`testId: apply`, notes say "mastery") and in the JSON copy. Before → after.
+
+| Hero | Skill | Status | Gauge | Full break |
+|---|---|---|---|---|
+| Aria | Shoot and Bomb (jump; the mastery repeats the last hit) | Burn 0.08 → 0.15, Airborne 0.01 → 0.03 | 0.8% → 1.25% | 50 → 47 s |
+| Astria | Slide (dash attack; longer) | none | 1.6% → 1.8% | 18 → 15 s (no dash attacks: a waste of time) |
+| Castella | Shoulder Crusher (dash attack) | none | 3% → 6%, plus 4% from the jump attack the sequence turns into | 18 → 16 s |
+| Cerese | Frozen Road (dash attack) | Frost 0.05 → 0.08 over the whole time on the ground | unchanged (0.25%) | not retested (unchanged) |
+| Charlotte | Shadow Dance (whole) / Shadow Leaf (jump) / Poison Step (dash) | not retested | 5% → 5% / 2% → 4% / 1% → 2.5% | 40–41 → 35 s |
+| Eileen | Barraging Spear (Skill) | Airborne 0.25 → 0.33 | 4% → 7% | 61 → 56 s |
+| Johnny | Venom Dance (Skill) | Poison 0.24 → 0.30; Airborne unchanged 0.20 (only the last hit) | 3% → 5% | 39 → 37 s |
+| Kalien | Twin Tails (dash attack) | Burn 0.08 → 0.11 | 3% → 5% | 25 → 20 s |
+| Lute | Kick Combo (dash attack) and Dropkick | each: Stun 0.05 (new) | 1.6% → 5%; Dropkick 5% | 75 → 41 s |
+| Ornette | Holy Cutter (dash attack) | Shock 0.10 → 0.18, Knockdown 0.03 (new) | 2.5% → 5% | 30 → 26 s |
+| Othello | Half-Moon Cutter (now a charged dash attack) | Frost 0.10 → 0.14 | 4% → 6% | 20 → 18 s |
+| Reina | Dash (not the dash attack) | none | about 2% (new) | not retested |
+| Sion | Bless (Special A) | Shock 0.04 → 0.06 | unchanged | not retested (unchanged) |
+| Tarte | Spiky Bolt | Shock 0.08 | unchanged | not retested (unchanged) |
+
+Notes from David:
+- **Castella and Theresia:** the mastery buff protects **their own** Super Armor; it doesn't break the enemy's faster. The codex wording ("Super Armor damage reduction is increased") reads like either. Castella's buff icon shows only during the dash attack; Theresia's lasts 5 s. Castella's faster break comes from the longer Shoulder Crusher (more hits), not the buff.
+- **Lute:** three uses of Kick Combo or Dropkick refresh his Skill.
+- **Othello:** if a charged dash attack would complete a Frost stack it only refills the bar instead (with only charged dash attacks the bar sits at about 0.99 of a stack). Damage per use 2328 → 3452; the cast takes about 1.5 s instead of about 0.9–1 s.
+- **Tarte:** Bolt Bubble now casts 40 bubbles, but she can't pop the extra ones herself: a buff for other Shock heroes' application. Each part of Spiky Bolt summons one bubble; the 3rd hit explodes them.
+- **Sion:** the Shock applies only when Special A is pressed, not from the blessing area on its own; in most cases unusable.
+- **Ryza:** Thunder Grab works as written: after any status (no Shock needed) she uses the mount attack as if the target had 2 Shock stacks; on groups she goes straight to the second version. Break unchanged.
+- **Kalsion:** no change on bosses (his grab becomes a mount attack there); the change is for groups only.
+- **Alex:** no change to damage or application. The debuff doesn't show when the Ultimate is used; Goblins dealt 6 damage before the Ultimate and after a quick cancel (needs a test on real enemies).
+- **Dana:** no combat change. **Roxy:** moving around the field is easier, which helps her hold skill.
+
 ## Castella
 
 | Skill | Status | Stacks / gauge | Note |

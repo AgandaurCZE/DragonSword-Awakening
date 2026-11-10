@@ -5387,5 +5387,464 @@
   "summary": "Alex breaks the Training Ogre's whole Super Armor gauge in about 45 s going all out.",
   "test": "Status application per skill",
   "testId": "apply"
+ },
+ "apply-1794500000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "Mastery repeats the last hit of the jump sequence. Before: 0.08.",
+   "presses": "1",
+   "skill": "Shoot and Bomb (jump attack, mastery)",
+   "st": "Burn",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Shoot and Bomb (jump attack, mastery): 0.15 Burn per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "Before: 0.01.",
+   "presses": "1",
+   "skill": "Shoot and Bomb (jump attack, mastery)",
+   "st": "Airborne",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Shoot and Bomb (jump attack, mastery): 0.03 Airborne per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "About 1.25% (before 0.8%). Whole gauge in 47 s (before 50 s).",
+   "presses": "1",
+   "skill": "Shoot and Bomb (jump attack, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.0125"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Shoot and Bomb (jump attack, mastery): 0.0125 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "About 1.8% (before 1.6%); longer slide. In Precision Shot mode the dodge rolls and reloads a bolt. Whole gauge in 15 s without dash attacks (before 18 s).",
+   "presses": "1",
+   "skill": "Slide (dash attack, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.018"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Slide (dash attack, mastery): 0.018 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 6% (before 3%), plus 4% from the jump attack the sequence turns into. Buff icon only during the dash attack. Whole gauge in 16 s (before 18 s).",
+   "presses": "1",
+   "skill": "Shoulder Crusher (dash attack, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Shoulder Crusher (dash attack, mastery): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "Over the whole time the road is on the ground (before 0.05). Gauge unchanged (0.25%); no break retest needed.",
+   "presses": "1",
+   "skill": "Frozen Road (dash attack, mastery)",
+   "st": "Frost",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Frozen Road (dash attack, mastery): 0.08 Frost per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "About 5% (unchanged). Whole gauge in 35 s (before 40-41 s).",
+   "presses": "1",
+   "skill": "Shadow Dance (whole combo, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Shadow Dance (whole combo, mastery): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "About 4% (before 2%).",
+   "presses": "1",
+   "skill": "Shadow Leaf (jump attack, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Shadow Leaf (jump attack, mastery): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "About 2.5% (before 1%).",
+   "presses": "1",
+   "skill": "Poison Step (dash attack, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.025"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Poison Step (dash attack, mastery): 0.025 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "Before: 0.25.",
+   "presses": "1",
+   "skill": "Barraging Spear (Skill, mastery)",
+   "st": "Airborne",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Barraging Spear (Skill, mastery): 0.33 Airborne per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "About 7% (before 4%). Whole gauge in 56 s (before 61 s).",
+   "presses": "1",
+   "skill": "Barraging Spear (Skill, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.07"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Barraging Spear (Skill, mastery): 0.07 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "Before: 0.24. Airborne unchanged (0.20; only the last hit inflicts it).",
+   "presses": "1",
+   "skill": "Venom Dance (Skill, mastery)",
+   "st": "Poison",
+   "stacks": "0.30"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Venom Dance (Skill, mastery): 0.30 Poison per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "About 5% (before 3%). Whole gauge in 37 s (before 39 s).",
+   "presses": "1",
+   "skill": "Venom Dance (Skill, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Venom Dance (Skill, mastery): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "Before: 0.08.",
+   "presses": "1",
+   "skill": "Twin Tails (dash attack, mastery)",
+   "st": "Burn",
+   "stacks": "0.11"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Twin Tails (dash attack, mastery): 0.11 Burn per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "About 5% (before 3%). Whole gauge in 20 s (before 25 s).",
+   "presses": "1",
+   "skill": "Twin Tails (dash attack, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Twin Tails (dash attack, mastery): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "New with the mastery. Three uses of Kick Combo or Dropkick refresh his Skill.",
+   "presses": "1",
+   "skill": "Kick Combo (dash attack, mastery)",
+   "st": "Stun",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Kick Combo (dash attack, mastery): 0.05 Stun per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "About 5% (before 1.6%). Whole gauge in 41 s (before 75 s).",
+   "presses": "1",
+   "skill": "Kick Combo (dash attack, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Kick Combo (dash attack, mastery): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500017000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "New with the mastery.",
+   "presses": "1",
+   "skill": "Dropkick (mastery)",
+   "st": "Stun",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Dropkick (mastery): 0.05 Stun per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500018000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Lute",
+   "lv": "90",
+   "note": "About 5%.",
+   "presses": "1",
+   "skill": "Dropkick (mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Dropkick (mastery): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500019000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "Before: 0.10.",
+   "presses": "1",
+   "skill": "Holy Cutter (dash attack, mastery)",
+   "st": "Shock",
+   "stacks": "0.18"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Holy Cutter (dash attack, mastery): 0.18 Shock per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500020000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "New with the mastery.",
+   "presses": "1",
+   "skill": "Holy Cutter (dash attack, mastery)",
+   "st": "Knockdown",
+   "stacks": "0.03"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Holy Cutter (dash attack, mastery): 0.03 Knockdown per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500021000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "About 5% (before 2.5%). Whole gauge in 26 s (before 30 s).",
+   "presses": "1",
+   "skill": "Holy Cutter (dash attack, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Holy Cutter (dash attack, mastery): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500022000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "Before: 0.10. If a full stack would be reached with this move it only refills the bar (with only charged dash attacks the bar sits at about 0.99). Damage 2328 -> 3452; cast about 1.5 s vs about 0.9-1 s.",
+   "presses": "1",
+   "skill": "Half-Moon Cutter (charged dash attack, mastery)",
+   "st": "Frost",
+   "stacks": "0.14"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Half-Moon Cutter (charged dash attack, mastery): 0.14 Frost per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500023000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "About 6% (before 4%). Whole gauge in 18 s (before 20 s).",
+   "presses": "1",
+   "skill": "Half-Moon Cutter (charged dash attack, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Half-Moon Cutter (charged dash attack, mastery): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500024000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "About 2% with the mastery.",
+   "presses": "1",
+   "skill": "Dash (not dash attack, mastery)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.02"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Dash (not dash attack, mastery): 0.02 Break (Super Armor) per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500025000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Sion",
+   "lv": "90",
+   "note": "Only when Special A is pressed, not from the area on its own; in most cases unusable (before 0.04). Gauge unchanged; no break retest needed.",
+   "presses": "1",
+   "skill": "Bless (Special A, mastery)",
+   "st": "Shock",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Bless (Special A, mastery): 0.06 Shock per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794500026000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "Each part of the sequence summons one bubble; the 3rd hit explodes them. Bolt Bubble now casts 40 bubbles in total, but she can't pop the extra ones herself. Break unchanged; no retest needed.",
+   "presses": "1",
+   "skill": "Spiky Bolt (mastery)",
+   "st": "Shock",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-10T06:05:00.000Z",
+  "summary": "Spiky Bolt (mastery): 0.08 Shock per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
  }
 }
