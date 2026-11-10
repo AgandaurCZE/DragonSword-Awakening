@@ -1,6 +1,6 @@
 # Game math: every measured formula, from levelling to damage
 
-Back to the library: [docs/README.md](../README.md). Evidence for each rule: `DAMAGE_TESTS.findings` in `data.json` and the Test Kit ([TESTING.md](TESTING.md)). Data shapes: [DATA_REFERENCE.md](../DATA_REFERENCE.md).
+Back to the library: [docs/README.md](../README.md). Evidence for each rule: `DAMAGE_TESTS.findings` in `data/research.json` and the Test Kit ([TESTING.md](TESTING.md)). Data shapes: [DATA_REFERENCE.md](../DATA_REFERENCE.md).
 
 **Dates:** each heading ends with when the rule was measured or last changed (from CHANGELOG).
 

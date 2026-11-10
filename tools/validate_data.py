@@ -183,6 +183,14 @@ for n, h in (T2.get('heroes') or {}).items():
     for t in h.get('tags', []):
         if t not in (T2.get('tags') or {}): bad(f'TIER_LIST_V2 {n}: undefined tag {t!r}')
 
+# Research data that the page doesn't load (moved out of data.json on 10 Nov 2026)
+try:
+    _r = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'research.json'), encoding='utf-8'))
+    if 'DAMAGE_TESTS' not in _r: bad('data/research.json: DAMAGE_TESTS missing')
+    if 'DAMAGE_TESTS' in d: bad('DAMAGE_TESTS is back in data.json; it lives in data/research.json')
+except (OSError, ValueError) as e:
+    bad(f'data/research.json: {e}')
+
 if problems:
     print(f'{len(problems)} problem(s):'); [print(' -', p) for p in problems]; sys.exit(1)
 print(f'data.json OK: {len(heroes)} heroes, {len(karma)} Karmas, {len(gear)} gear sets, {len(d["TEAM_DATA"])} teams checked.')

@@ -1,3 +1,7 @@
+## 10 Nov 2026 — Research data moved out of data.json (structure step B, Claude)
+- `DAMAGE_TESTS` (training-dummy research the page never reads) moved unchanged to the new `data/research.json`; `data.json` 712 → 629 KB for every visitor. `KARMA_LEVELLING` and `SKILL_BUFF_LEVELS` stay (4 KB; the Karma slider and builds will use them).
+- `tools/validate_data.py` checks `data/research.json` parses, holds `DAMAGE_TESTS`, and that the key doesn't drift back into data.json. AGENTS.md key index, SITE, GAME_MATH, DATA_REFERENCE and the `hero_stats.py` docstring point to the new file.
+- Checks: validator OK; public pages pixel-identical; preview identical apart from the Familiars Insect step 4 (the owned-count fix earlier today); no console errors.
 ## 10 Nov 2026 — Artifact backups as a routine (structure step E, Claude)
 - Full exports: `docs/testkit/testkit-results-2026-11-10.json` (all 830 Test Kit entries: 402 Test 01, 149 enemy Defense, 115 gear, 95 level costs, 22 signature, 20 Lv.70 stats, 12 buffs and the rest) and `docs/testkit/planner-backup-2026-11-10.json` (16 teams, 20 signatures). They replace `test01-apply-2026-11-09.json` and `planner-backup-2026-11-09.json` (checked: every old entry is in the new files, unchanged). `test01-apply-backup-2026-11-08.json` stays (pre-redo entries no longer in the artifact).
 - Routine written into `docs/README.md`: export both artifacts at the end of every session that wrote to them.

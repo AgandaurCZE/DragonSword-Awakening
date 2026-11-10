@@ -1,0 +1,2099 @@
+{
+ "note": "Research data that the page never shows, moved out of data.json on 10 Nov 2026 (David approved) so visitors don't download it. Same shape as before; read it in tools with json.load(open('data/research.json')). GAME_MATH.md cites these findings.",
+ "DAMAGE_TESTS": {
+  "note": "Training-dummy results (Lv.90 Training Ogre; the game shows no dummy stats). Every value repeated 5 times with identical results unless noted. Not used by the page yet.",
+  "findings": [
+   "Damage is proportional to Attack: Charlotte's auto-attack hits fell by the same ratio as her Attack (684 -> 637, x0.931; e.g. 3rd click 454 -> 423).",
+   "Damage is proportional to the skill %: Shadow Dance Lv.1 -> Lv.2 (332% -> 365%, x1.10) raised every hit by x1.10 (e.g. 423 -> 465).",
+   "Crit hit = non-crit x (1 + Critical Damage): x1.5 at 50% Crit Damage; x1.6 during Invisible at Lv.1 (+10%). Each hit of a multi-hit attack rolls its own crit.",
+   "Single hit (Reina Wind Slayer Lv.1, 549%, Attack 333): 916 damage = 0.50 x Attack x skill %. Whether the 0.50 is the dummy's defence, a level gap or a fixed constant is not known.",
+   "Auto-attack combos match the codex % at 0.50 x Attack when Charlotte's 4th click is counted as one hit (it sometimes hits once, likely an extra hit on the big ogre): Charlotte 0.502-0.505 in all four tests, Reina 0.498 (Wind Sword Lv.2, 385%: 2x89 + 128 + 128 + 205). So the codex % is the whole combo, and the dummy gives the same 0.50 to single hits and combos.",
+   "Status ticks (Poison, Bleed, Burn, Shock) = 50% of the applier's Attack, rounded down, 5 ticks per application (corrected 29 Oct 2026: one at 0 s, then every 2.5 s; first recorded as 4): Poison 684 -> 342, 637 -> 318, 658 -> 329, Johnny 584 -> 292; Bleed (Roxy), Burn (Aria) and Shock (Ornette) all 71 -> 35 and 326 -> 163. Armor Penetration and Defense Ignore don't change ticks. Frost/Stun/other statuses not tested. Time between ticks not measured.",
+   "Skill buffs scale with level too: Invisible's Critical Damage buff is +10% at Lv.1 and +15% at Lv.10 (x1.5, not x1.75).",
+   "Armor Penetration raises damage, so the Training Ogre has Defense: at the same 681 Attack, going from 10 to 33 raised the larger hits by 1.2% (499 -> 505, 312 -> 316, 174 -> 176), about +0.05% damage per point against this dummy. Combo ratio 0.505 -> 0.513 x Attack x skill %. The Poison tick stayed 340 (= Attack / 2), so Poison ignores Defense, or at least Armor Penetration. The dummy's Defense value and the exact Defense formula are not known.",
+   "Defense Ignore 0.97% (Armor Penetration 0) raised the larger hits by about 0.4% compared with the Armor Penetration 0 tests scaled to the same Attack (e.g. 482 vs 480.3 expected). Combo ratio 0.508. Poison tick 329 = 658 / 2 rounded down, unaffected. Against this dummy, roughly 1% Defense Ignore ~ +0.4% damage and 1 Armor Penetration ~ +0.05%.",
+   "Poison tick by stacks, as a share of the FIRST applier's Attack: 1 stack 50%, 2 stacks 75%, 3 stacks 100% (+25% per extra stack). The other appliers' Attack doesn't matter. 2 stacks: Charlotte (658) first -> 493, Johnny (645) first -> 484, whoever applied the second. 3 stacks (goblin dummies, order not tracked): ticks of 645 and 658, exactly the two heroes' Attack. Poison stops at 3 stacks (no 4th). Stacks last about 10 seconds (timed by eye); the ticks are 2.5 seconds apart, 5 in total including one on applying (corrected 29 Oct 2026). Bleed, Burn and Shock stack exactly the same way, also to a maximum of 3 (Lv.1 heroes, 71 Attack: 35 / 53 / 71). They also last about 10 seconds (a tick every ~2.5 s).",
+   "Burn Additional Damage (+4%) and Burn Additional Attack Power (+110) don't change Burn ticks: Aria with 381 Attack ticked 190 / 285 / 381 = 50 / 75 / 100% of 381, rounded down. So these status bonuses must do something else, most likely raise hits against enemies that have the status (not tested yet).",
+   "Hits on an enemy that has Poison, Burn, Bleed or Shock deal x1.5, at any stack count: Charlotte 22 -> 33 with Poison, Roxy 24 -> 36 with Bleed, Ornette 17 -> 26 with Shock; Aria with no Karma (71 Attack) hit 19 on a clean goblin and 28 on a burning one (19.x x 1.5 = 28.5, rounded down), the same at 1, 2 or 3 stacks. The Karma results are explained by the status-bonus rule below.",
+   "Status hit bonuses add up: +50% for each damage-over-time status (Poison, Bleed, Burn, Shock) and +100% each for Airborne, Knockdown and Stun. Charlotte's small auto-attack hit (22 clean): Poison 33 (x1.5), Poison + Bleed 44 (x2.0), Airborne + Poison 55 (x2.5), Knockdown + Poison + Bleed 66 (x3.0, recheck), Stun + Poison + Bleed 66 (x3.0), Airborne + Knockdown + Poison 77 (x3.5). Reina: Airborne alone x2.0. Clean check on the Training Ogre (Charlotte, 22 clean): Stun 44 (x2.0), Airborne 44 (x2.0), Stun + Airborne 66 (x3.0). Exception: Airborne + Knockdown + Poison + Bleed was 77 (x3.5) twice, where adding up gives x4.0, so either x3.5 is a cap or Bleed wasn't on. Settled 31 Oct 2026: no cap (Stun + Knockdown + Airborne = x4, see below), so Bleed wasn't on. The two earlier x2.5 results with Poison + Bleed + Airborne/Knockdown were most likely Bleed wearing off. Break not tested.",
+   "How the status bonuses work (tested with Burn): a hit on an enemy with the status = k x (Attack + <status> Additional Attack Power) x 1.5 x (1 + <status> Additional Damage). A clean hit is k x Attack, so neither bonus does anything on a clean enemy, and neither changes ticks. One value of k (0.2677-0.2681 for Aria's first auto-attack hit on the goblins) fits all 8 results: no bonus 19 -> 28; +15% 19 -> 32; +4% & +110 102 -> 205; +19% & +110 102 -> 234. With several statuses the bonuses apply to the whole hit: Aria (381 Attack, +110 / +4% Burn) on Bleed + Knockdown + Burn hit 410 = k x 491 x 3.0 x 1.04 (410.1-410.8). Applying them only to Burn's +50% would give about 323. So: hit = k x (Attack + Additional Attack Power of a status the enemy has) x (1 + all status hit bonuses) x (1 + Additional Damage of a status the enemy has). Not tested: bonuses for two different statuses at once (e.g. Burn and Knockdown Additional Damage together: added or multiplied).",
+   "Trait Dungeon weakness (David, 29 Oct 2026, Reina and Johnny, boss only): doubles the hit bonus of the weak archetype's status (Poison +50% -> +100%, Airborne +100% -> +200%). No effect on hits without the status, no effect on DoT ticks. A neutral boss gives the same multiplier as the Training Ground dummy (no resistance on Normal). Airborne also built up faster on the weak boss. Untested: whether higher difficulties add resistances.",
+   "Two different gear stats exist: 'All Status Effect Additional Attack Power' is flat (25 on a blue legs substat) and is added to Attack on hits against an enemy with any status; 'Status Effect Additional Attack Power Increase' is a % (1.94% on blue boots +3), the 1.1.0 sub-option that raises all status Additional Attack Power. Neither affects DoT ticks.",
+   "DoT ticks: 5 per application (0, 2.5, 5, 7.5, 10 s), not 4 as first recorded. Total per application at 1/2/3 stacks: 250/375/500% of the first applier's Attack.",
+   "Breaker weakness (Drosophia of Breaker) doesn't change status hit bonuses; it likely affects Super Armor break instead (untested). Drosophia of Bloodburst has no weakness (tested with every status).",
+   "Super Armor break: no hit bonus (Castella 194 before and after); lasts 8 s on both Drosophia bosses, whatever hero breaks it. Drosophia of Breaker has a much bigger Super Armor bar: Charlotte needed about 2x or more vs the Bloodburst one, Castella only about 1.4x. Likely meaning of the Breaker weakness: Breakers lose much less to the bigger bar (rough counts, two heroes).",
+   "Status ticks never crit (David, 29 Oct 2026, Test Kit): Poison, Bleed, Burn and Shock, 100 ticks each (Poison 200), at 1, 2 and 3 stacks, with 12.77% Crit Rate: 0 crits. Crit stats only raise direct hits. Each stack count also has its own visual on the enemy.",
+   "Charlotte's Illusion Kick and her Clone explosion (Invisible) apply Poison in-game, though the codex text names no Poison for either (David, 29 Oct 2026, screenshots on Lv. 90 goblins; no Karma or awakening effect explains it). Illusion Kick about 0.6 stack per press, the Clone explosion a full stack, and both hit several goblins.",
+   "Hidden Poison (David, 29 Oct 2026, screenshots): Charlotte's Illusion Kick (~0.6 stack) and Invisible's Clone explosion (~1 stack, area) apply Poison, which the codex text doesn't mention. So Charlotte applies Poison with 4 skills, not 2, and Illusion Kick from Stealth feeds her own Poison condition. The Clone explosion works differently from other appliers (David, 23:28): it tops the current stack up to full and stops there. From 0% of stack 1 it gives a full first stack; from 99% it adds only the missing 1% and nothing to stack 2. So it guarantees at least 1 full stack but never adds more.",
+   "Stun, Airborne and Knockdown build up on the same kind of gauge icon as the damage-over-time statuses (David, 29 Oct 2026), but it fills only once (one 'stack'). When it fills, the status triggers; the icon disappears when the status ends (Airborne: enemy lands; Knockdown: enemy stands up; Stun: stun ends). So their application value per skill can be measured the same way, as a fraction of one gauge.",
+   "Status application drops with difficulty and rises with weakness (David, 29-30 Oct 2026, Test Kit, Johnny, Poison stacks per press, estimated from the gauge; at III the neutral values are hard to read, 0.25-0.35). Poison Grab: Lv.90 goblins 1 | TD I neutral 0.6, weak 1 | TD III neutral ~0.3, weak 1. Venom Dance: goblins 1 | TD I neutral 0.5, weak 1 | TD III neutral ~0.3, weak 0.75. Venom Cutter: goblins 1.25 | TD III neutral ~0.4, weak 1. So: (1) bosses resist build-up more than mobs, and more at higher difficulty (I -> III roughly halves it), which confirms David's resistance idea; (2) a weakness raises build-up by roughly 2-3x (and doubles the hit bonus). Several weak results sit at exactly 1, so a press may be capped at one stack; not confirmed.",
+   "Physical statuses on Lv. 90 goblins (David, 30 Oct 2026, Test Kit; one use of a skill = one press): almost every Airborne, Knockdown and Stun skill fills the gauge in one use (Reina's three Airborne skills, Lute's Stun Slash and Swordgrab, Roxy's Crimson Spiral held or pressed, Castella's Stun Blow at 0.2 per hit over 5 hits and Upper Blow, Charlotte's Illusion Kick and Shadow Grab, Johnny's Phantom Slash, Venom Dance and Venom Cutter, Aria's Air Bomb and Rolling Bomb, Ornette's Holy Grab). Weaker: Ornette's Judgment 0.75 Knockdown, Aria's Switch On! 0.5 Airborne per bolt (1.5 with all 3 bolts on one enemy), Aria's Shoot and Bomb 0.1 Airborne. So on mobs the physical enablers differ in how often and how widely they apply, not how much.",
+   "Leftover build-up stays on the enemy after a physical status ends (David, 30 Oct 2026): Reina's Rising Cutter fills the Airborne gauge on hit 2 and adds 0.4 on hit 4, and that 0.4 is still there after the enemy lands; the same with Aria's Switch On! (0.5 left over). Reina's Wind Slayer has 2 charges; used back to back it leaves no leftover.",
+   "More hidden statuses (David, 30 Oct 2026, not in the codex text): Charlotte's Clone explosion applies Airborne as well as Poison; Johnny's Venom Cutter (needs an Airborne target) also makes other enemies it hits Airborne. Roxy's Bleeding Grab gives a full Knockdown at 2+ Bleed stacks, as the codex says.",
+   "Difficulty doesn't change the status hit bonus (David, 30 Oct 2026): Johnny's Poison hit bonus on Mantius of Amplitude was x1.85 on Trait Dungeon I and x1.84 on III. Higher difficulty only slows status build-up (and raises enemy Defense: clean hits 168 -> 102, -39%).",
+   "'Status Effect Additional Attack Power Increase' (the 1.1.0 % substat) raises your status Additional Attack Power by that % (David, 30 Oct 2026: Charlotte, 359 Attack, 125 Poison + All Status AAP: hit 126 -> 133 with a 3.88% piece = x1.056; predicted x1.050 for 'raises AAP', x1.038 for no effect, x1.078 for the whole hit). It only matters on afflicted targets and is worth little unless the flat status AAP is large.",
+   "Hits on an enemy with several statuses (David, 30 Oct 2026, Charlotte, 359 Attack, All Status AAP 50, Poison AD +15%, Burn AD +15%): clean 52, Poison 103, Poison + Burn 174. Fits only: hit = k x (Attack + sum over the statuses on the target of (that status's AAP + All Status AAP)) x (1 + sum of status hit bonuses) x (1 + sum of those statuses' Additional Damage). So All Status AAP counts once per status on the target, and Additional Damage from different statuses adds (the builds' cautious assumption is right).",
+   "Super Armor Break and Additional Attack Power (David, 30 Oct 2026): Break gives no hit multiplier, but Break Additional Attack Power and All Status AAP are added to Attack on hits against a broken enemy. Charlotte (359 Attack, Break AAP 400, All Status 50): clean 52 -> broken 118 (= 52 x 809/359). Poison + Break 216, Burn + Break 216, Poison + Burn + Break 345, all as predicted. So Break AAP can more than double hits on broken enemies for low-Attack heroes, and All Status AAP counts for Break too.",
+   "Frost (David, 31 Oct 2026, Cerese + Reina): no damage ticks; 3 stacks Freeze the enemy (can't act); a Frozen enemy takes +50% from hits, added like the other status bonuses (Reina Wind Slayer: clean 1742, Frozen 2613, Airborne 5605, Airborne + Frozen 7006 - all as predicted). Only Cerese's Shattering Touch shatters Frozen enemies / Ice Blocks.",
+   "Charlotte's swap-in counts as a dodge for 'when dodging' effects (Venomfog Shade 3-piece: +4% Crit Rate for 12 s, confirmed on her panel, 31 Oct 2026); Johnny's swap-in doesn't. Tip: the U key opens the stat panel during a fight without restarting it.",
+   "Three physical statuses add with no cap (David, 31 Oct 2026, video of Reina's Wind Slayer Lv.1 on Lv.90 goblins; Reina 626 Attack, Stun AAP 250, Airborne AAP 250, Airborne Additional Damage 15%): clean 1742; Stun + Knockdown 7311 (= 1742 x 876/626 x 3, predicted 7313); Stun + Knockdown + Airborne about 14407 (= 1742 x 1126/626 x 4 x 1.15) and the same hit as a crit 21611 (= 14407 x 1.5, Reina's Crit Damage is 50%, confirmed on her panel). Both white hits give the same true Attack of 626.6 (the panel rounds down). So the bonuses keep adding (x4); the earlier x3.5 goblin result was most likely Bleed wearing off.",
+   "Tower of Trials adds to the Additional Damage pool (David, 31 Oct 2026, Tower of Gale floor 1, Reina's Ultimate on the archers, no crits). Without Airborne gear stats (384 Attack): clean 1759, Airborne 17593 (x10), Poison 5278 (x3), Airborne + Poison 26390 (x15). That is the normal hit bonus (x2, x1.5, x2.5) times (1 + tower bonus): +400% for Airborne (the tower's own status) and +100% for Poison, added together (x5, x2, x6). With her Airborne gear (626 Attack, Airborne AAP 250, Airborne Additional Damage 15%): clean 2904, Airborne 41843, Poison 8712, Airborne + Poison 62460; the tower bonus joins the same pool as Additional Damage: 2904 x 876.6/626.6 x 2 x (1 + 4 + 0.15) = 41845 and x 2.5 x (1 + 4 + 1 + 0.15) = 62463. All 7 hits fit within 3. Stun gets no tower bonus: Stun + Airborne 26390 (= x3 x (1 + 4) = x15), Stun + Poison + Airborne 36947 (= x3.5 x (1 + 4 + 1) = x21). Burn gets +100% like Poison: Burn + Airborne 26390 (= x2.5 x (1 + 4 + 1) = x15). So in the Tower of Gale: Airborne +400%, damage-over-time statuses (Poison, Burn; Bleed and Shock not tested) +100%, Stun 0. Tower of Amplitude, same Reina setup: clean 1759, Poison 5278 (x3), Airborne 3518 (x2, no tower bonus), Poison + Airborne 8796 (x2.5 x (1 + 1) = x5). So the +100% for damage-over-time statuses is the towers, not the archers, and Airborne only gets +400% in its own tower. Stun in the Tower of Amplitude: Stun 17593 (x10 = x2 x (1 + 4)), Stun + Airborne 26390 (x3 x 5 = x15), Stun + Airborne + Poison 36947 (x3.5 x 6 = x21): the mirror of the Tower of Gale. Rule: each tower gives its own status +400% and damage-over-time statuses +100%, other statuses nothing, all added to the Additional Damage pool. A second enemy in each tower took about 4% less (Airborne 3379 vs 3518; a harpy's Poison + Airborne 25345 vs the archers' 26390): different Defense, the same ratio both times.",
+   "Sion (David, 31 Oct 2026, Test Kit): Bless gives Attack Power +10% at Lv.1 rising +0.5% per level to 14% at Lv.9 and 15% at Lv.10; the Defense version is the same (10-15%). Even steps then a double step at max, like every buff measured so far. How the field works (David): the Ultimate's relic field lasts as long as Sion stays on the field, and he can switch it between the Attack and Defense buff; it is about twice the size of Eileen's Brave One circle; after Sion swaps out it stays for 10 s, and swapping him back in during those 10 s refreshes it, so played right the buff never drops. A buff lingers 2 s after you switch it or leave the field, like Eileen's.",
+   "Team buffs add (David, 31 Oct 2026, Test Kit): Eileen's Brave One and Sion's Bless (both Lv.2) on Reina, no status on the enemy. Attack 748 -> 797 with either buff -> 847 with both (+49, +50: adding; multiplying would give 849). The same skill hit: 2,094 -> 2,231 -> 2,369; adding predicts 2,368, multiplying 2,377. Both buffs join the Attack Power Up pool with gear and each other. (A first try at 71 Attack, 78 / 78 / 85, was too small to tell.) Vanguard Banner lasted 10 s.",
+   "Super Armor Break and status build-up (David, 1 Nov 2026, Training Ogre, Test Kit): Break doubles the build-up of physical statuses only (Stun, Knockdown, Airborne). Measured unbroken -> broken per press: Reina Rising Cutter and Wind Slayer 0.167 -> 0.333 Airborne, Johnny Phantom Slash 0.167 -> 0.333 Airborne, Eileen Barraging Spear 0.25 -> 0.5 Airborne, Lute Stun Slash 0.167 -> 0.333 Stun, Sion Divine Smash 0.167 -> 0.333 Knockdown. Frost is not affected: Cerese Ice Storm 0.25 both ways; damage-over-time statuses (Poison, Bleed, Burn, Shock) are not affected either (David). Matches the Rift: physical statuses needed half as many uses on a Broken enemy. So status tests are done unbroken; broken physical values = 2x.",
+   "Defense Ignore 20% (Earthshatterer 3-piece), Reina, Attack 2445, Armor Penetration 66, Critical Damage 55.71%, Wind Sword Lv.3 first hit on the Training Ogre with no statuses (1 Nov 2026): non-crit 743 -> 829 (+11.6%), crit 1157 -> 1291 (+11.6%); crit / non-crit = 1.557 = 1 + Crit Damage. If damage taken scales as K / (K + Defense x (1 - Defense Ignore)), this means the dummy's Defense is about 1.08 x K at Armor Penetration 66 (it blocks about 52% before Defense Ignore). That also predicts about +0.5% for the earlier 0.97% test (+0.4% seen). The form of the formula is still an assumption.",
+   "Defense test (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Training Ogre, 4 Nov 2026), damage per Attack: AP 0/DI 6.65% 0.3042; AP 0/DI 26.65% 0.3389; AP 70/DI 0% 0.3044; AP 70/DI 20% 0.3400; AP 85/DI 0% 0.3069 (plus 1 Nov: AP 66/DI 0% 0.3039, AP 66/DI 20% 0.3391). Best fit: damage ∝ K / (K + Defense × (1 − Defense Ignore) − Armor Penetration), with this dummy's Defense = 1,000 and K = 1,000 (best fit on a grid search; same units as Armor Penetration). Fits all 7 points within 0.06%; applying Armor Penetration before Defense Ignore fits worse (up to 1%). On this dummy: 1 Armor Penetration ≈ 1 Defense point ≈ +0.05% damage; 1% Defense Ignore ≈ 10 Defense points ≈ +0.5%. The dummy blocks about half the damage. K and the dummy's Defense are fitted values; whether K changes with the attacker's level, and the Defense of real bosses, are unknown.",
+   "Defense on a real enemy (Test Kit test 04, Reina Wind Sword Lv.3 first hit, Barpedin the Crushing Darkness Lv.80, 4 Nov 2026): Attack 2160, AP 0, DI 0%: 578; Attack 2418, AP 85, DI 0%: 673; Attack 1503, AP 0, DI 11.09%: 428. With K = 1,000 and the Ogre's hit share (58.78% of Attack, 14% of Wind Sword Lv.3's 420%) these give Defense 1,197 (1,193–1,201), all three hits within 0.1 damage. K left free gives 915–1125, so K = 1,000 is a constant of the formula, not of the dummy, and the formula holds on a real boss. Full model in DEFENSE_MODEL.",
+   "Enemy Defense follows level × enemy type (Test Kit test 06, Reina Wind Sword Lv.3 first hit, 2427 Attack, Armor Penetration 0, Defense Ignore 0%, 4 Nov 2026). Goblin and Warg hit identically at every shared level: 1402, 1380, 1298, 1232, 1084, 1003 and 960 at Lv.10, 15, 25, 30, 40, 45 and 52, which is Defense 18, 34, 99, 158, 316, 422 and 486. Goblin Archer = x0.8, Goblin Barbarian = x1.1 (one level), Fierce Ironclad Warg and Sharpshooter Goblin Archer = x1.3. The Sharpshooter is not a basic archer: at Lv.40 it took 1012, where x0.8 predicts 1139. Break doesn't lower Defense: Goblin Archer Lv.52 went 1027 -> 1134 when broken with All Status AAP 76 and Break AAP 175; added Attack alone predicts 1133, and zero Defense would give about 1574.",
+   "Enemy Defense, second batch (Test Kit test 06, same setup, 4 Nov 2026). Dungeon bosses are x1.3 of the basic enemy: Fierce Ironclad Warg, Sharpshooter Goblin Archer, Veteran Goblin Barbarian, Proud Goblin Tribal Hero and Sargon, 13 hits within about 1 damage. Also x0.8 Axe-throwing Skeleton, x1.04 Agile Ironclad Warg, x1.1 Skeleton Commander (Skeleton taken as basic). World enemies are lower than dungeon ones: Warg and Goblin Lv.52 world 486, Warg Lv.50 dungeon 569. World bosses don't share one multiplier: Horg 374 and Andras 421 at Lv.40, Karon 836 and Scraping Back 1,257 at Lv.60, Octavia 1,195 and Barpedin about 1,197 at Lv.80. Named enemies: Kuaku the Mad Lv.56 549, about x1.1 like the Goblin Barbarian he looks like; Igniter Snickrak Lv.55 590, well above an archer's x0.8.",
+   "Enemy Defense, third batch (Test Kit test 06, 4 Nov 2026). Species doesn't seem to matter: Skeleton and Orc match Goblin and Warg at every shared dungeon level (Skeleton Lv.15, 30, 45; Orc Lv.45; Orc matches Skeleton at Lv.65). World enemies are about x0.8 of dungeon ones: basic 486, 503, 532 and 542 at Lv.52, 54, 57 and 58, against a dungeon curve of 569, 642 and 702 at Lv.50, 55 and 60. Dungeon bosses x1.3: Brave Skeleton Commander (Lv.15, 30, 45) and Orc Barbarian (Lv.55) too; Agile Ironclad Warg is a boss in a duo fight but x1.04. Named enemies with visible changes, Igniter Snickrak and Corroded Knight Kalvaros, are about x1.15 of a basic world enemy whatever model they share (two examples).",
+   "Enemy Defense, fourth batch (Test Kit test 06, 4 Nov 2026). Trait Dungeons: minions x1.6 and bosses x3.2 of the basic dungeon enemy at Lv.30, 40 and 50 (minion 251, 505, 912; boss 506, 1,012, 1,825), the same for Mantius, Drosophia and Ghagaroach where tested. World, relative to a basic world enemy: Goblin Berserker x1.1, Goblin Barbarian, Harpy and Spider x1.05, Troll x1.1, Ghoul and Worm x1.0, Lesser Dragon x1.2, Greater Dragon x1.5, Elemental Stone x1.0 (purple and red x1.1). Most of these are single tests.",
+   "Whole skills against the calculator (David, 5 Nov 2026, Training Ogre, no statuses, no crits; predicted -> real). Reina: Wind Slayer single hit 7330 -> 7332; Rising Cutter 6 hits 11249 -> 11588 (x1.03). Kalsion: Weapon Blaze single hit 5711 -> 5711, once its own Attack buff is counted, as it applies before the skill's damage; Flame Wave press 5 hits 8361 -> 8362, hold 3 hits 7109 (x0.85); Royal Flame Flame Wave press 9 hits 8797 -> 9202 (x1.046), hold 3 hits 7476 (x0.85). The codex % is right for single hits and the 5-hit press. Not known why Rising Cutter and the 9-hit press run higher, or whether these ratios hold at other skill levels. The codex gives one % for press and hold.",
+   "Kalsion's Explosion on an Airborne Training Ogre (David, 5 Nov 2026, Attack 1119, Lv.7 = 1714%, no gear, no buffs, no crits, Airborne up throughout): press = 4 hits of 1438 + a last hit of 5753 = 11505; hold = 14 hits of 1438 + the same last hit = 25885. Taking Airborne's x2 as applying to every hit, each small hit is 7.5% and the last hit 30% of the codex %, so press is 60% and hold 135% of the codex % (2173% at Lv.10 means about 1304% press and 2934% hold). Formula with those: 11508 and 25893. Runs with crits: hold 26693 (one crit) and 28489 (a few).",
+   "Kalsion in play (David, 5 Nov 2026, A0, no signature). Royal Flame's buff stays on when he swaps out. Burst Grab needs 2 Burn stacks for its triple mounted attack; at 1 stack it is one hit. With Reina (skill, Ultimate twice) and Eileen (skill), one combo fills the Airborne gauge on a boss, and his held Explosion then deals about as much as that whole combo. On a broken enemy his Flame Wave press applies about half an Airborne gauge, which fits Break doubling physical build-up.",
+   "Kalien in play (David, 5 Nov 2026, A0, no signature, no Mastery). On groups a full combo gives 3 Burn stacks and 1.5 Stun gauges, halved on scattered enemies. On a boss, after breaking it, a full combo gives 3/4 of a Burn stack and 1/4 of a Stun gauge, about 1/3 of a Burn stack without Break; Fox Grab on a giant boss about 1/2 Burn and 1/3 Stun. Aria with Skill and Ultimate on a boss gives 1/3 Burn and 1/4 Airborne, about 90% of a Burn stack with Airborne up. Burn ticks use the first applier's Attack as it was when applied: Kalsion 1510 and Kalien 344 (689 Attack) at 1 stack; Kalsion's ticks stayed the same when Burn was applied with about a second of Royal Flame left and the buff then ended.",
+   "Ryza in play (David, 5 Nov 2026, A0, no signature, no Mastery; estimates from the gauges). Groups: Stormbringer gives 1 to 1.8 Shock stacks and 1.7 to 1.99 Airborne gauges, and its lightning pulls enemies in; Flash about 0.6 Shock, then about 0.5 on the second hit, and it only fills up to the next whole stack; Thunder Grab about 3/4 of a Knockdown gauge on the first slam, and the second fills the rest. Full combo at level 1 with no gear on 9 goblin dummies: about 25k, against about 15k for Ornette. Boss: about 65% of a Shock stack and 10–15% of an Airborne gauge per combo; a full Shock stack alone in about 17–20 seconds with good play, as her Skill recharges per hit. Mount at 1 Shock: about 0.25–0.30 Shock and 10–15% Knockdown; at 2 Shock a six-hitter dealing about double Skill plus Flash.",
+   "Sion in play (David, 5 Nov 2026, A0, no signature, no Mastery; estimates from the gauges). Groups: Divine Crash pulls and can give a full Shock stack, its return about 1/3; Divine Smash and Justice Fall a full Knockdown gauge in a small area; Divine Crash with the relic planted about 1.25 Shock. Boss: Divine Crash about 0.24 Shock, about 0.26-0.27 with the relic planted; Divine Smash about 0.20 Knockdown; Justice Fall about 0.25 Knockdown; Bless about 0.04 Shock per cast. The buff circle is large, and the relic plants itself back within the 2 seconds before the buff fades, so the spin leaves no gap. To keep the buff he must swap back within 10 seconds or use Justice Fall, which needs Shock.",
+   "Ryza against Othello (David, 5 Nov 2026, level 1, 106 Attack, no gear or Karma, same targets). Boss, 60 s: Ryza 19159, Othello 14305. Groups, 16 s: Ryza 66k, Othello 55k. Earlier Othello runs had a Lv.20 Karma with its trait on (+236 Attack, +110 Frost Additional Attack Power, +4% Frost Additional Damage, +2% Crit Rate): 240k in groups, 102k out of order. The formula explains the gap: (106 + 236 + 110) / 106 x 1.04 = x4.4 on Frost hits, against x4.4 measured (240k / 55k). So level 1 comparisons need the same Karma on both heroes.",
+   "End of the story (David, 5 Nov 2026). World Difficulty 6 appears to add +10 levels: East enemies at Lv.65 during the Veteran promotion are Lv.75 now. The East has recoloured variants that apply statuses, for example hooded purple Goblin Archers applying Shock per arrow, and much tougher animals such as an oversized red boar. Their Defense is untested.",
+   "Enemy Defense debuffs multiply with Defense Ignore (David, 7 Nov 2026, Training Ogre, 1000 Defense). Alex's Guard Counter (Special B) lowers the target's Defense by 10% at skill Lv.1 and 20% at Lv.10 for about 10 s; it is on the enemy, so it carries over when swapping. Reina (3652 Attack, 36 Armor Penetration) auto attack: 1093 plain, 1217 with Earthshatterer's 20% Defense Ignore (×1.1134, exact), 1152 with the Lv.1 debuff (×1.054, −10.1%). Ultimate with Earthshatterer and Airborne: 37534, plus the debuff 39317 (×1.0475). Multiplying (1000 × 0.8 × 0.9 = 720) predicts ×1.048; adding (1000 × 0.7) predicts ×1.060. So Defense × (1 − DI) × (1 − debuff): a mild diminishing return, as each cut applies to the already lowered Defense.",
+   "Status application and Super Armor (Break) gauge damage don't change with hero or skill level; levels only raise damage and buffs (David, 8 Nov 2026). Castella breaks the Training Ogre's Super Armor in 18 s: Whirlwind (Skill) about 23% of the gauge, Howling (Ultimate) about 15%, Upper Blow about 6% (and 0.33 Airborne on a broken boss), Stun Blow 0.33 Stun (only usable on a broken boss), full basic combo about 4.5%, jump attack about 5%, dash attack about 3%, a basic-jump-dash loop about 14%. Read with David's % overlay on the boss bar."
+  ],
+  "tests": [
+   {
+    "hero": "Charlotte",
+    "attack": 684,
+    "critRate": 5,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.1, 332%",
+    "awakenings": 1,
+    "mastery": false,
+    "hits": {
+     "click1": [
+      39,
+      39,
+      90
+     ],
+     "click2": [
+      39,
+      39,
+      158
+     ],
+     "click3": [
+      454
+     ],
+     "click4": [
+      283,
+      283
+     ]
+    },
+    "crits": {
+     "39": 59,
+     "90": 136,
+     "158": 238,
+     "283": 425,
+     "454": 681,
+     "39 during Invisible": 63
+    },
+    "level": 30
+   },
+   {
+    "hero": "Charlotte",
+    "attack": 637,
+    "critRate": 6.75,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.1, 332%",
+    "hits": {
+     "click1": [
+      37,
+      37,
+      84
+     ],
+     "click2": [
+      37,
+      37,
+      148
+     ],
+     "click3": [
+      423
+     ],
+     "click4": [
+      264,
+      264
+     ]
+    },
+    "crits": {
+     "37": 55,
+     "84": 126,
+     "148": 222,
+     "264": 396,
+     "423": 634
+    },
+    "level": 30
+   },
+   {
+    "hero": "Charlotte",
+    "attack": 637,
+    "critRate": 6.75,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.2, 365%",
+    "hits": {
+     "click1": [
+      40,
+      40,
+      93
+     ],
+     "click2": [
+      40,
+      40,
+      162
+     ],
+     "click3": [
+      465
+     ],
+     "click4": [
+      290,
+      290
+     ]
+    },
+    "crits": {
+     "40": 61,
+     "93": 139,
+     "162": 244,
+     "290": 436,
+     "465": 697
+    },
+    "level": 30
+   },
+   {
+    "hero": "Charlotte",
+    "attack": 613,
+    "level": 30,
+    "critRate": 6.75,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.2, 365%",
+    "hits": {
+     "click1": [
+      39,
+      39,
+      89
+     ],
+     "click2": [
+      40,
+      40,
+      156
+     ],
+     "click3": [
+      447
+     ],
+     "click4": [
+      279,
+      279
+     ]
+    },
+    "crits": {
+     "89": 134,
+     "156": 234,
+     "279": 419,
+     "447": 671,
+     "39/40": 58
+    },
+    "note": "Chest Attack Power Up 3.97% swapped for Max HP 336. The 4th click sometimes hits only once; David thinks the second hit comes from the ogre being big."
+   },
+   {
+    "hero": "Charlotte",
+    "attack": 681,
+    "armorPenetration": 10,
+    "level": 30,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.2, 365%",
+    "hits": {
+     "click1": [
+      43,
+      43,
+      99
+     ],
+     "click2": [
+      43,
+      43,
+      174
+     ],
+     "click3": [
+      499
+     ],
+     "click4": [
+      312
+     ]
+    },
+    "crits": {
+     "43": 65,
+     "99": 149,
+     "312": 468,
+     "499": 749
+    },
+    "poisonTick": 340,
+    "note": "Blue chest upgraded to get an Armor Penetration 10 substat. The 4th click hit once. David gave the crit of 174 as 234, probably copied from the previous test (x1.5 would be 261)."
+   },
+   {
+    "hero": "Charlotte",
+    "attack": 681,
+    "armorPenetration": 33,
+    "level": 30,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.2, 365%",
+    "hits": {
+     "click1": [
+      44,
+      44,
+      101
+     ],
+     "click2": [
+      44,
+      44,
+      176
+     ],
+     "click3": [
+      505
+     ],
+     "click4": [
+      316
+     ]
+    },
+    "crits": {
+     "44": 66,
+     "101": 151,
+     "176": 265,
+     "316": 474,
+     "505": 758
+    },
+    "poisonTick": 340,
+    "note": "Same Attack as the Armor Penetration 10 test; Armor Penetration 33 is the most David can reach now. The 4th click hit once."
+   },
+   {
+    "hero": "Charlotte",
+    "attack": 658,
+    "armorPenetration": 0,
+    "defenseIgnore": 0.97,
+    "level": 30,
+    "critDamage": 50,
+    "skill": "Shadow Dance (auto attack) Lv.2, 365%",
+    "hits": {
+     "click1": [
+      42,
+      42,
+      96
+     ],
+     "click2": [
+      42,
+      42,
+      168
+     ],
+     "click3": [
+      482
+     ],
+     "click4": [
+      301
+     ]
+    },
+    "crits": {
+     "42": 63,
+     "96": 144,
+     "168": 253,
+     "301": 452,
+     "482": 724
+    },
+    "poisonTick": 329,
+    "note": "The only Defense Ignore substat David has (0.97%, on Blue Battle Will Boots +6). The 4th click hit once."
+   },
+   {
+    "hero": "Reina",
+    "attack": 333,
+    "critRate": 5,
+    "critDamage": 50,
+    "skill": "Wind Slayer (ultimate) Lv.1, 549%, single hit",
+    "awakenings": 0,
+    "hits": {
+     "hit": [
+      916
+     ]
+    },
+    "level": 30
+   },
+   {
+    "hero": "Reina",
+    "attack": 333,
+    "level": 30,
+    "critRate": 5,
+    "critDamage": 50,
+    "skill": "Wind Sword (auto attack) Lv.2, 385%",
+    "hits": {
+     "click1": [
+      89,
+      89
+     ],
+     "click2": [
+      128
+     ],
+     "click3": [
+      128
+     ],
+     "click4": [
+      205
+     ]
+    },
+    "crits": {
+     "89": 134,
+     "128": 192,
+     "205": 308
+    },
+    "note": "Attack assumed unchanged from the Wind Slayer test (same gear)."
+   },
+   {
+    "status": "Poison",
+    "ticks": [
+     {
+      "hero": "Charlotte",
+      "attack": 684,
+      "tick": 342
+     },
+     {
+      "hero": "Charlotte",
+      "attack": 637,
+      "tick": 318
+     },
+     {
+      "hero": "Johnny",
+      "attack": 584,
+      "tick": 292
+     }
+    ],
+    "ticksSeen": 4
+   },
+   {
+    "status": "Bleed / Burn / Shock",
+    "heroes": {
+     "Bleed": "Roxy",
+     "Burn": "Aria",
+     "Shock": "Ornette"
+    },
+    "level": 1,
+    "ticks": [
+     {
+      "attack": 71,
+      "tick": 35,
+      "setup": "Lv.1, no gear, no Karma"
+     },
+     {
+      "attack": 326,
+      "tick": 163,
+      "setup": "Lv.1, no gear, Frozen Fortress Lv.30 (before breakthrough) for base stats"
+     }
+    ],
+    "ticksSeen": 4,
+    "note": "Same numbers for all three statuses and heroes. Stats with the Karma: Attack 326, Defense 102, Max HP 2159 (= Lv.1 71/30/511 + Karma 255/71/1648; Defense also gets the 1.5% Defense Up title)."
+   },
+   {
+    "status": "Poison stacks",
+    "ticks": [
+     {
+      "stacks": 1,
+      "appliers": [
+       "Charlotte"
+      ],
+      "tick": 329
+     },
+     {
+      "stacks": 2,
+      "appliers": [
+       "Charlotte",
+       "Charlotte"
+      ],
+      "tick": 493
+     },
+     {
+      "stacks": 2,
+      "appliers": [
+       "Charlotte",
+       "Johnny"
+      ],
+      "tick": 493
+     },
+     {
+      "stacks": 2,
+      "appliers": [
+       "Johnny",
+       "Charlotte"
+      ],
+      "tick": 484
+     },
+     {
+      "stacks": 2,
+      "appliers": [
+       "Johnny",
+       "Johnny"
+      ],
+      "tick": 484
+     },
+     {
+      "stacks": 3,
+      "appliers": "Johnny and Charlotte (order not tracked)",
+      "tick": 645,
+      "enemy": "goblin training dummy"
+     },
+     {
+      "stacks": 3,
+      "appliers": "Johnny and Charlotte (order not tracked)",
+      "tick": 658,
+      "enemy": "goblin training dummy"
+     }
+    ],
+    "attack": {
+     "Charlotte": 658,
+     "Johnny": 645
+    },
+    "note": "Retested 28 Oct. The first run gave 429 for Charlotte then Johnny; the retest gave 493, so the 429 is treated as a misread or an expired stack."
+   },
+   {
+    "status": "Bleed / Burn / Shock stacks",
+    "heroes": {
+     "Bleed": "Roxy",
+     "Burn": "Aria",
+     "Shock": "Ornette"
+    },
+    "level": 1,
+    "attack": 71,
+    "enemy": "goblin training dummies",
+    "ticks": {
+     "1": 35,
+     "2": 53,
+     "3": 71
+    },
+    "maxStacks": 3,
+    "note": "Identical for all three statuses: 71 x 0.5 / 0.75 / 1.0 = 35.5 / 53.25 / 71, rounded down."
+   },
+   {
+    "status": "Burn with Burn bonuses",
+    "hero": "Aria",
+    "level": 1,
+    "setup": "No gear; Karma A Flame That Cuts Through the Moment (Lv.30, trait active for a Burn hero)",
+    "stats": {
+     "Attack": 381,
+     "Defense": 84,
+     "Max HP": 1841,
+     "Critical Rate": 7,
+     "Critical Damage": 50,
+     "Burn Additional Damage": 4,
+     "Burn Additional Attack Power": 110
+    },
+    "ticks": {
+     "1": 190,
+     "2": 285,
+     "3": 381
+    },
+    "enemy": "goblin training dummies"
+   },
+   {
+    "test": "Hit on a burning enemy",
+    "hero": "Aria",
+    "level": 1,
+    "attack": 381,
+    "setup": "Same as the Burn-bonus tick test (A Flame That Cuts Through the Moment: Burn Additional Damage 4%, Burn Additional Attack Power 110)",
+    "hits": {
+     "0 Burn stacks": 102,
+     "1 stack": 205,
+     "2 stacks": 205,
+     "3 stacks": 205
+    },
+    "enemy": "goblin training dummies",
+    "skill": "auto attack, first hit"
+   },
+   {
+    "test": "Hit on a burning enemy, no Karma",
+    "hero": "Aria",
+    "level": 1,
+    "attack": 71,
+    "setup": "No gear, no Karma",
+    "hits": {
+     "0 Burn stacks": 19,
+     "1 stack": 28,
+     "2 stacks": 28,
+     "3 stacks": 28
+    },
+    "enemy": "goblin training dummies",
+    "skill": "auto attack, first hit",
+    "note": "205 in the Karma test was one number from the hit; the Burn ticks showed separately every 2.5 s."
+   },
+   {
+    "test": "Hits on enemies with Bleed / Shock, with and without Knockdown",
+    "level": 1,
+    "attack": 71,
+    "setup": "No gear, no Karma",
+    "enemy": "goblin training dummies",
+    "skill": "auto attack hit",
+    "hits": {
+     "Roxy (Bleed)": {
+      "clean": 24,
+      "1 stack": 36,
+      "2 stacks": 36,
+      "3 stacks": 36,
+      "Bleed + Knockdown": 61
+     },
+     "Ornette (Shock)": {
+      "clean": 17,
+      "1 stack": 26,
+      "2 stacks": 26,
+      "3 stacks": 26,
+      "Shock + Knockdown": 44
+     }
+    }
+   },
+   {
+    "test": "Airborne and Poison on hits",
+    "enemy": "goblin training dummies",
+    "skill": "auto attack, first click",
+    "hits": {
+     "Reina (321 Attack)": {
+      "clean": [
+       87,
+       87
+      ],
+      "Airborne": [
+       174,
+       174
+      ]
+     },
+     "Charlotte (348 Attack, no Armor Penetration / Defense Ignore)": {
+      "clean": [
+       22,
+       22,
+       50
+      ],
+      "Poison": [
+       33,
+       33,
+       76
+      ],
+      "Airborne + Poison": [
+       55,
+       55,
+       127
+      ],
+      "Poison + Bleed": [
+       44,
+       44,
+       101
+      ],
+      "Knockdown + Poison + Bleed": [
+       55,
+       55
+      ],
+      "Airborne + Poison + Bleed": [
+       55,
+       55
+      ],
+      "Knockdown + Airborne + Poison (Bleed unsure), seen once": [
+       77,
+       77
+      ],
+      "Stun + Poison + Bleed": [
+       66,
+       66
+      ],
+      "Knockdown + Poison + Bleed (recheck)": [
+       66,
+       66
+      ],
+      "Airborne + Knockdown + Poison + Bleed": [
+       77,
+       77
+      ]
+     }
+    },
+    "note": "Knockdown + Poison + Bleed and Airborne + Poison + Bleed first gave 55 (x2.5); the Knockdown recheck gave 66 (x3.0), so Bleed had most likely worn off the first time. Goblin dummies come in a group of about 10, which makes single numbers hard to read."
+   },
+   {
+    "test": "Burn bonuses on hits (Blazing Flames 2-piece and/or Burn Karma)",
+    "hero": "Aria",
+    "level": 1,
+    "enemy": "goblin training dummies",
+    "skill": "auto attack, first hit",
+    "runs": [
+     {
+      "setup": "Blazing Flames 2-piece, no Karma",
+      "attack": 71,
+      "burnAdditionalDamage": 15,
+      "burnAdditionalAttackPower": 0,
+      "hits": {
+       "clean": 19,
+       "1-3 stacks": 32
+      },
+      "ticks": {
+       "1": 35,
+       "2": 53,
+       "3": 71
+      }
+     },
+     {
+      "setup": "Blazing Flames 2-piece + A Flame That Cuts Through the Moment",
+      "attack": 381,
+      "burnAdditionalDamage": 19,
+      "burnAdditionalAttackPower": 110,
+      "hits": {
+       "clean": 102,
+       "1-3 stacks": 234
+      },
+      "ticks": {
+       "1": 190,
+       "2": 285,
+       "3": 381
+      }
+     },
+     {
+      "setup": "A Flame That Cuts Through the Moment only (repeat)",
+      "attack": 381,
+      "burnAdditionalDamage": 4,
+      "burnAdditionalAttackPower": 110,
+      "hits": {
+       "clean": 102,
+       "1-3 stacks": 205
+      },
+      "ticks": {
+       "1": 190,
+       "2": 285,
+       "3": 381
+      }
+     }
+    ]
+   },
+   {
+    "test": "Burn bonuses with several statuses",
+    "hero": "Aria",
+    "level": 1,
+    "attack": 381,
+    "setup": "No gear; A Flame That Cuts Through the Moment (Burn Additional Damage 4%, Burn Additional Attack Power 110)",
+    "enemy": "goblin training dummies",
+    "skill": "auto attack, first hit",
+    "hits": {
+     "clean (earlier)": 102,
+     "Bleed + Knockdown + Burn": 410
+    }
+   },
+   {
+    "test": "Trait Dungeon weakness",
+    "hero": "Reina",
+    "date": "2026-10-29",
+    "enemy": "Mantius of Amplitude (not weak to Gale) vs Mantius of Gale (weak to Gale), Normal",
+    "skill": "auto attack, first hit, target Airborne",
+    "hits": {
+     "not weak (Amplitude boss)": 320,
+     "weak (Gale boss)": 473
+    },
+    "ratio": 1.478,
+    "observations": [
+     "About 1.48x damage against the boss weak to her archetype.",
+     "Airborne built up faster on the weak boss: one skill instead of the usual two or three."
+    ],
+    "open": [
+     "Only one hit each, so not yet a rule. A crit on either hit, or different Defense between the two bosses, would change the ratio.",
+     "Repeat with the same non-status hit on both bosses, and note any crits, to separate the weakness bonus from Defense."
+    ]
+   },
+   {
+    "test": "Trait Dungeon weakness, boss only",
+    "hero": "Reina",
+    "date": "2026-10-29",
+    "enemy": "Mantius of Gale (weak to Gale) vs Mantius of Amplitude, the boss itself",
+    "skill": "auto attack, first hit",
+    "hits": {
+     "Amplitude boss, no Airborne": 143,
+     "Amplitude boss, Airborne": 287,
+     "Gale-weak boss, no Airborne": 143,
+     "Gale-weak boss, Airborne": 431
+    },
+    "observations": [
+     "Without the status, weakness changes nothing: 143 on both bosses, so it is not a general damage bonus and both bosses take the same damage otherwise.",
+     "With Airborne: x2.0 on the normal boss (the usual +100%) and x3.0 on the weak boss, so the weakness raised Airborne's hit bonus from +100% to +200%.",
+     "The first test (473 vs 320, about 1.48x) fits this within about 1%.",
+     "Airborne also built up faster on the weak boss (first test)."
+    ],
+    "open": [
+     "Whether the weakness doubles the status bonus or adds a flat +100%: both give +200% for Airborne. A damage-over-time status (+50%) would tell them apart: doubled gives x2.0, added gives x2.5. Example: Charlotte or Johnny hitting a Poisoned Ghagaroach of Thunderbolt (weak to Venom) vs a Poisoned non-weak boss.",
+     "Whether the weakness also raises Poison, Bleed, Burn and Shock tick damage."
+    ]
+   },
+   {
+    "test": "Trait Dungeon weakness with Poison, boss only",
+    "hero": "Johnny",
+    "attack": 645,
+    "date": "2026-10-29",
+    "enemy": "Ghagaroach of Thunderbolt (weak to Venom) vs Ghagaroach of Frostbite (neutral to Venom)",
+    "skill": "auto attack, first hit; Poison tick",
+    "hits": {
+     "neutral boss, no Poison": 145,
+     "neutral boss, 1 Poison stack": 272,
+     "neutral boss, Poison tick": 322,
+     "Venom-weak boss, no Poison": 145,
+     "Venom-weak boss, 1 Poison stack": 291,
+     "Venom-weak boss, Poison tick": 322
+    },
+    "observations": [
+     "No Poison: 145 on both bosses, so same Defense and no bonus from the weakness on its own (as with Reina).",
+     "Poison ticks: 322 on both = 50% of 645 Attack (1 stack), so the weakness doesn't raise ticks.",
+     "Poisoned hit: x1.88 on the neutral boss (x1.5 expected from the +50% Poison bonus), x2.01 on the weak boss. The weakness added only about 7% here, vs 50% for Reina's Airborne."
+    ],
+    "open": [
+     "Johnny's gear and Karma at the time (any Poison Additional Attack Power or Additional Damage) are needed to explain the x1.88.",
+     "Repeat 2-3 hits per case to rule out a stray crit or a different hit of the combo."
+    ],
+    "superseded": "Replaced by the clean repeat below: the Poisoned hit on the neutral boss (272, x1.88) was most likely on a nearby mob, not the boss."
+   },
+   {
+    "test": "Trait Dungeon weakness with Poison, clean repeat",
+    "hero": "Johnny",
+    "date": "2026-10-29",
+    "level": "30 (before breakthrough)",
+    "stats": {
+     "Attack": 645,
+     "Defense": 183,
+     "Max HP": 4483,
+     "Armor Penetration": 17,
+     "Critical Rate": "5%",
+     "Critical Damage": "50%",
+     "Shock Additional Attack Power": 62,
+     "Status Effect Additional Attack Power Increase": "1.94%"
+    },
+    "setup": "2 Ballad of Life + 2 Battle Will + green helmet; Frozen Fortress Lv30 (trait not active: different archetype); no Mastery; Dirty Fight Lv3 (421%). No Poison bonuses.",
+    "skill": "auto attack, first hit; Poison tick (1 stack)",
+    "hits": {
+     "Training Ogre Lv90, clean": 109,
+     "Training Ogre Lv90, Poison": 164,
+     "Training Ogre Lv90, tick": 322,
+     "Mantius of Amplitude (neutral), clean": 145,
+     "Mantius of Amplitude (neutral), Poison": 218,
+     "Mantius of Amplitude (neutral), tick": 322,
+     "Ghagaroach of Thunderbolt (weak to Venom), clean": 145,
+     "Ghagaroach of Thunderbolt (weak to Venom), Poison": 291,
+     "Ghagaroach of Thunderbolt (weak to Venom), tick": 322
+    },
+    "observations": [
+     "Poison hit bonus: x1.50 on the dummy and on the neutral boss, x2.01 on the Venom-weak boss.",
+     "Ticks 322 everywhere = 50% of 645 Attack: weakness doesn't change ticks.",
+     "Neutral boss = dummy multiplier, so no hidden resistance to Venom on Normal.",
+     "Clean hits: 109 on the Lv90 Ogre vs 145 on the Lv30 bosses (the dummy has more Defense)."
+    ],
+    "conclusion": "A Trait Dungeon weakness doubles the matching status's hit bonus: Poison +50% -> +100% (Johnny), Airborne +100% -> +200% (Reina). A flat +100% is ruled out (Poison would be x2.5)."
+   },
+   {
+    "test": "Flat status Additional Attack Power, weak boss",
+    "hero": "Johnny",
+    "date": "2026-10-29",
+    "stats": {
+     "Attack": 679,
+     "All Status Effect Additional Attack Power": 25,
+     "Status Effect Additional Attack Power Increase": "1.94%",
+     "Shock Additional Attack Power": 62
+    },
+    "setup": "3 Ballad of Life + 2 Battle Will (blue legs +6: Max HP Up 14.13%, subs Attack 16 and All Status Effect Additional Attack Power 25; blue helmet +0: Attack Power Up 2.78%)",
+    "enemy": "Ghagaroach of Thunderbolt (weak to Venom), Lv30",
+    "hits": {
+     "clean": 153,
+     "Poison (1 stack)": 319,
+     "Poison tick": 339
+    },
+    "observations": [
+     "Clean hit scales with Attack: 153/679 = 0.2253 vs 145/645 = 0.2248 before.",
+     "Poisoned hit = 0.2253 x (679 + 25 x 1.0194) x 2.0 (doubled Poison bonus) = about 317-319, measured 319: the flat All Status Effect Additional Attack Power is added to Attack before the status bonus multiplies.",
+     "Tick 339 = 50% of 679: the flat 25 doesn't reach ticks.",
+     "Ticks happen 5 times per application: at 0 s and every 2.5 s to 10 s (David, true for every DoT he tested)."
+    ]
+   },
+   {
+    "test": "Drosophia bosses: no weakness and Breaker weakness",
+    "date": "2026-10-29",
+    "by": "David",
+    "observations": [
+     "Drosophia of Bloodburst: Bleed, Burn, Shock, Frost and Poison gave +50% on hits, Airborne, Knockdown and Stun +100%, i.e. the normal values. It has no weakness, as the game says.",
+     "Drosophia of Breaker (weak to Breaker): the same results, so the Breaker weakness doesn't raise any status hit bonus.",
+     "Amplitude = Stun; Breaker = breaking Super Armor (the bar under HP). The Breaker weakness probably affects Super Armor break speed; untested."
+    ]
+   },
+   {
+    "test": "Super Armor break: speed and hit bonus",
+    "hero": "Castella",
+    "date": "2026-10-29",
+    "skill": "one skill with 6 swings",
+    "enemy": "Drosophia of Breaker (weak to Breaker) vs Mantius of Amplitude (neutral)",
+    "hits": {
+     "Drosophia of Breaker, Super Armor up": 194,
+     "Drosophia of Breaker, Super Armor broken": 194,
+     "Mantius of Amplitude, Super Armor up": 194,
+     "Mantius of Amplitude, Super Armor broken": 194
+    },
+    "breakCost": {
+     "Drosophia of Breaker": "the whole skill sequence once plus one auto attack",
+     "Mantius of Amplitude": "about half of the skill"
+    },
+    "observations": [
+     "Breaking Super Armor gives no hit bonus: 194 before and after on both bosses.",
+     "The Breaker weakness didn't make breaking faster: Drosophia of Breaker needed more hits than Mantius of Amplitude.",
+     "Same hit (194) on both bosses: same Defense."
+    ],
+    "open": [
+     "Drosophia and Mantius are different monsters and may have different Super Armor bars. Compare Drosophia of Breaker with Drosophia of Bloodburst (same model, no weakness) to isolate the weakness."
+    ]
+   },
+   {
+    "test": "Super Armor break, same monster",
+    "hero": "Castella",
+    "date": "2026-10-29",
+    "enemy": "Drosophia of Bloodburst (no weakness) vs Drosophia of Breaker (weak to Breaker)",
+    "breakCost": {
+     "Drosophia of Bloodburst": "5th hit of the 6-hit skill",
+     "Drosophia of Breaker": "all 6 hits plus one auto attack"
+    },
+    "breakDurationSeconds": {
+     "Drosophia of Bloodburst": 8
+    },
+    "observations": [
+     "The Breaker weakness doesn't speed up Super Armor break: the weak boss needed slightly more hits than the same monster without a weakness.",
+     "Break lasts 8 s on Drosophia of Bloodburst, the same whichever hero breaks it.",
+     "Heroes deal different Super Armor damage per skill; Castella broke bosses fastest of the heroes David tried.",
+     "Grabs and mounts only exist on big Hunt bosses, so they can't be the Trait Dungeon weakness effect."
+    ],
+    "open": [
+     "Break duration on Drosophia of Breaker: longer than 8 s with Castella would be the weakness effect."
+    ]
+   },
+   {
+    "test": "Drosophia of Breaker: break duration and bar size",
+    "date": "2026-10-29",
+    "by": "David",
+    "breakDurationSeconds": {
+     "Drosophia of Breaker": 8,
+     "Drosophia of Bloodburst": 8
+    },
+    "breakCost": {
+     "Charlotte": {
+      "Drosophia of Bloodburst": "about her whole combo",
+      "Drosophia of Breaker": "two whole combo sequences plus auto attacks"
+     },
+     "Castella": {
+      "Drosophia of Bloodburst": "5 hits",
+      "Drosophia of Breaker": "7 hits"
+     }
+    },
+    "observations": [
+     "Break lasts 8 s on both bosses: the weakness doesn't lengthen it.",
+     "Drosophia of Breaker has a much larger Super Armor bar: Charlotte needed about twice as much or more.",
+     "Castella needed only about 1.4x as many hits, so a Breaker is held back far less by the bigger bar. Likely what the Breaker weakness means; two heroes and rough counts only.",
+     "The boss uses many rush and charge attacks, so breaking it to stop them is the point of the fight."
+    ]
+   },
+   {
+    "test": "Stun and Airborne on hits, single dummy",
+    "date": "2026-10-29",
+    "by": "David",
+    "enemy": "Training Ogre dummy",
+    "hero": "Charlotte (348 Attack, Armor Penetration 0, no other added or Venom stats)",
+    "skill": "Shadow Dance Lv.2 (365%), first click",
+    "hits": {
+     "clean": [
+      22,
+      22
+     ],
+     "Airborne": [
+      44,
+      44
+     ],
+     "Stun": [
+      44,
+      44
+     ],
+     "Stun + Airborne": [
+      66,
+      66
+     ]
+    },
+    "observations": [
+     "Stun alone gives +100% on hits, the same as Airborne.",
+     "Stun + Airborne = x3.0: the two bonuses add (1 + 1 + 1), they don't multiply (that would be x4.0).",
+     "Clean single-target confirmation of the goblin-dummy results, without Poison or Bleed in the mix."
+    ]
+   },
+   {
+    "test": "Skill buffs by level",
+    "date": "2026-10-29",
+    "by": "David (Test Kit)",
+    "observations": [
+     "All five skills (Healing Circle, Invisible, Holy Circle, Brave One, Vanguard Banner): an even step from Lv. 1 to Lv. 9, then a double step at Lv. 10. Step = (Lv.10 - Lv.1) / 10.",
+     "So buff at level L = Lv.1 + step x (L - 1) up to Lv. 9, and Lv.1 + 10 x step at Lv. 10. Damage multipliers also take a bigger step at the last level (x1.58 -> x1.75).",
+     "Max / Lv.1 differs per skill (x2.0 heal, x1.5 Crit Damage), so each buff needs its own Lv.1 and max value."
+    ],
+    "skills": [
+     {
+      "hero": "Lute",
+      "skill": "Healing Circle (Lv.10)",
+      "value": "Restores % of Maximum HP",
+      "byLevel": [
+       10,
+       11,
+       12,
+       13,
+       14,
+       15,
+       16,
+       17,
+       18,
+       20
+      ]
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Invisible (Lv.10)",
+      "value": "Critical Damage %",
+      "byLevel": [
+       10,
+       10.5,
+       11,
+       11.5,
+       12,
+       12.5,
+       13,
+       13.5,
+       14,
+       15
+      ]
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Circle (Lv.10)",
+      "value": "Critical Damage % ([Revelation of Dawn])",
+      "byLevel": [
+       20,
+       21,
+       22,
+       23,
+       24,
+       25,
+       26,
+       27,
+       28,
+       30
+      ]
+     },
+     {
+      "hero": "Eileen",
+      "skill": "Brave One (Lv.10)",
+      "value": "Attack Power %",
+      "byLevel": [
+       10,
+       10.5,
+       11,
+       11.5,
+       12,
+       12.5,
+       13,
+       13.5,
+       14,
+       15
+      ]
+     },
+     {
+      "hero": "Eileen",
+      "skill": "Vanguard Banner (Lv.10)",
+      "value": "Critical Rate %",
+      "byLevel": [
+       10,
+       11,
+       12,
+       13,
+       14,
+       15,
+       16,
+       17,
+       18,
+       20
+      ]
+     }
+    ]
+   },
+   {
+    "test": "Status application per skill",
+    "date": "2026-10-29",
+    "by": "David (Test Kit)",
+    "enemy": "Goblin training dummies, Lv. 90",
+    "note": "Stacks applied by one press, read from the stack gauge (fractions estimated). Confirmed with screenshots (29 Oct 2026): Charlotte's Illusion Kick and her Invisible Clone explosion DO apply Poison in-game, although their codex text names no Poison (Illusion Kick: Airborne only; Invisible: none). No Karma or awakening explains it (David's Charlotte is A0, no signature Karma).",
+    "results": [
+     {
+      "hero": "Johnny",
+      "skill": "Venom Dance",
+      "status": "Poison",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Poison Grab",
+      "status": "Poison",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Venom Cutter",
+      "status": "Poison",
+      "stacksPerPress": 1.25
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Fatal Sting",
+      "status": "Poison",
+      "stacksPerPress": 0.75
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Poison Step",
+      "status": "Poison",
+      "stacksPerPress": 0.45
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Invisible (clone explosion)",
+      "status": "Poison",
+      "stacksPerPress": 1,
+      "note": "Fills the current stack to full, nothing more (0% -> 1 stack; 99% -> +1% only)."
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Illusion Kick",
+      "status": "Poison",
+      "stacksPerPress": 0.6
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Bleeding Grab",
+      "status": "Bleed",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Crimson Spiral (Holding)",
+      "status": "Bleed",
+      "stacksPerPress": 0.99
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Bloody Shower",
+      "status": "Bleed",
+      "stacksPerPress": 1.1
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Crimson Spiral (Press)",
+      "status": "Bleed",
+      "stacksPerPress": 0.45
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Sliding Shot",
+      "status": "Bleed",
+      "stacksPerPress": 0.25
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Kick Storm",
+      "status": "Bleed",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Aria",
+      "skill": "Shoot and Bomb",
+      "status": "Burn",
+      "stacksPerPress": 0.45
+     },
+     {
+      "hero": "Aria",
+      "skill": "Air Bomb",
+      "status": "Burn",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Aria",
+      "skill": "Rolling Bomb",
+      "status": "Burn",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Aria",
+      "skill": "Switch On!",
+      "status": "Burn",
+      "stacksPerPress": 0.25,
+      "presses": 3
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Cross",
+      "status": "Shock",
+      "stacksPerPress": 1.5
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Cutter",
+      "status": "Shock",
+      "stacksPerPress": 0.5
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Circle",
+      "status": "Shock",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Grab",
+      "status": "Shock",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Reina",
+      "skill": "Wind Grab",
+      "status": "Airborne",
+      "stacksPerPress": 1,
+      "note": "2 hitter each for 0.5 stack"
+     },
+     {
+      "hero": "Reina",
+      "skill": "Rising Cutter",
+      "status": "Airborne",
+      "stacksPerPress": 1.4,
+      "note": "4 hitter (2nd hit for 1.0 stack, fourth for 0.4) the over stack stays on enemy after Airborne effect is over"
+     },
+     {
+      "hero": "Reina",
+      "skill": "Wind Slayer",
+      "status": "Airborne",
+      "stacksPerPress": 1,
+      "note": "Has 2 charges, if used right after each other doesn't leave any buildup"
+     },
+     {
+      "hero": "Lute",
+      "skill": "Swordgrab",
+      "status": "Knockdown",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Lute",
+      "skill": "Stun Slash",
+      "status": "Stun",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Crimson Spiral",
+      "status": "Stun",
+      "stacksPerPress": 1,
+      "note": "Full stun for both Charge and press mode"
+     },
+     {
+      "hero": "Roxy",
+      "skill": "Bleeding Grab",
+      "status": "Knockdown",
+      "stacksPerPress": 1,
+      "note": "After 2 bleed stacks applies full Knockdown on one enemy"
+     },
+     {
+      "hero": "Castella",
+      "skill": "Stun Blow",
+      "status": "Stun",
+      "stacksPerPress": 1,
+      "note": "5 Hitter - 0.20 per hit"
+     },
+     {
+      "hero": "Castella",
+      "skill": "Upper Blow",
+      "status": "Airborne",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Judgment",
+      "status": "Knockdown",
+      "stacksPerPress": 0.75
+     },
+     {
+      "hero": "Ornette",
+      "skill": "Holy Grab",
+      "status": "Airborne",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Aria",
+      "skill": "Shoot and Bomb",
+      "status": "Airborne",
+      "stacksPerPress": 0.1,
+      "note": "2 attacks, only second hit applies burn (0.45) and airborne (0.10)"
+     },
+     {
+      "hero": "Aria",
+      "skill": "Air Bomb",
+      "status": "Airborne",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Aria",
+      "skill": "Rolling Bomb",
+      "status": "Airborne",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Aria",
+      "skill": "Switch On!",
+      "status": "Airborne",
+      "stacksPerPress": 0.5,
+      "note": "Explodes 3 bolts from Multiple Bolt skill, if all 3 bolts are on one enemy he gets a total of 1.5 Airborne stacks, with the 0.5 staying up after airborne ends"
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Illusion Kick",
+      "status": "Airborne",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Shadow Grab",
+      "status": "Knockdown",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Charlotte",
+      "skill": "Invisible",
+      "status": "Airborne",
+      "stacksPerPress": 1,
+      "note": "Clone Explosion does apply both Poison AND Airborne"
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Phantom Slash",
+      "status": "Airborne",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Venom Dance",
+      "status": "Airborne",
+      "stacksPerPress": 1
+     },
+     {
+      "hero": "Johnny",
+      "skill": "Venom Cutter",
+      "status": "Airborne",
+      "stacksPerPress": 1,
+      "note": "It targets an enemy that is Airborne but IF enemies that are not in airborne gets hit by this Special A skill, they get the status too."
+     }
+    ]
+   },
+   {
+    "test": "Status application vs difficulty and weakness",
+    "date": "2026-10-30",
+    "by": "David (Test Kit)",
+    "hero": "Johnny",
+    "status": "Poison",
+    "unit": "stacks per press",
+    "results": {
+     "Poison Grab": {
+      "goblins Lv90": 1,
+      "TD I neutral": 0.6,
+      "TD I weak": 1,
+      "TD III neutral": 0.3,
+      "TD III weak": 1
+     },
+     "Venom Dance": {
+      "goblins Lv90": 1,
+      "TD I neutral": 0.5,
+      "TD I weak": 1,
+      "TD III neutral": 0.3,
+      "TD III weak": 0.75
+     },
+     "Venom Cutter": {
+      "goblins Lv90": 1.25,
+      "TD III neutral": 0.4,
+      "TD III weak": 1
+     }
+    },
+    "note": "TD III neutral values are estimates between 0.25 and 0.35 (0.4 for Venom Cutter)."
+   },
+   {
+    "test": "Hit bonus vs difficulty",
+    "date": "2026-10-30",
+    "by": "David (Test Kit)",
+    "hero": "Johnny",
+    "skill": "Dirty Fight (auto attack, Lv.3), first click",
+    "status": "Poison",
+    "enemy": "Mantius of Amplitude (no Venom weakness)",
+    "hits": {
+     "Trait Dungeon I (Lv.20)": {
+      "clean": 168,
+      "Poison": 311
+     },
+     "Trait Dungeon III (Lv.40)": {
+      "clean": 102,
+      "Poison": 188
+     }
+    },
+    "observations": [
+     "The Poison hit bonus is the same on both difficulties (x1.851 and x1.843): difficulty slows status build-up but doesn't cut the hit bonus.",
+     "x1.85 is fully explained: 1.5 (Poison) x 1.15 (Venomfog Shade +15% Poison Additional Damage) x (605 + 43) / 605 = x1.848, predicting 310.4 and 188.5 against the measured 311 and 188 (displayed hits are rounded). Confirms the status-bonus formula on a boss.",
+     "Clean hits are 39% lower on Very Hard (168 -> 102): the Lv.40 boss has much more Defense than the Lv.20 one."
+    ],
+    "gear": "Blue 3-piece Venomfog Shade (Poison Additional Damage +15%), Poison Additional Attack Power 43, Defense Ignore 1.25%, Armor Penetration 0.",
+    "attack": 605
+   },
+   {
+    "test": "Status Effect Additional Attack Power Increase (%)",
+    "date": "2026-10-30",
+    "by": "David (Test Kit)",
+    "hero": "Charlotte",
+    "attack": 359,
+    "target": "Training dummy with 1 Poison stack, first auto-attack click, no crits",
+    "without": {
+     "helmet": "Blue Venomfog Shade Helmet (All Status AAP 19)",
+     "statusAAP": "125 Poison + 19 All Status = 144",
+     "hits": [
+      55,
+      55,
+      126
+     ]
+    },
+    "with": {
+     "helmet": "Orange helmet (Status Effect Additional Attack Power Increase 3.88%, All Status AAP 38)",
+     "statusAAP": "125 + 38 = 163",
+     "hits": [
+      58,
+      58,
+      133
+     ]
+    },
+    "predictions": {
+     "no effect": 1.038,
+     "raises status Additional Attack Power by 3.88%": 1.05,
+     "multiplies the whole afflicted hit by 1.0388": 1.078
+    },
+    "measured": "133/126 = 1.056 (display rounding allows 1.047-1.064)",
+    "result": "The % raises the status Additional Attack Power (flat + All Status) by that %. 'No effect' and 'whole hit' fall outside the rounding range. Small numbers, so a second check with bigger values would firm it up."
+   },
+   {
+    "test": "Two Additional Damage bonuses + All Status Additional Attack Power",
+    "date": "2026-10-30",
+    "by": "David (Test Kit + panel screenshot)",
+    "hero": "Charlotte",
+    "attack": 359,
+    "gear": "2 Venomfog Shade (Poison Additional Damage +15%) + 2 Blazing Flames (Burn Additional Damage +15%); panel: Poison AAP 0, Burn AAP 0, All Status AAP 50",
+    "hits": {
+     "clean": 52,
+     "Poison": 103,
+     "Poison + Burn (Burn from Aria)": 174
+    },
+    "hit": "first auto-attack click, big hit, no crits",
+    "predictions (display range from the clean hit)": {
+     "Poison only": "102.2-104.2",
+     "both, All Status once, AD add": "154-157",
+     "both, All Status once, AD multiply": "156.7-159.7",
+     "both, All Status once per status, AD add": "172.9-176.2",
+     "both, All Status once per status, AD multiply": "175.9-179.2"
+    },
+    "result": "Only one model fits 174: All Status Additional Attack Power counts once for EACH status on the target, and Additional Damage bonuses of different statuses ADD (+15% + +15% = +30%). Multiplying is just outside the rounding range, so one repeat would be welcome."
+   },
+   {
+    "test": "Repeat with Break (goblin dummies)",
+    "date": "2026-10-30",
+    "by": "David",
+    "hero": "Charlotte",
+    "attack": 359,
+    "gear": "same as the previous test; panel also shows Break AAP 400 (Orange legs 225 + Orange gloves 175), All Status 50",
+    "hits": {
+     "clean": 52,
+     "Break": 118,
+     "Poison + Break": 216,
+     "Burn + Break": 216,
+     "Poison + Burn + Break": 345
+    },
+    "predictions": {
+     "Break: (359+400+50)/359, no hit bonus": "117.2-119.5",
+     "Poison + Break": "214.6-218.7",
+     "Poison + Burn + Break, AD add": "342.3-348.9",
+     "Poison + Burn + Break, AD multiply": "348.3-354.9"
+    },
+    "result": "Every hit fits the model: All Status AAP counts once per status on the target (Break included); Additional Damage of different statuses adds; Super Armor Break gives no hit bonus of its own but its Break Additional Attack Power (and All Status) is added on hits against a broken enemy. That explains why Castella's 194 didn't change when breaking (she had no Break AAP)."
+   },
+   {
+    "test": "Frost",
+    "date": "2026-10-31",
+    "by": "David (Test Kit)",
+    "applier": "Cerese",
+    "observations": [
+     "Frost does no damage ticks (0 seen).",
+     "Frost builds up like the other statuses; at 3 stacks the enemy is Frozen in an ice pillar and can't act.",
+     "Shattering Touch (Cerese's Special B) is the only way seen to shatter Ice Blocks / Frozen enemies; Reina couldn't."
+    ],
+    "hitTest": {
+     "hero": "Reina",
+     "skill": "Wind Slayer Lv.1 (549%)",
+     "attack": 626,
+     "airborneAdditionalDamage": 15,
+     "airborneAdditionalAttackPower": 250,
+     "hits": {
+      "clean": 1742,
+      "Frozen": 2613,
+      "Airborne": 5605,
+      "Airborne + Frozen": 7006
+     },
+     "predicted": {
+      "Frozen": 2613,
+      "Airborne": 5607,
+      "Airborne+Frozen": 7008
+     },
+     "result": "Frozen gives +50% on hits, like Poison/Bleed/Burn/Shock. All four hits match the model hit = k x (Attack + AAP of the statuses on the target) x (1 + sum of hit bonuses) x (1 + sum of their Additional Damage)."
+    }
+   },
+   {
+    "test": "Eileen's team buffs",
+    "date": "2026-10-31",
+    "by": "David",
+    "observations": [
+     "Brave One (Ultimate): the banner stays on the field for 10 s, even after swapping out, and makes a circle on the ground; a hero gets the buff only while standing in it. Lv.1 = +10% Attack Power.",
+     "Vanguard Banner (Special B, needs Brave One active): about 9-9.5 s; Eileen dances around and makes a big blue circle; stand in it for the buff. Lv.1 = +10% Crit Rate.",
+     "Both buffs fade about 2 s after leaving the circle. Teammates only get them by swapping in and stepping into the circle (Eileen stays on the field after a swap).",
+     "Reina (626 Attack): auto attack 171 -> 181 with Brave One Lv.1 (x1.058, display range 1.052-1.064). A +10% multiplier on the hit would give 188, so Brave One adds +10% to the Attack Power Up pool (diluted by the gear %), like a title %.",
+     "Charlotte (412 Attack, 96.42% Crit Damage), crit hits: 51 plain, 56 with Brave One, 56 with Brave One + Vanguard Banner (Crit Rate doesn't change a crit's size, as expected), 59 with Invisible too (+10% Crit Damage at Lv.1: 56 x 2.0642/1.9642 = 58.9).",
+     "The 12 s buff on Charlotte after swapping in is Venomfog Shade's 3-piece (+4% Crit Rate for 12 s after dodging): confirmed on her stat panel (U key works mid-fight). Her swap-in counts as a dodge; Johnny's doesn't trigger it."
+    ]
+   },
+   {
+    "test": "Cerese Shattering Touch on the Training Ogre",
+    "date": "2026-10-31",
+    "by": "David",
+    "setup": "Ice Block from Frozen Spike next to the Ogre, then Shattering Touch",
+    "hits": {
+     "no Frost on the Ogre": 251,
+     "with Frost stack(s) on the Ogre": 377
+    },
+    "observations": [
+     "377 / 251 = x1.50: the normal Frost hit bonus (+50%) applies to Shattering Touch, even with Frost stacks below Frozen.",
+     "251 / (71 x 7.09) = 0.499: the same 0.50 x Attack x skill % as every other single hit on the Training Ogre. So Shattering Touch deals its full 709% (Lv.1) in one hit to each shattered target."
+    ],
+    "attack": 71,
+    "skillLevel": "Lv.1 = 709% (codex max 1241% / 1.75)"
+   },
+   {
+    "test": "Stun + Knockdown + Airborne on goblins (is there a cap?)",
+    "date": "2026-10-31",
+    "by": "David",
+    "hero": "Reina",
+    "enemy": "Lv.90 goblins (Trait Dungeon area)",
+    "skill": "Wind Slayer Lv.1",
+    "attack": 626,
+    "stats": {
+     "Stun Additional Attack Power": 250,
+     "Airborne Additional Attack Power": 250,
+     "Airborne Additional Damage %": 15,
+     "Critical Damage %": 50,
+     "Armor Penetration": 15,
+     "Defense Ignore %": 0.97
+    },
+    "hits": {
+     "clean": 1742,
+     "Stun + Knockdown": 7311,
+     "Stun + Knockdown + Airborne": 14407,
+     "Stun + Knockdown + Airborne (crit)": 21611
+    },
+    "observations": [
+     "7311 / 1742 = 4.197 = (626.6 + 250) / 626.6 x 3: Stun and Knockdown add (+100% each) and Stun's Additional Attack Power counts.",
+     "14407 (David read it as about 14407; hard to spot) = 1742 x (626.6 + 500) / 626.6 x 4 x 1.15: three physical statuses give x4, no cap; both AAPs and Airborne's +15% Additional Damage apply.",
+     "21611 / 14407 = 1.50: the crit is x(1 + 50% Crit Damage), matching Reina's panel (50%).",
+     "Armor Penetration 15 and Defense Ignore 0.97% lower the goblins' defence equally on every hit, so they cancel out of these ratios (all hits on the same Lv.90 goblins in one clip)."
+    ],
+    "source": "David's clip 2026-10-31_04-09-24.mp4, read frame by frame"
+   },
+   {
+    "test": "Tower of Gale status bonus",
+    "date": "2026-10-31",
+    "by": "David",
+    "hero": "Reina",
+    "enemy": "Tower of Gale floor 1 archers (Lv.40)",
+    "skill": "Ultimate",
+    "runs": [
+     {
+      "gear": "Airborne gear: 626 Attack, Armor Penetration 15, Defense Ignore 0.97%, Airborne AAP 250, Airborne Additional Damage 15%",
+      "hits": {
+       "clean": 2904,
+       "Airborne": 41843,
+       "Poison": 8712,
+       "Airborne + Poison": 62460
+      }
+     },
+     {
+      "gear": "+0 Ballad of Life, crit-resistance mains only: 384 Attack, Defense Ignore 0.97%",
+      "hits": {
+       "clean": 1759,
+       "Airborne": 17593,
+       "Poison": 5278,
+       "Airborne + Poison": 26390,
+       "Stun + Airborne": 26390,
+       "Stun + Poison + Airborne": 36947,
+       "Burn + Airborne": 26390,
+       "Poison + Airborne (harpy)": 25345
+      }
+     },
+     {
+      "tower": "Tower of Amplitude",
+      "gear": "same as run 2 (384 Attack)",
+      "hits": {
+       "clean": 1759,
+       "Poison": 5278,
+       "Airborne": 3518,
+       "Airborne (second enemy)": 3379,
+       "Poison + Airborne": 8796,
+       "Stun": 17593,
+       "Stun + Airborne": 26390,
+       "Stun + Airborne + Poison": 36947
+      }
+     }
+    ],
+    "observations": [
+     "Run 2: x10.00, x3.00, x15.00 = (1 + hit bonuses) x (1 + tower bonus), tower bonus +400% Airborne, +100% Poison, added.",
+     "Run 1: the tower bonus adds to Airborne Additional Damage (15%), not multiplying it: predicted 41845 and 62463.",
+     "Stun + Airborne x15.00 and Stun + Poison + Airborne x21.00: Stun adds its normal +100% hit bonus but no tower bonus.",
+     "Burn + Airborne x15.00 = x2.5 x 6: Burn gets the same +100% tower bonus as Poison.",
+     "Tower of Amplitude: Poison x3.00, Airborne x2.00, Poison + Airborne x5.00: damage-over-time +100% in both towers; Airborne gets no tower bonus outside the Tower of Gale.",
+     "Tower of Amplitude: Stun x10.00, Stun + Airborne x15.00, Stun + Airborne + Poison x21.00: Stun +400% in its own tower, Airborne 0, Poison +100%. Confirmed rule for both towers."
+    ]
+   },
+   {
+    "test": "Level 40 base stats",
+    "date": "2026-10-31",
+    "by": "David",
+    "hits": {},
+    "heroes": {
+     "Johnny/Reina (profile B)": {
+      "pre": [
+       433,
+       135,
+       2898
+      ],
+      "post": [
+       468,
+       153,
+       3174
+      ]
+     },
+     "Charlotte (profile A)": {
+      "pre": [
+       447,
+       130,
+       2823
+      ],
+      "post": [
+       490,
+       145,
+       3053
+      ]
+     }
+    },
+    "observations": [
+     "Level part (minus the Lv20 and Lv30 bonuses) is 378 / 106 / 2448 for both profiles; the old curve predicted 371 / 103 / 2402, so HERO_STAT_MODEL.levelCurve was refitted.",
+     "Lv40 breakthrough: B +35 / +18 / +276, A +43 / +15 / +230."
+    ]
+   },
+   {
+    "test": "Team buff stacking",
+    "date": "2026-10-31",
+    "by": "David",
+    "hero": "Reina",
+    "buffs": "Eileen Brave One Lv.2, Sion Bless Lv.2",
+    "attack": {
+     "none": 748,
+     "Brave One": 797,
+     "Bless": 797,
+     "both": 847
+    },
+    "hits": {
+     "none": 2094,
+     "Brave One": 2231,
+     "Bless": 2231,
+     "both": 2369
+    },
+    "observations": [
+     "Adding predicts 2368 / 846; multiplying 2377 / 849. The buffs add."
+    ]
+   }
+  ],
+  "statsCheck": "Charlotte's Max HP 3,800 = (1,975 no-gear HP + 1,330 Karma) x 1.15 Ballad of Life (5 pieces), rounded down.",
+  "heroLevels": "Charlotte, Reina and Johnny were all Lv.30 (before the breakthrough) in these tests.",
+  "defenseModelGuess": "Untested guess, not used anywhere: damage x K / (K + effective Defense), with the ogre's Defense about equal to K (hence the ~0.50). That predicts +0.5% for 0.97% Defense Ignore (seen ~+0.4%) and puts the ogre's Defense and K both roughly 900. Needs a second enemy or a bigger Defense Ignore value to check.",
+  "statusApplication": {
+   "note": "Status build-up per press (stacks of the status; physical statuses: share of the gauge), from David's Test Kit, 29 Oct - 1 Nov 2026. 'ogre' = Training Ogre, unbroken (physical statuses double when broken). 'goblins' = Lv.90 goblin dummies, read from the gauge; many sit at exactly 1, so a press may be capped at one stack there and the goblin values are less exact. Ogre values are simple fractions (1/12, 1/10, 1/6, 1/5, 1/4, 1/3, 1/2), the same for every hero with the same value. Mount attacks (grab on a giant enemy): a 3-hit combo, 1/12 per hit of Airborne or Knockdown depending on the hero's kit; Ornette applies Shock and Kalsion Burn + Airborne.",
+   "rows": [
+    {
+     "hero": "Aria",
+     "skill": "Air Bomb",
+     "status": "Burn",
+     "goblins": 1,
+     "ogre": 0.167
+    },
+    {
+     "hero": "Aria",
+     "skill": "Air Bomb",
+     "status": "Airborne",
+     "goblins": 1,
+     "ogre": 0.167
+    },
+    {
+     "hero": "Aria",
+     "skill": "Rolling Bomb",
+     "status": "Burn",
+     "goblins": 1,
+     "ogre": 0.2
+    },
+    {
+     "hero": "Aria",
+     "skill": "Rolling Bomb",
+     "status": "Airborne",
+     "goblins": 1,
+     "ogre": 0.083
+    },
+    {
+     "hero": "Aria",
+     "skill": "Shoot and Bomb",
+     "status": "Burn",
+     "goblins": 0.45,
+     "ogre": 0.077
+    },
+    {
+     "hero": "Aria",
+     "skill": "Shoot and Bomb",
+     "status": "Airborne",
+     "goblins": 0.1,
+     "ogre": 0.02
+    },
+    {
+     "hero": "Aria",
+     "skill": "Switch On!",
+     "status": "Burn",
+     "goblins": 0.25,
+     "ogre": 0.2
+    },
+    {
+     "hero": "Aria",
+     "skill": "Switch On!",
+     "status": "Airborne",
+     "goblins": 0.5
+    },
+    {
+     "hero": "Castella",
+     "skill": "Stun Blow",
+     "status": "Stun",
+     "goblins": 1,
+     "ogre": 0.333
+    },
+    {
+     "hero": "Castella",
+     "skill": "Upper Blow",
+     "status": "Airborne",
+     "goblins": 1,
+     "ogre": 0.333
+    },
+    {
+     "hero": "Cerese",
+     "skill": "Frozen Needles",
+     "status": "Frost",
+     "ogre": 0.25
+    },
+    {
+     "hero": "Cerese",
+     "skill": "Frozen Road",
+     "status": "Frost",
+     "ogre": 0.028
+    },
+    {
+     "hero": "Cerese",
+     "skill": "Frozen Spike",
+     "status": "Frost",
+     "ogre": 0.1,
+     "goblins": 0.25
+    },
+    {
+     "hero": "Cerese",
+     "skill": "Frozen Spike",
+     "status": "Airborne",
+     "ogre": 0.1
+    },
+    {
+     "hero": "Cerese",
+     "skill": "Glacial Wave",
+     "status": "Frost",
+     "ogre": 0.056
+    },
+    {
+     "hero": "Cerese",
+     "skill": "Ice Ball (Charge)",
+     "status": "Frost",
+     "ogre": 0.059
+    },
+    {
+     "hero": "Cerese",
+     "skill": "Ice Ball (Press)",
+     "status": "Frost",
+     "ogre": 0.008
+    },
+    {
+     "hero": "Cerese",
+     "skill": "Ice Storm",
+     "status": "Frost",
+     "ogre": 0.25,
+     "goblins": 1.25
+    },
+    {
+     "hero": "Charlotte",
+     "skill": "Illusion Kick",
+     "status": "Poison",
+     "goblins": 0.6,
+     "ogre": 0.111
+    },
+    {
+     "hero": "Charlotte",
+     "skill": "Illusion Kick",
+     "status": "Airborne",
+     "goblins": 1,
+     "ogre": 0.167
+    },
+    {
+     "hero": "Charlotte",
+     "skill": "Invisible",
+     "status": "Airborne",
+     "goblins": 1
+    },
+    {
+     "hero": "Charlotte",
+     "skill": "Invisible (clone explosion)",
+     "status": "Poison",
+     "goblins": 1
+    },
+    {
+     "hero": "Charlotte",
+     "skill": "Poison Dagger",
+     "status": "Poison",
+     "ogre": 0.5
+    },
+    {
+     "hero": "Charlotte",
+     "skill": "Poison Step",
+     "status": "Poison",
+     "goblins": 0.45,
+     "ogre": 0.076
+    },
+    {
+     "hero": "Charlotte",
+     "skill": "Shadow Grab",
+     "status": "Knockdown",
+     "goblins": 1
+    },
+    {
+     "hero": "Eileen",
+     "skill": "Barraging Spear",
+     "status": "Airborne",
+     "ogre": 0.25
+    },
+    {
+     "hero": "Johnny",
+     "skill": "Fatal Sting",
+     "status": "Poison",
+     "goblins": 0.75,
+     "ogre": 0.14
+    },
+    {
+     "hero": "Johnny",
+     "skill": "Mount attack (Poison Grab)",
+     "status": "Airborne",
+     "ogre": 0.083
+    },
+    {
+     "hero": "Johnny",
+     "skill": "Phantom Slash",
+     "status": "Airborne",
+     "goblins": 1,
+     "ogre": 0.167
+    },
+    {
+     "hero": "Johnny",
+     "skill": "Poison Grab",
+     "status": "Poison",
+     "goblins": 1
+    },
+    {
+     "hero": "Johnny",
+     "skill": "Venom Cutter",
+     "status": "Airborne",
+     "goblins": 1
+    },
+    {
+     "hero": "Johnny",
+     "skill": "Venom Cutter",
+     "status": "Poison",
+     "ogre": 0.25
+    },
+    {
+     "hero": "Johnny",
+     "skill": "Venom Dance",
+     "status": "Poison",
+     "goblins": 1,
+     "ogre": 0.2
+    },
+    {
+     "hero": "Johnny",
+     "skill": "Venom Dance",
+     "status": "Airborne",
+     "goblins": 1
+    },
+    {
+     "hero": "Kalsion",
+     "skill": "Circle Cleave",
+     "status": "Burn",
+     "ogre": 0.1
+    },
+    {
+     "hero": "Kalsion",
+     "skill": "Circular Slash",
+     "status": "Burn",
+     "ogre": 0.043
+    },
+    {
+     "hero": "Kalsion",
+     "skill": "Flame Wave (Charge)",
+     "status": "Burn",
+     "ogre": 0.25
+    },
+    {
+     "hero": "Kalsion",
+     "skill": "Flame Wave (press)",
+     "status": "Burn",
+     "ogre": 0.333,
+     "goblins": 1
+    },
+    {
+     "hero": "Kalsion",
+     "skill": "Great Rush",
+     "status": "Burn",
+     "ogre": 0.014
+    },
+    {
+     "hero": "Kalsion",
+     "skill": "Mount Attack (Burst Grab)",
+     "status": "Airborne",
+     "ogre": 0.25
+    },
+    {
+     "hero": "Kalsion",
+     "skill": "Mount Attack (Burst Grab)",
+     "status": "Burn",
+     "ogre": 0.275
+    },
+    {
+     "hero": "Kalsion",
+     "skill": "Weapon Blaze",
+     "status": "Burn",
+     "ogre": 0.083,
+     "goblins": 0.333
+    },
+    {
+     "hero": "Lute",
+     "skill": "Mount attack (Swordgrab)",
+     "status": "Knockdown",
+     "ogre": 0.083
+    },
+    {
+     "hero": "Lute",
+     "skill": "Stun Slash",
+     "status": "Stun",
+     "goblins": 1,
+     "ogre": 0.167
+    },
+    {
+     "hero": "Lute",
+     "skill": "Swordgrab",
+     "status": "Knockdown",
+     "goblins": 1
+    },
+    {
+     "hero": "Ornette",
+     "skill": "Holy Circle",
+     "status": "Shock",
+     "goblins": 1,
+     "ogre": 0.2
+    },
+    {
+     "hero": "Ornette",
+     "skill": "Holy Cross",
+     "status": "Shock",
+     "goblins": 1.5,
+     "ogre": 0.25
+    },
+    {
+     "hero": "Ornette",
+     "skill": "Holy Cutter",
+     "status": "Shock",
+     "goblins": 0.5,
+     "ogre": 0.1
+    },
+    {
+     "hero": "Ornette",
+     "skill": "Holy Grab",
+     "status": "Shock",
+     "goblins": 1
+    },
+    {
+     "hero": "Ornette",
+     "skill": "Holy Grab",
+     "status": "Airborne",
+     "goblins": 1
+    },
+    {
+     "hero": "Ornette",
+     "skill": "Judgment",
+     "status": "Knockdown",
+     "goblins": 0.75,
+     "ogre": 0.25
+    },
+    {
+     "hero": "Ornette",
+     "skill": "Mount Attack (Holy Grab)",
+     "status": "Shock",
+     "ogre": 0.25
+    },
+    {
+     "hero": "Reina",
+     "skill": "Mount attack (Wind Grab)",
+     "status": "Airborne",
+     "ogre": 0.083
+    },
+    {
+     "hero": "Reina",
+     "skill": "Rising Cutter",
+     "status": "Airborne",
+     "goblins": 1.4,
+     "ogre": 0.167
+    },
+    {
+     "hero": "Reina",
+     "skill": "Wind Grab",
+     "status": "Airborne",
+     "goblins": 1
+    },
+    {
+     "hero": "Reina",
+     "skill": "Wind Slayer",
+     "status": "Airborne",
+     "goblins": 1,
+     "ogre": 0.167
+    },
+    {
+     "hero": "Roxy",
+     "skill": "Bleeding Grab",
+     "status": "Bleed",
+     "goblins": 1
+    },
+    {
+     "hero": "Roxy",
+     "skill": "Bleeding Grab",
+     "status": "Knockdown",
+     "goblins": 1
+    },
+    {
+     "hero": "Roxy",
+     "skill": "Bloody Shower",
+     "status": "Bleed",
+     "goblins": 1.1,
+     "ogre": 0.333
+    },
+    {
+     "hero": "Roxy",
+     "skill": "Crimson Spiral",
+     "status": "Stun",
+     "goblins": 1
+    },
+    {
+     "hero": "Roxy",
+     "skill": "Crimson Spiral (Hold)",
+     "status": "Stun",
+     "ogre": 0.167
+    },
+    {
+     "hero": "Roxy",
+     "skill": "Crimson Spiral (Holding)",
+     "status": "Bleed",
+     "goblins": 0.99
+    },
+    {
+     "hero": "Roxy",
+     "skill": "Crimson Spiral (Press)",
+     "status": "Bleed",
+     "goblins": 0.45,
+     "ogre": 0.167
+    },
+    {
+     "hero": "Roxy",
+     "skill": "Crimson Spiral (Press)",
+     "status": "Stun",
+     "ogre": 0.167
+    },
+    {
+     "hero": "Roxy",
+     "skill": "Kick Storm",
+     "status": "Bleed",
+     "goblins": 1,
+     "ogre": 0.2
+    },
+    {
+     "hero": "Roxy",
+     "skill": "Mount attack (Bleeding Grab)",
+     "status": "Knockdown",
+     "ogre": 0.083
+    },
+    {
+     "hero": "Roxy",
+     "skill": "Sliding Shot",
+     "status": "Bleed",
+     "goblins": 0.25
+    },
+    {
+     "hero": "Sion",
+     "skill": "Bless",
+     "status": "Shock",
+     "ogre": 0.04
+    },
+    {
+     "hero": "Sion",
+     "skill": "Divine Crash",
+     "status": "Shock",
+     "ogre": 0.25
+    },
+    {
+     "hero": "Sion",
+     "skill": "Divine Smash",
+     "status": "Stun",
+     "ogre": 0.167
+    },
+    {
+     "hero": "Sion",
+     "skill": "Justice Fall",
+     "status": "Knockdown",
+     "ogre": 0.25
+    },
+    {
+     "hero": "Sion",
+     "skill": "Sliding Bolt",
+     "status": "Shock",
+     "ogre": 0.1
+    }
+   ],
+   "goblinVsOgre": "Goblins (Lv.90) vs Training Ogre, same skill: for presses well under one stack on the goblins the ratio is about 5x (Holy Circle 5, Holy Cutter 5, Kick Storm 5, Venom Dance 5, Ice Storm 5, Weapon Blaze 4, Shoot and Bomb 5-6, Illusion Kick, Poison Step and Fatal Sting 5.4-5.9). Some skills are lower (Frozen Spike 2.5, Crimson Spiral 2.7, Judgment 3, Bloody Shower 3.3), so it isn't one fixed factor; values at or above 1 on the goblins are read from a capped or overflowing gauge and aren't comparable. The goblins also break in one hit, which doubles physical build-up. Use the Ogre values to compare heroes."
+  }
+ }
+}

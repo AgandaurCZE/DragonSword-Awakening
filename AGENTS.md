@@ -21,7 +21,7 @@ Read this before changing anything in this repository.
 
 A fan-made guide for **DragonSword: Awakening** (HOUND13, PC/Steam): one static page on **GitHub Pages** from the `main` branch root, https://agandaurcze.github.io/DragonSword-Awakening/. Every commit to `main` goes live about a minute later. No build step, framework or server. The owner is David (UK English). He checks claims, so don't state anything the data can't back up.
 
-- `data.json` holds **all guide content**. `index.html` holds layout, CSS and JavaScript, and no guide data. `assets/` holds images and source notes. `tools/` holds offline Python scripts. `docs/` holds notes and the Test Kit backup.
+- `data.json` holds **all guide content** (research the page never shows, `DAMAGE_TESTS`, is in `data/research.json` since 10 Nov 2026). `index.html` holds layout, CSS and JavaScript, and no guide data. `assets/` holds images and source notes. `tools/` holds offline Python scripts. `docs/` holds notes and the Test Kit backup.
 - At start-up `index.html` fetches `data.json`, copies each top-level key into a global of the same name, then `startApp()` draws every tab. `file://` fails, so test with `python3 -m http.server`.
 
 ## Preview gate
@@ -36,7 +36,7 @@ New work stays hidden until David says to launch. It appears only with `?tiers=n
 | Tiers and teams | `TIER_LIST_V2`, `TOWER_TRIALS`, `TEAM_DATA`, `TIER_ORDER`, `TIER_COLORS` |
 | Karma | `KARMA_DATA`, `KARMA_ASCENSION`, `KARMA_LEVELLING`, `GENERIC_KARMA` |
 | Gear | `GEAR_DATA`, `GEAR_STATS`, `GEAR_UPGRADE`, `RUNES` |
-| Mechanics | `DAMAGE_TESTS`, `DEFENSE_MODEL`, `DAMAGE_CALC`, `STATUS_EFFECTS`, `LEVEL_COSTS` |
+| Mechanics | `DEFENSE_MODEL`, `DAMAGE_CALC`, `STATUS_EFFECTS`, `LEVEL_COSTS` (training-dummy research `DAMAGE_TESTS` lives in `data/research.json`, which the page doesn't load) |
 | Other pages | `DUNGEONS`, `TRAIT_DUNGEONS`, `FAMILIARS`, `TITLES`, `COOKBOOK`, `GUIDES`, `PATCH_NOTES` |
 | Shared | `meta`, `schemaVersion`, `ARCHES`, `ARCH_COLORS`, `STATUS_ARCHETYPE`, `ROLE_ICONS`, `UI_ICONS` |
 

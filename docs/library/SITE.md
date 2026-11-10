@@ -33,7 +33,8 @@ Back to the library: [docs/README.md](../README.md). Rules: [AGENTS.md](../../AG
   - Tiers and teams: `TIER_LIST_V2` (preview), `TOWER_TRIALS`, `TEAM_DATA`, `TIER_ORDER`, `TIER_COLORS`.
   - Karma: `KARMA_DATA`, `KARMA_ASCENSION`, `KARMA_LEVELLING`, `GENERIC_KARMA`.
   - Gear: `GEAR_DATA`, `GEAR_STATS`, `GEAR_UPGRADE`, `RUNES`.
-  - Mechanics: `DAMAGE_TESTS`, `DEFENSE_MODEL`, `DAMAGE_CALC`, `STATUS_EFFECTS`, `LEVEL_COSTS` (formulas explained in [GAME_MATH.md](GAME_MATH.md)).
+  - Mechanics: `DEFENSE_MODEL`, `DAMAGE_CALC`, `STATUS_EFFECTS`, `LEVEL_COSTS` (formulas explained in [GAME_MATH.md](GAME_MATH.md)).
+- `data/research.json` (10 Nov): research the page never shows (`DAMAGE_TESTS`, the training-dummy results behind GAME_MATH). Visitors don't download it; the validator checks it parses.
   - Other pages: `DUNGEONS`, `TRAIT_DUNGEONS`, `FAMILIARS`, `TITLES`, `COOKBOOK`, `GUIDES`, `PATCH_NOTES`.
   - Shared: `meta`, `schemaVersion`, `ARCHES`, `ARCH_COLORS`, `STATUS_ARCHETYPE`, `ROLE_ICONS`, `UI_ICONS`.
 - `assets/`: images and source notes by topic (heroes, karma, gear, items, bosses, dungeons, tower, raid, roles, ui, upcoming …). Portraits are `.webp`; delete David's source PNGs after cutting.

@@ -13,7 +13,7 @@ Inputs (all in data.json):
 Damage builds also get their 2-piece set chosen here (HERO_BUILDS[hero].setChoice; the 3-piece stays the archetype set).
 Options: Battle Will (+6% Attack Power Up), The Infiltrator (+9% Crit Rate), and the set of any status that one of the
 hero's skills needs to activate (Azure Gale = Airborne, Earthshatterer = Knockdown, Holy Arbiter = Stun, Ruinsbreaker = Break).
-A status set's +15% Additional Damage only counts on hits against an enemy with that status (measured, see DAMAGE_TESTS):
+A status set's +15% Additional Damage only counts on hits against an enemy with that status (measured, see DAMAGE_TESTS in data/research.json):
   r       = share of the hero's skill % (each damage skill once) from skills that NEED the status; other hits are ignored
   share   = damage share of those hits: 2.5r / (2.5r + 1.5(1-r))  (Airborne/Knockdown/Stun +100% and the own status +50%;
             1.5r / (1.5r + 1.5(1-r)) = r for Break, whose hit bonus isn't measured)
