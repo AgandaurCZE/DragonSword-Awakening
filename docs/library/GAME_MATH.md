@@ -161,6 +161,8 @@ For David's six main teams, Orange +15, enemy Defense 1825, awakenings as owned 
 | Roxy (Holy Bleed) | Bloodstained Chaser | Boots Crit Rate | DI, Stun AAP, Airborne AAP, Bleed AAP | APU | 44 / 82 |
 | Castella (Holy Bleed) | Bloodstained Chaser | — | DI, Stun AAP, Airborne AAP, Bleed AAP | Crit Rate, All Status AAP or APU | 35 / 82 |
 
+**With 5 Perfect Crit Rate runes (6.80% each, +34% Crit Rate; rule added 10 Nov):** Crit Rate runes beat Attack runes (119) for 11 of 13 heroes by 0.5–5.7% (Johnny and Reina are within 0.5% either way). A Perfect Crit Damage rune would need about 11–13% per rune to beat them (not seen yet; Refined Crit Damage 4.90% vs Refined Crit Rate 4.50%). With the runes, the **Crit Rate substat becomes Crit Damage** everywhere, and a few mains switch to Crit Damage: Ryza Gloves and Boots, Kalsion Legs, Cerese Boots, Theresia Legs and Boots, Roxy Legs (Roxy's Boots back to Attack Power Up, Theresia's Chest back to Attack Power Up). Crit ends at 66–86% rate and 90–125% damage.
+
 Next best set pairs are 1–7% behind (often the element set as the 3-piece with The Infiltrator). Within 1% for Kalsion (Blazing Flames + The Infiltrator).
 
 ## 5. Known unknowns

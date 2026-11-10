@@ -23025,8 +23025,9 @@
   "rules": [
    "Runes can't be upgraded.",
    "Synthesis: 5 runes of one grade (types can be mixed) become 1 random rune of the next grade. Up to 10 syntheses at once.",
-   "Removing an engraved rune costs 10,000 Gold (seen for every grade).",
-   "Unlocking a rune slot costs 5 Anonymous Artisan's Crafting Tools."
+   "One rune slot per gear piece, so up to 5 runes per hero. Each piece's slot is unlocked separately for 1 Anonymous Artisan's Crafting Tool.",
+   "Any type and grade in any slot; the same type and grade can go in every slot.",
+   "Removing an engraved rune returns it and costs 10,000 Gold (every grade)."
   ],
   "image": "assets/runes/synthesis-screen.webp"
  },

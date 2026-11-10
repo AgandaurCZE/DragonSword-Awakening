@@ -1,3 +1,6 @@
+## 10 Nov 2026 — Rune slot rules; builds with Perfect Crit Rate runes (Claude)
+- `RUNES.rules` (David): one slot per gear piece (5 per hero), unlocked per piece for 1 Anonymous Artisan's Crafting Tool (the old "5" was wrong); any type or grade in any slot, duplicates allowed; removal returns the rune for 10,000 Gold.
+- GAME_MATH 4.3: the main-team builds re-run with 5 Perfect Crit Rate runes: Crit Rate runes win; Crit Rate substats become Crit Damage; a few mains switch to Crit Damage.
 ## 10 Nov 2026 — Title One Who Broke the Dragon Horn; new rune values (Claude)
 - `TITLES`: One Who Broke the Dragon Horn obtained (Attack Power Up +2.3%, Crit Rate +2%); 40 of 109.
 - `RUNES.seen` (David's file): Refined Attack 56, Max HP 600; Radiant Defense 67 (first Radiant value); Perfect Attack 119, Max HP 1050, Crit Rate 6.80% (first Perfect values). Removal costs 10,000 Gold for every grade. Rune slot cost: David saw 1 Anonymous Artisan's Crafting Tool where the data says 5 (asked). Rune box and Titles are preview-only; public page checked unchanged.
