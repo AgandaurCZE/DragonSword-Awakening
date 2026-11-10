@@ -1,3 +1,5 @@
+## 10 Nov 2026 — Karma levels Lv.1–70 measured; levelling rule (Claude)
+- `KARMA_LEVELLING.measured`: David's Lv.20–70 values (before and after each breakthrough) for The Scar Lightning Left Behind (Balanced) and Sacred Lightning Baptism (Attack); `note` rewritten with the rule (shared level curve, breakthrough shares 6/12–10/12 of Lv.1, type factors). GAME_MATH 2.3, STATUS, DONE updated. Not used by the page yet. Validator OK.
 ## 10 Nov 2026 — Main-team gear builds (Claude)
 - New `tools/team_gear.py` (team-aware version of `endgame_gear.py`: all team statuses on the target, real awakening levels, owned signatures only, physical statuses at full or half uptime). Builds for the 13 heroes of the six main teams in GAME_MATH 4.3. Offline tool only; no site change.
 ## 10 Nov 2026 — Team round after awakenings saved (Claude)

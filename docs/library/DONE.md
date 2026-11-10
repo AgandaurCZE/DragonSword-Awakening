@@ -5,6 +5,7 @@ Back to the library: [docs/README.md](../README.md). Open work: [STATUS.md](STAT
 Nothing on this page needs doing again. It exists so finished work is never mistaken for an open task. Newest first within each section. When a task in STATUS, SITE or the to-do page finishes, move it here with the date.
 
 ## Game tasks and tests (David)
+- **10 Nov:** Karma base stats Lv.20–70 before and after each breakthrough on Ryza's (Balanced) and Ornette's (Attack) signatures; levelling rule in [GAME_MATH.md](GAME_MATH.md) 2.3.
 - **10 Nov:** team round on the six main teams with masteries and awakenings ([TEAM_TESTS.md](TEAM_TESTS.md)).
 - **10 Nov:** awakening batch 3, A4–A6 on 12 heroes; results in [AWAKENING_TESTS.md](AWAKENING_TESTS.md).
 - **10 Nov:** awakening batch 2, A2 and A3 on 19 heroes (Alex later); results in [AWAKENING_TESTS.md](AWAKENING_TESTS.md).

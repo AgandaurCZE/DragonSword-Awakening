@@ -52,6 +52,7 @@ Back to the library: [docs/README.md](../README.md). Evidence for each rule: `DA
 - The levelling screen and `HERO_BASE_STATS` exclude titles. The in-fight panel includes them.
 
 ### 2.3 Karma stats (`KARMA_DATA`, `KARMA_LEVELLING`, `KARMA_ASCENSION`)
+- **Karma level rule (David's Lv.1–70 measurements on a Balanced and an Attack card, 10 Nov; fit by Claude):** stat = Lv.1 value × (level curve + breakthrough share × type factor). The **level curve is shared by every type**: +0.913 (Lv.1→20), +0.77 (20→30), +1.088 (30→40), +1.52 (40→50), +2.05 (50→60), +2.68 (60→70), in multiples of Lv.1. **Breakthrough bonuses** at Lv.20/30/40/50/60 are 6/12, 7/12, 8/12, 9/12, 10/12 of Lv.1 on a Balanced card; the Attack type gets Attack ×13/12, Defense ×1, Max HP ×0.8 of that. Reproduces all 22 measured points within 10 (Defense within 6). Checked against the known Lv.70 values: the Defense type behaves like Balanced (predicts 748/374/9241 vs 749/374/9230); High Attack fits Attack ×1.07, Max HP ×0.66 (from its Lv.70 only, so unconfirmed). Levels between breakthroughs aren't measured. Data: `KARMA_LEVELLING`.
 - Each Karma has a stat type (Balanced, Attack, …) set by its Lv.1 stats; its base Attack, Defense and HP add flat to the hero.
 - **Trait at Ascension n = A0 value × (1, 4/3, 5/3, 2, 8/3, 11/3, 5)** for A0 to A6. The game rounds % to whole numbers and flat values to the nearest 5.
 
