@@ -16,6 +16,19 @@ Each planner team has one of four statuses, chosen with the drop-down on its car
 - Main lesson (David, 9 Nov): application speed decides these teams. Reina applies Airborne from the first second with no condition; Castella's Stun only comes after Super Armor is broken, so she adds little. Kalien beats Castella in every comparison.
 - Signature runs so far compare signature vs **no** Karma, so they include the Karma's own stats. The planned clean test (to-do item 2, Test Kit test 09: signature vs a normal Karma of the same level) is **not done yet** and must happen before awakenings.
 
+## Team round after masteries and awakenings (prepared 10 Nov)
+
+The six main teams again, same setup as the 9–10 Nov runs (Lv.70, **no gear**, 1 min on the Training Ogre), now with all masteries and the awakenings from [AWAKENING_TESTS.md](AWAKENING_TESTS.md). Same Karma setup as before, so the gap is the masteries and awakenings only: first normal Lv.1 Karmas, then the signature run. Holy Bleed varies a lot, so two runs if you can.
+
+| Team | Heroes (awakening) | Before: normal → signature | After: normal → signature |
+|---|---|---|---|
+| Airborne burst | Kalsion A6, Johnny A6, Reina A6 | 600k → 630k (Kalsion's) | |
+| Shadow Poison | Charlotte A6, Johnny A6, Reina A6 | 680k → 700k (Charlotte's) | |
+| Holy Bleed | Theresia A6, Roxy A6, Castella A6 | 330k → 420k (Theresia's and Roxy's) | |
+| Thunder pair | Ryza A6, Ornette A6, Sion **A3** | 500k → 580k (Ryza's and Ornette's) | |
+| Fox and wind | Kalsion A6, Kalien A6, Reina A6 | 650k → 700k (Kalsion's on in both; then Kalien's) | |
+| Frost tornado | Dana A6, Cerese A6, Reina A6 | 490k → 530k (Cerese's) | |
+
 ## Teams
 
 **Groups in the planner (10 Nov):** teams built around the same damage dealer share one box (`group`); the main version (`main: true`) shows first and the alternatives open from buttons on the right. **Kalsion, burst and swap** (he only comes in for Explosion and his Ultimate): Airborne burst (main), Burn chain, Fire and venom. **Kalsion, field time:** Fox and wind (main), Break and burn, Fox and crossbow. **Ryza:** Thunder pair (main), Storm, Double blessing, Lightning break. **Dana:** Frost tornado (main), Deep Frost, Ice Prison. **Theresia:** Holy Bleed (main), Holy Bleed with Kalien. **Charlotte:** Shadow Poison. Verdicts (David, 10 Nov): all Works except Ice Prison.

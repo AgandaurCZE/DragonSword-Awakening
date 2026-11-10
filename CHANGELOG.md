@@ -1,3 +1,5 @@
+## 10 Nov 2026 — Team round prepared (Claude)
+- TEAM_TESTS: new section with the six main teams, their awakening levels and the 9–10 Nov numbers to compare against.
 ## 10 Nov 2026 — A6 results saved (Claude)
 - David's A6 tests: 24 Test Kit entries (`apply`) and the JSON copy; results and every hero's awakening level in AWAKENING_TESTS. Castella's Whirlwind corrected to 17.5% before A6 (note on the Test 01 row). STATUS and DONE updated.
 ## 10 Nov 2026 — A3 results saved; batch 3 prepared (Claude)
