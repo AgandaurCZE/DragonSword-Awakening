@@ -1,3 +1,7 @@
+## 10 Nov 2026 — Kalsion split into two groups; equal card widths (Claude)
+- David's answers: Kalsion only bursts and swaps in Airborne burst, Burn chain and Fire and venom (new group `kalsion-burst`, main Airborne burst); he gets field time in Fox and wind (main), Break and burn and Fox and crossbow.
+- Thunder pair note (David): Ornette beats Tarte because Knockdown matters more than extra Shock.
+- Planner page: teams without alternatives keep the same width as grouped ones. Published to the same link; repo source, backup and TEAM_TESTS refreshed.
 ## 10 Nov 2026 — Team Planner grouped by damage dealer (Claude)
 - At David's request: teams that share a damage dealer are one box with the main version first and alternatives as buttons on the right; an alternative opens over the main version, stays fully editable, and × Back returns. New team fields `group` and `main` (set for the Kalsion, Ryza, Dana and Theresia groups). Tested headless with the real team data (switching, editing an alternative saves to its own team, back). Published to the same link; repo source, backup and TEAM_TESTS updated.
 - David's verdicts (10 Nov): all teams Works except Ice Prison (Doesn't work).

@@ -141,7 +141,7 @@ function renderTeams(){const el=$('teams');if(!teams.length){el.innerHTML='<p cl
  teams.forEach(t=>{const k=t.data.group||t.id;if(!byKey[k]){byKey[k]=[];groups.push(k);}byKey[k].push(t);});
  el.innerHTML=groups.map((k,i)=>{const g=byKey[k];const main=g.find(t=>t.data.main)||g.slice().sort((a,b)=>sigW(b)-sigW(a))[0];
   const alts=g.filter(t=>t!==main);let cur=g.find(t=>t.id===view[k])||main;if(cur===main)delete view[k];
-  if(!alts.length)return cardHtml(main,i,null);
+  if(!alts.length)return `<div class="grp" data-group="${esc(k)}">${cardHtml(main,i,null)}<div class="alts" aria-hidden="true"></div></div>`;
   return `<div class="grp" data-group="${esc(k)}">${cardHtml(cur,i,cur===main?null:main)}<nav class="alts" aria-label="Alternative teams"><h4>Alternatives</h4>${alts.map(a=>`<button type="button" class="alt st-${esc(a.data.status||'idea')}${a===cur?' on':''}" data-alt="${esc(a.id)}" aria-pressed="${a===cur}">${esc(a.data.name)}<small>${esc(swapLabel(main,a))}${a.data.sig?' · '+esc(a.data.sig.without)+'k':''}</small></button>`).join('')}</nav></div>`;}).join('');}
 $('teams').addEventListener('click',e=>{const a=e.target.closest('[data-alt]');if(a){const k=a.closest('.grp').dataset.group;view[k]=view[k]===a.dataset.alt?undefined:a.dataset.alt;renderTeams();return;}
  const b=e.target.closest('[data-act="back"]');if(b){const g=b.closest('.grp');if(g){delete view[g.dataset.group];renderTeams();}}});
