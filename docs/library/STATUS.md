@@ -8,6 +8,7 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 - **Awakenings** (can't be undone; all 77 levels he had are spent): **A6** Castella, Cerese, Charlotte, Dana, Johnny, Kalien, Kalsion, Ornette, Reina, Roxy, Ryza, Theresia; **A3** Aria, Astria, Eileen, Lute, Othello, Sion, Tarte; **A0** Alex. Charlotte had A1 before every earlier test. Results: [AWAKENING_TESTS.md](AWAKENING_TESTS.md).
 - **Signature Karmas owned:** Theresia, Kalien, Kalsion, Othello, Cerese, Dana, Ornette, Charlotte, Ryza, Roxy. Ryza's and Ornette's levelled to Lv.70 (10 Nov).
 - **Gear:** David is gearing the six main teams with the builds in [GAME_MATH.md](GAME_MATH.md) 4.3 and running the raid for Perfect runes (10 Nov evening).
+- Karmas owned (colour art): 43 of 53 (10 Nov).
 - Titles 40 of 109; familiars 16 of 29 (all four Insects).
 
 ## Waiting on David (10 Nov)
@@ -29,4 +30,4 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 - Crit Rate awakenings were rated before the 30 Oct gear rebuild; re-check whether they're worth more now.
 - Hero review texts on the profiles still describe the old ratings; David will redo them later (10 Nov), so leave them.
 - Test 06 inside the Towers of Trials; new enemies, Quest items and World Bosses as David meets them.
-- Coloured signature Karma icons (Ryza's and Roxy's cards have no art); banner art for Eroded Underground Cemetery and Residual Worm Cleanup Zone; Hunt rating rewards and Fame stages above 3.
+- Banner art for Eroded Underground Cemetery and Residual Worm Cleanup Zone; Hunt rating rewards and Fame stages above 3.

@@ -897,7 +897,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/a-coincidental-yet-perfect-plan.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Amplitude",
@@ -1003,7 +1003,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/legends-left-behind-by-the-master.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Crushing",
@@ -1040,7 +1040,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/merciless-kick.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Crushing",
@@ -1072,7 +1072,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/stay-sharp-always.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Crushing",
@@ -1215,7 +1215,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/the-wind-blows-again.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Gale",
@@ -1353,7 +1353,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/the-noble-lady-s-wild-hobby.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Bloodburst",
@@ -1666,7 +1666,7 @@
    },
    "statType": "Defense",
    "image": "assets/karma/leg-scale-of-blazing-flames.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Frostbite",
@@ -1952,7 +1952,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/the-scar-lightning-left-behind.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Thunderbolt",
@@ -2376,7 +2376,7 @@
    },
    "statType": "Defense",
    "image": "assets/karma/dominating-head.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Breaker",
@@ -2482,7 +2482,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/destruction-is-the-mother-of-creation.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Breaker",
@@ -2519,7 +2519,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/the-way-of-the-wild.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Breaker",
@@ -2588,7 +2588,7 @@
    },
    "statType": "Defense",
    "image": "assets/karma/a-cut-above.webp",
-   "owned": false
+   "owned": true
   }
  ],
  "KARMA_ASCENSION": {
