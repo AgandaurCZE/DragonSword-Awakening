@@ -3,7 +3,7 @@
 Back to the library: [docs/README.md](../README.md). Data shape: `TIER_LIST_V2` in [DATA_REFERENCE.md](../DATA_REFERENCE.md). Evidence: [TEST01_RESULTS.md](TEST01_RESULTS.md), [TEAM_TESTS.md](TEAM_TESTS.md).
 
 ## Ground rules
-- `TIER_LIST_V2.heroes` holds only ratings agreed with David, after debate. **Never set a tier by formula.** Ratings are on base kits: no awakenings, no signature, no mastery.
+- `TIER_LIST_V2.heroes` holds only ratings agreed with David, after debate. **Never set a tier by formula.** Ratings are on base kits **with mastery** (David, 10 Nov; before that: no mastery): no awakenings, no signature. A separate awakening view (button) comes later, so the Needs A tag (`awk`: Kalien, Sion, Astria) will leave the tier list and free space for new tags. Open: what the button shows (A1, A6 or each level), whether signatures go in it, and what Late bloomer (Cerese) becomes.
 - All new tier-list work is preview-only (`?tiers=new`). The public page keeps `HEROES[].tiers` until David approves launch.
 - Hunt bosses are rated on **Nightmare and above** only (that's where the weakness mechanic matters).
 

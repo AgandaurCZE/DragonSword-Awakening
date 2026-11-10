@@ -1,3 +1,5 @@
+## 10 Nov 2026 — Ratings count the mastery (Claude)
+- David's decision: tier ratings are on base kits with mastery; a separate awakening view comes later and the Needs A tag leaves the tier list. DECISIONS and STATUS updated. No ratings changed yet.
 ## 10 Nov 2026 — Mastery retests saved (Claude)
 - David's retests with all 16 masteries (no gear, no Karma, Training Ogre): 27 new Test Kit entries (`apply`), also in `docs/testkit/test01-apply-2026-11-09.json`; new Mastery retests section in TEST01_RESULTS (before → after, break times, David's notes). Biggest change: Lute 75 → 41 s.
 - Castella's and Theresia's mastery buffs protect their own Super Armor, not the enemy's break (David). STATUS and DONE updated.
