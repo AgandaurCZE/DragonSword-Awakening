@@ -18,6 +18,8 @@ Each planner team has one of four statuses, chosen with the drop-down on its car
 
 ## Teams
 
+**Groups in the planner (10 Nov):** teams built around the same damage dealer share one box (`group` field); the main version (`main: true`, highest normal-Karma damage) shows first, the alternatives open from buttons on the right. Kalsion: Fox and wind (main), Airborne burst, Burn chain, Break and burn, Fire and venom, Fox and crossbow. Ryza: Thunder pair (main), Storm, Double blessing, Lightning break. Dana: Frost tornado (main), Deep Frost, Ice Prison. Theresia: Holy Bleed (main), Holy Bleed with Kalien. Charlotte: Shadow Poison on its own. Verdicts set by David on 10 Nov: everything Works except Ice Prison.
+
 Damage: 1 minute on the Training Ogre, all Lv.70, no gear. "Normal" = everyone on a Lv.1 normal Karma; "signature" = the named signature Karmas on (9–10 Nov runs, Test Kit test 09). Teams with Alex were dropped (10 Nov): see DECISIONS.
 
 ### 1. Airborne burst (t01, status: works) — normal 600k → signature 630k (+5%, Kalsion's)

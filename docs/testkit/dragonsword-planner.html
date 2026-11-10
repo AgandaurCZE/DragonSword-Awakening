@@ -41,6 +41,17 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .top .num{font:600 .85rem var(--mono);color:var(--accent)}
 input.name{font:700 1.3rem/1.2 var(--display);border:1px solid transparent;background:transparent;color:var(--ink);padding:2px 4px;flex:1 1 14rem;min-width:0}
 input.name:hover,input.name:focus{border-color:var(--line);background:var(--field)}
+.grp{display:grid;grid-template-columns:minmax(0,1fr) 11.5rem;gap:10px;align-items:start}
+.grp>.card{min-width:0}
+.alts{display:grid;gap:6px;position:sticky;top:12px}
+.alts h4{margin:0;font:600 .72rem var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.alt{display:grid;gap:1px;text-align:left;font:600 .82rem var(--body);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-left:3px solid var(--line);border-radius:3px;padding:6px 8px;cursor:pointer}
+.alt small{font:400 .72rem var(--mono);color:var(--muted)}
+.alt:hover{border-color:var(--accent)}.alt.on{border-color:var(--accent);background:var(--field)}
+.alt.st-works{border-left-color:var(--ok)}.alt.st-no{border-left-color:var(--bad)}.alt.st-test{border-left-color:var(--warn)}
+.variant-bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font:600 .78rem var(--mono);color:var(--info);border-bottom:1px dashed var(--line);padding-bottom:8px}
+.variant-bar .btn{margin-left:auto}
+@media (max-width:720px){.grp{grid-template-columns:1fr}.alts{position:static;grid-template-columns:repeat(auto-fill,minmax(10rem,1fr))}.alts h4{grid-column:1/-1}}
 .dmg{display:inline-flex;align-items:baseline;gap:6px;font:600 .9rem var(--mono);white-space:nowrap}
 .dmg .up{color:var(--ok)}.dmg .down{color:var(--bad)}.dmg .eq{color:var(--muted)}
 .dmg small{font:400 .72rem var(--mono);color:var(--muted)}
@@ -86,7 +97,7 @@ label.f{display:grid;gap:3px;font:600 .72rem var(--mono);text-transform:uppercas
 </div>
 
 <section id="paneTeams" class="list" aria-labelledby="tabTeams">
-  <p class="intro">Claude's suggestions, worked out from each hero's statuses and Activation Conditions, not from the guide's Teams page. None are tested unless the verdict says so. The numbers beside a team name are damage in 1 minute on the Training Ogre, all Lv.70, no gear: normal Lv.1 Karma on the left, signature Karma on the right (green is the better one, the arrow shows which way). Details are in David's notes. One run can be off by up to about 70k, so compare several. A team doesn't need a Main DPS: two Sub-DPS with an Enabler, or one Sub-DPS with two Enablers, are fine if the synergy is there.</p>
+  <p class="intro">Claude's suggestions, worked out from each hero's statuses and Activation Conditions, not from the guide's Teams page. None are tested unless the verdict says so. The numbers beside a team name are damage in 1 minute on the Training Ogre, all Lv.70, no gear: normal Lv.1 Karma on the left, signature Karma on the right (green is the better one, the arrow shows which way). Details are in David's notes. One run can be off by up to about 70k, so compare several. Teams built around the same damage dealer share one box: the main version (highest damage with normal Karma) shows first, and the buttons on the right open the alternatives, where one or two heroes are swapped. Each alternative can be edited like any team; × Back returns to the main version. A team doesn't need a Main DPS: two Sub-DPS with an Enabler, or one Sub-DPS with two Enablers, are fine if the synergy is there.</p>
   <div class="legend"><span style="color:var(--main)">■ Main DPS</span><span style="color:var(--sub)">■ Sub-DPS</span><span style="color:var(--enab)">■ Enabler</span><span style="color:var(--supp)">■ Support</span></div>
   <div id="teams" class="list"><p class="empty">Team ideas will appear here once they load. You can also add one with the button below.</p></div>
   <button type="button" class="btn add" id="addTeam">+ Add a team</button>
@@ -115,13 +126,25 @@ const roleKey=r=>(ROLES.find(x=>x[0]===r)||[])[1]||'';
 function sigHtml(s){if(!s||s.without==null||s.with==null)return'';const a=+s.without,b=+s.with,diff=b-a,pct=a?Math.round(diff/a*100):0;
   const cw=diff>0?'down':diff<0?'up':'eq',cs=diff>0?'up':diff<0?'down':'eq',ar=diff>0?'▲':diff<0?'▼':'=';
   return `<span class="dmg" title="1 minute on the Training Ogre, all Lv.70, no gear. Left: normal Lv.1 Karma. Right: with signature Karma${s.label?' ('+esc(s.label)+')':''}."><small>without</small><span class="${cw}">${a}k</span><span class="${cs}">${ar} ${b}k</span><small>${diff>=0?'+':''}${pct}%</small></span>`;}
-function renderTeams(){const el=$('teams');if(!teams.length){el.innerHTML='<p class="empty">No teams yet. Add the first one with the button below.</p>';return;}
- el.innerHTML=teams.map((t,i)=>{const d=t.data,hs=(d.heroes||[]).concat([{},{},{}]).slice(0,3);
-  return `<article class="card st-${esc(d.status||'idea')}" data-id="${esc(t.id)}"><div class="top"><span class="num">${String(i+1).padStart(2,'0')}</span><input class="name" id="n-${esc(t.id)}" data-f="name" value="${esc(d.name)}" aria-label="Team name"${readOnly?' disabled':''}>${sigHtml(d.sig)}
+const view={};
+const sigW=t=>(t.data.sig&&+t.data.sig.without)||0;
+function swapLabel(main,alt){const mh=(main.data.heroes||[]).map(h=>h.hero),ah=(alt.data.heroes||[]).map(h=>h.hero);const inn=ah.filter(h=>h&&!mh.includes(h)),out=mh.filter(h=>h&&!ah.includes(h));return inn.length?inn.join(' + ')+' for '+out.join(' + '):'same heroes';}
+function cardHtml(t,i,variantOf){const d=t.data,hs=(d.heroes||[]).concat([{},{},{}]).slice(0,3);
+  const bar=variantOf?`<div class="variant-bar">Alternative of ${esc(variantOf.data.name)}: ${esc(swapLabel(variantOf,t))}<button type="button" class="btn" data-act="back" aria-label="Back to ${esc(variantOf.data.name)}">× Back</button></div>`:'';
+  return `<article class="card st-${esc(d.status||'idea')}" data-id="${esc(t.id)}">${bar}<div class="top"><span class="num">${String(i+1).padStart(2,'0')}</span><input class="name" id="n-${esc(t.id)}" data-f="name" value="${esc(d.name)}" aria-label="Team name"${readOnly?' disabled':''}>${sigHtml(d.sig)}
   <div class="row-actions"><label class="pill">Verdict <select data-f="status" id="s-${esc(t.id)}"${readOnly?' disabled':''}>${TEAM_ST.map(([k,l])=>`<option value="${k}"${d.status===k?' selected':''}>${l}</option>`).join('')}</select></label>${readOnly?'':pendingDel===t.id?`<span class="confirm">Delete this team? <button type="button" class="btn danger" data-act="del-yes">Delete</button><button type="button" class="btn" data-act="del-no">Keep</button></span>`:`<button type="button" class="btn danger" data-act="del">Delete</button>`}</div></div>
   <div class="slots">${hs.map((h,k)=>`<div class="slot r-${roleKey(h.role)}"><select data-slot="${k}" data-sf="hero" id="h-${esc(t.id)}-${k}" aria-label="Hero ${k+1}"${readOnly?' disabled':''}><option value="">Pick a hero</option>${HEROES.map(n=>`<option${h.hero===n?' selected':''}>${n}</option>`).join('')}</select><select class="role" data-slot="${k}" data-sf="role" id="r-${esc(t.id)}-${k}" aria-label="Role in this team"${readOnly?' disabled':''}><option value="">Role in team</option>${ROLES.map(([r])=>`<option${h.role===r?' selected':''}>${r}</option>`).join('')}</select></div>`).join('')}</div>
   <label class="f">Why it should work<textarea data-f="why" id="w-${esc(t.id)}"${readOnly?' disabled':''}>${esc(d.why)}</textarea></label>
-  <div class="notes"><label class="f">David's notes<textarea data-f="davidNote" id="d-${esc(t.id)}" placeholder="What you saw when you tried it"${readOnly?' disabled':''}>${esc(d.davidNote)}</textarea></label><label class="f">Claude's notes<textarea data-f="claudeNote" id="c-${esc(t.id)}"${readOnly?' disabled':''}>${esc(d.claudeNote)}</textarea></label></div></article>`;}).join('');}
+  <div class="notes"><label class="f">David's notes<textarea data-f="davidNote" id="d-${esc(t.id)}" placeholder="What you saw when you tried it"${readOnly?' disabled':''}>${esc(d.davidNote)}</textarea></label><label class="f">Claude's notes<textarea data-f="claudeNote" id="c-${esc(t.id)}"${readOnly?' disabled':''}>${esc(d.claudeNote)}</textarea></label></div></article>`;}
+function renderTeams(){const el=$('teams');if(!teams.length){el.innerHTML='<p class="empty">No teams yet. Add the first one with the button below.</p>';return;}
+ const groups=[],byKey={};
+ teams.forEach(t=>{const k=t.data.group||t.id;if(!byKey[k]){byKey[k]=[];groups.push(k);}byKey[k].push(t);});
+ el.innerHTML=groups.map((k,i)=>{const g=byKey[k];const main=g.find(t=>t.data.main)||g.slice().sort((a,b)=>sigW(b)-sigW(a))[0];
+  const alts=g.filter(t=>t!==main);let cur=g.find(t=>t.id===view[k])||main;if(cur===main)delete view[k];
+  if(!alts.length)return cardHtml(main,i,null);
+  return `<div class="grp" data-group="${esc(k)}">${cardHtml(cur,i,cur===main?null:main)}<nav class="alts" aria-label="Alternative teams"><h4>Alternatives</h4>${alts.map(a=>`<button type="button" class="alt st-${esc(a.data.status||'idea')}${a===cur?' on':''}" data-alt="${esc(a.id)}" aria-pressed="${a===cur}">${esc(a.data.name)}<small>${esc(swapLabel(main,a))}${a.data.sig?' · '+esc(a.data.sig.without)+'k':''}</small></button>`).join('')}</nav></div>`;}).join('');}
+$('teams').addEventListener('click',e=>{const a=e.target.closest('[data-alt]');if(a){const k=a.closest('.grp').dataset.group;view[k]=view[k]===a.dataset.alt?undefined:a.dataset.alt;renderTeams();return;}
+ const b=e.target.closest('[data-act="back"]');if(b){const g=b.closest('.grp');if(g){delete view[g.dataset.group];renderTeams();}}});
 function renderSigs(){const el=$('sigs');if(!sigs.length){el.innerHTML='<p class="empty">No heroes in the list yet.</p>';return;}
  el.innerHTML=sigs.map((s,i)=>{const d=s.data;return `<article class="card sig" data-id="${esc(s.id)}"><div class="rank"><button type="button" class="btn" data-act="up" aria-label="Move ${esc(d.hero)} up"${i===0||readOnly?' disabled':''}>▲</button><b>${i+1}</b><button type="button" class="btn" data-act="down" aria-label="Move ${esc(d.hero)} down"${i===sigs.length-1||readOnly?' disabled':''}>▼</button></div>
  <div><h3>${esc(d.hero)} <span class="pill pri-${esc(d.priority)}">${esc(d.priority)} priority</span></h3><p class="eff"><b>${esc(d.karma)}:</b> ${esc(d.effect)}</p>

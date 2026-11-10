@@ -1,3 +1,6 @@
+## 10 Nov 2026 — Team Planner grouped by damage dealer (Claude)
+- At David's request: teams that share a damage dealer are one box with the main version first and alternatives as buttons on the right; an alternative opens over the main version, stays fully editable, and × Back returns. New team fields `group` and `main` (set for the Kalsion, Ryza, Dana and Theresia groups). Tested headless with the real team data (switching, editing an alternative saves to its own team, back). Published to the same link; repo source, backup and TEAM_TESTS updated.
+- David's verdicts (10 Nov): all teams Works except Ice Prison (Doesn't work).
 ## 10 Nov 2026 — Last team tests saved; Alex teams dropped (Claude)
 - Saved on the planner cards: Burn chain 490k→520k, Break and burn 430k→460k, Fire and venom 420k→450k, Double blessing 370k→410k, Ice Prison 300k→340k (David: feels terrible, Sion can't keep Shock up), Fox and crossbow 380k→400k, Frost tornado 490k→530k.
 - Nightmare support (Ryza, Eileen, Alex) deleted at David's request: Alex can't be tested fairly over 60 s (parry every time while dodging the aggroed Ogre). DECISIONS records this and the Astria finding (Ultimate refills from 3 Precision Shot basic attacks).
