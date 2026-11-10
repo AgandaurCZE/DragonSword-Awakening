@@ -1,3 +1,5 @@
+## 10 Nov 2026 — Team round after awakenings saved (Claude)
+- David's runs on the six main teams (masteries and awakenings, no gear): Airborne burst 820k→900k, Shadow Poison 950k→1.1M, Holy Bleed 630k→800k, Thunder pair 900k→1.1M, Fox and wind 800k→1M, Frost tornado 800k→1M (signature run now Dana's and Cerese's). Planner cards updated (badge shows the new numbers; old ones kept in the note); TEAM_TESTS, backup and STATUS updated.
 ## 10 Nov 2026 — Team round prepared (Claude)
 - TEAM_TESTS: new section with the six main teams, their awakening levels and the 9–10 Nov numbers to compare against.
 ## 10 Nov 2026 — A6 results saved (Claude)

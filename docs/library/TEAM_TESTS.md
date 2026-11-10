@@ -20,14 +20,16 @@ Each planner team has one of four statuses, chosen with the drop-down on its car
 
 The six main teams again, same setup as the 9–10 Nov runs (Lv.70, **no gear**, 1 min on the Training Ogre), now with all masteries and the awakenings from [AWAKENING_TESTS.md](AWAKENING_TESTS.md). Same Karma setup as before, so the gap is the masteries and awakenings only: first normal Lv.1 Karmas, then the signature run. Holy Bleed varies a lot, so two runs if you can.
 
-| Team | Heroes (awakening) | Before: normal → signature | After: normal → signature |
+**Results (David, 10 Nov 12:07):** every team gained 23–91%; four of six reach 1 million with signatures. Biggest jumps: Holy Bleed (both runs about +90%) and Thunder pair (+80% / +90%). Saved on the planner cards (the badge now shows the new numbers; the old ones are the second line of David's note).
+
+| Team | Heroes (awakening) | Before: normal → signature | After: normal → signature (gain normal / signature) |
 |---|---|---|---|
-| Airborne burst | Kalsion A6, Johnny A6, Reina A6 | 600k → 630k (Kalsion's) | |
-| Shadow Poison | Charlotte A6, Johnny A6, Reina A6 | 680k → 700k (Charlotte's) | |
-| Holy Bleed | Theresia A6, Roxy A6, Castella A6 | 330k → 420k (Theresia's and Roxy's) | |
-| Thunder pair | Ryza A6, Ornette A6, Sion **A3** | 500k → 580k (Ryza's and Ornette's) | |
-| Fox and wind | Kalsion A6, Kalien A6, Reina A6 | 650k → 700k (Kalsion's on in both; then Kalien's) | |
-| Frost tornado | Dana A6, Cerese A6, Reina A6 | 490k → 530k (Cerese's) | |
+| Airborne burst | Kalsion A6, Johnny A6, Reina A6 | 600k → 630k (Kalsion's) || 820k → 900k (+37% / +43%) |
+| Shadow Poison | Charlotte A6, Johnny A6, Reina A6 | 680k → 700k (Charlotte's) || 950k → 1.1M (+40% / +57%) |
+| Holy Bleed | Theresia A6, Roxy A6, Castella A6 | 330k → 420k (Theresia's and Roxy's) || 630k → 800k (+91% / +90%) |
+| Thunder pair | Ryza A6, Ornette A6, Sion **A3** | 500k → 580k (Ryza's and Ornette's) || 900k → 1.1M (+80% / +90%) |
+| Fox and wind | Kalsion A6, Kalien A6, Reina A6 | 650k → 700k (Kalsion's on in both; then Kalien's) || 800k → 1M (+23% / +43%; Kalsion's on in both, to confirm) |
+| Frost tornado | Dana A6, Cerese A6, Reina A6 | 490k → 530k (Cerese's) || 800k → 1M (+63% / +89%; signature run now Dana's and Cerese's) |
 
 ## Teams
 

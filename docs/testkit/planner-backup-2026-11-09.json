@@ -2,7 +2,7 @@
  "teams": [
   {
    "claudeNote": "Claude (8 Nov): The team David has been playing for the last few days.\n\nClaude (9 Nov, second check, built this team independently): Airborne comes from two heroes here. Reina adds about 0.89 of the gauge per rotation (Rising Cutter 0.24, Wind Slayer 0.40 with both charges, Wind Grab 0.25), Johnny about 0.6 (Venom Dance, Phantom Slash, Venom Cutter 0.20 each). With Burn, Poison and Airborne up, every hit gets +200% (x3).",
-   "davidNote": "Lv.70, no gear, 1 min: 600k with normal Lv.1 Karmas; 630k with Kalsion's signature (Johnny: So Good It's to Die For, Reina: Become a Star in That Sky).\nNo Karma at all (9 Nov): 420k; 510k with Kalsion's signature.",
+   "davidNote": "Masteries and awakenings (10 Nov, Lv.70, no gear, 1 min): 820k with normal Lv.1 Karmas; 900k with Kalsion's signature. Before awakenings: 600k → 630k (Kalsion's).\nLv.70, no gear, 1 min: 600k with normal Lv.1 Karmas; 630k with Kalsion's signature (Johnny: So Good It's to Die For, Reina: Become a Star in That Sky).\nNo Karma at all (9 Nov): 420k; 510k with Kalsion's signature.",
    "group": "kalsion-burst",
    "heroes": [
     {
@@ -23,8 +23,8 @@
    "order": 1,
    "sig": {
     "label": "Kalsion's",
-    "with": 630,
-    "without": 600
+    "with": 900,
+    "without": 820
    },
    "status": "works",
    "why": "Reina keeps enemies Airborne almost whenever you want, which unlocks Kalsion's Explosion and Johnny's Venom Cutter. Johnny's Poison comes on top. Two Sub-DPS and an Enabler.",
@@ -32,7 +32,7 @@
   },
   {
    "claudeNote": "Claude (9 Nov, built this team independently): Charlotte applies Poison herself on 4 skills (Test 01: Poison Dagger 0.50, clone explosion 0.24, Illusion Kick 0.15, Poison Step 0.08), so Johnny's Poison is mostly redundant here. His real value is Airborne (about 0.6 per rotation) for Shadow Grab, plus his own damage. Her only own Airborne is Illusion Kick (0.20) on a long cooldown, which is why the agreed rating says she needs it.",
-   "davidNote": "Lv.70, no gear, 1 min: 680k with normal Lv.1 Karmas; 700k with Charlotte's signature. With her signature a 600k+ run is more reliable.\nNo Karma at all (9 Nov): 440k; 560k with Charlotte's signature.",
+   "davidNote": "Masteries and awakenings (10 Nov, Lv.70, no gear, 1 min): 950k with normal Lv.1 Karmas; 1100k with Charlotte's signature. Before awakenings: 680k → 700k (Charlotte's).\nLv.70, no gear, 1 min: 680k with normal Lv.1 Karmas; 700k with Charlotte's signature. With her signature a 600k+ run is more reliable.\nNo Karma at all (9 Nov): 440k; 560k with Charlotte's signature.",
    "heroes": [
     {
      "hero": "Charlotte",
@@ -51,8 +51,8 @@
    "order": 2,
    "sig": {
     "label": "Charlotte's",
-    "with": 700,
-    "without": 680
+    "with": 1100,
+    "without": 950
    },
    "status": "works",
    "why": "Charlotte's Illusion Kick needs Poison or Stealth and her Shadow Grab needs Airborne. Johnny brings Poison and some Airborne, Reina brings the rest, so Charlotte can spend her time picking targets in Stealth.",
@@ -60,7 +60,7 @@
   },
   {
    "claudeNote": "Claude (8 Nov): David plans team tests with Roxy; Roxy may count as Sub-DPS here.\n\nClaude (9 Nov check): her own sources per Test 01: Celestial Verdict 0.20 Stun (0.25 in Heretic Judgment), Consecration 0.15 Bleed plus 0.12 from the 10 s aura. Too slow on a boss, which is why she needs an enabler (David's rule: a hero who applies their own needs slowly still needs an enabler). Castella's Stun Blow (0.33) only works on a broken boss.",
-   "davidNote": "Lv.70, no gear, 1 min: 330k with normal Lv.1 Karmas; 400k with Theresia's signature; 350k with only Roxy's; 420k with both.\nNo Karma at all (9 Nov): 250k.\nDavid: hard team (big run-to-run spread).",
+   "davidNote": "Masteries and awakenings (10 Nov, Lv.70, no gear, 1 min): 630k with normal Lv.1 Karmas; 800k with Theresia's and Roxy's signatures. Before awakenings: 330k → 420k (Theresia's and Roxy's).\nLv.70, no gear, 1 min: 330k with normal Lv.1 Karmas; 400k with Theresia's signature; 350k with only Roxy's; 420k with both.\nNo Karma at all (9 Nov): 250k.\nDavid: hard team (big run-to-run spread).",
    "group": "theresia",
    "heroes": [
     {
@@ -81,8 +81,8 @@
    "order": 3,
    "sig": {
     "label": "Theresia's and Roxy's",
-    "with": 420,
-    "without": 330
+    "with": 800,
+    "without": 630
    },
    "status": "works",
    "why": "Theresia's Divine Arc needs Stun and her Holy Rise needs Bleed. She applies both herself, but slowly on a boss, so she needs an enabler to reach her full potential fast: Roxy adds both, and Theresia's Stun in turn opens Roxy's Kick Storm. Castella breaks Super Armor fast, which opens her own Stun. One damage dealer and two Enablers.",
@@ -148,7 +148,7 @@
   },
   {
    "claudeNote": "Claude (8 Nov): David wants to see whether Ryza and Ornette work together at all.\n\nClaude (9 Nov, built this team independently): all three apply Shock, and Knockdown comes from three sources (Ryza's Thunder Grab 0.20–0.25, Ornette's Judgment 0.25, or 0.40 at 2 Shock stacks, Sion's Divine Smash and Justice Fall 0.20 each). Shock and Knockdown give +150% on hits. Almost no Airborne: Ryza's Stormbringer 0.20, and Ornette's Holy Grab didn't apply it on the boss.",
-   "davidNote": "Lv.70, no gear, 1 min: 500k with normal Lv.1 Karmas; 550k with Ryza's signature; 540k with only Ornette's; 580k with both.\nDavid (10 Nov): feels much better than Tarte (Storm). Tarte gives more Shock, but Ornette gives more Knockdown, which matters far more; played really well, she applies Knockdown and Airborne at the same time.",
+   "davidNote": "Masteries and awakenings (10 Nov, Lv.70, no gear, 1 min): 900k with normal Lv.1 Karmas; 1100k with Ryza's and Ornette's signatures. Before awakenings: 500k → 580k (Ryza's and Ornette's).\nLv.70, no gear, 1 min: 500k with normal Lv.1 Karmas; 550k with Ryza's signature; 540k with only Ornette's; 580k with both.\nDavid (10 Nov): feels much better than Tarte (Storm). Tarte gives more Shock, but Ornette gives more Knockdown, which matters far more; played really well, she applies Knockdown and Airborne at the same time.",
    "group": "ryza",
    "heroes": [
     {
@@ -169,8 +169,8 @@
    "order": 6,
    "sig": {
     "label": "Ryza's and Ornette's",
-    "with": 580,
-    "without": 500
+    "with": 1100,
+    "without": 900
    },
    "status": "works",
    "why": "Ornette's Judgment needs Shock and her Holy Grab needs Knockdown. Ryza supplies Shock, Sion supplies Shock and Knockdown plus the Attack buff.",
@@ -236,7 +236,7 @@
   },
   {
    "claudeNote": "",
-   "davidNote": "Lv.70, no gear, 1 min: 650k with Kalsion's signature on (Kalien and Reina on normal Lv.1 Karmas); 700k with Kalien's signature too. Kalsion's own signature gain is measured in team 1.\nNo Karma at all (9 Nov): 390k and 460k (two runs); 560k with Kalsion's and Kalien's signatures.",
+   "davidNote": "Masteries and awakenings (10 Nov, Lv.70, no gear, 1 min): 800k with Kalsion's signature on (Kalien and Reina on normal Lv.1 Karmas, as before; David to confirm); 1000k with Kalien's signature too. Before awakenings: 650k → 700k.\nLv.70, no gear, 1 min: 650k with Kalsion's signature on (Kalien and Reina on normal Lv.1 Karmas); 700k with Kalien's signature too. Kalsion's own signature gain is measured in team 1.\nNo Karma at all (9 Nov): 390k and 460k (two runs); 560k with Kalsion's and Kalien's signatures.",
    "group": "kalsion",
    "heroes": [
     {
@@ -256,9 +256,9 @@
    "name": "Fox and wind",
    "order": 10,
    "sig": {
-    "label": "Kalien's; Kalsion's signature on in both runs",
-    "with": 700,
-    "without": 650
+    "label": "Kalien's; Kalsion's on in both runs",
+    "with": 1000,
+    "without": 800
    },
    "status": "works",
    "why": "David's own test: Kalien's Burn and Reina's Airborne both feed Kalsion.",
@@ -411,7 +411,7 @@
   },
   {
    "claudeNote": "Claude (9 Nov): untested question: does Airborne keep or end Frozen and Ice Blocks? If it ends them, swap Reina for Sion. Dana groups S, Cerese groups A, Reina groups S+.",
-   "davidNote": "Lv.70, no gear, 1 min: 490k with normal Lv.1 Karmas; 530k with Cerese's signature.",
+   "davidNote": "Masteries and awakenings (10 Nov, Lv.70, no gear, 1 min): 800k with normal Lv.1 Karmas; 1000k with Dana's and Cerese's signatures (without = no signature at all; before only Cerese's was compared). Before awakenings: 490k → 530k (Cerese's).\nLv.70, no gear, 1 min: 490k with normal Lv.1 Karmas; 530k with Cerese's signature.",
    "group": "dana",
    "heroes": [
     {
@@ -431,9 +431,9 @@
    "name": "Frost tornado",
    "order": 16,
    "sig": {
-    "label": "Cerese's",
-    "with": 530,
-    "without": 490
+    "label": "Dana's and Cerese's",
+    "with": 1000,
+    "without": 800
    },
    "status": "works",
    "why": "For groups. Cerese gathers with Ice Storm; her Frozen Needles needs Airborne and Frost, which Reina and Dana supply. Dana's Frost brings enemies to Frozen for Cerese's Shattering Touch.",
