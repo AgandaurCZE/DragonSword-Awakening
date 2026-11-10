@@ -14,7 +14,7 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - **10 Nov:** all 16 masteries unlocked; mastery retests (changed skill and full break) in [TEST01_RESULTS.md](TEST01_RESULTS.md).
 - **10 Nov:** title Chest Addict obtained; last insect familiar, Red Ladybug, owned (colour card cut from David's screenshot); materials for all 16 masteries farmed.
 - **9 Nov evening:** all 20 heroes Lv.70; Test 08 base stats for all 20 (the 11 known ones re-measured and matching); 3 skill buffs (Tarte Cure, Alex Guard Counter, Astria Reload); 19 gear rows, mostly Blue and Purple (all match the tables, and they confirm Legs Attack Power Up, Legs Max HP Up, Helmet and Boots Defense Up and Boots Crit).
-- **9–10 Nov:** Signature Karma tests (test 09) for every owned signature, and team verdicts in the planner (all Works except Ice Prison, No; Nightmare support stays an Idea) ([TEAM_TESTS.md](TEAM_TESTS.md)).
+- **9–10 Nov:** Signature Karma tests (test 09) for every owned signature, and team verdicts in the planner (all Works except Ice Prison, No; team 9 deleted) ([TEAM_TESTS.md](TEAM_TESTS.md)).
 - **9 Nov:** gearless team redo: all three heroes in each tested team at Lv.70, no gear, no Karma, 1 min on the Training Ogre, plus signature runs ([TEAM_TESTS.md](TEAM_TESTS.md)).
 - **9 Nov:** levelled to 70: Ryza, Theresia, Roxy, Castella, Tarte, Sion, Charlotte (with Johnny, Reina, Kalsion and Kalien, 11 heroes are at 70).
 - **8 Nov:** Test 01 redo, status application, Super Armor gauge and all-out break time for all 20 heroes ([TEST01_RESULTS.md](TEST01_RESULTS.md)).

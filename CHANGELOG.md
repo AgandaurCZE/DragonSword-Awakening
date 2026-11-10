@@ -1,3 +1,7 @@
+## 10 Nov 2026 — Artifact backups as a routine (structure step E, Claude)
+- Full exports: `docs/testkit/testkit-results-2026-11-10.json` (all 830 Test Kit entries: 402 Test 01, 149 enemy Defense, 115 gear, 95 level costs, 22 signature, 20 Lv.70 stats, 12 buffs and the rest) and `docs/testkit/planner-backup-2026-11-10.json` (16 teams, 20 signatures). They replace `test01-apply-2026-11-09.json` and `planner-backup-2026-11-09.json` (checked: every old entry is in the new files, unchanged). `test01-apply-backup-2026-11-08.json` stays (pre-redo entries no longer in the artifact).
+- Routine written into `docs/README.md`: export both artifacts at the end of every session that wrote to them.
+- **Correction:** the notes check (part 2) added a "team 9, Nightmare support (Idea)" section; that came from an old export in Claude's scratch folder. The planner has no t09 (it was deleted before the 10 Nov runs); TEAM_TESTS, STATUS and DONE fixed.
 ## 10 Nov 2026 — data.json cached safely (structure step C, Claude)
 - David approved all five structure steps (SITE.md). Step C: `index.html` loads `data.json` with `cache:'no-cache'` instead of `?v=`timestamp + `no-store`. Every visit still asks the server for the newest file, but an unchanged file comes back as "not modified" (measured: 105 bytes instead of 712 KB on a reload). Public page pixel-identical; no console errors.
 ## 10 Nov 2026 — Notes check, part 2: every library file (Claude)

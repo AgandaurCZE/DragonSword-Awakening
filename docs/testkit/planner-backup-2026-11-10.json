@@ -1,4 +1,5 @@
 {
+ "note": "Team Planner data (collections teams and sigs), exported 10 Nov 2026 evening by Claude. Restore with ArtifactData writes if the artifact is ever lost.",
  "teams": [
   {
    "claudeNote": "Claude (8 Nov): The team David has been playing for the last few days.\n\nClaude (9 Nov, second check, built this team independently): Airborne comes from two heroes here. Reina adds about 0.89 of the gauge per rotation (Rising Cutter 0.24, Wind Slayer 0.40 with both charges, Wind Grab 0.25), Johnny about 0.6 (Venom Dance, Phantom Slash, Venom Cutter 0.20 each). With Burn, Poison and Airborne up, every hit gets +200% (x3).",
@@ -148,7 +149,7 @@
   },
   {
    "claudeNote": "Claude (8 Nov): David wants to see whether Ryza and Ornette work together at all.\n\nClaude (9 Nov, built this team independently): all three apply Shock, and Knockdown comes from three sources (Ryza's Thunder Grab 0.20–0.25, Ornette's Judgment 0.25, or 0.40 at 2 Shock stacks, Sion's Divine Smash and Justice Fall 0.20 each). Shock and Knockdown give +150% on hits. Almost no Airborne: Ryza's Stormbringer 0.20, and Ornette's Holy Grab didn't apply it on the boss.",
-   "davidNote": "Masteries and awakenings (10 Nov, Lv.70, no gear, 1 min): 900k with normal Lv.1 Karmas; 1100k with Ryza's and Ornette's signatures. Before awakenings: 500k → 580k (Ryza's and Ornette's).\nLv.70, no gear, 1 min: 500k with normal Lv.1 Karmas; 550k with Ryza's signature; 540k with only Ornette's; 580k with both.\nDavid (10 Nov): feels much better than Tarte (Storm). Tarte gives more Shock, but Ornette gives more Knockdown, which matters far more; played really well, she applies Knockdown and Airborne at the same time.",
+   "davidNote": "Masteries and awakenings (10 Nov, Lv.70, no gear, 1 min; Sion A3): 900k with normal Lv.1 Karmas; 1100k with Ryza's and Ornette's signatures. Before awakenings: 500k → 580k (Ryza's and Ornette's).\nLv.70, no gear, 1 min: 500k with normal Lv.1 Karmas; 550k with Ryza's signature; 540k with only Ornette's; 580k with both.\nDavid (10 Nov): feels much better than Tarte (Storm). Tarte gives more Shock, but Ornette gives more Knockdown, which matters far more; played really well, she applies Knockdown and Airborne at the same time.",
    "group": "ryza",
    "heroes": [
     {
@@ -411,7 +412,7 @@
   },
   {
    "claudeNote": "Claude (9 Nov): untested question: does Airborne keep or end Frozen and Ice Blocks? If it ends them, swap Reina for Sion. Dana groups S, Cerese groups A, Reina groups S+.",
-   "davidNote": "Masteries and awakenings (10 Nov, Lv.70, no gear, 1 min): 800k with normal Lv.1 Karmas; 1000k with Dana's and Cerese's signatures (without = no signature at all; before only Cerese's was compared). Before awakenings: 490k → 530k (Cerese's).\nLv.70, no gear, 1 min: 490k with normal Lv.1 Karmas; 530k with Cerese's signature.",
+   "davidNote": "Masteries and awakenings (10 Nov, Lv.70, no gear, 1 min): 800k with normal Lv.1 Karmas; 1000k with Dana's and Cerese's signatures (before, only Cerese's was compared). Before awakenings: 490k → 530k (Cerese's).\nLv.70, no gear, 1 min: 490k with normal Lv.1 Karmas; 530k with Cerese's signature.",
    "group": "dana",
    "heroes": [
     {
@@ -478,7 +479,8 @@
    "priority": "Low",
    "rank": 20,
    "status": "Not owned",
-   "why": "David: doesn't help him with anything."
+   "why": "David: doesn't help him with anything.",
+   "id": "alex"
   },
   {
    "effect": "When the Switch On! skill is used, a larger explosion occurs, inflicting additional Burn and Airborne status effects on hit enemies.",
@@ -488,7 +490,8 @@
    "priority": "Medium",
    "rank": 6,
    "status": "Not owned",
-   "why": "A bigger Switch On! explosion that adds Burn and Airborne: more application for an Enabler."
+   "why": "A bigger Switch On! explosion that adds Burn and Airborne: more application for an Enabler.",
+   "id": "aria"
   },
   {
    "effect": "In Precision Shooting mode, the Ballista Shot skill changes to a charge action, allowing you to unleash a powerful single shot by holding down the skill key to fire all loaded arrows.",
@@ -498,7 +501,8 @@
    "priority": "High",
    "rank": 1,
    "status": "Not owned",
-   "why": "Her charged shot of all loaded arrows may be the fix for her single target and Stun. David thinks she needs it."
+   "why": "Her charged shot of all loaded arrows may be the fix for her single target and Stun. David thinks she needs it.",
+   "id": "astria"
   },
   {
    "effect": "The Howling skill has been changed to a Hold Action, so holding the skill key increases the skill duration.",
@@ -508,7 +512,8 @@
    "priority": "Low",
    "rank": 16,
    "status": "Not owned",
-   "why": "Howling becomes a hold action for a longer duration."
+   "why": "Howling becomes a hold action for a longer duration.",
+   "id": "castella"
   },
   {
    "effect": "When the Ice Storm skill ends, the storm moves toward the nearest enemy. If the targeted enemy is defeated, the storm remains at that location.",
@@ -518,7 +523,8 @@
    "priority": "Medium",
    "rank": 11,
    "status": "Owned",
-   "why": "Her Ice Storm moves to the nearest enemy when it ends."
+   "why": "Her Ice Storm moves to the nearest enemy when it ends.",
+   "id": "cerese"
   },
   {
    "effect": "The Invisible skill is changed: reusing the skill instantly detonates the summoned Clone.",
@@ -528,7 +534,8 @@
    "priority": "High",
    "rank": 4,
    "status": "Owned",
-   "why": "Changes her playstyle: re-using Invisible detonates the clone at once. Worth seeing on an Expert Main DPS."
+   "why": "Changes her playstyle: re-using Invisible detonates the clone at once. Worth seeing on an Expert Main DPS.",
+   "id": "charlotte"
   },
   {
    "effect": "When Chako is summoned, frost spikes rise at the summoning point depending on the size of the Ice Clump on Chako's back. The frost spikes deal continuous damage to the target and inflict the Frost status effect.",
@@ -538,7 +545,8 @@
    "priority": "Low",
    "rank": 15,
    "status": "Owned",
-   "why": "David: not a must, and it needs enemies grouped first."
+   "why": "David: not a must, and it needs enemies grouped first.",
+   "id": "dana"
   },
   {
    "effect": "When using the Banner Maid skill within the area created by the Brave One skill, Critical Rate and Critical Damage are further increased.",
@@ -548,7 +556,8 @@
    "priority": "Low",
    "rank": 13,
    "status": "Not owned",
-   "why": "Already S. More Crit inside Brave One, so strong but not urgent."
+   "why": "Already S. More Crit inside Brave One, so strong but not urgent.",
+   "id": "eileen"
   },
   {
    "effect": "When using the Phantom Slash skill, blades are generated along the path, dealing additional damage to enemies within the area and inflicting the Poison status effect on hit.",
@@ -558,7 +567,8 @@
    "priority": "Medium",
    "rank": 7,
    "status": "Not owned",
-   "why": "Phantom Slash leaves blades that add damage and Poison."
+   "why": "Phantom Slash leaves blades that add damage and Poison.",
+   "id": "johnny"
   },
   {
    "effect": "The number of foxes summoned by the Fox Grab skill increases.",
@@ -568,7 +578,8 @@
    "priority": "High",
    "rank": 2,
    "status": "Owned",
-   "why": "The tier list already marks her as needing it: more foxes from Fox Grab, her key skill."
+   "why": "The tier list already marks her as needing it: more foxes from Fox Grab, her key skill.",
+   "id": "kalien"
   },
   {
    "effect": "The attack range and damage of the Explosion skill are increased.",
@@ -578,7 +589,8 @@
    "priority": "High",
    "rank": 3,
    "status": "Owned",
-   "why": "Explosion is his main damage. More range and damage on an A-tier hero that sits in several Airborne teams."
+   "why": "Explosion is his main damage. More range and damage on an A-tier hero that sits in several Airborne teams.",
+   "id": "kalsion"
   },
   {
    "effect": "The number of relics summoned by the Relic Fall skill increases.",
@@ -588,7 +600,8 @@
    "priority": "Low",
    "rank": 19,
    "status": "Not owned",
-   "why": "More relics from Relic Fall."
+   "why": "More relics from Relic Fall.",
+   "id": "lute"
   },
   {
    "effect": "When using the Holy Cross skill within the area created by the Holy Circle skill, the cross becomes larger and the number of attacks increases.",
@@ -598,7 +611,8 @@
    "priority": "Medium",
    "rank": 12,
    "status": "Owned",
-   "why": "Holy Cross gets bigger with more hits inside Holy Circle."
+   "why": "Holy Cross gets bigger with more hits inside Holy Circle.",
+   "id": "ornette"
   },
   {
    "effect": "Frozen Stinger is enhanced: the range and damage of its final attack are increased. Pressing the attack button again casts the final attack faster.",
@@ -608,7 +622,8 @@
    "priority": "Medium",
    "rank": 9,
    "status": "Owned",
-   "why": "Frozen Stinger's final hit gets bigger and faster."
+   "why": "Frozen Stinger's final hit gets bigger and faster.",
+   "id": "othello"
   },
   {
    "effect": "The Tempest skill changes to emit a sword aura.",
@@ -618,7 +633,8 @@
    "priority": "Low",
    "rank": 14,
    "status": "Not owned",
-   "why": "Already S. Tempest becomes a sword aura."
+   "why": "Already S. Tempest becomes a sword aura.",
+   "id": "reina"
   },
   {
    "effect": "The number of arrows fired by the Kick Storm skill increases.",
@@ -627,8 +643,9 @@
    "notes": "",
    "priority": "Medium",
    "rank": 8,
-   "status": "Not owned",
-   "why": "More arrows from Kick Storm, her Stun-gated skill."
+   "status": "Owned",
+   "why": "More arrows from Kick Storm, her Stun-gated skill.",
+   "id": "roxy"
   },
   {
    "effect": "After using the Flash skill, pressing the attack key again unleashes a powerful thrust attack.",
@@ -637,8 +654,9 @@
    "notes": "",
    "priority": "Medium",
    "rank": 5,
-   "status": "Farming",
-   "why": "Adds a new thrust attack after Flash on our strongest Main DPS."
+   "status": "Owned",
+   "why": "Adds a new thrust attack after Flash on our strongest Main DPS.",
+   "id": "ryza"
   },
   {
    "effect": "When retrieving the sacred relic, a set amount of Rage for the Divine Crash and Divine Smash skills is restored.",
@@ -648,7 +666,8 @@
    "priority": "Low",
    "rank": 17,
    "status": "Not owned",
-   "why": "Restores some Rage when retrieving the relic."
+   "why": "Restores some Rage when retrieving the relic.",
+   "id": "sion"
   },
   {
    "effect": "When the Cure skill is used, the magic circle that appears remains active for a certain period and expands in range. It immediately removes physical status effects from allies within the magic circle's range and continuously heals them.",
@@ -658,7 +677,8 @@
    "priority": "Low",
    "rank": 18,
    "status": "Not owned",
-   "why": "David: not needed. It only improves her heal."
+   "why": "David: not needed. It only improves her heal.",
+   "id": "tarte"
   },
   {
    "effect": "The damage of the Divine Arc skill is increased. When entering Heretic Judgment mode, movement speed increases, and Theresia's Bleed attacks inflict an additional Bleed status effect.",
@@ -668,7 +688,8 @@
    "priority": "Medium",
    "rank": 10,
    "status": "Owned",
-   "why": "David: not needed, but a big boost to Heretic Judgment."
+   "why": "David: not needed, but a big boost to Heretic Judgment.",
+   "id": "theresia"
   }
  ]
 }

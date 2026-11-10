@@ -2,7 +2,7 @@
 
 Back to the library: [docs/README.md](../README.md). Where things stand: [STATUS.md](STATUS.md).
 
-Live data is in the **Team Planner** artifact https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD (collections `teams`, doc ids `t01`…`t17` = order number, and `sigs`, doc id = hero name in lower case; source page `docs/testkit/dragonsword-planner.html`). This file is a snapshot taken 9 Nov 2026 (teams refreshed 04:45 after Claude's second check: teams 12–16 added, an outdated Lv.1 number removed from team 5 and an invalid comparison in team 10's note replaced; facts David confirmed in game restored in 4 and 5); JSON copy: `docs/testkit/planner-backup-2026-11-09.json`. If the artifact and this file disagree, the artifact is newer.
+Live data is in the **Team Planner** artifact https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD (collections `teams`, doc ids `t01`…`t17` = order number; t09 (Nightmare support, with Alex) was deleted before the 10 Nov runs, and `sigs`, doc id = hero name in lower case; source page `docs/testkit/dragonsword-planner.html`). This file is a snapshot taken 9 Nov 2026 (teams refreshed 04:45 after Claude's second check: teams 12–16 added, an outdated Lv.1 number removed from team 5 and an invalid comparison in team 10's note replaced; facts David confirmed in game restored in 4 and 5); JSON copy: `docs/testkit/planner-backup-2026-11-10.json`. If the artifact and this file disagree, the artifact is newer.
 
 ## Team statuses · 9 Nov
 
@@ -160,9 +160,6 @@ Claude's notes:
 
 - A variant of Burn chain for bosses with a big Super Armor gauge.
 
-### 9. Nightmare support (t09, status: idea) · planned 9 Nov, not run
-Ryza (Main DPS), Eileen (Support), Alex (Support). For the hardest bosses: Eileen adds +15% Attack and +20% Crit Rate; Alex's parry lowers the boss's Defense by 20% for 10 s. Not tested: teams with Alex are left out of team tests for now (David, 10 Nov; DECISIONS).
-
 ### 10. Fox and wind (t10, status: works, group kalsion, main) — normal 650k → signature 700k (+8%, Kalien's; Kalsion's signature on in both runs) · runs 9–10 Nov
 **After masteries and awakenings (10 Nov): 800k → 1M** (see the team round above).
 
@@ -218,7 +215,7 @@ Results (David):
 
 Claude's notes:
 
-- Claude (9 Nov): a variant of Nightmare support (t09) with Sion instead of Alex. Alex's parry is about +11% team damage on a 1000-Defense boss and needs exact timing. Sion's +15% Attack needs a relic placed but no timing, and he adds statuses. Only one Expert here (Eileen). Teammates must stand in the buff circles.
+- Claude (9 Nov): a variant of Nightmare support (t09, since deleted) with Sion instead of Alex. Alex's parry is about +11% team damage on a 1000-Defense boss and needs exact timing. Sion's +15% Attack needs a relic placed but no timing, and he adds statuses. Only one Expert here (Eileen). Teammates must stand in the buff circles.
 
 ### 14. Ice Prison (t14, status: doesn't work, group dana) — normal 300k → signature 340k (+13%, Othello's) · runs 9–10 Nov
 

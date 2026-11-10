@@ -24,7 +24,7 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 
 ## Open items that can wait
 - **Boss and Tower ratings**: every hero's `bosses.all` is still empty. After Test 07. Debate first.
-- **Team Planner**: every main team and its alternatives are marked Works except Ice Prison (No) and Nightmare support (Idea). Only the six main teams were retested after awakenings; David doesn't expect the alternatives to beat them (10 Nov), so their retest can wait.
+- **Team Planner**: every main team and its alternatives are marked Works except Ice Prison (No); team 9 (Nightmare support, with Alex) was deleted. Only the six main teams were retested after awakenings; David doesn't expect the alternatives to beat them (10 Nov), so their retest can wait.
 - **Signature Karma priorities** ([TEAM_TESTS.md](TEAM_TESTS.md)): update with the post-awakening gains (Charlotte's signature +16%, Kalsion's +10%, Theresia's and Roxy's together +27%).
 - **Gear values still estimated** (note the +0 main stat of any drop before disassembling): Legs Attack Power Up, Chest Max HP Up and Legs Defense Up, Max HP Up and Defense Up on Helmet, Gloves and Boots. Sources: `GEAR_STATS.valueSources`.
 - Crit Rate awakenings were rated before the 30 Oct gear rebuild; re-check whether they're worth more now.

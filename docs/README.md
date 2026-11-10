@@ -42,11 +42,12 @@ The two artifacts below keep their data outside the repo. Copies are kept here s
 
 | Artifact | Live link | Page source | Data copies |
 |---|---|---|---|
-| Test Kit (David's measurement notebook) | https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt | `testkit/dragonsword-test-kit.html` | `testkit/test01-apply-2026-11-09.json` (current Test 01, plus the 10 Nov mastery and awakening entries), `testkit/test01-apply-backup-2026-11-08.json` (superseded pre-redo entries) |
-| Team Planner (teams and signature list) | https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD | `testkit/dragonsword-planner.html` | `testkit/planner-backup-2026-11-09.json` (main teams refreshed 10 Nov) |
+| Test Kit (David's measurement notebook) | https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt | `testkit/dragonsword-test-kit.html` | `testkit/testkit-results-2026-11-10.json` (every Test Kit entry, 830, exported 10 Nov), `testkit/test01-apply-backup-2026-11-08.json` (superseded pre-redo Test 01 entries, no longer in the artifact) |
+| Team Planner (teams and signature list) | https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD | `testkit/dragonsword-planner.html` | `testkit/planner-backup-2026-11-10.json` (teams and signatures, exported 10 Nov) |
 
 ## Keeping the library current · updated 10 Nov
 - When you add a note file, list it in this index and put a "Back to the library" line at its top.
 - When David sends results: save them in the artifact, then the matching library file ([TESTING.md](library/TESTING.md) says where), then CHANGELOG.
-- After changing the Test Kit or Team Planner page, publish the repo source to the same artifact URL, and refresh the data copies in `testkit/` now and then (they are snapshots).
+- After changing the Test Kit or Team Planner page, publish the repo source to the same artifact URL.
+- **Backup routine (David, 10 Nov):** at the end of every session that wrote to the Test Kit or the Team Planner, export them (ArtifactData `list` with `out_dir`) into `testkit/testkit-results-<date>.json` and `testkit/planner-backup-<date>.json`, and delete the previous dated copy once the new one contains it (git keeps the history).
 - As you go, not only at the end: update [STATUS.md](library/STATUS.md), the to-do page and `CHANGELOG.md`; move finished tasks to [DONE.md](library/DONE.md).
