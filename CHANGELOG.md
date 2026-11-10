@@ -1,3 +1,6 @@
+## 10 Nov 2026 — Title One Who Broke the Dragon Horn; new rune values (Claude)
+- `TITLES`: One Who Broke the Dragon Horn obtained (Attack Power Up +2.3%, Crit Rate +2%); 40 of 109.
+- `RUNES.seen` (David's file): Refined Attack 56, Max HP 600; Radiant Defense 67 (first Radiant value); Perfect Attack 119, Max HP 1050, Crit Rate 6.80% (first Perfect values). Removal costs 10,000 Gold for every grade. Rune slot cost: David saw 1 Anonymous Artisan's Crafting Tool where the data says 5 (asked). Rune box and Titles are preview-only; public page checked unchanged.
 ## 10 Nov 2026 — Karma levels Lv.1–70 measured; levelling rule (Claude)
 - `KARMA_LEVELLING.measured`: David's Lv.20–70 values (before and after each breakthrough) for The Scar Lightning Left Behind (Balanced) and Sacred Lightning Baptism (Attack); `note` rewritten with the rule (shared level curve, breakthrough shares 6/12–10/12 of Lv.1, type factors). GAME_MATH 2.3, STATUS, DONE updated. Not used by the page yet. Validator OK.
 ## 10 Nov 2026 — Main-team gear builds (Claude)
