@@ -53,6 +53,10 @@ A mastery costs 10 of a special material from legendary chests. Test the changed
 
 No retest needed: Reina and Roxy (masteries only change Dodge), Dana (shields, ally buff, Defense), Alex (Taunt).
 
+## Quick reads that would firm up the gear builds (asked 10 Nov)
+- **Orange Defense Ignore substat** (Helmet, Chest, Legs, Gloves or Boots): every main-team build puts it on all five pieces, but the Orange value is an estimate (Blue × 0.5). One Orange piece with it, at any level, is enough (note the +level).
+- **Orange Attack Power Up substat**: also an estimate (Blue × 0.955).
+
 ## Open items that can wait (in David's to-do order)
 The to-do page `docs/dragonsword_david_todo_by_priority.html` (items 3–11; items 1–2 are the list above):
 - **Hunt boss weaknesses on Nightmare (Test 07).** From Nightmare, Hunt bosses get a big damage-resistance buff that the right status removes (Furcas: Burn; Venom and Airborne didn't). The boss ratings wait on this.

@@ -1913,7 +1913,7 @@ function v2BossInfo(b){const I=b&&b.info;if(!I)return v2HuntRanks(b);const E=pro
 function renderTierV2(){const root=$('tierV2');if(!root)return;const D=v2Data();const tiers=D.tiers||['S','A','B','C'];const roles=D.roles||['Main DPS','Sub-DPS','Support'];
  const list=HEROES.filter(h=>(!V2.q||h.name.toLowerCase().includes(V2.q))&&(!V2.arch||h.archetype===V2.arch)&&(!V2.role||v2Role(h)===V2.role)&&(!V2.kit||h.classType===V2.kit));
  const M=D.modes?.[V2.mode]||{};const bossName=V2.mode==='bosses'?(V2.boss==='all'?'All bosses':(D.bosses||[]).find(b=>b.id===V2.boss)?.name):V2.mode==='towers'?v2Tower().name:'';
- const tagRows=Object.entries(D.tags||{}).map(([k,T])=>`<tr><td>${k==='needs'?v2NeedsChip(['Airborne']):v2Chip(k,{awk:1,expert:{drop:1}},{})}</td><td>${profileEsc(T.desc)}</td></tr>`).join('');
+ const tagRows=Object.entries(D.tags||{}).filter(([k])=>k==='needs'||k==='applies'||Object.values(D.heroes||{}).some(h=>(h.tags||[]).includes(k))).map(([k,T])=>`<tr><td>${k==='needs'?v2NeedsChip(['Airborne']):v2Chip(k,{awk:1,expert:{drop:1}},{})}</td><td>${profileEsc(T.desc)}</td></tr>`).join('');
  const experts=Object.entries(D.heroes||{}).filter(([,H])=>H.expert).map(([n,H])=>`<li><b>${profileEsc(n)} (−${H.expert.drop}):</b> ${profileEsc(H.expert.reason||'')}</li>`).join('');
  let html=`<div class="v2-banner preview">PREVIEW: hidden from visitors. Ratings are added as we decide them together.</div>
  <div class="v2-head"><h2>Tier List <span>(${profileEsc(M.label||'')}${bossName?' · '+profileEsc(bossName):''})</span></h2><button type="button" class="v2-legacy" id="v2Legacy">Legacy view</button></div>

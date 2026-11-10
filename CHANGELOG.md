@@ -1,3 +1,7 @@
+## 10 Nov 2026 — Code tidy and data check (Claude)
+- `index.html`: removed 4 functions and 24 CSS rules nothing used (showTip, showHeroTip, positionTip, titleBonusTotals; old page-placeholder, karma-awakening, profile-intro/back, simple-card/grid, trait-row, arch-chip styles). Added a map of the script and of the styles at their tops and "// ====" section headers. Public and preview pixel-identical before and after; start-up script work measured at ~85 ms, so no lazy rendering needed.
+- Preview tier list: the Tags legend only lists tags some hero carries (Needs A and Late bloomer hidden until the awakening view); `TIER_LIST_V2.tags.sa` now says the 25 s rule uses the Lv.70 tests with Masteries (10 Nov).
+- data.json review: `DAMAGE_TESTS` (69 KB, 10% of the file) is only read by the offline tools, yet every visitor downloads it; moving it is in the structure proposal. Orange Defense Ignore and Attack Power Up substats are still estimates; asked in STATUS.
 ## 10 Nov 2026 — Site check: preview fixes and a faster preview start (Claude)
 - **Restore point:** commit `60ad0b3` is the last state before this clean-up (main can't be rewritten, so `git revert` back to it is always possible). Tags can't be pushed through the session proxy.
 - Method: every tab of the public URL and the preview screenshotted at 1400 px and 390 px before and after; the public page is pixel-identical on all tabs (desktop and phone), no console errors on either URL.

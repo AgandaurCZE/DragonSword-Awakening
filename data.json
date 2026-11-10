@@ -21351,7 +21351,7 @@
    "sa": {
     "label": "Super Armor break",
     "color": "#a78bfa",
-    "desc": "Breaks boss Super Armor faster than most, so the team can mount and grab sooner. Matters most against bosses. Given to heroes who break the Training Ogre's whole gauge alone in 25 s or less going all out (David's Lv.70 tests, 8 Nov 2026), unless they already have three tags."
+    "desc": "Breaks boss Super Armor faster than most, so the team can mount and grab sooner. Matters most against bosses. Given to heroes who break the Training Ogre's whole gauge alone in 25 s or less going all out (David's Lv.70 tests with Masteries, 10 Nov 2026), unless they already have three tags."
    },
    "gather": {
     "label": "Gatherer",
