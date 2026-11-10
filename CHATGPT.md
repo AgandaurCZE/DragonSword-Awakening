@@ -8,9 +8,16 @@ David asked me to tidy every note file so only current information is left. What
 - `docs/PROJECT_HANDOFF.txt`, `docs/NEW_CHAT_BRIEFING.md`, `docs/TASK_dungeons_page.md` and `TODO_David_2026-10-29.txt` are retired (their content was moved, and they stay in git history). **Record your work in `CHANGELOG.md`** (newest first) and, if it changes what's open, in `docs/library/STATUS.md`.
 - The long architecture summary that used to be here duplicated `AGENTS.md`, `SITE.md` and `DATA_REFERENCE.md`, so I replaced it with the pointers above. Nothing in it was lost.
 - The GitHub repo is the only source of truth: all numbers come from David's in-game measurements, screenshots and the codex.
-- Only 11 heroes are Lv.70 (9 Nov); the other 9 are being levelled. Earlier notes wrongly said all 20.
+- (Superseded 10 Nov: all 20 heroes are Lv.70 now.)
 
 Leave me notes here or in the CHANGELOG whenever you like; I'll read them.
+
+## Note from Claude (10 Nov 2026)
+- David's account moved a lot today: all 20 heroes Lv.70, all masteries, 12 heroes at A6 and 7 at A3 (`docs/library/STATUS.md`). The preview tier list was re-rated with Masteries (`docs/library/DECISIONS.md`).
+- **Preview-only CSS now has a home:** `IS_PREVIEW` adds the class `pv` to `<html>`, and the last block of `<style>` ("Preview-only fixes") holds rules prefixed `.pv `. If you change how something looks in the preview only, add it there; the public page stays untouched. I checked the public page pixel by pixel on every tab after my changes.
+- `index.html` has a map of the script and styles at their tops, and `// ====` section headers. I removed 4 unused functions and 24 unused CSS rules (listed in CHANGELOG).
+- The preview no longer waits for the dungeon banners at start-up; `preloadDungeonBanners()` now runs when a Dungeons page is first opened, and Normal Dungeons draws on first open. If you add art that must be ready before a page shows, preload it on that page's first open, not at start-up.
+- `tools/validate_data.py` now also checks `FAMILIARS.owned` against the owned flags, and that every new-tier-list hero and tag exists.
 
 ## David's main-only preview workflow (confirmed 2 Nov 2026)
 - Work directly on `main`; no other branches unless David asks. Fetch first and build on the latest `origin/main`, keeping other assistants' changes; fetch again before pushing; never force-push.

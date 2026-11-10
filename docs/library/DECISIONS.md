@@ -2,36 +2,47 @@
 
 Back to the library: [docs/README.md](../README.md). Data shape: `TIER_LIST_V2` in [DATA_REFERENCE.md](../DATA_REFERENCE.md). Evidence: [TEST01_RESULTS.md](TEST01_RESULTS.md), [TEAM_TESTS.md](TEAM_TESTS.md).
 
-## Ground rules
-- `TIER_LIST_V2.heroes` holds only ratings agreed with David, after debate. **Never set a tier by formula.** Ratings are on base kits **with mastery** (David, 10 Nov; before that: no mastery): no awakenings, no signature. A separate awakening view (button) comes later, so the Needs A tag (`awk`: Kalien, Sion, Astria) will leave the tier list and free space for new tags. Open: what the button shows (A1, A6 or each level), whether signatures go in it, and what Late bloomer (Cerese) becomes.
+## Ground rules · updated 10 Nov
+- `TIER_LIST_V2.heroes` holds only ratings agreed with David, after debate. **Never set a tier by formula.**
+- **What the main view rates (David, 10 Nov):** base kits **with Mastery** (before 10 Nov: without), no awakenings, no signature. The Needs A (`awk`) and Late bloomer (`late`) tags are gone from it (the definitions stay in data.json; the legend hides unused tags).
+- **Awakening view (agreed 10 Nov, not built yet):** a separate button rating every hero with **all awakenings at A6**, plus the signature where the hero really needs it (Castella's speed-run player didn't use hers, so not automatically). The purple signature card stays in that view. A hero who needs only A1 or A3 to work well says so in their review and in the best-awakening section.
 - All new tier-list work is preview-only (`?tiers=new`). The public page keeps `HEROES[].tiers` until David approves launch.
 - Hunt bosses are rated on **Nightmare and above** only (that's where the weakness mechanic matters).
 
-## Roles (`TIER_LIST_V2.heroes[].role`)
+## Roles (`TIER_LIST_V2.heroes[].role`) · 9 Nov
 Four roles: **Main DPS, Sub-DPS, Enabler, Support**. Enabler has the blue icon (`assets/roles/enabler.webp`).
 - Johnny is Sub-DPS with the Enabler tag. Reina, Castella and Roxy are Enablers. Ornette is Sub-DPS.
 - The Applies chip (`applies{main, also}`) shows a hero's statuses: bold = main. Castella's chain is Break, then Stun, then Airborne. Johnny's Airborne stays plain.
 - **A hero who applies their own needed status slowly still needs an enabler** to reach full potential fast (David, 9 Nov; e.g. Theresia's own Stun and Bleed are too slow on a boss).
 - Enabler is judged on bosses. Caveat agreed 9 Nov: a hero who must build their own setup first (Othello: Ice Grab Knockdown needs 2 Frost stacks) enables later than one who applies from the first second (Reina).
 
-## Tags: rules agreed with David
+## Tags: rules agreed with David · 8–10 Nov
 - At most **three tags** per hero (the auto-added Counter aside). If a new tag would make four, either rethink the existing ones or don't give it.
-- **Super Armor break (`sa`)**, 8 Nov: break the Training Ogre's whole gauge alone in **25 s or less** in Test 01. Given to Castella, Astria, Dana, Kalien. Othello (20 s) and Ryza (25 s) qualify but already have three tags (Gatherer, Self-sufficient, Expert), so they go without. The Ice Prison credit for the 7 s freeze-team break goes to Dana, who lands the 35% Knuckles. Theresia (27 s) gets another look after her mastery retest, and would still need a tag dropped.
+- **Super Armor break (`sa`)**, 8 Nov, re-based on the mastery retests 10 Nov: break the Training Ogre's whole gauge alone in **25 s or less**. Holders: Castella (16 s), Astria (15 s), Dana (23 s), Kalien (20 s). Othello (18 s) and Ryza (25 s) qualify but already have three tags (Gatherer, Self-sufficient, Expert), so they go without. Theresia stays at 27 s: her mastery protects her own Super Armor, it doesn't break faster (David, 10 Nov). The Ice Prison credit for the 7 s freeze-team break goes to Dana, who lands the 35% Knuckles.
+- **Purple signature card** (`signatureKarma`): the hero's signature changes how they play or lifts them a lot. Holders: Kalien, Astria (from before), Theresia and Ryza (10 Nov). It doesn't count toward the three-tag limit (David, 10 Nov).
 - **Self-sufficient + Expert** together (Othello, Ryza): kept. The tier list is rated on someone who knows the kit; Expert's drop number covers players who don't. Played well, both build their own stacks.
 
-## Findings that shape ratings (not yet turned into rating changes)
+## Findings behind the ratings · 9 Nov
 - Application speed decides team damage (David, 9 Nov). Reina's Airborne is "above everyone": 0.89 of a stack from her own kit with no condition on two of three skills.
 - Castella "doesn't provide anything useful" in team runs (David, 9 Nov): her Stun Blow (0.33) only works once Super Armor is broken, and Reina or Kalien score far higher in the same slot.
-- Kalien beat Castella in every comparison, with fewer signatures on.
+- Kalien beat Castella in every comparison, with fewer signatures on. (These two findings fed the 10 Nov re-rating: Kalien C → A single.)
 - Stun sources besides Castella and Lute for Theresia: Roxy (Crimson Spiral 0.20; also Bleed), Kalien (Finale 0.20, needs clones), Tarte (Thunderbolt 0.25, needs Shock), Astria (Precision Shot basic 0.20 over 8 s).
 
 ## Alex in team tests (David, 10 Nov)
 - Alex is still tested **alone** (Test 01 style, mastery and awakening retests); only team tests leave him out. Teams with Alex are dropped from testing for now: a fair 60 s run needs a parry every time **and** dodging the Training Ogre in aggro mode, so a clean run takes hours for underwhelming damage. Revisit once he is geared, or with his signature or awakenings.
 
 ## Astria (David, 10 Nov)
-- Her Ultimate needs very little Rage: 3 basic attacks in Precision Shot mode refill it. Very easy to break with. Worth raising in her rating debate.
+- Her Ultimate needs very little Rage: 3 basic attacks in Precision Shot mode refill it. Very easy to break with. Raised to B single on 10 Nov; not A because she barely applies statuses.
+
+## Current ratings (10 Nov, with Masteries)
+- **Ratings re-set with Masteries (David and Claude, 10 Nov).** Single: Castella, Kalien, Ornette, Othello, Lute, Kalsion, Theresia → A; Ryza, Dana → S; Cerese, Astria → B. Groups (David): Charlotte, Lute, Ornette, Johnny → A; Roxy, Alex → B; Tarte → C; Cerese → S. Overall = single, one higher if groups are two or more tiers above (Cerese A, Theresia S). Reasons: Castella 16 s, Kalien 20 s and Othello 18 s breaks; Ornette's dash adds Knockdown; Ryza's Thunder Grab works after any status; Lute is rated as an applier (a Stun in about 20 s on an unbroken boss, as fast as Reina's Airborne), not a breaker; Kalsion and Theresia on their single-target team damage (Training Ogre); Dana is an all-rounder (23 s alone; the 7 s break is from the Ice Prison team, marked Doesn't work); Cerese's Shatter makes up for her missing break; Astria loses too much damage from barely applying. Alex groups B: instant Knockdown in a big area. Johnny groups A: needs enemies lined up or grouped. Purple signature card added for Theresia and Ryza (outside the three-tag limit); Late bloomer and Needs A tags removed from the tier list.
+- **Also agreed 10 Nov:** Theresia S overall (her S+ groups); Kalsion stays A overall for now (his single A already counts his team damage; David: "hard, keep him where he is"); Ornette gets the Enabler tag and Applies Shock, Knockdown (her mastery adds both); Kalien and Astria keep their purple signature cards.
+- **Charlotte had A1 in every test so far** (David, 10 Nov). Her base-kit ratings were judged with it; worth a thought when re-debating her.
+- **Kalien:** very playable and a strong breaker without awakenings (David, 10 Nov, correcting the 29 Oct note "close to unplayable without A1"): one Burn stack alone on a boss in about 10 s (about 50% of the break bar), full break 20 s with mastery; her Stun application is low. Before A1 her Fox Grab needs Break, which limits her to Burn or Stun teams; A1 opens her to almost any team.
 
 ## Rating reasoning from the first debates (29 Oct – 3 Nov)
+These are the **29 Oct – 3 Nov** ratings and reasons; the 10 Nov section above supersedes the tiers below where they differ.
+
 Moved here on 9 Nov from David's old `TODO_David_2026-10-29.txt` (retired; still in git history). This is the reasoning behind the ratings at the time. **The current tiers and tags are the ones in `TIER_LIST_V2.heroes`; where they differ, data.json wins.**
 
 - **Tag rules (29 Oct):** no "Team-dependent" tag; Enabler covers heroes like Reina. Rate every hero at A0 first; awakenings only change things through the Needs-awakening tag and notes. **Self-sufficient** (new bar, 29 Oct 18:38): only heroes who run their whole kit alone **and** are strong doing it (Roxy and Aria lost it then). Claude must say so whenever a proposed tag doesn't meet its definition.
@@ -45,12 +56,9 @@ Moved here on 9 Nov from David's old `TODO_David_2026-10-29.txt` (retired; still
 - **Roxy:** B (single B, groups C). Unlocks her whole kit herself (Skill, Special A, 3× Special B, Ultimate) but damage is on the low side. Her Stun unlocks Theresia's Divine Arc, Astria's Bolt Bombard and Castella's Upper Blow; her Bleed unlocks Theresia's Holy Rise.
 - **Aria:** B (single B only thanks to Multiple Bolt, groups A). Air Bomb gives Burn and Airborne at once; play Skill, Ultimate, Special A, then swap. Her Burn helps Kalien's Fox Grab only with Kalien's A1.
 - **Ornette:** B (single B, groups B), Easy. Loops Judgment and Holy Grab on her own Shock and Knockdown, so no Needs Shock tag; numbers feel small. A1 makes Holy Cross aimable; A3's bigger, longer Holy Circle could make her an off-field damage dealer.
-- **Ratings re-set with Masteries (David and Claude, 10 Nov).** Single: Castella, Kalien, Ornette, Othello, Lute, Kalsion, Theresia → A; Ryza, Dana → S; Cerese, Astria → B. Groups (David): Charlotte, Lute, Ornette, Johnny → A; Roxy, Alex → B; Tarte → C; Cerese → S. Overall = single, one higher if groups are two or more tiers above (Cerese A, Theresia S). Reasons: Castella 16 s, Kalien 20 s and Othello 18 s breaks; Ornette's dash adds Knockdown; Ryza's Thunder Grab works after any status; Lute is rated as an applier (a Stun in about 20 s on an unbroken boss, as fast as Reina's Airborne), not a breaker; Kalsion and Theresia on their single-target team damage (Training Ogre); Dana is an all-rounder (23 s alone; the 7 s break is from the Ice Prison team, marked Doesn't work); Cerese's Shatter makes up for her missing break; Astria loses too much damage from barely applying. Alex groups B: instant Knockdown in a big area. Johnny groups A: needs enemies lined up or grouped. Purple signature card added for Theresia and Ryza (outside the three-tag limit); Late bloomer and Needs A tags removed from the tier list.
-- **Charlotte had A1 in every test so far** (David, 10 Nov). Her base-kit ratings were judged with it; worth a thought when re-debating her.
-- **Kalien:** very playable and a strong breaker without awakenings (David, 10 Nov, correcting the 29 Oct note "close to unplayable without A1"): one Burn stack alone on a boss in about 10 s (about 50% of the break bar), full break 20 s with mastery; her Stun application is low. Before A1 her Fox Grab needs Break, which limits her to Burn or Stun teams; A1 opens her to almost any team.
 - **Eileen (31 Oct):** S, Team buffer + Expert −1 (casual A). Not Enabler: her banner keeps enemies Airborne but she barely applies it. Brave One (+15% Attack) and Vanguard Banner (+20% Crit Rate) together about +17–21% team damage at end game (modelled). Works best with a Gatherer.
 - **Cerese (31 Oct):** B (groups A, single C). Gatherer (Ice Storm pulls everyone; not in the codex text) and Late bloomer (signature and A1 improve Ice Storm). Weak Frost build-up on bosses.
 - **Gatherers seen (31 Oct):** Kalien (Twin Tails), Kalsion (Explosion), Cerese (Ice Storm), a little from Roxy's held Crimson Spiral; awakenings Charlotte A3, Sion A3, Ornette A6.
 
-## Team-building observations (not used on the site yet)
+## Team-building observations (not used on the site yet) · 8 Nov
 - Teams where several heroes apply the same status (Charlotte, Johnny and Reina all apply some Airborne) can spam freely; teams that rely on two specific skills to fill a stack on a broken boss need Break-bar timing (David, 8 Nov). Candidate for a team-difficulty note.

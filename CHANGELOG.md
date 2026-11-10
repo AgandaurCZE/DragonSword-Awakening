@@ -1,3 +1,15 @@
+## 10 Nov 2026 — Notes check, part 2: every library file (Claude)
+- Read every note file and fixed what was out of date or wrong:
+  - **GAME_MATH:** "Crit above 100% unknown" contradicted DONE (answered: it does nothing); new 3.6 with today's buffs, debuffs and rules (Castella −20% Defense, Lute +20% Attack Power, Kalsion and Theresia Attack Power, Roxy Crit Damage stacks, Othello's Frost refill, Tarte's 40 bubbles, break times by stage); the new title's Attack Power Up and what it means for future panel readings (marked as Claude's reading); rune values and the estimated substats in the unknowns.
+  - **DECISIONS:** the open questions about the awakening view were answered on 10 Nov (all awakenings at A6, signature where needed, Late bloomer dropped); today's re-rating moved out of the 29 Oct history into "Current ratings"; Super Armor tag re-based on the mastery times; purple-card holders listed.
+  - **SITE:** start-up (banner preload, 85 ms drawing), `html.pv`, the pixel-check method, the code map; removed "9 estimated heroes" and "Karma slider waits on Lv.40–70".
+  - **TESTING:** tests 02, 08 and 09 are done; Test 01 holds the mastery and awakening entries; signatures' levels.
+  - **TEAM_TESTS:** after-awakening numbers on each main team; team 9 (Nightmare support, an Idea with Alex) was missing; doc ids go to t17.
+  - **TEST01_RESULTS:** 7 "Mastery not unlocked: retest" notes now point to the retests; Theresia's note no longer suggests her mastery breaks faster.
+  - **WORKING_WITH_DAVID:** the before-numbers routine for skill changes, "just ask for finer data", and three mistakes from today (unchecked "all familiars owned", an old note quoted as David's view, removing code without running the page).
+  - **DONE:** test 09, today's site work and answered questions added. **LAUNCH_CHANGES:** old "New rating" lines point to `TIER_LIST_V2`; the preview CSS step and the Gear footnote added. **CHATGPT.md:** a 10 Nov note (preview CSS home, code map, validator checks). **DATA_REFERENCE:** Karma levels, the familiar check, the gear tools, preview CSS. **README:** awakening file and data copies.
+- **Dates:** every section heading in the library files now ends with when it was measured or last changed (from CHANGELOG; git history only starts on 9 Nov).
+- **CHANGELOG:** headings now share one style ("31 Oct 2026 — title (author)"); two 2 Nov entries that sat below 28 Oct moved into place. Entry text unchanged.
 ## 10 Nov 2026 — Notes check, part 1: STATUS, to-do page, a familiar count (Claude)
 - **Bug:** `FAMILIARS.owned` (per-group counts the Familiars page uses for the passive steps) still said 3 Insects; Red Ladybug made it 4, so the 4th Insect passive showed as locked. Fixed, and `tools/validate_data.py` now checks these counts against the owned flags (and that every new-tier-list hero and tag exists).
 - `docs/library/STATUS.md` rewritten to the current state (account, what David is asked, next for Claude, open items); stale lines removed (no masteries/awakenings yet, planner verdicts still Idea, the Kalien/Castella re-debate, the pre-mastery plans).
@@ -478,7 +490,16 @@ Restored LF line endings without changing page content, and added an explicit pr
 ## 2 Nov 2026 — Dungeon banner frames fixed
 - Difficulty buttons sit exactly on the frame's I/II/III circles; unselected ones are dimmed, the selected one has a thin ring.
 - All three frames are the same size (WebP), so cards don't change height between difficulties; banner art is clipped to the inside of the frame.
-## 2026-11-01 — Claude: Help pages and Crew grades
+## 2 Nov 2026 — Normal Dungeons banner restyle (preview)
+- Replaced the paper-like Normal Dungeon tiles with wide cinematic banner cards, using independent I/II/III selectors styled after Trait Dungeons, real per-difficulty reward icons/amounts, and rarity chips.
+- Added farm-group-specific heading typography and a consistent pending-artwork state for dungeons without a banner.
+- Added the first Warg Cave banner asset at `assets/dungeons/banners/warg-cave.svg` and connected it through `DUNGEONS.normal[].banner`. Other dungeons intentionally remain artwork placeholders.
+- Preview only; no public-page behavior change. Browser rendering and GitHub Pages deployment still need visual confirmation.
+
+## 2 Nov 2026 — Normal Dungeon card details
+- Normal Dungeon cards: removed the visible set/slot text while retaining the underlying set and slot filter data; added the correct Gear set icon as a fourth reward, tinted by the highest rarity available at the selected difficulty. Moved rarity chips and EXP to the card's top-right corner.
+
+## 1 Nov 2026 — Help pages and Crew grades (Claude)
 - `assets/help/`: David's Help screenshots (converted to WebP) with their text in `notes.txt`, plus the five Mercenary Crew promotions (requirements, unlocks, rewards). Notes only.
 
 
@@ -514,147 +535,147 @@ Restored LF line endings without changing page content, and added an explicit pr
 - Raid: Gauron added as the first Raid boss tab in the new tier list (preview); `assets/raid/` screenshots converted to WebP with `notes.txt`.
 - Runes: five types and five grades recorded in `assets/runes/README.txt` from David's Raid video.
 
-## 2026-11-01 — Claude: achievements, Mercenary Crew Level
+## 1 Nov 2026 — achievements, Mercenary Crew Level (Claude)
 - `assets/items/achievements.json`: 103 achievements with conditions, David's progress and the title each gives. Titles tab: Curious Hands and 【777】 now show their achievements.
 - `assets/merc-crew/`: the free Crew Level reward track (screenshots + notes).
 
-## 2026-10-31 — Claude: Cookbook tab (preview only)
+## 31 Oct 2026 — Cookbook tab (preview only) (Claude)
 - New Cookbook tab, hidden in the preview: all 73 recipes (17 discovered, the rest as '?' cards), progress per method, effect and method filters, ingredient search, effect at every star level, per-visitor 'Mark as cooked' ticks, and the star calculator (dish stars = 1 + sum of ingredient stars ÷ 3, rounded down). Dish pictures and the chef-hat menu icon cut from David's screenshots and videos.
 
-## 2026-10-31 — Claude: cookbook notes
+## 31 Oct 2026 — cookbook notes (Claude)
 - New `assets/items/cookbook.json`: the 73 recipes by method (25 Grilling, 26 Boiling, 22 Slicing), the 17 David has discovered, their effects, ingredients and slot substitutes. Notes only.
 
-## 2026-10-31 — Claude: materials list
+## 31 Oct 2026 — materials list (Claude)
 - New `assets/items/`: all 63 items from David's Materials tab the 9 from his Important tab (`important.json`) and the 31 ingredients (`ingredients.json`, with David's cooking notes in the README) with icons, descriptions, uses and sources (from his inventory video). Notes only, not on the page.
 
-## 2026-10-31 — Claude: team buffs add
+## 31 Oct 2026 — team buffs add (Claude)
 - `DAMAGE_TESTS`: Eileen's Brave One and Sion's Bless add to each other (Reina: 2,094 / 2,231 / 2,369 damage; adding predicts 2,368, multiplying 2,377). Data only.
 
-## 2026-10-31 — Claude: level 40, Kalsion, Sion, Gallore, familiars, Rift notes
+## 31 Oct 2026 — level 40, Kalsion, Sion, Gallore, familiars, Rift notes (Claude)
 - Level-70 estimates: refitted the level curve with David's level-40 measurements and stored the Lv.40 breakthroughs (B +35/+18/+276, Charlotte +43/+15/+230). Every hero's estimated base stats rose (profile B 1003/327/6771 -> 1058/349/7136); no build changed. `tools/hero_stats.py` now uses every measured breakthrough tier.
 - Kalsion and Sion owned, with colour portraits. Familiars in colour: Fierce Rhinoceros Beetle, Cowardly Firefly, Maple Flying Squirrel, Shadow Wing Cat, Sandstorm Sky Wolf (passive steps updated). Titles 7/109.
 - New tier list (preview): Gallore the Collapse (Lv.35) as the fourth Hunt boss tab.
 - `DAMAGE_TESTS`: Sion's Bless by level (10-15%), how his field works, and the first team-buff stacking test.
 - Notes only: `assets/rift/` (Rift and Corrupted Entities), `assets/exchange/chest-drops.txt`. David's source PNGs deleted after cutting.
 
-## 2026-10-31 — Claude: tower crests (preview only)
+## 31 Oct 2026 — tower crests (preview only) (Claude)
 - Towers mode: each tower tab shows its crest, cut from David's deploy-screen Recommendations icons.
 
-## 2026-10-31 — Claude: tower quotes (preview only)
+## 31 Oct 2026 — tower quotes (preview only) (Claude)
 - Towers mode: the in-game quotes for the towers of Crushing and Amplitude (from David).
 
-## 2026-10-31 — Claude: Towers mode (preview only)
+## 31 Oct 2026 — Towers mode (preview only) (Claude)
 - New tier list: a third mode, Towers (Tower of Trials), with tabs for the towers of Amplitude, Gale and Crushing, the measured damage bonus (+400% for the tower's status, +100% for damage-over-time), floors and stars, and all rewards. New `TOWER_TRIALS` in data.json; icons for Fragment of Memory and Whirling Thoughts and the mode picture cut from David's screenshots. No tower ratings yet: heroes show their Overall tier faded, and the tower's archetype gets the Counter tag.
 
-## 2026-10-31 — Claude: Tower of Trials damage bonus
+## 31 Oct 2026 — Tower of Trials damage bonus (Claude)
 - `DAMAGE_TESTS`: the Tower of Gale adds +400% to the Additional Damage pool on Airborne hits and +100% on Poison hits (two runs of Reina's Ultimate, all 7 hits fit). Data only.
 
-## 2026-10-31 — Claude: Tower of Trials notes
+## 31 Oct 2026 — Tower of Trials notes (Claude)
 - New `assets/tower/`: David's Tower of Trials screenshots and notes (towers of Amplitude, Gale and Crushing; 30 floors, 3 stars each; cumulative star rewards). Found the source of Whirling Thoughts (55 per tower). Not on the page yet.
 
-## 2026-10-31 — Claude: Status Effects box: no cap
+## 31 Oct 2026 — Status Effects box: no cap (Claude)
 - Status Effects box on character pages: the line saying 3.5x was the highest seen (and suggesting a cap) now says bonuses add with no cap, with Stun + Knockdown + Airborne measured at 4x.
 
-## 2026-10-31 — Claude: David's titles, two stale notes
+## 31 Oct 2026 — David's titles, two stale notes (Claude)
 - `TITLES`: Environmental Cleaner and Black Wings marked as obtained (5 of 109); cumulative effect matches the game (Defense +10, Max HP +100, Defense Up +1.50%, Critical Rate +1.30%).
 - `STATUS_EFFECTS.damageOverTime.untested` and `HERO_STAT_MODEL.observations.titles` brought up to date (both described tests as missing that are done).
 
-## 2026-10-31 — Claude: status hit bonuses have no cap
+## 31 Oct 2026 — status hit bonuses have no cap (Claude)
 - `DAMAGE_TESTS`: David's clip of Reina's Wind Slayer on goblins shows Stun + Knockdown + Airborne = ×4 (1742 clean, 7311 with Stun + Knockdown, ~14407 with all three, 21611 as a crit at 50% Crit Damage). Hit bonuses keep adding; the old ×3.5 result was Bleed wearing off. Data only, nothing on the page changes.
 
-## 2026-10-31 — Claude: Gatherer tag (preview only)
+## 31 Oct 2026 — Gatherer tag (preview only) (Claude)
 - New tier-list tag "Gatherer" (cyan, vortex icon) for heroes that pull enemies together. Not given to anyone yet; to be decided after testing how big each pull is.
 
-## 2026-10-31 — Claude: third Hunt boss (preview only)
+## 31 Oct 2026 — third Hunt boss (preview only) (Claude)
 - New tier list, Bosses mode: Barduk the Corrupted (Lv.30) added as the third Hunt boss tab (banner cut from David's screenshot); 3 Hunt bosses left undiscovered. Cerese marked as owned.
 
-## 2026-10-30 — Claude: real Orange gear values, new builds
+## 30 Oct 2026 — real Orange gear values, new builds (Claude)
 - Gear tables corrected from David's in-game Orange and Purple pieces: Crit Rate main stats and substats were about 2.4x too high in the old database, Crit Damage about 1.65x too high, Stun/Airborne/Knockdown/Break Additional Attack Power substats half the real value, other status Additional Attack Power 0.8x, Defense Ignore about 2x too high (estimate). Plain stats matched and are unchanged. `GEAR_STATS.valueSources` marks what was measured.
 - A stat can now be both main stat and substat (seen in-game on every rarity); the optimiser (Python and the page's live version) and the checker allow it.
 - Builds re-run: with real Crit Rate values, every damage build now takes Attack Power Up in all five slots, with The Infiltrator as the 2-piece. Build explanations updated.
 - Venomfog Shade 3-piece: up to 3 stacks (+12% Crit Rate).
 
-## 2026-10-30 — Claude: Venomfog Shade 3-piece stacks
+## 30 Oct 2026 — Venomfog Shade 3-piece stacks (Claude)
 - Venomfog Shade's 3-piece Crit Rate bonus stacks up to 3 times (+4% per dodge, 12 s, up to +12%), from David's screenshot. The text now says so.
 
-## 2026-10-30 — Claude: Trait Dungeons weakness note (preview only)
+## 30 Oct 2026 — Trait Dungeons weakness note (preview only) (Claude)
 - The weakness box now says a weakness also speeds up status build-up (about 2–3×), and that bosses resist build-up more on higher difficulties. From David's Test Kit results (Johnny, Trait Dungeon I and III).
 
-## 2026-10-29 — Claude: archetype badge lined up with the portrait emblem
+## 29 Oct 2026 — archetype badge lined up with the portrait emblem (Claude)
 - The archetype badge on hero cards (both tier lists) now sits exactly over the archetype emblem printed in the portrait's top-left corner and scales with the card (23% of its width), instead of a fixed 31 px badge 5 px in. Spotted by David.
 
-## 2026-10-29 — Claude: kit-type filter on the new tier list (preview only)
+## 29 Oct 2026 — kit-type filter on the new tier list (preview only) (Claude)
 - New icon buttons after the role filter: Damage / Control (crossed swords), Healer (cross), Buffer (arrow), Tank (shield), using `HEROES[].classType`. The search box is shorter so everything fits on one line on desktop.
 
-## 2026-10-29 — Claude: new tier list, first ratings (preview only)
+## 29 Oct 2026 — new tier list, first ratings (preview only) (Claude)
 - `TIER_LIST_V2.heroes`: the 8 heroes David owns, rated together from his gameplay (Overall, Single target, Groups, tags, Charlotte's Expert −1 and Needs Airborne). The other 12 stay Unrated until David plays them.
 - Tag texts: Self-sufficient now means "runs their whole kit alone and is strong doing it"; Needs means their own source of the status is too rare.
 - The "Unrated" row label no longer gets cut off (smaller, vertical text).
 
-## 2026-10-29 — Claude: stray names in Mastery text
+## 29 Oct 2026 — stray names in Mastery text (Claude)
 - Removed a stray hero name at the end of 11 Mastery descriptions (e.g. Reina's ended with "Eileen"). It was the next hero's name from the Codex page, picked up when the text was copied. Spotted by David.
 
-## 2026-10-29 — Claude: preview gate fix
+## 29 Oct 2026 — preview gate fix (Claude)
 - The hidden menu buttons (Familiars, Titles, Trait Dungeons) were still visible because the menu's `display:flex` style overrode the `hidden` attribute. Added `.nav-item[hidden]{display:none!important}`. Checked by testing what's actually on screen.
 - Removed the new tier list's demo mode (`&demo=1`); we work in `?tiers=new` from now on.
 
-## 2026-10-29 — Claude: new tabs hidden until launch
+## 29 Oct 2026 — new tabs hidden until launch (Claude)
 - At David's request, Familiars, Titles and Trait Dungeons are hidden from visitors. Their menu buttons only show with `?tiers=new` (or `?preview=1`), along with the new tier list. Title ticks only affect hero stats in the preview. Visitors see Heroes, the old Tier List, Teams, Gear, Karma and Patch Notes.
 
-## 2026-10-29 — Claude: tick your titles; live end-game totals and gear
+## 29 Oct 2026 — tick your titles; live end-game totals and gear (Claude)
 - Titles tab: every row has a tick box. Ticked titles are saved in the viewer's browser; "Ticked only" and the "Your titles" total use them, and a "clear" link resets them.
 - Hero pages: the end-game totals count the ticked titles (gold values, hover for which titles). The recommended gear is re-optimised live with them, using a JavaScript copy of `tools/hero_stats.py`'s optimiser, checked to give exactly the stored builds with no titles ticked. When titles push Crit Rate up, main stats move to Crit Damage or Attack Power Up; changed pieces get a gold frame and the build text says which.
 
-## 2026-10-29 — Claude: all 109 Titles
+## 29 Oct 2026 — all 109 Titles (Claude)
 - The Titles tab lists every title with its passive and how to get it, read by OCR from David's screen recording. David owns 3: Curious Hands, 【777】 and Novice Mercenary Crew. Their total (Defense +10, Max HP +50, Defense Up +1.50%) matches the game's Cumulative Set Effect.
 - At the top: David's total and the total of all 109 titles together. Below: search plus filters by category, by bonus stat and for owned titles only.
 - Title names use the game's five colours, which follow passive strength (pink strongest, lavender weakest).
 - Titles still don't count in the end-game stat totals.
 
-## 2026-10-29 — Claude: Breaker boss explained (likely)
+## 29 Oct 2026 — Breaker boss explained (likely) (Claude)
 - Break lasts 8 s on both Drosophia bosses. Drosophia of Breaker has a much bigger Super Armor bar: Charlotte needs about 2× the hits, Castella only about 1.4×. That's the likely effect of the Breaker weakness; it's on the card and in the box, marked as likely. TODO item 12 is closed.
 
-## 2026-10-29 — Claude: Breaker weakness doesn't speed up Super Armor break
+## 29 Oct 2026 — Breaker weakness doesn't speed up Super Armor break (Claude)
 - Same-monster test with Castella: 5 hits to break Drosophia of Bloodburst vs 7 on Drosophia of Breaker. Breaks last 8 s, whichever hero breaks it. Recorded on both Drosophia cards, in `DAMAGE_TESTS` and in TODO item 12 (one optional check left: break duration on the Breaker boss).
 
-## 2026-10-29 — Claude: Super Armor break test
+## 29 Oct 2026 — Super Armor break test (Claude)
 - Castella's test: breaking Super Armor gives no hit bonus (194 before and after, on two bosses), and the Breaker weakness didn't make breaking faster than on Mantius of Amplitude. Recorded in `DAMAGE_TESTS`, the Drosophia of Breaker card and `STATUS_EFFECTS`. TODO item 12 now asks for the same-family comparison (Drosophia of Breaker vs Drosophia of Bloodburst).
 
-## 2026-10-29 — Claude: Drosophia tests
+## 29 Oct 2026 — Drosophia tests (Claude)
 - Drosophia of Bloodburst: David tested every status; it really has no weakness (the "may be a typo" note is replaced).
 - Drosophia of Breaker: its weakness doesn't change any status hit bonus. It probably speeds up Super Armor break, which is noted on the card, in `DAMAGE_TESTS`, and as TODO item 12.
 
-## 2026-10-29 — Claude: DoT ticks are 5, not 4; flat status Attack Power confirmed
+## 29 Oct 2026 — DoT ticks are 5, not 4; flat status Attack Power confirmed (Claude)
 - David noticed that Poison, Bleed, Burn and Shock tick straight away and then every 2.5 s, so **5 ticks** per application, not 4. Fixed in `STATUS_EFFECTS` (the Status Effects box now shows 250/375/500% totals at 1/2/3 stacks), in Charlotte's review, in `DAMAGE_TESTS` and in AGENTS.md.
 - Johnny's new test confirms two separate gear stats: flat "All Status Effect Additional Attack Power" (added to Attack before the status bonus) and the % "Status Effect Additional Attack Power Increase". Neither changes ticks. The values seen on blue gear are recorded in `GEAR_STATS.observedBlue`.
 
-## 2026-10-29 — Claude: Trait Dungeon weakness solved
+## 29 Oct 2026 — Trait Dungeon weakness solved (Claude)
 - David's clean Johnny repeat (dummy, neutral boss, Venom-weak boss): Poison ×1.50 / ×1.50 / ×2.01, ticks 322 everywhere. With Reina's test this shows that a weakness **doubles the matching status's hit bonus** (Poison +50% → +100%, Airborne +100% → +200%) and leaves ticks and status-free hits unchanged. Neutral bosses match the dummy.
 - The earlier ×1.88 reading is marked superseded (most likely a mob hit). The Trait Dungeons box and `DAMAGE_TESTS.findings` are updated, and TODO item 11 is reduced to an optional difficulty check.
 
-## 2026-10-29 — Claude: Johnny Poison weakness test, immunity bubble
+## 29 Oct 2026 — Johnny Poison weakness test, immunity bubble (Claude)
 - `DAMAGE_TESTS` has David's Johnny test: no gain without Poison, Poison ticks unchanged (322, 50% of Attack), Poisoned hit ×1.88 on the neutral boss vs ×2.01 on the Venom-weak boss. It's recorded without a conclusion because it doesn't match Reina's result yet.
 - Trait Dungeons: the "What a weakness does" box now covers both tests. The Immune column has a note on what immunity does, from Ghagaroach of Venom: a Venom skill makes the boss raise a bubble that Breaks, exposes and stuns your hero.
 
-## 2026-10-29 — Claude: what a Trait Dungeon weakness does
+## 29 Oct 2026 — what a Trait Dungeon weakness does (Claude)
 - From David's boss-only test with Reina: a weakness does nothing on hits without the status (143 on both bosses). On the weak boss Airborne's hit bonus rises from +100% to +200% (287 → 431). Recorded in `DAMAGE_TESTS` (test and finding), shown in the box on the Trait Dungeons page, and the follow-up test is on David's TODO list (item 11).
 
-## 2026-10-29 — Claude: Trait Dungeon banners, difficulty selector and reward icons
+## 29 Oct 2026 — Trait Dungeon banners, difficulty selector and reward icons (Claude)
 - Every boss card now uses its in-game picture as the banner (cropped from David's Extreme screens).
 - A I–IV selector in the banner's top-left switches difficulty (Normal, Hard, Very Hard, Extreme). It updates the recommended level (20/30/40/50) and the rewards, shown as in-game icons with amounts (EXP, Adventurer's Emblem and the boss's own green, blue or purple trait stones). Hover an icon for its name.
 - 29 reward icons were cut out of the screenshots; the source PNGs were deleted afterwards (still in git history).
 - On phones the banner contents stack so nothing overlaps.
 
-## 2026-10-29 — Claude: first Trait Dungeon weakness test
+## 29 Oct 2026 — first Trait Dungeon weakness test (Claude)
 - `DAMAGE_TESTS` has David's first weakness test: Reina's auto-attack first hit on an Airborne target did 473 on Mantius of Gale vs 320 on Mantius of Amplitude (about 1.48×), and Airborne built up faster. It's marked as a single test, with what's still open.
 - The Trait Dungeons page shows this as a short "What a weakness does" box at the top.
 
-## 2026-10-29 — Claude: Trait Dungeons page
+## 29 Oct 2026 — Trait Dungeons page (Claude)
 - All 9 Trait Dungeon bosses, in David's layout. Each banner has the name in the middle, the weakness top-right (green ▲) and the immunity bottom-right (red ▼). Below it: "Strong here" (heroes of the weak archetype) and "Immune · leave at home" (heroes of the immune archetype, greyed), ranked by End-game tier. Hovering a hero shows the hero card; clicking opens their page.
 - Weaknesses and immunities are from David's notes and are the same on every difficulty. Drosophia of Bloodburst shows "None" exactly as the game does.
 - Mantius of Amplitude also shows its recommended level (20) and Normal rewards. Banners use a tinted archetype background until David's boss screenshots arrive.
 
-## 2026-10-29 — Claude: how to get each Familiar
+## 29 Oct 2026 — how to get each Familiar (Claude)
 - Every Familiar card now shows how to get it, from David's list:
   - DLC: links to the Steam store page, with the price;
   - Gold and Adventurer's Emblem: the in-game currency icons with the amount;
@@ -662,32 +683,32 @@ Restored LF line endings without changing page content, and added an explicit pr
   - Mercenary Crew promotions, the story quest and the free starter.
 - The Gold coin and Adventurer's Emblem icons were cut out of David's screenshots (`assets/ui/gold.webp`, `assets/ui/adventurers-emblem.webp`).
 
-## 2026-10-29 — Claude: Insect stamina note
+## 29 Oct 2026 — Insect stamina note (Claude)
 - The Insect passive box notes that steps 2–4 each add 10% maximum stamina, are believed to add up, and that it isn't tested whether each 10% is of the base or the already raised stamina (`FAMILIARS.passiveNotes`).
 
-## 2026-10-29 — Claude: Familiar passives and abilities; faction on hero pages; big screenshots removed
+## 29 Oct 2026 — Familiar passives and abilities; faction on hero pages; big screenshots removed (Claude)
 - **Familiars:** each species now has a passive-effect box beside its cards, with numbered diamond badges 1–4 drawn in the game's style (green = unlocked in David's game). Steps that only apply to that species carry a "<Species> only" tag with a hover note. Ability names such as Air Dash are chips with the ability's icon. Hovering (or tapping) one opens a pop-up with the icon, description and cooldown, all read from David's screenshots. Dragon moved to the bottom. One game typo fixed ("consumtion").
 - **Hero pages:** Quick info now also shows Faction, Kit and How to get.
 - The full Codex screenshots (Karma, heroes, Familiars) were deleted at David's request; the cut-out pictures stay, and the originals remain in git history.
 - The validator checks the ability icons and that every `[Ability]` in the passives exists.
 
-## 2026-10-29 — Claude: Karma art, new hero portraits, Familiars page
+## 29 Oct 2026 — Karma art, new hero portraits, Familiars page (Claude)
 - From David's Codex screenshots, 102 card pictures were cut out automatically: 53 Karmas, 20 heroes and 29 Familiars. Each was named by reading the card text and matched to the data (every Karma and hero matched exactly). The in-game name printed on each card was painted out so only the art remains.
 - **Heroes:** new, sharper portraits (392×467, was 337×406) without the baked-in name, used everywhere portraits appear. Colour and grey still match who David owns. New `faction` field (the Codex groups), shown on the hero hover card.
 - **Karma:** card art now appears as the thumbnail on every Karma card (the Karma tab and Karma hover cards) and in the Best Karmas rows on hero pages; signature cards keep a small ✦. New `image` and `owned` fields (A Flame That Cuts Through the Moment and Frozen Fortress are in colour).
 - **Familiars:** the tab now lists all 29 with pictures, grouped like the Codex. How to get them and their effects come later.
 - The validator now checks the Karma and Familiar picture paths.
 
-## 2026-10-29 — Claude: boss tabs re-cropped; tag tooltip shown once
+## 29 Oct 2026 — boss tabs re-cropped; tag tooltip shown once (Claude)
 - New tier list preview: the boss tabs are taller (104 px) with shading only behind the text. Furcas's banner now shows his horns, eye and teeth. Vanak's shows his hook, arm and horned helmet (mirrored so the helmet sits clear of the name).
 - `assets/bosses/furcas.png` was empty after the GitHub rename; it's restored from the original upload.
 - Tag and Signature Karma hovers in the preview used `data-tip`, which also triggered the site-wide CSS tooltip, so two boxes appeared. They now use `data-v2tip` and show one tooltip.
 
-## 2026-10-29 — Claude: in-game icons and boss pictures
+## 29 Oct 2026 — in-game icons and boss pictures (Claude)
 - David's in-game icons were cut out of their dark backgrounds and converted to WebP in `assets/ui/` (white versions plus `-gold`). The menu now uses them for Heroes, Teams, Familiars and Trait Dungeons, coloured like the menu text (grey, blue when selected). Exchange, Guides and Help are kept for later.
 - New tier list preview: the Overall and Bosses mode buttons use David's backgrounds (the in-game badge strip cropped off). Furcas and Vanak the Bloody Hook have wide banner crops for their tabs and full portraits kept for later (`assets/bosses/`; `farkas.png` is stored as `furcas`).
 
-## 2026-10-29 — Claude: new tier list foundation (hidden preview)
+## 29 Oct 2026 — new tier list foundation (hidden preview) (Claude)
 - The new tier list is in the code, but visitors still see the old one. Open it with `?tiers=new` at the end of the site address; add `&demo=1` to fill it with sample placements and tags.
 - What's built:
   - Overall and Bosses modes. The Bosses mode has an All bosses tab, Furcas (Lv.20) and Vanak the Bloody Hook (Lv.25), and locked tabs for the 4 undiscovered Hunt bosses and the Raid.
@@ -698,21 +719,21 @@ Restored LF line endings without changing page content, and added an explicit pr
   - A "Legacy view" button that switches back to the old tier list.
 - Data lives in the new `TIER_LIST_V2` key. Its `heroes` entry is empty until we decide ratings together. Mode and boss pictures are placeholders until David's screenshots arrive.
 
-## 2026-10-29 — Claude: Familiars, Titles and Trait Dungeons tabs
+## 29 Oct 2026 — Familiars, Titles and Trait Dungeons tabs (Claude)
 - Three new tabs in the left menu, the foundation for later content:
   - **Titles:** the laurel-wreath icon (`assets/ui/titles.svg`) and the titles recorded so far with their passive bonuses (only Novice Mercenary Crew's is known).
   - **Familiars** and **Trait Dungeons:** placeholder pages that fill from the new `FAMILIARS` and `TRAIT_DUNGEONS` keys.
 - `UI_ICONS` in data.json holds the menu icon paths. Familiars (♞) and Trait Dungeons (⚔) keep text symbols until David's icons are added.
 - Page switching now uses one list of pages (`PAGE_IDS`), which also fixes the Patch Notes page staying visible under a character page opened from it.
 
-## 2026-10-29 — Claude: patch arrow beside the tier chip
+## 29 Oct 2026 — patch arrow beside the tier chip (Claude)
 - On Tier List cards the ▲/▼ arrow (and Ryza's NEW) now sits just left of the tier letter in the top-right corner instead of bottom-left.
 
-## 2026-10-29 — Claude: "damage moved between skills" counts as mixed; crit note updated
+## 29 Oct 2026 — "damage moved between skills" counts as mixed; crit note updated (Claude)
 - Patch 1.1.0 rating rule: when a hero's total skill damage changed by less than 3% but one skill went up 15% or more and another down 15% or more, the hero is now **mixed** (amber), with impact from the share of damage moved. Charlotte, Kalien and Cerese change from nerf, and Kalsion, Tarte and Astria from adjusted, all to mixed. These are exactly the heroes whose developer notes say their "damage share shifted". Tooltips and the patch detail now say how much damage moved.
 - Build tab: the "over 100%" Crit Rate note now states the 1.1.0 rule (crits happen exactly at your Crit Rate; monsters have no crit resistance) instead of the old untested caveat.
 
-## 2026-10-29 — Claude: Patch Notes page, buff/nerf arrows, pronoun and data fixes
+## 29 Oct 2026 — Patch Notes page, buff/nerf arrows, pronoun and data fixes (Claude)
 - New **Patch Notes** tab: every update from 1.0.0 (launch) to 1.1.2, newest first, with Steam dates and BuildIDs. Each patch shows badges (New hero, Balance, Content, Costumes, Story & quests, Systems & QoL, Bug fixes), the important changes without the developer messages, the bug-fix count and a link to the full official notes. You can filter by badge and by hero.
 - 1.1.0 hero changes use the official before/after numbers. Click a hero for every skill's old and new max-level %, Rage and Super Armor changes and the developer note. Each hero gets a direction (buff, nerf, mixed, adjusted) and an impact (Minor, Moderate, Major) by a fixed rule, stored in `PATCH_NOTES.rating`.
 - Green ▲ (buff), red ▼ (nerf) and amber (mixed) arrows from the latest balance patch now show on the Tier List cards, Team cards and hero hover cards. Clicking an arrow on the Tier List opens that hero's patch history. Tiers themselves are not changed.
@@ -722,24 +743,24 @@ Restored LF line endings without changing page content, and added an explicit pr
 - Frostbite: the "1.1.0 nerfed all three" wording is corrected. Othello and Cerese were nerfed; Dana's skill damage went up (+14.5% in total) with higher Rage costs.
 - AGENTS.md: open task 4 (Crit Rate above 100%) is closed by the 1.1.0 crit rework. The validator now checks `PATCH_NOTES`.
 
-## 2026-10-28 — Claude: Skills tab split into Basic Moves and Skills
+## 28 Oct 2026 — Skills tab split into Basic Moves and Skills (Claude)
 - The Skills tab now starts with **Basic Moves**: Basic Attack Combo (shown in place of "Auto attack"; the data slot name is unchanged), Jump attack, Dash attack and Dash.
 - A Gear-page-style divider, **Skills**, follows, with Skill and Ultimate, then Special A and Special B, then Mastery centred below (full width on phones).
 - "Basic Moves" and "Skills" are both Gear-page-style dividers (text between two lines) in the hero's archetype colour.
 - Alternate-mode sections (Theresia, Alex, Kalsion, Astria) follow unchanged. Grouping is done by `groupProfileSkills()`; `data.json` is not changed.
 
-## 2026-10-28 — Claude: Skills tab split into Basic Moves and Skills
+## 28 Oct 2026 — Skills tab split into Basic Moves and Skills (Claude)
 - The Skills tab now starts with **Basic Moves**: Basic Attack Combo (shown in place of "Auto attack"; the data slot name is unchanged), Jump attack, Dash attack and Dash.
 - A Gear-page-style divider, **Skills**, follows, with Skill and Ultimate, then Special A and Special B, then Mastery centred below (full width on phones).
 - Alternate-mode sections (Theresia, Alex, Kalsion, Astria) follow unchanged. Grouping is done by `groupProfileSkills()`; `data.json` is not changed.
 
-## 2026-10-28 — Claude: always load fresh data
+## 28 Oct 2026 — always load fresh data (Claude)
 - `index.html` now fetches `data.json` with a unique query and `cache: 'no-store'`, so data changes show after a normal refresh once GitHub Pages has deployed.
 
-## 2026-10-28 — Claude: skill names no longer split by status colouring
+## 28 Oct 2026 — skill names no longer split by status colouring (Claude)
 - `colourStatusWords()` leaves skill, Karma and set names that contain a status or archetype word (e.g. Venom Cutter, Poison Step, Frozen Burst, Defeating Poison with Poison) uncoloured, so only real status words are coloured in reviews, pros/cons and the Status Effects box.
 
-## 2026-10-28 — Claude: full reviews for all 20 heroes
+## 28 Oct 2026 — full reviews for all 20 heroes (Claude)
 - The other 19 heroes get a full review in Charlotte's approved format: overview, verdict with how to get them, gameplay loop, 2–3 combos built from activation conditions, kit analysis, skill priorities, best awakening stop, Karma, gear and teams.
 - Every hero, skill, Karma, set and awakening link and every combo chip was checked to resolve (0 unresolved), with no script errors.
 - Numbers quoted come from the data:
@@ -749,7 +770,7 @@ Restored LF line endings without changing page content, and added an explicit pr
   - Additional Attack Power as a share of each hero's end-game Attack from the Build tab totals.
 - Where a fact isn't known, the review says so: how Kalsion, Cerese, Othello and Ryza are obtained; Frost; Break; whether heal and buff values grow with skill level.
 
-## 2026-10-28 — Claude: one behaviour for all hover cards
+## 28 Oct 2026 — one behaviour for all hover cards (Claude)
 - **Skill links** in reviews and pros/cons now use the same skill card as the older awakening and Karma skill links, with the level slider and the skill owner's archetype colour.
 - **Clicking any link on desktop jumps to it:**
   - skill: the Skills tab, scrolled to the skill and highlighted;
@@ -760,13 +781,13 @@ Restored LF line endings without changing page content, and added an explicit pr
 - **Phones:** a tap shows the card with an "Open …" button, because phones can't hover.
 - **Hero hovers everywhere** (tier list, Heroes page, Teams page) now use the new hero card: tiers for all three stages, kit tag and an "Open guide" button. Clicking a hero on the Teams page now opens their guide instead of the Heroes page search.
 
-## 2026-10-28 — Claude: hero pages coloured by archetype
+## 28 Oct 2026 — hero pages coloured by archetype (Claude)
 - Hero pages use the hero's archetype colour (`ARCH_COLORS`, set as `--hero-accent` on `#profilePage`) in place of the fixed teal: name, banner edge, section underlines, tabs, skill slot labels, sliders, mode headings, Karma names, gear hover and the review cards.
 - Combo chips for another hero's skill use that hero's archetype colour for the slot tag, the border and the hero's name (e.g. Reina in Gale colour in Charlotte's Venom team combo).
 - Fixed the hero-name buttons in the Introduction, which showed as plain grey browser buttons because their style never applied.
 - Links (heroes, skills, Karmas, sets) stay light blue so they don't look like status words.
 
-## 2026-10-28 — Claude: full review layout (Charlotte sample)
+## 28 Oct 2026 — full review layout (Charlotte sample) (Claude)
 - New `CHARACTER_PROFILE_DATA[].review` and `renderProfileReview()`, replacing the Review placeholder on the Review tab. Sections: Overview, Verdict (with how to get the hero), How to play (gameplay loop and combo chips), Kit analysis, Investment (skill priorities, awakening stop, Karma, gear), Teams, and tier rating boxes.
 - **Links in reviews and pros/cons:** heroes, skills, Karmas, gear sets and awakenings open a card on hover. On phones a tap pins the card; hero cards have a button to open that hero's guide. Status and archetype names are coloured.
 - `HEROES[].obtain`, from David:
@@ -776,7 +797,7 @@ Restored LF line endings without changing page content, and added an explicit pr
 - Charlotte has the first full review, as a sample for approval. Eileen's Karma pro now names Vanguard Banner (David's reading of "Banner Maid").
 - Checked: all links resolve, and there are no script errors at desktop or phone width.
 
-## 2026-10-28 — Claude: Pros & Cons for every hero
+## 28 Oct 2026 — Pros & Cons for every hero (Claude)
 - New `pros` and `cons` lists in `CHARACTER_PROFILE_DATA` for all 20 heroes, drawn from their tiers, teams, skill text, signature Karmas and awakenings. S-tier heroes have more pros; C/B-tier heroes have more cons.
 - Review tab: the Pros & Cons placeholders are replaced by `renderProfileProsCons()`:
   - green text with a drawn plus icon for pros, bright red with a minus icon for cons;
@@ -784,7 +805,7 @@ Restored LF line endings without changing page content, and added an explicit pr
 - Fixed Kalsion A1's explanation: Explosion (2173%) is the second-biggest skill hit, after Eileen's Vanguard Banner (2295%).
 - Checked: all 20 heroes render with no errors, at desktop and phone width.
 
-## 2026-10-28 — Claude: builds and awakening ratings re-checked with the measured damage formula
+## 28 Oct 2026 — builds and awakening ratings re-checked with the measured damage formula (Claude)
 - **2-piece set:** `tools/hero_stats.py` now picks it together with the main stats (`HERO_BUILDS[].setChoice`).
   - All 16 damage builds change from Battle Will to The Infiltrator: +0.4% to +1.6%. Its +9% Crit Rate frees a main stat from Crit Rate. Castella and Astria change from Holy Arbiter.
   - Status sets (Azure Gale, Earthshatterer, Holy Arbiter, Ruinsbreaker) come out between −2% and +2.2% against Battle Will, depending on whether two statuses' Additional Damage adds or multiplies (untested). Close alternatives are named in each build's text.
@@ -797,7 +818,7 @@ Restored LF line endings without changing page content, and added an explicit pr
   - Best awakening changed for Charlotte, Aria, Ornette and Tarte (now A5).
 - Checked: the validator passes; all 20 heroes render with no errors; Charlotte's Build and Review tabs checked by eye.
 
-## 2026-10-28 — Claude: Status Effects box on character pages
+## 28 Oct 2026 — Status Effects box on character pages (Claude)
 - New `STATUS_EFFECTS` key and `renderProfileStatus()`: heroes whose skills inflict Poison, Bleed, Burn or Shock get a Status Effects box under their skills (12 of 20 heroes). It shows:
   - a stacks table: 50/75/100% of Attack per tick, ×4 ticks over ~10 s;
   - the rules measured in `DAMAGE_TESTS`;
@@ -805,7 +826,7 @@ Restored LF line endings without changing page content, and added an explicit pr
 - Checked on all 20 heroes at desktop and phone width with no script errors.
 - Bleed, Burn and Shock also last about 10 s (David).
 
-## 2026-10-28 — Claude: first training-dummy results
+## 28 Oct 2026 — first training-dummy results (Claude)
 - New `DAMAGE_TESTS` key with David's dummy results and findings:
   - damage is proportional to Attack and to the skill %;
   - a crit multiplies damage by 1 + Crit Damage;
@@ -815,40 +836,29 @@ Restored LF line endings without changing page content, and added an explicit pr
 - `GEAR_STATS.observedBlue`: Blue gear values. Substats are half the Orange values.
 - Neither is shown on the page.
 
-## 2026-10-28 — Claude: Dodge shows no damage
+## 28 Oct 2026 — Dodge shows no damage (Claude)
 - All 20 Dodge (`Dash` slot) descriptions lose the "Attack Power N% Damage" line. Dodge does no damage in-game (David); the codex number was the jump attack's. The number is kept as `codexAttackPct`, hidden. `skill_meta.py` re-run, so Dodge `meta.attackPct` is now null.
 - TODO: recording each skill's levels, to remove the 1% rounding differences.
 
-## 2026-10-28 — Claude: skill levels fully measured
+## 28 Oct 2026 — skill levels fully measured (Claude)
 - `SKILL_LEVEL_MULTIPLIERS`: all levels measured on 7 skills from 5 heroes (Reina, Johnny, Ornette, Charlotte, Castella). Level-10 skills: ×1, 1.05, 1.10, 1.15, 1.23, 1.30, 1.38, 1.48, 1.58, 1.75. Level-7 skills: ×1, 1.10, 1.20, 1.33, 1.45, 1.60, 1.75. Every hero uses the same multipliers, and nothing is marked "(est.)" any more.
 - `skillLevelValue()` in `index.html` now uses round(max ÷ 1.75 × multiplier) instead of rounding Lv.1 first: 47 of 57 measured values exact (was 35), the rest 1 off. The game rounds a hidden unrounded Lv.1 value, so exact matches would need each skill's Lv.1 value.
 - AGENTS.md: the max level of each skill slot, and Dodge does no damage (from David).
 
-## 2026-10-28 — Claude: Karma Ascensions complete, Karma levelling data, awakenings in end-game totals
+## 28 Oct 2026 — Karma Ascensions complete, Karma levelling data, awakenings in end-game totals (Claude)
 - `KARMA_ASCENSION`: the full measured table ×1, 4/3, 5/3, 2, 8/3, 11/3, 5 for A0–A6, matching all 35 values David measured. A3–A5 are no longer estimates.
 - `KARMA_DATA[].baseLv1` and `.statType` added from the workbook. There are four stat types: Balanced 19 cards, Attack 18, Defense 10, High Attack 6. New `KARMA_LEVELLING` holds David's Lv1–Lv30 measurements for two cards; it isn't displayed yet.
 - End-game totals now include all six awakenings' stat bonuses in purple, with a hover naming the awakening. `tools/hero_stats.py` counts them too, so 16 heroes' main stats were re-optimised; Crit Rate main stats mostly moved to smaller slots, since awakenings add Crit Rate.
 - New `assets/titles/` folder with upload instructions. Karma Ascension test removed from the Test Kit. TODO list updated.
 - Validation: the checker passes. Charlotte's totals checked by hand (Attack 3,793 + 135 set = 3,928; Crit Rate 84.19% + 4% set + 10% awakening). All 20 heroes render with no script errors.
 
-## 2026-10-28 — Claude: full-resolution colour portraits for Roxy, Reina and Ornette
+## 28 Oct 2026 — full-resolution colour portraits for Roxy, Reina and Ornette (Claude)
 - `assets/heroes/roxy.webp`, `reina.webp`, `ornette.webp` rebuilt from David's original colour screenshots (415×486 to 414×489). The previous versions were half-size (180×211) and lossy (about 7 KB), so they looked soft next to the others.
 - The colour art was scaled ×0.75 and placed by image matching onto the original greyscale portraits, so each keeps its exact original size (Ornette 359×399, Roxy 337×390, Reina 337×406), frame position and blue border. Saved as lossless WebP like the other portraits.
 - `data.json`: Roxy, Reina and Ornette marked `owned: true`.
 - Validation: the checker passes. A 50/50 overlay of old and new showed no misalignment (the name text stays sharp), and the tier board renders the three like the other colour portraits, with no script errors.
 
-## 2026-10-28 — Restore full-frame Roxy, Ornette and Reina portraits
+## 28 Oct 2026 — Restore full-frame Roxy, Ornette and Reina portraits
 - Replaced `assets/heroes/roxy.webp`, `assets/heroes/ornette.webp`, and `assets/heroes/reina.webp` using the original supplied character-card artwork, retaining each decorative frame, archetype emblem, and character name instead of the cropped portrait-only versions.
 - Kept all existing portrait paths and `data.json` connections unchanged. Encoded the recovered artwork as WebP at the original card aspect ratios for the existing card and profile layouts.
 - Validation: recovered and inspected the three original uploads, checked their image dimensions, verified the portrait paths in `data.json`, and prepared valid WebP replacements. Live browser rendering has not been tested in this session.
-
-
-
-## 2026-11-02 — Normal Dungeons banner restyle (preview)
-- Replaced the paper-like Normal Dungeon tiles with wide cinematic banner cards, using independent I/II/III selectors styled after Trait Dungeons, real per-difficulty reward icons/amounts, and rarity chips.
-- Added farm-group-specific heading typography and a consistent pending-artwork state for dungeons without a banner.
-- Added the first Warg Cave banner asset at `assets/dungeons/banners/warg-cave.svg` and connected it through `DUNGEONS.normal[].banner`. Other dungeons intentionally remain artwork placeholders.
-- Preview only; no public-page behavior change. Browser rendering and GitHub Pages deployment still need visual confirmation.
-
-## 2026-11-02
-- Normal Dungeon cards: removed the visible set/slot text while retaining the underlying set and slot filter data; added the correct Gear set icon as a fourth reward, tinted by the highest rarity available at the selected difficulty. Moved rarity chips and EXP to the card's top-right corner.

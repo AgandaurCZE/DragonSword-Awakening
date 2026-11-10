@@ -4,7 +4,7 @@ Library index: [docs/README.md](README.md). Current state: [library/STATUS.md](l
 
 Still open: banners for **Eroded Underground Cemetery** (Currency Dungeon) and **Residual Worm Cleanup Zone**. All 15 Normal Dungeons (three difficulties each) and the three other Currency Dungeons are done.
 
-## Required workflow
+## Required workflow · 2 Nov
 
 - Generate one Normal-difficulty preview first. Show it once, then present exactly two choices: **Proceed** or **Stop**.
 - **Proceed** authorises the matching II/III variants, necessary site integration, validation, changelog and commit. **Stop** means wait for David's additional art direction before revising.
@@ -26,7 +26,7 @@ Still open: banners for **Eroded Underground Cemetery** (Currency Dungeon) and *
 - Preserve the original blue, purple and red frame artwork and colours. Purple/red use measured vertical size and position corrections to match the blue outer corner span (source y=8…239); all cards retain the same dimensions and shared background crop. Do not recolour the blue frame with hue filters: David wants the original purple and fiery red appearance.
 - For commits intended for David's visual review, complete checks before pushing and end the task immediately after the push; do not wait for Pages deployment.
 
-## Corruption art direction supplied by David
+## Corruption art direction supplied by David · 2–3 Nov
 
 - Difficulty II corruption is associated with human Dragon Worshippers: concealed faces, dark cloaks, necromancy and control of beasts/orcs. Introduce these as occasional background details where appropriate.
 - Difficulty III may suggest dragons or beings with their traits. Existing Furcas, Barduk and especially Gauron's dragon form are visual references; don't assume every dungeon needs a literal dragon.

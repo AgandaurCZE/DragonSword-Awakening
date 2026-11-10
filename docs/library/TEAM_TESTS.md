@@ -2,13 +2,13 @@
 
 Back to the library: [docs/README.md](../README.md). Where things stand: [STATUS.md](STATUS.md).
 
-Live data is in the **Team Planner** artifact https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD (collections `teams`, doc ids `t01`…`t11` = order number, and `sigs`, doc id = hero name in lower case; source page `docs/testkit/dragonsword-planner.html`). This file is a snapshot taken 9 Nov 2026 (teams refreshed 04:45 after Claude's second check: teams 12–16 added, an outdated Lv.1 number removed from team 5 and an invalid comparison in team 10's note replaced; facts David confirmed in game restored in 4 and 5); JSON copy: `docs/testkit/planner-backup-2026-11-09.json`. If the artifact and this file disagree, the artifact is newer.
+Live data is in the **Team Planner** artifact https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD (collections `teams`, doc ids `t01`…`t17` = order number, and `sigs`, doc id = hero name in lower case; source page `docs/testkit/dragonsword-planner.html`). This file is a snapshot taken 9 Nov 2026 (teams refreshed 04:45 after Claude's second check: teams 12–16 added, an outdated Lv.1 number removed from team 5 and an invalid comparison in team 10's note replaced; facts David confirmed in game restored in 4 and 5); JSON copy: `docs/testkit/planner-backup-2026-11-09.json`. If the artifact and this file disagree, the artifact is newer.
 
-## Team statuses
+## Team statuses · 9 Nov
 
 Each planner team has one of four statuses, chosen with the drop-down on its card: **Idea** (proposed on paper from the skill data, never played; the default for a new team), **To test** (David plans to run it), **Works** (tested and good), **Doesn't work** (tested and dropped). Claude set the first statuses when it wrote the teams on 8 Nov; David sets them from now on. Shadow Poison, Storm and Break and burn have results but still say Idea.
 
-## Test conditions
+## Test conditions · 9 Nov
 
 - **8 Nov runs:** mixed levels and gear (written per team). Damage in 1 minute on the Training Ogre.
 - **9 Nov runs (the planned gearless redo, to-do item 2):** all three heroes Lv.70, **no gear, no Karma**, damage in 1 minute. Runs marked "with signature" have only the named signature Karmas on and no other Karma.
@@ -31,13 +31,14 @@ The six main teams again, same setup as the 9–10 Nov runs (Lv.70, **no gear**,
 | Fox and wind | Kalsion A6, Kalien A6, Reina A6 | 650k → 700k (Kalsion's on in both; then Kalien's) || 800k → 1M (+23% / +43%; Kalsion's on in both, confirmed) |
 | Frost tornado | Dana A6, Cerese A6, Reina A6 | 490k → 530k (Cerese's) || 800k → 1M (+63% / +89%; signature run now Dana's and Cerese's) |
 
-## Teams
+## Teams · runs 9–10 Nov
 
 **Groups in the planner (10 Nov):** teams built around the same damage dealer share one box (`group`); the main version (`main: true`) shows first and the alternatives open from buttons on the right. **Kalsion, burst and swap** (he only comes in for Explosion and his Ultimate): Airborne burst (main), Burn chain, Fire and venom. **Kalsion, field time:** Fox and wind (main), Break and burn, Fox and crossbow. **Ryza:** Thunder pair (main), Storm, Double blessing, Lightning break. **Dana:** Frost tornado (main), Deep Frost, Ice Prison. **Theresia:** Holy Bleed (main), Holy Bleed with Kalien. **Charlotte:** Shadow Poison. Verdicts (David, 10 Nov): all Works except Ice Prison.
 
 Damage: 1 minute on the Training Ogre, all Lv.70, no gear. "Normal" = everyone on a Lv.1 normal Karma; "signature" = the named signature Karmas on (9–10 Nov, Test Kit test 09). Teams with Alex were dropped (10 Nov, DECISIONS).
 
-### 1. Airborne burst (t01, status: works, group kalsion-burst, main) — normal 600k → signature 630k (+5%, Kalsion's)
+### 1. Airborne burst (t01, status: works, group kalsion-burst, main) — normal 600k → signature 630k (+5%, Kalsion's) · runs 9–10 Nov
+**After masteries and awakenings (10 Nov): 820k → 900k** (see the team round above).
 
 Heroes: Kalsion (Sub-DPS), Johnny (Sub-DPS), Reina (Enabler).
 
@@ -53,7 +54,8 @@ Claude's notes:
 - Claude (8 Nov): The team David has been playing for the last few days.
 - Claude (9 Nov, second check, built this team independently): Airborne comes from two heroes here. Reina adds about 0.89 of the gauge per rotation (Rising Cutter 0.24, Wind Slayer 0.40 with both charges, Wind Grab 0.25), Johnny about 0.6 (Venom Dance, Phantom Slash, Venom Cutter 0.20 each). With Burn, Poison and Airborne up, every hit gets +200% (x3).
 
-### 2. Shadow Poison (t02, status: works) — normal 680k → signature 700k (+3%, Charlotte's)
+### 2. Shadow Poison (t02, status: works) — normal 680k → signature 700k (+3%, Charlotte's) · runs 9–10 Nov
+**After masteries and awakenings (10 Nov): 950k → 1.1M** (see the team round above).
 
 Heroes: Charlotte (Main DPS), Johnny (Sub-DPS), Reina (Enabler).
 
@@ -68,7 +70,8 @@ Claude's notes:
 
 - Claude (9 Nov, built this team independently): Charlotte applies Poison herself on 4 skills (Test 01: Poison Dagger 0.50, clone explosion 0.24, Illusion Kick 0.15, Poison Step 0.08), so Johnny's Poison is mostly redundant here. His real value is Airborne (about 0.6 per rotation) for Shadow Grab, plus his own damage. Her only own Airborne is Illusion Kick (0.20) on a long cooldown, which is why the agreed rating says she needs it.
 
-### 3. Holy Bleed (t03, status: works, group theresia, main) — normal 330k → signature 420k (+27%, Theresia's and Roxy's)
+### 3. Holy Bleed (t03, status: works, group theresia, main) — normal 330k → signature 420k (+27%, Theresia's and Roxy's) · runs 9–10 Nov
+**After masteries and awakenings (10 Nov): 630k → 800k** (see the team round above).
 
 Heroes: Theresia (Main DPS), Roxy (Enabler), Castella (Enabler).
 
@@ -85,7 +88,7 @@ Claude's notes:
 - Claude (8 Nov): David plans team tests with Roxy; Roxy may count as Sub-DPS here.
 - Claude (9 Nov check): her own sources per Test 01: Celestial Verdict 0.20 Stun (0.25 in Heretic Judgment), Consecration 0.15 Bleed plus 0.12 from the 10 s aura. Too slow on a boss, which is why she needs an enabler (David's rule: a hero who applies their own needs slowly still needs an enabler). Castella's Stun Blow (0.33) only works on a broken boss.
 
-### 4. Deep Frost (t04, status: works, group dana) — normal 300k → signature 480k (+60%, all three)
+### 4. Deep Frost (t04, status: works, group dana) — normal 300k → signature 480k (+60%, all three) · runs 9–10 Nov
 
 Heroes: Othello (Main DPS), Dana (Sub-DPS), Cerese (Sub-DPS).
 
@@ -99,7 +102,7 @@ Claude's notes:
 
 - Claude (9 Nov check): Cerese shatters Othello's Ice Prison if she's played after him (David confirmed), and lifts his Knockdown targets, so she works against his setup. Dana is now rated higher than Othello (A vs B). My version without Cerese is t14, Ice Prison.
 
-### 5. Storm (t05, status: works, group ryza) — normal 380k → signature 430k (+13%, Ryza's)
+### 5. Storm (t05, status: works, group ryza) — normal 380k → signature 430k (+13%, Ryza's) · runs 9–10 Nov
 
 Heroes: Ryza (Main DPS), Tarte (Enabler), Sion (Support).
 
@@ -115,7 +118,8 @@ Claude's notes:
 - Claude (8 Nov): Ryza can stack Shock alone, so check whether Tarte's opener actually speeds her up.
 - Claude (9 Nov check): David confirmed the orbs keep coming after Tarte swaps out. The old "full Shock stack in about 17–18 s" came from a Lv.1 estimate in the superseded Test 01 entries, so it stays out until it's measured at Lv.70 (the Lv.70 Test 01 has her charged Skill at 0.90 Shock with all 26 orbs).
 
-### 6. Thunder pair (t06, status: works, group ryza, main) — normal 500k → signature 580k (+16%, Ryza's and Ornette's)
+### 6. Thunder pair (t06, status: works, group ryza, main) — normal 500k → signature 580k (+16%, Ryza's and Ornette's) · runs 9–10 Nov
+**After masteries and awakenings (10 Nov): 900k → 1.1M** (see the team round above).
 
 Heroes: Ryza (Main DPS), Ornette (Sub-DPS), Sion (Support).
 
@@ -131,7 +135,7 @@ Claude's notes:
 - Claude (8 Nov): David wants to see whether Ryza and Ornette work together at all.
 - Claude (9 Nov, built this team independently): all three apply Shock, and Knockdown comes from three sources (Ryza's Thunder Grab 0.20–0.25, Ornette's Judgment 0.25, or 0.40 at 2 Shock stacks, Sion's Divine Smash and Justice Fall 0.20 each). Shock and Knockdown give +150% on hits. Almost no Airborne: Ryza's Stormbringer 0.20, and Ornette's Holy Grab didn't apply it on the boss.
 
-### 7. Burn chain (t07, status: works, group kalsion-burst) — normal 490k → signature 520k (+6%, Kalsion's; Kalien's on in both runs)
+### 7. Burn chain (t07, status: works, group kalsion-burst) — normal 490k → signature 520k (+6%, Kalsion's; Kalien's on in both runs) · runs 9–10 Nov
 
 Heroes: Kalsion (Sub-DPS), Aria (Enabler), Kalien (Enabler).
 
@@ -141,7 +145,7 @@ Results (David):
 
 - Lv.70, no gear, 1 min: 490k with Kalsion on The Burning Taste of Fire; 520k with his signature. Kalien on her signature in both runs (her own gain is known from other tests).
 
-### 8. Break and burn (t08, status: works, group kalsion) — normal 430k → signature 460k (+7%, Kalsion's and Kalien's)
+### 8. Break and burn (t08, status: works, group kalsion) — normal 430k → signature 460k (+7%, Kalsion's and Kalien's) · runs 9–10 Nov
 
 Heroes: Kalsion (Sub-DPS), Kalien (Enabler), Castella (Enabler).
 
@@ -156,7 +160,11 @@ Claude's notes:
 
 - A variant of Burn chain for bosses with a big Super Armor gauge.
 
-### 10. Fox and wind (t10, status: works, group kalsion, main) — normal 650k → signature 700k (+8%, Kalien's; Kalsion's signature on in both runs)
+### 9. Nightmare support (t09, status: idea) · planned 9 Nov, not run
+Ryza (Main DPS), Eileen (Support), Alex (Support). For the hardest bosses: Eileen adds +15% Attack and +20% Crit Rate; Alex's parry lowers the boss's Defense by 20% for 10 s. Not tested: teams with Alex are left out of team tests for now (David, 10 Nov; DECISIONS).
+
+### 10. Fox and wind (t10, status: works, group kalsion, main) — normal 650k → signature 700k (+8%, Kalien's; Kalsion's signature on in both runs) · runs 9–10 Nov
+**After masteries and awakenings (10 Nov): 800k → 1M** (see the team round above).
 
 Heroes: Kalsion (Sub-DPS), Kalien (Enabler), Reina (Enabler).
 
@@ -167,7 +175,7 @@ Results (David):
 - Lv.70, no gear, 1 min: 650k with Kalsion's signature on (Kalien and Reina on normal Lv.1 Karmas); 700k with Kalien's signature too. Kalsion's own signature gain is measured in team 1.
 - No Karma at all (9 Nov): 390k and 460k (two runs); 560k with Kalsion's and Kalien's signatures.
 
-### 11. Holy Bleed with Kalien (t11, status: works, group theresia) — normal 320k → signature 450k (+41%, Theresia's, Roxy's and Kalien's)
+### 11. Holy Bleed with Kalien (t11, status: works, group theresia) — normal 320k → signature 450k (+41%, Theresia's, Roxy's and Kalien's) · runs 9–10 Nov
 
 Heroes: Theresia (Main DPS), Roxy (Enabler), Kalien (Enabler).
 
@@ -184,7 +192,7 @@ Claude's notes:
 - Claude (8 Nov): Holy Bleed with Castella: 250k with no signatures, 350k with Theresia's and Roxy's.
 - Claude (9 Nov, built this team independently): Kalien's Finale gives Stun (0.20) with no condition, and her Burn adds a second damage-over-time status: Bleed, Burn and Stun give +200% on hits. Her Fox Grab needs Break and nobody here is a Breaker, but Kalien (25 s) and Theresia (27 s) break the gauge fast alone.
 
-### 12. Fire and venom (t12, status: works, group kalsion-burst) — normal 420k → signature 450k (+7%, Kalsion's)
+### 12. Fire and venom (t12, status: works, group kalsion-burst) — normal 420k → signature 450k (+7%, Kalsion's) · runs 9–10 Nov
 
 Heroes: Kalsion (Sub-DPS), Johnny (Sub-DPS), Aria (Enabler).
 
@@ -198,7 +206,7 @@ Claude's notes:
 
 - Claude (9 Nov): Aria alone gives about 0.4 Airborne per rotation (Air Bomb 0.20, Rolling Bomb 0.10, Switch On! 0.10), less than half of Reina's 0.89. With Johnny's 0.6 the two together come close to Reina, and Aria adds Burn (about 0.65 per rotation). Burn, Poison and Airborne: +200% on hits. Frees Reina for another team.
 
-### 13. Double blessing (t13, status: works, group ryza) — normal 370k → signature 410k (+11%, Ryza's)
+### 13. Double blessing (t13, status: works, group ryza) — normal 370k → signature 410k (+11%, Ryza's) · runs 9–10 Nov
 
 Heroes: Ryza (Main DPS), Sion (Support), Eileen (Support).
 
@@ -212,7 +220,7 @@ Claude's notes:
 
 - Claude (9 Nov): a variant of Nightmare support (t09) with Sion instead of Alex. Alex's parry is about +11% team damage on a 1000-Defense boss and needs exact timing. Sion's +15% Attack needs a relic placed but no timing, and he adds statuses. Only one Expert here (Eileen). Teammates must stand in the buff circles.
 
-### 14. Ice Prison (t14, status: doesn't work, group dana) — normal 300k → signature 340k (+13%, Othello's)
+### 14. Ice Prison (t14, status: doesn't work, group dana) — normal 300k → signature 340k (+13%, Othello's) · runs 9–10 Nov
 
 Heroes: Dana (Main DPS), Othello (Sub-DPS), Sion (Support).
 
@@ -227,7 +235,7 @@ Claude's notes:
 
 - Claude (9 Nov): Deep Frost (t04) without Cerese, since she breaks Othello's prison and Frozen enemies, and with Dana as the Main DPS (rated A, Othello B). Measured: Dana broke the whole gauge in about 7 s after Othello's Ultimate. Knockdown and Shock: +150% on hits, plus +50% while Frozen.
 
-### 15. Fox and crossbow (t15, status: works, group kalsion) — normal 380k → signature 400k (+5%, Kalsion's)
+### 15. Fox and crossbow (t15, status: works, group kalsion) — normal 380k → signature 400k (+5%, Kalsion's) · runs 9–10 Nov
 
 Heroes: Kalsion (Sub-DPS), Kalien (Enabler), Astria (Sub-DPS).
 
@@ -242,7 +250,8 @@ Claude's notes:
 
 - Claude (9 Nov): Break and burn (t08) with Astria in Castella's slot. Weak spot: little Airborne for Kalsion's Explosion (only his own Burst Grab 0.25 and Royal Flame's Flame Wave 0.20), where Castella adds Upper Blow (0.33 Airborne). Worth one run to see whether Astria's own damage makes up for it.
 
-### 16. Frost tornado (t16, status: works, group dana, main) — normal 490k → signature 530k (+8%, Cerese's)
+### 16. Frost tornado (t16, status: works, group dana, main) — normal 490k → signature 530k (+8%, Cerese's) · runs 9–10 Nov
+**After masteries and awakenings (10 Nov): 800k → 1M, Dana's and Cerese's** (see the team round above).
 
 Heroes: Dana (Main DPS), Cerese (Sub-DPS), Reina (Enabler).
 
@@ -256,7 +265,7 @@ Claude's notes:
 
 - Claude (9 Nov): untested question: does Airborne keep or end Frozen and Ice Blocks? If it ends them, swap Reina for Sion. Dana groups S, Cerese groups A, Reina groups S+.
 
-### 17. Lightning break (t17, status: works, group ryza) — normal 360k → signature 410k (+14%, Ryza's)
+### 17. Lightning break (t17, status: works, group ryza) — normal 360k → signature 410k (+14%, Ryza's) · runs 9–10 Nov
 
 Heroes: Ryza (Main DPS), Castella (Enabler), Sion (Support).
 
@@ -270,7 +279,7 @@ Claude's notes:
 
 - Claude (10 Nov): added from David's signature test runs; this team wasn't in the planner.
 
-## Signature Karma priority list
+## Signature Karma priority list · 9 Nov (gains after awakenings: see the team round)
 
 | Rank | Hero | Karma | Priority | Status | Why / notes |
 |---|---|---|---|---|---|

@@ -2,23 +2,23 @@
 
 Back to the library: [docs/README.md](../README.md). Results: [TEST01_RESULTS.md](TEST01_RESULTS.md), [TEAM_TESTS.md](TEAM_TESTS.md). Measured mechanics in the data: `DAMAGE_TESTS`, `DEFENSE_MODEL` (see [DATA_REFERENCE.md](../DATA_REFERENCE.md)).
 
-## The Test Kit artifact
-- Live page: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt (David's measurement notebook; version 33, 9 Nov). Sections: Before awakenings (08, 09), Most useful (01, 07), When you can (02, 03, 06), and Already answered. Source: `docs/testkit/dragonsword-test-kit.html`. To change it, edit the source and publish to the same URL; a new chat must read the artifact first.
+## The Test Kit artifact · updated 10 Nov
+- Live page: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt (David's measurement notebook; version 33, 9 Nov). Sections: Before awakenings (08, 09; both done), Most useful (01, 07), When you can (02, 03, 06), and Already answered. Source: `docs/testkit/dragonsword-test-kit.html`. To change it, edit the source and publish to the same URL; a new chat must read the artifact first.
 - Storage: collection `results`; each entry has `testId`, `test`, `savedAt`, `inputs{}`, `summary`. Read with ArtifactData `query` (`where testId == …`, `out_dir` to save files). Writes to an existing document need `if_version`. New entry ids: `<testId>-<timestamp>`, e.g. `apply-1794430012000`.
 
 | Test | `testId` | Status |
 |---|---|---|
-| 01 Status application per skill | `apply` | Redo complete for all 20 heroes (8 Nov). Mastery retests pending. |
-| 02 Skill buffs by level | `buffs` | Eight rows, 7 skills. More when David can. |
+| 01 Status application per skill | `apply` | Redo complete for all 20 heroes (8 Nov). Mastery retests (10 Nov) and awakening tests A1, A3, A6 (10 Nov) saved as more `apply` entries; their summary ends "Mastery retest" or "Awakening A1/A3/A6 test". Results: [TEST01_RESULTS.md](TEST01_RESULTS.md), [AWAKENING_TESTS.md](AWAKENING_TESTS.md). |
+| 02 Skill buffs by level | `buffs` | Complete since 9 Nov: every scaling buff on a levellable skill, except Alex's two hostility values (no damage effect). In `SKILL_BUFF_LEVELS`. |
 | 03 Gear upgrade row | `gear` | 93 rows; tables match apart from two small misses. Add more only if a number looks wrong. |
 | 04 Defense Ignore and Armor Penetration | `defign` | Done 4 Nov; off the page, entries kept. |
 | 05 Level-up cost | `lvlcost` | Answered; moved to Already answered. |
 | 06 Enemy Defense | `enemydef` | Ongoing: new enemies as David meets them; tower floors open. |
 | 07 Hunt boss weakness (Nightmare and up) | `huntweak` | Not started (only Furcas known: Burn). |
-| 08 Hero stats at level 70 | `stats70` | Added 9 Nov. Before awakenings: the 9 estimated heroes, once each reaches Lv.70 (David is levelling them, 9 Nov). The page takes titles off (Attack −145, Max HP −1,575, Defense ÷ 1.053 − 30) and names the matching profile. Copy results into `HERO_BASE_STATS`. |
-| 09 Signature Karma against a normal Karma | `sigtest` | Added 9 Nov. Before awakenings. Fields: hero, normal Karma, Karma level (all of David's signatures are Lv.1, so compare with any Lv.1 normal Karma of the same archetype), target, team, damage with each (several runs comma-separated); shows the average gain. Copy results into the Team Planner `sigs` notes. |
+| 08 Hero stats at level 70 | `stats70` | Done 9 Nov for all 20 heroes, in `HERO_BASE_STATS`. The page takes titles off (Attack −145, Max HP −1,575, Defense ÷ 1.053 − 30) and names the matching profile. Copy results into `HERO_BASE_STATS`. |
+| 09 Signature Karma against a normal Karma | `sigtest` | Done 9–10 Nov for every owned signature (results in TEAM_TESTS). Fields: hero, normal Karma, Karma level (compare with a normal Karma of the same level and archetype; Ryza's and Ornette's signatures are Lv.70 since 10 Nov, the rest Lv.1), target, team, damage with each (several runs comma-separated); shows the average gain. Copy results into the Team Planner `sigs` notes. |
 
-## Test 01 conventions (Lv.70 redo)
+## Test 01 conventions (Lv.70 redo) · 8 Nov
 - Enemy: **Training Ogre**, Lv.90 boss dummy, Super Armor **not broken**. No gear, no Karma, no awakenings, no masteries. The redo was recorded as Lv.70, but only 11 heroes were Lv.70 on 9 Nov (see STATUS); the other 9 were tested below 70. Application and gauge don't depend on hero level (David, 8 Nov), so their numbers stand. Break times stand too: hero level doesn't change Super Armor gauge damage (David, 9 Nov: Castella removed the same gauge at Lv.20 as at Lv.70).
 - One entry per skill and status: `inputs{hero, skill, st, enemy, lv:"90", broken:"Not broken", presses:"1", stacks, note}`.
 - `stacks` = fraction of one stack the skill adds (0.25 = a quarter).
@@ -29,10 +29,10 @@ Back to the library: [docs/README.md](../README.md). Results: [TEST01_RESULTS.md
 - Application and gauge don't depend on hero or skill level (David, 8 Nov).
 - Grabs often need stacks: Roxy's Bleeding Grab applies Bleed only at 1 stack; Johnny, Roxy and Ryza gain their physical status at 2 stacks; Ryza's Thunder Grab gives Knockdown at both.
 
-## Team tests (Team Planner)
-- Damage in 1 minute on the Training Ogre. The 9 Nov runs: every hero in those teams Lv.70, no gear, no Karma (signatures only where stated).
+## Team tests (Team Planner) · 9–10 Nov
+- Damage in 1 minute on the Training Ogre. The 9–10 Nov runs: every hero in those teams Lv.70, no gear, normal Lv.1 Karmas (signatures only where stated). The 10 Nov team round repeats the six main teams with masteries and awakenings.
 - Results go in the Team Planner `teams[].davidNote` with the date and conditions. See [TEAM_TESTS.md](TEAM_TESTS.md).
 - Single runs vary by up to about 70k on hard teams: don't explain smaller gaps from one run each, and check what changed between two runs before comparing.
 
-## Recording rule
+## Recording rule · 9 Nov
 When David sends numbers: save them in the artifact straight away, then CHANGELOG (newest first) and the matching library file. Commit and push.

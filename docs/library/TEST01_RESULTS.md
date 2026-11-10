@@ -4,7 +4,7 @@ Back to the library: [docs/README.md](../README.md). Method and rules: [TESTING.
 
 David's redo, 8 Nov 2026: no gear, no Karma, no awakenings, no masteries, on the **Training Ogre (Lv.90 boss dummy), Super Armor not broken**. Status numbers are the fraction of one stack a skill adds (0.25 = a quarter of a stack). Gauge % is how much of the Super Armor gauge the skill removes, read with David's % overlay (stored in the Test Kit as status `Break (Super Armor)`, stacks = fraction of the gauge). Application and gauge don't depend on hero or skill level (David). Source: Test Kit storage (collection `results`, `testId: apply`); JSON copy: `docs/testkit/test01-apply-2026-11-09.json`. Pre-redo entries are in `docs/testkit/test01-apply-backup-2026-11-08.json` and are superseded.
 
-## All-out break time (whole gauge, hero alone)
+## All-out break time (whole gauge, hero alone) · 8 Nov (mastery times: see Mastery retests)
 
 | Hero | Result |
 |---|---|
@@ -17,9 +17,9 @@ David's redo, 8 Nov 2026: no gear, no Karma, no awakenings, no masteries, on the
 | Roxy | Whole gauge broken in about 50 s going all out. |
 | Johnny | Whole gauge broken in about 39 s going all out. |
 | Ryza | Whole gauge broken in about 25 s going all out. |
-| Theresia | Whole gauge broken in about 27 s going all out; a dash-attack rotation took about 35 s. Mastery not unlocked yet: retest once it is (dodging in Heretic Judgment mode raises Super Armor reduction). |
+| Theresia | Whole gauge broken in about 27 s going all out; a dash-attack rotation took about 35 s. Without mastery. Her mastery (dodging in Heretic Judgment mode) protects her own Super Armor for 5 s and doesn't break faster (David, 10 Nov), so this time stands. |
 | Tarte | About 67 s just to bring the gauge to 50%, so he stopped there. At that rate a full break would take about 2 min 15 s. |
-| Sion | Whole gauge broken in about 50 s going all out. Mastery not unlocked yet: retest once it is (blessing areas get bigger and also apply Shock). |
+| Sion | Whole gauge broken in about 50 s going all out. Without mastery (blessing areas get bigger and also apply Shock); retested 10 Nov: see Mastery retests. |
 | Lute | Whole gauge broken in about 75 s going all out. Retest after the mastery (Kick Combo). |
 | Aria | Whole gauge broken in about 50 s going all out. Retest after the mastery (Shoot and Bomb). |
 | Astria | Whole gauge broken in about 18 s going all out. Retest after the mastery (Slide; Dodge reloads an arrow in Precision Shot mode). |
@@ -61,7 +61,7 @@ Notes from David:
 - **Alex:** no change to damage or application. The debuff doesn't show when the Ultimate is used; Goblins dealt 6 damage before the Ultimate and after a quick cancel (needs a test on real enemies).
 - **Dana:** no combat change. **Roxy:** moving around the field is easier, which helps her hold skill.
 
-## Castella
+## Castella · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -75,7 +75,7 @@ Notes from David:
 | Shoulder Crusher (dash attack) | Gauge | 3% | About 3%. |
 | Full combo: basic, jump sequence, dash, back into basic | Gauge | 14% | About 14%. The dash after the last jump hit leads straight into the basic sequence. |
 
-## Kalsion
+## Kalsion · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -107,7 +107,7 @@ Notes from David:
 | Circular Slash (Royal Flame, dash attack) | Burn | 0.05 |  |
 | Circular Slash (Royal Flame, dash attack) | Gauge | 2.5% |  |
 
-## Kalien
+## Kalien · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -127,7 +127,7 @@ Notes from David:
 | Twin Tails (dash attack) | Burn | 0.08 | Burn per sequence: 0.25 ÷ number of sequences needed, rounded down to 2 decimals. |
 | Twin Tails (dash attack) | Gauge | 3% |  |
 
-## Charlotte
+## Charlotte · 8 Nov
 
 Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger also throws a large shuriken) during Test 01 and every team test; her Poison Dagger numbers include it.
 
@@ -148,7 +148,7 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Poison Step (dash attack) | Poison | 0.08 |  |
 | Poison Step (dash attack) | Gauge | 1% |  |
 
-## Reina
+## Reina · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -163,7 +163,7 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Silphid Spike (jump attack) | Gauge | 4% |  |
 | Winchester (dash attack) | Gauge | 2.5% |  |
 
-## Eileen
+## Eileen · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -176,7 +176,7 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Spin Presser (jump attack) | Gauge | 3% |  |
 | Spiral Shave (dash attack) | Gauge | 1% |  |
 
-## Roxy
+## Roxy · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -199,7 +199,7 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Sliding Shot (dash attack) | Bleed | 0.06 |  |
 | Sliding Shot (dash attack) | Gauge | 1.5% |  |
 
-## Johnny
+## Johnny · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -220,7 +220,7 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Fatal Sting (dash attack) | Poison | 0.12 |  |
 | Fatal Sting (dash attack) | Gauge | 2.5% |  |
 
-## Ryza
+## Ryza · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -241,7 +241,7 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Lightning Step (dash attack) | Shock | 0.06 |  |
 | Lightning Step (dash attack) | Gauge | 2.5% |  |
 
-## Theresia
+## Theresia · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -265,7 +265,7 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Heaven's Flick (dash attack, Heretic Judgment mode) | Gauge | 1.5% |  |
 | Judgment Spiral (whole basic combo, Heretic Judgment mode) | Gauge | 4% | Same as outside the mode. |
 
-## Tarte
+## Tarte · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -289,7 +289,7 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Cannon Bolt (dash attack, big orb explosion) | Shock | 0.125 | Hitting with both the moving orb and its explosion is very hard; usually only one of the two lands. |
 | Cannon Bolt (dash attack, big orb explosion) | Gauge | 1.25% |  |
 
-## Sion
+## Sion · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -310,7 +310,7 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Sliding Bolt (dash attack, sphere explosion) | Shock | 0.08 | Usually only the moving sphere or its explosion lands. |
 | Sliding Bolt (dash attack, sphere explosion) | Gauge | 0.5% |  |
 
-## Lute
+## Lute · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -322,9 +322,9 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Relic Fall (Special B) | Gauge | 2.5% |  |
 | Sword Slash (whole basic combo) | Gauge | 3% |  |
 | Dropkick (jump attack) | Gauge | 2.5% |  |
-| Kick Combo (dash attack) | Gauge | 1.6% | Mastery not unlocked: retest Kick Combo once it is (more hits, adds Stun). |
+| Kick Combo (dash attack) | Gauge | 1.6% | Without mastery (more hits, adds Stun); retested 10 Nov: see Mastery retests. |
 
-## Aria
+## Aria · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -339,12 +339,12 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Switch On! (Special B, all 3 bolts on one target) | Airborne | 0.1 | One bolt is a third of this (about 0.033); a Bomb Arrow from the basic combo explodes for the same as one bolt. |
 | Switch On! (Special B, all 3 bolts on one target) | Gauge | 6% | One bolt is a third of this (2%); a Bomb Arrow from the basic combo explodes for the same as one bolt. |
 | Bolt Shot (whole basic combo, without the Bomb Arrow explosion) | Gauge | 0.8% | The Bomb Arrow explosion counts as one Switch On! bolt. |
-| Shoot and Bomb (jump attack) | Burn | 0.08 | Mastery not unlocked: retest once it is (throws another bomb). |
+| Shoot and Bomb (jump attack) | Burn | 0.08 | Without mastery (throws another bomb); retested 10 Nov: see Mastery retests. |
 | Shoot and Bomb (jump attack) | Airborne | 0.01 |  |
 | Shoot and Bomb (jump attack) | Gauge | 0.8% |  |
 | Rapid Shot (dash attack) | Gauge | 1.25% |  |
 
-## Astria
+## Astria · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -352,13 +352,13 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Bolt Bombard (Special A) | Gauge | 18% |  |
 | Ballista Shot (whole basic combo, 6 bolts) | Gauge | 12% | All 6 bolts take about 4 s. |
 | Stunt Shot (jump attack) | Gauge | 2.5% |  |
-| Slide (dash attack) | Gauge | 1.6% | Mastery not unlocked: retest once it is (Slide enhanced). |
+| Slide (dash attack) | Gauge | 1.6% | Without mastery (Slide enhanced); retested 10 Nov: see Mastery retests. |
 | Ballista Shot (whole basic combo, 6 bolts, Precision Shot mode) | Stun | 0.2 | All 6 bolts take about 8 s. |
 | Ballista Shot (whole basic combo, 6 bolts, Precision Shot mode) | Gauge | 35% | All 6 bolts take about 8 s. |
 | Wide Shot (Ultimate, Precision Shot mode) | Gauge | 22.5% |  |
 | Bolt Bombard (Special A, Precision Shot mode) | Gauge | 18% | Probably more in theory, but the mode's extra explosions spread so far that they basically never hit. |
 
-## Dana
+## Dana · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -379,7 +379,7 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Snow Step (dash attack) | Frost | 0.08 |  |
 | Snow Step (dash attack) | Gauge | 1% |  |
 
-## Othello
+## Othello · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -400,10 +400,10 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Frozen Burst (Special B, shattering the Ice Prison, all 5 explosions) | Gauge | 5% | All 5 explosions; one is a fifth (1%). |
 | Avenger Circle (whole basic combo) | Gauge | 2.5% |  |
 | Piercing Spike (jump attack) | Gauge | 4% |  |
-| Half-Moon Cutter (dash attack) | Frost | 0.1 | Mastery not unlocked: retest once it is (becomes a charge attack). |
+| Half-Moon Cutter (dash attack) | Frost | 0.1 | Without mastery (becomes a charge attack); retested 10 Nov: see Mastery retests. |
 | Half-Moon Cutter (dash attack) | Gauge | 4% |  |
 
-## Cerese
+## Cerese · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -420,10 +420,10 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Ice Ball (whole basic combo) | Gauge | 0.7% |  |
 | Glacial Wave (jump attack) | Frost | 0.06 |  |
 | Glacial Wave (jump attack) | Gauge | 2.5% |  |
-| Frozen Road (dash attack) | Frost | 0.05 | Mastery not unlocked: retest once it is (longer path, adds Frost to enemies hit). |
+| Frozen Road (dash attack) | Frost | 0.05 | Without mastery (longer path, adds Frost to enemies hit); retested 10 Nov: see Mastery retests. |
 | Frozen Road (dash attack) | Gauge | 0.25% |  |
 
-## Ornette
+## Ornette · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
@@ -444,7 +444,7 @@ Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger als
 | Holy Cutter (dash attack) | Shock | 0.1 | Without mastery. With it: Shock 0.18, Knockdown 0.03 (Mastery retests, 10 Nov). |
 | Holy Cutter (dash attack) | Gauge | 2.5% |  |
 
-## Alex
+## Alex · 8 Nov
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|

@@ -14,6 +14,7 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - **10 Nov:** all 16 masteries unlocked; mastery retests (changed skill and full break) in [TEST01_RESULTS.md](TEST01_RESULTS.md).
 - **10 Nov:** title Chest Addict obtained; last insect familiar, Red Ladybug, owned (colour card cut from David's screenshot); materials for all 16 masteries farmed.
 - **9 Nov evening:** all 20 heroes Lv.70; Test 08 base stats for all 20 (the 11 known ones re-measured and matching); 3 skill buffs (Tarte Cure, Alex Guard Counter, Astria Reload); 19 gear rows, mostly Blue and Purple (all match the tables, and they confirm Legs Attack Power Up, Legs Max HP Up, Helmet and Boots Defense Up and Boots Crit).
+- **9–10 Nov:** Signature Karma tests (test 09) for every owned signature, and team verdicts in the planner (all Works except Ice Prison, No; Nightmare support stays an Idea) ([TEAM_TESTS.md](TEAM_TESTS.md)).
 - **9 Nov:** gearless team redo: all three heroes in each tested team at Lv.70, no gear, no Karma, 1 min on the Training Ogre, plus signature runs ([TEAM_TESTS.md](TEAM_TESTS.md)).
 - **9 Nov:** levelled to 70: Ryza, Theresia, Roxy, Castella, Tarte, Sion, Charlotte (with Johnny, Reina, Kalsion and Kalien, 11 heroes are at 70).
 - **8 Nov:** Test 01 redo, status application, Super Armor gauge and all-out break time for all 20 heroes ([TEST01_RESULTS.md](TEST01_RESULTS.md)).
@@ -29,6 +30,9 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - **29 Oct–3 Nov:** ratings agreed for all 20 heroes in `TIER_LIST_V2.heroes` (reasoning in [DECISIONS.md](DECISIONS.md)).
 
 ## Answered questions (now rules in [GAME_MATH.md](GAME_MATH.md))
+- Castella's and Theresia's mastery "Super Armor reduction" protects their own Super Armor, not the enemy's break (10 Nov; Theresia's Ultimate damage identical with and without it).
+- Karma base stats follow one level curve for every card type, plus breakthrough shares that depend on the type (10 Nov, GAME_MATH 2.3).
+- Rune slots: one per gear piece, 1 Anonymous Artisan's Crafting Tool each; removal returns the rune for 10,000 Gold (10 Nov).
 - Status hit bonuses add with no cap: Stun + Knockdown + Airborne = ×4 (31 Oct).
 - Team buffs (Eileen's Brave One, Sion's Bless) join the Attack Power Up pool and add (31 Oct).
 - Break gives no hit bonus and lasts 8 s; physical statuses still build up under Super Armor (29–31 Oct).
@@ -40,6 +44,9 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - Level curve refitted with Lv.40, Lv.50 and Lv.70 measurements (31 Oct–8 Nov).
 
 ## Site work (preview unless noted)
+- **10 Nov:** site check: preview starts ~5× faster (no longer waits for the 45 dungeon banners), phone layout fixes (Gear, tier list, Tools, Titles), Trait chips from the new tier list, tab titles, dead code removed, code map added; public page pixel-identical (CHANGELOG).
+- **10 Nov:** tier list re-rated with Masteries (16 heroes), Ornette Enabler and Applies, purple signature card for Theresia and Ryza, Needs A and Late bloomer gone from the main view; hover shows the latest patch line.
+- **10 Nov:** main-team gear builds (`tools/team_gear.py`, GAME_MATH 4.3), also with 5 Perfect Crit Rate runes.
 - **9 Nov:** notes library, GAME_MATH, SITE; Test Kit v33 (tests 08 and 09); Team Planner intro.
 - **8 Nov:** Super Armor break tag (`sa`) for Castella, Astria, Dana, Kalien.
 - **8 Nov:** levelling calculator: hero breakthrough materials by hero, Karma materials by archetype, dungeon runs.
