@@ -1,3 +1,5 @@
+## 10 Nov 2026 — Status AAP follows the team's shared status (Claude)
+- David's point from the Ursula run: the whole team uses Stun AAP, the status all three apply, not their own elements. Physical AAP substats are twice elemental ones, so the build rule changes: status AAP goes to the team's most-kept status (GAME_MATH 4.2, STATUS). The green panel buffs are most likely food (Tomato Stew gives Defense Ignore).
 ## 10 Nov 2026 — Ursula speed-run builds compared with the model (Claude)
 - David's screenshots: Roxy and Theresia match the model's on-field build; Castella matches the always-broken build. Her Crit mains are explained by flat AAP being larger than her Attack. Runes (one per piece, always Crit) added to the analysis; they push builds towards 80/150. GAME_MATH 4.2.
 ## 10 Nov 2026 — Broken vs unbroken boss builds compared (Claude)
