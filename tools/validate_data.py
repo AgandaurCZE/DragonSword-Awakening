@@ -127,7 +127,6 @@ for n, a in AW.get('heroes', {}).items():
         if not 0 <= x['rating'] <= 5: bad(f'AWAKENINGS[{n}] A{x["level"]}: rating must be 0-5')
         for e in x.get('effects', []):
             if e['stat'] not in known_stats: bad(f'AWAKENINGS[{n}] A{x["level"]}: unknown effect stat {e["stat"]!r}')
-        asset(f'assets/sources/awakenings/{n}/A{x["level"]}.png', f'AWAKENINGS[{n}] A{x["level"]} source screenshot')
 
 # Step tables
 for ml, arr in d.get('SKILL_LEVEL_MULTIPLIERS', {}).get('byMaxLevel', {}).items():

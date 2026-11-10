@@ -11,8 +11,7 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 - Titles 40 of 109; familiars 16 of 29 (all four Insects).
 
 ## Waiting on David (10 Nov)
-1. **Orange Defense Ignore substat** (and Attack Power Up): any Orange piece that has it, with its +level. Both are still estimates, and Defense Ignore is on every piece of every main-team build.
-2. **Perfect rune values**, above all a Perfect Crit Damage rune (it would need about 11–13% to beat a 6.80% Crit Rate rune).
+1. ~~Orange substats~~ done 10 Nov (all 31 pieces; estimates confirmed). **Perfect rune top values** still welcome (seen: Crit Rate 5.10–6.80%, Crit Damage 11.20%, Defense 95, Attack 119, Max HP 1050).
 3. **Hunt boss weaknesses on Nightmare (Test 07)**; the boss ratings wait on it.
 4. Alex's awakenings, tested alone, when materials allow. A team round **with gear** once the main teams are geared.
 

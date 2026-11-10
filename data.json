@@ -8112,7 +8112,7 @@
   }
  },
  "AWAKENINGS": {
-  "note": "Awakening names and text copied word for word from the in-game screenshots in assets/sources/awakenings/<Hero>/A1-A6.png (OCR, then every line checked by eye). '\\n' is a line break in the game text. 'effects' lists the always-on stat bonuses in the same stat names as GEAR_STATS; they count in the end-game totals (purple) and in the build optimiser. Ratings 0-5: kit-changing awakenings are Claude's judgement of what they do for the hero's kit, role and teams. Stat awakenings on damage heroes (28 Oct 2026, after the damage tests) are rated by their modelled damage gain at end-game with the recommended build: 15%+ = 4, 8-15% = 3, 3-8% = 2, 1-3% = 1. The model uses the measured damage rules in DAMAGE_TESTS, assumes the hero's own damage-over-time status stays on the target, counts Airborne/Knockdown/Stun bonuses only on skills that need that status (a lower bound), values Break bonuses at nothing (Break uptime unknown) and values Defense Ignore on an enemy like the Training Ogre (its Defense halves damage). Support and tank heroes' stat awakenings keep their earlier ratings. The best awakening is the highest-rated; on a tie the earlier pick stays.",
+  "note": "Awakening names and text copied word for word from David's in-game screenshots (assets/sources/awakenings/<Hero>/A1-A6.png, deleted on 10 Nov 2026 to keep deploys small; still in git history) (OCR, then every line checked by eye). '\\n' is a line break in the game text. 'effects' lists the always-on stat bonuses in the same stat names as GEAR_STATS; they count in the end-game totals (purple) and in the build optimiser. Ratings 0-5: kit-changing awakenings are Claude's judgement of what they do for the hero's kit, role and teams. Stat awakenings on damage heroes (28 Oct 2026, after the damage tests) are rated by their modelled damage gain at end-game with the recommended build: 15%+ = 4, 8-15% = 3, 3-8% = 2, 1-3% = 1. The model uses the measured damage rules in DAMAGE_TESTS, assumes the hero's own damage-over-time status stays on the target, counts Airborne/Knockdown/Stun bonuses only on skills that need that status (a lower bound), values Break bonuses at nothing (Break uptime unknown) and values Defense Ignore on an enemy like the Training Ogre (its Defense halves damage). Support and tank heroes' stat awakenings keep their earlier ratings. The best awakening is the highest-rated; on a tie the earlier pick stays.",
   "ratingScale": [
    "Not needed",
    "Barely noticeable",
@@ -10134,7 +10134,7 @@
       9.92,
       10.5,
       11.08,
-      11.67
+      11.66
      ],
      "Critical Damage": [
       4.68,
@@ -10211,7 +10211,7 @@
      "Break Additional Attack Power": 175,
      "All Status Effect Additional Attack Power": 38,
      "Critical Hit Chance": 1.55,
-     "Critical Damage": 2.49,
+     "Critical Damage": 2.5,
      "Armor Penetration": 15,
      "Defense Ignore": 1.94,
      "Status Effect Additional Attack Power Increase": 3.88
@@ -10343,7 +10343,7 @@
       14.17,
       15,
       15.83,
-      16.67
+      16.66
      ],
      "Critical Damage": [
       6.68,
@@ -10404,7 +10404,7 @@
      "Attack": 35,
      "Max HP": 384,
      "Defense": 25,
-     "Attack Power Up": 4.55,
+     "Attack Power Up": 4.54,
      "Max HP Up": 6.41,
      "Defense Up": 6.02,
      "Stun Additional Attack Power": 250,
@@ -10418,12 +10418,12 @@
      "Critical Hit Resistance": 5.49,
      "Critical Damage Reduction": 6.25,
      "Break Additional Attack Power": 250,
-     "All Status Effect Additional Attack Power": 56,
+     "All Status Effect Additional Attack Power": 55,
      "Critical Hit Chance": 2.22,
      "Critical Damage": 3.57,
      "Armor Penetration": 21,
      "Defense Ignore": 2.77,
-     "Status Effect Additional Attack Power Increase": 5.02
+     "Status Effect Additional Attack Power Increase": 5.55
     }
    },
    "Legs": {
@@ -10483,22 +10483,22 @@
       168
      ],
      "Attack Power Up": [
-      7.66,
-      9.19,
-      10.72,
-      12.26,
-      13.79,
-      15.32,
-      16.85,
-      18.39,
-      19.92,
-      21.45,
-      22.98,
-      24.51,
-      26.05,
-      27.58,
-      29.11,
-      30.64
+      7.67,
+      9.2,
+      10.73,
+      12.28,
+      13.81,
+      15.34,
+      16.87,
+      18.41,
+      19.95,
+      21.48,
+      23.01,
+      24.54,
+      26.08,
+      27.62,
+      29.15,
+      30.68
      ],
      "Max HP Up": [
       10.81,
@@ -10570,7 +10570,7 @@
       20.49,
       21.7,
       22.9,
-      24.11
+      24.1
      ],
      "Critical Hit Resistance": [
       9.27,
@@ -10632,7 +10632,7 @@
      "Critical Damage": 3.21,
      "Armor Penetration": 19,
      "Defense Ignore": 2.5,
-     "Status Effect Additional Attack Power Increase": 5.02
+     "Status Effect Additional Attack Power Increase": 5.0
     }
    },
    "Gloves": {
@@ -10761,7 +10761,7 @@
       9.92,
       10.5,
       11.08,
-      11.67
+      11.66
      ],
      "Critical Damage": [
       4.68,
@@ -10838,7 +10838,7 @@
      "Break Additional Attack Power": 175,
      "All Status Effect Additional Attack Power": 38,
      "Critical Hit Chance": 1.55,
-     "Critical Damage": 2.49,
+     "Critical Damage": 2.5,
      "Armor Penetration": 15,
      "Defense Ignore": 1.94,
      "Status Effect Additional Attack Power Increase": 3.88
@@ -10970,7 +10970,7 @@
       9.92,
       10.5,
       11.08,
-      11.67
+      11.66
      ],
      "Critical Damage": [
       4.68,
@@ -11047,7 +11047,7 @@
      "Break Additional Attack Power": 175,
      "All Status Effect Additional Attack Power": 38,
      "Critical Hit Chance": 1.55,
-     "Critical Damage": 2.49,
+     "Critical Damage": 2.5,
      "Armor Penetration": 15,
      "Defense Ignore": 1.94,
      "Status Effect Additional Attack Power Increase": 3.88
@@ -12787,12 +12787,12 @@
    "Gloves main Critical Damage": "measured (Orange)",
    "Boots main Critical Hit Chance": "same as measured Helmet (Helmet, Gloves and Boots share tables)",
    "Boots main Critical Damage": "same as measured Gloves (Helmet, Gloves and Boots share tables)",
-   "substats": "Measured on Orange: Helmet (Defense, Shock AAP, All Status AAP, Crit Rate, Status AAP Increase), Chest (Poison/Shock AAP, Crit Damage, Defense Up, Max HP), Legs (Crit Rate, Break/Stun/Frost AAP, All Status AAP), Gloves (Frost/Shock/Break AAP, Crit Damage Reduction, Max HP). Other corrected substats are the database value x the measured ratio; Defense Ignore x0.5 is an estimate from Blue. Status Additional Attack Power substats measured on Orange (31 Oct 2026): physical (Stun/Airborne/Knockdown/Break) 250 Chest, 225 Legs, 175 Helmet/Gloves/Boots; damage-over-time (Poison/Burn/Bleed/Shock/Frost) half of that: 125 / 112 / 87. Attack Power Up substat x0.955 is an estimate from Blue.",
+   "substats": "Measured on Orange: Helmet (Defense, Shock AAP, All Status AAP, Crit Rate, Status AAP Increase), Chest (Poison/Shock AAP, Crit Damage, Defense Up, Max HP), Legs (Crit Rate, Break/Stun/Frost AAP, All Status AAP), Gloves (Frost/Shock/Break AAP, Crit Damage Reduction, Max HP). Other corrected substats are the database value x the measured ratio; Defense Ignore x0.5 is an estimate from Blue. Status Additional Attack Power substats measured on Orange (31 Oct 2026): physical (Stun/Airborne/Knockdown/Break) 250 Chest, 225 Legs, 175 Helmet/Gloves/Boots; damage-over-time (Poison/Burn/Bleed/Shock/Frost) half of that: 125 / 112 / 87. Attack Power Up substat x0.955 is an estimate from Blue. **10 Nov 2026: every Orange +15 substat measured on David's 31 pieces** (Helmet, Gloves and Boots share one table; every elemental AAP is equal and every physical AAP is equal on a piece). Defense Ignore 1.94 / 2.77 / 2.50 (Helmet-Gloves-Boots / Chest / Legs) and Attack Power Up 3.18 / 4.54 / 4.09 confirm the earlier estimates; corrections: Crit Damage 2.50 (H/G/B), Chest Attack Power Up 4.54, Chest Status AAP Increase 5.55, Chest All Status AAP 55, Legs Status AAP Increase 5.00. Substats show the same value at +15 whatever the piece.",
    "Chest main Attack Power Up": "measured (Orange)",
    "Helmet main Attack Power Up": "measured (Orange Gloves; Helmet/Boots share the table)",
    "Gloves main Attack Power Up": "measured (Orange Gloves; Helmet/Boots share the table)",
    "Boots main Attack Power Up": "measured (Orange Gloves; Helmet/Boots share the table)",
-   "Legs main Attack Power Up": "estimate: database x 0.954 (ratio measured on Chest and Gloves)",
+   "Legs main Attack Power Up": "measured (Orange +15: 30.68, 10 Nov 2026); lower levels scaled from the earlier estimate",
    "testKitRows": {
     "checked": "2026-11-04",
     "note": "96 main-stat rows from Test Kit test 03 checked against the tables at +0 and at max level, using 0.375 / 0.467 / 0.600 of Orange: within 1 point for flat stats and 0.05 for % stats. Exceptions, all Legs Max HP: Green +0 242 vs 243.4, Green max 969 vs 973.5, Blue +0 302 vs 303.1, Blue max 1211 vs 1212.3.",
@@ -20922,7 +20922,14 @@
      "1050"
     ],
     "Focus": [
+     "5.10%",
      "6.80%"
+    ],
+    "Protection": [
+     "95"
+    ],
+    "Amplification": [
+     "11.20%"
     ]
    }
   },

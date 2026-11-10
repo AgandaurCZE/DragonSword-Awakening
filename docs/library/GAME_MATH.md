@@ -177,12 +177,14 @@ For David's six main teams, Orange +15, enemy Defense 1825, awakenings as owned 
 
 **With 5 Perfect Crit Rate runes (6.80% each, +34% Crit Rate; rule added 10 Nov):** Crit Rate runes beat Attack runes (119) for 11 of 13 heroes by 0.5–5.7% (Johnny and Reina are within 0.5% either way). A Perfect Crit Damage rune would need about 11–13% per rune to beat them (not seen yet; Refined Crit Damage 4.90% vs Refined Crit Rate 4.50%). With the runes, the **Crit Rate substat becomes Crit Damage** everywhere, and a few mains switch to Crit Damage: Ryza Gloves and Boots, Kalsion Legs, Cerese Boots, Theresia Legs and Boots, Roxy Legs (Roxy's Boots back to Attack Power Up, Theresia's Chest back to Attack Power Up). Crit ends at 66–86% rate and 90–125% damage.
 
+**Update 10 Nov evening (Perfect Crit Damage rune 11.20%, Crit Rate runes 5.10–6.80%):** with 6.80% Crit Rate and 11.20% Crit Damage runes, the best mix is **3 Crit Rate + 2 Crit Damage** for most of the 13 (Kalsion 2, Ryza and Theresia 1, Castella, Reina and Sion 4), but every mix with 2–4 Crit Rate runes is within about 0.5%, and all five Crit Rate within 0.1–1%. Perfect values seen fit tenths of a top value (Crit Rate 5.10 and 6.80 = 6/10 and 8/10 of 8.5%; Crit Damage 11.20 = 8/10 of 14%): Claude's reading, unconfirmed. Gear substats were measured on all 31 of David's Orange +15 pieces the same evening and confirmed the tables (DI and Attack Power Up included); the only real correction, Chest Status AAP Increase 5.55% (was 5.02%), doesn't change any build.
+
 Next best set pairs are 1–7% behind (often the element set as the 3-piece with The Infiltrator). Within 1% for Kalsion (Blazing Flames + The Infiltrator).
 
 ## 5. Known unknowns · updated 10 Nov
 - Levels 71–74 enemy Defense; what happens when Armor Penetration exceeds the remaining Defense.
 - Hunt boss weaknesses and immunities (Test 07); Crushing tower bonus; Bleed and Shock tower DoT bonus (assumed like Poison and Burn).
-- Rune top values: Perfect seen so far Attack 119, Max HP 1050, Crit Rate 6.80%; Radiant Defense 67 (10 Nov). Damaged and Intact values come in fifths of a top value, Refined in tenths (Claude's reading of `RUNES.seen`); Perfect Crit Damage not seen yet.
+- Rune top values: Perfect seen so far Attack 119, Defense 95, Max HP 1050, Crit Rate 5.10% and 6.80%, Crit Damage 11.20%; Radiant Defense 67 (10 Nov). Damaged and Intact values come in fifths of a top value, Refined in tenths (Claude's reading of `RUNES.seen`); Top values not seen yet.
 - Orange Defense Ignore and Attack Power Up substats are estimates (Blue × 0.5 and × 0.955); Defense Ignore is on every main-team build. The green +100 Attack and +17% Defense Ignore on the Ursula panels are a buff, most likely food: Tomato Stew gives team Defense Ignore (12% at tier 2; 17% at a higher tier would fit).
 - Why Charlotte, Roxy, Sion and Ornette get the halfway profile A (B = melee, C = ranged, D = Defender are explained). Kalsion's old −1 Attack is gone: his 9 Nov panel gives 1100.
 - Whether skill-damage adjustments hold at other skill levels.
