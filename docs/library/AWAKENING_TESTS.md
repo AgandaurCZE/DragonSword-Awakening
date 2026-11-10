@@ -53,3 +53,33 @@ Measured rows are also in the Test Kit (`testId: apply`, notes say "A1").
 | Ryza | Flash charged, both Lightning Javelins on the target: Shock 0.10 → **0.50**, Airborne **0.10** (new), gauge 5% → **15%**. |
 | Sion, Tarte | No damage change; not tested. |
 | Theresia | Holy Rise: Bleed 0.10 → **0.25**, Airborne 0.20 → **0.30**, gauge 8% → **15%**. |
+
+## Batch 2: A2 and A3 (prepared 10 Nov)
+
+David has 77 levels (25 Stigma Awaken Stones plus 52 to buy). Everyone to A3 costs 41 (19 heroes × 2, Alex 3), which leaves 36: enough to take 12 heroes from A3 to A6 in batch 3. **Every A2 is stat-only: no test.** Before numbers are from Test 01 (with masteries and A1 where they touch the same skill).
+
+| Hero | A3 | Skill and numbers before | What to note |
+|---|---|---|---|
+| Alex | A Subtle Opening: Pounding Grab usable on Knockdown or Stun | Pounding Grab (Special A) 8% | Tested last, alone |
+| Aria | A Burning Wick: Air Bomb's burning ground keeps applying Burn | Air Bomb (Skill): Burn 0.22, Airborne 0.20, gauge 12% | Burn from the ground, standing in it to the end |
+| Astria | Orbis Shooting Practice: Bolt Bombard's burning ground keeps applying Burn | Bolt Bombard (Special A) 18%, no Burn | The new Burn |
+| Castella | A Cool Shout: Howling bigger, lowers the enemy's Defense for a while | Howling (Ultimate) 15% | Gauge, and the Defense drop: damage of one skill before and right after Howling, or the debuff's value if shown |
+| Cerese | Endlessly Rising Magic: Frozen Needles more Frost, adds Knockdown | Frozen Needles (Special A): Frost 0.25, gauge 4% | Frost and the new Knockdown |
+| Charlotte | The Path of Shadows: Shadow Grab pulls in nearby enemies and slams them | Shadow Grab (Special B): Knockdown 0.25, gauge 10% | Groups only: just check the boss numbers didn't change |
+| Dana | Companion of Snow: Summon Chako fully charges Rime Energy | Summon Chako (Skill): Frost 0.15, Knockdown 0.10, gauge 12% | What full Rime does to her rotation; full break time |
+| Eileen | Training Is a Knight's Fundamental Duty: Rolling Upper more hits | Rolling Upper (Special A) 4% | Gauge, and any Airborne |
+| Johnny | A Spectacular Entrance!: an extra thrust during Fatal Sting | Fatal Sting (dash attack): Poison 0.12, gauge 2.5% | With the extra thrust |
+| Kalien | Pact of Scorching Fire: Sur stays longer; its attack lifts and slams; a tail hit adds Stun | Fox Chase (Ultimate): Burn 0.23, gauge 12.5% | Whole Ultimate: the new Airborne and Stun |
+| Kalsion | Noon Sunlight: Royal Flame lasts longer and adds Attack | Royal Flame skills: Flame Wave press Burn 0.33, Airborne 0.20, gauge 10% (no single number for the mode) | How long the mode lasts now and the Attack added (panel) |
+| Lute | Swordplay Imbued with Tenderness: Swordgrab twice in a row | Swordgrab (Special A): Knockdown 0.25, gauge 10% | Both together |
+| Ornette | Compassion as Deep as the Sea: Holy Circle bigger and longer | Holy Circle (Ultimate): Shock 0.22, gauge 4% | Whole Ultimate |
+| Othello | Sharpening Days: Frozen Burst bigger and stronger | Frozen Burst: Ice Grab spear Frost 0.10, gauge 5%; per Frozen Stinger spear Frost 0.01, gauge 1%; Ice Prison (5 explosions) Frost 0.10, gauge 5% | Any of them |
+| Reina | Flash (rated **Game-changing**): Wind Grab resets Tempest's cooldown | Wind Grab (Special B): Airborne 0.25, gauge 11%; Tempest 3% (5–6 hits; 9–10 with A1) | **Full break time** and how fast she reaches a full Airborne stack alone (before: break 50 s) |
+| Roxy | The Hunter of the Battlefield: Double Shot's plunge stacks Crit Damage; shorter Forward Jump cooldown after aerial actions | Double Shot (jump attack) 1% | The Crit Damage per stack and the maximum (panel) |
+| Ryza | Awakened Thunder: Stormbringer adds a lightning strike; bigger and longer pillar | Stormbringer (Ultimate): Shock 0.33, Airborne 0.20, gauge 10% | Whole Ultimate |
+| Sion | Legacy of Faith: Justice Fall pulls nearby enemies in | Justice Fall (Special B): Knockdown 0.20, gauge 2% | Groups only: just check the boss numbers |
+| Tarte | Affection Filled with Longing: Lightning Shock bigger, full charge adds Stun | Lightning Shock charge: Shock 0.33 (0.5 with 8 orbs, 0.9 with all 26), gauge 7.5% | The new Stun at full charge |
+| Theresia | Time of Judgment: Divine Arc hits harder, extends Heretic Judgment and adds Attack for a while | Divine Arc (Special A): Bleed 0.23, gauge 6% | Divine Arc numbers, the mode's new length, the Attack added (panel) |
+
+### Results
+(none yet)

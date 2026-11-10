@@ -1,3 +1,5 @@
+## 10 Nov 2026 — Awakening batch 2 (A2, A3) prepared (Claude)
+- AWAKENING_TESTS: batch 2 list with before numbers. David has 77 levels: everyone to A3 costs 41, leaving 36 for batch 3 (12 heroes A3 → A6).
 ## 10 Nov 2026 — A1 results saved (Claude)
 - David's A1 tests: 14 Test Kit entries (`apply`) and the JSON copy; results table in AWAKENING_TESTS. Lute's A1 buff read as +20% Attack Power. Charlotte had A1 all along (noted in TEST01_RESULTS and DECISIONS). STATUS and DONE updated.
 ## 10 Nov 2026 — Awakening test batch 1 (A1) prepared (Claude)
