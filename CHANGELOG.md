@@ -1,3 +1,5 @@
+## 10 Nov 2026 — Main-team gear builds (Claude)
+- New `tools/team_gear.py` (team-aware version of `endgame_gear.py`: all team statuses on the target, real awakening levels, owned signatures only, physical statuses at full or half uptime). Builds for the 13 heroes of the six main teams in GAME_MATH 4.3. Offline tool only; no site change.
 ## 10 Nov 2026 — Team round after awakenings saved (Claude)
 - David's runs on the six main teams (masteries and awakenings, no gear): Airborne burst 820k→900k, Shadow Poison 950k→1.1M, Holy Bleed 630k→800k, Thunder pair 900k→1.1M, Fox and wind 800k→1M, Frost tornado 800k→1M (signature run now Dana's and Cerese's). Planner cards updated (badge shows the new numbers; old ones kept in the note); TEAM_TESTS, backup and STATUS updated.
 ## 10 Nov 2026 — Team round prepared (Claude)

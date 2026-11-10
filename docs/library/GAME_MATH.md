@@ -139,6 +139,29 @@ Panels from a top player's hardest-difficulty Ursula run. Every gear piece has a
 - **Status AAP follows the team, not the hero's element** (David, 10 Nov): the whole team runs Stun AAP, the one status all three apply (Roxy is Bloodburst, yet takes Stun, not Bleed). It's the status most often on the target, and physical-status AAP substats are **twice** elemental ones (175–250 vs 87–125 per piece). So the AAP substat should go to the status the team keeps up most, usually a shared physical status, not by default to the hero's own element.
 - Conclusion (David and Claude): on bosses, breaking is a must, for the damage and for the doubled physical build-up. Builds follow the role: **on-field damage dealers**: must-have substats plus Crit; **Breakers**: Break and status AAP, Crit mains.
 
+### 4.3 Main-team builds after awakenings, 10 Nov (`tools/team_gear.py`)
+For David's six main teams, Orange +15, enemy Defense 1825, awakenings as owned (Sion A3, the rest A6), signature traits only where owned. Every status the team keeps on the target counts; the team's element is always up, **physical statuses half the time** (Claude's assumption: they come and go; with them always up the results move by 0–3% and the sets tie). Set 3-piece effects counted as always on (agreed). Runes not included (values unknown; they add Crit, which suits the Attack Power Up mains).
+
+**Rule that fell out for all 13:** 3-piece **Earthshatterer** + 2-piece **the team's element set**; mains **Attack Power Up** on every piece (exceptions below); every piece has **Defense Ignore** plus the team's **physical-status AAP** substats (worth twice elemental ones).
+
+| Hero (team) | 2-piece | Mains (not APU) | Substats on every piece | 5th substat | Crit before runes |
+|---|---|---|---|---|---|
+| Charlotte (Shadow Poison) | Venomfog Shade | — | DI, Airborne AAP, Poison AAP, APU | Crit Rate | 51 / 102 |
+| Johnny (Shadow Poison, Airborne burst) | Venomfog Shade | — | DI, Airborne AAP, Poison AAP, APU | Crit Rate | 51 / 82 |
+| Reina (4 teams) | Azure Gale | — | DI, Airborne AAP, APU, Crit Rate | Attack | 51 / 97 |
+| Ryza (Thunder pair) | Thunderrush | — | DI, Knockdown AAP, Airborne AAP, Shock AAP | All Status AAP or AAP Increase | 52 / 82 |
+| Ornette (Thunder pair) | Thunderrush | — | DI, Knockdown AAP, Shock AAP, APU | Crit Rate | 51 / 92 |
+| Sion (Thunder pair) | Thunderrush | — | DI, Knockdown AAP, Shock AAP, APU | Crit Rate | 41 / 92 |
+| Kalsion (Fox and wind, Airborne burst) | Blazing Flames | — | DI, Airborne AAP, Burn AAP, APU | Crit Rate or All Status AAP | 57 / 97 |
+| Kalien (Fox and wind) | Blazing Flames | — | DI, Airborne AAP, APU, Crit Rate | Stun AAP | 51 / 97 |
+| Dana (Frost tornado) | Froststorm | — | DI, Airborne AAP, APU, Crit Rate | Knockdown AAP | 51 / 97 |
+| Cerese (Frost tornado) | Froststorm | — | DI, Airborne AAP, Knockdown AAP, APU | Crit Rate | 49 / 82 |
+| Theresia (Holy Bleed) | Bloodstained Chaser | Chest Crit Rate, Boots Crit Damage | DI, Stun AAP, Airborne AAP, Bleed AAP | AAP Increase or All Status AAP | 59 / 101 |
+| Roxy (Holy Bleed) | Bloodstained Chaser | Boots Crit Rate | DI, Stun AAP, Airborne AAP, Bleed AAP | APU | 44 / 82 |
+| Castella (Holy Bleed) | Bloodstained Chaser | — | DI, Stun AAP, Airborne AAP, Bleed AAP | Crit Rate, All Status AAP or APU | 35 / 82 |
+
+Next best set pairs are 1–7% behind (often the element set as the 3-piece with The Infiltrator). Within 1% for Kalsion (Blazing Flames + The Infiltrator).
+
 ## 5. Known unknowns
 - Levels 71–74 enemy Defense; what happens when Armor Penetration exceeds the remaining Defense; Crit above 100%.
 - Hunt boss weaknesses and immunities (Test 07); Crushing tower bonus; Bleed and Shock tower DoT bonus (assumed like Poison and Burn).
