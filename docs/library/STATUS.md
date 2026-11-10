@@ -1,4 +1,4 @@
-# Status: where things stand (10 Nov 2026, evening)
+# Status: where things stand (10 Nov 2026, late evening)
 
 Back to the library: [docs/README.md](../README.md). Update this file during and at the end of every session; it's the first thing the next chat reads after [WORKING_WITH_DAVID.md](WORKING_WITH_DAVID.md). Finished items move to [DONE.md](DONE.md); every change is in `CHANGELOG.md`. Site tasks are in [SITE.md](SITE.md). David's own to-do list: `docs/dragonsword_david_todo_by_priority.html` (updated 10 Nov).
 
@@ -17,7 +17,7 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 
 ## Next for Claude (10 Nov)
 - **Awakening view of the tier list** (agreed 10 Nov): a button showing ratings with all awakenings, rated at A6 with the signature where the hero needs it; the purple signature card stays in that view; Needs A and Late bloomer leave the main view (done). Ratings to be debated with David first (Charlotte S in groups proposed). Evidence: [AWAKENING_TESTS.md](AWAKENING_TESTS.md) and the team round in [TEAM_TESTS.md](TEAM_TESTS.md).
-- **Preview builds from the full model**: port `tools/team_gear.py` / `endgame_gear.py` to the page behind `?tiers=new` (Python and JS kept identical). Agreed defaults (David, 9–10 Nov): toughest boss (Defense 1825) with a Training Ogre (1000) switch; set effects counted as always on; must-have substats first (Defense Ignore, Attack Power Up), then a slot labelled "team status Additional Attack Power"; physical-status AAP is worth twice elemental; role switch (on-field damage dealer or Breaker); 5 Crit Rate runes once Perfect values are settled.
+- **Preview "Best Gear" box on the hero Build tab: built 10 Nov** (port of `tools/team_gear.py`, identical results for the 13 main-team heroes; `GEAR_MODEL` in DATA_REFERENCE). Controls: enemy (toughest boss 1825 / Training Ogre), physical statuses half or all the time, awakenings A0–A6, signature on/off, Perfect runes best mix or none, status ticks (main-team defaults). **Next:** David's look and feedback; still not done from the 9–10 Nov wish list: a role switch (on-field damage dealer or Breaker) and labelling substats as "must-have" vs "team status AAP".
 - **Karma level slider** on the Karma page is now possible (rule in GAME_MATH 2.3; only breakthrough steps measured).
 - The repository restructure (all five steps David approved on 10 Nov) is done; see SITE.md and CHANGELOG. New layout: `index.html` + `css/site.css` + `js/01…09`, `data/research.json`, `assets/sources/`.
 

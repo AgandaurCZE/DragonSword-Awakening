@@ -147,6 +147,8 @@ Change these in the HTML if needed:
 
 ## Gear, builds and end-game stat totals
 
+**`GEAR_MODEL` (added 10 Nov 2026; preview only).** Settings for the "Best Gear" box on the hero Build tab with `?tiers=new`, which replaces the Best Gear Sets, Best Main Stats and Recommended Endgame Stats boxes there. The box is the JS port of `tools/team_gear.py` (block between `/*GM-START*/` and `/*GM-END*/` in `js/04-gear-builds.js`; keep the two identical). Fields: `level` (gear +15), `defense` (the Enemy buttons: label, Defense, tooltip), `statuses` (the status tick boxes; `Other` = a status with no AAP substat, which still counts for All Status AAP), `physical` (statuses counted at 50% uptime when "Half the time" is on), `excludeSets` (Ballad of Life), `runeMix` (the rune mix used to rank set pairs: 3 Focus + 2 Amplification; the box then tries all 21 mixes of Focus, Amplification and Determination on the winning pair at the top Perfect values in `RUNES.seen`), `teamStatuses` (each main-team hero's default ticks; other heroes start with their own archetype's status). Every other input comes from `HERO_BASE_STATS`, `KARMA_DATA` (signature base Attack and A6 traits), `AWAKENINGS`, all `TITLES`, `GEAR_STATS` and `GEAR_DATA` (`twoBonus`, `threeBonus`).
+
 **Gear rules (from David's testing; may change):**
 - Main stat values depend on the upgrade level. Each substat has one fixed value.
 - Green gear maxes at +6 with 2 substats, Blue at +9 with 3, Purple at +12 with 4, Orange at +15 with 5. Substats unlock at +3, +6, +9, +12 and +15.

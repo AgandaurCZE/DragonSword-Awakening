@@ -625,3 +625,19 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
  .pv .tt-table td{border:0;padding:6px 8px}
  .pv .tt-table td:nth-child(4){grid-column:2/-1;min-width:0;padding-top:0;font-size:13px}
 }
+/* Preview gear model on the hero Build tab (Claude, 10 Nov 2026) */
+.pv .gm-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 18px;padding:12px 14px;border:1px solid #33363f;border-radius:10px;background:rgba(255,255,255,.02);margin-bottom:12px}
+.pv .gm-lab{display:block;font-size:12px;color:#9aa0ab;margin-bottom:5px}
+.pv .gm-seg{display:inline-flex;flex-wrap:wrap;border:1px solid #3a3e48;border-radius:8px;overflow:hidden}
+.pv .gm-seg button{background:transparent;border:0;border-right:1px solid #3a3e48;color:#c9ced8;padding:5px 10px;font:inherit;font-size:13px;cursor:pointer}
+.pv .gm-seg button:last-child{border-right:0}
+.pv .gm-seg button.on{background:#68c7d5;color:#0f1115;font-weight:600}
+.pv .gm-none{font-size:13px;color:#7d838e}
+.pv .gm-st{grid-column:1/-1}
+.pv .gm-chips{display:flex;flex-wrap:wrap;gap:6px}
+.pv .gm-chip{display:inline-flex;align-items:center;gap:5px;border:1px solid #3a3e48;border-radius:999px;padding:3px 10px;font-size:13px;cursor:pointer}
+.pv .gm-chip input{margin:0;width:auto;height:auto;padding:0;min-height:0;accent-color:#68c7d5}
+.pv .gm-set{text-align:left;font:inherit;color:inherit;width:100%;cursor:pointer}
+.pv .gm-tot{margin:10px 0}
+.pv .gm-pct{color:#e0414b;font-weight:600}
+.pv .gm-why{font-size:12.5px}

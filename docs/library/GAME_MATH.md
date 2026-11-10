@@ -181,6 +181,8 @@ For David's six main teams, Orange +15, enemy Defense 1825, awakenings as owned 
 
 Next best set pairs are 1–7% behind (often the element set as the 3-piece with The Infiltrator). Within 1% for Kalsion (Blazing Flames + The Infiltrator).
 
+**On the page (preview), 10 Nov:** the hero Build tab's "Best Gear" box runs this model in the browser (`GEAR_MODEL` in DATA_REFERENCE). Checked against `tools/team_gear.py` for all 13 main-team heroes at David's settings: identical mains, substats and values for every set pair. The page skips 2-piece sets whose bonus needs a status that isn't ticked (they add nothing), so a hero takes 1–2 s instead of 4. With Perfect runes at the top values (Crit Rate 8.08%, Crit Damage 14%, Attack 140) the best mix varies by hero: 3 Crit Rate + 2 Crit Damage for most, Ryza 1 + 4, Theresia 5 Crit Damage, Charlotte, Castella, Roxy, Sion and Kalsion 2 + 3.
+
 ## 5. Known unknowns · updated 10 Nov
 - Levels 71–74 enemy Defense; what happens when Armor Penetration exceeds the remaining Defense.
 - Hunt boss weaknesses and immunities (Test 07); Crushing tower bonus; Bleed and Shock tower DoT bonus (assumed like Poison and Burn).

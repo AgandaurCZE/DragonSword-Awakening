@@ -20954,6 +20954,110 @@
   ],
   "image": "assets/runes/synthesis-screen.webp"
  },
+ "GEAR_MODEL": {
+  "note": "Preview gear model on the hero Build tab (Claude, 10 Nov 2026): a port of tools/team_gear.py. Orange +15 gear, all 109 titles, every 3-piece effect and 2-piece bonus counted as active, substats picked greedily (5 per piece). See GAME_MATH 4.3.",
+  "level": 15,
+  "defense": [
+   {
+    "label": "Toughest boss",
+    "value": 1825,
+    "tip": "Defense 1825: Lv.50 Trait Dungeon boss, the highest recorded"
+   },
+   {
+    "label": "Training Ogre",
+    "value": 1000,
+    "tip": "Defense 1000"
+   }
+  ],
+  "statuses": [
+   "Poison",
+   "Burn",
+   "Frost",
+   "Shock",
+   "Bleed",
+   "Airborne",
+   "Knockdown",
+   "Stun",
+   "Break",
+   "Other"
+  ],
+  "physical": [
+   "Airborne",
+   "Knockdown",
+   "Stun",
+   "Break",
+   "Other"
+  ],
+  "excludeSets": [
+   "Ballad of Life"
+  ],
+  "runeMix": {
+   "Focus": 3,
+   "Amplification": 2
+  },
+  "teamStatuses": {
+   "Charlotte": [
+    "Poison",
+    "Airborne"
+   ],
+   "Johnny": [
+    "Poison",
+    "Airborne"
+   ],
+   "Reina": [
+    "Airborne",
+    "Other"
+   ],
+   "Ryza": [
+    "Shock",
+    "Knockdown",
+    "Airborne"
+   ],
+   "Ornette": [
+    "Shock",
+    "Knockdown"
+   ],
+   "Sion": [
+    "Shock",
+    "Knockdown"
+   ],
+   "Kalsion": [
+    "Burn",
+    "Airborne",
+    "Other"
+   ],
+   "Kalien": [
+    "Burn",
+    "Airborne",
+    "Stun"
+   ],
+   "Dana": [
+    "Frost",
+    "Airborne",
+    "Knockdown"
+   ],
+   "Cerese": [
+    "Frost",
+    "Airborne",
+    "Knockdown"
+   ],
+   "Theresia": [
+    "Bleed",
+    "Stun",
+    "Airborne"
+   ],
+   "Roxy": [
+    "Bleed",
+    "Stun",
+    "Airborne"
+   ],
+   "Castella": [
+    "Bleed",
+    "Stun",
+    "Airborne"
+   ]
+  }
+ },
  "DUNGEONS": {
   "note": "Normal Dungeons, from David's Special Challenges screenshots (assets/dungeons/Drops1-5_<difficulty>.webp; Normal = grey I, Hard = green II, Very Hard = blue III) and his gear notes (1 Nov 2026). exp/emblem/material are the listed rewards; gear = rarities of the dungeon's set that can drop; slots = the gear pieces it drops. Materials identified by matching icons against assets/items/icons and confirmed by the items' own Main Sources.",
   "enemyLevelLabel": "Enemy Lv.",

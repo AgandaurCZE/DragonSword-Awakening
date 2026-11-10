@@ -45,6 +45,7 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - Level curve refitted with Lv.40, Lv.50 and Lv.70 measurements (31 Oct–8 Nov).
 
 ## Site work (preview unless noted)
+- **10 Nov late evening:** "Best Gear" box on the hero Build tab (port of `tools/team_gear.py`, checked identical for 13 heroes), replacing the old build boxes in the preview.
 - **10 Nov:** repository restructure approved by David and done: `index.html` split into `css/site.css` and nine `js/` files; `data.json` loads with safe caching (both URLs); `DAMAGE_TESTS` moved to `data/research.json`; source screenshots gathered in `assets/sources/`; artifact backups as an end-of-session routine. Public page pixel-identical throughout.
 - **10 Nov:** site check: preview starts ~5× faster (no longer waits for the 45 dungeon banners), phone layout fixes (Gear, tier list, Tools, Titles), Trait chips from the new tier list, tab titles, dead code removed, code map added; public page pixel-identical (CHANGELOG).
 - **10 Nov:** tier list re-rated with Masteries (16 heroes), Ornette Enabler and Applies, purple signature card for Theresia and Ryza, Needs A and Late bloomer gone from the main view; hover shows the latest patch line.
