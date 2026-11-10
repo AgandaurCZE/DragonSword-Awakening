@@ -1,3 +1,14 @@
+## 10 Nov 2026 — Site check: preview fixes and a faster preview start (Claude)
+- **Restore point:** commit `60ad0b3` is the last state before this clean-up (main can't be rewritten, so `git revert` back to it is always possible). Tags can't be pushed through the session proxy.
+- Method: every tab of the public URL and the preview screenshotted at 1400 px and 390 px before and after; the public page is pixel-identical on all tabs (desktop and phone), no console errors on either URL.
+- `index.html`, preview only (`html.pv` class set when `IS_PREVIEW`; CSS block "Preview-only fixes" at the end of `<style>`):
+  - **Start-up speed:** the preview no longer waits for all 45 dungeon banners (~9 MB) before drawing; they preload when a Dungeons page is first opened, and Normal Dungeons draws on first open. Preview visible after 0.64 s instead of 3.1 s on a 20 Mbit/s line.
+  - `#dungeons?set=…` links now open the Dungeons page (they never did on load).
+  - Browser tab title said "undefined" on Cookbook, Item Database, Achievements, Guides, Tools; fixed. The header line names the open page instead of "Visual tier list … hover a hero" on other pages.
+  - Trait Dungeons rating chips used the old tier list; they now show the new single-target rating.
+  - Gear: stray gap before full stops in set effects; Upgrade calculator and Runes boxes overflowed phones sideways; rune type cards now line up.
+  - Phones: tier list hides empty role rows and shortens the mode banners; Tools status table and Titles table re-flow instead of being cut off.
+  - Sidebar scrolls when the Dungeons group is open on short screens; Achievements in two columns on desktop.
 ## 10 Nov 2026 — Rune slot rules; builds with Perfect Crit Rate runes (Claude)
 - `RUNES.rules` (David): one slot per gear piece (5 per hero), unlocked per piece for 1 Anonymous Artisan's Crafting Tool (the old "5" was wrong); any type or grade in any slot, duplicates allowed; removal returns the rune for 10,000 Gold.
 - GAME_MATH 4.3: the main-team builds re-run with 5 Perfect Crit Rate runes: Crit Rate runes win; Crit Rate substats become Crit Damage; a few mains switch to Crit Damage.
