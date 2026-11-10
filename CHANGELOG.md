@@ -1,3 +1,5 @@
+## 10 Nov 2026 — A6 results saved (Claude)
+- David's A6 tests: 24 Test Kit entries (`apply`) and the JSON copy; results and every hero's awakening level in AWAKENING_TESTS. Castella's Whirlwind corrected to 17.5% before A6 (note on the Test 01 row). STATUS and DONE updated.
 ## 10 Nov 2026 — A3 results saved; batch 3 prepared (Claude)
 - David's A3 tests: 20 Test Kit entries (`apply`) and the JSON copy; results in AWAKENING_TESTS (Castella's Howling read as Defense −20%; Kalsion's Royal Flame +10% → +20% Attack Power; Theresia's A3 +10% Attack Power; Othello's Frozen Burst +50% damage; Roxy +10% Crit Damage per stack, 5 max). Batch 3 list (A4–A6 for the 12 heroes in the main planner teams). STATUS and DONE updated.
 ## 10 Nov 2026 — Awakening batch 2 (A2, A3) prepared (Claude)

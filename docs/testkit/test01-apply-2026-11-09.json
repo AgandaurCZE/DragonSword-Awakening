@@ -6424,5 +6424,413 @@
   "summary": "Lightning Shock (Skill, A3, full charge, no orbs): 0.10 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
   "test": "Status application per skill",
   "testId": "apply"
+ },
+ "apply-1794800000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "About 32.5%. Before A6: 6 spins in 3 s, 17.5% (David, 10 Nov: Test 01's 23% was wrong). Full break 15 s (before 16 s).",
+   "presses": "1",
+   "skill": "Whirlwind (Skill, A6, 8 spins in 3 s)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.325"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Whirlwind (Skill, A6, 8 spins in 3 s): 0.325 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "Many walls and explosions; about 30% of the gauge.",
+   "presses": "1",
+   "skill": "Frozen Spike on Frozen Road (A6, ice walls detonated)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.30"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Frozen Spike on Frozen Road (A6, ice walls detonated): 0.30 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "New with A6.",
+   "presses": "1",
+   "skill": "Chako Spin (Special B, A6)",
+   "st": "Airborne",
+   "stacks": "0.20"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Chako Spin (Special B, A6): 0.20 Airborne per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "About 25% (before 17.5%). Full break alone 15 s (before 20 s).",
+   "presses": "1",
+   "skill": "Chako Spin (Special B, A6)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Chako Spin (Special B, A6): 0.25 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "Before: 0.15.",
+   "presses": "1",
+   "skill": "Illusion Kick (Special A, A6)",
+   "st": "Poison",
+   "stacks": "0.20"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Illusion Kick (Special A, A6): 0.20 Poison per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "Before: 0.20.",
+   "presses": "1",
+   "skill": "Illusion Kick (Special A, A6)",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Illusion Kick (Special A, A6): 0.25 Airborne per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Charlotte",
+   "lv": "90",
+   "note": "About 5% (before 4%).",
+   "presses": "1",
+   "skill": "Illusion Kick (Special A, A6)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Illusion Kick (Special A, A6): 0.05 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "About 0.30 (before 0.25); Airborne and gauge unchanged.",
+   "presses": "1",
+   "skill": "Venom Cutter (Special A, A6)",
+   "st": "Poison",
+   "stacks": "0.30"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Venom Cutter (Special A, A6): 0.30 Poison per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "Before (press): 0.33.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, A6 sword beam with its ground)",
+   "st": "Burn",
+   "stacks": "0.50"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Flame Wave (Royal Flame, A6 sword beam with its ground): 0.50 Burn per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "Before: 0.20.",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, A6 sword beam with its ground)",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Flame Wave (Royal Flame, A6 sword beam with its ground): 0.25 Airborne per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalsion",
+   "lv": "90",
+   "note": "About 10% (unchanged).",
+   "presses": "1",
+   "skill": "Flame Wave (Royal Flame, A6 sword beam with its ground)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.10"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Flame Wave (Royal Flame, A6 sword beam with its ground): 0.10 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "The new wave adds 0.15 Shock at either stack count.",
+   "presses": "1",
+   "skill": "Judgment (Special A, A6, at 1 or 2 Shock stacks)",
+   "st": "Shock",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Judgment (Special A, A6, at 1 or 2 Shock stacks): 0.15 Shock per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "New with A6. Alone: Airborne stack in 12 s (before 20 s), full break 36 s (before 44 s).",
+   "presses": "1",
+   "skill": "Winchester (dash attack, A6 leap)",
+   "st": "Airborne",
+   "stacks": "0.08"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Winchester (dash attack, A6 leap): 0.08 Airborne per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Reina",
+   "lv": "90",
+   "note": "About 4% (before 2.5%).",
+   "presses": "1",
+   "skill": "Winchester (dash attack, A6 leap)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Winchester (dash attack, A6 leap): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "Exactly double the 2-javelin numbers.",
+   "presses": "1",
+   "skill": "Flash (Special A, A1 charge with 4 Lightning Javelins, A6)",
+   "st": "Shock",
+   "stacks": "1.00"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Flash (Special A, A1 charge with 4 Lightning Javelins, A6): 1.00 Shock per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "Double the 2-javelin 0.10.",
+   "presses": "1",
+   "skill": "Flash (Special A, A1 charge with 4 Lightning Javelins, A6)",
+   "st": "Airborne",
+   "stacks": "0.20"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Flash (Special A, A1 charge with 4 Lightning Javelins, A6): 0.20 Airborne per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "Double the 2-javelin 15%.",
+   "presses": "1",
+   "skill": "Flash (Special A, A1 charge with 4 Lightning Javelins, A6)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.30"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Flash (Special A, A1 charge with 4 Lightning Javelins, A6): 0.30 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800017000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "Before: 0.15.",
+   "presses": "1",
+   "skill": "Kick Storm (Special A, A6)",
+   "st": "Bleed",
+   "stacks": "0.20"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Kick Storm (Special A, A6): 0.20 Bleed per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800018000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "About 6% (before 3.5%).",
+   "presses": "1",
+   "skill": "Kick Storm (Special A, A6)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Kick Storm (Special A, A6): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800019000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "Before: 0.20.",
+   "presses": "1",
+   "skill": "Celestial Verdict (Ultimate, A6)",
+   "st": "Stun",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Celestial Verdict (Ultimate, A6): 0.25 Stun per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800020000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "About 15% (before 10%).",
+   "presses": "1",
+   "skill": "Celestial Verdict (Ultimate, A6)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Celestial Verdict (Ultimate, A6): 0.15 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800021000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "New with A6.",
+   "presses": "1",
+   "skill": "Celestial Verdict (Ultimate, A6, Heretic Judgment mode)",
+   "st": "Bleed",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Celestial Verdict (Ultimate, A6, Heretic Judgment mode): 0.15 Bleed per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800022000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "Before: 0.25.",
+   "presses": "1",
+   "skill": "Celestial Verdict (Ultimate, A6, Heretic Judgment mode)",
+   "st": "Stun",
+   "stacks": "0.30"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Celestial Verdict (Ultimate, A6, Heretic Judgment mode): 0.30 Stun per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794800023000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "About 25% (before 15%).",
+   "presses": "1",
+   "skill": "Celestial Verdict (Ultimate, A6, Heretic Judgment mode)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-10T10:12:00.000Z",
+  "summary": "Celestial Verdict (Ultimate, A6, Heretic Judgment mode): 0.25 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A6 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
  }
 }

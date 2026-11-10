@@ -65,7 +65,7 @@ Notes from David:
 
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
-| Whirlwind (Skill) | Gauge | 23% | About 23% of the Super Armor gauge (David's % overlay on the boss bar). Whole gauge in 18 s. |
+| Whirlwind (Skill) | Gauge | 23% | **David, 10 Nov: re-read as 17.5% (6 spins in 3 s); 23% was wrong.** About 23% of the Super Armor gauge (David's % overlay on the boss bar). Whole gauge in 18 s. |
 | Howling (Ultimate) | Gauge | 15% | About 15% of the Super Armor gauge. |
 | Stun Blow (Special A) | Stun | 0.33 | Only usable once the boss is broken, so its gauge damage can't be measured. |
 | Upper Blow (Special B) | Airborne | 0.33 |  |

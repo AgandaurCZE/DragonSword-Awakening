@@ -126,5 +126,26 @@ Measured rows are also in the Test Kit (`testId: apply`, notes say "A3"). A2 (st
 | Ryza | The Unfading Flash: Lightning Javelin up to 4 charges | Lightning Javelin per charge: Shock 0.10, gauge 2%; charged Flash (A1) with 2 javelins: Shock 0.50, Airborne 0.10, gauge 15% | Flash with 4 javelins out |
 | Theresia | In the Name of the Goddess: Celestial Verdict more hits | Celestial Verdict: Stun 0.20, gauge 10%; in Heretic Judgment: Stun 0.25, gauge 15% | Both versions |
 
-### Results
-(none yet)
+### Results (David, 10 Nov)
+Measured rows are also in the Test Kit (`testId: apply`, notes say "A6"). A4 and A5 (stats) were on.
+
+| Hero | Result |
+|---|---|
+| Castella | Whirlwind: 6 spins in 3 s → **8 spins in 3 s**, gauge **17.5% → 32.5%**. David's correction: before A6 it was 17.5%, not Test 01's 23%. **Full break 15 s** (16 s before). |
+| Cerese | Frozen Spike on Frozen Road makes many ice walls; detonated, many explosions, about **30%** of the gauge. |
+| Charlotte | Illusion Kick: Poison 0.15 → **0.20**, Airborne 0.20 → **0.25**, gauge 4% → **5%**. |
+| Dana | Chako Spin: Airborne **0.20** (new), gauge 17.5% → **25%**. **Full break alone 15 s** (20 s with A3). |
+| Johnny | Venom Cutter: Poison 0.25 → **about 0.30**; the rest unchanged. |
+| Kalien | Fox Parade's little foxes stay and do some damage (no application) and can be detonated at once with Special B. Alone: **Burn stack 7 s**, **full break 10 s**, **Stun 15 s** (10 s / 12 s / 25 s with A3). |
+| Kalsion | Royal Flame sword beam with its ground: Burn **0.50**, Airborne **0.25**, gauge **10%** (before, Flame Wave press: 0.33, 0.20, 10%). |
+| Ornette | Judgment's new wave adds **0.15 Shock**, at 1 or 2 Shock stacks. |
+| Reina | Winchester leap: Airborne **0.08** (new), gauge 2.5% → **4%**. Alone: **Airborne stack 12 s** (20 s with A3), **full break 36 s** (44 s). |
+| Roxy | Kick Storm: Bleed 0.15 → **0.20**, gauge 3.5% → **6%**. |
+| Ryza | Charged Flash with **4 javelins: exactly double** the 2-javelin numbers: Shock **1.00**, Airborne **0.20**, gauge **30%**. |
+| Theresia | Celestial Verdict: Stun 0.20 → **0.25**, gauge 10% → **15%**. In Heretic Judgment: Bleed **0.15** (new), Stun 0.25 → **0.30**, gauge 15% → **25%**. |
+
+## Where every hero stands (10 Nov)
+- **A6:** Castella, Cerese, Charlotte, Dana, Johnny, Kalien, Kalsion, Ornette, Reina, Roxy, Ryza, Theresia.
+- **A3:** Aria, Astria, Eileen, Lute, Othello, Sion, Tarte.
+- **A0:** Alex (tested last, alone).
+- All 77 levels spent.
