@@ -5846,5 +5846,243 @@
   "summary": "Spiky Bolt (mastery): 0.08 Shock per press on Training Ogre (Lv. 90). | Mastery retest, 10 Nov.",
   "test": "Status application per skill",
   "testId": "apply"
+ },
+ "apply-1794600000000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "A1: more hits, adds Knockdown. Before: Stun 0.33.",
+   "presses": "1",
+   "skill": "Stun Blow (Special A, A1, target broken)",
+   "st": "Stun",
+   "stacks": "0.45"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Stun Blow (Special A, A1, target broken): 0.45 Stun per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600001000": {
+  "inputs": {
+   "broken": "Broken",
+   "enemy": "Training Ogre",
+   "hero": "Castella",
+   "lv": "90",
+   "note": "New with A1.",
+   "presses": "1",
+   "skill": "Stun Blow (Special A, A1, target broken)",
+   "st": "Knockdown",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Stun Blow (Special A, A1, target broken): 0.25 Knockdown per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "About 0.28 (before 0.20). Full break not retested (he breaks with dash attacks and Ultimate).",
+   "presses": "1",
+   "skill": "Frozen Stinger (Skill, A1)",
+   "st": "Frost",
+   "stacks": "0.28"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Frozen Stinger (Skill, A1): 0.28 Frost per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Othello",
+   "lv": "90",
+   "note": "About 10% (before 7.5%).",
+   "presses": "1",
+   "skill": "Frozen Stinger (Skill, A1)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.10"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Frozen Stinger (Skill, A1): 0.10 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "Before (uncharged): 0.10.",
+   "presses": "1",
+   "skill": "Flash (Special A, A1, charged, both Lightning Javelins on the target)",
+   "st": "Shock",
+   "stacks": "0.50"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Flash (Special A, A1, charged, both Lightning Javelins on the target): 0.50 Shock per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "New with A1.",
+   "presses": "1",
+   "skill": "Flash (Special A, A1, charged, both Lightning Javelins on the target)",
+   "st": "Airborne",
+   "stacks": "0.10"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Flash (Special A, A1, charged, both Lightning Javelins on the target): 0.10 Airborne per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "About 15% (before 5%).",
+   "presses": "1",
+   "skill": "Flash (Special A, A1, charged, both Lightning Javelins on the target)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Flash (Special A, A1, charged, both Lightning Javelins on the target): 0.15 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "Before: 0.24. Stun unchanged 0.20.",
+   "presses": "1",
+   "skill": "Crimson Spiral (Skill, A1, charge held)",
+   "st": "Bleed",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Crimson Spiral (Skill, A1, charge held): 0.33 Bleed per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Roxy",
+   "lv": "90",
+   "note": "About 10% (before 7.5%).",
+   "presses": "1",
+   "skill": "Crimson Spiral (Skill, A1, charge held)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.10"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Crimson Spiral (Skill, A1, charge held): 0.10 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "Before: 0.10.",
+   "presses": "1",
+   "skill": "Holy Rise (Special B, A1)",
+   "st": "Bleed",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Holy Rise (Special B, A1): 0.25 Bleed per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "Before: 0.20.",
+   "presses": "1",
+   "skill": "Holy Rise (Special B, A1)",
+   "st": "Airborne",
+   "stacks": "0.30"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Holy Rise (Special B, A1): 0.30 Airborne per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Theresia",
+   "lv": "90",
+   "note": "About 15% (before 8%).",
+   "presses": "1",
+   "skill": "Holy Rise (Special B, A1)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Holy Rise (Special B, A1): 0.15 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Dana",
+   "lv": "90",
+   "note": "About 54-55% (before 35%). With Othello's Ultimate on she breaks in about 4 s (before 7 s).",
+   "presses": "1",
+   "skill": "Chako Knuckle (Special A, A1, at 2 Frost stacks, Knockdown or Ice Block)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.545"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Chako Knuckle (Special A, A1, at 2 Frost stacks, Knockdown or Ice Block): 0.545 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794600013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "A1: usable whenever the target burns, cooldown about 12 s. Alone: full break in 15 s (before 20 s), 3 Burn stacks in 25 s, her Stun in 43-46 s.",
+   "presses": "1",
+   "skill": "Fox Grab (Special A, A1, unbroken Burning target)",
+   "st": "Burn",
+   "stacks": "0.30"
+  },
+  "savedAt": "2026-11-10T08:17:00.000Z",
+  "summary": "Fox Grab (Special A, A1, unbroken Burning target): 0.30 Burn per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
  }
 }

@@ -29,5 +29,27 @@ Same setup as Test 01: Training Ogre, no gear, no Karma, all masteries on. Stat-
 | Tarte | A Glimmering Touch: Cure also shields allies and pushes enemies away | Cure: heal, no application data | Nothing to measure |
 | Theresia | The Mace of Branding: Holy Rise's upward strike becomes a whirlwind with more hits | Holy Rise (Special B): Bleed 0.10, Airborne 0.20, gauge 8% | Whole Holy Rise |
 
-### Results
-(none yet)
+### Results (David, 10 Nov)
+Measured rows are also in the Test Kit (`testId: apply`, notes say "A1").
+
+| Hero | Result |
+|---|---|
+| Alex | Tested last (alone). |
+| Aria | Rolling Bomb has two charges; each cast gives the old numbers, so twice per use. |
+| Astria | Doubles the gauge damage of Ballista Shot and Stunt Shot, but **only the first bolt after a Reload**. |
+| Castella | Stun Blow (target broken): Stun 0.33 → **0.45**, Knockdown **0.25** (new). |
+| Cerese | Ice Storm lasts twice as long (she's locked in place twice as long) and is much bigger; about double the old numbers (Frost about 0.50, Airborne about 0.40, gauge about 30%: inferred from "double", not read off). |
+| Charlotte | **Had A1 all along** (since before Test 01), so her Test 01 Poison Dagger numbers and her team tests already include it. |
+| Dana | Chako Knuckle's big blow (2 Frost stacks, Knockdown or Ice Block): gauge 35% → **about 54–55%**. With Othello's Ultimate on she breaks in **about 4 s** (before 7 s). |
+| Eileen | No damage change; not tested. |
+| Johnny | Phantom Slash: same numbers, two charges. |
+| Kalien | Fox Grab works whenever the target burns (cooldown about 12 s), so she uses it all the time. Alone: **full break in 15 s** (before 20 s), **all 3 Burn stacks in 25 s**, her Stun in **43–46 s**. Fox Grab per use as before (Burn 0.30, gauge 15%). |
+| Kalsion | Explosion: the fireball is cast and stays while he moves and uses other skills. Big quality-of-life gain, possibly more damage and a different playstyle. |
+| Lute | Relic area buff lasts about 5 s: Castella 1245 → +249 Attack, Ornette 1288 → +257 Attack. Both are exactly **+20%** of the base Attack shown in the panel (hero Lv.70 base 1100 / 1143 plus the owned titles' +145), so it's a **+20% Attack Power** buff (Claude's reading; it should add to the other Attack Power Up buffs like Eileen's and Sion's). |
+| Ornette | Holy Cross lasts longer and can be aimed; no other change seen. |
+| Othello | Frozen Stinger: Frost 0.20 → **about 0.28**, gauge 7.5% → **about 10%**. Full break not retested (it comes from dash attacks and the Ultimate). |
+| Reina | Tempest: 5–6 hits → **9–10 hits**. Gauge not read (3% before; if per hit, about 5% now: Claude's estimate, not measured). |
+| Roxy | Crimson Spiral, charge held: Bleed 0.24 → **0.33**, Stun 0.20 (same), gauge 7.5% → **10%**. |
+| Ryza | Flash charged, both Lightning Javelins on the target: Shock 0.10 → **0.50**, Airborne **0.10** (new), gauge 5% → **15%**. |
+| Sion, Tarte | No damage change; not tested. |
+| Theresia | Holy Rise: Bleed 0.10 → **0.25**, Airborne 0.20 → **0.30**, gauge 8% → **15%**. |

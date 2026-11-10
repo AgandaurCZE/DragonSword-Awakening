@@ -129,6 +129,8 @@ Notes from David:
 
 ## Charlotte
 
+Note (David, 10 Nov): Charlotte had **A1** (My Mother's Hands: Poison Dagger also throws a large shuriken) during Test 01 and every team test; her Poison Dagger numbers include it.
+
 | Skill | Status | Stacks / gauge | Note |
 |---|---|---|---|
 | Invisible (Skill, clone explosion) | Poison | 0.24 |  |

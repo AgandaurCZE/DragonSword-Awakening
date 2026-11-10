@@ -1,3 +1,5 @@
+## 10 Nov 2026 — A1 results saved (Claude)
+- David's A1 tests: 14 Test Kit entries (`apply`) and the JSON copy; results table in AWAKENING_TESTS. Lute's A1 buff read as +20% Attack Power. Charlotte had A1 all along (noted in TEST01_RESULTS and DECISIONS). STATUS and DONE updated.
 ## 10 Nov 2026 — Awakening test batch 1 (A1) prepared (Claude)
 - New `docs/library/AWAKENING_TESTS.md`: every hero's A1, the skill it changes with the Test 01 numbers (with masteries), and what to note. Listed in the README index; STATUS updated.
 ## 10 Nov 2026 — Patch line in the preview tier tooltip; Ornette applies Shock and Knockdown (Claude)
