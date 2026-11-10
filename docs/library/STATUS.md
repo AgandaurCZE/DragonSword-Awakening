@@ -21,7 +21,9 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 - David has materials for **9 masteries** (16 heroes need a retest) and **29 awakening levels** (77 if he exchanges Fragment of Sacred Light for Stigma Awaken Stones; 120 for A6 on all 20).
 - **Order per hero: mastery → retest → only then awakenings.** A retest after an awakening changes two things at once and can't be compared with Test 01.
 - First 9 masteries (Claude's suggestion, heroes in the Works teams first): Ryza, Kalsion, Kalien, Charlotte, Johnny, Ornette, Sion, Cerese, Theresia. Later: Castella, Aria, Tarte, Astria, Othello, Eileen, Lute.
-- Awakenings have no retest list. Suggestion: A1 for everyone first (20 of the 29; most A1s are rated 4 and several change the kit, e.g. Kalien's Fox Grab without Break), then by rating.
+- **Awakening retests (agreed 10 Nov):** same method as masteries (the changed skill's application and gauge first, then the all-out break time), but **only for awakenings that change a status or Super Armor**: about 25 of 120 (Castella A1, A6; Aria A3; Dana A1, A6; Kalien A1, A3; Roxy A1; Ornette A6; Tarte A3, A6; Kalsion A6; Cerese A3, A6; Reina A6; Astria A1, A3, A6; Othello A1, A3; Charlotte A1, A6; Ryza A1; Alex skipped). Stat-only awakenings need no test; the model already counts them. Take one at a time and test before the next on the same hero.
+- **No team tests in between.** One team round at the end, with the main version of each planner group (6 teams), once masteries and awakenings are in (ideally with gear).
+- Awakenings have no other retest list. Suggestion: A1 for everyone first (20 of the 29; most A1s are rated 4 and several change the kit, e.g. Kalien's Fox Grab without Break), then by rating.
 
 ## Mastery retests (after each mastery, before that hero's awakenings)
 A mastery costs 10 of a special material from legendary chests. Test the changed skill first, then redo the all-out break time (same setup as Test 01: Training Ogre, no gear, no Karma). Compare with [TEST01_RESULTS.md](TEST01_RESULTS.md).
