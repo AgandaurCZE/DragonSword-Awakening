@@ -21378,8 +21378,16 @@
      "groups": "A"
     },
     "tags": [
+     "enabler",
      "easy"
-    ]
+    ],
+    "applies": {
+     "main": [
+      "Shock",
+      "Knockdown"
+     ],
+     "also": []
+    }
    },
    "Lute": {
     "role": "Support",

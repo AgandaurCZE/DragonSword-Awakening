@@ -1,3 +1,7 @@
+## 10 Nov 2026 — Patch line in the preview tier tooltip; Ornette applies Shock and Knockdown (Claude)
+- `index.html` `v2TipHtml` (preview tier list only): hovering a hero shows the latest balance patch, its direction and the skill damage %, the same line as the other hero hover cards. The preview tooltip never had it.
+- `TIER_LIST_V2.heroes.Ornette`: Enabler tag and Applies Shock, Knockdown (David, 10 Nov: her mastery adds both). Kalien and Astria keep their purple signature cards.
+- Validator OK; checked locally: Ornette's tooltip shows the patch line, no console errors, public page unchanged.
 ## 10 Nov 2026 — Tier list v2 re-rated with Masteries (Claude)
 - `TIER_LIST_V2.heroes` (preview only): 16 heroes changed after debate with David (list in DECISIONS). `signatureKarma` added for Theresia and Ryza; `awk` removed from Kalien, Sion, Astria and `late` from Cerese (tag definitions kept). `about` text: ratings now include Masteries.
 - Validator OK; preview tier list checked locally.

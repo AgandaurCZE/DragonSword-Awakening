@@ -439,7 +439,7 @@ Notes from David:
 | Holy Grab (Special B) | Gauge | 12.5% |  |
 | Pray (whole basic combo) | Gauge | 3% |  |
 | Shining Spin (jump attack) | Gauge | 5% |  |
-| Holy Cutter (dash attack) | Shock | 0.1 | Mastery not unlocked: retest once it is (extra swing adds Shock and Knockdown). |
+| Holy Cutter (dash attack) | Shock | 0.1 | Without mastery. With it: Shock 0.18, Knockdown 0.03 (Mastery retests, 10 Nov). |
 | Holy Cutter (dash attack) | Gauge | 2.5% |  |
 
 ## Alex
