@@ -24238,6 +24238,23 @@
       "mult": 1.35
      }
     ]
+   },
+   {
+    "hero": "Sion",
+    "slots": [
+     "Ultimate"
+    ],
+    "note": "Three hits: 2% + 60% + 40% of the codex % (David, Lv.1, 11 Nov 2026).",
+    "variants": [
+     {
+      "label": "All three hits",
+      "mult": 1.02
+     },
+     {
+      "label": "Biggest hit",
+      "mult": 0.6
+     }
+    ]
    }
   ],
   "statuses": [
