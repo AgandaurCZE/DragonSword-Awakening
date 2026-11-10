@@ -1,3 +1,5 @@
+## 10 Nov 2026 — data.json cached safely (structure step C, Claude)
+- David approved all five structure steps (SITE.md). Step C: `index.html` loads `data.json` with `cache:'no-cache'` instead of `?v=`timestamp + `no-store`. Every visit still asks the server for the newest file, but an unchanged file comes back as "not modified" (measured: 105 bytes instead of 712 KB on a reload). Public page pixel-identical; no console errors.
 ## 10 Nov 2026 — Notes check, part 2: every library file (Claude)
 - Read every note file and fixed what was out of date or wrong:
   - **GAME_MATH:** "Crit above 100% unknown" contradicted DONE (answered: it does nothing); new 3.6 with today's buffs, debuffs and rules (Castella −20% Defense, Lute +20% Attack Power, Kalsion and Theresia Attack Power, Roxy Crit Damage stacks, Othello's Frost refill, Tarte's 40 bubbles, break times by stage); the new title's Attack Power Up and what it means for future panel readings (marked as Claude's reading); rune values and the estimated substats in the unknowns.
