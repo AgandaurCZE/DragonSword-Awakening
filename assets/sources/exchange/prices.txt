@@ -1,4 +1,4 @@
-Exchange prices (David's screenshots, 30 Oct 2026). Screens kept in assets/exchange/source/ for cutting icons later.
+Exchange prices (David's screenshots, 30 Oct 2026). Screens kept in assets/sources/exchange/source/ for cutting icons later.
 
 KARMA (Karma exchange crystals; David had 595)
 - General Karma: 30 each.

@@ -8112,7 +8112,7 @@
   }
  },
  "AWAKENINGS": {
-  "note": "Awakening names and text copied word for word from the in-game screenshots in assets/awakenings/<Hero>/A1-A6.png (OCR, then every line checked by eye). '\\n' is a line break in the game text. 'effects' lists the always-on stat bonuses in the same stat names as GEAR_STATS; they count in the end-game totals (purple) and in the build optimiser. Ratings 0-5: kit-changing awakenings are Claude's judgement of what they do for the hero's kit, role and teams. Stat awakenings on damage heroes (28 Oct 2026, after the damage tests) are rated by their modelled damage gain at end-game with the recommended build: 15%+ = 4, 8-15% = 3, 3-8% = 2, 1-3% = 1. The model uses the measured damage rules in DAMAGE_TESTS, assumes the hero's own damage-over-time status stays on the target, counts Airborne/Knockdown/Stun bonuses only on skills that need that status (a lower bound), values Break bonuses at nothing (Break uptime unknown) and values Defense Ignore on an enemy like the Training Ogre (its Defense halves damage). Support and tank heroes' stat awakenings keep their earlier ratings. The best awakening is the highest-rated; on a tie the earlier pick stays.",
+  "note": "Awakening names and text copied word for word from the in-game screenshots in assets/sources/awakenings/<Hero>/A1-A6.png (OCR, then every line checked by eye). '\\n' is a line break in the game text. 'effects' lists the always-on stat bonuses in the same stat names as GEAR_STATS; they count in the end-game totals (purple) and in the build optimiser. Ratings 0-5: kit-changing awakenings are Claude's judgement of what they do for the hero's kit, role and teams. Stat awakenings on damage heroes (28 Oct 2026, after the damage tests) are rated by their modelled damage gain at end-game with the recommended build: 15%+ = 4, 8-15% = 3, 3-8% = 2, 1-3% = 1. The model uses the measured damage rules in DAMAGE_TESTS, assumes the hero's own damage-over-time status stays on the target, counts Airborne/Knockdown/Stun bonuses only on skills that need that status (a lower bound), values Break bonuses at nothing (Break uptime unknown) and values Defense Ignore on an enemy like the Training Ogre (its Defense halves damage). Support and tank heroes' stat awakenings keep their earlier ratings. The best awakening is the highest-rated; on a tie the earlier pick stays.",
   "ratingScale": [
    "Not needed",
    "Barely noticeable",
@@ -19677,7 +19677,7 @@
   }
  },
  "TOWER_TRIALS": {
-  "note": "Tower of Trials (David, 31 Oct 2026). Unlocked by the side quest 'Barduk's Intentions'; reached only through the map's Tower of Trials point (not in the menu or the Mercenary Guide). Source notes and screenshots: assets/tower/. Shown in the new tier list's Towers mode (preview only).",
+  "note": "Tower of Trials (David, 31 Oct 2026). Unlocked by the side quest 'Barduk's Intentions'; reached only through the map's Tower of Trials point (not in the menu or the Mercenary Guide). Source notes and screenshots: assets/sources/tower/. Shown in the new tier list's Towers mode (preview only).",
   "unlock": "Unlocked by the side quest Barduk's Intentions. Afterwards the map shows a Tower of Trials point you can warp to; it isn't in the menu or the Mercenary Guide.",
   "floors": 30,
   "starsPerFloor": 3,

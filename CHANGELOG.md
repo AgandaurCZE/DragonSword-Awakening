@@ -1,3 +1,7 @@
+## 10 Nov 2026 — Source screenshots gathered in assets/sources/ (structure step D, Claude)
+- Moved with `git mv` (history kept) into `assets/sources/`: `help`, `merc-crew`, `exchange`, `raid`, `tower`, `rift`, `upcoming`, `titles`, and the 20 hero folders of awakening screenshots (`assets/sources/awakenings/<Hero>/A1–A6.png`). 41 MB of material the page never loads; `assets/awakenings/Awakening_Icon.png` stays (the page uses it).
+- Updated: the validator's awakening-screenshot check, `AWAKENINGS.note` and `TOWER_TRIALS.note` in data.json, DATA_REFERENCE, SITE, and two source notes that pointed at their own folder.
+- Checks: validator OK; every tab of both URLs clicked through (tier modes, boss tabs, a hero profile and its tabs) with no missing files and no console errors; public pages pixel-identical.
 ## 10 Nov 2026 — Research data moved out of data.json (structure step B, Claude)
 - `DAMAGE_TESTS` (training-dummy research the page never reads) moved unchanged to the new `data/research.json`; `data.json` 712 → 629 KB for every visitor. `KARMA_LEVELLING` and `SKILL_BUFF_LEVELS` stay (4 KB; the Karma slider and builds will use them).
 - `tools/validate_data.py` checks `data/research.json` parses, holds `DAMAGE_TESTS`, and that the key doesn't drift back into data.json. AGENTS.md key index, SITE, GAME_MATH, DATA_REFERENCE and the `hero_stats.py` docstring point to the new file.

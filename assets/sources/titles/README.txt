@@ -5,7 +5,7 @@ Title screenshots go in this folder.
 - Name each file after the title, e.g. Novice Mercenary Crew.png
   (any name is fine if that's awkward; Claude reads the text from the image).
 - A screenshot of the "Cumulative Set Effect" box is useful too.
-- Upload them through GitHub: Add file > Upload files, into assets/titles/.
+- Upload them through GitHub: Add file > Upload files, into assets/sources/titles/.
 
 Claude then transcribes them into TITLES in data.json. The screenshots stay
 here as the source, like assets/awakenings/.
