@@ -1,3 +1,5 @@
+## 10 Nov 2026 — Awakening test batch 1 (A1) prepared (Claude)
+- New `docs/library/AWAKENING_TESTS.md`: every hero's A1, the skill it changes with the Test 01 numbers (with masteries), and what to note. Listed in the README index; STATUS updated.
 ## 10 Nov 2026 — Patch line in the preview tier tooltip; Ornette applies Shock and Knockdown (Claude)
 - `index.html` `v2TipHtml` (preview tier list only): hovering a hero shows the latest balance patch, its direction and the skill damage %, the same line as the other hero hover cards. The preview tooltip never had it.
 - `TIER_LIST_V2.heroes.Ornette`: Enabler tag and Applies Shock, Knockdown (David, 10 Nov: her mastery adds both). Kalien and Astria keep their purple signature cards.

@@ -8,7 +8,7 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 
 ## Current task (10 Nov, 07:05)
 - **All 16 masteries unlocked and retested (10 Nov)**; results in [TEST01_RESULTS.md](TEST01_RESULTS.md) (Mastery retests). Castella's and Theresia's mastery buffs protect their own Super Armor, not the enemy's break. David asked for every Castella and Theresia skill's gauge % to compare (sent).
-- **Next:** awakenings, one at a time, testing only those on the list below.
+- **Next (agreed 10 Nov 08:26):** awakenings in batches, A1 for everyone first. The list with before numbers is in [AWAKENING_TESTS.md](AWAKENING_TESTS.md); David notes every change and Claude saves the results there. Stat-only awakenings aren't tested.
 
 ## Earlier this session (Claude, 9 Nov evening)
 - Done: breakthrough profiles explained (GAME_MATH 2.1: one axis, B melee, C ranged, A halfway, D Alex); skill buffs checked; 19 new gear rows checked (all match); endgame gear and set analysis (GAME_MATH 4.1).

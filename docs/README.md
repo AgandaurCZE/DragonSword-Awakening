@@ -19,6 +19,7 @@ This is the index of every note in the repository. A new chat (Claude, ChatGPT, 
 | **Game math**: every measured formula from levelling and stats to damage, Defense, statuses, Super Armor and each game mode | [`library/GAME_MATH.md`](library/GAME_MATH.md) |
 | The Test Kit: each test, how David measures, how entries are stored | [`library/TESTING.md`](library/TESTING.md) |
 | Test 01 results: status application, Super Armor gauge and break times, all 20 heroes | [`library/TEST01_RESULTS.md`](library/TEST01_RESULTS.md) |
+| Awakening tests in batches (A1 first): before numbers, what to note, results | [`library/AWAKENING_TESTS.md`](library/AWAKENING_TESTS.md) |
 | Team tests (1-minute damage runs), team statuses, the Signature Karma priority list | [`library/TEAM_TESTS.md`](library/TEAM_TESTS.md) |
 | Rating rules, roles, tags, and the reasoning behind each hero's rating | [`library/DECISIONS.md`](library/DECISIONS.md) |
 | David's to-do list in priority order (game tasks; open it in a browser) | [`dragonsword_david_todo_by_priority.html`](dragonsword_david_todo_by_priority.html) |
