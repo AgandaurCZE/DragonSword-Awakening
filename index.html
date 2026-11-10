@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>DragonSword: Awakening — Visual Tier List</title>
 <style>
+/* ===== Styles (map by Claude, 10 Nov 2026). Rules were added page by page, so find a page by its class prefix:
+   app-/nav- shell and sidebar, profile- hero pages, karma-, team-, gear- and gx- (gear extras), patch-, v2- new tier list,
+   dng- dungeons, tr- trait dungeons, cb- cookbook, it-/ach- items and achievements, dc-/lv- tools, tt- titles, rn- runes.
+   Phone rules sit in @media(max-width:760px or 800px) blocks near their page. The last block, "Preview-only fixes",
+   is scoped under html.pv and must keep the public page unchanged. ===== */
 :root{--bg:#151a22;--panel:#222a35;--panel2:#2a3441;--line:#3b4654;--text:#f4f6fa;--muted:#aeb8c7;--accent:#68c7d5}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#243b4c 0,#151a22 56%);color:var(--text);font:15px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
 header{padding:26px clamp(16px,4vw,48px) 18px;border-bottom:1px solid #35404d;background:#111820cc}
@@ -756,6 +761,25 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 <div id="karmaPopover" role="tooltip" hidden></div>
 <script>
 // All data is loaded from data.json at start-up (see the loader at the end of this script).
+/* ===== Map of this script (Claude, 10 Nov 2026). Search for a name to jump there; every section starts with a "// ==" line.
+   Globals and helpers ...... let HEROES, $ , tierColor
+   Teams page ............... renderTeams (TEAM_DATA)
+   Karma page ............... renderKarmas, buildKarmaCard (KARMA_DATA)
+   Shared text helpers ...... formatSkillText, profileEsc
+   Hero profile ............. openCharacterProfile, renderProfileReview, renderProfileBuild, closeCharacterProfile
+   Reference pop-ups ........ showRefPopover, showKarmaPopover
+   Gear page ................ renderGear, renderGearPreview (upgrade calculator, runes)
+   Builds and optimiser ..... endgameStats, optBest, liveBuild (JS port of tools/hero_stats.py: keep both in step)
+   Legacy tier list ......... render, makeCard (public page)
+   Heroes page .............. renderHeroes
+   Patch Notes .............. renderPatches, latestBalanceChange
+   Familiars, Titles ........ renderFamiliars, renderTitles
+   Dungeons ................. renderDungeons, renderCurrencyDungeons, renderTrait
+   New tier list (preview) .. renderTierV2, v2Card, v2TipHtml (TIER_LIST_V2)
+   Cookbook, Items, Achievements (preview) .. renderCookbook, renderItems, renderAchievements
+   Tools (preview) .......... renderDamageCalc (dcCompute), renderLevelCalc, renderTools
+   Start-up ................. applyPreviewGate, startApp, then the data.json loader at the very end
+   Preview gate: IS_PREVIEW (?tiers=new or ?preview=1), PREVIEW_PAGES, html.pv for preview-only CSS. */
 let HEROES=[],ROLE_ICONS={},ARCHES=[],TIER_ORDER=[],TIER_COLORS={},TEAM_DATA=[],KARMA_DATA=[],CHARACTER_PROFILE_DATA={},GEAR_DATA=[],DATA_META={},ARCH_COLORS={},STATUS_ARCHETYPE={},GEAR_STATS={slots:{},percentStats:[]},HERO_BASE_STATS={},HERO_BUILDS={},HERO_STAT_MODEL={},TITLES={list:[]},AWAKENINGS={heroes:{},ratingScale:[]},GENERIC_KARMA={},SKILL_LEVEL_MULTIPLIERS={byMaxLevel:{}},KARMA_ASCENSION={multipliers:[1,null,null,null,null,null,5]},STATUS_EFFECTS={},PATCH_NOTES={},FAMILIARS={},TRAIT_DUNGEONS={},UI_ICONS={},TIER_LIST_V2={},TOWER_TRIALS={},COOKBOOK={},GEAR_UPGRADE={levels:{},expMaterials:[],refund:{base:{}},crafting:{}},RUNES=null,GUIDES={categories:[]},DAMAGE_CALC=null,DEFENSE_MODEL=null,LEVEL_COSTS=null;
 let activeArch='';
 let activeRole='';
@@ -810,6 +834,7 @@ function formatTeamSkillText(raw,team){
  }
  return html;
 }
+// ==== Teams page (TEAM_DATA) ====
 function renderTeams(){
  const board=document.getElementById('teamBoard'); if(!board)return; board.innerHTML='';
  const tiers=['S','A','B','C'];
@@ -858,6 +883,7 @@ function renderTeams(){
 let activeKarmaArch='';
 // Ascension 0..6: even steps between the two recorded values (a0 = Lv.1 pre-Ascension, a6 = Lv.70 Ascension 6).
 // Karma trait per Ascension = A0 x multiplier (KARMA_ASCENSION in data.json); any null multiplier is filled evenly and flagged est.
+// ==== Karma page (KARMA_DATA) ====
 function karmaLevels(t){const pct=/%$/.test(String(t.a0));const a=parseFloat(t.a0);const R=KARMA_ASCENSION.rounding||{percent:1,flat:5};
  const f=fillSteps(KARMA_ASCENSION.multipliers||[1,null,null,null,null,null,5]);const unit=pct?(R.percent||1):(R.flat||5);
  const fmt=n=>String(Math.round(n/unit)*unit)+(pct?'%':'');
@@ -1060,6 +1086,7 @@ function makeRoleFilters(){
  });
 }
 // Skill text: damage values bold, status effects bold in their archetype colour, Activation Conditions in red.
+// ==== Shared text helpers: skill text, numbers, escaping ====
 function formatSkillText(text){
  const S=STATUS_ARCHETYPE||{};const names=[...new Set([...Object.keys(S),...(ARCHES||[])])].sort((a,b)=>b.length-a.length).join('|')||'(?!)';
  const re=new RegExp([
@@ -1139,6 +1166,7 @@ function setupSearchClearButtons(){
   input.addEventListener('input',()=>{clear.hidden=!input.value});wrap.append(clear);
  }
 }
+// ==== Hero profile page ====
 function openCharacterProfile(name,initialTab='skills'){
  const h=HEROES.find(x=>x.name.toLowerCase()===String(name).toLowerCase());if(!h)return;
  currentProfileName=h.name;hideTip();if(typeof refPinned!=='undefined')refPinned=null;{const kp=$('karmaPopover');kp.hidden=true;kp.innerHTML='';}{const sp=document.getElementById('karmaSkillPopover');if(sp)sp.hidden=true;}
@@ -1343,6 +1371,7 @@ function groupProfileSkills(root){
 
 let activeGearFilter='all';
 // Identify elemental/status sets using the same mapping as skill and Karma text.
+// ==== Gear page (GEAR_DATA; extras in renderGearPreview) ====
 function gearArchetype(g){
  const text=`${g.name||''} ${g.two||''} ${g.three||''}`.toLowerCase();
  const statuses=Object.keys(STATUS_ARCHETYPE||{}).sort((a,b)=>b.length-a.length);
@@ -1575,6 +1604,7 @@ $('profileBackTier').addEventListener('click',closeCharacterProfile);
 document.querySelectorAll('[data-profile-tab]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.profile-tab').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.profile-tabpanel').forEach(p=>p.classList.toggle('active',p.id==={skills:'profileSkills',review:'profileReview',build:'profileBuild'}[b.dataset.profileTab]));}));
 document.getElementById('profileIntro').addEventListener('click',e=>{if(e.target.closest('[data-back-tier]'))closeCharacterProfile()});
 
+// ==== Legacy tier list (public page) and hero tooltips ====
 function filtered(){
  const q=$('search').value.trim().toLowerCase(),ct=$('classType').value;
  return HEROES.filter(h=>(!q||h.name.toLowerCase().includes(q))&&(!activeRole||h.role===activeRole)&&(!ct||h.classType===ct)&&(!activeArch||h.archetype===activeArch));
@@ -1624,6 +1654,7 @@ document.querySelectorAll('.nav-item[data-page]').forEach(btn=>btn.addEventListe
 
 let activeHeroesArch='';
 let activeHeroesRole='';
+// ==== Heroes page ====
 function renderHeroesFilters(){
  const archRoot=$('heroesArchFilters'),roleRoot=$('heroesRoleFilters');
  archRoot.innerHTML='';roleRoot.innerHTML='';
@@ -1765,6 +1796,7 @@ function renderTitles(){const T=TITLES||{};const list=T.list||[];const root=$('t
 // Normal and Currency Dungeons are preview-only; all content is read from data.json.
 const DNG={q:'',set:'',slot:'',farm:'',orange:false,selected:{},hashLoaded:false};
 const CURRENCY_DNG_STATE={selected:{}};
+// ==== Dungeons: Normal, Currency, Trait ====
 function resetDungeonFilters(){
  DNG.q='';DNG.set='';DNG.slot='';DNG.farm='';DNG.orange=false;
  if(location.hash.startsWith('#dungeons'))history.replaceState(null,'',location.pathname+location.search);
@@ -1966,6 +1998,7 @@ function cbDetail(d,ticks){const C=COOKBOOK,M=C.methods,E=C.effects;if(!d)return
 // Pages hidden from visitors until launch (David, 29 Oct 2026): shown only in the preview (?tiers=new).
 const ITEMDB={tab:'materials',q:'',rar:'',data:{},ach:null,aq:'',acat:'',aown:''};
 const ITEM_TABS=[['materials','Materials'],['ingredients','Ingredients'],['important','Important'],['quest','Quest']];
+// ==== Item Database and Achievements (preview; assets/items/*.json) ====
 function itemRarColor(r){return {Grey:'#9aa3ad',Green:'#5fd38d',Blue:'#4aa3ff',Purple:'#b77cf2',Orange:'#ff9f43'}[r]||'#666';}
 async function itemLoad(k){if(ITEMDB.data[k]!==undefined)return;try{const r=await fetch(`assets/items/${k}.json`);ITEMDB.data[k]=r.ok?((await r.json()).items||[]):[];}catch(e){ITEMDB.data[k]=[];}}
 async function renderItems(){const root=$('itemsBody');if(!root)return;await itemLoad(ITEMDB.tab);const E=profileEsc;const L=ITEMDB.data[ITEMDB.tab]||[];
@@ -1987,6 +2020,7 @@ async function renderAchievements(){const root=$('achBody');if(!root)return;if(!
  root.querySelectorAll('[data-ach]').forEach(c=>c.onchange=()=>{const t=achTicks();c.checked?t[c.dataset.ach]=1:delete t[c.dataset.ach];try{localStorage.setItem('dsw.achievements.v1',JSON.stringify(t))}catch(e){}renderAchievements();});
  const qi=$('achQ');qi.oninput=()=>{ITEMDB.aq=qi.value;const p=qi.selectionStart;renderAchievements().then(()=>{const n=$('achQ');n.focus();n.setSelectionRange(p,p);});};$('achCat').onchange=e=>{ITEMDB.acat=e.target.value;renderAchievements();};$('achOwn').onchange=e=>{ITEMDB.aown=e.target.value;renderAchievements();};}
 // Damage calculator (Tools page, preview only). Rules and notes come from DAMAGE_CALC and DEFENSE_MODEL.
+// ==== Tools (preview): damage calculator ====
 function dcCompute(i){const C=DAMAGE_CALC,K=DEFENSE_MODEL.K,N=x=>Number(x)||0;
  const apu=N(i.apu),atk=N(i.attack)*(1+(apu+N(i.buff))/100)/(1+apu/100),dots=(STATUS_EFFECTS.damageOverTime||{}).statuses||[],tb=TOWER_TRIALS.bonus||{};
  const tower=(TOWER_TRIALS.towers||[]).find(t=>t.id===i.tower);let aap=0,hit=0,ad=0;const on=[];
@@ -2080,6 +2114,7 @@ function draw(){dcExtras();const eff=syncReq(),r=dcCompute({...S,weak:dcWeak(),t
  root.oninput=root.onchange=e=>{const t=e.target;if(t.dataset.k){S[t.dataset.k]=t.value;if(t.dataset.k==='def'&&!S.typed){S.typed=true;applyEnemy();}}else if(t.dataset.st){const r=S.st[t.dataset.st]=S.st[t.dataset.st]||{};r[t.dataset.f]=t.type==='checkbox'?t.checked:t.value;}else return;draw();dcSave();};
  applyEnemy();draw();}
 // Levelling calculator (Tools page, preview only). Follows the game's item-picking rule; data from LEVEL_COSTS.
+// ==== Tools (preview): levelling calculator ====
 function lvPlan(kind,from,to,bar,names,skipFirst){const L=LEVEL_COSTS,T=L.exp[kind].toNext,all=L.items[kind],items=all.filter(i=>names.includes(i.name)).sort((a,b)=>b.exp-a.exp),caps=Object.keys(L.breakthroughs[kind]).map(Number).sort((a,b)=>a-b);
  const counts={},done=[];let total=0,lost=0,left=0,s=from,first=true;const small=items[items.length-1];
  while(s<to&&small){const cap=caps.find(c=>c>s),e=cap&&cap<to?cap:to;let need=0;for(let l=s;l<e;l++)need+=T[l-1];total+=need;if(first){need=Math.max(0,need-bar);first=false;}
@@ -2131,9 +2166,11 @@ function renderLevelCalc(){const root=$('lvRoot');if(!root||!LEVEL_COSTS||!LEVEL
 function renderTools(){const t=$('toolTabs');if(!t)return;let cur='damage';try{cur=localStorage.getItem('dsw.tool')||cur;}catch(e){}const tabs=[['damage','Damage calculator'],['level','Levelling calculator']];
  const show=()=>{t.innerHTML=tabs.map(([k,l])=>`<button type="button" class="${k===cur?'on':''}" data-tool="${k}">${profileEsc(l)}</button>`).join('');$('dcRoot').hidden=cur!=='damage';$('lvRoot').hidden=cur!=='level';};
  t.onclick=e=>{const k=e.target.dataset.tool;if(!k)return;cur=k;try{localStorage.setItem('dsw.tool',k);}catch(x){}show();};renderDamageCalc();renderLevelCalc();show();}
+// ==== Guides (preview) ====
 function renderGuides(){const root=$('guidesBody');if(!root)return;const G=(typeof GUIDES!=='undefined'&&GUIDES)||{};const E=profileEsc;
  root.innerHTML=(G.categories||[]).map(c=>`<section class="gd-cat"><h3>${E(c.name)}</h3><div class="gd-grid">${(c.items||[]).length?(c.items||[]).map(it=>`<button type="button" class="gd-card${it.ready?'':' soon'}" ${it.ready?'':'disabled'}>${it.image?`<img src="${E(it.image)}" alt="">`:'<span class="gd-ph"></span>'}<span>${E(it.title)}</span>${it.ready?'<span class="gd-arrow">→</span>':'<span class="gd-soon">soon</span>'}</button>`).join(''):'<p class="gd-empty">No guides yet.</p>'}</div></section>`).join('');}
 const PREVIEW_PAGES=['familiars','titles','dungeons','trait','currency','cookbook','guides','tools','news','items','achievements'];
+// ==== Start-up: preview gate, startApp, data.json loader ====
 function applyPreviewGate(){if(IS_PREVIEW)return;PREVIEW_PAGES.forEach(pg=>{const b=document.querySelector(`.nav-item[data-page="${pg}"]`);if(b)b.hidden=true;});const g=$('navDungeonsGroup'),t=$('navDungeonsToggle');if(g)g.hidden=true;if(t)t.hidden=true;}
 function initTierV2(){const p=new URLSearchParams(location.search);if(p.get('tiers')!=='new')return;const tp=$('tierPage');const box=document.createElement('div');box.id='tierV2';tp.prepend(box);showTierV2(true);}
 
