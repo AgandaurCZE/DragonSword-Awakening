@@ -1,3 +1,5 @@
+## 10 Nov 2026 — Ursula speed-run builds compared with the model (Claude)
+- David's screenshots: Roxy and Theresia match the model's on-field build; Castella matches the always-broken build. Her Crit mains are explained by flat AAP being larger than her Attack. Runes (one per piece, always Crit) added to the analysis; they push builds towards 80/150. GAME_MATH 4.2.
 ## 10 Nov 2026 — Broken vs unbroken boss builds compared (Claude)
 - A build made for an always-broken boss loses 7.5–10% on an unbroken one, and vice versa (Johnny, Ryza, Reina, Kalsion, Defense 1825). Defense Ignore and own-status AAP are on every piece in both. Agreed in principle: must-have substats first, then a labelled team-dependent slot (STATUS).
 ## 10 Nov 2026 — Signature Karma test 09 results saved (Claude)
