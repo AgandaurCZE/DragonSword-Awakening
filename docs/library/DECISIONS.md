@@ -25,6 +25,12 @@ Four roles: **Main DPS, Sub-DPS, Enabler, Support**. Enabler has the blue icon (
 - Kalien beat Castella in every comparison, with fewer signatures on.
 - Stun sources besides Castella and Lute for Theresia: Roxy (Crimson Spiral 0.20; also Bleed), Kalien (Finale 0.20, needs clones), Tarte (Thunderbolt 0.25, needs Shock), Astria (Precision Shot basic 0.20 over 8 s).
 
+## Alex in team tests (David, 10 Nov)
+- Teams with Alex are dropped from testing for now: a fair 60 s run needs a parry every time **and** dodging the Training Ogre in aggro mode, so a clean run takes hours for underwhelming damage. Revisit once he is geared, or with his signature or awakenings.
+
+## Astria (David, 10 Nov)
+- Her Ultimate needs very little Rage: 3 basic attacks in Precision Shot mode refill it. Very easy to break with. Worth raising in her rating debate.
+
 ## Rating reasoning from the first debates (29 Oct – 3 Nov)
 Moved here on 9 Nov from David's old `TODO_David_2026-10-29.txt` (retired; still in git history). This is the reasoning behind the ratings at the time. **The current tiers and tags are the ones in `TIER_LIST_V2.heroes`; where they differ, data.json wins.**
 

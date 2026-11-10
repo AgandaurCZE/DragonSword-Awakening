@@ -1,3 +1,7 @@
+## 10 Nov 2026 — Last team tests saved; Alex teams dropped (Claude)
+- Saved on the planner cards: Burn chain 490k→520k, Break and burn 430k→460k, Fire and venom 420k→450k, Double blessing 370k→410k, Ice Prison 300k→340k (David: feels terrible, Sion can't keep Shock up), Fox and crossbow 380k→400k, Frost tornado 490k→530k.
+- Nightmare support (Ryza, Eileen, Alex) deleted at David's request: Alex can't be tested fairly over 60 s (parry every time while dodging the aggroed Ogre). DECISIONS records this and the Astria finding (Ultimate refills from 3 Precision Shot basic attacks).
+- Every planner team is now tested at Lv.70. TEAM_TESTS and the planner backup refreshed.
 ## 10 Nov 2026 — Team tests at Lv.70: normal vs signature on every card (Claude)
 - David's Lv.70 runs (normal Lv.1 Karma vs signature, 9–10 Nov) saved on the planner teams: Airborne burst 600k→630k, Shadow Poison 680k→700k, Holy Bleed 330k→420k, Deep Frost 300k→480k, Storm 380k→430k, Thunder pair 500k→580k, Fox and wind 650k→700k (Kalsion's signature on in both), Holy Bleed with Kalien 320k→450k. New team 17 Lightning break (Ryza, Castella, Sion) 360k→410k, tested but not in the planner before.
 - Removed the 8 Nov Lv.1 and mixed-level runs from the notes (Burn chain's note is now empty).

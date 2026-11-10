@@ -18,7 +18,7 @@ Each planner team has one of four statuses, chosen with the drop-down on its car
 
 ## Teams
 
-Damage: 1 minute on the Training Ogre, all Lv.70, no gear. "Normal" = everyone on a Lv.1 normal Karma; "signature" = the named signature Karmas on (10 Nov runs, Test Kit test 09).
+Damage: 1 minute on the Training Ogre, all Lv.70, no gear. "Normal" = everyone on a Lv.1 normal Karma; "signature" = the named signature Karmas on (9–10 Nov runs, Test Kit test 09). Teams with Alex were dropped (10 Nov): see DECISIONS.
 
 ### 1. Airborne burst (t01, status: works) — normal 600k → signature 630k (+5%, Kalsion's)
 
@@ -113,13 +113,17 @@ Claude's notes:
 - Claude (8 Nov): David wants to see whether Ryza and Ornette work together at all.
 - Claude (9 Nov, built this team independently): all three apply Shock, and Knockdown comes from three sources (Ryza's Thunder Grab 0.20–0.25, Ornette's Judgment 0.25, or 0.40 at 2 Shock stacks, Sion's Divine Smash and Justice Fall 0.20 each). Shock and Knockdown give +150% on hits. Almost no Airborne: Ryza's Stormbringer 0.20, and Ornette's Holy Grab didn't apply it on the boss.
 
-### 7. Burn chain (t07, status: idea)
+### 7. Burn chain (t07, status: idea) — normal 490k → signature 520k (+6%, Kalsion's; Kalien's on in both runs)
 
 Heroes: Kalsion (Sub-DPS), Aria (Enabler), Kalien (Enabler).
 
 Why: A Burn team without Reina. Aria applies Burn and Airborne, Kalien stacks more Burn. Kalsion's Burst Grab needs Burn and his Explosion needs Airborne, both covered.
 
-### 8. Break and burn (t08, status: idea)
+Results (David):
+
+- Lv.70, no gear, 1 min: 490k with Kalsion on The Burning Taste of Fire; 520k with his signature. Kalien on her signature in both runs (her own gain is known from other tests).
+
+### 8. Break and burn (t08, status: idea) — normal 430k → signature 460k (+7%, Kalsion's and Kalien's)
 
 Heroes: Castella (Enabler), Kalien (Enabler), Kalsion (Sub-DPS).
 
@@ -127,22 +131,12 @@ Why: Kalien's Fox Grab needs Break, and Castella breaks Super Armor fastest. Cas
 
 Results (David):
 
-- 9 Nov: 330k in 1 min, all Lv.70, no gear, no Karma.
-- 9 Nov: 380k with Kalsion's and Kalien's signatures on (Castella has none).
+- Lv.70, no gear, 1 min: 430k with Kalsion without his signature; 460k with Kalsion and Kalien both on their signatures.
+- No Karma at all (9 Nov): 330k; 380k with Kalsion's and Kalien's signatures.
 
 Claude's notes:
 
 - A variant of Burn chain for bosses with a big Super Armor gauge.
-
-### 9. Nightmare support (t09, status: idea)
-
-Heroes: Ryza (Main DPS), Eileen (Support), Alex (Support).
-
-Why: For the hardest bosses. Eileen adds +15% Attack and +20% Crit Rate; Alex's parry lowers the boss's Defense by 20% for 10 s (about +11% team damage, and it stacks with Earthshatterer). Two Supports around one damage dealer.
-
-Claude's notes:
-
-- Both Supports are Expert: timing matters a lot here.
 
 ### 10. Fox and wind (t10, status: to test) — normal 650k → signature 700k (+8%, Kalien's; Kalsion's signature on in both runs)
 
@@ -172,51 +166,73 @@ Claude's notes:
 - Claude (8 Nov): Holy Bleed with Castella: 250k with no signatures, 350k with Theresia's and Roxy's.
 - Claude (9 Nov, built this team independently): Kalien's Finale gives Stun (0.20) with no condition, and her Burn adds a second damage-over-time status: Bleed, Burn and Stun give +200% on hits. Her Fox Grab needs Break and nobody here is a Breaker, but Kalien (25 s) and Theresia (27 s) break the gauge fast alone.
 
-### 12. Fire and venom (t12, status: idea)
+### 12. Fire and venom (t12, status: idea) — normal 420k → signature 450k (+7%, Kalsion's)
 
 Heroes: Kalsion (Sub-DPS), Johnny (Sub-DPS), Aria (Enabler).
 
 Why: Airborne burst without Reina. Aria applies both statuses Kalsion needs (Burn for Burst Grab, Airborne for Explosion); Johnny adds Airborne for both Explosion and his own Venom Cutter, plus Poison.
 
+Results (David):
+
+- Lv.70, no gear, 1 min: 420k with normal Lv.1 Karmas; 450k with Kalsion's signature.
+
 Claude's notes:
 
 - Claude (9 Nov): Aria alone gives about 0.4 Airborne per rotation (Air Bomb 0.20, Rolling Bomb 0.10, Switch On! 0.10), less than half of Reina's 0.89. With Johnny's 0.6 the two together come close to Reina, and Aria adds Burn (about 0.65 per rotation). Burn, Poison and Airborne: +200% on hits. Frees Reina for another team.
 
-### 13. Double blessing (t13, status: idea)
+### 13. Double blessing (t13, status: idea) — normal 370k → signature 410k (+11%, Ryza's)
 
 Heroes: Ryza (Main DPS), Sion (Support), Eileen (Support).
 
 Why: Ryza covers her own needs, so both partners add damage: Sion's Bless and Eileen's Brave One each give +15% Attack (Lv.10) and add together, the banner gives +20% Crit Rate, and Sion adds Shock and Knockdown.
 
+Results (David):
+
+- Lv.70, no gear, 1 min: 370k with normal Lv.1 Karmas; 410k with Ryza's signature.
+
 Claude's notes:
 
 - Claude (9 Nov): a variant of Nightmare support (t09) with Sion instead of Alex. Alex's parry is about +11% team damage on a 1000-Defense boss and needs exact timing. Sion's +15% Attack needs a relic placed but no timing, and he adds statuses. Only one Expert here (Eileen). Teammates must stand in the buff circles.
 
-### 14. Ice Prison (t14, status: idea)
+### 14. Ice Prison (t14, status: idea) — normal 300k → signature 340k (+13%, Othello's)
 
 Heroes: Dana (Main DPS), Othello (Sub-DPS), Sion (Support).
 
 Why: Othello's Ice Crown makes the Ice Prison (about 20 s); Dana's Chako Knuckle on Ice Block hits 35% of the Super Armor gauge each, up to 4 in one prison. Sion adds Knockdown for Dana's Chako Spin, Shock, and team Attack.
 
+Results (David):
+
+- Lv.70, no gear, 1 min: 300k with normal Lv.1 Karmas; 340k with Othello's signature.
+- David: feels terrible. Sion can't apply enough Shock on his own without a weird rotation that costs a ton of damage.
+
 Claude's notes:
 
 - Claude (9 Nov): Deep Frost (t04) without Cerese, since she breaks Othello's prison and Frozen enemies, and with Dana as the Main DPS (rated A, Othello B). Measured: Dana broke the whole gauge in about 7 s after Othello's Ultimate. Knockdown and Shock: +150% on hits, plus +50% while Frozen.
 
-### 15. Fox and crossbow (t15, status: idea)
+### 15. Fox and crossbow (t15, status: idea) — normal 380k → signature 400k (+5%, Kalsion's)
 
 Heroes: Kalsion (Sub-DPS), Kalien (Enabler), Astria (Sub-DPS).
 
 Why: Kalien and Astria unlock each other: Kalien's Finale gives Stun, which Astria's Bolt Bombard needs; Astria breaks Super Armor in about 18 s, which Kalien's Fox Grab needs. Both feed Kalsion Burn.
 
+Results (David):
+
+- Lv.70, no gear, 1 min: 380k with normal Lv.1 Karmas; 400k with Kalsion's signature.
+- David: very easy to break. Discovery: Astria's Ultimate needs very little Rage; 3 basic attacks in Precision Shot mode give it back.
+
 Claude's notes:
 
 - Claude (9 Nov): Break and burn (t08) with Astria in Castella's slot. Weak spot: little Airborne for Kalsion's Explosion (only his own Burst Grab 0.25 and Royal Flame's Flame Wave 0.20), where Castella adds Upper Blow (0.33 Airborne). Worth one run to see whether Astria's own damage makes up for it.
 
-### 16. Frost tornado (t16, status: idea)
+### 16. Frost tornado (t16, status: idea) — normal 490k → signature 530k (+8%, Cerese's)
 
 Heroes: Dana (Main DPS), Cerese (Sub-DPS), Reina (Enabler).
 
 Why: For groups. Cerese gathers with Ice Storm; her Frozen Needles needs Airborne and Frost, which Reina and Dana supply. Dana's Frost brings enemies to Frozen for Cerese's Shattering Touch.
+
+Results (David):
+
+- Lv.70, no gear, 1 min: 490k with normal Lv.1 Karmas; 530k with Cerese's signature.
 
 Claude's notes:
 

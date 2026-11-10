@@ -170,7 +170,7 @@
   },
   {
    "claudeNote": "",
-   "davidNote": "",
+   "davidNote": "Lv.70, no gear, 1 min: 490k with Kalsion on The Burning Taste of Fire; 520k with his signature. Kalien on her signature in both runs (her own gain is known from other tests).",
    "heroes": [
     {
      "hero": "Kalsion",
@@ -187,13 +187,18 @@
    ],
    "name": "Burn chain",
    "order": 7,
+   "sig": {
+    "label": "Kalsion's; Kalien's on in both runs",
+    "with": 520,
+    "without": 490
+   },
    "status": "idea",
    "why": "A Burn team without Reina. Aria applies Burn and Airborne, Kalien stacks more Burn. Kalsion's Burst Grab needs Burn and his Explosion needs Airborne, both covered.",
    "id": "t07"
   },
   {
    "claudeNote": "A variant of Burn chain for bosses with a big Super Armor gauge.",
-   "davidNote": "9 Nov: 330k in 1 min, all Lv.70, no gear, no Karma.\n9 Nov: 380k with Kalsion's and Kalien's signatures on (Castella has none).",
+   "davidNote": "Lv.70, no gear, 1 min: 430k with Kalsion without his signature; 460k with Kalsion and Kalien both on their signatures.\nNo Karma at all (9 Nov): 330k; 380k with Kalsion's and Kalien's signatures.",
    "heroes": [
     {
      "hero": "Castella",
@@ -210,32 +215,14 @@
    ],
    "name": "Break and burn",
    "order": 8,
+   "sig": {
+    "label": "Kalsion's and Kalien's",
+    "with": 460,
+    "without": 430
+   },
    "status": "idea",
    "why": "Kalien's Fox Grab needs Break, and Castella breaks Super Armor fastest. Castella's Upper Blow then launches the enemy, giving Kalsion the Airborne for Explosion.",
    "id": "t08"
-  },
-  {
-   "claudeNote": "Both Supports are Expert: timing matters a lot here.",
-   "davidNote": "",
-   "heroes": [
-    {
-     "hero": "Ryza",
-     "role": "Main DPS"
-    },
-    {
-     "hero": "Eileen",
-     "role": "Support"
-    },
-    {
-     "hero": "Alex",
-     "role": "Support"
-    }
-   ],
-   "name": "Nightmare support",
-   "order": 9,
-   "status": "idea",
-   "why": "For the hardest bosses. Eileen adds +15% Attack and +20% Crit Rate; Alex's parry lowers the boss's Defense by 20% for 10 s (about +11% team damage, and it stacks with Earthshatterer). Two Supports around one damage dealer.",
-   "id": "t09"
   },
   {
    "claudeNote": "",
@@ -295,7 +282,7 @@
   },
   {
    "claudeNote": "Claude (9 Nov): Aria alone gives about 0.4 Airborne per rotation (Air Bomb 0.20, Rolling Bomb 0.10, Switch On! 0.10), less than half of Reina's 0.89. With Johnny's 0.6 the two together come close to Reina, and Aria adds Burn (about 0.65 per rotation). Burn, Poison and Airborne: +200% on hits. Frees Reina for another team.",
-   "davidNote": "",
+   "davidNote": "Lv.70, no gear, 1 min: 420k with normal Lv.1 Karmas; 450k with Kalsion's signature.",
    "heroes": [
     {
      "hero": "Kalsion",
@@ -312,13 +299,18 @@
    ],
    "name": "Fire and venom",
    "order": 12,
+   "sig": {
+    "label": "Kalsion's",
+    "with": 450,
+    "without": 420
+   },
    "status": "idea",
    "why": "Airborne burst without Reina. Aria applies both statuses Kalsion needs (Burn for Burst Grab, Airborne for Explosion); Johnny adds Airborne for both Explosion and his own Venom Cutter, plus Poison.",
    "id": "t12"
   },
   {
    "claudeNote": "Claude (9 Nov): a variant of Nightmare support (t09) with Sion instead of Alex. Alex's parry is about +11% team damage on a 1000-Defense boss and needs exact timing. Sion's +15% Attack needs a relic placed but no timing, and he adds statuses. Only one Expert here (Eileen). Teammates must stand in the buff circles.",
-   "davidNote": "",
+   "davidNote": "Lv.70, no gear, 1 min: 370k with normal Lv.1 Karmas; 410k with Ryza's signature.",
    "heroes": [
     {
      "hero": "Ryza",
@@ -335,13 +327,18 @@
    ],
    "name": "Double blessing",
    "order": 13,
+   "sig": {
+    "label": "Ryza's",
+    "with": 410,
+    "without": 370
+   },
    "status": "idea",
    "why": "Ryza covers her own needs, so both partners add damage: Sion's Bless and Eileen's Brave One each give +15% Attack (Lv.10) and add together, the banner gives +20% Crit Rate, and Sion adds Shock and Knockdown.",
    "id": "t13"
   },
   {
    "claudeNote": "Claude (9 Nov): Deep Frost (t04) without Cerese, since she breaks Othello's prison and Frozen enemies, and with Dana as the Main DPS (rated A, Othello B). Measured: Dana broke the whole gauge in about 7 s after Othello's Ultimate. Knockdown and Shock: +150% on hits, plus +50% while Frozen.",
-   "davidNote": "",
+   "davidNote": "Lv.70, no gear, 1 min: 300k with normal Lv.1 Karmas; 340k with Othello's signature.\nDavid: feels terrible. Sion can't apply enough Shock on his own without a weird rotation that costs a ton of damage.",
    "heroes": [
     {
      "hero": "Dana",
@@ -358,13 +355,18 @@
    ],
    "name": "Ice Prison",
    "order": 14,
+   "sig": {
+    "label": "Othello's",
+    "with": 340,
+    "without": 300
+   },
    "status": "idea",
    "why": "Othello's Ice Crown makes the Ice Prison (about 20 s); Dana's Chako Knuckle on Ice Block hits 35% of the Super Armor gauge each, up to 4 in one prison. Sion adds Knockdown for Dana's Chako Spin, Shock, and team Attack.",
    "id": "t14"
   },
   {
    "claudeNote": "Claude (9 Nov): Break and burn (t08) with Astria in Castella's slot. Weak spot: little Airborne for Kalsion's Explosion (only his own Burst Grab 0.25 and Royal Flame's Flame Wave 0.20), where Castella adds Upper Blow (0.33 Airborne). Worth one run to see whether Astria's own damage makes up for it.",
-   "davidNote": "",
+   "davidNote": "Lv.70, no gear, 1 min: 380k with normal Lv.1 Karmas; 400k with Kalsion's signature.\nDavid: very easy to break. Discovery: Astria's Ultimate needs very little Rage; 3 basic attacks in Precision Shot mode give it back.",
    "heroes": [
     {
      "hero": "Kalsion",
@@ -381,13 +383,18 @@
    ],
    "name": "Fox and crossbow",
    "order": 15,
+   "sig": {
+    "label": "Kalsion's",
+    "with": 400,
+    "without": 380
+   },
    "status": "idea",
    "why": "Kalien and Astria unlock each other: Kalien's Finale gives Stun, which Astria's Bolt Bombard needs; Astria breaks Super Armor in about 18 s, which Kalien's Fox Grab needs. Both feed Kalsion Burn.",
    "id": "t15"
   },
   {
    "claudeNote": "Claude (9 Nov): untested question: does Airborne keep or end Frozen and Ice Blocks? If it ends them, swap Reina for Sion. Dana groups S, Cerese groups A, Reina groups S+.",
-   "davidNote": "",
+   "davidNote": "Lv.70, no gear, 1 min: 490k with normal Lv.1 Karmas; 530k with Cerese's signature.",
    "heroes": [
     {
      "hero": "Dana",
@@ -404,6 +411,11 @@
    ],
    "name": "Frost tornado",
    "order": 16,
+   "sig": {
+    "label": "Cerese's",
+    "with": 530,
+    "without": 490
+   },
    "status": "idea",
    "why": "For groups. Cerese gathers with Ice Storm; her Frozen Needles needs Airborne and Frost, which Reina and Dana supply. Dana's Frost brings enemies to Frozen for Cerese's Shattering Touch.",
    "id": "t16"
