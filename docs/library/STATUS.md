@@ -17,7 +17,13 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 2. ~~Signature Karma tests (test 09)~~ done 9–10 Nov (Ryza, Ornette, Theresia, Roxy, Charlotte, Kalsion, Kalien, Othello, Cerese, Dana); every tested team's normal vs signature damage is on its planner card and in [TEAM_TESTS.md](TEAM_TESTS.md).
 3. Optional: Theresia, Roxy and Kalien with **no** signatures, the one missing run to isolate Theresia's signature.
 
-## After awakenings and masteries: mastery retests
+## Masteries and awakenings: plan (10 Nov)
+- David has materials for **9 masteries** (16 heroes need a retest) and **29 awakening levels** (77 if he exchanges Fragment of Sacred Light for Stigma Awaken Stones; 120 for A6 on all 20).
+- **Order per hero: mastery → retest → only then awakenings.** A retest after an awakening changes two things at once and can't be compared with Test 01.
+- First 9 masteries (Claude's suggestion, heroes in the Works teams first): Ryza, Kalsion, Kalien, Charlotte, Johnny, Ornette, Sion, Cerese, Theresia. Later: Castella, Aria, Tarte, Astria, Othello, Eileen, Lute.
+- Awakenings have no retest list. Suggestion: A1 for everyone first (20 of the 29; most A1s are rated 4 and several change the kit, e.g. Kalien's Fox Grab without Break), then by rating.
+
+## Mastery retests (after each mastery, before that hero's awakenings)
 A mastery costs 10 of a special material from legendary chests. Test the changed skill first, then redo the all-out break time (same setup as Test 01: Training Ogre, no gear, no Karma). Compare with [TEST01_RESULTS.md](TEST01_RESULTS.md).
 
 | Hero | What the mastery changes |
