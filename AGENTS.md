@@ -2,7 +2,7 @@
 
 Read this before changing anything in this repository.
 
-- Preserve existing line endings when editing files. `index.html` uses LF (Unix) line endings; never convert it to CRLF or rewrite unrelated lines.
+- Preserve existing line endings when editing files. `index.html`, `css/site.css` and `js/*.js` use LF (Unix) line endings; never convert them to CRLF or rewrite unrelated lines.
 - **Start at the library index `docs/README.md`.** It lists every note file by topic; `docs/library/STATUS.md` says where things stand and `docs/library/WORKING_WITH_DAVID.md` how David works and which mistakes to avoid. Keep both up to date.
 - **Detail lives in `docs/DATA_REFERENCE.md`:** every data key's shape and renderer, text formats, the full data rules, the build and base-stat methods, assets and tool details. Read the relevant section before editing that data or code. Document new or changed keys there.
 - New chat? Read `docs/library/WORKING_WITH_DAVID.md` and `docs/library/STATUS.md`. History: `CHANGELOG.md` (newest first); finished tasks: `docs/library/DONE.md`.
@@ -21,8 +21,8 @@ Read this before changing anything in this repository.
 
 A fan-made guide for **DragonSword: Awakening** (HOUND13, PC/Steam): one static page on **GitHub Pages** from the `main` branch root, https://agandaurcze.github.io/DragonSword-Awakening/. Every commit to `main` goes live about a minute later. No build step, framework or server. The owner is David (UK English). He checks claims, so don't state anything the data can't back up.
 
-- `data.json` holds **all guide content** (research the page never shows, `DAMAGE_TESTS`, is in `data/research.json` since 10 Nov 2026). `index.html` holds layout, CSS and JavaScript, and no guide data. `assets/` holds images and source notes. `tools/` holds offline Python scripts. `docs/` holds notes and the Test Kit backup.
-- At start-up `index.html` fetches `data.json`, copies each top-level key into a global of the same name, then `startApp()` draws every tab. `file://` fails, so test with `python3 -m http.server`.
+- `data.json` holds **all guide content** (research the page never shows, `DAMAGE_TESTS`, is in `data/research.json` since 10 Nov 2026). Since 10 Nov 2026 the page is `index.html` (layout only), `css/site.css` (every style) and `js/01-core.js` … `js/09-startup.js` (the script, in load order); none of them holds guide data. When you change a CSS or JS file, bump its `?v=` in `index.html`. `assets/` holds images and source notes. `tools/` holds offline Python scripts. `docs/` holds notes and the Test Kit backup.
+- At start-up `js/09-startup.js` fetches `data.json`, copies each top-level key into a global of the same name, then `startApp()` draws every tab. `file://` fails, so test with `python3 -m http.server`.
 
 ## Preview gate
 
@@ -47,7 +47,7 @@ Item Database and Achievements read `assets/items/*.json` when opened.
 1. **Never invent numbers.** Hero skill data comes from the in-game codex; Karma stats, gear-set effects and Recommended Combinations from David's screenshots. If sources conflict, the codex wins: flag it, don't guess.
 2. **Tiers are never set by formula.** `TIER_LIST_V2.heroes` holds only ratings agreed with David.
 3. Keep names exact: heroes, Karmas, sets, stats and archetypes are cross-references. Some profile sentences have fixed formats, so check "Text formats" in the reference before editing them.
-4. If the Python optimiser (`tools/hero_stats.py`) changes, change its JS port in `index.html` too.
+4. If the Python optimiser (`tools/hero_stats.py`) changes, change its JS port in `js/04-gear-builds.js` too.
 5. Generated fields: run `tools/skill_meta.py --write` after editing skill text or the Karma or gear sentences. Run `tools/hero_stats.py` without `--write` first to inspect changes.
 
 ## How to make changes

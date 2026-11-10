@@ -11,7 +11,7 @@ The detail behind `AGENTS.md`. Open it when a task touches the data keys, text f
 | File | What it is |
 |---|---|
 | `data.json` | **All guide content.** The single source of truth. Edit this for any content change. |
-| `index.html` | Layout, CSS and JavaScript. Contains no guide data. It loads `data.json` at start-up and renders every page from it. |
+| `index.html`, `css/site.css`, `js/*.js` | Layout (`index.html`), every style (`css/site.css`) and the script in nine files loaded in order (`js/01-core.js` … `js/09-startup.js`; split out of `index.html` on 10 Nov 2026). No guide data. The script loads `data.json` at start-up and renders every page from it. |
 | `assets/` | Images as WebP: `heroes/<name>.webp` (portraits), `archetypes/<archetype>.webp`, `roles/<role>.webp`, `gear/<set>.webp`. File names are lowercase with hyphens. `awakenings/<Hero>/A1–A6.png` are David's original screenshots: the source for `AWAKENINGS`, not shown on the page. `awakenings/Awakening_Icon.png` is shown on the cards. |
 | `AGENTS.md` / `CLAUDE.md` | These notes. |
 | `tools/` | Python scripts for the data (no build step; the site never runs them). See **Tools** below. |
@@ -30,7 +30,7 @@ The detail behind `AGENTS.md`. Open it when a task touches the data keys, text f
 | `CHANGELOG.md` | A record of every change, newest first. |
 | `docs/` | The notes library (start at `docs/README.md`), this reference, David's to-do page and the Test Kit and Team Planner backups in `docs/testkit/`. |
 
-How the page starts: `index.html` runs `fetch('data.json')`, copies each top-level key into a global variable of the same name (`HEROES`, `TEAM_DATA`, …), then calls `startApp()`, which draws every tab. Opening `index.html` directly from disk (`file://`) fails because browsers block the fetch. Test with a local server instead, e.g. `python3 -m http.server` in the repository folder.
+How the page starts: `js/09-startup.js` runs `fetch('data.json')`, copies each top-level key into a global variable of the same name (`HEROES`, `TEAM_DATA`, …), then calls `startApp()`, which draws every tab. Opening `index.html` directly from disk (`file://`) fails because browsers block the fetch. Test with a local server instead, e.g. `python3 -m http.server` in the repository folder.
 
 ## Dungeons pages (preview only)
 
@@ -42,7 +42,7 @@ How the page starts: `index.html` runs `fetch('data.json')`, copies each top-lev
 - Banner art rules: [DUNGEON_ARTWORK_WORKFLOW.md](DUNGEON_ARTWORK_WORKFLOW.md).
 
 ## Preview (hidden until launch)
-- Preview-only CSS: `IS_PREVIEW` adds `pv` to `<html>`; the "Preview-only fixes" block at the end of `<style>` holds `.pv `-prefixed rules (10 Nov).
+- Preview-only CSS: `IS_PREVIEW` adds `pv` to `<html>`; the "Preview-only fixes" block at the end of `css/site.css` holds `.pv `-prefixed rules (10 Nov).
 
 David's decision (29 Oct 2026): new work stays hidden as a surprise until launch. Visitors see Heroes, the old Tier List, Teams, Gear, Karma and Patch Notes. **Familiars, Titles, the Dungeons group (Normal, Trait, Currency), Cookbook, Guides, Tools, News, Item Database and Achievements** (and the new tier list) only appear with `?tiers=new` (or `?preview=1`) in the URL: `PREVIEW_PAGES` and `applyPreviewGate()` in `index.html` hide their menu buttons otherwise, and title ticks only count in the preview. Add any new tab to `PREVIEW_PAGES` until David says to launch.
 
@@ -104,7 +104,7 @@ David's decision (29 Oct 2026): new work stays hidden as a surprise until launch
   - `[Bracketed names]`, Super Armor, Taunt, `%` values, seconds and `N times` are bold.
   - Any line starting `Activation Conditions` is red.
 
-### Still hard-coded in `index.html`
+### Still hard-coded in the script (`js/*.js`)
 
 Change these in the HTML if needed:
 - a fallback copy of the generic Karma per archetype (`genericKarmaByArchetype`); `GENERIC_KARMA` in data.json takes priority
@@ -154,14 +154,14 @@ Change these in the HTML if needed:
 - Cooldown Reduction and Status Application Rate don't exist on armour. Don't recommend them.
 - Helmet, Gloves and Boots have identical tables for now.
 
-**How the page calculates the totals** (`endgameStats()` in `index.html`; all inputs are in `data.json`):
+**How the page calculates the totals** (`endgameStats()` in `js/04-gear-builds.js`; all inputs are in `data.json`):
 - Attack = (hero base + signature Karma base Attack + flat Attack from gear) × (1 + all Attack Power Up %). Defense and Max HP work the same way with Defense Up and Max HP Up.
 - Every other stat is a plain sum: hero, Karma traits at Ascension 6, gear main stats at +15, and substats.
 - Set bonuses (always-on and conditional) are calculated separately and shown in green next to the total, with a hover giving the source and the condition.
 - Awakening stat bonuses (all six awakenings, from `AWAKENINGS[hero].list[].effects`) are added after the set bonuses and shown in purple, with a hover naming the awakening.
 - Only the signature Karma counts; the second Karma doesn't.
 - Titles the viewer ticks on the Titles tab are added last and shown in gold (flat to flat, % to the % pool).
-- **Live gear optimiser** (`liveBuild()`, `optBest()`, `optDamageIndex()` in `index.html`): when ticked titles add Attack, Attack Power Up, Crit Rate or Crit Damage, Damage and Support builds are re-optimised in the browser. It's an exact port of `tools/hero_stats.py` (verified: with no titles it reproduces every stored build), with the titles added to the bonuses. The 2-piece set stays the stored `setChoice`. Changed pieces get a gold frame. Keep the two in step: if the Python optimiser changes, change the JS port too.
+- **Live gear optimiser** (`liveBuild()`, `optBest()`, `optDamageIndex()` in `js/04-gear-builds.js`): when ticked titles add Attack, Attack Power Up, Crit Rate or Crit Damage, Damage and Support builds are re-optimised in the browser. It's an exact port of `tools/hero_stats.py` (verified: with no titles it reproduces every stored build), with the titles added to the bonuses. The 2-piece set stays the stored `setChoice`. Changed pieces get a gold frame. Keep the two in step: if the Python optimiser changes, change the JS port too.
 
 **How `HERO_BUILDS` was chosen** (by role and team position, after checking skill text):
 - **Damage builds** (Main DPS, Sub-DPS and the enablers Reina and Kalien): every combination of Attack Power Up, Crit Rate and Crit Damage main stats was tried. The one with the highest Attack × (1 + Crit Rate × Crit Damage) won. The calculation counts all six awakenings' stat bonuses and the 2-piece set's always-on bonus, caps Crit Rate at 100% and leaves out 3-piece bonuses, except Blazing Flames' Crit Rate for Aria, Kalien and Kalsion (they apply Burn with almost every skill). Spare substat slots get Defense Ignore, then the hero's own status Additional Attack Power.

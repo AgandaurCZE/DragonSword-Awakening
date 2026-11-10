@@ -6,7 +6,7 @@ These touch public pages, so they can't go in until David approves the launch. H
 
 **Ratings (10 Nov):** the tier list was re-rated with Masteries on 10 Nov, so the ratings quoted in the hero notes below are out of date: take every rating from `TIER_LIST_V2.heroes` at launch. David will rewrite the review texts himself later (10 Nov).
 
-**Preview CSS:** at launch, drop the `.pv ` prefix from the "Preview-only fixes" block at the end of `<style>` (10 Nov) so its fixes reach everyone, and the `IS_PREVIEW` checks in the code become always-on.
+**Preview CSS:** at launch, drop the `.pv ` prefix from the "Preview-only fixes" block at the end of `css/site.css` (10 Nov) so its fixes reach everyone, and the `IS_PREVIEW` checks in the code become always-on.
 
 ## Launch checklist (David, 29 Oct; for when the project is done)
 1. Apply every hero change below.

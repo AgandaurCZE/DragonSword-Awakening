@@ -20,7 +20,7 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 - **Awakening view of the tier list** (agreed 10 Nov): a button showing ratings with all awakenings, rated at A6 with the signature where the hero needs it; the purple signature card stays in that view; Needs A and Late bloomer leave the main view (done). Ratings to be debated with David first (Charlotte S in groups proposed). Evidence: [AWAKENING_TESTS.md](AWAKENING_TESTS.md) and the team round in [TEAM_TESTS.md](TEAM_TESTS.md).
 - **Preview builds from the full model**: port `tools/team_gear.py` / `endgame_gear.py` to the page behind `?tiers=new` (Python and JS kept identical). Agreed defaults (David, 9–10 Nov): toughest boss (Defense 1825) with a Training Ogre (1000) switch; set effects counted as always on; must-have substats first (Defense Ignore, Attack Power Up), then a slot labelled "team status Additional Attack Power"; physical-status AAP is worth twice elemental; role switch (on-field damage dealer or Breaker); 5 Crit Rate runes once Perfect values are settled.
 - **Karma level slider** on the Karma page is now possible (rule in GAME_MATH 2.3; only breakthrough steps measured).
-- The repository structure proposal (10 Nov) waits on David's answer: see SITE.md.
+- The repository restructure (all five steps David approved on 10 Nov) is done; see SITE.md and CHANGELOG. New layout: `index.html` + `css/site.css` + `js/01…09`, `data/research.json`, `assets/sources/`.
 
 ## Open items that can wait
 - **Boss and Tower ratings**: every hero's `bosses.all` is still empty. After Test 07. Debate first.

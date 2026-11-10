@@ -15,7 +15,7 @@ This is the index of every note in the repository. A new chat (Claude, ChatGPT, 
 | Topic | File |
 |---|---|
 | Every `data.json` key, its shape and renderer; text formats; build method; assets; tools | [`DATA_REFERENCE.md`](DATA_REFERENCE.md) (open only the section you need) |
-| **The site**: how `index.html` works, a code map, GitHub and publishing, open site tasks | [`library/SITE.md`](library/SITE.md) |
+| **The site**: how the page works (`index.html`, `css/`, `js/`), a code map, GitHub and publishing, open site tasks | [`library/SITE.md`](library/SITE.md) |
 | **Game math**: every measured formula from levelling and stats to damage, Defense, statuses, Super Armor and each game mode | [`library/GAME_MATH.md`](library/GAME_MATH.md) |
 | The Test Kit: each test, how David measures, how entries are stored | [`library/TESTING.md`](library/TESTING.md) |
 | Test 01 results: status application, Super Armor gauge and break times, all 20 heroes | [`library/TEST01_RESULTS.md`](library/TEST01_RESULTS.md) |

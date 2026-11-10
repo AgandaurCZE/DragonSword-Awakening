@@ -132,7 +132,7 @@ Terms:
 - **Tarte A3 Bolt Bubble casts 40 bubbles** but she can't pop the extra ones herself: they feed other Shock heroes.
 - Full break times alone, base → mastery → awakenings: Kalien 25 → 20 → 15 (A1) → 12 (A3) → 10 s (A6); Dana 23 → 20 (A3) → 15 s (A6); Reina 50 → 44 (A3) → 36 s (A6); Castella 18 → 16 → 15 s (A6); Lute 75 → 41 s (mastery).
 
-## 4. Builds and the optimiser (`tools/hero_stats.py`, its JS port in `index.html`) · 30 Oct
+## 4. Builds and the optimiser (`tools/hero_stats.py`, its JS port in `js/04-gear-builds.js`) · 30 Oct
 - **Damage index = Attack × (1 + Crit Rate × Crit Damage)** (crit capped at 100%), from base + signature Karma at A6 + all six awakenings + gear + the 2-piece set's always-on bonus. 3-piece bonuses are left out except Blazing Flames' Crit Rate for Aria, Kalien and Kalsion.
 - A status set's +15% Additional Damage counts only for the share of hits that need that status (formula in the script's docstring).
 - Spare substats go to Defense Ignore, then the hero's own status AAP.
