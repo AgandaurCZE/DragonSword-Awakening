@@ -1,3 +1,6 @@
+## 10 Nov 2026 — Tier list v2 re-rated with Masteries (Claude)
+- `TIER_LIST_V2.heroes` (preview only): 16 heroes changed after debate with David (list in DECISIONS). `signatureKarma` added for Theresia and Ryza; `awk` removed from Kalien, Sion, Astria and `late` from Cerese (tag definitions kept). `about` text: ratings now include Masteries.
+- Validator OK; preview tier list checked locally.
 ## 10 Nov 2026 — Ratings count the mastery (Claude)
 - David's decision: tier ratings are on base kits with mastery; a separate awakening view comes later and the Needs A tag leaves the tier list. DECISIONS and STATUS updated. No ratings changed yet.
 ## 10 Nov 2026 — Mastery retests saved (Claude)

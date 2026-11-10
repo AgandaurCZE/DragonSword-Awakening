@@ -21162,7 +21162,7 @@
   ],
   "undiscovered": {},
   "about": [
-   "DragonSword: Awakening is a single-player RPG with no gacha and no energy limits, so every hero is eventually yours. This tier list rates heroes on their base kit, before awakenings, Masteries and signature Karma. A \"Needs A\" tag or the purple card shows what could lift a hero higher.",
+   "DragonSword: Awakening is a single-player RPG with no gacha and no energy limits, so every hero is eventually yours. This tier list rates heroes on their base kit with Masteries, before awakenings and signature Karma. The purple card shows a hero whose signature Karma lifts them a lot.",
    "Ratings are decided by us from the in-game codex, measured damage tests and hands-on play, and they're never moved by a formula. Patch arrows next to the tier letter show whether the latest balance patch buffed (green ▲) or nerfed (red ▼) a hero; amber means mixed.",
    "Heroes are compared with others in the same role column: a Support is ranked against other Supports, not against damage dealers."
   ],
@@ -21280,7 +21280,7 @@
     "overall": {
      "tier": "A",
      "single": "A",
-     "groups": "S"
+     "groups": "A"
     },
     "tags": [
      "enabler",
@@ -21300,7 +21300,7 @@
     "overall": {
      "tier": "A",
      "single": "A",
-     "groups": "B"
+     "groups": "A"
     },
     "tags": [
      "expert"
@@ -21318,8 +21318,8 @@
    "Castella": {
     "role": "Enabler",
     "overall": {
-     "tier": "B",
-     "single": "B",
+     "tier": "A",
+     "single": "A",
      "groups": "B"
     },
     "tags": [
@@ -21341,7 +21341,7 @@
     "overall": {
      "tier": "B",
      "single": "B",
-     "groups": "C"
+     "groups": "B"
     },
     "tags": [],
     "applies": {
@@ -21373,9 +21373,9 @@
    "Ornette": {
     "role": "Sub-DPS",
     "overall": {
-     "tier": "B",
-     "single": "B",
-     "groups": "B"
+     "tier": "A",
+     "single": "A",
+     "groups": "A"
     },
     "tags": [
      "easy"
@@ -21384,9 +21384,9 @@
    "Lute": {
     "role": "Support",
     "overall": {
-     "tier": "C",
-     "single": "C",
-     "groups": "C"
+     "tier": "A",
+     "single": "A",
+     "groups": "A"
     },
     "tags": [
      "enabler",
@@ -21419,13 +21419,12 @@
    "Cerese": {
     "role": "Sub-DPS",
     "overall": {
-     "tier": "B",
-     "groups": "A",
-     "single": "C"
+     "tier": "A",
+     "groups": "S",
+     "single": "B"
     },
     "tags": [
-     "gather",
-     "late"
+     "gather"
     ],
     "progression": {
      "late": "Her signature Karma (the storm follows the nearest enemy when Ice Storm ends) and A1 (bigger, longer Ice Storm) build on her strongest skill; the devs moved her damage into Ice Storm in 1.1.0 for exactly this. Likely a tier higher with both."
@@ -21435,7 +21434,7 @@
     "role": "Sub-DPS",
     "overall": {
      "tier": "A",
-     "single": "B",
+     "single": "A",
      "groups": "S"
     },
     "tags": [
@@ -21450,12 +21449,11 @@
    "Kalien": {
     "role": "Enabler",
     "overall": {
-     "tier": "B",
-     "single": "C",
+     "tier": "A",
+     "single": "A",
      "groups": "A"
     },
     "tags": [
-     "awk",
      "sa"
     ],
     "awk": 1,
@@ -21472,8 +21470,8 @@
    "Ryza": {
     "role": "Main DPS",
     "overall": {
-     "tier": "A",
-     "single": "A",
+     "tier": "S",
+     "single": "S",
      "groups": "S"
     },
     "tags": [
@@ -21484,7 +21482,8 @@
     "expert": {
      "drop": 1,
      "reason": "Her Skill recharges per hit, so on a boss one wrong move can mean several more dash combos before she can throw again. Played well, she reaches a full Shock stack alone in about 17–20 seconds."
-    }
+    },
+    "signatureKarma": true
    },
    "Sion": {
     "role": "Support",
@@ -21495,8 +21494,7 @@
     },
     "tags": [
      "buffer",
-     "enabler",
-     "awk"
+     "enabler"
     ],
     "awk": 1,
     "applies": {
@@ -21511,8 +21509,8 @@
    "Othello": {
     "role": "Main DPS",
     "overall": {
-     "tier": "B",
-     "single": "B",
+     "tier": "A",
+     "single": "A",
      "groups": "A"
     },
     "tags": [
@@ -21528,12 +21526,11 @@
    "Astria": {
     "role": "Sub-DPS",
     "overall": {
-     "tier": "C",
-     "single": "C",
+     "tier": "B",
+     "single": "B",
      "groups": "C"
     },
     "tags": [
-     "awk",
      "sa"
     ],
     "signatureKarma": true
@@ -21541,8 +21538,8 @@
    "Dana": {
     "role": "Main DPS",
     "overall": {
-     "tier": "A",
-     "single": "A",
+     "tier": "S",
+     "single": "S",
      "groups": "S"
     },
     "tags": [
@@ -21555,7 +21552,7 @@
     "overall": {
      "tier": "C",
      "single": "C",
-     "groups": "B"
+     "groups": "C"
     },
     "tags": [],
     "applies": {
@@ -21570,9 +21567,9 @@
    "Alex": {
     "role": "Support",
     "overall": {
-     "tier": "C",
+     "tier": "B",
      "single": "B",
-     "groups": "C"
+     "groups": "B"
     },
     "tags": [
      "buffer",
@@ -21586,8 +21583,8 @@
    "Theresia": {
     "role": "Main DPS",
     "overall": {
-     "tier": "A",
-     "single": "B",
+     "tier": "S",
+     "single": "A",
      "groups": "S+"
     },
     "tags": [
@@ -21598,7 +21595,8 @@
       "Stun",
       "Bleed"
      ]
-    ]
+    ],
+    "signatureKarma": true
    }
   },
   "huntRatingRewards": {
