@@ -28,7 +28,7 @@ The six main teams again, same setup as the 9–10 Nov runs (Lv.70, **no gear**,
 | Shadow Poison | Charlotte A6, Johnny A6, Reina A6 | 680k → 700k (Charlotte's) || 950k → 1.1M (+40% / +57%) |
 | Holy Bleed | Theresia A6, Roxy A6, Castella A6 | 330k → 420k (Theresia's and Roxy's) || 630k → 800k (+91% / +90%) |
 | Thunder pair | Ryza A6, Ornette A6, Sion **A3** | 500k → 580k (Ryza's and Ornette's) || 900k → 1.1M (+80% / +90%) |
-| Fox and wind | Kalsion A6, Kalien A6, Reina A6 | 650k → 700k (Kalsion's on in both; then Kalien's) || 800k → 1M (+23% / +43%; Kalsion's on in both, to confirm) |
+| Fox and wind | Kalsion A6, Kalien A6, Reina A6 | 650k → 700k (Kalsion's on in both; then Kalien's) || 800k → 1M (+23% / +43%; Kalsion's on in both, confirmed) |
 | Frost tornado | Dana A6, Cerese A6, Reina A6 | 490k → 530k (Cerese's) || 800k → 1M (+63% / +89%; signature run now Dana's and Cerese's) |
 
 ## Teams
