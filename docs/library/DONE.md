@@ -5,6 +5,7 @@ Back to the library: [docs/README.md](../README.md). Open work: [STATUS.md](STAT
 Nothing on this page needs doing again. It exists so finished work is never mistaken for an open task. Newest first within each section. When a task in STATUS, SITE or the to-do page finishes, move it here with the date.
 
 ## Game tasks and tests (David)
+- **10 Nov:** awakening batch 2, A2 and A3 on 19 heroes (Alex later); results in [AWAKENING_TESTS.md](AWAKENING_TESTS.md).
 - **10 Nov:** awakening batch 1, A1 on 19 heroes (Alex later); results in [AWAKENING_TESTS.md](AWAKENING_TESTS.md).
 - **10 Nov:** all 16 masteries unlocked; mastery retests (changed skill and full break) in [TEST01_RESULTS.md](TEST01_RESULTS.md).
 - **10 Nov:** title Chest Addict obtained; last insect familiar, Red Ladybug, owned (colour card cut from David's screenshot); materials for all 16 masteries farmed.

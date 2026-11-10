@@ -6084,5 +6084,345 @@
   "summary": "Fox Grab (Special A, A1, unbroken Burning target): 0.30 Burn per press on Training Ogre (Lv. 90). | Awakening A1 test, 10 Nov.",
   "test": "Status application per skill",
   "testId": "apply"
+ },
+ "apply-1794700000000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Aria",
+   "lv": "90",
+   "note": "About 0.33 by the end of the burning ground; no gauge damage from the ground.",
+   "presses": "1",
+   "skill": "Air Bomb burning ground (A3, whole duration)",
+   "st": "Burn",
+   "stacks": "0.33"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Air Bomb burning ground (A3, whole duration): 0.33 Burn per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700001000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Astria",
+   "lv": "90",
+   "note": "About 0.45 across the whole duration (new with A3).",
+   "presses": "1",
+   "skill": "Bolt Bombard burning ground (A3, whole duration)",
+   "st": "Burn",
+   "stacks": "0.45"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Bolt Bombard burning ground (A3, whole duration): 0.45 Burn per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700002000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "Before: 0.25.",
+   "presses": "1",
+   "skill": "Frozen Needles (Special A, A3)",
+   "st": "Frost",
+   "stacks": "0.40"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Frozen Needles (Special A, A3): 0.40 Frost per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700003000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "New with A3.",
+   "presses": "1",
+   "skill": "Frozen Needles (Special A, A3)",
+   "st": "Knockdown",
+   "stacks": "0.20"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Frozen Needles (Special A, A3): 0.20 Knockdown per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700004000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Cerese",
+   "lv": "90",
+   "note": "About 6% (before 4%).",
+   "presses": "1",
+   "skill": "Frozen Needles (Special A, A3)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Frozen Needles (Special A, A3): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700005000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "Before: 0.12.",
+   "presses": "1",
+   "skill": "Fatal Sting (dash attack, A3, with the extra thrust)",
+   "st": "Poison",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Fatal Sting (dash attack, A3, with the extra thrust): 0.25 Poison per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700006000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Johnny",
+   "lv": "90",
+   "note": "About 4% (before 2.5%).",
+   "presses": "1",
+   "skill": "Fatal Sting (dash attack, A3, with the extra thrust)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.04"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Fatal Sting (dash attack, A3, with the extra thrust): 0.04 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700007000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "The summon itself. Before: 0.23.",
+   "presses": "1",
+   "skill": "Fox Chase (Ultimate, A3, summon)",
+   "st": "Burn",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Fox Chase (Ultimate, A3, summon): 0.25 Burn per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700008000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "About 17.5% (before 12.5%).",
+   "presses": "1",
+   "skill": "Fox Chase (Ultimate, A3, summon)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.175"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Fox Chase (Ultimate, A3, summon): 0.175 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700009000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "Sur picks bite or tail strike at random. Alone with A3: full break 12 s, Burn stack 10 s, Stun 25 s.",
+   "presses": "1",
+   "skill": "Fox Chase Sur tail strike (A3, per attack)",
+   "st": "Stun",
+   "stacks": "0.05"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Fox Chase Sur tail strike (A3, per attack): 0.05 Stun per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700010000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Kalien",
+   "lv": "90",
+   "note": "",
+   "presses": "1",
+   "skill": "Fox Chase Sur tail strike (A3, per attack)",
+   "st": "Burn",
+   "stacks": "0.10"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Fox Chase Sur tail strike (A3, per attack): 0.10 Burn per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700011000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "About 0.27 (before 0.22).",
+   "presses": "1",
+   "skill": "Holy Circle (Ultimate, A3)",
+   "st": "Shock",
+   "stacks": "0.27"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Holy Circle (Ultimate, A3): 0.27 Shock per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700012000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ornette",
+   "lv": "90",
+   "note": "About 6% (before 4%).",
+   "presses": "1",
+   "skill": "Holy Circle (Ultimate, A3)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.06"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Holy Circle (Ultimate, A3): 0.06 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700013000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "Before: 0.33.",
+   "presses": "1",
+   "skill": "Stormbringer (Ultimate, A3)",
+   "st": "Shock",
+   "stacks": "0.50"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Stormbringer (Ultimate, A3): 0.50 Shock per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700014000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "About 0.25 (before 0.20).",
+   "presses": "1",
+   "skill": "Stormbringer (Ultimate, A3)",
+   "st": "Airborne",
+   "stacks": "0.25"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Stormbringer (Ultimate, A3): 0.25 Airborne per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700015000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Ryza",
+   "lv": "90",
+   "note": "About 15% (before 10%).",
+   "presses": "1",
+   "skill": "Stormbringer (Ultimate, A3)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.15"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Stormbringer (Ultimate, A3): 0.15 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700016000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Eileen",
+   "lv": "90",
+   "note": "About 7.5% (before 4%).",
+   "presses": "1",
+   "skill": "Rolling Upper (Special A, A3)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.075"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Rolling Upper (Special A, A3): 0.075 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700017000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "Before: 0.33.",
+   "presses": "1",
+   "skill": "Lightning Shock (Skill, A3, full charge, no orbs)",
+   "st": "Shock",
+   "stacks": "0.60"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Lightning Shock (Skill, A3, full charge, no orbs): 0.60 Shock per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700018000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "New with A3.",
+   "presses": "1",
+   "skill": "Lightning Shock (Skill, A3, full charge, no orbs)",
+   "st": "Stun",
+   "stacks": "0.20"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Lightning Shock (Skill, A3, full charge, no orbs): 0.20 Stun per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
+ },
+ "apply-1794700019000": {
+  "inputs": {
+   "broken": "Not broken",
+   "enemy": "Training Ogre",
+   "hero": "Tarte",
+   "lv": "90",
+   "note": "About 10% (before 7.5%).",
+   "presses": "1",
+   "skill": "Lightning Shock (Skill, A3, full charge, no orbs)",
+   "st": "Break (Super Armor)",
+   "stacks": "0.10"
+  },
+  "savedAt": "2026-11-10T09:27:00.000Z",
+  "summary": "Lightning Shock (Skill, A3, full charge, no orbs): 0.10 Break (Super Armor) per press on Training Ogre (Lv. 90). | Awakening A3 test, 10 Nov.",
+  "test": "Status application per skill",
+  "testId": "apply"
  }
 }
