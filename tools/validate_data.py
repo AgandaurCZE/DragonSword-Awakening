@@ -167,6 +167,22 @@ for p in PN.get('patches', []):
         if n not in heroes: bad(f'PATCH_NOTES {v}: unknown hero {n!r} in heroChanges')
         if c.get('direction') not in PN.get('directions', {}): bad(f'PATCH_NOTES {v} {n}: unknown direction {c.get("direction")!r}')
 
+# Familiars: the per-group owned counts (used for the passive steps) must match the owned flags in the list (added 10 Nov 2026)
+FAM = d.get('FAMILIARS', {})
+if FAM.get('list') and isinstance(FAM.get('owned'), dict):
+    from collections import Counter
+    fc = Counter(f.get('group') for f in FAM['list'] if f.get('owned'))
+    for g in set(fc) | set(FAM['owned']):
+        if fc.get(g, 0) != FAM['owned'].get(g, 0):
+            bad(f'FAMILIARS.owned[{g!r}] is {FAM["owned"].get(g, 0)} but {fc.get(g, 0)} {g} familiars are marked owned')
+
+# New tier list: TIER_LIST_V2 heroes must be real heroes, and their tags must be defined (added 10 Nov 2026)
+T2 = d.get('TIER_LIST_V2', {})
+for n, h in (T2.get('heroes') or {}).items():
+    if n not in heroes: bad(f'TIER_LIST_V2: unknown hero {n!r}')
+    for t in h.get('tags', []):
+        if t not in (T2.get('tags') or {}): bad(f'TIER_LIST_V2 {n}: undefined tag {t!r}')
+
 if problems:
     print(f'{len(problems)} problem(s):'); [print(' -', p) for p in problems]; sys.exit(1)
 print(f'data.json OK: {len(heroes)} heroes, {len(karma)} Karmas, {len(gear)} gear sets, {len(d["TEAM_DATA"])} teams checked.')
