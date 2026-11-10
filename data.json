@@ -20922,13 +20922,15 @@
     ],
     "Vitality": [
      "1050",
+     "1125",
      "1200",
      "1275"
     ],
     "Focus": [
      "5.10%",
      "5.95%",
-     "6.80%"
+     "6.80%",
+     "8.08%"
     ],
     "Protection": [
      "80",
@@ -20944,6 +20946,7 @@
   "rules": [
    "Runes can't be upgraded.",
    "Synthesis: 5 runes of one grade (types can be mixed) become 1 random rune of the next grade. Up to 10 syntheses at once.",
+   "Perfect runes synthesise too: 3 Perfect runes become 1 random Perfect rune; the type is random (3 Determination gave a Focus rune). The game warns that ★5 runes used this way can't be recovered (David, 10 Nov 2026).",
    "One rune slot per gear piece, so up to 5 runes per hero. Each piece's slot is unlocked separately for 1 Anonymous Artisan's Crafting Tool.",
    "Any type and grade in any slot; the same type and grade can go in every slot.",
    "Removing an engraved rune returns it and costs 10,000 Gold (every grade)."

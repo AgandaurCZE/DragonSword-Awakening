@@ -1,3 +1,5 @@
+## 10 Nov 2026 — Perfect rune synthesis; two more values (Claude)
+- `RUNES.rules`: 3 Perfect runes synthesise into 1 random Perfect rune of a random type (David's screenshots: 3 Vitality gave Vitality, 3 Determination gave Focus); ★5 runes can't be recovered. `RUNES.seen` Perfect: Crit Rate 8.08% (predicted by the n/20 rule: 19 × 0.425), Max HP 1125 (15 × 75). GAME_MATH updated.
 ## 10 Nov 2026 — More Perfect rune values (Claude)
 - `RUNES.seen` Perfect: Attack 133, 140; Defense 80; Max HP 1200, 1275; Crit Rate 5.95%; Crit Damage 13.30%, 14%. Every Perfect value fits top × n/20 (GAME_MATH unknowns): tops Attack 140 and Crit Damage 14% seen; Defense 100, Max HP 1500, Crit Rate 8.5% predicted.
 ## 10 Nov 2026 — Every Orange +15 substat measured; Perfect runes; unused PNGs removed (Claude)
