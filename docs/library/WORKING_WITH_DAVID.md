@@ -26,6 +26,10 @@ Back to the library: [docs/README.md](../README.md). Repository rules: [AGENTS.m
 - **His PC:** ask him personally before looking through it. GitHub: look anywhere.
 - **Site changes:** only behind the preview (`?tiers=new`). The plain URL must not change.
 
+## What David owns (check before planning tests)
+- **Signature Karmas (10 Nov): Theresia, Kalien, Kalsion, Othello, Cerese, Dana, Ornette, Charlotte, Ryza, Roxy.** Source of truth: the Team Planner's Signature Karmas tab (status Owned or Tested). `KARMA_DATA[].owned` in data.json marks only the eight whose coloured card art is in the repo (Ryza's and Roxy's art isn't yet), so don't read it as the full list.
+- Titles: `TITLES` in data.json (all 109 recorded; the in-fight panel includes the owned ones).
+
 ## Keeping memory in the repo
 - Long chats get compacted (older messages summarised). Tell David when it happens, and keep everything needed in the repo as you go, not only at the end: [STATUS.md](STATUS.md) (current task and next steps), `CHANGELOG.md` (every change), [DONE.md](DONE.md) (finished tasks). There is no separate handoff file any more (retired 9 Nov).
 - Other assistants (ChatGPT, mainly for artwork) work on the same repo. Leave them notes in `CHATGPT.md`; be kind, and check their changes rather than undoing them.
