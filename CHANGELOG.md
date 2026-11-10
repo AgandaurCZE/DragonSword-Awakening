@@ -1,3 +1,5 @@
+## 10 Nov 2026 — Broken vs unbroken boss builds compared (Claude)
+- A build made for an always-broken boss loses 7.5–10% on an unbroken one, and vice versa (Johnny, Ryza, Reina, Kalsion, Defense 1825). Defense Ignore and own-status AAP are on every piece in both. Agreed in principle: must-have substats first, then a labelled team-dependent slot (STATUS).
 ## 10 Nov 2026 — Signature Karma test 09 results saved (Claude)
 - David's runs (9 Nov evening, Test Kit): Ryza +10–14% in three teams; Theresia +21%; Ornette +8% and Roxy +6% (both within chance); the Kalien team +41% with all three signatures. Table in TEAM_TESTS; Ryza's and Roxy's signatures are now marked Owned.
 - STATUS: test 09 remaining runs; build status rule agreed (own status + the physical the hero needs).
