@@ -18,7 +18,9 @@ Each planner team has one of four statuses, chosen with the drop-down on its car
 
 ## Teams
 
-### 1. Airborne burst (t01, status: works)
+Damage: 1 minute on the Training Ogre, all Lv.70, no gear. "Normal" = everyone on a Lv.1 normal Karma; "signature" = the named signature Karmas on (10 Nov runs, Test Kit test 09).
+
+### 1. Airborne burst (t01, status: works) — normal 600k → signature 630k (+5%, Kalsion's)
 
 Heroes: Reina (Enabler), Kalsion (Sub-DPS), Johnny (Sub-DPS).
 
@@ -26,16 +28,15 @@ Why: Reina keeps enemies Airborne almost whenever you want, which unlocks Kalsio
 
 Results (David):
 
-- 8 Nov: 2 million in 1 min, no signatures, all Lv.70 with full builds.
-- 9 Nov: 420k in 1 min, all Lv.70, no gear, no Karma.
-- 9 Nov: 510k with Kalsion's signature on (Johnny and Reina without).
+- Lv.70, no gear, 1 min: 600k with normal Lv.1 Karmas; 630k with Kalsion's signature (Johnny: So Good It's to Die For, Reina: Become a Star in That Sky).
+- No Karma at all (9 Nov): 420k; 510k with Kalsion's signature.
 
 Claude's notes:
 
 - Claude (8 Nov): The team David has been playing for the last few days.
 - Claude (9 Nov, second check, built this team independently): Airborne comes from two heroes here. Reina adds about 0.89 of the gauge per rotation (Rising Cutter 0.24, Wind Slayer 0.40 with both charges, Wind Grab 0.25), Johnny about 0.6 (Venom Dance, Phantom Slash, Venom Cutter 0.20 each). With Burn, Poison and Airborne up, every hit gets +200% (x3).
 
-### 2. Shadow Poison (t02, status: idea)
+### 2. Shadow Poison (t02, status: idea) — normal 680k → signature 700k (+3%, Charlotte's)
 
 Heroes: Charlotte (Main DPS), Johnny (Sub-DPS), Reina (Enabler).
 
@@ -43,15 +44,14 @@ Why: Charlotte's Illusion Kick needs Poison or Stealth and her Shadow Grab needs
 
 Results (David):
 
-- 8 Nov: 2 million in 1 min, no signatures. Charlotte Lv.50 with some gear, Johnny and Reina Lv.70 built.
-- 9 Nov: 440k in 1 min, all Lv.70, no gear, no Karma.
-- 9 Nov: 560k with Charlotte's signature on (Johnny and Reina without).
+- Lv.70, no gear, 1 min: 680k with normal Lv.1 Karmas; 700k with Charlotte's signature. With her signature a 600k+ run is more reliable.
+- No Karma at all (9 Nov): 440k; 560k with Charlotte's signature.
 
 Claude's notes:
 
 - Claude (9 Nov, built this team independently): Charlotte applies Poison herself on 4 skills (Test 01: Poison Dagger 0.50, clone explosion 0.24, Illusion Kick 0.15, Poison Step 0.08), so Johnny's Poison is mostly redundant here. His real value is Airborne (about 0.6 per rotation) for Shadow Grab, plus his own damage. Her only own Airborne is Illusion Kick (0.20) on a long cooldown, which is why the agreed rating says she needs it.
 
-### 3. Holy Bleed (t03, status: to test)
+### 3. Holy Bleed (t03, status: to test) — normal 330k → signature 420k (+27%, Theresia's and Roxy's)
 
 Heroes: Theresia (Main DPS), Roxy (Enabler), Castella (Enabler).
 
@@ -59,10 +59,8 @@ Why: Theresia's Divine Arc needs Stun and her Holy Rise needs Bleed. She applies
 
 Results (David):
 
-- 8 Nov: 45k in 1 min, no signatures. Theresia and Roxy Lv.1, Castella Lv.20.
-- 9 Nov: 250k in 1 min, all Lv.70, no gear, no Karma.
-- 9 Nov: 350k with Theresia's and Roxy's signatures on.
-- 9 Nov: 330k with only Theresia's signature on.
+- Lv.70, no gear, 1 min: 330k with normal Lv.1 Karmas; 400k with Theresia's signature; 350k with only Roxy's; 420k with both.
+- No Karma at all (9 Nov): 250k.
 - David: hard team (big run-to-run spread).
 
 Claude's notes:
@@ -70,7 +68,7 @@ Claude's notes:
 - Claude (8 Nov): David plans team tests with Roxy; Roxy may count as Sub-DPS here.
 - Claude (9 Nov check): her own sources per Test 01: Celestial Verdict 0.20 Stun (0.25 in Heretic Judgment), Consecration 0.15 Bleed plus 0.12 from the 10 s aura. Too slow on a boss, which is why she needs an enabler (David's rule: a hero who applies their own needs slowly still needs an enabler). Castella's Stun Blow (0.33) only works on a broken boss.
 
-### 4. Deep Frost (t04, status: idea)
+### 4. Deep Frost (t04, status: idea) — normal 300k → signature 480k (+60%, all three)
 
 Heroes: Othello (Main DPS), Dana (Sub-DPS), Cerese (Sub-DPS).
 
@@ -78,13 +76,13 @@ Why: Othello's Frozen Burst needs Frozen enemies. Dana stacks Frost fast and Cha
 
 Results (David):
 
-- 8 Nov: 42k in 1 min, no signatures, all Lv.1.
+- Lv.70, no gear, 1 min: 300k with Season of Bitter Cold on all three; 350k with Othello's signature; 430k with Othello's and Cerese's; 480k with all three signatures.
 
 Claude's notes:
 
 - Claude (9 Nov check): Cerese shatters Othello's Ice Prison if she's played after him (David confirmed), and lifts his Knockdown targets, so she works against his setup. Dana is now rated higher than Othello (A vs B). My version without Cerese is t14, Ice Prison.
 
-### 5. Storm (t05, status: idea)
+### 5. Storm (t05, status: idea) — normal 380k → signature 430k (+13%, Ryza's)
 
 Heroes: Ryza (Main DPS), Tarte (Enabler), Sion (Support).
 
@@ -92,20 +90,23 @@ Why: Tarte builds Shock fast, and her Bolt Bubble keeps casting after she swaps 
 
 Results (David):
 
-- 8 Nov: 50k in 1 min, no signatures, all Lv.1.
-- 9 Nov: 330k in 1 min, all Lv.70, no gear, no Karma, after runs of 250k and 300k; the Expert tag at its best, and still could do more.
-- 9 Nov: 400k with Ryza's signature on.
+- Lv.70, no gear, 1 min: 380k with normal Lv.1 Karmas; 430k with Ryza's signature.
+- No Karma at all (9 Nov): 330k after runs of 250k and 300k (the Expert tag at its best, and still could do more); 400k with Ryza's signature.
 
 Claude's notes:
 
 - Claude (8 Nov): Ryza can stack Shock alone, so check whether Tarte's opener actually speeds her up.
 - Claude (9 Nov check): David confirmed the orbs keep coming after Tarte swaps out. The old "full Shock stack in about 17–18 s" came from a Lv.1 estimate in the superseded Test 01 entries, so it stays out until it's measured at Lv.70 (the Lv.70 Test 01 has her charged Skill at 0.90 Shock with all 26 orbs).
 
-### 6. Thunder pair (t06, status: to test)
+### 6. Thunder pair (t06, status: to test) — normal 500k → signature 580k (+16%, Ryza's and Ornette's)
 
 Heroes: Ryza (Main DPS), Ornette (Sub-DPS), Sion (Support).
 
 Why: Ornette's Judgment needs Shock and her Holy Grab needs Knockdown. Ryza supplies Shock, Sion supplies Shock and Knockdown plus the Attack buff.
+
+Results (David):
+
+- Lv.70, no gear, 1 min: 500k with normal Lv.1 Karmas; 550k with Ryza's signature; 540k with only Ornette's; 580k with both.
 
 Claude's notes:
 
@@ -117,10 +118,6 @@ Claude's notes:
 Heroes: Kalsion (Sub-DPS), Aria (Enabler), Kalien (Enabler).
 
 Why: A Burn team without Reina. Aria applies Burn and Airborne, Kalien stacks more Burn. Kalsion's Burst Grab needs Burn and his Explosion needs Airborne, both covered.
-
-Results (David):
-
-- 8 Nov: 1.1 million in 1 min, no signatures. Kalien Lv.50 no gear, Aria Lv.1 no gear, Kalsion Lv.70 built.
 
 ### 8. Break and burn (t08, status: idea)
 
@@ -147,7 +144,7 @@ Claude's notes:
 
 - Both Supports are Expert: timing matters a lot here.
 
-### 10. Fox and wind (t10, status: to test)
+### 10. Fox and wind (t10, status: to test) — normal 650k → signature 700k (+8%, Kalien's; Kalsion's signature on in both runs)
 
 Heroes: Kalien (Enabler), Kalsion (Sub-DPS), Reina (Enabler).
 
@@ -155,15 +152,10 @@ Why: David's own test: Kalien's Burn and Reina's Airborne both feed Kalsion.
 
 Results (David):
 
-- 8 Nov: 1 million in 1 min, no signatures. Kalien Lv.50 no gear, Kalsion and Reina Lv.70 built.
-- 9 Nov: 390k and 460k in 1 min (two runs), all Lv.70, no gear, no Karma.
-- 9 Nov: 560k with Kalsion's and Kalien's signatures on (Reina without).
+- Lv.70, no gear, 1 min: 650k with Kalsion's signature on (Kalien and Reina on normal Lv.1 Karmas); 700k with Kalien's signature too. Kalsion's own signature gain is measured in team 1.
+- No Karma at all (9 Nov): 390k and 460k (two runs); 560k with Kalsion's and Kalien's signatures.
 
-Claude's notes:
-
-- Claude (9 Nov check): the earlier note said swapping Reina for Aria gave slightly more damage (Burn chain 1.1M vs this team 1M on 8 Nov). That comparison doesn't hold. Those runs had different levels and gear (Aria Lv.1 no gear, Kalien Lv.50, Reina built), so more than one thing changed. Compare the two teams only at the same level, with no gear.
-
-### 11. Holy Bleed with Kalien (t11, status: to test)
+### 11. Holy Bleed with Kalien (t11, status: to test) — normal 320k → signature 450k (+41%, Theresia's, Roxy's and Kalien's)
 
 Heroes: Theresia (Main DPS), Roxy (Enabler), Kalien (Enabler).
 
@@ -171,9 +163,8 @@ Why: Holy Bleed with Kalien in Castella's slot: Kalien's Finale adds Stun with n
 
 Results (David):
 
-- 9 Nov: 380k in 1 min, all Lv.70, no gear, with only Theresia's signature Karma on.
-- 9 Nov: 350k with Theresia's and Kalien's signatures, Roxy's off.
-- 9 Nov: 500k and 430k (two runs) with Theresia's, Roxy's and Kalien's signature Karmas on (no other Karma).
+- Lv.70, no gear, 1 min: 320k with normal Lv.1 Karmas; 450k with all three signatures.
+- No other Karma (9 Nov): 380k with only Theresia's signature; 350k with Theresia's and Kalien's; 500k and 430k with all three.
 - David: hard team (big run-to-run spread).
 
 Claude's notes:
@@ -230,6 +221,20 @@ Why: For groups. Cerese gathers with Ice Storm; her Frozen Needles needs Airborn
 Claude's notes:
 
 - Claude (9 Nov): untested question: does Airborne keep or end Frozen and Ice Blocks? If it ends them, swap Reina for Sion. Dana groups S, Cerese groups A, Reina groups S+.
+
+### 17. Lightning break (t17, status: idea) — normal 360k → signature 410k (+14%, Ryza's)
+
+Heroes: Ryza (Main DPS), Castella (Enabler), Sion (Support).
+
+Why: Ryza's Thunder Grab needs Shock, which she and Sion apply. Castella breaks the boss fast, which doubles physical build-up, then Stuns it; Sion adds team Attack and Knockdown.
+
+Results (David):
+
+- Lv.70, no gear, 1 min: 360k with normal Lv.1 Karmas (Sion: The One Chosen by Lightning, Castella: Destruction is the Mother of Creation); 410k with Ryza's signature. With it the boss ends each rotation on a full Shock stack; without, at about 75%. Expert team, could still do better.
+
+Claude's notes:
+
+- Claude (10 Nov): added from David's signature test runs; this team wasn't in the planner.
 
 ## Signature Karma priority list
 

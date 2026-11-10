@@ -1,3 +1,7 @@
+## 10 Nov 2026 — Team tests at Lv.70: normal vs signature on every card (Claude)
+- David's Lv.70 runs (normal Lv.1 Karma vs signature, 9–10 Nov) saved on the planner teams: Airborne burst 600k→630k, Shadow Poison 680k→700k, Holy Bleed 330k→420k, Deep Frost 300k→480k, Storm 380k→430k, Thunder pair 500k→580k, Fox and wind 650k→700k (Kalsion's signature on in both), Holy Bleed with Kalien 320k→450k. New team 17 Lightning break (Ryza, Castella, Sion) 360k→410k, tested but not in the planner before.
+- Removed the 8 Nov Lv.1 and mixed-level runs from the notes (Burn chain's note is now empty).
+- Team Planner page: coloured damage badge beside each team name (normal vs signature; the better in green, the worse in red, with an arrow and %); intro updated. Published to the same link; repo source `docs/testkit/dragonsword-planner.html`, backup and TEAM_TESTS refreshed.
 ## 10 Nov 2026 — Status AAP follows the team's shared status (Claude)
 - David's point from the Ursula run: the whole team uses Stun AAP, the status all three apply, not their own elements. Physical AAP substats are twice elemental ones, so the build rule changes: status AAP goes to the team's most-kept status (GAME_MATH 4.2, STATUS). The green panel buffs are most likely food (Tomato Stew gives Defense Ignore).
 ## 10 Nov 2026 — Ursula speed-run builds compared with the model (Claude)
