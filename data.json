@@ -14880,7 +14880,7 @@
    {
     "name": "Chest Addict",
     "grade": 2,
-    "obtained": false,
+    "obtained": true,
     "passive": [
      {
       "stat": "Defense",
@@ -20314,7 +20314,7 @@
     "name": "Red Ladybug",
     "group": "Insect",
     "image": "assets/familiars/red-ladybug.webp",
-    "owned": false,
+    "owned": true,
     "obtain": {
      "type": "task",
      "label": "Clear Puzzle",

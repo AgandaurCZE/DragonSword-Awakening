@@ -5,6 +5,7 @@ Back to the library: [docs/README.md](../README.md). Open work: [STATUS.md](STAT
 Nothing on this page needs doing again. It exists so finished work is never mistaken for an open task. Newest first within each section. When a task in STATUS, SITE or the to-do page finishes, move it here with the date.
 
 ## Game tasks and tests (David)
+- **10 Nov:** title Chest Addict obtained; last insect familiar, Red Ladybug, owned (colour card cut from David's screenshot); materials for all 16 masteries farmed.
 - **9 Nov evening:** all 20 heroes Lv.70; Test 08 base stats for all 20 (the 11 known ones re-measured and matching); 3 skill buffs (Tarte Cure, Alex Guard Counter, Astria Reload); 19 gear rows, mostly Blue and Purple (all match the tables, and they confirm Legs Attack Power Up, Legs Max HP Up, Helmet and Boots Defense Up and Boots Crit).
 - **9 Nov:** gearless team redo: all three heroes in each tested team at Lv.70, no gear, no Karma, 1 min on the Training Ogre, plus signature runs ([TEAM_TESTS.md](TEAM_TESTS.md)).
 - **9 Nov:** levelled to 70: Ryza, Theresia, Roxy, Castella, Tarte, Sion, Charlotte (with Johnny, Reina, Kalsion and Kalien, 11 heroes are at 70).

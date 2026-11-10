@@ -48,7 +48,7 @@ Back to the library: [docs/README.md](../README.md). Evidence for each rule: `DA
 - Base Crit Rate 5%, Crit Damage 50%. Every status resistance is 50 with no gear.
 
 ### 2.2 Titles (`TITLES`)
-- Titles give passives to every hero, slotted or not. David's current set: Attack +145, Max HP +1,575 flat; Defense +30 flat then Defense Up +5.3%.
+- Titles give passives to every hero, slotted or not. David's set: Attack +145, Max HP +1,575 flat; Defense +30 flat then Defense Up +5.3% (all Lv.70 base stats were measured with this). **From 10 Nov (Chest Addict obtained): Defense +45 flat.** Subtract +45 from new panel readings.
 - The levelling screen and `HERO_BASE_STATS` exclude titles. The in-fight panel includes them.
 
 ### 2.3 Karma stats (`KARMA_DATA`, `KARMA_LEVELLING`, `KARMA_ASCENSION`)

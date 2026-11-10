@@ -7,7 +7,7 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 - No awakenings and no masteries taken on any hero yet. They **can't be undone**.
 
 ## Current task (10 Nov, 04:15)
-- **David is collecting treasure maps for mastery materials; he'll come back with enough for all 16 masteries.** Then: per hero mastery → retest → awakenings (plan below).
+- **David has materials for all 16 masteries (10 Nov, 210/200).** He's unlocking them all and running the solo retests: no gear, no Karma (same as Test 01). Then awakenings, one at a time, testing only those on the list below.
 
 ## Earlier this session (Claude, 9 Nov evening)
 - Done: breakthrough profiles explained (GAME_MATH 2.1: one axis, B melee, C ranged, A halfway, D Alex); skill buffs checked; 19 new gear rows checked (all match); endgame gear and set analysis (GAME_MATH 4.1).

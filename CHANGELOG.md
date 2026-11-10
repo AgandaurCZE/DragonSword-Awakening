@@ -1,3 +1,7 @@
+## 10 Nov 2026 — Chest Addict, Red Ladybug (Claude)
+- `TITLES`: Chest Addict obtained (Defense +15; owned titles now Defense +45 flat, GAME_MATH 2.2). `FAMILIARS`: Red Ladybug owned; `assets/familiars/red-ladybug.webp` replaced with the colour card cut from David's `insect.png` by `tools/image/codex_recolor.py` (same 392×467 size and style, checked by eye next to the other beetles), then the PNG was deleted.
+- STATUS: David has materials for all 16 masteries; solo retests with no gear and no Karma.
+- Validator OK. Titles and Familiars are preview-only pages.
 ## 10 Nov 2026 — Kalsion split into two groups; equal card widths (Claude)
 - David's answers: Kalsion only bursts and swaps in Airborne burst, Burn chain and Fire and venom (new group `kalsion-burst`, main Airborne burst); he gets field time in Fox and wind (main), Break and burn and Fox and crossbow.
 - Thunder pair note (David): Ornette beats Tarte because Knockdown matters more than extra Shock.
