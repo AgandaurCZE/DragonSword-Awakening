@@ -19,6 +19,7 @@ Back to the library: [docs/README.md](../README.md). Rules: [AGENTS.md](../../AG
 | Karma cards | `One Karma card, built from KARMA_DATA`; Ascension comment |
 | Awakenings | `AWAKENINGS in data.json` comment |
 | Builds and stat totals | `Gear builds and end-game stat totals`; the JS port of `tools/hero_stats.py` (keep identical) |
+| Preview Back button | `navInit`, `navRecord`, `navShow` in `js/09-startup.js` (addresses `#page`, `#hero/Name/tab`) |
 | Preview gear model | `/*GM-START*/` in `js/04-gear-builds.js` (port of `tools/team_gear.py`, keep identical); `gmMount`, `gmDraw`, `gmRun`, `gmShow`; data `GEAR_MODEL` |
 | Patch notes | `Patch Notes (PATCH_NOTES` |
 | Simple pages | `Simple pages: Familiars, Titles, Trait Dungeons`; Normal and Currency Dungeons comment |

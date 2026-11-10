@@ -307,36 +307,44 @@ function gmDraw(h,o){const M=GEAR_MODEL,box=$('gmBox'),hasSig=!!(KARMA_DATA||[])
   <div><span class="gm-lab">Perfect runes</span>${seg('runes',[[1,'Best mix'],[0,'None']],o.runes?1:0)}</div>
   <div class="gm-st"><span class="gm-lab">Statuses the team keeps on the target</span><div class="gm-chips">${M.statuses.map(s=>`<label class="gm-chip"><input type="checkbox" data-gm-st="${profileEsc(s)}"${s==='Other'?' title="A status with no AAP substat: it still counts for All Status AAP"':''}${o.st.includes(s)?' checked':''}>${profileEsc(s)}</label>`).join('')}</div></div>
  </div><div id="gmOut" class="gm-out"><p class="profile-note">Working out the best gear…</p></div>`;
- box.querySelectorAll('[data-gm]').forEach(b=>b.onclick=()=>{const k=b.dataset.gm,v=Number(b.dataset.v);o[k]=(k==='def'||k==='awk')?v:!!v;gmDraw(h,o);});
- box.querySelectorAll('[data-gm-st]').forEach(cb=>cb.onchange=()=>{const s=cb.dataset.gmSt;o.st=M.statuses.filter(x=>x===s?cb.checked:o.st.includes(x));gmDraw(h,o);});
+ box.querySelectorAll('[data-gm]').forEach(b=>b.onclick=()=>{const k=b.dataset.gm,v=Number(b.dataset.v);o.open=0;o[k]=(k==='def'||k==='awk')?v:!!v;gmDraw(h,o);});
+ box.querySelectorAll('[data-gm-st]').forEach(cb=>cb.onchange=()=>{const s=cb.dataset.gmSt;o.open=0;o.st=M.statuses.filter(x=>x===s?cb.checked:o.st.includes(x));gmDraw(h,o);});
  gmRun(h,o);}
 function gmRun(h,o){const M=GEAR_MODEL,out=$('gmOut'),token=(o.token=(o.token||0)+1);
  if(!o.st.length){out.innerHTML='<p class="profile-note">Tick at least one status.</p>';return;}
+ const ck=JSON.stringify([o.def,o.half,o.awk,o.sig,o.runes,o.st]);if(o.cache&&o.cache.k===ck){gmShow(h,o,o.cache.rows,o.cache.top);return;}/* same settings as last time: redraw at once (Back button keeps its scroll place) */
  const phys=new Set(M.physical||[]),S=o.st.map(s=>[s,o.half&&phys.has(s)?0.5:1]);
  const top=gmRunes(M.runeMix||{}),base0=gmHeroBase(h.name,o.awk,o.sig),base=o.runes?gmAddRunes(base0,M.runeMix||{},top):base0;
  const pairs=gmPairs(S),res=[];let i=0;
  const step=()=>{if(o.token!==token||!$('gmOut'))return;const t0=performance.now();
   while(i<pairs.length&&performance.now()-t0<40){const [a,b]=pairs[i++];const r=gmBuild(gmSetBase(base,a,b),S,o.def);res.push(Object.assign(r,{s3:a,s2:b}));}
   if(i<pairs.length){out.innerHTML=`<p class="profile-note">Working out the best gear… ${Math.round(100*i/pairs.length)}%</p>`;setTimeout(step,0);return;}
-  res.sort((x,y)=>y.v-x.v);let best=res[0],mixNote='';
-  if(o.runes){const top5=gmRunes({Focus:1,Amplification:1,Determination:1});let bm=null;
-   for(let cr=0;cr<=5;cr++)for(let cd=0;cd+cr<=5;cd++){const mix={Focus:cr,Amplification:cd,Determination:5-cr-cd};const r=gmBuild(gmSetBase(gmAddRunes(base0,mix,top5),best.s3,best.s2),S,o.def);if(!bm||r.v>bm.r.v)bm={mix,r};}
-   best=Object.assign(bm.r,{s3:best.s3,s2:best.s2,mix:bm.mix});const rn={Focus:'Crit Rate',Amplification:'Crit Damage',Determination:'Attack'};
-   mixNote=Object.entries(bm.mix).filter(([,n])=>n).map(([t,n])=>`${n} × ${rn[t]} (${t}, ${fmtStat(GM_RUNE[t]==='gearAttack'?'Attack':GM_RUNE[t],top5[t])})`).join(' + ');}
-  gmShow(h,o,best,res,mixNote);};
+  res.sort((x,y)=>y.v-x.v);const seen=new Set(),rows=res.filter(r=>{const k=r.s3+'|'+r.s2;if(seen.has(k))return false;seen.add(k);return true}).slice(0,GM_ROWS);
+  if(!o.runes){o.cache={k:ck,rows};gmShow(h,o,rows);return;}
+  /* runes: try all 21 mixes of 5 Perfect runes (Crit Rate, Crit Damage, Attack at the top values seen) on each listed pair, then re-rank */
+  const top5=gmRunes({Focus:1,Amplification:1,Determination:1}),mixes=[];for(let cr=0;cr<=5;cr++)for(let cd=0;cd+cr<=5;cd++)mixes.push({Focus:cr,Amplification:cd,Determination:5-cr-cd});
+  let ri=0,mi=0;const bestOf=rows.map(()=>null);
+  const step2=()=>{if(o.token!==token||!$('gmOut'))return;const t1=performance.now();
+   while(ri<rows.length&&performance.now()-t1<40){const r=rows[ri],mix=mixes[mi];const b=gmBuild(gmSetBase(gmAddRunes(base0,mix,top5),r.s3,r.s2),S,o.def);if(!bestOf[ri]||b.v>bestOf[ri].v)bestOf[ri]=Object.assign(b,{s3:r.s3,s2:r.s2,mix});if(++mi>=mixes.length){mi=0;ri++;}}
+   if(ri<rows.length){out.innerHTML=`<p class="profile-note">Fitting runes… ${Math.round(100*ri/rows.length)}%</p>`;setTimeout(step2,0);return;}
+   bestOf.sort((x,y)=>y.v-x.v);o.cache={k:ck,rows:bestOf,top:top5};gmShow(h,o,bestOf,top5);};
+  setTimeout(step2,0);};
  setTimeout(step,30);}
-function gmShow(h,o,best,res,mixNote){const out=$('gmOut'),G=GEAR_STATS.slots,lv=GEAR_MODEL.level||15,set=n=>(GEAR_DATA||[]).find(g=>g.name===n)||{},c=best.c;
- const card=(n,pc)=>{const g=set(n);return `<button type="button" class="profile-build-item profile-gear-link gm-set" data-gm-set="${profileEsc(n)}"><div class="profile-build-head"><div class="profile-build-icon">${g.icon?`<img src="${profileEsc(g.icon)}" alt="">`:''}</div><div><h4>${profileEsc(n)}</h4><small>${pc}-piece · ${profileEsc(pc===3?g.three:g.two)}</small></div></div></button>`;};
- const pieces=GM_SLOTS.map(s=>{const m=best.mains[s];return `<div class="profile-gear-piece build-piece"><strong>${s}</strong><div class="profile-main-stat-value">${profileEsc(gmShort(m))}<span class="build-main-val">${fmtStat(m,G[s].main[m][lv],true)}</span></div><ul class="build-subs">${best.subs[s].map(st=>`<li><span>${profileEsc(gmShort(st))}</span><b>${fmtStat(st,G[s].sub[st],true)}</b></li>`).join('')}</ul></div>`;}).join('');
- const g=k=>c[k]||0,cr=g('Critical Hit Chance');
- const tot=[['Attack',(g('flat')+g('gearAttack'))*(1+g('Attack Power Up')/100),'Attack'],['Attack Power Up',g('Attack Power Up'),'Attack Power Up'],['Crit Rate',cr,'Critical Hit Chance'],['Crit Damage',g('Critical Damage'),'Critical Damage'],['Defense Ignore',g('Defense Ignore'),'Defense Ignore']];
- const st=new Set(o.st);const aapRows=[...o.st.filter(s=>s!=='Other').map(s=>s+' Additional Attack Power'),'All Status Effect Additional Attack Power','Status Effect Additional Attack Power Increase'].filter(k=>g(k)>0);
- const seen=new Set(),next=res.filter(r=>{const k=r.s3+'|'+r.s2;if(seen.has(k)||(r.s3===best.s3&&r.s2===best.s2))return false;seen.add(k);return true}).slice(0,4);
- const base=res.find(r=>r.s3===best.s3&&r.s2===best.s2)||res[0];
- out.innerHTML=`<div class="profile-build-list gm-sets">${card(best.s3,3)}${card(best.s2,2)}</div>
-  <div class="profile-gear-pieces">${pieces}</div>
-  ${mixNote?`<p class="profile-note"><strong>Runes:</strong> ${mixNote}, one per piece.</p>`:''}
-  <div class="eg-grid gm-tot">${tot.map(([l,v,k])=>`<div class="eg-row"><span class="eg-label">${l}</span><span class="eg-val"><b class="eg-total">${k==='Attack'?Math.round(v).toLocaleString('en-GB'):fmtStat(k,v)}</b>${k==='Critical Hit Chance'&&v>100?'<span class="eg-cap">over 100%</span>':''}</span></div>`).join('')}${aapRows.map(k=>`<div class="eg-row"><span class="eg-label">${profileEsc(gmShort(k))}</span><span class="eg-val"><b class="eg-total">${fmtStat(k,g(k))}</b></span></div>`).join('')}</div>
-  <p class="profile-note"><strong>Next best set pairs:</strong> ${next.map(r=>`${profileEsc(r.s3)} + ${profileEsc(r.s2)} <span class="gm-pct">${(100*(r.v/base.v-1)).toFixed(1)}%</span>`).join(' · ')}</p>
-  <p class="profile-note gm-why">Level 70, Orange gear at +${lv}, all ${(TITLES.list||[]).length} titles, ${o.sig?'signature Karma at Ascension 6':'no signature Karma traits'}, awakenings A${o.awk}. Every 3-piece effect and every 2-piece bonus is counted as active, and a status's Additional Damage and AAP (Additional Attack Power) count only while that status is up${o.half?'; physical statuses count half the time':''}. Substats are picked one at a time for the biggest gain, five per piece. The game's real uptime depends on how you play, so treat close set pairs (under about 1%) as a tie. Python reference: <code>tools/team_gear.py</code>.</p>`;
+const GM_ROWS=6;
+function gmRuneText(mix,top,short){if(!mix)return '';const rn={Focus:'Crit Rate',Amplification:'Crit Damage',Determination:'Attack'};return Object.entries(mix).filter(([,n])=>n).map(([t,n])=>short?`${n} ${rn[t]}`:`${n} × ${rn[t]} (${t}, ${fmtStat(GM_RUNE[t]==='gearAttack'?'Attack':GM_RUNE[t],top[t])})`).join(short?' + ':' + ');}
+function gmShow(h,o,rows,top){const out=$('gmOut'),G=GEAR_STATS.slots,lv=GEAR_MODEL.level||15,set=n=>(GEAR_DATA||[]).find(g=>g.name===n)||{},best=rows[0];
+ const icon=n=>{const g=set(n);return g.icon?`<img src="${profileEsc(g.icon)}" alt="" title="${profileEsc(n)}">`:''};
+ const detail=r=>{const c=r.c,g=k=>c[k]||0;
+  const pieces=GM_SLOTS.map(s=>{const m=r.mains[s];return `<div class="profile-gear-piece build-piece"><strong>${s}</strong><div class="profile-main-stat-value">${profileEsc(gmShort(m))}<span class="build-main-val">${fmtStat(m,G[s].main[m][lv],true)}</span></div><ul class="build-subs">${r.subs[s].map(st=>`<li><span>${profileEsc(gmShort(st))}</span><b>${fmtStat(st,G[s].sub[st],true)}</b></li>`).join('')}</ul></div>`;}).join('');
+  const tot=[['Attack',(g('flat')+g('gearAttack'))*(1+g('Attack Power Up')/100),'Attack'],['Attack Power Up',g('Attack Power Up'),'Attack Power Up'],['Crit Rate',g('Critical Hit Chance'),'Critical Hit Chance'],['Crit Damage',g('Critical Damage'),'Critical Damage'],['Defense Ignore',g('Defense Ignore'),'Defense Ignore']];
+  const aap=[...o.st.filter(s=>s!=='Other').map(s=>s+' Additional Attack Power'),'All Status Effect Additional Attack Power','Status Effect Additional Attack Power Increase'].filter(k=>g(k)>0);
+  const setLine=n=>{const s=set(n);return `<button type="button" class="gm-setlink" data-gm-set="${profileEsc(n)}">${icon(n)}<span><b>${profileEsc(n)}</b> ${n===r.s3?'(3) '+profileEsc(s.three)+' · (2) '+profileEsc(s.two):'(2) '+profileEsc(s.two)}</span></button>`;};
+  return `<div class="gm-detail">${setLine(r.s3)}${setLine(r.s2)}<div class="profile-gear-pieces">${pieces}</div>${r.mix?`<p class="profile-note"><strong>Runes:</strong> ${gmRuneText(r.mix,top)}, one per piece.</p>`:''}<div class="eg-grid gm-tot">${tot.map(([l,v,k])=>`<div class="eg-row"><span class="eg-label">${l}</span><span class="eg-val"><b class="eg-total">${k==='Attack'?Math.round(v).toLocaleString('en-GB'):fmtStat(k,v)}</b>${k==='Critical Hit Chance'&&v>100?'<span class="eg-cap">over 100%</span>':''}</span></div>`).join('')}${aap.map(k=>`<div class="eg-row"><span class="eg-label">${profileEsc(gmShort(k))}</span><span class="eg-val"><b class="eg-total">${fmtStat(k,g(k))}</b></span></div>`).join('')}</div></div>`;};
+ const row=(r,n)=>{const c=r.c,g=k=>c[k]||0,pct=100*r.v/best.v;
+  const chips=[['Crit',fmtStat('Critical Hit Chance',g('Critical Hit Chance'))+' / '+fmtStat('Critical Damage',g('Critical Damage'))],['Defense Ignore',fmtStat('Defense Ignore',g('Defense Ignore'))],['Attack Power Up',fmtStat('Attack Power Up',g('Attack Power Up'))]].concat(r.mix?[['Runes',gmRuneText(r.mix,top,true)]]:[]);
+  return `<div class="gm-row${n===o.open?' open':''}" data-gm-row="${n}"><button type="button" class="gm-row-head" aria-expanded="${n===o.open}"><span class="gm-pct-badge">${pct>=99.995?'100':pct.toFixed(2)}%</span><span class="gm-icons">${icon(r.s3)}${icon(r.s2)}</span><span class="gm-names">${profileEsc(r.s3)} <small>(3-PC)</small> + ${profileEsc(r.s2)} <small>(2-PC)</small></span><span class="gm-chev" aria-hidden="true">⌄</span></button><div class="gm-chips2">${chips.map(([l,v])=>`<span class="gm-chip2">${l}: <b>${profileEsc(v)}</b></span>`).join('')}</div>${n===o.open?detail(r):''}</div>`;};
+ if(o.open==null||o.open>=rows.length)o.open=0;
+ out.innerHTML=`<div class="gm-list">${rows.map(row).join('')}</div>
+  <p class="profile-note gm-why">% = damage of each set pair compared with the best (100%), each with its own best main stats, substats${o.runes?' and runes':''}. Level 70, Orange gear at +${lv}, all ${(TITLES.list||[]).length} titles, ${o.sig?'signature Karma at Ascension 6':'no signature Karma traits'}, awakenings A${o.awk}. Every 3-piece effect and every 2-piece bonus is counted as active, and a status's Additional Damage and AAP (Additional Attack Power) count only while that status is up${o.half?'; physical statuses count half the time':''}. Substats are picked one at a time for the biggest gain, five per piece. Real uptime depends on how you play, so treat pairs within about 1% as a tie. Python reference: <code>tools/team_gear.py</code>.</p>`;
+ out.querySelectorAll('[data-gm-row] .gm-row-head').forEach(b=>b.onclick=()=>{const n=Number(b.parentNode.dataset.gmRow);o.open=o.open===n?-1:n;gmShow(h,o,rows,top);});
  out.querySelectorAll('[data-gm-set]').forEach(b=>b.onclick=()=>openGearSet(b.dataset.gmSet));}
