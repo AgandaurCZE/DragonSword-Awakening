@@ -1,5 +1,10 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 11 Nov 2026 — Share picture and tab icon (Claude)
+- **Handover #4, approved by David to go live now (both URLs):** `<head>` gets a description, `theme-color`, Open Graph tags (title "DragonSword: Awakening, Guides, tools & Tier List", description, URL, picture with size and alt text) and `twitter:card` = large picture. New files in `assets/ui/`: `og-image.jpg` (1200×630, David's pick: all 20 hero portraits under the title in the site's gothic font), `favicon.png` (64 px) and `apple-touch-icon.png` (180 px), both the gold hero emblem from the menu on the page's dark background. Visible on the public page: only the browser-tab icon.
+- David asked for only these two things now; the new tab names and the home page are the next steps (STATUS).
+- Checks: `public_diff.py` OK (87 views); icon file loads in a browser; `check_all.py` below.
+
 ## 11 Nov 2026 — Handover tasks 1, 2, 3, 5, 6 and the Karma level picker (Claude)
 - Restore point: `52e17ef`.
 - **#1 menu names:** at start-up every `.nav-item` gets `aria-label` from its label (both URLs, nothing visible); in the preview also `title`, so the icon-only phone menu shows names on hover/long-press.
