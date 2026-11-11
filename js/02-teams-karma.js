@@ -203,6 +203,7 @@ function buildKarmaCard(k) {
   const esc = profileEsc;
   const card = document.createElement('article');
   card.className = 'karma-card';
+  card.dataset.karmaName = k.name;
   const kh = document.createElement('div');
   kh.className = 'karma-card-head';
   const mark = document.createElement('div');
@@ -302,6 +303,7 @@ function buildKarmaCard(k) {
   for (const [label, value] of Object.entries(k.base || {})) {
     const st = document.createElement('div');
     st.className = 'karma-stat';
+    st.dataset.karmaStat = label;
     st.innerHTML = esc(label) + ': <b>' + esc(value) + '</b>';
     stats.append(st);
   }
@@ -573,6 +575,7 @@ function renderKarmas() {
   }
   if (!found.length)
     board.innerHTML = '<div class="karma-empty">No Karmas match your search or archetype filter.</div>';
+  if (IS_PREVIEW) karmaLevelInit();
 }
 function makeArchFilters() {
   $('archfilters').innerHTML = '';
@@ -636,3 +639,69 @@ function makeRoleFilters() {
   });
 }
 // Skill text: damage values bold, status effects bold in their archetype colour, Activation Conditions in red.
+
+/* Preview: base stats at another Karma level (Claude, 11 Nov 2026). Only measured values are shown: every Balanced card shares
+   Ryza's signature table and every Attack card Ornette's (KARMA_LEVELLING.measured, David, 10 Nov); the Defense and High Attack
+   types are measured at Lv.1 and Lv.70 only, so between those they say "not measured yet". */
+let KARMA_LV = 'Lv70';
+function karmaLevelTables() {
+  const out = {},
+    M = (KARMA_LEVELLING || {}).measured || {};
+  for (const [name, t] of Object.entries(M)) {
+    const m = /\((Balanced|Attack|Defense|High Attack)\b/.exec(name);
+    if (m && t.Lv70 && !out[m[1]]) out[m[1]] = t;
+  }
+  return out;
+}
+const karmaLvLabel = (k) =>
+  k
+    .replace(/^Lv(\d+)/, 'Lv. $1')
+    .replace(' before breakthrough', ', before breakthrough')
+    .replace(' after breakthrough', ', after breakthrough');
+function karmaLevelInit() {
+  const T = karmaLevelTables(),
+    keys = (T.Balanced && Object.keys(T.Balanced)) || ['Lv1', 'Lv70'],
+    ctl = document.querySelector('#karmaPage .karma-controls');
+  if (ctl && !document.getElementById('karmaLevel')) {
+    const w = document.createElement('label');
+    w.className = 'karma-level-pick';
+    w.innerHTML =
+      '<span>Base stats at</span><select id="karmaLevel">' +
+      keys
+        .map(
+          (k) =>
+            `<option value="${profileEsc(k)}"${k === KARMA_LV ? ' selected' : ''}>${profileEsc(karmaLvLabel(k))}</option>`,
+        )
+        .join('') +
+      '</select>';
+    ctl.append(w);
+    w.querySelector('select').addEventListener('change', (e) => {
+      KARMA_LV = e.target.value;
+      karmaLevelApply();
+    });
+  }
+  karmaLevelApply();
+}
+function karmaLevelApply() {
+  const T = karmaLevelTables(),
+    order = (KARMA_LEVELLING || {}).order || ['Attack', 'Defense', 'Max HP'],
+    lv = KARMA_LV;
+  document.querySelectorAll('#karmaBoard .karma-card').forEach((card) => {
+    const k = KARMA_DATA.find((x) => x.name === card.dataset.karmaName);
+    if (!k) return;
+    const h = card.querySelector('.karma-stat-heading');
+    if (h) h.textContent = 'Base stats · ' + karmaLvLabel(lv) + (lv === 'Lv70' ? ' / Ascension 6' : '');
+    const row =
+      lv === 'Lv70' ? null : lv === 'Lv1' ? order.map((s) => (k.baseLv1 || {})[s]) : (T[k.statType] || {})[lv];
+    card.querySelectorAll('[data-karma-stat]').forEach((st) => {
+      const s = st.dataset.karmaStat,
+        i = order.indexOf(s),
+        v = lv === 'Lv70' ? (k.base || {})[s] : row && i >= 0 ? row[i] : null;
+      st.innerHTML =
+        profileEsc(s) +
+        ': <b>' +
+        (v == null ? '<span class="karma-unmeasured">not measured yet</span>' : profileEsc(String(v))) +
+        '</b>';
+    });
+  });
+}

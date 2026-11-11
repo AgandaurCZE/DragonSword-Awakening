@@ -63,6 +63,13 @@ function startApp() {
     renderTools();
   }
   applyPreviewGate();
+  /* Handover #1 (11 Nov 2026): every menu button gets its name for screen readers (invisible on both URLs); the preview also shows it as a tooltip, for the icon-only phone menu. */
+  document.querySelectorAll('.nav-item').forEach((b) => {
+    const l = b.querySelector('.nav-label');
+    if (!l) return;
+    b.setAttribute('aria-label', l.textContent.trim());
+    if (IS_PREVIEW) b.title = l.textContent.trim();
+  });
   initTierV2();
   if (IS_PREVIEW && location.hash.startsWith('#dungeons')) {
     const b = document.querySelector('.nav-item[data-page="dungeons"]');
@@ -183,6 +190,7 @@ fetch('data.json', {
     GEAR_UPGRADE = d.GEAR_UPGRADE || GEAR_UPGRADE;
     RUNES = d.RUNES || null;
     GEAR_MODEL = d.GEAR_MODEL || null;
+    KARMA_LEVELLING = d.KARMA_LEVELLING || null;
     GUIDES = d.GUIDES || { categories: [] };
     LEVEL_COSTS = d.LEVEL_COSTS || null;
     DAMAGE_CALC = d.DAMAGE_CALC || null;

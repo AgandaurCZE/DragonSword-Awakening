@@ -6967,3 +6967,54 @@ main {
   outline: 2px solid #19b9ff;
   outline-offset: 3px;
 }
+/* Handover #2 and #3 (Claude, 11 Nov 2026): phone dungeon cards keep the name clear of the rewards; the hero profile gets the same side padding as the other pages. */
+@media (max-width: 800px) {
+  .pv .dng-card {
+    height: 190px;
+  }
+  .pv .dng-name {
+    inset: 76px 28% auto 7%;
+    height: 44px;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: clamp(16px, 4.4vw, 21px);
+  }
+  .pv .dng-rewards {
+    bottom: 10%;
+  }
+}
+.pv #profilePage {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+@media (max-width: 800px) {
+  .pv #profilePage {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+/* Preview Karma level picker (Claude, 11 Nov 2026) */
+.pv .karma-level-pick {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #9aa0ab;
+}
+.pv .karma-level-pick span {
+  white-space: nowrap;
+}
+.pv .karma-level-pick select {
+  width: auto;
+  background: #1a1d23;
+  color: #e6e8ec;
+  border: 1px solid #3a3e48;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font: inherit;
+}
+.pv .karma-unmeasured {
+  color: #7d838e;
+  font-weight: 400;
+  font-style: italic;
+}

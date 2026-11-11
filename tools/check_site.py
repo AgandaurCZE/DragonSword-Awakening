@@ -274,6 +274,42 @@ def progress_backups(browser, base):
         ctx.close()
 
 
+def preview_views(browser, base):
+    """Preview views the menu walk can't reach (Claude, 11 Nov 2026): every Karma level in the picker shows the measured
+    table for Balanced and Attack cards, and the per-view addresses (#hero/Name/tab) open and go Back correctly."""
+    ctx = browser.new_context(viewport={'width': 1400, 'height': 900})
+    page = open_site(ctx, base, '?tiers=new#karma', 'preview Karma levels')
+    with open(os.path.join(ROOT, 'data.json'), encoding='utf-8') as f:
+        d = json.load(f)
+    tables = {}
+    for name, t in d['KARMA_LEVELLING']['measured'].items():
+        for typ in ('Balanced', 'Attack'):
+            if '(' + typ in name and 'Lv70' in t and typ not in tables:
+                tables[typ] = t
+    if not page.query_selector('#karmaLevel'):
+        bad('preview Karma levels: the level picker is missing')
+    else:
+        for lv in page.evaluate("[...document.querySelectorAll('#karmaLevel option')].map(o=>o.value)"):
+            page.select_option('#karmaLevel', lv)
+            got = page.evaluate("""()=>{const o={};document.querySelectorAll('#karmaBoard .karma-card').forEach(c=>{const k=KARMA_DATA.find(x=>x.name===c.dataset.karmaName);if(!k||o[k.statType])return;o[k.statType]=[...c.querySelectorAll('[data-karma-stat] b')].map(b=>b.textContent)});return o}""")
+            for typ, t in tables.items():
+                want = [str(v) for v in t[lv]]
+                if got.get(typ) != want:
+                    bad(f'preview Karma levels: {typ} at {lv} shows {got.get(typ)}, measured {want}')
+    page.goto(base + '?tiers=new#hero/Ryza/build', wait_until='networkidle')
+    page.wait_for_timeout(800)
+    if page.evaluate("document.getElementById('profilePage').hidden || currentProfileName!=='Ryza'"):
+        bad('preview addresses: #hero/Ryza/build did not open Ryza')
+    page.evaluate("document.querySelector('.nav-item[data-page=\"gear\"]').click()")
+    page.wait_for_timeout(300)
+    page.go_back()
+    page.wait_for_timeout(800)
+    if page.evaluate("document.getElementById('profilePage').hidden"):
+        bad('preview addresses: Back from Gear did not return to the hero profile')
+    print('  preview Karma levels and Back button checked')
+    ctx.close()
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -293,6 +329,7 @@ def main():
             print('check_site: JS ports against the Python tools')
             parity(browser, base)
             progress_backups(browser, base)
+            preview_views(browser, base)
         browser.close()
     if problems:
         print(f'check_site: {len(problems)} problem(s).')
