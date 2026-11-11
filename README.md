@@ -17,3 +17,5 @@ Fan-made guide. Not affiliated with or endorsed by HOUND13. DragonSword: Awakeni
 ---
 
 **Working on this repository?** Start with [`AGENTS.md`](AGENTS.md) (rules, including the checks that must pass before every commit) and the notes library in [`docs/README.md`](docs/README.md).
+
+Repository layout: `src/` contains the website code, `routes/` the generated URL entry pages, and `tools/` the Python development tools. Assets, data and notes keep their existing locations. Run locally with `python3 tools/serve_site.py`; run all checks with `python3 tools/check_all.py`.

@@ -1,5 +1,8 @@
 # Done: finished tasks and answered questions
 
+## 12 Nov — Repository folder organisation (complete; checked)
+Website source grouped in `src/`, generated URL pages in `routes/`, Python tools kept in `tools/`. Assets and Markdown files remain in place. Assembly preserves the public paths; use `tools/serve_site.py` for local testing. Full checks passed, all 218 pixel views matched the previous release, and clean Git archive assembly passed.
+
 ## 11 Nov — Public Beta implementation (Codex; checked)
 Shortcuts home and clean public routes implemented from the former preview. Legacy public tier renderer/gate removed, original uploaded logo added as home link with BETA, existing share art/favicon retained. Full `check_all.py` passed; 39 direct routes/reloads, both browser widths, existing parity/storage checks and the new interaction checks passed. Full pixel comparison completed with the approved launch differences. CHANGELOG records validation; the release commit is published only when its GitHub check and publish jobs pass.
 

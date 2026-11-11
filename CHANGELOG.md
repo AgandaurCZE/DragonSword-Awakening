@@ -1,5 +1,14 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Organise site source and URL folders (Codex; David requested)
+
+- Restore point: `a7644fbc734227ad715cb70e82ddf3f6c4d2d29d`, latest main and successful Beta deployment confirmed before work.
+- Moved editable HTML/CSS/JS together under `src/`; generated home/hero/page/tool entry files together under `routes/`. Removed the generated entry folders from the repository root and Python tools directory. `tools/` remains the Python development/checking folder. Assets and all Markdown files retain their locations; only current path/workflow references and required work logs are updated in the notes.
+- Added `tools/build_site.py` and `tools/serve_site.py`. Publishing assembles a clean committed Git archive: URL entries at the public root, scripts/styles at their original `/js` and `/css` paths, and assets, data, notes, Test Kit and planner copied unchanged. No URL, view, calculation, image or game-data changes intended.
+- Adapted path-dependent checks, formatter discovery, local browser/pixel serving and the publish assembly step to this requested layout. No check removed/skipped or tolerance loosened. The cache check compares file contents across old/new paths (rather than treating a move as a content change); changed contents still require a version bump. Route checks now include the generated home and reject URL entries outside `routes/`.
+- Assembly initially found a collision between the `/tools` route and copied Python tools; fixed by merging those directories in the output, preserving both at their original public paths.
+- Verification so far: all 675 published asset/data/code/URL files match the previous release byte for byte (generated HTML comments excluded); temporary cache-guard probe rejected modified JS with an unchanged cache version across the move, and source bytes were restored exactly. Final `python3 tools/check_all.py`: ALL CHECKS PASSED. `python3 tools/public_diff.py --preview`: all 218 views match HEAD pixel for pixel. Formatter discovery confirmed (`ignored:false` for moved JavaScript); clean staged Git archive assembly passed, including public URL entries and online notes/Test Kit. Release commit: “Organise website source and URL folders”; publication remains gated by its exact-SHA GitHub checks.
+
 ## 11 Nov 2026 — Public Beta launch (Codex; David approved)
 
 - Restore point before migration: `6c5f5167e927fc670a0ece5facd692bef83913f3` (David's exact `assets/logo_2x.png` upload). Fetched latest main and confirmed its Check and publish run succeeded; all new branding and previous assistants' work retained.

@@ -14,7 +14,7 @@ It serves the repository on a local port, opens it in headless Chromium (Playwri
 Needs: pip install playwright, and a Chromium (python3 -m playwright install chromium) or an installed Chrome.
 Exit codes: 0 = all passed, 1 = a check failed, 2 = the browser could not be started (the checks did NOT run).
 """
-import contextlib, functools, http.server, json, os, sys, threading
+import contextlib, functools, http.server, json, os, sys, threading, tempfile, subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUICK = '--quick' in sys.argv
@@ -48,15 +48,27 @@ class QuietHandler(http.server.SimpleHTTPRequestHandler):
 
 
 @contextlib.contextmanager
-def serve(directory):
-    """Serve `directory` on a free local port; yields the base URL."""
-    handler = functools.partial(QuietHandler, directory=directory)
-    srv = http.server.ThreadingHTTPServer(('127.0.0.1', 0), handler)
-    threading.Thread(target=srv.serve_forever, daemon=True).start()
-    try:
-        yield 'http://127.0.0.1:%d/' % srv.server_address[1]
-    finally:
-        srv.shutdown()
+def serve(directory, prefix=''):
+    """Serve the assembled artifact; old commits without src/ still serve as before.
+
+    The pixel tool uses this same function for reference archives and working files.
+    """
+    with tempfile.TemporaryDirectory(prefix='site_check_') as temporary:
+        directory = os.path.abspath(directory)
+        assembled = os.path.join(temporary, prefix) if prefix else temporary
+        if os.path.isfile(os.path.join(directory, 'src', 'index.html')):
+            subprocess.run([sys.executable, os.path.join(directory, 'tools', 'build_site.py'),
+                            '--output', assembled], check=True, capture_output=True)
+            directory = temporary
+        elif prefix:
+            raise ValueError('Prefix hosting requires the assembled layout')
+        handler = functools.partial(QuietHandler, directory=directory)
+        srv = http.server.ThreadingHTTPServer(('127.0.0.1', 0), handler)
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        try:
+            yield 'http://127.0.0.1:%d/' % srv.server_address[1] + (prefix + '/' if prefix else '')
+        finally:
+            srv.shutdown()
 
 
 def launch(p):
@@ -498,8 +510,8 @@ def main():
         smoke(browser, base)
         beta_routes(browser, base)
         beta_interactions(browser, base)
-        with serve(os.path.dirname(ROOT)) as parent:
-            beta_subpath(browser, parent + os.path.basename(ROOT) + "/")
+        with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
+            beta_subpath(browser, prefixed)
         if not QUICK:
             print('check_site: JS ports against the Python tools')
             parity(browser, base)

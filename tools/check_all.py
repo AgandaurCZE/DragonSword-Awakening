@@ -51,13 +51,13 @@ def indent(text, limit=60):
 
 def site_files():
     """(path, version) for every stylesheet and script index.html loads."""
-    html = open('index.html', encoding='utf-8').read()
+    html = open('src/index.html', encoding='utf-8').read()
     return re.findall(r'(?:href|src)="((?:css|js)/[^"?]+)(?:\?v=([^"]*))?"', html)
 
 
 def file_rules():
     bad = []
-    for f in ['index.html', 'data.json'] + sorted(glob.glob('css/*.css')) + sorted(glob.glob('js/*.js')):
+    for f in ['src/index.html', 'data.json'] + sorted(glob.glob('src/css/*.css')) + sorted(glob.glob('src/js/*.js')):
         if b'\r' in open(f, 'rb').read(): bad.append(f'{f}: has CRLF line endings; this file must use LF')
     raw = open('data.json', encoding='utf-8').read()
     try:
@@ -69,11 +69,11 @@ def file_rules():
         bad.append(f'data.json or data/research.json is not valid JSON: {e}')
     linked = site_files()
     for path, version in linked:
-        if not os.path.exists(path): bad.append(f'index.html loads {path}, which does not exist')
+        if not os.path.exists('src/' + path): bad.append(f'index.html loads {path}, which does not exist')
         if not version: bad.append(f'index.html loads {path} without ?v=')
     listed = [p for p, _ in linked]
-    for f in sorted(glob.glob('js/*.js')) + sorted(glob.glob('css/*.css')):
-        if f not in listed: bad.append(f'{f} exists but index.html does not load it (delete it or add it)')
+    for f in sorted(glob.glob('src/js/*.js')) + sorted(glob.glob('src/css/*.css')):
+        if f.removeprefix('src/') not in listed: bad.append(f'{f} exists but index.html does not load it (delete it or add it)')
     scripts = [p for p in listed if p.startswith('js/')]
     if scripts != sorted(scripts): bad.append('index.html: the js/ files are not loaded in their numbered order')
     step('file rules', 'FAIL' if bad else 'ok', indent('\n'.join(bad)))
@@ -82,20 +82,26 @@ def file_rules():
 def js_syntax():
     if not shutil.which('node'):
         return step('JS syntax', 'not run', '          node is not installed')
-    bad = [r.stderr.strip() for r in (run(['node', '--check', f]) for f in sorted(glob.glob('js/*.js'))) if r.returncode]
+    bad = [r.stderr.strip() for r in (run(['node', '--check', f]) for f in sorted(glob.glob('src/js/*.js'))) if r.returncode]
     step('JS syntax', 'FAIL' if bad else 'ok', indent('\n'.join(bad)))
 
 
 def cache_numbers(base):
     """A changed css/js file needs a new ?v= in index.html, or returning visitors keep the old copy for a while."""
-    old_html = run(['git', 'show', f'{base}:index.html'])
-    changed = run(['git', 'diff', '--name-only', base, '--', 'css', 'js'])
-    if old_html.returncode or changed.returncode:
+    old_html = run(['git', 'show', f'{base}:src/index.html'])
+    if old_html.returncode:
+        old_html = run(['git', 'show', f'{base}:index.html'])  # before the folder reorganisation
+    if old_html.returncode:
         return step('cache numbers', 'not run', f'          git cannot read {base!r} here (shallow clone?)')
     old = dict(re.findall(r'(?:href|src)="((?:css|js)/[^"?]+)\?v=([^"]*)"', old_html.stdout))
     new = dict(site_files())
-    bad = [f'{f} changed since {base}, but its ?v= in index.html is still {new[f]}: give it a new value (e.g. today\'s date and a letter)'
-           for f in changed.stdout.split() if f in new and f in old and new[f] == old[f]]
+    bad = []
+    for path, version in new.items():
+        previous = run(['git', 'show', f'{base}:src/{path}'])
+        if previous.returncode:
+            previous = run(['git', 'show', f'{base}:{path}'])
+        if previous.returncode == 0 and previous.stdout != open('src/' + path, encoding='utf-8').read() and old.get(path) == version:
+            bad.append(f'{path} content changed since {base}, but its ?v= is still {version}: give it a new value')
     step('cache numbers', 'FAIL' if bad else 'ok', indent('\n'.join(bad)))
 
 
@@ -110,11 +116,11 @@ def browser():
 def formatting():
     if not shutil.which('npx'):
         return step('formatting', 'not run', '          npx is not installed')
-    r = run(['npx', '--yes', PRETTIER, '--check', 'js', 'css'])
+    r = run(['npx', '--yes', PRETTIER, '--check', 'src/js', 'src/css'])
     if r.returncode == 0:
         return step('formatting', 'ok')
     files = [l for l in (r.stdout + r.stderr).splitlines() if l.startswith('[warn]')]
-    step('formatting', 'warn', indent('\n'.join(files) + f'\nFix: npx --yes {PRETTIER} --write js css   (then run the checks again)'))
+    step('formatting', 'warn', indent('\n'.join(files) + f'\nFix: npx --yes {PRETTIER} --write src/js src/css   (then run the checks again)'))
 
 
 def main():
