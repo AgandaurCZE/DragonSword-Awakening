@@ -43,8 +43,8 @@ COMPARE = """async([a,b])=>{const load=u=>new Promise((res,rej)=>{const i=new Im
  return {n,total:A.width*A.height,box:[x0,y0,x1,y1]};}"""
 
 
-def shoot(browser, base, out):
-    """Full-page pictures of every view; returns the list of file names."""
+def shoot(browser, base, out, only=None):
+    """Full-page pictures of every view (or just the views named in `only`); returns the list of file names."""
     names = []
     modes = [('public', '')] + ([('preview', '?tiers=new')] if PREVIEW else [])
     for mode, query in modes:
@@ -56,6 +56,7 @@ def shoot(browser, base, out):
             page.add_style_tag(content=FREEZE)
 
             def snap(name):
+                if only is not None and name not in only: return
                 page.evaluate(SETTLE)
                 page.wait_for_load_state('networkidle')
                 page.screenshot(path=os.path.join(out, name), full_page=True)
@@ -70,7 +71,7 @@ def shoot(browser, base, out):
             for hero in heroes:
                 for tab in ('skills', 'review', 'build'):
                     page.evaluate('([n,t])=>openCharacterProfile(n,t)', [hero, tab])
-                    if tab == 'build' and mode == 'preview':
+                    if tab == 'build' and mode == 'preview' and (only is None or f'{mode}-{w}-hero-{hero}-{tab}.png' in only):
                         page.wait_for_function("()=>{const o=document.getElementById('gmOut');return !o||!/Working out|Fitting runes/.test(o.textContent)}", timeout=60000)
                     snap(f'{mode}-{w}-hero-{hero}-{tab}.png')
             ctx.close()
@@ -108,20 +109,35 @@ def main():
             only = sorted(set(names_before) ^ set(names_after))
             diffs.append('the two versions do not have the same pages: ' + ', '.join(only))
         same = [n for n in names_after if n in set(names_before)]
-        with serve(work) as base:
-            page = browser.new_page()
-            page.goto(base)
-            for n in same:
-                if open(os.path.join(before, n), 'rb').read() == open(os.path.join(after, n), 'rb').read():
-                    os.remove(os.path.join(before, n)); os.remove(os.path.join(after, n))
-                    continue
-                r = page.evaluate(COMPARE, [f'{base}before/{n}', f'{base}after/{n}'])
-                if 'size' in r:
-                    diffs.append(f'{n}: page size changed {r["size"][0]}x{r["size"][1]} -> {r["size"][2]}x{r["size"][3]}')
-                elif r['n']:
-                    diffs.append(f'{n}: {r["n"]} pixels differ ({100 * r["n"] / r["total"]:.3f}%), inside x {r["box"][0]}-{r["box"][2]}, y {r["box"][1]}-{r["box"][3]}')
-                else:
-                    os.remove(os.path.join(before, n)); os.remove(os.path.join(after, n))
+
+        def compare(names):
+            found = {}
+            with serve(work) as wbase:
+                page = browser.new_page()
+                page.goto(wbase)
+                for n in names:
+                    if open(os.path.join(before, n), 'rb').read() == open(os.path.join(after, n), 'rb').read(): continue
+                    r = page.evaluate(COMPARE, [f'{wbase}before/{n}', f'{wbase}after/{n}'])
+                    if 'size' in r:
+                        found[n] = f'{n}: page size changed {r["size"][0]}x{r["size"][1]} -> {r["size"][2]}x{r["size"][3]}'
+                    elif r['n']:
+                        found[n] = f'{n}: {r["n"]} pixels differ ({100 * r["n"] / r["total"]:.3f}%), inside x {r["box"][0]}-{r["box"][2]}, y {r["box"][1]}-{r["box"][3]}'
+                page.close()
+            return found
+        found = compare(same)
+        if found:
+            # Second look: now and then the browser draws a dotted underline one pixel along on a very tall page.
+            # Render the views that differed once more; only a view that differs both times is a real difference.
+            again = set(found)
+            with serve(ref_dir) as base:
+                shoot(browser, base, before, again)
+            with serve(ROOT) as base:
+                shoot(browser, base, after, again)
+            found = compare([n for n in same if n in again])
+        diffs += list(found.values())
+        for n in same:
+            if n not in found:
+                os.remove(os.path.join(before, n)); os.remove(os.path.join(after, n))
         browser.close()
     what = 'public' + (' and preview' if PREVIEW else '')
     if diffs:

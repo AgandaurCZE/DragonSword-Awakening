@@ -1,0 +1,5 @@
+# Prettier formats only the site's code: js/ and css/. Everything else keeps its own format
+# (data.json is 1-space JSON written by the Python tools; index.html is laid out by hand).
+/*
+!/js/
+!/css/
