@@ -1,3 +1,6 @@
+## 11 Nov 2026 — Strongest-skill damage in the Best Gear rows (Claude)
+- Each set-pair row in the preview Best Gear box now starts with the hero's strongest skill (highest codex % at max skill level, whole skill with all hits added, `DAMAGE_CALC.skillAdjust` applied) and its damage with that build: no crit · every hit a crit, against the chosen enemy with every ticked status on it at once (David, 11 Nov: totals only, no single hits). Same formula as the Tools calculator, checked on Ryza and Sion within 0.05%. Frost stacks add no hit bonus (only Frozen does). Code: `gmSkill`, `gmSkillDmg` in `js/04-gear-builds.js`; `?v=20261111a`. Public pages pixel-identical; no console errors.
+
 ## 11 Nov 2026 — Damage formula checked on a geared hero (Claude)
 - David's Ryza test (Lightning Javelin, Training Ogre, five status cases, panel screenshots): the hit formula matches all ten readings within 0.03% (a typo in one crit, 119,900, was corrected by David to 106,496; the formula gives 106,487). Recorded in GAME_MATH 3.1. Sion's Divine Smash (11 Nov): three hits of 2% + 60% + 40% of the codex %, every case predicted within 0.05%; added to `DAMAGE_CALC.skillAdjust` (Tools calculator: "All three hits" ×1.02, "Biggest hit" ×0.6). Next: the biggest-hit boxes in the Best Gear rows.
 

@@ -659,3 +659,4 @@ main{max-width:none;padding:20px clamp(12px,2.5vw,34px) 60px}
 .pv .gm-setlink img{width:30px;height:30px;object-fit:contain}
 .pv .gm-setlink:hover b{text-decoration:underline}
 @media(max-width:760px){.pv .gm-pct-badge{min-width:62px;font-size:13px}.pv .gm-icons img{width:28px;height:28px}.pv .gm-names{font-size:13px}}
+.pv .gm-chip2.gm-skill{border-color:var(--hero-accent,#68c7d5)}
