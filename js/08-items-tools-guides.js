@@ -970,6 +970,7 @@ function renderTools() {
   const tabs = [
     ['damage', 'Damage calculator'],
     ['level', 'Levelling calculator'],
+    ['backup', 'Backup & restore'],
   ];
   const show = () => {
     t.innerHTML = tabs
@@ -979,6 +980,7 @@ function renderTools() {
       .join('');
     $('dcRoot').hidden = cur !== 'damage';
     $('lvRoot').hidden = cur !== 'level';
+    $('backupRoot').hidden = cur !== 'backup';
   };
   t.onclick = (e) => {
     const k = e.target.dataset.tool;
@@ -991,6 +993,7 @@ function renderTools() {
   };
   renderDamageCalc();
   renderLevelCalc();
+  renderSettingsBackup();
   show();
 }
 // ==== Guides (preview) ====
@@ -1019,3 +1022,342 @@ const PREVIEW_PAGES = [
   'items',
   'achievements',
 ];
+
+/* Visitor progress backups (preview only, 11 Nov 2026). Part of the Tools page, following the calculators.
+   Only the five documented progress keys are exported or restored. No account preset is included. */
+const PROGRESS_FORMAT = 'dragonsword-awakening-progress';
+const PROGRESS_VERSION = 1;
+const PROGRESS_LIMIT = 1024 * 1024;
+const PROGRESS_UNDO = 'dsw.progressUndo.v1';
+const PROGRESS_KEYS = [
+  ['dsw.selectedTitles.v1', 'Titles'],
+  ['dsw.achievements.v1', 'Achievements'],
+  ['dsw.cooked.v1', 'Cookbook'],
+  ['dsw.dmgcalc.v1', 'Damage calculator'],
+  ['dsw.lvcalc.v1', 'Levelling calculator'],
+];
+function progressObject(value, label, allowed) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error(`${label}: expected an object.`);
+  if (Object.keys(value).some((key) => !allowed.includes(key))) throw new Error(`${label}: contains an unknown field.`);
+}
+function progressNames(value, label, names) {
+  if (!Array.isArray(value) || value.length > 5000 || new Set(value).size !== value.length)
+    throw new Error(`${label}: expected a list without duplicates.`);
+  if (value.some((name) => typeof name !== 'string' || !names.includes(name)))
+    throw new Error(`${label}: contains an entry this version of the guide does not recognise.`);
+}
+function progressNumber(value, label, min = 0, max = 1e12) {
+  if (
+    value !== '' &&
+    ((typeof value !== 'number' && typeof value !== 'string') ||
+      (typeof value === 'string' && !value.trim()) ||
+      !Number.isFinite(Number(value)) ||
+      Number(value) < min ||
+      Number(value) > max)
+  )
+    throw new Error(`${label}: expected a valid number.`);
+}
+function progressCalculator(value, key) {
+  const damage = key === 'dsw.dmgcalc.v1';
+  const fields = damage ? [...Object.keys(DC_DEF), 'slotName', 'varIdx'] : Object.keys(LV_DEF);
+  progressObject(value, damage ? 'Damage calculator' : 'Levelling calculator', fields);
+  for (const [field, v] of Object.entries(value)) {
+    if (['hero', 'arch', 'skill', 'slotName', 'place', 'kind', 'weak', 'tower'].includes(field)) {
+      if (typeof v !== 'string' || v.length > 300) throw new Error(`Calculator ${field}: expected text.`);
+      const choices = {
+        hero: ['', ...HEROES.map((h) => h.name)],
+        arch: ['', ...ARCHES],
+        kind: ['hero', 'karma'],
+        place: (DEFENSE_MODEL.places || []).map((p) => p.id),
+        weak: ['', ...DAMAGE_CALC.statuses.map((s) => s.name)],
+        tower: ['', ...(TOWER_TRIALS.towers || []).map((t) => t.id)],
+      };
+      if (choices[field] && !choices[field].includes(v)) throw new Error(`Calculator ${field}: unknown selection.`);
+    } else if (['boss', 'typed', 'skip'].includes(field)) {
+      if (typeof v !== 'boolean') throw new Error(`Calculator ${field}: expected true or false.`);
+    } else if (field === 'off') {
+      progressNames(
+        v,
+        'EXP items',
+        [...LEVEL_COSTS.items.hero, ...LEVEL_COSTS.items.karma].map((i) => i.name),
+      );
+    } else if (field === 'st') {
+      progressObject(
+        v,
+        'Damage statuses',
+        DAMAGE_CALC.statuses.map((s) => s.name),
+      );
+      for (const row of Object.values(v)) {
+        progressObject(row, 'Damage status', ['on', 'aap', 'ad']);
+        if ('on' in row && typeof row.on !== 'boolean') throw new Error('Damage status: expected true or false.');
+        for (const f of ['aap', 'ad']) if (f in row) progressNumber(row[f], `Damage status ${f}`);
+      }
+    } else progressNumber(v, `Calculator ${field}`);
+  }
+  if (!damage) {
+    for (const f of ['from', 'to'])
+      if (f in value) {
+        progressNumber(value[f], `Level ${f}`, 1, LEVEL_COSTS.calc.maxLevel);
+        if (!Number.isInteger(Number(value[f]))) throw new Error('Levels must be whole numbers.');
+      }
+    if ('from' in value && 'to' in value && Number(value.to) <= Number(value.from))
+      throw new Error('The final level must be higher than the starting level.');
+  } else if (value.skill || value.slotName) {
+    const skills = dcSkills(value.hero);
+    if (
+      !skills.some((s) => (!value.skill || s.skill === value.skill) && (!value.slotName || s.slot === value.slotName))
+    )
+      throw new Error('Damage calculator: the selected skill is not available for this hero.');
+  }
+}
+function progressValidate(doc) {
+  progressObject(doc, 'Backup', ['format', 'version', 'exportedAt', 'storage']);
+  if (doc.format !== PROGRESS_FORMAT || doc.version !== PROGRESS_VERSION)
+    throw new Error('This is not a supported DragonSword progress backup.');
+  if (typeof doc.exportedAt !== 'string' || !Number.isFinite(Date.parse(doc.exportedAt)))
+    throw new Error('The backup date is missing or invalid.');
+  const keys = PROGRESS_KEYS.map(([key]) => key);
+  progressObject(doc.storage, 'Saved progress', keys);
+  if (keys.some((key) => !Object.hasOwn(doc.storage, key))) throw new Error('The backup is incomplete.');
+  for (const [key, label] of PROGRESS_KEYS) {
+    const value = doc.storage[key];
+    if (value === null) continue; // No saved value: an exact restore removes this key.
+    if (key === TITLE_KEY)
+      progressNames(
+        value,
+        label,
+        TITLES.list.map((t) => t.name),
+      );
+    else if (key === 'dsw.cooked.v1')
+      progressNames(
+        value,
+        label,
+        COOKBOOK.dishes.map((d) => d.id),
+      );
+    else if (key === 'dsw.achievements.v1') {
+      progressObject(
+        value,
+        label,
+        (ITEMDB.ach.items || []).map((a) => a.name),
+      );
+      if (Object.values(value).some((v) => ![0, 1, false, true].includes(v)))
+        throw new Error('Achievements: invalid tick.');
+    } else progressCalculator(value, key);
+  }
+  return doc;
+}
+async function progressCatalogue() {
+  if (!ITEMDB.ach) {
+    const r = await fetch('assets/items/achievements.json');
+    if (!r.ok) throw new Error('Could not load achievements. Please try again.');
+    ITEMDB.ach = await r.json();
+  }
+  if (!Array.isArray(ITEMDB.ach.items) || !ITEMDB.ach.items.length)
+    throw new Error('Could not load achievements. Please reload and try again.');
+}
+function progressSnapshot() {
+  return Object.fromEntries(PROGRESS_KEYS.map(([key]) => [key, localStorage.getItem(key)]));
+}
+function progressDocument() {
+  const storage = Object.fromEntries(
+    Object.entries(progressSnapshot()).map(([key, raw]) => [key, raw === null ? null : JSON.parse(raw)]),
+  );
+  return progressValidate({
+    format: PROGRESS_FORMAT,
+    version: PROGRESS_VERSION,
+    exportedAt: new Date().toISOString(),
+    storage,
+  });
+}
+function progressWriteRaw(values) {
+  for (const [key] of PROGRESS_KEYS) {
+    if (values[key] === null) localStorage.removeItem(key);
+    else localStorage.setItem(key, values[key]);
+  }
+}
+function progressUndoRecord() {
+  const raw = localStorage.getItem(PROGRESS_UNDO);
+  if (!raw) return null;
+  const r = JSON.parse(raw);
+  progressObject(r, 'Recovery copy', ['version', 'storage']);
+  if (r.version !== 1) throw new Error('Unsupported recovery copy.');
+  progressObject(
+    r.storage,
+    'Recovery copy',
+    PROGRESS_KEYS.map(([key]) => key),
+  );
+  for (const [key] of PROGRESS_KEYS)
+    if (r.storage[key] !== null && typeof r.storage[key] !== 'string') throw new Error('Incomplete recovery copy.');
+  return r;
+}
+function progressRestore(doc) {
+  if (!IS_PREVIEW) throw new Error('Progress restore is available in the preview.');
+  progressValidate(doc);
+  const before = progressSnapshot(),
+    previousUndo = localStorage.getItem(PROGRESS_UNDO);
+  // Save recovery before touching progress. A quota failure here leaves all five keys untouched.
+  localStorage.setItem(PROGRESS_UNDO, JSON.stringify({ version: 1, storage: before }));
+  try {
+    progressWriteRaw(
+      Object.fromEntries(
+        PROGRESS_KEYS.map(([key]) => [key, doc.storage[key] === null ? null : JSON.stringify(doc.storage[key])]),
+      ),
+    );
+  } catch (error) {
+    try {
+      progressWriteRaw(before);
+      if (previousUndo === null) localStorage.removeItem(PROGRESS_UNDO);
+      else localStorage.setItem(PROGRESS_UNDO, previousUndo);
+    } catch (rollback) {
+      throw new Error(
+        'Storage failed during restore. Your recovery copy is saved; use Undo last restore after freeing browser storage.',
+      );
+    }
+    throw new Error('The browser could not save the backup. Your previous progress has been kept.');
+  }
+}
+function progressUndo() {
+  if (!IS_PREVIEW) throw new Error('Progress restore is available in the preview.');
+  const undo = progressUndoRecord();
+  if (!undo) throw new Error('There is no restore to undo.');
+  const before = progressSnapshot();
+  try {
+    progressWriteRaw(undo.storage);
+    localStorage.removeItem(PROGRESS_UNDO);
+  } catch (error) {
+    try {
+      progressWriteRaw(before);
+    } catch (rollback) {
+      throw new Error(
+        'Browser storage is unavailable. The recovery copy is still saved; free storage and try Undo again.',
+      );
+    }
+    throw new Error('Could not undo the restore. Nothing has been changed; please try again.');
+  }
+}
+function progressDownload(doc) {
+  const url = URL.createObjectURL(new Blob([JSON.stringify(doc, null, 2) + '\n'], { type: 'application/json' }));
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `dragonsword-progress-${doc.exportedAt.slice(0, 10)}.json`;
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+function progressReload(message) {
+  try {
+    sessionStorage.setItem('dsw.progressNotice', message);
+  } catch (e) {}
+  location.reload();
+}
+function renderSettingsBackup() {
+  const root = $('backupRoot');
+  if (!root || !IS_PREVIEW) return;
+  root.innerHTML = `<section class="gx-box progress-backup"><h3>Backup &amp; restore</h3>
+    <p>Save your title ticks, achievements, cooked dishes and both calculator settings to a file. Keep a copy to move your progress between browsers or devices.</p>
+    <div class="progress-actions"><button type="button" id="progressExport">Download backup</button>
+    <label for="progressFile">Open a backup <input type="file" id="progressFile" accept=".json,application/json"></label>
+    <button type="button" id="progressUndo" disabled>Undo last restore</button></div>
+    <p id="progressStatus" role="status" aria-live="polite"></p>
+    <section id="progressReview" class="progress-review" aria-labelledby="progressReviewTitle" hidden>
+    <h4 id="progressReviewTitle">Review before restoring</h4><p id="progressDate"></p><ul id="progressSummary"></ul>
+    <p>This replaces all five saved sections with the backup, including empty sections. Other browser preferences stay as they are. A recovery copy of your current progress will be saved before anything changes.</p>
+    <button type="button" id="progressRestore">Restore this backup</button> <button type="button" id="progressCancel">Cancel</button></section></section>`;
+  let pending = null,
+    revision = 0;
+  const status = (text) => {
+    $('progressStatus').textContent = text;
+  };
+  const reset = () => {
+    pending = null;
+    $('progressReview').hidden = true;
+    $('progressFile').value = '';
+  };
+  try {
+    $('progressUndo').disabled = !progressUndoRecord();
+  } catch (e) {
+    status(e.message);
+  }
+  try {
+    const notice = sessionStorage.getItem('dsw.progressNotice');
+    if (notice) {
+      status(notice);
+      sessionStorage.removeItem('dsw.progressNotice');
+    }
+  } catch (e) {}
+  $('progressExport').onclick = async () => {
+    try {
+      await progressCatalogue();
+      progressDownload(progressDocument());
+      status('Backup downloaded. Keep it somewhere safe.');
+    } catch (e) {
+      status('Could not export your progress: ' + e.message);
+    }
+  };
+  $('progressFile').onchange = async () => {
+    const file = $('progressFile').files[0],
+      current = ++revision;
+    pending = null;
+    $('progressReview').hidden = true;
+    if (!file) return;
+    try {
+      if (file.size > PROGRESS_LIMIT) throw new Error('The file is too large (maximum 1 MB).');
+      const text = await file.text();
+      await progressCatalogue();
+      const doc = progressValidate(JSON.parse(text));
+      if (current !== revision) return;
+      pending = doc;
+      $('progressDate').textContent = `Backup saved: ${new Date(doc.exportedAt).toLocaleString('en-GB')}`;
+      const list = $('progressSummary');
+      list.replaceChildren();
+      for (const [key, label] of PROGRESS_KEYS) {
+        const value = doc.storage[key],
+          row = document.createElement('li');
+        const count =
+          value === null
+            ? null
+            : Array.isArray(value)
+              ? value.length
+              : key === 'dsw.achievements.v1'
+                ? Object.values(value).filter(Boolean).length
+                : null;
+        row.textContent = `${label}: ${value === null ? 'not saved — will reset' : count === null ? 'saved settings' : count + ' ticked'}`;
+        list.append(row);
+      }
+      $('progressReview').hidden = false;
+      status('File checked. Review it below; nothing has been changed.');
+      $('progressRestore').focus();
+    } catch (e) {
+      if (current === revision) {
+        reset();
+        status('Cannot restore this file: ' + e.message);
+      }
+    }
+  };
+  $('progressCancel').onclick = () => {
+    revision++;
+    reset();
+    status('Cancelled. Your progress has not changed.');
+  };
+  $('progressRestore').onclick = () => {
+    if (!pending) return;
+    try {
+      progressRestore(pending);
+      progressReload('Backup restored. Undo last restore is available on this browser.');
+    } catch (e) {
+      status(e.message);
+      try {
+        $('progressUndo').disabled = !progressUndoRecord();
+      } catch (x) {}
+    }
+  };
+  $('progressUndo').onclick = () => {
+    try {
+      progressUndo();
+      progressReload('Restore undone. Your previous progress is back.');
+    } catch (e) {
+      status(e.message);
+    }
+  };
+}

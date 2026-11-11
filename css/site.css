@@ -6912,3 +6912,58 @@ main {
 .pv .gm-chip2.gm-skill {
   border-color: var(--hero-accent, #68c7d5);
 }
+
+/* Preview-only visitor progress backup controls. */
+.pv .progress-backup {
+  max-width: 900px;
+}
+.pv .progress-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.pv .progress-actions label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.pv .progress-actions input {
+  max-width: 100%;
+  min-width: 0;
+}
+.pv .progress-actions button,
+.pv .progress-review button {
+  font: inherit;
+  padding: 8px 12px;
+  border: 1px solid #596777;
+  border-radius: 6px;
+  color: #e6edf5;
+  background: #253647;
+  cursor: pointer;
+}
+.pv .progress-actions button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.pv .progress-review {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #596777;
+  border-radius: 6px;
+}
+.pv .progress-review[hidden] {
+  display: none;
+}
+.pv .progress-review button {
+  margin: 4px 4px 4px 0;
+}
+.pv .progress-backup #progressStatus {
+  overflow-wrap: anywhere;
+}
+.pv .progress-backup button:focus-visible,
+.pv .progress-backup input:focus-visible {
+  outline: 2px solid #19b9ff;
+  outline-offset: 3px;
+}

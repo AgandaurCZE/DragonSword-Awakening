@@ -215,3 +215,23 @@ Run these from the repository root with Python 3. The data tools need no extra p
   Heroes with `estimated: false` keep their measured numbers.
 - **`tools/endgame_gear.py`** (9 Nov) and **`tools/team_gear.py`** (10 Nov): offline gear optimisers on the full damage formula (Defense, Defense Ignore, status AAP, set effects). `team_gear.py <Hero> <Status,Status,...>` counts every status the team keeps on the target, real awakening levels and owned signatures (signature ownership derived from `KARMA_DATA[].owned`; awakening levels from `GEAR_MODEL.account.awakenings`), at full and half physical-status uptime; results in GAME_MATH 4.1 and 4.3. Its page port is `gmBuild` in `js/04-gear-builds.js` (preview Best Gear box); `check_site.py` compares the two on every run.
 - **`tools/skill_meta.py --write`** regenerates `skills[].meta` and the profiles' `build`. Run it after editing skill text or the Karma or gear sentences.
+
+## Visitor progress backups (11 Nov 2026; preview Tools page)
+
+`Backup & restore` is the third Tools tab. `renderSettingsBackup()` and the `progress*` helpers are in `js/08-items-tools-guides.js`; styles are `.pv`-scoped. No login, cloud storage, account preset or merge is involved.
+
+The downloaded JSON is `{format: "dragonsword-awakening-progress", version: 1, exportedAt: ISO date, storage: {...}}`. `storage` has exactly five keys, each holding its parsed saved value or `null` for an absent key:
+
+| Key | Value |
+|---|---|
+| `dsw.selectedTitles.v1` | Array of known title names |
+| `dsw.achievements.v1` | Known achievement names mapped to boolean/0/1 ticks |
+| `dsw.cooked.v1` | Array of known discovered-dish IDs |
+| `dsw.dmgcalc.v1` | Saved damage-calculator fields, with validated selections, numeric inputs and status rows |
+| `dsw.lvcalc.v1` | Saved levelling-calculator fields, valid level range, hero/archetype and excluded EXP items |
+
+Import is exact replacement of these five sections, never a merge: null sections remove the corresponding key. Files larger than 1 MiB, unsupported formats/versions, incomplete sections, unknown entries/fields and malformed nested settings are rejected before writing. Opening a file only shows a review; Cancel writes nothing. Browser preferences such as tag visibility and the selected Tools tab are untouched.
+
+Before restoring, `dsw.progressUndo.v1` saves all five original raw values (including absent keys). A failed write attempts rollback, and a successful restore reloads the page to refresh cached title selections/calculator state. `Undo last restore` survives reload on the same browser and restores the previous raw values. This is one recovery copy, replaced by the next restore, not an extra exported/cloud backup. A transient sessionStorage notice reports restore/undo after reload. Keep an exported file outside browser storage for moving devices or surviving browser clears.
+
+This is a visitor-created file with runtime validation, not an additional repository data file in `check_shape.py`. If storage formats change, update the backup version/validation and its browser tests deliberately. `progress_backups()` in `tools/check_site.py` covers real download/upload, review/cancel, reload, exact restore/undo, invalid files, missing/empty sections, unrelated-key preservation and mid-write failure rollback at 1400 and 390 px.

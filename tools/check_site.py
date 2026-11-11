@@ -183,6 +183,97 @@ def parity(browser, base):
     ctx.close()
 
 
+def progress_backups(browser, base):
+    """Exercise real download/upload/reload/undo, rejection and write-failure recovery (handover #7)."""
+    for width in (1400, 390):
+        ctx = browser.new_context(viewport={'width': width, 'height': 900}, accept_downloads=True)
+        page = open_site(ctx, base, '?tiers=new', f'progress {width}px')
+        page.wait_for_function('ITEMDB.ach && ITEMDB.ach.items && ITEMDB.ach.items.length > 0')
+        fixture = page.evaluate("""()=>{
+            const storage={
+                [TITLE_KEY]:[TITLES.list[0].name],
+                'dsw.achievements.v1':{[ITEMDB.ach.items[0].name]:1},
+                'dsw.cooked.v1':[COOKBOOK.dishes[0].id],
+                'dsw.dmgcalc.v1':{...DC_DEF,hero:'Ryza',attack:1234,st:{Shock:{on:true,aap:'2',ad:3}}},
+                'dsw.lvcalc.v1':{...LV_DEF,kind:'hero',hero:'Ryza',arch:'Thunderbolt',from:1,to:20}
+            };
+            for(const [k,v] of Object.entries(storage))localStorage.setItem(k,JSON.stringify(v));
+            localStorage.setItem('progress-test-unrelated','keep me');return storage;
+        }""")
+        page.locator('[data-page="tools"]').click()
+        page.locator('[data-tool="backup"]').click()
+        with page.expect_download() as event:
+            page.locator('#progressExport').click()
+        with open(event.value.path(), encoding='utf-8') as f:
+            doc = json.load(f)
+        if doc['storage'] != fixture:
+            bad(f'progress {width}px: exported file did not reproduce all five saved sections')
+        before = page.evaluate("""()=>{
+            localStorage.removeItem(TITLE_KEY);localStorage.setItem('dsw.cooked.v1','[]');
+            localStorage.removeItem('dsw.dmgcalc.v1');return progressSnapshot();
+        }""")
+        payload = {'name': 'progress.json', 'mimeType': 'application/json', 'buffer': json.dumps(doc).encode()}
+        page.locator('#progressFile').set_input_files(payload)
+        page.locator('#progressRestore').wait_for(state='visible')
+        if page.evaluate('progressSnapshot()') != before:
+            bad(f'progress {width}px: merely opening a file changed progress')
+        page.locator('#progressCancel').click()
+        if page.evaluate('progressSnapshot()') != before:
+            bad(f'progress {width}px: Cancel changed progress')
+        page.locator('#progressFile').set_input_files(payload)
+        page.locator('#progressRestore').wait_for(state='visible')
+        with page.expect_navigation(wait_until='networkidle'):
+            page.locator('#progressRestore').click()
+        page.wait_for_function('HEROES.length > 0 && !!document.getElementById("progressUndo")')
+        actual = page.evaluate('()=>Object.fromEntries(Object.entries(progressSnapshot()).map(([k,v])=>[k,v===null?null:JSON.parse(v)]))')
+        if actual != fixture or page.evaluate('localStorage.getItem("progress-test-unrelated")') != 'keep me':
+            bad(f'progress {width}px: restore changed unrelated storage or lost progress')
+        with page.expect_navigation(wait_until='networkidle'):
+            page.locator('#progressUndo').click()
+        page.wait_for_function('HEROES.length > 0 && !!document.getElementById("progressUndo")')
+        if page.evaluate('progressSnapshot()') != before:
+            bad(f'progress {width}px: Undo did not restore the exact original raw values and absent keys')
+        # Invalid uploads, future formats, unknown keys, bad nested settings: none may write.
+        invalid = json.loads(json.dumps(doc))
+        invalid['storage']['dsw.lvcalc.v1']['off'] = 'not a list'
+        page.locator('#progressFile').set_input_files({'name':'bad.json','mimeType':'application/json','buffer':json.dumps(invalid).encode()})
+        page.wait_for_function('document.getElementById("progressStatus").textContent.startsWith("Cannot restore")')
+        if page.evaluate('progressSnapshot()') != before or page.locator('#progressReview').is_visible():
+            bad(f'progress {width}px: invalid upload was not rejected without writes')
+        issues = page.evaluate("""doc=>{
+            const errors=[], clone=()=>JSON.parse(JSON.stringify(doc));
+            const cases=[
+                d=>d.version=999,
+                d=>d.storage['unrelated']='bad',
+                d=>delete d.storage['dsw.cooked.v1'],
+                d=>d.storage['dsw.selectedTitles.v1']=['<img src=x onerror=alert(1)>'],
+                d=>d.storage['dsw.dmgcalc.v1'].st={Shock:{on:'yes'}},
+                d=>d.storage['dsw.lvcalc.v1'].kind='invalid',
+                d=>d.storage['dsw.lvcalc.v1'].from=-10
+            ];
+            for(const [i,mutate] of cases.entries()){
+                const d=clone();mutate(d);try{progressRestore(d);errors.push('invalid case '+i+' accepted')}catch(e){}
+            }
+            const before=JSON.stringify(progressSnapshot()), undo=localStorage.getItem(PROGRESS_UNDO);
+            const setter=Storage.prototype.setItem;let fail=true;
+            Storage.prototype.setItem=function(k,v){if(k==='dsw.cooked.v1'&&fail){fail=false;throw new DOMException('test failure','QuotaExceededError')}return setter.call(this,k,v)};
+            let rejected=false;
+            try{progressRestore(doc)}catch(e){rejected=true}finally{Storage.prototype.setItem=setter}
+            if(!rejected||JSON.stringify(progressSnapshot())!==before||localStorage.getItem(PROGRESS_UNDO)!==undo)
+                errors.push('mid-write failure did not roll back progress and recovery');
+            const absent=clone();for(const k in absent.storage)absent.storage[k]=null;
+            progressRestore(absent);
+            if(Object.values(progressSnapshot()).some(v=>v!==null))errors.push('absent sections did not reset');
+            progressUndo();
+            if(JSON.stringify(progressSnapshot())!==before)errors.push('empty restore could not be undone');
+            return errors;
+        }""", doc)
+        for issue in issues:
+            bad(f'progress {width}px: {issue}')
+        print(f'  progress {width}px: download, review, cancel, restore, reload, undo, invalid files, absent keys and write rollback')
+        ctx.close()
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -201,6 +292,7 @@ def main():
         if not QUICK:
             print('check_site: JS ports against the Python tools')
             parity(browser, base)
+            progress_backups(browser, base)
         browser.close()
     if problems:
         print(f'check_site: {len(problems)} problem(s).')

@@ -46,6 +46,7 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - Level curve refitted with Lv.40, Lv.50 and Lv.70 measurements (31 Oct–8 Nov).
 
 ## Site work (preview unless noted)
+- **11 Nov (Codex, handover #7):** preview Tools Backup & restore downloads the five agreed visitor-progress keys, reviews/validates imports before exact replacement, saves recovery before writing and supports undo after reload. Invalid inputs and partial storage failures are browser-tested at desktop/phone widths.
 - **11 Nov (Codex, handover #9):** shared account preset in `GEAR_MODEL.account`, ownership derived from existing Karma flags; no implicit A6 fallback in the offline tool. Website maximum-build defaults unchanged. Added validator coverage and A3/A0 Python/JS parity cases.
 - **11 Nov (Codex):** confirmed-complete facts reconciled across reference notes, status and the to-do page; old comparisons kept as dated history. No game values or public presentation changed.
 - **11 Nov (Codex review only):** all 18 Markdown files, new check/publish workflow and relevant data/code reviewed at `da91cfa`; full check_all passed locally, including browser and parity. Eleven handover entries assessed for model/task fit, none implemented. Stale-note examples recorded in CHANGELOG and STATUS. GitHub deployment result could not be verified (API Forbidden).
