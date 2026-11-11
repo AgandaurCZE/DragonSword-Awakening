@@ -1,0 +1,7 @@
+# Line endings (11 Nov 2026): every text file is stored and checked out with LF, on every machine.
+# The page files (index.html, css/, js/, data.json) must never be CRLF. Images and fonts are binary: never converted.
+* text=auto eol=lf
+*.webp binary
+*.png binary
+*.jpg binary
+*.woff2 binary
