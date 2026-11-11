@@ -72,7 +72,11 @@ def watch(page, where, base):
     """Record console errors, script errors and missing files for this page."""
     def short(u):
         return u.replace(base, '')
-    page.on('console', lambda m: bad(f'{where}: console error: {m.text[:300]}') if m.type == 'error' else None)
+    def console(m):
+        # A full Chrome asks for /favicon.ico by itself; the site has none yet (SITE.md, handover task 4), so that one 404 is not an error.
+        if m.type == 'error' and not str((m.location or {}).get('url', '')).endswith('favicon.ico'):
+            bad(f'{where}: console error: {m.text[:300]} ({short((m.location or {}).get("url", ""))})')
+    page.on('console', console)
     page.on('pageerror', lambda e: bad(f'{where}: script error: {str(e)[:300]}'))
     page.on('requestfailed', lambda r: None if r.url.startswith('data:') else bad(f'{where}: request failed: {short(r.url)}'))
     page.on('response', lambda r: bad(f'{where}: HTTP {r.status} for {short(r.url)}')
