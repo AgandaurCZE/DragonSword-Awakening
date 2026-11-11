@@ -29,6 +29,10 @@ GM_CASES = [
     ('Charlotte', 'Earthshatterer', 'Venomfog Shade', ['Poison', 'Airborne'], False, 1825),
     ('Sion', 'Thunderrush', 'Battle Will', ['Shock', 'Knockdown'], True, 1000),
     ('Castella', 'Ruinsbreaker', 'Holy Arbiter', ['Bleed', 'Stun', 'Airborne', 'Break'], False, 1000),
+    # Recorded A3 and A0 heroes guard against the old implicit A6 fallback.
+    ('Othello', 'Earthshatterer', 'Froststorm', ['Frost', 'Knockdown'], True, 1825),
+    ('Aria', 'Blazing Flames', 'Azure Gale', ['Burn', 'Airborne'], True, 1000),
+    ('Alex', 'Earthshatterer', 'Ruinsbreaker', ['Break', 'Knockdown'], False, 1000),
 ]
 problems = []
 
@@ -167,7 +171,7 @@ def parity(browser, base):
         up = {s: (0.5 if half and (s in ns['PHYS'] or s == 'Other') else 1.0) for s in statuses}
         v, mains, subs, _ = ns['build'](hero, s3, s2, up, defense)
         js = page.evaluate("""([h,awk,sig,s3,s2,S,def])=>{const r=gmBuild(gmSetBase(gmHeroBase(h,awk,sig),s3,s2),S,def);return {v:r.v,mains:r.mains,subs:r.subs}}""",
-                           [hero, ns['AWK'].get(hero, 6), hero in ns['OWNED'], s3, s2, [[s, u] for s, u in up.items()], defense])
+                           [hero, ns['AWK'][hero], hero in ns['OWNED'], s3, s2, [[s, u] for s, u in up.items()], defense])
         label = f'PARITY gmBuild {hero} {s3} + {s2} {"half" if half else "full"} Def {defense}'
         if js['mains'] != mains:
             bad(f'{label}: main stats differ: page {js["mains"]} / Python {mains}')

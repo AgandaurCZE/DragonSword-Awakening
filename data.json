@@ -13164,7 +13164,7 @@
     "note": "Lv.70 1014 / 379 / 7850 measured 9 Nov 2026; breakthroughs not split by level."
    }
   },
-  "profileRule": "Profile A only for Charlotte (measured); profile B for everyone else. Castella (Main DPS) and Lute (healer) both measured as B, so the profile is not tied to role.",
+  "profileRule": "All 20 current heroes have measured Lv.70 base stats (9 Nov 2026), with profiles A, B, C or D recorded per hero in HERO_BASE_STATS; see GAME_MATH 2.1. The former Charlotte-only A / everyone-else B estimate is superseded. Do not infer a future hero's profile without measurements.",
   "observations": {
    "statusResistance": "Every status resistance (Stun, Airborne, Knockdown, Shock, Frost, Burn, Poison, Bleed) is 50 on Charlotte with no gear; the same at Lv1.",
    "critRateText": "Historical codex wording mentioned target Critical Hit Resistance. Resolved by patch 1.1.0: monsters no longer have Critical Hit Resistance, and 100% Critical Rate means every hit crits; above 100% gives no benefit (PATCH_NOTES and GAME_MATH 2.5).",
@@ -21079,6 +21079,31 @@
     "Stun",
     "Airborne"
    ]
+  },
+  "account": {
+   "updated": "2026-11-10",
+   "awakenings": {
+    "Johnny": 6,
+    "Lute": 3,
+    "Castella": 6,
+    "Aria": 3,
+    "Dana": 6,
+    "Kalien": 6,
+    "Roxy": 6,
+    "Alex": 0,
+    "Theresia": 6,
+    "Ornette": 6,
+    "Sion": 3,
+    "Tarte": 3,
+    "Kalsion": 6,
+    "Cerese": 6,
+    "Reina": 6,
+    "Astria": 3,
+    "Eileen": 3,
+    "Othello": 3,
+    "Charlotte": 6,
+    "Ryza": 6
+   }
   }
  },
  "DUNGEONS": {

@@ -2070,6 +2070,25 @@
      "record": {
       "opt": {},
       "req": {
+       "account": {
+        "record": {
+         "opt": {},
+         "req": {
+          "awakenings": {
+           "map": {
+            "types": [
+             "number"
+            ]
+           }
+          },
+          "updated": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       },
        "defense": {
         "list": {
          "record": {

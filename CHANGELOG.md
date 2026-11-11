@@ -1,3 +1,10 @@
+## 11 Nov 2026 — Shared account inputs for offline gear tools (Codex, handover #9)
+- David chose option A: centralise his confirmed account inputs without adding website preset UI or changing its maximum-build defaults. Restore point: 65e0ae0.
+- Added `GEAR_MODEL.account` (updated date and explicit awakening levels for all 20 heroes). The previous Python fallback treated every hero except Sion as A6; now Aria/Astria/Eileen/Lute/Othello/Tarte are correctly A3 and Alex A0. The twelve A6 heroes and Sion A3 retain their previous inputs.
+- Signature ownership is derived from the existing `KARMA_DATA` flags; no duplicate signature list. Corrected the obsolete Charlotte-only profileRule provenance note to point at the measured A/B/C/D profiles.
+- Added account-coverage/range validation and three extra browser/Python comparison cases (Othello A3, Aria A3, Alex A0); no existing check weakened. Documented the schema; check_shape --update printed exactly four intended additions, committed in tools/data_shape.json.
+- Validation: data rules and schema passed. `python3 tools/check_all.py`: ALL CHECKS PASSED, including all nine Python/JS cases. No HTML, CSS, JS, ownership flags, game values or website defaults changed.
+
 ## 11 Nov 2026 — Close confirmed-complete notes and start approved handover work (Codex)
 - Reconciled current references and the to-do page with existing evidence: all 20 base-stat measurements, all five Currency Dungeons, all ten owned signature cards, completed Test 09 and team verdicts, Orange +15 substats, measured rune tops, completed structural work and Theresia's mastery review. Kept historical measurements dated; Alex's awakening tests remain explicitly pending.
 - Corrected non-rendered provenance strings in data.json (former gear estimates and the resolved crit-resistance question); no game number, ownership flag, schema or build changed. Fixed the after-awakening team table's extra separator and documented actual desktop/phone browser coverage.

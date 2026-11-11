@@ -23,7 +23,7 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 
 ## Codex familiarisation review (11 Nov)
 - Reviewed the latest fetched `da91cfa` and all 18 Markdown files, plus the check/publish machinery and relevant data/code. Full `python3 tools/check_all.py`: ALL CHECKS PASSED, browser and parity included. GitHub Actions API returned Forbidden; remote deployment not verified.
-- **David approved tasks #9 and #7 (11 Nov):** #9 uses shared account data for tools while keeping website maximum-build defaults; #7 uses exact settings restore with review and recovery. Implement #9 first, then #7, under the golden rules. #8 remains after launch; no other handover item started.
+- **David approved tasks #9 and #7 (11 Nov):** #9 uses shared account data for tools while keeping website maximum-build defaults; #7 uses exact settings restore with review and recovery. #9 now uses explicit recorded levels for all heroes and existing signature flags; the website defaults stay unchanged. #7 implementation is next, under the golden rules. #8 remains after launch; no other handover item started.
 - **Note reconciliation completed 11 Nov:** current references now mark all 20 base stats, five discovered Currency Dungeons, measured Orange DI/APU substats and Ryza/Roxy signature art as complete. Historical test conditions and changelog entries remain dated history.
 
 ## Next for Claude (10 Nov)

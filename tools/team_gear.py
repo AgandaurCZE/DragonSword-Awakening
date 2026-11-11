@@ -1,6 +1,6 @@
 """Team-aware endgame gear (Claude, 10 Nov 2026). Like endgame_gear.py, but every status the team keeps on the target counts
 (AAP substats, status Additional Damage, set 2-piece Additional Damage only when that status is up), awakenings at David's levels
-(Sion A3, others A6), signature Karma traits only for owned signatures. Two runs: every status always up ("full"), and physical
+(GEAR_MODEL.account.awakenings), signature Karma traits only for owned signatures. Two runs: every status always up ("full"), and physical
 statuses up half the time ("half"; the recommended builds in GAME_MATH 4.3). "Other" = a team status with no AAP substat offered.
 Usage (repo root): python3 tools/team_gear.py Kalien Burn,Airborne,Stun   (takes a few minutes)
 """
@@ -12,8 +12,9 @@ src = open('tools/endgame_gear.py', encoding='utf-8').read().split("if __name__ 
 ns = {}; exec(src, ns)
 d, G, SLOTS, THREE, SETS, KARMA, TITLES, TRAIT = (ns[k] for k in 'd G SLOTS THREE SETS KARMA TITLES TRAIT'.split())
 _two = ns['_two']
-OWNED = {'Theresia','Kalien','Kalsion','Othello','Cerese','Dana','Ornette','Charlotte','Ryza','Roxy'}
-AWK = {'Sion': 3}
+# One recorded account: ownership already lives on the Karma records; awakening levels are explicit for every hero.
+OWNED = {k['signature'] for k in d['KARMA_DATA'] if k.get('signature') and k.get('owned')}
+AWK = d['GEAR_MODEL']['account']['awakenings']
 def hero_base(h):
     b = d['HERO_BASE_STATS'][h]; c = collections.Counter(TITLES)
     kb = float(KARMA[h]['base']['Attack'])  # same Karma level base either way
@@ -21,7 +22,7 @@ def hero_base(h):
     c['Critical Hit Chance'] += b['Critical Hit Chance']; c['Critical Damage'] += b['Critical Damage']
     if h in OWNED:
         for t in KARMA[h]['traits']: c[TRAIT.get(t['label'], t['label'])] += float(str(t['a6']).rstrip('%'))
-    for a in d['AWAKENINGS']['heroes'][h]['list'][:AWK.get(h, 6)]:
+    for a in d['AWAKENINGS']['heroes'][h]['list'][:AWK[h]]:
         for e in a.get('effects', []): c[e['stat']] += e['value']
     return c
 MAINS = ['Attack', 'Attack Power Up', 'Critical Hit Chance', 'Critical Damage']

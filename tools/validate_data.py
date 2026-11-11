@@ -182,6 +182,21 @@ for n, h in (T2.get('heroes') or {}).items():
     for t in h.get('tags', []):
         if t not in (T2.get('tags') or {}): bad(f'TIER_LIST_V2 {n}: undefined tag {t!r}')
 
+# Recorded account for the offline gear tools (11 Nov 2026): no implicit A6 fallback.
+account = d.get('GEAR_MODEL', {}).get('account', {})
+levels = account.get('awakenings') if isinstance(account, dict) else None
+if not isinstance(levels, dict):
+    bad('GEAR_MODEL.account.awakenings: expected an explicit awakening level for every hero')
+else:
+    for name in sorted(set(levels) - H):
+        bad(f'GEAR_MODEL.account.awakenings: unknown hero {name!r}')
+    for name in heroes:
+        value = levels.get(name)
+        if type(value) is not int or not 0 <= value <= 6:
+            bad(f'GEAR_MODEL.account.awakenings[{name}]: expected an integer from 0 to 6, got {value!r}')
+        elif value > len(d.get('AWAKENINGS', {}).get('heroes', {}).get(name, {}).get('list', [])):
+            bad(f'GEAR_MODEL.account.awakenings[{name}]: level exceeds the recorded awakenings')
+
 # Research data that the page doesn't load (moved out of data.json on 10 Nov 2026)
 try:
     _r = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'research.json'), encoding='utf-8'))
