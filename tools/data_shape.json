@@ -4448,6 +4448,106 @@
       }
      }
     },
+    "SITE": {
+     "record": {
+      "opt": {},
+      "req": {
+       "logo": {
+        "types": [
+         "string"
+        ]
+       },
+       "routes": {
+        "map": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "shortcuts": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "items": {
+            "list": {
+             "record": {
+              "opt": {
+               "disabled": {
+                "types": [
+                 "bool"
+                ]
+               },
+               "mode": {
+                "types": [
+                 "string"
+                ]
+               },
+               "tool": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
+              "req": {
+               "image": {
+                "types": [
+                 "string"
+                ]
+               },
+               "label": {
+                "types": [
+                 "string"
+                ]
+               },
+               "page": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           },
+           "label": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "stage": {
+        "types": [
+         "string"
+        ]
+       },
+       "toolRoutes": {
+        "record": {
+         "opt": {},
+         "req": {
+          "backup": {
+           "types": [
+            "string"
+           ]
+          },
+          "damage": {
+           "types": [
+            "string"
+           ]
+          },
+          "level": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       }
+      }
+     }
+    },
     "SKILL_BUFF_LEVELS": {
      "record": {
       "opt": {},

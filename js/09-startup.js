@@ -1,27 +1,170 @@
-/* js/09-startup.js: Start-up: preview gate, startApp and the data.json loader (runs last). Part of the site script, split out of index.html on 10 Nov 2026.
-   The files load in order (see index.html) and share one global scope, so code that runs at load time may only use what earlier files define. */
-// ==== Start-up: preview gate, startApp, data.json loader ====
-function applyPreviewGate() {
-  if (IS_PREVIEW) return;
-  PREVIEW_PAGES.forEach((pg) => {
-    const b = document.querySelector(`.nav-item[data-page="${pg}"]`);
-    if (b) b.hidden = true;
+/* Beta launch: shortcuts, canonical path navigation and data loading. */
+const APP_ROOT = new URL('.', document.baseURI).pathname;
+const NAV = { ready: false, restoring: false, state: null, url: '', y: 0 };
+function routeUrl(page, options = {}) {
+  const path =
+    page === 'hero'
+      ? encodeURIComponent(options.hero)
+      : page === 'tools' && options.tool
+        ? SITE.toolRoutes[options.tool] || SITE.routes.tools
+        : (SITE.routes[page] ?? '');
+  return APP_ROOT + path;
+}
+function navCurrent() {
+  if (!$('profilePage').hidden)
+    return {
+      page: 'hero',
+      hero: currentProfileName,
+      tab: document.querySelector('.profile-tab.active')?.dataset.profileTab || 'skills',
+    };
+  const page = document.querySelector('.nav-item.active[data-page]')?.dataset.page || 'home';
+  const state = { page };
+  if (page === 'tools') state.tool = document.querySelector('#toolTabs .on')?.dataset.tool || 'damage';
+  if (page === 'tier') state.tier = { mode: V2.mode, boss: V2.boss, tower: V2.tower, view: V2.view };
+  return state;
+}
+function navRecord(replace = false) {
+  if (!NAV.ready || NAV.restoring) return;
+  const state = navCurrent(),
+    url = routeUrl(state.page, state);
+  if (replace || url === NAV.url) history.replaceState({ view: state, y: window.scrollY }, '', url);
+  else {
+    history.replaceState({ view: NAV.state, y: NAV.y }, '', NAV.url);
+    history.pushState({ view: state, y: window.scrollY }, '', url);
+  }
+  NAV.state = state;
+  NAV.url = url;
+  NAV.y = window.scrollY;
+}
+function navSchedule() {
+  if (NAV.ready && !NAV.restoring) queueMicrotask(() => navRecord());
+}
+function navShow(state, scrollY = null) {
+  NAV.restoring = true;
+  try {
+    if (state.page === 'hero') openCharacterProfile(state.hero, state.tab || 'skills');
+    else {
+      const button =
+        document.querySelector(`.nav-item[data-page="${state.page}"]`) ||
+        document.querySelector('.nav-item[data-page="home"]');
+      button.click();
+      if (state.page === 'tier' && state.tier) {
+        Object.assign(V2, state.tier);
+        renderTierV2();
+      }
+      if (state.page === 'tools' && state.tool) document.querySelector(`[data-tool="${state.tool}"]`)?.click();
+    }
+  } finally {
+    NAV.restoring = false;
+  }
+  if (scrollY !== null) requestAnimationFrame(() => window.scrollTo({ top: scrollY, behavior: 'instant' }));
+}
+function navNavigate(state) {
+  NAV.y = window.scrollY;
+  navShow(state, 0);
+  navRecord();
+}
+function navInitial() {
+  const hash = location.hash.slice(1);
+  if (hash.startsWith('hero/')) {
+    const [, hero, tab] = hash.split('/');
+    const h = HEROES.find((h) => h.name.toLowerCase() === decodeURIComponent(hero || '').toLowerCase());
+    if (h) return { page: 'hero', hero: h.name, tab: ['skills', 'review', 'build'].includes(tab) ? tab : 'skills' };
+  }
+  if (hash) {
+    const page = hash.split('?')[0];
+    if (Object.hasOwn(SITE.routes, page)) return { page, ...(page === 'tools' ? { tool: 'damage' } : {}) };
+  }
+  let path;
+  try {
+    path = decodeURIComponent(location.pathname.slice(APP_ROOT.length))
+      .replace(/\/$/, '')
+      .replace(/\/index\.html$/, '');
+  } catch {
+    return { page: 'home' };
+  }
+  if (!path || path === 'index.html' || path === 'dungeons') return { page: 'home' };
+  const hero = HEROES.find((h) => h.name.toLowerCase() === path.toLowerCase());
+  if (hero) return { page: 'hero', hero: hero.name, tab: 'skills' };
+  const tool = Object.entries(SITE.toolRoutes).find(([, p]) => p.toLowerCase() === path.toLowerCase());
+  if (tool) return { page: 'tools', tool: tool[0] };
+  const page = Object.entries(SITE.routes).find(([, p]) => p === path)?.[0];
+  return { page: page || 'home' };
+}
+function navInit() {
+  navShow(navInitial());
+  NAV.state = navCurrent();
+  NAV.url = routeUrl(NAV.state.page, NAV.state);
+  NAV.ready = true;
+  history.replaceState({ view: NAV.state, y: 0 }, '', NAV.url);
+  window.addEventListener('popstate', (e) => {
+    const view = e.state?.view || navInitial();
+    navShow(view, e.state?.y || 0);
+    NAV.state = navCurrent();
+    NAV.url = routeUrl(NAV.state.page, NAV.state);
+    NAV.y = e.state?.y || 0;
   });
-  const g = $('navDungeonsGroup'),
-    t = $('navDungeonsToggle');
-  if (g) g.hidden = true;
-  if (t) t.hidden = true;
+  document.addEventListener(
+    'click',
+    () => {
+      NAV.y = window.scrollY;
+    },
+    true,
+  );
+  document.addEventListener('click', () => navSchedule());
+  document.addEventListener('change', () => navSchedule());
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') navSchedule();
+  });
+  document.querySelector('.brand-home').addEventListener('click', (e) => {
+    if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    navNavigate({ page: 'home' });
+  });
 }
-function initTierV2() {
-  const p = new URLSearchParams(location.search);
-  if (p.get('tiers') !== 'new') return;
-  const tp = $('tierPage');
-  const box = document.createElement('div');
-  box.id = 'tierV2';
-  tp.prepend(box);
-  showTierV2(true);
+function renderShortcuts() {
+  const root = $('shortcutsBody');
+  root.replaceChildren();
+  for (const group of SITE.shortcuts) {
+    const section = document.createElement('section');
+    section.className = 'shortcut-group';
+    const title = document.createElement('h3');
+    title.className = 'gear-section-title shortcut-title';
+    title.textContent = group.label;
+    const grid = document.createElement('div');
+    grid.className = 'shortcut-grid';
+    for (const item of group.items) {
+      const card = document.createElement(item.disabled ? 'div' : 'a');
+      card.className = 'shortcut-card' + (item.disabled ? ' shortcut-soon' : '');
+      if (item.disabled) card.setAttribute('aria-disabled', 'true');
+      else {
+        card.href = routeUrl(item.page, item);
+        card.addEventListener('click', (e) => {
+          if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button !== 0) return;
+          e.preventDefault();
+          const state = { page: item.page };
+          if (item.tool) state.tool = item.tool;
+          if (item.mode) state.tier = { mode: item.mode };
+          navNavigate(state);
+        });
+      }
+      const image = document.createElement('img');
+      image.src = item.image;
+      image.alt = '';
+      image.loading = 'lazy';
+      const label = document.createElement('span');
+      label.textContent = item.label;
+      const arrow = document.createElement('span');
+      arrow.className = 'shortcut-arrow';
+      arrow.textContent = item.disabled ? 'SOON' : '→';
+      arrow.setAttribute('aria-hidden', 'true');
+      card.append(image, label, arrow);
+      grid.append(card);
+    }
+    section.append(title, grid);
+    root.append(section);
+  }
 }
-
 function patchText() {
   const m = DATA_META || {};
   return m.balancePatch && m.balancePatch !== m.patch
@@ -29,24 +172,18 @@ function patchText() {
     : m.patch || '';
 }
 function startApp() {
+  document.documentElement.classList.add('beta');
   setupSearchClearButtons();
-  if (IS_PREVIEW) {
-    const hp = document.querySelector('header p');
-    if (hp)
-      hp.innerHTML =
-        '<span class="hdr-page" id="hdrPage"></span><span class="hdr-tl">Visual tier list · </span>patch <span id="patchLabel"></span><span class="hdr-tl"> · hover or focus a hero for the early / mid / end-game breakdown</span>';
-  } /* preview: header names the open page */
   $('patchLabel').textContent = patchText();
-  makeArchFilters();
-  makeRoleFilters();
-  render();
+  renderShortcuts();
+  renderTierV2();
   renderTeams();
   renderKarmaFilters();
   renderKarmas();
-  document.getElementById('karmaSearch').addEventListener('input', renderKarmas);
+  $('karmaSearch').addEventListener('input', renderKarmas);
   renderHeroesFilters();
   renderHeroes();
-  document.getElementById('heroesSearch').addEventListener('input', renderHeroes);
+  $('heroesSearch').addEventListener('input', renderHeroes);
   renderGear();
   renderGearPreview();
   renderPatches();
@@ -57,105 +194,27 @@ function startApp() {
   renderTrait();
   renderCookbook();
   renderGuides();
-  if (IS_PREVIEW) {
-    renderItems();
-    renderAchievements();
-    renderTools();
-  }
-  applyPreviewGate();
-  /* Handover #1 (11 Nov 2026): every menu button gets its name for screen readers (invisible on both URLs); the preview also shows it as a tooltip, for the icon-only phone menu. */
+  renderItems();
+  renderAchievements();
+  renderTools();
   document.querySelectorAll('.nav-item').forEach((b) => {
-    const l = b.querySelector('.nav-label');
-    if (!l) return;
-    b.setAttribute('aria-label', l.textContent.trim());
-    if (IS_PREVIEW) b.title = l.textContent.trim();
+    const label = b.querySelector('.nav-label');
+    if (!label) return;
+    b.setAttribute('aria-label', label.textContent.trim());
+    b.title = label.textContent.trim();
   });
-  initTierV2();
-  if (IS_PREVIEW && location.hash.startsWith('#dungeons')) {
-    const b = document.querySelector('.nav-item[data-page="dungeons"]');
-    if (b) b.click();
-  } /* preview: #dungeons links open the page */
-  if (IS_PREVIEW) navInit();
-  navIcon('navIconFamiliars', (UI_ICONS || {}).familiars);
-  navIcon('navIconTrait', (UI_ICONS || {}).trait);
-  navIcon('navIconHeroes', (UI_ICONS || {}).heroes);
-  navIcon('navIconTeams', (UI_ICONS || {}).teams);
-  navIcon('navIconCookbook', (UI_ICONS || {}).cookbook);
-  navIcon('navIconGuides', (UI_ICONS || {}).guides);
+  navInit();
+  for (const [id, key] of [
+    ['navIconFamiliars', 'familiars'],
+    ['navIconTrait', 'trait'],
+    ['navIconHeroes', 'heroes'],
+    ['navIconTeams', 'teams'],
+    ['navIconCookbook', 'cookbook'],
+    ['navIconGuides', 'guides'],
+  ])
+    navIcon(id, UI_ICONS[key]);
 }
-/* Preview: Back and Forward buttons (Claude, 10 Nov 2026). Every page and hero profile tab gets its own address
-   (#gear, #karma, #hero/Ryza/build), so the browser's Back returns to where you were, scroll position included.
-   Any click or Enter that changes the view adds a history entry; popstate redraws the view from it. */
-const NAV = { restoring: false, key: '', url: '', y: 0 };
-function navKey() {
-  if (!$('profilePage').hidden)
-    return (
-      'hero/' +
-      encodeURIComponent(currentProfileName) +
-      '/' +
-      (((document.querySelector('.profile-tab.active') || {}).dataset || {}).profileTab || 'skills')
-    );
-  const b = document.querySelector('.nav-item.active[data-page]');
-  return b ? b.dataset.page : 'tier';
-}
-function navRecord() {
-  if (NAV.restoring) return;
-  const k = navKey();
-  if (k === NAV.key) return;
-  history.replaceState({ k: NAV.key, y: NAV.y }, '', NAV.url);
-  const url = location.pathname + location.search + (k === 'tier' ? '' : '#' + k);
-  history.pushState({ k, y: 0 }, '', url);
-  NAV.key = k;
-  NAV.url = url;
-}
-function navShow(k, y) {
-  NAV.restoring = true;
-  try {
-    const m = /^hero\/([^/]+)\/?(\w*)/.exec(k || '');
-    if (m) {
-      openCharacterProfile(decodeURIComponent(m[1]), m[2] || 'skills');
-    } else {
-      const pg = String(k || 'tier').split('?')[0];
-      const b =
-        [...document.querySelectorAll('.nav-item[data-page="' + pg + '"]')][0] ||
-        document.querySelector('.nav-item[data-page="tier"]');
-      if (pg === 'tier' && !$('profilePage').hidden) closeCharacterProfile();
-      else if (b) b.click();
-    }
-  } finally {
-    NAV.restoring = false;
-  }
-  NAV.key = navKey();
-  NAV.url = location.pathname + location.search + location.hash;
-  requestAnimationFrame(() => window.scrollTo({ top: y || 0, behavior: 'instant' }));
-}
-function navInit() {
-  const h = location.hash.slice(1);
-  if (h && !h.startsWith('dungeons')) navShow(h, 0);
-  NAV.key = navKey();
-  NAV.url = location.pathname + location.search + location.hash;
-  history.replaceState({ k: NAV.key, y: 0 }, '', NAV.url);
-  const before = () => {
-    NAV.y = window.scrollY;
-  };
-  const after = () => setTimeout(navRecord, 0);
-  document.addEventListener('click', before, true);
-  document.addEventListener('click', after);
-  document.addEventListener(
-    'keydown',
-    (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        before();
-        after();
-      }
-    },
-    true,
-  );
-  window.addEventListener('popstate', (e) => {
-    const st = e.state || {};
-    navShow(st.k || location.hash.slice(1), st.y || 0);
-  });
-}
+
 fetch('data.json', {
   cache: 'no-cache',
 }) /* revalidates every visit (ETag): always the newest data, but no re-download when unchanged (10 Nov; was a timestamp + no-store) */
@@ -166,6 +225,7 @@ fetch('data.json', {
   .then(async (d) => {
     ({ HEROES, ROLE_ICONS, ARCHES, TIER_ORDER, TIER_COLORS, TEAM_DATA, KARMA_DATA, CHARACTER_PROFILE_DATA, GEAR_DATA } =
       d);
+    SITE = d.SITE;
     ARCH_COLORS = d.ARCH_COLORS || {};
     STATUS_ARCHETYPE = d.STATUS_ARCHETYPE || {};
     GEAR_STATS = d.GEAR_STATS || GEAR_STATS;
@@ -199,8 +259,8 @@ fetch('data.json', {
   })
   .catch((err) => {
     console.error(err);
-    $('board').innerHTML =
+    $('shortcutsBody').innerHTML =
       '<div class="no-results">Could not load data.json (' +
       String(err.message || err) +
-      '). Open the site from Netlify or a local web server; browsers block loading it from a file opened directly.</div>';
+      '). Open the site from GitHub Pages or a local web server; browsers block loading it from a file opened directly.</div>';
   });

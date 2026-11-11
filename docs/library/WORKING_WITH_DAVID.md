@@ -31,7 +31,7 @@ Back to the library: [docs/README.md](../README.md). Repository rules: [AGENTS.m
 - **Folders:** ask before creating, moving, deleting or changing the contents of any folder, unless it's part of the task.
 - **His uploads:** PNGs he sends for cutting or converting to WebP may be deleted afterwards, with their folder if it's no longer needed, without asking.
 - **His PC:** ask him personally before looking through it. GitHub: look anywhere.
-- **Site changes:** only behind the preview (`?tiers=new`). The plain URL must not change.
+- **Site changes (updated 11 Nov):** David approved the public Beta launch. Former preview features are public; follow AGENTS' Beta routing workflow. The old preview-only restriction is superseded.
 
 ## What David owns (check before planning tests) · 10 Nov
 - **Signature Karmas (confirmed 10–11 Nov): Theresia, Kalien, Kalsion, Othello, Cerese, Dana, Ornette, Charlotte, Ryza, Roxy.** The Team Planner and `KARMA_DATA[].owned` now agree on all ten signatures. Ryza's and Roxy's colour art was added on 10 Nov; that artwork task is complete. Recheck the current flags and planner before planning future purchases or tests.

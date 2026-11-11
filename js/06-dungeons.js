@@ -11,7 +11,6 @@ function resetDungeonFilters() {
   renderDungeons();
 }
 function preloadDungeonBanners() {
-  if (!IS_PREVIEW) return Promise.resolve();
   const D = DUNGEONS || {};
   const urls = [
     ...new Set(
@@ -52,11 +51,11 @@ function renderDungeons() {
   const D = DUNGEONS || {},
     root = $('dungeonsBody');
   if (!root) return;
-  if (IS_PREVIEW && $('dungeonsPage').hidden && !location.hash.startsWith('#dungeons')) {
+  if ($('dungeonsPage').hidden && !location.hash.startsWith('#dungeons')) {
     DNG.lazy = true;
     return;
   }
-  const cleanFrames = new URLSearchParams(location.search).get('tiers') === 'new';
+  const cleanFrames = true;
   if (!DNG.hashLoaded && location.hash.startsWith('#dungeons')) {
     const raw = location.hash.split('?')[1] || '',
       p = new URLSearchParams(raw);
@@ -255,7 +254,6 @@ function renderCurrencyDungeons() {
   const D = DUNGEONS || {},
     root = $('currencyBody');
   if (!root) return;
-  const preview = new URLSearchParams(location.search).get('tiers') === 'new';
   const locked = Array.from(
     { length: Number(D.undiscovered?.currency) || 0 },
     (_, i) =>
@@ -263,21 +261,6 @@ function renderCurrencyDungeons() {
       (i + 1) +
       '</p></article>',
   ).join('');
-  if (!preview) {
-    root.innerHTML =
-      '<div class="dng-currency-grid">' +
-      (D.currency || [])
-        .map(
-          (x) =>
-            '<article class="dng-currency"><h3>' + dngEsc(x.name) + '</h3><p>' + dngEsc(x.gives) + '</p></article>',
-        )
-        .join('') +
-      locked +
-      '</div><p class="dng-note">' +
-      dngEsc(D.currencyNote || '') +
-      '</p>';
-    return;
-  }
   const levels = D.difficulties || [],
     items = D.currencyRewardItems || {};
   const cards = (D.currency || [])
@@ -389,9 +372,7 @@ function renderTrait() {
   const root = $('traitBody');
   const archIcon = (a) => HEROES.find((x) => x.archetype === a)?.archIcon || '';
   const order = { S: 0, A: 1, B: 2, C: 3, D: 4, F: 5 };
-  const trTier = (h) =>
-    (IS_PREVIEW && typeof TIER_LIST_V2 !== 'undefined' && TIER_LIST_V2?.heroes?.[h.name]?.overall?.single) ||
-    h.tiers['End-game']; /* preview: single-target rating from the new tier list (bosses) */
+  const trTier = (h) => v2Hero(h.name).overall?.single || '?'; // Current single-target rating.
   const heroesOf = (archs) =>
     HEROES.filter((h) => archs.includes(h.archetype)).sort(
       (a, b) => (order[trTier(a)] ?? 9) - (order[trTier(b)] ?? 9) || a.name.localeCompare(b.name),
@@ -404,7 +385,7 @@ function renderTrait() {
     `<span class="tr-chip ${kind} none"><span><small>${kind === 'weak' ? 'Weakness' : 'Immune'}</small>None</span></span>`;
   const card = (b) => {
     const ac = ARCH_COLORS[b.archetype] || '#5b6270';
-    const image = IS_PREVIEW && b.previewImage ? b.previewImage : b.image;
+    const image = b.previewImage || b.image;
     const W = heroesOf(b.weak || []),
       I = heroesOf(b.immune || []);
     const banner = `<div class="tr-banner" style="--ac:${ac};${image ? `--bg:url('${profileEsc(absUrl(image))}')` : ''}">${image ? '' : `<img class="tr-ghost" src="${archIcon(b.archetype)}" alt="">`}<div class="tr-title"><img src="${archIcon(b.archetype)}" alt=""><h3>${profileEsc(b.name)}</h3><span class="tr-lv" data-tr-lv></span></div><div class="tr-corner top">${(b.weak || []).length ? b.weak.map((a) => chip(a, 'weak')).join('') : none('weak')}</div>${(b.immune || []).length ? `<div class="tr-corner bottom">${b.immune.map((a) => chip(a, 'immune')).join('')}</div>` : ''}<div class="tr-diffs">${(D.difficultyLevels || []).map((L) => `<button type="button" class="tr-diff" data-n="${L.n}" style="--dc:${L.color}" title="${profileEsc(L.name)}">${L.roman}</button>`).join('')}<span class="tr-diff-name"></span></div><div class="tr-rewards"></div></div>`;

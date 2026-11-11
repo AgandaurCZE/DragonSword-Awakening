@@ -6,7 +6,7 @@ This is the index of every note in the repository. A new chat (Claude, ChatGPT, 
 
 | File | What it holds |
 |---|---|
-| [`../AGENTS.md`](../AGENTS.md) | The repository rules, starting with the **golden rules** (11 Nov): run `python3 tools/check_all.py` before every commit, the site is only published when GitHub passes the same checks, never weaken a check. Then the main-only workflow, the `?tiers=new` preview gate, data rules, how to commit. Binding. |
+| [`../AGENTS.md`](../AGENTS.md) | The repository rules, starting with the **golden rules** (11 Nov): run `python3 tools/check_all.py` before every commit, the site is only published when GitHub passes the same checks, never weaken a check. Then the main-only workflow, public Beta routing and legacy-link compatibility, data rules, how to commit. Binding. |
 | [`library/WORKING_WITH_DAVID.md`](library/WORKING_WITH_DAVID.md) | How David likes to work, his permissions, and the mistakes past chats made. Read before replying to him. |
 | [`library/STATUS.md`](library/STATUS.md) | **Where things stand right now**: what David is doing in the game, the current task, what must happen before awakenings, mastery retests, open items. |
 

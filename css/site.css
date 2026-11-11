@@ -1,8 +1,8 @@
 /* ===== css/site.css: every style of the site (moved out of index.html on 10 Nov 2026; asset paths start with ../). Map by Claude, 10 Nov 2026. Rules were added page by page, so find a page by its class prefix:
    app-/nav- shell and sidebar, profile- hero pages, karma-, team-, gear- and gx- (gear extras), patch-, v2- new tier list,
    dng- dungeons, tr- trait dungeons, cb- cookbook, it-/ach- items and achievements, dc-/lv- tools, tt- titles, rn- runes.
-   Phone rules sit in @media(max-width:760px or 800px) blocks near their page. The last block, "Preview-only fixes",
-   is scoped under html.pv and must keep the public page unchanged. ===== */
+   Phone rules sit in @media(max-width:760px or 800px) blocks near their page.
+   Former preview layout fixes apply to the public Beta site. ===== */
 :root {
   --bg: #151a22;
   --panel: #222a35;
@@ -6578,120 +6578,120 @@ main {
   font-size: 14px;
 }
 
-/* ===== Preview-only fixes (Claude, 10 Nov 2026). Scoped under html.pv, so the public page is untouched; at launch drop the ".pv " prefixes. ===== */
+/* Layout fixes promoted to public for the Beta launch. */
 .hdr-page:empty {
   display: none;
 }
-.pv:not([data-page='tier'])[data-page] .hdr-tl {
+:root:not([data-page='tier'])[data-page] .hdr-tl {
   display: none;
 }
-.pv .app-sidebar {
+.app-sidebar {
   overflow-y: auto;
   scrollbar-width: thin;
 }
-.pv .gear-effect b.sk-num,
-.pv .gear-effect b.sk-status {
+.gear-effect b.sk-num,
+.gear-effect b.sk-status {
   margin-right: 0;
 }
-.pv .gx-box {
+.gx-box {
   min-width: 0;
   max-width: 100%;
 }
-.pv .gx-wrap {
+.gx-wrap {
   overflow-x: auto;
   max-width: 100%;
 }
-.pv .rn-type b {
+.rn-type b {
   min-height: 2.5em;
 }
-.pv .ach-list {
+.ach-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
   gap: 6px;
 }
-.pv .ach-list .ach-row {
+.ach-list .ach-row {
   margin-bottom: 0;
 }
 @media (max-width: 760px) {
-  .pv .gear-controls input {
+  .gear-controls input {
     min-width: 0;
   }
-  .pv .gx-ctl,
-  .pv .gx-rar {
+  .gx-ctl,
+  .gx-rar {
     flex-wrap: wrap;
   }
-  .pv .rn-cols {
+  .rn-cols {
     grid-template-columns: minmax(0, 1fr);
   }
-  .pv .rn-cols > div {
+  .rn-cols > div {
     min-width: 0;
   }
-  .pv .gx-box table {
+  .gx-box table {
     display: block;
     max-width: 100%;
     overflow-x: auto;
   }
-  .pv .v2-mode {
+  .v2-mode {
     height: 60px;
   }
-  .pv .v2-mode-label {
+  .v2-mode-label {
     font-size: 17px;
   }
-  .pv .v2-mode-sub {
+  .v2-mode-sub {
     display: none;
   }
-  .pv .v2-cell:not(:has(.v2-card)) {
+  .v2-cell:not(:has(.v2-card)) {
     display: none;
   }
-  .pv .dc-st thead {
+  .dc-st thead {
     display: none;
   }
-  .pv .dc-st tr {
+  .dc-st tr {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 6px 10px;
     padding: 8px 0;
     border-top: 1px solid var(--line);
   }
-  .pv .dc-st td {
+  .dc-st td {
     border: 0;
     padding: 0;
     white-space: normal;
   }
-  .pv .dc-st td:nth-child(3),
-  .pv .dc-st td:nth-child(4) {
+  .dc-st td:nth-child(3),
+  .dc-st td:nth-child(4) {
     grid-column: 1/-1;
   }
-  .pv .dc-st td:nth-child(3)::before {
+  .dc-st td:nth-child(3)::before {
     content: 'Additional Attack Power';
     display: block;
     font-size: 11px;
     color: var(--muted);
   }
-  .pv .dc-st td:nth-child(4)::before {
+  .dc-st td:nth-child(4)::before {
     content: 'Additional Damage %';
     display: block;
     font-size: 11px;
     color: var(--muted);
   }
-  .pv .dc-st input[type='number'],
-  .pv .dc-adw input {
+  .dc-st input[type='number'],
+  .dc-adw input {
     min-width: 0;
     width: 100%;
   }
-  .pv .tt-table thead {
+  .tt-table thead {
     display: none;
   }
-  .pv .tt-table tr {
+  .tt-table tr {
     display: grid;
     grid-template-columns: 34px minmax(0, 1fr) minmax(0, 1fr);
     border-top: 1px solid #33363f;
   }
-  .pv .tt-table td {
+  .tt-table td {
     border: 0;
     padding: 6px 8px;
   }
-  .pv .tt-table td:nth-child(4) {
+  .tt-table td:nth-child(4) {
     grid-column: 2/-1;
     min-width: 0;
     padding-top: 0;
@@ -6699,7 +6699,7 @@ main {
   }
 }
 /* Preview gear model on the hero Build tab (Claude, 10 Nov 2026) */
-.pv .gm-controls {
+.gm-controls {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 10px 18px;
@@ -6709,20 +6709,20 @@ main {
   background: rgba(255, 255, 255, 0.02);
   margin-bottom: 12px;
 }
-.pv .gm-lab {
+.gm-lab {
   display: block;
   font-size: 12px;
   color: #9aa0ab;
   margin-bottom: 5px;
 }
-.pv .gm-seg {
+.gm-seg {
   display: inline-flex;
   flex-wrap: wrap;
   border: 1px solid #3a3e48;
   border-radius: 8px;
   overflow: hidden;
 }
-.pv .gm-seg button {
+.gm-seg button {
   background: transparent;
   border: 0;
   border-right: 1px solid #3a3e48;
@@ -6732,27 +6732,27 @@ main {
   font-size: 13px;
   cursor: pointer;
 }
-.pv .gm-seg button:last-child {
+.gm-seg button:last-child {
   border-right: 0;
 }
-.pv .gm-seg button.on {
+.gm-seg button.on {
   background: #68c7d5;
   color: #0f1115;
   font-weight: 600;
 }
-.pv .gm-none {
+.gm-none {
   font-size: 13px;
   color: #7d838e;
 }
-.pv .gm-st {
+.gm-st {
   grid-column: 1/-1;
 }
-.pv .gm-chips {
+.gm-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
-.pv .gm-chip {
+.gm-chip {
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -6762,7 +6762,7 @@ main {
   font-size: 13px;
   cursor: pointer;
 }
-.pv .gm-chip input {
+.gm-chip input {
   margin: 0;
   width: auto;
   height: auto;
@@ -6770,35 +6770,35 @@ main {
   min-height: 0;
   accent-color: #68c7d5;
 }
-.pv .gm-set {
+.gm-set {
   text-align: left;
   font: inherit;
   color: inherit;
   width: 100%;
   cursor: pointer;
 }
-.pv .gm-tot {
+.gm-tot {
   margin: 10px 0;
 }
-.pv .gm-pct {
+.gm-pct {
   color: #e0414b;
   font-weight: 600;
 }
-.pv .gm-why {
+.gm-why {
   font-size: 12.5px;
 }
-.pv .gm-list {
+.gm-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.pv .gm-row {
+.gm-row {
   border: 1px solid #33363f;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.02);
   overflow: hidden;
 }
-.pv .gm-row-head {
+.gm-row-head {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -6812,7 +6812,7 @@ main {
   cursor: pointer;
   min-height: 52px;
 }
-.pv .gm-pct-badge {
+.gm-pct-badge {
   align-self: stretch;
   display: flex;
   align-items: center;
@@ -6823,58 +6823,58 @@ main {
   font-weight: 700;
   font-size: 14px;
 }
-.pv .gm-icons {
+.gm-icons {
   display: flex;
   gap: 4px;
   flex: none;
 }
-.pv .gm-icons img {
+.gm-icons img {
   width: 36px;
   height: 36px;
   object-fit: contain;
   border-radius: 6px;
   background: #22252c;
 }
-.pv .gm-names {
+.gm-names {
   flex: 1;
   min-width: 0;
   font-weight: 600;
   color: #9fd8e2;
 }
-.pv .gm-names small {
+.gm-names small {
   color: #9aa0ab;
   font-weight: 400;
 }
-.pv .gm-chev {
+.gm-chev {
   transition: transform 0.15s;
   color: #9aa0ab;
   font-size: 18px;
 }
-.pv .gm-row.open .gm-chev {
+.gm-row.open .gm-chev {
   transform: rotate(180deg);
 }
-.pv .gm-chips2 {
+.gm-chips2 {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   padding: 8px 12px;
   border-top: 1px solid #2b2e36;
 }
-.pv .gm-chip2 {
+.gm-chip2 {
   border: 1px solid #3a3e48;
   border-radius: 6px;
   padding: 3px 9px;
   font-size: 12.5px;
   color: #c9ced8;
 }
-.pv .gm-chip2 b {
+.gm-chip2 b {
   color: var(--hero-accent, #68c7d5);
 }
-.pv .gm-detail {
+.gm-detail {
   padding: 10px 12px 12px;
   border-top: 1px solid #2b2e36;
 }
-.pv .gm-setlink {
+.gm-setlink {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -6888,53 +6888,53 @@ main {
   padding: 4px 0;
   cursor: pointer;
 }
-.pv .gm-setlink img {
+.gm-setlink img {
   width: 30px;
   height: 30px;
   object-fit: contain;
 }
-.pv .gm-setlink:hover b {
+.gm-setlink:hover b {
   text-decoration: underline;
 }
 @media (max-width: 760px) {
-  .pv .gm-pct-badge {
+  .gm-pct-badge {
     min-width: 62px;
     font-size: 13px;
   }
-  .pv .gm-icons img {
+  .gm-icons img {
     width: 28px;
     height: 28px;
   }
-  .pv .gm-names {
+  .gm-names {
     font-size: 13px;
   }
 }
-.pv .gm-chip2.gm-skill {
+.gm-chip2.gm-skill {
   border-color: var(--hero-accent, #68c7d5);
 }
 
 /* Preview-only visitor progress backup controls. */
-.pv .progress-backup {
+.progress-backup {
   max-width: 900px;
 }
-.pv .progress-actions {
+.progress-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
 }
-.pv .progress-actions label {
+.progress-actions label {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
 }
-.pv .progress-actions input {
+.progress-actions input {
   max-width: 100%;
   min-width: 0;
 }
-.pv .progress-actions button,
-.pv .progress-review button {
+.progress-actions button,
+.progress-review button {
   font: inherit;
   padding: 8px 12px;
   border: 1px solid #596777;
@@ -6943,68 +6943,68 @@ main {
   background: #253647;
   cursor: pointer;
 }
-.pv .progress-actions button:disabled {
+.progress-actions button:disabled {
   opacity: 0.5;
   cursor: default;
 }
-.pv .progress-review {
+.progress-review {
   margin-top: 16px;
   padding: 16px;
   border: 1px solid #596777;
   border-radius: 6px;
 }
-.pv .progress-review[hidden] {
+.progress-review[hidden] {
   display: none;
 }
-.pv .progress-review button {
+.progress-review button {
   margin: 4px 4px 4px 0;
 }
-.pv .progress-backup #progressStatus {
+.progress-backup #progressStatus {
   overflow-wrap: anywhere;
 }
-.pv .progress-backup button:focus-visible,
-.pv .progress-backup input:focus-visible {
+.progress-backup button:focus-visible,
+.progress-backup input:focus-visible {
   outline: 2px solid #19b9ff;
   outline-offset: 3px;
 }
 /* Handover #2 and #3 (Claude, 11 Nov 2026): phone dungeon cards keep the name clear of the rewards; the hero profile gets the same side padding as the other pages. */
 @media (max-width: 800px) {
-  .pv .dng-card {
+  .dng-card {
     height: 190px;
   }
-  .pv .dng-name {
+  .dng-name {
     inset: 76px 28% auto 7%;
     height: 44px;
     justify-content: flex-start;
     text-align: left;
     font-size: clamp(16px, 4.4vw, 21px);
   }
-  .pv .dng-rewards {
+  .dng-rewards {
     bottom: 10%;
   }
 }
-.pv #profilePage {
+#profilePage {
   padding-left: 22px;
   padding-right: 22px;
 }
 @media (max-width: 800px) {
-  .pv #profilePage {
+  #profilePage {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 /* Preview Karma level picker (Claude, 11 Nov 2026) */
-.pv .karma-level-pick {
+.karma-level-pick {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-size: 13px;
   color: #9aa0ab;
 }
-.pv .karma-level-pick span {
+.karma-level-pick span {
   white-space: nowrap;
 }
-.pv .karma-level-pick select {
+.karma-level-pick select {
   width: auto;
   background: #1a1d23;
   color: #e6e8ec;
@@ -7013,8 +7013,125 @@ main {
   padding: 6px 8px;
   font: inherit;
 }
-.pv .karma-unmeasured {
+.karma-unmeasured {
   color: #7d838e;
   font-weight: 400;
   font-style: italic;
+}
+
+/* Beta home and original game logo. */
+.sidebar-brand {
+  padding: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+.brand-home {
+  display: block;
+  width: 100%;
+}
+.brand-home img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.beta-badge {
+  color: #e6c270;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  font-weight: 900;
+}
+.shortcut-group {
+  margin: 28px 0 34px;
+}
+.gear-section-title {
+  font-size: 19px;
+  text-align: center;
+}
+.shortcut-title {
+  font-size: 23px;
+}
+.shortcut-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.shortcut-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 90px;
+  color: #edf1f8;
+  background: #252932;
+  border: 1px solid #3a414d;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  overflow: hidden;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+a.shortcut-card:hover,
+a.shortcut-card:focus-visible {
+  background: #303c4d;
+  border-color: #36b7e6;
+  outline: 2px solid #36b7e6;
+  outline-offset: 2px;
+}
+.shortcut-card img {
+  width: 88px;
+  height: 88px;
+  flex: 0 0 88px;
+  object-fit: cover;
+  background: #1a1e27;
+}
+.shortcut-arrow {
+  margin-left: auto;
+  padding-right: 18px;
+  color: #8fabc3;
+}
+.shortcut-soon {
+  opacity: 0.65;
+}
+.shortcut-soon .shortcut-arrow {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+.site-footer {
+  color: #8e929d;
+  padding: 28px 20px;
+  text-align: center;
+  font-size: 12px;
+}
+@media (max-width: 1150px) {
+  .shortcut-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .sidebar-brand {
+    display: flex;
+    padding: 4px 3px 12px;
+  }
+  .beta-badge {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+  .shortcut-grid {
+    grid-template-columns: 1fr;
+  }
+  .shortcut-title {
+    font-size: 20px;
+  }
+  .shortcut-card {
+    min-height: 76px;
+    gap: 12px;
+  }
+  .shortcut-card img {
+    width: 74px;
+    height: 74px;
+    flex-basis: 74px;
+  }
 }

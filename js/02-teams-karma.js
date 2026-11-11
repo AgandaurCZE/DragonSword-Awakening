@@ -575,68 +575,7 @@ function renderKarmas() {
   }
   if (!found.length)
     board.innerHTML = '<div class="karma-empty">No Karmas match your search or archetype filter.</div>';
-  if (IS_PREVIEW) karmaLevelInit();
-}
-function makeArchFilters() {
-  $('archfilters').innerHTML = '';
-  const all = document.createElement('button');
-  all.className = 'archbtn' + (!activeArch ? ' active' : '');
-  all.title = 'All archetypes';
-  all.setAttribute('aria-label', 'All archetypes');
-  all.innerHTML = '<span class="all-symbol">✱</span>';
-  all.onclick = () => {
-    activeArch = '';
-    makeArchFilters();
-    render();
-  };
-  $('archfilters').append(all);
-  ARCHES.forEach((a) => {
-    const h = HEROES.find((x) => x.archetype === a);
-    const b = document.createElement('button');
-    b.className = 'archbtn' + (activeArch === a ? ' active' : '');
-    b.title = a;
-    b.setAttribute('aria-label', a);
-    b.innerHTML = `<img src="${h?.archIcon || ''}" alt="">`;
-    b.onclick = () => {
-      activeArch = activeArch === a ? '' : a;
-      makeArchFilters();
-      render();
-    };
-    $('archfilters').append(b);
-  });
-}
-function makeRoleFilters() {
-  const root = $('rolefilters');
-  root.innerHTML = '';
-  const roles = [
-    { key: 'Main DPS', label: 'Main DPS' },
-    { key: 'Sub-DPS', label: 'Sub DPS' },
-    { key: 'Support', label: 'Support' },
-  ];
-  const all = document.createElement('button');
-  all.className = 'rolebtn' + (!activeRole ? ' active' : '');
-  all.title = 'All roles';
-  all.setAttribute('aria-label', 'All roles');
-  all.innerHTML = '<span class="all-symbol">✱</span>';
-  all.onclick = () => {
-    activeRole = '';
-    makeRoleFilters();
-    render();
-  };
-  root.append(all);
-  roles.forEach((r) => {
-    const b = document.createElement('button');
-    b.className = 'rolebtn' + (activeRole === r.key ? ' active' : '');
-    b.title = r.label;
-    b.setAttribute('aria-label', r.label);
-    b.innerHTML = `<img src="${ROLE_ICONS[r.key] || ''}" alt="">`;
-    b.onclick = () => {
-      activeRole = activeRole === r.key ? '' : r.key;
-      makeRoleFilters();
-      render();
-    };
-    root.append(b);
-  });
+  karmaLevelInit();
 }
 // Skill text: damage values bold, status effects bold in their archetype colour, Activation Conditions in red.
 

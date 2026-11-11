@@ -24361,5 +24361,157 @@
    "Stealth"
   ],
   "lockTitle": "This skill can't be used without this status."
+ },
+ "SITE": {
+  "stage": "Beta",
+  "logo": "assets/logo_2x.png",
+  "routes": {
+   "home": "",
+   "heroes": "heroes",
+   "tier": "tierlist",
+   "karma": "karma",
+   "teams": "teams",
+   "gear": "gear",
+   "familiars": "familiars",
+   "titles": "titles",
+   "cookbook": "cookbook",
+   "items": "items",
+   "trait": "dungeons/trait",
+   "dungeons": "dungeons/normal",
+   "currency": "dungeons/currency",
+   "guides": "guides",
+   "tools": "tools",
+   "achievements": "achievements",
+   "patches": "patch-notes"
+  },
+  "toolRoutes": {
+   "damage": "tools/DamageCalculator",
+   "level": "tools/LevellingCalculator",
+   "backup": "tools"
+  },
+  "shortcuts": [
+   {
+    "label": "Database",
+    "items": [
+     {
+      "label": "Heroes",
+      "page": "heroes",
+      "image": "assets/heroes/johnny.webp"
+     },
+     {
+      "label": "Tier List",
+      "page": "tier",
+      "image": "assets/ui/mode-overall.webp"
+     },
+     {
+      "label": "Karma",
+      "page": "karma",
+      "image": "assets/karma/a-sword-summoned-for-a-friend.webp"
+     },
+     {
+      "label": "Teams",
+      "page": "teams",
+      "image": "assets/ui/teams.webp"
+     },
+     {
+      "label": "Gear",
+      "page": "gear",
+      "image": "assets/gear/the-infiltrator.webp"
+     },
+     {
+      "label": "Familiars",
+      "page": "familiars",
+      "image": "assets/familiars/refreshing-canary.webp"
+     },
+     {
+      "label": "Titles",
+      "page": "titles",
+      "image": "assets/ui/titles.svg"
+     },
+     {
+      "label": "Cookbook",
+      "page": "cookbook",
+      "image": "assets/cooking/grilled-meat.webp"
+     },
+     {
+      "label": "Item Database",
+      "page": "items",
+      "image": "assets/items/icons/tome-of-insight.webp"
+     }
+    ]
+   },
+   {
+    "label": "Dungeons",
+    "items": [
+     {
+      "label": "Trait Dungeons",
+      "page": "trait",
+      "image": "assets/ui/trait-dungeons.webp"
+     },
+     {
+      "label": "Normal Dungeons",
+      "page": "dungeons",
+      "image": "assets/dungeons/banners/warg-cave-normal.webp"
+     },
+     {
+      "label": "Currency Dungeons",
+      "page": "currency",
+      "image": "assets/dungeons/currency/dragon-worshipper-ruins.webp"
+     },
+     {
+      "label": "Bosses Tier List",
+      "page": "tier",
+      "image": "assets/bosses/gauron-banner.webp",
+      "mode": "bosses"
+     },
+     {
+      "label": "Tower Tier List",
+      "page": "tier",
+      "image": "assets/ui/mode-towers.webp",
+      "mode": "towers"
+     }
+    ]
+   },
+   {
+    "label": "Guides",
+    "items": [
+     {
+      "label": "Guide coming soon",
+      "page": "guides",
+      "image": "assets/ui/guides.webp",
+      "disabled": true
+     },
+     {
+      "label": "Guide coming soon",
+      "page": "guides",
+      "image": "assets/ui/guides.webp",
+      "disabled": true
+     },
+     {
+      "label": "Guide coming soon",
+      "page": "guides",
+      "image": "assets/ui/guides.webp",
+      "disabled": true
+     }
+    ]
+   },
+   {
+    "label": "Tools",
+    "items": [
+     {
+      "label": "Damage Calculator",
+      "page": "tools",
+      "image": "assets/ui/hero.webp",
+      "tool": "damage"
+     },
+     {
+      "label": "Levelling Calculator",
+      "page": "tools",
+      "image": "assets/items/icons/tome-of-insight.webp",
+      "tool": "level"
+     }
+    ]
+   }
+  ]
  }
 }

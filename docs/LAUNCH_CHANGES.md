@@ -1,22 +1,20 @@
-# Changes waiting for launch
+# Beta launch and remaining content work
 
 Library index: [docs/README.md](README.md). Current state: [library/STATUS.md](library/STATUS.md).
 
-These touch public pages, so they can't go in until David approves the launch. Hero pages, `HEROES` and `CHARACTER_PROFILE_DATA` are public.
+**Beta launch approved by David, 11 Nov 2026.** Former preview pages/styles and the full gear model are public; legacy public tier view and preview gate removed. Root is Shortcuts with clean page/hero/tool paths. Public workbook wording and the Netlify error are replaced. Share art, gold favicon and supplied logo are preserved.
 
-**Ratings (10 Nov):** the tier list was re-rated with Masteries on 10 Nov, so the ratings quoted in the hero notes below are out of date: take every rating from `TIER_LIST_V2.heroes` at launch. David will rewrite the review texts himself later (10 Nov).
-
-**Preview CSS:** at launch, drop the `.pv ` prefix from the "Preview-only fixes" block at the end of `css/site.css` (10 Nov) so its fixes reach everyone, and the `IS_PREVIEW` checks in the code become always-on.
+**Remaining content work:** David will rewrite hero reviews; these prose tasks below are not prerequisites for the approved Beta migration. Take displayed ratings from `TIER_LIST_V2`, never the historical `HEROES[].tiers`. Do not invent a Discord invite or post publicly without David's instruction.
 
 ## Launch checklist (David, 29 Oct; for when the project is done)
-1. Apply every hero change below.
-2. Footer: replace the current line (it still cites the old 27 Oct workbook) with the credit line: "Fan-made guide. Not affiliated with or endorsed by HOUND13. DragonSword: Awakening and all game assets belong to their respective owners." The Gear page's own footnote ("transcribed from the workbook's Gear Sets & Acquisition sheet") cites the workbook too; update it at the same time (Claude, 10 Nov).
+1. Pending content review: hero changes below (David's review rewrite remains separate).
+2. **Done at Beta launch:** footer replaced; original request: replace the current line (it still cites the old 27 Oct workbook) with the credit line: "Fan-made guide. Not affiliated with or endorsed by HOUND13. DragonSword: Awakening and all game assets belong to their respective owners." The Gear page's own footnote ("transcribed from the workbook's Gear Sets & Acquisition sheet") cites the workbook too; update it at the same time (Claude, 10 Nov).
    **All "workbook" wording on public pages (found 11 Nov; the two above plus seven more):** in `index.html` the Tier List footer, the Teams intro ("from the workbook's reviewed Teams & Archetypes sheet"), the Teams footnote ("the workbook's own S–C evaluation"), the Gear footnote, and the profile line "Data from the master workbook"; in `js/03-profile.js` the profile subtitle "Character guide · workbook data · End-game tier"; in `js/04-gear-builds.js` "Recommended Karma from the master workbook.", "Alternative listed in the master workbook." and "Synergy recommendations can be added to the Teams workbook." Also the load-error message in `js/09-startup.js` says "Open the site from Netlify": the site is on GitHub Pages.
 3. Corner links: Discord (David's server; ask him for the invite link), GitHub (the repo), and a Claude credit ("Built with Claude" linking to claude.ai, unless Anthropic's brand rules allow the logo). Check each brand's current logo rules first (web search, with David's OK).
 4. Optional: a short "how this was made" note (David's in-game testing, the data, open questions).
-5. Hero builds: switch the public builds to the full damage model from the preview (David, 9 Nov).
+5. **Done at Beta launch:** switch the public builds to the full damage model from the preview (David, 9 Nov).
 6. Teams page: rebuild `TEAM_DATA` from the tested and rated planner teams (David, 9 Nov). Teams that don't work are deleted and replaced; later, testing against real enemies adds the real feel.
-7. Remove the preview gate (`PREVIEW_PAGES`) and make the new tier list the default.
+7. **Done at Beta launch:** preview gate and legacy tier view removed; new tier list public at `/tierlist`, root opens Shortcuts.
 8. Post on the game's subreddit.
 
 ## Kalsion · 8 Nov

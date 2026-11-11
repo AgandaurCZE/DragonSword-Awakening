@@ -14,7 +14,7 @@ What runs, in order (each is also a script you can run alone):
   4. file rules      (here)                     LF line endings, data.json formatting, every script listed in index.html with ?v=
   5. JS syntax       node --check               every js/*.js file parses
   6. cache numbers   (here)                     a changed css/js file has a new ?v= in index.html
-  7. browser         tools/check_site.py        no console errors or missing files on both URLs, the preview gate holds,
+  7. browser         tools/check_site.py        no console errors or missing files on canonical and legacy URLs, Beta routes work,
                                                 the JS ports give the same answers as the Python tools
   8. formatting      prettier --check           js/ and css/ are in the agreed format (a warning, not a failure)
 
@@ -122,6 +122,7 @@ def main():
     script('data rules', ['tools/validate_data.py'])
     script('data shape', ['tools/check_shape.py'])
     script('stored builds', ['tools/hero_stats.py'], ok_text='No changes.')
+    script('clean URL entries', ['tools/build_routes.py', '--check'])
     file_rules()
     js_syntax()
     cache_numbers(base)

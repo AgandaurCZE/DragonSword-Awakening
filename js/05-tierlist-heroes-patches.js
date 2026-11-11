@@ -1,95 +1,6 @@
-/* js/05-tierlist-heroes-patches.js: Legacy tier list (public), Heroes page, Patch Notes, Familiars and Titles. Part of the site script, split out of index.html on 10 Nov 2026.
+/* js/05-tierlist-heroes-patches.js: Hero tooltips, Heroes page, Patch Notes, Familiars and Titles. Part of the site script, split out of index.html on 10 Nov 2026.
    The files load in order (see index.html) and share one global scope, so code that runs at load time may only use what earlier files define. */
-// ==== Legacy tier list (public page) and hero tooltips ====
-function filtered() {
-  const q = $('search').value.trim().toLowerCase(),
-    ct = $('classType').value;
-  return HEROES.filter(
-    (h) =>
-      (!q || h.name.toLowerCase().includes(q)) &&
-      (!activeRole || h.role === activeRole) &&
-      (!ct || h.classType === ct) &&
-      (!activeArch || h.archetype === activeArch),
-  );
-}
-function render() {
-  const phase = $('phase').value;
-  const heroes = filtered();
-  const buckets = { S: [], A: [], B: [], C: [], D: [], F: [] };
-  heroes.forEach((h) => {
-    const t = h.tiers[phase] || 'Unranked';
-    (buckets[t] || buckets.F).push(h);
-  });
-  const board = $('board');
-  board.innerHTML = '';
-  const titles = { S: 'S TIER', A: 'A TIER', B: 'B TIER', C: 'C TIER', D: 'D TIER', F: 'F TIER' };
-  for (const tier of TIER_ORDER) {
-    const section = document.createElement('section');
-    section.className = 'tier-section';
-    const head = document.createElement('div');
-    head.className = 'tier-head';
-    head.style.background = tierColor(tier);
-    head.style.color = '#141820';
-    head.innerHTML = `${titles[tier]} <small>${buckets[tier].length} heroes</small>`;
-    section.append(head);
-    const row = document.createElement('div');
-    row.className = 'tier-row';
-    const label = document.createElement('div');
-    label.className = 'tier-label';
-    label.style.background = tierColor(tier);
-    label.textContent = tier;
-    row.append(label);
-    const cards = document.createElement('div');
-    cards.className = 'cards';
-    buckets[tier].forEach((h) => cards.append(makeCard(h, phase, tier)));
-    if (!buckets[tier].length) {
-      const blank = document.createElement('div');
-      blank.className = 'no-results';
-      blank.textContent = 'No heroes match these filters in this tier.';
-      cards.append(blank);
-    }
-    row.append(cards);
-    section.append(row);
-    board.append(section);
-  }
-  if (!heroes.length) board.innerHTML = '<div class="no-results">No heroes match your filters.</div>';
-}
-function makeCard(h, phase, tier) {
-  const card = document.createElement('div');
-  card.className = 'hero-card';
-  card.tabIndex = 0;
-  card.style.setProperty('--tier', tierColor(tier));
-  card.innerHTML = `<div class="portrait-wrap"><img class="portrait" src="${h.portrait}" alt="${h.name}"><span class="arch-badge"><img src="${h.archIcon}" alt="${h.archetype}"></span><span class="tier-chip">${tier}</span>${(() => {
-    const a = latestArrow(h.name);
-    return a ? `<span class="patch-arrow" data-patch-hero="${h.name}">${a}</span>` : '';
-  })()}</div><div class="hero-name">${h.name}</div>`;
-  card.style.cursor = 'pointer';
-  card.setAttribute('role', 'button');
-  card.setAttribute('aria-label', `Open ${h.name} character page`);
-  card.addEventListener('click', () => openCharacterProfile(h.name));
-  card.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      openCharacterProfile(h.name);
-    }
-  });
-  card.addEventListener('pointerenter', (e) => {
-    if (e.pointerType !== 'touch') showHeroCard(h, card);
-  });
-  card.addEventListener('pointerleave', (e) => {
-    if (!$('karmaPopover').contains(e.relatedTarget)) hideKarmaPopover();
-  });
-  card.addEventListener('focus', () => showHeroCard(h, card));
-  card.addEventListener('blur', () => hideKarmaPopover());
-  const pa = card.querySelector('.patch-arrow');
-  if (pa)
-    pa.addEventListener('click', (e) => {
-      e.stopPropagation();
-      hideKarmaPopover(0);
-      openPatchesFor(h.name);
-    });
-  return card;
-}
+// ==== Shared hero tooltips ====
 function showHeroCard(h, anchor) {
   hideTip();
   showRefPopover(anchor, 'hero', h.name, IS_TOUCH);
@@ -97,7 +8,6 @@ function showHeroCard(h, anchor) {
 function hideTip() {
   $('tooltip').style.display = 'none';
 }
-['search', 'classType', 'phase'].forEach((id) => $(id).addEventListener('input', render));
 const dToggle = $('navDungeonsToggle');
 if (dToggle)
   dToggle.addEventListener('click', () => {
@@ -109,6 +19,7 @@ if (dToggle)
   });
 document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
   btn.addEventListener('click', () => {
+    if (btn.disabled) return;
     const page = btn.dataset.page;
     if (page !== 'currency' && !$('currencyPage').hidden) {
       CURRENCY_DNG_STATE.selected = {};
@@ -128,7 +39,8 @@ document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
       $(id).hidden = k !== page;
     });
     const titles = {
-      tier: 'Visual tier list',
+      home: 'Shortcuts',
+      tier: 'Tier List',
       heroes: 'Heroes',
       teams: 'Teams',
       gear: 'Gear',
@@ -147,10 +59,10 @@ document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
       news: 'News',
     };
     document.title = 'DragonSword: Awakening — ' + (titles[page] || page);
-    if (IS_PREVIEW) {
+    {
       document.documentElement.dataset.page = page;
       const hp = $('hdrPage');
-      if (hp) hp.textContent = page === 'tier' ? '' : (titles[page] || page) + ' · ';
+      if (hp) hp.textContent = titles[page] || page;
       if (['dungeons', 'trait', 'currency'].includes(page) && !DNG.preloaded) {
         DNG.preloaded = true;
         preloadDungeonBanners();
@@ -160,6 +72,7 @@ document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
         renderDungeons();
       }
     }
+    navSchedule();
   }),
 );
 
@@ -498,6 +411,7 @@ function renderProfilePatches(h) {
 
 // ---- Simple pages: Familiars, Titles, Trait Dungeons ----
 const PAGE_IDS = {
+  home: 'homePage',
   tier: 'tierPage',
   heroes: 'heroesPage',
   teams: 'teamsPage',

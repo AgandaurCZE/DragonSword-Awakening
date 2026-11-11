@@ -5,8 +5,8 @@ Run from the repository root:   python3 tools/check_site.py            (everythi
 
 It serves the repository on a local port, opens it in headless Chromium (Playwright) and fails if:
   1. SMOKE   any page logs a console error, throws, or asks for a file that is missing. Every menu page is opened
-             on the public URL and on ?tiers=new, at 1400 px and 390 px, plus every hero profile and its three tabs.
-  2. GATE    a preview-only page or the new tier list is reachable on the public URL (the preview gate leaked).
+             on the public URL and on ?tiers=new, at 1400 px and 390 px, plus every hero profile and its three tabs. Clean routes are tested with direct loads and reloads, including the repository prefix.
+  2. ROUTES  Beta pages, direct clean links, unified hero/tier addresses and legacy aliases must work.
   3. PARITY  the JS ports in js/04-gear-builds.js no longer give the same answers as the Python tools:
              a) optBest (port of tools/hero_stats.py) must reproduce every stored HERO_BUILDS piece with no titles ticked;
              b) gmBuild (port of tools/team_gear.py) must give the same main stats, substats and damage value as Python.
@@ -91,7 +91,7 @@ def open_site(ctx, base, query, where):
     page = ctx.new_page()
     watch(page, where, base)
     page.goto(base + query, wait_until='networkidle')
-    page.wait_for_function("typeof HEROES!=='undefined' && HEROES.length>0 && document.getElementById('board').children.length>0", timeout=20000)
+    page.wait_for_function("typeof HEROES!=='undefined' && HEROES.length>0 && typeof NAV!=='undefined' && NAV.ready && document.getElementById('shortcutsBody').children.length>0", timeout=20000)
     return page
 
 
@@ -102,19 +102,17 @@ def smoke(browser, base):
             ctx = browser.new_context(viewport={'width': w, 'height': h})
             page = open_site(ctx, base, query, where)
             state = page.evaluate("""()=>({
-                preview: typeof IS_PREVIEW!=='undefined' && IS_PREVIEW, pv: document.documentElement.classList.contains('pv'),
-                v2: !!document.getElementById('tierV2'), previewPages: PREVIEW_PAGES,
+                beta: document.documentElement.classList.contains('beta'),
+                v2: !!document.getElementById('tierV2'), legacy: !!document.getElementById('board') || !!document.getElementById('v2Legacy'),
                 nav: [...document.querySelectorAll('.nav-item[data-page]')].map(b=>({page:b.dataset.page, hidden:b.hidden, disabled:b.disabled})),
                 heroes: HEROES.map(x=>x.name)})""")
-            # GATE: the public URL must not show preview work; the preview URL must show it.
-            if mode == 'public':
-                if state['preview'] or state['pv'] or state['v2']:
-                    bad(f'{where}: GATE: the public URL is running in preview mode (IS_PREVIEW/html.pv/#tierV2)')
-                for n in state['nav']:
-                    if n['page'] in state['previewPages'] and not n['hidden']:
-                        bad(f"{where}: GATE: preview page '{n['page']}' is visible in the public menu")
-            elif not (state['preview'] and state['v2']):
-                bad(f'{where}: the preview URL did not switch the preview on')
+            if not state['beta'] or not state['v2'] or state['legacy']:
+                bad(f'{where}: Beta launch missing or legacy public tier list remains')
+            if page.evaluate("document.getElementById('homePage').hidden"):
+                bad(f'{where}: Shortcuts is not the default view')
+            for n in state['nav']:
+                if n['hidden']:
+                    bad(f"{where}: Beta menu page '{n['page']}' is hidden")
             # SMOKE: every menu page a visitor can open.
             pages = [n['page'] for n in state['nav'] if not n['hidden'] and not n['disabled']]
             for pg in pages:
@@ -128,7 +126,7 @@ def smoke(browser, base):
             for name in heroes:
                 for tab in ('skills', 'review', 'build'):
                     page.evaluate('([n,t])=>openCharacterProfile(n,t)', [name, tab])
-                    if tab == 'build' and mode == 'preview':
+                    if tab == 'build':
                         try:
                             page.wait_for_function("()=>{const o=document.getElementById('gmOut');return !o||!/Working out|Fitting runes/.test(o.textContent)}", timeout=60000)
                         except Exception:
@@ -276,7 +274,7 @@ def progress_backups(browser, base):
 
 def preview_views(browser, base):
     """Preview views the menu walk can't reach (Claude, 11 Nov 2026): every Karma level in the picker shows the measured
-    table for Balanced and Attack cards, and the per-view addresses (#hero/Name/tab) open and go Back correctly."""
+    table for Balanced and Attack cards, and legacy #hero/Name/tab links canonicalize and go Back correctly."""
     ctx = browser.new_context(viewport={'width': 1400, 'height': 900})
     page = open_site(ctx, base, '?tiers=new#karma', 'preview Karma levels')
     with open(os.path.join(ROOT, 'data.json'), encoding='utf-8') as f:
@@ -310,6 +308,179 @@ def preview_views(browser, base):
     ctx.close()
 
 
+def beta_routes(browser, base):
+    """Launch contract: direct loads/reloads and UI/history reach the same clean URLs."""
+    ctx = browser.new_context(viewport={'width': 1400, 'height': 900})
+    page = open_site(ctx, base, '', 'Beta routes')
+    config = page.evaluate('()=>({site:SITE,heroes:HEROES.map(h=>h.name)})')
+    expected = [
+        ['Heroes','Tier List','Karma','Teams','Gear','Familiars','Titles','Cookbook','Item Database'],
+        ['Trait Dungeons','Normal Dungeons','Currency Dungeons','Bosses Tier List','Tower Tier List'],
+        ['Guide coming soon']*3, ['Damage Calculator','Levelling Calculator']]
+    actual = page.locator('.shortcut-group').evaluate_all("ss=>ss.map(s=>[...s.querySelectorAll('.shortcut-card>span:first-of-type')].map(e=>e.textContent))")
+    if actual != expected or page.locator('.shortcut-soon[aria-disabled="true"]').count() != 3:
+        bad('Beta shortcuts: wrong category order, card order or guide placeholders')
+    if not page.locator('.beta-badge').is_visible() or page.locator('.brand-home img').get_attribute('src') != 'assets/logo_2x.png':
+        bad('Beta branding: original logo or BETA badge missing')
+    for selector, value in [('meta[property="og:image"]','assets/ui/og-image.jpg'), ('link[rel="icon"]','assets/ui/favicon.png')]:
+        got = page.locator(selector).get_attribute('content' if selector.startswith('meta') else 'href')
+        if not got or not got.endswith(value):
+            bad('Beta branding: share art or golden favicon changed')
+    cases = [(r, p, None) for p,r in config['site']['routes'].items() if r and p != 'tools']
+    cases += [(r, 'tools', t) for t,r in config['site']['toolRoutes'].items()]
+    cases += [(h, 'hero', h) for h in config['heroes']]
+    cases += [('dungeons','home',None)]
+    for path, pg, detail in cases:
+        response = page.goto(base+path, wait_until='networkidle')
+        page.wait_for_function('NAV.ready')
+        state = page.evaluate('navCurrent()')
+        want_path = '' if path == 'dungeons' else path
+        if response.status != 200 or state['page'] != pg or page.url != base+want_path:
+            bad(f'Beta direct route {path}: HTTP {response.status}, state {state}, URL {page.url}')
+        if pg == 'hero' and state.get('hero') != detail or pg == 'tools' and state.get('tool') != detail:
+            bad(f'Beta direct route {path}: wrong hero/tool {state}')
+        page.reload(wait_until='networkidle')
+        page.wait_for_function('NAV.ready')
+        if page.evaluate('navCurrent().page') != pg:
+            bad(f'Beta refresh {path}: wrong view')
+    page.goto(base, wait_until='networkidle')
+    page.wait_for_function('NAV.ready')
+    for label, mode in [('Bosses Tier List','bosses'), ('Tower Tier List','towers')]:
+        page.locator('.shortcut-card').filter(has_text=label).click()
+        page.wait_for_timeout(80)
+        if page.url != base+'tierlist' or page.evaluate('V2.mode') != mode:
+            bad(f'Beta shortcut {label}: wrong mode or URL')
+        page.locator('.brand-home').click()
+    page.evaluate("openCharacterProfile('Ryza','skills')")
+    page.wait_for_timeout(100)
+    for tab in ('review','build','skills'):
+        page.locator(f'[data-profile-tab="{tab}"]').click()
+        if page.url != base+'Ryza':
+            bad('Beta hero tab changed the unified address')
+    page.locator('[data-page="gear"]').click()
+    page.wait_for_timeout(100)
+    page.go_back()
+    page.wait_for_timeout(100)
+    if page.url != base+'Ryza' or page.evaluate('navCurrent().hero') != 'Ryza':
+        bad('Beta Back did not return to the hero')
+    page.go_forward()
+    page.wait_for_timeout(100)
+    if page.url != base+'gear' or page.evaluate('navCurrent().page') != 'gear':
+        bad('Beta Forward did not return to Gear')
+    for old, canonical in [('?tiers=new#teams','teams'), ('?preview=1#gear','gear'), ('?tiers=new#hero/Johnny/review','Johnny')]:
+        page.goto(base+old, wait_until='networkidle')
+        page.wait_for_function('NAV.ready')
+        if page.url != base+canonical:
+            bad(f'Beta legacy alias {old}: not canonicalized')
+    print(f'  Beta: shortcut order, branding, {len(cases)} direct routes and refreshes, unified hero URL, Back/Forward, old links')
+    ctx.close()
+
+
+def beta_interactions(browser, base):
+    for width in (1400, 390):
+        ctx = browser.new_context(viewport={'width':width,'height':900}, has_touch=width<1000)
+        page = open_site(ctx, base, '', f'Beta interactions {width}px')
+        issues = page.evaluate("""()=>{
+            const failures=[], select=p=>document.querySelector(`[data-page="${p}"]`).click();
+            select('dungeons');
+            const names=DUNGEONS.normal.map(x=>x.name);
+            for(const name of names)for(let i=0;i<3;i++){
+                [...document.querySelectorAll('[data-dng]')].find(b=>b.dataset.dng===name&&Number(b.dataset.level)===i).click();
+                const b=[...document.querySelectorAll('[data-dng]')].find(b=>b.dataset.dng===name&&Number(b.dataset.level)===i);
+                if(!b.classList.contains('on')||DNG.selected[name]!==i)failures.push('normal difficulty '+name+'/'+i);
+            }
+            select('currency');
+            for(const x of DUNGEONS.currency)for(let i=0;i<3;i++){
+                [...document.querySelectorAll('[data-currency-dungeon]')].find(b=>b.dataset.currencyDungeon===x.name&&Number(b.dataset.currencyLevel)===i).click();
+                if(CURRENCY_DNG_STATE.selected[x.name]!==i)failures.push('currency difficulty '+x.name+'/'+i);
+            }
+            select('home');select('currency');
+            if(Object.keys(CURRENCY_DNG_STATE.selected).length)failures.push('currency reset on leave');
+            select('trait');
+            for(const c of document.querySelectorAll('.tr-card'))for(const b of c.querySelectorAll('.tr-diff')){
+                b.click();if(!b.classList.contains('on')||!c.querySelector('.tr-rewards').children.length)failures.push('trait difficulty');
+            }
+            select('gear');
+            document.querySelector('.gear-section-general .gear-card h3 a').click();
+            if(document.getElementById('dungeonsPage').hidden||!DNG.set)failures.push('gear set dungeon crosslink');
+            select('tier');
+            document.querySelector('[data-v2mode="bosses"]').click();
+            for(const b of document.querySelectorAll('[data-v2boss]')){
+                const id=b.dataset.v2boss;
+                document.querySelector(`[data-v2boss="${id}"]`).click();
+                if(V2.boss!==id)failures.push('boss button '+id);
+            }
+            const alts=[...document.querySelectorAll('.v2-boss-alt')];
+            if(alts.length!==2)failures.push('Ursula/Gauron alternate pictures missing');
+            for(const a of alts){
+                if(getComputedStyle(a).animationName!=='v2alt'||!getComputedStyle(a).backgroundImage.includes('assets/'))failures.push('boss crossfade missing');
+                const glow=getComputedStyle(a.parentElement).animationName;
+                if(!['v2raid','v2succubus'].includes(glow))failures.push('raid glow missing');
+                const anim=a.getAnimations()[0]; if(!anim)failures.push('boss animation not running');
+                else {anim.pause();anim.effect.updateTiming({delay:0});anim.currentTime=1000;const off=+getComputedStyle(a).opacity;anim.currentTime=40000;const on=+getComputedStyle(a).opacity;if(on<=off)failures.push('boss pictures do not crossfade');}
+            }
+            document.querySelector('[data-v2mode="towers"]').click();
+            for(const t of TOWER_TRIALS.towers){document.querySelector(`[data-v2tower="${t.id}"]`).click();if(V2.tower!==t.id)failures.push('tower '+t.id);}
+            return failures;
+        }""")
+        for issue in issues:
+            bad(f'Beta interactions {width}px: {issue}')
+        if page.url != base+'tierlist':
+            bad(f'Beta interactions {width}px: tier controls changed unified URL')
+        page.evaluate("navNavigate({page:'tools',tool:'damage'})")
+        attack = page.locator('[data-k="attack"]')
+        attack.fill('1000')
+        a = page.locator('#dcOut').inner_text()
+        attack.fill('2000')
+        if page.locator('#dcOut').inner_text() == a:
+            bad(f'Beta interactions {width}px: Damage Calculator did not update')
+        page.locator('[data-tool="level"]').click()
+        page.locator('#lvTo').fill('20')
+        a = page.locator('#lvOut').inner_text()
+        page.locator('#lvTo').fill('40')
+        if page.locator('#lvOut').inner_text() == a or page.url != base+'tools/LevellingCalculator':
+            bad(f'Beta interactions {width}px: Levelling Calculator output or URL wrong')
+        page.evaluate("openCharacterProfile('Ryza','review')")
+        ref = page.locator('#profileReview [data-ref-type="hero"]').first
+        if ref.count():
+            if width<1000:
+                ref.tap()
+            else:
+                ref.hover()
+            page.locator('#karmaPopover').wait_for(state='visible')
+        else:
+            bad(f'Beta interactions {width}px: review hero crosslinks missing')
+        page.evaluate("navNavigate({page:'home'})")
+        page.screenshot(path=f'/tmp/beta-home-{width}.png',full_page=True)
+        if page.evaluate('document.documentElement.scrollWidth>innerWidth'):
+            bad(f'Beta home {width}px: horizontal overflow')
+        print(f'  Beta interactions {width}px: dungeon difficulties, crosslinks, tier modes, raid glow/crossfade, calculators, rich-link popover')
+        ctx.close()
+
+
+
+def beta_subpath(browser, base):
+    """GitHub Pages serves below the repository prefix, not the domain root."""
+    ctx = browser.new_context(viewport={'width':390,'height':844})
+    page = open_site(ctx, base, 'dungeons/normal', 'repository prefix')
+    page.locator('.brand-home').click()
+    page.locator('.shortcut-card').filter(has_text='Gear').click()
+    if page.url != base+'gear':
+        bad('repository prefix: navigation escaped the repository')
+    page.reload(wait_until='networkidle')
+    page.wait_for_function('NAV.ready')
+    page.locator('.gear-section-general .gear-card h3 a').first.click()
+    page.wait_for_timeout(100)
+    if page.url != base+'dungeons/normal' or not page.evaluate('DNG.set'):
+        bad('repository prefix: Gear crosslink failed')
+    broken = page.evaluate("[...document.images].filter(i=>!i.complete||i.naturalWidth===0).filter(i=>i.getBoundingClientRect().width>0&&i.loading!=='lazy').map(i=>i.src)")
+    if broken:
+        bad(f'repository prefix: broken loaded images {broken}')
+    print('  GitHub Pages repository prefix: direct route, home, Gear, reload and dungeon crosslink')
+    ctx.close()
+
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -323,8 +494,12 @@ def main():
         except Exception as e:
             print('check_site: no browser could be started (%s). The browser checks did NOT run.' % str(e).splitlines()[0])
             return 2
-        print('check_site: smoke test and preview gate')
+        print('check_site: Beta smoke test and legacy URL compatibility')
         smoke(browser, base)
+        beta_routes(browser, base)
+        beta_interactions(browser, base)
+        with serve(os.path.dirname(ROOT)) as parent:
+            beta_subpath(browser, parent + os.path.basename(ROOT) + "/")
         if not QUICK:
             print('check_site: JS ports against the Python tools')
             parity(browser, base)
@@ -334,7 +509,7 @@ def main():
     if problems:
         print(f'check_site: {len(problems)} problem(s).')
         return 1
-    print('check_site OK: no console errors, no missing files, the preview gate holds' + ('' if QUICK else ', JS ports match Python') + '.')
+    print('check_site OK: no console errors, no missing files, Beta routes and legacy aliases work' + ('' if QUICK else ', JS ports match Python') + '.')
     return 0
 
 

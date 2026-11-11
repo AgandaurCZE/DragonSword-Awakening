@@ -1,5 +1,8 @@
 # Done: finished tasks and answered questions
 
+## 11 Nov — Public Beta implementation (Codex; checked)
+Shortcuts home and clean public routes implemented from the former preview. Legacy public tier renderer/gate removed, original uploaded logo added as home link with BETA, existing share art/favicon retained. Full `check_all.py` passed; 39 direct routes/reloads, both browser widths, existing parity/storage checks and the new interaction checks passed. Full pixel comparison completed with the approved launch differences. CHANGELOG records validation; the release commit is published only when its GitHub check and publish jobs pass.
+
 Back to the library: [docs/README.md](../README.md). Open work: [STATUS.md](STATUS.md) (game) and [SITE.md](SITE.md) (site). Every change in detail: [CHANGELOG.md](../../CHANGELOG.md).
 
 Nothing on this page needs doing again. It exists so finished work is never mistaken for an open task. Newest first within each section. When a task in STATUS, SITE or the to-do page finishes, move it here with the date.
@@ -46,6 +49,7 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - Level curve refitted with Lv.40, Lv.50 and Lv.70 measurements (31 Oct–8 Nov).
 
 ## Site work (preview unless noted)
+- **Amplitude icon report closed by David:** after restarting his PC and reopening Firefox, the icon stays visible. No site fix applied; original cause unconfirmed. Do not resume browser installation or change image loading unless the issue recurs.
 - **11 Nov evening:** handover #1 (menu names), #2 (phone dungeon cards), #3 (profile padding), #5 (root README), #6 (October changelog archived); Karma level picker on the Karma page; browser check for it and for the Back button.
 - **11 Nov (Codex, handover #7):** preview Tools Backup & restore downloads the five agreed visitor-progress keys, reviews/validates imports before exact replacement, saves recovery before writing and supports undo after reload. Invalid inputs and partial storage failures are browser-tested at desktop/phone widths.
 - **11 Nov (Codex, handover #9):** shared account preset in `GEAR_MODEL.account`, ownership derived from existing Karma flags; no implicit A6 fallback in the offline tool. Website maximum-build defaults unchanged. Added validator coverage and A3/A0 Python/JS parity cases.

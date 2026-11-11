@@ -31,9 +31,9 @@ function renderGear() {
     section.className = 'gear-section' + (isGeneral ? ' gear-section-general' : ' gear-section-archetype');
     const heading = document.createElement('h3');
     heading.className = 'gear-section-title';
-    if (isGeneral && IS_PREVIEW) {
+    if (isGeneral) {
       const link = document.createElement('a');
-      link.href = '#dungeons';
+      link.href = routeUrl('dungeons');
       link.textContent = title;
       link.style.color = 'inherit';
       link.style.textDecoration = 'none';
@@ -56,10 +56,10 @@ function renderGear() {
       const color = ARCH_COLORS[archetype] || '';
       if (color) card.style.setProperty('--gear-arch-color', color);
       card.innerHTML = `<div class="gear-card-head"><div class="gear-icon-wrap"><img src="${g.icon}" alt="${profileEsc(g.name)} icon"></div><div><h3>${profileEsc(g.name)}</h3><div class="gear-source">${profileEsc(g.source)}</div></div></div><div class="gear-effects"><div class="gear-effect"><b>(2) Piece</b> ${formatSkillText(g.two)}</div><div class="gear-effect"><b>(3) Piece</b> ${formatSkillText(g.three)}</div></div>`;
-      if (isGeneral && IS_PREVIEW) {
+      if (isGeneral) {
         const name = card.querySelector('.gear-card-head h3');
         const link = document.createElement('a');
-        link.href = '#dungeons?set=' + encodeURIComponent(g.name);
+        link.href = routeUrl('dungeons');
         link.textContent = g.name;
         link.style.color = 'inherit';
         link.style.textDecoration = 'none';
@@ -80,7 +80,7 @@ function renderGear() {
   makeSection('Archetype sets', archetypeSets, false);
 }
 
-/* Gear page extras (preview only): upgrade calculator, Disassemble returns, Runes */
+/* Gear page extras (Beta): upgrade calculator, Disassemble returns, Runes */
 const GX = { rar: 'Orange', from: 0, to: 15 };
 function gxGreedy(x) {
   const out = [];
@@ -126,7 +126,7 @@ function gxRarColor(r) {
 }
 function renderGearPreview() {
   const root = $('gearPreview');
-  if (!root || !IS_PREVIEW || typeof GEAR_UPGRADE === 'undefined') return;
+  if (!root || typeof GEAR_UPGRADE === 'undefined') return;
   root.hidden = false;
   const U = GEAR_UPGRADE,
     L = U.levels[GX.rar] || [];
@@ -159,13 +159,13 @@ function renderGearPreview() {
   const C = U.crafting[GX.rar] || {};
   const R = typeof RUNES !== 'undefined' ? RUNES : null;
   const runes = R
-    ? `<section class="gx-box"><h3>Runes<span class="gx-tag">PREVIEW</span></h3><p class="gx-sub">${profileEsc(R.note)}</p>
+    ? `<section class="gx-box"><h3>Runes<span class="gx-tag">BETA</span></h3><p class="gx-sub">${profileEsc(R.note)}</p>
   <div class="rn-types">${R.types.map((t) => `<div class="rn-type" style="--c:${t.color}">${t.icon ? `<span class="rn-ico" style="-webkit-mask-image:url('${t.icon}');mask-image:url('${t.icon}')"></span>` : ''}<b>Rune of ${profileEsc(t.name)}</b><small>${profileEsc(t.line)}</small><div>${profileEsc(t.gameStat || t.stat)}</div></div>`).join('')}</div>
   <div class="rn-cols"><div><h4 style="margin:0">Grades</h4><div class="rn-grades">${R.grades.map((g) => `<span class="rn-grade" style="--c:${g.color}" title="Raid: ${profileEsc(g.raid)}">${profileEsc(g.name)}</span>`).join('<span style="color:var(--muted)">›</span>')}</div>
   <div class="gx-wrap"><table class="gx-tbl"><tr><th>Values seen</th>${R.types.map((t) => `<th style="color:${t.color}">${profileEsc(t.name)}</th>`).join('')}</tr>${R.grades.map((g) => `<tr><td style="color:${g.color};font-weight:800">${profileEsc(g.name)}<br><small style="color:var(--muted);font-weight:400">Raid ${profileEsc(g.raid)}</small></td>${R.types.map((t) => `<td>${((R.seen[g.name] || {})[t.name] || []).join(', ') || '<span style="color:var(--muted)">–</span>'}</td>`).join('')}</tr>`).join('')}</table></div>
   <ul>${R.rules.map((x) => `<li>${profileEsc(x)}</li>`).join('')}</ul></div>${R.image ? `<figure style="margin:0"><img src="${R.image}" alt="Rune Synthesis screen" loading="lazy"><figcaption class="gx-note">Synthesis: five Damaged runes of mixed types give one random Intact rune.</figcaption></figure>` : ''}</div></section>`
     : '';
-  root.innerHTML = `<div class="gx"><section class="gx-box"><h3>Upgrade calculator<span class="gx-tag">PREVIEW</span></h3><p class="gx-sub">Equipment EXP and Gold per upgrade level. The same for every slot and set.</p>
+  root.innerHTML = `<div class="gx"><section class="gx-box"><h3>Upgrade calculator<span class="gx-tag">BETA</span></h3><p class="gx-sub">Equipment EXP and Gold per upgrade level. The same for every slot and set.</p>
   <div class="gx-ctl"><div class="gx-rar">${Object.keys(U.levels)
     .reverse()
     .map(
@@ -341,10 +341,6 @@ const TITLE_KEY = 'dsw.selectedTitles.v1';
 let SEL_TITLES = null;
 function selTitles() {
   if (SEL_TITLES) return SEL_TITLES;
-  if (typeof IS_PREVIEW !== 'undefined' && !IS_PREVIEW) {
-    SEL_TITLES = new Set();
-    return SEL_TITLES;
-  }
   let v = [];
   try {
     v = JSON.parse(localStorage.getItem(TITLE_KEY) || '[]') || [];
@@ -604,74 +600,6 @@ function endgameStats(name, piecesOverride) {
   );
   return { rows, build, base };
 }
-function renderBuildStats(h) {
-  const root = $('profileGearStats'),
-    eg = $('profileEndgame');
-  root.innerHTML = '';
-  eg.innerHTML = '';
-  const build0 = HERO_BUILDS[h.name];
-  const LB = build0 ? liveBuild(h.name) : null;
-  const build = build0 ? Object.assign({}, build0, { pieces: LB.pieces }) : null;
-  if (!build) {
-    root.innerHTML = '<div class="profile-placeholder">No gear build recorded for this hero yet.</div>';
-    return;
-  }
-  const lv = build.level ?? 15;
-  root.parentNode.querySelectorAll('.build-why').forEach((x) => x.remove());
-  const intro = document.createElement('p');
-  intro.className = 'profile-note build-why';
-  intro.innerHTML =
-    `<strong>${profileEsc(build.type)} build.</strong> ${profileEsc(build.why)}` +
-    (LB.adjusted
-      ? ` <span class="eg-ttl-key">Adjusted live for your ${selectedTitleList().length} selected title${selectedTitleList().length === 1 ? '' : 's'}</span>: ${LB.changed.length ? 'main stats or substats change on ' + LB.changed.join(', ') + ' (marked gold).' : 'the recommended stats stay the same.'}`
-      : '');
-  root.before(intro);
-  GEAR_SLOTS.forEach((slot) => {
-    const p = build.pieces[slot],
-      g = GEAR_STATS.slots[slot];
-    if (!p || !g) return;
-    const el = document.createElement('div');
-    el.className =
-      'profile-gear-piece build-piece' + (LB.adjusted && LB.changed.includes(slot) ? ' build-piece-changed' : '');
-    el.innerHTML =
-      `<strong>${slot}</strong><div class="profile-main-stat-value">${profileEsc(p.main)}<span class="build-main-val">${fmtStat(p.main, (g.main[p.main] || [])[lv] || 0, true)}</span></div>` +
-      `<ul class="build-subs">${(p.subs || []).map((s) => `<li><span>${profileEsc(s)}</span><b>${fmtStat(s, g.sub[s] || 0, true)}</b></li>`).join('')}</ul>`;
-    root.append(el);
-  });
-  const res = endgameStats(h.name, LB.pieces);
-  if (!res) return;
-  const note = document.createElement('p');
-  note.className = 'profile-note';
-  note.innerHTML =
-    `Fully built at level 70: signature Karma at Ascension 6, ${profileEsc(build.rarity || 'Orange')} gear at +${lv} with the stats above. <span class="eg-set-key">Green values</span> come from the recommended gear sets, <span class="eg-awk-key">purple values</span> from the hero's awakenings (all six unlocked) and <span class="eg-ttl-key">gold values</span> from the titles you've ticked on the Titles tab (${selectedTitleList().length} selected); hover for the source.` +
-    (res.base.estimated
-      ? ' <span class="eg-est">Hero base stats are estimates</span> from measured levels 1–30 until the level-70 values are confirmed in-game.'
-      : '');
-  eg.append(note);
-  const grid = document.createElement('div');
-  grid.className = 'eg-grid';
-  res.rows.forEach((r) => {
-    const row = document.createElement('div');
-    row.className = 'eg-row';
-    const total = r.own + r.set + (r.awk || 0) + (r.ttl || 0);
-    const tipAttr = (t) => (t ? ` data-tip="${profileEsc(t)}" tabindex="0"` : '');
-    let val = `<b class="eg-total">${fmtStat(r.stat, total)}</b>`;
-    const hasSet = Math.abs(r.set) > 0.001,
-      hasAwk = Math.abs(r.awk || 0) > 0.001,
-      hasTtl = Math.abs(r.ttl || 0) > 0.001;
-    if (hasSet || hasAwk || hasTtl) {
-      val += `<span class="eg-own"${tipAttr(r.tip)}>${fmtStat(r.stat, r.own)}</span>`;
-      if (hasSet) val += `<span class="eg-set"${tipAttr(r.setTip)}>${fmtStat(r.stat, r.set, true)}</span>`;
-      if (hasAwk) val += `<span class="eg-awk"${tipAttr(r.awkTip)}>${fmtStat(r.stat, r.awk, true)}</span>`;
-      if (hasTtl) val += `<span class="eg-ttl"${tipAttr(r.ttlTip)}>${fmtStat(r.stat, r.ttl, true)}</span>`;
-    } else if (r.tip) val = `<b class="eg-total"${tipAttr(r.tip)}>${fmtStat(r.stat, total)}</b>`;
-    if (r.stat === 'Critical Hit Chance' && total > 100)
-      val += `<span class="eg-cap" data-tip="Crit Rate above 100% is wasted. Since patch 1.1.0, hits crit exactly at your Crit Rate and monsters have no critical resistance, so 100% already means every hit crits." tabindex="0">over 100%</span>`;
-    row.innerHTML = `<span class="eg-label">${profileEsc(r.stat)}</span><span class="eg-val">${val}</span>`;
-    grid.append(row);
-  });
-  eg.append(grid);
-}
 function renderProfileBuild(h, data) {
   const karmaRoot = $('profileKarmas');
   karmaRoot.innerHTML = '';
@@ -701,7 +629,7 @@ function renderProfileBuild(h, data) {
     rows.push({
       title: signature,
       kind: /signature/i.test(recommendedParts[0] || '') ? 'Signature' : 'Recommended',
-      desc: 'Recommended Karma from the master workbook.',
+      desc: 'Recommended Karma from the recorded guide data.',
     });
   const bestAlternative =
     recommendedParts[1] ||
@@ -711,7 +639,7 @@ function renderProfileBuild(h, data) {
       .filter(Boolean)[0] ||
     '';
   if (bestAlternative)
-    rows.push({ title: bestAlternative, kind: 'Best alternative', desc: 'Alternative listed in the master workbook.' });
+    rows.push({ title: bestAlternative, kind: 'Best alternative', desc: 'Alternative from the recorded guide data.' });
   const genericKarmaByArchetype = {
     Amplitude: 'Pounding Heart',
     Crushing: 'Scattered Pulse',
@@ -791,53 +719,7 @@ function renderProfileBuild(h, data) {
     wireKarmaPopover(item, r.title);
     karmaRoot.append(item);
   });
-  const gearRoot = $('profileGearSets');
-  gearRoot.innerHTML = '';
-  const gearText = String(data.gear || '');
-  let setText = gearText.replace(/^Recommended Gear sets:\s*/i, '');
-  const gearNames = setText
-    .split(/\. Main stats:/i)[0]
-    .split(/\. Substats:/i)[0]
-    .trim();
-  const gearParts = gearNames
-    ? gearNames
-        .split(/\s*\+\s*/)
-        .map((x) => x.trim())
-        .filter(Boolean)
-    : [];
-  const normGear = (s) =>
-    String(s || '')
-      .replace(/^\d+\s*/, '')
-      .replace(/[^a-z0-9]/gi, '')
-      .toLowerCase();
-  const matched = (
-    data.build && data.build.sets && data.build.sets.length
-      ? data.build.sets.map((s) => s.set)
-      : gearParts.map((part) => part.replace(/^\d+\s*/, ''))
-  )
-    .map((name) => GEAR_DATA.find((g) => normGear(g.name) === normGear(name)))
-    .filter(Boolean);
-  if (!matched.length)
-    gearRoot.innerHTML =
-      '<div class="profile-placeholder">Recommended gear combination will be added after testing.</div>';
-  matched.forEach((g, i) => {
-    const item = document.createElement('article');
-    item.className = 'profile-build-item profile-gear-link';
-    item.tabIndex = 0;
-    item.setAttribute('role', 'link');
-    item.title = 'Click to view this gear set in the Gear tab';
-    item.innerHTML = `<div class="profile-build-head"><div class="profile-build-icon"><img src="${g.icon}" alt=""></div><div><h4>${profileEsc(g.name)}</h4><small>${i === 0 ? 'Recommended 3-piece set' : 'Recommended 2-piece set'} · View in Gear Sets ↗</small></div></div><div class="profile-gear-detail"><b>(2)</b> ${profileEsc(g.two)}<br><b>(3)</b> ${profileEsc(g.three)}</div>`;
-    item.addEventListener('click', () => openGearSet(g.name));
-    item.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openGearSet(g.name);
-      }
-    });
-    gearRoot.append(item);
-  });
-  renderBuildStats(h);
-  if (IS_PREVIEW) gmMount(h);
+  gmMount(h);
   const sy = $('profileSynergy');
   sy.innerHTML = '';
   const relevant = TEAM_DATA.filter((t) =>
@@ -845,7 +727,7 @@ function renderProfileBuild(h, data) {
   );
   if (!relevant.length)
     sy.innerHTML =
-      '<div class="profile-placeholder">No team entry currently lists this character. Synergy recommendations can be added to the Teams workbook.</div>';
+      '<div class="profile-placeholder">No team entry currently lists this character. Team recommendations are still being tested during Beta.</div>';
   relevant.forEach((t) => {
     const item = document.createElement('article');
     item.className = 'profile-synergy';
@@ -869,6 +751,8 @@ function closeCharacterProfile() {
   $('tierPage').hidden = false;
   document.querySelectorAll('.nav-item').forEach((x) => x.classList.toggle('active', x.dataset.page === 'tier'));
   document.title = 'DragonSword: Awakening — Visual tier list';
+  document.querySelector('.nav-item[data-page="tier"]').click();
+  navSchedule();
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 $('profileBackTier').addEventListener('click', closeCharacterProfile);
@@ -890,7 +774,7 @@ document.getElementById('profileIntro').addEventListener('click', (e) => {
 });
 
 /* ===== Preview: team-aware gear model (Claude, 10 Nov 2026). A port of tools/team_gear.py: keep the two identical.
-   Settings live in data.json GEAR_MODEL. Shown on the hero Build tab only with ?tiers=new, in place of the old build boxes. ===== */
+   Settings live in data.json GEAR_MODEL. Shown on every hero Build tab. ===== */
 /*GM-START*/
 const GM_MAINS = ['Attack', 'Attack Power Up', 'Critical Hit Chance', 'Critical Damage'],
   GM_SLOTS = ['Helmet', 'Chest', 'Legs', 'Gloves', 'Boots'];

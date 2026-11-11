@@ -1,6 +1,6 @@
-/* js/07-tierlist-v2-cookbook.js: New tier list (preview; IS_PREVIEW and html.pv are set here) and Cookbook. Part of the site script, split out of index.html on 10 Nov 2026.
+/* js/07-tierlist-v2-cookbook.js: Beta tier list and Cookbook. Part of the site script, split out of index.html on 10 Nov 2026.
    The files load in order (see index.html) and share one global scope, so code that runs at load time may only use what earlier files define. */
-// ---- New tier list (TIER_LIST_V2): hidden preview, opened with ?tiers=new ----
+// ---- New tier list (TIER_LIST_V2): public Beta tier list ----
 const V2_ICONS = {
   expert: '<path d="M9 1.5L3.5 9H8l-1 5.5L12.5 7H8z" fill="currentColor"/>',
   easy: '<path d="M8 13.5S2.5 10 2.5 6.2A2.9 2.9 0 018 4.6a2.9 2.9 0 015.5 1.6C13.5 10 8 13.5 8 13.5z" fill="currentColor"/>',
@@ -270,8 +270,8 @@ function renderTierV2() {
     .filter(([, H]) => H.expert)
     .map(([n, H]) => `<li><b>${profileEsc(n)} (−${H.expert.drop}):</b> ${profileEsc(H.expert.reason || '')}</li>`)
     .join('');
-  let html = `<div class="v2-banner preview">PREVIEW: hidden from visitors. Ratings are added as we decide them together.</div>
- <div class="v2-head"><h2>Tier List <span>(${profileEsc(M.label || '')}${bossName ? ' · ' + profileEsc(bossName) : ''})</span></h2><button type="button" class="v2-legacy" id="v2Legacy">Legacy view</button></div>
+  let html = `<div class="v2-banner">BETA · Ratings reflect the agreed tests and are still being reviewed.</div>
+ <div class="v2-head"><h2>Tier List <span>(${profileEsc(M.label || '')}${bossName ? ' · ' + profileEsc(bossName) : ''})</span></h2></div>
  <details class="v2-panel"><summary>About this tier list</summary><div>${(D.about || []).map((p) => `<p>${profileEsc(p)}</p>`).join('')}</div></details>
  <details class="v2-panel"><summary>Modes</summary><div>${Object.values(D.modes || {})
    .map((m) => `<p><b>${profileEsc(m.label)}</b> (${profileEsc(m.sub)}): ${profileEsc(m.intro || '')}</p>`)
@@ -409,7 +409,6 @@ function renderTierV2() {
     n.focus();
     n.setSelectionRange(pos, pos);
   };
-  $('v2Legacy').onclick = () => showTierV2(false);
   root.querySelectorAll('.v2-card').forEach((c) => {
     const h = HEROES.find((x) => x.name === c.dataset.hero);
     c.addEventListener('click', (e) => {
@@ -463,33 +462,6 @@ function renderTierV2() {
     });
   });
 }
-function showTierV2(on) {
-  const tp = $('tierPage');
-  [...tp.children].forEach((c) => {
-    if (c.id !== 'tierV2') c.hidden = on;
-  });
-  $('tierV2').hidden = !on;
-  if (on) renderTierV2();
-  else if (!$('v2Back')) {
-    const b = document.createElement('button');
-    b.id = 'v2Back';
-    b.type = 'button';
-    b.className = 'v2-legacy';
-    b.textContent = 'Back to the new tier list (preview)';
-    b.style.margin = '0 0 12px';
-    b.onclick = () => {
-      b.remove();
-      showTierV2(true);
-    };
-    tp.prepend(b);
-  }
-}
-const IS_PREVIEW = (() => {
-  const p = new URLSearchParams(location.search);
-  return p.get('tiers') === 'new' || p.get('preview') === '1';
-})();
-if (IS_PREVIEW)
-  document.documentElement.classList.add('pv'); /* html.pv scopes preview-only CSS (block at the end of <style>) */
 // ---- Cookbook (COOKBOOK in data.json; preview only) ----
 const CB = { m: '', e: '', hide: false, q: '', sel: null };
 function cbTicks() {
@@ -652,7 +624,7 @@ function cbDetail(d, ticks) {
  <div class="cb-note">${d.fixed ? 'These exact ingredients only (no substitutes in the game).' : 'Any ingredient of the same category fits each slot; higher-star ingredients give a higher-star dish.'} Highlighted row = the best version cooked so far.</div>
  <button type="button" class="cb-tick${ticks.has(d.id) ? ' done' : ''}" id="cbTick">${ticks.has(d.id) ? 'Cooked ✓ (click to undo)' : 'Mark as cooked'}</button>`;
 }
-// Pages hidden from visitors until launch (David, 29 Oct 2026): shown only in the preview (?tiers=new).
+// Additional Beta pages.
 const ITEMDB = { tab: 'materials', q: '', rar: '', data: {}, ach: null, aq: '', acat: '', aown: '' };
 const ITEM_TABS = [
   ['materials', 'Materials'],

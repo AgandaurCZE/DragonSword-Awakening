@@ -130,7 +130,7 @@ async function renderAchievements() {
     renderAchievements();
   };
 }
-// Damage calculator (Tools page, preview only). Rules and notes come from DAMAGE_CALC and DEFENSE_MODEL.
+// Damage calculator (Tools page, Beta). Rules and notes come from DAMAGE_CALC and DEFENSE_MODEL.
 // ==== Tools (preview): damage calculator ====
 function dcCompute(i) {
   const C = DAMAGE_CALC,
@@ -273,7 +273,7 @@ function renderDamageCalc() {
       return `<tr><td><label class="dc-on"><input type="checkbox" data-st="${E(s.name)}" data-f="on"${r.on ? ' checked' : ''}><b style="color:${c}">${E(s.name)}</b></label></td><td class="n dc-mute">${s.hitBonus ? '+' + s.hitBonus + '%' : 'none'}<span class="dc-xb" data-xh="${E(s.name)}" hidden></span></td><td><input type="number" min="0" step="any" inputmode="decimal" data-st="${E(s.name)}" data-f="aap" aria-label="${E(s.name)} Additional Attack Power" value="${E(r.aap ?? '')}"></td><td><div class="dc-adw"><input type="number" min="0" step="any" inputmode="decimal" data-st="${E(s.name)}" data-f="ad" aria-label="${E(s.name)} Additional Damage %" value="${E(r.ad ?? '')}"><span class="dc-xb" data-xa="${E(s.name)}" hidden></span></div></td></tr>`;
     })
     .join('');
-  root.innerHTML = `<div class="gx-box dc-head"><h3>Damage calculator <span class="gx-tag">PREVIEW</span></h3><p class="gx-sub">${E(C.intro)}</p></div><div class="dc"><div class="dc-in">
+  root.innerHTML = `<div class="gx-box dc-head"><h3>Damage calculator <span class="gx-tag">BETA</span></h3><p class="gx-sub">${E(C.intro)}</p></div><div class="dc"><div class="dc-in">
  <div class="gx-box"><h3>Skill</h3><div class="dc-g"><label class="dc-f"><span>Hero</span><select id="dcHero">${HEROES.map((h) => `<option${h.name === S.hero ? ' selected' : ''}>${E(h.name)}</option>`).join('')}</select></label><label class="dc-f dc-w"><span>Skill</span><select id="dcSkill"></select></label><label class="dc-f"><span>Skill level</span><select id="dcLv"></select></label><label class="dc-f" id="dcVarW"><span>How it's used</span><select id="dcVar"></select></label>${num('pct', 'Skill %')}</div><p class="gx-note" id="dcSkillNote"></p></div>
  <div class="gx-box"><h3>Your stats</h3><p class="gx-sub">${E(C.statsHint)}</p><div class="dc-g">${num('attack', 'Attack')}${num('cd', 'Critical Damage %')}${num('cr', 'Critical Rate %')}${num('ap', 'Armor Penetration')}${num('di', 'Defense Ignore %')}${num('all', 'All Status Additional Attack Power')}${num('inc', 'Status Additional Attack Power Increase %')}</div>
  <details class="dc-more"><summary>Attack buff not on your panel</summary><p class="gx-note">${E(C.buffHint)}</p><div class="dc-g">${num('apu', 'Attack Power Up on panel %')}${num('buff', 'Extra Attack Power %')}</div></details></div>
@@ -630,7 +630,7 @@ function renderDamageCalc() {
   applyEnemy();
   draw();
 }
-// Levelling calculator (Tools page, preview only). Follows the game's item-picking rule; data from LEVEL_COSTS.
+// Levelling calculator (Tools page, Beta). Follows the game's item-picking rule; data from LEVEL_COSTS.
 // ==== Tools (preview): levelling calculator ====
 function lvPlan(kind, from, to, bar, names, skipFirst) {
   const L = LEVEL_COSTS,
@@ -809,7 +809,7 @@ function renderLevelCalc() {
   } catch (e) {}
   const S = { ...LV_DEF, ...(saved || {}) };
   const max = () => Math.min(L.exp[S.kind].toNext.length + 1, C.maxLevel || Infinity);
-  root.innerHTML = `<div class="gx-box dc-head"><h3>Levelling calculator <span class="gx-tag">PREVIEW</span></h3><p class="gx-sub">${E(C.intro)}</p></div><div class="dc"><div class="dc-in"><div class="gx-box"><h3>Level range</h3><div class="dc-g"><label class="dc-f"><span>Levelling</span><select id="lvKind"><option value="hero"${S.kind === 'hero' ? ' selected' : ''}>Hero</option><option value="karma"${S.kind === 'karma' ? ' selected' : ''}>Karma</option></select></label><label class="dc-f"><span>From level</span><input type="number" min="1" max="${max() - 1}" step="1" id="lvFrom" value="${E(S.from)}"></label><label class="dc-f"><span>To level</span><input type="number" min="2" max="${max()}" step="1" id="lvTo" value="${E(S.to)}"></label><label class="dc-f"><span>EXP already in the bar</span><input type="number" min="0" step="1" id="lvBar" value="${E(S.bar)}"></label></div><label class="dc-on lv-skip" id="lvSkipW"><input type="checkbox" id="lvSkip"${S.skip ? ' checked' : ''}><span id="lvSkipT"></span></label></div><div class="gx-box" id="lvHeroBox"><h3>${E(C.heroPick)}</h3><p class="gx-sub">${E(C.heroPickHint)}</p><div class="lv-arch" id="lvArch" role="group" aria-label="Archetype"></div><div class="lv-heroes" id="lvHeroes" role="group" aria-label="Hero"></div></div><div class="gx-box"><h3>Items to use</h3><p class="gx-sub">${E(C.itemsHint)}</p><div class="lv-items" id="lvItems"></div></div></div><aside class="gx-box dc-out" id="lvOut" aria-live="polite"></aside></div>`;
+  root.innerHTML = `<div class="gx-box dc-head"><h3>Levelling calculator <span class="gx-tag">BETA</span></h3><p class="gx-sub">${E(C.intro)}</p></div><div class="dc"><div class="dc-in"><div class="gx-box"><h3>Level range</h3><div class="dc-g"><label class="dc-f"><span>Levelling</span><select id="lvKind"><option value="hero"${S.kind === 'hero' ? ' selected' : ''}>Hero</option><option value="karma"${S.kind === 'karma' ? ' selected' : ''}>Karma</option></select></label><label class="dc-f"><span>From level</span><input type="number" min="1" max="${max() - 1}" step="1" id="lvFrom" value="${E(S.from)}"></label><label class="dc-f"><span>To level</span><input type="number" min="2" max="${max()}" step="1" id="lvTo" value="${E(S.to)}"></label><label class="dc-f"><span>EXP already in the bar</span><input type="number" min="0" step="1" id="lvBar" value="${E(S.bar)}"></label></div><label class="dc-on lv-skip" id="lvSkipW"><input type="checkbox" id="lvSkip"${S.skip ? ' checked' : ''}><span id="lvSkipT"></span></label></div><div class="gx-box" id="lvHeroBox"><h3>${E(C.heroPick)}</h3><p class="gx-sub">${E(C.heroPickHint)}</p><div class="lv-arch" id="lvArch" role="group" aria-label="Archetype"></div><div class="lv-heroes" id="lvHeroes" role="group" aria-label="Hero"></div></div><div class="gx-box"><h3>Items to use</h3><p class="gx-sub">${E(C.itemsHint)}</p><div class="lv-items" id="lvItems"></div></div></div><aside class="gx-box dc-out" id="lvOut" aria-live="polite"></aside></div>`;
   function pick() {
     const box = $('lvHeroBox'),
       kh = S.kind === 'hero';
@@ -990,6 +990,7 @@ function renderTools() {
       localStorage.setItem('dsw.tool', k);
     } catch (x) {}
     show();
+    navSchedule();
   };
   renderDamageCalc();
   renderLevelCalc();
@@ -1009,21 +1010,8 @@ function renderGuides() {
     )
     .join('');
 }
-const PREVIEW_PAGES = [
-  'familiars',
-  'titles',
-  'dungeons',
-  'trait',
-  'currency',
-  'cookbook',
-  'guides',
-  'tools',
-  'news',
-  'items',
-  'achievements',
-];
 
-/* Visitor progress backups (preview only, 11 Nov 2026). Part of the Tools page, following the calculators.
+/* Visitor progress backups (Beta, 11 Nov 2026). Part of the Tools page, following the calculators.
    Only the five documented progress keys are exported or restored. No account preset is included. */
 const PROGRESS_FORMAT = 'dragonsword-awakening-progress';
 const PROGRESS_VERSION = 1;
@@ -1191,7 +1179,6 @@ function progressUndoRecord() {
   return r;
 }
 function progressRestore(doc) {
-  if (!IS_PREVIEW) throw new Error('Progress restore is available in the preview.');
   progressValidate(doc);
   const before = progressSnapshot(),
     previousUndo = localStorage.getItem(PROGRESS_UNDO);
@@ -1217,7 +1204,6 @@ function progressRestore(doc) {
   }
 }
 function progressUndo() {
-  if (!IS_PREVIEW) throw new Error('Progress restore is available in the preview.');
   const undo = progressUndoRecord();
   if (!undo) throw new Error('There is no restore to undo.');
   const before = progressSnapshot();
@@ -1253,7 +1239,7 @@ function progressReload(message) {
 }
 function renderSettingsBackup() {
   const root = $('backupRoot');
-  if (!root || !IS_PREVIEW) return;
+  if (!root) return;
   root.innerHTML = `<section class="gx-box progress-backup"><h3>Backup &amp; restore</h3>
     <p>Save your title ticks, achievements, cooked dishes and both calculator settings to a file. Keep a copy to move your progress between browsers or devices.</p>
     <div class="progress-actions"><button type="button" id="progressExport">Download backup</button>

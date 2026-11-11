@@ -2,11 +2,14 @@
 
 Hello from Claude. David works with both of us on this repository: mostly ChatGPT for artwork and some UI, Claude for data, notes and site code. This file is yours; the shared rules are in `AGENTS.md`.
 
+## Beta launch (11 Nov 2026)
+David explicitly approved promoting the preview and deleting the legacy public view. Root is Shortcuts; all features are public, with clean paths and unified hero/tier addresses. Read the current Beta workflow in AGENTS and routing in DATA_REFERENCE. Edit root index only, regenerate route copies with `python3 tools/build_routes.py`, run full checks and pixel comparison. Preserve the share art, golden favicon, original logo and LF. Older preview-only instructions below are historical, not current requirements.
+
 ## Approved work (11 Nov 2026)
-David approved cleanup of clearly stale notes and selected task #9 option A (shared account data for tools; retain website maximum-build defaults) and #7 option A (exact visitor-settings restore with review and recovery). Confirmed-complete notes have been reconciled. Task #9 is complete (explicit account levels; signatures from existing flags); task #7 is implemented in the preview Tools tab (exact restore with validation, review and undo). See DATA_REFERENCE for both contracts; do not reimplement the completed handovers. The Actions API restriction is an environment proxy CONNECT 403 to api.github.com, not evidence of missing Git permissions; existing Git read/push access is separate.
+David approved cleanup of clearly stale notes and selected task #9 option A (shared account data for tools; retain website maximum-build defaults) and #7 option A (exact visitor-settings restore with review and recovery). Confirmed-complete notes have been reconciled. Task #9 is complete (explicit account levels; signatures from existing flags); task #7 is implemented in the preview Tools tab (exact restore with validation, review and undo). See DATA_REFERENCE for both contracts; do not reimplement the completed handovers. The earlier Actions API block is resolved in this environment; check actual access and exact deployment SHA each session.
 
 ## Codex review (11 Nov 2026)
-Reviewed all 18 Markdown files and the current architecture/checks at `da91cfa`; the full `check_all.py` passed locally, including browser and parity checks. GitHub Actions API is Forbidden here, so do not claim the remote deployment was verified. The eleven SITE handover entries were assessed, not implemented: #1/#2/#3/#5/#6 suit a cheaper model with focused review; #7/#9 and later #8 merit stronger implementation/review; #4 needs approval/art, #10 launch approval, #11 is explicitly do-not-do. Details and stale-note examples are in the matching CHANGELOG entry. The old PROJECT_HANDOFF is retired; use the library. Read current data rather than old snapshots of David's account; all five Currency Dungeons are now known.
+Reviewed all 18 Markdown files and the current architecture/checks at `da91cfa`; the full `check_all.py` passed locally, including browser and parity checks. That review could not verify deployment then; API access was subsequently restored. The eleven SITE handover entries were assessed, not implemented: #1/#2/#3/#5/#6 suit a cheaper model with focused review; #7/#9 and later #8 merit stronger implementation/review; #4 needs approval/art, #10 launch approval, #11 is explicitly do-not-do. Details and stale-note examples are in the matching CHANGELOG entry. The old PROJECT_HANDOFF is retired; use the library. Read current data rather than old snapshots of David's account; all five Currency Dungeons are now known.
 
 ## Note from Claude (11 Nov 2026): golden rules and automatic checks — read this first
 David asked for a big structural upgrade and for its rules to be the most important ones for all of us. They are at the top of `AGENTS.md` ("Golden rules"); the machinery is explained in `docs/library/SITE.md`, "Checks and publishing". The short version:
@@ -29,7 +32,7 @@ Leave me notes here or in the CHANGELOG whenever you like; I'll read them.
 
 ## Note from Claude (10 Nov 2026)
 - David's account moved a lot today: all 20 heroes Lv.70, all masteries, 12 heroes at A6 and 7 at A3 (`docs/library/STATUS.md`). The preview tier list was re-rated with Masteries (`docs/library/DECISIONS.md`).
-- **Preview-only CSS now has a home:** `IS_PREVIEW` adds the class `pv` to `<html>`, and the last block of `css/site.css` ("Preview-only fixes") holds rules prefixed `.pv `. If you change how something looks in the preview only, add it there; the public page stays untouched. I checked the public page pixel by pixel on every tab after my changes.
+- **Historical, superseded at Beta launch:** `IS_PREVIEW` adds the class `pv` to `<html>`, and the last block of `css/site.css` ("Preview-only fixes") holds rules prefixed `.pv `. If you change how something looks in the preview only, add it there; the public page stays untouched. I checked the public page pixel by pixel on every tab after my changes.
 - `index.html` has a map of the script and styles at their tops, and `// ====` section headers. I removed 4 unused functions and 24 unused CSS rules (listed in CHANGELOG).
 - The preview no longer waits for the dungeon banners at start-up; `preloadDungeonBanners()` now runs when a Dungeons page is first opened, and Normal Dungeons draws on first open. If you add art that must be ready before a page shows, preload it on that page's first open, not at start-up.
 - `tools/validate_data.py` now also checks `FAMILIARS.owned` against the owned flags, and that every new-tier-list hero and tag exists.
@@ -43,7 +46,7 @@ Also new today: source screenshots live in `assets/sources/`, research-only data
 
 ## David's main-only preview workflow (confirmed 2 Nov 2026)
 - Work directly on `main`; no other branches unless David asks. Fetch first and build on the latest `origin/main`, keeping other assistants' changes; fetch again before pushing; never force-push.
-- The public URL without a query must not change. All new work goes behind `?tiers=new` (`PREVIEW_PAGES`, `applyPreviewGate()`). Don't remove the gate before David approves the launch (`docs/LAUNCH_CHANGES.md`).
+- Superseded by David's approved Beta launch (11 Nov): former preview is public; root Shortcuts, clean paths, old hashes accepted. Do not restore the gate.
 - Keep `index.html`, `css/site.css` and `js/*.js` in LF line endings (`index.html` was once converted to CRLF by accident; restored 3 Nov).
 - Don't modify `AGENTS.md` or `CLAUDE.md` unless David asks.
 

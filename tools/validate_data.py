@@ -197,6 +197,30 @@ else:
         elif value > len(d.get('AWAKENINGS', {}).get('heroes', {}).get(name, {}).get('list', [])):
             bad(f'GEAR_MODEL.account.awakenings[{name}]: level exceeds the recorded awakenings')
 
+# Public Beta route/shortcut configuration (launch approved 11 Nov 2026).
+site = d.get('SITE', {})
+routes = site.get('routes', {})
+tool_routes = site.get('toolRoutes', {})
+if site.get('stage') != 'Beta' or routes.get('home') != '':
+    bad('SITE: expected Beta stage and the empty home route')
+asset(site.get('logo', ''), 'SITE.logo')
+paths = list(routes.values()) + list(tool_routes.values())
+for path in paths:
+    if path and (path.startswith('/') or any(p in ('', '.', '..') for p in path.split('/'))):
+        bad(f'SITE: invalid relative route {path!r}')
+if len(set(routes.values())) != len(routes):
+    bad('SITE.routes: duplicate page paths')
+for group in site.get('shortcuts', []):
+    for item in group.get('items', []):
+        name = f'SITE.shortcuts {group["label"]}/{item["label"]}'
+        asset(item.get('image', ''), name)
+        if item.get('page') not in routes:
+            bad(name + ': unknown page')
+        if item.get('mode') and (item['page'] != 'tier' or item['mode'] not in ('overall','bosses','towers')):
+            bad(name + ': invalid tier mode')
+        if item.get('tool') and (item['page'] != 'tools' or item['tool'] not in tool_routes):
+            bad(name + ': unknown tool')
+
 # Research data that the page doesn't load (moved out of data.json on 10 Nov 2026)
 try:
     _r = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'research.json'), encoding='utf-8'))

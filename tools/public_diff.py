@@ -52,7 +52,7 @@ def shoot(browser, base, out, only=None):
             ctx = browser.new_context(viewport={'width': w, 'height': h})
             page = ctx.new_page()
             page.goto(base + query, wait_until='networkidle')
-            page.wait_for_function("typeof HEROES!=='undefined' && HEROES.length>0 && document.getElementById('board').children.length>0", timeout=20000)
+            page.wait_for_function("typeof HEROES!=='undefined' && HEROES.length>0 && (document.getElementById('board')?.children.length>0 || (typeof NAV!=='undefined' && NAV.ready))", timeout=20000)
             page.add_style_tag(content=FREEZE)
 
             def snap(name):
@@ -71,7 +71,7 @@ def shoot(browser, base, out, only=None):
             for hero in heroes:
                 for tab in ('skills', 'review', 'build'):
                     page.evaluate('([n,t])=>openCharacterProfile(n,t)', [hero, tab])
-                    if tab == 'build' and mode == 'preview' and (only is None or f'{mode}-{w}-hero-{hero}-{tab}.png' in only):
+                    if tab == 'build' and (only is None or f'{mode}-{w}-hero-{hero}-{tab}.png' in only):
                         page.wait_for_function("()=>{const o=document.getElementById('gmOut');return !o||!/Working out|Fitting runes/.test(o.textContent)}", timeout=60000)
                     snap(f'{mode}-{w}-hero-{hero}-{tab}.png')
             ctx.close()

@@ -247,6 +247,9 @@ function openCharacterProfile(name, initialTab = 'skills') {
   const h = HEROES.find((x) => x.name.toLowerCase() === String(name).toLowerCase());
   if (!h) return;
   currentProfileName = h.name;
+  document.documentElement.dataset.page = 'hero';
+  if ($('hdrPage')) $('hdrPage').textContent = h.name;
+  navSchedule();
   hideTip();
   if (typeof refPinned !== 'undefined') refPinned = null;
   {
@@ -261,17 +264,18 @@ function openCharacterProfile(name, initialTab = 'skills') {
   Object.values(PAGE_IDS).forEach((id) => ($(id).hidden = true));
   $('profilePage').hidden = false;
   $('profilePage').style.setProperty('--hero-accent', ARCH_COLORS[h.archetype] || '#68c7d5');
-  document.querySelectorAll('.nav-item').forEach((x) => x.classList.toggle('active', x.dataset.page === 'tier'));
+  document.querySelectorAll('.nav-item').forEach((x) => x.classList.toggle('active', x.dataset.page === 'heroes'));
   document.title = 'DragonSword: Awakening — ' + h.name;
   $('profileName').textContent = h.name;
   $('profileCrumbName').textContent = h.name;
   $('profilePortrait').src = h.portrait;
   $('profilePortrait').alt = h.name;
-  $('profileUpdated').textContent = 'Character guide · workbook data · End-game tier ' + (h.tiers['End-game'] || '—');
+  $('profileUpdated').textContent =
+    'Character guide · in-game tests · Overall tier ' + (v2Hero(h.name).overall?.tier || 'Unrated');
   $('profileIntro').innerHTML =
     `Guide and build for <button type="button" data-back-tier="1">${profileEsc(h.name)}</button> from DragonSword: Awakening. <button type="button" data-back-tier="1">${profileEsc(h.name)}</button> is a character from the <strong>${profileEsc(h.archetype)}</strong> archetype. To learn more about ${profileEsc(h.name)}, check the sections below. Use the tabs to quickly switch to the kind of information you're looking for.`;
   $('profileQuickInfo').innerHTML =
-    `<div class="profile-quick-info-list"><div class="profile-quick-info-row"><strong>Archetype:</strong> <span class="profile-quick-arch"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)}</span></div><div class="profile-quick-info-row"><strong>Role:</strong> <span>${profileEsc(h.role)}</span></div>${h.faction ? `<div class="profile-quick-info-row"><strong>Faction:</strong> <span>${profileEsc(h.faction)}</span></div>` : ''}<div class="profile-quick-info-row"><strong>Kit:</strong> <span>${profileEsc(h.classType || '')}</span></div>${h.obtain?.method ? `<div class="profile-quick-info-row"><strong>How to get:</strong> <span>${profileEsc(h.obtain.method + (h.obtain.cost ? ' (' + h.obtain.cost + ')' : ''))}</span></div>` : ''}<div class="profile-quick-info-row"><strong>End-game tier:</strong> <span class="profile-tier-large" style="background:${tierColor(h.tiers['End-game'] || '—')}">${profileEsc(h.tiers['End-game'] || '—')}</span></div></div>`;
+    `<div class="profile-quick-info-list"><div class="profile-quick-info-row"><strong>Archetype:</strong> <span class="profile-quick-arch"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)}</span></div><div class="profile-quick-info-row"><strong>Role:</strong> <span>${profileEsc(h.role)}</span></div>${h.faction ? `<div class="profile-quick-info-row"><strong>Faction:</strong> <span>${profileEsc(h.faction)}</span></div>` : ''}<div class="profile-quick-info-row"><strong>Kit:</strong> <span>${profileEsc(h.classType || '')}</span></div>${h.obtain?.method ? `<div class="profile-quick-info-row"><strong>How to get:</strong> <span>${profileEsc(h.obtain.method + (h.obtain.cost ? ' (' + h.obtain.cost + ')' : ''))}</span></div>` : ''}<div class="profile-quick-info-row"><strong>Overall tier:</strong> <span class="profile-tier-large" style="background:${v2TierColor(v2Hero(h.name).overall?.tier)}">${profileEsc(v2Hero(h.name).overall?.tier || '—')}</span></div></div>`;
   const data = CHARACTER_PROFILE_DATA[h.name] || { skills: [], karma: '', gear: '' };
   renderProfileAwakenings(h);
   const skillRoot = $('profileSkillsGrid');
@@ -515,8 +519,14 @@ function refCardHtml(type, key) {
   if (type === 'hero') {
     const h = HEROES.find((x) => x.name === key);
     if (!h) return '';
-    const t = h.tiers || {};
-    return `<div class="ref-card"><div class="ref-head"><img class="ref-portrait" src="${h.portrait}" alt=""><div><div class="ref-title">${profileEsc(h.name)}</div><div class="ref-meta"><img src="${h.archIcon}" alt="">${colourStatusWords(h.archetype)} · ${profileEsc(h.role)}</div><div class="ref-meta">Kit: ${profileEsc(h.classType)}${h.faction ? ` · ${profileEsc(h.faction)}` : ''}</div><div class="ref-tiers">${['Early-game', 'Mid-game', 'End-game'].map((p) => `<span style="background:${tierColor(t[p])}">${p.split('-')[0]} ${t[p] || '—'}</span>`).join('')}</div>${(() => {
+    const t = v2Hero(h.name).overall || {};
+    return `<div class="ref-card"><div class="ref-head"><img class="ref-portrait" src="${h.portrait}" alt=""><div><div class="ref-title">${profileEsc(h.name)}</div><div class="ref-meta"><img src="${h.archIcon}" alt="">${colourStatusWords(h.archetype)} · ${profileEsc(h.role)}</div><div class="ref-meta">Kit: ${profileEsc(h.classType)}${h.faction ? ` · ${profileEsc(h.faction)}` : ''}</div><div class="ref-tiers">${[
+      ['tier', 'Overall'],
+      ['single', 'Single target'],
+      ['groups', 'Groups'],
+    ]
+      .map(([p, label]) => `<span style="background:${v2TierColor(t[p])}">${label} ${t[p] || '—'}</span>`)
+      .join('')}</div>${(() => {
       const l = latestBalanceChange(h.name);
       return l
         ? `<div class="ref-patch">${patchArrow(l.c, l.version)} Patch ${l.version}: ${profileEsc(patchDirLabel(l.c))}${l.c.damagePct != null ? ` (skill damage ${l.c.damagePct > 0 ? '+' : ''}${l.c.damagePct}%${l.c.shiftPct ? `, ${l.c.shiftPct}% moved between skills` : ''})` : ''}</div>`
@@ -820,9 +830,20 @@ function renderProfileReview(h, data) {
     const ph = renderProfilePatches(h);
     if (ph) parts.push(card('PATCHES', 'Patch history', ph));
   }
-  const t = h.tiers || {};
+  const t = v2Hero(h.name).overall || {};
   parts.push(
-    `<div class="rv-ratings">${['Early-game', 'Mid-game', 'End-game'].map((p) => `<div class="rv-rating"><div class="rv-rating-box" style="background:${tierColor(t[p])}">${t[p] || '—'}</div><div class="rv-rating-label">${p}</div></div>`).join('')}</div><p class="profile-note">Tiers from the guide's Tier List · patch ${profileEsc(patchText())}. Review written ${profileEsc(R.updated || '')}; numbers come from the codex and the measured damage rules in the guide.</p>`,
+    `<div class="rv-ratings">${[
+      ['tier', 'Overall'],
+      ['single', 'Single target'],
+      ['groups', 'Groups'],
+    ]
+      .map(
+        ([p, label]) =>
+          `<div class="rv-rating"><div class="rv-rating-box" style="background:${v2TierColor(t[p])}">${t[p] || '—'}</div><div class="rv-rating-label">${label}</div></div>`,
+      )
+      .join(
+        '',
+      )}</div><p class="profile-note">Tiers from the guide's Tier List · patch ${profileEsc(patchText())}. Review written ${profileEsc(R.updated || '')}; numbers come from the codex and the measured damage rules in the guide.</p>`,
   );
   root.innerHTML = parts.join('');
   root

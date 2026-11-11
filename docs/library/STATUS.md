@@ -2,6 +2,9 @@
 
 Back to the library: [docs/README.md](../README.md). Update this file during and at the end of every session; it's the first thing the next chat reads after [WORKING_WITH_DAVID.md](WORKING_WITH_DAVID.md). Finished items move to [DONE.md](DONE.md); every change is in `CHANGELOG.md`. Site tasks are in [SITE.md](SITE.md). David's own to-do list: `docs/dragonsword_david_todo_by_priority.html` (updated 10 Nov).
 
+## Public Beta launch — implemented and checked (11 Nov, Codex)
+David approved replacing the old public view with the former preview. Implemented locally: Shortcuts home, supplied logo + BETA, clean routes and real GitHub Pages entry shells, unified hero/tier addresses, legacy URL compatibility. Share strip/gold favicon unchanged. The old preview-only workflow is superseded by AGENTS' Beta workflow. Final full `check_all.py` passed, including browser interactions and repository-prefix hosting. Full public/preview pixel comparison completed (218 captured views; the approved launch changes are recorded in CHANGELOG). Publication is gated by the exact-SHA Check and publish run for the release commit “Launch public Beta with shortcuts and clean URLs”; verify the latest run at the start of the next session as always. No implementation task remains from this request. Restore point: `6c5f516`.
+
 ## Where David's account is (10 Nov)
 - **All 20 heroes Lv.70**, base stats measured (test 08) and in `HERO_BASE_STATS`.
 - **All 16 masteries unlocked** (10 Nov). Reina, Roxy, Dana and Alex's masteries don't change combat numbers. Results: [TEST01_RESULTS.md](TEST01_RESULTS.md), "Mastery retests".
@@ -45,4 +48,7 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 - Banner art for Eroded Underground Cemetery and Residual Worm Cleanup Zone; Hunt rating rewards and Fame stages above 3.
 
 ## Deployment access (11 Nov, Codex)
-The API proxy currently blocks api.github.com (CONNECT 403), but Git fetch/push works and the ordinary GitHub Actions web pages are readable. Run 42947152789 matched 92a4e43 and showed successful checks and publishing. Use that web-page fallback for deployment status; authenticated failure logs may still be unavailable. Allow api.github.com in this environment's Internet settings to test the API with the existing authentication before requesting any new credential.
+Resolved in this chat after api.github.com was allowed and the policy finished applying. Existing authentication successfully read the latest run and individual job/step results: 52e17ef passed checks and publishing (run 42947852910). No new token was needed. Recheck actual access if a later task uses a different environment; the normal Actions web page remains a fallback.
+
+## Amplitude icon report — resolved by David; no site fix required
+David confirmed that after restarting his PC and reopening Firefox, the icon remains visible without changing filters or tabs. Close the investigation unless it recurs. No website source, artwork or data was changed. The original cause was not established; do not describe it as a proven load-order, network or cache defect. Firefox installation and the extra browser-download domains are no longer required for this report.

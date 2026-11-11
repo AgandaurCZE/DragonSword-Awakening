@@ -10,16 +10,16 @@
    Reference pop-ups ........ showRefPopover (03-profile), showKarmaPopover (04-gear-builds)
    Gear page ................ renderGear, renderGearPreview: upgrade calculator, runes (04-gear-builds)
    Builds and optimiser ..... endgameStats, optBest, liveBuild: JS port of tools/hero_stats.py, keep both in step (04-gear-builds)
-   Legacy tier list ......... render, makeCard: public page (05-tierlist-heroes-patches)
    Heroes, Patch Notes ...... renderHeroes, renderPatches, latestBalanceChange (05)
    Familiars, Titles ........ renderFamiliars, renderTitles (05)
    Dungeons ................. renderDungeons, renderCurrencyDungeons, renderTrait (06-dungeons)
-   New tier list (preview) .. IS_PREVIEW, renderTierV2, v2Card, v2TipHtml (07-tierlist-v2-cookbook)
+   Tier list ............... renderTierV2, v2Card, v2TipHtml (07-tierlist-v2-cookbook)
    Cookbook (preview) ....... renderCookbook (07)
    Items, Achievements, Tools, Guides (preview) .. renderItems, renderAchievements, renderDamageCalc, renderLevelCalc, renderGuides (08-items-tools-guides)
    Start-up ................. applyPreviewGate, startApp, the data.json loader (09-startup, loaded last)
-   Preview gate: IS_PREVIEW (?tiers=new or ?preview=1), PREVIEW_PAGES, html.pv for preview-only CSS (end of css/site.css). */
-let HEROES = [],
+   Beta routing: SITE.routes, routeUrl, navInit (09-startup); generated entry pages via tools/build_routes.py. */
+let SITE = {},
+  HEROES = [],
   ROLE_ICONS = {},
   ARCHES = [],
   TIER_ORDER = [],
@@ -56,8 +56,6 @@ let HEROES = [],
   DAMAGE_CALC = null,
   DEFENSE_MODEL = null,
   LEVEL_COSTS = null;
-let activeArch = '';
-let activeRole = '';
 const $ = (id) => document.getElementById(id);
 /* Image paths put into CSS variables (--bg, --dng-art, …) must be absolute: since the CSS lives in css/site.css, the browser would resolve them against css/ (10 Nov 2026). */
 const absUrl = (p) => (p ? new URL(p, document.baseURI).href : p);
