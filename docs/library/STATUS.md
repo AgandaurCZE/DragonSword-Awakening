@@ -9,7 +9,7 @@ Back to the library: [docs/README.md](../README.md). Update this file during and
 - **Signature Karmas owned:** Theresia, Kalien, Kalsion, Othello, Cerese, Dana, Ornette, Charlotte, Ryza, Roxy. Ryza's and Ornette's levelled to Lv.70 (10 Nov).
 - **Gear:** David is gearing the six main teams with the builds in [GAME_MATH.md](GAME_MATH.md) 4.3 and running the raid for Perfect runes (10 Nov evening).
 - Karmas owned (colour art): 43 of 53 (10 Nov).
-- Titles 40 of 109; familiars 16 of 29 (all four Insects).
+- Titles 41 of 109; familiars 16 of 29 (all four Insects).
 
 ## Waiting on David (10 Nov)
 1. ~~Orange substats~~ done 10 Nov (all 31 pieces; estimates confirmed). **Perfect rune top values** still welcome (seen: Crit Rate 5.10–6.80%, Crit Damage 11.20%, Defense 95, Attack 119, Max HP 1050).

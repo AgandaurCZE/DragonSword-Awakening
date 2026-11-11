@@ -1,3 +1,8 @@
+## 11 Nov 2026 — Title, rune values, synthesis rule (Claude)
+- Title **One Who Broke the Thunderbolt** obtained: 41 of 109. `TITLES.ownedCount` (was a stale 38) and `ownedCumulative` recalculated from the obtained titles' passives (not read by the page).
+- Runes seen (David): Perfect Determination 105, 112; Vitality 900, 975; Focus 7.65%; Amplification 10.50%, 11.90% (the rest already recorded). Radiant Focus 6.50%, Vitality 1035, Amplification 7.35%. Refined Amplification 5.60%, 7%; Vitality 750. Every new Perfect value fits top × n/20 (GAME_MATH 2.2). Synthesis rule: 5 runes become 1 of the next grade at every step, Radiant to Perfect included.
+- Checks: `python3 tools/check_all.py`: ALL CHECKS PASSED (data only, no page code changed).
+
 ## 11 Nov 2026 — Big upgrade, part 4: the gate's first run; Pages switched to GitHub Actions (Claude)
 - **David switched the Pages source to "GitHub Actions"** (11 Nov, night). From now on only the workflow "Check and publish" publishes the site.
 - **The first run (commit `93768d4`) failed and published nothing, as designed.** Cause: GitHub's runner uses a full Chrome, which asks for `/favicon.ico` by itself; the site has no favicon, so the console logged one 404 and the smoke test counted it. `tools/check_site.py` now ignores that single request (and prints the address with any console error). A real favicon is handover task 4 in SITE.md. All other checks passed on GitHub on the first run.
