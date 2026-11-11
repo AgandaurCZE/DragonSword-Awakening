@@ -24,41 +24,7 @@ def hero_base(h):
     for a in d['AWAKENINGS']['heroes'][h]['list'][:AWK.get(h, 6)]:
         for e in a.get('effects', []): c[e['stat']] += e['value']
     return c
-def value(c, S, defense):
-    atk = (c['flat'] + c['gearAttack']) * (1 + c['Attack Power Up'] / 100)
-    aap = sum(c[s + ' Additional Attack Power'] for s in S) + c['All Status Effect Additional Attack Power'] * len(S)
-    aap *= 1 + c['Status Effect Additional Attack Power Increase'] / 100
-    eff = max(0.0, defense * (1 - min(c['Defense Ignore'], 100) / 100) - c['Armor Penetration'])
-    crit = 1 + min(c['Critical Hit Chance'], 100) / 100 * c['Critical Damage'] / 100
-    ad = 1 + sum(c[s + ' Additional Damage'] for s in S) / 100
-    return (atk + aap) * 1000 / (1000 + eff) * crit * ad
 MAINS = ['Attack', 'Attack Power Up', 'Critical Hit Chance', 'Critical Damage']
-def build(h, s3, s2, S, defense=1825):
-    base = hero_base(h) + _two(s3) + collections.Counter(THREE[s3]) + _two(s2)
-    subs_ok = ['Attack', 'Attack Power Up', 'Critical Hit Chance', 'Critical Damage', 'Defense Ignore', 'Armor Penetration',
-               'All Status Effect Additional Attack Power', 'Status Effect Additional Attack Power Increase'] + [s + ' Additional Attack Power' for s in S]
-    key = lambda st: 'gearAttack' if st == 'Attack' else st
-    best = None
-    for trip in itertools.combinations_with_replacement(MAINS, 3):
-        for ch in MAINS:
-            for lg in MAINS:
-                mains = {'Helmet': trip[0], 'Gloves': trip[1], 'Boots': trip[2], 'Chest': ch, 'Legs': lg}
-                c = collections.Counter(base)
-                for s, m in mains.items(): c[key(m)] += G[s]['main'][m][15]
-                subs = {s: [] for s in SLOTS}
-                for _ in range(25):
-                    cur = value(c, S, defense); pick = None
-                    for s in SLOTS:
-                        if len(subs[s]) >= 5: continue
-                        for st in subs_ok:
-                            if st in subs[s]: continue
-                            k = key(st); v0 = c[k]; c[k] = v0 + G[s]['sub'][st]; g = value(c, S, defense) - cur; c[k] = v0
-                            if pick is None or g > pick[0]: pick = (g, s, st)
-                    c[key(pick[2])] += G[pick[1]]['sub'][pick[2]]; subs[pick[1]].append(pick[2])
-                v = value(c, S, defense)
-                if best is None or v > best[0]:
-                    best = (v, mains, subs, dict(cr=round(c['Critical Hit Chance'], 1), cd=round(c['Critical Damage'], 1), apu=round(c['Attack Power Up'], 1), di=round(c['Defense Ignore'], 1)))
-    return best
 PHYS = {'Airborne','Knockdown','Stun','Break'}
 def value(c, S, defense):  # S: {status: uptime}; 'Other' = a status with no AAP sub offered
     atk = (c['flat'] + c['gearAttack']) * (1 + c['Attack Power Up'] / 100)
