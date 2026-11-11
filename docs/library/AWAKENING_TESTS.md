@@ -34,7 +34,7 @@ Measured rows are also in the Test Kit (`testId: apply`, notes say "A1").
 
 | Hero | Result |
 |---|---|
-| Alex | Tested last (alone). |
+| Alex | **Pending:** remains A0; test alone when materials allow. |
 | Aria | Rolling Bomb has two charges; each cast gives the old numbers, so twice per use. |
 | Astria | Doubles the gauge damage of Ballista Shot and Stunt Shot, but **only the first bolt after a Reload**. |
 | Castella | Stun Blow (target broken): Stun 0.33 → **0.45**, Knockdown **0.25** (new). |
@@ -147,5 +147,5 @@ Measured rows are also in the Test Kit (`testId: apply`, notes say "A6"). A4 and
 ## Where every hero stands (10 Nov)
 - **A6:** Castella, Cerese, Charlotte, Dana, Johnny, Kalien, Kalsion, Ornette, Reina, Roxy, Ryza, Theresia.
 - **A3:** Aria, Astria, Eileen, Lute, Othello, Sion, Tarte.
-- **A0:** Alex (tested last, alone).
+- **A0:** Alex (awakening tests pending; test alone when materials allow).
 - All 77 levels spent.

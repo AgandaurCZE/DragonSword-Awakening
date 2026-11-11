@@ -46,6 +46,8 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - Level curve refitted with Lv.40, Lv.50 and Lv.70 measurements (31 Oct–8 Nov).
 
 ## Site work (preview unless noted)
+- **11 Nov (Codex):** confirmed-complete facts reconciled across reference notes, status and the to-do page; old comparisons kept as dated history. No game values or public presentation changed.
+- **11 Nov (Codex review only):** all 18 Markdown files, new check/publish workflow and relevant data/code reviewed at `da91cfa`; full check_all passed locally, including browser and parity. Eleven handover entries assessed for model/task fit, none implemented. Stale-note examples recorded in CHANGELOG and STATUS. GitHub deployment result could not be verified (API Forbidden).
 - **11 Nov (structure; public and preview unchanged to the pixel):** golden rules and automatic checks. `tools/check_all.py` (one command before every commit), `tools/check_shape.py` with the recorded data shape, `tools/check_site.py` (browser smoke test, preview gate, JS ports against Python), `tools/public_diff.py` (the pixel check as a tool); `js/` and `css/` reformatted with Prettier (syntax trees, CSS rules and 194 views identical); LF line endings enforced by `.gitattributes`; GitHub workflow "Check and publish" that publishes only when the checks pass; three stale set-choice figures refreshed; dead duplicate code removed from `tools/team_gear.py`; unused `assets/ui/preview.jpg` deleted. Rules: AGENTS.md "Golden rules"; details: [SITE.md](SITE.md).
 - **10 Nov, late evening (public and preview):** Karma art 43 of 53 in colour; owned flags match (Ryza's and Roxy's signatures now marked).
 - **10 Nov, late evening:** Best Gear as a ranked list with % of the best; browser Back and Forward work in the preview (each page and hero tab has its own address).
@@ -60,7 +62,7 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - **4–8 Nov:** damage calculator (Tools page) with enemy type, level and place (World, Normal, Trait, Currency Dungeon), towers and Hunt weakness.
 - **4 Nov:** Item Database (Materials, Ingredients, Important, Quest); Achievements tracker; Guides placeholder cards; News entry (disabled).
 - **3 Nov:** Gear page: upgrade calculator, Disassemble returns, Runes box.
-- **1–3 Nov:** Dungeons group: Normal Dungeons (15 cards, I/II/III, filters, links from the Gear page), Trait Dungeons banners, Currency Dungeons (4 discovered, 1 locked). Built from the 1 Nov brief, which is now retired. The original Normal Dungeons design and artwork foundation are David's, made with ChatGPT.
+- **1–3 Nov:** Dungeons group: Normal Dungeons (15 cards, I/II/III, filters, links from the Gear page), Trait Dungeons banners, Currency Dungeon foundation (all 5 discovered by 5 Nov; no locked entries remain). Built from the 1 Nov brief, which is now retired. The original Normal Dungeons design and artwork foundation are David's, made with ChatGPT.
 - **2–3 Nov:** banner art for all 15 Normal Dungeons, three difficulties each; Goblin Bandits' Cave replaced with one shared crop; Currency Dungeon background fitted inside its frame (9 px inset, 8 px radius); David checked both live.
 - **31 Oct–1 Nov:** new tier list v2 with Overall, Bosses (5 Hunt bosses, Raid Gauron with its fights, strategy and rewards panels) and Towers modes; Hunt rating rewards panel.
 - **29 Oct–1 Nov:** Familiars, Titles, Cookbook, Trait Dungeons pages; preview gate.

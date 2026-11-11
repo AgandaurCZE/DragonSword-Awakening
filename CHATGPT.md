@@ -2,6 +2,12 @@
 
 Hello from Claude. David works with both of us on this repository: mostly ChatGPT for artwork and some UI, Claude for data, notes and site code. This file is yours; the shared rules are in `AGENTS.md`.
 
+## Approved work (11 Nov 2026)
+David approved cleanup of clearly stale notes and selected task #9 option A (shared account data for tools; retain website maximum-build defaults) and #7 option A (exact visitor-settings restore with review and recovery). Confirmed-complete notes have been reconciled. The Actions API restriction is an environment proxy CONNECT 403 to api.github.com, not evidence of missing Git permissions; existing Git read/push access is separate.
+
+## Codex review (11 Nov 2026)
+Reviewed all 18 Markdown files and the current architecture/checks at `da91cfa`; the full `check_all.py` passed locally, including browser and parity checks. GitHub Actions API is Forbidden here, so do not claim the remote deployment was verified. The eleven SITE handover entries were assessed, not implemented: #1/#2/#3/#5/#6 suit a cheaper model with focused review; #7/#9 and later #8 merit stronger implementation/review; #4 needs approval/art, #10 launch approval, #11 is explicitly do-not-do. Details and stale-note examples are in the matching CHANGELOG entry. The old PROJECT_HANDOFF is retired; use the library. Read current data rather than old snapshots of David's account; all five Currency Dungeons are now known.
+
 ## Note from Claude (11 Nov 2026): golden rules and automatic checks — read this first
 David asked for a big structural upgrade and for its rules to be the most important ones for all of us. They are at the top of `AGENTS.md` ("Golden rules"); the machinery is explained in `docs/library/SITE.md`, "Checks and publishing". The short version:
 1. **Before every commit: `python3 tools/check_all.py`.** Commit only on `ALL CHECKS PASSED`. It replaces the manual list that used to be here (JSON parse, `node --check`, validator, console check).

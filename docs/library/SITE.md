@@ -62,7 +62,7 @@ The rules are AGENTS.md, "Golden rules". This is how the machinery works. Everyt
 | file rules (in `check_all.py`) | LF line endings; data.json in its format (UTF-8, 1-space indent); every `js/` and `css/` file is loaded by index.html, in order, with `?v=`. | The message says which file. |
 | `node --check` | Every `js/*.js` parses. | Syntax error with line number. |
 | cache numbers (in `check_all.py`) | A css/js file that changed since the last commit has a new `?v=` in index.html. | Give that file's link a new `?v=`. |
-| `tools/check_site.py` | In a headless browser, on the public URL and `?tiers=new`, at 1400 px and 390 px: every menu page and all 20 hero profiles with their three tabs open with no console error, script error or missing file; no preview page, `html.pv` or new tier list on the public URL; `optBest` reproduces every stored build; `gmBuild` equals `tools/team_gear.py` on six builds (`GM_CASES`). `--quick` = 3 heroes, no parity. | `FAIL` lines say the URL, width and what happened. |
+| `tools/check_site.py` | In a headless browser, on the public URL and `?tiers=new`, at 1400 px and 390 px: every menu page at both widths, all 20 hero profiles with their three tabs at 1400 px, and Ryza/Sion/Alex profiles at 390 px with no console error, script error or missing file; no preview page, `html.pv` or new tier list on the public URL; `optBest` reproduces every stored build; `gmBuild` equals `tools/team_gear.py` on six builds (`GM_CASES`). `--quick` = 3 heroes, no parity. | `FAIL` lines say the URL, width and what happened. |
 | prettier (warning) | `js/` and `css/` are in the agreed format (`.prettierrc.json`). | `npx --yes prettier@3.9.10 --write js css`. |
 | `tools/public_diff.py` (not part of `check_all.py`; golden rule 4) | Every public page and hero profile renders the same as in the last commit, pixel by pixel (42 views with `--quick`, 132 normally, 194 with `--preview`). A colour step of 1–2 of 255 is ignored and a differing view is rendered twice before it's reported. | It lists the views, how many pixels and where, and keeps before/after pictures. Acceptable only if it's exactly what David asked for. |
 
@@ -96,8 +96,10 @@ Game-side tasks and David's to-do list are in [STATUS.md](STATUS.md). Site work 
 10. **Public wording waiting for launch:** the "workbook" lines and the "Netlify" error message, listed in [LAUNCH_CHANGES.md](../LAUNCH_CHANGES.md).
 11. **Decided, don't do (David, 11 Nov):** the icon, gear, Karma and portrait files keep their size and encoding (quality comes first; the safe saving was only about 0.3 MB); the raid glow stays as it is.
 
-## Structure proposal (Claude, 10 Nov; waiting on David's choice)
-Measured on 10 Nov: `index.html` 323 KB in one file (CSS 99 KB, script 206 KB, lines up to 8,900 characters); `data.json` 712 KB (546 KB without indentation; GitHub Pages compresses it in transit); public first load ~2.7 MB, preview ~2.9 MB now that banners wait; start-up drawing ~85 ms.
+## Completed structure upgrade (Claude, 10 Nov; historical proposal retained below)
+**Completed:** David approved A–E and all five shipped on 10 Nov. This table records the original proposal, not outstanding work.
+
+Measured before the split on 10 Nov: `index.html` 323 KB in one file (CSS 99 KB, script 206 KB, lines up to 8,900 characters); `data.json` 712 KB (546 KB without indentation; GitHub Pages compresses it in transit); public first load ~2.7 MB, preview ~2.9 MB now that banners wait; start-up drawing ~85 ms.
 
 | # | Change | Benefit | Downside |
 |---|---|---|---|

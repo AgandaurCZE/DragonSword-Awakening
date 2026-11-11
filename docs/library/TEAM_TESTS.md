@@ -2,11 +2,11 @@
 
 Back to the library: [docs/README.md](../README.md). Where things stand: [STATUS.md](STATUS.md).
 
-Live data is in the **Team Planner** artifact https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD (collections `teams`, doc ids `t01`…`t17` = order number; t09 (Nightmare support, with Alex) was deleted before the 10 Nov runs, and `sigs`, doc id = hero name in lower case; source page `docs/testkit/dragonsword-planner.html`). This file is a snapshot taken 9 Nov 2026 (teams refreshed 04:45 after Claude's second check: teams 12–16 added, an outdated Lv.1 number removed from team 5 and an invalid comparison in team 10's note replaced; facts David confirmed in game restored in 4 and 5); JSON copy: `docs/testkit/planner-backup-2026-11-10.json`. If the artifact and this file disagree, the artifact is newer.
+Live data is in the **Team Planner** artifact https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD (collections `teams`, doc ids `t01`…`t17` = order number; t09 (Nightmare support, with Alex) was deleted before the 10 Nov runs, and `sigs`, doc id = hero name in lower case; source page `docs/testkit/dragonsword-planner.html`). This file records the 9–10 Nov tests, including the completed 10 Nov mastery/awakening team round; JSON copy: `docs/testkit/planner-backup-2026-11-10.json`. If the artifact and this file disagree, the artifact is newer.
 
 ## Team statuses · 9 Nov
 
-Each planner team has one of four statuses, chosen with the drop-down on its card: **Idea** (proposed on paper from the skill data, never played; the default for a new team), **To test** (David plans to run it), **Works** (tested and good), **Doesn't work** (tested and dropped). Claude set the first statuses when it wrote the teams on 8 Nov; David sets them from now on. Shadow Poison, Storm and Break and burn have results but still say Idea.
+Each planner team has one of four statuses, chosen with the drop-down on its card: **Idea** (proposed on paper from the skill data, never played; the default for a new team), **To test** (David plans to run it), **Works** (tested and good), **Doesn't work** (tested and dropped). Claude set the first statuses when it wrote the teams on 8 Nov; David sets them from now on. **Completed 10 Nov:** all retained teams are Works except Ice Prison (Doesn't work), as confirmed in the planner and the team sections below.
 
 ## Test conditions · 9 Nov
 
@@ -14,7 +14,7 @@ Each planner team has one of four statuses, chosen with the drop-down on its car
 - **9 Nov runs (the planned gearless redo, to-do item 2):** all three heroes Lv.70, **no gear, no Karma**, damage in 1 minute. Runs marked "with signature" have only the named signature Karmas on and no other Karma.
 - One run each unless stated. David calls Holy Bleed a hard team: the same setup gave 500k and 430k, so gaps under about 70k between single runs mean little.
 - Main lesson (David, 9 Nov): application speed decides these teams. Reina applies Airborne from the first second with no condition; Castella's Stun only comes after Super Armor is broken, so she adds little. Kalien beats Castella in every comparison.
-- Signature runs so far compare signature vs **no** Karma, so they include the Karma's own stats. The planned clean test (to-do item 2, Test Kit test 09: signature vs a normal Karma of the same level) is **not done yet** and must happen before awakenings.
+- **Completed 9–10 Nov:** Test 09 compared each owned signature against a normal Karma of the same level before awakenings; results are below. The older runs labelled no Karma remain historical comparisons and include the Karma's base-stat gain.
 
 ## Team round after masteries and awakenings (prepared 10 Nov)
 
@@ -24,12 +24,12 @@ The six main teams again, same setup as the 9–10 Nov runs (Lv.70, **no gear**,
 
 | Team | Heroes (awakening) | Before: normal → signature | After: normal → signature (gain normal / signature) |
 |---|---|---|---|
-| Airborne burst | Kalsion A6, Johnny A6, Reina A6 | 600k → 630k (Kalsion's) || 820k → 900k (+37% / +43%) |
-| Shadow Poison | Charlotte A6, Johnny A6, Reina A6 | 680k → 700k (Charlotte's) || 950k → 1.1M (+40% / +57%) |
-| Holy Bleed | Theresia A6, Roxy A6, Castella A6 | 330k → 420k (Theresia's and Roxy's) || 630k → 800k (+91% / +90%) |
-| Thunder pair | Ryza A6, Ornette A6, Sion **A3** | 500k → 580k (Ryza's and Ornette's) || 900k → 1.1M (+80% / +90%) |
-| Fox and wind | Kalsion A6, Kalien A6, Reina A6 | 650k → 700k (Kalsion's on in both; then Kalien's) || 800k → 1M (+23% / +43%; Kalsion's on in both, confirmed) |
-| Frost tornado | Dana A6, Cerese A6, Reina A6 | 490k → 530k (Cerese's) || 800k → 1M (+63% / +89%; signature run now Dana's and Cerese's) |
+| Airborne burst | Kalsion A6, Johnny A6, Reina A6 | 600k → 630k (Kalsion's) | 820k → 900k (+37% / +43%) |
+| Shadow Poison | Charlotte A6, Johnny A6, Reina A6 | 680k → 700k (Charlotte's) | 950k → 1.1M (+40% / +57%) |
+| Holy Bleed | Theresia A6, Roxy A6, Castella A6 | 330k → 420k (Theresia's and Roxy's) | 630k → 800k (+91% / +90%) |
+| Thunder pair | Ryza A6, Ornette A6, Sion **A3** | 500k → 580k (Ryza's and Ornette's) | 900k → 1.1M (+80% / +90%) |
+| Fox and wind | Kalsion A6, Kalien A6, Reina A6 | 650k → 700k (Kalsion's on in both; then Kalien's) | 800k → 1M (+23% / +43%; Kalsion's on in both, confirmed) |
+| Frost tornado | Dana A6, Cerese A6, Reina A6 | 490k → 530k (Cerese's) | 800k → 1M (+63% / +89%; signature run now Dana's and Cerese's) |
 
 ## Teams · runs 9–10 Nov
 
@@ -316,4 +316,4 @@ Training Ogre, every hero Lv.70, no gear, 1 minute. Every hero wears a Lv.1 norm
 | Theresia + Roxy | Theresia, Roxy, Castella | 400k (Theresia's alone) | 420k (both) | +5% for Roxy's on top (within chance) |
 | Kalien, Theresia, Roxy | Theresia, Roxy, Kalien | 320k (all normal) | 450k (all three signatures) | +41% for all three together; Kalien's own share not split (David's choice) |
 
-Reading: Ryza's and Theresia's signatures are clear gains (about +10–14% and +21% team damage). Roxy's and Ornette's are small or within chance. Still open: Charlotte on a boss; group runs for Kalsion, Dana, Cerese and Ornette.
+Reading: Ryza's and Theresia's signatures are clear gains (about +10–14% and +21% team damage). Roxy's and Ornette's are small or within chance. **Charlotte boss comparison complete:** Shadow Poison has before- and after-awakening runs above (post-awakening 950k → 1.1M). Dedicated group runs for Kalsion, Dana, Cerese and Ornette remain unrecorded here.

@@ -34,7 +34,7 @@ Back to the library: [docs/README.md](../README.md). Repository rules: [AGENTS.m
 - **Site changes:** only behind the preview (`?tiers=new`). The plain URL must not change.
 
 ## What David owns (check before planning tests) · 10 Nov
-- **Signature Karmas (10 Nov): Theresia, Kalien, Kalsion, Othello, Cerese, Dana, Ornette, Charlotte, Ryza, Roxy.** Source of truth: the Team Planner's Signature Karmas tab (status Owned or Tested). `KARMA_DATA[].owned` in data.json marks only the eight whose coloured card art is in the repo (Ryza's and Roxy's art isn't yet), so don't read it as the full list.
+- **Signature Karmas (confirmed 10–11 Nov): Theresia, Kalien, Kalsion, Othello, Cerese, Dana, Ornette, Charlotte, Ryza, Roxy.** The Team Planner and `KARMA_DATA[].owned` now agree on all ten signatures. Ryza's and Roxy's colour art was added on 10 Nov; that artwork task is complete. Recheck the current flags and planner before planning future purchases or tests.
 - Titles: `TITLES` in data.json (all 109 recorded; the in-fight panel includes the owned ones). Familiars: `FAMILIARS.list[].owned`.
 - Masteries and awakenings per hero: [STATUS.md](STATUS.md), "Where David's account is".
 
