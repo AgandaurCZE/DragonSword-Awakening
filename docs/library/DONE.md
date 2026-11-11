@@ -45,6 +45,7 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - Level curve refitted with Lv.40, Lv.50 and Lv.70 measurements (31 Oct–8 Nov).
 
 ## Site work (preview unless noted)
+- **11 Nov (structure; public and preview unchanged to the pixel):** golden rules and automatic checks. `tools/check_all.py` (one command before every commit), `tools/check_shape.py` with the recorded data shape, `tools/check_site.py` (browser smoke test, preview gate, JS ports against Python), `tools/public_diff.py` (the pixel check as a tool); `js/` and `css/` reformatted with Prettier (syntax trees, CSS rules and 194 views identical); LF line endings enforced by `.gitattributes`; GitHub workflow "Check and publish" that publishes only when the checks pass; three stale set-choice figures refreshed; dead duplicate code removed from `tools/team_gear.py`; unused `assets/ui/preview.jpg` deleted. Rules: AGENTS.md "Golden rules"; details: [SITE.md](SITE.md).
 - **10 Nov, late evening (public and preview):** Karma art 43 of 53 in colour; owned flags match (Ryza's and Roxy's signatures now marked).
 - **10 Nov, late evening:** Best Gear as a ranked list with % of the best; browser Back and Forward work in the preview (each page and hero tab has its own address).
 - **10 Nov late evening:** "Best Gear" box on the hero Build tab (port of `tools/team_gear.py`, checked identical for 13 heroes), replacing the old build boxes in the preview.

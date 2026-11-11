@@ -1,0 +1,73 @@
+# Check, then publish (Claude, 11 Nov 2026). The rules for assistants are in AGENTS.md, "Golden rules".
+#
+# Every push to main runs tools/check_all.py. Only if every check passes is the site published to GitHub Pages.
+# A push that fails is NOT published: the live site stays on the last good commit until a fixed commit is pushed.
+# Nothing is built or transformed: the published site is exactly the committed files.
+#
+# Needs: repository Settings -> Pages -> Build and deployment -> Source = "GitHub Actions" (David set it on 11 Nov 2026).
+name: Check and publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:        # "Run workflow" button on the Actions tab: publish the current main again
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One publish at a time; a newer push waits for the running one instead of cutting it off half-way.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: Checks (tools/check_all.py)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up the browser for the checks
+        run: |
+          python3 -m venv "$RUNNER_TEMP/venv"
+          "$RUNNER_TEMP/venv/bin/pip" install --quiet playwright
+          # The runner already has Chrome; download Playwright's own Chromium only if it is ever missing.
+          command -v google-chrome >/dev/null || "$RUNNER_TEMP/venv/bin/python" -m playwright install --with-deps chromium
+
+      - name: Run every check
+        run: |
+          # Compare the ?v= cache numbers against the commit that was live before this push.
+          BASE="${{ github.event.before }}"
+          if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ] || ! git fetch --quiet --depth=1 origin "$BASE"; then BASE=HEAD; fi
+          set -o pipefail
+          "$RUNNER_TEMP/venv/bin/python" tools/check_all.py --base "$BASE" 2>&1 | tee "$RUNNER_TEMP/checks.txt"
+
+      - name: Show the result on the run page
+        if: always()
+        run: |
+          { echo '### tools/check_all.py'; echo '```'; cat "$RUNNER_TEMP/checks.txt" 2>/dev/null || echo 'The checks did not start.'; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Collect the committed files (nothing else) for publishing
+        run: |
+          mkdir "$RUNNER_TEMP/site"
+          git archive HEAD | tar -x -C "$RUNNER_TEMP/site"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ runner.temp }}/site
+
+  publish:
+    name: Publish to GitHub Pages
+    needs: check            # runs only when every check passed
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

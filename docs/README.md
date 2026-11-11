@@ -6,7 +6,7 @@ This is the index of every note in the repository. A new chat (Claude, ChatGPT, 
 
 | File | What it holds |
 |---|---|
-| [`../AGENTS.md`](../AGENTS.md) | The repository rules: main-only workflow, the `?tiers=new` preview gate, data rules, how to commit. Binding. |
+| [`../AGENTS.md`](../AGENTS.md) | The repository rules, starting with the **golden rules** (11 Nov): run `python3 tools/check_all.py` before every commit, the site is only published when GitHub passes the same checks, never weaken a check. Then the main-only workflow, the `?tiers=new` preview gate, data rules, how to commit. Binding. |
 | [`library/WORKING_WITH_DAVID.md`](library/WORKING_WITH_DAVID.md) | How David likes to work, his permissions, and the mistakes past chats made. Read before replying to him. |
 | [`library/STATUS.md`](library/STATUS.md) | **Where things stand right now**: what David is doing in the game, the current task, what must happen before awakenings, mastery retests, open items. |
 
@@ -15,7 +15,7 @@ This is the index of every note in the repository. A new chat (Claude, ChatGPT, 
 | Topic | File |
 |---|---|
 | Every `data.json` key, its shape and renderer; text formats; build method; assets; tools | [`DATA_REFERENCE.md`](DATA_REFERENCE.md) (open only the section you need) |
-| **The site**: how the page works (`index.html`, `css/`, `js/`), a code map, GitHub and publishing, open site tasks | [`library/SITE.md`](library/SITE.md) |
+| **The site**: how the page works (`index.html`, `css/`, `js/`), a code map, **the checks and how the site is published**, GitHub, open site tasks and the 11 Nov handover list | [`library/SITE.md`](library/SITE.md) |
 | **Game math**: every measured formula from levelling and stats to damage, Defense, statuses, Super Armor and each game mode | [`library/GAME_MATH.md`](library/GAME_MATH.md) |
 | The Test Kit: each test, how David measures, how entries are stored | [`library/TESTING.md`](library/TESTING.md) |
 | Test 01 results: status application, Super Armor gauge and break times, all 20 heroes | [`library/TEST01_RESULTS.md`](library/TEST01_RESULTS.md) |

@@ -2,6 +2,15 @@
 
 Hello from Claude. David works with both of us on this repository: mostly ChatGPT for artwork and some UI, Claude for data, notes and site code. This file is yours; the shared rules are in `AGENTS.md`.
 
+## Note from Claude (11 Nov 2026): golden rules and automatic checks — read this first
+David asked for a big structural upgrade and for its rules to be the most important ones for all of us. They are at the top of `AGENTS.md` ("Golden rules"); the machinery is explained in `docs/library/SITE.md`, "Checks and publishing". The short version:
+1. **Before every commit: `python3 tools/check_all.py`.** Commit only on `ALL CHECKS PASSED`. It replaces the manual list that used to be here (JSON parse, `node --check`, validator, console check).
+2. **GitHub runs the same checks on every push and publishes the site only if they pass.** A red run on the Actions tab means your commit is not live. Fix it with a new commit; never loosen a check to get a pass.
+3. **The pixel check is a tool now: `python3 tools/public_diff.py`** before committing any change to `index.html`, `css/`, `js/` or an image (also for artwork you replace: a changed public picture will be reported, which is fine when it's the change David asked for; say so in CHANGELOG).
+4. **`js/` and `css/` are formatted** (one statement or declaration per line). After editing them: `npx --yes prettier@3.9.10 --write js css`, and a new `?v=` for each changed file (now checked).
+5. **A new or renamed data key** needs `python3 tools/check_shape.py --update` (read what it prints) and a line in `docs/DATA_REFERENCE.md`.
+6. Open site tasks anyone can take are listed in `docs/library/SITE.md`, "Handed over on 11 Nov".
+
 ## Note from Claude (9 Nov 2026)
 David asked me to tidy every note file so only current information is left. What changed for you:
 - **Start at `docs/README.md`.** It indexes every note. Where things stand: `docs/library/STATUS.md`. The site and its code map: `docs/library/SITE.md`. Every data key: `docs/DATA_REFERENCE.md`. Finished work: `docs/library/DONE.md`.
@@ -32,12 +41,12 @@ Also new today: source screenshots live in `assets/sources/`, research-only data
 - Keep `index.html`, `css/site.css` and `js/*.js` in LF line endings (`index.html` was once converted to CRLF by accident; restored 3 Nov).
 - Don't modify `AGENTS.md` or `CLAUDE.md` unless David asks.
 
-## Mandatory checks after every change
-1. **Validate syntax:** parse `data.json`; syntax-check every changed `js/*.js` file (`node --check js/<file>.js`); run `python3 tools/validate_data.py`.
+## Mandatory checks after every change (updated 11 Nov: see the golden rules in `AGENTS.md`)
+1. **Run `python3 tools/check_all.py`** (data rules, data shape, stored builds, file rules, JS syntax, cache numbers, the site in a browser on both URLs). For page files and pictures also `python3 tools/public_diff.py`.
 2. **Check the diff:** the intended change is there, nothing duplicated or malformed, nothing removed by accident.
-3. **Functional check:** serve with `python3 -m http.server` (not `file://`) and test the affected page with `?tiers=new` and without. If browser testing isn't available, say so; never claim a test that didn't run.
+3. **Look at it yourself:** serve with `python3 -m http.server` (not `file://`) and look at the affected page with `?tiers=new` and without. If the browser checks couldn't run on your machine, say so; never claim a test that didn't run.
 4. **CHANGELOG.md:** date, files, what changed, and the validation actually done.
-5. **After pushing:** re-fetch and confirm the committed files contain the change and the changelog entry.
+5. **After pushing:** re-fetch and confirm the committed files contain the change and the changelog entry, then check the "Check and publish" run for your commit on the Actions tab: the site is only updated when it's green.
 
 ## Artwork
 - Workflow and lessons: `docs/DUNGEON_ARTWORK_WORKFLOW.md` (one Normal preview first, then **Proceed** or **Stop**; 1672×240 banners; keep subjects anchored across I/II/III).
