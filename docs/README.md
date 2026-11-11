@@ -33,6 +33,7 @@ This is the index of every note in the repository. A new chat (Claude, ChatGPT, 
 |---|---|
 | [`library/DONE.md`](library/DONE.md) | Finished tasks and answered questions: nothing there needs doing again |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | Every change, newest first |
+| [`library/CHANGELOG_2026-10.md`](library/CHANGELOG_2026-10.md) | October 2026 changes (archived 11 Nov) |
 
 Retired on 9 Nov 2026 (content moved into the files above; still in git history): `PROJECT_HANDOFF.txt`, `NEW_CHAT_BRIEFING.md`, `TASK_dungeons_page.md`, `TODO_David_2026-10-29.txt`.
 
