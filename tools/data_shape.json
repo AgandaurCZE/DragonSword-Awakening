@@ -1,0 +1,5618 @@
+{
+ "assets/items/achievements.json": {
+  "record": {
+   "opt": {},
+   "req": {
+    "fame": {
+     "record": {
+      "opt": {},
+      "req": {
+       "categories": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "category": {
+            "types": [
+             "string"
+            ]
+           },
+           "description": {
+            "types": [
+             "string"
+            ]
+           },
+           "icon": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "points": {
+            "types": [
+             "number"
+            ]
+           },
+           "stages": {
+            "list": {
+             "types": [
+              "number"
+             ]
+            }
+           }
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "text": {
+        "types": [
+         "string"
+        ]
+       },
+       "type": {
+        "types": [
+         "string"
+        ]
+       }
+      }
+     }
+    },
+    "items": {
+     "list": {
+      "record": {
+       "opt": {
+        "inferred": {
+         "types": [
+          "bool"
+         ]
+        }
+       },
+       "req": {
+        "category": {
+         "types": [
+          "string"
+         ]
+        },
+        "condition": {
+         "types": [
+          "string"
+         ]
+        },
+        "name": {
+         "types": [
+          "string"
+         ]
+        },
+        "progress": {
+         "types": [
+          "number"
+         ]
+        },
+        "target": {
+         "types": [
+          "number"
+         ]
+        },
+        "title": {
+         "types": [
+          "null",
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "note": {
+     "types": [
+      "string"
+     ]
+    }
+   }
+  }
+ },
+ "assets/items/cookbook.json": {
+  "record": {
+   "opt": {},
+   "req": {
+    "discovered": {
+     "list": {
+      "record": {
+       "opt": {
+        "effect": {
+         "types": [
+          "string"
+         ]
+        },
+        "note": {
+         "types": [
+          "string"
+         ]
+        },
+        "stars": {
+         "types": [
+          "number"
+         ]
+        },
+        "type": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "req": {
+        "effectsByStars": {
+         "map": {
+          "types": [
+           "string"
+          ]
+         }
+        },
+        "ingredients": {
+         "list": {
+          "types": [
+           "string"
+          ]
+         }
+        },
+        "method": {
+         "types": [
+          "string"
+         ]
+        },
+        "name": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "effectsByStars": {
+     "map": {
+      "map": {
+       "types": [
+        "string"
+       ]
+      },
+      "types": [
+       "string"
+      ]
+     }
+    },
+    "methodCounts": {
+     "map": {
+      "types": [
+       "number"
+      ]
+     }
+    },
+    "note": {
+     "types": [
+      "string"
+     ]
+    },
+    "rules": {
+     "list": {
+      "types": [
+       "string"
+      ]
+     }
+    },
+    "starRule": {
+     "record": {
+      "opt": {},
+      "req": {
+       "consequence": {
+        "types": [
+         "string"
+        ]
+       },
+       "rule": {
+        "types": [
+         "string"
+        ]
+       },
+       "table": {
+        "map": {
+         "types": [
+          "number"
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "assets/items/important.json": {
+  "record": {
+   "opt": {},
+   "req": {
+    "items": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "description": {
+         "types": [
+          "string"
+         ]
+        },
+        "icon": {
+         "types": [
+          "string"
+         ]
+        },
+        "name": {
+         "types": [
+          "string"
+         ]
+        },
+        "rarity": {
+         "types": [
+          "string"
+         ]
+        },
+        "sources": {
+         "list": {
+          "types": [
+           "string"
+          ]
+         }
+        },
+        "type": {
+         "types": [
+          "string"
+         ]
+        },
+        "use": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "note": {
+     "types": [
+      "string"
+     ]
+    }
+   }
+  }
+ },
+ "assets/items/ingredients.json": {
+  "record": {
+   "opt": {},
+   "req": {
+    "items": {
+     "list": {
+      "record": {
+       "opt": {
+        "eat": {
+         "record": {
+          "opt": {},
+          "req": {
+           "cooldown": {
+            "types": [
+             "string"
+            ]
+           },
+           "effect": {
+            "types": [
+             "string"
+            ]
+           },
+           "type": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "req": {
+        "category": {
+         "types": [
+          "string"
+         ]
+        },
+        "description": {
+         "types": [
+          "string"
+         ]
+        },
+        "icon": {
+         "types": [
+          "string"
+         ]
+        },
+        "name": {
+         "types": [
+          "string"
+         ]
+        },
+        "sources": {
+         "list": {
+          "types": [
+           "string"
+          ]
+         }
+        },
+        "stars": {
+         "types": [
+          "number"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "note": {
+     "types": [
+      "string"
+     ]
+    }
+   }
+  }
+ },
+ "assets/items/materials.json": {
+  "record": {
+   "opt": {},
+   "req": {
+    "items": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "description": {
+         "types": [
+          "string"
+         ]
+        },
+        "icon": {
+         "types": [
+          "string"
+         ]
+        },
+        "name": {
+         "types": [
+          "string"
+         ]
+        },
+        "rarity": {
+         "types": [
+          "string"
+         ]
+        },
+        "sources": {
+         "list": {
+          "types": [
+           "string"
+          ]
+         }
+        },
+        "type": {
+         "types": [
+          "string"
+         ]
+        },
+        "use": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "note": {
+     "types": [
+      "string"
+     ]
+    }
+   }
+  }
+ },
+ "assets/items/quest.json": {
+  "record": {
+   "opt": {},
+   "req": {
+    "items": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "description": {
+         "types": [
+          "string"
+         ]
+        },
+        "icon": {
+         "types": [
+          "string"
+         ]
+        },
+        "name": {
+         "types": [
+          "string"
+         ]
+        },
+        "rarity": {
+         "types": [
+          "string"
+         ]
+        },
+        "type": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "note": {
+     "types": [
+      "string"
+     ]
+    }
+   }
+  }
+ },
+ "data.json": {
+  "record": {
+   "opt": {},
+   "req": {
+    "ARCHES": {
+     "list": {
+      "types": [
+       "string"
+      ]
+     }
+    },
+    "ARCH_COLORS": {
+     "map": {
+      "types": [
+       "string"
+      ]
+     }
+    },
+    "AWAKENINGS": {
+     "record": {
+      "opt": {},
+      "req": {
+       "heroes": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "best": {
+            "types": [
+             "number"
+            ]
+           },
+           "list": {
+            "list": {
+             "record": {
+              "opt": {},
+              "req": {
+               "effects": {
+                "list": {
+                 "record": {
+                  "opt": {},
+                  "req": {
+                   "stat": {
+                    "types": [
+                     "string"
+                    ]
+                   },
+                   "value": {
+                    "types": [
+                     "number"
+                    ]
+                   }
+                  }
+                 }
+                }
+               },
+               "level": {
+                "types": [
+                 "number"
+                ]
+               },
+               "name": {
+                "types": [
+                 "string"
+                ]
+               },
+               "rating": {
+                "types": [
+                 "number"
+                ]
+               },
+               "text": {
+                "types": [
+                 "string"
+                ]
+               },
+               "why": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       },
+       "icon": {
+        "types": [
+         "string"
+        ]
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "ratingScale": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "CHARACTER_PROFILE_DATA": {
+     "map": {
+      "record": {
+       "opt": {},
+       "req": {
+        "archetype": {
+         "types": [
+          "string"
+         ]
+        },
+        "build": {
+         "record": {
+          "opt": {},
+          "req": {
+           "karma": {
+            "record": {
+             "opt": {},
+             "req": {
+              "alternatives": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
+              "second": {
+               "types": [
+                "string"
+               ]
+              },
+              "signature": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           },
+           "sets": {
+            "list": {
+             "record": {
+              "opt": {},
+              "req": {
+               "pieces": {
+                "types": [
+                 "number"
+                ]
+               },
+               "set": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        },
+        "cons": {
+         "list": {
+          "types": [
+           "string"
+          ]
+         }
+        },
+        "gear": {
+         "types": [
+          "string"
+         ]
+        },
+        "karma": {
+         "types": [
+          "string"
+         ]
+        },
+        "pros": {
+         "list": {
+          "types": [
+           "string"
+          ]
+         }
+        },
+        "review": {
+         "record": {
+          "opt": {},
+          "req": {
+           "howToPlay": {
+            "record": {
+             "opt": {},
+             "req": {
+              "combos": {
+               "list": {
+                "record": {
+                 "opt": {},
+                 "req": {
+                  "name": {
+                   "types": [
+                    "string"
+                   ]
+                  },
+                  "note": {
+                   "types": [
+                    "string"
+                   ]
+                  },
+                  "sequence": {
+                   "list": {
+                    "types": [
+                     "string"
+                    ]
+                   }
+                  }
+                 }
+                }
+               }
+              },
+              "intro": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
+              "loop": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           },
+           "investment": {
+            "record": {
+             "opt": {},
+             "req": {
+              "awakening": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
+              "gear": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
+              "karma": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
+              "skills": {
+               "list": {
+                "record": {
+                 "opt": {},
+                 "req": {
+                  "priority": {
+                   "types": [
+                    "string"
+                   ]
+                  },
+                  "text": {
+                   "types": [
+                    "string"
+                   ]
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           },
+           "kit": {
+            "list": {
+             "record": {
+              "opt": {},
+              "req": {
+               "points": {
+                "list": {
+                 "types": [
+                  "string"
+                 ]
+                }
+               },
+               "title": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           },
+           "pronoun": {
+            "types": [
+             "string"
+            ]
+           },
+           "summary": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           },
+           "teams": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           },
+           "updated": {
+            "types": [
+             "string"
+            ]
+           },
+           "verdict": {
+            "record": {
+             "opt": {},
+             "req": {
+              "label": {
+               "types": [
+                "string"
+               ]
+              },
+              "level": {
+               "types": [
+                "string"
+               ]
+              },
+              "text": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        },
+        "role": {
+         "types": [
+          "string"
+         ]
+        },
+        "skills": {
+         "list": {
+          "record": {
+           "opt": {
+            "codexAttackPct": {
+             "types": [
+              "number"
+             ]
+            },
+            "meta": {
+             "record": {
+              "opt": {},
+              "req": {
+               "attackPct": {
+                "types": [
+                 "null",
+                 "number"
+                ]
+               },
+               "inflicts": {
+                "list": {
+                 "types": [
+                  "string"
+                 ]
+                }
+               },
+               "maxLevel": {
+                "types": [
+                 "null",
+                 "number"
+                ]
+               },
+               "requiresAny": {
+                "list": {
+                 "types": [
+                  "string"
+                 ]
+                }
+               }
+              }
+             }
+            }
+           },
+           "req": {
+            "description": {
+             "types": [
+              "string"
+             ]
+            },
+            "skill": {
+             "types": [
+              "string"
+             ]
+            },
+            "slot": {
+             "types": [
+              "string"
+             ]
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "COOKBOOK": {
+     "record": {
+      "opt": {},
+      "req": {
+       "dishes": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "best": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           },
+           "bestStars": {
+            "types": [
+             "number"
+            ]
+           },
+           "duration": {
+            "types": [
+             "null",
+             "string"
+            ]
+           },
+           "effect": {
+            "types": [
+             "string"
+            ]
+           },
+           "fixed": {
+            "types": [
+             "bool"
+            ]
+           },
+           "id": {
+            "types": [
+             "string"
+            ]
+           },
+           "image": {
+            "types": [
+             "string"
+            ]
+           },
+           "method": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "scope": {
+            "types": [
+             "string"
+            ]
+           },
+           "slots": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           },
+           "text": {
+            "types": [
+             "string"
+            ]
+           },
+           "tiers": {
+            "map": {
+             "types": [
+              "string"
+             ]
+            }
+           }
+          }
+         }
+        }
+       },
+       "effects": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "color": {
+            "types": [
+             "string"
+            ]
+           },
+           "icon": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "ingredients": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "category": {
+            "types": [
+             "string"
+            ]
+           },
+           "icon": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "stars": {
+            "types": [
+             "number"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "intro": {
+        "types": [
+         "string"
+        ]
+       },
+       "methods": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "color": {
+            "types": [
+             "string"
+            ]
+           },
+           "total": {
+            "types": [
+             "number"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "starRule": {
+        "types": [
+         "string"
+        ]
+       },
+       "total": {
+        "types": [
+         "number"
+        ]
+       }
+      }
+     }
+    },
+    "DAMAGE_CALC": {
+     "record": {
+      "opt": {},
+      "req": {
+       "buffHint": {
+        "types": [
+         "string"
+        ]
+       },
+       "customLabel": {
+        "types": [
+         "string"
+        ]
+       },
+       "emptyHint": {
+        "types": [
+         "string"
+        ]
+       },
+       "fixedGroup": {
+        "types": [
+         "string"
+        ]
+       },
+       "fixedNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "formula": {
+        "types": [
+         "string"
+        ]
+       },
+       "intro": {
+        "types": [
+         "string"
+        ]
+       },
+       "levelEstNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "levelFarNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "lockTitle": {
+        "types": [
+         "string"
+        ]
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "notes": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "onceNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "overNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "requireAlias": {
+        "map": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "requireNoLock": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "skillAdjust": {
+        "list": {
+         "record": {
+          "opt": {
+           "note": {
+            "types": [
+             "string"
+            ]
+           },
+           "variants": {
+            "list": {
+             "record": {
+              "opt": {},
+              "req": {
+               "label": {
+                "types": [
+                 "string"
+                ]
+               },
+               "mult": {
+                "types": [
+                 "number"
+                ]
+               }
+              }
+             }
+            }
+           }
+          },
+          "req": {
+           "hero": {
+            "types": [
+             "string"
+            ]
+           },
+           "slots": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           }
+          }
+         }
+        }
+       },
+       "statsHint": {
+        "types": [
+         "string"
+        ]
+       },
+       "statusHint": {
+        "types": [
+         "string"
+        ]
+       },
+       "statuses": {
+        "list": {
+         "record": {
+          "opt": {
+           "untested": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "req": {
+           "hitBonus": {
+            "types": [
+             "number"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "towerDot": {
+        "types": [
+         "string"
+        ]
+       },
+       "towerDotUntested": {
+        "types": [
+         "string"
+        ]
+       },
+       "towerOwn": {
+        "types": [
+         "string"
+        ]
+       },
+       "towerTip": {
+        "types": [
+         "string"
+        ]
+       },
+       "towerUntested": {
+        "types": [
+         "string"
+        ]
+       },
+       "typedNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "variantNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "weakTip": {
+        "types": [
+         "string"
+        ]
+       },
+       "weaknessMeasured": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "weaknessMultiplier": {
+        "types": [
+         "number"
+        ]
+       },
+       "weaknessUntested": {
+        "types": [
+         "string"
+        ]
+       }
+      }
+     }
+    },
+    "DEFENSE_MODEL": {
+     "record": {
+      "opt": {},
+      "req": {
+       "K": {
+        "types": [
+         "number"
+        ]
+       },
+       "checks": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "enemies": {
+        "list": {
+         "record": {
+          "opt": {
+           "range": {
+            "list": {
+             "types": [
+              "number"
+             ]
+            }
+           }
+          },
+          "req": {
+           "basis": {
+            "types": [
+             "string"
+            ]
+           },
+           "defense": {
+            "types": [
+             "number"
+            ]
+           },
+           "level": {
+            "types": [
+             "number"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "fitPoints": {
+        "types": [
+         "number"
+        ]
+       },
+       "formula": {
+        "types": [
+         "string"
+        ]
+       },
+       "levelCurve": {
+        "record": {
+         "opt": {},
+         "req": {
+          "dungeon": {
+           "map": {
+            "types": [
+             "number"
+            ]
+           }
+          },
+          "note": {
+           "types": [
+            "string"
+           ]
+          },
+          "worldFactor": {
+           "types": [
+            "number"
+           ]
+          }
+         }
+        }
+       },
+       "maxError": {
+        "types": [
+         "string"
+        ]
+       },
+       "measured": {
+        "types": [
+         "string"
+        ]
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "places": {
+        "list": {
+         "record": {
+          "opt": {
+           "bossMult": {
+            "types": [
+             "number"
+            ]
+           },
+           "enemies": {
+            "list": {
+             "record": {
+              "opt": {
+               "note": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
+              "req": {
+               "mult": {
+                "types": [
+                 "number"
+                ]
+               },
+               "name": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           },
+           "factor": {
+            "types": [
+             "number"
+            ]
+           },
+           "mobMult": {
+            "types": [
+             "number"
+            ]
+           },
+           "note": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "req": {
+           "id": {
+            "types": [
+             "string"
+            ]
+           },
+           "label": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "trainingOgre": {
+        "record": {
+         "opt": {},
+         "req": {
+          "K": {
+           "types": [
+            "number"
+           ]
+          },
+          "defense": {
+           "types": [
+            "number"
+           ]
+          }
+         }
+        }
+       },
+       "types": {
+        "list": {
+         "record": {
+          "opt": {
+           "note": {
+            "types": [
+             "string"
+            ]
+           },
+           "once": {
+            "types": [
+             "bool"
+            ]
+           }
+          },
+          "req": {
+           "group": {
+            "types": [
+             "string"
+            ]
+           },
+           "mult": {
+            "types": [
+             "number"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "worth": {
+        "record": {
+         "opt": {},
+         "req": {
+          "armorPenetration": {
+           "types": [
+            "string"
+           ]
+          },
+          "defenseIgnore": {
+           "types": [
+            "string"
+           ]
+          },
+          "orangeSubstats": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "DUNGEONS": {
+     "record": {
+      "opt": {},
+      "req": {
+       "currency": {
+        "list": {
+         "record": {
+          "opt": {
+           "banner": {
+            "types": [
+             "string"
+            ]
+           },
+           "description": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "req": {
+           "difficulties": {
+            "list": {
+             "record": {
+              "opt": {},
+              "req": {
+               "enemyLevel": {
+                "types": [
+                 "number"
+                ]
+               },
+               "name": {
+                "types": [
+                 "string"
+                ]
+               },
+               "rewards": {
+                "list": {
+                 "list": {
+                  "types": [
+                   "number",
+                   "string"
+                  ]
+                 }
+                }
+               },
+               "rewardsKnown": {
+                "types": [
+                 "bool"
+                ]
+               }
+              }
+             }
+            }
+           },
+           "gives": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "currencyNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "currencyRewardItems": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "icon": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "difficulties": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "color": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "roman": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "enemyLevelLabel": {
+        "types": [
+         "string"
+        ]
+       },
+       "farmGroups": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "normal": {
+        "list": {
+         "record": {
+          "opt": {
+           "banner": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "req": {
+           "difficulties": {
+            "list": {
+             "record": {
+              "opt": {},
+              "req": {
+               "banner": {
+                "types": [
+                 "string"
+                ]
+               },
+               "enemyLevel": {
+                "types": [
+                 "number"
+                ]
+               },
+               "gear": {
+                "list": {
+                 "types": [
+                  "string"
+                 ]
+                }
+               },
+               "name": {
+                "types": [
+                 "string"
+                ]
+               },
+               "rewards": {
+                "list": {
+                 "list": {
+                  "types": [
+                   "number",
+                   "string"
+                  ]
+                 }
+                }
+               }
+              }
+             }
+            }
+           },
+           "farm": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "set": {
+            "types": [
+             "string"
+            ]
+           },
+           "slots": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           }
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "rewardItems": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "icon": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "undiscovered": {
+        "map": {
+         "types": [
+          "number"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "FAMILIARS": {
+     "record": {
+      "opt": {},
+      "req": {
+       "abilities": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "cooldown": {
+            "types": [
+             "number"
+            ]
+           },
+           "description": {
+            "types": [
+             "string"
+            ]
+           },
+           "icon": {
+            "types": [
+             "string"
+            ]
+           },
+           "species": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "currencies": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "icon": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "empty": {
+        "types": [
+         "string"
+        ]
+       },
+       "groups": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "list": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "group": {
+            "types": [
+             "string"
+            ]
+           },
+           "image": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "obtain": {
+            "record": {
+             "opt": {
+              "amount": {
+               "types": [
+                "number"
+               ]
+              },
+              "count": {
+               "types": [
+                "number"
+               ]
+              },
+              "currency": {
+               "types": [
+                "string"
+               ]
+              },
+              "price": {
+               "types": [
+                "string"
+               ]
+              },
+              "url": {
+               "types": [
+                "string"
+               ]
+              }
+             },
+             "req": {
+              "label": {
+               "types": [
+                "string"
+               ]
+              },
+              "type": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           },
+           "owned": {
+            "types": [
+             "bool"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "owned": {
+        "map": {
+         "types": [
+          "number"
+         ]
+        }
+       },
+       "passiveNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "passiveNotes": {
+        "map": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "passives": {
+        "map": {
+         "list": {
+          "record": {
+           "opt": {},
+           "req": {
+            "count": {
+             "types": [
+              "number"
+             ]
+            },
+            "scope": {
+             "types": [
+              "string"
+             ]
+            },
+            "text": {
+             "types": [
+              "string"
+             ]
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "GEAR_DATA": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "icon": {
+         "types": [
+          "string"
+         ]
+        },
+        "name": {
+         "types": [
+          "string"
+         ]
+        },
+        "source": {
+         "types": [
+          "string"
+         ]
+        },
+        "three": {
+         "types": [
+          "string"
+         ]
+        },
+        "threeBonus": {
+         "list": {
+          "record": {
+           "opt": {
+            "condition": {
+             "types": [
+              "string"
+             ]
+            }
+           },
+           "req": {
+            "stat": {
+             "types": [
+              "string"
+             ]
+            },
+            "value": {
+             "types": [
+              "number"
+             ]
+            }
+           }
+          }
+         }
+        },
+        "two": {
+         "types": [
+          "string"
+         ]
+        },
+        "twoBonus": {
+         "list": {
+          "record": {
+           "opt": {},
+           "req": {
+            "stat": {
+             "types": [
+              "string"
+             ]
+            },
+            "value": {
+             "types": [
+              "number"
+             ]
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "GEAR_MODEL": {
+     "record": {
+      "opt": {},
+      "req": {
+       "defense": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "label": {
+            "types": [
+             "string"
+            ]
+           },
+           "tip": {
+            "types": [
+             "string"
+            ]
+           },
+           "value": {
+            "types": [
+             "number"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "excludeSets": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "level": {
+        "types": [
+         "number"
+        ]
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "physical": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "runeMix": {
+        "map": {
+         "types": [
+          "number"
+         ]
+        }
+       },
+       "statuses": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "teamStatuses": {
+        "map": {
+         "list": {
+          "types": [
+           "string"
+          ]
+         }
+        }
+       }
+      }
+     }
+    },
+    "GEAR_STATS": {
+     "record": {
+      "opt": {},
+      "req": {
+       "databaseSlots": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "main": {
+            "map": {
+             "list": {
+              "types": [
+               "number"
+              ]
+             }
+            }
+           },
+           "sub": {
+            "map": {
+             "types": [
+              "number"
+             ]
+            }
+           }
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "observedBlue": {
+        "record": {
+         "opt": {},
+         "req": {
+          "critRateFinding": {
+           "types": [
+            "string"
+           ]
+          },
+          "main": {
+           "list": {
+            "record": {
+             "opt": {},
+             "req": {
+              "level": {
+               "types": [
+                "number"
+               ]
+              },
+              "slot": {
+               "types": [
+                "string"
+               ]
+              },
+              "stat": {
+               "types": [
+                "string"
+               ]
+              },
+              "value": {
+               "types": [
+                "number"
+               ]
+              }
+             }
+            }
+           }
+          },
+          "note": {
+           "types": [
+            "string"
+           ]
+          },
+          "rows": {
+           "list": {
+            "record": {
+             "opt": {
+              "observation": {
+               "types": [
+                "string"
+               ]
+              },
+              "subs": {
+               "map": {
+                "types": [
+                 "number"
+                ]
+               }
+              },
+              "substatsShown": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             },
+             "req": {
+              "by": {
+               "types": [
+                "string"
+               ]
+              },
+              "byLevel": {
+               "list": {
+                "types": [
+                 "number"
+                ]
+               }
+              },
+              "date": {
+               "types": [
+                "string"
+               ]
+              },
+              "rarity": {
+               "types": [
+                "string"
+               ]
+              },
+              "slot": {
+               "types": [
+                "string"
+               ]
+              },
+              "stat": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           }
+          },
+          "rowsFinding": {
+           "types": [
+            "string"
+           ]
+          },
+          "runes": {
+           "types": [
+            "string"
+           ]
+          },
+          "sub": {
+           "list": {
+            "record": {
+             "opt": {
+              "note": {
+               "types": [
+                "string"
+               ]
+              }
+             },
+             "req": {
+              "slot": {
+               "types": [
+                "string"
+               ]
+              },
+              "stat": {
+               "types": [
+                "string"
+               ]
+              },
+              "value": {
+               "types": [
+                "number"
+               ]
+              }
+             }
+            }
+           }
+          },
+          "subRatios": {
+           "record": {
+            "opt": {},
+            "req": {
+             "blueVsDatabaseOrange": {
+              "map": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             },
+             "by": {
+              "types": [
+               "string"
+              ]
+             },
+             "date": {
+              "types": [
+               "string"
+              ]
+             },
+             "notes": {
+              "list": {
+               "types": [
+                "string"
+               ]
+              }
+             },
+             "pieces": {
+              "list": {
+               "record": {
+                "opt": {},
+                "req": {
+                 "level": {
+                  "types": [
+                   "number"
+                  ]
+                 },
+                 "main": {
+                  "list": {
+                   "types": [
+                    "number",
+                    "string"
+                   ]
+                  }
+                 },
+                 "rarity": {
+                  "types": [
+                   "string"
+                  ]
+                 },
+                 "set": {
+                  "types": [
+                   "string"
+                  ]
+                 },
+                 "slot": {
+                  "types": [
+                   "string"
+                  ]
+                 },
+                 "subs": {
+                  "list": {
+                   "types": [
+                    "string"
+                   ]
+                  },
+                  "map": {
+                   "types": [
+                    "number"
+                   ]
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       },
+       "percentStats": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "rarities": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "maxLevel": {
+            "types": [
+             "number"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "substats": {
+            "types": [
+             "number"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "slots": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "main": {
+            "map": {
+             "list": {
+              "types": [
+               "number"
+              ]
+             }
+            }
+           },
+           "sub": {
+            "map": {
+             "types": [
+              "number"
+             ]
+            }
+           }
+          }
+         }
+        }
+       },
+       "substatUnlockLevels": {
+        "list": {
+         "types": [
+          "number"
+         ]
+        }
+       },
+       "valueSources": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "checked": {
+            "types": [
+             "string"
+            ]
+           },
+           "note": {
+            "types": [
+             "string"
+            ]
+           },
+           "rows": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           }
+          }
+         },
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "GEAR_UPGRADE": {
+     "record": {
+      "opt": {},
+      "req": {
+       "crafting": {
+        "map": {
+         "record": {
+          "opt": {
+           "archetype": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "req": {
+           "normal": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "craftingNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "expMaterials": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "exp": {
+            "types": [
+             "number"
+            ]
+           },
+           "gold": {
+            "types": [
+             "number"
+            ]
+           },
+           "icon": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "rarity": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "inferred": {
+        "map": {
+         "list": {
+          "types": [
+           "number"
+          ]
+         }
+        }
+       },
+       "levels": {
+        "map": {
+         "list": {
+          "list": {
+           "types": [
+            "null",
+            "number"
+           ]
+          }
+         }
+        }
+       },
+       "levelsNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "refund": {
+        "record": {
+         "opt": {},
+         "req": {
+          "base": {
+           "map": {
+            "types": [
+             "number"
+            ]
+           }
+          },
+          "check": {
+           "types": [
+            "string"
+           ]
+          },
+          "rate": {
+           "types": [
+            "number"
+           ]
+          },
+          "text": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "GENERIC_KARMA": {
+     "map": {
+      "types": [
+       "string"
+      ]
+     }
+    },
+    "GUIDES": {
+     "record": {
+      "opt": {},
+      "req": {
+       "categories": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "items": {
+            "list": {
+             "record": {
+              "opt": {},
+              "req": {
+               "ready": {
+                "types": [
+                 "bool"
+                ]
+               },
+               "title": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       }
+      }
+     }
+    },
+    "HEROES": {
+     "list": {
+      "record": {
+       "opt": {
+        "profileFaction": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "req": {
+        "archIcon": {
+         "types": [
+          "string"
+         ]
+        },
+        "archetype": {
+         "types": [
+          "string"
+         ]
+        },
+        "classType": {
+         "types": [
+          "string"
+         ]
+        },
+        "faction": {
+         "types": [
+          "string"
+         ]
+        },
+        "name": {
+         "types": [
+          "string"
+         ]
+        },
+        "obtain": {
+         "record": {
+          "opt": {
+           "cost": {
+            "types": [
+             "string"
+            ]
+           },
+           "note": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "req": {
+           "method": {
+            "types": [
+             "null",
+             "string"
+            ]
+           }
+          }
+         }
+        },
+        "owned": {
+         "types": [
+          "bool"
+         ]
+        },
+        "portrait": {
+         "types": [
+          "string"
+         ]
+        },
+        "role": {
+         "types": [
+          "string"
+         ]
+        },
+        "tiers": {
+         "record": {
+          "opt": {},
+          "req": {
+           "Early-game": {
+            "types": [
+             "string"
+            ]
+           },
+           "End-game": {
+            "types": [
+             "string"
+            ]
+           },
+           "Mid-game": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "HERO_BASE_STATS": {
+     "map": {
+      "record": {
+       "opt": {},
+       "req": {
+        "Attack": {
+         "types": [
+          "number"
+         ]
+        },
+        "Critical Damage": {
+         "types": [
+          "number"
+         ]
+        },
+        "Critical Hit Chance": {
+         "types": [
+          "number"
+         ]
+        },
+        "Defense": {
+         "types": [
+          "number"
+         ]
+        },
+        "Max HP": {
+         "types": [
+          "number"
+         ]
+        },
+        "estimated": {
+         "types": [
+          "bool"
+         ]
+        },
+        "profile": {
+         "types": [
+          "string"
+         ]
+        },
+        "source": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "HERO_BUILDS": {
+     "map": {
+      "record": {
+       "opt": {
+        "setChoice": {
+         "record": {
+          "opt": {
+           "statusSetsIfBonusesMultiply": {
+            "map": {
+             "types": [
+              "number"
+             ]
+            }
+           }
+          },
+          "req": {
+           "set": {
+            "types": [
+             "string"
+            ]
+           },
+           "threePiece": {
+            "types": [
+             "string"
+            ]
+           },
+           "vsBattleWill": {
+            "map": {
+             "types": [
+              "number"
+             ]
+            }
+           }
+          }
+         }
+        }
+       },
+       "req": {
+        "level": {
+         "types": [
+          "number"
+         ]
+        },
+        "pieces": {
+         "map": {
+          "record": {
+           "opt": {},
+           "req": {
+            "main": {
+             "types": [
+              "string"
+             ]
+            },
+            "subs": {
+             "list": {
+              "types": [
+               "string"
+              ]
+             }
+            }
+           }
+          }
+         }
+        },
+        "rarity": {
+         "types": [
+          "string"
+         ]
+        },
+        "type": {
+         "types": [
+          "string"
+         ]
+        },
+        "why": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "HERO_STAT_MODEL": {
+     "record": {
+      "opt": {},
+      "req": {
+       "breakthroughNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "breakthroughProfiles": {
+        "map": {
+         "record": {
+          "opt": {
+           "Attack": {
+            "record": {
+             "opt": {},
+             "req": {
+              "Lv20": {
+               "types": [
+                "number"
+               ]
+              },
+              "Lv30": {
+               "types": [
+                "number"
+               ]
+              },
+              "Lv40": {
+               "types": [
+                "number"
+               ]
+              },
+              "Lv50": {
+               "types": [
+                "number"
+               ]
+              },
+              "perTierIncrease": {
+               "types": [
+                "number"
+               ]
+              }
+             }
+            }
+           },
+           "Defense": {
+            "record": {
+             "opt": {},
+             "req": {
+              "Lv20": {
+               "types": [
+                "number"
+               ]
+              },
+              "Lv30": {
+               "types": [
+                "number"
+               ]
+              },
+              "Lv40": {
+               "types": [
+                "number"
+               ]
+              },
+              "Lv50": {
+               "types": [
+                "number"
+               ]
+              },
+              "perTierIncrease": {
+               "types": [
+                "number"
+               ]
+              }
+             }
+            }
+           },
+           "Max HP": {
+            "record": {
+             "opt": {},
+             "req": {
+              "Lv20": {
+               "types": [
+                "number"
+               ]
+              },
+              "Lv30": {
+               "types": [
+                "number"
+               ]
+              },
+              "Lv40": {
+               "types": [
+                "number"
+               ]
+              },
+              "Lv50": {
+               "types": [
+                "number"
+               ]
+              },
+              "perTierIncrease": {
+               "types": [
+                "number"
+               ]
+              }
+             }
+            }
+           },
+           "measuredOnly": {
+            "types": [
+             "bool"
+            ]
+           },
+           "note": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "req": {
+           "label": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "breakthroughs": {
+        "list": {
+         "types": [
+          "number"
+         ]
+        }
+       },
+       "level": {
+        "types": [
+         "number"
+        ]
+       },
+       "levelCurve": {
+        "record": {
+         "opt": {},
+         "req": {
+          "Attack": {
+           "record": {
+            "opt": {},
+            "req": {
+             "a": {
+              "types": [
+               "number"
+              ]
+             },
+             "b": {
+              "types": [
+               "number"
+              ]
+             },
+             "r": {
+              "types": [
+               "number"
+              ]
+             }
+            }
+           }
+          },
+          "Defense": {
+           "record": {
+            "opt": {},
+            "req": {
+             "a": {
+              "types": [
+               "number"
+              ]
+             },
+             "b": {
+              "types": [
+               "number"
+              ]
+             },
+             "r": {
+              "types": [
+               "number"
+              ]
+             }
+            }
+           }
+          },
+          "Max HP": {
+           "record": {
+            "opt": {},
+            "req": {
+             "a": {
+              "types": [
+               "number"
+              ]
+             },
+             "b": {
+              "types": [
+               "number"
+              ]
+             },
+             "r": {
+              "types": [
+               "number"
+              ]
+             }
+            }
+           }
+          },
+          "formula": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       },
+       "measured": {
+        "map": {
+         "list": {
+          "types": [
+           "number",
+           "string"
+          ]
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "observations": {
+        "record": {
+         "opt": {},
+         "req": {
+          "critRateText": {
+           "types": [
+            "string"
+           ]
+          },
+          "setBonusTest": {
+           "types": [
+            "string"
+           ]
+          },
+          "statusResistance": {
+           "types": [
+            "string"
+           ]
+          },
+          "titles": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       },
+       "profileRule": {
+        "types": [
+         "string"
+        ]
+       }
+      }
+     }
+    },
+    "KARMA_ASCENSION": {
+     "record": {
+      "opt": {},
+      "req": {
+       "measured": {
+        "map": {
+         "map": {
+          "list": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       },
+       "multipliers": {
+        "list": {
+         "types": [
+          "number"
+         ]
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "rounding": {
+        "record": {
+         "opt": {},
+         "req": {
+          "flat": {
+           "types": [
+            "number"
+           ]
+          },
+          "percent": {
+           "types": [
+            "number"
+           ]
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "KARMA_DATA": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "archetype": {
+         "types": [
+          "string"
+         ]
+        },
+        "base": {
+         "record": {
+          "opt": {},
+          "req": {
+           "Attack": {
+            "types": [
+             "string"
+            ]
+           },
+           "Defense": {
+            "types": [
+             "string"
+            ]
+           },
+           "Max HP": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        },
+        "baseLv1": {
+         "record": {
+          "opt": {},
+          "req": {
+           "Attack": {
+            "types": [
+             "string"
+            ]
+           },
+           "Defense": {
+            "types": [
+             "string"
+            ]
+           },
+           "Max HP": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        },
+        "exclusive": {
+         "types": [
+          "string"
+         ]
+        },
+        "image": {
+         "types": [
+          "string"
+         ]
+        },
+        "name": {
+         "types": [
+          "string"
+         ]
+        },
+        "owned": {
+         "types": [
+          "bool"
+         ]
+        },
+        "signature": {
+         "types": [
+          "null",
+          "string"
+         ]
+        },
+        "source": {
+         "types": [
+          "string"
+         ]
+        },
+        "statType": {
+         "types": [
+          "string"
+         ]
+        },
+        "traits": {
+         "list": {
+          "record": {
+           "opt": {},
+           "req": {
+            "a0": {
+             "types": [
+              "string"
+             ]
+            },
+            "a6": {
+             "types": [
+              "string"
+             ]
+            },
+            "label": {
+             "types": [
+              "string"
+             ]
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "KARMA_LEVELLING": {
+     "record": {
+      "opt": {},
+      "req": {
+       "measured": {
+        "map": {
+         "map": {
+          "list": {
+           "types": [
+            "number"
+           ]
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "order": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "types": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "lv1": {
+            "list": {
+             "types": [
+              "number"
+             ]
+            }
+           },
+           "lv70": {
+            "list": {
+             "types": [
+              "number"
+             ]
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "LEVEL_COSTS": {
+     "record": {
+      "opt": {},
+      "req": {
+       "breakthroughs": {
+        "record": {
+         "opt": {},
+         "req": {
+          "hero": {
+           "map": {
+            "record": {
+             "opt": {},
+             "req": {
+              "examples": {
+               "map": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
+              "gold": {
+               "types": [
+                "number"
+               ]
+              }
+             }
+            }
+           }
+          },
+          "heroPattern": {
+           "record": {
+            "opt": {},
+            "req": {
+             "insignia": {
+              "map": {
+               "types": [
+                "string"
+               ]
+              }
+             },
+             "monsterMaterial": {
+              "map": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             },
+             "note": {
+              "types": [
+               "string"
+              ]
+             },
+             "secondMaterial": {
+              "map": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           }
+          },
+          "heroTable": {
+           "record": {
+            "opt": {},
+            "req": {
+             "20": {
+              "record": {
+               "opt": {},
+               "req": {
+                "monster": {
+                 "list": {
+                  "list": {
+                   "types": [
+                    "number",
+                    "string"
+                   ]
+                  }
+                 }
+                }
+               }
+              }
+             },
+             "30": {
+              "record": {
+               "opt": {},
+               "req": {
+                "monster": {
+                 "list": {
+                  "list": {
+                   "types": [
+                    "number",
+                    "string"
+                   ]
+                  }
+                 }
+                },
+                "second": {
+                 "types": [
+                  "number"
+                 ]
+                }
+               }
+              }
+             },
+             "40": {
+              "record": {
+               "opt": {},
+               "req": {
+                "insignia": {
+                 "types": [
+                  "number"
+                 ]
+                },
+                "monster": {
+                 "list": {
+                  "list": {
+                   "types": [
+                    "number",
+                    "string"
+                   ]
+                  }
+                 }
+                },
+                "second": {
+                 "types": [
+                  "number"
+                 ]
+                }
+               }
+              }
+             },
+             "50": {
+              "record": {
+               "opt": {},
+               "req": {
+                "insignia": {
+                 "types": [
+                  "number"
+                 ]
+                },
+                "monster": {
+                 "list": {
+                  "list": {
+                   "types": [
+                    "number",
+                    "string"
+                   ]
+                  }
+                 }
+                },
+                "second": {
+                 "types": [
+                  "number"
+                 ]
+                }
+               }
+              }
+             },
+             "60": {
+              "record": {
+               "opt": {},
+               "req": {
+                "insignia": {
+                 "types": [
+                  "number"
+                 ]
+                },
+                "monster": {
+                 "list": {
+                  "list": {
+                   "types": [
+                    "number",
+                    "string"
+                   ]
+                  }
+                 }
+                },
+                "second": {
+                 "types": [
+                  "number"
+                 ]
+                }
+               }
+              }
+             },
+             "note": {
+              "types": [
+               "string"
+              ]
+             }
+            }
+           }
+          },
+          "karma": {
+           "map": {
+            "record": {
+             "opt": {},
+             "req": {
+              "examples": {
+               "map": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
+              "gold": {
+               "types": [
+                "number"
+               ]
+              }
+             }
+            }
+           }
+          },
+          "karmaPattern": {
+           "record": {
+            "opt": {},
+            "req": {
+             "crystal": {
+              "map": {
+               "types": [
+                "string"
+               ]
+              }
+             },
+             "note": {
+              "types": [
+               "string"
+              ]
+             },
+             "stoneColour": {
+              "record": {
+               "opt": {},
+               "req": {
+                "High-Grade": {
+                 "types": [
+                  "string"
+                 ]
+                },
+                "Intermediate": {
+                 "types": [
+                  "string"
+                 ]
+                },
+                "Low-Grade": {
+                 "types": [
+                  "string"
+                 ]
+                }
+               }
+              }
+             },
+             "table": {
+              "map": {
+               "record": {
+                "opt": {
+                 "chronograph": {
+                  "types": [
+                   "number"
+                  ]
+                 },
+                 "stones": {
+                  "list": {
+                   "list": {
+                    "types": [
+                     "number",
+                     "string"
+                    ]
+                   }
+                  }
+                 }
+                },
+                "req": {
+                 "crystal": {
+                  "types": [
+                   "number"
+                  ]
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          },
+          "note": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       },
+       "calc": {
+        "record": {
+         "opt": {},
+         "req": {
+          "btNote": {
+           "types": [
+            "string"
+           ]
+          },
+          "chronographBuy": {
+           "record": {
+            "opt": {},
+            "req": {
+             "emblems": {
+              "types": [
+               "number"
+              ]
+             },
+             "gold": {
+              "types": [
+               "number"
+              ]
+             },
+             "vendor": {
+              "types": [
+               "string"
+              ]
+             }
+            }
+           }
+          },
+          "farmExp": {
+           "record": {
+            "opt": {},
+            "req": {
+             "difficulty": {
+              "types": [
+               "number"
+              ]
+             },
+             "dungeon": {
+              "types": [
+               "string"
+              ]
+             },
+             "item": {
+              "types": [
+               "string"
+              ]
+             },
+             "reward": {
+              "types": [
+               "string"
+              ]
+             }
+            }
+           }
+          },
+          "farmExpKarma": {
+           "record": {
+            "opt": {},
+            "req": {
+             "difficulty": {
+              "types": [
+               "number"
+              ]
+             },
+             "dungeon": {
+              "types": [
+               "string"
+              ]
+             },
+             "item": {
+              "types": [
+               "string"
+              ]
+             },
+             "reward": {
+              "types": [
+               "string"
+              ]
+             }
+            }
+           }
+          },
+          "farmNote": {
+           "types": [
+            "string"
+           ]
+          },
+          "farmNoteKarma": {
+           "types": [
+            "string"
+           ]
+          },
+          "heroNone": {
+           "types": [
+            "string"
+           ]
+          },
+          "heroPick": {
+           "types": [
+            "string"
+           ]
+          },
+          "heroPickHint": {
+           "types": [
+            "string"
+           ]
+          },
+          "insigniaBuy": {
+           "record": {
+            "opt": {},
+            "req": {
+             "emblems": {
+              "types": [
+               "number"
+              ]
+             },
+             "gold": {
+              "types": [
+               "number"
+              ]
+             },
+             "vendor": {
+              "types": [
+               "string"
+              ]
+             }
+            }
+           }
+          },
+          "intro": {
+           "types": [
+            "string"
+           ]
+          },
+          "itemsHint": {
+           "types": [
+            "string"
+           ]
+          },
+          "karmaNone": {
+           "types": [
+            "string"
+           ]
+          },
+          "karmaPick": {
+           "types": [
+            "string"
+           ]
+          },
+          "karmaPickHint": {
+           "types": [
+            "string"
+           ]
+          },
+          "matsTitle": {
+           "types": [
+            "string"
+           ]
+          },
+          "maxLevel": {
+           "types": [
+            "number"
+           ]
+          },
+          "noItems": {
+           "types": [
+            "string"
+           ]
+          },
+          "note": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       },
+       "exp": {
+        "record": {
+         "opt": {},
+         "req": {
+          "hero": {
+           "record": {
+            "opt": {},
+            "req": {
+             "from": {
+              "types": [
+               "number"
+              ]
+             },
+             "toNext": {
+              "list": {
+               "types": [
+                "number"
+               ]
+              }
+             }
+            }
+           }
+          },
+          "karma": {
+           "record": {
+            "opt": {},
+            "req": {
+             "from": {
+              "types": [
+               "number"
+              ]
+             },
+             "toNext": {
+              "list": {
+               "types": [
+                "number"
+               ]
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       },
+       "expNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "items": {
+        "record": {
+         "opt": {},
+         "req": {
+          "gear": {
+           "list": {
+            "record": {
+             "opt": {},
+             "req": {
+              "exp": {
+               "types": [
+                "number"
+               ]
+              },
+              "gold": {
+               "types": [
+                "number"
+               ]
+              },
+              "icon": {
+               "types": [
+                "string"
+               ]
+              },
+              "name": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           }
+          },
+          "hero": {
+           "list": {
+            "record": {
+             "opt": {},
+             "req": {
+              "exp": {
+               "types": [
+                "number"
+               ]
+              },
+              "gold": {
+               "types": [
+                "number"
+               ]
+              },
+              "icon": {
+               "types": [
+                "string"
+               ]
+              },
+              "name": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           }
+          },
+          "karma": {
+           "list": {
+            "record": {
+             "opt": {},
+             "req": {
+              "exp": {
+               "types": [
+                "number"
+               ]
+              },
+              "gold": {
+               "types": [
+                "number"
+               ]
+              },
+              "icon": {
+               "types": [
+                "string"
+               ]
+              },
+              "name": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "pickRule": {
+        "types": [
+         "string"
+        ]
+       },
+       "skills": {
+        "record": {
+         "opt": {},
+         "req": {
+          "levels": {
+           "list": {
+            "record": {
+             "opt": {
+              "maxLv7": {
+               "list": {
+                "list": {
+                 "types": [
+                  "number",
+                  "string"
+                 ]
+                }
+               }
+              }
+             },
+             "req": {
+              "gold": {
+               "types": [
+                "number"
+               ]
+              },
+              "materials": {
+               "list": {
+                "list": {
+                 "types": [
+                  "number",
+                  "string"
+                 ]
+                }
+               }
+              },
+              "to": {
+               "types": [
+                "number"
+               ]
+              }
+             }
+            }
+           }
+          },
+          "levelsNote": {
+           "types": [
+            "string"
+           ]
+          },
+          "note": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       },
+       "unknown": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "PATCH_NOTES": {
+     "record": {
+      "opt": {},
+      "req": {
+       "badgeTypes": {
+        "map": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "directions": {
+        "map": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "impactLabels": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "latestBalance": {
+        "types": [
+         "string"
+        ]
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "patches": {
+        "list": {
+         "record": {
+          "opt": {
+           "launch": {
+            "types": [
+             "bool"
+            ]
+           }
+          },
+          "req": {
+           "badges": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           },
+           "balance": {
+            "types": [
+             "bool"
+            ]
+           },
+           "buildId": {
+            "types": [
+             "number"
+            ]
+           },
+           "date": {
+            "types": [
+             "string"
+            ]
+           },
+           "fixCount": {
+            "types": [
+             "number"
+            ]
+           },
+           "headline": {
+            "types": [
+             "string"
+            ]
+           },
+           "heroChanges": {
+            "map": {
+             "record": {
+              "opt": {
+               "damagePct": {
+                "types": [
+                 "number"
+                ]
+               },
+               "devNote": {
+                "types": [
+                 "string"
+                ]
+               },
+               "shiftPct": {
+                "types": [
+                 "number"
+                ]
+               },
+               "totalAfter": {
+                "types": [
+                 "number"
+                ]
+               },
+               "totalBefore": {
+                "types": [
+                 "number"
+                ]
+               }
+              },
+              "req": {
+               "changes": {
+                "list": {
+                 "record": {
+                  "opt": {
+                   "after": {
+                    "types": [
+                     "number"
+                    ]
+                   },
+                   "before": {
+                    "types": [
+                     "number"
+                    ]
+                   },
+                   "patchName": {
+                    "types": [
+                     "string"
+                    ]
+                   },
+                   "slot": {
+                    "types": [
+                     "string"
+                    ]
+                   },
+                   "text": {
+                    "types": [
+                     "string"
+                    ]
+                   }
+                  },
+                  "req": {
+                   "skill": {
+                    "types": [
+                     "string"
+                    ]
+                   }
+                  }
+                 }
+                }
+               },
+               "direction": {
+                "types": [
+                 "string"
+                ]
+               },
+               "impact": {
+                "types": [
+                 "number"
+                ]
+               }
+              }
+             }
+            }
+           },
+           "highlights": {
+            "list": {
+             "record": {
+              "opt": {
+               "heroes": {
+                "list": {
+                 "types": [
+                  "string"
+                 ]
+                }
+               }
+              },
+              "req": {
+               "badge": {
+                "types": [
+                 "string"
+                ]
+               },
+               "text": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           },
+           "source": {
+            "types": [
+             "string"
+            ]
+           },
+           "tierChanges": {
+            "list": {}
+           },
+           "time": {
+            "types": [
+             "string"
+            ]
+           },
+           "title": {
+            "types": [
+             "string"
+            ]
+           },
+           "version": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "rating": {
+        "types": [
+         "string"
+        ]
+       }
+      }
+     }
+    },
+    "ROLE_ICONS": {
+     "map": {
+      "types": [
+       "string"
+      ]
+     }
+    },
+    "RUNES": {
+     "record": {
+      "opt": {},
+      "req": {
+       "grades": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "color": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "raid": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "image": {
+        "types": [
+         "string"
+        ]
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "rules": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "seen": {
+        "map": {
+         "map": {
+          "list": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       },
+       "types": {
+        "list": {
+         "record": {
+          "opt": {
+           "gameStat": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "req": {
+           "color": {
+            "types": [
+             "string"
+            ]
+           },
+           "icon": {
+            "types": [
+             "string"
+            ]
+           },
+           "line": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "stat": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "SKILL_BUFF_LEVELS": {
+     "record": {
+      "opt": {},
+      "req": {
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "skills": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "effect": {
+            "types": [
+             "string"
+            ]
+           },
+           "hero": {
+            "types": [
+             "string"
+            ]
+           },
+           "skill": {
+            "types": [
+             "string"
+            ]
+           },
+           "values": {
+            "list": {
+             "types": [
+              "number"
+             ]
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "SKILL_LEVEL_MULTIPLIERS": {
+     "record": {
+      "opt": {},
+      "req": {
+       "byMaxLevel": {
+        "map": {
+         "list": {
+          "types": [
+           "number"
+          ]
+         }
+        }
+       },
+       "measured": {
+        "map": {
+         "list": {
+          "types": [
+           "null",
+           "number"
+          ]
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       }
+      }
+     }
+    },
+    "STATUS_ARCHETYPE": {
+     "map": {
+      "types": [
+       "string"
+      ]
+     }
+    },
+    "STATUS_EFFECTS": {
+     "record": {
+      "opt": {},
+      "req": {
+       "damageOverTime": {
+        "record": {
+         "opt": {},
+         "req": {
+          "durationSeconds": {
+           "types": [
+            "number"
+           ]
+          },
+          "maxStacks": {
+           "types": [
+            "number"
+           ]
+          },
+          "rules": {
+           "list": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "statuses": {
+           "list": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "tickEverySeconds": {
+           "types": [
+            "number"
+           ]
+          },
+          "tickPctByStacks": {
+           "list": {
+            "types": [
+             "number"
+            ]
+           }
+          },
+          "ticks": {
+           "types": [
+            "number"
+           ]
+          },
+          "untested": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       }
+      }
+     }
+    },
+    "TEAM_DATA": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "accent": {
+         "types": [
+          "string"
+         ]
+        },
+        "arch": {
+         "types": [
+          "string"
+         ]
+        },
+        "lead": {
+         "types": [
+          "string"
+         ]
+        },
+        "members": {
+         "list": {
+          "record": {
+           "opt": {
+            "alts": {
+             "list": {
+              "types": [
+               "string"
+              ]
+             }
+            }
+           },
+           "req": {
+            "name": {
+             "types": [
+              "string"
+             ]
+            }
+           }
+          }
+         }
+        },
+        "name": {
+         "types": [
+          "string"
+         ]
+        },
+        "note": {
+         "types": [
+          "string"
+         ]
+        },
+        "tags": {
+         "list": {
+          "types": [
+           "string"
+          ]
+         }
+        },
+        "tier": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "TIER_COLORS": {
+     "map": {
+      "types": [
+       "string"
+      ]
+     }
+    },
+    "TIER_LIST_V2": {
+     "record": {
+      "opt": {},
+      "req": {
+       "about": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "bosses": {
+        "list": {
+         "record": {
+          "opt": {
+           "image2": {
+            "types": [
+             "string"
+            ]
+           },
+           "info": {
+            "record": {
+             "opt": {},
+             "req": {
+              "difficulties": {
+               "list": {
+                "record": {
+                 "opt": {},
+                 "req": {
+                  "level": {
+                   "types": [
+                    "number"
+                   ]
+                  },
+                  "name": {
+                   "types": [
+                    "string"
+                   ]
+                  },
+                  "rewards": {
+                   "list": {
+                    "types": [
+                     "string"
+                    ]
+                   }
+                  }
+                 }
+                }
+               }
+              },
+              "fights": {
+               "list": {
+                "record": {
+                 "opt": {},
+                 "req": {
+                  "name": {
+                   "types": [
+                    "string"
+                   ]
+                  },
+                  "text": {
+                   "types": [
+                    "string"
+                   ]
+                  }
+                 }
+                }
+               }
+              },
+              "fightsNote": {
+               "types": [
+                "string"
+               ]
+              },
+              "intro": {
+               "types": [
+                "string"
+               ]
+              },
+              "rewardsNote": {
+               "types": [
+                "string"
+               ]
+              },
+              "strategy": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           },
+           "note": {
+            "types": [
+             "string"
+            ]
+           },
+           "stage": {
+            "types": [
+             "string"
+            ]
+           },
+           "theme": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "req": {
+           "id": {
+            "types": [
+             "string"
+            ]
+           },
+           "image": {
+            "types": [
+             "string"
+            ]
+           },
+           "immune": {
+            "list": {}
+           },
+           "level": {
+            "types": [
+             "number"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "portrait": {
+            "types": [
+             "string"
+            ]
+           },
+           "type": {
+            "types": [
+             "string"
+            ]
+           },
+           "weak": {
+            "list": {}
+           }
+          }
+         }
+        }
+       },
+       "heroes": {
+        "map": {
+         "record": {
+          "opt": {
+           "applies": {
+            "record": {
+             "opt": {},
+             "req": {
+              "also": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
+              "main": {
+               "list": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           },
+           "awk": {
+            "types": [
+             "number"
+            ]
+           },
+           "expert": {
+            "record": {
+             "opt": {},
+             "req": {
+              "drop": {
+               "types": [
+                "number"
+               ]
+              },
+              "reason": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           },
+           "needs": {
+            "list": {
+             "list": {
+              "types": [
+               "string"
+              ]
+             }
+            }
+           },
+           "progression": {
+            "record": {
+             "opt": {},
+             "req": {
+              "late": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           },
+           "signatureKarma": {
+            "types": [
+             "bool"
+            ]
+           }
+          },
+          "req": {
+           "overall": {
+            "record": {
+             "opt": {},
+             "req": {
+              "groups": {
+               "types": [
+                "string"
+               ]
+              },
+              "single": {
+               "types": [
+                "string"
+               ]
+              },
+              "tier": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           },
+           "role": {
+            "types": [
+             "string"
+            ]
+           },
+           "tags": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           }
+          }
+         }
+        }
+       },
+       "huntRatingRewards": {
+        "record": {
+         "opt": {},
+         "req": {
+          "note": {
+           "types": [
+            "string"
+           ]
+          },
+          "ranks": {
+           "list": {
+            "record": {
+             "opt": {},
+             "req": {
+              "amount": {
+               "types": [
+                "number"
+               ]
+              },
+              "icon": {
+               "types": [
+                "string"
+               ]
+              },
+              "item": {
+               "types": [
+                "string"
+               ]
+              },
+              "points": {
+               "types": [
+                "number"
+               ]
+              },
+              "rank": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       },
+       "modes": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "image": {
+            "types": [
+             "string"
+            ]
+           },
+           "intro": {
+            "types": [
+             "string"
+            ]
+           },
+           "label": {
+            "types": [
+             "string"
+            ]
+           },
+           "sub": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "ratings": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "text": {
+            "types": [
+             "string"
+            ]
+           },
+           "tier": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "roles": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "signatureKarmaText": {
+        "types": [
+         "string"
+        ]
+       },
+       "status": {
+        "types": [
+         "string"
+        ]
+       },
+       "tags": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "color": {
+            "types": [
+             "string"
+            ]
+           },
+           "desc": {
+            "types": [
+             "string"
+            ]
+           },
+           "label": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "tierColors": {
+        "map": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "tiers": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "undiscovered": {
+        "map": {}
+       }
+      }
+     }
+    },
+    "TIER_ORDER": {
+     "list": {
+      "types": [
+       "string"
+      ]
+     }
+    },
+    "TITLES": {
+     "record": {
+      "opt": {},
+      "req": {
+       "categories": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "grades": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "color": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "list": {
+        "list": {
+         "record": {
+          "opt": {
+           "condition": {
+            "types": [
+             "string"
+            ]
+           },
+           "inferred": {
+            "types": [
+             "bool"
+            ]
+           }
+          },
+          "req": {
+           "achievement": {
+            "types": [
+             "string"
+            ]
+           },
+           "category": {
+            "types": [
+             "string"
+            ]
+           },
+           "grade": {
+            "types": [
+             "number"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "obtained": {
+            "types": [
+             "bool"
+            ]
+           },
+           "passive": {
+            "list": {
+             "record": {
+              "opt": {},
+              "req": {
+               "stat": {
+                "types": [
+                 "string"
+                ]
+               },
+               "value": {
+                "types": [
+                 "number"
+                ]
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "ownedCount": {
+        "types": [
+         "number"
+        ]
+       },
+       "ownedCumulative": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "stat": {
+            "types": [
+             "string"
+            ]
+           },
+           "value": {
+            "types": [
+             "number"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "totalCount": {
+        "types": [
+         "number"
+        ]
+       }
+      }
+     }
+    },
+    "TOWER_TRIALS": {
+     "record": {
+      "opt": {},
+      "req": {
+       "bonus": {
+        "record": {
+         "opt": {},
+         "req": {
+          "dot": {
+           "types": [
+            "number"
+           ]
+          },
+          "dotTested": {
+           "list": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "example": {
+           "types": [
+            "string"
+           ]
+          },
+          "other": {
+           "types": [
+            "number"
+           ]
+          },
+          "own": {
+           "types": [
+            "number"
+           ]
+          },
+          "text": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
+       },
+       "conditions": {
+        "list": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "conditionsNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "cumulative": {
+        "list": {
+         "list": {
+          "types": [
+           "number",
+           "string"
+          ]
+         }
+        }
+       },
+       "enemyLevels": {
+        "types": [
+         "string"
+        ]
+       },
+       "entry": {
+        "types": [
+         "string"
+        ]
+       },
+       "floorRewards": {
+        "list": {
+         "types": [
+          "number"
+         ]
+        }
+       },
+       "floors": {
+        "types": [
+         "number"
+        ]
+       },
+       "image": {
+        "types": [
+         "string"
+        ]
+       },
+       "items": {
+        "record": {
+         "opt": {},
+         "req": {
+          "memory": {
+           "record": {
+            "opt": {},
+            "req": {
+             "icon": {
+              "types": [
+               "string"
+              ]
+             },
+             "name": {
+              "types": [
+               "string"
+              ]
+             }
+            }
+           }
+          },
+          "whirling": {
+           "record": {
+            "opt": {},
+            "req": {
+             "icon": {
+              "types": [
+               "string"
+              ]
+             },
+             "name": {
+              "types": [
+               "string"
+              ]
+             },
+             "use": {
+              "types": [
+               "string"
+              ]
+             }
+            }
+           }
+          }
+         }
+        }
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "starsPerFloor": {
+        "types": [
+         "number"
+        ]
+       },
+       "towers": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "archetype": {
+            "types": [
+             "string"
+            ]
+           },
+           "crest": {
+            "types": [
+             "string"
+            ]
+           },
+           "id": {
+            "types": [
+             "string"
+            ]
+           },
+           "measured": {
+            "types": [
+             "bool"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "pos": {
+            "types": [
+             "string"
+            ]
+           },
+           "status": {
+            "types": [
+             "string"
+            ]
+           },
+           "text": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "unlock": {
+        "types": [
+         "string"
+        ]
+       }
+      }
+     }
+    },
+    "TRAIT_DUNGEONS": {
+     "record": {
+      "opt": {},
+      "req": {
+       "bosses": {
+        "list": {
+         "record": {
+          "opt": {
+           "note": {
+            "types": [
+             "string"
+            ]
+           }
+          },
+          "req": {
+           "archetype": {
+            "types": [
+             "string"
+            ]
+           },
+           "family": {
+            "types": [
+             "string"
+            ]
+           },
+           "id": {
+            "types": [
+             "string"
+            ]
+           },
+           "image": {
+            "types": [
+             "string"
+            ]
+           },
+           "immune": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "previewImage": {
+            "types": [
+             "string"
+            ]
+           },
+           "weak": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           }
+          }
+         }
+        }
+       },
+       "difficulties": {
+        "types": [
+         "number"
+        ]
+       },
+       "difficultyLevels": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "color": {
+            "types": [
+             "string"
+            ]
+           },
+           "level": {
+            "types": [
+             "number"
+            ]
+           },
+           "n": {
+            "types": [
+             "number"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "rewards": {
+            "list": {
+             "list": {
+              "types": [
+               "number",
+               "string"
+              ]
+             }
+            }
+           },
+           "roman": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "empty": {
+        "types": [
+         "string"
+        ]
+       },
+       "immunityNote": {
+        "types": [
+         "string"
+        ]
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "rewardItems": {
+        "map": {
+         "record": {
+          "opt": {},
+          "req": {
+           "icon": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
+       "weaknessTest": {
+        "types": [
+         "string"
+        ]
+       }
+      }
+     }
+    },
+    "UI_ICONS": {
+     "map": {
+      "types": [
+       "string"
+      ]
+     }
+    },
+    "meta": {
+     "record": {
+      "opt": {},
+      "req": {
+       "balancePatch": {
+        "types": [
+         "string"
+        ]
+       },
+       "note": {
+        "types": [
+         "string"
+        ]
+       },
+       "patch": {
+        "types": [
+         "string"
+        ]
+       },
+       "patchDates": {
+        "map": {
+         "types": [
+          "string"
+         ]
+        }
+       },
+       "updated": {
+        "types": [
+         "string"
+        ]
+       }
+      }
+     }
+    },
+    "schemaVersion": {
+     "types": [
+      "number"
+     ]
+    }
+   }
+  }
+ }
+}
