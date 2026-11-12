@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Hunt boss resistances: Extreme reading (notes only; Claude)
+- David's Extreme reading of Ryza's Stormbringer on Furcas (Shock about 0.9, Airborne about 0.22) shows that Nightmare and Hell halve every status's build-up (both give about 0.45 and 0.10), while up to Extreme physical statuses build like on the Ogre and the weak element about 2.7×. GAME_MATH 3.3 rewritten as a table. No site or data change. `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Hunt boss resistances, first reading (notes only; Claude)
 - GAME_MATH 3.3: David's Furcas readings against the Ogre values from Test 01 (Ryza Shock ×1.36, Airborne ×0.5; Charlotte Poison ×0.2), and what they suggest: everything resisted about 2× more, non-weak elements about 2.5× more on top, weak elements raised about 2.7×. Marked as a hypothesis (one boss, eye readings, difficulty not noted).
 - GAME_MATH 3.4: physical statuses alone also remove the Nightmare+ damage-resistance buff while they last (David, 12 Nov).

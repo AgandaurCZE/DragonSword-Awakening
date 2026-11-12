@@ -100,10 +100,17 @@ Terms:
 - Not affected by hero or skill level, and neither is Super Armor gauge damage (Castella removed the same gauge at Lv.20 as at Lv.70).
 - **Super Armor Break doubles the build-up of physical statuses** (Stun, Knockdown, Airborne), not Frost or DoTs.
 - Bosses resist build-up more than mobs, and more at higher difficulty (Trait Dungeon I to III roughly halves it). A weakness raises build-up about 2–3× and doubles that status's hit bonus.
-- **Hunt boss resistances, first reading (David, Furcas, 12 Nov; difficulty not noted; gauge fill read by eye from the build-up rings):** each Hunt boss has **two weak elements**; other elements aren't immune but resist far more. Compared with the Training Ogre (Test 01):
-  - Ryza's Stormbringer: Shock about 0.45 (Ogre 0.33, **×1.36**, a weakness), Airborne about 0.10 (Ogre 0.20, **×0.5**).
-  - Charlotte's Poison Dagger: Poison about 0.10 (Ogre 0.50, **×0.2**). Her Ogre value was measured at A1; she's A6 now, so recheck it on the Ogre before relying on this one.
-  - Reading: **everything is resisted more** (the physical Airborne, which isn't an element, is halved), a non-weak element **about 2.5× more on top** (×0.2 instead of ×0.5), and a weak element is raised about 2.7× from that halved base (×1.36), in line with "a weakness raises build-up about 2–3×" above. One boss, one reading each, by eye: a working hypothesis until Test 07.
+- **Hunt boss resistances (David, Furcas, 12 Nov; gauge fill read by eye from the build-up rings):** each Hunt boss has **two weak elements**; other elements aren't immune but resist far more. Ryza's Stormbringer and Charlotte's Poison Dagger compared with the Training Ogre (Test 01):
+
+  | Furcas | Shock (weak) | Airborne (physical) | Poison (not weak) |
+  |---|---|---|---|
+  | Training Ogre | 0.33 | 0.20 | 0.50 |
+  | Extreme | about 0.9 (**×2.7**) | about 0.22 (**×1.1**, like the Ogre) | not read |
+  | Nightmare and Hell (same) | about 0.45 (**×1.36**) | about 0.10 (**×0.5**) | about 0.10 (**×0.2**) |
+
+  - **Nightmare and up halve every status's build-up** (Shock and Airborne both exactly half of Extreme; Hell the same as Nightmare).
+  - Up to Extreme a physical status builds like on the Ogre, the weak element about 2.7× (in line with "a weakness raises build-up about 2–3×" above), and a non-weak element about 0.4× (×0.2 at Nightmare doubled back, an estimate).
+  - Charlotte's Ogre value was measured at A1; she's A6 now, so recheck it on the Ogre before relying on the Poison column. One boss, eye readings: a working hypothesis until Test 07.
 - Leftover build-up stays on the enemy after a physical status ends.
 - Some skills apply statuses the codex doesn't mention (Charlotte's Illusion Kick and Clone explosion apply Poison and Airborne; Johnny's Venom Cutter spreads Airborne).
 - **Effects that continue after a swap or interact across heroes** (David, in game, 9 Nov; not in the codex text): Tarte's Bolt Bubble keeps casting after she swaps out, so orbs keep coming while the next hero is on the field and that hero's Shock hits detonate them. Dana's Chako keeps fighting while she's swapped out. Cerese's Shattering Touch shatters Othello's Ice Prison if she's played after him.
