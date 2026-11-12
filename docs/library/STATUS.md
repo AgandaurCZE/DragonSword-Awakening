@@ -47,7 +47,7 @@ David approved replacing the old public view with the former preview. Implemente
 - Crit Rate awakenings were rated before the 30 Oct gear rebuild; re-check whether they're worth more now.
 - Hero review texts on the profiles still describe the old ratings; David will redo them later (10 Nov), so leave them.
 - Test 06 inside the Towers of Trials; new enemies, Quest items and World Bosses as David meets them.
-- Banner art for Residual Worm Cleanup Zone; Hunt rating rewards and Fame stages above 3.
+- Hunt rating rewards and Fame stages above 3.
 
 ## Deployment access (11 Nov, Codex)
 Resolved in this chat after api.github.com was allowed and the policy finished applying. Existing authentication successfully read the latest run and individual job/step results: 52e17ef passed checks and publishing (run 42947852910). No new token was needed. Recheck actual access if a later task uses a different environment; the normal Actions web page remains a fallback.

@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 12 Nov — Residual Worm Cleanup Zone banner
+
+David approved the cavern panorama with the giant worm’s ringed shaft and a smaller worm surfacing beyond the rim. This completes all five Currency Dungeon banners.
+
 ## 12 Nov — Eroded Underground Cemetery banner
 
 David approved the candlelit crypt with gold-filled chests and faint red eyes in the rear arch. The same banner is used for all three Currency Dungeon difficulties.

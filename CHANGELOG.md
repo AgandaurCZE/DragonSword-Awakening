@@ -1,5 +1,9 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Residual Worm Cleanup Zone banner (Codex)
+- Added David’s approved cavern panorama to the Residual Worm Cleanup Zone card. The giant worm’s ringed shaft and the smaller emerging worm feature in one WebP shared across I, II and III. All five Currency Dungeons now have artwork.
+- Checks: `check_all.py` passed after increasing the local Windows test server’s connection queue. `public_diff.py` found changes only within the Worm Cleanup Zone card at both widths (2 of 109 public views). All three difficulty settings were verified at both widths.
+
 ## 12 Nov 2026 — Eroded Underground Cemetery banner (Codex)
 - Added David’s approved candlelit crypt, overflowing gold chests and faint red eyes to the Eroded Underground Cemetery card. One WebP is shared across I, II and III.
 - Checks: `check_all.py` passed. `public_diff.py` found changes only within the Cemetery card at both widths (2 of 109 public views). All three difficulty settings were verified at both widths.
