@@ -7292,12 +7292,3 @@ a.shortcut-card:focus-visible {
       0 0 32px #b45cff55;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  #bossArt .ba-art,
-  .app-content > header h1 {
-    animation: none !important;
-  }
-  #bossArt.ba-cycle .ba-right {
-    opacity: 0;
-  }
-}

@@ -552,6 +552,14 @@ def boss_header(browser, base):
     page.wait_for_timeout(300)
     if page.evaluate("getComputedStyle(document.getElementById('bossArt')).display!=='none'"):
         bad('boss header: art showing on a narrow screen')
+    rctx = browser.new_context(viewport={'width': 1400, 'height': 900}, reduced_motion='reduce')
+    rpage = open_site(rctx, base, 'tierlist', 'boss header, reduced motion')
+    rpage.evaluate("()=>{Object.assign(V2,{mode:'bosses',boss:'ursula'});renderTierV2();}")
+    rpage.wait_for_timeout(150)
+    names = rpage.evaluate("[getComputedStyle(document.querySelector('.v2-boss.raid.on .v2-boss-alt')).animationName,getComputedStyle(document.querySelector('#bossArt .ba-right')).animationName]")
+    if names[0] != names[1]:
+        bad(f'boss header: with reduced motion the box swaps ({names[0]}) but the header art does not ({names[1]})')
+    rctx.close()
     print('  boss header art checked')
     ctx.close()
 
