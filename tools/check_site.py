@@ -37,9 +37,13 @@ GM_CASES = [
 problems = []
 
 
+SILENT = []   # non-empty while a self-test provokes failures on purpose (icon_checks); they are removed again
+
+
 def bad(msg):
     problems.append(msg)
-    print('  FAIL ' + msg)
+    if not SILENT:
+        print('  FAIL ' + msg)
 
 
 class QuietHandler(http.server.SimpleHTTPRequestHandler):
@@ -84,6 +88,74 @@ def launch(p):
         raise first
 
 
+FAVICON = 'assets/ui/favicon.png'
+ICONS = [(FAVICON, 64), ('assets/ui/apple-touch-icon.png', 180)]
+
+
+def aborted_favicon(url, failure, base):
+    """David's exception (12 Nov 2026): Chromium sometimes cancels the tab-icon download when the check moves on quickly.
+    Only that exact URL with net::ERR_ABORTED is ignored; any other failure, file or reason still fails. The icon itself is
+    checked separately by icon_checks(), which downloads and decodes it."""
+    return url == base + FAVICON and failure == 'net::ERR_ABORTED'
+
+
+def icon_problem(page, url, size):
+    """Download an icon and decode it in the browser. Returns a message, or None if it is a valid image of the given size."""
+    return page.evaluate("""async ([u, n]) => {
+        let r;
+        try { r = await fetch(u, {cache: 'no-store'}); } catch (e) { return 'download failed: ' + e.message; }
+        if (!r.ok) return 'HTTP ' + r.status;
+        try {
+            const bmp = await createImageBitmap(await r.blob());
+            if (bmp.width !== n || bmp.height !== n) return `decoded as ${bmp.width}x${bmp.height}, expected ${n}x${n}`;
+        } catch (e) { return 'not a valid image: ' + e.message; }
+        return null;
+    }""", [url, size])
+
+
+def icon_checks(browser, base):
+    """The tab icons load and decode; and the favicon exception is tested both ways (David, 12 Nov 2026)."""
+    ctx = browser.new_context(viewport={'width': 800, 'height': 600})
+    page = ctx.new_page()
+    page.goto(base, wait_until='networkidle')
+    for path, n in ICONS:
+        msg = icon_problem(page, base + path, n)
+        if msg:
+            bad(f'icons: {path}: {msg}')
+    # The decode check must catch a missing and a corrupt icon.
+    page.route(base + 'assets/ui/corrupt-test.png', lambda r: r.fulfill(status=200, content_type='image/png', body=b'\x89PNG\r\n\x1a\nnot really a png'))
+    if not icon_problem(page, base + 'assets/ui/missing-test.png', 64):
+        bad('icons: self-test: a missing icon was not reported')
+    if not icon_problem(page, base + 'assets/ui/corrupt-test.png', 64):
+        bad('icons: self-test: a corrupt icon was not reported')
+    # The request-failure filter: only a cancelled favicon passes.
+    cases = [(base + FAVICON, 'net::ERR_ABORTED', True), (base + FAVICON, 'net::ERR_FILE_NOT_FOUND', False),
+             (base + FAVICON, 'net::ERR_CONNECTION_REFUSED', False), (base + 'assets/ui/gold.webp', 'net::ERR_ABORTED', False),
+             (base + 'x/' + FAVICON, 'net::ERR_ABORTED', False)]
+    for url, why, ok in cases:
+        if aborted_favicon(url, why, base) != ok:
+            bad(f'icons: self-test: {url.replace(base, "")} with {why} should {"pass" if ok else "fail"}')
+    # And in a real browser: a cancelled favicon download records nothing, a refused one is recorded.
+    for reason, expect in (('aborted', False), ('connectionrefused', True)):
+        p2 = ctx.new_page()
+        before = len(problems)
+        SILENT.append(1)
+        watch(p2, 'icons self-test', base)
+        p2.goto(base, wait_until='networkidle')
+        p2.route(base + FAVICON, lambda r, _req=None, why=reason: r.abort(why))
+        # Headless Chromium doesn't fetch the tab icon by itself (full Chrome in CI does), so the test requests it.
+        p2.evaluate("u => fetch(u, {cache: 'no-store'}).catch(() => null)", base + FAVICON)
+        p2.wait_for_timeout(300)
+        mine = [m for m in problems[before:] if 'icons self-test: request failed' in m]
+        del problems[before:]
+        SILENT.clear()
+        if bool(mine) != expect:
+            bad(f'icons: self-test: favicon {reason} {"was not reported" if expect else "was reported: " + "; ".join(mine)}')
+        p2.close()
+    print('  tab icons downloaded and decoded; favicon cancellation exception tested')
+    ctx.close()
+
+
 def watch(page, where, base):
     """Record console errors, script errors and missing files for this page."""
     def short(u):
@@ -94,7 +166,11 @@ def watch(page, where, base):
             bad(f'{where}: console error: {m.text[:300]} ({short((m.location or {}).get("url", ""))})')
     page.on('console', console)
     page.on('pageerror', lambda e: bad(f'{where}: script error: {str(e)[:300]}'))
-    page.on('requestfailed', lambda r: None if r.url.startswith('data:') else bad(f'{where}: request failed: {short(r.url)}'))
+    def failed(r):
+        if r.url.startswith('data:') or aborted_favicon(r.url, r.failure, base):
+            return
+        bad(f'{where}: request failed: {short(r.url)} ({r.failure})')
+    page.on('requestfailed', failed)
     page.on('response', lambda r: bad(f'{where}: HTTP {r.status} for {short(r.url)}')
             if r.status >= 400 and not r.url.endswith('favicon.ico') else None)
 
@@ -608,6 +684,7 @@ def main():
             print('check_site: no browser could be started (%s). The browser checks did NOT run.' % str(e).splitlines()[0])
             return 2
         print('check_site: Beta smoke test and legacy URL compatibility')
+        icon_checks(browser, base)
         smoke(browser, base)
         beta_routes(browser, base)
         beta_interactions(browser, base)

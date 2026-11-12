@@ -1,5 +1,15 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Check change approved by David: a cancelled tab-icon download no longer fails a publish (Claude)
+- **Why:** two publish runs today failed with "request failed: assets/ui/favicon.png" and passed on an unchanged re-run. Full Chrome in CI sometimes cancels the tab-icon download when the check moves on quickly (`net::ERR_ABORTED`); the site was fine.
+- **David's conditions (12 Nov), all met in `tools/check_site.py`:**
+  1. `aborted_favicon()`: only the exact URL `<site>/assets/ui/favicon.png` with `net::ERR_ABORTED` is ignored.
+  2. Every other request failure still fails, now with its reason in the message (missing files, HTTP errors and refused connections are unaffected).
+  3. New `icon_checks()` (runs first in every browser check): downloads `favicon.png` and `apple-touch-icon.png` and decodes them in the browser (`createImageBitmap`); each must be a valid image of 64×64 and 180×180.
+  4. The exception is tested on every run: the filter against five cases (cancelled favicon passes; favicon not found, favicon connection refused, another file cancelled and a look-alike path all fail); in a real browser a cancelled favicon download records nothing and a refused one is recorded; the decode check must report a missing icon (HTTP 404) and a corrupt one (PNG header plus junk).
+- **Proved both ways:** with a deliberately too-loose filter the self-test reported 4 problems; with a wrong icon (gold.webp, 122×128) the decode check failed; with the real code `check_site.py --quick` passes.
+- `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Raid rewards by difficulty, as icons (Claude)
 - **What David sees:** the Rewards panel of Gauron and Ursula now has three difficulty circles (I Normal, II Hard, III Very Hard, coloured like the dungeons' circles); each shows that difficulty's recommended level and its rewards as icon tiles with amounts, instead of the old text lists.
 - **Gauron (David's list, 12 Nov):** every difficulty drops all three normal sets (Battle Will, Ballad of Life, The Infiltrator) in Legendary quality. Normal Lv.50: Damaged and Intact Runes, EXP 800, Gold 150,000, Adventurer's Emblem 30, Anonymous Artisan's Crafting Tool 1, Shape Grinder 1–3. Hard Lv.70: Refined and Radiant Runes, EXP 1,500, Gold 250,000, Emblem 50, Tool 2, Grinder 3–5. Very Hard Lv.90: Perfect Runes, EXP 2,500, Gold 350,000, Emblem 70, Tool 3, Grinder 5–7. Was: one set per difficulty, missing numbers and "3 more items (not identified yet)".
