@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 13 Nov 2026 — Ryza's basic attack split (notes only; Claude)
+- David's five-move sequence on the Ogre (1194, 1194, 895 + 895 + 1791, 2388, 3582) adds up to 11,939, the formula's value for the codex 383%: the codex % is the whole sequence, and the first move is 10% of it. GAME_MATH 3.4 updated; the open point in STATUS is closed. No site or data change. `check_all.py`: ALL CHECKS PASSED.
+
 ## 13 Nov 2026 — Damage Calculator: Hunt boss enemies (Claude)
 - **What David sees:** a fifth button, **Hunt boss**, in the Damage Calculator's Enemy box. It lists the six Hunt bosses by difficulty (with level), plus Gallore's Nightmare and Hell with one stone fist off, and fills in their Defense from GAME_MATH 3.4. On Nightmare and Hell the hit is multiplied by 0.171 (the damage-resistance buff) until one of the boss's weak elements or Airborne, Knockdown or Stun is ticked; the result says which status removed it.
 - Data: new place `hunt` in `DEFENSE_MODEL.places` with `bosses[{id, rows[]}]`, `buff`, `buffRemovedBy`, `buffNote`, `buffOff` (DATA_REFERENCE; `check_shape.py --update` printed 14 added keys, all intended). Code: `dcHuntRows()`, `dcBossName()`, `dcResist()` and a `resist` factor in `dcCompute()` (`src/js/08-items-tools-guides.js`, `?v=20261113a`); routes regenerated.
