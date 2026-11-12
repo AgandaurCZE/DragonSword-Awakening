@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 12 Nov — Furcas and Vanak header artwork
+
+David approved both left-corner cutouts. The 1120 × 760 transparent PNGs are in `assets/bosses/bosses-header/`.
+
 ## 12 Nov — Residual Worm Cleanup Zone banner
 
 David approved the cavern panorama with the giant worm’s ringed shaft and a smaller worm surfacing beyond the rim. This completes all five Currency Dungeon banners.

@@ -1,5 +1,9 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Boss tier list header artwork
+- Stored the approved Furcas and Vanak left-corner artwork in `assets/bosses/bosses-header/` as 1120 × 760 transparent PNGs for the header implementation.
+- Checks: `check_all.py` passed. `public_diff.py --preview` matched all 218 public and preview views pixel for pixel. Both copied PNGs match the approved files by checksum.
+
 ## 12 Nov 2026 — Residual Worm Cleanup Zone banner (Codex)
 - Added David’s approved cavern panorama to the Residual Worm Cleanup Zone card. The giant worm’s ringed shaft and the smaller emerging worm feature in one WebP shared across I, II and III. All five Currency Dungeons now have artwork.
 - Checks: `check_all.py` passed after increasing the local Windows test server’s connection queue. `public_diff.py` found changes only within the Worm Cleanup Zone card at both widths (2 of 109 public views). All three difficulty settings were verified at both widths.

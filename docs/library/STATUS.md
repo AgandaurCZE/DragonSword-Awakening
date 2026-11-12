@@ -2,6 +2,10 @@
 
 Back to the library: [docs/README.md](../README.md). Update this file during and at the end of every session; it's the first thing the next chat reads after [WORKING_WITH_DAVID.md](WORKING_WITH_DAVID.md). Finished items move to [DONE.md](DONE.md); every change is in `CHANGELOG.md`. Site tasks are in [SITE.md](SITE.md). David's own to-do list: `docs/dragonsword_david_todo_by_priority.html` (updated 10 Nov).
 
+## Boss tier list header artwork — 12 Nov
+
+Furcas and Vanak are approved and stored in `assets/bosses/bosses-header/`. The remaining boss cutouts are under individual review, starting with Barduk’s wing revision. The header layout is a separate implementation task.
+
 ## Repository organisation — 12 Nov (Codex)
 David requested a tidy repository: website code is now in `src/`, generated URL entries in `routes/`, Python tools in `tools/`. Assets, Markdown and game-data locations remain unchanged. Build/serve/publish now assemble the original public paths. Full `check_all.py` passed; all 218 public/alias pixel views are identical to the previous release. Clean Git archive assembly passed; all 675 asset/data/code/URL files retain their public contents (generated comments excluded). The commit “Organise website source and URL folders” publishes through the same gated workflow. No implementation task remains. Restore point `a7644fb`.
 
