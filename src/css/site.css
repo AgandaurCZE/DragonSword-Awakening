@@ -7135,3 +7135,151 @@ a.shortcut-card:focus-visible {
     flex-basis: 74px;
   }
 }
+/* Boss header art (David, 12 Nov 2026): PC only; shown on the tier list in Bosses mode with a boss picked. */
+#bossArt {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .boss-art .app-content:has(> #tierPage:not([hidden])) {
+    position: relative;
+  }
+  .boss-art .app-content:has(> #tierPage:not([hidden])) > #bossArt {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 475px;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .boss-art .app-content:has(> #tierPage:not([hidden])) > header,
+  .boss-art .app-content:has(> #tierPage:not([hidden])) > main {
+    position: relative;
+    z-index: 1;
+  }
+  .boss-art .app-content:has(> #tierPage:not([hidden])) > header {
+    background: transparent;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  #bossArt .ba-art {
+    position: absolute;
+    top: -23px;
+    width: 700px;
+    height: 475px;
+    background: no-repeat top / contain;
+    -webkit-mask-image:
+      linear-gradient(var(--ba-dir), #000 55%, transparent 88%), linear-gradient(to bottom, #000 45%, transparent 92%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(var(--ba-dir), #000 55%, transparent 88%), linear-gradient(to bottom, #000 45%, transparent 92%);
+    mask-composite: intersect;
+  }
+  #bossArt .ba-left {
+    left: 0;
+    --ba-dir: to right;
+    background-position: left top;
+  }
+  #bossArt .ba-right {
+    right: 0;
+    --ba-dir: to left;
+    background-position: right top;
+  }
+  #bossArt.ba-cycle .ba-left {
+    animation: baHuman 60s ease-in-out infinite;
+  }
+  #bossArt.ba-cycle .ba-right {
+    animation: v2alt 60s ease-in-out infinite;
+  }
+  #bossArt .ba-icons {
+    position: absolute;
+    right: 46px;
+    top: 72px;
+    display: flex;
+    gap: 14px;
+  }
+  #bossArt .ba-icons img {
+    width: 104px;
+    height: 104px;
+    filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.8));
+  }
+  .boss-art .app-content:has(> #tierPage:not([hidden])) > header.ba-raid h1 {
+    color: #ff3b47;
+    -webkit-text-stroke: 0.6px #000;
+    animation: baRaidGlow 2.6s ease-in-out infinite;
+  }
+  .boss-art .app-content:has(> #tierPage:not([hidden])) > header.ba-raid.ba-succubus h1 {
+    font-family: 'Grenze Gotisch', Georgia, serif;
+    font-weight: 700;
+    color: #dcb0ff;
+    letter-spacing: 0.03em;
+    -webkit-text-stroke: 0.5px #000;
+    animation-name: baSuccubusGlow;
+  }
+  .boss-art .app-content:has(> #tierPage:not([hidden])) > header.ba-one h1 {
+    color: var(--ba-a);
+  }
+  .boss-art .app-content:has(> #tierPage:not([hidden])) > header.ba-split h1 {
+    background: linear-gradient(105deg, var(--ba-a) 0 var(--ba-cut, 50%), var(--ba-b) var(--ba-cut, 50%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+@keyframes baHuman {
+  0%,
+  47% {
+    opacity: 1;
+  }
+  50%,
+  97% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes baRaidGlow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 2px #000,
+      0 0 8px #c4142b88;
+  }
+  50% {
+    text-shadow:
+      0 0 2px #000,
+      0 0 16px #ff2a3acc,
+      0 0 32px #ff2a3a55;
+  }
+}
+@keyframes baSuccubusGlow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 2px #000,
+      0 0 8px #8a2be288;
+  }
+  50% {
+    text-shadow:
+      0 0 2px #000,
+      0 0 16px #b45cffcc,
+      0 0 32px #b45cff55;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #bossArt .ba-art,
+  .app-content > header h1 {
+    animation: none !important;
+  }
+  #bossArt.ba-cycle .ba-right {
+    opacity: 0;
+  }
+}

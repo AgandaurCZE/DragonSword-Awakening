@@ -1567,11 +1567,6 @@
         "list": {
          "record": {
           "opt": {
-           "banner": {
-            "types": [
-             "string"
-            ]
-           },
            "description": {
             "types": [
              "string"
@@ -1579,6 +1574,11 @@
            }
           },
           "req": {
+           "banner": {
+            "types": [
+             "string"
+            ]
+           },
            "difficulties": {
             "list": {
              "record": {
@@ -4880,6 +4880,24 @@
            }
           },
           "req": {
+           "header": {
+            "record": {
+             "opt": {
+              "right": {
+               "types": [
+                "string"
+               ]
+              }
+             },
+             "req": {
+              "left": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           },
            "id": {
             "types": [
              "string"

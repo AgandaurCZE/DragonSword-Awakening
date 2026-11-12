@@ -522,6 +522,40 @@ def tab_titles(browser, base):
     ctx.close()
 
 
+def boss_header(browser, base):
+    """Boss header art (David, 12 Nov 2026; check added by Claude): shown on PC in Bosses mode with a boss picked, art files load,
+    Raids get their look, and it is gone on other pages and on narrow screens."""
+    ctx = browser.new_context(viewport={'width': 1400, 'height': 900})
+    page = open_site(ctx, base, 'tierlist', 'boss header')
+    with open(os.path.join(ROOT, 'data.json'), encoding='utf-8') as f:
+        bosses = json.load(f)['TIER_LIST_V2']['bosses']
+    for b in bosses:
+        page.evaluate("id=>{Object.assign(V2,{mode:'bosses',boss:id});renderTierV2();}", b['id'])
+        page.wait_for_timeout(150)
+        st = page.evaluate("""()=>{const L=document.getElementById('bossArt'),h=document.querySelector('.app-content > header');return {shown:!!L&&getComputedStyle(L).display!=='none',left:L&&L.querySelector('.ba-left').style.backgroundImage,raid:h.classList.contains('ba-raid')}}""")
+        if not st['shown'] or b['header']['left'].split('/')[-1] not in (st['left'] or ''):
+            bad(f"boss header: {b['id']} art not shown ({st})")
+        if (b['type'] == 'Raid') != st['raid']:
+            bad(f"boss header: {b['id']} raid look is {st['raid']}")
+    for b in bosses:
+        for side in ('left', 'right'):
+            if side in b['header']:
+                r = page.request.get(base + b['header'][side])
+                if r.status != 200:
+                    bad(f"boss header: {b['header'][side]} returned {r.status}")
+    page.evaluate("document.querySelector('.nav-item[data-page=\"karma\"]').click()")
+    page.wait_for_timeout(200)
+    if page.evaluate("(()=>{const h=getComputedStyle(document.querySelector('.app-content > header h1'));return getComputedStyle(document.getElementById('bossArt')).display!=='none'||h.animationName!=='none'||h.webkitTextFillColor==='rgba(0, 0, 0, 0)'})()"):
+        bad('boss header: art or title style still showing on the Karma page')
+    page.go_back()
+    page.set_viewport_size({'width': 900, 'height': 900})
+    page.wait_for_timeout(300)
+    if page.evaluate("getComputedStyle(document.getElementById('bossArt')).display!=='none'"):
+        bad('boss header: art showing on a narrow screen')
+    print('  boss header art checked')
+    ctx.close()
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -540,6 +574,7 @@ def main():
         beta_routes(browser, base)
         beta_interactions(browser, base)
         tab_titles(browser, base)
+        boss_header(browser, base)
         with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
             beta_subpath(browser, prefixed)
         if not QUICK:

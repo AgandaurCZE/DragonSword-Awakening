@@ -461,6 +461,7 @@ function renderTierV2() {
       tip.style.top = Math.min(window.innerHeight - tip.offsetHeight - 12, r.bottom + 8) + 'px';
     });
   });
+  v2HeaderArt();
 }
 // ---- Cookbook (COOKBOOK in data.json; preview only) ----
 const CB = { m: '', e: '', hide: false, q: '', sel: null };
@@ -632,3 +633,89 @@ const ITEM_TABS = [
   ['important', 'Important'],
   ['quest', 'Quest'],
 ];
+
+/* Boss header art (David, 12 Nov 2026). PC only (CSS, 1100 px and wider). In Bosses mode with a boss picked, the header grows,
+   the boss art (TIER_LIST_V2.bosses[].header) sits in the top corners behind the centred title, and the title takes the boss's look:
+   Raids their card colour, font and breathing glow; Hunt bosses split diagonally through the middle letter in their two weakness
+   colours, with the weakness icons on the right. Raid art follows the card: humanoid left for 30 s, dragon right for 30 s, on the
+   card's own animation clock. */
+function v2HeaderArt() {
+  const app = document.querySelector('.app-content'),
+    hdr = app && app.querySelector(':scope > header');
+  if (!hdr) return;
+  let layer = $('bossArt');
+  if (!layer) {
+    layer = document.createElement('div');
+    layer.id = 'bossArt';
+    layer.setAttribute('aria-hidden', 'true');
+    layer.innerHTML =
+      '<div class="ba-art ba-left"></div><div class="ba-art ba-right"></div><div class="ba-icons"></div>';
+    app.prepend(layer);
+  }
+  const b = V2.mode === 'bosses' ? (v2Data().bosses || []).find((x) => x.id === V2.boss) : null,
+    art = b && b.header,
+    root = document.documentElement;
+  root.classList.toggle('boss-art', !!art);
+  hdr.classList.remove('ba-raid', 'ba-succubus', 'ba-split', 'ba-one');
+  hdr.style.removeProperty('--ba-a');
+  hdr.style.removeProperty('--ba-b');
+  if (!art) return;
+  const L = layer.querySelector('.ba-left'),
+    R = layer.querySelector('.ba-right'),
+    I = layer.querySelector('.ba-icons'),
+    raid = b.type === 'Raid',
+    weak = raid ? [] : (b.weak || []).filter((a) => ARCH_COLORS[a]).slice(0, 2);
+  L.style.backgroundImage = `url('${absUrl(art.left)}')`;
+  R.style.backgroundImage = art.right ? `url('${absUrl(art.right)}')` : 'none';
+  layer.classList.toggle('ba-cycle', raid && !!art.right);
+  I.innerHTML = weak
+    .map((a) => `<img src="${profileEsc(absUrl('assets/archetypes/' + a.toLowerCase() + '.webp'))}" alt="">`)
+    .join('');
+  if (raid) hdr.classList.add('ba-raid', ...(String(b.theme || '').includes('succubus') ? ['ba-succubus'] : []));
+  else if (weak.length) {
+    hdr.style.setProperty('--ba-a', ARCH_COLORS[weak[0]]);
+    hdr.style.setProperty('--ba-b', ARCH_COLORS[weak[1] || weak[0]]);
+    hdr.classList.add(weak.length > 1 ? 'ba-split' : 'ba-one');
+    v2HeaderSplit();
+  }
+  requestAnimationFrame(v2HeaderSync);
+}
+/* The diagonal split passes through the centre of the middle letter, counting letters only (not ':' or spaces). */
+function v2HeaderSplit() {
+  const hdr = document.querySelector('.app-content > header.ba-split'),
+    h1 = hdr && hdr.querySelector('h1'),
+    t = h1 && h1.firstChild;
+  if (!t || t.nodeType !== 3) return;
+  const idx = [...t.textContent].map((c, i) => (/[A-Za-z]/.test(c) ? i : -1)).filter((i) => i >= 0);
+  if (!idx.length) return;
+  const at = idx[Math.floor(idx.length / 2)],
+    r = document.createRange();
+  r.setStart(t, at);
+  r.setEnd(t, at + 1);
+  const box = h1.getBoundingClientRect(),
+    c = r.getBoundingClientRect();
+  if (!box.width) return;
+  const a = (105 * Math.PI) / 180,
+    len = box.width * Math.abs(Math.sin(a)) + box.height * Math.abs(Math.cos(a)),
+    x = (c.left + c.right) / 2 - box.left - box.width / 2,
+    y = (c.top + c.bottom) / 2 - box.top - box.height / 2;
+  hdr.style.setProperty('--ba-cut', (((x * Math.sin(a) - y * Math.cos(a) + len / 2) / len) * 100).toFixed(3) + '%');
+}
+/* Keep the header's swap and glow on the selected card's clock, so they never drift apart. */
+function v2HeaderSync() {
+  const card = document.querySelector('.v2-boss.raid.on');
+  if (!card || !document.documentElement.classList.contains('boss-art')) return;
+  const alt = card.querySelector('.v2-boss-alt')?.getAnimations()[0],
+    glow = card.getAnimations().find((a) => /v2raid|v2succubus/.test(a.animationName || '')),
+    h1 = document.querySelector('.app-content > header h1');
+  document.querySelectorAll('#bossArt .ba-art').forEach((el) =>
+    el.getAnimations().forEach((a) => {
+      if (alt && alt.currentTime != null) a.currentTime = alt.currentTime;
+    }),
+  );
+  h1?.getAnimations().forEach((a) => {
+    if (glow && glow.currentTime != null) a.currentTime = glow.currentTime;
+  });
+}
+window.addEventListener('resize', () => v2HeaderSplit());
+document.fonts?.ready.then(() => v2HeaderSplit());

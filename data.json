@@ -19000,7 +19000,10 @@
     "image": "assets/bosses/furcas-banner.webp",
     "weak": [],
     "immune": [],
-    "portrait": "assets/bosses/furcas.webp"
+    "portrait": "assets/bosses/furcas.webp",
+    "header": {
+     "left": "assets/bosses/bosses-header/furcas-left.webp"
+    }
    },
    {
     "id": "vanak",
@@ -19010,7 +19013,10 @@
     "image": "assets/bosses/vanak-banner.webp",
     "weak": [],
     "immune": [],
-    "portrait": "assets/bosses/vanak.webp"
+    "portrait": "assets/bosses/vanak.webp",
+    "header": {
+     "left": "assets/bosses/bosses-header/vanak-left.webp"
+    }
    },
    {
     "id": "barduk",
@@ -19020,7 +19026,10 @@
     "image": "assets/bosses/barduk-banner.webp",
     "weak": [],
     "immune": [],
-    "portrait": "assets/bosses/barduk.webp"
+    "portrait": "assets/bosses/barduk.webp",
+    "header": {
+     "left": "assets/bosses/bosses-header/barduk-left.webp"
+    }
    },
    {
     "id": "gallore",
@@ -19030,7 +19039,10 @@
     "image": "assets/bosses/gallore-banner.webp",
     "weak": [],
     "immune": [],
-    "portrait": "assets/bosses/gallore.webp"
+    "portrait": "assets/bosses/gallore.webp",
+    "header": {
+     "left": "assets/bosses/bosses-header/gallore-left.webp"
+    }
    },
    {
     "id": "ghoul-greed",
@@ -19041,7 +19053,10 @@
     "weak": [],
     "immune": [],
     "portrait": "assets/bosses/ghoul-greed.webp",
-    "note": "5th Hunt boss, unlocked after story Chapter 6. Normal: Lv.45, 1–2 members. Rewards: EXP 900, Necklace Soaked in Greed 1, Adventurer's Emblem 15, Secret Text of the Warrior 10, Record of Battle 20."
+    "note": "5th Hunt boss, unlocked after story Chapter 6. Normal: Lv.45, 1–2 members. Rewards: EXP 900, Necklace Soaked in Greed 1, Adventurer's Emblem 15, Secret Text of the Warrior 10, Record of Battle 20.",
+    "header": {
+     "left": "assets/bosses/bosses-header/ghoul-greed-left.webp"
+    }
    },
    {
     "id": "earthlander",
@@ -19052,7 +19067,10 @@
     "weak": [],
     "immune": [],
     "portrait": "assets/bosses/earthlander.webp",
-    "note": "6th and last Hunt boss, unlocked after story Chapter 8. Normal: Lv.50, 1–2 members. Rewards: EXP 1,000, Gigantic Tooth 1, Adventurer's Emblem 20, Secret Text of the Warrior 10, Record of Battle 20."
+    "note": "6th and last Hunt boss, unlocked after story Chapter 8. Normal: Lv.50, 1–2 members. Rewards: EXP 1,000, Gigantic Tooth 1, Adventurer's Emblem 20, Secret Text of the Warrior 10, Record of Battle 20.",
+    "header": {
+     "left": "assets/bosses/bosses-header/earthlander-left.webp"
+    }
    },
    {
     "id": "gauron",
@@ -19117,7 +19135,11 @@
      "rewardsNote": "Read from the reward lists in David's screenshots; the lists scroll, so some entries may be missing. Members: 1–3 on every difficulty.",
      "strategy": []
     },
-    "image2": "assets/bosses/gauron-dragon-banner.webp"
+    "image2": "assets/bosses/gauron-dragon-banner.webp",
+    "header": {
+     "left": "assets/bosses/bosses-header/gauron-left.webp",
+     "right": "assets/bosses/bosses-header/gauron-dragon-right.webp"
+    }
    },
    {
     "id": "ursula",
@@ -19189,7 +19211,11 @@
       "Dodging at the right moments is crucial: she has many grab attacks and can easily stun-lock you."
      ]
     },
-    "image2": "assets/bosses/ursula-dragon-banner.webp"
+    "image2": "assets/bosses/ursula-dragon-banner.webp",
+    "header": {
+     "left": "assets/bosses/bosses-header/ursula-left.webp",
+     "right": "assets/bosses/bosses-header/ursula-dragon-right.webp"
+    }
    }
   ],
   "undiscovered": {},
