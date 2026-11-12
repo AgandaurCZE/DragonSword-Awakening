@@ -1,5 +1,9 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Normal and Currency Dungeon reward icons: emblem and Gold on blue tiles (Claude)
+- David's bug report: Normal and Currency Dungeons showed Adventurer's Emblem and Gold on a black square and used a different emblem picture from Trait Dungeons. `DUNGEONS.rewardItems.emblem` and `DUNGEONS.currencyRewardItems.emblem` now use the Trait icon `assets/trait/icons/emblem.webp`; `DUNGEONS.currencyRewardItems.gold` uses the new `assets/trait/icons/gold.webp`: the existing gold coin on the same blue tile (the tile was taken from the Trait EXP icon with the EXP badge painted out, then the coin placed on it). Familiars' currency icons (`FAMILIARS.currencies`) are unchanged.
+- `public_diff.py`: exactly 4 of 109 views differ, Normal and Currency Dungeons at 1400 and 390 px, only in the reward icon columns (the requested change). `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Boss header swap stays in sync after switching bosses (Claude)
 - **Cause (David: in sync at first, drifting the longer he stayed; human form right after switching Gauron ↔ Ursula):** the boxes are re-drawn on every change, so each new box starts on the wall clock. The header art isn't re-drawn; I only changed its animation delay, and a changed delay on a running animation counts from when the animation first started, not from now. Every switch or re-draw therefore pushed the header off by the time since the first boss was picked.
 - **Fix:** the header's swap animation is restarted with the wall-clock delay each time it is set (`v2HeaderArt` in `src/js/07-tierlist-v2-cookbook.js`). Test: 90 s with six switches (Gauron, Ursula, Gauron, Barduk, Ursula, Gauron), opacity of box and header compared every second: before the fix up to 1.000 apart (completely opposite), after it at most 0.014.

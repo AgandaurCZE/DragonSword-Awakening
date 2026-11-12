@@ -21166,7 +21166,7 @@
    },
    "emblem": {
     "name": "Adventurer's Emblem",
-    "icon": "assets/ui/adventurers-emblem.webp"
+    "icon": "assets/trait/icons/emblem.webp"
    },
    "lowestradeonsterlaw": {
     "name": "Lowest-Grade Monster Claw",
@@ -22865,7 +22865,7 @@
   "currencyRewardItems": {
    "gold": {
     "name": "Gold",
-    "icon": "assets/ui/gold.webp"
+    "icon": "assets/trait/icons/gold.webp"
    },
    "basicCombatText": {
     "name": "Basic Combat Text",
@@ -22897,7 +22897,7 @@
    },
    "emblem": {
     "name": "Adventurer's Emblem",
-    "icon": "assets/ui/adventurers-emblem.webp"
+    "icon": "assets/trait/icons/emblem.webp"
    },
    "coreCombatText": {
     "name": "Core Combat Text",
