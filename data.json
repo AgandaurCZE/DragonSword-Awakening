@@ -19168,6 +19168,163 @@
     "portrait": "assets/bosses/vanak.webp",
     "header": {
      "left": "assets/bosses/bosses-header/vanak-left.webp"
+    },
+    "hunt": {
+     "members": "1–2",
+     "note": "From David's reward screens (12 Nov 2026), in the game's order.",
+     "difficulties": [
+      {
+       "name": "Normal",
+       "level": 25,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 500
+        },
+        {
+         "name": "Blood-stained Hook",
+         "icon": "assets/items/icons/blood-stained-hook.webp",
+         "amount": 1
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 10
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 15
+        }
+       ]
+      },
+      {
+       "name": "Hard",
+       "level": 40,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 800
+        },
+        {
+         "name": "Blood-stained Hook",
+         "icon": "assets/items/icons/blood-stained-hook.webp",
+         "amount": 3
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 15
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 10
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Very Hard",
+       "level": 55,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1100
+        },
+        {
+         "name": "Blood-stained Hook",
+         "icon": "assets/items/icons/blood-stained-hook.webp",
+         "amount": 5
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 20
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 15
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Extreme",
+       "level": 70,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1400
+        },
+        {
+         "name": "Blood-stained Hook",
+         "icon": "assets/items/icons/blood-stained-hook.webp",
+         "amount": 10
+        },
+        {
+         "name": "Secret Text of Victory",
+         "icon": "assets/items/icons/secret-text-of-victory.webp",
+         "amount": 10
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 25
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Nightmare",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 3000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 60
+        }
+       ]
+      },
+      {
+       "name": "Hell",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 5000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 100
+        }
+       ]
+      }
+     ]
     }
    },
    {

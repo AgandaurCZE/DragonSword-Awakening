@@ -1,5 +1,9 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Hunt rewards: Vanak, the last Hunt boss (Claude)
+- From David's full screenshot of Vanak's Extreme: Lv.70, EXP 1,400, Blood-stained Hook 10, Secret Text of Victory 10, Adventurer's Emblem 25, Secret Text of the Warrior 20. With the earlier screens: Normal Lv.25 EXP 500, Hook 1, Emblem 10, Record of Battle 15 · Hard Lv.40 800, 3, 15, Warrior 10, Record 20 · Very Hard Lv.55 1,100, 5, 20, Warrior 15, Record 20 · Nightmare Lv.90 EXP 3,000 + Emblem 60 · Hell Lv.90 EXP 5,000 + Emblem 100. All six Hunt bosses now have their rewards by difficulty.
+- The last six screenshots and the now-empty `assets/bosses/reward/` folder are deleted (David's rule for processed uploads). `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Hunt rewards: Barduk, Gallore, Ghoul Greed, Earthlander (Claude)
 - From David's full-width screenshots (sent as a RAR in chat, since the GitHub uploads were cut off by the image editor). All levels, members (1–2) and tiles read one by one; every boss's own material: Sage's Blood (Barduk), Stilled Core of Collapse (Gallore), Necklace Soaked in Greed (Ghoul Greed), Gigantic Tooth (Earthlander).
   - **Barduk:** Normal Lv.30 EXP 600, Sage's Blood 1, Emblem 10, Record of Battle 20 · Hard Lv.45 900, 3, 15, Secret Text of the Warrior 10, Record 20 · Very Hard Lv.60 1,200, 5, 20, Warrior 15, Record 20 · Extreme Lv.75 1,500, 10, Secret Text of Victory 10, Emblem 30, Warrior 20.

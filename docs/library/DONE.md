@@ -64,6 +64,7 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - Level curve refitted with Lv.40, Lv.50 and Lv.70 measurements (31 Oct–8 Nov).
 
 ## Site work (preview unless noted)
+- **12 Nov:** Hunt rewards by difficulty for all six Hunt bosses, with six game-style circles (I Normal to VI Hell).
 - **12 Nov:** Raid rewards by difficulty as icon tiles (Gauron completed from David's list); Normal/Currency Dungeon emblem and Gold icons on blue tiles.
 - **12 Nov:** boss header art on the tier list (PC): corner art, Raid humanoid/dragon swap synced to the card, Raid title look and glow, Hunt title split in weakness colours once known.
 - **12 Nov:** browser tab names as David set them (home, "<Page> | DragonSword: Awakening", "Tier List" for every tier view, "<Hero> Build Guide"); the checks test them.
