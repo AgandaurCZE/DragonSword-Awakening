@@ -1,5 +1,10 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Hunt boss resistances, first reading (notes only; Claude)
+- GAME_MATH 3.3: David's Furcas readings against the Ogre values from Test 01 (Ryza Shock ×1.36, Airborne ×0.5; Charlotte Poison ×0.2), and what they suggest: everything resisted about 2× more, non-weak elements about 2.5× more on top, weak elements raised about 2.7×. Marked as a hypothesis (one boss, eye readings, difficulty not noted).
+- GAME_MATH 3.4: physical statuses alone also remove the Nightmare+ damage-resistance buff while they last (David, 12 Nov).
+- No site or data change. `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Hunt rewards: Vanak, the last Hunt boss (Claude)
 - From David's full screenshot of Vanak's Extreme: Lv.70, EXP 1,400, Blood-stained Hook 10, Secret Text of Victory 10, Adventurer's Emblem 25, Secret Text of the Warrior 20. With the earlier screens: Normal Lv.25 EXP 500, Hook 1, Emblem 10, Record of Battle 15 · Hard Lv.40 800, 3, 15, Warrior 10, Record 20 · Very Hard Lv.55 1,100, 5, 20, Warrior 15, Record 20 · Nightmare Lv.90 EXP 3,000 + Emblem 60 · Hell Lv.90 EXP 5,000 + Emblem 100. All six Hunt bosses now have their rewards by difficulty.
 - The last six screenshots and the now-empty `assets/bosses/reward/` folder are deleted (David's rule for processed uploads). `check_all.py`: ALL CHECKS PASSED.

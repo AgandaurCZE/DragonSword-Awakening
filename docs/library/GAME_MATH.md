@@ -100,6 +100,10 @@ Terms:
 - Not affected by hero or skill level, and neither is Super Armor gauge damage (Castella removed the same gauge at Lv.20 as at Lv.70).
 - **Super Armor Break doubles the build-up of physical statuses** (Stun, Knockdown, Airborne), not Frost or DoTs.
 - Bosses resist build-up more than mobs, and more at higher difficulty (Trait Dungeon I to III roughly halves it). A weakness raises build-up about 2–3× and doubles that status's hit bonus.
+- **Hunt boss resistances, first reading (David, Furcas, 12 Nov; difficulty not noted; gauge fill read by eye from the build-up rings):** each Hunt boss has **two weak elements**; other elements aren't immune but resist far more. Compared with the Training Ogre (Test 01):
+  - Ryza's Stormbringer: Shock about 0.45 (Ogre 0.33, **×1.36**, a weakness), Airborne about 0.10 (Ogre 0.20, **×0.5**).
+  - Charlotte's Poison Dagger: Poison about 0.10 (Ogre 0.50, **×0.2**). Her Ogre value was measured at A1; she's A6 now, so recheck it on the Ogre before relying on this one.
+  - Reading: **everything is resisted more** (the physical Airborne, which isn't an element, is halved), a non-weak element **about 2.5× more on top** (×0.2 instead of ×0.5), and a weak element is raised about 2.7× from that halved base (×1.36), in line with "a weakness raises build-up about 2–3×" above. One boss, one reading each, by eye: a working hypothesis until Test 07.
 - Leftover build-up stays on the enemy after a physical status ends.
 - Some skills apply statuses the codex doesn't mention (Charlotte's Illusion Kick and Clone explosion apply Poison and Airborne; Johnny's Venom Cutter spreads Airborne).
 - **Effects that continue after a swap or interact across heroes** (David, in game, 9 Nov; not in the codex text): Tarte's Bolt Bubble keeps casting after she swaps out, so orbs keep coming while the next hero is on the field and that hero's Shock hits detonate them. Dana's Chako keeps fighting while she's swapped out. Cerese's Shattering Touch shatters Othello's Ice Prison if she's played after him.
@@ -113,7 +117,7 @@ Terms:
   - **Currency Dungeon**: ×0.4, with no type or boss multiplier.
   - Type multipliers (`types`): e.g. Goblin Archer ×0.8, Barbarian and Berserker ×1.1, Lesser Dragon ×1.2, Greater Dragon ×1.5, named enemies with visible changes ×1.15. Look-alike enemies can differ by one 5% step.
 - **Towers of Trials** (`TOWER_TRIALS.bonus`): hits on an enemy with the tower's own status get **+400%**, and each damage-over-time status **+100%**, added to the Additional Damage pool. Other statuses add nothing. Crushing isn't measured.
-- **Hunt bosses, Nightmare and up**: a big damage-resistance buff that applying the boss's weak status removes (Furcas: Burn). The other bosses are untested (Test 07).
+- **Hunt bosses, Nightmare and up**: a big damage-resistance buff (about 90%) that applying the boss's weak status removes (Furcas: Burn). **Physical statuses alone also remove it for as long as they last** (David, 12 Nov). The other bosses' weaknesses: Test 07.
 - **Raid** (Gauron): structure in `TIER_LIST_V2.bosses[].info`; no separate damage rule measured.
 
 ### 3.5 Super Armor (Test 01) · 29 Oct, 8 Nov
