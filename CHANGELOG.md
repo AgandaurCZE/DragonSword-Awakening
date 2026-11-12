@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 13 Nov 2026 — Nightmare+ buff is 83% (notes only; Claude)
+- David: the "about 90%" was an estimate by eye; the measured ×0.171 (83%) is the value. GAME_MATH 3.4 states it as measured; STATUS no longer lists it as open. No site or data change (the calculator already uses 0.171). `check_all.py`: ALL CHECKS PASSED.
+
 ## 13 Nov 2026 — Ryza's basic attack split (notes only; Claude)
 - David's five-move sequence on the Ogre (1194, 1194, 895 + 895 + 1791, 2388, 3582) adds up to 11,939, the formula's value for the codex 383%: the codex % is the whole sequence, and the first move is 10% of it. GAME_MATH 3.4 updated; the open point in STATUS is closed. No site or data change. `check_all.py`: ALL CHECKS PASSED.
 

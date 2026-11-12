@@ -37,7 +37,7 @@ David approved replacing the old public view with the former preview. Implemente
 - **Note reconciliation completed 11 Nov:** current references now mark all 20 base stats, five discovered Currency Dungeons, measured Orange DI/APU substats and Ryza/Roxy signature art as complete. Historical test conditions and changelog entries remain dated history.
 
 ## Next for Claude (10 Nov)
-- **Hunt boss Defense (12 Nov): done**, table in GAME_MATH 3.4. Open: the Nightmare+ buff works out to about 83%, not 90%. In the Damage Calculator since 13 Nov (Hunt boss button).
+- **Hunt boss Defense (12 Nov): done**, table in GAME_MATH 3.4. The Nightmare+ buff is 83% (×0.171). In the Damage Calculator since 13 Nov (Hunt boss button).
 - **Boss rewards by difficulty (12 Nov):** Raids done (Gauron, Ursula). Hunts: six circles built and Furcas filled in (12 Nov). All six Hunt bosses done 12 Nov; the screenshots are deleted.
 - **Boss header art (12 Nov, live on PC):** the Hunt bosses' weakness icons and two-colour title switch on by themselves once `weak` is filled in for each boss (after Test 07). Still open from David: nothing; "All bosses" shows the normal header.
 - **Home page (David, 11 Nov):** the plain URL and the logo open a main view of shortcuts to every part of the site, each with its own picture (placeholders first). David sends a sketch. He is also leaning towards launching the site as is with that change; don't remove the gate until he says so. Its tab title: "DragonSword: Awakening, Guides, tools & Tier List".
