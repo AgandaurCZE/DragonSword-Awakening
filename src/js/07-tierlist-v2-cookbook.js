@@ -668,10 +668,15 @@ function v2HeaderArt() {
   L.style.backgroundImage = `url('${absUrl(art.left)}')`;
   R.style.backgroundImage = art.right ? `url('${absUrl(art.right)}')` : 'none';
   layer.classList.toggle('ba-cycle', raid && !!art.right);
-  /* Same wall-clock phase as the card's swap (its animation-delay is -(now mod 60) s), so header and card change together. */
-  const phase = `-${((Date.now() / 1000) % 60).toFixed(2)}s`;
-  L.style.animationDelay = phase;
-  R.style.animationDelay = phase;
+  /* Same wall-clock phase as the card's swap (its animation-delay is -(now mod 60) s), so header and card change together.
+     A changed delay on a running animation counts from when that animation first started, not from now, so the animation is
+     restarted each time (that was the drift David saw after switching bosses or re-drawing the tier list). */
+  [L, R].forEach((el) => {
+    el.style.animation = 'none';
+    void el.offsetWidth;
+    el.style.animation = '';
+    el.style.animationDelay = `-${((Date.now() / 1000) % 60).toFixed(3)}s`;
+  });
   I.innerHTML = weak
     .map((a) => `<img src="${profileEsc(absUrl('assets/archetypes/' + a.toLowerCase() + '.webp'))}" alt="">`)
     .join('');

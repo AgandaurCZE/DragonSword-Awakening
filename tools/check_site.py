@@ -552,6 +552,14 @@ def boss_header(browser, base):
     page.wait_for_timeout(300)
     if page.evaluate("getComputedStyle(document.getElementById('bossArt')).display!=='none'"):
         bad('boss header: art showing on a narrow screen')
+    page.set_viewport_size({'width': 1400, 'height': 900})
+    page.evaluate("()=>{Object.assign(V2,{mode:'bosses',boss:'gauron'});renderTierV2();}")
+    page.wait_for_timeout(1500)
+    page.evaluate("document.querySelector('[data-v2boss=\"ursula\"]').click()")
+    page.wait_for_timeout(300)
+    gap = page.evaluate("""()=>{const t=e=>e.getAnimations()[0].effect.getComputedTiming().localTime%60000;const a=t(document.querySelector('.v2-boss.raid.on .v2-boss-alt')),b=t(document.querySelector('#bossArt .ba-right'));const d=Math.abs(a-b);return Math.min(d,60000-d)}""")
+    if gap > 250:
+        bad(f'boss header: after switching Raid boss the header swap is {gap:.0f} ms away from the box')
     rctx = browser.new_context(viewport={'width': 1400, 'height': 900}, reduced_motion='reduce')
     rpage = open_site(rctx, base, 'tierlist', 'boss header, reduced motion')
     rpage.evaluate("()=>{Object.assign(V2,{mode:'bosses',boss:'ursula'});renderTierV2();}")

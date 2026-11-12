@@ -1,5 +1,10 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Boss header swap stays in sync after switching bosses (Claude)
+- **Cause (David: in sync at first, drifting the longer he stayed; human form right after switching Gauron ↔ Ursula):** the boxes are re-drawn on every change, so each new box starts on the wall clock. The header art isn't re-drawn; I only changed its animation delay, and a changed delay on a running animation counts from when the animation first started, not from now. Every switch or re-draw therefore pushed the header off by the time since the first boss was picked.
+- **Fix:** the header's swap animation is restarted with the wall-clock delay each time it is set (`v2HeaderArt` in `src/js/07-tierlist-v2-cookbook.js`). Test: 90 s with six switches (Gauron, Ursula, Gauron, Barduk, Ursula, Gauron), opacity of box and header compared every second: before the fix up to 1.000 apart (completely opposite), after it at most 0.014.
+- **Check:** `boss_header()` now switches from Gauron to Ursula after 1.5 s and fails if the header swap is more than 250 ms from the box (added, nothing loosened). `?v=20261112f` on js 07. `check_all.py`: ALL CHECKS PASSED (the new switching check first failed because it ran at the 900 px width left by the narrow-screen step, where the art is off; it now sets 1400 px first).
+
 ## 12 Nov 2026 — Boss header swap works with reduced-motion settings (Claude)
 - **Cause of "only the human forms" (David, two browsers):** my header styles switched the swap and glow off when the computer asks for reduced motion (Windows "Animation effects" off), while the Raid boxes keep animating. Reproduced in a browser with reduced motion: box 1.0 / header 0.0. Removed that exception so the header behaves exactly like the boxes; re-tested 35 s with and without reduced motion: header and box opacity match.
 - **Check:** `boss_header()` in `tools/check_site.py` now also opens the tier list with reduced motion and fails if the box swaps but the header doesn't (added, nothing loosened). `?v=20261112e` on css. `check_all.py`: ALL CHECKS PASSED.
