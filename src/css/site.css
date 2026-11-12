@@ -3249,6 +3249,19 @@ main {
 .v2-boss.raid.on {
   border-color: #ff3b47;
 }
+/* Gauron's "orcish" font, New Rocker (David's pick, 12 Nov 2026; OFL, assets/fonts/new-rocker-OFL.txt). Ursula keeps Grenze Gotisch. */
+@font-face {
+  font-family: 'New Rocker';
+  src: url(../assets/fonts/new-rocker-400.woff2) format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+.v2-boss.raid:not(.succubus) .v2-boss-name {
+  font-family: 'New Rocker', Georgia, serif;
+  font-weight: 400;
+  font-size: 19px;
+  letter-spacing: 0.04em;
+}
 .tr-rw-noicon {
   font-style: normal;
   font-size: 9px;
@@ -7214,6 +7227,11 @@ a.shortcut-card:focus-visible {
     color: #ff3b47;
     -webkit-text-stroke: 0.6px #000;
     animation: baRaidGlow 2.6s ease-in-out infinite;
+  }
+  .boss-art .app-content:has(> #tierPage:not([hidden])) > header.ba-raid:not(.ba-succubus) h1 {
+    font-family: 'New Rocker', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 0.04em;
   }
   .boss-art .app-content:has(> #tierPage:not([hidden])) > header.ba-raid.ba-succubus h1 {
     font-family: 'Grenze Gotisch', Georgia, serif;

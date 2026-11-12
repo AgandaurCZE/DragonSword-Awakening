@@ -1,5 +1,10 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Boss header swap fixed; Gauron's orcish font (Claude)
+- **Swap fix (David: "the image doesn't swap"):** the Raid boxes time their humanoid/dragon swap from the wall clock (`animation-delay: -(now mod 60) s`), but the header copied the box's animation time without that offset, so it swapped at a different moment from the box. The header art now uses the same wall-clock delay as the box. Watched for 64 s on Ursula: two swaps, header and box opacity identical at every second (largest difference 0.000). The title glow still follows the box's glow clock.
+- **Gauron's font (David's pick from six samples):** New Rocker, a spiky "orcish" display font, on Gauron's boss box name (19 px) and on the tier list title when Gauron is picked. Ursula keeps Grenze Gotisch. New files `assets/fonts/new-rocker-400.woff2` (latin, 29 KB, from the `@fontsource/new-rocker` package) and its licence `assets/fonts/new-rocker-OFL.txt` (SIL Open Font License 1.1). Visible change on the public page: Gauron's box name in Bosses mode (`public_diff.py` reported all 109 views equal, so its views don't include that box; checked by screenshot instead).
+- `?v=20261112d` on css and js 07. `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Boss header art on the tier list (Claude; David's design)
 - Restore point: `aec18f4`.
 - **What David sees (PC, 1100 px and wider):** in the tier list's Bosses mode with a boss picked, the header grows to 250 px with the title and the small patch line centred (the patch line keeps its size). The boss's art sits in the top corners behind the title, starting just under the top edge, fading into the page and continuing behind the boxes below.

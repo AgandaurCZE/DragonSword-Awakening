@@ -668,6 +668,10 @@ function v2HeaderArt() {
   L.style.backgroundImage = `url('${absUrl(art.left)}')`;
   R.style.backgroundImage = art.right ? `url('${absUrl(art.right)}')` : 'none';
   layer.classList.toggle('ba-cycle', raid && !!art.right);
+  /* Same wall-clock phase as the card's swap (its animation-delay is -(now mod 60) s), so header and card change together. */
+  const phase = `-${((Date.now() / 1000) % 60).toFixed(2)}s`;
+  L.style.animationDelay = phase;
+  R.style.animationDelay = phase;
   I.innerHTML = weak
     .map((a) => `<img src="${profileEsc(absUrl('assets/archetypes/' + a.toLowerCase() + '.webp'))}" alt="">`)
     .join('');
@@ -701,18 +705,12 @@ function v2HeaderSplit() {
     y = (c.top + c.bottom) / 2 - box.top - box.height / 2;
   hdr.style.setProperty('--ba-cut', (((x * Math.sin(a) - y * Math.cos(a) + len / 2) / len) * 100).toFixed(3) + '%');
 }
-/* Keep the header's swap and glow on the selected card's clock, so they never drift apart. */
+/* Keep the title's breathing glow on the selected card's glow clock (the swap follows the wall clock, like the card). */
 function v2HeaderSync() {
   const card = document.querySelector('.v2-boss.raid.on');
   if (!card || !document.documentElement.classList.contains('boss-art')) return;
-  const alt = card.querySelector('.v2-boss-alt')?.getAnimations()[0],
-    glow = card.getAnimations().find((a) => /v2raid|v2succubus/.test(a.animationName || '')),
+  const glow = card.getAnimations().find((a) => /v2raid|v2succubus/.test(a.animationName || '')),
     h1 = document.querySelector('.app-content > header h1');
-  document.querySelectorAll('#bossArt .ba-art').forEach((el) =>
-    el.getAnimations().forEach((a) => {
-      if (alt && alt.currentTime != null) a.currentTime = alt.currentTime;
-    }),
-  );
   h1?.getAnimations().forEach((a) => {
     if (glow && glow.currentTime != null) a.currentTime = glow.currentTime;
   });
