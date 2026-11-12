@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Hunt boss Defense (notes only; Claude)
+- GAME_MATH 3.4: Defense of all six Hunt bosses on all six difficulties, from David's Ryza basic-attack readings against the Ogre (1194). Normal–Extreme 107–2112; Nightmare 1928 and Hell 2034 for five bosses; Gallore 4111 on Nightmare with both stone fists, about 247 after breaking one. The Nightmare+ buff gives a constant 0.171 damage ratio (about 83%, earlier noted as ~90%). Open points in STATUS. No site or data change. `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Fix: data shape for the Hunt boss weaknesses (Claude)
 - Commit `dfd9af5` (Hunt boss weaknesses) failed GitHub's checks and was **not published**: `TIER_LIST_V2.bosses[].weak` had only ever held empty lists, so `check_shape.py` saw the new names as a type change. Its CHANGELOG line "ALL CHECKS PASSED" was wrong: the commit went out before the check result was read (Claude's mistake).
 - `check_shape.py --update` printed one line, `TIER_LIST_V2.bosses[].weak[]: -> string`, which is the intended change (the key was already documented in DATA_REFERENCE as `weak[]`). `tools/data_shape.json` committed. `check_all.py`: ALL CHECKS PASSED.

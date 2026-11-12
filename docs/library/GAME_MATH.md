@@ -125,7 +125,17 @@ Terms:
   - **Currency Dungeon**: ×0.4, with no type or boss multiplier.
   - Type multipliers (`types`): e.g. Goblin Archer ×0.8, Barbarian and Berserker ×1.1, Lesser Dragon ×1.2, Greater Dragon ×1.5, named enemies with visible changes ×1.15. Look-alike enemies can differ by one 5% step.
 - **Towers of Trials** (`TOWER_TRIALS.bonus`): hits on an enemy with the tower's own status get **+400%**, and each damage-over-time status **+100%**, added to the Additional Damage pool. Other statuses add nothing. Crushing isn't measured.
-- **Hunt bosses, Nightmare and up**: a big damage-resistance buff (about 90%) that applying the boss's weak status removes (Furcas: Burn). **Physical statuses alone also remove it for as long as they last** (David, 12 Nov). The other bosses' weaknesses: Test 07.
+- **Hunt bosses, Nightmare and up**: a big damage-resistance buff that applying the boss's weak status removes (Furcas: Burn). **Physical statuses alone also remove it for as long as they last** (David, 12 Nov).
+- **Hunt boss Defense (David's readings 12 Nov, worked out by Claude):** Ryza (panel Attack 5577, Defense Ignore 21.09%, Armor Penetration 0, Shock / All Status AAP 346 / 169, AAP Increase 22.19%, Shock Additional Damage 34%), first hit of her basic attack, non-crit. Ogre (Defense 1000): 1194. Defense from the ratio to the Ogre with formula 3.1; the Nightmare/Hell "+ shock" readings divided by the Shock factor ×2.237 (AAP, +50% hit, +34%), "+ frost" by the Frozen factor ×1.556 (All AAP, +50% hit).
+  | Boss | Normal | Hard | Very Hard | Extreme | Nightmare | Hell |
+  |---|---|---|---|---|---|---|
+  | Furcas | 107 | 344 | 916 | 1258 | 1928 | 2034 |
+  | Vanak | 159 | 508 | 1033 | 1369 | 1928 | 2034 |
+  | Barduk | 254 | 679 | 1131 | 1688 | 1928 | 2034 |
+  | Gallore (fists intact) | 430 | 1143 | 1573 | 2112 | 4111 | see below |
+  | Ghoul Greed, Earthlander (identical, tested twice) | 916 | 1131 | 1369 | 2050 | 1928 | 2034 |
+  - Nightmare and Hell are the same for five bosses; Gallore is the exception. **Gallore's gimmick:** breaking him knocks off a stone fist and lowers his very high Defense: Nightmare 4111 with both fists, **about 247 with one fist off** (2780 + frost, read after he had recovered from the break, so the lower Defense stays). "+ frost" and "+ shock" both mean one stack of that element on the boss (+50% hit). His Hell reading (753 + shock) gives 6774 with the Shock factor but 4325 with the Frozen factor; only the Frozen one fits the buff ratio below, so Frozen is the likelier reading (to confirm when convenient).
+  - **The buff:** every with/without pair gives the same ratio, **0.171** (145, 140, 86, 306 and Gallore Hell as Frozen). So with the formula above the buff cuts damage by about **83%**, not 90%. One cross-check: the 1194 Ogre reading is exactly a tenth of what formula 3.1 gives for 383% (11,939), so the hit is either 38.3% or the reading is scaled; the Defense values use only ratios to the Ogre, so they don't depend on it.
 - **Raid** (Gauron): structure in `TIER_LIST_V2.bosses[].info`; no separate damage rule measured.
 
 ### 3.5 Super Armor (Test 01) · 29 Oct, 8 Nov
