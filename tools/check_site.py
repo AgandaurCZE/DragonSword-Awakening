@@ -493,6 +493,35 @@ def beta_subpath(browser, base):
 
 
 
+def tab_titles(browser, base):
+    """Browser tab names (David, 11 Nov 2026; check added by Claude 12 Nov): home, pages, tool views, a hero, Back."""
+    G = ' | DragonSword: Awakening'
+    want = [('', 'DragonSword: Awakening, Guides, tools & Tier List'), ('tierlist', 'Tier List' + G), ('karma', 'Karma' + G),
+            ('dungeons/trait', 'Trait Dungeons' + G), ('tools/DamageCalculator', 'Damage Calculator' + G),
+            ('tools/LevellingCalculator', 'Levelling Calculator' + G), ('tools', 'Backup & Restore' + G), ('Ryza', 'Ryza Build Guide' + G)]
+    ctx = browser.new_context(viewport={'width': 1400, 'height': 900})
+    for path, title in want:
+        page = open_site(ctx, base, path, f'tab name /{path}')
+        if page.title() != title:
+            bad(f'tab name: /{path} shows "{page.title()}", expected "{title}"')
+        page.close()
+    page = open_site(ctx, base, 'Ryza', 'tab name steps')
+    page.evaluate("document.querySelector('[data-profile-tab=\"build\"]').click()")
+    page.wait_for_timeout(200)
+    if page.title() != 'Ryza Build Guide' + G:
+        bad(f'tab name: Ryza Build tab shows "{page.title()}"')
+    page.evaluate("document.querySelector('.nav-item[data-page=\"gear\"]').click()")
+    page.wait_for_timeout(200)
+    if page.title() != 'Gear' + G:
+        bad(f'tab name: Gear after a hero shows "{page.title()}"')
+    page.go_back()
+    page.wait_for_timeout(500)
+    if page.title() != 'Ryza Build Guide' + G:
+        bad(f'tab name: Back to Ryza shows "{page.title()}"')
+    print('  tab names checked')
+    ctx.close()
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -510,6 +539,7 @@ def main():
         smoke(browser, base)
         beta_routes(browser, base)
         beta_interactions(browser, base)
+        tab_titles(browser, base)
         with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
             beta_subpath(browser, prefixed)
         if not QUICK:

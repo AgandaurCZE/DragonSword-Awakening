@@ -1,5 +1,11 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Browser tab names (Claude)
+- Restore point: `4daf3ce`.
+- David's scheme (11 Nov): home "DragonSword: Awakening, Guides, tools & Tier List"; every other view "<Name> | DragonSword: Awakening": the menu name (e.g. "Karma", "Normal Dungeons", "Item Database", "Patch Notes"); every tier list mode "Tier List"; a hero on any tab "<Hero> Build Guide"; the tool views "Damage Calculator", "Levelling Calculator" and "Backup & Restore" (`/tools`). Was "DragonSword: Awakening — <page>" and "— Beta guide".
+- Code: `setTabTitle` and `tabTitleFor` in `src/js/01-core.js`, used by the page switch (05), hero profile (03), tier close (04) and the address history (09: after every recorded view, on load and on Back/Forward, so tool switches and Back get the right name). `src/index.html` `<title>` is the home name, so every route entry starts with it until the script runs; the share tags are unchanged. Route entries regenerated (`tools/build_routes.py`). `?v=20261112a` on js 01, 03, 04, 05, 09.
+- Checks: new `tab_titles()` in `tools/check_site.py` (golden rule 8; nothing removed or loosened): eight addresses, the Ryza Build tab, Gear after a hero and Back. `public_diff.py`: all 109 views match. `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Organise site source and URL folders (Codex; David requested)
 
 - Restore point: `a7644fbc734227ad715cb70e82ddf3f6c4d2d29d`, latest main and successful Beta deployment confirmed before work.

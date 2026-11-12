@@ -57,6 +57,18 @@ let SITE = {},
   DEFENSE_MODEL = null,
   LEVEL_COSTS = null;
 const $ = (id) => document.getElementById(id);
+/* Browser tab names (David, 11 Nov 2026): home "DragonSword: Awakening, Guides, tools & Tier List"; every other view
+   "<Name> | DragonSword: Awakening"; all tier list views share "Tier List"; a hero (any tab) "<Hero> Build Guide". */
+const TAB_TOOLS = { damage: 'Damage Calculator', level: 'Levelling Calculator', backup: 'Backup & Restore' };
+function setTabTitle(name) {
+  document.title = name ? name + ' | DragonSword: Awakening' : 'DragonSword: Awakening, Guides, tools & Tier List';
+}
+function tabTitleFor(state) {
+  if (!state || state.page === 'home') return '';
+  if (state.page === 'hero') return state.hero + ' Build Guide';
+  if (state.page === 'tools') return TAB_TOOLS[state.tool] || 'Tools';
+  return null;
+}
 /* Image paths put into CSS variables (--bg, --dng-art, …) must be absolute: since the CSS lives in css/site.css, the browser would resolve them against css/ (10 Nov 2026). */
 const absUrl = (p) => (p ? new URL(p, document.baseURI).href : p);
 function tierColor(t) {

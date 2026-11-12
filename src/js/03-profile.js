@@ -265,7 +265,7 @@ function openCharacterProfile(name, initialTab = 'skills') {
   $('profilePage').hidden = false;
   $('profilePage').style.setProperty('--hero-accent', ARCH_COLORS[h.archetype] || '#68c7d5');
   document.querySelectorAll('.nav-item').forEach((x) => x.classList.toggle('active', x.dataset.page === 'heroes'));
-  document.title = 'DragonSword: Awakening — ' + h.name;
+  setTabTitle(h.name + ' Build Guide');
   $('profileName').textContent = h.name;
   $('profileCrumbName').textContent = h.name;
   $('profilePortrait').src = h.portrait;

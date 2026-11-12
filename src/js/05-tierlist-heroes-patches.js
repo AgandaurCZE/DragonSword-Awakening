@@ -58,7 +58,7 @@ document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
       tools: 'Tools',
       news: 'News',
     };
-    document.title = 'DragonSword: Awakening — ' + (titles[page] || page);
+    setTabTitle(page === 'home' ? '' : titles[page] || page);
     {
       document.documentElement.dataset.page = page;
       const hp = $('hdrPage');

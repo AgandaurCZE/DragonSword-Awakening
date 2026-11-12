@@ -35,6 +35,11 @@ function navRecord(replace = false) {
   NAV.state = state;
   NAV.url = url;
   NAV.y = window.scrollY;
+  navTitle(state);
+}
+function navTitle(state) {
+  const t = tabTitleFor(state);
+  if (t !== null) setTabTitle(t);
 }
 function navSchedule() {
   if (NAV.ready && !NAV.restoring) queueMicrotask(() => navRecord());
@@ -97,12 +102,14 @@ function navInit() {
   NAV.url = routeUrl(NAV.state.page, NAV.state);
   NAV.ready = true;
   history.replaceState({ view: NAV.state, y: 0 }, '', NAV.url);
+  navTitle(NAV.state);
   window.addEventListener('popstate', (e) => {
     const view = e.state?.view || navInitial();
     navShow(view, e.state?.y || 0);
     NAV.state = navCurrent();
     NAV.url = routeUrl(NAV.state.page, NAV.state);
     NAV.y = e.state?.y || 0;
+    navTitle(NAV.state);
   });
   document.addEventListener(
     'click',

@@ -750,7 +750,7 @@ function closeCharacterProfile() {
   $('profilePage').hidden = true;
   $('tierPage').hidden = false;
   document.querySelectorAll('.nav-item').forEach((x) => x.classList.toggle('active', x.dataset.page === 'tier'));
-  document.title = 'DragonSword: Awakening — Visual tier list';
+  setTabTitle('Tier List');
   document.querySelector('.nav-item[data-page="tier"]').click();
   navSchedule();
   window.scrollTo({ top: 0, behavior: 'instant' });
