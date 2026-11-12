@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 13 Nov 2026 — Gallore's Hell Defense (notes only; Claude)
+- From David: Gallore Hell was 753 + frost (not shock), so 4325 with both fists; with one fist off 2741 + frost and 302 buffed, Defense about 269. All Gallore pairs give the 0.171 buff ratio; the one-fist readings were not broken. GAME_MATH 3.4 and STATUS updated. No site or data change. `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Hunt boss Defense (notes only; Claude)
 - GAME_MATH 3.4: Defense of all six Hunt bosses on all six difficulties, from David's Ryza basic-attack readings against the Ogre (1194). Normal–Extreme 107–2112; Nightmare 1928 and Hell 2034 for five bosses; Gallore 4111 on Nightmare with both stone fists, about 247 after breaking one. The Nightmare+ buff gives a constant 0.171 damage ratio (about 83%, earlier noted as ~90%). Open points in STATUS. No site or data change. `check_all.py`: ALL CHECKS PASSED.
 

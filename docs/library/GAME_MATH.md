@@ -132,10 +132,10 @@ Terms:
   | Furcas | 107 | 344 | 916 | 1258 | 1928 | 2034 |
   | Vanak | 159 | 508 | 1033 | 1369 | 1928 | 2034 |
   | Barduk | 254 | 679 | 1131 | 1688 | 1928 | 2034 |
-  | Gallore (fists intact) | 430 | 1143 | 1573 | 2112 | 4111 | see below |
+  | Gallore (fists intact) | 430 | 1143 | 1573 | 2112 | 4111 | 4325 |
   | Ghoul Greed, Earthlander (identical, tested twice) | 916 | 1131 | 1369 | 2050 | 1928 | 2034 |
-  - Nightmare and Hell are the same for five bosses; Gallore is the exception. **Gallore's gimmick:** breaking him knocks off a stone fist and lowers his very high Defense: Nightmare 4111 with both fists, **about 247 with one fist off** (2780 + frost, read after he had recovered from the break, so the lower Defense stays). "+ frost" and "+ shock" both mean one stack of that element on the boss (+50% hit). His Hell reading (753 + shock) gives 6774 with the Shock factor but 4325 with the Frozen factor; only the Frozen one fits the buff ratio below, so Frozen is the likelier reading (to confirm when convenient).
-  - **The buff:** every with/without pair gives the same ratio, **0.171** (145, 140, 86, 306 and Gallore Hell as Frozen). So with the formula above the buff cuts damage by about **83%**, not 90%. One cross-check: the 1194 Ogre reading is exactly a tenth of what formula 3.1 gives for 383% (11,939), so the hit is either 38.3% or the reading is scaled; the Defense values use only ratios to the Ogre, so they don't depend on it.
+  - Nightmare and Hell are the same for five bosses; Gallore is the exception. **Gallore's gimmick:** breaking him knocks off a stone fist and lowers his very high Defense, which stays low after he recovers from the break: **Nightmare 4111 → about 247, Hell 4325 → about 269** with one fist off (2780 and 2741 + frost; buffed 306 and 302, not broken, as the ratio below confirms: a broken boss would give 0.165). "+ frost" and "+ shock" both mean one stack of that element on the boss (+50% hit). Hell with fists was 753 + frost (David corrected it from "+ shock", 13 Nov).
+  - **The buff:** every with/without pair gives the same ratio, **0.171** (Furcas to Earthlander 145 and 140; Gallore 86, 83, 306 and 302). So with the formula above the buff cuts damage by about **83%**, not 90%. One cross-check: the 1194 Ogre reading is exactly a tenth of what formula 3.1 gives for 383% (11,939), so the hit is either 38.3% or the reading is scaled; the Defense values use only ratios to the Ogre, so they don't depend on it.
 - **Raid** (Gauron): structure in `TIER_LIST_V2.bosses[].info`; no separate damage rule measured.
 
 ### 3.5 Super Armor (Test 01) · 29 Oct, 8 Nov
