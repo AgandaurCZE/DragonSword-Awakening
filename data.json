@@ -22732,7 +22732,8 @@
       ],
       "rewardsKnown": true
      }
-    ]
+    ],
+    "banner": "assets/dungeons/currency/eroded-underground-cemetery.webp"
    },
    {
     "name": "Residual Worm Cleanup Zone",

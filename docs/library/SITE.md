@@ -81,7 +81,7 @@ Game-side tasks and David's to-do list are in [STATUS.md](STATUS.md). Site work 
 - **Tier list:** the awakening view button (agreed 10 Nov, see DECISIONS); boss ratings (`bosses.all` empty for every hero) and tower ratings, after Test 07; review texts David will redo later (10 Nov).
 - **Builds:** the preview "Best Gear" box (done 10 Nov) replaces the old build boxes on the Build tab; still open: a role switch (on-field damage dealer or Breaker) and David's review of the box.
 - **Karma:** a Karma level slider is now possible: levels 1–70 measured on two card types and the rule found (10 Nov, GAME_MATH 2.3; only breakthrough steps measured).
-- **Dungeons:** banner art for Eroded Underground Cemetery and Residual Worm Cleanup Zone.
+- **Dungeons:** banner art for Residual Worm Cleanup Zone.
 - **Guides:** the 8 categories are placeholder cards; content not written. News page is disabled and comes last.
 - **Optional, only if David asks:** Test 01 application and gauge table in each hero profile (preview); a Super Armor gauge column in the damage calculator; a short line in the Status Effects box that physical statuses still build up under Super Armor and only control the enemy after Break (in the game's words, `assets/sources/help/notes.txt`); Karma exchange costs on the Karma tab (`assets/sources/exchange/prices.txt`); a small "Coming next" box on the Patch Notes page (`assets/sources/upcoming/notes.txt`).
 - **Not worth doing yet:** quest tracker, interactive map.

@@ -1,5 +1,9 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Eroded Underground Cemetery banner (Codex)
+- Added David’s approved candlelit crypt, overflowing gold chests and faint red eyes to the Eroded Underground Cemetery card. One WebP is shared across I, II and III.
+- Checks: `check_all.py` passed. `public_diff.py` found changes only within the Cemetery card at both widths (2 of 109 public views). All three difficulty settings were verified at both widths.
+
 ## 12 Nov 2026 — Browser tab names (Claude)
 - Restore point: `4daf3ce`.
 - David's scheme (11 Nov): home "DragonSword: Awakening, Guides, tools & Tier List"; every other view "<Name> | DragonSword: Awakening": the menu name (e.g. "Karma", "Normal Dungeons", "Item Database", "Patch Notes"); every tier list mode "Tier List"; a hero on any tab "<Hero> Build Guide"; the tool views "Damage Calculator", "Levelling Calculator" and "Backup & Restore" (`/tools`). Was "DragonSword: Awakening — <page>" and "— Beta guide".

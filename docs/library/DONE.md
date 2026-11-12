@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 12 Nov — Eroded Underground Cemetery banner
+
+David approved the candlelit crypt with gold-filled chests and faint red eyes in the rear arch. The same banner is used for all three Currency Dungeon difficulties.
+
 ## 12 Nov — Repository folder organisation (complete; checked)
 Website source grouped in `src/`, generated URL pages in `routes/`, Python tools kept in `tools/`. Assets and Markdown files remain in place. Assembly preserves the public paths; use `tools/serve_site.py` for local testing. Full checks passed, all 218 pixel views matched the previous release, and clean Git archive assembly passed.
 

@@ -39,7 +39,7 @@ How the page starts: `src/js/09-startup.js` runs `fetch('data.json')`, copies ea
 
 - Public collapsible Dungeons group: `/dungeons/normal`, `/dungeons/trait`, `/dungeons/currency`. Bare `/dungeons` returns to Shortcuts.
 - **Normal Dungeons:** 15 cards grouped by `farmGroups`; each card keeps its own I/II/III choice, shows that difficulty's rewards and the matching banner from `assets/dungeons/banners/`. Rewards are `[itemKey, amount]` pairs resolved through `DUNGEONS.rewardItems` (EXP included); set icons come from `GEAR_DATA`. The original design and artwork foundation are David's, made with ChatGPT.
-- **Currency Dungeons:** all five discovered cards with I/II/III; no undiscovered cards remain; leaving the page resets them to I. Rewards resolve through `currencyRewardItems`. Eroded Underground Cemetery and Residual Worm Cleanup Zone still need banners. The frame is a separate overlay; the background sits 9 px inside it with an 8 px radius.
+- **Currency Dungeons:** all five discovered cards with I/II/III; no undiscovered cards remain; leaving the page resets them to I. Rewards resolve through `currencyRewardItems`. Residual Worm Cleanup Zone still needs a banner. The frame is a separate overlay; the background sits 9 px inside it with an 8 px radius.
 - **Trait Dungeons:** unchanged data and rendering, plus nine preview banners (three Mantius, two Drosophia, four Ghagaroach).
 - `openDungeons({set, material, slot})` is the cross-page entry point (used by the Gear page's set links). Available on the public Beta site.
 - Banner art rules: [DUNGEON_ARTWORK_WORKFLOW.md](DUNGEON_ARTWORK_WORKFLOW.md).

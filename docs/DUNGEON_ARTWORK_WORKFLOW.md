@@ -2,7 +2,7 @@
 
 Library index: [docs/README.md](README.md). Current state: [library/STATUS.md](library/STATUS.md). Finished art batches: [library/DONE.md](library/DONE.md).
 
-Still open: banners for **Eroded Underground Cemetery** (Currency Dungeon) and **Residual Worm Cleanup Zone**. All 15 Normal Dungeons (three difficulties each) and the three other Currency Dungeon banners are done. All five Currency Dungeons are discovered; the two missing banners are artwork tasks, not undiscovered dungeons.
+Still open: the banner for **Residual Worm Cleanup Zone**. All 15 Normal Dungeons (three difficulties each) and four Currency Dungeon banners are done, including Eroded Underground Cemetery. All five Currency Dungeons are discovered.
 
 ## Required workflow · 2 Nov
 

@@ -61,5 +61,5 @@ Also new today: source screenshots live in `assets/sources/`, research-only data
 
 ## Artwork
 - Workflow and lessons: `docs/DUNGEON_ARTWORK_WORKFLOW.md` (one Normal preview first, then **Proceed** or **Stop**; 1672×240 banners; keep subjects anchored across I/II/III).
-- Still open: banners for Eroded Underground Cemetery and Residual Worm Cleanup Zone.
+- Still open: banner for Residual Worm Cleanup Zone. Eroded Underground Cemetery is complete.
 - Provenance: the original Normal Dungeons design and artwork foundation are David's, made with the ChatGPT chat version. Later work moved the rewards to the key/count format shared with Trait Dungeons.
