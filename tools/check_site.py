@@ -522,6 +522,25 @@ def beta_interactions(browser, base):
         attack.fill('2000')
         if page.locator('#dcOut').inner_text() == a:
             bad(f'Beta interactions {width}px: Damage Calculator did not update')
+        # Hunt boss enemies: David's Ryza readings (12-13 Nov) must come back, buff on and off.
+        hunt = page.evaluate("""async()=>{
+            const out=[],fire=(el)=>{el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));};
+            document.querySelector('[data-place="hunt"]').click();
+            const set=(sel,v)=>{const el=document.querySelector(sel);if(el.type==='checkbox'){el.checked=v;}else el.value=v;fire(el);};
+            for(const [k,v] of [['attack',5577],['di',21.09],['all',169],['inc',22.19],['ap',0],['buff',''],['apu',''],['pct',38.3]])set(`[data-k="${k}"]`,v);
+            const pick=(boss,diff)=>{const s=document.querySelector('#dcEnemy');const o=[...s.options].find(o=>o.parentNode.label.startsWith(boss)&&o.text.startsWith(diff));if(!o)return false;s.value=o.value;s.dispatchEvent(new Event('change',{bubbles:true}));return true;};
+            const non=()=>+document.querySelector('#dcOut .dc-big b').textContent.replace(/,/g,'');
+            for(const st of ['Shock','Frozen'])set(`[data-st="${st}"][data-f="on"]`,false);
+            const want=[['Furcas','Normal (',1970],['Furcas','Nightmare (',145],['Gallore','Hell (',83]];
+            for(const [b,d,v] of want){if(!pick(b,d))out.push('missing '+b+' '+d);else if(Math.abs(non()-v)>2)out.push(`${b} ${d}: ${non()} not ${v}`);}
+            set('[data-st="Shock"][data-f="on"]',true);set('[data-st="Shock"][data-f="aap"]',346);set('[data-st="Shock"][data-f="ad"]',34);
+            pick('Furcas','Nightmare (');if(Math.abs(non()-1895)>2)out.push(`Furcas Nightmare + Shock: ${non()} not 1895`);
+            set('[data-st="Shock"][data-f="on"]',false);set('[data-st="Frozen"][data-f="on"]',true);
+            pick('Gallore','Nightmare, one');if(Math.abs(non()-2780)>3)out.push(`Gallore one fist + Frozen: ${non()} not 2780`);
+            set('[data-st="Frozen"][data-f="on"]',false);
+            return out;}""")
+        for issue in hunt:
+            bad(f'Beta interactions {width}px: Damage Calculator Hunt boss: {issue}')
         page.locator('[data-tool="level"]').click()
         page.locator('#lvTo').fill('20')
         a = page.locator('#lvOut').inner_text()

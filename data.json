@@ -25248,6 +25248,219 @@
     "label": "Currency Dungeon",
     "factor": 0.4,
     "note": "Currency Dungeons: enemy type and bosses make no difference. Measured in Endless Summoning Grounds and Trace of the Giant; the other three are assumed to match."
+   },
+   {
+    "id": "hunt",
+    "label": "Hunt boss",
+    "note": "Hunt boss Defense worked out from David's readings (Ryza's basic attack against the Training Ogre, 12–13 Nov 2026). Gallore: breaking him knocks off a stone fist and his Defense stays low after he recovers.",
+    "buff": 0.171,
+    "buffRemovedBy": [
+     "Airborne",
+     "Knockdown",
+     "Stun"
+    ],
+    "buffNote": "Nightmare and Hell: the boss's damage-resistance buff cuts the hit to ×0.171 (about −83%) until one of its weak elements or a physical status (Airborne, Knockdown, Stun) is on it. Tick one under Statuses on the enemy to see the hit without the buff.",
+    "buffOff": "Damage-resistance buff removed by {status}.",
+    "bosses": [
+     {
+      "id": "furcas",
+      "rows": [
+       {
+        "difficulty": "Normal",
+        "defense": 107
+       },
+       {
+        "difficulty": "Hard",
+        "defense": 344
+       },
+       {
+        "difficulty": "Very Hard",
+        "defense": 916
+       },
+       {
+        "difficulty": "Extreme",
+        "defense": 1258
+       },
+       {
+        "difficulty": "Nightmare",
+        "defense": 1928,
+        "buff": true
+       },
+       {
+        "difficulty": "Hell",
+        "defense": 2034,
+        "buff": true
+       }
+      ]
+     },
+     {
+      "id": "vanak",
+      "rows": [
+       {
+        "difficulty": "Normal",
+        "defense": 159
+       },
+       {
+        "difficulty": "Hard",
+        "defense": 508
+       },
+       {
+        "difficulty": "Very Hard",
+        "defense": 1033
+       },
+       {
+        "difficulty": "Extreme",
+        "defense": 1369
+       },
+       {
+        "difficulty": "Nightmare",
+        "defense": 1928,
+        "buff": true
+       },
+       {
+        "difficulty": "Hell",
+        "defense": 2034,
+        "buff": true
+       }
+      ]
+     },
+     {
+      "id": "barduk",
+      "rows": [
+       {
+        "difficulty": "Normal",
+        "defense": 254
+       },
+       {
+        "difficulty": "Hard",
+        "defense": 679
+       },
+       {
+        "difficulty": "Very Hard",
+        "defense": 1131
+       },
+       {
+        "difficulty": "Extreme",
+        "defense": 1688
+       },
+       {
+        "difficulty": "Nightmare",
+        "defense": 1928,
+        "buff": true
+       },
+       {
+        "difficulty": "Hell",
+        "defense": 2034,
+        "buff": true
+       }
+      ]
+     },
+     {
+      "id": "gallore",
+      "rows": [
+       {
+        "difficulty": "Normal",
+        "defense": 430
+       },
+       {
+        "difficulty": "Hard",
+        "defense": 1143
+       },
+       {
+        "difficulty": "Very Hard",
+        "defense": 1573
+       },
+       {
+        "difficulty": "Extreme",
+        "defense": 2112
+       },
+       {
+        "difficulty": "Nightmare",
+        "defense": 4111,
+        "buff": true
+       },
+       {
+        "difficulty": "Nightmare",
+        "label": "one stone fist off",
+        "defense": 247,
+        "buff": true
+       },
+       {
+        "difficulty": "Hell",
+        "defense": 4325,
+        "buff": true
+       },
+       {
+        "difficulty": "Hell",
+        "label": "one stone fist off",
+        "defense": 269,
+        "buff": true
+       }
+      ]
+     },
+     {
+      "id": "ghoul-greed",
+      "rows": [
+       {
+        "difficulty": "Normal",
+        "defense": 916
+       },
+       {
+        "difficulty": "Hard",
+        "defense": 1131
+       },
+       {
+        "difficulty": "Very Hard",
+        "defense": 1369
+       },
+       {
+        "difficulty": "Extreme",
+        "defense": 2050
+       },
+       {
+        "difficulty": "Nightmare",
+        "defense": 1928,
+        "buff": true
+       },
+       {
+        "difficulty": "Hell",
+        "defense": 2034,
+        "buff": true
+       }
+      ]
+     },
+     {
+      "id": "earthlander",
+      "rows": [
+       {
+        "difficulty": "Normal",
+        "defense": 916
+       },
+       {
+        "difficulty": "Hard",
+        "defense": 1131
+       },
+       {
+        "difficulty": "Very Hard",
+        "defense": 1369
+       },
+       {
+        "difficulty": "Extreme",
+        "defense": 2050
+       },
+       {
+        "difficulty": "Nightmare",
+        "defense": 1928,
+        "buff": true
+       },
+       {
+        "difficulty": "Hell",
+        "defense": 2034,
+        "buff": true
+       }
+      ]
+     }
+    ]
    }
   ],
   "types": [

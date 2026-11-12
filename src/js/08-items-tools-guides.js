@@ -159,7 +159,7 @@ function dcCompute(i) {
     ap = N(i.ap),
     eff = (d, p) => Math.max(0, def * (1 - d / 100) - p),
     fac = (d, p) => K / (K + eff(d, p));
-  const base = (((atk + aap) * N(i.pct)) / 100) * (1 + hit / 100) * (1 + ad),
+  const base = (((atk + aap) * N(i.pct)) / 100) * (1 + hit / 100) * (1 + ad) * (i.resist > 0 ? i.resist : 1),
     cd = N(i.cd) / 100,
     cr = Math.min(N(i.cr), 100) / 100,
     non = base * fac(di, ap);
@@ -215,6 +215,7 @@ const DC_DEF = {
   enemy: 0,
   wboss: 0,
   nmob: 0,
+  hunt: 0,
   boss: false,
   typed: false,
   place: 'world',
@@ -231,6 +232,23 @@ function dcSave() {
   try {
     localStorage.setItem('dsw.dmgcalc.v1', JSON.stringify(DC_S));
   } catch (e) {}
+}
+// Hunt boss rows for the calculator, with the level and difficulty from TIER_LIST_V2.bosses[].hunt.
+function dcHuntRows(bosses) {
+  return bosses.flatMap((b) => {
+    const t = (TIER_LIST_V2.bosses || []).find((x) => x.id === b.id) || {},
+      lv = {};
+    ((t.hunt || {}).difficulties || []).forEach((d) => (lv[d.name] = d.level));
+    return b.rows.map((r) => ({
+      ...r,
+      boss: b,
+      name: `${t.name || b.id}, ${r.difficulty}`,
+      label: `${r.difficulty}${r.label ? ', ' + r.label : ''}${lv[r.difficulty] ? ' (Lv.' + lv[r.difficulty] + ')' : ''}`,
+    }));
+  });
+}
+function dcBossName(id) {
+  return ((TIER_LIST_V2.bosses || []).find((x) => x.id === id) || {}).name || id;
 }
 function dcSkills(h) {
   return ((CHARACTER_PROFILE_DATA[h] || {}).skills || []).filter((s) => s.meta && s.meta.attackPct);
@@ -255,11 +273,13 @@ function renderDamageCalc() {
     types = DEFENSE_MODEL.types || [],
     places = DEFENSE_MODEL.places || [];
   const dcIdx = (v, a) => (Number.isInteger(+v) && a[+v] ? +v : 0),
-    nmobs = (places.find((p) => p.enemies) || {}).enemies || [];
+    nmobs = (places.find((p) => p.enemies) || {}).enemies || [],
+    hunts = dcHuntRows((places.find((p) => p.bosses) || {}).bosses || []);
   if (!places.some((p) => p.id === S.place)) S.place = 'world';
   S.enemy = dcIdx(S.enemy, types);
   S.wboss = dcIdx(S.wboss, enemies);
   S.nmob = dcIdx(S.nmob, nmobs);
+  S.hunt = dcIdx(S.hunt, hunts);
   S.boss = !!S.boss;
   S.typed = !!S.typed;
   S.elv = +S.elv > 0 ? +S.elv : 50;
@@ -412,10 +432,23 @@ function renderDamageCalc() {
       );
     });
   }
+  // Nightmare+ Hunt bosses: damage-resistance buff unless a weak element or a physical status is on.
+  function dcResist(st) {
+    const ei = dcEnemyInfo();
+    if (!ei || !ei.h || !ei.h.buff) return { mult: 1 };
+    const weak = ((TIER_LIST_V2.bosses || []).find((b) => b.id === ei.h.boss.id) || {}).weak || [],
+      by = C.statuses.find(
+        (s) =>
+          (st[s.name] || {}).on &&
+          ((ei.p.buffRemovedBy || []).includes(s.name) || weak.includes(STATUS_ARCHETYPE[s.name])),
+      );
+    return by ? { mult: 1, by: by.name } : { mult: ei.p.buff };
+  }
   function draw() {
     dcExtras();
     const eff = syncReq(),
-      r = dcCompute({ ...S, weak: dcWeak(), tower: dcTower(), st: eff }),
+      rs = dcResist(eff),
+      r = dcCompute({ ...S, weak: dcWeak(), tower: dcTower(), st: eff, resist: rs.mult }),
       out = $('dcOut'),
       fmt = (x) => Math.round(x).toLocaleString('en-GB');
     if (!(+S.attack > 0) || !(+S.pct > 0)) {
@@ -451,6 +484,11 @@ function renderDamageCalc() {
     if (tw && r.dots.some((s) => !((TOWER_TRIALS.bonus || {}).dotTested || []).includes(s.name)))
       un.push(C.towerDotUntested);
     const ei = dcEnemyInfo();
+    if (ei && ei.h) {
+      un.push(ei.p.note);
+      if (rs.mult !== 1) un.push(ei.p.buffNote);
+      else if (rs.by) small.push(ei.p.buffOff.replace('{status}', rs.by));
+    }
     if (ei && ei.t) {
       if (ei.p.note) un.push(ei.p.note);
       if (ei.t.once) un.push(C.onceNote);
@@ -507,6 +545,10 @@ function renderDamageCalc() {
       c = DEFENSE_MODEL.levelCurve,
       world = p.id === 'world';
     if (world && S.boss) return { e: enemies[S.wboss] };
+    if (p.bosses) {
+      const h = hunts[S.hunt];
+      return h && { e: { name: h.name, defense: h.defense }, h, p };
+    }
     const t =
       S.boss && p.bossMult
         ? { mult: p.bossMult }
@@ -537,6 +579,14 @@ function renderDamageCalc() {
         )
         .join('');
       val = S.enemy;
+    } else if (p.bosses) {
+      body = p.bosses
+        .map(
+          (b) =>
+            `<optgroup label="${E(dcBossName(b.id))}">${hunts.map((h, n) => (h.boss === b ? `<option value="${n}">${E(h.label)}</option>` : '')).join('')}</optgroup>`,
+        )
+        .join('');
+      val = S.hunt;
     } else if (p.enemies && !S.boss) {
       body = p.enemies.map((t, n) => `<option value="${n}">${E(t.name)}</option>`).join('');
       val = S.nmob;
@@ -553,12 +603,12 @@ function renderDamageCalc() {
     $('dcWeakW').style.display = p.id === 'trait' ? '' : 'none';
     $('dcTowerW').style.display = p.id === 'world' ? '' : 'none';
     $('dcBossW').style.display = p.bossMult || p.id === 'world' ? '' : 'none';
-    $('dcElvW').style.display = p.id === 'world' && S.boss ? 'none' : '';
+    $('dcElvW').style.display = (p.id === 'world' && S.boss) || p.bosses ? 'none' : '';
     let note = '';
     if (!ei) note = C.typedNote;
     else if (ei.e) {
       S.def = ei.e.defense;
-      note = C.fixedNote;
+      note = ei.h ? '' : C.fixedNote;
     } else {
       S.def = Math.round(ei.def);
       note = `Basic enemy at Lv.${E(S.elv)}: ${Math.round(ei.base).toLocaleString('en-GB')}${ei.factor !== 1 ? ` × ${ei.factor} (${E(ei.p.label)})` : ''}${ei.t.mult !== 1 ? ` × ${ei.t.mult}` : ''}.`;
@@ -572,6 +622,7 @@ function renderDamageCalc() {
     S.typed = v === 'custom';
     if (!S.typed) {
       if (p.id === 'world' && S.boss) S.wboss = +v;
+      else if (p.bosses) S.hunt = +v;
       else if (p.id === 'world') S.enemy = +v;
       else S.nmob = +v;
     }

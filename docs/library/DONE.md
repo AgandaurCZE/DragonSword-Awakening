@@ -2,7 +2,7 @@
 
 ## 12 Nov — Hunt boss weaknesses and Defense
 
-All six Hunt bosses' weak elements are in the data (header icons and split title). Their Defense on every difficulty is worked out from David's Ryza readings: table in GAME_MATH 3.4, with Gallore's fist gimmick and the buff ratio.
+All six Hunt bosses' weak elements are in the data (header icons and split title). Their Defense on every difficulty is worked out from David's Ryza readings: table in GAME_MATH 3.4, with Gallore's fist gimmick and the buff ratio. Since 13 Nov they're in the Damage Calculator (Hunt boss button), which reproduces David's readings.
 
 ## 12 Nov — Furcas and Vanak header artwork
 

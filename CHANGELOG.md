@@ -1,5 +1,11 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 13 Nov 2026 — Damage Calculator: Hunt boss enemies (Claude)
+- **What David sees:** a fifth button, **Hunt boss**, in the Damage Calculator's Enemy box. It lists the six Hunt bosses by difficulty (with level), plus Gallore's Nightmare and Hell with one stone fist off, and fills in their Defense from GAME_MATH 3.4. On Nightmare and Hell the hit is multiplied by 0.171 (the damage-resistance buff) until one of the boss's weak elements or Airborne, Knockdown or Stun is ticked; the result says which status removed it.
+- Data: new place `hunt` in `DEFENSE_MODEL.places` with `bosses[{id, rows[]}]`, `buff`, `buffRemovedBy`, `buffNote`, `buffOff` (DATA_REFERENCE; `check_shape.py --update` printed 14 added keys, all intended). Code: `dcHuntRows()`, `dcBossName()`, `dcResist()` and a `resist` factor in `dcCompute()` (`src/js/08-items-tools-guides.js`, `?v=20261113a`); routes regenerated.
+- `check_site.py`: new check that the calculator reproduces David's readings with Ryza's stats: Furcas Normal 1970, Nightmare 145 and 1895 with Shock, Gallore Hell 83, Gallore one fist off 2780 with Frozen (all exact in the browser).
+- `public_diff.py`: only the Tools page differs, the new Hunt boss button (1400 px: one button; 390 px: it wraps to a third row, +37 px). `check_all.py`: ALL CHECKS PASSED.
+
 ## 13 Nov 2026 — Gallore's Hell Defense (notes only; Claude)
 - From David: Gallore Hell was 753 + frost (not shock), so 4325 with both fists; with one fist off 2741 + frost and 302 buffed, Defense about 269. All Gallore pairs give the 0.171 buff ratio; the one-fist readings were not broken. GAME_MATH 3.4 and STATUS updated. No site or data change. `check_all.py`: ALL CHECKS PASSED.
 

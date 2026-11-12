@@ -1426,6 +1426,72 @@
              "number"
             ]
            },
+           "bosses": {
+            "list": {
+             "record": {
+              "opt": {},
+              "req": {
+               "id": {
+                "types": [
+                 "string"
+                ]
+               },
+               "rows": {
+                "list": {
+                 "record": {
+                  "opt": {
+                   "buff": {
+                    "types": [
+                     "bool"
+                    ]
+                   },
+                   "label": {
+                    "types": [
+                     "string"
+                    ]
+                   }
+                  },
+                  "req": {
+                   "defense": {
+                    "types": [
+                     "number"
+                    ]
+                   },
+                   "difficulty": {
+                    "types": [
+                     "string"
+                    ]
+                   }
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           },
+           "buff": {
+            "types": [
+             "number"
+            ]
+           },
+           "buffNote": {
+            "types": [
+             "string"
+            ]
+           },
+           "buffOff": {
+            "types": [
+             "string"
+            ]
+           },
+           "buffRemovedBy": {
+            "list": {
+             "types": [
+              "string"
+             ]
+            }
+           },
            "enemies": {
             "list": {
              "record": {
