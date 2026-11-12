@@ -1,5 +1,15 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Hunt rewards: Barduk, Gallore, Ghoul Greed, Earthlander (Claude)
+- From David's full-width screenshots (sent as a RAR in chat, since the GitHub uploads were cut off by the image editor). All levels, members (1–2) and tiles read one by one; every boss's own material: Sage's Blood (Barduk), Stilled Core of Collapse (Gallore), Necklace Soaked in Greed (Ghoul Greed), Gigantic Tooth (Earthlander).
+  - **Barduk:** Normal Lv.30 EXP 600, Sage's Blood 1, Emblem 10, Record of Battle 20 · Hard Lv.45 900, 3, 15, Secret Text of the Warrior 10, Record 20 · Very Hard Lv.60 1,200, 5, 20, Warrior 15, Record 20 · Extreme Lv.75 1,500, 10, Secret Text of Victory 10, Emblem 30, Warrior 20.
+  - **Gallore:** Normal Lv.35 700, 1, 10, Record 20 · Hard Lv.50 1,000, 3, 20, Warrior 10, Record 20 · Very Hard Lv.65 1,300, 5, 25, Warrior 20, Record 20 · Extreme Lv.75 1,500, 10, Victory 10, Emblem 30, Warrior 20.
+  - **Ghoul Greed:** Normal Lv.45 900, 1, 15, Warrior 10, Record 20 · Hard Lv.55 1,100, 3, 20, Warrior 15, Record 20 · Very Hard Lv.65 1,300, 5, Victory 10, Emblem 25, Warrior 20 · Extreme Lv.80 1,600, 10, Victory 15, Emblem 30, Warrior 20.
+  - **Earthlander:** Normal Lv.50 1,000, 1, 20, Warrior 10, Record 20 · Hard Lv.60 1,200, 3, 20, Warrior 15, Record 20 · Very Hard Lv.70 1,400, 5, Victory 10, Emblem 25, Warrior 20 · Extreme Lv.80 1,600, 10, Victory 15, Emblem 30, Warrior 20.
+  - Every Hunt boss: Nightmare Lv.90 EXP 3,000 + Emblem 60; Hell Lv.90 EXP 5,000 + Emblem 100.
+- **Two files in the RAR were swapped and one still cut:** `vanak_extreme.png` is Ghoul Greed's Extreme (Ghoul's horn and necklace, Lv.80), `ghoul_extreme.png` is Gallore's (rocks, Stilled Core, Lv.75), and `gallore_extreme.png` is still 2,237 px wide. Identified by the boss behind the panel and the boss material; both Extreme lists above come from the right picture. **Vanak's Extreme is missing,** so Vanak waits; his screenshots stay in `assets/bosses/reward/`, the other 30 PNGs are deleted.
+- `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Hunt rewards by difficulty: six circles, Furcas first (Claude)
 - **What David sees:** a new Rewards panel on Hunt bosses (above the unchanged rating rewards) with six circles, I Normal to VI Hell, each showing that difficulty's recommended level, players (1–2) and rewards as icon tiles. The circles now look like the game's on both Hunts and Raids: always in their colour, dimmed when not picked, white ring and glow when picked, joined by short lines. Trait Dungeon circles are unchanged.
 - **Colours:** I–III keep the dungeon colours; IV Extreme #996ccb, V Nightmare #de833c, VI Hell #c86b6b, sampled from the picked circle in David's Furcas screenshots. New data `TIER_LIST_V2.huntDifficulties`.

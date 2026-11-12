@@ -19181,6 +19181,163 @@
     "portrait": "assets/bosses/barduk.webp",
     "header": {
      "left": "assets/bosses/bosses-header/barduk-left.webp"
+    },
+    "hunt": {
+     "members": "1–2",
+     "note": "From David's reward screens (12 Nov 2026), in the game's order.",
+     "difficulties": [
+      {
+       "name": "Normal",
+       "level": 30,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 600
+        },
+        {
+         "name": "Sage's Blood",
+         "icon": "assets/items/icons/sage-s-blood.webp",
+         "amount": 1
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 10
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Hard",
+       "level": 45,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 900
+        },
+        {
+         "name": "Sage's Blood",
+         "icon": "assets/items/icons/sage-s-blood.webp",
+         "amount": 3
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 15
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 10
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Very Hard",
+       "level": 60,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1200
+        },
+        {
+         "name": "Sage's Blood",
+         "icon": "assets/items/icons/sage-s-blood.webp",
+         "amount": 5
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 20
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 15
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Extreme",
+       "level": 75,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1500
+        },
+        {
+         "name": "Sage's Blood",
+         "icon": "assets/items/icons/sage-s-blood.webp",
+         "amount": 10
+        },
+        {
+         "name": "Secret Text of Victory",
+         "icon": "assets/items/icons/secret-text-of-victory.webp",
+         "amount": 10
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 30
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Nightmare",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 3000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 60
+        }
+       ]
+      },
+      {
+       "name": "Hell",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 5000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 100
+        }
+       ]
+      }
+     ]
     }
    },
    {
@@ -19194,6 +19351,163 @@
     "portrait": "assets/bosses/gallore.webp",
     "header": {
      "left": "assets/bosses/bosses-header/gallore-left.webp"
+    },
+    "hunt": {
+     "members": "1–2",
+     "note": "From David's reward screens (12 Nov 2026), in the game's order.",
+     "difficulties": [
+      {
+       "name": "Normal",
+       "level": 35,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 700
+        },
+        {
+         "name": "Stilled Core of Collapse",
+         "icon": "assets/items/icons/stilled-core-of-collapse.webp",
+         "amount": 1
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 10
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Hard",
+       "level": 50,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1000
+        },
+        {
+         "name": "Stilled Core of Collapse",
+         "icon": "assets/items/icons/stilled-core-of-collapse.webp",
+         "amount": 3
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 20
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 10
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Very Hard",
+       "level": 65,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1300
+        },
+        {
+         "name": "Stilled Core of Collapse",
+         "icon": "assets/items/icons/stilled-core-of-collapse.webp",
+         "amount": 5
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 25
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 20
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Extreme",
+       "level": 75,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1500
+        },
+        {
+         "name": "Stilled Core of Collapse",
+         "icon": "assets/items/icons/stilled-core-of-collapse.webp",
+         "amount": 10
+        },
+        {
+         "name": "Secret Text of Victory",
+         "icon": "assets/items/icons/secret-text-of-victory.webp",
+         "amount": 10
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 30
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Nightmare",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 3000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 60
+        }
+       ]
+      },
+      {
+       "name": "Hell",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 5000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 100
+        }
+       ]
+      }
+     ]
     }
    },
    {
@@ -19208,6 +19522,168 @@
     "note": "5th Hunt boss, unlocked after story Chapter 6. Normal: Lv.45, 1–2 members. Rewards: EXP 900, Necklace Soaked in Greed 1, Adventurer's Emblem 15, Secret Text of the Warrior 10, Record of Battle 20.",
     "header": {
      "left": "assets/bosses/bosses-header/ghoul-greed-left.webp"
+    },
+    "hunt": {
+     "members": "1–2",
+     "note": "From David's reward screens (12 Nov 2026), in the game's order.",
+     "difficulties": [
+      {
+       "name": "Normal",
+       "level": 45,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 900
+        },
+        {
+         "name": "Necklace Soaked in Greed",
+         "icon": "assets/items/icons/necklace-soaked-in-greed.webp",
+         "amount": 1
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 15
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 10
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Hard",
+       "level": 55,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1100
+        },
+        {
+         "name": "Necklace Soaked in Greed",
+         "icon": "assets/items/icons/necklace-soaked-in-greed.webp",
+         "amount": 3
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 20
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 15
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Very Hard",
+       "level": 65,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1300
+        },
+        {
+         "name": "Necklace Soaked in Greed",
+         "icon": "assets/items/icons/necklace-soaked-in-greed.webp",
+         "amount": 5
+        },
+        {
+         "name": "Secret Text of Victory",
+         "icon": "assets/items/icons/secret-text-of-victory.webp",
+         "amount": 10
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 25
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Extreme",
+       "level": 80,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1600
+        },
+        {
+         "name": "Necklace Soaked in Greed",
+         "icon": "assets/items/icons/necklace-soaked-in-greed.webp",
+         "amount": 10
+        },
+        {
+         "name": "Secret Text of Victory",
+         "icon": "assets/items/icons/secret-text-of-victory.webp",
+         "amount": 15
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 30
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Nightmare",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 3000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 60
+        }
+       ]
+      },
+      {
+       "name": "Hell",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 5000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 100
+        }
+       ]
+      }
+     ]
     }
    },
    {
@@ -19222,6 +19698,168 @@
     "note": "6th and last Hunt boss, unlocked after story Chapter 8. Normal: Lv.50, 1–2 members. Rewards: EXP 1,000, Gigantic Tooth 1, Adventurer's Emblem 20, Secret Text of the Warrior 10, Record of Battle 20.",
     "header": {
      "left": "assets/bosses/bosses-header/earthlander-left.webp"
+    },
+    "hunt": {
+     "members": "1–2",
+     "note": "From David's reward screens (12 Nov 2026), in the game's order.",
+     "difficulties": [
+      {
+       "name": "Normal",
+       "level": 50,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1000
+        },
+        {
+         "name": "Gigantic Tooth",
+         "icon": "assets/items/icons/gigantic-tooth.webp",
+         "amount": 1
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 20
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 10
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Hard",
+       "level": 60,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1200
+        },
+        {
+         "name": "Gigantic Tooth",
+         "icon": "assets/items/icons/gigantic-tooth.webp",
+         "amount": 3
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 20
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 15
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Very Hard",
+       "level": 70,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1400
+        },
+        {
+         "name": "Gigantic Tooth",
+         "icon": "assets/items/icons/gigantic-tooth.webp",
+         "amount": 5
+        },
+        {
+         "name": "Secret Text of Victory",
+         "icon": "assets/items/icons/secret-text-of-victory.webp",
+         "amount": 10
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 25
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Extreme",
+       "level": 80,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1600
+        },
+        {
+         "name": "Gigantic Tooth",
+         "icon": "assets/items/icons/gigantic-tooth.webp",
+         "amount": 10
+        },
+        {
+         "name": "Secret Text of Victory",
+         "icon": "assets/items/icons/secret-text-of-victory.webp",
+         "amount": 15
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 30
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Nightmare",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 3000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 60
+        }
+       ]
+      },
+      {
+       "name": "Hell",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 5000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 100
+        }
+       ]
+      }
+     ]
     }
    },
    {
