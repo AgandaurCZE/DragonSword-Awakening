@@ -1,5 +1,9 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Hunt boss weaknesses (Claude)
+- David found each Hunt boss's two weak elements: Furcas Shock, Burn · Vanak Poison, Bleed · Barduk Bleed, Frost · Gallore Frost, Burn · Ghoul Greed Burn, Shock · Earthlander Bleed, Poison. Stored as archetypes in `TIER_LIST_V2.bosses[].weak` (Thunderbolt, Blazeflame, Venom, Bloodburst, Frostbite), in David's order. On PC the boss header now shows the two weakness icons on the right and splits the title through the last D of DRAGONSWORD into the two colours; the tier list's boss views mark heroes of those archetypes as before (`v2BossWeak`). Charlotte's Ultimate confirmed at 0.50 Poison on the Ogre at A6 (GAME_MATH 3.3).
+- David's damage readings for every difficulty (to work out the bosses' Defense) are not stored yet: the hit and its Ogre value are needed first, see STATUS. `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Hunt boss resistances: Extreme reading (notes only; Claude)
 - David's Extreme reading of Ryza's Stormbringer on Furcas (Shock about 0.9, Airborne about 0.22) shows that Nightmare and Hell halve every status's build-up (both give about 0.45 and 0.10), while up to Extreme physical statuses build like on the Ogre and the weak element about 2.7×. GAME_MATH 3.3 rewritten as a table. No site or data change. `check_all.py`: ALL CHECKS PASSED.
 

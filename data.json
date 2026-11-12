@@ -18998,7 +18998,10 @@
     "level": 20,
     "type": "Hunt",
     "image": "assets/bosses/furcas-banner.webp",
-    "weak": [],
+    "weak": [
+     "Thunderbolt",
+     "Blazeflame"
+    ],
     "immune": [],
     "portrait": "assets/bosses/furcas.webp",
     "header": {
@@ -19163,7 +19166,10 @@
     "level": 25,
     "type": "Hunt",
     "image": "assets/bosses/vanak-banner.webp",
-    "weak": [],
+    "weak": [
+     "Venom",
+     "Bloodburst"
+    ],
     "immune": [],
     "portrait": "assets/bosses/vanak.webp",
     "header": {
@@ -19333,7 +19339,10 @@
     "level": 30,
     "type": "Hunt",
     "image": "assets/bosses/barduk-banner.webp",
-    "weak": [],
+    "weak": [
+     "Bloodburst",
+     "Frostbite"
+    ],
     "immune": [],
     "portrait": "assets/bosses/barduk.webp",
     "header": {
@@ -19503,7 +19512,10 @@
     "level": 35,
     "type": "Hunt",
     "image": "assets/bosses/gallore-banner.webp",
-    "weak": [],
+    "weak": [
+     "Frostbite",
+     "Blazeflame"
+    ],
     "immune": [],
     "portrait": "assets/bosses/gallore.webp",
     "header": {
@@ -19673,7 +19685,10 @@
     "level": 45,
     "type": "Hunt",
     "image": "assets/bosses/ghoul-greed-banner.webp",
-    "weak": [],
+    "weak": [
+     "Blazeflame",
+     "Thunderbolt"
+    ],
     "immune": [],
     "portrait": "assets/bosses/ghoul-greed.webp",
     "note": "5th Hunt boss, unlocked after story Chapter 6. Normal: Lv.45, 1–2 members. Rewards: EXP 900, Necklace Soaked in Greed 1, Adventurer's Emblem 15, Secret Text of the Warrior 10, Record of Battle 20.",
@@ -19849,7 +19864,10 @@
     "level": 50,
     "type": "Hunt",
     "image": "assets/bosses/earthlander-banner.webp",
-    "weak": [],
+    "weak": [
+     "Bloodburst",
+     "Venom"
+    ],
     "immune": [],
     "portrait": "assets/bosses/earthlander.webp",
     "note": "6th and last Hunt boss, unlocked after story Chapter 8. Normal: Lv.50, 1–2 members. Rewards: EXP 1,000, Gigantic Tooth 1, Adventurer's Emblem 20, Secret Text of the Warrior 10, Record of Battle 20.",
