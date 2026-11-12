@@ -572,6 +572,28 @@ def boss_header(browser, base):
     ctx.close()
 
 
+def boss_rewards(browser, base):
+    """Boss rewards by difficulty (David, 12 Nov 2026; check added by Claude): every circle shows that difficulty's tiles and every icon loads."""
+    ctx = browser.new_context(viewport={'width': 1400, 'height': 900})
+    page = open_site(ctx, base, 'tierlist', 'boss rewards')
+    with open(os.path.join(ROOT, 'data.json'), encoding='utf-8') as f:
+        bosses = json.load(f)['TIER_LIST_V2']['bosses']
+    for b in bosses:
+        diffs = (b.get('info') or {}).get('difficulties') or []
+        if not diffs:
+            continue
+        page.evaluate("id=>{Object.assign(V2,{mode:'bosses',boss:id});renderTierV2();}", b['id'])
+        page.wait_for_timeout(150)
+        for i, x in enumerate(diffs):
+            page.evaluate("([id,i])=>document.querySelector(`[data-v2rew=\"${id}\"] [data-v2rdiff=\"${i}\"]`).click()", [b['id'], i])
+            page.wait_for_timeout(250)
+            st = page.evaluate("""id=>{const box=document.querySelector(`[data-v2rew="${id}"]`);const imgs=[...box.querySelectorAll('.v2-rtiles img')];box.closest('details').open=true;return {tiles:box.querySelectorAll('.v2-rtiles > *').length,on:box.querySelector('.tr-diff.on')?.dataset.v2rdiff,broken:imgs.filter(m=>!m.complete||!m.naturalWidth).map(m=>m.getAttribute('src'))}}""", b['id'])
+            if st['tiles'] != len(x['rewards']) or st['on'] != str(i) or st['broken']:
+                bad(f"boss rewards: {b['id']} {x['name']} shows {st}")
+    print('  boss rewards by difficulty checked')
+    ctx.close()
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -591,6 +613,7 @@ def main():
         beta_interactions(browser, base)
         tab_titles(browser, base)
         boss_header(browser, base)
+        boss_rewards(browser, base)
         with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
             beta_subpath(browser, prefixed)
         if not QUICK:

@@ -7292,3 +7292,71 @@ a.shortcut-card:focus-visible {
       0 0 32px #b45cff55;
   }
 }
+/* Boss rewards by difficulty (12 Nov 2026) */
+.v2-rdiffs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 2px 0 12px;
+}
+.v2-rdiff-name {
+  margin-left: 8px;
+  font-weight: 800;
+  color: #e6e8ec;
+}
+.v2-rtiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.v2-rtiles .tr-rw,
+.v2-rtiles .tr-rw img {
+  width: 56px;
+  height: 56px;
+}
+.v2-rtiles .tr-rw b {
+  font-size: 11px;
+  line-height: 15px;
+}
+.v2-rw-set img,
+.v2-rw-rune img {
+  box-sizing: border-box;
+  padding: 5px;
+  object-fit: contain;
+}
+.v2-rw-set img {
+  background: color-mix(in srgb, var(--set-rarity) 28%, #07131d);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--set-rarity) 90%, #fff),
+    0 0 12px color-mix(in srgb, var(--set-rarity) 42%, transparent);
+}
+.v2-rw-set:after {
+  content: 'SET';
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  padding: 1px 3px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--set-rarity) 78%, #111);
+  color: #fff;
+  font-size: 8px;
+  font-weight: 900;
+  text-shadow: 0 1px 2px #000;
+}
+.v2-rw-rune img {
+  background: radial-gradient(
+    circle at 50% 40%,
+    color-mix(in srgb, var(--rune) 55%, #0b1320),
+    color-mix(in srgb, var(--rune) 22%, #07131d)
+  );
+  box-shadow:
+    inset 0 0 0 1px var(--rune),
+    0 0 10px color-mix(in srgb, var(--rune) 40%, transparent);
+}
+.v2-rw-rune b {
+  font-size: 9px !important;
+}
+.v2-rtext {
+  color: #c9ced8;
+}

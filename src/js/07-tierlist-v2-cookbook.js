@@ -222,13 +222,7 @@ function v2BossInfo(b) {
   if (!I) return v2HuntRanks(b);
   const E = profileEsc;
   const fights = `<p>${E(I.intro || '')}</p><div class="v2-fights">${(I.fights || []).map((f, i) => `<div><b>${i + 1}. ${E(f.name)}</b>${E(f.text || '')}</div>`).join('')}</div>${I.fightsNote ? `<p><b>${E(I.fightsNote)}</b></p>` : ''}`;
-  const rew =
-    (I.difficulties || [])
-      .map(
-        (x) =>
-          `<h5>${E(x.name)} · recommended Lv.${x.level}</h5><ul>${x.rewards.map((r) => `<li>${E(r)}</li>`).join('')}</ul>`,
-      )
-      .join('') + (I.rewardsNote ? `<p class="v2-tnote">${E(I.rewardsNote)}</p>` : '');
+  const rew = `<div class="v2-rew" data-v2rew="${E(b.id)}">${v2BossRewards(b)}</div>`;
   const strat = (I.strategy || []).length
     ? `<ul>${I.strategy.map((t) => `<li>${E(t)}</li>`).join('')}</ul>`
     : '<p class="v2-tnote">Signature moves and tips will be added once recorded.</p>';
@@ -722,3 +716,46 @@ function v2HeaderSync() {
 }
 window.addEventListener('resize', () => v2HeaderSplit());
 document.fonts?.ready.then(() => v2HeaderSplit());
+
+/* Boss rewards by difficulty (David, 12 Nov 2026): circles like the dungeons' (colours from DUNGEONS.difficulties), icons instead of text.
+   Entries: {set, rarity} (gear set tile), {rune} (one tile for all 5 types of that grade), {name, icon, amount} (amount may be "1–3"). */
+const V2_RDIFF = {};
+function v2BossRewards(b) {
+  const I = (b && b.info) || {},
+    D = I.difficulties || [],
+    E = profileEsc;
+  if (!D.length) return '';
+  const pick = Math.min(V2_RDIFF[b.id] || 0, D.length - 1),
+    x = D[pick],
+    DC = ((typeof DUNGEONS !== 'undefined' && DUNGEONS.difficulties) || []).reduce((o, v) => ((o[v.name] = v), o), {}),
+    grades = ((typeof RUNES !== 'undefined' && RUNES.grades) || []).reduce((o, g) => ((o[g.name] = g), o), {}),
+    runeIcon = ((typeof RUNES !== 'undefined' && RUNES.types) || [])[0]?.icon || '';
+  const circles = D.map((v, i) => {
+    const c = DC[v.name] || {};
+    return `<button type="button" class="tr-diff${i === pick ? ' on' : ''}" style="--dc:${E(c.color || '#9aa3ad')}" data-v2rdiff="${i}" aria-pressed="${i === pick}" title="${E(v.name)}">${E(c.roman || String(i + 1))}</button>`;
+  }).join('');
+  const amt = (a) => (typeof a === 'number' ? a.toLocaleString('en-GB') : E(String(a ?? '')));
+  const tile = (r) => {
+    if (r.set) {
+      const g = (GEAR_DATA || []).find((s) => s.name === r.set) || {},
+        col = gxRarColor(r.rarity || 'Orange');
+      return `<span class="tr-rw v2-rw-set" style="--set-rarity:${col}" title="${E(r.set)} (${r.rarity === 'Orange' || !r.rarity ? 'Legendary' : E(r.rarity)})"><img src="${E(absUrl(g.icon || ''))}" alt="${E(r.set)}"></span>`;
+    }
+    if (r.rune) {
+      const g = grades[r.rune] || {};
+      return `<span class="tr-rw v2-rw-rune" style="--rune:${E(g.color || '#8b8f98')}" title="${E(r.rune)} Runes (all 5 types)"><img src="${E(absUrl(runeIcon))}" alt="${E(r.rune)} Runes"><b>${E(r.rune)}</b></span>`;
+    }
+    return `<span class="tr-rw" title="${E(r.name)} ×${amt(r.amount)}"><img src="${E(absUrl(r.icon || ''))}" alt="${E(r.name)}"><b>${amt(r.amount)}</b></span>`;
+  };
+  return `<div class="v2-rdiffs" role="group" aria-label="Difficulty">${circles}<span class="v2-rdiff-name">${E(x.name)} · recommended Lv.${E(String(x.level))}</span></div><div class="v2-rtiles">${(x.rewards || []).map((r) => (typeof r === 'string' ? `<span class="v2-rtext">${E(r)}</span>` : tile(r))).join('')}</div>${I.rewardsNote ? `<p class="v2-tnote">${E(I.rewardsNote)}</p>` : ''}`;
+}
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-v2rdiff]'),
+    box = btn && btn.closest('[data-v2rew]');
+  if (!box) return;
+  const b = (v2Data().bosses || []).find((x) => x.id === box.dataset.v2rew);
+  if (!b) return;
+  V2_RDIFF[b.id] = Number(btn.dataset.v2rdiff);
+  box.innerHTML = v2BossRewards(b);
+  box.querySelector(`[data-v2rdiff="${V2_RDIFF[b.id]}"]`)?.focus();
+});

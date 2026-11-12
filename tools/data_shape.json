@@ -4810,9 +4810,42 @@
                   },
                   "rewards": {
                    "list": {
-                    "types": [
-                     "string"
-                    ]
+                    "record": {
+                     "opt": {
+                      "amount": {
+                       "types": [
+                        "number",
+                        "string"
+                       ]
+                      },
+                      "icon": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "name": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "rarity": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "rune": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "set": {
+                       "types": [
+                        "string"
+                       ]
+                      }
+                     },
+                     "req": {}
+                    }
                    }
                   }
                  }

@@ -19084,7 +19084,7 @@
     "stage": "Steelheart Fortress Defense",
     "theme": "raid",
     "info": {
-     "intro": "Co-op Raid for up to 3 players (Multiplayer Mode with an Invite Code, or Solo Mode). Rewards: equipment, Runes and special equipment materials.",
+     "intro": "Co-op Raid for up to 3 players (Multiplayer Mode with an Invite Code, or Solo Mode). Rewards: Legendary gear from the three normal sets, Runes and special equipment materials.",
      "fights": [
       {
        "name": "Ogre",
@@ -19105,34 +19105,148 @@
        "name": "Normal",
        "level": 50,
        "rewards": [
-        "Infiltrator gear",
-        "Intact Runes (all 5 types)",
-        "Damaged Runes (all 5 types)",
-        "EXP 800",
-        "Gold 150,000",
-        "3 more items (not identified yet)"
+        {
+         "set": "Battle Will",
+         "rarity": "Orange"
+        },
+        {
+         "set": "Ballad of Life",
+         "rarity": "Orange"
+        },
+        {
+         "set": "The Infiltrator",
+         "rarity": "Orange"
+        },
+        {
+         "rune": "Damaged"
+        },
+        {
+         "rune": "Intact"
+        },
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 800
+        },
+        {
+         "name": "Gold",
+         "icon": "assets/trait/icons/gold.webp",
+         "amount": 150000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 30
+        },
+        {
+         "name": "Anonymous Artisan's Crafting Tool",
+         "icon": "assets/items/icons/anonymous-artisan-s-crafting-tool.webp",
+         "amount": 1
+        },
+        {
+         "name": "Shape Grinder",
+         "icon": "assets/items/icons/shape-grinder.webp",
+         "amount": "1–3"
+        }
        ]
       },
       {
        "name": "Hard",
        "level": 70,
        "rewards": [
-        "Ballad of Life gear",
-        "Infiltrator gear",
-        "Radiant Runes (all 5 types)",
-        "Refined Runes (all 5 types)"
+        {
+         "set": "Battle Will",
+         "rarity": "Orange"
+        },
+        {
+         "set": "Ballad of Life",
+         "rarity": "Orange"
+        },
+        {
+         "set": "The Infiltrator",
+         "rarity": "Orange"
+        },
+        {
+         "rune": "Refined"
+        },
+        {
+         "rune": "Radiant"
+        },
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1500
+        },
+        {
+         "name": "Gold",
+         "icon": "assets/trait/icons/gold.webp",
+         "amount": 250000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 50
+        },
+        {
+         "name": "Anonymous Artisan's Crafting Tool",
+         "icon": "assets/items/icons/anonymous-artisan-s-crafting-tool.webp",
+         "amount": 2
+        },
+        {
+         "name": "Shape Grinder",
+         "icon": "assets/items/icons/shape-grinder.webp",
+         "amount": "3–5"
+        }
        ]
       },
       {
        "name": "Very Hard",
        "level": 90,
        "rewards": [
-        "Perfect Runes (all 5 types)",
-        "EXP, Gold and materials"
+        {
+         "set": "Battle Will",
+         "rarity": "Orange"
+        },
+        {
+         "set": "Ballad of Life",
+         "rarity": "Orange"
+        },
+        {
+         "set": "The Infiltrator",
+         "rarity": "Orange"
+        },
+        {
+         "rune": "Perfect"
+        },
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 2500
+        },
+        {
+         "name": "Gold",
+         "icon": "assets/trait/icons/gold.webp",
+         "amount": 350000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 70
+        },
+        {
+         "name": "Anonymous Artisan's Crafting Tool",
+         "icon": "assets/items/icons/anonymous-artisan-s-crafting-tool.webp",
+         "amount": 3
+        },
+        {
+         "name": "Shape Grinder",
+         "icon": "assets/items/icons/shape-grinder.webp",
+         "amount": "5–7"
+        }
        ]
       }
      ],
-     "rewardsNote": "Read from the reward lists in David's screenshots; the lists scroll, so some entries may be missing. Members: 1–3 on every difficulty.",
+     "rewardsNote": "David's list of 12 Nov 2026: every difficulty drops all three normal sets (Battle Will, Ballad of Life, The Infiltrator) in Legendary quality; a rune tile stands for all 5 rune types of that grade. Members: 1–3 on every difficulty.",
      "strategy": []
     },
     "image2": "assets/bosses/gauron-dragon-banner.webp",
@@ -19170,42 +19284,112 @@
        "name": "Normal",
        "level": 60,
        "rewards": [
-        "Refined Runes (all 5 types)",
-        "Intact Runes (all 5 types)",
-        "EXP 800",
-        "Gold 200,000",
-        "Anonymous Artisan's Crafting Tool 1",
-        "Shape Grinder 1–3",
-        "Adventurer's Emblem 40"
+        {
+         "rune": "Refined"
+        },
+        {
+         "rune": "Intact"
+        },
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 800
+        },
+        {
+         "name": "Gold",
+         "icon": "assets/trait/icons/gold.webp",
+         "amount": 200000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 40
+        },
+        {
+         "name": "Anonymous Artisan's Crafting Tool",
+         "icon": "assets/items/icons/anonymous-artisan-s-crafting-tool.webp",
+         "amount": 1
+        },
+        {
+         "name": "Shape Grinder",
+         "icon": "assets/items/icons/shape-grinder.webp",
+         "amount": "1–3"
+        }
        ]
       },
       {
        "name": "Hard",
        "level": 80,
        "rewards": [
-        "Radiant Runes (all 5 types)",
-        "Refined Runes (all 5 types)",
-        "EXP 1,500",
-        "Gold 300,000",
-        "Anonymous Artisan's Crafting Tool 2",
-        "Shape Grinder 3–5",
-        "Adventurer's Emblem 60"
+        {
+         "rune": "Radiant"
+        },
+        {
+         "rune": "Refined"
+        },
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1500
+        },
+        {
+         "name": "Gold",
+         "icon": "assets/trait/icons/gold.webp",
+         "amount": 300000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 60
+        },
+        {
+         "name": "Anonymous Artisan's Crafting Tool",
+         "icon": "assets/items/icons/anonymous-artisan-s-crafting-tool.webp",
+         "amount": 2
+        },
+        {
+         "name": "Shape Grinder",
+         "icon": "assets/items/icons/shape-grinder.webp",
+         "amount": "3–5"
+        }
        ]
       },
       {
        "name": "Very Hard",
        "level": 90,
        "rewards": [
-        "Perfect Runes (all 5 types)",
-        "EXP 2,500",
-        "Gold 350,000",
-        "Anonymous Artisan's Crafting Tool 3",
-        "Shape Grinder 5–7",
-        "Adventurer's Emblem 70"
+        {
+         "rune": "Perfect"
+        },
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 2500
+        },
+        {
+         "name": "Gold",
+         "icon": "assets/trait/icons/gold.webp",
+         "amount": 350000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 70
+        },
+        {
+         "name": "Anonymous Artisan's Crafting Tool",
+         "icon": "assets/items/icons/anonymous-artisan-s-crafting-tool.webp",
+         "amount": 3
+        },
+        {
+         "name": "Shape Grinder",
+         "icon": "assets/items/icons/shape-grinder.webp",
+         "amount": "5–7"
+        }
        ]
       }
      ],
-     "rewardsNote": "Read from the reward lists in David's screenshots. Members: 1–3 on every difficulty.",
+     "rewardsNote": "Read from the reward lists in David's screenshots; a rune tile stands for all 5 rune types of that grade. Members: 1–3 on every difficulty.",
      "strategy": [
       "One of the hardest fights in the game (David, first clear).",
       "Dodging at the right moments is crucial: she has many grab attacks and can easily stun-lock you."
