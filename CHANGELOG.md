@@ -1,5 +1,9 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Fix: data shape for the Hunt boss weaknesses (Claude)
+- Commit `dfd9af5` (Hunt boss weaknesses) failed GitHub's checks and was **not published**: `TIER_LIST_V2.bosses[].weak` had only ever held empty lists, so `check_shape.py` saw the new names as a type change. Its CHANGELOG line "ALL CHECKS PASSED" was wrong: the commit went out before the check result was read (Claude's mistake).
+- `check_shape.py --update` printed one line, `TIER_LIST_V2.bosses[].weak[]: -> string`, which is the intended change (the key was already documented in DATA_REFERENCE as `weak[]`). `tools/data_shape.json` committed. `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Hunt boss weaknesses (Claude)
 - David found each Hunt boss's two weak elements: Furcas Shock, Burn · Vanak Poison, Bleed · Barduk Bleed, Frost · Gallore Frost, Burn · Ghoul Greed Burn, Shock · Earthlander Bleed, Poison. Stored as archetypes in `TIER_LIST_V2.bosses[].weak` (Thunderbolt, Blazeflame, Venom, Bloodburst, Frostbite), in David's order. On PC the boss header now shows the two weakness icons on the right and splits the title through the last D of DRAGONSWORD into the two colours; the tier list's boss views mark heroes of those archetypes as before (`v2BossWeak`). Charlotte's Ultimate confirmed at 0.50 Poison on the Ogre at A6 (GAME_MATH 3.3).
 - David's damage readings for every difficulty (to work out the bosses' Defense) are not stored yet: the hit and its Ogre value are needed first, see STATUS. `check_all.py`: ALL CHECKS PASSED.
