@@ -1,5 +1,12 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 12 Nov 2026 — Hunt rewards by difficulty: six circles, Furcas first (Claude)
+- **What David sees:** a new Rewards panel on Hunt bosses (above the unchanged rating rewards) with six circles, I Normal to VI Hell, each showing that difficulty's recommended level, players (1–2) and rewards as icon tiles. The circles now look like the game's on both Hunts and Raids: always in their colour, dimmed when not picked, white ring and glow when picked, joined by short lines. Trait Dungeon circles are unchanged.
+- **Colours:** I–III keep the dungeon colours; IV Extreme #996ccb, V Nightmare #de833c, VI Hell #c86b6b, sampled from the picked circle in David's Furcas screenshots. New data `TIER_LIST_V2.huntDifficulties`.
+- **Furcas (from David's screenshots):** Normal Lv.20: EXP 400, Spiny Fin 1, Adventurer's Emblem 5, Record of Battle 10. Hard Lv.35: 700, 3, 10, Record 20. Very Hard Lv.50: 1,000, 5, 20, Secret Text of the Warrior 10, Record 20. Extreme Lv.65: 1,300, 10, 25, Warrior 20, Record 20. Nightmare Lv.90: EXP 3,000, Emblem 60. Hell Lv.90: EXP 5,000, Emblem 100. New data `TIER_LIST_V2.bosses[].hunt` (DATA_REFERENCE; `check_shape.py --update` printed only the new `hunt` and `huntDifficulties` fields).
+- **The other five Hunt bosses wait:** their Normal-to-Extreme screenshots (and Earthlander's Normal and Hard) are cut off on the right, so the last reward tiles are missing. Their Nightmare and Hell lists are complete (EXP 3,000 + Emblem 60; EXP 5,000 + Emblem 100), but a boss only gets the panel once all six are known. The PNGs stay in `assets/bosses/reward/` until then.
+- **Checks:** `boss_rewards()` now covers Hunt bosses too. `?v=20261112h` on css and js 07. `check_all.py`: ALL CHECKS PASSED.
+
 ## 12 Nov 2026 — Check change approved by David: a cancelled tab-icon download no longer fails a publish (Claude)
 - **Why:** two publish runs today failed with "request failed: assets/ui/favicon.png" and passed on an unchanged re-run. Full Chrome in CI sometimes cancels the tab-icon download when the check moves on quickly (`net::ERR_ABORTED`); the site was fine.
 - **David's conditions (12 Nov), all met in `tools/check_site.py`:**

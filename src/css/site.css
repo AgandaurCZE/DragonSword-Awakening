@@ -7360,3 +7360,48 @@ a.shortcut-card:focus-visible {
 .v2-rtext {
   color: #c9ced8;
 }
+/* Boss reward circles look like the game's: always in their colour, dimmer when not picked, a white ring and glow when picked; a short
+   line joins them (12 Nov 2026). Only inside the boss Rewards panel; the Trait Dungeon circles are unchanged. */
+.v2-rdiffs .tr-diff {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border: 2px solid color-mix(in srgb, var(--dc) 75%, #000);
+  background: radial-gradient(
+    circle at 50% 35%,
+    color-mix(in srgb, var(--dc) 70%, #fff 10%),
+    color-mix(in srgb, var(--dc) 45%, #0b1320)
+  );
+  color: color-mix(in srgb, var(--dc) 35%, #fff);
+  opacity: 0.62;
+  transition:
+    opacity 0.15s,
+    box-shadow 0.15s;
+}
+.v2-rdiffs .tr-diff + .tr-diff {
+  margin-left: 12px;
+}
+.v2-rdiffs .tr-diff + .tr-diff:before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  width: 12px;
+  border-top: 2px solid #ffffff2e;
+}
+.v2-rdiffs .tr-diff:hover {
+  opacity: 0.9;
+}
+.v2-rdiffs .tr-diff.on {
+  opacity: 1;
+  border-color: #fff;
+  background: radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--dc) 55%, #fff), var(--dc));
+  color: #fff;
+  text-shadow: 0 1px 2px #0009;
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--dc) 80%, transparent),
+    0 0 16px 2px color-mix(in srgb, var(--dc) 75%, transparent);
+}
+.v2-rdiffs .v2-rdiff-name {
+  margin-left: 14px;
+}

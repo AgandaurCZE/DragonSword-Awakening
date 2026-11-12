@@ -19003,6 +19003,158 @@
     "portrait": "assets/bosses/furcas.webp",
     "header": {
      "left": "assets/bosses/bosses-header/furcas-left.webp"
+    },
+    "hunt": {
+     "members": "1–2",
+     "note": "From David's reward screens (12 Nov 2026), in the game's order.",
+     "difficulties": [
+      {
+       "name": "Normal",
+       "level": 20,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 400
+        },
+        {
+         "name": "Spiny Fin",
+         "icon": "assets/items/icons/spiny-fin.webp",
+         "amount": 1
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 5
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 10
+        }
+       ]
+      },
+      {
+       "name": "Hard",
+       "level": 35,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 700
+        },
+        {
+         "name": "Spiny Fin",
+         "icon": "assets/items/icons/spiny-fin.webp",
+         "amount": 3
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 10
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Very Hard",
+       "level": 50,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1000
+        },
+        {
+         "name": "Spiny Fin",
+         "icon": "assets/items/icons/spiny-fin.webp",
+         "amount": 5
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 20
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 10
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Extreme",
+       "level": 65,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 1300
+        },
+        {
+         "name": "Spiny Fin",
+         "icon": "assets/items/icons/spiny-fin.webp",
+         "amount": 10
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 25
+        },
+        {
+         "name": "Secret Text of the Warrior",
+         "icon": "assets/items/icons/secret-text-of-the-warrior.webp",
+         "amount": 20
+        },
+        {
+         "name": "Record of Battle",
+         "icon": "assets/items/icons/record-of-battle.webp",
+         "amount": 20
+        }
+       ]
+      },
+      {
+       "name": "Nightmare",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 3000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 60
+        }
+       ]
+      },
+      {
+       "name": "Hell",
+       "level": 90,
+       "rewards": [
+        {
+         "name": "EXP",
+         "icon": "assets/trait/icons/exp.webp",
+         "amount": 5000
+        },
+        {
+         "name": "Adventurer's Emblem",
+         "icon": "assets/trait/icons/emblem.webp",
+         "amount": 100
+        }
+       ]
+      }
+     ]
     }
    },
    {
@@ -19888,7 +20040,39 @@
      "icon": "assets/items/icons/fragment-of-sacred-light.webp"
     }
    ]
-  }
+  },
+  "huntDifficulties": [
+   {
+    "name": "Normal",
+    "roman": "I",
+    "color": "#9aa3ad"
+   },
+   {
+    "name": "Hard",
+    "roman": "II",
+    "color": "#4caf6a"
+   },
+   {
+    "name": "Very Hard",
+    "roman": "III",
+    "color": "#3f8fd8"
+   },
+   {
+    "name": "Extreme",
+    "roman": "IV",
+    "color": "#996ccb"
+   },
+   {
+    "name": "Nightmare",
+    "roman": "V",
+    "color": "#de833c"
+   },
+   {
+    "name": "Hell",
+    "roman": "VI",
+    "color": "#c86b6b"
+   }
+  ]
  },
  "TOWER_TRIALS": {
   "note": "Tower of Trials (David, 31 Oct 2026). Unlocked by the side quest 'Barduk's Intentions'; reached only through the map's Tower of Trials point (not in the menu or the Mercenary Guide). Source notes and screenshots: assets/sources/tower/. Shown in the new tier list's Towers mode (preview only).",

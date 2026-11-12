@@ -4784,6 +4784,66 @@
         "list": {
          "record": {
           "opt": {
+           "hunt": {
+            "record": {
+             "opt": {},
+             "req": {
+              "difficulties": {
+               "list": {
+                "record": {
+                 "opt": {},
+                 "req": {
+                  "level": {
+                   "types": [
+                    "number"
+                   ]
+                  },
+                  "name": {
+                   "types": [
+                    "string"
+                   ]
+                  },
+                  "rewards": {
+                   "list": {
+                    "record": {
+                     "opt": {},
+                     "req": {
+                      "amount": {
+                       "types": [
+                        "number"
+                       ]
+                      },
+                      "icon": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "name": {
+                       "types": [
+                        "string"
+                       ]
+                      }
+                     }
+                    }
+                   }
+                  }
+                 }
+                }
+               }
+              },
+              "members": {
+               "types": [
+                "string"
+               ]
+              },
+              "note": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           },
            "image2": {
             "types": [
              "string"
@@ -5079,6 +5139,30 @@
               "string"
              ]
             }
+           }
+          }
+         }
+        }
+       },
+       "huntDifficulties": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "color": {
+            "types": [
+             "string"
+            ]
+           },
+           "name": {
+            "types": [
+             "string"
+            ]
+           },
+           "roman": {
+            "types": [
+             "string"
+            ]
            }
           }
          }

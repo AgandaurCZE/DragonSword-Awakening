@@ -215,7 +215,13 @@ function v2HuntRanks(b) {
   const H = (typeof TIER_LIST_V2 !== 'undefined' && TIER_LIST_V2.huntRatingRewards) || null;
   if (!b || b.type !== 'Hunt' || !H) return '';
   const E = profileEsc;
-  return `<details class="v2-panel v2-binfo"><summary>Rating rewards (every Hunt boss, every difficulty)</summary><div><table class="gx-tbl">${(H.ranks || []).map((r) => `<tr><td style="font-weight:900;font-size:18px;width:40px">${E(r.rank)}</td><td>${Number(r.points).toLocaleString('en-GB')} pts</td><td><span class="gx-mat"><img src="${E(r.icon)}" alt="">${r.amount}× ${E(r.item)}</span></td></tr>`).join('')}</table><p class="v2-tnote">${E(H.note || '')}</p></div></details>`;
+  const rew = b.hunt
+    ? `<details class="v2-panel v2-binfo"><summary>Rewards</summary><div><div class="v2-rew" data-v2rew="${E(b.id)}">${v2BossRewards(b)}</div></div></details>`
+    : '';
+  return (
+    rew +
+    `<details class="v2-panel v2-binfo"><summary>Rating rewards (every Hunt boss, every difficulty)</summary><div><table class="gx-tbl">${(H.ranks || []).map((r) => `<tr><td style="font-weight:900;font-size:18px;width:40px">${E(r.rank)}</td><td>${Number(r.points).toLocaleString('en-GB')} pts</td><td><span class="gx-mat"><img src="${E(r.icon)}" alt="">${r.amount}× ${E(r.item)}</span></td></tr>`).join('')}</table><p class="v2-tnote">${E(H.note || '')}</p></div></details>`
+  );
 }
 function v2BossInfo(b) {
   const I = b && b.info;
@@ -721,13 +727,18 @@ document.fonts?.ready.then(() => v2HeaderSplit());
    Entries: {set, rarity} (gear set tile), {rune} (one tile for all 5 types of that grade), {name, icon, amount} (amount may be "1–3"). */
 const V2_RDIFF = {};
 function v2BossRewards(b) {
-  const I = (b && b.info) || {},
-    D = I.difficulties || [],
+  const H = (b && b.hunt) || null,
+    I = (b && b.info) || {},
+    D = I.difficulties || (H && H.difficulties) || [],
+    note = I.rewardsNote || (H && H.note) || '',
     E = profileEsc;
   if (!D.length) return '';
   const pick = Math.min(V2_RDIFF[b.id] || 0, D.length - 1),
     x = D[pick],
-    DC = ((typeof DUNGEONS !== 'undefined' && DUNGEONS.difficulties) || []).reduce((o, v) => ((o[v.name] = v), o), {}),
+    DC = [
+      ...((typeof DUNGEONS !== 'undefined' && DUNGEONS.difficulties) || []),
+      ...((H && typeof TIER_LIST_V2 !== 'undefined' && TIER_LIST_V2.huntDifficulties) || []),
+    ].reduce((o, v) => ((o[v.name] = v), o), {}),
     grades = ((typeof RUNES !== 'undefined' && RUNES.grades) || []).reduce((o, g) => ((o[g.name] = g), o), {}),
     runeIcon = ((typeof RUNES !== 'undefined' && RUNES.types) || [])[0]?.icon || '';
   const circles = D.map((v, i) => {
@@ -747,7 +758,7 @@ function v2BossRewards(b) {
     }
     return `<span class="tr-rw" title="${E(r.name)} ×${amt(r.amount)}"><img src="${E(absUrl(r.icon || ''))}" alt="${E(r.name)}"><b>${amt(r.amount)}</b></span>`;
   };
-  return `<div class="v2-rdiffs" role="group" aria-label="Difficulty">${circles}<span class="v2-rdiff-name">${E(x.name)} · recommended Lv.${E(String(x.level))}</span></div><div class="v2-rtiles">${(x.rewards || []).map((r) => (typeof r === 'string' ? `<span class="v2-rtext">${E(r)}</span>` : tile(r))).join('')}</div>${I.rewardsNote ? `<p class="v2-tnote">${E(I.rewardsNote)}</p>` : ''}`;
+  return `<div class="v2-rdiffs" role="group" aria-label="Difficulty">${circles}<span class="v2-rdiff-name">${E(x.name)} · recommended Lv.${E(String(x.level))}${H && H.members ? ' · ' + E(H.members) + ' players' : ''}</span></div><div class="v2-rtiles">${(x.rewards || []).map((r) => (typeof r === 'string' ? `<span class="v2-rtext">${E(r)}</span>` : tile(r))).join('')}</div>${note ? `<p class="v2-tnote">${E(note)}</p>` : ''}`;
 }
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-v2rdiff]'),

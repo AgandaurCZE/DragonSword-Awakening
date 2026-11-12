@@ -655,7 +655,7 @@ def boss_rewards(browser, base):
     with open(os.path.join(ROOT, 'data.json'), encoding='utf-8') as f:
         bosses = json.load(f)['TIER_LIST_V2']['bosses']
     for b in bosses:
-        diffs = (b.get('info') or {}).get('difficulties') or []
+        diffs = (b.get('info') or {}).get('difficulties') or (b.get('hunt') or {}).get('difficulties') or []
         if not diffs:
             continue
         page.evaluate("id=>{Object.assign(V2,{mode:'bosses',boss:id});renderTierV2();}", b['id'])
