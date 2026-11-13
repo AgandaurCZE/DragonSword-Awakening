@@ -5,7 +5,7 @@ Back to the library: [docs/README.md](../README.md). Data shape: `TIER_LIST_V2` 
 ## Ground rules · updated 10 Nov
 - `TIER_LIST_V2.heroes` holds only ratings agreed with David, after debate. **Never set a tier by formula.**
 - **What the main view rates (David, 10 Nov):** base kits **with Mastery** (before 10 Nov: without), no awakenings, no signature. The Needs A (`awk`) and Late bloomer (`late`) tags are gone from it (the definitions stay in data.json; the legend hides unused tags).
-- **Awakening view (agreed 10 Nov, not built yet):** a separate button rating every hero with **all awakenings at A6**, plus the signature where the hero really needs it (Castella's speed-run player didn't use hers, so not automatically). The purple signature card stays in that view. A hero who needs only A1 or A3 to work well says so in their review and in the best-awakening section.
+- **Awakening view (agreed 10 Nov; button built 13 Nov, ratings not agreed yet, so every hero is unrated in it):** a separate button rating every hero with **all awakenings at A6**, plus the signature where the hero really needs it (Castella's speed-run player didn't use hers, so not automatically). The purple signature card stays in that view. A hero who needs only A1 or A3 to work well says so in their review and in the best-awakening section.
 - All new tier-list work is preview-only (`?tiers=new`). The public page keeps `HEROES[].tiers` until David approves launch.
 - Hunt bosses are rated on **Nightmare and above** only (that's where the weakness mechanic matters).
 

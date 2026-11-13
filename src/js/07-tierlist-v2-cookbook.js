@@ -38,6 +38,9 @@ let V2 = {
     }
   })(),
   tagFlip: new Set(),
+  // Awakenings view (David, 13 Nov 2026): foundation only. While it is on every hero is unrated, in every mode;
+  // the ratings with all awakenings are agreed with David later. Not remembered between visits.
+  awk: false,
 };
 const V2_KITS = {
   'Damage / Control':
@@ -60,6 +63,7 @@ function v2Tower() {
 }
 function v2Tier(name) {
   const H = v2Hero(name);
+  if (V2.awk) return { t: undefined };
   if (V2.mode === 'overall')
     return { t: V2.view === 'single' ? H.overall?.single : V2.view === 'groups' ? H.overall?.groups : H.overall?.tier };
   if (V2.mode === 'towers') {
@@ -146,8 +150,10 @@ function v2Card(h) {
 function v2TipHtml(h) {
   const H = v2Hero(h.name);
   const D = v2Data();
-  const box = (label, t) =>
-    `<div class="tip-tier"><div class="label">${profileEsc(label)}</div><div class="value" style="background:${t ? v2TierColor(t) : '#3a3f4a'};${t ? '' : 'color:#cbd0d9'}">${t || '?'}</div></div>`;
+  const box = (label, t0) => {
+    const t = V2.awk ? undefined : t0;
+    return `<div class="tip-tier"><div class="label">${profileEsc(label)}</div><div class="value" style="background:${t ? v2TierColor(t) : '#3a3f4a'};${t ? '' : 'color:#cbd0d9'}">${t || '?'}</div></div>`;
+  };
   let tiers = '';
   if (V2.mode === 'overall')
     tiers =
@@ -321,7 +327,7 @@ function renderTierV2() {
     )
     .join(
       '',
-    )}</div><div class="v2-fgroup"><button type="button" class="heroes-filter-btn v2-tagall${V2.tagsOff ? '' : ' active'}" id="v2TagAll" aria-pressed="${!V2.tagsOff}" title="${V2.tagsOff ? 'Show' : 'Hide'} all tags">Tags</button></div></div>`;
+    )}</div><div class="v2-fgroup"><button type="button" class="heroes-filter-btn v2-tagall${V2.tagsOff ? '' : ' active'}" id="v2TagAll" aria-pressed="${!V2.tagsOff}" title="${V2.tagsOff ? 'Show' : 'Hide'} all tags">Tags</button><button type="button" class="heroes-filter-btn v2-tagall${V2.awk ? ' active' : ''}" id="v2AwkAll" aria-pressed="${V2.awk}" title="${V2.awk ? 'Back to the ratings without awakenings' : 'Ratings with all awakenings (not rated yet)'}">Awakenings</button></div></div>`;
   const rolesShown = V2.role ? [V2.role] : roles;
   html += `<div class="v2-grid" style="--cols:${rolesShown.length}"><div class="v2-corner"></div>${rolesShown.map((r) => `<div class="v2-rolehead"><img src="${ROLE_ICONS[r] || ''}" alt="">${profileEsc(r)}</div>`).join('')}`;
   const rows = [...tiers, '?'];
@@ -383,6 +389,14 @@ function renderTierV2() {
         try {
           localStorage.setItem('dsw.v2.tagsOff', V2.tagsOff ? '1' : '0');
         } catch (e) {}
+        renderTierV2();
+      };
+  }
+  {
+    const ab = $('v2AwkAll');
+    if (ab)
+      ab.onclick = () => {
+        V2.awk = !V2.awk;
         renderTierV2();
       };
   }

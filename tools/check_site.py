@@ -362,20 +362,22 @@ def progress_backups(browser, base):
 
 def preview_views(browser, base):
     """Preview views the menu walk can't reach (Claude, 11 Nov 2026): every Karma level in the picker shows the measured
-    table for Balanced and Attack cards, and legacy #hero/Name/tab links canonicalize and go Back correctly."""
+    table for all four stat types (every level since 13 Nov), and legacy #hero/Name/tab links canonicalize and go Back correctly."""
     ctx = browser.new_context(viewport={'width': 1400, 'height': 900})
     page = open_site(ctx, base, '?tiers=new#karma', 'preview Karma levels')
     with open(os.path.join(ROOT, 'data.json'), encoding='utf-8') as f:
         d = json.load(f)
-    tables = {}
-    for name, t in d['KARMA_LEVELLING']['measured'].items():
-        for typ in ('Balanced', 'Attack'):
-            if '(' + typ in name and 'Lv70' in t and typ not in tables:
-                tables[typ] = t
+    tables = d['KARMA_LEVELLING']['measured']
+    want_levels = ['Lv1'] + [f'Lv{n}{w}' for n in range(2, 71) for w in ((' before breakthrough', ' after breakthrough') if n in (20, 30, 40, 50, 60) else ('',))]
+    if sorted(tables) != ['Attack', 'Balanced', 'Defense', 'High Attack'] or any(list(t) != want_levels for t in tables.values()):
+        bad('preview Karma levels: KARMA_LEVELLING.measured must hold the four stat types, each with every level from 1 to 70 and both breakthrough values')
     if not page.query_selector('#karmaLevel'):
         bad('preview Karma levels: the level picker is missing')
     else:
-        for lv in page.evaluate("[...document.querySelectorAll('#karmaLevel option')].map(o=>o.value)"):
+        options = page.evaluate("[...document.querySelectorAll('#karmaLevel option')].map(o=>o.value)")
+        if options != want_levels:
+            bad(f'preview Karma levels: the picker offers {len(options)} levels, expected {len(want_levels)}')
+        for lv in options:
             page.select_option('#karmaLevel', lv)
             got = page.evaluate("""()=>{const o={};document.querySelectorAll('#karmaBoard .karma-card').forEach(c=>{const k=KARMA_DATA.find(x=>x.name===c.dataset.karmaName);if(!k||o[k.statType])return;o[k.statType]=[...c.querySelectorAll('[data-karma-stat] b')].map(b=>b.textContent)});return o}""")
             for typ, t in tables.items():
@@ -689,6 +691,37 @@ def boss_rewards(browser, base):
     ctx.close()
 
 
+def awakening_toggle(browser, base):
+    """Awakenings toggle on the tier list (David, 13 Nov 2026; check added by Claude): the button sits next to Tags; while it is on
+    every hero is unrated (in the Unrated row, the last one) in every mode and the hover card shows no rating; switching it off brings the ratings back."""
+    for width in (1400, 390):
+        ctx = browser.new_context(viewport={'width': width, 'height': 900})
+        page = open_site(ctx, base, 'tierlist', f'awakening toggle, {width}px')
+        state = """()=>{const b=document.getElementById('v2AwkAll'),t=document.getElementById('v2TagAll');return {next:!!b&&!!t&&t.nextElementSibling===b,pressed:b&&b.getAttribute('aria-pressed'),cards:document.querySelectorAll('#tierV2 .v2-card').length,chips:[...document.querySelectorAll('#tierV2 .v2-card .tier-chip')].filter(c=>c.textContent.trim()!=='?').length,rows:[...document.querySelectorAll('#tierV2 .v2-tierlabel')].map(r=>r.textContent.trim())}}"""
+        before = page.evaluate(state)
+        if not before['next'] or before['pressed'] != 'false' or before['cards'] != 20 or not before['chips']:
+            bad(f'awakening toggle, {width}px: before switching on: {before}')
+        page.click('#v2AwkAll')
+        page.wait_for_timeout(150)
+        for mode in ('overall', 'bosses', 'towers'):
+            page.evaluate("m=>{V2.mode=m;renderTierV2();}", mode)
+            page.wait_for_timeout(100)
+            on = page.evaluate(state)
+            if on['pressed'] != 'true' or on['cards'] != 20 or on['chips'] or on['rows'][-1:] != ['Unrated']:
+                bad(f'awakening toggle, {width}px, {mode}: while on: {on}')
+        tip = page.evaluate("[...new DOMParser().parseFromString(v2TipHtml(HEROES[0]),'text/html').querySelectorAll('.tip-tier .value')].map(v=>v.textContent.trim())")
+        if not tip or any(v != '?' for v in tip):
+            bad(f'awakening toggle, {width}px: hover card shows ratings while on: {tip}')
+        page.evaluate("()=>{V2.mode='overall';renderTierV2();}")
+        page.click('#v2AwkAll')
+        page.wait_for_timeout(150)
+        after = page.evaluate(state)
+        if after != before:
+            bad(f'awakening toggle, {width}px: after switching off {after} differs from {before}')
+        ctx.close()
+    print('  awakening toggle checked')
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -710,6 +743,7 @@ def main():
         tab_titles(browser, base)
         boss_header(browser, base)
         boss_rewards(browser, base)
+        awakening_toggle(browser, base)
         with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
             beta_subpath(browser, prefixed)
         if not QUICK:

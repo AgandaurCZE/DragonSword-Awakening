@@ -1,5 +1,19 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 13 Nov 2026 — Karma base stats at every level, all four stat types (Claude)
+- **What David sees:** "Base stats at" on the Karma page now offers every level from Lv.1 to Lv.70, with "before breakthrough" and "after breakthrough" at Lv.20, 30, 40, 50 and 60 (75 choices), and every card shows the game's exact numbers, the Defense and High Attack cards included. Before: only Lv.1, the breakthrough steps and Lv.70, and Defense and High Attack cards said "not measured yet" between Lv.1 and Lv.70.
+- **Source:** David's file `Karma_Stats.txt` (13 Nov; his videos of levelling one card of each group, written out by ChatGPT): Group A 80/22/519 (Balanced), B 96/16/432 (Attack), C 120/11/259 (High Attack), D 56/28/692 (Defense), 74 lines each after Lv.1. Checked before storing: every level present once, no value ever falls, all 24 stored 10 Nov breakthrough readings (Ryza's and Ornette's signatures) are identical, and all four Lv.70 rows equal the stored Lv.70 stats. Nothing was calculated or filled in.
+- **Data:** `KARMA_LEVELLING.measured` changed from four card-named tables (two Lv.1–30, two Lv.1–70, breakthrough steps only) into one table per stat type, `Balanced`, `Attack`, `Defense`, `High Attack`, each with 75 rows. The old tables' numbers are all contained in the new ones. `KARMA_LEVELLING.note` rewritten (the fitted rule is no longer needed for the page; GAME_MATH 2.3 keeps it as an explanation). Same shape: `check_shape.py` passed without `--update`. DATA_REFERENCE updated.
+- **Code:** `karmaLevelTables()` in `src/js/02-teams-karma.js` reads the tables by stat type (`?v=20261113a`). `tools/check_site.py` (`preview_views`) now checks all four types at all 75 levels, and that the data and the picker hold exactly those levels (before: Balanced and Attack only).
+- GAME_MATH 2.3: the level curve is confirmed on all four types; the High Attack breakthrough shares are now measured (Attack ×1.07, Max HP ×0.66 of a Balanced card's, as predicted from Lv.70).
+- `public_diff.py`: the Karma page is unchanged at its default (Lv.70). `check_all.py`: ALL CHECKS PASSED.
+
+## 13 Nov 2026 — Tier list: Awakenings toggle, foundation (Claude)
+- **What David sees:** a small **Awakenings** button next to **Tags** on the tier list. Switched on, every hero is unrated (grey "?", all in the Unrated row) in Overall, Bosses and Towers, and the hover card shows "?" for every rating; switched off, the normal ratings are back. It is off on every visit (not remembered). Tags, roles and the purple signature card are unchanged in that view.
+- This is the foundation David asked for: the ratings with all awakenings are still to be agreed with him (DECISIONS). No data change.
+- Code: `V2.awk`, one line in `v2Tier()`, the hover card and the button `#v2AwkAll` in `src/js/07-tierlist-v2-cookbook.js` (`?v=20261113a`); routes regenerated. New browser check `awakening_toggle` in `tools/check_site.py` (both widths: button next to Tags, all 20 heroes unrated in the three modes, hover card, back to the same ratings when switched off).
+- `public_diff.py`: 2 of 109 views differ, the tier list at 1400 px and 390 px, both 50 px taller: the new button, and at those widths Tags and Awakenings move together onto their own row because the filter row is full (on a wider screen they stay in the row). `check_all.py`: ALL CHECKS PASSED.
+
 ## 13 Nov 2026 — Nightmare+ buff is 83% (notes only; Claude)
 - David: the "about 90%" was an estimate by eye; the measured ×0.171 (83%) is the value. GAME_MATH 3.4 states it as measured; STATUS no longer lists it as open. No site or data change (the calculator already uses 0.171). `check_all.py`: ALL CHECKS PASSED.
 

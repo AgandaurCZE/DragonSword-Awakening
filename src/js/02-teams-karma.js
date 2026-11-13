@@ -579,18 +579,12 @@ function renderKarmas() {
 }
 // Skill text: damage values bold, status effects bold in their archetype colour, Activation Conditions in red.
 
-/* Preview: base stats at another Karma level (Claude, 11 Nov 2026). Only measured values are shown: every Balanced card shares
-   Ryza's signature table and every Attack card Ornette's (KARMA_LEVELLING.measured, David, 10 Nov); the Defense and High Attack
-   types are measured at Lv.1 and Lv.70 only, so between those they say "not measured yet". */
+/* Base stats at another Karma level (Claude, 11 Nov 2026; every level since 13 Nov). Only measured values are shown: every card
+   shows its stat type's table from KARMA_LEVELLING.measured (Balanced, Attack, Defense, High Attack), which holds every level
+   from 1 to 70 and the values before and after each breakthrough (David, 13 Nov). A level missing from a table says "not measured yet". */
 let KARMA_LV = 'Lv70';
 function karmaLevelTables() {
-  const out = {},
-    M = (KARMA_LEVELLING || {}).measured || {};
-  for (const [name, t] of Object.entries(M)) {
-    const m = /\((Balanced|Attack|Defense|High Attack)\b/.exec(name);
-    if (m && t.Lv70 && !out[m[1]]) out[m[1]] = t;
-  }
-  return out;
+  return (KARMA_LEVELLING || {}).measured || {};
 }
 const karmaLvLabel = (k) =>
   k

@@ -27,6 +27,7 @@ Back to the library: [docs/README.md](../README.md). Open work: [STATUS.md](STAT
 Nothing on this page needs doing again. It exists so finished work is never mistaken for an open task. Newest first within each section. When a task in STATUS, SITE or the to-do page finishes, move it here with the date.
 
 ## Game tasks and tests (David)
+- **13 Nov:** Karma base stats at every level (Lv.1–70, before and after each breakthrough) for all four stat types ([GAME_MATH.md](GAME_MATH.md) 2.3).
 - **11 Nov:** title One Who Broke the Thunderbolt (41 of 109); more rune values; Radiant runes synthesise 5 into 1 Perfect; geared damage tests on Ryza and Sion (formula matches every hit, GAME_MATH 3.1).
 - **10 Nov evening:** all Orange +15 substats read from 31 pieces (GEAR_STATS confirmed and corrected); Perfect runes Defense 95, Crit Rate 5.10%, Crit Damage 11.20%.
 - **10 Nov:** title One Who Broke the Dragon Horn (40 of 109); first Radiant and Perfect rune values.
@@ -68,6 +69,8 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - Level curve refitted with Lv.40, Lv.50 and Lv.70 measurements (31 Oct–8 Nov).
 
 ## Site work (preview unless noted)
+- **13 Nov:** Karma level picker shows every level from Lv.1 to Lv.70 and both breakthrough values, exact for all four stat types (David's readings of 13 Nov).
+- **13 Nov:** Awakenings toggle next to Tags on the tier list (foundation: every hero unrated while it is on; the ratings are still to be agreed).
 - **12 Nov:** Hunt rewards by difficulty for all six Hunt bosses, with six game-style circles (I Normal to VI Hell).
 - **12 Nov:** Raid rewards by difficulty as icon tiles (Gauron completed from David's list); Normal/Currency Dungeon emblem and Gold icons on blue tiles.
 - **12 Nov:** boss header art on the tier list (PC): corner art, Raid humanoid/dragon swap synced to the card, Raid title look and glow, Hunt title split in weakness colours once known.
