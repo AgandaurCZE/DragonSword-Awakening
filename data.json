@@ -21802,12 +21802,12 @@
      "groups": "S+"
     },
     "bosses": {
-     "furcas": "C",
-     "vanak": "C",
-     "barduk": "C",
-     "gallore": "C",
-     "ghoul-greed": "C",
-     "earthlander": "C"
+     "furcas": "A",
+     "vanak": "A",
+     "barduk": "A",
+     "gallore": "A",
+     "ghoul-greed": "A",
+     "earthlander": "A"
     },
     "tags": [
      "self",
@@ -21884,12 +21884,12 @@
      "groups": "B"
     },
     "bosses": {
-     "furcas": "C",
-     "vanak": "C",
-     "barduk": "C",
-     "gallore": "C",
-     "ghoul-greed": "C",
-     "earthlander": "C"
+     "furcas": "B",
+     "vanak": "B",
+     "barduk": "B",
+     "gallore": "B",
+     "ghoul-greed": "B",
+     "earthlander": "B"
     },
     "tags": [
      "easy",
@@ -21990,12 +21990,12 @@
      "groups": "A"
     },
     "bosses": {
-     "furcas": "C",
-     "vanak": "C",
-     "barduk": "C",
-     "gallore": "C",
-     "ghoul-greed": "C",
-     "earthlander": "C"
+     "furcas": "A",
+     "vanak": "A",
+     "barduk": "A",
+     "gallore": "A",
+     "ghoul-greed": "A",
+     "earthlander": "A"
     },
     "tags": [
      "enabler",
@@ -22017,12 +22017,12 @@
      "groups": "S"
     },
     "bosses": {
-     "furcas": "C",
-     "vanak": "C",
-     "barduk": "C",
-     "gallore": "C",
-     "ghoul-greed": "C",
-     "earthlander": "C"
+     "furcas": "A",
+     "vanak": "A",
+     "barduk": "A",
+     "gallore": "A",
+     "ghoul-greed": "A",
+     "earthlander": "A"
     },
     "tags": [
      "buffer",
@@ -22196,12 +22196,12 @@
      "groups": "C"
     },
     "bosses": {
-     "furcas": "C",
-     "vanak": "C",
-     "barduk": "C",
-     "gallore": "C",
-     "ghoul-greed": "C",
-     "earthlander": "C"
+     "furcas": "B",
+     "vanak": "B",
+     "barduk": "B",
+     "gallore": "B",
+     "ghoul-greed": "B",
+     "earthlander": "B"
     },
     "tags": [
      "sa"
@@ -22261,12 +22261,12 @@
      "groups": "B"
     },
     "bosses": {
-     "furcas": "C",
-     "vanak": "C",
-     "barduk": "C",
-     "gallore": "C",
-     "ghoul-greed": "C",
-     "earthlander": "C"
+     "furcas": "A",
+     "vanak": "A",
+     "barduk": "A",
+     "gallore": "A",
+     "ghoul-greed": "A",
+     "earthlander": "A"
     },
     "tags": [
      "buffer",
@@ -22285,12 +22285,12 @@
      "groups": "S+"
     },
     "bosses": {
-     "furcas": "C",
-     "vanak": "C",
-     "barduk": "C",
-     "gallore": "C",
-     "ghoul-greed": "C",
-     "earthlander": "C"
+     "furcas": "A",
+     "vanak": "A",
+     "barduk": "A",
+     "gallore": "A",
+     "ghoul-greed": "A",
+     "earthlander": "A"
     },
     "tags": [
      "gather"
