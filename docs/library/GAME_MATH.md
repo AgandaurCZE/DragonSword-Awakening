@@ -209,7 +209,7 @@ Next best set pairs are 1–7% behind (often the element set as the 3-piece with
 
 ## 5. Known unknowns · updated 10 Nov
 - Levels 71–74 enemy Defense; what happens when Armor Penetration exceeds the remaining Defense.
-- Hunt boss weaknesses and immunities (Test 07); Crushing tower bonus; Bleed and Shock tower DoT bonus (assumed like Poison and Burn).
+- Hunt boss build-up resistances on the five bosses other than Furcas (Test 07; the weak elements of all six are known, 3.3); Crushing tower bonus; Bleed and Shock tower DoT bonus (assumed like Poison and Burn).
 - Rune values (updated 11 Nov): `RUNES.seen` holds the complete measured list, including the newer Radiant readings. Perfect values fit **top × n/20** (Claude's interpretation). Attack 140 and Crit Damage 14% tops have been seen; **Defense 100, Max HP 1500 and Crit Rate 8.5% remain predicted, not measured** (highest recorded Focus 8.08%). **Synthesis confirmed:** 5 runes become 1 of the next grade at every step, including Radiant → Perfect (11 Nov); 3 Perfect runes become 1 random Perfect rune. Additional readings are welcome but already recorded values are not open tasks.
 - **Completed 10 Nov:** all Orange +15 substats measured on 31 pieces; Defense Ignore and Attack Power Up confirmed the earlier estimates (`GEAR_STATS.valueSources`). No further confirmation of those substats is needed. The green +100 Attack and +17% Defense Ignore on the Ursula panels remain an unconfirmed buff, most likely food (Tomato Stew gives team Defense Ignore).
 - Why Charlotte, Roxy, Sion and Ornette get the halfway profile A (B = melee, C = ranged, D = Defender are explained). Kalsion's old −1 Attack is gone: his 9 Nov panel gives 1100.

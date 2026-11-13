@@ -14,7 +14,7 @@ Back to the library: [docs/README.md](../README.md). Results: [TEST01_RESULTS.md
 | 04 Defense Ignore and Armor Penetration | `defign` | Done 4 Nov; off the page, entries kept. |
 | 05 Level-up cost | `lvlcost` | Answered; moved to Already answered. |
 | 06 Enemy Defense | `enemydef` | Ongoing: new enemies as David meets them; tower floors open. |
-| 07 Hunt boss weakness (Nightmare and up) | `huntweak` | Not started (only Furcas known: Burn). |
+| 07 Hunt boss weakness (Nightmare and up) | `huntweak` | The weak elements of all six Hunt bosses are known (David, 12 Nov; GAME_MATH 3.3), found outside the Test Kit. Build-up resistances were read on Furcas only. |
 | 08 Hero stats at level 70 | `stats70` | Done 9 Nov for all 20 heroes, in `HERO_BASE_STATS`. The page takes titles off (Attack −145, Max HP −1,575, Defense ÷ 1.053 − 30) and names the matching profile. Copy results into `HERO_BASE_STATS`. |
 | 09 Signature Karma against a normal Karma | `sigtest` | Done 9–10 Nov for every owned signature (results in TEAM_TESTS). Fields: hero, normal Karma, Karma level (compare with a normal Karma of the same level and archetype; Ryza's and Ornette's signatures are Lv.70 since 10 Nov, the rest Lv.1), target, team, damage with each (several runs comma-separated); shows the average gain. Copy results into the Team Planner `sigs` notes. |
 

@@ -8,6 +8,13 @@ Back to the library: [docs/README.md](../README.md). Data shape: `TIER_LIST_V2` 
 - **Awakening view (agreed 10 Nov; button built 13 Nov, ratings not agreed yet, so every hero is unrated in it):** a separate button rating every hero with **all awakenings at A6**, plus the signature where the hero really needs it (Castella's speed-run player didn't use hers, so not automatically). The purple signature card stays in that view. A hero who needs only A1 or A3 to work well says so in their review and in the best-awakening section.
 - All new tier-list work is preview-only (`?tiers=new`). The public page keeps `HEROES[].tiers` until David approves launch.
 - Hunt bosses are rated on **Nightmare and above** only (that's where the weakness mechanic matters).
+- **There is no "All bosses" rating** (David, 13 Nov): world bosses can be killed by anyone, so the tab was removed. Each boss has its own rating.
+
+## Hunt boss ratings: first pass (David, 13 Nov)
+- **Rule:** against a Hunt boss a hero is strong or weak by archetype, because each boss has two weak elements and resists the rest heavily. So nobody is in B, and that is intended (David).
+- **Starting point:** S for heroes of the boss's two weak archetypes; A for the physical-status archetypes (Gale, Crushing, Amplitude); C for the other elements.
+- **David's moves on top:** S+ on the matching weak bosses for Ryza, Ornette, Sion (Shock), Kalsion, Kalien (Burn), Charlotte, Johnny (Poison), Dana, Othello (Frost) and Theresia (Bleed); Reina S on all six; Lute S on Bleed-weak bosses; Tarte A (not S) on Shock-weak bosses; Castella and Astria A on all six.
+- **Not final:** David will test more in game. Astria is A everywhere for now; he re-tests her once she is A6. The full lists per boss are in CHANGELOG (13 Nov) and `TIER_LIST_V2.heroes{}.bosses`. Raids are not rated yet.
 
 ## Roles (`TIER_LIST_V2.heroes[].role`) · 9 Nov
 Four roles: **Main DPS, Sub-DPS, Enabler, Support**. Enabler has the blue icon (`assets/roles/enabler.webp`).

@@ -3212,8 +3212,13 @@ main {
 .v2-boss:hover {
   filter: none;
 }
-.v2-boss.all {
-  background: linear-gradient(120deg, #2b3a52, #1a2230);
+.v2-boss-rows {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.v2-boss-rows .v2-bosses {
+  margin-bottom: 0;
 }
 .v2-boss.locked {
   cursor: default;

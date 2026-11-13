@@ -722,6 +722,27 @@ def awakening_toggle(browser, base):
     print('  awakening toggle checked')
 
 
+def boss_rows(browser, base):
+    """Boss tabs (David, 13 Nov 2026; check added by Claude): no "All bosses" tab; one row of tabs per boss type, Hunt bosses above
+    Raid bosses, at every width; Bosses mode opens on the first boss."""
+    with open(os.path.join(ROOT, 'data.json'), encoding='utf-8') as f:
+        bosses = json.load(f)['TIER_LIST_V2']['bosses']
+    types = list(dict.fromkeys(b['type'] for b in bosses))
+    want = [[b['id'] for b in bosses if b['type'] == t] for t in types]
+    for width in (1920, 1400, 390):
+        ctx = browser.new_context(viewport={'width': width, 'height': 900})
+        page = open_site(ctx, base, 'tierlist', f'boss rows, {width}px')
+        page.click('[data-v2mode="bosses"]')
+        page.wait_for_timeout(200)
+        st = page.evaluate("""()=>{const rows=[...document.querySelectorAll('.v2-boss-rows .v2-bosses')];return {rows:rows.map(r=>[...r.children].map(c=>c.dataset.v2boss)),tops:rows.map(r=>[Math.min(...[...r.children].map(c=>c.getBoundingClientRect().top)),Math.max(...[...r.children].map(c=>c.getBoundingClientRect().bottom))]),on:V2.boss,all:!!document.querySelector('[data-v2boss="all"]')||/All bosses/.test(document.getElementById('tierV2').textContent)}}""")
+        if st['rows'] != want or st['all'] or st['on'] != bosses[0]['id']:
+            bad(f'boss rows, {width}px: {st}')
+        if any(st['tops'][i + 1][0] < st['tops'][i][1] for i in range(len(st['tops']) - 1)):
+            bad(f"boss rows, {width}px: a boss type does not start on its own row ({st['tops']})")
+        ctx.close()
+    print('  boss tab rows checked')
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -744,6 +765,7 @@ def main():
         boss_header(browser, base)
         boss_rewards(browser, base)
         awakening_toggle(browser, base)
+        boss_rows(browser, base)
         with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
             beta_subpath(browser, prefixed)
         if not QUICK:

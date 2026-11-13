@@ -23,7 +23,7 @@ const V2_ICONS = {
 };
 let V2 = {
   mode: 'overall',
-  boss: 'all',
+  boss: '', // a boss id; renderTierV2() picks the first boss when this isn't one (the "All bosses" tab was removed, David, 13 Nov 2026)
   tower: 'gale',
   arch: '',
   role: '',
@@ -71,8 +71,7 @@ function v2Tier(name) {
     return { t: w };
   }
   const b = H.bosses || {};
-  if (V2.boss === 'all') return { t: b.all };
-  return b[V2.boss] ? { t: b[V2.boss] } : { t: b.all, fallback: !!b.all };
+  return { t: b[V2.boss] };
 }
 function v2TierColor(t) {
   return (v2Data().tierColors || {})[t] || tierColor(t);
@@ -122,7 +121,7 @@ function v2NeedsChip(group) {
 }
 function v2Counter(h) {
   if (V2.mode === 'towers') return !!v2Tower().archetype && v2Tower().archetype === h.archetype;
-  if (V2.mode !== 'bosses' || V2.boss === 'all') return false;
+  if (V2.mode !== 'bosses') return false;
   const b = (v2Data().bosses || []).find((x) => x.id === V2.boss);
   return !!b && (b.weak || []).includes(h.archetype);
 }
@@ -162,9 +161,7 @@ function v2TipHtml(h) {
     tiers =
       box('Overall', H.overall?.tier) +
       (TOWER_TRIALS.towers || []).map((w) => box(w.name.replace('Tower of ', ''), (H.towers || {})[w.id])).join('');
-  else
-    tiers =
-      box('All bosses', H.bosses?.all) + (D.bosses || []).map((b) => box(b.name, (H.bosses || {})[b.id])).join('');
+  else tiers = (D.bosses || []).map((b) => box(b.name, (H.bosses || {})[b.id])).join('');
   return `<div class="tip-top"><img class="tip-portrait" src="${h.portrait}" alt=""><div><div class="tip-title">${profileEsc(h.name)}</div><div class="tip-meta"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)} · ${profileEsc(v2Role(h))}</div></div></div><div class="tip-tiers v2-tip-tiers">${tiers}</div>${(() => {
     const l = latestBalanceChange(h.name);
     return l
@@ -244,6 +241,7 @@ function renderTierV2() {
   const root = $('tierV2');
   if (!root) return;
   const D = v2Data();
+  if (!(D.bosses || []).some((b) => b.id === V2.boss)) V2.boss = (D.bosses || [])[0]?.id || '';
   const tiers = D.tiers || ['S', 'A', 'B', 'C'];
   const roles = D.roles || ['Main DPS', 'Sub-DPS', 'Support'];
   const list = HEROES.filter(
@@ -256,9 +254,7 @@ function renderTierV2() {
   const M = D.modes?.[V2.mode] || {};
   const bossName =
     V2.mode === 'bosses'
-      ? V2.boss === 'all'
-        ? 'All bosses'
-        : (D.bosses || []).find((b) => b.id === V2.boss)?.name
+      ? (D.bosses || []).find((b) => b.id === V2.boss)?.name
       : V2.mode === 'towers'
         ? v2Tower().name
         : '';
@@ -291,14 +287,20 @@ function renderTierV2() {
   if (V2.mode === 'towers') html += v2TowersHtml();
   if (V2.mode === 'bosses') {
     const un = D.undiscovered || {};
-    const locks = Object.entries(un).flatMap(([type, n]) =>
-      Array.from(
-        { length: n },
-        () =>
-          `<div class="v2-boss locked"><span class="v2-boss-text"><span class="v2-boss-name">${profileEsc(type)} boss · not reached yet</span></span></div>`,
-      ),
+    // One row of tabs per boss type, in the order the types first appear (Hunt bosses above, Raid bosses below; David, 13 Nov 2026).
+    const types = [...new Set([...(D.bosses || []).map((b) => b.type), ...Object.keys(un)])];
+    const rows = types.map(
+      (type) =>
+        `<div class="v2-bosses">${(D.bosses || [])
+          .filter((b) => b.type === type)
+          .map(v2BossTab)
+          .join('')}${Array.from(
+          { length: un[type] || 0 },
+          () =>
+            `<div class="v2-boss locked"><span class="v2-boss-text"><span class="v2-boss-name">${profileEsc(type)} boss · not reached yet</span></span></div>`,
+        ).join('')}</div>`,
     );
-    html += `<div class="v2-bosses"><button type="button" class="v2-boss all${V2.boss === 'all' ? ' on' : ''}" data-v2boss="all"><span class="v2-boss-text"><span class="v2-boss-name">All bosses</span></span></button>${(D.bosses || []).map(v2BossTab).join('')}${locks.join('')}</div>${v2BossInfo((D.bosses || []).find((b) => b.id === V2.boss))}`;
+    html += `<div class="v2-boss-rows">${rows.join('')}</div>${v2BossInfo((D.bosses || []).find((b) => b.id === V2.boss))}`;
   }
   if (V2.mode === 'overall')
     html += `<div class="v2-view" role="group" aria-label="Rating shown">${[
