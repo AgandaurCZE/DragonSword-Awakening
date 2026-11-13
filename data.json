@@ -21801,6 +21801,14 @@
      "single": "S",
      "groups": "S+"
     },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "C",
+     "earthlander": "C"
+    },
     "tags": [
      "self",
      "easy"
@@ -21818,6 +21826,14 @@
      "tier": "A",
      "single": "A",
      "groups": "A"
+    },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "S",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "C",
+     "earthlander": "S"
     },
     "tags": [
      "enabler",
@@ -21839,6 +21855,14 @@
      "single": "A",
      "groups": "A"
     },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "S",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "C",
+     "earthlander": "S"
+    },
     "tags": [
      "expert"
     ],
@@ -21858,6 +21882,14 @@
      "tier": "A",
      "single": "A",
      "groups": "B"
+    },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "C",
+     "earthlander": "C"
     },
     "tags": [
      "easy",
@@ -21880,6 +21912,14 @@
      "single": "B",
      "groups": "B"
     },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "S",
+     "barduk": "S",
+     "gallore": "C",
+     "ghoul-greed": "C",
+     "earthlander": "S"
+    },
     "tags": [],
     "applies": {
      "main": [
@@ -21898,6 +21938,14 @@
      "single": "B",
      "groups": "A"
     },
+    "bosses": {
+     "furcas": "S",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "S",
+     "ghoul-greed": "S",
+     "earthlander": "C"
+    },
     "tags": [],
     "applies": {
      "main": [
@@ -21913,6 +21961,14 @@
      "tier": "A",
      "single": "A",
      "groups": "A"
+    },
+    "bosses": {
+     "furcas": "S",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "S",
+     "earthlander": "C"
     },
     "tags": [
      "enabler",
@@ -21933,6 +21989,14 @@
      "single": "A",
      "groups": "A"
     },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "C",
+     "earthlander": "C"
+    },
     "tags": [
      "enabler",
      "easy"
@@ -21952,6 +22016,14 @@
      "single": "S",
      "groups": "S"
     },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "C",
+     "earthlander": "C"
+    },
     "tags": [
      "buffer",
      "expert"
@@ -21968,6 +22040,14 @@
      "groups": "S",
      "single": "B"
     },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "C",
+     "barduk": "S",
+     "gallore": "S",
+     "ghoul-greed": "C",
+     "earthlander": "C"
+    },
     "tags": [
      "gather"
     ],
@@ -21981,6 +22061,14 @@
      "tier": "A",
      "single": "A",
      "groups": "S"
+    },
+    "bosses": {
+     "furcas": "S",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "S",
+     "ghoul-greed": "S",
+     "earthlander": "C"
     },
     "tags": [
      "gather"
@@ -21997,6 +22085,14 @@
      "tier": "A",
      "single": "A",
      "groups": "A"
+    },
+    "bosses": {
+     "furcas": "S",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "S",
+     "ghoul-greed": "S",
+     "earthlander": "C"
     },
     "tags": [
      "sa"
@@ -22019,6 +22115,14 @@
      "single": "S",
      "groups": "S"
     },
+    "bosses": {
+     "furcas": "S",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "S",
+     "earthlander": "C"
+    },
     "tags": [
      "gather",
      "self",
@@ -22036,6 +22140,14 @@
      "tier": "B",
      "single": "B",
      "groups": "A"
+    },
+    "bosses": {
+     "furcas": "S",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "S",
+     "earthlander": "C"
     },
     "tags": [
      "buffer",
@@ -22058,6 +22170,14 @@
      "single": "A",
      "groups": "A"
     },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "C",
+     "barduk": "S",
+     "gallore": "S",
+     "ghoul-greed": "C",
+     "earthlander": "C"
+    },
     "tags": [
      "gather",
      "self",
@@ -22075,6 +22195,14 @@
      "single": "B",
      "groups": "C"
     },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "C",
+     "earthlander": "C"
+    },
     "tags": [
      "sa"
     ],
@@ -22087,6 +22215,14 @@
      "single": "S",
      "groups": "S"
     },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "C",
+     "barduk": "S",
+     "gallore": "S",
+     "ghoul-greed": "C",
+     "earthlander": "C"
+    },
     "tags": [
      "easy",
      "sa"
@@ -22098,6 +22234,14 @@
      "tier": "C",
      "single": "C",
      "groups": "C"
+    },
+    "bosses": {
+     "furcas": "S",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "S",
+     "earthlander": "C"
     },
     "tags": [],
     "applies": {
@@ -22116,6 +22260,14 @@
      "single": "B",
      "groups": "B"
     },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "C",
+     "earthlander": "C"
+    },
     "tags": [
      "buffer",
      "expert"
@@ -22131,6 +22283,14 @@
      "tier": "S",
      "single": "A",
      "groups": "S+"
+    },
+    "bosses": {
+     "furcas": "C",
+     "vanak": "C",
+     "barduk": "C",
+     "gallore": "C",
+     "ghoul-greed": "C",
+     "earthlander": "C"
     },
     "tags": [
      "gather"

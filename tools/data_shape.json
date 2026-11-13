@@ -5176,6 +5176,13 @@
            }
           },
           "req": {
+           "bosses": {
+            "map": {
+             "types": [
+              "string"
+             ]
+            }
+           },
            "overall": {
             "record": {
              "opt": {},
