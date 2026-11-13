@@ -78,7 +78,7 @@ The rules are AGENTS.md, "Golden rules". This is how the machinery works. Everyt
 ## Open site tasks · updated 11 Nov
 Game-side tasks and David's to-do list are in [STATUS.md](STATUS.md). Site work still open:
 - **Launch** (David's approval needed): the checklist and the public text changes waiting for it are in [LAUNCH_CHANGES.md](../LAUNCH_CHANGES.md).
-- **Tier list:** the awakening view: the Awakenings button is built (13 Nov; every hero unrated while it is on), its ratings are still to be agreed with David and stored (see DECISIONS); Raid boss ratings and tower ratings (the six Hunt bosses have first-pass ratings since 13 Nov); review texts David will redo later (10 Nov).
+- **Tier list:** the awakening view: the Awakenings button is built (13 Nov; every hero unrated while it is on), its ratings are still to be agreed with David and stored (see DECISIONS); Raid boss ratings (the six Hunt bosses and the three Towers have first-pass ratings since 13 Nov); review texts David will redo later (10 Nov).
 - **Builds:** the preview "Best Gear" box (done 10 Nov) replaces the old build boxes on the Build tab; still open: a role switch (on-field damage dealer or Breaker) and David's review of the box.
 - **Karma:** nothing open. The level picker shows every level for all four stat types since 13 Nov.
 - **Guides:** the 8 categories are placeholder cards; content not written. News page is disabled and comes last.

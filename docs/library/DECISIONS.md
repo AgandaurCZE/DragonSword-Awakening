@@ -10,6 +10,13 @@ Back to the library: [docs/README.md](../README.md). Data shape: `TIER_LIST_V2` 
 - Hunt bosses are rated on **Nightmare and above** only (that's where the weakness mechanic matters).
 - **There is no "All bosses" rating** (David, 13 Nov): world bosses can be killed by anyone, so the tab was removed. Each boss has its own rating.
 
+## What S+ and S mean (David and Claude, 13 Nov)
+- **S+:** "A step above S: top damage in this mode, plus something the whole team gains from, such as fast status application." **S:** "Strong in every fight of this mode and a natural pick for the best teams." The old S+ ("reserved… empty until someone earns it") stopped fitting once many heroes were S+ on Hunt bosses.
+
+## Tower ratings: first pass (David, 13 Nov)
+- **Rule:** in a Tower of Trials the tower's own archetype is S+ (hits on its status get +400%); the other physical-status heroes (Gale, Amplitude, Crushing) are A outside their own tower; Castella is S in all three. The rest were placed by David hero by hero: full lists in CHANGELOG (13 Nov) and `TIER_LIST_V2.heroes{}.towers`.
+- **Not final:** a starting point David will adjust as he plays the towers.
+
 ## Hunt boss ratings: first pass (David, 13 Nov)
 - **Rule:** against a Hunt boss a hero is strong or weak by archetype, because each boss has two weak elements and resists the rest heavily. So nobody is in B, and that is intended (David).
 - **Starting point:** S for heroes of the boss's two weak archetypes; A for the physical-status archetypes (Gale, Crushing, Amplitude); C for the other elements.

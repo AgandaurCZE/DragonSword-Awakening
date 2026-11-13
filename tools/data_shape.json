@@ -5173,6 +5173,13 @@
             "types": [
              "bool"
             ]
+           },
+           "towers": {
+            "map": {
+             "types": [
+              "string"
+             ]
+            }
            }
           },
           "req": {

@@ -69,6 +69,7 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - Level curve refitted with Lv.40, Lv.50 and Lv.70 measurements (31 Oct–8 Nov).
 
 ## Site work (preview unless noted)
+- **13 Nov:** first-pass ratings for every hero on the three Towers of Trials; new wording for the S+ and S ratings.
 - **13 Nov:** first-pass ratings for every hero on the six Hunt bosses; "All bosses" tab removed; Hunt and Raid bosses on separate rows of tabs.
 - **13 Nov:** Karma level picker shows every level from Lv.1 to Lv.70 and both breakthrough values, exact for all four stat types (David's readings of 13 Nov).
 - **13 Nov:** Awakenings toggle next to Tags on the tier list (foundation: every hero unrated while it is on; the ratings are still to be agreed).

@@ -21706,11 +21706,11 @@
   "ratings": [
    {
     "tier": "S+",
-    "text": "Reserved for a hero who, played well, can carry almost any fight on their own. Empty until someone earns it."
+    "text": "A step above S: top damage in this mode, plus something the whole team gains from, such as fast status application."
    },
    {
     "tier": "S",
-    "text": "Defines the best teams and is strong in every fight of this mode."
+    "text": "Strong in every fight of this mode and a natural pick for the best teams."
    },
    {
     "tier": "A",
@@ -21809,6 +21809,11 @@
      "ghoul-greed": "S",
      "earthlander": "S"
     },
+    "towers": {
+     "amplitude": "A",
+     "gale": "S+",
+     "crushing": "A"
+    },
     "tags": [
      "self",
      "easy"
@@ -21834,6 +21839,11 @@
      "gallore": "C",
      "ghoul-greed": "C",
      "earthlander": "S+"
+    },
+    "towers": {
+     "amplitude": "B",
+     "gale": "S",
+     "crushing": "B"
     },
     "tags": [
      "enabler",
@@ -21863,6 +21873,11 @@
      "ghoul-greed": "C",
      "earthlander": "S+"
     },
+    "towers": {
+     "amplitude": "B",
+     "gale": "S",
+     "crushing": "S"
+    },
     "tags": [
      "expert"
     ],
@@ -21890,6 +21905,11 @@
      "gallore": "A",
      "ghoul-greed": "A",
      "earthlander": "A"
+    },
+    "towers": {
+     "amplitude": "S",
+     "gale": "S",
+     "crushing": "S"
     },
     "tags": [
      "easy",
@@ -21920,6 +21940,11 @@
      "ghoul-greed": "C",
      "earthlander": "S"
     },
+    "towers": {
+     "amplitude": "S",
+     "gale": "B",
+     "crushing": "B"
+    },
     "tags": [],
     "applies": {
      "main": [
@@ -21946,6 +21971,11 @@
      "ghoul-greed": "S",
      "earthlander": "C"
     },
+    "towers": {
+     "amplitude": "B",
+     "gale": "A",
+     "crushing": "B"
+    },
     "tags": [],
     "applies": {
      "main": [
@@ -21969,6 +21999,11 @@
      "gallore": "C",
      "ghoul-greed": "S+",
      "earthlander": "C"
+    },
+    "towers": {
+     "amplitude": "B",
+     "gale": "B",
+     "crushing": "S"
     },
     "tags": [
      "enabler",
@@ -21997,6 +22032,11 @@
      "ghoul-greed": "A",
      "earthlander": "S"
     },
+    "towers": {
+     "amplitude": "S+",
+     "gale": "A",
+     "crushing": "A"
+    },
     "tags": [
      "enabler",
      "easy"
@@ -22024,6 +22064,11 @@
      "ghoul-greed": "A",
      "earthlander": "A"
     },
+    "towers": {
+     "amplitude": "A",
+     "gale": "S+",
+     "crushing": "A"
+    },
     "tags": [
      "buffer",
      "expert"
@@ -22048,6 +22093,11 @@
      "ghoul-greed": "C",
      "earthlander": "C"
     },
+    "towers": {
+     "amplitude": "B",
+     "gale": "S",
+     "crushing": "B"
+    },
     "tags": [
      "gather"
     ],
@@ -22069,6 +22119,11 @@
      "gallore": "S+",
      "ghoul-greed": "S+",
      "earthlander": "C"
+    },
+    "towers": {
+     "amplitude": "A",
+     "gale": "S",
+     "crushing": "B"
     },
     "tags": [
      "gather"
@@ -22093,6 +22148,11 @@
      "gallore": "S+",
      "ghoul-greed": "S+",
      "earthlander": "C"
+    },
+    "towers": {
+     "amplitude": "S",
+     "gale": "A",
+     "crushing": "A"
     },
     "tags": [
      "sa"
@@ -22123,6 +22183,11 @@
      "ghoul-greed": "S+",
      "earthlander": "C"
     },
+    "towers": {
+     "amplitude": "B",
+     "gale": "S",
+     "crushing": "S"
+    },
     "tags": [
      "gather",
      "self",
@@ -22148,6 +22213,11 @@
      "gallore": "C",
      "ghoul-greed": "S+",
      "earthlander": "C"
+    },
+    "towers": {
+     "amplitude": "A",
+     "gale": "A",
+     "crushing": "S"
     },
     "tags": [
      "buffer",
@@ -22178,6 +22248,11 @@
      "ghoul-greed": "C",
      "earthlander": "C"
     },
+    "towers": {
+     "amplitude": "B",
+     "gale": "B",
+     "crushing": "S"
+    },
     "tags": [
      "gather",
      "self",
@@ -22203,6 +22278,11 @@
      "ghoul-greed": "A",
      "earthlander": "A"
     },
+    "towers": {
+     "amplitude": "A",
+     "gale": "B",
+     "crushing": "B"
+    },
     "tags": [
      "sa"
     ],
@@ -22223,6 +22303,11 @@
      "ghoul-greed": "C",
      "earthlander": "C"
     },
+    "towers": {
+     "amplitude": "B",
+     "gale": "B",
+     "crushing": "S"
+    },
     "tags": [
      "easy",
      "sa"
@@ -22242,6 +22327,11 @@
      "gallore": "C",
      "ghoul-greed": "A",
      "earthlander": "C"
+    },
+    "towers": {
+     "amplitude": "A",
+     "gale": "C",
+     "crushing": "B"
     },
     "tags": [],
     "applies": {
@@ -22268,6 +22358,11 @@
      "ghoul-greed": "A",
      "earthlander": "A"
     },
+    "towers": {
+     "amplitude": "A",
+     "gale": "A",
+     "crushing": "S+"
+    },
     "tags": [
      "buffer",
      "expert"
@@ -22291,6 +22386,11 @@
      "gallore": "A",
      "ghoul-greed": "A",
      "earthlander": "S+"
+    },
+    "towers": {
+     "amplitude": "S+",
+     "gale": "A",
+     "crushing": "A"
     },
     "tags": [
      "gather"
