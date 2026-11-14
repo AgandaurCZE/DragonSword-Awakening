@@ -743,6 +743,70 @@ def boss_rows(browser, base):
     print('  boss tab rows checked')
 
 
+def visible_text_rules(browser, base):
+    """David's rule of 13 Nov 2026 (check added by Claude): nothing a visitor can read may contain his name: page text, hover text,
+    labels and image descriptions, on every menu page, every boss and tower view and every hero tab. Also checked here, both new
+    the same day: the Teams page (tier rows S to C, no team cards for now, the speed-run toggle) and the Counter mark in Towers mode
+    (the tower's own archetype plus every hero with a skill that inflicts its status)."""
+    with open(os.path.join(ROOT, 'data.json'), encoding='utf-8') as f:
+        d = json.load(f)
+    ctx = browser.new_context(viewport={'width': 1400, 'height': 900})
+    page = open_site(ctx, base, '', 'visible text')
+    grab = """()=>{const b=document.body.cloneNode(true);b.querySelectorAll('script,style').forEach(e=>e.remove());
+      return b.textContent+' '+[...document.querySelectorAll('[title],[data-v2tip],[aria-label],[alt],[placeholder]')].map(e=>[e.getAttribute('title'),e.dataset.v2tip,e.getAttribute('aria-label'),e.getAttribute('alt'),e.getAttribute('placeholder')].join(' ')).join(' ')}"""
+    seen = set()
+
+    def look(where):
+        text = page.evaluate(grab)
+        i = text.find('David')
+        if i >= 0 and text[max(0, i - 60):i + 60] not in seen:
+            seen.add(text[max(0, i - 60):i + 60])
+            bad(f'visible text, {where}: mentions David: "...{" ".join(text[max(0, i - 60):i + 60].split())}..."')
+
+    for pg in page.evaluate("[...document.querySelectorAll('.nav-item[data-page]')].filter(b=>!b.hidden&&!b.disabled).map(b=>b.dataset.page)"):
+        page.evaluate("p=>document.querySelector('.nav-item[data-page=\"'+p+'\"]').click()", pg)
+        page.wait_for_timeout(350)
+        look(pg)
+    # Teams page
+    page.evaluate("document.querySelector('.nav-item[data-page=\"teams\"]').click()")
+    page.wait_for_timeout(150)
+    teams = "()=>({rows:[...document.querySelectorAll('#teamBoard .team-tier-label')].map(e=>e.textContent.trim()),cards:document.querySelectorAll('#teamBoard .team-card').length,pressed:(document.getElementById('teamsSpeed')||{getAttribute:()=>null}).getAttribute('aria-pressed')})"
+    t0 = page.evaluate(teams)
+    if t0 != {'rows': ['S', 'A', 'B', 'C'], 'cards': 0, 'pressed': 'false'}:
+        bad(f'Teams page: expected the four tier rows, no team cards and the speed-run toggle off, got {t0}')
+    else:
+        page.click('#teamsSpeed')
+        page.wait_for_timeout(100)
+        t1 = page.evaluate(teams)
+        if t1 != {'rows': ['S', 'A', 'B', 'C'], 'cards': 0, 'pressed': 'true'}:
+            bad(f'Teams page: after switching the speed-run toggle on, got {t1}')
+    # Tier list: every boss and tower
+    page.evaluate("document.querySelector('.nav-item[data-page=\"tier\"]').click()")
+    page.wait_for_timeout(150)
+    for b in d['TIER_LIST_V2']['bosses']:
+        page.evaluate("id=>{Object.assign(V2,{mode:'bosses',boss:id,tagsOff:false});renderTierV2();}", b['id'])
+        page.wait_for_timeout(60)
+        look('boss ' + b['id'])
+    arch = {h['name']: h['archetype'] for h in d['HEROES']}
+    for t in d['TOWER_TRIALS']['towers']:
+        page.evaluate("id=>{Object.assign(V2,{mode:'towers',tower:id,tagsOff:false});renderTierV2();}", t['id'])
+        page.wait_for_timeout(60)
+        look('tower ' + t['id'])
+        want = sorted(n for n in arch if arch[n] == t['archetype'] or any(t['status'] in ((s.get('meta') or {}).get('inflicts') or []) for s in (d['CHARACTER_PROFILE_DATA'].get(n) or {}).get('skills', [])))
+        got = page.evaluate("()=>({fn:HEROES.filter(v2Counter).map(h=>h.name).sort(),marks:document.querySelectorAll('#tierV2 .v2-card .v2-tag.solid').length})")
+        if got['fn'] != want or got['marks'] != len(want):
+            bad(f"tower counters, {t['id']}: expected {want}, got {got}")
+    page.evaluate("()=>{Object.assign(V2,{mode:'overall'});renderTierV2();}")
+    # Hero pages: every hero, every tab (the texts are there before the Best Gear box finishes)
+    for name in arch:
+        for tab in ('skills', 'review', 'build'):
+            page.evaluate('([n,t])=>openCharacterProfile(n,t)', [name, tab])
+            page.wait_for_timeout(40)
+            look(f'{name} {tab}')
+    ctx.close()
+    print('  visible text, Teams page and tower counters checked')
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -766,6 +830,7 @@ def main():
         boss_rewards(browser, base)
         awakening_toggle(browser, base)
         boss_rows(browser, base)
+        visible_text_rules(browser, base)
         with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
             beta_subpath(browser, prefixed)
         if not QUICK:

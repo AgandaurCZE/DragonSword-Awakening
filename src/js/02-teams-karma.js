@@ -1,10 +1,23 @@
 /* js/02-teams-karma.js: Teams page (TEAM_DATA) and Karma page (KARMA_DATA). Part of the site script, split out of index.html on 10 Nov 2026.
    The files load in order (see index.html) and share one global scope, so code that runs at load time may only use what earlier files define. */
 // ==== Teams page (TEAM_DATA) ====
+/* Teams page (David, 13 Nov 2026): the old teams are no longer listed here; new ones are coming. The tier rows stay, empty, and a
+   toggle at the top switches to the end-game speed-run teams (also empty for now). TEAM_DATA itself stays in data.json: the hero
+   pages (Synergy) and the gear tools still read it. To list teams again, fill `shown` below. */
+const TEAMS_VIEW = { speed: false };
 function renderTeams() {
   const board = document.getElementById('teamBoard');
   if (!board) return;
   board.innerHTML = '';
+  const controls = document.getElementById('teamsControls');
+  if (controls) {
+    controls.innerHTML = `<button type="button" class="heroes-filter-btn v2-tagall${TEAMS_VIEW.speed ? ' active' : ''}" id="teamsSpeed" aria-pressed="${TEAMS_VIEW.speed}">End-game speed runs</button>`;
+    document.getElementById('teamsSpeed').onclick = () => {
+      TEAMS_VIEW.speed = !TEAMS_VIEW.speed;
+      renderTeams();
+    };
+  }
+  const shown = [];
   const tiers = ['S', 'A', 'B', 'C'];
   const colors = { S: '#f05258', A: '#ff9d48', B: '#69c9e8', C: '#8b86ef' };
   const heroMap = new Map(HEROES.map((h) => [h.name.toLowerCase(), h]));
@@ -24,8 +37,7 @@ function renderTeams() {
     return '#' + shade(r) + shade(g) + shade(b);
   };
   for (const tier of tiers) {
-    const items = TEAM_DATA.filter((t) => t.tier === tier);
-    if (!items.length) continue;
+    const items = shown.filter((t) => t.tier === tier);
     const group = document.createElement('section');
     group.className = 'team-tier-group';
     const label = document.createElement('div');

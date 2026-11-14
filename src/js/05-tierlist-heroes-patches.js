@@ -297,7 +297,7 @@ function renderPatches() {
       )
       .join(
         '',
-      )}<span style="color:#9aa3b2;font-size:12px;flex-basis:100%">Green ▲ buffed, red ▼ nerfed, amber mixed. The same arrows appear on the Tier List and Teams. How the ratings are worked out is explained at the bottom of this page.</span></div>`;
+      )}<span style="color:#9aa3b2;font-size:12px;flex-basis:100%"><b style="color:#3ddc84">Green ▲ buffed</b>, <b style="color:#ff5b64">red ▼ nerfed</b>, <b style="color:#f0a93b">amber mixed</b>. The same arrows appear on the Tier List.</span></div>`;
   }
   const heroes = HEROES.map((h) => h.name).sort();
   const controls = `<div class="patch-controls"><button class="patch-filter${!activePatchBadge ? ' active' : ''}" data-pbf="">✱ All</button>${Object.keys(
@@ -357,8 +357,7 @@ function renderPatches() {
     controls +
     (list.length
       ? `<div class="patch-timeline">${list.map(entry).join('')}</div>`
-      : '<div class="patch-empty">No patches match these filters.</div>') +
-    `<p class="profile-note">${profileEsc(P.rating || '')} ${profileEsc(P.note || '')}</p>`;
+      : '<div class="patch-empty">No patches match these filters.</div>');
   root.querySelectorAll('[data-pbf]').forEach(
     (b) =>
       (b.onclick = () => {
@@ -509,7 +508,7 @@ function renderFamiliars() {
     const P = (F.passives || {})[g];
     if (!P || !P.length) return '';
     const owned = (F.owned || {})[g] || 0;
-    return `<aside class="fam-passive"><div class="fam-passive-title">${profileEsc(g)} passive effect</div><ol>${P.map((p) => `<li class="fp-row${p.scope === 'none' ? ' fp-none' : ''}"><span class="fp-num${p.count <= owned ? ' on' : ''}" title="${p.count <= owned ? "Unlocked in David's game" : 'Collect ' + p.count + ' ' + g + ' familiar' + (p.count > 1 ? 's' : '')}"><span>${p.count}</span></span><div class="fp-text">${famPassiveText(p.text)}${p.scope === 'species' ? ` <span class="fp-scope" data-tip="Applies only to ${profileEsc(g)} familiars, not to the others.">${profileEsc(g)} only</span>` : ''}</div></li>`).join('')}</ol>${(F.passiveNotes || {})[g] ? `<div class="fam-passive-note">${profileEsc(F.passiveNotes[g])}</div>` : ''}</aside>`;
+    return `<aside class="fam-passive"><div class="fam-passive-title">${profileEsc(g)} passive effect</div><ol>${P.map((p) => `<li class="fp-row${p.scope === 'none' ? ' fp-none' : ''}"><span class="fp-num${p.count <= owned ? ' on' : ''}" title="${p.count <= owned ? 'Unlocked' : 'Collect ' + p.count + ' ' + g + ' familiar' + (p.count > 1 ? 's' : '')}"><span>${p.count}</span></span><div class="fp-text">${famPassiveText(p.text)}${p.scope === 'species' ? ` <span class="fp-scope" data-tip="Applies only to ${profileEsc(g)} familiars, not to the others.">${profileEsc(g)} only</span>` : ''}</div></li>`).join('')}</ol>${(F.passiveNotes || {})[g] ? `<div class="fam-passive-note">${profileEsc(F.passiveNotes[g])}</div>` : ''}</aside>`;
   };
   root.innerHTML = list.length
     ? groups
@@ -521,8 +520,6 @@ function renderFamiliars() {
         })
         .join('')
     : `<div class="simple-empty">${profileEsc(F.empty || 'Familiars are coming soon.')}</div>`;
-  if (F.passiveNote) root.insertAdjacentHTML('beforeend', `<p class="profile-note">${profileEsc(F.passiveNote)}</p>`);
-  if (F.note) root.insertAdjacentHTML('beforeend', `<p class="profile-note">${profileEsc(F.note)}</p>`);
   root.querySelectorAll('.fam-abil').forEach((b) => {
     b.addEventListener('pointerenter', (e) => {
       if (e.pointerType !== 'touch') famShowAbility(b);
@@ -589,8 +586,7 @@ function renderTitles() {
   const SEL = selTitles();
   root.innerHTML = `<div class="tt-summary"><div><div class="tt-sum-h">Your titles · ${own.length} of ${T.totalCount || list.length} ticked${own.length ? ' · <button type="button" class="tt-clear" id="ttClear">clear</button>' : ''}</div><div class="tt-sum">${titleSumHtml(titleSum(own))}</div></div><div><div class="tt-sum-h">All ${list.length} titles together</div><div class="tt-sum">${titleSumHtml(titleSum(list))}</div></div><p>Tick the titles you own (the box at the start of each row). They're saved in this browser and counted in every hero's end-game stats, and the recommended gear adjusts to them, e.g. when titles push Crit Rate towards 100%. Every owned title adds its passive to <b>all heroes</b>; flat bonuses are added before % bonuses multiply.</p></div>
  <div class="tt-controls"><input type="search" id="ttSearch" placeholder="Search titles or achievements…" value="${profileEsc(F.q)}" autocomplete="off"><select id="ttCat"><option value="">All categories</option>${(T.categories || []).map((c) => `<option${F.cat === c ? ' selected' : ''}>${profileEsc(c)}</option>`).join('')}</select><select id="ttStat"><option value="">All bonuses</option>${stats.map((s) => `<option value="${profileEsc(s)}"${F.stat === s ? ' selected' : ''}>${profileEsc(titleStatLabel(s))}</option>`).join('')}</select><label class="tt-own"><input type="checkbox" id="ttOwned" style="width:auto"${F.owned ? ' checked' : ''}> Ticked only</label><span class="muted">${shown.length} shown</span></div>
- <div class="simple-table-wrap"><table class="simple-table tt-table"><thead><tr><th></th><th>Title</th><th>Passive</th><th>How to get</th></tr></thead><tbody>${shown.map((t) => `<tr class="${SEL.has(t.name) ? 'tt-owned' : ''}"><td class="tt-tick"><button type="button" class="tt-box${SEL.has(t.name) ? ' on' : ''}" data-title="${profileEsc(t.name)}" aria-pressed="${SEL.has(t.name)}" title="${SEL.has(t.name) ? 'Untick' : 'Tick if you own it'}">${SEL.has(t.name) ? '✓' : ''}</button></td><td><b style="color:${(G[t.grade] || {}).color || '#e5e7eb'}">${profileEsc(t.name)}</b></td><td>${(t.passive || []).map(titleFmt).join('<br>') || '<span class="muted">Not checked yet</span>'}</td><td>${t.category ? `<span class="tt-cat" data-c="${profileEsc(t.category)}">${profileEsc(t.category)}</span> ` : ''}${t.achievement ? profileEsc(t.achievement) + (t.category && t.category !== 'Promotion' ? ' <span class="muted">achievement</span>' : '') : '<span class="muted">Hidden in-game once obtained</span>'}${t.inferred ? ' <span class="muted" title="The game hides it once obtained; inferred from the other promotion titles">(inferred)</span>' : ''}</td></tr>`).join('') || '<tr><td colspan="4" class="muted">No titles match.</td></tr>'}</tbody></table></div>
- <p class="profile-note">${profileEsc(T.note || '')}</p>`;
+ <div class="simple-table-wrap"><table class="simple-table tt-table"><thead><tr><th></th><th>Title</th><th>Passive</th><th>How to get</th></tr></thead><tbody>${shown.map((t) => `<tr class="${SEL.has(t.name) ? 'tt-owned' : ''}"><td class="tt-tick"><button type="button" class="tt-box${SEL.has(t.name) ? ' on' : ''}" data-title="${profileEsc(t.name)}" aria-pressed="${SEL.has(t.name)}" title="${SEL.has(t.name) ? 'Untick' : 'Tick if you own it'}">${SEL.has(t.name) ? '✓' : ''}</button></td><td><b style="color:${(G[t.grade] || {}).color || '#e5e7eb'}">${profileEsc(t.name)}</b></td><td>${(t.passive || []).map(titleFmt).join('<br>') || '<span class="muted">Not checked yet</span>'}</td><td>${t.category ? `<span class="tt-cat" data-c="${profileEsc(t.category)}">${profileEsc(t.category)}</span> ` : ''}${t.achievement ? profileEsc(t.achievement) + (t.category && t.category !== 'Promotion' ? ' <span class="muted">achievement</span>' : '') : '<span class="muted">Hidden in-game once obtained</span>'}${t.inferred ? ' <span class="muted" title="The game hides it once obtained; inferred from the other promotion titles">(inferred)</span>' : ''}</td></tr>`).join('') || '<tr><td colspan="4" class="muted">No titles match.</td></tr>'}</tbody></table></div>`;
   const s = $('ttSearch');
   s.oninput = () => {
     F.q = s.value.trim().toLowerCase();

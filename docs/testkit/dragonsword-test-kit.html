@@ -198,6 +198,7 @@ const TESTS=[
  run(v){const x=nums(v.vals);if(x.length<2||!v.skill)return null;const r=x.map(z=>z/x[0]);
   return{cls:'ok',verdict:`${v.skill}: ${x.length} levels recorded.`,lines:[`Each level ÷ Lv. 1: <span class="v">${r.map(z=>f(z,3)).join(' · ')}</span>`]}}},
 {id:'gear',no:3,grp:'When you can',multi:1,title:'Gear upgrade row',why:'Blue, Purple and Green main stats don\'t follow one ratio to Orange. A full row for one piece pins the table down.',
+ known:'<b>Done (13 Nov):</b> 117 rows recorded, and every main stat that isn\'t filled can be worked out from them (Blue, Purple and Orange match the tables within 1 point or 0.03%). No more rows are needed. Add one only if a number in the game looks different from the site.',
  steps:['Take one piece and note its main stat at every upgrade level you reach (+0, +1, …).','Pick the rarity first: it sets how many levels the boxes show. Substats are optional.'],
  fields:[{k:'slot',l:'Slot',t:'select',o:['Helmet','Chest','Legs','Gloves','Boots']},{k:'rar',l:'Rarity',t:'select',o:['Green','Blue','Purple','Orange']},{k:'main',l:'Main stat name',t:'text',list:'gear-mains'},
   {k:'vals',l:'Main stat at each upgrade level (Tab moves to the next)',t:'levels'},{k:'subs',l:'Substats (name and value, optional)',t:'area',wide:1}],

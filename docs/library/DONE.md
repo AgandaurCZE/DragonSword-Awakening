@@ -28,6 +28,7 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 
 ## Game tasks and tests (David)
 - **13 Nov:** Karma base stats at every level (Lv.1–70, before and after each breakthrough) for all four stat types ([GAME_MATH.md](GAME_MATH.md) 2.3).
+- **13 Nov:** gear main stats at every rarity and upgrade level follow from the Test 03 rows; Test 03 complete ([GAME_MATH.md](GAME_MATH.md) 2.4).
 - **11 Nov:** title One Who Broke the Thunderbolt (41 of 109); more rune values; Radiant runes synthesise 5 into 1 Perfect; geared damage tests on Ryza and Sion (formula matches every hit, GAME_MATH 3.1).
 - **10 Nov evening:** all Orange +15 substats read from 31 pieces (GEAR_STATS confirmed and corrected); Perfect runes Defense 95, Crit Rate 5.10%, Crit Damage 11.20%.
 - **10 Nov:** title One Who Broke the Dragon Horn (40 of 109); first Radiant and Perfect rune values.
@@ -69,6 +70,9 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - Level curve refitted with Lv.40, Lv.50 and Lv.70 measurements (31 Oct–8 Nov).
 
 ## Site work (preview unless noted)
+- **13 Nov:** internal notes and David's name removed from the pages (his list); a check now fails if a page shows his name.
+- **13 Nov:** hero Build tab shows each stat as base + awakenings + titles + runes, coloured and hoverable; runes line larger.
+- **13 Nov:** Counter mark in Towers mode for every hero who inflicts the tower's status; Teams page emptied with an "End-game speed runs" toggle.
 - **13 Nov:** first-pass ratings for every hero on the three Towers of Trials; new wording for the S+ and S ratings.
 - **13 Nov:** first-pass ratings for every hero on the six Hunt bosses; "All bosses" tab removed; Hunt and Raid bosses on separate rows of tabs.
 - **13 Nov:** Karma level picker shows every level from Lv.1 to Lv.70 and both breakthrough values, exact for all four stat types (David's readings of 13 Nov).

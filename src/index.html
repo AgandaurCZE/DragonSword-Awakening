@@ -20,7 +20,7 @@
 <link rel="icon" type="image/png" href="assets/ui/favicon.png">
 <link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
 <title>DragonSword: Awakening, Guides, tools &amp; Tier List</title>
-<link rel="stylesheet" href="css/site.css?v=20261113a">
+<link rel="stylesheet" href="css/site.css?v=20261113b">
 </head>
 <body>
 <aside class="app-sidebar" aria-label="Main navigation">
@@ -63,27 +63,25 @@
  <div class="heroes-grid" id="heroesGrid"></div>
 </section>
 <section class="teams-page" id="teamsPage" hidden>
- <header class="teams-intro"><h2>Team Tier List <span>— DragonSword: Awakening</span></h2><p>Recorded team compositions and recommendations. Team testing and reviews are ongoing during Beta. Character alternatives are shown as split portraits where a specific slot can be swapped.</p></header>
+ <header class="teams-intro"><h2>Team Tier List <span>— DragonSword: Awakening</span></h2></header>
+ <div class="teams-controls" id="teamsControls"></div>
  <div id="teamBoard"></div>
- <p class="teams-footnote">Team tiers are guide recommendations, not an official developer ranking. Slots are ordered Main DPS, Sub-DPS, then Support / enabler; alternatives are explained in each team's notes.</p>
 </section>
 <section class="gear-page" id="gearPage" hidden>
  <div class="gear-heading"><h2>GEAR SETS</h2><span id="gearCount">Showing 12 Gear Sets</span></div>
  <div class="gear-controls"><input id="gearSearch" type="search" placeholder="Search gear sets..." autocomplete="off" aria-label="Search gear sets"><button class="gear-filter active" data-gear-filter="all">✱ All</button><button class="gear-filter" data-gear-filter="Normal Dungeons">Normal Dungeons</button><button class="gear-filter" data-gear-filter="Blacksmith">Blacksmith</button><button class="gear-filter" id="gearReset">× Reset</button></div>
  <div id="gearGrid"></div>
  <div id="gearPreview" hidden></div>
- <p class="profile-note">Gear names, acquisition and effects are recorded from David’s in-game screenshots. The three general sets are grouped as Normal Dungeons; the other nine are crafted at the Blacksmith.</p>
 </section>
 
 <section class="karma-page" id="karmaPage" hidden>
- <div class="karma-intro"><h2>Karma Codex</h2><p>All Karmas from the in-game screenshots, grouped by archetype. Base stats shown are at Lv. 70 / Ascension 6.</p></div>
+ <div class="karma-intro"><h2>Karma Codex</h2></div>
  <div class="karma-controls">
   <input class="karma-search" id="karmaSearch" type="search" placeholder="Search Karmas..." autocomplete="off" aria-label="Search Karmas">
   <div class="karma-arch-filters" id="karmaArchFilters" aria-label="Filter by archetype"></div>
  </div>
  <p class="karma-result-count" id="karmaResultCount"></p>
  <div id="karmaBoard"></div>
- <p class="karma-awakening-note">Trait values at Ascension 0 (Lv. 1) and Ascension 6 (Lv. 70) are from the in-game screenshots. Each Ascension multiplies the A0 value: ×4/3, ×5/3, ×2, ×8/3, ×11/3 and ×5 for A1–A6, measured in-game. Values are rounded like the game: whole % and the nearest 5. Signature-exclusive effects are listed separately. Base stats are Lv. 70 / Ascension 6 values.</p>
 </section>
 <section class="simple-page" id="familiarsPage" hidden>
  <div class="gear-heading"><h2>FAMILIARS</h2><span>Mounts and companions</span></div>
@@ -128,7 +126,7 @@
  <div class="profile-hero"><div class="profile-hero-copy"><h2 id="profileName">Character</h2><div class="profile-subtitle">Character guide &amp; build</div><div class="profile-note" id="profileUpdated">In-game codex and measured tests</div></div><img class="profile-hero-portrait" id="profilePortrait" alt=""></div>
  <div class="profile-intro-grid"><section><h3 class="profile-section-title">Introduction</h3><p id="profileIntro"></p></section><section><h3 class="profile-section-title">Quick info</h3><p id="profileQuickInfo"></p></section></div>
  <div class="profile-tabs" role="tablist"><button class="profile-tab active" data-profile-tab="skills" role="tab">Skills</button><button class="profile-tab" data-profile-tab="review" role="tab">Review</button><button class="profile-tab" data-profile-tab="build" role="tab">Build and Teams</button></div>
- <section class="profile-tabpanel active" id="profileSkills" role="tabpanel"><div class="profile-skills-grid profile-skills-grid-top" id="profileSkillsGrid"></div><div id="profileStatus"></div><p class="profile-note">The in-game codex shows max-level values only. Lower levels use multipliers measured in-game: Lv. 1 = max ÷ 1.75, then ×1.05, ×1.10, ×1.15, ×1.23, ×1.30, ×1.38, ×1.48, ×1.58 at Lv. 2–9 for level-10 skills (×1.10, ×1.20, ×1.33, ×1.45, ×1.60 at Lv. 2–6 for level-7 skills). Values can be 1% off the game’s because of rounding. Only the “Attack Power % Damage” values change; stacks, durations, buffs and heals are shown as recorded.</p></section>
+ <section class="profile-tabpanel active" id="profileSkills" role="tabpanel"><div class="profile-skills-grid profile-skills-grid-top" id="profileSkillsGrid"></div><div id="profileStatus"></div></section>
  <section class="profile-tabpanel" id="profileReview" role="tabpanel"><h3 class="profile-subhead">Pros &amp; Cons</h3><div class="profile-proscons"><article><h4 class="profile-pros">PROS</h4><ul class="pc-list pc-pros" id="profilePros"></ul></article><article><h4 class="profile-cons">CONS</h4><ul class="pc-list pc-cons" id="profileCons"></ul></article></div><h3 class="profile-subhead">Review</h3><div id="profileReviewBody"></div><h3 class="profile-subhead">Best Awakening</h3><div id="profileBestAwakening"></div><h3 class="profile-subhead">Awakenings</h3><div class="profile-awakening-grid" id="profileAwakenings"></div></section>
  <section class="profile-tabpanel" id="profileBuild" role="tabpanel"><h3 class="profile-subhead">Best Karmas</h3><div class="profile-build-list" id="profileKarmas"></div><h3 class="profile-subhead">Synergy</h3><div class="profile-synergy-list" id="profileSynergy"></div></section>
 </section>
@@ -139,12 +137,12 @@
 <div id="karmaPopover" role="tooltip" hidden></div>
 <!-- Site script, in load order. Bump ?v= on every file you change so browsers fetch the new copy (10 Nov 2026). -->
 <script src="js/01-core.js?v=20261112a"></script>
-<script src="js/02-teams-karma.js?v=20261113a-beta1"></script>
+<script src="js/02-teams-karma.js?v=20261113b-beta1"></script>
 <script src="js/03-profile.js?v=20261112a"></script>
-<script src="js/04-gear-builds.js?v=20261112a"></script>
-<script src="js/05-tierlist-heroes-patches.js?v=20261112a"></script>
-<script src="js/06-dungeons.js?v=20261111-beta1"></script>
-<script src="js/07-tierlist-v2-cookbook.js?v=20261113b"></script>
+<script src="js/04-gear-builds.js?v=20261113a"></script>
+<script src="js/05-tierlist-heroes-patches.js?v=20261113a"></script>
+<script src="js/06-dungeons.js?v=20261113a-beta1"></script>
+<script src="js/07-tierlist-v2-cookbook.js?v=20261113c"></script>
 <script src="js/08-items-tools-guides.js?v=20261113a"></script>
 <script src="js/09-startup.js?v=20261112a"></script>
 </body></html>

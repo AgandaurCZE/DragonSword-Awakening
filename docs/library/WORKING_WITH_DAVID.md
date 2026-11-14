@@ -42,7 +42,8 @@ Back to the library: [docs/README.md](../README.md). Repository rules: [AGENTS.m
 - Long chats get compacted (older messages summarised). Tell David when it happens, and keep everything needed in the repo as you go, not only at the end: [STATUS.md](STATUS.md) (current task and next steps), `CHANGELOG.md` (every change), [DONE.md](DONE.md) (finished tasks). There is no separate handoff file any more (retired 9 Nov).
 - Other assistants (ChatGPT, mainly for artwork) work on the same repo. Leave them notes in `CHATGPT.md`; be kind, and check their changes rather than undoing them.
 
-## Mistakes past chats made: don't repeat them · updated 10 Nov
+## Mistakes past chats made: don't repeat them · updated 13 Nov
+- **Internal notes on the public pages (David, 13 Nov):** pages carried his name, dates, "measured with Reina's Ultimate, floor 1, 1,759…", "seen up to floor 5", "tested by David", where files are stored and Python tool names. Visitors must see facts only: never his name, who or how something was measured, where data lives, or "measured / tested / seen / recorded". Keep such notes in unprinted `note` fields or in `docs/`. Rule and check: AGENTS.md, "How to make changes".
 - **Removing in-game facts because the codex text doesn't state them** (9 Nov: Tarte's orbs after a swap, Chako after a swap). David's play knowledge is a source. If something isn't in the repo, ask him; don't delete it.
 - **Writing that all 20 heroes were Lv.70** (9 Nov) when only 11 were. Check `HERO_BASE_STATS` (`estimated`) and STATUS before stating levels.
 - **Forgetting agreed plans.** On 9 Nov a chat didn't recognise the gearless Lv.70 team redo it had planned itself, and twice left out the Signature Karma tests when asked what must happen before awakenings. Before answering "what's left" or "what is this", read [STATUS.md](STATUS.md) and the to-do page (`docs/dragonsword_david_todo_by_priority.html`).

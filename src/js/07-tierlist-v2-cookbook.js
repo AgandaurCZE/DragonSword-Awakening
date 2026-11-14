@@ -120,7 +120,17 @@ function v2NeedsChip(group) {
   return `<span class="v2-tag" style="--c:${T.color || '#94a3b8'}" data-v2tip="${profileEsc(T.desc || '')}"><svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS.needs}</svg><span>Needs ${words}</span></span>`;
 }
 function v2Counter(h) {
-  if (V2.mode === 'towers') return !!v2Tower().archetype && v2Tower().archetype === h.archetype;
+  if (V2.mode === 'towers') {
+    // Strong in this tower: the tower's own archetype, and any other hero with a skill that inflicts its status (David, 13 Nov 2026).
+    const w = v2Tower();
+    return (
+      (!!w.archetype && w.archetype === h.archetype) ||
+      (!!w.status &&
+        ((CHARACTER_PROFILE_DATA[h.name] || {}).skills || []).some((s) =>
+          ((s.meta || {}).inflicts || []).includes(w.status),
+        ))
+    );
+  }
   if (V2.mode !== 'bosses') return false;
   const b = (v2Data().bosses || []).find((x) => x.id === V2.boss);
   return !!b && (b.weak || []).includes(h.archetype);
@@ -201,9 +211,8 @@ function v2TowersHtml() {
     const h = HEROES.find((x) => x.archetype === t.archetype);
     return `<button type="button" class="v2-boss v2-tower${t.id === w.id ? ' on' : ''}" data-v2tower="${t.id}" style="--bg:url('${absUrl(T.image)}');background-position:${t.pos || '50% 50%'};--tc:${col(t.archetype)}">${t.crest ? `<img class="v2-tcrest" src="${t.crest}" alt="">` : ''}<span class="v2-boss-text"><span class="v2-lv v2-tlv" style="background:${col(t.archetype)}">${h ? `<img src="${h.archIcon}" alt="">` : ''}${profileEsc(t.status)} +${B.own ?? 400}%</span><span class="v2-boss-name">${profileEsc(t.name)}</span></span></button>`;
   }).join('');
-  const dots = (B.dotTested || []).map((s) => st(s)).join(' and ');
-  const how = `<p>${w.text ? `<i>“${profileEsc(w.text)}”</i></p><p>` : ''}In the <b>${profileEsc(w.name || '')}</b>, hits on an enemy with ${st(w.status, w.archetype)} deal <b>+${B.own ?? 400}%</b> damage, so ${profileEsc(w.archetype || '')} heroes are close to required. Damage-over-time statuses add <b>+${B.dot ?? 100}%</b> in every tower (measured: ${dots}); other statuses add nothing.${w.measured === false ? ' <span class="v2-tnote">Not measured in this tower yet: assumed to work like the others.</span>' : ''}</p><p>${profileEsc(B.text || '')}</p><p class="v2-tnote">${profileEsc(B.example || '')}</p>`;
-  const floors = `<p><b>${T.floors || 30} floors</b>, up to ${T.starsPerFloor || 3} stars each: ${(T.conditions || []).map(profileEsc).join('; ')}. ${profileEsc(T.conditionsNote || '')}</p><p>${profileEsc(T.enemyLevels || '')} ${profileEsc(T.entry || '')}</p><p class="v2-tnote">${profileEsc(T.unlock || '')}</p>`;
+  const how = `<p>${w.text ? `<i>“${profileEsc(w.text)}”</i></p><p>` : ''}In the <b>${profileEsc(w.name || '')}</b>, hits on an enemy with ${st(w.status, w.archetype)} deal <b>+${B.own ?? 400}%</b> damage, so ${profileEsc(w.archetype || '')} heroes are close to required. Damage-over-time statuses add <b>+${B.dot ?? 100}%</b> in every tower; other statuses add nothing.</p><p>${profileEsc(B.text || '')}</p>`;
+  const floors = `<p><b>${T.floors || 30} floors</b>, up to ${T.starsPerFloor || 3} stars each: ${(T.conditions || []).map(profileEsc).join('; ')}. ${profileEsc(T.conditionsNote || '')}</p><p>${profileEsc(T.enemyLevels || '')} ${profileEsc(T.entry || '')}</p>`;
   const fr = T.floorRewards || [];
   const sum = (a) => a.reduce((x, y) => x + y, 0);
   const cm = T.cumulative || [];
@@ -223,7 +232,7 @@ function v2HuntRanks(b) {
     : '';
   return (
     rew +
-    `<details class="v2-panel v2-binfo"><summary>Rating rewards (every Hunt boss, every difficulty)</summary><div><table class="gx-tbl">${(H.ranks || []).map((r) => `<tr><td style="font-weight:900;font-size:18px;width:40px">${E(r.rank)}</td><td>${Number(r.points).toLocaleString('en-GB')} pts</td><td><span class="gx-mat"><img src="${E(r.icon)}" alt="">${r.amount}× ${E(r.item)}</span></td></tr>`).join('')}</table><p class="v2-tnote">${E(H.note || '')}</p></div></details>`
+    `<details class="v2-panel v2-binfo"><summary>Rating Rewards (Same for each difficulty)</summary><div><table class="gx-tbl">${(H.ranks || []).map((r) => `<tr><td style="font-weight:900;font-size:18px;width:40px">${E(r.rank)}</td><td>${Number(r.points).toLocaleString('en-GB')} pts</td><td><span class="gx-mat"><img src="${E(r.icon)}" alt="">${r.amount}× ${E(r.item)}</span></td></tr>`).join('')}</table></div></details>`
   );
 }
 function v2BossInfo(b) {
@@ -746,7 +755,7 @@ function v2BossRewards(b) {
   const H = (b && b.hunt) || null,
     I = (b && b.info) || {},
     D = I.difficulties || (H && H.difficulties) || [],
-    note = I.rewardsNote || (H && H.note) || '',
+    note = I.rewardsNote || '',
     E = profileEsc;
   if (!D.length) return '';
   const pick = Math.min(V2_RDIFF[b.id] || 0, D.length - 1),

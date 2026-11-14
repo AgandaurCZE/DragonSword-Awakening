@@ -61,6 +61,7 @@ Back to the library: [docs/README.md](../README.md). Evidence for each rule: `DA
 ### 2.4 Gear stats (`GEAR_STATS`) · 30 Oct
 - Each piece reaches **4× its +0 value** at max; Orange rises +0.2× per level.
 - Green / Blue / Purple main stats are 0.375 / 0.467 / 0.600 of Orange; substats Blue 0.5, Purple 0.75.
+- **Upgrade steps for main stats, as a share of the +0 value:** Orange +0.2 every level; Purple +0.2 up to +9, then +0.4; Blue +0.2 up to +3, then +0.4; Green 1, 1.4, 2, 2.4, 3.2, 3.6, 4 (two rows). **Checked 13 Nov against all 117 Test 03 rows at every level:** Blue, Purple and Orange within 1 point (flat) and 0.03 (%); every slot and main stat pair is measured at some rarity except Gloves Attack (same table as Helmet and Boots). So any main stat at any rarity and level can be computed; Test 03 is complete. Known small miss: Legs Max HP on Green and Blue reads 1 to 4 points under the rule (Orange Legs Max HP is measured and exact, so it is the game's rounding).
 - Set bonuses add like gear (Ballad of Life: +9% Max HP at 2 pieces, +15% total at 3).
 
 ### 2.5 How stats combine · 31 Oct

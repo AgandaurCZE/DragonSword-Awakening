@@ -11676,22 +11676,22 @@
       16.66
      ],
      "Critical Damage": [
-      6.68,
-      8.02,
-      9.36,
-      10.69,
-      12.03,
-      13.37,
-      14.7,
-      16.04,
-      17.38,
-      18.71,
-      20.05,
-      21.39,
-      22.72,
-      24.06,
-      25.4,
-      26.73
+      6.69,
+      8.04,
+      9.38,
+      10.71,
+      12.05,
+      13.39,
+      14.73,
+      16.07,
+      17.41,
+      18.75,
+      20.09,
+      21.43,
+      22.77,
+      24.11,
+      25.45,
+      26.79
      ],
      "Critical Hit Resistance": [
       10.3,
@@ -14110,7 +14110,7 @@
    "Helmet main Critical Hit Chance": "measured (Orange)",
    "Helmet main Critical Damage": "same as measured Gloves (Helmet, Gloves and Boots share tables)",
    "Chest main Critical Hit Chance": "measured (Orange)",
-   "Chest main Critical Damage": "from David's Purple Chest (4.01 at +0) / 0.6",
+   "Chest main Critical Damage": "measured (Orange +0 to +15, 13 Nov 2026); before that from David's Purple Chest (4.01 at +0) / 0.6, which ran 0.01 to 0.06 low",
    "Legs main Critical Hit Chance": "from David's Purple Legs (2.25 at +0) / 0.6",
    "Legs main Critical Damage": "measured (Orange)",
    "Gloves main Critical Hit Chance": "same as measured Helmet (Helmet, Gloves and Boots share tables)",
@@ -14125,7 +14125,7 @@
    "Legs main Attack Power Up": "measured (Orange +15: 30.68, 10 Nov 2026); lower levels scaled from the earlier estimate",
    "testKitRows": {
     "checked": "2026-11-04",
-    "note": "96 main-stat rows from Test Kit test 03 checked against the tables at +0 and at max level, using 0.375 / 0.467 / 0.600 of Orange: within 1 point for flat stats and 0.05 for % stats. Exceptions, all Legs Max HP: Green +0 242 vs 243.4, Green max 969 vs 973.5, Blue +0 302 vs 303.1, Blue max 1211 vs 1212.3.",
+    "note": "96 main-stat rows from Test Kit test 03 checked against the tables at +0 and at max level, using 0.375 / 0.467 / 0.600 of Orange: within 1 point for flat stats and 0.05 for % stats. Exceptions, all Legs Max HP: Green +0 242 vs 243.4, Green max 969 vs 973.5, Blue +0 302 vs 303.1, Blue max 1211 vs 1212.3. 13 Nov 2026: all 117 Test 03 rows rechecked at every upgrade level (not only +0 and max): the 115 Blue, Purple and Orange rows are within 1 point (flat) and 0.03 (%) of the tables with the upgrade steps in upgradeSteps; the two Green rows both rise as 1, 1.4, 2, 2.4, 3.2, 3.6, 4 times their +0 value. Orange Legs Max HP was measured (649 to 2,596) and equals the table, so the Legs Max HP misses on Green and Blue above are the game's own rounding, not a table error. Orange Chest Critical Damage was measured and stored. Every slot and main stat pair has a measured row at some rarity except Gloves Attack, which shares the Helmet and Boots table. Test 03 is complete.",
     "rows": [
      "Blue Helmet Defense Up",
      "Blue Helmet Critical Hit Resistance",
@@ -20149,7 +20149,7 @@
    }
   ],
   "difficulties": 4,
-  "weaknessTest": "Tested by David with Reina and Johnny: a weakness doubles the hit bonus of that archetype's status. Poison's +50% becomes +100%, Airborne's +100% becomes +200%. It does nothing to hits without the status and doesn't raise damage-over-time ticks. Bosses that aren't weak to you take the same multiplier as the Training Ground dummy. A weakness also makes the status build up about 2–3× faster: Johnny's Poison Grab gave a full Poison stack per press on a Venom-weak boss, but only about 0.3 on a boss without the weakness (Very Hard). Bosses resist status build-up more than normal enemies, and more on higher difficulties (Very Hard roughly halves it compared with Normal), so heroes of the weak archetype matter more the harder you go. Breaker is the exception: Drosophia of Breaker has a much bigger Super Armor bar, and Breakers are held back by it far less than other heroes (Castella about 1.4× the usual hits, Charlotte about 2×).",
+  "weaknessTest": "A weakness doubles the hit bonus of that archetype's status (Poison's +50% becomes +100%, Airborne's +100% becomes +200%) and builds the status up about 2–3× faster. It does nothing for hits without the status or for damage-over-time ticks. Bosses resist status build-up more on higher difficulties, so heroes of the weak archetype matter more the harder you go.",
   "difficultyLevels": [
    {
     "n": 1,
@@ -20270,7 +20270,7 @@
     "icon": "assets/trait/icons/{key}-purple.webp"
    }
   },
-  "immunityNote": "Immunity, seen on Ghagaroach of Venom with Johnny: using a Venom skill makes the boss raise a bubble that Breaks your hero, leaving them vulnerable and stunned. The pre-battle screen only lists the weakness, not the immunity."
+  "immunityNote": "Using a skill of the immune archetype makes the boss raise a bubble that Breaks your hero, leaving them vulnerable and stunned. The pre-battle screen only lists the weakness, not the immunity."
  },
  "UI_ICONS": {
   "note": "Menu icons from assets/ui, cut out of David's in-game screenshots (white versions, used as masks so they take the menu colour; -gold versions kept for later). exchange and help are spare; guides is the Codex book, recut from David's menu screenshot on 8 Nov 2026. A missing entry keeps the text symbol.",
@@ -20318,7 +20318,7 @@
     "label": "Towers",
     "sub": "Tower of Trials",
     "image": "assets/ui/mode-towers.webp",
-    "intro": "How the hero performs in the Tower of Trials. Each tower massively boosts hits on enemies with its own status, so heroes of that archetype (marked Counter) are close to required. Heroes stay Unrated here until they're rated for a tower."
+    "intro": "How the hero performs in the Tower of Trials. Each tower massively boosts hits on enemies with its own status, so heroes who inflict it (marked Counter) are the strongest there."
    }
   },
   "bosses": [
@@ -21541,7 +21541,7 @@
        ]
       }
      ],
-     "rewardsNote": "David's list of 12 Nov 2026: every difficulty drops all three normal sets (Battle Will, Ballad of Life, The Infiltrator) in Legendary quality; a rune tile stands for all 5 rune types of that grade. Members: 1–3 on every difficulty.",
+     "rewardsNote": "Every difficulty drops all three normal sets (Battle Will, Ballad of Life, The Infiltrator) in Legendary quality. A rune tile stands for all 5 rune types of that grade. Members: 1–3 on every difficulty.",
      "strategy": []
     },
     "image2": "assets/bosses/gauron-dragon-banner.webp",
@@ -21684,9 +21684,9 @@
        ]
       }
      ],
-     "rewardsNote": "Read from the reward lists in David's screenshots; a rune tile stands for all 5 rune types of that grade. Members: 1–3 on every difficulty.",
+     "rewardsNote": "A rune tile stands for all 5 rune types of that grade. Members: 1–3 on every difficulty.",
      "strategy": [
-      "One of the hardest fights in the game (David, first clear).",
+      "One of the hardest fights in the game.",
       "Dodging at the right moments is crucial: she has many grab attacks and can easily stun-lock you."
      ]
     },
@@ -21764,7 +21764,7 @@
    "sa": {
     "label": "Super Armor break",
     "color": "#a78bfa",
-    "desc": "Breaks boss Super Armor faster than most, so the team can mount and grab sooner. Matters most against bosses. Given to heroes who break the Training Ogre's whole gauge alone in 25 s or less going all out (David's Lv.70 tests with Masteries, 10 Nov 2026), unless they already have three tags."
+    "desc": "Breaks boss Super Armor faster than most, so the team can mount and grab sooner. Matters most against bosses. Given to heroes who break the Training Ogre's whole gauge alone in 25 s or less going all out, unless they already have three tags."
    },
    "gather": {
     "label": "Gatherer",
@@ -21789,7 +21789,7 @@
    "counter": {
     "label": "Counter",
     "color": "#facc15",
-    "desc": "Added automatically. Bosses mode: the selected boss is weak to this hero's archetype. Towers mode: the selected tower gives this hero's status +400% damage."
+    "desc": "Added automatically. Bosses mode: the selected boss is weak to this hero's archetype. Towers mode: this hero inflicts the status the selected tower boosts by +400%."
    }
   },
   "signatureKarmaText": "The purple card in a portrait's bottom-right corner means the hero's signature Karma changes how they play, not just their stats. It could lift them above the rating shown.",
@@ -22483,13 +22483,13 @@
   "floors": 30,
   "starsPerFloor": 3,
   "conditions": [
-   "Defeat all monsters (on boss floors: defeat the boss)",
-   "Clear within a shorter time limit",
-   "Clear within a longer time limit"
+   "defeat all monsters (the boss on boss floors)",
+   "clear within the shorter time limit",
+   "clear within the longer time limit"
   ],
-  "conditionsNote": "The time limits grow with the floor. Floor 1: 60 s and 90 s.",
-  "enemyLevels": "Lv.40 on floors 1-2, then +5 every two floors (Lv.45 on 3-4, Lv.50 on 5). Seen up to floor 5.",
-  "entry": "Any hero can enter; the deploy screen only marks the tower's archetype as recommended.",
+  "conditionsNote": "The time limits grow with the floor.",
+  "enemyLevels": "Enemies are Lv.40 on floors 1–2 and gain 5 levels every two floors.",
+  "entry": "Any hero can enter; the tower's archetype is only recommended.",
   "bonus": {
    "own": 400,
    "dot": 100,
@@ -22705,7 +22705,7 @@
     "icon": "F"
    }
   },
-  "starRule": "Dish stars = 1 + (sum of the ingredients' stars ÷ 3, rounded down). Checked on 45 combinations in the game. One ingredient caps at 2★, two at 3★, three at 5★.",
+  "starRule": "Dish stars = 1 + (sum of the ingredients' stars ÷ 3, rounded down). One ingredient caps at 2★, two at 3★, three at 5★.",
   "intro": "Every recipe in the in-game Cookbook. Undiscovered dishes stay hidden, like in the game, until someone cooks them. Tick what you've cooked: it's saved in your browser.",
   "ingredients": [
    {
@@ -23579,7 +23579,7 @@
   "craftingNote": "Returned at any upgrade level, on top of the EXP materials. There is no Grey gear."
  },
  "RUNES": {
-  "note": "Runes drop only in the Raid. Each rune type has one main stat; the value is random within its grade. The values below are the ones seen so far, not the full range.",
+  "note": "Runes drop only in the Raid. Each rune type has one main stat; the value is random within its grade.",
   "types": [
    {
     "name": "Determination",
@@ -23766,8 +23766,8 @@
   },
   "rules": [
    "Runes can't be upgraded.",
-   "Synthesis: 5 runes of one grade (types can be mixed) become 1 random rune of the next grade, at every step from Damaged to Perfect (Radiant to Perfect confirmed by David, 11 Nov 2026). Up to 10 syntheses at once.",
-   "Perfect runes synthesise too: 3 Perfect runes become 1 random Perfect rune; the type is random (3 Determination gave a Focus rune). The game warns that ★5 runes used this way can't be recovered (David, 10 Nov 2026).",
+   "Synthesis: 5 runes of one grade (types can be mixed) become 1 random rune of the next grade, at every step from Damaged to Perfect. Up to 10 syntheses at once.",
+   "Perfect runes synthesise too: 3 Perfect runes become 1 random Perfect rune of a random type. ★5 runes used this way can't be recovered.",
    "One rune slot per gear piece, so up to 5 runes per hero. Each piece's slot is unlocked separately for 1 Anonymous Artisan's Crafting Tool.",
    "Any type and grade in any slot; the same type and grade can go in every slot.",
    "Removing an engraved rune returns it and costs 10,000 Gold (every grade)."

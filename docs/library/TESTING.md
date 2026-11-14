@@ -3,14 +3,14 @@
 Back to the library: [docs/README.md](../README.md). Results: [TEST01_RESULTS.md](TEST01_RESULTS.md), [TEAM_TESTS.md](TEAM_TESTS.md). Measured mechanics in the data: `DAMAGE_TESTS`, `DEFENSE_MODEL` (see [DATA_REFERENCE.md](../DATA_REFERENCE.md)).
 
 ## The Test Kit artifact · updated 10 Nov
-- Live page: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt (David's measurement notebook; version 33, 9 Nov). Sections: Before awakenings (08, 09; both done), Most useful (01, 07), When you can (02, 03, 06), and Already answered. Source: `docs/testkit/dragonsword-test-kit.html`. To change it, edit the source and publish to the same URL; a new chat must read the artifact first.
+- Live page: https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt (David's measurement notebook; version 34, 13 Nov). Sections: Before awakenings (08, 09; both done), Most useful (01, 07), When you can (02, 03, 06), and Already answered. Source: `docs/testkit/dragonsword-test-kit.html`. To change it, edit the source and publish to the same URL; a new chat must read the artifact first.
 - Storage: collection `results`; each entry has `testId`, `test`, `savedAt`, `inputs{}`, `summary`. Read with ArtifactData `query` (`where testId == …`, `out_dir` to save files). Writes to an existing document need `if_version`. New entry ids: `<testId>-<timestamp>`, e.g. `apply-1794430012000`.
 
 | Test | `testId` | Status |
 |---|---|---|
 | 01 Status application per skill | `apply` | Redo complete for all 20 heroes (8 Nov). Mastery retests (10 Nov) and awakening tests A1, A3, A6 (10 Nov) saved as more `apply` entries; their summary ends "Mastery retest" or "Awakening A1/A3/A6 test". Results: [TEST01_RESULTS.md](TEST01_RESULTS.md), [AWAKENING_TESTS.md](AWAKENING_TESTS.md). |
 | 02 Skill buffs by level | `buffs` | Complete since 9 Nov: every scaling buff on a levellable skill, except Alex's two hostility values (no damage effect). In `SKILL_BUFF_LEVELS`. |
-| 03 Gear upgrade row | `gear` | 93 rows; tables match apart from two small misses. Add more only if a number looks wrong. |
+| 03 Gear upgrade row | `gear` | **Done 13 Nov.** 117 rows; every unfilled main stat follows from them (GAME_MATH 2.4). Add a row only if a number in the game differs from the site. |
 | 04 Defense Ignore and Armor Penetration | `defign` | Done 4 Nov; off the page, entries kept. |
 | 05 Level-up cost | `lvlcost` | Answered; moved to Already answered. |
 | 06 Enemy Defense | `enemydef` | Ongoing: new enemies as David meets them; tower floors open. |

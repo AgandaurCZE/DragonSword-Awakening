@@ -133,7 +133,6 @@ function renderGearPreview() {
   const max = L.length;
   GX.to = Math.min(Math.max(GX.to, 1), max);
   GX.from = Math.min(GX.from, GX.to - 1);
-  const inf = (U.inferred || {})[GX.rar] || [];
   let eT = 0,
     gT = 0,
     gUnknown = false;
@@ -149,7 +148,7 @@ function renderGearPreview() {
     else gT += g;
     gxAdd(matT, feed);
     rows.push(
-      `<tr><td>+${i} → +${i + 1}</td><td class="n">${e.toLocaleString('en-GB')}${inf.includes(i) ? ' <span class="gx-est">(inferred)</span>' : ''}</td><td class="n">${g == null ? '?' : g.toLocaleString('en-GB')}</td><td>${gxMats(feed)}</td></tr>`,
+      `<tr><td>+${i} → +${i + 1}</td><td class="n">${e.toLocaleString('en-GB')}</td><td class="n">${g == null ? '?' : g.toLocaleString('en-GB')}</td><td>${gxMats(feed)}</td></tr>`,
     );
   }
   const opt = (n, sel, lo, hi) =>
@@ -162,7 +161,7 @@ function renderGearPreview() {
     ? `<section class="gx-box"><h3>Runes<span class="gx-tag">BETA</span></h3><p class="gx-sub">${profileEsc(R.note)}</p>
   <div class="rn-types">${R.types.map((t) => `<div class="rn-type" style="--c:${t.color}">${t.icon ? `<span class="rn-ico" style="-webkit-mask-image:url('${t.icon}');mask-image:url('${t.icon}')"></span>` : ''}<b>Rune of ${profileEsc(t.name)}</b><small>${profileEsc(t.line)}</small><div>${profileEsc(t.gameStat || t.stat)}</div></div>`).join('')}</div>
   <div class="rn-cols"><div><h4 style="margin:0">Grades</h4><div class="rn-grades">${R.grades.map((g) => `<span class="rn-grade" style="--c:${g.color}" title="Raid: ${profileEsc(g.raid)}">${profileEsc(g.name)}</span>`).join('<span style="color:var(--muted)">›</span>')}</div>
-  <div class="gx-wrap"><table class="gx-tbl"><tr><th>Values seen</th>${R.types.map((t) => `<th style="color:${t.color}">${profileEsc(t.name)}</th>`).join('')}</tr>${R.grades.map((g) => `<tr><td style="color:${g.color};font-weight:800">${profileEsc(g.name)}<br><small style="color:var(--muted);font-weight:400">Raid ${profileEsc(g.raid)}</small></td>${R.types.map((t) => `<td>${((R.seen[g.name] || {})[t.name] || []).join(', ') || '<span style="color:var(--muted)">–</span>'}</td>`).join('')}</tr>`).join('')}</table></div>
+  <div class="gx-wrap"><table class="gx-tbl"><tr><th>Values</th>${R.types.map((t) => `<th style="color:${t.color}">${profileEsc(t.name)}</th>`).join('')}</tr>${R.grades.map((g) => `<tr><td style="color:${g.color};font-weight:800">${profileEsc(g.name)}<br><small style="color:var(--muted);font-weight:400">Raid ${profileEsc(g.raid)}</small></td>${R.types.map((t) => `<td>${((R.seen[g.name] || {})[t.name] || []).join(', ') || '<span style="color:var(--muted)">–</span>'}</td>`).join('')}</tr>`).join('')}</table></div>
   <ul>${R.rules.map((x) => `<li>${profileEsc(x)}</li>`).join('')}</ul></div>${R.image ? `<figure style="margin:0"><img src="${R.image}" alt="Rune Synthesis screen" loading="lazy"><figcaption class="gx-note">Synthesis: five Damaged runes of mixed types give one random Intact rune.</figcaption></figure>` : ''}</div></section>`
     : '';
   root.innerHTML = `<div class="gx"><section class="gx-box"><h3>Upgrade calculator<span class="gx-tag">BETA</span></h3><p class="gx-sub">Equipment EXP and Gold per upgrade level. The same for every slot and set.</p>
@@ -176,11 +175,14 @@ function renderGearPreview() {
   <label>From <select id="gxFrom">${opt(0, GX.from, 0, max - 1)}</select></label><label>to <select id="gxTo">${opt(0, GX.to, 1, max)}</select></label></div>
   <div class="gx-wrap"><table class="gx-tbl"><tr><th>Level</th><th class="n">EXP</th><th class="n">Gold</th><th>Materials (as the game auto-selects)</th></tr>${rows.join('')}
   <tr class="tot"><td>Total</td><td class="n">${eT.toLocaleString('en-GB')}</td><td class="n">${gT.toLocaleString('en-GB')}${gUnknown ? ' + ?' : ''}</td><td>${gxMats(matT)}</td></tr></table></div>
-  <p class="gx-note">Materials: the game fills each level with the largest Equipment EXP materials that don't overshoot the bar, then one Mana Shard if anything is left (it overshoots by 100). The extra EXP carries over to the next level (measured), which this table doesn't follow, so it can be a little off. Gold is paid per item used (Mana Shard 300, Crystal 700, Ore 2,000), so it's worked out from the items picked; where a Raw Mana Stone is picked the game's own figure is shown, as its Gold price isn't known yet.</p>
+  <p class="gx-note">Materials: the game fills each level with the largest Equipment EXP materials that don't overshoot the bar, then one Mana Shard if anything is left (it overshoots by 100). The extra EXP carries over to the next level, which this table doesn't follow, so it can be a little off. Gold is paid per item used: ${U.expMaterials
+    .slice()
+    .reverse()
+    .map((m) => `${profileEsc(m.name)} ${Number(m.gold).toLocaleString('en-GB')}`)
+    .join(', ')}.</p>
   <div class="gx-ret"><b>Disassemble returns</b> 80% of the Equipment EXP spent on a piece, plus its base materials. Gold isn't returned, and anything under 200 EXP is lost, so disassemble several pieces at once (their leftovers add up: the extra Mana Shard per pair).<br>
   ${GX.rar} at +${GX.from}: ${gxMats(gxReturn(GX.rar, GX.from))}<br>${GX.rar} at +${GX.to}: ${gxMats(gxReturn(GX.rar, GX.to))}<br>
-  <span class="gx-note">Plus ${profileEsc(C.normal || '')}${C.archetype ? `; archetype sets: ${profileEsc(C.archetype)}` : ''}.</span></div>
-  <p class="gx-note">Upgrading a piece you'll scrap later loses 20% of the EXP you put in and all of the Gold, at every level, so no level is a better point to disassemble at. Upgrade only what you'll keep.</p></section>${runes}</div>`;
+  <span class="gx-note">Plus ${profileEsc(C.normal || '')}${C.archetype ? `; archetype sets: ${profileEsc(C.archetype)}` : ''}.</span></div></section>${runes}</div>`;
   root.querySelectorAll('[data-gxrar]').forEach(
     (b) =>
       (b.onclick = () => {
@@ -629,7 +631,7 @@ function renderProfileBuild(h, data) {
     rows.push({
       title: signature,
       kind: /signature/i.test(recommendedParts[0] || '') ? 'Signature' : 'Recommended',
-      desc: 'Recommended Karma from the recorded guide data.',
+      desc: '',
     });
   const bestAlternative =
     recommendedParts[1] ||
@@ -638,8 +640,7 @@ function renderProfileBuild(h, data) {
       .map((x) => x.trim())
       .filter(Boolean)[0] ||
     '';
-  if (bestAlternative)
-    rows.push({ title: bestAlternative, kind: 'Best alternative', desc: 'Alternative from the recorded guide data.' });
+  if (bestAlternative) rows.push({ title: bestAlternative, kind: 'Best alternative', desc: '' });
   const genericKarmaByArchetype = {
     Amplitude: 'Pounding Heart',
     Crushing: 'Scattered Pulse',
@@ -675,7 +676,7 @@ function renderProfileBuild(h, data) {
           .trim()
           .toLowerCase(),
     )?.image;
-    item.innerHTML = `<div class="profile-build-head"><div class="profile-build-icon${kArt ? ' karma-row-art' : ''}">${kArt ? `<img src="${profileEsc(kArt)}" alt="">` : '✦'}</div><div><h4>${profileEsc(r.title)}</h4><small>${profileEsc(r.kind)} · View in Karma Codex ↗</small></div></div><div class="profile-build-desc">${profileEsc(r.desc)}</div>`;
+    item.innerHTML = `<div class="profile-build-head"><div class="profile-build-icon${kArt ? ' karma-row-art' : ''}">${kArt ? `<img src="${profileEsc(kArt)}" alt="">` : '✦'}</div><div><h4>${profileEsc(r.title)}</h4><small>${profileEsc(r.kind)} · View in Karma Codex ↗</small></div></div>${r.desc ? `<div class="profile-build-desc">${profileEsc(r.desc)}</div>` : ''}`;
     const openKarma = () => {
       document.querySelector('.nav-item[data-page="karma"]').click();
       activeKarmaArch = '';
@@ -732,8 +733,10 @@ function renderProfileBuild(h, data) {
     const item = document.createElement('article');
     item.className = 'profile-synergy';
     const lead = HEROES.find((x) => x.name.toLowerCase() === t.lead.toLowerCase());
-    item.innerHTML = `${lead ? `<img src="${lead.portrait}" alt="${profileEsc(t.lead)}">` : ''}<div><button type="button" data-team-link="${profileEsc(t.name)}">${profileEsc(t.name)} · ${profileEsc(t.tier)} Tier</button><div class="profile-note">${profileEsc(t.note)}</div></div>`;
-    item.querySelector('[data-team-link]').addEventListener('click', () => {
+    // The title links to the team's card only while the Teams page lists that team.
+    const onTeamsPage = [...document.querySelectorAll('.team-card')].some((el) => el.dataset.teamName === t.name);
+    item.innerHTML = `${lead ? `<img src="${lead.portrait}" alt="${profileEsc(t.lead)}">` : ''}<div>${onTeamsPage ? `<button type="button" data-team-link="${profileEsc(t.name)}">${profileEsc(t.name)} · ${profileEsc(t.tier)} Tier</button>` : `<strong class="profile-synergy-title">${profileEsc(t.name)} · ${profileEsc(t.tier)} Tier</strong>`}<div class="profile-note">${profileEsc(t.note)}</div></div>`;
+    item.querySelector('[data-team-link]')?.addEventListener('click', () => {
       document.querySelector('.nav-item[data-page="teams"]').click();
       const target = [...document.querySelectorAll('.team-card')].find((el) => el.dataset.teamName === t.name);
       if (target) {
@@ -1263,9 +1266,36 @@ function gmRuneText(mix, top, short) {
     .map(([t, n]) =>
       short
         ? `${n} ${rn[t]}`
-        : `${n} × ${rn[t]} (${t}, ${fmtStat(GM_RUNE[t] === 'gearAttack' ? 'Attack' : GM_RUNE[t], top[t])})`,
+        : `<span class="eg-rune">${n} × ${rn[t]} (${t}, ${fmtStat(GM_RUNE[t] === 'gearAttack' ? 'Attack' : GM_RUNE[t], top[t])})</span>`,
     )
-    .join(short ? ' + ' : ' + ');
+    .join(' + ');
+}
+/* Where a build's end-game stats come from (David, 13 Nov 2026): the parts added by awakenings, titles and runes, each with the
+   lines for its hover text. Keys are the stat names; a rune's flat Attack is filed under 'Attack'. */
+function gmSources(h, o, r, top) {
+  const S = { awk: {}, ttl: {}, rune: {}, tip: { awk: {}, ttl: {}, rune: {} } };
+  const put = (kind, k, v, line) => {
+    S[kind][k] = (S[kind][k] || 0) + v;
+    (S.tip[kind][k] = S.tip[kind][k] || []).push(line);
+  };
+  ((((AWAKENINGS || {}).heroes || {})[h.name] || {}).list || [])
+    .slice(0, o.awk)
+    .forEach((a) =>
+      (a.effects || []).forEach((e) =>
+        put('awk', e.stat, e.value, `A${a.level} · ${a.name}: ${e.stat} ${fmtStat(e.stat, e.value, true)}`),
+      ),
+    );
+  (TITLES.list || []).forEach((t) =>
+    (t.passive || []).forEach((p) =>
+      put('ttl', p.stat, p.value, `${t.name}: ${p.stat} ${fmtStat(p.stat, p.value, true)}`),
+    ),
+  );
+  Object.entries(r.mix || {}).forEach(([t, n]) => {
+    if (!n || !top[t] || !GM_RUNE[t]) return;
+    const k = GM_RUNE[t] === 'gearAttack' ? 'Attack' : GM_RUNE[t];
+    put('rune', k, n * top[t], `${n} × ${t} rune: ${k} ${fmtStat(k, top[t], true)} each`);
+  });
+  return S;
 }
 function gmShow(h, o, rows, top) {
   const out = $('gmOut'),
@@ -1284,6 +1314,45 @@ function gmShow(h, o, rows, top) {
       const m = r.mains[s];
       return `<div class="profile-gear-piece build-piece"><strong>${s}</strong><div class="profile-main-stat-value">${profileEsc(gmShort(m))}<span class="build-main-val">${fmtStat(m, G[s].main[m][lv], true)}</span></div><ul class="build-subs">${r.subs[s].map((st) => `<li><span>${profileEsc(gmShort(st))}</span><b>${fmtStat(st, G[s].sub[st], true)}</b></li>`).join('')}</ul></div>`;
     }).join('');
+    // Each total, then (base + awakenings + titles + runes); the three added parts are coloured and say on hover what they are made of.
+    const S = gmSources(h, o, r, top),
+      archColor = ARCH_COLORS[h.archetype] || '#c58bff';
+    const partsOf = (k, total) => {
+      const tips = (kind, ...keys) => keys.flatMap((x) => S.tip[kind][x] || []).join('\n');
+      if (k !== 'Attack')
+        return [
+          [S.awk[k] || 0, 'awk', tips('awk', k)],
+          [S.ttl[k] || 0, 'ttl', tips('ttl', k)],
+          [S.rune[k] || 0, 'rune', tips('rune', k)],
+        ];
+      const pct = 'Attack Power Up',
+        tA = S.ttl.Attack || 0,
+        rA = S.rune.Attack || 0,
+        aP = S.awk[pct] || 0,
+        tP = S.ttl[pct] || 0,
+        F0 = g('flat') + g('gearAttack') - tA - rA,
+        P0 = g(pct) - aP - tP,
+        A0 = F0 * (1 + P0 / 100),
+        A1 = F0 * (1 + (P0 + aP) / 100),
+        A2 = (F0 + tA) * (1 + (P0 + aP + tP) / 100);
+      return [
+        [A1 - A0, 'awk', tips('awk', pct)],
+        [A2 - A1, 'ttl', tips('ttl', 'Attack', pct)],
+        [total - A2, 'rune', tips('rune', 'Attack')],
+      ];
+    };
+    const breakdown = (k, total) => {
+      const isAtk = k === 'Attack',
+        shown = (v) => (isAtk ? Math.round(v) : Math.round(v * 100) / 100),
+        text = (v) => (isAtk ? v.toLocaleString('en-GB') : fmtStat(k, v)),
+        parts = partsOf(k, total)
+          .map(([v, kind, tip]) => [shown(v), kind, tip])
+          .filter(([v]) => v > 0);
+      if (!parts.length) return '';
+      const base = shown(shown(total) - parts.reduce((a, [v]) => a + v, 0)),
+        label = { awk: 'Awakenings', ttl: 'Titles', rune: 'Runes' };
+      return `<span class="eg-parts">(<span class="eg-own">${text(base)}</span>${parts.map(([v, kind, tip]) => ` + <span class="eg-src eg-${kind}"${kind === 'awk' ? ` style="color:${archColor}"` : ''} title="${profileEsc(label[kind] + '\n' + tip)}">${text(v)}</span>`).join('')})</span>`;
+    };
     const tot = [
       ['Attack', (g('flat') + g('gearAttack')) * (1 + g('Attack Power Up') / 100), 'Attack'],
       ['Attack Power Up', g('Attack Power Up'), 'Attack Power Up'],
@@ -1300,7 +1369,7 @@ function gmShow(h, o, rows, top) {
       const s = set(n);
       return `<button type="button" class="gm-setlink" data-gm-set="${profileEsc(n)}">${icon(n)}<span><b>${profileEsc(n)}</b> ${n === r.s3 ? '(3) ' + profileEsc(s.three) + ' · (2) ' + profileEsc(s.two) : '(2) ' + profileEsc(s.two)}</span></button>`;
     };
-    return `<div class="gm-detail">${setLine(r.s3)}${setLine(r.s2)}<div class="profile-gear-pieces">${pieces}</div>${r.mix ? `<p class="profile-note"><strong>Runes:</strong> ${gmRuneText(r.mix, top)}, one per piece.</p>` : ''}<div class="eg-grid gm-tot">${tot.map(([l, v, k]) => `<div class="eg-row"><span class="eg-label">${l}</span><span class="eg-val"><b class="eg-total">${k === 'Attack' ? Math.round(v).toLocaleString('en-GB') : fmtStat(k, v)}</b>${k === 'Critical Hit Chance' && v > 100 ? '<span class="eg-cap">over 100%</span>' : ''}</span></div>`).join('')}${aap.map((k) => `<div class="eg-row"><span class="eg-label">${profileEsc(gmShort(k))}</span><span class="eg-val"><b class="eg-total">${fmtStat(k, g(k))}</b></span></div>`).join('')}</div></div>`;
+    return `<div class="gm-detail">${setLine(r.s3)}${setLine(r.s2)}<div class="profile-gear-pieces">${pieces}</div>${r.mix ? `<p class="gm-runes"><strong>Runes:</strong> ${gmRuneText(r.mix, top)}, one per piece.</p>` : ''}<div class="eg-grid gm-tot">${tot.map(([l, v, k]) => `<div class="eg-row"><span class="eg-label">${l}</span><span class="eg-val"><b class="eg-total">${k === 'Attack' ? Math.round(v).toLocaleString('en-GB') : fmtStat(k, v)}</b>${k === 'Critical Hit Chance' && v > 100 ? '<span class="eg-cap">over 100%</span>' : ''}${breakdown(k, v)}</span></div>`).join('')}${aap.map((k) => `<div class="eg-row"><span class="eg-label">${profileEsc(gmShort(k))}</span><span class="eg-val"><b class="eg-total">${fmtStat(k, g(k))}</b>${breakdown(k, g(k))}</span></div>`).join('')}</div></div>`;
   };
   const row = (r, n) => {
     const c = r.c,
@@ -1327,13 +1396,7 @@ function gmShow(h, o, rows, top) {
     return `<div class="gm-row${n === o.open ? ' open' : ''}" data-gm-row="${n}"><button type="button" class="gm-row-head" aria-expanded="${n === o.open}"><span class="gm-pct-badge">${pct >= 99.995 ? '100' : pct.toFixed(2)}%</span><span class="gm-icons">${icon(r.s3)}${icon(r.s2)}</span><span class="gm-names">${profileEsc(r.s3)} <small>(3-PC)</small> + ${profileEsc(r.s2)} <small>(2-PC)</small></span><span class="gm-chev" aria-hidden="true">⌄</span></button><div class="gm-chips2">${chips.map(([l, v], i) => `<span class="gm-chip2${i === 0 && sk ? ' gm-skill' : ''}">${l}: <b>${profileEsc(v)}</b></span>`).join('')}</div>${n === o.open ? detail(r) : ''}</div>`;
   };
   if (o.open == null || o.open >= rows.length) o.open = 0;
-  out.innerHTML = `<div class="gm-list">${rows.map(row).join('')}</div>
-  <p class="profile-note gm-why">${(() => {
-    const sk = gmSkill(h.name);
-    return sk
-      ? `<strong>${profileEsc(sk.name)}</strong> (${profileEsc(sk.slot)}, Lv.${sk.lv}, ${+sk.pct.toFixed(1)}%): the whole skill's damage with all its hits added up, against ${o.def === 1000 ? 'the Training Ogre' : 'the toughest boss'} with every ticked status on it at once (not broken unless Break is ticked; Frost stacks add no hit bonus, only a Frozen enemy does). No crit · every hit a crit. `
-      : '';
-  })()}% = damage of each set pair compared with the best (100%), each with its own best main stats, substats${o.runes ? ' and runes' : ''}. Level 70, Orange gear at +${lv}, all ${(TITLES.list || []).length} titles, ${o.sig ? 'signature Karma at Ascension 6' : 'no signature Karma traits'}, awakenings A${o.awk}. Every 3-piece effect and every 2-piece bonus is counted as active, and a status's Additional Damage and AAP (Additional Attack Power) count only while that status is up${o.half ? '; physical statuses count half the time' : ''}. Substats are picked one at a time for the biggest gain, five per piece. Real uptime depends on how you play, so treat pairs within about 1% as a tie. Python reference: <code>tools/team_gear.py</code>.</p>`;
+  out.innerHTML = `<div class="gm-list">${rows.map(row).join('')}</div>`;
   out.querySelectorAll('[data-gm-row] .gm-row-head').forEach(
     (b) =>
       (b.onclick = () => {

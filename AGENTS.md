@@ -77,6 +77,7 @@ Item Database and Achievements read `assets/items/*.json` when opened.
 
 ## How to make changes
 
+- **Nothing a visitor can read may be an internal note (David, 13 Nov 2026).** No text on any page, hover text or label may contain David's name, or say who measured something, when, how or with which hero, where data is stored, or that something was "measured", "tested", "seen so far", "recorded" or "not confirmed yet". Visitors get the facts only. Internal notes go in a `note` field the page doesn't print, or in `docs/`. `check_all.py` fails if a page shows the name "David" (`visible_text_rules` in `tools/check_site.py`); the rest is on you.
 - **Don't change the look** unless David asks. Content changes go in `data.json`.
 - Keep `data.json` valid JSON, UTF-8, and indented with 1 space as it is now. Don't rename keys; the page reads them by name.
 - **New hero:** add a portrait to `assets/heroes/`, then add entries to `HEROES` and `CHARACTER_PROFILE_DATA`, the hero's Karma to `KARMA_DATA`, and team slots to `TEAM_DATA` if needed.

@@ -43,7 +43,7 @@ The two artifacts below keep their data outside the repo. Copies are kept here s
 
 | Artifact | Live link | Page source | Data copies |
 |---|---|---|---|
-| Test Kit (David's measurement notebook) | https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt | `testkit/dragonsword-test-kit.html` | `testkit/testkit-results-2026-11-10.json` (every Test Kit entry, 830, exported 10 Nov), `testkit/test01-apply-backup-2026-11-08.json` (superseded pre-redo Test 01 entries, no longer in the artifact) |
+| Test Kit (David's measurement notebook) | https://claude.ai/artifact/UefeH47GdLPfBV8kA8zdyt | `testkit/dragonsword-test-kit.html` | `testkit/testkit-results-2026-11-13.json` (every Test Kit entry, 832, as of 13 Nov), `testkit/test01-apply-backup-2026-11-08.json` (superseded pre-redo Test 01 entries, no longer in the artifact) |
 | Team Planner (teams and signature list) | https://claude.ai/artifact/7k9fC5D1pShnjkX8R3PtYD | `testkit/dragonsword-planner.html` | `testkit/planner-backup-2026-11-10.json` (teams and signatures, exported 10 Nov) |
 
 ## Keeping the library current · updated 10 Nov

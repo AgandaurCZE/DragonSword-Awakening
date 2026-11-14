@@ -82,9 +82,7 @@ function renderDungeons() {
     opts(farms, DNG.farm) +
     '</select></div></div><label class="dng-orange-filter"><input id="dngOrange" type="checkbox" ' +
     (DNG.orange ? 'checked' : '') +
-    '>Drops Orange at selected difficulty</label><div id="dngGroups" class="dng-groups"></div><p class="dng-note">' +
-    dngEsc(D.note || '') +
-    '</p>';
+    '>Drops Orange at selected difficulty</label><div id="dngGroups" class="dng-groups"></div>';
   const filtered = all.filter((x) => {
     const i = DNG.selected[x.name] ?? 0,
       lv = (x.difficulties || [])[i] || {};
@@ -335,13 +333,7 @@ function renderCurrencyDungeons() {
       );
     })
     .join('');
-  root.innerHTML =
-    '<div class="dng-currency-grid dng-currency-preview-grid">' +
-    cards +
-    locked +
-    '</div><p class="dng-note">' +
-    dngEsc(D.currencyNote || '') +
-    '</p>';
+  root.innerHTML = '<div class="dng-currency-grid dng-currency-preview-grid">' + cards + locked + '</div>';
   root.querySelectorAll('[data-currency-dungeon]').forEach((button) => {
     button.onclick = () => {
       CURRENCY_DNG_STATE.selected[button.dataset.currencyDungeon] = Number(button.dataset.currencyLevel);
@@ -390,7 +382,7 @@ function renderTrait() {
       I = heroesOf(b.immune || []);
     const banner = `<div class="tr-banner" style="--ac:${ac};${image ? `--bg:url('${profileEsc(absUrl(image))}')` : ''}">${image ? '' : `<img class="tr-ghost" src="${archIcon(b.archetype)}" alt="">`}<div class="tr-title"><img src="${archIcon(b.archetype)}" alt=""><h3>${profileEsc(b.name)}</h3><span class="tr-lv" data-tr-lv></span></div><div class="tr-corner top">${(b.weak || []).length ? b.weak.map((a) => chip(a, 'weak')).join('') : none('weak')}</div>${(b.immune || []).length ? `<div class="tr-corner bottom">${b.immune.map((a) => chip(a, 'immune')).join('')}</div>` : ''}<div class="tr-diffs">${(D.difficultyLevels || []).map((L) => `<button type="button" class="tr-diff" data-n="${L.n}" style="--dc:${L.color}" title="${profileEsc(L.name)}">${L.roman}</button>`).join('')}<span class="tr-diff-name"></span></div><div class="tr-rewards"></div></div>`;
     const cols = `<div class="tr-cols"><div class="tr-col good"><h4>Strong here${(b.weak || []).length ? ` · ${b.weak.map(profileEsc).join(', ')} heroes` : ''}</h4>${W.length ? `<div class="tr-heroes">${W.map((h) => tile(h, false)).join('')}</div>` : `<p class="muted">No archetype gets a weakness bonus here, so bring your strongest team.</p>`}</div><div class="tr-col badcol"><h4>Immune · leave at home</h4>${I.length ? `<div class="tr-heroes">${I.map((h) => tile(h, true)).join('')}</div>${D.immunityNote ? `<p class="tr-immune-note">${profileEsc(D.immunityNote)}</p>` : ''}` : `<p class="muted">No immunities: every hero can hurt this boss.</p>`}</div></div>`;
-    return `<article class="tr-card" id="trait-${profileEsc(b.id)}">${banner}${cols}${b.note ? `<p class="tr-note">${profileEsc(b.note)}</p>` : ''}</article>`;
+    return `<article class="tr-card" id="trait-${profileEsc(b.id)}">${banner}${cols}</article>`;
   };
   root.innerHTML = list.length
     ? list.map(card).join('')
@@ -400,7 +392,6 @@ function renderTrait() {
       'afterbegin',
       `<div class="simple-summary" style="border-left-color:#4ade80"><b>What a weakness does:</b> ${profileEsc(D.weaknessTest)}</div>`,
     );
-  if (D.note) root.insertAdjacentHTML('beforeend', `<p class="profile-note">${profileEsc(D.note)}</p>`);
   const setDiff = (card, n) => {
     const b = list.find((x) => 'trait-' + x.id === card.id);
     const L = (D.difficultyLevels || []).find((x) => x.n === n);
