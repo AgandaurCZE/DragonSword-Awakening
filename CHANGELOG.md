@@ -1,5 +1,9 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 14 Nov 2026 — Achievement cups: one stage size each (Claude)
+- The Fame cups no longer list every stage (50 / 100 / 150 …); each says "Stages per 50 Fame", and The Fame of the Challenger "Stages per 75 Fame" (David). `assets/items/achievements.json`: `stages` is now the one step, [50] or [75]; `src/js/08-items-tools-guides.js` (`?v=20261114c`) prints it. Replaces the 50/100/150/200 list from the entry below.
+- `public_diff.py`: only the Achievements cups differ. `check_all.py`: ALL CHECKS PASSED.
+
 ## 14 Nov 2026 — Eight titles owned; Achievement stages (Claude)
 - `TITLES`: obtained Conqueror of Furcas, Conqueror of Vanak, Conqueror of Gallore the Collapse, Conqueror of Ghoul Greed, Conqueror of the Earthlander, Conqueror of Barduk, Destroyer, Carousel (David). `ownedCount` 41 → 49; `ownedCumulative` recomputed from the obtained titles' passives (new: Attack Power Up 6.9%, Critical Damage 16.2%, Critical Hit Chance 13.1%, Armor Penetration 20, Defense Ignore 2.7%, Max HP Up 1.6%).
 - `assets/items/achievements.json`: Combat (Name of the Strong) stages 50/100/150 → 50/100/150/200 (stage 4 is the highest so far; every stage gives the same reward, so the text now says "Every stage gives 100,000 Gold + 50 of a purple crystal"); Special (The Fame of the Challenger) first stage 100 → 75. The Fame text now says stages go up per 50 Fame, with The Fame of the Challenger at 75 per stage (David).

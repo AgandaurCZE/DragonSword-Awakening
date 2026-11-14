@@ -839,9 +839,7 @@
     "icon": "assets/items/icons/pioneers-title.webp",
     "points": 10,
     "stages": [
-     50,
-     100,
-     150
+     50
     ],
     "description": "Those who explore the world and make their name known far and wide earn a reputation for uncovering its secrets. A name made known in this way holds value in and of itself. This reputation becomes a legacy, and that legacy is the mark an individual leaves on this world."
    },
@@ -851,9 +849,7 @@
     "icon": "assets/items/icons/name-of-prowess.webp",
     "points": 10,
     "stages": [
-     50,
-     100,
-     150
+     50
     ],
     "description": "To build skill, one must cultivate a sincere mindset forged with unwavering resolve and make tireless efforts. A name earned in this way holds value in and of itself. The reputation built in this way becomes an achievement, and that achievement is the mark an individual leaves on this world."
    },
@@ -873,10 +869,7 @@
     "icon": "assets/items/icons/name-of-the-strong.webp",
     "points": 10,
     "stages": [
-     50,
-     100,
-     150,
-     200
+     50
     ],
     "description": "The name of one who possesses great strength quickly becomes known throughout the region. If everyone comes to know their name, it gains value in and of itself. The reputation built in this way becomes an achievement, and that achievement is the mark an individual leaves on this world."
    },
