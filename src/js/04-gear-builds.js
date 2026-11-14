@@ -568,7 +568,7 @@ function endgameStats(name, piecesOverride) {
       ttl: withTtl - withAwk,
       ttlTip: [...(TT.src[s] || []), ...(TT.src[pct] || [])].join('\n'),
       awkTip: (awkSrc[pct] || []).join('\n'),
-      tip: `Hero Lv.70${base.estimated ? ' (estimated)' : ''}: ${fmtStat(s, P.hero)}\nSignature Karma (A6): ${fmtStat(s, P.karma)}\nGear (flat): ${fmtStat(s, P.gear)}\n${pct}: ${fmtStat(pct, own[pct] || 0, true)}`,
+      tip: `Hero Lv.70: ${fmtStat(s, P.hero)}\nSignature Karma (A6): ${fmtStat(s, P.karma)}\nGear (flat): ${fmtStat(s, P.gear)}\n${pct}: ${fmtStat(pct, own[pct] || 0, true)}`,
       setTip: (src[pct] || []).join('\n'),
     });
   });
@@ -727,8 +727,7 @@ function renderProfileBuild(h, data) {
     t.members.some((m) => [m.name, ...(m.alts || [])].some((n) => n.toLowerCase() === h.name.toLowerCase())),
   );
   if (!relevant.length)
-    sy.innerHTML =
-      '<div class="profile-placeholder">No team entry currently lists this character. Team recommendations are still being tested during Beta.</div>';
+    sy.innerHTML = '<div class="profile-placeholder">No team entry currently lists this character.</div>';
   relevant.forEach((t) => {
     const item = document.createElement('article');
     item.className = 'profile-synergy';
@@ -1266,7 +1265,7 @@ function gmRuneText(mix, top, short) {
     .map(([t, n]) =>
       short
         ? `${n} ${rn[t]}`
-        : `<span class="eg-rune">${n} × ${rn[t]} (${t}, ${fmtStat(GM_RUNE[t] === 'gearAttack' ? 'Attack' : GM_RUNE[t], top[t])})</span>`,
+        : `<span class="eg-rune">${n}</span> × <span class="eg-rune">${rn[t]}</span> (<span class="eg-rune">${t}</span>, ${fmtStat(GM_RUNE[t] === 'gearAttack' ? 'Attack' : GM_RUNE[t], top[t]).replace(/^([\d.,]+)(%?)$/, '<span class="eg-rune">$1</span>$2')})`,
     )
     .join(' + ');
 }

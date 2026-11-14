@@ -396,10 +396,6 @@ function renderProfileStatus(h, data) {
     item.innerHTML = `<div class="profile-build-head">${icon ? `<img class="status-icon" src="${icon}" alt="">` : ''}<div><h4 style="color:${col}">${profileEsc(st)} · damage over time</h4><small>Inflicted by: ${profileEsc([...new Set(by[st])].join(', '))}</small></div></div><div class="profile-build-desc"><table class="status-table"><thead><tr><th>Stacks</th><th>Each tick</th><th>All ${dot.ticks} ticks (~${dot.durationSeconds} s)</th></tr></thead><tbody>${rows}</tbody></table><ul class="status-rules">${dot.rules.map((r) => `<li>${profileEsc(r)}</li>`).join('')}<li>Maximum ${dot.maxStacks} stacks.</li></ul></div>`;
     root.append(item);
   });
-  const note = document.createElement('p');
-  note.className = 'profile-note';
-  note.textContent = `The same rules apply to ${dot.statuses.slice(0, -1).join(', ')} and ${dot.statuses.slice(-1)}, measured on training dummies. ${dot.untested || ''}`;
-  root.append(note);
 }
 
 // Pros & Cons (Review tab) from CHARACTER_PROFILE_DATA[hero].pros / .cons. Status and archetype names are coloured by archetype.
@@ -788,7 +784,7 @@ function renderProfileReview(h, data) {
     card(
       'VERDICT',
       'Should I get ' + (R.pronoun === 'him' ? 'him' : R.pronoun === 'them' ? 'them' : 'her') + '?',
-      `<div class="rv-verdict"><span class="rv-verdict-badge" data-level="${profileEsc(v.level || '')}">${profileEsc(v.label || '')}</span><span class="rv-obtain">${profileEsc(ob.method ? 'How to get: ' + ob.method + (ob.cost ? ' (' + ob.cost + ')' : '') : 'How to get: not recorded yet')}</span></div>${P(v.text)}`,
+      `<div class="rv-verdict"><span class="rv-verdict-badge" data-level="${profileEsc(v.level || '')}">${profileEsc(v.label || '')}</span>${ob.method ? `<span class="rv-obtain">${profileEsc('How to get: ' + ob.method + (ob.cost ? ' (' + ob.cost + ')' : ''))}</span>` : ''}</div>${P(v.text)}`,
     ),
   );
   if (R.howToPlay) {
@@ -841,9 +837,7 @@ function renderProfileReview(h, data) {
         ([p, label]) =>
           `<div class="rv-rating"><div class="rv-rating-box" style="background:${v2TierColor(t[p])}">${t[p] || '—'}</div><div class="rv-rating-label">${label}</div></div>`,
       )
-      .join(
-        '',
-      )}</div><p class="profile-note">Tiers from the guide's Tier List · patch ${profileEsc(patchText())}. Review written ${profileEsc(R.updated || '')}; numbers come from the codex and the measured damage rules in the guide.</p>`,
+      .join('')}</div><p class="profile-note">Tiers from the guide's Tier List · patch ${profileEsc(patchText())}.</p>`,
   );
   root.innerHTML = parts.join('');
   root

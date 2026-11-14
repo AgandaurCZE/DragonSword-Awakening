@@ -593,7 +593,7 @@ function renderKarmas() {
 
 /* Base stats at another Karma level (Claude, 11 Nov 2026; every level since 13 Nov). Only measured values are shown: every card
    shows its stat type's table from KARMA_LEVELLING.measured (Balanced, Attack, Defense, High Attack), which holds every level
-   from 1 to 70 and the values before and after each breakthrough (David, 13 Nov). A level missing from a table says "not measured yet". */
+   from 1 to 70 and the values before and after each breakthrough (David, 13 Nov). A level missing from a table shows a dash. */
 let KARMA_LV = 'Lv70';
 function karmaLevelTables() {
   return (KARMA_LEVELLING || {}).measured || {};
@@ -645,7 +645,7 @@ function karmaLevelApply() {
       st.innerHTML =
         profileEsc(s) +
         ': <b>' +
-        (v == null ? '<span class="karma-unmeasured">not measured yet</span>' : profileEsc(String(v))) +
+        (v == null ? '<span class="karma-unmeasured">—</span>' : profileEsc(String(v))) +
         '</b>';
     });
   });

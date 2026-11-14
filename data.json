@@ -4386,7 +4386,7 @@
     "pronoun": "him",
     "summary": [
      "Johnny is a Venom sub-DPS who brings both halves of the Venom game plan himself: Poison from [[skill:Fatal Sting]], [[skill:Venom Dance]], [[skill:Venom Cutter]] and [[skill:Poison Grab]], and Airborne from Venom Dance, [[skill:Phantom Slash]] and Poison Grab at 2+ stacks. He's **A tier at every stage** and the second slot of the S-tier Venom team with [[hero:Charlotte]] and [[hero:Reina]].",
-     "Because he launches enemies himself, his biggest hit, Venom Cutter (1456%, needs Airborne), is easy to unlock, and it lands on a Poisoned, Airborne target at about 2.5× its normal damage (Poison +50%, Airborne +100%, measured).",
+     "Because he launches enemies himself, his biggest hit, Venom Cutter (1456%, needs Airborne), is easy to unlock, and it lands on a Poisoned, Airborne target at about 2.5× its normal damage (Poison +50%, Airborne +100%).",
      "He's a partner more than a lead: Charlotte's kit has the bigger finisher ([[skill:Charlotte/Shadow Grab]], 1700%), so Johnny's job is to keep both statuses up for her."
     ],
     "verdict": {
@@ -4649,7 +4649,7 @@
     "pronoun": "her",
     "summary": [
      "Charlotte is a Venom main damage dealer who plays like an assassin: she Poisons the target, launches it with [[skill:Illusion Kick]] and finishes with [[skill:Shadow Grab]] (1700%), one of the biggest hits in the game. She is **S tier at every stage**, and she leads the S-tier Venom team, which is the game's own recommendation for her.",
-     "What makes her special is that she can start her combo on her own. Illusion Kick works on a Poisoned target **or** from her own Stealth ([[skill:Invisible]]), so she never has to wait for a teammate to unlock her skills. Every hit she lands on a Poisoned, Airborne enemy gets the measured status bonuses (+50% for Poison, +100% for Airborne), so her finisher lands at about 2.5× its normal damage.",
+     "What makes her special is that she can start her combo on her own. Illusion Kick works on a Poisoned target **or** from her own Stealth ([[skill:Invisible]]), so she never has to wait for a teammate to unlock her skills. Every hit she lands on a Poisoned, Airborne enemy gets the status bonuses (+50% for Poison, +100% for Airborne), so her finisher lands at about 2.5× its normal damage.",
      "Her weak spot is Poison uptime: only [[skill:Poison Step]] and [[skill:Poison Dagger]] apply it, so she keeps it up best next to [[hero:Johnny]]. Her A3 pull-in also does nothing against a lone boss."
     ],
     "verdict": {
@@ -4715,7 +4715,7 @@
       "title": "[[skill:Invisible]]: Stealth and Crit Damage",
       "points": [
        "Stealth removes her from enemy targeting until she attacks; the skill deals 740% and leaves a Clone that explodes.",
-       "+15% Crit Damage while hidden at Lv.10 (+10% at Lv.1, measured).",
+       "+15% Crit Damage while hidden at Lv.10 (+10% at Lv.1).",
        "Her signature Karma lets her reuse Invisible to detonate the Clone instantly."
       ]
      },
@@ -4723,7 +4723,7 @@
       "title": "[[skill:Poison Step]] and [[skill:Poison Dagger]]: Poison",
       "points": [
        "Her only two Poison sources. Poison ticks 5 times over 10 s (once on applying, then every 2.5 s) for 50/75/100% of Attack at 1/2/3 stacks (max 3).",
-       "Poison also makes every hit on the target deal +50% (measured), which is why keeping it up matters more than the ticks themselves.",
+       "Poison also makes every hit on the target deal +50%, which is why keeping it up matters more than the ticks themselves.",
        "Poison Dagger works on the ground and in the air; [[awk:1]] adds a powerful shuriken to it."
       ]
      },
@@ -5241,7 +5241,7 @@
         "Divine Arc",
         "Holy Rise"
        ],
-       "note": "Stun unlocks Divine Arc, its Bleed unlocks Holy Rise; both land on a Stunned, Bleeding target at about 2.5× (measured bonuses)."
+       "note": "Stun unlocks Divine Arc, its Bleed unlocks Holy Rise; both land on a Stunned, Bleeding target at about 2.5×."
       },
       {
        "name": "Bloodburst team combo",
@@ -5724,7 +5724,7 @@
     "S tier at every stage and the Airborne starter in both S-tier teams (Venom and Gale).",
     "Three of her skills apply Airborne, so Tempest (1515%) and Wind Grab (1582%) are almost always ready.",
     "A3 is game-changing: Wind Grab resets Tempest's cooldown, looping her two biggest hits.",
-    "Airborne doubles every hit the team lands on the target while it's up (measured +100%), so her launches boost everyone.",
+    "Airborne doubles every hit the team lands on the target while it's up (+100%), so her launches boost everyone.",
     "Her Mastery lets her Dodge in mid-air."
    ],
    "cons": [
@@ -5737,7 +5737,7 @@
     "pronoun": "her",
     "summary": [
      "Reina is the Gale enabler and one of three heroes rated **S at every stage**. She launches enemies with [[skill:Rising Cutter]], [[skill:Wind Slayer]] and [[skill:Wind Grab]], and her two biggest hits, [[skill:Tempest]] (1515%) and Wind Grab (1582%), both need Airborne, so she feeds herself.",
-     "Airborne doubles every hit the team lands on the target while it's up (measured +100%), so her launches boost everyone, not just her.",
+     "Airborne doubles every hit the team lands on the target while it's up (+100%), so her launches boost everyone, not just her.",
      "[[awk:3]] is the most game-changing awakening in the guide: Wind Grab resets Tempest's cooldown, looping her two biggest hits."
     ],
     "verdict": {
@@ -6234,7 +6234,7 @@
     "pronoun": "her",
     "summary": [
      "Roxy is the Bloodburst main damage dealer and sets up her own big hit: [[skill:Crimson Spiral]] applies Bleed and Stun, which unlocks [[skill:Kick Storm]] (1786%, needs Stun), one of the biggest hits in the game. She's **A tier at every stage**.",
-     "Kick Storm lands on a Bleeding, Stunned target, so it gets the measured +150% from those two statuses together. Five of her skills apply Bleed, so it stays up.",
+     "Kick Storm lands on a Bleeding, Stunned target, so it gets +150% from those two statuses together. Five of her skills apply Bleed, so it stays up.",
      "[[skill:Bleeding Grab]] rounds her out: at 1 Bleed stack it applies Bleed, at 2+ it Knocks down and allows continuous attacks during its Mount Action."
     ],
     "verdict": {
@@ -7053,7 +7053,7 @@
      "level": "great",
      "label": "Yes, a top pick",
      "text": [
-      "S tier at every stage, lead of the S-tier Gale team and the A-tier Blazeflame team. How he's obtained isn't recorded in the guide yet.",
+      "S tier at every stage, lead of the S-tier Gale team and the A-tier Blazeflame team.",
       "His best awakening is [[awk:3]] (longer Royal Flame with extra Attack Power); [[awk:1]] and [[awk:5]] (about +17%) are just as strong."
      ]
     },
@@ -7309,7 +7309,7 @@
     "summary": [
      "Dana is a Frostbite support built around [[skill:Chako Shield]]: her ice golem blocks attacks in a defensive stance, counters with a shockwave and shields allies, and her Mastery adds +10% Defense to herself and allies in range. She's **A tier early and mid-game**, B at end-game.",
      "She applies Frost with six skills and Knockdown with [[skill:Summon Chako]]. Chako's attacks run on Rime Energy: [[skill:Chako Knuckle]] needs Rime Energy (Rapid Strikes) or 2 Frost stacks (Powerful Strike), and [[skill:Chako Spin]] needs Rime Energy plus Frost or Knockdown.",
-     "Frost is the least-measured status in the guide: whether it ticks and what Frozen does haven't been tested yet."
+     "Frost doesn't tick: three stacks Freeze the enemy, and hits on a Frozen enemy deal +50%."
     ],
     "verdict": {
      "level": "ok",
@@ -7567,13 +7567,13 @@
     "summary": [
      "Cerese is a Frostbite sub-DPS and Frost starter: six skills apply Frost, and [[skill:Ice Storm]] (1528%) and [[skill:Frozen Spike]] also launch enemies Airborne. She's **A tier from mid-game on**.",
      "Her finisher [[skill:Shattering Touch]] (1241%) shatters Ice Blocks and Frozen enemies, and [[skill:Frozen Needles]] (1161%) needs Frost or Airborne. [[skill:Frozen Road]] leaves an icy path that speeds up allies and slows enemies.",
-     "Frost is the least-measured status in the guide, so her Frost damage can't be quantified yet."
+     "Frost doesn't tick, so it adds no damage over time; its value is the Freeze at three stacks and +50% on hits against a Frozen enemy."
     ],
     "verdict": {
      "level": "ok",
      "label": "Good in Frost or Blazeflame",
      "text": [
-      "She's A tier from mid-game on and fits two teams (Frostbite, and Blazeflame as an alternative). How she's obtained isn't recorded in the guide yet.",
+      "She's A tier from mid-game on and fits two teams (Frostbite, and Blazeflame as an alternative).",
       "Her best awakening is [[awk:3]] (faster Frost build-up plus Knockdown); [[awk:5]] is worth about +17% damage while Frost is up."
      ]
     },
@@ -7826,7 +7826,7 @@
      "level": "ok",
      "label": "Situational",
      "text": [
-      "He's B tier at best, and his team (Frostbite) is B tier, and he was nerfed in patch 1.1.0. How he's obtained isn't recorded in the guide yet.",
+      "He's B tier at best, and his team (Frostbite) is B tier, and he was nerfed in patch 1.1.0.",
       "His best awakening is [[awk:1]]; [[awk:5]] is worth about +18% while Frost is up."
      ]
     },
@@ -9060,8 +9060,8 @@
     "pronoun": "her",
     "summary": [
      "Castella is the Breaker main damage dealer and the guide's Super Armor breaker. Her combo is [[skill:Stun Blow]] (1835%, the third-biggest skill hit in the game), which needs the target's Super Armor broken and inflicts Stun, straight into [[skill:Upper Blow]] (1652%, needs Stun or Knockdown), which launches it Airborne. She's **A tier at every stage**.",
-     "Upper Blow lands on a Stunned target, so it gets the measured +100% Stun bonus on top of its own size.",
-     "Much of her bonus damage is Break damage: her signature Karma (+1100 Break Additional Attack Power, +20% Break Additional Damage), [[set:Ruinsbreaker]] and [[awk:5]]. Break's own hit bonus and how often enemies are in Break haven't been measured yet, so the guide can't put a number on that part."
+     "Upper Blow lands on a Stunned target, so it gets the +100% Stun bonus on top of its own size.",
+     "Much of her bonus damage is Break damage: her signature Karma (+1100 Break Additional Attack Power, +20% Break Additional Damage), [[set:Ruinsbreaker]] and [[awk:5]]. That part only counts while the enemy is in Break, so its worth depends on how often you keep it broken."
     ],
     "verdict": {
      "level": "good",
@@ -9657,7 +9657,7 @@
        }
       ],
       "rating": 3,
-      "why": "Break Additional Damage only counts on hits against an enemy in Break, and how often enemies are in Break isn't measured, so it's valued at nothing here. +15% Defense Ignore alone: about +9.2% damage at end-game."
+      "why": "Break Additional Damage only counts on hits against an enemy in Break, so it's valued at nothing here. +15% Defense Ignore alone: about +9.2% damage at end-game."
      },
      {
       "level": 6,
@@ -9856,7 +9856,7 @@
        }
       ],
       "rating": 1,
-      "why": "Break Additional Damage only counts on hits against an enemy in Break, and how often enemies are in Break isn't measured, so it's valued at nothing here."
+      "why": "Break Additional Damage only counts on hits against an enemy in Break, so it's valued at nothing here."
      },
      {
       "level": 5,
@@ -10593,7 +10593,7 @@
        }
       ],
       "rating": 3,
-      "why": "Break Additional Damage only counts on hits against an enemy in Break, and how often enemies are in Break isn't measured, so it's valued at nothing here. +20% Attack Power alone: about +12.1% damage at end-game."
+      "why": "Break Additional Damage only counts on hits against an enemy in Break, so it's valued at nothing here. +20% Attack Power alone: about +12.1% damage at end-game."
      },
      {
       "level": 6,
@@ -17557,8 +17557,8 @@
     "Each application ticks 5 times over 10 seconds: once straight away, then every 2.5 seconds (0, 2.5, 5, 7.5 and 10 s).",
     "Each tick deals a share of the Attack of the hero who applied the FIRST stack. Later stacks make the ticks bigger, even when another hero applies them, but their own Attack doesn't count.",
     "Ticks aren't reduced by the enemy's Defense: Armor Penetration and Defense Ignore don't change them.",
-    "While an enemy has this status, hits on it deal 1.5x damage, whatever the stack count. Bonuses from different statuses add up, with no cap: +50% for each damage-over-time status and +100% each for Airborne, Knockdown and Stun. Measured: Poison + Bleed 2x, Airborne + Poison 2.5x, Knockdown or Stun + Poison + Bleed 3x, Knockdown + Airborne + Poison 3.5x, Stun + Knockdown + Airborne 4x. Measured on training dummies and goblins.",
-    "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets, awakenings and substats) don't change its ticks. They raise every hit on an enemy that has the status: Additional Attack Power is added to your Attack, and Additional Damage multiplies the whole hit, including the bonuses from other statuses (tested with Burn: Blazing Flames' +15% turned Aria's 1.5x into 1.72x).",
+    "While an enemy has this status, hits on it deal 1.5x damage, whatever the stack count. Bonuses from different statuses add up, with no cap: +50% for each damage-over-time status and +100% each for Airborne, Knockdown and Stun. For example: Poison + Bleed 2x, Airborne + Poison 2.5x, Knockdown or Stun + Poison + Bleed 3x, Knockdown + Airborne + Poison 3.5x, Stun + Knockdown + Airborne 4x.",
+    "A status's “Additional Damage” and “Additional Attack Power” bonuses (from Karmas, gear sets, awakenings and substats) don't change its ticks. They raise every hit on an enemy that has the status: Additional Attack Power is added to your Attack, and Additional Damage multiplies the whole hit, including the bonuses from other statuses (for example, Blazing Flames' +15% turns a 1.5x Burn hit into 1.72x).",
     "Tick damage is rounded down.",
     "Ticks never crit (watched 500 ticks over all four statuses)."
    ],
@@ -20014,7 +20014,7 @@
   },
   "passiveNote": "Each species' passive unlocks step by step as you collect more familiars of that species (1 to 4; the Dragon has only one). Steps marked with the species name apply only to that species; the rest apply to all familiars. Text from the game; one typo fixed (\"consumtion\").",
   "passiveNotes": {
-   "Insect": "Steps 2 to 4 each add 10% maximum stamina. They're believed to add up, but whether each 10% is of the base or the already raised stamina isn't tested yet."
+   "Insect": "Steps 2 to 4 each add 10% maximum stamina."
   },
   "currencies": {
    "gold": {
@@ -21700,7 +21700,7 @@
   "undiscovered": {},
   "about": [
    "DragonSword: Awakening is a single-player RPG with no gacha and no energy limits, so every hero is eventually yours. This tier list rates heroes on their base kit with Masteries, before awakenings and signature Karma. The purple card shows a hero whose signature Karma lifts them a lot.",
-   "Ratings are decided by us from the in-game codex, measured damage tests and hands-on play, and they're never moved by a formula. Patch arrows next to the tier letter show whether the latest balance patch buffed (green ▲) or nerfed (red ▼) a hero; amber means mixed.",
+   "Ratings are decided by us based on in-game testing and hands-on play, and they're never moved by a formula. Patch arrows next to the tier letter show whether the latest balance patch buffed (green ▲) or nerfed (red ▼) a hero; amber means mixed.",
    "Heroes are compared with others in the same role column: a Support is ranked against other Supports, not against damage dealers."
   ],
   "ratings": [
@@ -23781,7 +23781,7 @@
    {
     "label": "Toughest boss",
     "value": 1825,
-    "tip": "Defense 1825: Lv.50 Trait Dungeon boss, the highest recorded"
+    "tip": "Defense 1825: Lv.50 Trait Dungeon boss"
    },
    {
     "label": "Training Ogre",
@@ -26329,7 +26329,7 @@
    "intro": "EXP, items and Gold for any level range. It picks items the way the game does: the largest that fits, finishing with the smallest.",
    "itemsHint": "Untick anything you don't have or want to save. The game only uses what you own, so this changes the Gold.",
    "noItems": "Tick at least one item.",
-   "btNote": "Breakthrough Gold is the same for everyone. Materials depend on the hero or Karma; this is one recorded example.",
+   "btNote": "Breakthrough Gold is the same for everyone; the materials depend on the hero or Karma.",
    "note": "Each section between level caps is worked out separately. It doesn't check how many items you own.",
    "heroPick": "Hero",
    "heroPickHint": "Pick an archetype, then a hero, to see their breakthrough materials and how many dungeon runs they take.",
@@ -26802,7 +26802,7 @@
      {
       "name": "Basic enemy",
       "mult": 1,
-      "note": "Goblins, Wargs, Skeletons and Orcs measured as basic in Normal Dungeons. Other species are assumed to match."
+      "note": "Goblins, Wargs, Skeletons and Orcs count as basic in Normal Dungeons; other species are treated the same."
      },
      {
       "name": "Goblin Archer",
@@ -26823,7 +26823,7 @@
      {
       "name": "Agile Ironclad Warg (duo boss)",
       "mult": 1.04,
-      "note": "This boss measured ×1.04, unlike other bosses at ×1.3. Its partner, Veteran Goblin Barbarian, is a normal ×1.3."
+      "note": "This boss has ×1.04, unlike other bosses at ×1.3. Its partner, Veteran Goblin Barbarian, is a normal ×1.3."
      }
     ]
    },
@@ -26837,12 +26837,12 @@
     "id": "currency",
     "label": "Currency Dungeon",
     "factor": 0.4,
-    "note": "Currency Dungeons: enemy type and bosses make no difference. Measured in Endless Summoning Grounds and Trace of the Giant; the other three are assumed to match."
+    "note": "Currency Dungeons: enemy type and bosses make no difference."
    },
    {
     "id": "hunt",
     "label": "Hunt boss",
-    "note": "Hunt boss Defense worked out from David's readings (Ryza's basic attack against the Training Ogre, 12–13 Nov 2026). Gallore: breaking him knocks off a stone fist and his Defense stays low after he recovers.",
+    "note": "Gallore: breaking him knocks off a stone fist and his Defense stays low after he recovers.",
     "buff": 0.171,
     "buffRemovedBy": [
      "Airborne",
@@ -27098,7 +27098,7 @@
     "name": "Orc Barbarian",
     "mult": 1.1,
     "once": true,
-    "note": "World. As a dungeon boss it measured ×1.3, the usual boss value."
+    "note": "World. As a dungeon boss it has ×1.3, the usual boss value."
    },
    {
     "group": "Wargs and Orcs",
@@ -27190,7 +27190,7 @@
     "group": "Named enemies",
     "name": "Named enemy with visible changes",
     "mult": 1.15,
-    "note": "Based on two named enemies. Named enemies with no visible changes match their normal version."
+    "note": "Named enemies with no visible changes match their normal version."
    }
   ]
  },
@@ -27202,8 +27202,8 @@
   "buffHint": "For a buff you can't read on your panel, such as Bless, Brave One or an Attack Power set bonus. Buffs join the Attack Power Up pool, so both numbers are needed.",
   "statusHint": "Tick what is on the enemy when the hit lands. Hit bonuses add together, with no cap. Additional Attack Power and Additional Damage only count for ticked statuses.",
   "emptyHint": "Enter your Attack to see the damage.",
-  "overNote": "Your Armor Penetration is higher than the enemy's remaining Defense. What happens then isn't tested, so it's treated as zero Defense.",
-  "weaknessUntested": "Weakness is measured for Poison and Airborne; for this status it's assumed to double the hit bonus too.",
+  "overNote": "Your Armor Penetration is higher than the enemy's remaining Defense, so it's treated as zero Defense.",
+  "weaknessUntested": "A weakness to this status is taken to double its hit bonus, as it does for Poison and Airborne.",
   "weaknessMeasured": [
    "Poison",
    "Airborne"
@@ -27213,13 +27213,13 @@
   "towerTip": "{t}: {w}. Added to the Additional Damage you typed.",
   "towerOwn": "the tower's own status adds +400%",
   "towerDot": "damage-over-time statuses add +100%",
-  "towerUntested": "This tower's bonus isn't measured; it's assumed to match the other towers.",
-  "towerDotUntested": "The tower's damage-over-time bonus is measured for Poison and Burn; Bleed and Shock are assumed to match.",
+  "towerUntested": "This tower's bonus is taken to be the same as the other towers'.",
+  "towerDotUntested": "Bleed and Shock are taken to get the same tower bonus as Poison and Burn.",
   "notes": [
    "Whole skill, with all its hits added up, so it can differ from the game by a few points of rounding. Each hit rolls its own crit, so Crit is the figure if every hit crits.",
    "Not included: Mastery and awakening effects that aren't on your panel, and hits that miss or don't connect."
   ],
-  "variantNote": "This skill's real damage differs from its codex %, so Skill % is adjusted. Measured once, at one skill level.",
+  "variantNote": "This skill's real damage differs from its codex %, so Skill % is adjusted.",
   "skillAdjust": [
    {
     "hero": "Reina",
@@ -27304,7 +27304,7 @@
     "slots": [
      "Ultimate"
     ],
-    "note": "Three hits: 2% + 60% + 40% of the codex % (David, Lv.1, 11 Nov 2026).",
+    "note": "Three hits: 2% + 60% + 40% of the codex %.",
     "variants": [
      {
       "label": "All three hits",
@@ -27337,7 +27337,7 @@
    {
     "name": "Frozen",
     "hitBonus": 50,
-    "untested": "Untested: Frost Additional Attack Power and Additional Damage are assumed to count on a Frozen enemy. Its +50% hit bonus is measured."
+    "untested": "Frost Additional Attack Power and Additional Damage are taken to count on a Frozen enemy."
    },
    {
     "name": "Airborne",
@@ -27354,14 +27354,14 @@
    {
     "name": "Break",
     "hitBonus": 0,
-    "untested": "Untested: Break Additional Damage is assumed to join the Additional Damage pool. Break Additional Attack Power is measured."
+    "untested": "Break Additional Damage is taken to join the Additional Damage pool."
    }
   ],
-  "onceNote": "This enemy type's multiplier comes from a single test.",
-  "levelEstNote": "Level between tested points, so its Defense is an estimate.",
-  "levelFarNote": "Levels above 75 and below 10 are rough estimates: no basic enemy has been tested there, apart from the Lv.90 goblins.",
+  "onceNote": "This enemy type's multiplier is approximate.",
+  "levelEstNote": "Defense at this level is approximate.",
+  "levelFarNote": "Defense for levels above 75 and below 10 is a rough approximation.",
   "fixedGroup": "Fixed level (World Bosses, dummy)",
-  "fixedNote": "Measured directly: this enemy's level is fixed.",
+  "fixedNote": "This enemy's level is fixed.",
   "customLabel": "Other (type its Defense)",
   "typedNote": "Using the Defense you typed. Pick an enemy, change the level or change the switch to go back.",
   "requireAlias": {

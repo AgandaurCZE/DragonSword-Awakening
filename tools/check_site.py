@@ -750,6 +750,18 @@ def visible_text_rules(browser, base):
     (the tower's own archetype plus every hero with a skill that inflicts its status)."""
     with open(os.path.join(ROOT, 'data.json'), encoding='utf-8') as f:
         d = json.load(f)
+    # Notes the Damage Calculator prints only for some choices (a place, an enemy type, a skill), which the walk below doesn't reach.
+    calc = d['DAMAGE_CALC']
+    printed = [(f'DAMAGE_CALC.{k}', v) for k, v in calc.items() if isinstance(v, str) and k != 'note']
+    printed += [(f'DAMAGE_CALC.statuses ({x.get("name")}).untested', x.get('untested') or '') for x in calc.get('statuses', [])]
+    printed += [(f'DAMAGE_CALC.skillAdjust[{i}].note', x.get('note') or '') for i, x in enumerate(calc.get('skillAdjust', []))]
+    for pl in d['DEFENSE_MODEL'].get('places', []):
+        printed += [(f'DEFENSE_MODEL.places ({pl.get("id")}).{k}', pl.get(k) or '') for k in ('note', 'buffNote', 'buffOff')]
+        printed += [(f'DEFENSE_MODEL.places ({pl.get("id")}) enemy note', e.get('note') or '') for e in pl.get('enemies') or []]
+    printed += [(f'DEFENSE_MODEL.types ({t.get("name")}).note', t.get('note') or '') for t in d['DEFENSE_MODEL'].get('types', [])]
+    for where, text in printed:
+        if 'David' in text:
+            bad(f'visible text: {where} is printed by the Damage Calculator and mentions David')
     ctx = browser.new_context(viewport={'width': 1400, 'height': 900})
     page = open_site(ctx, base, '', 'visible text')
     grab = """()=>{const b=document.body.cloneNode(true);b.querySelectorAll('script,style').forEach(e=>e.remove());

@@ -70,6 +70,7 @@ Nothing on this page needs doing again. It exists so finished work is never mist
 - Level curve refitted with Lv.40, Lv.50 and Lv.70 measurements (31 Oct–8 Nov).
 
 ## Site work (preview unless noted)
+- **14 Nov:** second clean-up pass: no "measured / tested / recorded" wording left on the pages (reviews, status rules, Damage Calculator notes, single lines); Runes line colouring refined; every familiar passive step lit.
 - **13 Nov:** internal notes and David's name removed from the pages (his list); a check now fails if a page shows his name.
 - **13 Nov:** hero Build tab shows each stat as base + awakenings + titles + runes, coloured and hoverable; runes line larger.
 - **13 Nov:** Counter mark in Towers mode for every hero who inflicts the tower's status; Teams page emptied with an "End-game speed runs" toggle.

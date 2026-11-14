@@ -243,7 +243,7 @@ function v2BossInfo(b) {
   const rew = `<div class="v2-rew" data-v2rew="${E(b.id)}">${v2BossRewards(b)}</div>`;
   const strat = (I.strategy || []).length
     ? `<ul>${I.strategy.map((t) => `<li>${E(t)}</li>`).join('')}</ul>`
-    : '<p class="v2-tnote">Signature moves and tips will be added once recorded.</p>';
+    : '<p class="v2-tnote">Signature moves and tips will be added soon.</p>';
   return `<details class="v2-panel v2-binfo" open><summary>${E(b.name)}${b.stage ? ' · ' + E(b.stage) : ''}: the fights</summary><div>${fights}</div></details><details class="v2-panel v2-binfo"><summary>Strategy</summary><div>${strat}</div></details><details class="v2-panel v2-binfo"><summary>Rewards</summary><div>${rew}</div></details>`;
 }
 function renderTierV2() {
@@ -643,7 +643,7 @@ function cbDetail(d, ticks) {
    .filter((s) => s >= 1 + Math.floor(d.slots.length / 3))
    .map(
      (s) =>
-       `<tr class="${s === d.bestStars ? 'hl' : ''}"><td>${cbStars(s, max)}</td><td>${d.tiers[String(s)] ? profileEsc(d.tiers[String(s)]) : '<span class="cb-note">not seen yet</span>'}</td></tr>`,
+       `<tr class="${s === d.bestStars ? 'hl' : ''}"><td>${cbStars(s, max)}</td><td>${d.tiers[String(s)] ? profileEsc(d.tiers[String(s)]) : '<span class="cb-note">—</span>'}</td></tr>`,
    )
    .join('')}</tbody></table>
  <h4 class="cb-h">Ingredients</h4><div class="cb-slots" style="grid-template-columns:repeat(${d.slots.length},minmax(0,1fr))">${d.slots.map(slot).join('')}</div>
