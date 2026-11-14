@@ -3,6 +3,7 @@
  "meta": {
   "patch": "1.1.2",
   "balancePatch": "1.1.0",
+  "tierReviewedPatch": "1.1.0",
   "updated": "2026-10-27",
   "note": "Single source of truth for the site. index.html loads this file; images live in assets/.",
   "patchDates": {
@@ -27874,7 +27875,8 @@
    "guides": "guides",
    "tools": "tools",
    "achievements": "achievements",
-   "patches": "patch-notes"
+   "patches": "patch-notes",
+   "news": "news"
   },
   "toolRoutes": {
    "damage": "tools/DamageCalculator",

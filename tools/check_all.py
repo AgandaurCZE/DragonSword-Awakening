@@ -73,7 +73,7 @@ def file_rules():
         if not version: bad.append(f'index.html loads {path} without ?v=')
     listed = [p for p, _ in linked]
     for f in sorted(glob.glob('src/js/*.js')) + sorted(glob.glob('src/css/*.css')):
-        if f.removeprefix('src/') not in listed: bad.append(f'{f} exists but index.html does not load it (delete it or add it)')
+        if f.replace(os.sep, '/').removeprefix('src/') not in listed: bad.append(f'{f} exists but index.html does not load it (delete it or add it)')
     scripts = [p for p in listed if p.startswith('js/')]
     if scripts != sorted(scripts): bad.append('index.html: the js/ files are not loaded in their numbered order')
     step('file rules', 'FAIL' if bad else 'ok', indent('\n'.join(bad)))
@@ -114,9 +114,10 @@ def browser():
 
 
 def formatting():
-    if not shutil.which('npx'):
+    npx = shutil.which('npx')
+    if not npx:
         return step('formatting', 'not run', '          npx is not installed')
-    r = run(['npx', '--yes', PRETTIER, '--check', 'src/js', 'src/css'])
+    r = run([npx, '--yes', PRETTIER, '--check', 'src/js', 'src/css'])
     if r.returncode == 0:
         return step('formatting', 'ok')
     files = [l for l in (r.stdout + r.stderr).splitlines() if l.startswith('[warn]')]

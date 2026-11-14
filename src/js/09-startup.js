@@ -173,15 +173,16 @@ function renderShortcuts() {
   }
 }
 function patchText() {
-  const m = DATA_META || {};
-  return m.balancePatch && m.balancePatch !== m.patch
-    ? `${m.patch} (no balance changes since ${m.balancePatch})`
-    : m.patch || '';
+  return DATA_META.patch || '';
+}
+function tierPatchText() {
+  return 'Game version ' + DATA_META.patch + ' · Tier List reviewed for balance patch ' + DATA_META.tierReviewedPatch;
 }
 function startApp() {
   document.documentElement.classList.add('beta');
   setupSearchClearButtons();
   $('patchLabel').textContent = patchText();
+  $('tierPatchLabel').textContent = tierPatchText();
   renderShortcuts();
   renderTierV2();
   renderTeams();
@@ -262,6 +263,8 @@ fetch('data.json', {
     LEVEL_COSTS = d.LEVEL_COSTS || null;
     DAMAGE_CALC = d.DAMAGE_CALC || null;
     DEFENSE_MODEL = d.DEFENSE_MODEL || null;
+    await loadSteamNews();
+    mergeSteamPatches();
     startApp(); /* banners now preload when Dungeons is first opened (was: awaited here, so the preview waited for ~9 MB of art before drawing) */
   })
   .catch((err) => {

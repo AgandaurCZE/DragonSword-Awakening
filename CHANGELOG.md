@@ -1,5 +1,15 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 14 Nov 2026 — Official Steam News and automatic Patch Notes (Codex)
+
+- Enabled the News menu and `/news` route. Full Hound13 posts load newest first, with four posts initially, a Load older news button and inline YouTube playback on request.
+- Steam posts titled `Update Notes x.x.x` appear in Patch Notes, with expandable full notes. Seeded 66 announcements and 15 updates. Kept the curated patch summaries and existing history. Clear skill coefficients feed the existing change rows and percentage badges.
+- Current game, latest balance, and last-reviewed tier versions now have distinct sources. The header and Tier List show the current version, while ratings keep their reviewed balance version.
+- A half-hourly workflow refreshes the feed and dispatches the existing check-and-publish workflow when the feed changes. Previous source commit: `c4be08d`.
+- Added browser coverage for the full post, older posts, video player, unsafe markup, patch details, badges, and both version labels. Intended visual changes are the enabled News sidebar item, News articles, full-note controls, and version labels on the header, tiers and hero tier summaries.
+- The visual comparison covered 111 desktop and mobile views. The two new News views, shorter current-version header, new Tier List and hero review version text, and the expandable patch notes explain the differences. The mobile header wraps onto one fewer line on most pages.
+- Verification: `tools/check_all.py` reported `ALL CHECKS PASSED`. Import checks reproduced Eileen's +11.9% aggregate for 1.1.0 and confirmed that a fix-only patch and a partial skill update display no aggregate percentage.
+
 ## 14 Nov 2026 — Tier list re-rated from David's file; Awakenings view filled (Claude)
 Restore point: commit `5bf0595`.
 - **Source:** David's file `DragonSword_Hero_Tier_Lists.html` (repository snapshot `5bf0595`): 20 heroes × 13 matchups (Overall single, Overall group, Furcas, Vanak, Barduk, Gallore, Ghoul Greed, Earthlander, Gauron, Ursula, Amplitude, Gale, Crushing) × two scenarios. Roles in the file match the site for every hero.

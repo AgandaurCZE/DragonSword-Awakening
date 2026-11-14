@@ -2,6 +2,10 @@
 
 Back to the library: [docs/README.md](../README.md). Update this file during and at the end of every session; it's the first thing the next chat reads after [WORKING_WITH_DAVID.md](WORKING_WITH_DAVID.md). Finished items move to [DONE.md](DONE.md); every change is in `CHANGELOG.md`. Site tasks are in [SITE.md](SITE.md). David's own to-do list: `docs/dragonsword_david_todo_by_priority.html` (updated 10 Nov).
 
+## Steam News and Patch Notes — 14 Nov
+
+- The News menu shows the official Steam feed in full. Versioned update notes open inside Patch Notes, and the site separates current game, latest balance and last-reviewed tier versions. The half-hourly workflow refreshes the feed through the existing publishing checks.
+
 ## Boss tier list header artwork — 12 Nov
 
 Furcas and Vanak are approved and stored in `assets/bosses/bosses-header/`. The remaining boss cutouts are under individual review, starting with Barduk’s wing revision. The header layout is a separate implementation task.

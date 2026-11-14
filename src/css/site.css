@@ -7443,3 +7443,66 @@ a.shortcut-card:focus-visible {
 .v2-rdiffs .v2-rdiff-name {
   margin-left: 14px;
 }
+.tier-patch-label {
+  margin: 0 0 12px;
+  color: #aab3c4;
+  font-size: 13px;
+}
+.steam-post {
+  margin: 0 0 18px;
+  padding: 20px;
+}
+.steam-post > h3 {
+  margin: 0 0 4px;
+}
+.steam-post-meta {
+  color: #aab3c4;
+  font-size: 13px;
+}
+.steam-body {
+  margin: 12px 0;
+  line-height: 1.6;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.steam-body li {
+  margin-bottom: 4px;
+}
+.steam-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 8px 0;
+  border-radius: 6px;
+}
+.steam-body a,
+.steam-patch summary {
+  color: #82caff;
+}
+.steam-patch summary {
+  margin-top: 12px;
+  cursor: pointer;
+}
+.steam-video {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+  margin: 10px 0;
+}
+.steam-video button {
+  padding: 8px 14px;
+  color: #e8f3ff;
+  background: #21354b;
+  border: 1px solid #516a89;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.steam-video iframe {
+  width: min(100%, 840px);
+  aspect-ratio: 16 / 9;
+  min-height: 200px;
+  border: 0;
+}
+.patch-filter[hidden] {
+  display: none;
+}

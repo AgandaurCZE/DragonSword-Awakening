@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 14 Nov — Steam News and Patch Notes
+
+Full official announcements and click-to-play videos are available through News. Versioned update posts join the curated patch timeline. Numeric skill changes feed the existing badge and detail views, and the site displays the current game version and the Tier List's reviewed balance version.
+
 ## 14 Nov — Tier list re-rated, Awakenings view filled
 
 Every hero re-rated from David's tier-list file: Overall (single, groups; the main Overall tier is the higher of the two, David's choice), the six Hunts, both Raids and the three Towers, as A0 + Mastery in the normal view and A6 + Signature Karma + Mastery in the Awakenings view.

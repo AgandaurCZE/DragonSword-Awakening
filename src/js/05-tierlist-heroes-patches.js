@@ -72,6 +72,7 @@ document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
         renderDungeons();
       }
     }
+    if (page === 'news') renderNews();
     navSchedule();
   }),
 );
@@ -350,7 +351,7 @@ function renderPatches() {
         return `<button type="button" class="phc" style="--pc:${col}" data-phc="${profileEsc(p.version)}|${profileEsc(n)}"><img src="${h.portrait || ''}" alt=""><div><div class="phc-name">${profileEsc(n)}</div><div class="phc-sub">${patchArrow(c, p.version)} ${profileEsc(patchDirLabel(c))}${c.impact && !['fix', 'new', 'adjusted'].includes(c.direction) ? ` <span class="pips">${[1, 2, 3].map((i) => `<i class="${i <= c.impact ? 'on' : ''}"></i>`).join('')}</span>` : ''}${c.damagePct != null ? ` <span class="${c.damagePct > 0 ? 'up' : c.damagePct < 0 ? 'down' : ''}">${c.damagePct > 0 ? '+' : ''}${c.damagePct}%</span>` : ''}</div></div></button>`;
       })
       .join('');
-    return `<article class="patch-entry${p.balance ? ' is-balance' : ''}" id="patch-${p.version.replace(/\./g, '-')}"><div class="patch-card"><div class="patch-head"><span class="patch-version">${profileEsc(p.version)}${p.launch ? ' <small style="font-size:12px;color:#f0b94a;vertical-align:middle">LAUNCH</small>' : ''}</span><span class="patch-date">${patchDate(p.date)}</span><div class="patch-badges">${(p.badges || []).map((b) => patchBadge(b)).join('')}</div><div class="patch-title">${profileEsc(p.title)} · Steam build ${profileEsc(String(p.buildId || ''))}</div></div><div class="patch-body"><p class="patch-headline">${profileEsc(p.headline || '')}</p>${hl.length ? `<ul class="patch-hl">${hl.map((h) => `<li>${patchBadge(h.badge, false)}<div>${colourStatusWords(h.text)}</div></li>`).join('')}</ul>` : ''}${showHeroes && chips ? `<div class="patch-heroes-title">Hero changes${p.version === P.latestBalance ? ' · click a hero for the numbers' : ''}</div><div class="patch-hero-grid">${chips}</div>` : ''}<div class="patch-more">${p.fixCount ? `${p.fixCount} bug fix${p.fixCount > 1 ? 'es' : ''} in total. ` : ''}<a href="${profileEsc(p.source)}" target="_blank" rel="noopener">Full official notes</a></div></div></div></article>`;
+    return `<article class="patch-entry${p.balance ? ' is-balance' : ''}" id="patch-${p.version.replace(/\./g, '-')}"><div class="patch-card"><div class="patch-head"><span class="patch-version">${profileEsc(p.version)}${p.launch ? ' <small style="font-size:12px;color:#f0b94a;vertical-align:middle">LAUNCH</small>' : ''}</span><span class="patch-date">${patchDate(p.date)}</span><div class="patch-badges">${(p.badges || []).map((b) => patchBadge(b)).join('')}</div><div class="patch-title">${profileEsc(p.title)}${p.buildId ? ' · Steam build ' + profileEsc(String(p.buildId)) : ''}</div></div><div class="patch-body"><p class="patch-headline">${profileEsc(p.headline || '')}</p>${hl.length ? `<ul class="patch-hl">${hl.map((h) => `<li>${patchBadge(h.badge, false)}<div>${colourStatusWords(h.text)}</div></li>`).join('')}</ul>` : ''}${showHeroes && chips ? `<div class="patch-heroes-title">Hero changes${p.version === P.latestBalance ? ' · click a hero for the numbers' : ''}</div><div class="patch-hero-grid">${chips}</div>` : ''}<div class="patch-more">${p.fixCount ? `${p.fixCount} bug fix${p.fixCount > 1 ? 'es' : ''} in total. ` : ''}<a href="${profileEsc(p.source)}" target="_blank" rel="noopener">Original notes</a></div><details class="steam-patch" data-steam-patch="${profileEsc(p.version)}"><summary>Read the full update notes</summary></details></div></div></article>`;
   };
   root.innerHTML =
     sum +
@@ -358,6 +359,7 @@ function renderPatches() {
     (list.length
       ? `<div class="patch-timeline">${list.map(entry).join('')}</div>`
       : '<div class="patch-empty">No patches match these filters.</div>');
+  renderSteamPatchBodies(root);
   root.querySelectorAll('[data-pbf]').forEach(
     (b) =>
       (b.onclick = () => {
@@ -417,6 +419,7 @@ const PAGE_IDS = {
   gear: 'gearPage',
   karma: 'karmaPage',
   patches: 'patchesPage',
+  news: 'newsPage',
   familiars: 'familiarsPage',
   titles: 'titlesPage',
   dungeons: 'dungeonsPage',

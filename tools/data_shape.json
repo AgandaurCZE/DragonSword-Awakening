@@ -5980,6 +5980,11 @@
          ]
         }
        },
+       "tierReviewedPatch": {
+        "types": [
+         "string"
+        ]
+       },
        "updated": {
         "types": [
          "string"
@@ -5992,6 +5997,173 @@
      "types": [
       "number"
      ]
+    }
+   }
+  }
+ },
+ "data/steam-news.json": {
+  "record": {
+   "opt": {},
+   "req": {
+    "patches": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "badges": {
+         "list": {
+          "types": [
+           "string"
+          ]
+         }
+        },
+        "balance": {
+         "types": [
+          "bool"
+         ]
+        },
+        "body": {
+         "types": [
+          "string"
+         ]
+        },
+        "date": {
+         "types": [
+          "string"
+         ]
+        },
+        "fixCount": {
+         "types": [
+          "number"
+         ]
+        },
+        "heroChanges": {
+         "map": {
+          "record": {
+           "opt": {
+            "damagePct": {
+             "types": [
+              "number"
+             ]
+            },
+            "totalAfter": {
+             "types": [
+              "number"
+             ]
+            },
+            "totalBefore": {
+             "types": [
+              "number"
+             ]
+            }
+           },
+           "req": {
+            "changes": {
+             "list": {
+              "record": {
+               "opt": {
+                "after": {
+                 "types": [
+                  "number"
+                 ]
+                },
+                "before": {
+                 "types": [
+                  "number"
+                 ]
+                },
+                "text": {
+                 "types": [
+                  "string"
+                 ]
+                }
+               },
+               "req": {
+                "skill": {
+                 "types": [
+                  "string"
+                 ]
+                },
+                "slot": {
+                 "types": [
+                  "string"
+                 ]
+                }
+               }
+              }
+             }
+            },
+            "direction": {
+             "types": [
+              "string"
+             ]
+            },
+            "impact": {
+             "types": [
+              "number"
+             ]
+            }
+           }
+          }
+         }
+        },
+        "id": {
+         "types": [
+          "string"
+         ]
+        },
+        "title": {
+         "types": [
+          "string"
+         ]
+        },
+        "url": {
+         "types": [
+          "string"
+         ]
+        },
+        "version": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "posts": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "body": {
+         "types": [
+          "string"
+         ]
+        },
+        "date": {
+         "types": [
+          "string"
+         ]
+        },
+        "id": {
+         "types": [
+          "string"
+         ]
+        },
+        "title": {
+         "types": [
+          "string"
+         ]
+        },
+        "url": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
     }
    }
   }

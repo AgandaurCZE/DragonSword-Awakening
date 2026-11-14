@@ -837,7 +837,7 @@ function renderProfileReview(h, data) {
         ([p, label]) =>
           `<div class="rv-rating"><div class="rv-rating-box" style="background:${v2TierColor(t[p])}">${t[p] || '—'}</div><div class="rv-rating-label">${label}</div></div>`,
       )
-      .join('')}</div><p class="profile-note">Tiers from the guide's Tier List · patch ${profileEsc(patchText())}.</p>`,
+      .join('')}</div><p class="profile-note">${profileEsc(tierPatchText())}.</p>`,
   );
   root.innerHTML = parts.join('');
   root

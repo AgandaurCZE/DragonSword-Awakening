@@ -67,12 +67,17 @@ def serve(directory, prefix=''):
         elif prefix:
             raise ValueError('Prefix hosting requires the assembled layout')
         handler = functools.partial(QuietHandler, directory=directory)
-        srv = http.server.ThreadingHTTPServer(('127.0.0.1', 0), handler)
+        srv = SiteTestServer(('127.0.0.1', 0), handler)
         threading.Thread(target=srv.serve_forever, daemon=True).start()
         try:
             yield 'http://127.0.0.1:%d/' % srv.server_address[1] + (prefix + '/' if prefix else '')
         finally:
             srv.shutdown()
+
+
+class SiteTestServer(http.server.ThreadingHTTPServer):
+    # Route changes can trigger several simultaneous image requests.
+    request_queue_size = 64
 
 
 def launch(p):
@@ -834,6 +839,44 @@ def visible_text_rules(browser, base):
     print('  visible text, Teams page and tower counters checked')
 
 
+def steam_news(browser, base):
+    """Exercise new patches and media without depending on Steam or YouTube uptime."""
+    ctx = browser.new_context(viewport={'width': 390, 'height': 844})
+    ctx.route('https://www.youtube-nocookie.com/**', lambda route: route.fulfill(body='video'))
+    post = dict(id='1', date='2026-11-14', url='https://store.steampowered.com/news/app/4570720/view/1')
+    news = [dict(post, title=f'Announcement {i}', body='[h3]Full post[/h3][list][*]Complete text[/list]'
+                 '[previewyoutube=VLFUtQv25W4;full][/previewyoutube]'
+                 '[url=javascript:alert(1)]Unsafe link[/url] <script>not markup</script>') for i in range(5)]
+    hero = dict(direction='buff', impact=1, changes=[dict(skill='Barraging Spear', before=100, after=120)])
+    patches = [
+        dict(post, version='1.2.1', title='Update Notes 1.2.1', body='Hotfix', balance=False, badges=['fix']),
+        dict(post, version='1.2.0', title='Update Notes 1.2.0', body='Full balance notes', balance=True,
+             badges=['balance'], heroChanges={'Eileen': hero}),
+    ]
+    ctx.route('**/data/steam-news.json', lambda route: route.fulfill(json=dict(posts=news, patches=patches)))
+    page = open_site(ctx, base, 'news', 'Steam announcements')
+    assert page.locator('#newsBody article').count() == 4
+    assert page.locator('#newsBody article').first.get_by_text('Complete text').is_visible()
+    assert not page.locator('#newsBody script, #newsBody a[href^="javascript:"]').count()
+    page.locator('#newsMore').click()
+    assert page.locator('#newsBody article').count() == 5
+    assert not page.locator('#newsMore').is_visible()
+    page.locator('#newsBody article').first.get_by_role('button', name='Play video').click()
+    assert page.locator('#newsBody iframe').first.get_attribute('src').endswith('VLFUtQv25W4?autoplay=1')
+    assert page.locator('#patchLabel').text_content() == '1.2.1'
+    assert page.evaluate("latestBalanceChange('Eileen').version") == '1.2.0'
+    assert '1.1.0' in page.locator('#tierPatchLabel').text_content()
+    page.evaluate("navNavigate({page:'patches'})")
+    assert page.locator('.patch-entry').first.get_attribute('id') == 'patch-1-2-1'
+    patch = page.locator('#patch-1-2-0')
+    patch.locator('summary').click()
+    patch.get_by_text('Full balance notes').wait_for(state='visible', timeout=5000)
+    patch.locator('button[data-phc]').click()
+    assert '20%' in page.locator('#patchesBody').inner_text()
+    ctx.close()
+    print('  Steam news, patch import, media, badges and version labels checked')
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -858,6 +901,7 @@ def main():
         awakening_toggle(browser, base)
         boss_rows(browser, base)
         visible_text_rules(browser, base)
+        steam_news(browser, base)
         with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
             beta_subpath(browser, prefixed)
         if not QUICK:

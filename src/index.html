@@ -20,7 +20,7 @@
 <link rel="icon" type="image/png" href="assets/ui/favicon.png">
 <link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
 <title>DragonSword: Awakening, Guides, tools &amp; Tier List</title>
-<link rel="stylesheet" href="css/site.css?v=20261113b">
+<link rel="stylesheet" href="css/site.css?v=20261114-news1">
 </head>
 <body>
 <aside class="app-sidebar" aria-label="Main navigation">
@@ -46,13 +46,13 @@
  <button class="nav-item" data-page="achievements"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span><span class="nav-label">Achievements</span></button>
  <button class="nav-item" data-page="guides"><span class="nav-icon" id="navIconGuides"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span><span class="nav-label">Guides</span></button>
  <button class="nav-item" data-page="tools"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><span class="nav-label">Tools</span></button>
- <button class="nav-item nav-soon" data-page="news" disabled title="Coming later"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0V11h4"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg></span><span class="nav-label">News</span></button>
+ <button class="nav-item" data-page="news"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0V11h4"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg></span><span class="nav-label">News</span></button>
  <button class="nav-item" data-page="patches"><span class="nav-icon">☰</span><span class="nav-label">Patch Notes</span></button>
 </aside>
 <div class="app-content">
-<header><h1>DRAGONSWORD: AWAKENING</h1><p><span id="hdrPage">Shortcuts</span> · Beta · patch <span id="patchLabel">1.1.2</span></p></header>
+<header><h1>DRAGONSWORD: AWAKENING</h1><p><span id="hdrPage">Shortcuts</span> · Beta · patch <span id="patchLabel"></span></p></header>
 <section class="simple-page shortcuts-page" id="homePage"><div class="gear-heading"><h2>SHORTCUTS</h2><span>Explore the Beta guide</span></div><div id="shortcutsBody"></div></section>
-<main id="tierPage" hidden><div id="tierV2"></div></main>
+<main id="tierPage" hidden><p id="tierPatchLabel" class="tier-patch-label"></p><div id="tierV2"></div></main>
 <section class="heroes-page" id="heroesPage" hidden>
  <div class="heroes-heading"><h2>All Heroes <span id="heroesCount"></span></h2></div>
  <div class="heroes-controls">
@@ -117,6 +117,12 @@
  <div class="gear-heading"><h2>COOKBOOK</h2><span>Every recipe, what it does at each star level, and what you've cooked</span></div>
  <div id="cookbookBody"></div>
 </section>
+<section class="patches-page" id="newsPage" hidden>
+ <div class="gear-heading"><h2>NEWS</h2><span>Official announcements from Hound13</span></div>
+ <div id="newsBody"></div>
+ <p id="newsEmpty" hidden>News is currently unavailable. <a href="https://store.steampowered.com/news/app/4570720">View announcements on Steam</a>.</p>
+ <button type="button" id="newsMore" class="patch-filter" hidden>Load older news</button>
+</section>
 <section class="patches-page" id="patchesPage" hidden>
  <div class="gear-heading"><h2>PATCH NOTES</h2><span>Every update since launch, newest first, from the official Steam notes</span></div>
  <div id="patchesBody"></div>
@@ -138,11 +144,12 @@
 <!-- Site script, in load order. Bump ?v= on every file you change so browsers fetch the new copy (10 Nov 2026). -->
 <script src="js/01-core.js?v=20261112a"></script>
 <script src="js/02-teams-karma.js?v=20261114a-beta1"></script>
-<script src="js/03-profile.js?v=20261114a"></script>
+<script src="js/03-profile.js?v=20261114-news1"></script>
 <script src="js/04-gear-builds.js?v=20261114a"></script>
-<script src="js/05-tierlist-heroes-patches.js?v=20261114a"></script>
+<script src="js/05-tierlist-heroes-patches.js?v=20261114-news1"></script>
 <script src="js/06-dungeons.js?v=20261113a-beta1"></script>
 <script src="js/07-tierlist-v2-cookbook.js?v=20261114b"></script>
 <script src="js/08-items-tools-guides.js?v=20261113a"></script>
-<script src="js/09-startup.js?v=20261112a"></script>
+<script src="js/08-steam-news.js?v=20261114-news1"></script>
+<script src="js/09-startup.js?v=20261114-news1"></script>
 </body></html>
