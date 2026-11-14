@@ -157,7 +157,7 @@ function v2Card(h) {
       : '';
   const a = latestArrow(h.name);
   const off = V2.tagsOff !== V2.tagFlip.has(h.name);
-  return `<div class="hero-card v2-card${tags && off ? ' tags-off' : ''}" tabindex="0" role="button" data-hero="${profileEsc(h.name)}" style="--tier:${t ? v2TierColor(t) : '#4b5563'}"><div class="portrait-wrap"><img class="portrait" src="${h.portrait}" alt="${profileEsc(h.name)}" loading="lazy"><span class="arch-badge"><img src="${h.archIcon}" alt="${profileEsc(h.archetype)}"></span>${a ? `<span class="patch-arrow" data-patch-hero="${profileEsc(h.name)}">${a}</span>` : ''}<span class="tier-chip${fallback ? ' v2-fallback' : ''}">${t || '?'}</span>${kb}</div><div class="hero-name">${profileEsc(h.name)}</div>${tags ? `<button type="button" class="v2-tagtog" aria-expanded="${!off}" aria-label="${off ? 'Show' : 'Hide'} tags" title="${off ? 'Show' : 'Hide'} tags"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="v2-tags">${tags}</div>` : ''}</div>`;
+  return `<div class="hero-card v2-card${tags && off ? ' tags-off' : ''}" data-hero="${profileEsc(h.name)}" style="--tier:${t ? v2TierColor(t) : '#4b5563'}"><div class="portrait-wrap"><a class="tier-hero-link" href="${profileEsc(heroLinkUrl(h.name))}" aria-label="Open ${profileEsc(h.name)} character page"><img class="portrait" src="${h.portrait}" alt="" loading="lazy"></a><span class="arch-badge"><img src="${h.archIcon}" alt="${profileEsc(h.archetype)}"></span>${a ? `<span class="patch-arrow" data-patch-hero="${profileEsc(h.name)}">${a}</span>` : ''}<span class="tier-chip${fallback ? ' v2-fallback' : ''}">${t || '?'}</span>${kb}</div><div class="hero-name">${profileEsc(h.name)}</div>${tags ? `<button type="button" class="v2-tagtog" aria-expanded="${!off}" aria-label="${off ? 'Show' : 'Hide'} tags" title="${off ? 'Show' : 'Hide'} tags"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="v2-tags">${tags}</div>` : ''}</div>`;
 }
 function v2TipHtml(h) {
   const H0 = v2Hero(h.name),
@@ -440,6 +440,8 @@ function renderTierV2() {
   root.querySelectorAll('.v2-card').forEach((c) => {
     const h = HEROES.find((x) => x.name === c.dataset.hero);
     c.addEventListener('click', (e) => {
+      if (!isPlainLinkClick(e)) return;
+      e.preventDefault();
       const tt = e.target.closest('.v2-tagtog');
       if (tt) {
         e.stopPropagation();
@@ -462,20 +464,14 @@ function renderTierV2() {
         return;
       }
       hideTip();
-      openCharacterProfile(h.name);
-    });
-    c.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openCharacterProfile(h.name);
-      }
+      navNavigate({ page: 'hero', hero: h.name });
     });
     c.addEventListener('pointerenter', (e) => {
       if (e.pointerType !== 'touch') v2ShowTip(h, c);
     });
     c.addEventListener('pointerleave', hideTip);
-    c.addEventListener('focus', () => v2ShowTip(h, c));
-    c.addEventListener('blur', hideTip);
+    c.addEventListener('focusin', () => v2ShowTip(h, c));
+    c.addEventListener('focusout', hideTip);
   });
   root.querySelectorAll('.v2-tag[data-v2tip],.v2-karma[data-v2tip]').forEach((el) => {
     el.addEventListener('pointerleave', hideTip);

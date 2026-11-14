@@ -370,7 +370,7 @@ function renderTrait() {
       (a, b) => (order[trTier(a)] ?? 9) - (order[trTier(b)] ?? 9) || a.name.localeCompare(b.name),
     );
   const tile = (h, bad) =>
-    `<button type="button" class="tr-hero${bad ? ' bad' : ''}" data-hero="${profileEsc(h.name)}"><span class="tr-portrait"><img src="${profileEsc(h.portrait)}" alt="${profileEsc(h.name)}" loading="lazy"><span class="tier-chip" style="--tier:${tierColor(trTier(h))};background:${tierColor(trTier(h))}">${profileEsc(trTier(h) || '—')}</span></span><span class="tr-name">${profileEsc(h.name)}</span></button>`;
+    `<a href="${profileEsc(heroLinkUrl(h.name))}" class="tr-hero${bad ? ' bad' : ''}" data-hero="${profileEsc(h.name)}"><span class="tr-portrait"><img src="${profileEsc(h.portrait)}" alt="${profileEsc(h.name)}" loading="lazy"><span class="tier-chip" style="--tier:${tierColor(trTier(h))};background:${tierColor(trTier(h))}">${profileEsc(trTier(h) || '—')}</span></span><span class="tr-name">${profileEsc(h.name)}</span></a>`;
   const chip = (a, kind) =>
     `<span class="tr-chip ${kind}" style="--ac:${ARCH_COLORS[a] || '#888'}"><svg viewBox="0 0 16 16" aria-hidden="true">${kind === 'weak' ? '<path d="M8 3l5.5 8h-11z" fill="currentColor"/>' : '<path d="M8 13l5.5-8h-11z" fill="currentColor"/>'}</svg>${archIcon(a) ? `<img src="${archIcon(a)}" alt="">` : ''}<span><small>${kind === 'weak' ? 'Weakness' : 'Immune'}</small>${profileEsc(a)}</span></span>`;
   const none = (kind) =>
@@ -417,7 +417,11 @@ function renderTrait() {
   });
   root.querySelectorAll('.tr-hero').forEach((b) => {
     const h = HEROES.find((x) => x.name === b.dataset.hero);
-    b.addEventListener('click', () => openCharacterProfile(h.name));
+    b.addEventListener('click', (event) => {
+      if (!isPlainLinkClick(event)) return;
+      event.preventDefault();
+      navNavigate({ page: 'hero', hero: h.name });
+    });
     b.addEventListener('pointerenter', (e) => {
       if (e.pointerType !== 'touch') showHeroCard(h, b);
     });

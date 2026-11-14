@@ -1132,280 +1132,246 @@ main {
 }
 .team-tier-group {
   display: grid;
-  grid-template-columns: 62px minmax(0, 1fr);
+  grid-template-columns: 60px minmax(0, 1fr);
   gap: 10px;
   margin: 14px 0 24px;
+  padding: 10px;
   border: 1px solid #41434b;
   background: #292b32;
-  padding: 10px;
-  align-items: stretch;
 }
 .team-tier-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  border-radius: 2px;
+  color: #11131a;
   font-size: 34px;
   font-weight: 950;
-  color: #11131a;
-  border-radius: 2px;
-  min-height: 100%;
-  line-height: 1;
 }
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  align-content: start;
+  min-width: 0;
 }
 .team-card {
-  --team-accent: #8b86ef;
   min-width: 0;
-  border: 2px solid var(--team-accent);
+  border: 3px solid var(--team-accent);
   background: #292b32;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
-}
-.team-notes strong.sk-status {
-  color: var(--sk-color, #fff);
 }
 .team-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 7px 14px;
   background: var(--team-accent);
-  color: #10131a;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 0.35px;
-  padding: 6px 10px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  min-height: 42px;
+  color: #14161b;
+  font-size: 17px;
 }
-.team-arch-crop {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  flex: 0 0 34px;
-  overflow: hidden;
-  border-radius: 50%;
-  background: transparent;
-  box-shadow: none;
+.team-title small {
+  margin-left: 6px;
+  color: #252831;
+  font-size: 11px;
+  font-weight: 600;
+}
+.team-notes a.karma-skill-link,
+a.nav-item,
+a.heroes-character-card,
+a.tr-hero {
+  text-decoration: none;
+}
+.team-notes a.karma-skill-link {
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+}
+.tier-hero-link {
+  display: block;
+  height: 100%;
 }
 .team-arch-crop img {
   display: block;
-  width: 100%;
-  height: 100%;
-  max-width: none;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
-  object-position: center;
-}
-.team-title span {
-  line-height: 1.2;
-}
-.team-notes .karma-skill-link {
-  color: inherit;
-}
-.team-notes .karma-skill-link:hover,
-.team-notes .karma-skill-link:focus-visible {
-  color: #fff;
-  text-decoration-color: #fff;
-}
-.team-character-link {
-  cursor: pointer;
-  outline-offset: -3px;
-}
-.team-character-link:focus-visible {
-  outline: 2px solid #fff;
-  z-index: 2;
-}
-.team-slot img.team-character-link:hover {
-  transform: scale(1.06);
-  box-shadow: 0 0 0 2px var(--team-accent);
-}
-.team-lead img.team-character-link {
-  cursor: pointer;
 }
 .team-body {
   display: grid;
-  grid-template-columns: minmax(130px, 1fr) minmax(0, 1.5fr);
-  min-height: 155px;
-  flex: 1;
+  grid-template-columns: clamp(105px, 18%, 190px) minmax(0, 1fr);
 }
 .team-lead {
   position: relative;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  min-width: 0;
+  min-height: 174px;
   overflow: hidden;
-  background: linear-gradient(145deg, #202936, #111720);
   border-right: 2px solid var(--team-accent);
+  background: #171d27;
 }
-.team-lead img {
+.team-portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #edf0f5;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+}
+.team-portrait img {
+  display: block;
+  width: min(78px, 100%);
+  aspect-ratio: 335 / 386;
+  object-fit: cover;
+  border: 1px solid #8791a2;
+  border-radius: 4px;
+}
+.team-slot .team-portrait {
+  width: min(96px, 40%);
+}
+.team-slot .team-portrait-alt {
+  width: min(72px, 24%);
+}
+.team-slot .team-portrait:only-child {
+  width: min(96px, 100%);
+}
+.team-slot .team-portrait img {
+  width: 100%;
+}
+.team-portrait:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+.team-portrait:hover img {
+  border-color: #fff;
+}
+.team-portrait-name {
+  font-size: 12px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+.team-role {
+  color: #c5ccda;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+}
+.team-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+}
+.team-face img {
   width: 100%;
   height: 100%;
-  min-height: 155px;
-  max-height: 220px;
-  object-fit: cover;
-  object-position: center 20%;
-  mask-image: linear-gradient(to right, #000 68%, transparent 100%);
-}
-.team-lead-name {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 24px 8px 9px;
-  background: linear-gradient(transparent, #080b11dd);
-  font-weight: 900;
-  font-size: 15px;
-  text-shadow: 0 2px 4px #000;
-  text-align: left;
-}
-.team-slot-images.many {
-  flex-wrap: wrap;
-  gap: 3px;
-}
-.team-slot-images.many .swap-divider {
-  display: none;
-}
-.team-slot-images.many img {
-  width: min(40px, 44%);
+  border: 0;
+  border-radius: 0;
+  object-position: center 25%;
 }
 .team-members {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  min-width: 0;
 }
 .team-slot {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
+  align-content: center;
   justify-content: center;
   gap: 5px;
   min-width: 0;
-  padding: 9px 5px;
-  border-right: 1px solid color-mix(in srgb, var(--team-accent) 75%, #252832);
-  position: relative;
+  padding: 10px 5px;
+  border-right: 1px solid #545765;
 }
 .team-slot:last-child {
   border-right: 0;
 }
-.team-slot-images {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  width: 100%;
-  min-width: 0;
-}
-.team-slot img {
-  width: min(68px, 46%);
-  aspect-ratio: 335/386;
-  object-fit: cover;
-  border: 2px solid #d8d9de;
-  background: #111720;
-  border-radius: 2px;
-  display: block;
-}
-.team-slot img.single {
-  width: min(82px, 100%);
-}
 .team-slot .swap-divider {
-  font-size: 12px;
-  font-weight: 900;
   color: #f1d46a;
+  font-size: 14px;
+  font-weight: 900;
 }
-.team-slot-name {
-  font-size: 11px;
-  font-weight: 800;
-  text-align: center;
-  line-height: 1.25;
-  overflow-wrap: anywhere;
-}
-.team-slot-alt {
-  font-size: 10px;
-  color: #c9cbd3;
-  text-align: center;
-  line-height: 1.25;
+.team-flex-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 60px;
+  border: 1px dashed #8b94a4;
+  border-radius: 4px;
+  color: #c5ccda;
+  font-size: 24px;
 }
 .team-notes {
+  margin: 0;
+  padding: 8px 12px;
   border-top: 1px solid #454852;
-  padding: 8px 11px;
-  color: #c6c9d1;
-  font-size: 12px;
-  line-height: 1.45;
   background: #22242b;
-}
-.team-notes strong {
-  color: #f4f4f6;
-}
-.team-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 5px;
-}
-.team-tag {
-  border: 1px solid #59606c;
-  border-radius: 4px;
-  padding: 2px 6px;
-  font-size: 10px;
-  font-weight: 800;
-  color: #e3e5eb;
-}
-.teams-footnote {
-  color: #9da2ad;
-  font-size: 12px;
-  margin: 18px 2px 0;
+  color: #d5dae3;
+  font-size: 13px;
   line-height: 1.5;
 }
-@media (max-width: 1050px) {
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-  .team-body {
-    grid-template-columns: minmax(120px, 0.8fr) minmax(0, 1.4fr);
-  }
+.team-notes .karma-skill-link {
+  color: inherit;
 }
-@media (max-width: 600px) {
+.team-speed-group {
+  grid-template-columns: minmax(0, 1fr);
+}
+.team-speed-group .team-tier-label {
+  padding: 9px;
+  font-size: 21px;
+}
+.team-speed-group .team-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+.team-run {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+  align-items: start;
+  gap: 8px;
+  padding: 12px;
+  background: #22242b;
+  border: 1px solid #454852;
+}
+.teams-footnote {
+  color: #b9c0cc;
+  font-size: 13px;
+}
+.teams-footnote:empty {
+  display: none;
+}
+@media (max-width: 700px) {
   .team-tier-group {
-    grid-template-columns: 44px minmax(0, 1fr);
-    padding: 6px;
-    gap: 6px;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 7px;
+    gap: 7px;
   }
   .team-tier-label {
-    font-size: 28px;
-  }
-  .team-grid {
-    grid-template-columns: 1fr;
+    font-size: 23px;
   }
   .team-body {
-    grid-template-columns: 100px minmax(0, 1fr);
-    min-height: 140px;
+    grid-template-columns: minmax(0, 1fr);
   }
-  .team-lead img {
-    min-height: 140px;
+  .team-lead {
+    min-height: 130px;
+    border-right: 0;
+    border-bottom: 2px solid var(--team-accent);
+  }
+  .team-face img {
+    max-width: 128px;
   }
   .team-slot {
-    padding: 6px 2px;
+    gap: 3px;
   }
-  .team-slot img {
-    width: min(48px, 47%);
+  .team-slot .team-portrait img {
+    width: min(63px, 100%);
   }
-  .team-slot img.single {
-    width: min(58px, 100%);
-  }
-  .team-slot-name {
-    font-size: 10px;
-  }
-  .team-title {
-    font-size: 12px;
+  .team-slot .team-portrait-alt img {
+    width: min(43px, 100%);
   }
 }
 
@@ -5435,15 +5401,13 @@ main {
   width: 11px;
   height: 11px;
 }
-.team-lead-name .pa,
-.team-slot-name .pa {
+.team-portrait-name .pa {
   margin-left: 5px;
   width: 15px;
   height: 15px;
   vertical-align: -3px;
 }
-.team-lead-name .pa svg,
-.team-slot-name .pa svg {
+.team-portrait-name .pa svg {
   width: 10px;
   height: 10px;
 }
@@ -7489,13 +7453,32 @@ a.shortcut-card:focus-visible {
   gap: 8px;
   margin: 10px 0;
 }
-.steam-video button {
-  padding: 8px 14px;
+.steam-video .steam-video-preview {
+  position: relative;
+  width: min(100%, 640px);
+  padding: 0;
+  overflow: hidden;
   color: #e8f3ff;
   background: #21354b;
   border: 1px solid #516a89;
   border-radius: 6px;
   cursor: pointer;
+}
+.steam-video-preview img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 0;
+}
+.steam-video-preview span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: #14171ce8;
+  font-size: 20px;
 }
 .steam-video iframe {
   width: min(100%, 840px);

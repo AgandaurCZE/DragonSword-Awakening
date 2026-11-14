@@ -18,8 +18,9 @@ if (dToggle)
     dToggle.classList.toggle('active', open);
   });
 document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
-  btn.addEventListener('click', () => {
-    if (btn.disabled) return;
+  btn.addEventListener('click', (event) => {
+    if (btn.disabled || !isPlainLinkClick(event)) return;
+    event.preventDefault();
     const page = btn.dataset.page;
     if (page !== 'currency' && !$('currencyPage').hidden) {
       CURRENCY_DNG_STATE.selected = {};
@@ -145,20 +146,17 @@ function renderHeroes() {
   const grid = $('heroesGrid');
   grid.innerHTML = '';
   list.forEach((h) => {
-    const card = document.createElement('article');
+    const card = document.createElement('a');
     card.className = 'heroes-character-card';
+    card.href = heroLinkUrl(h.name);
     card.title = `${h.name} · ${h.archetype} · ${h.role}`;
-    card.tabIndex = 0;
     card.innerHTML = `<img class="heroes-portrait" src="${h.portrait}" alt="${h.name}" loading="lazy"><div class="heroes-char-badges"><span class="heroes-char-badge" title="${h.role}"><img src="${ROLE_ICONS[h.role] || ''}" alt="${h.role}"></span></div>${h.name === 'Ryza' ? '<span class="heroes-new">NEW</span>' : ''}<div class="heroes-char-name">${h.name}</div>`;
     card.style.cursor = 'pointer';
-    card.setAttribute('role', 'button');
     card.setAttribute('aria-label', `Open ${h.name} character page`);
-    card.addEventListener('click', () => openCharacterProfile(h.name));
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openCharacterProfile(h.name);
-      }
+    card.addEventListener('click', (event) => {
+      if (!isPlainLinkClick(event)) return;
+      event.preventDefault();
+      navNavigate({ page: 'hero', hero: h.name });
     });
     card.addEventListener('pointerenter', (e) => {
       if (e.pointerType !== 'touch') showHeroCard(h, card);

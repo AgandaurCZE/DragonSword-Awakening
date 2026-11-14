@@ -1,157 +1,107 @@
 /* js/02-teams-karma.js: Teams page (TEAM_DATA) and Karma page (KARMA_DATA). Part of the site script, split out of index.html on 10 Nov 2026.
    The files load in order (see index.html) and share one global scope, so code that runs at load time may only use what earlier files define. */
-// ==== Teams page (TEAM_DATA) ====
-/* Teams page (David, 13 Nov 2026): the old teams are no longer listed here; new ones are coming. The tier rows stay, empty, and a
-   toggle at the top switches to the end-game speed-run teams (also empty for now). TEAM_DATA itself stays in data.json: the hero
-   pages (Synergy) and the gear tools still read it. To list teams again, fill `shown` below. */
+// ==== Teams page (TEAM_DATA and TEAM_SPEED_RUNS) ====
 const TEAMS_VIEW = { speed: false };
-function renderTeams() {
-  const board = document.getElementById('teamBoard');
-  if (!board) return;
-  board.innerHTML = '';
-  const controls = document.getElementById('teamsControls');
-  if (controls) {
-    controls.innerHTML = `<button type="button" class="heroes-filter-btn v2-tagall${TEAMS_VIEW.speed ? ' active' : ''}" id="teamsSpeed" aria-pressed="${TEAMS_VIEW.speed}">End-game speed runs</button>`;
-    document.getElementById('teamsSpeed').onclick = () => {
-      TEAMS_VIEW.speed = !TEAMS_VIEW.speed;
-      renderTeams();
-    };
+
+function teamPortrait(hero, small = false, showRole = true) {
+  const role = v2Role(hero);
+  const portrait = document.createElement('a');
+  portrait.className = 'team-portrait team-character-link' + (small ? ' team-portrait-alt' : '');
+  portrait.setAttribute('aria-label', hero.name + ' · Build and Teams');
+  portrait.innerHTML = `<img src="${profileEsc(hero.portrait)}" alt="" loading="lazy"><span class="team-portrait-name">${profileEsc(hero.name)}${showRole ? latestArrow(hero.name) : ''}</span>`;
+  if (showRole) {
+    const label = document.createElement('span');
+    label.className = 'team-role';
+    label.textContent = role;
+    portrait.prepend(label);
   }
-  const shown = [];
-  const tiers = ['S', 'A', 'B', 'C'];
-  const colors = { S: '#f05258', A: '#ff9d48', B: '#69c9e8', C: '#8b86ef' };
-  const heroMap = new Map(HEROES.map((h) => [h.name.toLowerCase(), h]));
-  const portrait = (name) => heroMap.get(name.toLowerCase())?.portrait || '';
-  // Darken the sampled archetype color slightly so its icon remains distinct against the team title.
-  const teamArchColor = (arch) => {
-    const hex = ARCH_COLORS[arch];
-    if (!hex) return '#555b68';
-    const n = parseInt(hex.slice(1), 16),
-      r = (n >> 16) & 255,
-      g = (n >> 8) & 255,
-      b = n & 255;
-    const shade = (v) =>
-      Math.round(v * 0.78)
-        .toString(16)
-        .padStart(2, '0');
-    return '#' + shade(r) + shade(g) + shade(b);
+  wireTeamCharacter(portrait, hero);
+  return portrait;
+}
+
+function teamCard(team, heroes) {
+  const card = document.createElement('article');
+  card.className = 'team-card';
+  card.dataset.teamName = team.name;
+  card.style.setProperty('--team-accent', ARCH_COLORS[team.arch] || team.accent);
+  const archIcon = HEROES.find((hero) => hero.archetype === team.arch)?.archIcon;
+  card.innerHTML = `<h3 class="team-title">${archIcon ? `<span class="team-arch-crop"><img src="${profileEsc(archIcon)}" alt=""></span>` : ''}<span>${profileEsc(team.name)} <small>${profileEsc(team.arch)}</small></span></h3><div class="team-body"><div class="team-lead"></div><div class="team-members"></div></div><p class="team-notes">${formatTeamSkillText(team.note, team)}</p>`;
+  const face = teamPortrait(heroes.get(team.lead), false, false);
+  face.classList.add('team-face');
+  face.querySelector('.team-portrait-name').remove();
+  card.querySelector('.team-lead').append(face);
+  const members = card.querySelector('.team-members');
+  for (const slot of team.members) {
+    const section = document.createElement('div');
+    section.className = 'team-slot';
+    if (slot.name === null) {
+      section.innerHTML = '<span class="team-flex-icon" aria-hidden="true">+</span><strong>Flex</strong>';
+    } else {
+      section.append(teamPortrait(heroes.get(slot.name)));
+      for (const name of slot.alts || []) {
+        const slash = document.createElement('span');
+        slash.className = 'swap-divider';
+        slash.textContent = '/';
+        section.append(slash, teamPortrait(heroes.get(name), true));
+      }
+    }
+    members.append(section);
+  }
+  return card;
+}
+
+function renderTeams() {
+  const board = $('teamBoard');
+  const button = $('teamsSpeed');
+  const speed = TEAMS_VIEW.speed;
+  button.setAttribute('aria-pressed', String(speed));
+  button.classList.toggle('active', speed);
+  button.onclick = () => {
+    TEAMS_VIEW.speed = !speed;
+    renderTeams();
   };
-  for (const tier of tiers) {
-    const items = shown.filter((t) => t.tier === tier);
-    const group = document.createElement('section');
-    group.className = 'team-tier-group';
-    const label = document.createElement('div');
-    label.className = 'team-tier-label';
-    label.style.background = colors[tier];
-    label.textContent = tier;
-    label.setAttribute('aria-label', tier + ' tier');
-    group.append(label);
+  $('teamsHeading').textContent = speed ? 'Ursula speed runs' : 'Team Tier List';
+  $('teamsIntroText').textContent = speed
+    ? 'Ursula reaches phase two faster than Gauron and offers better end-game rewards.'
+    : 'Same-archetype teams become more valuable as you progress into the end game.';
+  $('teamsFootnote').textContent = speed
+    ? 'Other well-invested teams can also clear quickly if you know the boss and your rotation.'
+    : '';
+  board.replaceChildren();
+  const heroes = new Map(HEROES.map((hero) => [hero.name, hero]));
+  const groups = speed
+    ? TEAM_SPEED_RUNS.map((group, index) => ({
+        ...group,
+        color: index === 0 ? TIER_LIST_V2.tierColors['S+'] : TIER_COLORS.S,
+      }))
+    : ['S', 'A', 'B'].map((tier) => ({
+        label: tier,
+        color: { S: '#f05258', A: '#ff9d48', B: '#69c9e8' }[tier],
+        teams: TEAM_DATA.filter((team) => team.tier === tier),
+      }));
+  for (const group of groups) {
+    const section = document.createElement('section');
+    section.className = 'team-tier-group' + (speed ? ' team-speed-group' : '');
+    const heading = document.createElement('h3');
+    heading.className = 'team-tier-label';
+    heading.style.backgroundColor = group.color;
+    heading.textContent = group.label;
+    if (!speed) heading.setAttribute('aria-label', group.label + ' tier');
+    section.append(heading);
     const grid = document.createElement('div');
     grid.className = 'team-grid';
-    for (const team of items) {
-      const card = document.createElement('article');
-      card.className = 'team-card';
-      card.dataset.teamName = team.name;
-      card.style.setProperty('--team-accent', teamArchColor(team.arch));
-      const title = document.createElement('div');
-      title.className = 'team-title';
-      const archHero = HEROES.find((h) => h.archetype === team.arch && h.archIcon);
-      if (archHero) {
-        const crop = document.createElement('span');
-        crop.className = 'team-arch-crop';
-        crop.setAttribute('aria-label', team.arch + ' archetype icon');
-        const archImg = document.createElement('img');
-        archImg.src = archHero.archIcon;
-        archImg.alt = '';
-        archImg.draggable = false;
-        crop.append(archImg);
-        title.append(crop);
+    for (const team of group.teams) {
+      if (speed) {
+        const lineup = document.createElement('article');
+        lineup.className = 'team-run';
+        lineup.append(...team.map((name) => teamPortrait(heroes.get(name), false, false)));
+        grid.append(lineup);
+      } else {
+        grid.append(teamCard(team, heroes));
       }
-      const titleText = document.createElement('span');
-      titleText.textContent = team.name;
-      title.append(titleText);
-      card.append(title);
-      const body = document.createElement('div');
-      body.className = 'team-body';
-      const lead = document.createElement('div');
-      lead.className = 'team-lead';
-      const leadImg = document.createElement('img');
-      leadImg.alt = team.lead;
-      leadImg.src = portrait(team.lead);
-      leadImg.loading = 'lazy';
-      leadImg.classList.add('team-character-link');
-      leadImg.tabIndex = 0;
-      leadImg.title = 'View ' + team.lead + ' in Heroes';
-      wireTeamCharacter(leadImg, team.lead);
-      lead.append(leadImg);
-      const leadName = document.createElement('div');
-      leadName.className = 'team-lead-name';
-      leadName.textContent = team.lead;
-      leadName.insertAdjacentHTML('beforeend', latestArrow(team.lead));
-      lead.append(leadName);
-      body.append(lead);
-      const members = document.createElement('div');
-      members.className = 'team-members';
-      for (const slot of team.members) {
-        const box = document.createElement('div');
-        box.className = 'team-slot';
-        const pics = document.createElement('div');
-        pics.className = 'team-slot-images';
-        const names = [slot.name, ...(slot.alts || [])];
-        if (names.length > 2) pics.classList.add('many');
-        names.forEach((name, i) => {
-          if (i > 0) {
-            const sep = document.createElement('span');
-            sep.className = 'swap-divider';
-            sep.textContent = '/';
-            pics.append(sep);
-          }
-          const im = document.createElement('img');
-          im.src = portrait(name);
-          im.alt = name;
-          im.title = 'View ' + name + ' in Heroes';
-          im.loading = 'lazy';
-          im.classList.add('team-character-link');
-          im.tabIndex = 0;
-          if (names.length === 1) im.classList.add('single');
-          wireTeamCharacter(im, name);
-          pics.append(im);
-        });
-        box.append(pics);
-        const nm = document.createElement('div');
-        nm.className = 'team-slot-name';
-        nm.textContent = slot.name;
-        nm.insertAdjacentHTML('beforeend', latestArrow(slot.name));
-        box.append(nm);
-        if (slot.alts?.length) {
-          const alt = document.createElement('div');
-          alt.className = 'team-slot-alt';
-          alt.textContent = 'Alt: ' + slot.alts.join(' / ');
-          box.append(alt);
-        }
-        members.append(box);
-      }
-      body.append(members);
-      card.append(body);
-      const notes = document.createElement('div');
-      notes.className = 'team-notes';
-      const tags = document.createElement('div');
-      tags.className = 'team-tags';
-      team.tags.forEach((t) => {
-        const x = document.createElement('span');
-        x.className = 'team-tag';
-        x.innerHTML = formatTeamSkillText(t, team);
-        tags.append(x);
-      });
-      notes.append(tags);
-      const note = document.createElement('div');
-      note.innerHTML = '<strong>Team fit:</strong> ' + formatTeamSkillText(team.note, team);
-      notes.append(note);
-      card.append(notes);
-      grid.append(card);
     }
-    group.append(grid);
-    board.append(group);
+    section.append(grid);
+    board.append(section);
   }
 }
 
@@ -254,12 +204,16 @@ function buildKarmaCard(k) {
   kind.className = 'karma-kind' + (!k.signature ? ' generic' : '');
   if (k.signature) {
     kind.append(document.createTextNode('Signature · '));
-    const heroLink = document.createElement('button');
-    heroLink.type = 'button';
+    const heroLink = document.createElement('a');
+    heroLink.href = heroLinkUrl(k.signature, 'build');
     heroLink.className = 'karma-signature-link';
     heroLink.textContent = k.signature;
     heroLink.title = `Open ${k.signature}'s Build and Teams`;
-    heroLink.addEventListener('click', () => openCharacterProfile(k.signature, 'build'));
+    heroLink.addEventListener('click', (event) => {
+      if (!isPlainLinkClick(event)) return;
+      event.preventDefault();
+      navNavigate({ page: 'hero', hero: k.signature, tab: 'build' });
+    });
     kind.append(heroLink);
   } else kind.textContent = 'Generic Karma';
   meta.append(kind);
@@ -397,20 +351,7 @@ function formatKarmaExclusive(k) {
   return html;
 }
 function showKarmaSkillPopover(anchor, heroName, skillName) {
-  const profile = CHARACTER_PROFILE_DATA[heroName];
-  if (!profile) return;
-  const norm = (s) =>
-    String(s || '')
-      .trim()
-      .toLowerCase();
-  const skill = (profile.skills || []).find(
-    (sk) =>
-      norm(
-        String(sk.skill || '')
-          .replace(/\s*\(Lv\.?\s*\d+\).*$/i, '')
-          .split(/\s*\(/)[0],
-      ) === norm(skillName),
-  );
+  const skill = findSkill(heroName, skillName);
   if (!skill) return;
   let pop = document.getElementById('karmaSkillPopover');
   if (!pop) {
@@ -427,53 +368,7 @@ function showKarmaSkillPopover(anchor, heroName, skillName) {
     const hh = HEROES.find((x) => x.name === heroName);
     pop.style.setProperty('--hero-accent', (hh && ARCH_COLORS[hh.archetype]) || '#68c7d5');
   }
-  const card = document.createElement('article');
-  card.className = 'profile-skill';
-  const head = document.createElement('div');
-  head.className = 'profile-skill-head';
-  const slot = document.createElement('span');
-  slot.className = 'profile-skill-slot';
-  slot.textContent = skill.slot || 'Skill';
-  const title = document.createElement('h4');
-  title.textContent = skill.skill || skillName;
-  head.append(slot, title);
-  const body = document.createElement('div');
-  body.className = 'profile-skill-body';
-  body.innerHTML = formatSkillText(skill.description || '');
-  card.append(head, body);
-  const maxMatch = String(skill.skill || '').match(/Lv\.?\s*(\d+)/i),
-    maxLevel = maxMatch ? Math.max(1, parseInt(maxMatch[1], 10)) : 1;
-  if (maxLevel > 1 && !/mastery\s*\(passive\)/i.test(skill.slot || '')) {
-    const controls = document.createElement('div');
-    controls.className = 'profile-skill-controls';
-    const label = document.createElement('label');
-    label.textContent = 'Skill level';
-    const range = document.createElement('input');
-    range.type = 'range';
-    range.min = '1';
-    range.max = String(maxLevel);
-    range.value = String(maxLevel);
-    range.setAttribute('aria-label', skill.skill + ' level');
-    const level = document.createElement('span');
-    level.className = 'profile-skill-level';
-    level.textContent = 'Lv. ' + maxLevel;
-    const original = skill.description || '';
-    range.addEventListener('input', () => {
-      const lv = Number(range.value),
-        sf = skillLevelFactor(lv, maxLevel),
-        factor = sf.factor;
-      level.textContent = sf.est ? 'Lv. ' + lv + ' (est.)' : 'Lv. ' + lv;
-      body.innerHTML = formatSkillText(
-        original.replace(
-          /(Attack Power )(\d+(?:\.\d+)?)(% Damage)/g,
-          (m, a, num, c) => a + skillLevelValue(num, factor) + c,
-        ),
-      );
-    });
-    controls.append(label, range, level);
-    card.append(controls);
-  }
-  pop.append(card);
+  pop.append(buildProfileSkillCard(skill));
   pop.hidden = false;
   const r = anchor.getBoundingClientRect(),
     w = pop.offsetWidth,
@@ -497,7 +392,7 @@ const IS_TOUCH = window.matchMedia && window.matchMedia('(hover: none)').matches
 document.addEventListener('pointerover', (e) => {
   if (e.pointerType === 'touch') return;
   const link = e.target.closest?.('.karma-skill-link, .ref-skill');
-  if (link) showSkillRef(link);
+  if (link && !link.contains(e.relatedTarget)) showSkillRef(link);
 });
 document.addEventListener('pointerout', (e) => {
   if (e.pointerType === 'touch') return;
@@ -509,14 +404,22 @@ document.addEventListener('pointerout', (e) => {
   )
     hideKarmaSkillPopover();
 });
+document.addEventListener('focusin', (e) => {
+  const link = e.target.closest('.team-skill-link');
+  if (link?.matches(':focus-visible')) showSkillRef(link);
+});
 document.addEventListener('focusout', (e) => {
-  if (e.target.closest?.('.karma-skill-link')) hideKarmaSkillPopover();
+  if (
+    e.target.closest?.('.karma-skill-link') &&
+    !document.getElementById('karmaSkillPopover')?.contains(e.relatedTarget)
+  )
+    hideKarmaSkillPopover();
 });
 document.addEventListener('click', (e) => {
   const link = e.target.closest?.('.karma-skill-link');
-  if (!link) return;
+  if (!link || (link.matches('a') && !isPlainLinkClick(e))) return;
   e.preventDefault();
-  if (IS_TOUCH) {
+  if (IS_TOUCH && !link.classList.contains('team-skill-link')) {
     showSkillRef(link, true);
     return;
   }

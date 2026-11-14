@@ -4795,6 +4795,7 @@
            "req": {
             "name": {
              "types": [
+              "null",
               "string"
              ]
             }
@@ -4812,17 +4813,33 @@
           "string"
          ]
         },
-        "tags": {
-         "list": {
-          "types": [
-           "string"
-          ]
-         }
-        },
         "tier": {
          "types": [
           "string"
          ]
+        }
+       }
+      }
+     }
+    },
+    "TEAM_SPEED_RUNS": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "label": {
+         "types": [
+          "string"
+         ]
+        },
+        "teams": {
+         "list": {
+          "list": {
+           "types": [
+            "string"
+           ]
+          }
+         }
         }
        }
       }

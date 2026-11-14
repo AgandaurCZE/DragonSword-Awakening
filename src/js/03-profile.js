@@ -243,6 +243,68 @@ function setupSearchClearButtons() {
   }
 }
 // ==== Hero profile page ====
+function buildProfileSkillCard(sk) {
+  const slot = String(sk.slot || '');
+  const maxMatch = sk.skill.match(/Lv\.?\s*(\d+)/i),
+    maxLevel = maxMatch ? Math.max(1, parseInt(maxMatch[1], 10)) : 10;
+  const isPassive = /mastery\s*\(passive\)/i.test(slot);
+  const card = document.createElement('article');
+  card.className = 'profile-skill' + (isPassive ? ' profile-skill-passive' : '');
+  card.dataset.slot = slot.replace(/\s*\(.*$/, '');
+  const head = document.createElement('div');
+  head.className = 'profile-skill-head';
+  head.innerHTML = `<span class="profile-skill-slot">${profileEsc(slot.replace(/^Auto attack/, 'Basic Attack Combo'))}</span><h4>${profileEsc(sk.skill)}</h4>`;
+  const body = document.createElement('div');
+  body.className = 'profile-skill-body';
+  body.innerHTML = formatSkillText(sk.description);
+  card.append(head, body);
+  // Mastery/passive effects are fixed: they do not have a skill-level slider.
+  if (!isPassive && maxLevel > 1) {
+    const controls = document.createElement('div');
+    controls.className = 'profile-skill-controls';
+    const label = document.createElement('label');
+    label.textContent = 'Skill level';
+    const range = document.createElement('input');
+    range.type = 'range';
+    range.min = '1';
+    range.max = String(maxLevel);
+    range.value = String(maxLevel);
+    range.setAttribute('aria-label', `${sk.skill} level`);
+    const level = document.createElement('span');
+    level.className = 'profile-skill-level';
+    level.textContent = `Lv. ${maxLevel}`;
+    const original = sk.description;
+    function updateSkill() {
+      const lv = Number(range.value),
+        sf = skillLevelFactor(lv, maxLevel),
+        factor = sf.factor;
+      level.textContent = sf.est ? `Lv. ${lv} (est.)` : `Lv. ${lv}`;
+      body.innerHTML = formatSkillText(
+        original.replace(
+          /(Attack Power )(\d+(?:\.\d+)?)(% Damage)/g,
+          (m, a, num, c) => a + skillLevelValue(num, factor) + c,
+        ),
+      );
+    }
+    range.addEventListener('input', updateSkill);
+    controls.append(label, range, level);
+    card.append(controls);
+  }
+  return card;
+}
+
+function focusProfileSkill(hero, name) {
+  const skill = findSkill(hero, name);
+  if (!skill) return;
+  requestAnimationFrame(() => {
+    flashEl(
+      [...document.querySelectorAll('#profileSkillsGrid .profile-skill')].find(
+        (card) => card.querySelector('h4')?.textContent === skill.skill,
+      ),
+    );
+  });
+}
+
 function openCharacterProfile(name, initialTab = 'skills') {
   const h = HEROES.find((x) => x.name.toLowerCase() === String(name).toLowerCase());
   if (!h) return;
@@ -280,7 +342,7 @@ function openCharacterProfile(name, initialTab = 'skills') {
   renderProfileAwakenings(h);
   const skillRoot = $('profileSkillsGrid');
   skillRoot.innerHTML = '';
-  (data.skills || []).forEach((sk, i) => {
+  (data.skills || []).forEach((sk) => {
     const slot = String(sk.slot || '');
     if (/^MODE SWITCH/i.test(slot)) {
       const modeName =
@@ -293,52 +355,7 @@ function openCharacterProfile(name, initialTab = 'skills') {
       skillRoot.append(heading);
       return;
     }
-    const maxMatch = sk.skill.match(/Lv\.?\s*(\d+)/i),
-      maxLevel = maxMatch ? Math.max(1, parseInt(maxMatch[1], 10)) : 10;
-    const isPassive = /mastery\s*\(passive\)/i.test(slot);
-    const card = document.createElement('article');
-    card.className = 'profile-skill' + (isPassive ? ' profile-skill-passive' : '');
-    card.dataset.slot = slot.replace(/\s*\(.*$/, '');
-    const head = document.createElement('div');
-    head.className = 'profile-skill-head';
-    head.innerHTML = `<span class="profile-skill-slot">${profileEsc(slot.replace(/^Auto attack/, 'Basic Attack Combo'))}</span><h4>${profileEsc(sk.skill)}</h4>`;
-    const body = document.createElement('div');
-    body.className = 'profile-skill-body';
-    body.innerHTML = formatSkillText(sk.description);
-    card.append(head, body);
-    // Mastery/passive effects are fixed: they do not have a skill-level slider.
-    if (!isPassive && maxLevel > 1) {
-      const controls = document.createElement('div');
-      controls.className = 'profile-skill-controls';
-      const label = document.createElement('label');
-      label.textContent = 'Skill level';
-      const range = document.createElement('input');
-      range.type = 'range';
-      range.min = '1';
-      range.max = String(maxLevel);
-      range.value = String(maxLevel);
-      range.setAttribute('aria-label', `${sk.skill} level`);
-      const level = document.createElement('span');
-      level.className = 'profile-skill-level';
-      level.textContent = `Lv. ${maxLevel}`;
-      const original = sk.description;
-      function updateSkill() {
-        const lv = Number(range.value),
-          sf = skillLevelFactor(lv, maxLevel),
-          factor = sf.factor;
-        level.textContent = sf.est ? `Lv. ${lv} (est.)` : `Lv. ${lv}`;
-        body.innerHTML = formatSkillText(
-          original.replace(
-            /(Attack Power )(\d+(?:\.\d+)?)(% Damage)/g,
-            (m, a, num, c) => a + skillLevelValue(num, factor) + c,
-          ),
-        );
-      }
-      range.addEventListener('input', updateSkill);
-      controls.append(label, range, level);
-      card.append(controls);
-    }
-    skillRoot.append(card);
+    skillRoot.append(buildProfileSkillCard(sk));
   });
   groupProfileSkills(skillRoot);
   renderProfileStatus(h, data);
@@ -620,18 +637,7 @@ function navigateRef(type, key) {
   }
   const [h, n] = key.split('/');
   if (type === 'skill') {
-    openCharacterProfile(h, 'skills');
-    const sk = findSkill(h, n);
-    if (sk)
-      setTimeout(
-        () =>
-          flashEl(
-            [...document.querySelectorAll('#profileSkillsGrid .profile-skill')].find(
-              (c) => c.querySelector('h4')?.textContent === sk.skill,
-            ),
-          ),
-        60,
-      );
+    navNavigate({ page: 'hero', hero: h, tab: 'skills', skill: n });
     return;
   }
   if (type === 'awk') {

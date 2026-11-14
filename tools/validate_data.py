@@ -77,8 +77,13 @@ for t in d['TEAM_DATA']:
     if t['arch'] not in arches: bad(f'TEAM {t["name"]}: unknown archetype')
     if t['lead'] != t['members'][0]['name']: bad(f'TEAM {t["name"]}: lead is not the first member')
     for m in t['members']:
+        if m['name'] is None and not m.get('alts'): continue  # open flex slot
         for x in [m['name']] + m.get('alts', []):
             if x not in H: bad(f'TEAM {t["name"]}: unknown hero {x!r}')
+for group in d['TEAM_SPEED_RUNS']:
+    for team in group['teams']:
+        if len(set(team)) != 3 or len(team) != 3 or any(name not in H for name in team):
+            bad(f'TEAM SPEED RUN {group["label"]}: expected three different known heroes')
 
 # Karma: A6 = 5 x A0 for every trait (holds for all recorded cards)
 for k in d['KARMA_DATA']:

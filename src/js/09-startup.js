@@ -47,8 +47,10 @@ function navSchedule() {
 function navShow(state, scrollY = null) {
   NAV.restoring = true;
   try {
-    if (state.page === 'hero') openCharacterProfile(state.hero, state.tab || 'skills');
-    else {
+    if (state.page === 'hero') {
+      openCharacterProfile(state.hero, state.tab || 'skills');
+      if (state.skill) focusProfileSkill(state.hero, state.skill);
+    } else {
       const button =
         document.querySelector(`.nav-item[data-page="${state.page}"]`) ||
         document.querySelector('.nav-item[data-page="home"]');
@@ -62,7 +64,8 @@ function navShow(state, scrollY = null) {
   } finally {
     NAV.restoring = false;
   }
-  if (scrollY !== null) requestAnimationFrame(() => window.scrollTo({ top: scrollY, behavior: 'instant' }));
+  if (scrollY !== null && !state.skill)
+    requestAnimationFrame(() => window.scrollTo({ top: scrollY, behavior: 'instant' }));
 }
 function navNavigate(state) {
   NAV.y = window.scrollY;
@@ -90,15 +93,19 @@ function navInitial() {
   }
   if (!path || path === 'index.html' || path === 'dungeons') return { page: 'home' };
   const hero = HEROES.find((h) => h.name.toLowerCase() === path.toLowerCase());
-  if (hero) return { page: 'hero', hero: hero.name, tab: 'skills' };
+  if (hero) {
+    const skill = new URLSearchParams(hash).get('skill');
+    return { page: 'hero', hero: hero.name, tab: hash === 'build' ? 'build' : 'skills', ...(skill ? { skill } : {}) };
+  }
   const tool = Object.entries(SITE.toolRoutes).find(([, p]) => p.toLowerCase() === path.toLowerCase());
   if (tool) return { page: 'tools', tool: tool[0] };
   const page = Object.entries(SITE.routes).find(([, p]) => p === path)?.[0];
   return { page: page || 'home' };
 }
 function navInit() {
-  navShow(navInitial());
-  NAV.state = navCurrent();
+  const initial = navInitial();
+  navShow(initial);
+  NAV.state = initial.skill ? { ...navCurrent(), skill: initial.skill } : navCurrent();
   NAV.url = routeUrl(NAV.state.page, NAV.state);
   NAV.ready = true;
   history.replaceState({ view: NAV.state, y: 0 }, '', NAV.url);
@@ -234,6 +241,7 @@ fetch('data.json', {
     ({ HEROES, ROLE_ICONS, ARCHES, TIER_ORDER, TIER_COLORS, TEAM_DATA, KARMA_DATA, CHARACTER_PROFILE_DATA, GEAR_DATA } =
       d);
     SITE = d.SITE;
+    TEAM_SPEED_RUNS = d.TEAM_SPEED_RUNS;
     ARCH_COLORS = d.ARCH_COLORS || {};
     STATUS_ARCHETYPE = d.STATUS_ARCHETYPE || {};
     GEAR_STATS = d.GEAR_STATS || GEAR_STATS;

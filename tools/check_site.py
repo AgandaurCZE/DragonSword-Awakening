@@ -802,16 +802,28 @@ def visible_text_rules(browser, base):
     # Teams page
     page.evaluate("document.querySelector('.nav-item[data-page=\"teams\"]').click()")
     page.wait_for_timeout(150)
-    teams = "()=>({rows:[...document.querySelectorAll('#teamBoard .team-tier-label')].map(e=>e.textContent.trim()),cards:document.querySelectorAll('#teamBoard .team-card').length,pressed:(document.getElementById('teamsSpeed')||{getAttribute:()=>null}).getAttribute('aria-pressed')})"
+    teams = """()=>({
+      rows:[...document.querySelectorAll('#teamBoard .team-tier-label')].map(e=>e.textContent.trim()),
+      cards:document.querySelectorAll('#teamBoard .team-card').length,
+      runs:document.querySelectorAll('#teamBoard .team-run').length,
+      pressed:document.getElementById('teamsSpeed').getAttribute('aria-pressed')})"""
     t0 = page.evaluate(teams)
-    if t0 != {'rows': ['S', 'A', 'B', 'C'], 'cards': 0, 'pressed': 'false'}:
-        bad(f'Teams page: expected the four tier rows, no team cards and the speed-run toggle off, got {t0}')
+    if t0 != {'rows': ['S', 'A', 'B'], 'cards': 6, 'runs': 0, 'pressed': 'false'}:
+        bad(f'Teams page: expected six teams in S, A and B, got {t0}')
     else:
         page.click('#teamsSpeed')
         page.wait_for_timeout(100)
         t1 = page.evaluate(teams)
-        if t1 != {'rows': ['S', 'A', 'B', 'C'], 'cards': 0, 'pressed': 'true'}:
+        if t1 != {'rows': ['Sub 1 minute', 'Sub 2 minutes'], 'cards': 0, 'runs': 5, 'pressed': 'true'}:
             bad(f'Teams page: after switching the speed-run toggle on, got {t1}')
+        first = page.locator('.team-run').first.locator('.team-portrait-name').all_text_contents()
+        if first != ['Charlotte', 'Johnny', 'Reina'] or page.locator('.team-run .team-portrait-alt').count():
+            bad(f'Teams page: wrong first speed-run lineup or unexpected alternatives, got {first}')
+        page.click('#teamsSpeed')
+        royal = page.locator('[data-team-name="Royal Inferno"]')
+        names = royal.locator('.team-members .team-portrait-name').all_text_contents()
+        if names != ['Kalsion', 'Kalien', 'Aria', 'Reina', 'Eileen'] or royal.locator('.team-face').count() != 1:
+            bad(f'Teams page: wrong Royal Inferno order or front portrait, got {names}')
     # Tier list: every boss and tower
     page.evaluate("document.querySelector('.nav-item[data-page=\"tier\"]').click()")
     page.wait_for_timeout(150)
@@ -843,6 +855,8 @@ def steam_news(browser, base):
     """Exercise new patches and media without depending on Steam or YouTube uptime."""
     ctx = browser.new_context(viewport={'width': 390, 'height': 844})
     ctx.route('https://www.youtube-nocookie.com/**', lambda route: route.fulfill(body='video'))
+    ctx.route('https://i.ytimg.com/**', lambda route: route.fulfill(
+        content_type='image/svg+xml', body='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="9"/>'))
     post = dict(id='1', date='2026-11-14', url='https://store.steampowered.com/news/app/4570720/view/1')
     news = [dict(post, title=f'Announcement {i}', body='[h3]Full post[/h3][list][*]Complete text[/list]'
                  '[previewyoutube=VLFUtQv25W4;full][/previewyoutube]'
@@ -857,6 +871,10 @@ def steam_news(browser, base):
     page = open_site(ctx, base, 'news', 'Steam announcements')
     assert page.locator('#newsBody article').count() == 4
     assert page.locator('#newsBody article').first.get_by_text('Complete text').is_visible()
+    preview = page.locator('#newsBody article').first.locator('.steam-video-preview img')
+    assert preview.is_visible()
+    assert preview.evaluate('(img) => img.decode().then(() => img.naturalWidth > 0)')
+    assert not page.locator('#newsBody iframe').count()
     assert not page.locator('#newsBody script, #newsBody a[href^="javascript:"]').count()
     page.locator('#newsMore').click()
     assert page.locator('#newsBody article').count() == 5
@@ -875,6 +893,50 @@ def steam_news(browser, base):
     assert '20%' in page.locator('#patchesBody').inner_text()
     ctx.close()
     print('  Steam news, patch import, media, badges and version labels checked')
+
+
+def team_links(browser, base):
+    ctx = browser.new_context(viewport={'width': 1400, 'height': 900})
+    page = open_site(ctx, base, 'teams', 'Team roster links')
+    royal = page.locator('[data-team-name="Royal Inferno"]')
+    face = royal.locator('.team-face')
+    assert face.get_attribute('href').endswith('/Kalsion#build')
+    assert not face.locator('.team-portrait-name').count()
+    assert page.locator('.nav-item[data-page="news"]').get_attribute('href') == 'news'
+    skill = royal.get_by_role('link', name='Explosion', exact=True)
+    assert skill.get_attribute('href').endswith('/Kalsion#skill=Explosion')
+    skill.hover()
+    preview = page.locator('#karmaSkillPopover .profile-skill')
+    preview.wait_for(state='visible')
+    slider = preview.get_by_role('slider')
+    slider.fill('5')
+    assert 'Lv. 5' in preview.locator('.profile-skill-level').inner_text()
+    assert '2173%' not in preview.locator('.profile-skill-body').inner_text()
+    with ctx.expect_page() as new_tab:
+        face.click(modifiers=['Control'])
+    tab = new_tab.value
+    tab.bring_to_front()
+    tab.wait_for_function("typeof NAV !== 'undefined' && NAV.ready", polling=100)
+    assert tab.locator('.profile-tab.active').get_attribute('data-profile-tab') == 'build'
+    tab.close()
+    with ctx.expect_page() as new_tab:
+        skill.click(button='middle')
+    tab = new_tab.value
+    tab.bring_to_front()
+    tab.wait_for_function("typeof NAV !== 'undefined' && NAV.ready", polling=100)
+    tab.locator('#profileSkillsGrid .profile-skill').filter(has_text='Explosion').first.wait_for()
+    assert tab.locator('.profile-tab.active').get_attribute('data-profile-tab') == 'skills'
+    tab.close()
+    skill.click()
+    assert page.locator('#profileName').inner_text() == 'Kalsion'
+    assert page.locator('.profile-tab.active').get_attribute('data-profile-tab') == 'skills'
+    page.goto(base + 'heroes')
+    page.wait_for_function('NAV.ready')
+    assert page.locator('.heroes-character-card').first.get_attribute('href')
+    page.locator('.nav-item[data-page="tier"]').click()
+    assert page.locator('.tier-hero-link').first.get_attribute('href')
+    ctx.close()
+    print('  Team skill slider, hero deep links and native new-tab clicks checked')
 
 
 def main():
@@ -902,6 +964,7 @@ def main():
         boss_rows(browser, base)
         visible_text_rules(browser, base)
         steam_news(browser, base)
+        team_links(browser, base)
         with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
             beta_subpath(browser, prefixed)
         if not QUICK:

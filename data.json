@@ -473,8 +473,55 @@
  "TEAM_DATA": [
   {
    "tier": "S",
-   "name": "Venom — Poison + Airborne",
-   "accent": "#f05258",
+   "name": "Royal Inferno",
+   "accent": "#eb8b4e",
+   "lead": "Kalsion",
+   "arch": "Blazeflame",
+   "members": [
+    {
+     "name": "Kalsion"
+    },
+    {
+     "name": "Kalien",
+     "alts": [
+      "Aria"
+     ]
+    },
+    {
+     "name": "Reina",
+     "alts": [
+      "Eileen"
+     ]
+    }
+   ],
+   "note": "Kalsion’s Explosion excels against packs and bosses. Pair Aria with Eileen for more Airborne and buffs, with less Break than Kalien provides. Against resilient bosses, Aria can replace Reina for an all-Blazeflame team."
+  },
+  {
+   "tier": "S",
+   "name": "Thunder Chorus",
+   "accent": "#b580fd",
+   "lead": "Ryza",
+   "arch": "Thunderbolt",
+   "members": [
+    {
+     "name": "Ryza"
+    },
+    {
+     "name": "Ornette",
+     "alts": [
+      "Tarte"
+     ]
+    },
+    {
+     "name": "Sion"
+    }
+   ],
+   "note": "Ryza builds Shock quickly. Ornette adds more damage and Knockdown than Tarte, and Sion buffs the team. This is Ryza’s strongest same-archetype lineup."
+  },
+  {
+   "tier": "S",
+   "name": "Venom Cyclone",
+   "accent": "#3eb83a",
    "lead": "Charlotte",
    "arch": "Venom",
    "members": [
@@ -491,125 +538,12 @@
      ]
     }
    ],
-   "tags": [
-    "Main DPS + Sub-DPS + Airborne enabler"
-   ],
-   "note": "Charlotte is the main damage dealer, Johnny adds Poison and Airborne as sub-DPS, and Reina is the Airborne enabler. Poison unlocks Illusion Kick and Poison Grab, and Airborne unlocks Venom Cutter, Shadow Grab, Tempest and Wind Grab, so every conditional skill stays live. This is the game's own recommendation for Charlotte. Alt: Eileen can take Reina's slot as the Airborne starter, adding +15% team Attack (Brave One) and +20% team Crit Rate (Vanguard Banner)."
-  },
-  {
-   "tier": "S",
-   "name": "Gale — Airborne + Burn",
-   "accent": "#61d6ca",
-   "lead": "Kalsion",
-   "arch": "Gale",
-   "members": [
-    {
-     "name": "Kalsion",
-     "alts": [
-      "Charlotte"
-     ]
-    },
-    {
-     "name": "Eileen"
-    },
-    {
-     "name": "Reina",
-     "alts": [
-      "Johnny",
-      "Castella"
-     ]
-    }
-   ],
-   "tags": [
-    "Main DPS + Sub-DPS / buffer + Airborne enabler"
-   ],
-   "note": "Kalsion is the main damage dealer, Eileen adds Airborne damage plus team Attack and Crit Rate buffs, and Reina starts Airborne. Three Airborne sources keep Explosion (2173%), Tempest, Wind Grab and Rolling Upper available. Matches the game's recommendations for Reina and Eileen. Alts: Charlotte as the damage dealer instead of Kalsion; Johnny (the game recommends him with Eileen; Poison and more Airborne) or Castella (Break starter) for Reina."
+   "note": "Charlotte and Johnny build Poison. The third slot can go to any reliable Airborne applier, with Reina the fastest option."
   },
   {
    "tier": "A",
-   "name": "Blazeflame — Burn + Airborne",
-   "accent": "#ff9d48",
-   "lead": "Kalsion",
-   "arch": "Blazeflame",
-   "members": [
-    {
-     "name": "Kalsion"
-    },
-    {
-     "name": "Aria",
-     "alts": [
-      "Cerese"
-     ]
-    },
-    {
-     "name": "Kalien",
-     "alts": [
-      "Reina"
-     ]
-    }
-   ],
-   "tags": [
-    "Main DPS + Burn / Airborne sub-DPS + Burn / Stun enabler"
-   ],
-   "note": "Kalsion is the main damage dealer. Aria applies Burn and Airborne with almost every attack, keeping both of his conditions live (Burn for Burst Grab, Airborne for Explosion), and Kalien stacks Burn and adds Stun with Finale. This is the game's recommendation for Aria, Kalien and Kalsion. Not S because Aria and Kalien are B-tier damage. Alts: Cerese (the game recommends her with Kalsion; Frost and Airborne) for Aria; Reina as Airborne setup instead of Kalien."
-  },
-  {
-   "tier": "A",
-   "name": "Bloodburst — Bleed + Stun",
-   "accent": "#e94e70",
-   "lead": "Roxy",
-   "arch": "Bloodburst",
-   "members": [
-    {
-     "name": "Roxy"
-    },
-    {
-     "name": "Theresia"
-    },
-    {
-     "name": "Astria",
-     "alts": [
-      "Lute"
-     ]
-    }
-   ],
-   "tags": [
-    "Main DPS + Stun / Bleed sub-DPS + Stun enabler"
-   ],
-   "note": "Roxy is the main damage dealer, Theresia applies Stun and Bleed and hits hard on Stunned foes, and Astria adds a third Stun source with Precision Shot. Three Stun sources (Celestial Verdict, Crimson Spiral, Precision Shot) keep Kick Storm (1786%), Divine Arc and Bolt Bombard live. This is exactly the game's recommendation for Roxy and Theresia, and it is close to S with Merciful Death Sentence. Alt: Lute (healer, Stun from Stun Slash) for Astria."
-  },
-  {
-   "tier": "A",
-   "name": "Thunderbolt — Shock",
-   "accent": "#8b86ef",
-   "lead": "Tarte",
-   "arch": "Thunderbolt",
-   "members": [
-    {
-     "name": "Tarte",
-     "alts": [
-      "Ryza"
-     ]
-    },
-    {
-     "name": "Ornette"
-    },
-    {
-     "name": "Sion",
-     "alts": [
-      "Ryza"
-     ]
-    }
-   ],
-   "tags": [
-    "Main DPS / healer + Shock sub-DPS + buffer"
-   ],
-   "note": "Tarte is the damage slot (Shock, Stun and a conditional heal from Cure), Ornette adds Shock control, Knockdown and +30% Crit Damage for herself, and Sion buffs the team with +15% Attack or Defense (Bless). All three apply Shock and turn it into Knockdown or Stun. Matches the game's recommendations for Ornette, Sion and Ryza. Thunderrush's 3-piece needs Signal skills, so use them often. Alt: Ryza for Tarte or Sion (build her like Tarte), one swap at a time."
-  },
-  {
-   "tier": "B",
-   "name": "Frostbite — Frost",
-   "accent": "#69c9e8",
+   "name": "Frost Prison",
+   "accent": "#70c5cb",
    "lead": "Othello",
    "arch": "Frostbite",
    "members": [
@@ -617,27 +551,41 @@
      "name": "Othello"
     },
     {
-     "name": "Cerese",
-     "alts": [
-      "Ornette"
-     ]
+     "name": "Cerese"
     },
     {
-     "name": "Dana",
+     "name": "Dana"
+    }
+   ],
+   "note": "All three contribute Frost. Othello’s ice sets up Dana’s Knuckles and Cerese’s shatter, so the lineup leaves little room for swaps."
+  },
+  {
+   "tier": "A",
+   "name": "Crimson Verdict",
+   "accent": "#ce686d",
+   "lead": "Theresia",
+   "arch": "Bloodburst",
+   "members": [
+    {
+     "name": "Theresia"
+    },
+    {
+     "name": "Roxy"
+    },
+    {
+     "name": "Lute",
      "alts": [
-      "Alex"
+      "Castella",
+      "Kalien"
      ]
     }
    ],
-   "tags": [
-    "Main DPS + Frost sub-DPS + shield / buffer"
-   ],
-   "note": "Othello is the main damage dealer on Frozen targets, Cerese starts Frost and adds crowd control, and Dana supports with Chako's shield and a +10% team Defense aura. All three stack Frost and the team matches the game's recommendations, but patch 1.1.0 lowered Othello's and Cerese's damage and Super Armor break (Dana's damage went up, with higher Rage costs), and their listed damage is the lowest of any full team, so pick it for safety. Alts: Ornette (the game recommends her with Othello; Shock and Knockdown) for Cerese; Alex as a Knockdown tank for Dana."
+   "note": "Theresia and Roxy are the core Bleed pair. Use the third slot for Lute’s healing, Castella’s Break or Kalien’s Burn and Stun."
   },
   {
    "tier": "B",
-   "name": "Breaker — Break + Stun",
-   "accent": "#f04f72",
+   "name": "Armor Break",
+   "accent": "#c6cfce",
    "lead": "Castella",
    "arch": "Breaker",
    "members": [
@@ -647,76 +595,14 @@
     {
      "name": "Astria",
      "alts": [
-      "Theresia"
-     ]
-    },
-    {
-     "name": "Lute",
-     "alts": [
       "Kalien"
      ]
+    },
+    {
+     "name": null
     }
    ],
-   "tags": [
-    "Main DPS / Break starter + Stun sub-DPS + healer"
-   ],
-   "note": "Castella is the main damage dealer and Break starter (Stun Blow into Upper Blow), Astria adds Stun and Break damage, and Lute heals and Stuns. Matches the game's recommendation for Castella. Not A because only Castella is A tier. Alts: Theresia (Stun damage) for Astria; Kalien (the game recommends her with Castella and Astria; Stun and Burn) for Lute."
-  },
-  {
-   "tier": "B",
-   "name": "Crushing — Knockdown",
-   "accent": "#a0a4ac",
-   "lead": "Alex",
-   "arch": "Crushing",
-   "members": [
-    {
-     "name": "Alex"
-    },
-    {
-     "name": "Othello",
-     "alts": [
-      "Ornette",
-      "Castella",
-      "Roxy"
-     ]
-    },
-    {
-     "name": "Sion",
-     "alts": [
-      "Lute",
-      "Dana"
-     ]
-    }
-   ],
-   "tags": [
-    "Tank / Knockdown payoff + Sub-DPS + buffer"
-   ],
-   "note": "Built around Alex, the only Crushing hero: he tanks with Taunt and his counter cuts the target's Defense by 20%. Othello (Ice Crown, Ice Grab) and Sion (Divine Smash, Justice Fall) both inflict Knockdown, which unlocks Alex's Pounding Grab. This is exactly the game's recommendation for Alex. Othello has no Frost partner here, so his Frozen-only skills fire less often. Alts: Ornette (Shock and Knockdown), Castella (Break starter) or Roxy (Bleed damage) for Othello; Lute (healer, Stun) or Dana (shield) for Sion."
-  },
-  {
-   "tier": "B",
-   "name": "Amplitude — Stun",
-   "accent": "#f0cf5b",
-   "lead": "Theresia",
-   "arch": "Amplitude",
-   "members": [
-    {
-     "name": "Theresia"
-    },
-    {
-     "name": "Astria",
-     "alts": [
-      "Roxy"
-     ]
-    },
-    {
-     "name": "Lute"
-    }
-   ],
-   "tags": [
-    "Main DPS + Stun sub-DPS + healer"
-   ],
-   "note": "Theresia is the main damage dealer (Stun from Celestial Verdict into Divine Arc and Holy Rise), Astria adds Stun and Break damage, and Lute heals and Stuns. Three Stun sources keep Divine Arc and Bolt Bombard live, and Lute's heal makes it the safest Stun team. Matches the game's recommendations for Lute and Theresia. Alt: Roxy (the game recommends her with both Lute and Theresia) for Astria when you want more damage."
+   "note": "Fast Break speeds up physical status buildup and can interrupt dangerous boss attacks. Raw damage is lower. Use the open slot to suit the fight."
   }
  ],
  "KARMA_DATA": [
@@ -28019,5 +27905,42 @@
     ]
    }
   ]
- }
+ },
+ "TEAM_SPEED_RUNS": [
+  {
+   "label": "Sub 1 minute",
+   "teams": [
+    [
+     "Charlotte",
+     "Johnny",
+     "Reina"
+    ]
+   ]
+  },
+  {
+   "label": "Sub 2 minutes",
+   "teams": [
+    [
+     "Othello",
+     "Cerese",
+     "Dana"
+    ],
+    [
+     "Alex",
+     "Lute",
+     "Sion"
+    ],
+    [
+     "Theresia",
+     "Roxy",
+     "Castella"
+    ],
+    [
+     "Ryza",
+     "Ornette",
+     "Sion"
+    ]
+   ]
+  }
+ ]
 }

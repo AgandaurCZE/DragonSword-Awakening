@@ -1,5 +1,15 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 15 Nov 2026 — Teams lineups, Ursula speed runs and link previews
+
+- Filled the S, A and B groups with David’s six lineups. Teams keep roster order, use the lead hero for the large portrait, and show a role above each main or alternate portrait. Armor Break has an open Flex slot.
+- End-game speed runs show the five Ursula lineups under Sub 1 minute and Sub 2 minutes, with the fastest group in the S+ colour. The run view shows the recorded rosters without alternate picks.
+- The team frame and title bar use the same archetype colour as skill status text. Roster portraits are larger and the large face has no duplicate name. Each portrait opens Build and Teams. Linked skill names use the same card and level slider as the hero’s Skills tab and open the named skill.
+- Sidebar destinations and hero portraits on Teams, Heroes, Tier List and Trait Dungeons use browser links. New tabs and windows can open the same routes directly. Regular clicks retain in-site navigation. Signature Karma hero names also link to Build and Teams.
+- Steam YouTube attachments show the thumbnail and play overlay in the post. Clicking opens the inline player. The original YouTube link remains below it.
+- Visual comparison covered 111 views. The new team cards, the linked teams and notes in hero Build and Teams, and the News thumbnails account for the changes. The Tier List portraits matched the original desktop and mobile screenshots pixel for pixel after preserving the image wrapper height.
+- `tools/check_all.py` reported `ALL CHECKS PASSED`, including the skill slider, native new-tab links, and News thumbnail before playback.
+
 ## 14 Nov 2026 — Achievement cups: one stage size each (Claude)
 - The Fame cups no longer list every stage (50 / 100 / 150 …); each says "Stages per 50 Fame", and The Fame of the Challenger "Stages per 75 Fame" (David). `assets/items/achievements.json`: `stages` is now the one step, [50] or [75]; `src/js/08-items-tools-guides.js` (`?v=20261114c`) prints it. Replaces the 50/100/150/200 list from the entry below.
 - `public_diff.py`: only the Achievements cups differ. `check_all.py`: ALL CHECKS PASSED.

@@ -50,7 +50,16 @@ function steamVideo(id) {
   box.className = 'steam-video';
   const button = document.createElement('button');
   button.type = 'button';
-  button.textContent = 'Play video';
+  button.className = 'steam-video-preview';
+  button.setAttribute('aria-label', 'Play video');
+  const thumbnail = document.createElement('img');
+  thumbnail.src = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
+  thumbnail.alt = '';
+  thumbnail.loading = 'lazy';
+  const play = document.createElement('span');
+  play.textContent = '▶';
+  play.setAttribute('aria-hidden', 'true');
+  button.append(thumbnail, play);
   const link = document.createElement('a');
   link.href = 'https://www.youtube.com/watch?v=' + id;
   link.textContent = 'Watch on YouTube';

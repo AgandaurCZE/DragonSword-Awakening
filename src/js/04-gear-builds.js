@@ -723,19 +723,17 @@ function renderProfileBuild(h, data) {
   gmMount(h);
   const sy = $('profileSynergy');
   sy.innerHTML = '';
-  const relevant = TEAM_DATA.filter((t) =>
-    t.members.some((m) => [m.name, ...(m.alts || [])].some((n) => n.toLowerCase() === h.name.toLowerCase())),
-  );
+  const relevant = TEAM_DATA.filter((t) => t.members.some((m) => [m.name, ...(m.alts || [])].includes(h.name)));
   if (!relevant.length)
     sy.innerHTML = '<div class="profile-placeholder">No team entry currently lists this character.</div>';
   relevant.forEach((t) => {
     const item = document.createElement('article');
     item.className = 'profile-synergy';
     const lead = HEROES.find((x) => x.name.toLowerCase() === t.lead.toLowerCase());
-    // The title links to the team's card only while the Teams page lists that team.
-    const onTeamsPage = [...document.querySelectorAll('.team-card')].some((el) => el.dataset.teamName === t.name);
-    item.innerHTML = `${lead ? `<img src="${lead.portrait}" alt="${profileEsc(t.lead)}">` : ''}<div>${onTeamsPage ? `<button type="button" data-team-link="${profileEsc(t.name)}">${profileEsc(t.name)} · ${profileEsc(t.tier)} Tier</button>` : `<strong class="profile-synergy-title">${profileEsc(t.name)} · ${profileEsc(t.tier)} Tier</strong>`}<div class="profile-note">${profileEsc(t.note)}</div></div>`;
+    item.innerHTML = `${lead ? `<img src="${lead.portrait}" alt="${profileEsc(t.lead)}">` : ''}<div><button type="button" data-team-link="${profileEsc(t.name)}">${profileEsc(t.name)} · ${profileEsc(t.tier)} Tier</button><div class="profile-note">${profileEsc(t.note)}</div></div>`;
     item.querySelector('[data-team-link]')?.addEventListener('click', () => {
+      TEAMS_VIEW.speed = false;
+      renderTeams();
       document.querySelector('.nav-item[data-page="teams"]').click();
       const target = [...document.querySelectorAll('.team-card')].find((el) => el.dataset.teamName === t.name);
       if (target) {

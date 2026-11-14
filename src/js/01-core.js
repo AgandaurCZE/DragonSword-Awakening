@@ -25,6 +25,7 @@ let SITE = {},
   TIER_ORDER = [],
   TIER_COLORS = {},
   TEAM_DATA = [],
+  TEAM_SPEED_RUNS = [],
   KARMA_DATA = [],
   CHARACTER_PROFILE_DATA = {},
   GEAR_DATA = [],
@@ -74,38 +75,19 @@ const absUrl = (p) => (p ? new URL(p, document.baseURI).href : p);
 function tierColor(t) {
   return TIER_COLORS[t] || '#6b7280';
 }
-function wireTeamCharacter(element, name) {
-  const hero = HEROES.find((h) => h.name.toLowerCase() === name.toLowerCase());
-  if (hero) {
-    element.addEventListener('pointerenter', (e) => {
-      if (e.pointerType !== 'touch') showHeroCard(hero, element);
-    });
-    element.addEventListener('pointerleave', (e) => {
-      if (!$('karmaPopover').contains(e.relatedTarget)) hideKarmaPopover();
-    });
-  }
-  element.addEventListener('click', () => {
-    if (hero) {
-      navigateRef('hero', hero.name);
-      return;
-    }
-    hideTip();
-    const heroesButton = document.querySelector('.nav-item[data-page="heroes"]');
-    if (heroesButton) heroesButton.click();
-    const search = document.getElementById('heroesSearch');
-    if (search) {
-      search.value = name;
-      activeHeroesArch = '';
-      activeHeroesRole = '';
-      renderHeroesFilters();
-      renderHeroes();
-    }
-  });
-  element.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      element.click();
-    }
+function isPlainLinkClick(event) {
+  return event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey;
+}
+function heroLinkUrl(name, tab = 'skills', skill = '') {
+  const path = routeUrl('hero', { hero: name });
+  return path + (skill ? '#skill=' + encodeURIComponent(skill) : tab === 'build' ? '#build' : '');
+}
+function wireTeamCharacter(element, hero) {
+  element.href = heroLinkUrl(hero.name, 'build');
+  element.addEventListener('click', (event) => {
+    if (!isPlainLinkClick(event)) return;
+    event.preventDefault();
+    navNavigate({ page: 'hero', hero: hero.name, tab: 'build' });
   });
 }
 // Turn exact character skill names in a team note/tag into the same hoverable links used by Karma.
@@ -153,18 +135,8 @@ function formatTeamSkillText(raw, team) {
   }
   let html = formatSkillText(text);
   for (const m of matches) {
-    const link =
-      '<button type="button" class="karma-skill-link" data-karma-skill="' +
-      profileEsc(m.skill.displayName) +
-      '" data-karma-hero="' +
-      profileEsc(m.skill.heroName) +
-      '" aria-label="View ' +
-      profileEsc(m.skill.heroName) +
-      ' skill ' +
-      profileEsc(m.skill.displayName) +
-      '" title="Hover to preview skill; click to open Skills">' +
-      profileEsc(m.matched) +
-      '</button>';
+    const { heroName, displayName } = m.skill;
+    const link = `<a href="${profileEsc(heroLinkUrl(heroName, 'skills', displayName))}" class="karma-skill-link team-skill-link" data-karma-skill="${profileEsc(displayName)}" data-karma-hero="${profileEsc(heroName)}">${profileEsc(m.matched)}</a>`;
     html = html.replace(m.token, link);
   }
   return html;
