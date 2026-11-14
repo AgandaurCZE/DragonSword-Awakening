@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 14 Nov — Titles and Achievement stages
+
+Eight more titles owned (the six Hunt Conquerors, Destroyer, Carousel; 49 of 109). Combat Fame track goes to stage 4 (200); The Fame of the Challenger's stage is 75.
+
 ## 14 Nov — Steam News and Patch Notes
 
 Full official announcements and click-to-play videos are available through News. Versioned update posts join the curated patch timeline. Numeric skill changes feed the existing badge and detail views, and the site displays the current game version and the Tier List's reviewed balance version.

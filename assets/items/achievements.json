@@ -875,7 +875,8 @@
     "stages": [
      50,
      100,
-     150
+     150,
+     200
     ],
     "description": "The name of one who possesses great strength quickly becomes known throughout the region. If everyone comes to know their name, it gains value in and of itself. The reputation built in this way becomes an achievement, and that achievement is the mark an individual leaves on this world."
    },
@@ -885,11 +886,11 @@
     "icon": "assets/items/icons/the-fame-of-the-challenger.webp",
     "points": 25,
     "stages": [
-     100
+     75
     ],
     "description": "A challenge that fails is nothing more than an attempt. The names of successful challengers endure, gaining value in and of themselves. The reputation built in this way becomes an achievement, and that achievement is the mark an individual leaves on this world."
    }
   ],
-  "text": "Every achievement gives points to its own category's Accumulated Fame track. Each of stages 1 to 3 gives 100,000 Gold + 50 of a purple crystal."
+  "text": "Every achievement gives points to its own category's Accumulated Fame track. Stages increase per 50 Fame, with The Fame of the Challenger being 75 per stage. Each of stages 1 to 3 gives 100,000 Gold + 50 of a purple crystal."
  }
 }
