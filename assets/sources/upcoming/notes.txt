@@ -6,7 +6,7 @@ DEV STREAM ROADMAP (David's screenshots, 31 Oct 2026)
 - Content: Hero Quest, Rift, QoL Update, Combat Controls Update, Balance Fixes.
 
 UPCOMING HEROES (from Othello's Hero Quest)
-- Jerome: member of the rebel faction (Othello, Charlotte). Probably a new race: often calls himself "Taril"; a smaller human with animal ears and tail. Guess from looks: Blazeflame.
+- Jerome: member of the rebel faction (Othello, Charlotte). Probably a new race: often calls himself "Taril"; a smaller human with animal ears and tail. Confirmed Bloodburst (official video, HOUND13 DragonSword: Awakening YouTube, seen by David 14 Nov 2026; coming in the December update). Fights with a sword and has a parry, like Alex.
 - Veronica: member of the rebel faction. Brown-skinned human woman, lighter than Castella. Carries syringes that look like her weapon, also in her roadmap portrait. Briefly playable in Othello's Hero Quest (screenshot veronica-othello-quest.webp): could move, but not open the character screen or use attacks or skills. Skill icon looks physical, or a buff/effect on herself; the Ultimate icon is Amplitude-coloured (Amplitude inflicts Stun). First guess from looks was Venom; the icons point to Amplitude.
 - Logan (?): not mentioned by name yet; wears the rebels' colours, so probably a rebel too (unconfirmed). Muscular human man with a big shield; appeared only in a cutscene at the end of the quest. Guess: Crushing, like Alex.
 - Viola: pink-haired girl from the teaser after the main story ends, chasing a new goat-looking monster. Name and playable status come from datamining (David's report, not seen in-game).

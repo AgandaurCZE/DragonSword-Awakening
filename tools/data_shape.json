@@ -5173,16 +5173,52 @@
             "types": [
              "bool"
             ]
-           },
-           "towers": {
-            "map": {
-             "types": [
-              "string"
-             ]
-            }
            }
           },
           "req": {
+           "awakened": {
+            "record": {
+             "opt": {},
+             "req": {
+              "bosses": {
+               "map": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
+              "overall": {
+               "record": {
+                "opt": {},
+                "req": {
+                 "groups": {
+                  "types": [
+                   "string"
+                  ]
+                 },
+                 "single": {
+                  "types": [
+                   "string"
+                  ]
+                 },
+                 "tier": {
+                  "types": [
+                   "string"
+                  ]
+                 }
+                }
+               }
+              },
+              "towers": {
+               "map": {
+                "types": [
+                 "string"
+                ]
+               }
+              }
+             }
+            }
+           },
            "bosses": {
             "map": {
              "types": [
@@ -5219,6 +5255,13 @@
            },
            "tags": {
             "list": {
+             "types": [
+              "string"
+             ]
+            }
+           },
+           "towers": {
+            "map": {
              "types": [
               "string"
              ]

@@ -25,6 +25,7 @@ Back to the library: [docs/README.md](../README.md). Repository rules: [AGENTS.m
 - **The checks are the golden rule** (top of [AGENTS.md](../../AGENTS.md)): run `python3 tools/check_all.py` before every commit, and never loosen a check to get a pass. David asked for this to be the most important rule for every assistant.
 - **Picture quality comes before file size.** A change to icons, gear, Karma or hero pictures is only allowed if what the site shows doesn't get worse; when in doubt, leave them. (The 11 Nov idea of shrinking the icons was dropped for this reason.)
 - He wants backups before big changes (every commit is one; note the hash to go back to) and a dated note of what was changed into what, as you go.
+- **Push in batches (David, 13 Nov).** Don't push every small change on its own; each push waits minutes for GitHub's checks. Commit locally (still only after `check_all.py` passes) and push a batch when there's a meaningful set of changes, or when David wants something live. Say what is committed but not pushed yet.
 - Usage is limited: do the hard parts yourself, and leave clearly described tasks for other assistants in [SITE.md](SITE.md) instead of half-doing them.
 
 ## Permissions (David, 9 Nov)

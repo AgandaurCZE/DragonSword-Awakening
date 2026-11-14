@@ -692,27 +692,42 @@ def boss_rewards(browser, base):
 
 
 def awakening_toggle(browser, base):
-    """Awakenings toggle on the tier list (David, 13 Nov 2026; check added by Claude): the button sits next to Tags; while it is on
-    every hero is unrated (in the Unrated row, the last one) in every mode and the hover card shows no rating; switching it off brings the ratings back."""
+    """Awakenings toggle on the tier list (David, 13 Nov 2026; check added by Claude): the button sits next to Tags. Since 14 Nov 2026
+    (David) it shows each hero's `awakened` ratings (A6 + Signature Karma + Mastery) instead of leaving everyone unrated: while it is on,
+    every card's tier and the hover card come from `awakened` in every mode; switching it off brings the normal ratings back."""
+    with open(os.path.join(ROOT, 'data.json'), encoding='utf-8') as f:
+        T = json.load(f)['TIER_LIST_V2']
+    first_boss = T['bosses'][0]['id']
+    with open(os.path.join(ROOT, 'data.json'), encoding='utf-8') as f:
+        first_tower = json.load(f)['TOWER_TRIALS']['towers'][0]['id']
+    want = {}
+    for name, H in T['heroes'].items():
+        A = H.get('awakened') or {}
+        want[name] = {'overall': (A.get('overall') or {}).get('tier') or '?', 'bosses': (A.get('bosses') or {}).get(first_boss) or '?',
+                      'towers': (A.get('towers') or {}).get(first_tower) or '?'}
     for width in (1400, 390):
         ctx = browser.new_context(viewport={'width': width, 'height': 900})
         page = open_site(ctx, base, 'tierlist', f'awakening toggle, {width}px')
         state = """()=>{const b=document.getElementById('v2AwkAll'),t=document.getElementById('v2TagAll');return {next:!!b&&!!t&&t.nextElementSibling===b,pressed:b&&b.getAttribute('aria-pressed'),cards:document.querySelectorAll('#tierV2 .v2-card').length,chips:[...document.querySelectorAll('#tierV2 .v2-card .tier-chip')].filter(c=>c.textContent.trim()!=='?').length,rows:[...document.querySelectorAll('#tierV2 .v2-tierlabel')].map(r=>r.textContent.trim())}}"""
+        tiers = "()=>Object.fromEntries([...document.querySelectorAll('#tierV2 .v2-card')].map(c=>[c.dataset.hero,c.querySelector('.tier-chip').textContent.trim()]))"
         before = page.evaluate(state)
         if not before['next'] or before['pressed'] != 'false' or before['cards'] != 20 or not before['chips']:
             bad(f'awakening toggle, {width}px: before switching on: {before}')
         page.click('#v2AwkAll')
         page.wait_for_timeout(150)
         for mode in ('overall', 'bosses', 'towers'):
-            page.evaluate("m=>{V2.mode=m;renderTierV2();}", mode)
+            page.evaluate("m=>{V2.mode=m;V2.boss=" + json.dumps(first_boss) + ";V2.tower=" + json.dumps(first_tower) + ";renderTierV2();}", mode)
             page.wait_for_timeout(100)
             on = page.evaluate(state)
-            if on['pressed'] != 'true' or on['cards'] != 20 or on['chips'] or on['rows'][-1:] != ['Unrated']:
-                bad(f'awakening toggle, {width}px, {mode}: while on: {on}')
-        tip = page.evaluate("[...new DOMParser().parseFromString(v2TipHtml(HEROES[0]),'text/html').querySelectorAll('.tip-tier .value')].map(v=>v.textContent.trim())")
-        if not tip or any(v != '?' for v in tip):
-            bad(f'awakening toggle, {width}px: hover card shows ratings while on: {tip}')
+            got = page.evaluate(tiers)
+            wrong = {n: (got.get(n), w[mode]) for n, w in want.items() if got.get(n) != w[mode]}
+            if on['pressed'] != 'true' or on['cards'] != 20 or wrong:
+                bad(f'awakening toggle, {width}px, {mode}: while on: {on}; shown vs awakened: {wrong}')
         page.evaluate("()=>{V2.mode='overall';renderTierV2();}")
+        tip = page.evaluate("[...new DOMParser().parseFromString(v2TipHtml(HEROES[0]),'text/html').querySelectorAll('.tip-tier .value')].map(v=>v.textContent.trim())")
+        A = (T['heroes'].get(page.evaluate('HEROES[0].name')) or {}).get('awakened', {}).get('overall', {})
+        if tip != [A.get('tier', '?'), A.get('groups', '?'), A.get('single', '?')]:
+            bad(f'awakening toggle, {width}px: hover card shows {tip}, not the awakened ratings {A}')
         page.click('#v2AwkAll')
         page.wait_for_timeout(150)
         after = page.evaluate(state)

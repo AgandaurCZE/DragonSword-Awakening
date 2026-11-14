@@ -38,8 +38,8 @@ let V2 = {
     }
   })(),
   tagFlip: new Set(),
-  // Awakenings view (David, 13 Nov 2026): foundation only. While it is on every hero is unrated, in every mode;
-  // the ratings with all awakenings are agreed with David later. Not remembered between visits.
+  // Awakenings view (David, 13 Nov 2026): while it is on, the tiers come from each hero's `awakened` ratings
+  // (A6 + Signature Karma + Mastery, David, 14 Nov 2026); a hero without them is unrated. Not remembered between visits.
   awk: false,
 };
 const V2_KITS = {
@@ -61,9 +61,12 @@ function v2Tower() {
   const L = TOWER_TRIALS.towers || [];
   return L.find((t) => t.id === V2.tower) || L[0] || {};
 }
+// The ratings in use: the hero's `awakened` block while the Awakenings view is on.
+function v2Rated(H) {
+  return V2.awk ? H.awakened || {} : H;
+}
 function v2Tier(name) {
-  const H = v2Hero(name);
-  if (V2.awk) return { t: undefined };
+  const H = v2Rated(v2Hero(name));
   if (V2.mode === 'overall')
     return { t: V2.view === 'single' ? H.overall?.single : V2.view === 'groups' ? H.overall?.groups : H.overall?.tier };
   if (V2.mode === 'towers') {
@@ -157,10 +160,10 @@ function v2Card(h) {
   return `<div class="hero-card v2-card${tags && off ? ' tags-off' : ''}" tabindex="0" role="button" data-hero="${profileEsc(h.name)}" style="--tier:${t ? v2TierColor(t) : '#4b5563'}"><div class="portrait-wrap"><img class="portrait" src="${h.portrait}" alt="${profileEsc(h.name)}" loading="lazy"><span class="arch-badge"><img src="${h.archIcon}" alt="${profileEsc(h.archetype)}"></span>${a ? `<span class="patch-arrow" data-patch-hero="${profileEsc(h.name)}">${a}</span>` : ''}<span class="tier-chip${fallback ? ' v2-fallback' : ''}">${t || '?'}</span>${kb}</div><div class="hero-name">${profileEsc(h.name)}</div>${tags ? `<button type="button" class="v2-tagtog" aria-expanded="${!off}" aria-label="${off ? 'Show' : 'Hide'} tags" title="${off ? 'Show' : 'Hide'} tags"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="v2-tags">${tags}</div>` : ''}</div>`;
 }
 function v2TipHtml(h) {
-  const H = v2Hero(h.name);
+  const H0 = v2Hero(h.name),
+    H = v2Rated(H0);
   const D = v2Data();
-  const box = (label, t0) => {
-    const t = V2.awk ? undefined : t0;
+  const box = (label, t) => {
     return `<div class="tip-tier"><div class="label">${profileEsc(label)}</div><div class="value" style="background:${t ? v2TierColor(t) : '#3a3f4a'};${t ? '' : 'color:#cbd0d9'}">${t || '?'}</div></div>`;
   };
   let tiers = '';
@@ -177,7 +180,7 @@ function v2TipHtml(h) {
     return l
       ? `<div class="tip-note">${patchArrow(l.c, l.version)} Patch ${profileEsc(l.version)}: ${profileEsc(patchDirLabel(l.c))}${l.c.damagePct != null ? ` (skill damage ${l.c.damagePct > 0 ? '+' : ''}${l.c.damagePct}%${l.c.shiftPct ? `, ${l.c.shiftPct}% moved between skills` : ''})` : ''}</div>`
       : '';
-  })()}${H.expert ? `<div class="tip-note"><b style="color:#ef4444">Expert −${H.expert.drop}:</b> ${profileEsc(H.expert.reason || '')}</div>` : ''}<div class="tip-note">Click for the full guide.</div>`;
+  })()}${H0.expert ? `<div class="tip-note"><b style="color:#ef4444">Expert −${H0.expert.drop}:</b> ${profileEsc(H0.expert.reason || '')}</div>` : ''}<div class="tip-note">Click for the full guide.</div>`;
 }
 function v2ShowTip(h, el) {
   const tip = $('tooltip');
@@ -338,7 +341,7 @@ function renderTierV2() {
     )
     .join(
       '',
-    )}</div><div class="v2-fgroup"><button type="button" class="heroes-filter-btn v2-tagall${V2.tagsOff ? '' : ' active'}" id="v2TagAll" aria-pressed="${!V2.tagsOff}" title="${V2.tagsOff ? 'Show' : 'Hide'} all tags">Tags</button><button type="button" class="heroes-filter-btn v2-tagall${V2.awk ? ' active' : ''}" id="v2AwkAll" aria-pressed="${V2.awk}" title="${V2.awk ? 'Back to the ratings without awakenings' : 'Ratings with all awakenings (not rated yet)'}">Awakenings</button></div></div>`;
+    )}</div><div class="v2-fgroup"><button type="button" class="heroes-filter-btn v2-tagall${V2.tagsOff ? '' : ' active'}" id="v2TagAll" aria-pressed="${!V2.tagsOff}" title="${V2.tagsOff ? 'Show' : 'Hide'} all tags">Tags</button><button type="button" class="heroes-filter-btn v2-tagall${V2.awk ? ' active' : ''}" id="v2AwkAll" aria-pressed="${V2.awk}" title="${V2.awk ? 'Back to the ratings without awakenings' : 'Ratings with all awakenings and the Signature Karma'}">Awakenings</button></div></div>`;
   const rolesShown = V2.role ? [V2.role] : roles;
   html += `<div class="v2-grid" style="--cols:${rolesShown.length}"><div class="v2-corner"></div>${rolesShown.map((r) => `<div class="v2-rolehead"><img src="${ROLE_ICONS[r] || ''}" alt="">${profileEsc(r)}</div>`).join('')}`;
   const rows = [...tiers, '?'];

@@ -21797,8 +21797,8 @@
    "Reina": {
     "role": "Enabler",
     "overall": {
-     "tier": "S",
-     "single": "S",
+     "tier": "S+",
+     "single": "S+",
      "groups": "S+"
     },
     "bosses": {
@@ -21807,12 +21807,36 @@
      "barduk": "S",
      "gallore": "S",
      "ghoul-greed": "S",
-     "earthlander": "S"
+     "earthlander": "S",
+     "gauron": "S+",
+     "ursula": "S"
     },
     "towers": {
-     "amplitude": "A",
+     "amplitude": "S",
      "gale": "S+",
      "crushing": "A"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S+",
+      "single": "S+",
+      "groups": "S+"
+     },
+     "bosses": {
+      "furcas": "S",
+      "vanak": "S",
+      "barduk": "S",
+      "gallore": "S",
+      "ghoul-greed": "S",
+      "earthlander": "S",
+      "gauron": "S+",
+      "ursula": "S"
+     },
+     "towers": {
+      "amplitude": "S",
+      "gale": "S+",
+      "crushing": "A"
+     }
     },
     "tags": [
      "self",
@@ -21828,22 +21852,46 @@
    "Johnny": {
     "role": "Sub-DPS",
     "overall": {
-     "tier": "A",
-     "single": "A",
-     "groups": "A"
+     "tier": "S",
+     "single": "S",
+     "groups": "S"
     },
     "bosses": {
-     "furcas": "C",
-     "vanak": "S+",
-     "barduk": "C",
-     "gallore": "C",
-     "ghoul-greed": "C",
-     "earthlander": "S+"
+     "furcas": "B",
+     "vanak": "S",
+     "barduk": "B",
+     "gallore": "B",
+     "ghoul-greed": "B",
+     "earthlander": "S",
+     "gauron": "S",
+     "ursula": "A"
     },
     "towers": {
-     "amplitude": "B",
+     "amplitude": "A",
      "gale": "S",
      "crushing": "B"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S",
+      "single": "S",
+      "groups": "S"
+     },
+     "bosses": {
+      "furcas": "B",
+      "vanak": "S+",
+      "barduk": "B",
+      "gallore": "B",
+      "ghoul-greed": "B",
+      "earthlander": "S+",
+      "gauron": "S",
+      "ursula": "S"
+     },
+     "towers": {
+      "amplitude": "A",
+      "gale": "S",
+      "crushing": "A"
+     }
     },
     "tags": [
      "enabler",
@@ -21861,22 +21909,46 @@
    "Charlotte": {
     "role": "Main DPS",
     "overall": {
-     "tier": "A",
-     "single": "A",
+     "tier": "S",
+     "single": "S",
      "groups": "A"
     },
     "bosses": {
      "furcas": "C",
      "vanak": "S+",
-     "barduk": "C",
+     "barduk": "B",
      "gallore": "C",
      "ghoul-greed": "C",
-     "earthlander": "S+"
+     "earthlander": "S+",
+     "gauron": "S",
+     "ursula": "S"
     },
     "towers": {
      "amplitude": "B",
      "gale": "S",
-     "crushing": "S"
+     "crushing": "A"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S+",
+      "single": "S+",
+      "groups": "S"
+     },
+     "bosses": {
+      "furcas": "C",
+      "vanak": "S+",
+      "barduk": "B",
+      "gallore": "C",
+      "ghoul-greed": "C",
+      "earthlander": "S+",
+      "gauron": "S",
+      "ursula": "S"
+     },
+     "towers": {
+      "amplitude": "A",
+      "gale": "S",
+      "crushing": "S"
+     }
     },
     "tags": [
      "expert"
@@ -21896,20 +21968,44 @@
     "overall": {
      "tier": "A",
      "single": "A",
-     "groups": "B"
+     "groups": "A"
     },
     "bosses": {
      "furcas": "A",
      "vanak": "A",
      "barduk": "A",
-     "gallore": "A",
+     "gallore": "S",
      "ghoul-greed": "A",
-     "earthlander": "A"
+     "earthlander": "A",
+     "gauron": "S",
+     "ursula": "S"
     },
     "towers": {
-     "amplitude": "S",
-     "gale": "S",
-     "crushing": "S"
+     "amplitude": "A",
+     "gale": "A",
+     "crushing": "B"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S",
+      "single": "S",
+      "groups": "S"
+     },
+     "bosses": {
+      "furcas": "A",
+      "vanak": "A",
+      "barduk": "A",
+      "gallore": "S+",
+      "ghoul-greed": "A",
+      "earthlander": "A",
+      "gauron": "S+",
+      "ursula": "S+"
+     },
+     "towers": {
+      "amplitude": "S",
+      "gale": "A",
+      "crushing": "S"
+     }
     },
     "tags": [
      "easy",
@@ -21928,22 +22024,46 @@
    "Roxy": {
     "role": "Enabler",
     "overall": {
-     "tier": "B",
-     "single": "B",
-     "groups": "B"
+     "tier": "A",
+     "single": "A",
+     "groups": "A"
     },
     "bosses": {
-     "furcas": "C",
-     "vanak": "S",
+     "furcas": "B",
+     "vanak": "S+",
      "barduk": "S",
-     "gallore": "C",
-     "ghoul-greed": "C",
-     "earthlander": "S"
+     "gallore": "B",
+     "ghoul-greed": "B",
+     "earthlander": "S+",
+     "gauron": "A",
+     "ursula": "S"
     },
     "towers": {
      "amplitude": "S",
-     "gale": "B",
-     "crushing": "B"
+     "gale": "A",
+     "crushing": "A"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S",
+      "single": "S",
+      "groups": "S"
+     },
+     "bosses": {
+      "furcas": "B",
+      "vanak": "S+",
+      "barduk": "S+",
+      "gallore": "B",
+      "ghoul-greed": "B",
+      "earthlander": "S+",
+      "gauron": "S",
+      "ursula": "S"
+     },
+     "towers": {
+      "amplitude": "S",
+      "gale": "S",
+      "crushing": "A"
+     }
     },
     "tags": [],
     "applies": {
@@ -21959,22 +22079,46 @@
    "Aria": {
     "role": "Enabler",
     "overall": {
-     "tier": "B",
+     "tier": "S",
      "single": "B",
-     "groups": "A"
+     "groups": "S"
     },
     "bosses": {
-     "furcas": "S",
+     "furcas": "A",
      "vanak": "C",
      "barduk": "C",
-     "gallore": "S",
-     "ghoul-greed": "S",
-     "earthlander": "C"
+     "gallore": "A",
+     "ghoul-greed": "A",
+     "earthlander": "C",
+     "gauron": "B",
+     "ursula": "B"
     },
     "towers": {
      "amplitude": "B",
-     "gale": "A",
-     "crushing": "B"
+     "gale": "S",
+     "crushing": "C"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S",
+      "single": "A",
+      "groups": "S"
+     },
+     "bosses": {
+      "furcas": "S",
+      "vanak": "C",
+      "barduk": "C",
+      "gallore": "S",
+      "ghoul-greed": "S",
+      "earthlander": "C",
+      "gauron": "A",
+      "ursula": "A"
+     },
+     "towers": {
+      "amplitude": "A",
+      "gale": "S",
+      "crushing": "C"
+     }
     },
     "tags": [],
     "applies": {
@@ -21988,22 +22132,46 @@
    "Ornette": {
     "role": "Sub-DPS",
     "overall": {
-     "tier": "A",
-     "single": "A",
+     "tier": "S",
+     "single": "S",
      "groups": "A"
     },
     "bosses": {
-     "furcas": "S+",
+     "furcas": "S",
      "vanak": "C",
      "barduk": "C",
      "gallore": "C",
-     "ghoul-greed": "S+",
-     "earthlander": "C"
+     "ghoul-greed": "S",
+     "earthlander": "C",
+     "gauron": "S",
+     "ursula": "A"
     },
     "towers": {
      "amplitude": "B",
-     "gale": "B",
+     "gale": "A",
      "crushing": "S"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S+",
+      "single": "S",
+      "groups": "S+"
+     },
+     "bosses": {
+      "furcas": "S+",
+      "vanak": "C",
+      "barduk": "C",
+      "gallore": "C",
+      "ghoul-greed": "S+",
+      "earthlander": "C",
+      "gauron": "S",
+      "ursula": "S"
+     },
+     "towers": {
+      "amplitude": "B",
+      "gale": "S",
+      "crushing": "S+"
+     }
     },
     "tags": [
      "enabler",
@@ -22025,17 +22193,41 @@
      "groups": "A"
     },
     "bosses": {
-     "furcas": "A",
+     "furcas": "B",
      "vanak": "S",
      "barduk": "S",
-     "gallore": "A",
-     "ghoul-greed": "A",
-     "earthlander": "S"
+     "gallore": "B",
+     "ghoul-greed": "B",
+     "earthlander": "S",
+     "gauron": "S",
+     "ursula": "S+"
     },
     "towers": {
-     "amplitude": "S+",
-     "gale": "A",
+     "amplitude": "S",
+     "gale": "B",
      "crushing": "A"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S",
+      "single": "S",
+      "groups": "A"
+     },
+     "bosses": {
+      "furcas": "A",
+      "vanak": "S+",
+      "barduk": "S+",
+      "gallore": "A",
+      "ghoul-greed": "A",
+      "earthlander": "S+",
+      "gauron": "S+",
+      "ursula": "S+"
+     },
+     "towers": {
+      "amplitude": "S+",
+      "gale": "A",
+      "crushing": "S"
+     }
     },
     "tags": [
      "enabler",
@@ -22052,9 +22244,9 @@
    "Eileen": {
     "role": "Support",
     "overall": {
-     "tier": "S",
+     "tier": "S+",
      "single": "S",
-     "groups": "S"
+     "groups": "S+"
     },
     "bosses": {
      "furcas": "A",
@@ -22062,12 +22254,36 @@
      "barduk": "A",
      "gallore": "A",
      "ghoul-greed": "A",
-     "earthlander": "A"
+     "earthlander": "A",
+     "gauron": "S",
+     "ursula": "S"
     },
     "towers": {
      "amplitude": "A",
      "gale": "S+",
      "crushing": "A"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S+",
+      "single": "S+",
+      "groups": "S+"
+     },
+     "bosses": {
+      "furcas": "A",
+      "vanak": "A",
+      "barduk": "A",
+      "gallore": "A",
+      "ghoul-greed": "A",
+      "earthlander": "A",
+      "gauron": "S+",
+      "ursula": "S"
+     },
+     "towers": {
+      "amplitude": "A",
+      "gale": "S+",
+      "crushing": "A"
+     }
     },
     "tags": [
      "buffer",
@@ -22081,9 +22297,9 @@
    "Cerese": {
     "role": "Sub-DPS",
     "overall": {
-     "tier": "A",
-     "groups": "S",
-     "single": "B"
+     "tier": "S",
+     "single": "A",
+     "groups": "S"
     },
     "bosses": {
      "furcas": "C",
@@ -22091,12 +22307,36 @@
      "barduk": "S",
      "gallore": "S",
      "ghoul-greed": "C",
-     "earthlander": "C"
+     "earthlander": "C",
+     "gauron": "A",
+     "ursula": "B"
     },
     "towers": {
      "amplitude": "B",
-     "gale": "S",
+     "gale": "A",
      "crushing": "B"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S+",
+      "single": "S",
+      "groups": "S+"
+     },
+     "bosses": {
+      "furcas": "C",
+      "vanak": "C",
+      "barduk": "S",
+      "gallore": "S",
+      "ghoul-greed": "C",
+      "earthlander": "C",
+      "gauron": "S",
+      "ursula": "A"
+     },
+     "towers": {
+      "amplitude": "B",
+      "gale": "S",
+      "crushing": "A"
+     }
     },
     "tags": [
      "gather"
@@ -22108,22 +22348,46 @@
    "Kalsion": {
     "role": "Sub-DPS",
     "overall": {
-     "tier": "A",
-     "single": "A",
-     "groups": "S"
+     "tier": "S+",
+     "single": "S",
+     "groups": "S+"
     },
     "bosses": {
-     "furcas": "S+",
-     "vanak": "C",
-     "barduk": "C",
-     "gallore": "S+",
-     "ghoul-greed": "S+",
-     "earthlander": "C"
+     "furcas": "S",
+     "vanak": "B",
+     "barduk": "B",
+     "gallore": "S",
+     "ghoul-greed": "S",
+     "earthlander": "B",
+     "gauron": "S",
+     "ursula": "A"
     },
     "towers": {
-     "amplitude": "A",
-     "gale": "S",
-     "crushing": "B"
+     "amplitude": "B",
+     "gale": "S+",
+     "crushing": "A"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S+",
+      "single": "S+",
+      "groups": "S+"
+     },
+     "bosses": {
+      "furcas": "S+",
+      "vanak": "B",
+      "barduk": "B",
+      "gallore": "S+",
+      "ghoul-greed": "S+",
+      "earthlander": "B",
+      "gauron": "S+",
+      "ursula": "S"
+     },
+     "towers": {
+      "amplitude": "A",
+      "gale": "S+",
+      "crushing": "A"
+     }
     },
     "tags": [
      "gather"
@@ -22137,22 +22401,46 @@
    "Kalien": {
     "role": "Enabler",
     "overall": {
-     "tier": "A",
-     "single": "A",
-     "groups": "A"
+     "tier": "S",
+     "single": "S",
+     "groups": "S"
     },
     "bosses": {
-     "furcas": "S+",
-     "vanak": "C",
-     "barduk": "C",
-     "gallore": "S+",
-     "ghoul-greed": "S+",
-     "earthlander": "C"
+     "furcas": "S",
+     "vanak": "B",
+     "barduk": "B",
+     "gallore": "S",
+     "ghoul-greed": "S",
+     "earthlander": "B",
+     "gauron": "S",
+     "ursula": "S"
     },
     "towers": {
-     "amplitude": "S",
+     "amplitude": "A",
      "gale": "A",
-     "crushing": "A"
+     "crushing": "B"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S+",
+      "single": "S+",
+      "groups": "S+"
+     },
+     "bosses": {
+      "furcas": "S+",
+      "vanak": "A",
+      "barduk": "A",
+      "gallore": "S+",
+      "ghoul-greed": "S+",
+      "earthlander": "A",
+      "gauron": "S+",
+      "ursula": "S+"
+     },
+     "towers": {
+      "amplitude": "S",
+      "gale": "S",
+      "crushing": "A"
+     }
     },
     "tags": [
      "sa"
@@ -22176,17 +22464,41 @@
      "groups": "S"
     },
     "bosses": {
-     "furcas": "S+",
-     "vanak": "C",
-     "barduk": "C",
-     "gallore": "C",
-     "ghoul-greed": "S+",
-     "earthlander": "C"
+     "furcas": "S",
+     "vanak": "B",
+     "barduk": "B",
+     "gallore": "B",
+     "ghoul-greed": "S",
+     "earthlander": "B",
+     "gauron": "S",
+     "ursula": "S"
     },
     "towers": {
      "amplitude": "B",
-     "gale": "S",
+     "gale": "A",
      "crushing": "S"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S+",
+      "single": "S+",
+      "groups": "S+"
+     },
+     "bosses": {
+      "furcas": "S+",
+      "vanak": "B",
+      "barduk": "B",
+      "gallore": "B",
+      "ghoul-greed": "S+",
+      "earthlander": "B",
+      "gauron": "S+",
+      "ursula": "S+"
+     },
+     "towers": {
+      "amplitude": "A",
+      "gale": "S",
+      "crushing": "S+"
+     }
     },
     "tags": [
      "gather",
@@ -22202,22 +22514,46 @@
    "Sion": {
     "role": "Support",
     "overall": {
-     "tier": "B",
-     "single": "B",
+     "tier": "S",
+     "single": "S",
      "groups": "A"
     },
     "bosses": {
      "furcas": "S+",
-     "vanak": "C",
-     "barduk": "C",
-     "gallore": "C",
+     "vanak": "B",
+     "barduk": "B",
+     "gallore": "B",
      "ghoul-greed": "S+",
-     "earthlander": "C"
+     "earthlander": "B",
+     "gauron": "A",
+     "ursula": "A"
     },
     "towers": {
-     "amplitude": "A",
+     "amplitude": "B",
      "gale": "A",
      "crushing": "S"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S",
+      "single": "S",
+      "groups": "S"
+     },
+     "bosses": {
+      "furcas": "S+",
+      "vanak": "B",
+      "barduk": "B",
+      "gallore": "B",
+      "ghoul-greed": "S+",
+      "earthlander": "B",
+      "gauron": "S",
+      "ursula": "S"
+     },
+     "towers": {
+      "amplitude": "A",
+      "gale": "A",
+      "crushing": "S"
+     }
     },
     "tags": [
      "buffer",
@@ -22236,22 +22572,46 @@
    "Othello": {
     "role": "Main DPS",
     "overall": {
-     "tier": "A",
-     "single": "A",
+     "tier": "S",
+     "single": "S",
      "groups": "A"
     },
     "bosses": {
      "furcas": "C",
      "vanak": "C",
-     "barduk": "S+",
+     "barduk": "S",
      "gallore": "S+",
      "ghoul-greed": "C",
-     "earthlander": "C"
+     "earthlander": "C",
+     "gauron": "S",
+     "ursula": "S"
     },
     "towers": {
      "amplitude": "B",
      "gale": "B",
      "crushing": "S"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S",
+      "single": "S",
+      "groups": "S"
+     },
+     "bosses": {
+      "furcas": "C",
+      "vanak": "C",
+      "barduk": "S",
+      "gallore": "S+",
+      "ghoul-greed": "C",
+      "earthlander": "C",
+      "gauron": "S",
+      "ursula": "S"
+     },
+     "towers": {
+      "amplitude": "A",
+      "gale": "A",
+      "crushing": "S"
+     }
     },
     "tags": [
      "gather",
@@ -22268,20 +22628,44 @@
     "overall": {
      "tier": "B",
      "single": "B",
-     "groups": "C"
+     "groups": "B"
     },
     "bosses": {
-     "furcas": "A",
-     "vanak": "A",
-     "barduk": "A",
+     "furcas": "B",
+     "vanak": "B",
+     "barduk": "B",
      "gallore": "A",
-     "ghoul-greed": "A",
-     "earthlander": "A"
+     "ghoul-greed": "B",
+     "earthlander": "B",
+     "gauron": "B",
+     "ursula": "B"
     },
     "towers": {
      "amplitude": "A",
-     "gale": "B",
-     "crushing": "B"
+     "gale": "C",
+     "crushing": "C"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "A",
+      "single": "A",
+      "groups": "A"
+     },
+     "bosses": {
+      "furcas": "A",
+      "vanak": "B",
+      "barduk": "B",
+      "gallore": "A",
+      "ghoul-greed": "A",
+      "earthlander": "B",
+      "gauron": "A",
+      "ursula": "A"
+     },
+     "towers": {
+      "amplitude": "S",
+      "gale": "C",
+      "crushing": "C"
+     }
     },
     "tags": [
      "sa"
@@ -22291,22 +22675,46 @@
    "Dana": {
     "role": "Main DPS",
     "overall": {
-     "tier": "S",
-     "single": "S",
-     "groups": "S"
+     "tier": "A",
+     "single": "A",
+     "groups": "A"
     },
     "bosses": {
      "furcas": "C",
      "vanak": "C",
-     "barduk": "S+",
-     "gallore": "S+",
+     "barduk": "S",
+     "gallore": "S",
      "ghoul-greed": "C",
-     "earthlander": "C"
+     "earthlander": "C",
+     "gauron": "A",
+     "ursula": "A"
     },
     "towers": {
      "amplitude": "B",
      "gale": "B",
-     "crushing": "S"
+     "crushing": "A"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S",
+      "single": "S",
+      "groups": "S"
+     },
+     "bosses": {
+      "furcas": "C",
+      "vanak": "C",
+      "barduk": "S",
+      "gallore": "S+",
+      "ghoul-greed": "C",
+      "earthlander": "C",
+      "gauron": "S",
+      "ursula": "S"
+     },
+     "towers": {
+      "amplitude": "A",
+      "gale": "A",
+      "crushing": "S"
+     }
     },
     "tags": [
      "easy",
@@ -22316,9 +22724,9 @@
    "Tarte": {
     "role": "Enabler",
     "overall": {
-     "tier": "C",
-     "single": "C",
-     "groups": "C"
+     "tier": "A",
+     "single": "B",
+     "groups": "A"
     },
     "bosses": {
      "furcas": "A",
@@ -22326,12 +22734,36 @@
      "barduk": "C",
      "gallore": "C",
      "ghoul-greed": "A",
-     "earthlander": "C"
+     "earthlander": "C",
+     "gauron": "B",
+     "ursula": "B"
     },
     "towers": {
      "amplitude": "A",
-     "gale": "C",
+     "gale": "B",
      "crushing": "B"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S",
+      "single": "A",
+      "groups": "S"
+     },
+     "bosses": {
+      "furcas": "S",
+      "vanak": "B",
+      "barduk": "B",
+      "gallore": "B",
+      "ghoul-greed": "S",
+      "earthlander": "B",
+      "gauron": "A",
+      "ursula": "A"
+     },
+     "towers": {
+      "amplitude": "S",
+      "gale": "B",
+      "crushing": "B"
+     }
     },
     "tags": [],
     "applies": {
@@ -22351,17 +22783,41 @@
      "groups": "B"
     },
     "bosses": {
-     "furcas": "A",
-     "vanak": "A",
-     "barduk": "A",
+     "furcas": "B",
+     "vanak": "B",
+     "barduk": "B",
      "gallore": "A",
-     "ghoul-greed": "A",
-     "earthlander": "A"
+     "ghoul-greed": "B",
+     "earthlander": "B",
+     "gauron": "A",
+     "ursula": "A"
     },
     "towers": {
-     "amplitude": "A",
-     "gale": "A",
-     "crushing": "S+"
+     "amplitude": "C",
+     "gale": "B",
+     "crushing": "S"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "B",
+      "single": "B",
+      "groups": "B"
+     },
+     "bosses": {
+      "furcas": "B",
+      "vanak": "B",
+      "barduk": "B",
+      "gallore": "A",
+      "ghoul-greed": "B",
+      "earthlander": "B",
+      "gauron": "A",
+      "ursula": "A"
+     },
+     "towers": {
+      "amplitude": "C",
+      "gale": "B",
+      "crushing": "S"
+     }
     },
     "tags": [
      "buffer",
@@ -22375,22 +22831,46 @@
    "Theresia": {
     "role": "Main DPS",
     "overall": {
-     "tier": "S",
+     "tier": "A",
      "single": "A",
-     "groups": "S+"
+     "groups": "A"
     },
     "bosses": {
-     "furcas": "A",
-     "vanak": "S+",
-     "barduk": "S+",
-     "gallore": "A",
-     "ghoul-greed": "A",
-     "earthlander": "S+"
+     "furcas": "B",
+     "vanak": "S",
+     "barduk": "S",
+     "gallore": "B",
+     "ghoul-greed": "B",
+     "earthlander": "S",
+     "gauron": "A",
+     "ursula": "A"
     },
     "towers": {
-     "amplitude": "S+",
-     "gale": "A",
-     "crushing": "A"
+     "amplitude": "S",
+     "gale": "B",
+     "crushing": "B"
+    },
+    "awakened": {
+     "overall": {
+      "tier": "S",
+      "single": "S",
+      "groups": "S"
+     },
+     "bosses": {
+      "furcas": "B",
+      "vanak": "S",
+      "barduk": "S",
+      "gallore": "B",
+      "ghoul-greed": "B",
+      "earthlander": "S",
+      "gauron": "S",
+      "ursula": "S+"
+     },
+     "towers": {
+      "amplitude": "S+",
+      "gale": "A",
+      "crushing": "A"
+     }
     },
     "tags": [
      "gather"

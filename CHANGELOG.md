@@ -1,5 +1,15 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 14 Nov 2026 — Tier list re-rated from David's file; Awakenings view filled (Claude)
+Restore point: commit `5bf0595`.
+- **Source:** David's file `DragonSword_Hero_Tier_Lists.html` (repository snapshot `5bf0595`): 20 heroes × 13 matchups (Overall single, Overall group, Furcas, Vanak, Barduk, Gallore, Ghoul Greed, Earthlander, Gauron, Ursula, Amplitude, Gale, Crushing) × two scenarios. Roles in the file match the site for every hero.
+- **Normal view = "A0 + Mastery"** (normal Karma): `TIER_LIST_V2.heroes[].overall`, `bosses` (now including `gauron` and `ursula`, rated for the first time) and `towers` replaced with the file's values. `overall.tier` (the main Overall tab) = the higher of single and groups, David's choice. Then, at David's request, three A0 placements raised from A to S: Dana on Barduk, Cerese on Barduk and on Gallore.
+- **Awakenings view = "A6 + Signature + Mastery"**: new `awakened{overall, bosses, towers}` per hero, same shape. `src/js/07-tierlist-v2-cookbook.js` (`?v=20261114b`): new `v2Rated()`; cards and hover cards read `awakened` while the Awakenings button is on (before: every hero unrated); the button's hover text says "Ratings with all awakenings and the Signature Karma".
+- **Check changed (David's new behaviour, not loosened):** `awakening_toggle` in `tools/check_site.py` used to require every hero unrated while the button is on; it now requires every card in all three modes and the hover card to show exactly the `awakened` rating, and the normal ratings back after switching off.
+- `check_shape.py --update`: 12 lines, all intended (`awakened.*` added; `towers` now on every hero). DATA_REFERENCE, STATUS, DONE updated.
+- Also: `assets/sources/upcoming/notes.txt`: Jerome is Bloodburst (official video, December update), fights with a sword and has a parry like Alex (David, 14 Nov). `docs/library/WORKING_WITH_DAVID.md`: push in batches or when David says (13 Nov).
+- `public_diff.py`: 60 of 109 views differ, all from the new ratings: the tier list, the Trait Dungeon page (hero tiers there) and the hero pages' Overall tier lines. `check_all.py`: ALL CHECKS PASSED.
+
 ## 14 Nov 2026 — Second pass: the remaining "measured / tested / recorded" wording removed (Claude)
 David's instruction after the 13 Nov clean-up: no page may say something was or wasn't measured, tested or recorded. Restore point: commit `1cb7632`.
 - **Hero page, Skills:** the paragraph under the status rules ("The same rules apply to… measured on training dummies. Not tested yet… Tested…") is no longer printed. In the rules themselves "Measured: Poison + Bleed 2x…" became "For example: …", "Measured on training dummies and goblins." was dropped, and "(tested with Burn: … turned Aria's 1.5x into 1.72x)" became "(for example, Blazing Flames' +15% turns a 1.5x Burn hit into 1.72x)" (`STATUS_EFFECTS.damageOverTime.rules`).

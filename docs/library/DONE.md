@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 14 Nov — Tier list re-rated, Awakenings view filled
+
+Every hero re-rated from David's tier-list file: Overall (single, groups; the main Overall tier is the higher of the two, David's choice), the six Hunts, both Raids and the three Towers, as A0 + Mastery in the normal view and A6 + Signature Karma + Mastery in the Awakenings view.
+
 ## 12 Nov — Hunt boss weaknesses and Defense
 
 All six Hunt bosses' weak elements are in the data (header icons and split title). Their Defense on every difficulty is worked out from David's Ryza readings: table in GAME_MATH 3.4, with Gallore's fist gimmick and the buff ratio. Since 13 Nov they're in the Damage Calculator (Hunt boss button), which reproduces David's readings.
