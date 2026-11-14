@@ -831,7 +831,7 @@
  ],
  "fame": {
   "type": "Achievement Points",
-  "note": "David, 8 Nov 2026. Each category has its own points, cup and Accumulated Fame track. Stages 1 to 3 each give 100,000 Gold + 50 of a purple crystal.",
+  "note": "David, 8 Nov 2026. Each category has its own points, cup and Accumulated Fame track. Every stage gives the same 100,000 Gold + 50 of a purple crystal.",
   "categories": [
    {
     "category": "Explore",
@@ -891,6 +891,6 @@
     "description": "A challenge that fails is nothing more than an attempt. The names of successful challengers endure, gaining value in and of themselves. The reputation built in this way becomes an achievement, and that achievement is the mark an individual leaves on this world."
    }
   ],
-  "text": "Every achievement gives points to its own category's Accumulated Fame track. Stages increase per 50 Fame, with The Fame of the Challenger being 75 per stage. Each of stages 1 to 3 gives 100,000 Gold + 50 of a purple crystal."
+  "text": "Every achievement gives points to its own category's Accumulated Fame track. Stages increase per 50 Fame, with The Fame of the Challenger being 75 per stage. Every stage gives 100,000 Gold + 50 of a purple crystal."
  }
 }
