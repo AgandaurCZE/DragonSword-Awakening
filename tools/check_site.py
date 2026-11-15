@@ -946,6 +946,15 @@ def team_links(browser, base):
         text = pop.inner_text()
         if want[0] not in text or 'UPCOMING' not in text or 'not revealed yet' not in text:
             raise AssertionError(f'upcoming hero hover card: {text!r}')
+    # "Start here" guide (15 Nov 2026): the deep link opens the Guides page with every section of GUIDES.startHere
+    # drawn, its pictures loaded, and its hero chips linking to hero pages.
+    page.goto(base + 'guides#start-here')
+    page.wait_for_function('NAV.ready')
+    want = page.evaluate("((GUIDES||{}).startHere||{sections:[]}).sections.length")
+    got = page.locator('#start-here .sh-sec').count()
+    broken = page.evaluate("[...document.querySelectorAll('#start-here img')].filter(i=>i.complete&&!i.naturalWidth&&i.loading!=='lazy').length")
+    if not want or got != want or broken or not page.locator('#start-here [data-sh-hero]').first.get_attribute('href'):
+        raise AssertionError(f'start-here guide: {got} of {want} sections, {broken} broken pictures')
     page.locator('.nav-item[data-page="tier"]').click()
     assert page.locator('.tier-hero-link').first.get_attribute('href')
     ctx.close()

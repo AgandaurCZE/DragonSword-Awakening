@@ -2784,6 +2784,179 @@
         "types": [
          "string"
         ]
+       },
+       "startHere": {
+        "record": {
+         "opt": {},
+         "req": {
+          "id": {
+           "types": [
+            "string"
+           ]
+          },
+          "intro": {
+           "types": [
+            "string"
+           ]
+          },
+          "kicker": {
+           "types": [
+            "string"
+           ]
+          },
+          "sections": {
+           "list": {
+            "record": {
+             "opt": {},
+             "req": {
+              "blocks": {
+               "list": {
+                "record": {
+                 "opt": {
+                  "caption": {
+                   "types": [
+                    "string"
+                   ]
+                  },
+                  "head": {
+                   "list": {
+                    "types": [
+                     "string"
+                    ]
+                   }
+                  },
+                  "heroes": {
+                   "list": {
+                    "types": [
+                     "string"
+                    ]
+                   }
+                  },
+                  "items": {
+                   "list": {
+                    "record": {
+                     "opt": {
+                      "color": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "hero": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "heroes": {
+                       "list": {
+                        "types": [
+                         "string"
+                        ]
+                       }
+                      },
+                      "icon": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "label": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "page": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "text": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "title": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "tool": {
+                       "types": [
+                        "string"
+                       ]
+                      },
+                      "when": {
+                       "types": [
+                        "string"
+                       ]
+                      }
+                     },
+                     "req": {}
+                    },
+                    "types": [
+                     "string"
+                    ]
+                   }
+                  },
+                  "rows": {
+                   "list": {
+                    "list": {
+                     "types": [
+                      "string"
+                     ]
+                    }
+                   }
+                  },
+                  "src": {
+                   "types": [
+                    "string"
+                   ]
+                  },
+                  "text": {
+                   "types": [
+                    "string"
+                   ]
+                  }
+                 },
+                 "req": {
+                  "type": {
+                   "types": [
+                    "string"
+                   ]
+                  }
+                 }
+                }
+               }
+              },
+              "color": {
+               "types": [
+                "string"
+               ]
+              },
+              "id": {
+               "types": [
+                "string"
+               ]
+              },
+              "sub": {
+               "types": [
+                "string"
+               ]
+              },
+              "title": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           }
+          },
+          "title": {
+           "types": [
+            "string"
+           ]
+          }
+         }
+        }
        }
       }
      }

@@ -26972,7 +26972,312 @@
      }
     ]
    }
-  ]
+  ],
+  "startHere": {
+   "id": "start-here",
+   "kicker": "Getting started",
+   "title": "New to DragonSword? Start here.",
+   "intro": "Everything you need for your first weeks: who joins you and when, which teams to build, how combat really works, what to spend on first and where to farm. Ten minutes of reading saves a lot of wasted materials.",
+   "sections": [
+    {
+     "id": "first-heroes",
+     "title": "Your first heroes",
+     "color": "#68c7d5",
+     "sub": "Every hero can be unlocked for free through the Story Quests and Hero Quests. These eight join you along the main story, in this order.",
+     "blocks": [
+      {
+       "type": "timeline",
+       "items": [
+        {
+         "hero": "Lute",
+         "when": "Start of the game"
+        },
+        {
+         "hero": "Aria",
+         "when": "Reaching the city"
+        },
+        {
+         "hero": "Johnny",
+         "when": "After quest 10"
+        },
+        {
+         "hero": "Ornette",
+         "when": "After quest 20"
+        },
+        {
+         "hero": "Cerese",
+         "when": "After quest 30"
+        },
+        {
+         "hero": "Kalsion",
+         "when": "After quest 40"
+        },
+        {
+         "hero": "Othello",
+         "when": "After quest 50"
+        },
+        {
+         "hero": "Ryza",
+         "when": "After quest 53"
+        }
+       ]
+      },
+      {
+       "type": "tip",
+       "text": "Johnny, Kalsion and Ryza are top-tier and join early. Invest in them as soon as they arrive; they stay in the best teams all the way to the end."
+      },
+      {
+       "type": "heroes",
+       "text": "Everyone else is exchanged in the Hero shop for Fate's Invitation. Your first picks there, in this order:",
+       "heroes": [
+        "Reina",
+        "Charlotte",
+        "Eileen"
+       ]
+      },
+      {
+       "type": "image",
+       "src": "assets/ui/guide-exchange.webp",
+       "caption": "The Hero tab of the Exchange: one Fate's Invitation per hero."
+      }
+     ]
+    },
+    {
+     "id": "first-teams",
+     "title": "Your first teams",
+     "color": "#eb8b4e",
+     "sub": "You fight with three heroes and switch between them. A good team has someone to apply statuses and someone to cash them in.",
+     "blocks": [
+      {
+       "type": "cols",
+       "items": [
+        {
+         "title": "Early game",
+         "color": "#9aa3ad",
+         "heroes": [
+          "Lute",
+          "Castella",
+          "Johnny"
+         ],
+         "text": "Lute's Stun and Johnny's Airborne open Castella's Upper Blow, and Castella breaks Super Armor for everyone. Lute heals when it goes wrong."
+        },
+        {
+         "title": "Mid game",
+         "color": "#3f8fd8",
+         "heroes": [
+          "Kalsion",
+          "Reina / Kalien",
+          "Johnny"
+         ],
+         "text": "When Kalsion arrives at quest 40, you can already have Reina or Kalien from the Hero shop. Reina launches for his Explosion; Kalien stacks Burn and pulls enemies in."
+        },
+        {
+         "title": "End game",
+         "color": "#ff4fa3",
+         "heroes": [
+          "Kalsion",
+          "Kalien",
+          "Reina"
+         ],
+         "text": "Royal Inferno, one of three S-tier teams. The Teams page lists all of them, plus the fastest Ursula runs."
+        }
+       ]
+      },
+      {
+       "type": "links",
+       "items": [
+        {
+         "label": "See every team",
+         "page": "teams"
+        },
+        {
+         "label": "Open the Tier List",
+         "page": "tier"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combat",
+     "title": "How combat really works",
+     "color": "#b580fd",
+     "sub": "The four things the game never explains properly.",
+     "blocks": [
+      {
+       "type": "rules",
+       "items": [
+        {
+         "icon": "🎯",
+         "title": "Statuses build up, they don't just happen",
+         "text": "Each hit fills a hidden gauge. One cast is never enough on a boss, and most skills take about 10 seconds to come back, so plan for several heroes adding to the same status."
+        },
+        {
+         "icon": "💥",
+         "title": "Statuses multiply your damage",
+         "text": "Poison, Bleed, Burn, Shock and Frost add +50% to every hit on the target; Airborne, Knockdown and Stun add +100%. They add up: two or three at once can double or triple your damage. Break adds no bonus of its own, but Break and All Status Additional Attack Power count while the boss is broken."
+        },
+        {
+         "icon": "🛡️",
+         "title": "Break the Super Armor first",
+         "text": "Bosses resist physical statuses until their Super Armor breaks. After that, Stun, Knockdown and Airborne build twice as fast, and some skills only work on a broken boss."
+        },
+        {
+         "icon": "🔥",
+         "title": "Nightmare and Hell change the rules",
+         "text": "Up to Extreme, every element works the same on a Hunt boss. On Nightmare and Hell each boss has a strong damage-resistance buff and is weak to two elements: one of its weak statuses, or any physical status, removes the buff while it lasts. The Boss & Tower Finder shows each boss's weaknesses."
+        }
+       ]
+      },
+      {
+       "type": "links",
+       "items": [
+        {
+         "label": "Open the Boss & Tower Finder",
+         "page": "finder"
+        },
+        {
+         "label": "Try the Damage Calculator",
+         "page": "tools",
+         "tool": "damage"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "spend",
+     "title": "What to spend on first",
+     "color": "#22c55e",
+     "sub": "Resources are tight early on. In this order:",
+     "blocks": [
+      {
+       "type": "steps",
+       "items": [
+        "**Hero levels for your main three.** Don't spread EXP over the whole roster; keep one team ahead of the story.",
+        "**Skill levels on the big hitters.** Each hero's Review tab lists which skills to level first. Basic attacks can wait.",
+        "**Blacksmith gear sets, as soon as you can.** Battle Will (+Attack) or The Infiltrator (+Crit Rate) from the Normal Dungeons get you started, but the archetype sets from the Blacksmith (Blazing Flames for Burn heroes, Thunderrush for Shock and so on) make a huge difference. Make them your first big goal.",
+        "**Karma.** Put a Karma of the hero's archetype on every hero. World Bosses drop good Karmas for each archetype, and more of them unlock as you progress, so farm those until you can buy the Signature Karmas. The reviews say whose signature is worth it first.",
+        "**Awakenings last.** They can't be undone. Each hero's page shows the best one to aim for."
+       ]
+      },
+      {
+       "type": "image",
+       "src": "assets/ui/guide-skill-levels.webp",
+       "caption": "Skill levels: Kalsion's Explosion, his biggest hit, is the one to level first."
+      },
+      {
+       "type": "image",
+       "src": "assets/ui/guide-world-boss.webp",
+       "caption": "World Bosses in the Mercenary Guide: each one drops Karmas of its archetypes and comes back 2 hours after it is defeated."
+      },
+      {
+       "type": "links",
+       "items": [
+        {
+         "label": "Browse the gear sets",
+         "page": "gear"
+        },
+        {
+         "label": "Browse the Karmas",
+         "page": "karma"
+        },
+        {
+         "label": "Plan levels with the Levelling Calculator",
+         "page": "tools",
+         "tool": "level"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "farm",
+     "title": "Where to farm what",
+     "color": "#fbbf24",
+     "sub": "The Dungeons pages list every reward by difficulty.",
+     "blocks": [
+      {
+       "type": "table",
+       "head": [
+        "Where",
+        "What you get",
+        "Why you go"
+       ],
+       "rows": [
+        [
+         "Normal Dungeons",
+         "Crafting materials (and early gear sets)",
+         "Materials for the Blacksmith"
+        ],
+        [
+         "Dragon Worshipper Ruins",
+         "Hero EXP texts",
+         "Hero levels"
+        ],
+        [
+         "Endless Summoning Grounds",
+         "Mana Shards, Crystals and Ore",
+         "Gear upgrades"
+        ],
+        [
+         "Trace of the Giant",
+         "Arcanas",
+         "Karma levels"
+        ],
+        [
+         "Eroded Underground Cemetery",
+         "Gold",
+         "Everything costs Gold"
+        ],
+        [
+         "Residual Worm Cleanup Zone",
+         "Hero, Karma and gear materials",
+         "A bit of everything"
+        ],
+        [
+         "Trait Dungeons",
+         "Each archetype’s trait stones",
+         "Early on, run whatever you can clear. Later, Mantius of Crushing is the one most teams want, for the 20% Defense Ignore"
+        ],
+        [
+         "Towers of Trials",
+         "Floor and star rewards",
+         "The slow grind towards Signature Karmas, and some are essential"
+        ],
+        [
+         "World Bosses",
+         "Archetype Karmas",
+         "Good Karmas until you have signatures"
+        ],
+        [
+         "Hunts and Raids",
+         "End-game rewards by difficulty; runes from the Raids",
+         "End game"
+        ]
+       ]
+      },
+      {
+       "type": "links",
+       "items": [
+        {
+         "label": "Normal Dungeons",
+         "page": "dungeons"
+        },
+        {
+         "label": "Currency Dungeons",
+         "page": "currency"
+        },
+        {
+         "label": "Trait Dungeons",
+         "page": "trait"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
  },
  "DEFENSE_MODEL": {
   "formula": "damage = Attack × skill % × K / (K + Defense × (1 − DefenseIgnore) − ArmorPenetration), K = 1000",

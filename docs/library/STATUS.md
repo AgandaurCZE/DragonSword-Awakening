@@ -8,7 +8,7 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 
 ## In progress
 - **Hero reviews:** rewritten and live 15 Nov (banner with nickname, lore title, A0/A6, groups vs bosses). Alex has no review until his awakenings are rated. Writing rules: no testing details or names; one cast never fills a status gauge; most skills return in about 10 s; against bosses heroes need partners or a broken Super Armor for physical statuses.
-- **"Start here" guide** for new players: next, after the reviews. David can supply screenshots.
+- **"Start here" guide:** live 15 Nov at the top of the Guides page (`GUIDES.startHere`). Still unwritten guides: the other planned topics in `GUIDES.categories`.
 
 ## David's account (latest)
 - All 20 heroes Lv.70, all masteries. Awakenings: A6 Castella, Cerese, Charlotte, Dana, Johnny, Kalien, Kalsion, Ornette, Reina, Roxy, Ryza, Theresia; A3 Aria, Astria, Eileen, Lute, Othello, Sion, Tarte; A0 Alex.

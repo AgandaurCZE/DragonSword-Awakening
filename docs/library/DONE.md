@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 15 Nov — Start here guide
+
+Five-section guide for new players with David's three screenshots, at the top of the Guides page.
+
 ## 15 Nov — Hero reviews rewritten
 
 All 19 reviews (Alex left empty) with nicknames, lore titles, A0/A6 ratings, groups vs bosses, new pros and cons, current teams and Signature Karma priorities.

@@ -127,7 +127,8 @@ function navInitial() {
   }
   if (page === 'teams' && hash === 'speed') return { page, speed: true };
   if (page === 'teams' && params.has('team')) return { page, team: params.get('team') };
-  if (page === 'guides' && MECHANICS_GUIDES.some((guide) => guide.id === hash)) return { page, guide: hash };
+  if (page === 'guides' && (hash === 'start-here' || MECHANICS_GUIDES.some((guide) => guide.id === hash)))
+    return { page, guide: hash };
   return { page: page || 'home' };
 }
 function navInit() {
