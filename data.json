@@ -681,7 +681,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/a-sword-summoned-for-a-friend.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Amplitude",
@@ -893,7 +893,7 @@
    },
    "statType": "Defense",
    "image": "assets/karma/loyalty-amidst-lethargy.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Crushing",
@@ -1068,7 +1068,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/between-chivalry-and-bookmarks.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Gale",
@@ -1105,7 +1105,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/the-wind-that-protects-the-kingdom.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Gale",
@@ -1418,7 +1418,7 @@
    },
    "statType": "High Attack",
    "image": "assets/karma/explosion-is-art.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Blazeflame",
@@ -1842,7 +1842,7 @@
    },
    "statType": "High Attack",
    "image": "assets/karma/a-helping-hand-for-good-kids.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Thunderbolt",
@@ -1953,7 +1953,7 @@
    },
    "statType": "Attack",
    "image": "assets/karma/fate-spoke-to-the-boy.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Thunderbolt",
@@ -2165,7 +2165,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/wandering-blade.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Venom",
@@ -2340,7 +2340,7 @@
    },
    "statType": "Balanced",
    "image": "assets/karma/noisy-duet.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Breaker",
@@ -2377,7 +2377,7 @@
    },
    "statType": "High Attack",
    "image": "assets/karma/wildflowers-bloom-through-the-wind.webp",
-   "owned": false
+   "owned": true
   },
   {
    "archetype": "Breaker",

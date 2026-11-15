@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 15 Nov — All 53 Karmas in colour
+
+Every Karma, signatures included, is owned and shown in colour.
+
 ## 15 Nov — Start here guide
 
 Five-section guide for new players with David's three screenshots, at the top of the Guides page.
