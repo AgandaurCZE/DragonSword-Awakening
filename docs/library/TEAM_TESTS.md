@@ -301,6 +301,15 @@ Claude's notes:
 | 19 | Lute | A Sword Summoned for a Friend | Low | Not owned | More relics from Relic Fall. |
 | 20 | Alex | Loyalty Amidst Lethargy | Low | Not owned | David: doesn't help him with anything. |
 
+### Signature team tests, full gear (David, 15 Nov)
+Training Ogre, 1 minute, everyone geared; only the tested hero's Karma changes. One run each side.
+
+| Hero | Team | Without | With signature | Gain |
+|---|---|---|---|---|
+| Sion | Ryza, Ornette, Sion (all Lv.70 signatures) | 14M (Sion on A Flame That Cuts Through the Moment, Lv.70: same base stats and Crit Rate trait, Burn traits useless to him) | 17M (Fate Spoke to the Boy, Lv.70) | **+21%** (part of it is the Shock Additional Damage a normal Shock Karma would also give) |
+| Reina | Kalien (sig Lv.70), Kalsion (sig Lv.20), Reina | 4.1M (Lv.1 normal Gale) | 4.4M (Lv.1 signature) | **+7%** |
+| Castella | Theresia, Roxy, Castella | 3.9M (Lv.1 normal Breaker) | 4.2M (Lv.1 signature) | **+8%** |
+
 ### Signature skill tests: the last ten (David, 15 Nov)
 Training Ogre. Each row: the signature's change, against the earlier numbers in TEST01_RESULTS / AWAKENING_TESTS. Full-break times are the hero alone, going all out.
 

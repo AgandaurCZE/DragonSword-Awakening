@@ -1,5 +1,9 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 15 Nov 2026 — Signature team tests: Sion, Reina, Castella (Claude)
+- David's geared 1-minute runs (TEAM_TESTS): Sion +21% (14M → 17M, Thunder Chorus), Reina +7% (4.1M → 4.4M, Royal Inferno), Castella +8% (3.9M → 4.2M, Holy Bleed). Signature Karma priority lines added to their reviews (`review.investment.karma`): Sion high, Reina and Castella low.
+- `check_all.py`: passes apart from the YouTube thumbnails (David: ignore those). Not pushed yet (batch).
+
 ## 15 Nov 2026 — Signature skill tests for the last ten (notes only; Claude)
 - David's results for Astria, Johnny, Reina, Aria, Eileen, Castella, Sion, Lute, Tarte and Alex recorded in `docs/library/TEAM_TESTS.md` ("Signature skill tests: the last ten"). Biggest changes: Sion's relic retrieval refunds his skill (full break 50 → 27 s, a full Shock stack alone); Astria's charged shot refills her Ultimate in about 5 s (full break 18 → 12–13 s); Castella's held Howling 32% gauge (full break 14–15 s); Reina's Tempest up to 20 piercing hits; Aria's Switch On! Burn 0.30 / Airborne 0.20; Eileen's banner +20% Crit Rate and Crit Damage. Team runs pending (setup being agreed). No site or data change. `check_all.py`: not needed (Markdown only, not pushed yet).
 

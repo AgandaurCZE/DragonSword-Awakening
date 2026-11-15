@@ -5637,7 +5637,8 @@
       "**Best stop: [[awk:3]].** [[awk:5]] (+15% Airborne Additional Damage, +15% Crit Damage) is worth at least +13%, [[awk:1]] adds Tempest hits."
      ],
      "karma": [
-      "Signature: [[karma:The Wind That Protects the Kingdom]] (exclusive shop): +10% Crit Rate, +20% Crit Damage, +20% Airborne Additional Damage, and Tempest's sword aura. Second: [[karma:A Path That Leads to the Wind]]."
+      "Signature: [[karma:The Wind That Protects the Kingdom]] (exclusive shop): +10% Crit Rate, +20% Crit Damage, +20% Airborne Additional Damage, and Tempest's sword aura. Second: [[karma:A Path That Leads to the Wind]].",
+      "**Priority: low.** About +7% team damage in Royal Inferno; Tempest hits up to 20 times and pierces."
      ],
      "gear": [
       "3 [[set:Azure Gale]] + 2 [[set:The Infiltrator]]."
@@ -8193,7 +8194,8 @@
       "**Best stop: [[awk:1]].** The rest are small gains for a support; [[awk:5]] adds Shock damage and Crit Rate if he deals damage too."
      ],
      "karma": [
-      "Signature: [[karma:Fate Spoke to the Boy]] (exclusive shop): +10% Crit Rate, +10% Crit Damage, +20% Shock Additional Damage, and Rage back when retrieving the relic. Second: [[karma:The One Chosen by Lightning]]."
+      "Signature: [[karma:Fate Spoke to the Boy]] (exclusive shop): +10% Crit Rate, +10% Crit Damage, +20% Shock Additional Damage, and Rage back when retrieving the relic. Second: [[karma:The One Chosen by Lightning]].",
+      "**Priority: high.** About +21% team damage in Thunder Chorus: the relic refunds his skill, so he builds a full Shock stack by himself."
      ],
      "gear": [
       "3 [[set:Thunderrush]] + 2 [[set:Battle Will]], with Max HP Up on the chest and Defense Up on the legs."
@@ -8935,7 +8937,8 @@
       "[[awk:2]] (+15% Defense) adds nothing to her damage."
      ],
      "karma": [
-      "Signature: [[karma:Noisy Duet]] (exclusive shop): +20% Attack Power, +1100 Break Additional Attack Power and +20% Break Additional Damage, plus the held Howling. Second: [[karma:Destruction Is the Mother of Creation]]."
+      "Signature: [[karma:Noisy Duet]] (exclusive shop): +20% Attack Power, +1100 Break Additional Attack Power and +20% Break Additional Damage, plus the held Howling. Second: [[karma:Destruction Is the Mother of Creation]].",
+      "**Priority: low.** About +8% team damage in Crimson Verdict; a held Howling breaks Super Armor much faster."
      ],
      "gear": [
       "3 [[set:Ruinsbreaker]] + 2 [[set:The Infiltrator]]. Ruinsbreaker's 3-piece gives +10% Defense Ignore for 6 s when attacking enemies in Break."
