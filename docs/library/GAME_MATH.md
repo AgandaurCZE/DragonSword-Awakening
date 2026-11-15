@@ -157,6 +157,13 @@ Terms:
 - **Tarte A3 Bolt Bubble casts 40 bubbles** but she can't pop the extra ones herself: they feed other Shock heroes.
 - Full break times alone, base → mastery → awakenings: Kalien 25 → 20 → 15 (A1) → 12 (A3) → 10 s (A6); Dana 23 → 20 (A3) → 15 s (A6); Reina 50 → 44 (A3) → 36 s (A6); Castella 18 → 16 → 15 s (A6); Lute 75 → 41 s (mastery).
 
+### 3.7 Why matched teams pull so far ahead (15 Nov; David's panels and team runs)
+Every factor of 3.1 multiplies the others, so a team that matches its **statuses, AAP and uptime** gains on all of them at once.
+- **Per hit, Shock + Knockdown on the Ogre, per 100% of skill** (geared panels, 15 Nov): Ryza ≈ 9,300 (AAP 2058 with All AAP 169 and 22% AAP Increase: ×1.37; Crit 63% × 66%), Ornette ≈ 9,500 (10,400 in Holy Circle), Sion ≈ 7,600; inside Sion's blessing (+15% Attack, +10% Crit Rate, assumed on panel Attack) about 10,800 / 11,600 / 9,300. Theresia and Roxy with Bleed + Stun: ≈ 6,900 each (Crit Rate 30% / 21%, no All AAP or AAP Increase; Roxy has no Bleed AAP).
+- **Team runs:** Ryza + Ornette + Sion 14M (17M with Sion's signature) against Theresia + Roxy + Castella 3.9M in 1 minute. Panels and buffs explain about **1.7×**; the other **~2×** is uptime: the Shock team keeps Shock and Knockdown up almost all the minute, adds Airborne, and breaks the Ogre often.
+- **Breaking pays three times:** physical statuses build twice as fast on a broken target, Break counts as one more status for AAP (All AAP again, plus Break AAP) and Break Additional Damage, and skills gated on physical statuses (Ryza's Thunder Grab with Mastery) come up more often. Fast breakers help most in a team that cashes in the broken window.
+- **AAP on statuses the team never applies is wasted.** On 15 Nov only Ryza was fully matched; Ornette and Sion had no Shock AAP (their Burn, Frost, Bleed and Poison AAP does nothing in a Shock team), Theresia and Roxy carried Burn, Frost, Shock and Poison AAP in a Bleed team. Substats: Crit Rate, All Status AAP, AAP Increase and the team's own status AAP first.
+
 ## 4. Builds and the optimiser (`tools/hero_stats.py`, its JS port in `js/04-gear-builds.js`) · 30 Oct
 - **Damage index = Attack × (1 + Crit Rate × Crit Damage)** (crit capped at 100%), from base + signature Karma at A6 + all six awakenings + gear + the 2-piece set's always-on bonus. 3-piece bonuses are left out except Blazing Flames' Crit Rate for Aria, Kalien and Kalsion.
 - A status set's +15% Additional Damage counts only for the share of hits that need that status (formula in the script's docstring).

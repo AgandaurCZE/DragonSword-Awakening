@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 15 Nov 2026 — GAME_MATH 3.7: why matched teams pull ahead (notes only; Claude)
+- From David's geared stat panels (Ryza, Ornette, Sion, Theresia, Roxy) and team runs: per-hit comparison, the 1.7× from stats and buffs against the ~2× from status uptime and breaking, why breaking pays three times, and wasted off-status AAP. No site or data change. `check_all.py`: passes apart from the YouTube thumbnails.
+
 ## 15 Nov 2026 — Signature team tests: Sion, Reina, Castella (Claude)
 - David's geared 1-minute runs (TEAM_TESTS): Sion +21% (14M → 17M, Thunder Chorus), Reina +7% (4.1M → 4.4M, Royal Inferno), Castella +8% (3.9M → 4.2M, Holy Bleed). Signature Karma priority lines added to their reviews (`review.investment.karma`): Sion high, Reina and Castella low.
 - `check_all.py`: passes apart from the YouTube thumbnails (David: ignore those). Not pushed yet (batch).
