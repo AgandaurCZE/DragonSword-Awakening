@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 16 Nov 2026 — Alex at A6 (notes only; Claude)
+- David's A6 + signature readings in AWAKENING_TESTS: Guard Counter Knockdown about 0.30, gauge about 10%, Defense debuff 10 s; from his damage readings the debuff works out to about −10% Defense at shield Lv.1 and about −30% at Lv.2. No site change. Pushed without the local browser check.
+
 ## 16 Nov 2026 — Signature team tests: Astria, Johnny, Aria, Eileen, Lute (Claude)
 - David's 1-minute Ogre runs, Lv.1 normal Karma vs Lv.1 signature (TEAM_TESTS): Aria +22%, Eileen +16%, Johnny +30% (aim-dependent; one normal run reached 2.5M), Astria −12% (no real change), Lute −5% (no Knockdown in that team, so his relic never dropped). Priority lines added to their reviews: Aria high, Johnny and Eileen medium, Astria and Lute low. Pushed without the local browser check (David, 15 Nov).
 
