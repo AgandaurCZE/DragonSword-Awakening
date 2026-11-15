@@ -1,5 +1,10 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 15 Nov 2026 — Patches update the hero data automatically (Claude)
+- David: Steam patch notes count as the codex. New `tools/apply_patch_skills.py`: for each balance patch newer than `meta.balancePatch`, recognised skill damage changes rewrite that skill's "Attack Power N%" text and `meta.attackPct`; a skill that doesn't show the old value is reported, not changed. `.github/workflows/steam-news.yml` runs it and `tools/hero_stats.py --write` after the fetch and commits `data.json` with the feed. Replayed on today's data: nothing to change (1.1.0 already applied); a simulated 1.2.0 row applied once and was idempotent.
+- Tier list: a hero changed by a balance patch after `meta.tierReviewedPatch` gets a dashed tier chip and the hover line "Changed in patch X, after this rating; the rating will be reviewed." (`v2PatchedSince()`, `07` and `site.css` `?v=20261115-patchauto`). `check_site.py` checks it with the 1.2.0 test feed. AGENTS core rule 1 and SITE.md updated.
+- Pushed without the local browser check (David, 15 Nov); GitHub's run is the check.
+
 ## 15 Nov 2026 — No more "assumed" status notes in the calculator (Claude)
 - David: every elemental status works the same everywhere (Frost only adds the Frozen shatter), and every physical status too. `TOWER_TRIALS.bonus.dotTested` now Poison, Bleed, Burn, Shock; `DAMAGE_CALC.weaknessMeasured` all eight statuses; Frozen's and Break's `untested` notes removed (Break counts in the AAP sum and its Additional Damage joins the pool, GAME_MATH 3.1/3.7). The Damage Calculator no longer shows any "taken to…" status note. GAME_MATH updated. Pushed without the local browser check (GitHub's run is the check).
 

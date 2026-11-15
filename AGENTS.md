@@ -69,7 +69,7 @@ Item Database and Achievements read `assets/items/*.json` when opened.
 
 ## Core data rules
 
-1. **Never invent numbers.** Hero skill data comes from the in-game codex; Karma stats, gear-set effects and Recommended Combinations from David's screenshots. If sources conflict, the codex wins: flag it, don't guess.
+1. **Never invent numbers.** Hero skill data comes from the in-game codex and the official Steam patch notes, which count the same (David, 15 Nov 2026: `tools/apply_patch_skills.py` applies recognised skill changes automatically in the Steam workflow); Karma stats, gear-set effects and Recommended Combinations from David's screenshots. If sources conflict, the codex wins: flag it, don't guess.
 2. **Tiers are never set by formula.** `TIER_LIST_V2.heroes` holds only ratings agreed with David.
 3. Keep names exact: heroes, Karmas, sets, stats and archetypes are cross-references. Some profile sentences have fixed formats, so check "Text formats" in the reference before editing them.
 4. If the Python optimiser (`tools/hero_stats.py`) changes, change its JS port in `src/js/04-gear-builds.js` too; the same for `tools/team_gear.py` and `gmBuild` (golden rule 6: the browser check compares them).

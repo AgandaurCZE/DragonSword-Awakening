@@ -156,8 +156,26 @@ function v2Card(h) {
       ? `<span class="v2-karma" data-karma="${profileEsc(sig.name)}" data-v2tip="${profileEsc(`Signature Karma: ${sig.name}. ${sig.exclusive || ''}`)}"><svg viewBox="0 0 16 16" aria-hidden="true">${V2_ICONS.karma}</svg></span>`
       : '';
   const a = latestArrow(h.name);
+  const stale = v2PatchedSince(h.name);
   const off = V2.tagsOff !== V2.tagFlip.has(h.name);
-  return `<div class="hero-card v2-card${tags && off ? ' tags-off' : ''}" data-hero="${profileEsc(h.name)}" style="--tier:${t ? v2TierColor(t) : '#4b5563'}"><div class="portrait-wrap"><a class="tier-hero-link" href="${profileEsc(heroLinkUrl(h.name))}" aria-label="Open ${profileEsc(h.name)} character page"><img class="portrait" src="${h.portrait}" alt="" loading="lazy"></a><span class="arch-badge"><img src="${h.archIcon}" alt="${profileEsc(h.archetype)}"></span>${a ? `<span class="patch-arrow" data-patch-hero="${profileEsc(h.name)}">${a}</span>` : ''}<span class="tier-chip${fallback ? ' v2-fallback' : ''}">${t || '?'}</span>${kb}</div><div class="hero-name">${profileEsc(h.name)}</div>${tags ? `<button type="button" class="v2-tagtog" aria-expanded="${!off}" aria-label="${off ? 'Show' : 'Hide'} tags" title="${off ? 'Show' : 'Hide'} tags"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="v2-tags">${tags}</div>` : ''}</div>`;
+  return `<div class="hero-card v2-card${tags && off ? ' tags-off' : ''}" data-hero="${profileEsc(h.name)}" style="--tier:${t ? v2TierColor(t) : '#4b5563'}"><div class="portrait-wrap"><a class="tier-hero-link" href="${profileEsc(heroLinkUrl(h.name))}" aria-label="Open ${profileEsc(h.name)} character page"><img class="portrait" src="${h.portrait}" alt="" loading="lazy"></a><span class="arch-badge"><img src="${h.archIcon}" alt="${profileEsc(h.archetype)}"></span>${a ? `<span class="patch-arrow" data-patch-hero="${profileEsc(h.name)}">${a}</span>` : ''}<span class="tier-chip${fallback ? ' v2-fallback' : ''}${stale ? ' v2-stale' : ''}"${stale ? ` title="Changed in patch ${profileEsc(stale)}, after this rating"` : ''}>${t || '?'}</span>${kb}</div><div class="hero-name">${profileEsc(h.name)}</div>${tags ? `<button type="button" class="v2-tagtog" aria-expanded="${!off}" aria-label="${off ? 'Show' : 'Hide'} tags" title="${off ? 'Show' : 'Hide'} tags"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="v2-tags">${tags}</div>` : ''}</div>`;
+}
+// Newest balance patch that changed this hero after the tier list was last reviewed (meta.tierReviewedPatch), or ''.
+// Skill values follow patches automatically (tools/apply_patch_skills.py); ratings are reviewed by hand.
+function v2PatchedSince(name) {
+  const num = (v) =>
+    String(v || '0')
+      .split('.')
+      .map(Number);
+  const newer = (a, b) => {
+    const [x, y] = [num(a), num(b)];
+    for (let i = 0; i < 3; i++) if ((x[i] || 0) !== (y[i] || 0)) return (x[i] || 0) > (y[i] || 0);
+    return false;
+  };
+  const p = ((PATCH_NOTES || {}).patches || []).find(
+    (x) => x.balance && newer(x.version, DATA_META.tierReviewedPatch) && (x.heroChanges || {})[name],
+  );
+  return p ? p.version : '';
 }
 function v2TipHtml(h) {
   const H0 = v2Hero(h.name),
@@ -180,7 +198,7 @@ function v2TipHtml(h) {
     return l
       ? `<div class="tip-note">${patchArrow(l.c, l.version)} Patch ${profileEsc(l.version)}: ${profileEsc(patchDirLabel(l.c))}${l.c.damagePct != null ? ` (skill damage ${l.c.damagePct > 0 ? '+' : ''}${l.c.damagePct}%${l.c.shiftPct ? `, ${l.c.shiftPct}% moved between skills` : ''})` : ''}</div>`
       : '';
-  })()}${H0.expert ? `<div class="tip-note"><b style="color:#ef4444">Expert −${H0.expert.drop}:</b> ${profileEsc(H0.expert.reason || '')}</div>` : ''}<div class="tip-note">Click for the full guide.</div>`;
+  })()}${v2PatchedSince(h.name) ? `<div class="tip-note v2-stale-note">Changed in patch ${profileEsc(v2PatchedSince(h.name))}, after this rating; the rating will be reviewed.</div>` : ''}${H0.expert ? `<div class="tip-note"><b style="color:#ef4444">Expert −${H0.expert.drop}:</b> ${profileEsc(H0.expert.reason || '')}</div>` : ''}<div class="tip-note">Click for the full guide.</div>`;
 }
 function v2ShowTip(h, el) {
   const tip = $('tooltip');

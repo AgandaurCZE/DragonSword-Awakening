@@ -8219,3 +8219,12 @@ a.shortcut-card:focus-visible {
     height: 80px;
   }
 }
+
+/* Tier list: hero changed by a balance patch after the last rating review (v2PatchedSince, 15 Nov 2026) */
+.tier-chip.v2-stale {
+  outline: 2px dashed #f0b94a;
+  outline-offset: 1px;
+}
+.v2-stale-note {
+  color: #f0b94a;
+}

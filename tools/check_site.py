@@ -883,6 +883,8 @@ def steam_news(browser, base):
     assert page.locator('#newsBody iframe').first.get_attribute('src').endswith('VLFUtQv25W4?autoplay=1')
     assert page.locator('#patchLabel').text_content() == '1.2.1'
     assert page.evaluate("latestBalanceChange('Eileen').version") == '1.2.0'
+    # A hero changed by a balance patch after meta.tierReviewedPatch gets the dashed "changed after this rating" chip (15 Nov 2026).
+    assert page.evaluate("v2PatchedSince('Eileen')") == '1.2.0'
     assert '1.1.0' in page.locator('#tierPatchLabel').text_content()
     page.evaluate("navNavigate({page:'patches'})")
     assert page.locator('.patch-entry').first.get_attribute('id') == 'patch-1-2-1'
