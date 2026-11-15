@@ -1,5 +1,13 @@
 # Done: finished tasks and answered questions
 
+## 15 Nov — Hero reviews rewritten
+
+All 19 reviews (Alex left empty) with nicknames, lore titles, A0/A6 ratings, groups vs bosses, new pros and cons, current teams and Signature Karma priorities.
+
+## 15 Nov — Jerome on the Heroes page
+
+Jerome is shown as an upcoming hero (purple UPCOMING badge, hover card); Veronica and Logan are recorded in the Lentus Rebellion.
+
 ## 15 Nov — Finder Frost tip and menu icons
 
 The Frost and Freeze tip follows Hunt weakness and difficulty. Six sidebar placeholders have matching outline icons for Shortcuts, Finder, Normal Dungeons, Currency Dungeons, Gear and Karma.

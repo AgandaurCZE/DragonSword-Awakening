@@ -671,6 +671,16 @@
          "record": {
           "opt": {},
           "req": {
+           "bosses": {
+            "types": [
+             "string"
+            ]
+           },
+           "groups": {
+            "types": [
+             "string"
+            ]
+           },
            "howToPlay": {
             "record": {
              "opt": {},
@@ -798,12 +808,22 @@
              ]
             }
            },
+           "tag": {
+            "types": [
+             "string"
+            ]
+           },
            "teams": {
             "list": {
              "types": [
               "string"
              ]
             }
+           },
+           "title": {
+            "types": [
+             "string"
+            ]
            },
            "updated": {
             "types": [
@@ -835,7 +855,10 @@
             }
            }
           }
-         }
+         },
+         "types": [
+          "null"
+         ]
         },
         "role": {
          "types": [
@@ -2808,17 +2831,11 @@
             "types": [
              "string"
             ]
-           },
-           "note": {
-            "types": [
-             "string"
-            ]
            }
           },
           "req": {
            "method": {
             "types": [
-             "null",
              "string"
             ]
            }
@@ -5964,6 +5981,56 @@
       "types": [
        "string"
       ]
+     }
+    },
+    "UPCOMING_HEROES": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "archIcon": {
+         "types": [
+          "null",
+          "string"
+         ]
+        },
+        "archetype": {
+         "types": [
+          "null",
+          "string"
+         ]
+        },
+        "arrives": {
+         "types": [
+          "null",
+          "string"
+         ]
+        },
+        "faction": {
+         "types": [
+          "string"
+         ]
+        },
+        "facts": {
+         "list": {
+          "types": [
+           "string"
+          ]
+         }
+        },
+        "name": {
+         "types": [
+          "string"
+         ]
+        },
+        "portrait": {
+         "types": [
+          "null",
+          "string"
+         ]
+        }
+       }
+      }
      }
     },
     "meta": {

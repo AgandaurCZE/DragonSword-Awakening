@@ -933,6 +933,19 @@ def team_links(browser, base):
     page.goto(base + 'heroes')
     page.wait_for_function('NAV.ready')
     assert page.locator('.heroes-character-card').first.get_attribute('href')
+    # Upcoming heroes (15 Nov 2026): every UPCOMING_HEROES entry with a portrait has a card with the purple badge,
+    # no link to a guide page, and a hover card that names the hero, the faction and "not revealed yet".
+    want = page.evaluate("(UPCOMING_HEROES||[]).filter(h=>h.portrait).map(h=>h.name)")
+    cards = page.locator('.heroes-upcoming')
+    if cards.count() != len(want) or (want and cards.first.get_attribute('href')):
+        raise AssertionError(f'upcoming hero cards: {cards.count()} for {want}')
+    if want:
+        cards.first.click()
+        pop = page.locator('#karmaPopover')
+        pop.wait_for(state='visible')
+        text = pop.inner_text()
+        if want[0] not in text or 'UPCOMING' not in text or 'not revealed yet' not in text:
+            raise AssertionError(f'upcoming hero hover card: {text!r}')
     page.locator('.nav-item[data-page="tier"]').click()
     assert page.locator('.tier-hero-link').first.get_attribute('href')
     ctx.close()

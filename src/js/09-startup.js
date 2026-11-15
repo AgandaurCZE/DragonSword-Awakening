@@ -314,6 +314,7 @@ fetch('data.json', {
     RUNES = d.RUNES || null;
     GEAR_MODEL = d.GEAR_MODEL || null;
     KARMA_LEVELLING = d.KARMA_LEVELLING || null;
+    UPCOMING_HEROES = d.UPCOMING_HEROES || [];
     GUIDES = d.GUIDES || { categories: [] };
     LEVEL_COSTS = d.LEVEL_COSTS || null;
     DAMAGE_CALC = d.DAMAGE_CALC || null;

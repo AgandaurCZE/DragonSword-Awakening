@@ -140,7 +140,15 @@ function renderHeroes() {
       (!activeHeroesArch || h.archetype === activeHeroesArch) &&
       (!activeHeroesRole || v2Role(h) === activeHeroesRole),
   );
-  $('heroesCount').textContent = `Showing ${list.length} characters`;
+  // Announced heroes (UPCOMING_HEROES): shown after the released ones, only with a portrait; no guide page yet.
+  const soon = (UPCOMING_HEROES || []).filter(
+    (h) =>
+      h.portrait &&
+      (!q || h.name.toLowerCase().includes(q)) &&
+      (!activeHeroesArch || h.archetype === activeHeroesArch) &&
+      !activeHeroesRole,
+  );
+  $('heroesCount').textContent = `Showing ${list.length + soon.length} characters`;
   const grid = $('heroesGrid');
   grid.innerHTML = '';
   list.forEach((h) => {
@@ -166,7 +174,25 @@ function renderHeroes() {
     card.addEventListener('blur', () => hideKarmaPopover());
     grid.append(card);
   });
-  if (!list.length) grid.innerHTML = '<div class="heroes-empty">No characters match your search and filters.</div>';
+  soon.forEach((h) => {
+    const card = document.createElement('div');
+    card.className = 'heroes-character-card heroes-upcoming';
+    card.tabIndex = 0;
+    card.setAttribute('aria-label', `${h.name}, upcoming hero`);
+    card.innerHTML = `<img class="heroes-portrait" src="${h.portrait}" alt="${h.name}" loading="lazy"><span class="heroes-new heroes-soon">UPCOMING</span><div class="heroes-char-name">${h.name}</div>`;
+    card.addEventListener('pointerenter', (e) => {
+      if (e.pointerType !== 'touch') showHeroCard(h, card);
+    });
+    card.addEventListener('pointerleave', (e) => {
+      if (!$('karmaPopover').contains(e.relatedTarget)) hideKarmaPopover();
+    });
+    card.addEventListener('click', () => showHeroCard(h, card));
+    card.addEventListener('focus', () => showHeroCard(h, card));
+    card.addEventListener('blur', () => hideKarmaPopover());
+    grid.append(card);
+  });
+  if (!list.length && !soon.length)
+    grid.innerHTML = '<div class="heroes-empty">No characters match your search and filters.</div>';
 }
 
 // ---- Patch Notes (PATCH_NOTES in data.json) ----

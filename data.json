@@ -40,7 +40,8 @@
    "role": "Sub-DPS",
    "classType": "Damage / Control",
    "obtain": {
-    "method": "Story Quests"
+    "method": "Story Quests",
+    "cost": "after quest 10"
    },
    "faction": "Johnny Mercenaries"
   },
@@ -58,7 +59,7 @@
    "role": "Support",
    "classType": "Healer",
    "obtain": {
-    "method": "Story Quests"
+    "method": "Starting hero"
    },
    "faction": "Johnny Mercenaries"
   },
@@ -94,7 +95,8 @@
    "role": "Sub-DPS",
    "classType": "Damage / Control",
    "obtain": {
-    "method": "Story Quests"
+    "method": "Story Quests",
+    "cost": "after reaching the city"
    },
    "faction": "Johnny Mercenaries"
   },
@@ -207,7 +209,8 @@
    "role": "Sub-DPS",
    "classType": "Damage / Control",
    "obtain": {
-    "method": "Story Quests"
+    "method": "Story Quests",
+    "cost": "after quest 20"
    },
    "faction": "Organa Order"
   },
@@ -263,8 +266,8 @@
    "role": "Main DPS",
    "classType": "Damage / Control",
    "obtain": {
-    "method": null,
-    "note": "Not recorded yet"
+    "method": "Story Quests",
+    "cost": "after quest 40"
    },
    "faction": "Orbis Kingdom"
   },
@@ -282,8 +285,8 @@
    "role": "Sub-DPS",
    "classType": "Damage / Control",
    "obtain": {
-    "method": null,
-    "note": "Not recorded yet"
+    "method": "Story Quests",
+    "cost": "after quest 30"
    },
    "faction": "Orbis Kingdom"
   },
@@ -358,8 +361,8 @@
    "role": "Main DPS",
    "classType": "Damage / Control",
    "obtain": {
-    "method": null,
-    "note": "Not recorded yet"
+    "method": "Story Quests",
+    "cost": "after quest 50"
    },
    "faction": "Lentus Rebellion"
   },
@@ -397,11 +400,42 @@
    "classType": "Damage / Control",
    "obtain": {
     "method": "Story Quests",
-    "cost": "Adventure Quest 53. Reunion",
-    "note": "Main story quest 53 (Chapter 6). The Codex lists her under Other; her in-game profile says The Six Heroes."
+    "cost": "after quest 53 (Reunion)"
    },
    "faction": "Other",
    "profileFaction": "The Six Heroes"
+  }
+ ],
+ "UPCOMING_HEROES": [
+  {
+   "name": "Jerome",
+   "archetype": "Bloodburst",
+   "portrait": "assets/heroes/jerome.webp",
+   "archIcon": "assets/archetypes/bloodburst.webp",
+   "faction": "Lentus Rebellion",
+   "arrives": "December update",
+   "facts": [
+    "Fights with a sword",
+    "Has a parry, like Alex"
+   ]
+  },
+  {
+   "name": "Veronica",
+   "archetype": null,
+   "portrait": null,
+   "archIcon": null,
+   "faction": "Lentus Rebellion",
+   "arrives": null,
+   "facts": []
+  },
+  {
+   "name": "Logan",
+   "archetype": null,
+   "portrait": null,
+   "archIcon": null,
+   "faction": "Lentus Rebellion",
+   "arrives": null,
+   "facts": []
   }
  ],
  "ROLE_ICONS": {
@@ -4264,30 +4298,29 @@
     ]
    },
    "pros": [
-    "Applies Poison and Airborne himself, so he unlocks his own Venom Cutter (1456%) and Poison Grab.",
-    "Sub-DPS of the S-tier Venom team with Charlotte and Reina, where every conditional skill stays live.",
-    "A1 lets him use Phantom Slash twice in a row: double the burst and a second Airborne launch.",
-    "His signature Karma leaves Poison-inflicting blades along Phantom Slash's path."
+    "S tier and in your team from quest 10",
+    "Two statuses from one skill (Poison + Airborne)",
+    "Half of the fastest Ursula team"
    ],
    "cons": [
-    "His damage sits below Charlotte's, so he works best as her partner rather than the lead.",
-    "Venom Cutter needs Airborne, so his biggest hit waits on Phantom Slash, Venom Dance or a teammate.",
-    "Poison ticks use the Attack of whoever applied the first stack, so if he poisons before a stronger main damage dealer, the ticks are weaker."
+    "Best next to Charlotte; outside Venom teams he's a solid sub-DPS, not a star"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "him",
+    "tag": "The Great Johnny (his words)",
+    "title": "Leader of the Johnny Mercenary Crew",
     "summary": [
-     "Johnny is a Venom sub-DPS who brings both halves of the Venom game plan himself: Poison from [[skill:Fatal Sting]], [[skill:Venom Dance]], [[skill:Venom Cutter]] and [[skill:Poison Grab]], and Airborne from Venom Dance, [[skill:Phantom Slash]] and Poison Grab at 2+ stacks. He's **A tier at every stage** and the second slot of the S-tier Venom team with [[hero:Charlotte]] and [[hero:Reina]].",
-     "Because he launches enemies himself, his biggest hit, Venom Cutter (1456%, needs Airborne), is easy to unlock, and it lands on a Poisoned, Airborne target at about 2.5× its normal damage (Poison +50%, Airborne +100%).",
-     "He's a partner more than a lead: Charlotte's kit has the bigger finisher ([[skill:Charlotte/Shadow Grab]], 1700%), so Johnny's job is to keep both statuses up for her."
+     "Johnny will tell you he's the greatest mercenary alive. Annoyingly, he's close: he's S for single target and groups, and for all the showing off, he'd never put someone else's life on the line to look good.",
+     "He joins after quest 10 and keeps Poison rolling for [[hero:Charlotte]]. [[skill:Venom Dance]] adds Poison and Airborne in one go, [[skill:Poison Grab]] turns two Poison stacks into a launch, and [[skill:Venom Cutter]], his hardest hit, waits for Airborne."
     ],
+    "groups": "Poisons and launches packs by himself; Venom Cutter comes up often.",
+    "bosses": "Poison builds slowly on a boss that isn't weak to it, and one launch skill every 10 seconds isn't enough. Let [[hero:Reina]] or a broken Super Armor handle the launching.",
     "verdict": {
-     "level": "good",
-     "label": "Yes, he's free",
+     "level": "great",
+     "label": "Yes, build him early",
      "text": [
-      "He comes from the Story Quests, he's A tier at every stage, and he's half of the strongest Venom team in the guide. Even without Charlotte he sets up his own combos.",
-      "His best awakening is [[awk:1]] (Phantom Slash twice in a row); [[awk:5]] is worth about +17% damage while Poison is up."
+      "He carries the early game and still belongs in the fastest team at the end."
      ]
     },
     "howToPlay": {
@@ -4380,8 +4413,7 @@
      ]
     },
     "teams": [
-     "**Venom (S tier):** [[hero:Charlotte]] + Johnny + [[hero:Reina]]. Two Poison sources and two Airborne sources keep every conditional skill in the team available.",
-     "**Gale (S tier):** Johnny can take [[hero:Reina]]'s slot next to [[hero:Kalsion]] and [[hero:Eileen]] (the game recommends him with Eileen), adding Poison and more Airborne."
+     "**Venom Cyclone (S):** [[hero:Charlotte]] + Johnny + [[hero:Reina]]"
     ]
    }
   },
@@ -4526,32 +4558,29 @@
     ]
    },
    "pros": [
-    "S tier at every stage of the game and the lead of the S-tier Venom team, which is the game's own recommendation for her.",
-    "Illusion Kick works on a Poisoned target or from her own Stealth, so she can open a combo without help.",
-    "Shadow Grab (1700%) is one of the biggest hits in the game, and Illusion Kick sets it up by launching the target Airborne.",
-    "Invisible adds +15% Crit Damage while hidden and takes her out of enemy targeting.",
-    "A5 (+15% Poison Additional Damage, +10% Crit Rate) is worth about +17% damage while Poison is on the target."
+    "S single target, S+ with awakenings",
+    "Stealth keeps Illusion Kick usable even without Poison",
+    "Leads the fastest Ursula team"
    ],
    "cons": [
-    "Only 2 of her skills apply Poison (Poison Step and Poison Dagger), so keeping it up relies on Johnny or careful rotation.",
-    "Shadow Grab needs Airborne, so her biggest hit waits on Illusion Kick or a partner like Reina.",
-    "A3's pull-in only helps against groups; it adds nothing on a lone boss."
+    "Expert: misplaced Stealth wastes her best window",
+    "Only A in groups without awakenings"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "The Informant",
+    "title": "Informant of the Lentus Rebellion",
     "summary": [
-     "Charlotte is a Venom main damage dealer who plays like an assassin: she Poisons the target, launches it with [[skill:Illusion Kick]] and finishes with [[skill:Shadow Grab]] (1700%), one of the biggest hits in the game. She is **S tier at every stage**, and she leads the S-tier Venom team, which is the game's own recommendation for her.",
-     "What makes her special is that she can start her combo on her own. Illusion Kick works on a Poisoned target **or** from her own Stealth ([[skill:Invisible]]), so she never has to wait for a teammate to unlock her skills. Every hit she lands on a Poisoned, Airborne enemy gets the status bonuses (+50% for Poison, +100% for Airborne), so her finisher lands at about 2.5× its normal damage.",
-     "Her weak spot is Poison uptime: only [[skill:Poison Step]] and [[skill:Poison Dagger]] apply it, so she keeps it up best next to [[hero:Johnny]]. Her A3 pull-in also does nothing against a lone boss."
+     "Everyone knows Charlotte as the Informant. She still runs with the Rebellion, though lately she's not fond of how far they're willing to go. In a fight she's the assassin of the roster: she vanishes with [[skill:Invisible]], comes back with [[skill:Illusion Kick]] and slams the target down with [[skill:Shadow Grab]], one of the hardest hits in the game.",
+     "Stealth opens Illusion Kick, so she's never fully locked out, but her full combo still wants Poison and Airborne on the target. It rewards good timing, which is why she carries the Expert tag."
     ],
+    "groups": "Strong, but she shines most against single targets (S, rising to S+ with awakenings).",
+    "bosses": "Her best mode. Keep [[hero:Johnny]] on Poison and [[hero:Reina]] on launches so Shadow Grab is ready when the boss goes up.",
     "verdict": {
      "level": "great",
-     "label": "Yes, a top pick",
-     "text": [
-      "She is one of only three heroes rated S at every stage, she's a Main DPS, and her team is the strongest Venom setup in the guide. If you're spending **Fate's Invitations** in the Hero shop, she is one of the safest choices.",
-      "She works at A0 thanks to her self-sufficient combo. Her most valuable awakening is [[awk:5]] (about +17% damage); [[awk:1]] adds a big shuriken to Poison Dagger, a skill she uses all the time."
-     ]
+     "label": "Yes, if you like a challenge",
+     "text": []
     },
     "howToPlay": {
      "intro": [
@@ -4647,15 +4676,15 @@
       "[[awk:3]] is great in crowds but adds nothing on a lone boss; [[awk:2]], [[awk:4]] and [[awk:6]] are small gains."
      ],
      "karma": [
-      "Signature: [[karma:The Conviction Left in Darkness]] (exclusive shop). Its +475 Poison Additional Attack Power is about +12% Attack on every hit against a Poisoned target at end-game, plus +20% Poison Additional Damage. Second: [[karma:Defeating Poison with Poison]]."
+      "Signature: [[karma:The Conviction Left in Darkness]] (exclusive shop). Its +475 Poison Additional Attack Power is about +12% Attack on every hit against a Poisoned target at end-game, plus +20% Poison Additional Damage. Second: [[karma:Defeating Poison with Poison]].",
+      "**Priority: medium.** About +16% team damage in Venom Cyclone."
      ],
      "gear": [
       "3 [[set:Venomfog Shade]] + 2 [[set:The Infiltrator]]. [[set:Azure Gale]] is a close alternative for the 2-piece, since Shadow Grab always hits an Airborne target. Main stats and substats are on the Build tab."
      ]
     },
     "teams": [
-     "**Venom (S tier):** Charlotte + [[hero:Johnny]] + [[hero:Reina]]. Johnny doubles the Poison and Airborne sources, and Reina's launches keep Shadow Grab and Johnny's Venom Cutter available. [[hero:Eileen]] can replace Reina and adds +15% team Attack and +20% team Crit Rate.",
-     "**Gale (S tier):** Charlotte can take [[hero:Kalsion]]'s place as the damage dealer alongside [[hero:Eileen]] and [[hero:Reina]], where three Airborne sources keep Shadow Grab ready almost constantly."
+     "**Venom Cyclone (S):** Charlotte + [[hero:Johnny]] + [[hero:Reina]] ([[hero:Eileen]] for Reina adds team buffs)"
     ]
    }
   },
@@ -4793,31 +4822,31 @@
     ]
    },
    "pros": [
-    "Healing Circle restores 20% of max HP to the whole team.",
-    "Applies Stun (Stun Slash) and Knockdown (Swordgrab), unlocking those skills for teammates.",
-    "Swordgrab (1626%) and Relic Fall (1499%) give him real damage for a healer.",
-    "A1 makes Relic Fall leave a zone that raises allies' Attack Power."
+    "You have him from the first minute",
+    "The team healer",
+    "[[awk:1]] adds a team Attack Power zone",
+    "Part of a safe Ursula team under 2 minutes"
    ],
    "cons": [
-    "B tier from mid-game on.",
-    "His heal is a flat 20% of max HP, so gear can't make it stronger.",
-    "Relic Fall needs Knockdown first.",
-    "He fills the healer slot in B-tier teams and is only an alternative in Bloodburst."
+    "A in groups even with awakenings",
+    "Healing isn't needed in every fight"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "him",
+    "tag": "Don't make him angry",
+    "title": "The hero of the story",
     "summary": [
-     "Lute is an Amplitude healer. [[skill:Healing Circle]] restores 20% of max HP to himself and allies in range, and he adds Stun ([[skill:Stun Slash]]) and Knockdown ([[skill:Swordgrab]]) so teammates' conditional skills fire. He's **A tier early-game** and B tier after that.",
-     "Unusually for a healer he has two big hits: Swordgrab (1626%) and [[skill:Relic Fall]] (1499%, needs Knockdown). His Mastery also adds Stun to the hits of [[skill:Kick Combo]].",
-     "His heal is a flat 20% of max HP, so gear can't make it bigger; that's the main reason he drops to B tier later."
+     "Lute is the one you start the game with. He heals people with his magic, and when a fight looks lost, the dragon power inside him wakes up and flattens everything in sight. He never remembers it afterwards.",
+     "[[skill:Healing Circle]] gives back 20% Max HP to everyone in it, [[skill:Stun Slash]] Stuns and [[skill:Swordgrab]] knocks down for his own [[skill:Relic Fall]]. What makes him great later is [[awk:1]]: the relic stays on the field and raises your allies' Attack Power, which is how a healer ends up in Ursula speed-run teams."
     ],
+    "groups": "Solid; the healing matters most on long dungeon runs.",
+    "bosses": "His Stun feeds [[hero:Roxy]] and [[hero:Theresia]], but like every Stun, it takes several casts on a boss. The A1 Attack zone helps everyone standing in it.",
     "verdict": {
      "level": "good",
-     "label": "Yes, he's free",
+     "label": "Yes, keep him levelled",
      "text": [
-      "He comes from the Story Quests, so he costs nothing, and he's the healer in the guide's Stun teams (Amplitude and Breaker). He's also the alternative for [[hero:Astria]] in the A-tier Bloodburst team.",
-      "His best awakening is [[awk:1]]: Relic Fall leaves a zone that raises allies' Attack Power."
+      "A comfort pick early, and a real support once he reaches A1."
      ]
     },
     "howToPlay": {
@@ -4900,8 +4929,8 @@
      ]
     },
     "teams": [
-     "**Amplitude (B tier):** [[hero:Theresia]] + [[hero:Astria]] + Lute, the safest Stun team thanks to his heal.",
-     "**Breaker (B tier):** [[hero:Castella]] + [[hero:Astria]] + Lute. He's also the alternative for Astria in **Bloodburst (A tier)** and for [[hero:Sion]] in **Crushing**."
+     "**Crimson Verdict (A):** [[hero:Theresia]] + [[hero:Roxy]] + Lute",
+     "**Ursula (under 2 min):** [[hero:Alex]] + Lute + [[hero:Sion]]"
     ]
    }
   },
@@ -5089,32 +5118,28 @@
     ]
    },
    "pros": [
-    "S tier at end-game; she leads the Amplitude team and is the second damage dealer in the A-tier Bloodburst team.",
-    "Applies Stun and Bleed herself: Celestial Verdict Stuns, which unlocks Divine Arc (1570%), and Bleed unlocks Holy Rise.",
-    "In Heretic Judgment her auto attack applies Stun and Bleed, and Divine Arc keeps the mode going.",
-    "Her signature Karma (+1050 Stun and +525 Bleed Additional Attack Power, extra Bleed in Heretic Judgment) is a huge boost; with it the Bloodburst team is close to S.",
-    "A3 makes Divine Arc hit harder and extends Heretic Judgment."
+    "S with awakenings",
+    "Her and Roxy's signatures add about 27% team damage: get [[karma:Merciful Death Sentence]] first"
    ],
    "cons": [
-    "C tier early-game: she needs levels and her Karma before she shines.",
-    "Her best results depend on her signature Karma from the exclusive shop.",
-    "Using Celestial Verdict in Heretic Judgment cuts the mode short by 4 seconds."
+    "A without awakenings",
+    "Needs Roxy to shine"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "The Inquisitor with two flails",
+    "title": "Inquisitor of the Order of Organa",
     "summary": [
-     "Theresia is an Amplitude main damage dealer who chains Stun into Bleed: [[skill:Celestial Verdict]] Stuns, which unlocks [[skill:Divine Arc]] (1570%), and Divine Arc's Bleed unlocks [[skill:Holy Rise]]. She's **S tier at end-game**, but C tier early.",
-     "Divine Arc also enters or extends Heretic Judgment, a mode in which her auto attack applies Stun and Bleed, so once it's running she keeps both statuses up herself.",
-     "Her signature Karma is unusually important: +1050 Stun and +525 Bleed Additional Attack Power (about +29% and +15% of her end-game Attack on Stunned or Bleeding targets), more Divine Arc damage and extra Bleed in Heretic Judgment. With it, the Bloodburst team is close to S."
+     "The Order's Inquisitor doesn't do half measures. Theresia spins two flails and enters Heretic Judgment, where her basic attacks add Stun and Bleed. [[skill:Divine Arc]] wants Stun, [[skill:Holy Rise]] wants Bleed.",
+     "She's at her best next to [[hero:Roxy]], who supplies both. A without awakenings, S with them."
     ],
+    "groups": "Heretic Judgment spins through packs.",
+    "bosses": "Stun is slow on a boss; with Roxy and a broken Super Armor she gets Divine Arc out on time.",
     "verdict": {
-     "level": "great",
-     "label": "Yes, if you can wait for her",
-     "text": [
-      "She's a Hero shop exchange (Fate's Invitation) and one of the strongest end-game heroes, but she's weak early and leans on her exclusive-shop signature Karma.",
-      "Her best awakening is [[awk:3]]: Divine Arc hits harder and extends Heretic Judgment."
-     ]
+     "level": "good",
+     "label": "Yes for Bleed teams",
+     "text": []
     },
     "howToPlay": {
      "intro": [
@@ -5188,15 +5213,15 @@
       "**Best stop: [[awk:3]].** [[awk:4]] (+15% Bleed Additional Damage) is worth about +13% while Bleed is up, and [[awk:2]] (+15% Attack Power) about +9%."
      ],
      "karma": [
-      "Signature: [[karma:Merciful Death Sentence]] (exclusive shop): more important to her than any other signature Karma is to its hero, because two of its stats boost her two statuses. Second: [[karma:I'll Knock You Out Myself]]."
+      "Signature: [[karma:Merciful Death Sentence]] (exclusive shop): more important to her than any other signature Karma is to its hero, because two of its stats boost her two statuses. Second: [[karma:I'll Knock You Out Myself]].",
+      "**Priority: highest.** With [[hero:Roxy]]'s, about +27% team damage."
      ],
      "gear": [
       "3 [[set:Bloodstained Chaser]] + 2 [[set:The Infiltrator]]."
      ]
     },
     "teams": [
-     "**Amplitude (B tier):** Theresia + [[hero:Astria]] + [[hero:Lute]], the safest Stun team; [[hero:Roxy]] can replace Astria for more damage.",
-     "**Bloodburst (A tier):** [[hero:Roxy]] + Theresia + [[hero:Astria]], close to S with her signature Karma. She's also the alternative for Astria in **Breaker**."
+     "**Crimson Verdict (A):** Theresia + [[hero:Roxy]] + [[hero:Lute]]; with [[hero:Castella]] it clears Ursula in under 2 minutes"
     ]
    }
   },
@@ -5371,110 +5396,9 @@
      }
     ]
    },
-   "pros": [
-    "The only tank: Taunt pulls enemies onto him and cuts their Attack by 10%.",
-    "Guard Counter lowers the target's Defense by 20%, which raises the whole team's damage.",
-    "His signature Karma cuts damage taken by him and nearby allies by 10% in Defensive Stance.",
-    "A6 adds a shield and Rage refunds in Defensive Stance."
-   ],
-   "cons": [
-    "Low damage: his kit and gear go into survival.",
-    "Guard Counter has to be timed with the enemy's attack.",
-    "His team, Crushing, is B tier.",
-    "Pounding Grab needs Knockdown (or Stun after A3)."
-   ],
-   "review": {
-    "updated": "28 Oct 2026",
-    "pronoun": "him",
-    "summary": [
-     "Alex is the only tank and the only Crushing hero. [[skill:Guard Stance]] puts him in Defensive Stance, where he takes less Super Armor damage and counters hits with a shockwave; his Mastery makes it Taunt enemies in range and lowers their Attack by 10%. He's **A tier early-game** and B after that.",
-     "[[skill:Guard Counter]], timed with an enemy attack, cuts the target's Defense by 20%, which raises the whole team's damage, and Knocks it down for [[skill:Pounding Grab]].",
-     "His own damage is low by design: his kit and gear go into survival."
-    ],
-    "verdict": {
-     "level": "ok",
-     "label": "Only if you need a tank",
-     "text": [
-      "He's a Hero shop exchange (Fate's Invitation). Teams in the guide manage without a tank, and his team (Crushing) is B tier, so he's a comfort pick for hard fights.",
-      "His best awakening is [[awk:6]]: a stronger shield and Rage refunds in Defensive Stance."
-     ]
-    },
-    "howToPlay": {
-     "intro": [
-      "Hold enemy attention in Defensive Stance, time Guard Counter, and use Knockdown to open Pounding Grab."
-     ],
-     "loop": [
-      "Enter Defensive Stance with [[skill:Guard Stance]] (Taunt).",
-      "Time [[skill:Guard Counter]] with an enemy attack: −20% Defense and Knockdown.",
-      "Use [[skill:Pounding Grab]] on the knocked-down target.",
-      "Use [[skill:Knockdown Smash]] for Knockdown when Guard Counter isn't ready."
-     ],
-     "combos": [
-      {
-       "name": "Counter combo",
-       "sequence": [
-        "Guard Stance",
-        "Guard Counter",
-        "Pounding Grab"
-       ],
-       "note": "Guard Counter Knocks down and cuts Defense; Pounding Grab needs Knockdown (or Stun with [[awk:3]])."
-      },
-      {
-       "name": "Simple combo",
-       "sequence": [
-        "Knockdown Smash",
-        "Pounding Grab"
-       ],
-       "note": "Knockdown Smash opens Pounding Grab without timing a counter."
-      }
-     ]
-    },
-    "kit": [
-     {
-      "title": "[[skill:Guard Stance]] and Defensive Stance",
-      "points": [
-       "Less Super Armor depletion and a counter-shockwave when hit; his Mastery adds unconditional Taunt and −10% Attack on Taunted enemies.",
-       "His signature Karma adds +100% Super Armor resistance for a time and −10% damage taken for him and nearby allies in Defensive Stance; [[awk:1]] and [[awk:6]] strengthen it."
-      ]
-     },
-     {
-      "title": "[[skill:Guard Counter]] and [[skill:Pounding Grab]]",
-      "points": [
-       "Guard Counter (1172%) cuts the target's Defense by 20% on success and Knocks down.",
-       "Pounding Grab (1456%) needs Knockdown and raises the enemy's hostility towards him by 33%."
-      ]
-     }
-    ],
-    "investment": {
-     "skills": [
-      {
-       "priority": "High",
-       "text": "[[skill:Guard Stance]] and [[skill:Guard Counter]]."
-      },
-      {
-       "priority": "Medium",
-       "text": "[[skill:Knockdown Smash]] and [[skill:Pounding Grab]]."
-      },
-      {
-       "priority": "Low",
-       "text": "[[skill:Brandish]], [[skill:Dive Kick]] and [[skill:Dodge Combo]]."
-      }
-     ],
-     "awakening": [
-      "**Best stop: [[awk:6]].** [[awk:2]] (+40% Defense) and [[awk:1]] are solid; [[awk:3]] lets Pounding Grab use Stun."
-     ],
-     "karma": [
-      "Signature: [[karma:Loyalty Amidst Lethargy]] (exclusive shop): +30% Max HP, +1175 Knockdown Additional Attack Power, +20% Knockdown Additional Damage, plus the Defensive Stance damage reduction. Second: [[karma:Stay Sharp. Always]]."
-     ],
-     "gear": [
-      "3 [[set:Earthshatterer]] + 2 [[set:Battle Will]], with Max HP Up and Defense Up main stats everywhere."
-     ]
-    },
-    "teams": [
-     "**Crushing (B tier):** Alex + [[hero:Othello]] + [[hero:Sion]], the game's recommendation; both partners apply Knockdown for Pounding Grab.",
-     "He's also the alternative for [[hero:Dana]] in **Frostbite** as a Knockdown tank."
-    ]
-   }
+   "pros": [],
+   "cons": [],
+   "review": null
   },
   "Reina": {
    "archetype": "GALE",
@@ -5614,31 +5538,30 @@
     ]
    },
    "pros": [
-    "S tier at every stage and the Airborne starter in both S-tier teams (Venom and Gale).",
-    "Three of her skills apply Airborne, so Tempest (1515%) and Wind Grab (1582%) are almost always ready.",
-    "A3 is game-changing: Wind Grab resets Tempest's cooldown, looping her two biggest hits.",
-    "Airborne doubles every hit the team lands on the target while it's up (+100%), so her launches boost everyone.",
-    "Her Mastery lets her Dodge in mid-air."
+    "S+ for single target and groups, and easy to play",
+    "Airborne doubles every hit the team lands on the target",
+    "[[awk:3]] lets Wind Grab reset Tempest, looping her two biggest hits"
    ],
    "cons": [
-    "Tempest only works on an Airborne target, so her damage drops whenever the enemy can't be launched.",
-    "No healing, shields or team stat buffs: her value is the Airborne setup and her own damage.",
-    "Her A4 and A5 bonuses only count against Airborne targets."
+    "Tempest needs Airborne, so her damage dips while a boss refuses to go up",
+    "No healing, shields or team buffs"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "Captain Liftoff",
+    "title": "Knight Captain of the Orbis Kingdom",
     "summary": [
-     "Reina is the Gale enabler and one of three heroes rated **S at every stage**. She launches enemies with [[skill:Rising Cutter]], [[skill:Wind Slayer]] and [[skill:Wind Grab]], and her two biggest hits, [[skill:Tempest]] (1515%) and Wind Grab (1582%), both need Airborne, so she feeds herself.",
-     "Airborne doubles every hit the team lands on the target while it's up (+100%), so her launches boost everyone, not just her.",
-     "[[awk:3]] is the most game-changing awakening in the guide: Wind Grab resets Tempest's cooldown, looping her two biggest hits."
+     "The Knight Captain of Orbis doesn't wait for permission, she just sends the enemy into the sky. If you only build one Gale hero, make it Reina: she's the only hero rated S+ for single target and groups without a single awakening, and she's easy to play.",
+     "[[skill:Rising Cutter]] and [[skill:Wind Slayer]] launch, then [[skill:Tempest]] and [[skill:Wind Grab]], her two biggest hits, cash in on Airborne. Every launch also opens the best skills of whoever she's playing with."
     ],
+    "groups": "Launches whole packs on her own and keeps them up; Tempest and Wind Grab are almost always ready.",
+    "bosses": "One cast won't launch a boss, and her launchers need about 10 seconds to come back. Break the Super Armor first and save her launches for when the gauge is nearly full.",
     "verdict": {
      "level": "great",
-     "label": "Yes, a top pick",
+     "label": "Get her early",
      "text": [
-      "She's a Hero shop exchange (Fate's Invitation), S tier at every stage, and the Airborne starter in both S-tier teams (Venom and Gale).",
-      "Aim for [[awk:3]] as early as you can."
+      "The third slot of two S-tier teams, from the first chapters to the hardest content."
      ]
     },
     "howToPlay": {
@@ -5721,8 +5644,8 @@
      ]
     },
     "teams": [
-     "**Venom (S tier):** [[hero:Charlotte]] + [[hero:Johnny]] + Reina.",
-     "**Gale (S tier):** [[hero:Kalsion]] + [[hero:Eileen]] + Reina. She can also replace [[hero:Kalien]] in **Blazeflame** as Airborne setup."
+     "**Royal Inferno (S):** [[hero:Kalsion]] + [[hero:Kalien]] + Reina",
+     "**Venom Cyclone (S):** [[hero:Charlotte]] + [[hero:Johnny]] + Reina, the fastest Ursula team"
     ]
    }
   },
@@ -5858,30 +5781,29 @@
     ]
    },
    "pros": [
-    "Brave One gives +15% Attack to herself and allies in range.",
-    "Vanguard Banner (2295%) is the biggest skill hit in the game and gives +20% Crit Rate to allies in range.",
-    "Plays in both S-tier teams: Gale, and as an alternative in Venom.",
-    "Her signature Karma raises Crit Rate and Crit Damage further when Vanguard Banner is used inside Brave One's area."
+    "The best team buffs in the game",
+    "S+ in groups, S+ everywhere with awakenings",
+    "Fits any team that wants Airborne"
    ],
    "cons": [
-    "Vanguard Banner only works while the Brave One buff is active.",
-    "Rolling Upper needs Airborne, and Barraging Spear is her only skill listed as applying it.",
-    "B tier early-game."
+    "Expert: buffs are wasted out of range or at the wrong moment"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "Definitely not a noble",
+    "title": "8th Knights Templar Apprentice",
     "summary": [
-     "Eileen is a Gale sub-DPS and team buffer. [[skill:Brave One]] gives +15% Attack to herself and allies in range, and [[skill:Vanguard Banner]] (2295%, the biggest skill hit in the game) adds +20% Crit Rate in range, but only while Brave One's buff is active. She's **A tier from mid-game on**.",
-     "She also applies Airborne with [[skill:Barraging Spear]], which unlocks [[skill:Rolling Upper]] (1558%).",
-     "Her signature Karma raises Crit Rate and Crit Damage further when Vanguard Banner is used inside Brave One's area (the Karma calls it \"Banner Maid\")."
+     "Officially, Eileen is just the 8th Knights Templar Apprentice. Unofficially, she's a noble, and she'd rather you didn't mention it. On the battlefield she makes everyone around her stronger: [[skill:Brave One]] adds +15% Attack, and while it's up, [[skill:Vanguard Banner]] adds +20% Crit Rate.",
+     "She's also an Airborne starter with [[skill:Barraging Spear]]. The catch is timing: the buffs only reach allies in range, which is why she's Expert."
     ],
+    "groups": "S+: buffs and launches on everything in reach.",
+    "bosses": "S, S+ with awakenings. Line up the banner with your damage dealer's burst.",
     "verdict": {
-     "level": "good",
-     "label": "Yes for Gale teams",
+     "level": "great",
+     "label": "Yes, a top pick",
      "text": [
-      "She's a Hero shop exchange (Fate's Invitation), A tier from mid-game on, and plays in both S-tier teams (Gale, and Venom as an alternative).",
-      "Her best awakening is [[awk:1]]: a bigger Brave One area keeps the team inside her buff."
+      "A swap for [[hero:Reina]] in any S team."
      ]
     },
     "howToPlay": {
@@ -5964,8 +5886,7 @@
      ]
     },
     "teams": [
-     "**Gale (S tier):** [[hero:Kalsion]] + Eileen + [[hero:Reina]].",
-     "She's the alternative for [[hero:Reina]] in **Venom (S tier)**, trading some Airborne for her team buffs."
+     "**Royal Inferno / Venom Cyclone (S):** in [[hero:Reina]]'s slot for team buffs"
     ]
    }
   },
@@ -6112,30 +6033,30 @@
     ]
    },
    "pros": [
-    "Sets up her own Stun with Crimson Spiral, unlocking Kick Storm (1786%), one of the biggest hits in the game.",
-    "Applies Bleed with 5 skills, so Bleed and its +50% hit bonus stay up.",
-    "Leads the A-tier Bloodburst team, whose three Stun sources keep Kick Storm ready.",
-    "A6 adds hits to Kick Storm, and A5 is worth about +18% damage while Bleed is on the target."
+    "The Bleed core with Theresia",
+    "Her and Theresia's signatures add about 27% team damage, the biggest pair gain in the game",
+    "Ranged and safe"
    ],
    "cons": [
-    "Kick Storm needs Stun, so without Crimson Spiral or a Stun teammate her biggest hit is locked.",
-    "Bleeding Grab needs 2 Bleed stacks for its full combo and Knockdown.",
-    "Only one team is built around her; elsewhere she's an alternative pick."
+    "Only A without awakenings",
+    "Kick Storm waits for Stun"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "Bow first, kicks second",
+    "title": "Archer of the Red Fox Mercenaries",
     "summary": [
-     "Roxy is the Bloodburst main damage dealer and sets up her own big hit: [[skill:Crimson Spiral]] applies Bleed and Stun, which unlocks [[skill:Kick Storm]] (1786%, needs Stun), one of the biggest hits in the game. She's **A tier at every stage**.",
-     "Kick Storm lands on a Bleeding, Stunned target, so it gets +150% from those two statuses together. Five of her skills apply Bleed, so it stays up.",
-     "[[skill:Bleeding Grab]] rounds her out: at 1 Bleed stack it applies Bleed, at 2+ it Knocks down and allows continuous attacks during its Mount Action."
+     "Roxy loves her bow far more than her kicks, and she'd like you to know it. She's in the Red Fox Mercenaries, but not on [[hero:Kalien]]'s side: an administrative mix-up put two rival groups under one name, and the two of them keep stealing each other's jobs. [[hero:Alex]] follows her around as her bodyguard.",
+     "In battle she's the one who makes [[hero:Theresia]] work. [[skill:Crimson Spiral]] adds Bleed and Stun at once, and Stun opens her [[skill:Kick Storm]] and Theresia's Divine Arc. [[skill:Bleeding Grab]] turns Bleed stacks into a Knockdown. A without awakenings, S with them."
     ],
+    "groups": "Spreads Bleed easily and gets Stuns out on packs.",
+    "bosses": "Stun is slow on a boss; plan Kick Storm for a broken Super Armor or after a teammate's Stun.",
     "verdict": {
      "level": "good",
-     "label": "Yes for Bleed and Stun teams",
+     "label": "Yes for Bleed teams",
      "text": [
-      "She's a Hero shop exchange (Fate's Invitation), A tier at every stage, and the lead of the A-tier Bloodburst team, which is close to S once [[hero:Theresia]] has her signature Karma.",
-      "Her best awakening is [[awk:6]] (more hits on Kick Storm); [[awk:5]] is worth about +18% damage while Bleed is up."
+      "Get her alongside Theresia; one without the other loses most of the value."
      ]
     },
     "howToPlay": {
@@ -6210,15 +6131,15 @@
       "[[awk:4]] (Stun damage) is a smaller gain."
      ],
      "karma": [
-      "Signature: [[karma:The Noble Lady's Wild Hobby]] (exclusive shop): +10% Defense Ignore, +15% Attack Power, +20% Bleed Additional Damage, and more arrows from Kick Storm. Second: [[karma:Fangs Lurking in the Thicket]]."
+      "Signature: [[karma:The Noble Lady's Wild Hobby]] (exclusive shop): +10% Defense Ignore, +15% Attack Power, +20% Bleed Additional Damage, and more arrows from Kick Storm. Second: [[karma:Fangs Lurking in the Thicket]].",
+      "**Priority: highest.** With [[hero:Theresia]]'s, about +27% team damage."
      ],
      "gear": [
       "3 [[set:Bloodstained Chaser]] + 2 [[set:The Infiltrator]]. [[set:Holy Arbiter]] is a close alternative for the 2-piece, since Kick Storm always hits a Stunned target."
      ]
     },
     "teams": [
-     "**Bloodburst (A tier):** Roxy + [[hero:Theresia]] + [[hero:Astria]]; three Stun sources keep Kick Storm ready. [[hero:Lute]] can replace Astria.",
-     "She's also an alternative in **Amplitude** (for Astria; the game recommends her with Lute and Theresia) and in **Crushing** for [[hero:Othello]]."
+     "**Crimson Verdict (A):** [[hero:Theresia]] + Roxy + [[hero:Lute]]"
     ]
    }
   },
@@ -6369,30 +6290,30 @@
     ]
    },
    "pros": [
-    "Applies Burn and Airborne with almost every attack, keeping Kalsion's Burst Grab and Explosion ready.",
-    "A5 is worth about +20% damage while Burn is on the target.",
-    "Her signature Karma makes Switch On! explode bigger and add more Burn and Airborne."
+    "S in groups",
+    "Burn and Airborne from almost every attack",
+    "One of the first heroes you get"
    ],
    "cons": [
-    "B tier: her own damage is modest, and she's picked mainly for setup.",
-    "Only one team uses her, and it's A tier rather than S because she and Kalien are B-tier damage.",
-    "Multiple Bolt (1541%), her biggest hit, needs Airborne.",
-    "A3's Burn zone adds little when Kalsion and Kalien already keep Burn up."
+    "B single target without awakenings",
+    "Her value depends on having Kalsion"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "Academia dropout, bomb enthusiast",
+    "title": "Secret weapon of the Johnny Mercenary Crew",
     "summary": [
-     "Aria is a Blazeflame sub-DPS and the setup engine of the Blazeflame team: six of her skills apply both Burn and Airborne, which keeps [[hero:Kalsion]]'s [[skill:Kalsion/Burst Grab]] (needs Burn) and [[skill:Kalsion/Explosion]] (needs Airborne) ready. She's **B tier at every stage**.",
-     "She fights with Bomb Arrows: [[skill:Bolt Shot]] fires one every 3rd attack, [[skill:Multiple Bolt]] fires homing ones, and [[skill:Switch On!]] detonates them all at once.",
-     "Her own damage is modest (her biggest hit is Multiple Bolt at 1541%), and the Blazeflame team is A tier rather than S because she and [[hero:Kalien]] are B-tier damage."
+     "Aria is the smartest of Johnny's crew. She studied at the Academia, then quit to do what she really loves: blowing things up. Johnny keeps her as his secret weapon. Almost every bomb she throws adds Burn and Airborne, and [[skill:Switch On!]] sets off every Bomb Arrow on the field at once.",
+     "She joins as soon as you reach the city. Against packs she's S; against a single big target only B (A with awakenings), where her job is keeping [[hero:Kalsion]]'s Burn stacked."
     ],
+    "groups": "Excellent: every bomb splashes Burn and launches.",
+    "bosses": "Her launches add up slowly on a boss. Use her for Burn stacks and let a breaker or Reina handle the launch.",
     "verdict": {
      "level": "ok",
      "label": "Good if you play Kalsion",
      "text": [
-      "She's free from the Story Quests, so there's no reason not to have her. Her value is what she enables for Kalsion; on her own she's B tier.",
-      "Her best awakening is [[awk:5]] (+15% Burn Additional Damage, +15% Attack Power), about +20% damage while Burn is up."
+      "Swap her in for [[hero:Kalien]] or [[hero:Reina]] when the fight is all packs."
      ]
     },
     "howToPlay": {
@@ -6475,7 +6396,7 @@
      ]
     },
     "teams": [
-     "**Blazeflame (A tier):** [[hero:Kalsion]] + Aria + [[hero:Kalien]], the game's recommendation for all three. [[hero:Cerese]] is the alternative in her slot."
+     "**Royal Inferno (S):** swap for [[hero:Kalien]] or [[hero:Reina]] next to [[hero:Kalsion]]"
     ]
    }
   },
@@ -6624,31 +6545,28 @@
     ]
    },
    "pros": [
-    "Applies Burn with 7 skills, the most of any hero, so Burn stacks stay up for Kalsion.",
-    "Finale adds Stun, giving Blazeflame and Breaker teams a second status.",
-    "A1 lets Fox Grab fire on any Burning target, which is almost always."
+    "S, and S+ with awakenings",
+    "Burn on everything, plus Stun",
+    "Her signature adds about 25% team damage, a high priority"
    ],
    "cons": [
-    "C tier early-game.",
-    "Fox Grab, her biggest hit (1178%), needs Super Armor Break until A1.",
-    "Her skills have the lowest combined skill % of any hero in the guide.",
-    "A4 (Break Additional Damage) does almost nothing for her."
+    "Fox Grab is locked until Super Armor breaks"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "Fired from the forest",
+    "title": "Spiritmancer, former leader of the Spirit Forest",
     "summary": [
-     "Kalien is a Blazeflame support whose job is Burn: seven of her skills apply it, the most of any hero, and [[skill:Finale]] adds Stun. She's **C tier early-game** and B tier after that.",
-     "She fights through fox spirits: [[skill:Fox Parade]] and [[skill:Fox Chase]] summon them, [[skill:Fox Grab]] sends Sur's Clones to lift and slam enemies, and Finale detonates every clone at once.",
-     "Her skills have the lowest combined skill % of any hero in the guide, so she's in teams for Burn stacks and Stun rather than damage."
+     "Kalien once led the Spirit Forest, until she brought in a human who later turned on the spirits, and she had to step down. Now she's a mercenary with her fire fox Sur, sharing the Red Fox name with [[hero:Roxy]]'s group by pure paperwork accident. They don't get along.",
+     "Her foxes pull enemies together and burn them, every attack adds Burn, and [[skill:Finale]] blows up all of Sur's clones at once with a Stun. [[skill:Fox Grab]] needs a broken Super Armor, so she loves a team that breaks fast. S without awakenings, S+ with them."
     ],
+    "groups": "Foxes pull packs together for [[hero:Kalsion]]'s Explosion.",
+    "bosses": "Fox Grab only comes out on a broken boss; plan around the break.",
     "verdict": {
-     "level": "ok",
-     "label": "Only for Blazeflame",
-     "text": [
-      "She's a Hero shop exchange (Fate's Invitation), and her value is limited to keeping Burn up for [[hero:Kalsion]]. Spend Fate's Invitations on stronger heroes first.",
-      "If you do use her, [[awk:1]] is essential: Fox Grab, her biggest hit, can then be used on any Burning target."
-     ]
+     "level": "great",
+     "label": "Yes, a top pick",
+     "text": []
     },
     "howToPlay": {
      "intro": [
@@ -6717,15 +6635,16 @@
       "[[awk:4]] (Break damage) does almost nothing for her."
      ],
      "karma": [
-      "Signature: [[karma:The Chosen One of the Crimson Flame]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Burn Additional Damage, and more foxes in Fox Grab. Second: [[karma:A Flame That Cuts Through the Moment]]."
+      "Signature: [[karma:The Chosen One of the Crimson Flame]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Burn Additional Damage, and more foxes in Fox Grab. Second: [[karma:A Flame That Cuts Through the Moment]].",
+      "**Priority: high.** About +25% team damage in Royal Inferno."
      ],
      "gear": [
       "3 [[set:Blazing Flames]] + 2 [[set:The Infiltrator]]; Blazing Flames' 3-piece Crit Rate is nearly always on because she applies Burn constantly."
      ]
     },
     "teams": [
-     "**Blazeflame (A tier):** [[hero:Kalsion]] + [[hero:Aria]] + Kalien; [[hero:Reina]] can replace her as Airborne setup.",
-     "She's also the alternative for [[hero:Lute]] in **Breaker** (the game recommends her with Castella and Astria) for Stun and Burn."
+     "**Royal Inferno (S):** [[hero:Kalsion]] + Kalien + [[hero:Reina]]",
+     "**Crimson Verdict (A):** can replace [[hero:Lute]]"
     ]
    }
   },
@@ -6923,32 +6842,29 @@
     ]
    },
    "pros": [
-    "S tier at every stage; he leads both the S-tier Gale team and the A-tier Blazeflame team.",
-    "Explosion (2173%) is the second-biggest skill hit in the game, after Eileen's Vanguard Banner.",
-    "Weapon Blaze's Royal Flame gives +15% Attack and makes his auto, jump and dash attacks apply Burn.",
-    "Burst Grab turns 2+ Burn stacks into Airborne, so he can set up his own Explosion.",
-    "A1 runs Explosion at full duration without holding the key, and A3 extends Royal Flame with extra Attack Power."
+    "In your team from quest 40",
+    "S+ in groups",
+    "Explosion pulls enemies in"
    ],
    "cons": [
-    "Explosion needs Airborne; outside Royal Flame only Burst Grab gives him that, so he leans on Aria, Reina or Eileen.",
-    "Most of his kit runs through Royal Flame, so he is noticeably weaker while it's down.",
-    "Burst Grab's Airborne needs 2 Burn stacks first."
+    "Wants a launcher; Explosion sits idle without Airborne",
+    "His signature is only a medium priority (about +10% team damage)"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "him",
+    "tag": "His Majesty, Explosion",
+    "title": "King of the Orbis Kingdom",
     "summary": [
-     "Kalsion is the Blazeflame main damage dealer and one of three heroes rated **S at every stage**. His plan is Burn → Airborne → [[skill:Explosion]]: Explosion (2173%, the second-biggest skill hit in the game) needs Airborne, pulls enemies in and can be held longer.",
-     "[[skill:Weapon Blaze]] puts him in Royal Flame: +15% Attack, and his auto, jump and dash attacks apply Burn. [[skill:Burst Grab]] turns 2+ Burn stacks into Airborne, so he can set up his own Explosion.",
-     "Outside Royal Flame only Burst Grab launches the target, so he plays best with Airborne partners like [[hero:Aria]], [[hero:Reina]] or [[hero:Eileen]]."
+     "The King of Orbis fights on the front line, and he brings the fire with him. [[skill:Weapon Blaze]] sets his greatsword alight (+15% Attack, Burn on his basic attacks), and [[skill:Explosion]], one of the biggest hits in the game, pulls everything in and blows it up.",
+     "He joins after quest 40. Explosion needs Airborne: [[skill:Burst Grab]] can launch at two Burn stacks, but he's best with a launcher next to him. S for single target, S+ in groups, S+ everywhere awakened."
     ],
+    "groups": "S+: Explosion gathers packs and wipes them.",
+    "bosses": "Still S, but he relies on a partner's launch to get Explosion out on time.",
     "verdict": {
      "level": "great",
      "label": "Yes, a top pick",
-     "text": [
-      "S tier at every stage, lead of the S-tier Gale team and the A-tier Blazeflame team.",
-      "His best awakening is [[awk:3]] (longer Royal Flame with extra Attack Power); [[awk:1]] and [[awk:5]] (about +17%) are just as strong."
-     ]
+     "text": []
     },
     "howToPlay": {
      "intro": [
@@ -7030,15 +6946,15 @@
       "**Best stop: [[awk:3]]**, with [[awk:1]] and [[awk:5]] (about +17%) equally rated. [[awk:2]] and [[awk:4]] are smaller."
      ],
      "karma": [
-      "Signature: [[karma:The Sun Blazes Again]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Burn Additional Damage, and a bigger, stronger Explosion. Second: [[karma:A Flame That Cuts Through the Moment]]."
+      "Signature: [[karma:The Sun Blazes Again]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Burn Additional Damage, and a bigger, stronger Explosion. Second: [[karma:A Flame That Cuts Through the Moment]].",
+      "**Priority: medium.** About +10% team damage in Royal Inferno."
      ],
      "gear": [
       "3 [[set:Blazing Flames]] + 2 [[set:The Infiltrator]]; Blazing Flames' 3-piece Crit Rate is nearly always on because he applies Burn constantly."
      ]
     },
     "teams": [
-     "**Gale (S tier):** Kalsion + [[hero:Eileen]] + [[hero:Reina]]; three Airborne sources keep Explosion ready.",
-     "**Blazeflame (A tier):** Kalsion + [[hero:Aria]] + [[hero:Kalien]], the game's recommendation; Aria keeps Burn and Airborne up for him."
+     "**Royal Inferno (S):** Kalsion + [[hero:Kalien]] + [[hero:Reina]]; [[hero:Aria]] and [[hero:Eileen]] are the swaps"
     ]
    }
   },
@@ -7187,30 +7103,28 @@
     ]
    },
    "pros": [
-    "Chako Shield blocks attacks, shields allies and gives +10% team Defense.",
-    "Applies Frost with 6 skills, plus Knockdown from Summon Chako.",
-    "A6 adds a whirlwind that applies Frost and Airborne."
+    "Easy, with Super Armor",
+    "Shields and Defense for the team",
+    "Her and [[hero:Cerese]]'s signatures add about 25% team damage"
    ],
    "cons": [
-    "B tier at end-game, and her Frostbite teammates Othello and Cerese were nerfed in patch 1.1.0.",
-    "Chako Knuckle and Chako Spin need Rime Energy and Frost or Knockdown, so her damage takes setup.",
-    "Her own damage is low."
+    "A without awakenings"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "Five more minutes, Chako's got this",
+    "title": "Sleepy mage of the Red Fox Mercenaries",
     "summary": [
-     "Dana is a Frostbite support built around [[skill:Chako Shield]]: her ice golem blocks attacks in a defensive stance, counters with a shockwave and shields allies, and her Mastery adds +10% Defense to herself and allies in range. She's **A tier early and mid-game**, B at end-game.",
-     "She applies Frost with six skills and Knockdown with [[skill:Summon Chako]]. Chako's attacks run on Rime Energy: [[skill:Chako Knuckle]] needs Rime Energy (Rapid Strikes) or 2 Frost stacks (Powerful Strike), and [[skill:Chako Spin]] needs Rime Energy plus Frost or Knockdown.",
-     "Frost doesn't tick: three stacks Freeze the enemy, and hits on a Frozen enemy deal +50%."
+     "Dana travels with [[hero:Kalien]] and would honestly rather be napping. Luckily her ice golem Chako does a lot of the work: he chases enemies on his own, and [[skill:Summon Chako]] adds Frost and Knockdown for [[skill:Chako Spin]] and [[skill:Chako Knuckle]].",
+     "[[skill:Chako Shield]] protects everyone behind it and, with her Mastery, shields the team and adds 10% Defense. Easy to play, with Super Armor: A without awakenings, S with them."
     ],
+    "groups": "Chako keeps packs busy while she shoots.",
+    "bosses": "Steady and safe; strongest against Barduk and Gallore.",
     "verdict": {
-     "level": "ok",
-     "label": "Situational",
-     "text": [
-      "She's a Hero shop exchange (Fate's Invitation). She's a strong early support, but her team (Frostbite) is B tier and two of its members were nerfed in patch 1.1.0, so pick her for safety rather than damage.",
-      "Her best awakening is [[awk:6]]: longer Chako Spin plus a whirlwind that applies Frost and Airborne."
-     ]
+     "level": "good",
+     "label": "Yes, great to start with",
+     "text": []
     },
     "howToPlay": {
      "intro": [
@@ -7285,15 +7199,15 @@
       "[[awk:2]], [[awk:4]] and [[awk:5]] are damage stats that matter little for a support."
      ],
      "karma": [
-      "Signature: [[karma:A Sparkling Tea Time]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Frost Additional Damage, and frost spikes when Chako is summoned. Second: [[karma:Rock-Splitting Ice]]."
+      "Signature: [[karma:A Sparkling Tea Time]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Frost Additional Damage, and frost spikes when Chako is summoned. Second: [[karma:Rock-Splitting Ice]].",
+      "**Priority: high.** With [[hero:Cerese]]'s, about +25% team damage."
      ],
      "gear": [
       "3 [[set:Froststorm]] + 2 [[set:Battle Will]], with Max HP Up on the chest and Defense Up on the legs."
      ]
     },
     "teams": [
-     "**Frostbite (B tier):** [[hero:Othello]] + [[hero:Cerese]] + Dana, the game's recommendation; picked for safety; patch 1.1.0 nerfed Othello and Cerese and gave Dana more damage but higher Rage costs.",
-     "She's also an alternative for [[hero:Sion]] in **Crushing** as a shield support."
+     "**Frost Prison (A):** [[hero:Othello]] + [[hero:Cerese]] + Dana"
     ]
    }
   },
@@ -7443,32 +7357,28 @@
     ]
    },
    "pros": [
-    "Applies Frost with 6 skills and Airborne with Ice Storm and Frozen Spike.",
-    "Ice Storm (1528%) is a big area hit, and her signature Karma sends the storm on to the nearest enemy.",
-    "Frozen Road slows enemies and speeds up allies.",
-    "Fits two teams: Frostbite, and Blazeflame as an alternative (the game recommends her with Kalsion).",
-    "A3 speeds up Frost build-up and adds Knockdown."
+    "In your team from quest 30",
+    "S in groups, S+ with awakenings",
+    "Her and [[hero:Dana]]'s signatures add about 25% team damage"
    ],
    "cons": [
-    "Shattering Touch needs a Frozen enemy or an Ice Block, so part of her damage waits on setup.",
-    "The Frostbite team is B tier, and she and Othello were nerfed in patch 1.1.0.",
-    "A6's ice wall needs three skills lined up."
+    "A single target without awakenings"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "Court mage, cold reception",
+    "title": "Court Mage of the Orbis Kingdom",
     "summary": [
-     "Cerese is a Frostbite sub-DPS and Frost starter: six skills apply Frost, and [[skill:Ice Storm]] (1528%) and [[skill:Frozen Spike]] also launch enemies Airborne. She's **A tier from mid-game on**.",
-     "Her finisher [[skill:Shattering Touch]] (1241%) shatters Ice Blocks and Frozen enemies, and [[skill:Frozen Needles]] (1161%) needs Frost or Airborne. [[skill:Frozen Road]] leaves an icy path that speeds up allies and slows enemies.",
-     "Frost doesn't tick, so it adds no damage over time; its value is the Freeze at three stacks and +50% on hits against a Frozen enemy."
+     "The Court Mage of Orbis, and one of the Academia's best. Cerese covers the battlefield in frost: [[skill:Frozen Spike]] leaves Ice Blocks behind, and [[skill:Shattering Touch]] smashes every block and frozen enemy at once. [[skill:Frozen Road]] even speeds the team up.",
+     "She joins after quest 30. S in groups, S+ with awakenings, and against Barduk and Gallore, both weak to Frost, S without them."
     ],
+    "groups": "Her best mode: wide frost and ice everywhere.",
+    "bosses": "Strong against the two Frost-weak bosses; elsewhere Frost builds slowly.",
     "verdict": {
-     "level": "ok",
-     "label": "Good in Frost or Blazeflame",
-     "text": [
-      "She's A tier from mid-game on and fits two teams (Frostbite, and Blazeflame as an alternative).",
-      "Her best awakening is [[awk:3]] (faster Frost build-up plus Knockdown); [[awk:5]] is worth about +17% damage while Frost is up."
-     ]
+     "level": "good",
+     "label": "Yes, in Frost teams",
+     "text": []
     },
     "howToPlay": {
      "intro": [
@@ -7542,15 +7452,15 @@
       "**Best stop: [[awk:3]]**, with [[awk:5]] (about +17%) equally rated. [[awk:1]] is next."
      ],
      "karma": [
-      "Signature: [[karma:Eternal Blizzard]] (exclusive shop): +15% Attack Power, +425 Frost Additional Attack Power (about +9% Attack on Frosted targets at end-game), +20% Frost Additional Damage, and the travelling Ice Storm. Second: [[karma:Frozen Fortress]]."
+      "Signature: [[karma:Eternal Blizzard]] (exclusive shop): +15% Attack Power, +425 Frost Additional Attack Power (about +9% Attack on Frosted targets at end-game), +20% Frost Additional Damage, and the travelling Ice Storm. Second: [[karma:Frozen Fortress]].",
+      "**Priority: high.** With [[hero:Dana]]'s, about +25% team damage."
      ],
      "gear": [
       "3 [[set:Froststorm]] + 2 [[set:The Infiltrator]]."
      ]
     },
     "teams": [
-     "**Frostbite (B tier):** [[hero:Othello]] + Cerese + [[hero:Dana]]; [[hero:Ornette]] can replace her.",
-     "She's the alternative for [[hero:Aria]] in **Blazeflame (A tier)**; the game recommends her with Kalsion."
+     "**Frost Prison (A):** [[hero:Othello]] + Cerese + [[hero:Dana]]"
     ]
    }
   },
@@ -7697,31 +7607,29 @@
     ]
    },
    "pros": [
-    "Applies Frost and Knockdown with Ice Crown and Ice Grab.",
-    "A1 and his signature Karma both upgrade Frozen Stinger, and the two stack.",
-    "His Ice Spears slow enemies down."
+    "In your team from quest 50",
+    "S single target",
+    "Sets up [[hero:Dana]] and [[hero:Cerese]]"
    ],
    "cons": [
-    "C tier early-game and B tier after that.",
-    "Frozen Burst needs a Frozen enemy or an Ice Spear on the field.",
-    "His best team, Frostbite, is B tier, and he and Cerese were nerfed in patch 1.1.0.",
-    "In the Crushing team he has no Frost partner, so his Frozen-only skills fire less often."
+    "Expert",
+    "A in groups without awakenings"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "him",
+    "tag": "The Ice Prison",
+    "title": "Leader of the Lentus Rebellion",
     "summary": [
-     "Othello is the Frostbite main damage dealer, built for Frozen targets. [[skill:Frozen Stinger]] drives Ice Spears into enemies (they freeze and slow), [[skill:Ice Crown]] adds Frost and Knockdown, and [[skill:Frozen Burst]] (995%) shatters Frozen enemies and every Ice Spear on the field. He's **C tier early** and B after that.",
-     "Frozen Burst can also fire whenever an Ice Spear is on the field, so Frozen Stinger lets him use it without waiting for Frozen.",
-     "[[awk:1]] and his signature Karma both upgrade Frozen Stinger, and the two stack."
+     "Othello leads the Lentus Rebellion, and he fights the way he leads: cold and thorough. He pins enemies with Ice Spears and shatters them all with [[skill:Frozen Burst]]; [[skill:Ice Crown]] drops a prison of spears and knocks everything down.",
+     "He joins after quest 50. S single target, S everywhere with awakenings, and he gathers enemies himself, but he's Expert: the spears need to be in place before you cash them in."
     ],
+    "groups": "Good at gathering and freezing packs.",
+    "bosses": "Best against Barduk and Gallore, both weak to Frost.",
     "verdict": {
-     "level": "ok",
-     "label": "Situational",
-     "text": [
-      "He's B tier at best, and his team (Frostbite) is B tier, and he was nerfed in patch 1.1.0.",
-      "His best awakening is [[awk:1]]; [[awk:5]] is worth about +18% while Frost is up."
-     ]
+     "level": "good",
+     "label": "Yes, in Frost teams",
+     "text": []
     },
     "howToPlay": {
      "intro": [
@@ -7800,8 +7708,7 @@
      ]
     },
     "teams": [
-     "**Frostbite (B tier):** Othello + [[hero:Cerese]] + [[hero:Dana]]; picked for safety after the patch 1.1.0 nerfs to Othello and Cerese.",
-     "**Crushing (B tier):** with [[hero:Alex]] and [[hero:Sion]] he has no Frost partner, so his Frozen-only skills fire less often."
+     "**Frost Prison (A):** Othello + [[hero:Cerese]] + [[hero:Dana]]"
     ]
    }
   },
@@ -7948,30 +7855,29 @@
     ]
    },
    "pros": [
-    "Holy Circle gives her +30% Crit Damage.",
-    "Applies Shock with 4 skills and turns it into Knockdown with Judgment (1578%).",
-    "Fits several teams: Thunderbolt (A tier), and as an alternative in Frostbite and Crushing.",
-    "A5 is worth about +17% damage while Shock is on the target."
+    "In your team from quest 20",
+    "S single target, S+ in groups with awakenings",
+    "Her and Ryza's signatures add about 22% team damage"
    ],
    "cons": [
-    "Judgment needs Shock first.",
-    "Her +30% Crit Damage only applies to herself, not the team.",
-    "B tier early-game."
+    "Only A in groups without awakenings"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "The Phantom Thief of Dawn",
+    "title": "Saintess of the Order of Organa",
     "summary": [
-     "Ornette is a Thunderbolt sub-DPS who turns Shock into Knockdown: four skills apply Shock, and [[skill:Judgment]] (1578%, needs Shock, enhanced at 2+ Shock stacks) Knocks the target down. She's **A tier from mid-game on**.",
-     "[[skill:Holy Circle]] gives her +30% Crit Damage, and her signature Karma makes [[skill:Holy Cross]] bigger with more hits when cast inside Holy Circle.",
-     "She fits three teams: Thunderbolt, and as an alternative in Frostbite and Crushing."
+     "By day, the Saintess who leads the Order of Organa. By night, the Phantom Thief of Dawn, stealing cursed dragon relics before they drain their owners, and handing them to the church to be cleansed.",
+     "She swings a lightning scythe and keeps Shock up for [[hero:Ryza]]. [[skill:Judgment]] is her big hit on a Shocked target and gets stronger at two stacks; it also knocks the target down for [[skill:Holy Grab]]. [[skill:Holy Circle]] gives her +30% Crit Damage. She joins after quest 20."
     ],
+    "groups": "Spreads Shock across packs well; S+ with awakenings.",
+    "bosses": "Shock builds slowly unless the boss is weak to it (Furcas, Ghoul Greed); there she's at her best.",
     "verdict": {
      "level": "good",
-     "label": "Yes, she's free",
+     "label": "Yes, build her early",
      "text": [
-      "She comes from the Story Quests, is A tier from mid-game on, and slots into several teams.",
-      "Her best awakening is [[awk:5]] (+15% Shock Additional Damage, +10% Defense Ignore), about +17% damage while Shock is up."
+      "The second slot of Thunder Chorus."
      ]
     },
     "howToPlay": {
@@ -8046,15 +7952,15 @@
       "**Best stop: [[awk:5]].** [[awk:2]] (+15% Attack Power) is worth about +9%; [[awk:3]] strengthens Holy Circle."
      ],
      "karma": [
-      "Signature: [[karma:Sacred Lightning Baptism]] (exclusive shop): +10% Crit Rate, +10% Crit Damage, +20% Shock Additional Damage, and the bigger Holy Cross. Second: [[karma:The One Chosen by Lightning]]."
+      "Signature: [[karma:Sacred Lightning Baptism]] (exclusive shop): +10% Crit Rate, +10% Crit Damage, +20% Shock Additional Damage, and the bigger Holy Cross. Second: [[karma:The One Chosen by Lightning]].",
+      "**Priority: high.** With [[hero:Ryza]]'s, about +22% team damage."
      ],
      "gear": [
       "3 [[set:Thunderrush]] + 2 [[set:The Infiltrator]]. Thunderrush's 3-piece needs Signal skills, so use them often."
      ]
     },
     "teams": [
-     "**Thunderbolt (A tier):** [[hero:Tarte]] + Ornette + [[hero:Sion]]; all three apply Shock and turn it into Knockdown or Stun.",
-     "She's the alternative for [[hero:Cerese]] in **Frostbite** (the game recommends her with Othello) and for [[hero:Othello]] in **Crushing**."
+     "**Thunder Chorus (S):** [[hero:Ryza]] + Ornette + [[hero:Sion]]"
     ]
    }
   },
@@ -8200,32 +8106,27 @@
     ]
    },
    "pros": [
-    "Bless gives +15% Attack (or Defense) to himself and allies in range.",
-    "Applies Shock with 4 skills and Knockdown with Divine Smash and Justice Fall.",
-    "Justice Fall (1551%) is a strong hit for a support.",
-    "A1 adds +10% team Crit Rate (or +25% Crit Damage Reduction) to Bless.",
-    "Fits two teams: Thunderbolt and Crushing."
+    "Team Attack or Defense buff",
+    "Part of two Ursula teams under 2 minutes"
    ],
    "cons": [
-    "His buffs only work inside the relic's area, so allies have to stay in it.",
-    "Justice Fall needs Shock first.",
-    "No healing or shields."
+    "A in groups without awakenings"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "him",
+    "tag": "Hears voices (the holy kind)",
+    "title": "Priest of the Order of Organa",
     "summary": [
-     "Sion is a Thunderbolt support who buffs the team: [[skill:Bless]] gives +15% Attack (Orzea's Blessing) or +15% Defense (Orzea's Protection) to himself and allies in range. He's **A tier from mid-game on**.",
-     "He applies Shock with four skills and Knockdown with [[skill:Divine Smash]] and [[skill:Justice Fall]] (1551%, needs Shock), and both of those place the relic area that carries his buff.",
-     "His Mastery widens the buff areas and makes them apply Shock as well."
+     "Sion was chosen by the Pillar of Orzea, a holy relic. Through it he hears the Saint who gave her life long ago to destroy the first dragon. That same relic is what he plants in battle: everyone inside its blessing gets +15% Attack, or +15% Defense when you switch it with [[skill:Bless]].",
+     "He adds Shock and Knockdown on the side, and [[skill:Justice Fall]] hits hard on a Shocked target. S single target, S everywhere with awakenings."
     ],
+    "groups": "The blessing area is easy to keep everyone in.",
+    "bosses": "Steady buffs for the whole fight.",
     "verdict": {
      "level": "good",
      "label": "Yes for Shock teams",
-     "text": [
-      "He's a Hero shop exchange (Fate's Invitation), A tier from mid-game on, and his team buff helps whoever is dealing the damage.",
-      "His best awakening is [[awk:1]]: Bless also gives +10% team Crit Rate (or +25% Crit Damage Reduction)."
-     ]
+     "text": []
     },
     "howToPlay": {
      "intro": [
@@ -8299,8 +8200,8 @@
      ]
     },
     "teams": [
-     "**Thunderbolt (A tier):** [[hero:Tarte]] + [[hero:Ornette]] + Sion; [[hero:Ryza]] can replace him.",
-     "**Crushing (B tier):** [[hero:Alex]] + [[hero:Othello]] + Sion, where his Knockdown opens Alex's Pounding Grab."
+     "**Thunder Chorus (S):** [[hero:Ryza]] + [[hero:Ornette]] + Sion",
+     "**Ursula (under 2 min):** [[hero:Alex]] + [[hero:Lute]] + Sion"
     ]
    }
   },
@@ -8448,31 +8349,29 @@
     ]
    },
    "pros": [
-    "The damage slot of the A-tier Thunderbolt team.",
-    "Her Holy Orbs explode when any Shock attack hits them, including teammates' attacks.",
-    "Cure removes physical statuses and heals 10% max HP, and her signature Karma turns it into a lasting healing circle.",
-    "Thunderbolt adds Stun, and A6 raises its damage and Stun chance.",
-    "A5 is worth about +17% damage while Shock is on the target."
+    "Orbs turn every teammate's Shock into extra damage",
+    "Cure saves a teammate"
    ],
    "cons": [
-    "Cure only works on an ally who has Stun, Airborne, Knockdown or Break.",
-    "Holy Orb explosions need setup with Bolt Bubble and Shock hits.",
-    "Thunderrush's 3-piece needs Signal skills, so she has to use them often."
+    "B single target without awakenings",
+    "Needs Shock teammates"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "Fireworks, but holy",
+    "title": "Order of Organa",
     "summary": [
-     "Tarte is the damage slot of the Thunderbolt team, with a support side. [[skill:Bolt Bubble]] fills the field with Holy Orbs that explode when any Shock attack hits them, including teammates' attacks, and [[skill:Thunderbolt]] (needs Shock) adds Stun. She's **A tier from mid-game on**.",
-     "[[skill:Cure]] runs to an ally hit by a physical status (Stun, Airborne, Knockdown or Break), removes it and heals 10% of max HP; her signature Karma turns it into a lasting healing circle.",
-     "Orb damage takes setup: orbs have to be placed and then hit with Shock."
+     "Tarte fills the field with Holy Orbs, and any Shock attack, hers or an ally's, sets them off. Next to [[hero:Ryza]] and [[hero:Sion]], the screen lights up.",
+     "[[skill:Cure]] clears Stun, Airborne or Knockdown from an ally and heals a little. A in groups, S with awakenings; weaker against a single target."
     ],
+    "groups": "Orbs everywhere: her best mode.",
+    "bosses": "B without awakenings: the orbs still pop, but there's less to hit.",
     "verdict": {
-     "level": "good",
+     "level": "ok",
      "label": "Yes for Shock teams",
      "text": [
-      "She's a Hero shop exchange (Fate's Invitation), A tier from mid-game on, and the lead of the A-tier Thunderbolt team.",
-      "Her best awakening is [[awk:5]] (+15% Shock Additional Damage, +10% Crit Damage), about +17% damage while Shock is up."
+      "Swap for [[hero:Ornette]] when you want more support."
      ]
     },
     "howToPlay": {
@@ -8553,7 +8452,7 @@
      ]
     },
     "teams": [
-     "**Thunderbolt (A tier):** Tarte + [[hero:Ornette]] + [[hero:Sion]]; [[hero:Ryza]] can take her slot."
+     "**Thunder Chorus (S):** in [[hero:Ornette]]'s slot"
     ]
    }
   },
@@ -8699,30 +8598,29 @@
     ]
    },
    "pros": [
-    "A tier at end-game; Flash (1370%) and Thunder Grab (1382%) hit hard.",
-    "Applies Shock with 5 skills.",
-    "Her Mastery lets Thunder Grab activate on physical statuses as well as Shock.",
-    "A1 turns Flash into a charged multi-hit that strikes once per spear and adds Airborne."
+    "In your team from quest 53",
+    "S, S+ with awakenings",
+    "Her and Ornette's signatures add about 22% team damage"
    ],
    "cons": [
-    "B tier early and mid-game.",
-    "Flash needs her spear on the field first.",
-    "She isn't a starter in any team; she's an alternative in Thunderbolt (for Tarte or Sion)."
+    "Expert: spear placement matters"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "One hand, zero trust",
+    "title": "One of the Six Heroes",
     "summary": [
-     "Ryza is a Thunderbolt main damage dealer who fights with thrown spears: [[skill:Lightning Javelin]] throws one, and [[skill:Flash]] (1370%) teleports to it. Five skills apply Shock, and [[skill:Thunder Grab]] (1382%, needs Shock) adds Knockdown. She's **A tier at end-game**, B before that.",
-     "Her Mastery lets Thunder Grab activate on physical statuses as well as Shock, so it's rarely locked.",
-     "[[awk:1]] reshapes her kit: Flash becomes a charged multi-hit that strikes once per spear on the field and adds Airborne; [[awk:6]] raises Lightning Javelin's maximum stacks to 4."
+     "Ryza is one of the Six Heroes who saved Orbis from the last Origin Dragon. She fights with one hand and doesn't trust humans, and the reason why is a story the game hasn't told yet.",
+     "She throws spears and teleports to them: [[skill:Lightning Javelin]] plants one, [[skill:Flash]] warps her there and clears the area. [[skill:Thunder Grab]] gets stronger at two Shock stacks, and her Mastery lets it fire off physical statuses too. She joins after quest 53. S without awakenings, S+ with them, but Expert."
     ],
+    "groups": "Gathers and Shocks packs by herself.",
+    "bosses": "Shock stacks build slowly unless the boss is weak to it; [[hero:Ornette]] and [[hero:Sion]] keep it topped up.",
     "verdict": {
-     "level": "ok",
-     "label": "Good later",
+     "level": "great",
+     "label": "Yes, a top pick",
      "text": [
-      "She's A tier at end-game but only an alternative in the Thunderbolt team. She's free: a reward for Adventure Quest 53. Reunion, and her signature Karma is at the Exchange (both added in patch 1.1.0).",
-      "Her best awakening is [[awk:1]]; [[awk:5]] is worth about +18% while Shock is up."
+      "Leads Thunder Chorus (S)."
      ]
     },
     "howToPlay": {
@@ -8791,14 +8689,15 @@
       "**Best stop: [[awk:1]]**, with [[awk:5]] (about +18%) equally rated. [[awk:6]] pairs well with A1."
      ],
      "karma": [
-      "Signature: [[karma:The Scar Lightning Left Behind]] (exclusive shop, added in 1.1.0): +10% Crit Rate, +300 Shock Additional Attack Power (about +7% Attack on Shocked targets at end-game), +20% Shock Additional Damage. Second: [[karma:The One Chosen by Lightning]]."
+      "Signature: [[karma:The Scar Lightning Left Behind]] (exclusive shop, added in 1.1.0): +10% Crit Rate, +300 Shock Additional Attack Power (about +7% Attack on Shocked targets at end-game), +20% Shock Additional Damage. Second: [[karma:The One Chosen by Lightning]].",
+      "**Priority: high.** With [[hero:Ornette]]'s, about +22% team damage."
      ],
      "gear": [
       "3 [[set:Thunderrush]] + 2 [[set:The Infiltrator]]."
      ]
     },
     "teams": [
-     "**Thunderbolt (A tier):** she replaces [[hero:Tarte]] or [[hero:Sion]] alongside [[hero:Ornette]], one swap at a time; build her like Tarte."
+     "**Thunder Chorus (S):** Ryza + [[hero:Ornette]] + [[hero:Sion]]; [[hero:Tarte]] can replace Ornette"
     ]
    }
   },
@@ -8937,31 +8836,30 @@
     ]
    },
    "pros": [
-    "Stun Blow (1835%) is the third-biggest skill hit in the game, and it Stuns the target.",
-    "Stun Blow into Upper Blow (1652%) is a self-contained combo once the target's Super Armor breaks.",
-    "Howling, with A3, lowers the Defense of hit enemies for the whole team.",
-    "Her Mastery makes Shoulder Crusher reduce damage taken while it's used."
+    "Makes every boss fight faster for the whole team",
+    "Easy to play",
+    "S once awakened"
    ],
    "cons": [
-    "Stun Blow only works after the target's Super Armor is broken, so her burst waits for it.",
-    "Much of her bonus damage (signature Karma, Ruinsbreaker, A5) is Break damage, which only counts while the enemy is in Break.",
-    "Her own team, Breaker, is B tier because Astria and Lute are weaker partners.",
-    "A2 (+15% Defense) adds nothing to her damage."
+    "Raw damage is low; she's a facilitator",
+    "Stun Blow only works on a broken target"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "Johnny's leash (when sober)",
+    "title": "Dark elf of the Johnny Mercenary Crew",
     "summary": [
-     "Castella is the Breaker main damage dealer and the guide's Super Armor breaker. Her combo is [[skill:Stun Blow]] (1835%, the third-biggest skill hit in the game), which needs the target's Super Armor broken and inflicts Stun, straight into [[skill:Upper Blow]] (1652%, needs Stun or Knockdown), which launches it Airborne. She's **A tier at every stage**.",
-     "Upper Blow lands on a Stunned target, so it gets the +100% Stun bonus on top of its own size.",
-     "Much of her bonus damage is Break damage: her signature Karma (+1100 Break Additional Attack Power, +20% Break Additional Damage), [[set:Ruinsbreaker]] and [[awk:5]]. That part only counts while the enemy is in Break, so its worth depends on how often you keep it broken."
+     "Castella is either drinking or keeping Johnny in line, sometimes both. Her axe is built for one thing: breaking Super Armor. On a broken boss, physical statuses build twice as fast, the bonus hits land, and her own [[skill:Stun Blow]] finally comes out.",
+     "[[skill:Upper Blow]] follows on Stun or Knockdown. She's easy to play and climbs from A to S with awakenings."
     ],
+    "groups": "Fine, but breaking matters far less against packs.",
+    "bosses": "Her reason to exist. Break first, and the whole team's physical statuses come twice as fast.",
     "verdict": {
      "level": "good",
-     "label": "Yes, she's free",
+     "label": "Yes, for bosses",
      "text": [
-      "She comes from the Story Quests and is A tier at every stage. Her own team (Breaker) is only B tier, but she also fits Gale and Crushing as an alternative.",
-      "Her best awakening is [[awk:1]]: Stun Blow gets more hits and also Knocks down."
+      "A great third slot whenever a boss's Super Armor is the problem."
      ]
     },
     "howToPlay": {
@@ -9044,8 +8942,8 @@
      ]
     },
     "teams": [
-     "**Breaker (B tier):** Castella + [[hero:Astria]] + [[hero:Lute]], the game's recommendation for him; B because only Castella is A tier.",
-     "She's also an alternative in **Gale (S tier)** for [[hero:Reina]] as a Break starter, and in **Crushing** for [[hero:Othello]]."
+     "**Armor Break (B):** Castella + [[hero:Astria]] + one free slot",
+     "**Crimson Verdict (A):** can replace [[hero:Lute]]; with her it clears Ursula in under 2 minutes"
     ]
    }
   },
@@ -9221,31 +9119,29 @@
     ]
    },
    "pros": [
-    "Precision Shot mode gives +40% Attack and makes her auto attack Stun.",
-    "Bolt Bombard (1526%) hits hard on Stunned targets.",
-    "A5 gives +20% Attack Power, the largest Attack bonus of any awakening."
+    "+40% Attack in Precision Shot",
+    "Stun from range"
    ],
    "cons": [
-    "C tier early-game and B tier after that.",
-    "Precision Shot restricts her movement.",
-    "She runs on arrows, and Reload can only be used once some are spent.",
-    "Her Break bonuses (signature Karma, Ruinsbreaker, A5) only count while the enemy is in Break, and none of her skills apply it.",
-    "A3's Burn zone does nothing in her teams."
+    "B without awakenings",
+    "Almost no movement while planted"
    ],
    "review": {
-    "updated": "28 Oct 2026",
+    "updated": "15 Nov 2026",
     "pronoun": "her",
+    "tag": "Plant the ballista, hold the fort",
+    "title": "Garrison Commander of Ironheart Fortress",
     "summary": [
-     "Astria is a Breaker sub-DPS with a stance: [[skill:Siege Assault]] plants her ballista for Precision Shot, which gives +40% Attack and longer range but restricts movement, and makes [[skill:Ballista Shot]] apply Stun. She's **C tier early** and B after that.",
-     "Her big hit [[skill:Bolt Bombard]] (1526%) needs Stun, so in Precision Shot she sets it up herself. She runs on arrows: [[skill:Reload]] refills them once some are spent.",
-     "Her Break bonuses (signature Karma, [[set:Ruinsbreaker]], [[awk:5]]) only count while the enemy is in Break, and none of her skills apply Break."
+     "Astria commands the garrison at Ironheart Fortress, and she fights like it: [[skill:Siege Assault]] plants her ballista for +40% Attack, longer range and Stun on her shots, at the cost of barely moving.",
+     "[[skill:Bolt Bombard]] waits for Stun. B without awakenings, A with them."
     ],
+    "groups": "OK from a safe spot.",
+    "bosses": "Her Stun helps break, but slowly; [[hero:Castella]] does more.",
     "verdict": {
      "level": "ok",
      "label": "Situational",
      "text": [
-      "She's a Hero shop exchange (Fate's Invitation) and B tier at best. She's a useful third Stun source in Stun teams, but not a priority.",
-      "Her best awakening is [[awk:6]] (more arrows and faster attacks in Precision Shot)."
+      "[[hero:Kalien]] is a stronger pick for her slot."
      ]
     },
     "howToPlay": {
@@ -9328,8 +9224,7 @@
      ]
     },
     "teams": [
-     "**Bloodburst (A tier):** [[hero:Roxy]] + [[hero:Theresia]] + Astria, as the third Stun source.",
-     "**Amplitude** and **Breaker (B tier):** with [[hero:Theresia]] or [[hero:Castella]] plus [[hero:Lute]]."
+     "**Armor Break (B):** [[hero:Castella]] + Astria + one free slot"
     ]
    }
   }

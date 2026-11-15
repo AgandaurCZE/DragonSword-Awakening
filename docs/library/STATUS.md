@@ -1,81 +1,27 @@
-# Status: where things stand (13 Nov 2026)
+# Status: where things stand (15 Nov 2026)
 
-Back to the library: [docs/README.md](../README.md). Update this file during and at the end of every session; it's the first thing the next chat reads after [WORKING_WITH_DAVID.md](WORKING_WITH_DAVID.md). Finished items move to [DONE.md](DONE.md); every change is in `CHANGELOG.md`. Site tasks are in [SITE.md](SITE.md). David's own to-do list: `docs/dragonsword_david_todo_by_priority.html` (updated 10 Nov).
+Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DAVID.md](WORKING_WITH_DAVID.md). Keep this file short: only what is open or needed to work. Finished work goes to [DONE.md](DONE.md), history to CHANGELOG.
 
-## Finder Frost tip and menu icons — 15 Nov
+## The site
+- Public Beta, live since 11 Nov. Every page has a clean path (AGENTS.md). All 20 heroes, tier list (A0 + Mastery view and Awakenings view, re-rated 14 Nov from David's file), Teams (six lineups + Ursula speed runs), Boss & Tower Finder, Dungeons, Gear, Karma, Familiars, Cookbook, Items, Titles, Achievements, Damage and Levelling calculators, News and Patch Notes.
+- Upcoming heroes: `UPCOMING_HEROES` (15 Nov). Jerome (Bloodburst, Lentus Rebellion, December update, sword, parry) is shown on the Heroes page; Veronica and Logan are data only (Lentus Rebellion). Notes: `assets/sources/upcoming/notes.txt`.
 
-- The Frost and Freeze tip appears on Frost-weak Nightmare and Hell Hunts. Shortcuts, Finder, Normal Dungeons, Currency Dungeons, Gear and Karma have new sidebar icons.
+## In progress
+- **Hero reviews:** rewritten and live 15 Nov (banner with nickname, lore title, A0/A6, groups vs bosses). Alex has no review until his awakenings are rated. Writing rules: no testing details or names; one cast never fills a status gauge; most skills return in about 10 s; against bosses heroes need partners or a broken Super Armor for physical statuses.
+- **"Start here" guide** for new players: next, after the reviews. David can supply screenshots.
 
-## Navigation, guide and encounter update — 15 Nov
+## David's account (latest)
+- All 20 heroes Lv.70, all masteries. Awakenings: A6 Castella, Cerese, Charlotte, Dana, Johnny, Kalien, Kalsion, Ornette, Reina, Roxy, Ryza, Theresia; A3 Aria, Astria, Eileen, Lute, Othello, Sion, Tarte; A0 Alex.
+- Signature Karmas: Theresia, Kalien, Kalsion, Othello, Cerese, Dana, Ornette, Charlotte, Ryza, Roxy (Ryza's and Ornette's Lv.70).
+- Karmas 43 of 53, titles 49 of 109, familiars 16 of 29.
 
-- Mobile has a labelled menu and full-width content. Shortcuts features the Tier List, Teams and Finder. Ratings appear before the explanation, and hero skill tabs stick on mobile. The Finder links boss and tower mechanics to ranks and rosters. Guides publishes three completed mechanics guides.
+## Open questions (need the game)
+1. Perfect rune tops: Crit Rate 8.5%, Defense 100, Max HP 1500 are predicted; Attack 140 and Crit Damage 14% are seen (don't ask again). Readings in `RUNES.seen`.
+2. Hunt bosses: build-up resistances on the five bosses other than Furcas (Test 07). Raid ranks are provisional.
+3. Towers: the Crushing tower bonus; the Bleed and Shock DoT bonus is assumed like Poison and Burn. Test 06 inside the Towers.
+4. Gear main stats not read yet: Chest Max HP Up, Legs Defense Up, Max HP Up / Defense Up on Helmet, Gloves and Boots.
+5. Alex's awakenings, when materials allow.
 
-## Teams and Ursula speed runs — 15 Nov
-
-- The Teams layout contains six tiered lineups and five Ursula speed runs. Portraits link to Build and Teams, and named skills open the Skills tab and the matching skill card. Hero and navigation links support opening in another tab or window. News videos show thumbnails before playback.
-
-## Steam News and Patch Notes — 14 Nov
-
-- The News menu shows the official Steam feed in full. Versioned update notes open inside Patch Notes, and the site separates current game, latest balance and last-reviewed tier versions. The half-hourly workflow refreshes the feed through the existing publishing checks.
-
-## Boss tier list header artwork — 12 Nov
-
-Furcas and Vanak are approved and stored in `assets/bosses/bosses-header/`. The remaining boss cutouts are under individual review, starting with Barduk’s wing revision. The header layout is a separate implementation task.
-
-## Repository organisation — 12 Nov (Codex)
-David requested a tidy repository: website code is now in `src/`, generated URL entries in `routes/`, Python tools in `tools/`. Assets, Markdown and game-data locations remain unchanged. Build/serve/publish now assemble the original public paths. Full `check_all.py` passed; all 218 public/alias pixel views are identical to the previous release. Clean Git archive assembly passed; all 675 asset/data/code/URL files retain their public contents (generated comments excluded). The commit “Organise website source and URL folders” publishes through the same gated workflow. No implementation task remains. Restore point `a7644fb`.
-
-## Public Beta launch — implemented and checked (11 Nov, Codex)
-David approved replacing the old public view with the former preview. Implemented locally: Shortcuts home, supplied logo + BETA, clean routes and real GitHub Pages entry shells, unified hero/tier addresses, legacy URL compatibility. Share strip/gold favicon unchanged. The old preview-only workflow is superseded by AGENTS' Beta workflow. Final full `check_all.py` passed, including browser interactions and repository-prefix hosting. Full public/preview pixel comparison completed (218 captured views; the approved launch changes are recorded in CHANGELOG). Publication is gated by the exact-SHA Check and publish run for the release commit “Launch public Beta with shortcuts and clean URLs”; verify the latest run at the start of the next session as always. No implementation task remains from this request. Restore point: `6c5f516`.
-
-## Where David's account is (10 Nov)
-- **All 20 heroes Lv.70**, base stats measured (test 08) and in `HERO_BASE_STATS`.
-- **All 16 masteries unlocked** (10 Nov). Reina, Roxy, Dana and Alex's masteries don't change combat numbers. Results: [TEST01_RESULTS.md](TEST01_RESULTS.md), "Mastery retests".
-- **Awakenings** (can't be undone; all 77 levels he had are spent): **A6** Castella, Cerese, Charlotte, Dana, Johnny, Kalien, Kalsion, Ornette, Reina, Roxy, Ryza, Theresia; **A3** Aria, Astria, Eileen, Lute, Othello, Sion, Tarte; **A0** Alex. Charlotte had A1 before every earlier test. Results: [AWAKENING_TESTS.md](AWAKENING_TESTS.md).
-- **Signature Karmas owned:** Theresia, Kalien, Kalsion, Othello, Cerese, Dana, Ornette, Charlotte, Ryza, Roxy. Ryza's and Ornette's levelled to Lv.70 (10 Nov).
-- **Gear:** David is gearing the six main teams with the builds in [GAME_MATH.md](GAME_MATH.md) 4.3 and running the raid for Perfect runes (10 Nov evening).
-- Karmas owned (colour art): 43 of 53 (10 Nov).
-- Titles 41 of 109; familiars 16 of 29 (all four Insects).
-
-## Waiting on David (10 Nov)
-1. **Perfect rune tops still unconfirmed:** Crit Rate 8.5%, Defense 100 and Max HP 1500 are predicted, not measured. Attack 140 and Crit Damage 14% are already seen; do not ask for those again. Other current readings are in `RUNES.seen`. Orange +15 substats were completed on 10 Nov.
-3. **Hunt bosses:** the weak elements of all six are known (12 Nov) and the first-pass ratings are on the site (13 Nov). Still his: more testing of the ratings, and the rest of Test 07 (build-up resistances were only read on Furcas).
-4. Alex's awakenings, tested alone, when materials allow. A team round **with gear** once the main teams are geared.
-
-## Site upgrade, 11 Nov (done; rules in AGENTS.md "Golden rules")
-- David asked for the structural upgrades to be done at once and written down as the most important rules. Done: one command for every check (`python3 tools/check_all.py`: data rules, data shape, stored builds, file rules, JS syntax, cache numbers, the site in a browser, JS ports against Python), the pixel check as a tool (`tools/public_diff.py`), `js/` and `css/` reformatted (layout only, proven identical), LF line endings enforced, and a GitHub workflow that runs the checks on every push and publishes the site only when they pass. Details: [SITE.md](SITE.md) "Checks and publishing"; every step in CHANGELOG (11 Nov, parts 1–3).
-- **Left for any assistant:** the list "Handed over on 11 Nov" in [SITE.md](SITE.md) (phone menu labels, dungeon cards on phones, profile padding, share tags and favicon, a root README, CHANGELOG archive, export of ticks, colour variables, launch wording).
-- David's decisions the same night: icon, gear, Karma and portrait files keep their size (quality first); the raid glow stays; notes, Test Kit and planner files stay published with the site.
-
-## Codex familiarisation review (11 Nov)
-- Reviewed the latest fetched `da91cfa` and all 18 Markdown files, plus the check/publish machinery and relevant data/code. Full `python3 tools/check_all.py`: ALL CHECKS PASSED, browser and parity included. GitHub Actions API returned Forbidden; remote deployment not verified.
-- **David approved tasks #9 and #7 (11 Nov):** #9 uses shared account data for tools while keeping website maximum-build defaults; #7 uses exact settings restore with review and recovery. #9 now uses explicit recorded levels for all heroes and existing signature flags; the website defaults stay unchanged. #7 adds the preview Tools Backup & restore tab with exact restore, review, rollback and persistent undo; validation is recorded in CHANGELOG. Both selected tasks are implemented. #8 remains after launch; no other handover item started.
-- **Note reconciliation completed 11 Nov:** current references now mark all 20 base stats, five discovered Currency Dungeons, measured Orange DI/APU substats and Ryza/Roxy signature art as complete. Historical test conditions and changelog entries remain dated history.
-
-## Next for Claude (10 Nov)
-- **Hunt boss Defense (12 Nov): done**, table in GAME_MATH 3.4. The Nightmare+ buff is 83% (×0.171). In the Damage Calculator since 13 Nov (Hunt boss button).
-- **Boss rewards by difficulty (12 Nov):** Raids done (Gauron, Ursula). Hunts: six circles built and Furcas filled in (12 Nov). All six Hunt bosses done 12 Nov; the screenshots are deleted.
-- **Boss header art (12 Nov, live on PC):** the Hunt bosses' weakness icons and two-colour title switch on by themselves once `weak` is filled in for each boss (after Test 07). Still open from David: nothing. Since 13 Nov there is no "All bosses" tab, so the header art shows as soon as Bosses is opened.
-- **Home page (David, 11 Nov):** the plain URL and the logo open a main view of shortcuts to every part of the site, each with its own picture (placeholders first). David sends a sketch. He is also leaning towards launching the site as is with that change; don't remove the gate until he says so. Its tab title: "DragonSword: Awakening, Guides, tools & Tier List".
-- **Awakening view of the tier list: done 14 Nov.** The Awakenings button shows each hero's `awakened` ratings (A6 + Signature Karma + Mastery). Both views were re-rated on 14 Nov from David's tier-list file (13 matchups, two scenarios). The file flags A6 estimates for Aria, Astria, Eileen, Lute, Othello, Sion and Tarte and no awakening tests for Alex; those ratings can move after testing.
-- **Preview "Best Gear" box on the hero Build tab: built 10 Nov** (port of `tools/team_gear.py`, identical results for the 13 main-team heroes; `GEAR_MODEL` in DATA_REFERENCE). Controls: enemy (toughest boss 1825 / Training Ogre), physical statuses half or all the time, awakenings A0–A6, signature on/off, Perfect runes best mix or none, status ticks (main-team defaults). Since late 10 Nov a ranked list of the six best set pairs with % of the best (David's design request) and a working Back button in the preview. Each row shows the strongest skill's total damage (11 Nov; formula checked on Ryza and Sion). **Next:** David's look and feedback; still not done from the 9–10 Nov wish list: a role switch (on-field damage dealer or Breaker) and labelling substats as "must-have" vs "team status AAP".
-- **Karma level picker: complete 13 Nov.** "Base stats at" on the Karma page offers every level from Lv.1 to Lv.70 and both values at each breakthrough, with the game's exact numbers for all four stat types (David's 13 Nov readings, `KARMA_LEVELLING.measured`). Nothing left to measure for it.
-- The repository restructure (all five steps David approved on 10 Nov) is done; see SITE.md and CHANGELOG. New layout: `index.html` + `css/site.css` + `js/01…09`, `data/research.json`, `assets/sources/`. The 11 Nov upgrade added the checks and the publish workflow (section above).
-
-## Open items that can wait
-- **Boss and Tower ratings**: re-rated 14 Nov from David's tier-list file, both views: six Hunts, both Raids (Gauron, Ursula, rated for the first time) and the three Towers. The file marks Raid ranks as provisional and Crushing as resting on an assumed bonus. David will test more in game and re-rate.
-- **Teams page (13 Nov):** lists no teams for now, only the empty S to C rows and an "End-game speed runs" toggle. David will supply new teams and speed-run teams; `TEAM_DATA` still feeds the hero pages and gear tools.
-- **Internal notes on the pages (13 and 14 Nov):** cleaned up site-wide in two passes; a scan of every page, boss and tower view and hero tab finds no "measured / tested / recorded / seen" wording apart from "Every item recorded from the game" on Items, which David keeps. His name remains only in unprinted data notes, code comments and the published docs.
-- **Team Planner**: every main team and its alternatives are marked Works except Ice Prison (No); team 9 (Nightmare support, with Alex) was deleted. Only the six main teams were retested after awakenings; David doesn't expect the alternatives to beat them (10 Nov), so their retest can wait.
-- **Signature Karma priorities** ([TEAM_TESTS.md](TEAM_TESTS.md)): update with the post-awakening gains (Charlotte's signature +16%, Kalsion's +10%, Theresia's and Roxy's together +27%).
-- **Gear main-stat readings still useful:** Chest Max HP Up, Legs Defense Up, and Max HP Up / Defense Up on Helmet, Gloves and Boots. Legs Attack Power Up at +15 is measured (30.68, 10 Nov); only its lower-level scaling remains derived. Orange +15 substats, including Defense Ignore and Attack Power Up, are measured and complete. See `GEAR_STATS.valueSources`.
-- Crit Rate awakenings were rated before the 30 Oct gear rebuild; re-check whether they're worth more now.
-- Hero review texts on the profiles still describe the old ratings; David will redo them later (10 Nov), so leave them.
-- Test 06 inside the Towers of Trials; new enemies, Quest items and World Bosses as David meets them.
-- Hunt rating rewards and Fame stages above 3.
-
-## Deployment access (11 Nov, Codex)
-Resolved in this chat after api.github.com was allowed and the policy finished applying. Existing authentication successfully read the latest run and individual job/step results: 52e17ef passed checks and publishing (run 42947852910). No new token was needed. Recheck actual access if a later task uses a different environment; the normal Actions web page remains a fallback.
-
-## Amplitude icon report — resolved by David; no site fix required
-David confirmed that after restarting his PC and reopening Firefox, the icon remains visible without changing filters or tabs. Close the investigation unless it recurs. No website source, artwork or data was changed. The original cause was not established; do not describe it as a proven load-order, network or cache defect. Firefox installation and the extra browser-download domains are no longer required for this report.
+## Can wait
+- Crit Rate awakenings were rated before the 30 Oct gear rebuild; worth a re-check.
+- New enemies, Quest items and World Bosses as David meets them.

@@ -1,5 +1,20 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 15 Nov 2026 — Hero reviews rewritten (Claude)
+- **What visitors see:** the Review tab opens with a banner: a nickname and lore title (from David's lore notes), the hero's A0 and A6 ratings, the verdict and how to get them, a short write-up, and "In groups" / "Against bosses" boxes. Two columns on PC, stacked on phones. New pros and cons for all heroes. Teams now follow the Teams page (Royal Inferno, Thunder Chorus, Venom Cyclone, Frost Prison, Crimson Verdict, Armor Break) and the Ursula speed runs. Signature Karma priority added to nine heroes' Karma advice (Theresia + Roxy about +27% team damage; Kalien, Dana + Cerese about +25%; Ryza + Ornette about +22%; Charlotte about +16%; Kalsion about +10%). How to play, kit, skill priorities, awakenings and gear are unchanged.
+- **Alex:** no review, pros or cons for now (David: he'll likely improve with awakenings); the tab says the review isn't written yet.
+- **How to get:** Lute is the starting hero; Story Quests: Aria after reaching the city, Johnny after quest 10, Ornette 20, Cerese 30, Kalsion 40, Othello 50, Ryza 53 (David).
+- Writing rules (David): no testing details or names; one cast never fills a status gauge, most skills return in about 10 s, so against bosses heroes need partners or a broken Super Armor for physical statuses.
+- Data: `review.tag`, `title`, `groups`, `bosses` (new), `review` may be `null`; `HEROES[].obtain.note` no longer used (DATA_REFERENCE; `check_shape.py --update`: 7 lines, all intended). Code: `reviewHeroHtml()` in `src/js/03-profile.js`, `#profileReviewHero` in `src/index.html`, `.rvh` styles in `site.css` (`?v=20261115-reviews`); routes regenerated.
+- `public_diff.py`: 27 of 113 views differ, all intended: the Review tabs and the Heroes page (Jerome). `check_all.py`: every check passes except the browser check's requests for the YouTube news thumbnails (i.ytimg.com), which this workspace can't reach; GitHub's run is the check for those (David approved pushing, 15 Nov).
+
+## 15 Nov 2026 — Jerome as an upcoming hero; notes trimmed (Claude)
+- **New data key `UPCOMING_HEROES`** (DATA_REFERENCE; `check_shape.py --update`: 10 added lines, all intended): Jerome (Bloodburst, Lentus Rebellion, December update, sword, parry like Alex) with portrait `assets/heroes/jerome.webp` (392 × 467 from the official splash, approved by David), plus Veronica and Logan (Lentus Rebellion, data only).
+- Heroes page: Jerome's card follows the 20 heroes with a purple UPCOMING badge and no guide page; hover or tap shows archetype, faction, "Coming in the December update", the two facts, and that role and kit aren't revealed. Code: `src/js/05-tierlist-heroes-patches.js` (cards), `src/js/03-profile.js` (`refCardHtml`), globals in `01-core.js` / `09-startup.js`, styles at the end of `site.css` (all `?v=20261115-jerome`); routes regenerated.
+- `check_site.py`: new check that every upcoming hero with a portrait has a card without a link and a hover card naming the hero, UPCOMING and "not revealed yet".
+- Notes: `docs/library/STATUS.md` rewritten short (only what's open); `docs/library/SITE.md` open tasks trimmed (finished hand-over list and the historical structure proposal removed; history stays in CHANGELOG); `assets/sources/upcoming/notes.txt` updated.
+- `public_diff.py`: only the Heroes page differs (the new card). `check_all.py`: ALL CHECKS PASSED.
+
 ## 15 Nov 2026 — Finder Frost tip and menu icons
 
 - The Finder shows the Frost and Freeze tip only on Nightmare and Hell Hunts that list Frost as a weakness.

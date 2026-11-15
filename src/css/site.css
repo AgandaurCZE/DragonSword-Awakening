@@ -7778,3 +7778,147 @@ a.shortcut-card:focus-visible {
     flex: 1 1 170px;
   }
 }
+
+/* Upcoming heroes on the Heroes page (UPCOMING_HEROES, 15 Nov 2026) */
+.heroes-new.heroes-soon {
+  background: #8b5cf6;
+}
+.heroes-upcoming {
+  cursor: default;
+}
+.ref-soon {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #8b5cf6;
+  color: white;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+}
+.ref-facts {
+  margin: 6px 0 0;
+  padding-left: 16px;
+  font-size: 12px;
+}
+
+/* Review banner (15 Nov 2026): nickname, lore title, A0 / A6 ratings, verdict, story, groups vs bosses */
+.rvh {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+  gap: 18px;
+  margin: 4px 0 18px;
+  padding: 20px 22px;
+  border: 1px solid #3a3d46;
+  border-top: 3px solid var(--rvh);
+  border-radius: 14px;
+  background:
+    radial-gradient(ellipse at top left, color-mix(in srgb, var(--rvh) 22%, transparent), transparent 60%),
+    linear-gradient(160deg, #2a2f3a, #20242c);
+  box-shadow: 0 12px 32px #0006;
+}
+.rvh-nick {
+  font-size: 26px;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--rvh);
+  line-height: 1.2;
+  text-shadow: 0 0 18px color-mix(in srgb, var(--rvh) 45%, transparent);
+}
+.rvh-title {
+  margin-top: 4px;
+  color: #aeb8c7;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.rvh-story p {
+  margin: 12px 0 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+.rvh-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rvh-tiers,
+.rvh-verdict,
+.rvh-gb > div {
+  background: #151a22b3;
+  border: 1px solid #3a3d46;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.rvh-tier {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #aeb8c7;
+}
+.rvh-tier + .rvh-tier {
+  margin-top: 6px;
+}
+.rvh-tier b {
+  width: 26px;
+  color: #fff;
+}
+.rvh-tier span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.rvh-chip {
+  min-width: 28px;
+  padding: 1px 6px;
+  border-radius: 5px;
+  color: #14181f;
+  font-weight: 900;
+  text-align: center;
+}
+.rvh-verdict p,
+.rvh-gb p {
+  margin: 6px 0 0;
+  font-size: 13.5px;
+}
+.rvh-obtain {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #aeb8c7;
+}
+.rvh-gb {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rvh-gb h5 {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.rvh-g {
+  border-left: 3px solid #5eead4 !important;
+}
+.rvh-g h5 {
+  color: #5eead4;
+}
+.rvh-b {
+  border-left: 3px solid #fca5a5 !important;
+}
+.rvh-b h5 {
+  color: #fca5a5;
+}
+@media (max-width: 900px) {
+  .rvh {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+  .rvh-nick {
+    font-size: 22px;
+  }
+}

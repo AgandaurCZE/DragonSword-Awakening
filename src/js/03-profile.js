@@ -553,7 +553,11 @@ function richText(text, hero) {
 function refCardHtml(type, key) {
   if (type === 'hero') {
     const h = HEROES.find((x) => x.name === key);
-    if (!h) return '';
+    if (!h) {
+      const u = (UPCOMING_HEROES || []).find((x) => x.name === key);
+      if (!u) return '';
+      return `<div class="ref-card ref-upcoming"><div class="ref-head">${u.portrait ? `<img class="ref-portrait" src="${u.portrait}" alt="">` : ''}<div><div class="ref-title">${profileEsc(u.name)} <span class="ref-soon">UPCOMING</span></div><div class="ref-meta">${u.archIcon ? `<img src="${u.archIcon}" alt="">` : ''}${u.archetype ? colourStatusWords(u.archetype) : 'Archetype not revealed yet'} · Role not revealed yet</div><div class="ref-meta">Kit: not revealed yet${u.faction ? ` · ${profileEsc(u.faction)}` : ''}</div>${u.arrives ? `<div class="ref-meta">Coming in the ${profileEsc(u.arrives)}</div>` : ''}${(u.facts || []).length ? `<ul class="ref-facts">${u.facts.map((f) => `<li>${profileEsc(f)}</li>`).join('')}</ul>` : ''}</div></div></div>`;
+    }
     const t = v2Hero(h.name).overall || {};
     return `<div class="ref-card"><div class="ref-head"><img class="ref-portrait" src="${h.portrait}" alt=""><div><div class="ref-title">${profileEsc(h.name)}</div><div class="ref-meta"><img src="${h.archIcon}" alt="">${colourStatusWords(h.archetype)} · ${profileEsc(v2Role(h))}</div><div class="ref-meta">Kit: ${profileEsc(h.classType)}${h.faction ? ` · ${profileEsc(h.faction)}` : ''}</div><div class="ref-tiers">${[
       ['tier', 'Overall'],
@@ -791,11 +795,24 @@ function rvChip(hero, token) {
   const oc = other ? ARCH_COLORS[other.archetype] || '' : '';
   return `<span class="rv-chip ref ref-skill${other ? ' rv-chip-other' : ''}"${oc ? ` style="--chip-accent:${oc}"` : ''} tabindex="0" role="button" data-ref-type="skill" data-ref-key="${profileEsc(h + '/' + n)}"><small>${RV_SLOT_SHORT[slot] || profileEsc(slot)}</small>${profileEsc(n)}${h !== hero ? ` <em>(${profileEsc(h)})</em>` : ''}</span>`;
 }
+// Review banner (15 Nov 2026): nickname, lore title, A0 and A6 ratings, verdict, the story, and groups vs bosses.
+function reviewHeroHtml(h, R, v, obtainText) {
+  const T = v2Hero(h.name),
+    A = (T.awakened || {}).overall || {},
+    O = T.overall || {};
+  const chip = (t) => `<span class="rvh-chip" style="background:${v2TierColor(t)}">${t || '—'}</span>`;
+  const row = (label, o) =>
+    `<div class="rvh-tier"><b>${label}</b><span>Single ${chip(o.single)}</span><span>Groups ${chip(o.groups)}</span></div>`;
+  const P = (a) => (a || []).map((t) => `<p>${richText(t, h.name)}</p>`).join('');
+  return `<section class="rvh" style="--rvh:${ARCH_COLORS[h.archetype] || '#68c7d5'}"><div class="rvh-main"><div class="rvh-nick">“${profileEsc(R.tag)}”</div>${R.title ? `<div class="rvh-title">${profileEsc(R.title)}</div>` : ''}<div class="rvh-story">${P(R.summary)}</div></div><aside class="rvh-side"><div class="rvh-tiers">${row('A0', O)}${row('A6', A)}</div><div class="rvh-verdict" data-level="${profileEsc(v.level || '')}"><span class="rv-verdict-badge" data-level="${profileEsc(v.level || '')}">${profileEsc(v.label || '')}</span>${P(v.text)}${obtainText ? `<div class="rvh-obtain">${profileEsc(obtainText)}</div>` : ''}</div>${R.groups || R.bosses ? `<div class="rvh-gb">${R.groups ? `<div class="rvh-g"><h5>In groups</h5><p>${richText(R.groups, h.name)}</p></div>` : ''}${R.bosses ? `<div class="rvh-b"><h5>Against bosses</h5><p>${richText(R.bosses, h.name)}</p></div>` : ''}</div>` : ''}</aside></section>`;
+}
 function renderProfileReview(h, data) {
-  const root = $('profileReviewBody');
+  const root = $('profileReviewBody'),
+    heroBox = $('profileReviewHero');
   if (!root) return;
   const R = data.review;
   const accent = ARCH_COLORS[h.archetype] || '#68c7d5';
+  if (heroBox) heroBox.innerHTML = '';
   if (!R) {
     root.innerHTML = '<div class="profile-placeholder">A full review for this hero hasn\'t been written yet.</div>';
     return;
@@ -806,15 +823,18 @@ function renderProfileReview(h, data) {
     `<section class="rv-card"><div class="rv-card-head"><span class="rv-tag">${tag}</span><h4>${title}</h4></div><div class="rv-card-body">${body}</div></section>`;
   const ob = h.obtain || {};
   const parts = [];
-  parts.push(card('OVERVIEW', `${profileEsc(h.name)} in short`, P(R.summary)));
   const v = R.verdict || {};
-  parts.push(
-    card(
-      'VERDICT',
-      'Should I get ' + (R.pronoun === 'him' ? 'him' : R.pronoun === 'them' ? 'them' : 'her') + '?',
-      `<div class="rv-verdict"><span class="rv-verdict-badge" data-level="${profileEsc(v.level || '')}">${profileEsc(v.label || '')}</span>${ob.method ? `<span class="rv-obtain">${profileEsc('How to get: ' + ob.method + (ob.cost ? ' (' + ob.cost + ')' : ''))}</span>` : ''}</div>${P(v.text)}`,
-    ),
-  );
+  const obtainText = ob.method ? 'How to get: ' + ob.method + (ob.cost ? ' (' + ob.cost + ')' : '') : '';
+  if (heroBox) heroBox.innerHTML = R.tag ? reviewHeroHtml(h, R, v, obtainText) : '';
+  if (!R.tag) parts.push(card('OVERVIEW', `${profileEsc(h.name)} in short`, P(R.summary)));
+  if (!R.tag)
+    parts.push(
+      card(
+        'VERDICT',
+        'Should I get ' + (R.pronoun === 'him' ? 'him' : R.pronoun === 'them' ? 'them' : 'her') + '?',
+        `<div class="rv-verdict"><span class="rv-verdict-badge" data-level="${profileEsc(v.level || '')}">${profileEsc(v.label || '')}</span>${ob.method ? `<span class="rv-obtain">${profileEsc('How to get: ' + ob.method + (ob.cost ? ' (' + ob.cost + ')' : ''))}</span>` : ''}</div>${P(v.text)}`,
+      ),
+    );
   if (R.howToPlay) {
     const H = R.howToPlay;
     let body = '';
