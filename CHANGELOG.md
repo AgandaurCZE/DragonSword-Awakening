@@ -1,5 +1,10 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 15 Nov 2026 — Notes corrected; new Perfect rune readings (Claude)
+- David: Hunt bosses share the same build-up resistances; the Tower of Crushing works like the other two for Knockdown (`TOWER_TRIALS.towers[crushing].measured` → true, so the calculator no longer says its bonus is assumed); gear main stats were settled earlier. STATUS open questions, GAME_MATH "Known unknowns" and SITE open tasks corrected (the Best Gear role switch removed: no hero plays a Breaker as damage dealer).
+- `RUNES.seen` Perfect: added Focus 6.38%, Vitality 1425 and 1500, Amplification 9.10%. Max HP top 1500 is now seen; only Crit Rate 8.50% and Defense 100 remain predicted.
+- Pushed without waiting for the local browser check (David, 15 Nov); GitHub's run is the check.
+
 ## 15 Nov 2026 — GAME_MATH 3.7: why matched teams pull ahead (notes only; Claude)
 - From David's geared stat panels (Ryza, Ornette, Sion, Theresia, Roxy) and team runs: per-hit comparison, the 1.7× from stats and buffs against the ~2× from status uptime and breaking, why breaking pays three times, and wasted off-status AAP. No site or data change. `check_all.py`: passes apart from the YouTube thumbnails.
 

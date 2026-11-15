@@ -79,7 +79,6 @@ The rules are AGENTS.md, "Golden rules". This is how the machinery works. Everyt
 
 ## Open site tasks · updated 15 Nov
 Game-side questions are in [STATUS.md](STATUS.md).
-- **Builds:** the "Best Gear" box on the Build tab still lacks a role switch (on-field damage dealer or Breaker).
 - **CSS tidy-up (when there's time):** `src/css/site.css` repeats many colours; replace them with variables a section at a time, each step proven with `public_diff.py --preview`.
 - **Optional, only if David asks:** a status application table per hero; a Super Armor gauge column in the Damage Calculator.
 - **Decided, don't do:** shrinking icon, gear, Karma or portrait files (quality first); changing the raid glow; a quest tracker or interactive map for now.

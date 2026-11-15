@@ -16,11 +16,9 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 - Karmas 53 of 53 (every signature; Codex complete, 15 Nov), titles 49 of 109, familiars 16 of 29.
 
 ## Open questions (need the game)
-1. Perfect rune tops: Crit Rate 8.5%, Defense 100, Max HP 1500 are predicted; Attack 140 and Crit Damage 14% are seen (don't ask again). Readings in `RUNES.seen`.
-2. Hunt bosses: build-up resistances on the five bosses other than Furcas (Test 07). Raid ranks are provisional.
-3. Towers: the Crushing tower bonus; the Bleed and Shock DoT bonus is assumed like Poison and Burn. Test 06 inside the Towers.
-4. Gear main stats not read yet: Chest Max HP Up, Legs Defense Up, Max HP Up / Defense Up on Helmet, Gloves and Boots.
-5. Alex's awakenings, when materials allow.
+1. Perfect rune tops still predicted: Crit Rate 8.50% (step 0.425%) and Defense 100 (step 5). Seen tops: Attack 140, Crit Damage 14%, Max HP 1500 (15 Nov). Readings in `RUNES.seen`.
+2. Alex's awakenings, when materials allow.
+3. The remaining signature team runs, when those teams are at Lv.70.
 
 ## Can wait
 - Crit Rate awakenings were rated before the 30 Oct gear rebuild; worth a re-check.

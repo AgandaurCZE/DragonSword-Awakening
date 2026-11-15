@@ -22945,7 +22945,7 @@
     "name": "Tower of Crushing",
     "archetype": "Crushing",
     "status": "Knockdown",
-    "measured": false,
+    "measured": true,
     "pos": "100% 50%",
     "text": "He who severs consciousness shall sever the flow. If you cannot create even a single moment of silence, you will not reach it easily.",
     "crest": "assets/ui/crest-crushing.webp"
@@ -24025,11 +24025,14 @@
      "1050",
      "1125",
      "1200",
-     "1275"
+     "1275",
+     "1425",
+     "1500"
     ],
     "Focus": [
      "5.10%",
      "5.95%",
+     "6.38%",
      "6.80%",
      "7.65%",
      "8.08%"
@@ -24039,6 +24042,7 @@
      "95"
     ],
     "Amplification": [
+     "9.10%",
      "10.50%",
      "11.20%",
      "11.90%",
