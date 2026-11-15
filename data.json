@@ -27952,8 +27952,7 @@
    },
    {
     "name": "Break",
-    "hitBonus": 0,
-    "untested": "Break Additional Damage is taken to join the Additional Damage pool."
+    "hitBonus": 0
    }
   ],
   "onceNote": "This enemy type's multiplier is approximate.",
