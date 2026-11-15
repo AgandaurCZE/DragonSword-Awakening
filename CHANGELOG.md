@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 15 Nov 2026 — No more "assumed" status notes in the calculator (Claude)
+- David: every elemental status works the same everywhere (Frost only adds the Frozen shatter), and every physical status too. `TOWER_TRIALS.bonus.dotTested` now Poison, Bleed, Burn, Shock; `DAMAGE_CALC.weaknessMeasured` all eight statuses; Frozen's `untested` note removed. The Damage Calculator no longer shows "taken to…" notes for these (Break's note stays). GAME_MATH updated. Pushed without the local browser check (GitHub's run is the check).
+
 ## 15 Nov 2026 — Notes corrected; new Perfect rune readings (Claude)
 - David: Hunt bosses share the same build-up resistances; the Tower of Crushing works like the other two for Knockdown (`TOWER_TRIALS.towers[crushing].measured` → true, so the calculator no longer says its bonus is assumed); gear main stats were settled earlier. STATUS open questions, GAME_MATH "Known unknowns" and SITE open tasks corrected (the Best Gear role switch removed: no hero plays a Breaker as damage dealer).
 - `RUNES.seen` Perfect: added Focus 6.38%, Vitality 1425 and 1500, Amplification 9.10%. Max HP top 1500 is now seen; only Crit Rate 8.50% and Defense 100 remain predicted.

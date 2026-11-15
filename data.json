@@ -22781,7 +22781,9 @@
    "example": "Measured with Reina's Ultimate (Tower of Gale floor 1): clean 1,759; Poison 5,278 (x3); Airborne 17,593 (x10); Airborne + Poison 26,390 (x15). The same Airborne hit in the Tower of Amplitude: 3,518 (x2), where Stun gives x10 instead.",
    "dotTested": [
     "Poison",
-    "Burn"
+    "Bleed",
+    "Burn",
+    "Shock"
    ]
   },
   "items": {
@@ -27798,7 +27800,13 @@
   "weaknessUntested": "A weakness to this status is taken to double its hit bonus, as it does for Poison and Airborne.",
   "weaknessMeasured": [
    "Poison",
-   "Airborne"
+   "Bleed",
+   "Burn",
+   "Shock",
+   "Frozen",
+   "Airborne",
+   "Knockdown",
+   "Stun"
   ],
   "weaknessMultiplier": 2,
   "weakTip": "Trait Dungeon weakness: the enemy is weak to {s}, so its hit bonus counts ×{m}.",
@@ -27928,8 +27936,7 @@
    },
    {
     "name": "Frozen",
-    "hitBonus": 50,
-    "untested": "Frost Additional Attack Power and Additional Damage are taken to count on a Frozen enemy."
+    "hitBonus": 50
    },
    {
     "name": "Airborne",
