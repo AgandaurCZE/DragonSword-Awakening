@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 15 Nov — Finder Frost tip and menu icons
+
+The Frost and Freeze tip follows Hunt weakness and difficulty. Six sidebar placeholders have matching outline icons for Shortcuts, Finder, Normal Dungeons, Currency Dungeons, Gear and Karma.
+
 ## 14 Nov — Titles and Achievement stages
 
 Eight more titles owned (the six Hunt Conquerors, Destroyer, Carousel; 49 of 109). Combat Fame track goes to stage 4 (200); The Fame of the Challenger's stage is 75.

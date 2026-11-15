@@ -2,6 +2,10 @@
 
 Back to the library: [docs/README.md](../README.md). Update this file during and at the end of every session; it's the first thing the next chat reads after [WORKING_WITH_DAVID.md](WORKING_WITH_DAVID.md). Finished items move to [DONE.md](DONE.md); every change is in `CHANGELOG.md`. Site tasks are in [SITE.md](SITE.md). David's own to-do list: `docs/dragonsword_david_todo_by_priority.html` (updated 10 Nov).
 
+## Finder Frost tip and menu icons — 15 Nov
+
+- The Frost and Freeze tip appears on Frost-weak Nightmare and Hell Hunts. Shortcuts, Finder, Normal Dungeons, Currency Dungeons, Gear and Karma have new sidebar icons.
+
 ## Navigation, guide and encounter update — 15 Nov
 
 - Mobile has a labelled menu and full-width content. Shortcuts features the Tier List, Teams and Finder. Ratings appear before the explanation, and hero skill tabs stick on mobile. The Finder links boss and tower mechanics to ranks and rosters. Guides publishes three completed mechanics guides.

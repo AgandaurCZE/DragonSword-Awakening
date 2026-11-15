@@ -49,8 +49,10 @@ function renderFinder() {
       summary = `${tower.status} adds +${TOWER_TRIALS.bonus.own}% Additional Damage to hits while it is active. The most useful teams apply the status early and spend the window on their strongest hits.`;
     } else if (boss.type === 'Hunt') {
       summary = highHunt
-        ? 'A matching elemental status or an active physical status removes the damage resistance for its duration. One Frost stack opens Frost-weak Hunts. Three trigger Freeze.'
+        ? 'A matching elemental status or an active physical status removes the damage resistance for its duration.'
         : 'On this difficulty, the Nightmare and Hell damage-resistance rule is inactive.';
+      if (highHunt && weakness.includes('Frost'))
+        summary += ' One Frost stack opens Frost-weak Hunts. Three trigger Freeze.';
       if (boss.id === 'gallore')
         summary += ' The first Break knocks off a fist and lowers Gallore’s Defense after the gauge recovers.';
     } else {

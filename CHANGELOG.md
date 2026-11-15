@@ -1,5 +1,11 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 15 Nov 2026 — Finder Frost tip and menu icons
+
+- The Finder shows the Frost and Freeze tip only on Nightmare and Hell Hunts that list Frost as a weakness.
+- Replaced the Shortcuts, Boss & Tower Finder, Normal Dungeons, Currency Dungeons, Gear and Karma placeholder glyphs with custom outline icons. They use the same size and menu colours as the existing outline icons.
+- The 113-view desktop and phone comparison found the expected desktop sidebar changes and a shorter Finder summary for the default Hunt at both widths. Browser spot checks covered the expanded phone menu and every Hunt on Hard, Nightmare and Hell. The full check suite passed.
+
 ## 15 Nov 2026 — Mobile layout, encounter finder and mechanics guides
 
 - Replaced the phone icon rail with a labelled menu and grouped the sidebar into Play, Database, Progress, Resources and Updates. Shortcuts now features Tier List, Teams and Boss & Tower Finder, with a latest Hound13 link.
