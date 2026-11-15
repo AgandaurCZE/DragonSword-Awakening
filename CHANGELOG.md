@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 15 Nov 2026 — Signature skill tests for the last ten (notes only; Claude)
+- David's results for Astria, Johnny, Reina, Aria, Eileen, Castella, Sion, Lute, Tarte and Alex recorded in `docs/library/TEAM_TESTS.md` ("Signature skill tests: the last ten"). Biggest changes: Sion's relic retrieval refunds his skill (full break 50 → 27 s, a full Shock stack alone); Astria's charged shot refills her Ultimate in about 5 s (full break 18 → 12–13 s); Castella's held Howling 32% gauge (full break 14–15 s); Reina's Tempest up to 20 piercing hits; Aria's Switch On! Burn 0.30 / Airborne 0.20; Eileen's banner +20% Crit Rate and Crit Damage. Team runs pending (setup being agreed). No site or data change. `check_all.py`: not needed (Markdown only, not pushed yet).
+
 ## 15 Nov 2026 — Karma art: 53 of 53 in colour (Claude)
 - David owns every Signature Karma (Codex complete). From his nine Codex screenshots: the last ten cards cut at 392 × 467, the printed name painted out, saved as WebP: A Sword Summoned for a Friend, Loyalty Amidst Lethargy, Between Chivalry and Bookmarks, The Wind That Protects the Kingdom, Explosion Is Art, A Helping Hand for Good Kids, Fate Spoke to the Boy, Wandering Blade, Noisy Duet, Wildflowers Bloom Through the Wind. `KARMA_DATA.owned`: all 53 true. Source PNGs deleted.
 - `public_diff.py`: the Karma page, Shortcuts and the Build tabs of the ten owners differ (their Best Gear now counts the owned signature: Alex, Aria, Astria, Castella, Eileen, Johnny, Lute, Reina, Sion, Tarte). `check_all.py`: passes apart from the YouTube thumbnails this workspace can't reach (David: ignore those).

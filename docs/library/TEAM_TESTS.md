@@ -301,6 +301,22 @@ Claude's notes:
 | 19 | Lute | A Sword Summoned for a Friend | Low | Not owned | More relics from Relic Fall. |
 | 20 | Alex | Loyalty Amidst Lethargy | Low | Not owned | David: doesn't help him with anything. |
 
+### Signature skill tests: the last ten (David, 15 Nov)
+Training Ogre. Each row: the signature's change, against the earlier numbers in TEST01_RESULTS / AWAKENING_TESTS. Full-break times are the hero alone, going all out.
+
+| Hero (awakening) | Signature | Result |
+|---|---|---|
+| Astria (A3) | Wildflowers Bloom Through the Wind | Charged shot of all 6 bolts in Precision Shot: gauge about **12.5%**, Stun only **0.08–0.10**, takes about 2 s. The gain is Rage: Ultimate → charged shot → reload + one bolt refills the Ultimate in about **5 s** (about 8 s with normal Precision shots). In that rotation: **full break 12–13 s** (before about 18 s), at the cost of some Stun. |
+| Johnny (A6) | Wandering Blade | Phantom Slash's blades follow the dash path, so application depends on the aim: Poison **0.20–0.30** per Ultimate (usually about 0.25), Airborne 0.20 (same), gauge 5% → **7.5%**. **Full break 33 s** (before 39 s). |
+| Reina (A6) | The Wind That Protects the Kingdom | Tempest up to **20 hits** (9–10 with A1), and they pierce, hitting enemies behind. Gauge about **6.5–7%** (3% before A1). **Full break 38 s** (before 50 s). |
+| Aria (A3) | Explosion Is Art | Switch On!, all 3 bolts: Burn 0.20 → **0.30**, Airborne 0.10 → **0.20**, gauge unchanged (6%). One bolt (Bomb Arrow from the 3rd basic hit, set off with Special B): Burn **0.10**, Airborne **0.05**. **Full break 37 s** (before 50 s). |
+| Eileen (A3) | Between Chivalry and Bookmarks | Vanguard Banner inside Brave One: **+20% Crit Rate and +20% Crit Damage** at skill Lv.1; Lv.2 21% / 20%; Lv.4 23% / 20%. Skill levels raise only the skill's own Crit Rate, not the signature's part. No hit change, so no break time. |
+| Castella (A6) | Noisy Duet | Howling pressed (1 s): gauge 15% → **20%**. Held (3 s): **32–32.5%**; releasing after the first second ends it, and she can dodge and move. **Full break 14 s pressed, 15 s held** (before about 18 s). |
+| Sion (A6) | Fate Spoke to the Boy | Retrieving the relic after Divine Crash gives back **half the skill's cooldown**; with the relic planted by the Ultimate, the skill is ready again at once. Divine Crash now Shock **about 0.35** (no relic) and **about 0.75** with the relic planted (A6 may add to this); gauge 17.5% without relic, 5% with it. He reaches a full Shock stack alone, which opens his own Justice Fall. **Full break 27 s** (before about 50 s). Big gain for Shock teams. |
+| Lute (A3) | A Sword Summoned for a Friend | Not more relics: one bigger relic (looks like three) with a much larger buff circle; lasts **10 s** (5 s without). Buff value looks unchanged: Ornette, panel Attack 7224 (geared, Karma maxed), got **+551 Attack**. |
+| Tarte (A3) | A Helping Hand for Good Kids | Cure circle lasts **5 s**, small, heals little (maybe it can't overheal, so the goblins don't show it). |
+| Alex (A0) | Loyalty Amidst Lethargy | The damage reduction works only while his guard is up; it ends the moment he parries and leaves the stance. No values are shown anywhere. |
+
 ### Test 09 results (David, 9 Nov evening)
 Training Ogre, every hero Lv.70, no gear, 1 minute. Every hero wears a Lv.1 normal Karma; then only the named hero swaps to their Lv.1 signature. One run each side, so a gap under about 70k may be chance; Ryza's gain repeats in three teams, so it is the most reliable.
 
