@@ -494,7 +494,8 @@
      ]
     }
    ],
-   "note": "Kalsion’s Explosion excels against packs and bosses. Pair Aria with Eileen for more Airborne and buffs, with less Break than Kalien provides. Against resilient bosses, Aria can replace Reina for an all-Blazeflame team."
+   "note": "Kalsion’s Explosion excels against packs and bosses. Pair Aria with Eileen for more Airborne and buffs, with less Break than Kalien provides. Against resilient bosses, Aria can replace Reina for an all-Blazeflame team.",
+   "combo": "Reina launches → Kalsion groups enemies with Explosion."
   },
   {
    "tier": "S",
@@ -516,7 +517,8 @@
      "name": "Sion"
     }
    ],
-   "note": "Ryza builds Shock quickly. Ornette adds more damage and Knockdown than Tarte, and Sion buffs the team. This is Ryza’s strongest same-archetype lineup."
+   "note": "Ryza builds Shock quickly. Ornette adds more damage and Knockdown than Tarte, and Sion buffs the team. This is Ryza’s strongest same-archetype lineup.",
+   "combo": "Build Shock → Ornette’s Judgment sets up Ryza’s Thunder Grab."
   },
   {
    "tier": "S",
@@ -538,7 +540,8 @@
      ]
     }
    ],
-   "note": "Charlotte and Johnny build Poison. The third slot can go to any reliable Airborne applier, with Reina the fastest option."
+   "note": "Charlotte and Johnny build Poison. The third slot can go to any reliable Airborne applier, with Reina the fastest option.",
+   "combo": "Charlotte and Johnny stack Poison → Reina launches for Venom Cutter and Shadow Grab."
   },
   {
    "tier": "A",
@@ -557,7 +560,8 @@
      "name": "Dana"
     }
    ],
-   "note": "All three contribute Frost. Othello’s ice sets up Dana’s Knuckles and Cerese’s shatter, so the lineup leaves little room for swaps."
+   "note": "All three contribute Frost. Othello’s ice sets up Dana’s Knuckles and Cerese’s shatter, so the lineup leaves little room for swaps.",
+   "combo": "Othello creates ice → Dana uses Chako Knuckle → Cerese shatters it with Shattering Touch."
   },
   {
    "tier": "A",
@@ -580,7 +584,8 @@
      ]
     }
    ],
-   "note": "Theresia and Roxy are the core Bleed pair. Use the third slot for Lute’s healing, Castella’s Break or Kalien’s Burn and Stun."
+   "note": "Theresia and Roxy are the core Bleed pair. Use the third slot for Lute’s healing, Castella’s Break or Kalien’s Burn and Stun.",
+   "combo": "Roxy builds Bleed and Stun → Theresia uses Divine Arc."
   },
   {
    "tier": "B",
@@ -602,7 +607,8 @@
      "name": null
     }
    ],
-   "note": "Fast Break speeds up physical status buildup and can interrupt dangerous boss attacks. Raw damage is lower. Use the open slot to suit the fight."
+   "note": "Fast Break speeds up physical status buildup and can interrupt dangerous boss attacks. Raw damage is lower. Use the open slot to suit the fight.",
+   "combo": "Castella and Astria break Super Armor → the team builds physical statuses faster."
   }
  ],
  "KARMA_DATA": [
@@ -27774,7 +27780,8 @@
    "tools": "tools",
    "achievements": "achievements",
    "patches": "patch-notes",
-   "news": "news"
+   "news": "news",
+   "finder": "finder"
   },
   "toolRoutes": {
    "damage": "tools/DamageCalculator",
@@ -27782,6 +27789,26 @@
    "backup": "tools"
   },
   "shortcuts": [
+   {
+    "label": "Start here",
+    "items": [
+     {
+      "label": "Tier List",
+      "page": "tier",
+      "image": "assets/ui/mode-overall.webp"
+     },
+     {
+      "label": "Teams",
+      "page": "teams",
+      "image": "assets/ui/teams.webp"
+     },
+     {
+      "label": "Boss & Tower Finder",
+      "page": "finder",
+      "image": "assets/bosses/gauron-banner.webp"
+     }
+    ]
+   },
    {
     "label": "Database",
     "items": [
@@ -27791,19 +27818,9 @@
       "image": "assets/heroes/johnny.webp"
      },
      {
-      "label": "Tier List",
-      "page": "tier",
-      "image": "assets/ui/mode-overall.webp"
-     },
-     {
       "label": "Karma",
       "page": "karma",
       "image": "assets/karma/a-sword-summoned-for-a-friend.webp"
-     },
-     {
-      "label": "Teams",
-      "page": "teams",
-      "image": "assets/ui/teams.webp"
      },
      {
       "label": "Gear",
@@ -27814,11 +27831,6 @@
       "label": "Familiars",
       "page": "familiars",
       "image": "assets/familiars/refreshing-canary.webp"
-     },
-     {
-      "label": "Titles",
-      "page": "titles",
-      "image": "assets/ui/titles.svg"
      },
      {
       "label": "Cookbook",
@@ -27849,18 +27861,21 @@
       "label": "Currency Dungeons",
       "page": "currency",
       "image": "assets/dungeons/currency/dragon-worshipper-ruins.webp"
+     }
+    ]
+   },
+   {
+    "label": "Progress",
+    "items": [
+     {
+      "label": "Titles",
+      "page": "titles",
+      "image": "assets/ui/titles.svg"
      },
      {
-      "label": "Bosses Tier List",
-      "page": "tier",
-      "image": "assets/bosses/gauron-banner.webp",
-      "mode": "bosses"
-     },
-     {
-      "label": "Tower Tier List",
-      "page": "tier",
-      "image": "assets/ui/mode-towers.webp",
-      "mode": "towers"
+      "label": "Achievements",
+      "page": "achievements",
+      "image": "assets/ui/titles.svg"
      }
     ]
    },
@@ -27868,22 +27883,9 @@
     "label": "Guides",
     "items": [
      {
-      "label": "Guide coming soon",
+      "label": "Mechanics guides",
       "page": "guides",
-      "image": "assets/ui/guides.webp",
-      "disabled": true
-     },
-     {
-      "label": "Guide coming soon",
-      "page": "guides",
-      "image": "assets/ui/guides.webp",
-      "disabled": true
-     },
-     {
-      "label": "Guide coming soon",
-      "page": "guides",
-      "image": "assets/ui/guides.webp",
-      "disabled": true
+      "image": "assets/ui/guides.webp"
      }
     ]
    },

@@ -4539,16 +4539,6 @@
             "list": {
              "record": {
               "opt": {
-               "disabled": {
-                "types": [
-                 "bool"
-                ]
-               },
-               "mode": {
-                "types": [
-                 "string"
-                ]
-               },
                "tool": {
                 "types": [
                  "string"
@@ -4771,6 +4761,11 @@
          ]
         },
         "arch": {
+         "types": [
+          "string"
+         ]
+        },
+        "combo": {
          "types": [
           "string"
          ]

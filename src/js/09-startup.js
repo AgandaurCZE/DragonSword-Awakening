@@ -1,6 +1,15 @@
 /* Beta launch: shortcuts, canonical path navigation and data loading. */
 const APP_ROOT = new URL('.', document.baseURI).pathname;
 const NAV = { ready: false, restoring: false, state: null, url: '', y: 0 };
+function setMobileMenu(open, restoreFocus = false) {
+  const toggle = $('mobileMenu');
+  const menu = $('mainNavigation');
+  toggle.setAttribute('aria-expanded', String(open));
+  menu.classList.toggle('is-open', open);
+  $('mobileMenuBackdrop').hidden = !open;
+  if (open) (menu.querySelector('.nav-item.active') || menu.querySelector('.nav-item'))?.focus();
+  else if (restoreFocus) toggle.focus();
+}
 function routeUrl(page, options = {}) {
   const path =
     page === 'hero'
@@ -60,11 +69,20 @@ function navShow(state, scrollY = null) {
         renderTierV2();
       }
       if (state.page === 'tools' && state.tool) document.querySelector(`[data-tool="${state.tool}"]`)?.click();
+      if (state.page === 'teams' && (state.team || state.speed)) {
+        TEAMS_VIEW.speed = Boolean(state.speed);
+        renderTeams();
+        if (state.team)
+          requestAnimationFrame(() =>
+            flashEl([...document.querySelectorAll('.team-card')].find((card) => card.dataset.teamName === state.team)),
+          );
+      }
+      if (state.page === 'guides' && state.guide) requestAnimationFrame(() => $(state.guide)?.scrollIntoView());
     }
   } finally {
     NAV.restoring = false;
   }
-  if (scrollY !== null && !state.skill)
+  if (scrollY !== null && !state.skill && !state.team && !state.guide)
     requestAnimationFrame(() => window.scrollTo({ top: scrollY, behavior: 'instant' }));
 }
 function navNavigate(state) {
@@ -100,6 +118,16 @@ function navInitial() {
   const tool = Object.entries(SITE.toolRoutes).find(([, p]) => p.toLowerCase() === path.toLowerCase());
   if (tool) return { page: 'tools', tool: tool[0] };
   const page = Object.entries(SITE.routes).find(([, p]) => p === path)?.[0];
+  const params = new URLSearchParams(hash);
+  if (page === 'tier') {
+    const boss = params.get('boss'),
+      tower = params.get('tower');
+    if (TIER_LIST_V2.bosses.some((entry) => entry.id === boss)) return { page, tier: { mode: 'bosses', boss } };
+    if (TOWER_TRIALS.towers.some((entry) => entry.id === tower)) return { page, tier: { mode: 'towers', tower } };
+  }
+  if (page === 'teams' && hash === 'speed') return { page, speed: true };
+  if (page === 'teams' && params.has('team')) return { page, team: params.get('team') };
+  if (page === 'guides' && MECHANICS_GUIDES.some((guide) => guide.id === hash)) return { page, guide: hash };
   return { page: page || 'home' };
 }
 function navInit() {
@@ -130,10 +158,20 @@ function navInit() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') navSchedule();
   });
-  document.querySelector('.brand-home').addEventListener('click', (e) => {
-    if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button !== 0) return;
-    e.preventDefault();
-    navNavigate({ page: 'home' });
+  document.querySelectorAll('.brand-home, .mobile-home').forEach((link) =>
+    link.addEventListener('click', (e) => {
+      if (!isPlainLinkClick(e)) return;
+      e.preventDefault();
+      navNavigate({ page: 'home' });
+    }),
+  );
+  const menu = $('mobileMenu');
+  menu.onclick = () => setMobileMenu(menu.getAttribute('aria-expanded') !== 'true');
+  $('mobileMenuBackdrop').onclick = () => setMobileMenu(false, true);
+  const narrow = matchMedia('(max-width: 760px)');
+  narrow.addEventListener('change', () => setMobileMenu(false));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') setMobileMenu(false, true);
   });
 }
 function renderShortcuts() {
@@ -142,26 +180,21 @@ function renderShortcuts() {
   for (const group of SITE.shortcuts) {
     const section = document.createElement('section');
     section.className = 'shortcut-group';
+    if (group.label === 'Start here') section.classList.add('shortcut-featured');
     const title = document.createElement('h3');
     title.className = 'gear-section-title shortcut-title';
     title.textContent = group.label;
     const grid = document.createElement('div');
     grid.className = 'shortcut-grid';
-    for (const item of group.items) {
-      const card = document.createElement(item.disabled ? 'div' : 'a');
-      card.className = 'shortcut-card' + (item.disabled ? ' shortcut-soon' : '');
-      if (item.disabled) card.setAttribute('aria-disabled', 'true');
-      else {
-        card.href = routeUrl(item.page, item);
-        card.addEventListener('click', (e) => {
-          if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button !== 0) return;
-          e.preventDefault();
-          const state = { page: item.page };
-          if (item.tool) state.tool = item.tool;
-          if (item.mode) state.tier = { mode: item.mode };
-          navNavigate(state);
-        });
-      }
+    for (const item of group.items.filter((entry) => !entry.disabled)) {
+      const card = document.createElement('a');
+      card.className = 'shortcut-card';
+      card.href = routeUrl(item.page, item);
+      card.addEventListener('click', (event) => {
+        if (!isPlainLinkClick(event)) return;
+        event.preventDefault();
+        navNavigate({ page: item.page, tool: item.tool, ...(item.mode ? { tier: { mode: item.mode } } : {}) });
+      });
       const image = document.createElement('img');
       image.src = item.image;
       image.alt = '';
@@ -170,13 +203,26 @@ function renderShortcuts() {
       label.textContent = item.label;
       const arrow = document.createElement('span');
       arrow.className = 'shortcut-arrow';
-      arrow.textContent = item.disabled ? 'SOON' : '→';
+      arrow.textContent = '→';
       arrow.setAttribute('aria-hidden', 'true');
       card.append(image, label, arrow);
       grid.append(card);
     }
     section.append(title, grid);
     root.append(section);
+  }
+  const first = steamNews.posts[0];
+  if (first) {
+    const latest = document.createElement('a');
+    latest.className = 'shortcuts-latest';
+    latest.href = routeUrl('news');
+    latest.innerHTML = `<strong>Latest from Hound13</strong><span>${profileEsc(first.title)} →</span>`;
+    latest.onclick = (e) => {
+      if (!isPlainLinkClick(e)) return;
+      e.preventDefault();
+      navNavigate({ page: 'news' });
+    };
+    root.querySelector('.shortcut-featured').after(latest);
   }
 }
 function patchText() {
@@ -209,6 +255,7 @@ function startApp() {
   renderTrait();
   renderCookbook();
   renderGuides();
+  renderFinder();
   renderItems();
   renderAchievements();
   renderTools();

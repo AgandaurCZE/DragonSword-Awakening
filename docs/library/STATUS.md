@@ -2,6 +2,10 @@
 
 Back to the library: [docs/README.md](../README.md). Update this file during and at the end of every session; it's the first thing the next chat reads after [WORKING_WITH_DAVID.md](WORKING_WITH_DAVID.md). Finished items move to [DONE.md](DONE.md); every change is in `CHANGELOG.md`. Site tasks are in [SITE.md](SITE.md). David's own to-do list: `docs/dragonsword_david_todo_by_priority.html` (updated 10 Nov).
 
+## Navigation, guide and encounter update — 15 Nov
+
+- Mobile has a labelled menu and full-width content. Shortcuts features the Tier List, Teams and Finder. Ratings appear before the explanation, and hero skill tabs stick on mobile. The Finder links boss and tower mechanics to ranks and rosters. Guides publishes three completed mechanics guides.
+
 ## Teams and Ursula speed runs — 15 Nov
 
 - The Teams layout contains six tiered lineups and five Ursula speed runs. Portraits link to Build and Teams, and named skills open the Skills tab and the matching skill card. Hero and navigation links support opening in another tab or window. News videos show thumbnails before playback.

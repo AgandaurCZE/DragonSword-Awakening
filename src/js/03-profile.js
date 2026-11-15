@@ -305,6 +305,29 @@ function focusProfileSkill(hero, name) {
   });
 }
 
+const HERO_INTROS = {
+  Alex: 'Time Guard Counter to apply Knockdown and lower the enemy’s Defense.',
+  Aria: 'Use bomb attacks to build Burn and Airborne across a pack.',
+  Astria: 'Set up Precision Shot to pressure Super Armor, then use Bolt Bombard on a Stunned target.',
+  Castella: 'Break Super Armor to open Stun Blow, then follow with Upper Blow for Airborne.',
+  Cerese: 'Build Frost with Ice Storm and detonate ice or Frozen enemies with Shattering Touch.',
+  Charlotte: 'Start with Poison, launch with Illusion Kick and follow with Shadow Grab for Knockdown.',
+  Dana: 'Keep Chako fighting through swaps and use Chako Knuckle on ice to pressure Super Armor.',
+  Eileen: 'Use Brave One and Vanguard Banner to buff the team, and Barraging Spear to build Airborne.',
+  Johnny: 'Stack Poison and use Airborne windows for Venom Cutter.',
+  Kalien: 'Build Burn with fox summons and pressure Super Armor to unlock Fox Grab at A0.',
+  Kalsion: 'Kalsion spends Airborne on Explosion to pull packs together.',
+  Lute: 'Build Stun with Stun Slash and keep the team healthy with Healing Circle.',
+  Ornette: 'Build Shock, then use Judgment to turn the opening into Knockdown.',
+  Othello: 'Build Frost with Frozen Stinger and create ice with Ice Crown.',
+  Reina: 'Use Rising Cutter and Wind Slayer to start Airborne for the team.',
+  Roxy: 'Build Bleed and Stun with Crimson Spiral, then use Kick Storm while Stun is active.',
+  Ryza: 'Plant javelins, recover them with Flash and use Thunder Grab during an opening.',
+  Sion: 'Place relics to buff the team and use Shock to unlock Justice Fall.',
+  Tarte: 'Leave Bolt Bubble orbs active while a Shock teammate detonates them.',
+  Theresia: 'Build Bleed and spend Stun on Divine Arc to extend Heretic Judgment.',
+};
+
 function openCharacterProfile(name, initialTab = 'skills') {
   const h = HEROES.find((x) => x.name.toLowerCase() === String(name).toLowerCase());
   if (!h) return;
@@ -332,12 +355,11 @@ function openCharacterProfile(name, initialTab = 'skills') {
   $('profileCrumbName').textContent = h.name;
   $('profilePortrait').src = h.portrait;
   $('profilePortrait').alt = h.name;
-  $('profileUpdated').textContent =
-    'Character guide · in-game tests · Overall tier ' + (v2Hero(h.name).overall?.tier || 'Unrated');
-  $('profileIntro').innerHTML =
-    `Guide and build for <button type="button" data-back-tier="1">${profileEsc(h.name)}</button> from DragonSword: Awakening. <button type="button" data-back-tier="1">${profileEsc(h.name)}</button> is a character from the <strong>${profileEsc(h.archetype)}</strong> archetype. To learn more about ${profileEsc(h.name)}, check the sections below. Use the tabs to quickly switch to the kind of information you're looking for.`;
-  $('profileQuickInfo').innerHTML =
-    `<div class="profile-quick-info-list"><div class="profile-quick-info-row"><strong>Archetype:</strong> <span class="profile-quick-arch"><img src="${h.archIcon}" alt="">${profileEsc(h.archetype)}</span></div><div class="profile-quick-info-row"><strong>Role:</strong> <span>${profileEsc(h.role)}</span></div>${h.faction ? `<div class="profile-quick-info-row"><strong>Faction:</strong> <span>${profileEsc(h.faction)}</span></div>` : ''}<div class="profile-quick-info-row"><strong>Kit:</strong> <span>${profileEsc(h.classType || '')}</span></div>${h.obtain?.method ? `<div class="profile-quick-info-row"><strong>How to get:</strong> <span>${profileEsc(h.obtain.method + (h.obtain.cost ? ' (' + h.obtain.cost + ')' : ''))}</span></div>` : ''}<div class="profile-quick-info-row"><strong>Overall tier:</strong> <span class="profile-tier-large" style="background:${v2TierColor(v2Hero(h.name).overall?.tier)}">${profileEsc(v2Hero(h.name).overall?.tier || '—')}</span></div></div>`;
+  const role = v2Role(h);
+  const tier = v2Hero(h.name).overall?.tier || '—';
+  $('profileFacts').innerHTML =
+    `<li><img src="${profileEsc(h.archIcon)}" alt="">${profileEsc(h.archetype)}</li><li><img src="${profileEsc(ROLE_ICONS[role] || '')}" alt="">${profileEsc(role)}</li><li>Overall <span class="profile-tier-large" style="background:${v2TierColor(tier)}">${profileEsc(tier)}</span></li>`;
+  $('profileIntro').textContent = HERO_INTROS[h.name] || '';
   const data = CHARACTER_PROFILE_DATA[h.name] || { skills: [], karma: '', gear: '' };
   renderProfileAwakenings(h);
   const skillRoot = $('profileSkillsGrid');
@@ -533,7 +555,7 @@ function refCardHtml(type, key) {
     const h = HEROES.find((x) => x.name === key);
     if (!h) return '';
     const t = v2Hero(h.name).overall || {};
-    return `<div class="ref-card"><div class="ref-head"><img class="ref-portrait" src="${h.portrait}" alt=""><div><div class="ref-title">${profileEsc(h.name)}</div><div class="ref-meta"><img src="${h.archIcon}" alt="">${colourStatusWords(h.archetype)} · ${profileEsc(h.role)}</div><div class="ref-meta">Kit: ${profileEsc(h.classType)}${h.faction ? ` · ${profileEsc(h.faction)}` : ''}</div><div class="ref-tiers">${[
+    return `<div class="ref-card"><div class="ref-head"><img class="ref-portrait" src="${h.portrait}" alt=""><div><div class="ref-title">${profileEsc(h.name)}</div><div class="ref-meta"><img src="${h.archIcon}" alt="">${colourStatusWords(h.archetype)} · ${profileEsc(v2Role(h))}</div><div class="ref-meta">Kit: ${profileEsc(h.classType)}${h.faction ? ` · ${profileEsc(h.faction)}` : ''}</div><div class="ref-tiers">${[
       ['tier', 'Overall'],
       ['single', 'Single target'],
       ['groups', 'Groups'],

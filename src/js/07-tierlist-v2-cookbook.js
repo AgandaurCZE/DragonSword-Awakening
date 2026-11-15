@@ -284,18 +284,15 @@ function renderTierV2() {
     .filter(([, H]) => H.expert)
     .map(([n, H]) => `<li><b>${profileEsc(n)} (−${H.expert.drop}):</b> ${profileEsc(H.expert.reason || '')}</li>`)
     .join('');
-  let html = `<div class="v2-banner">BETA · Ratings reflect the agreed tests and are still being reviewed.</div>
- <div class="v2-head"><h2>Tier List <span>(${profileEsc(M.label || '')}${bossName ? ' · ' + profileEsc(bossName) : ''})</span></h2></div>
- <details class="v2-panel"><summary>About this tier list</summary><div>${(D.about || []).map((p) => `<p>${profileEsc(p)}</p>`).join('')}</div></details>
- <details class="v2-panel"><summary>Modes</summary><div>${Object.values(D.modes || {})
-   .map((m) => `<p><b>${profileEsc(m.label)}</b> (${profileEsc(m.sub)}): ${profileEsc(m.intro || '')}</p>`)
-   .join('')}</div></details>
- <details class="v2-panel"><summary>Tags</summary><div><table class="v2-tag-table">${tagRows}<tr><td><span class="v2-karma inline"><svg viewBox="0 0 16 16">${V2_ICONS.karma}</svg></span></td><td>${profileEsc(D.signatureKarmaText || '')}</td></tr></table>${experts ? `<h5>Expert reasons</h5><ul>${experts}</ul>` : ''}</div></details>
- <details class="v2-panel"><summary>Ratings</summary><div><ul class="v2-ratings">${(D.ratings || []).map((r) => `<li><span class="v2-rt" style="background:${v2TierColor(r.tier)}">${profileEsc(r.tier)}</span>${profileEsc(r.text)}</li>`).join('')}</ul></div></details>
+  const filterCount = [V2.q, V2.arch, V2.role, V2.kit].filter(Boolean).length;
+  let html = `<div class="v2-head"><h2>Tier List <span>(${profileEsc(M.label || '')}${bossName ? ' · ' + profileEsc(bossName) : ''})</span></h2></div>
  <div class="v2-modes">${['overall', 'bosses', 'towers']
    .filter((k) => D.modes?.[k])
    .map(v2ModeBtn)
-   .join('')}</div>`;
+   .join('')}</div><div class="v2-toolbar"><div class="v2-view" role="group" aria-label="Investment">
+      <button type="button" id="v2Base" class="${V2.awk ? '' : 'on'}" aria-pressed="${!V2.awk}" title="A0 with Mastery">A0 · Mastery</button>
+      <button type="button" id="v2AwkAll" class="${V2.awk ? 'on' : ''}" aria-pressed="${V2.awk}" title="A6 with Signature Karma and Mastery">A6 · Signature</button>
+    </div><button type="button" class="heroes-filter-btn v2-tagall${V2.tagsOff ? '' : ' active'}" id="v2TagAll" aria-pressed="${!V2.tagsOff}">Tags</button></div>`;
   if (V2.mode === 'towers') html += v2TowersHtml();
   if (V2.mode === 'bosses') {
     const un = D.undiscovered || {};
@@ -325,7 +322,7 @@ function renderTierV2() {
           `<button type="button" data-v2view="${k}" aria-pressed="${V2.view === k}"${V2.view === k ? ' class="on"' : ''}>${l}</button>`,
       )
       .join('')}</div>`;
-  html += `<p class="v2-intro">${profileEsc(M.intro || '')}</p><div class="v2-filters"><input type="search" id="v2Search" placeholder="Search heroes…" value="${profileEsc(V2.q)}" autocomplete="off"><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.arch ? ' active' : ''}" data-v2arch="" title="All archetypes"><span class="all-symbol">✱</span></button>${ARCHES.map(
+  html += `<details id="v2FilterPanel" class="v2-panel v2-filter-panel"${V2.filtersOpen ? ' open' : ''}><summary>Filters${filterCount ? ' (' + filterCount + ')' : ''}</summary><div class="v2-filters"><input type="search" id="v2Search" placeholder="Search heroes…" value="${profileEsc(V2.q)}" autocomplete="off"><div class="v2-fgroup"><button class="heroes-filter-btn${!V2.arch ? ' active' : ''}" data-v2arch="" title="All archetypes"><span class="all-symbol">✱</span></button>${ARCHES.map(
     (a) => {
       const h = HEROES.find((x) => x.archetype === a);
       return `<button class="heroes-filter-btn${V2.arch === a ? ' active' : ''}" data-v2arch="${profileEsc(a)}" title="${profileEsc(a)}"><img src="${h?.archIcon || ''}" alt=""></button>`;
@@ -339,9 +336,7 @@ function renderTierV2() {
       ([k, ic]) =>
         `<button class="heroes-filter-btn v2-kit-btn${V2.kit === k ? ' active' : ''}" data-v2kit="${profileEsc(k)}" title="${profileEsc(k)}"><svg viewBox="0 0 16 16" aria-hidden="true">${ic}</svg></button>`,
     )
-    .join(
-      '',
-    )}</div><div class="v2-fgroup"><button type="button" class="heroes-filter-btn v2-tagall${V2.tagsOff ? '' : ' active'}" id="v2TagAll" aria-pressed="${!V2.tagsOff}" title="${V2.tagsOff ? 'Show' : 'Hide'} all tags">Tags</button><button type="button" class="heroes-filter-btn v2-tagall${V2.awk ? ' active' : ''}" id="v2AwkAll" aria-pressed="${V2.awk}" title="${V2.awk ? 'Back to the ratings without awakenings' : 'Ratings with all awakenings and the Signature Karma'}">Awakenings</button></div></div>`;
+    .join('')}</div></div></details>`;
   const rolesShown = V2.role ? [V2.role] : roles;
   html += `<div class="v2-grid" style="--cols:${rolesShown.length}"><div class="v2-corner"></div>${rolesShown.map((r) => `<div class="v2-rolehead"><img src="${ROLE_ICONS[r] || ''}" alt="">${profileEsc(r)}</div>`).join('')}`;
   const rows = [...tiers, '?'];
@@ -357,7 +352,14 @@ function renderTierV2() {
         })
         .join('');
   });
-  html += `</div>`;
+  html += `</div><details class="v2-panel v2-explainer"><summary>How ratings work</summary><div><p class="v2-intro">Beta ratings reflect the agreed tests and are still being reviewed.</p>
+<h3>About this tier list</h3><div>${(D.about || []).map((p) => `<p>${profileEsc(p)}</p>`).join('')}</div>
+ <h3>Modes</h3><div>${Object.values(D.modes || {})
+   .map((m) => `<p><b>${profileEsc(m.label)}</b> (${profileEsc(m.sub)}): ${profileEsc(m.intro || '')}</p>`)
+   .join('')}</div>
+ <h3>Tags</h3><div><table class="v2-tag-table">${tagRows}<tr><td><span class="v2-karma inline"><svg viewBox="0 0 16 16">${V2_ICONS.karma}</svg></span></td><td>${profileEsc(D.signatureKarmaText || '')}</td></tr></table>${experts ? `<h5>Expert reasons</h5><ul>${experts}</ul>` : ''}</div>
+ <h3>Ratings</h3><div><ul class="v2-ratings">${(D.ratings || []).map((r) => `<li><span class="v2-rt" style="background:${v2TierColor(r.tier)}">${profileEsc(r.tier)}</span>${profileEsc(r.text)}</li>`).join('')}</ul></div>
+</div></details>`;
   root.innerHTML = html;
   root.querySelectorAll('[data-v2mode]').forEach(
     (b) =>
@@ -410,10 +412,18 @@ function renderTierV2() {
     const ab = $('v2AwkAll');
     if (ab)
       ab.onclick = () => {
-        V2.awk = !V2.awk;
+        V2.awk = true;
         renderTierV2();
       };
   }
+  $('v2Base').onclick = () => {
+    V2.awk = false;
+    renderTierV2();
+  };
+  const filterPanel = $('v2FilterPanel');
+  filterPanel.ontoggle = () => {
+    V2.filtersOpen = filterPanel.open;
+  };
   root.querySelectorAll('[data-v2role]').forEach(
     (b) =>
       (b.onclick = () => {
@@ -431,11 +441,10 @@ function renderTierV2() {
   const s = $('v2Search');
   s.oninput = () => {
     V2.q = s.value.trim().toLowerCase();
-    const pos = s.selectionStart;
+    V2.filtersOpen = true;
     renderTierV2();
     const n = $('v2Search');
     n.focus();
-    n.setSelectionRange(pos, pos);
   };
   root.querySelectorAll('.v2-card').forEach((c) => {
     const h = HEROES.find((x) => x.name === c.dataset.hero);

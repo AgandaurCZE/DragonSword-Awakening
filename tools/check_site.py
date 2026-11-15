@@ -291,6 +291,8 @@ def progress_backups(browser, base):
             for(const [k,v] of Object.entries(storage))localStorage.setItem(k,JSON.stringify(v));
             localStorage.setItem('progress-test-unrelated','keep me');return storage;
         }""")
+        if page.locator('#mobileMenu').is_visible():
+            page.locator('#mobileMenu').click()
         page.locator('[data-page="tools"]').click()
         page.locator('[data-tool="backup"]').click()
         with page.expect_download() as event:
@@ -409,12 +411,13 @@ def beta_routes(browser, base):
     page = open_site(ctx, base, '', 'Beta routes')
     config = page.evaluate('()=>({site:SITE,heroes:HEROES.map(h=>h.name)})')
     expected = [
-        ['Heroes','Tier List','Karma','Teams','Gear','Familiars','Titles','Cookbook','Item Database'],
-        ['Trait Dungeons','Normal Dungeons','Currency Dungeons','Bosses Tier List','Tower Tier List'],
-        ['Guide coming soon']*3, ['Damage Calculator','Levelling Calculator']]
+        ['Tier List','Teams','Boss & Tower Finder'],
+        ['Heroes','Karma','Gear','Familiars','Cookbook','Item Database'],
+        ['Trait Dungeons','Normal Dungeons','Currency Dungeons'],
+        ['Titles','Achievements'], ['Mechanics guides'], ['Damage Calculator','Levelling Calculator']]
     actual = page.locator('.shortcut-group').evaluate_all("ss=>ss.map(s=>[...s.querySelectorAll('.shortcut-card>span:first-of-type')].map(e=>e.textContent))")
-    if actual != expected or page.locator('.shortcut-soon[aria-disabled="true"]').count() != 3:
-        bad('Beta shortcuts: wrong category order, card order or guide placeholders')
+    if actual != expected or page.locator('.shortcut-soon').count() or not page.locator('.shortcuts-latest').is_visible():
+        bad('Beta shortcuts: expected featured pages, a News link and no placeholders')
     if not page.locator('.beta-badge').is_visible() or page.locator('.brand-home img').get_attribute('src') != 'assets/logo_2x.png':
         bad('Beta branding: original logo or BETA badge missing')
     for selector, value in [('meta[property="og:image"]','assets/ui/og-image.jpg'), ('link[rel="icon"]','assets/ui/favicon.png')]:
@@ -440,12 +443,9 @@ def beta_routes(browser, base):
             bad(f'Beta refresh {path}: wrong view')
     page.goto(base, wait_until='networkidle')
     page.wait_for_function('NAV.ready')
-    for label, mode in [('Bosses Tier List','bosses'), ('Tower Tier List','towers')]:
-        page.locator('.shortcut-card').filter(has_text=label).click()
-        page.wait_for_timeout(80)
-        if page.url != base+'tierlist' or page.evaluate('V2.mode') != mode:
-            bad(f'Beta shortcut {label}: wrong mode or URL')
-        page.locator('.brand-home').click()
+    page.locator('.shortcut-featured a').filter(has_text='Boss & Tower Finder').click()
+    page.wait_for_url(base+'finder')
+    page.locator('.brand-home').click()
     page.evaluate("openCharacterProfile('Ryza','skills')")
     page.wait_for_timeout(100)
     for tab in ('review','build','skills'):
@@ -577,7 +577,7 @@ def beta_subpath(browser, base):
     """GitHub Pages serves below the repository prefix, not the domain root."""
     ctx = browser.new_context(viewport={'width':390,'height':844})
     page = open_site(ctx, base, 'dungeons/normal', 'repository prefix')
-    page.locator('.brand-home').click()
+    page.locator('.mobile-home').click()
     page.locator('.shortcut-card').filter(has_text='Gear').click()
     if page.url != base+'gear':
         bad('repository prefix: navigation escaped the repository')
@@ -713,7 +713,7 @@ def awakening_toggle(browser, base):
     for width in (1400, 390):
         ctx = browser.new_context(viewport={'width': width, 'height': 900})
         page = open_site(ctx, base, 'tierlist', f'awakening toggle, {width}px')
-        state = """()=>{const b=document.getElementById('v2AwkAll'),t=document.getElementById('v2TagAll');return {next:!!b&&!!t&&t.nextElementSibling===b,pressed:b&&b.getAttribute('aria-pressed'),cards:document.querySelectorAll('#tierV2 .v2-card').length,chips:[...document.querySelectorAll('#tierV2 .v2-card .tier-chip')].filter(c=>c.textContent.trim()!=='?').length,rows:[...document.querySelectorAll('#tierV2 .v2-tierlabel')].map(r=>r.textContent.trim())}}"""
+        state = """()=>{const b=document.getElementById('v2AwkAll'),t=document.getElementById('v2Base');return {next:!!b&&!!t&&t.nextElementSibling===b,pressed:b&&b.getAttribute('aria-pressed'),cards:document.querySelectorAll('#tierV2 .v2-card').length,chips:[...document.querySelectorAll('#tierV2 .v2-card .tier-chip')].filter(c=>c.textContent.trim()!=='?').length,rows:[...document.querySelectorAll('#tierV2 .v2-tierlabel')].map(r=>r.textContent.trim())}}"""
         tiers = "()=>Object.fromEntries([...document.querySelectorAll('#tierV2 .v2-card')].map(c=>[c.dataset.hero,c.querySelector('.tier-chip').textContent.trim()]))"
         before = page.evaluate(state)
         if not before['next'] or before['pressed'] != 'false' or before['cards'] != 20 or not before['chips']:
@@ -733,7 +733,7 @@ def awakening_toggle(browser, base):
         A = (T['heroes'].get(page.evaluate('HEROES[0].name')) or {}).get('awakened', {}).get('overall', {})
         if tip != [A.get('tier', '?'), A.get('groups', '?'), A.get('single', '?')]:
             bad(f'awakening toggle, {width}px: hover card shows {tip}, not the awakened ratings {A}')
-        page.click('#v2AwkAll')
+        page.click('#v2Base')
         page.wait_for_timeout(150)
         after = page.evaluate(state)
         if after != before:
@@ -903,7 +903,7 @@ def team_links(browser, base):
     assert face.get_attribute('href').endswith('/Kalsion#build')
     assert not face.locator('.team-portrait-name').count()
     assert page.locator('.nav-item[data-page="news"]').get_attribute('href') == 'news'
-    skill = royal.get_by_role('link', name='Explosion', exact=True)
+    skill = royal.locator('.team-combo').get_by_role('link', name='Explosion', exact=True)
     assert skill.get_attribute('href').endswith('/Kalsion#skill=Explosion')
     skill.hover()
     preview = page.locator('#karmaSkillPopover .profile-skill')
@@ -939,6 +939,48 @@ def team_links(browser, base):
     print('  Team skill slider, hero deep links and native new-tab clicks checked')
 
 
+def guide_polish(browser, base):
+    ctx = browser.new_context(viewport={'width': 390, 'height': 844}, is_mobile=True, has_touch=True)
+    page = open_site(ctx, base, '', 'Mobile guide and encounter finder')
+    menu = page.locator('#mobileMenu')
+    assert menu.is_visible() and not page.locator('#mainNavigation').is_visible()
+    menu.click()
+    assert menu.get_attribute('aria-expanded') == 'true'
+    page.get_by_role('link', name='Boss & Tower Finder', exact=True).first.click()
+    assert menu.get_attribute('aria-expanded') == 'false'
+    page.locator('#finderEncounter').select_option('gallore')
+    assert page.locator('#finderDifficulty').input_value() == 'Hell'
+    result = page.locator('#finderResult')
+    assert 'Frost · Burn' in result.inner_text()
+    assert 'knocks off a fist' in result.inner_text()
+    assert 'Frost Prison' in result.inner_text()
+    page.locator('#finderDifficulty').select_option('Normal')
+    assert 'damage-resistance rule is inactive' in result.inner_text()
+    page.locator('#finderEncounter').select_option('gale')
+    assert not page.locator('#finderDifficultyLabel').is_visible()
+    assert 'Airborne adds +400%' in result.inner_text()
+    result.get_by_role('link', name='See hero rankings').click()
+    page.wait_for_function("NAV.ready && V2.mode === 'towers' && V2.tower === 'gale'", polling=100)
+    page.locator('#v2FilterPanel summary').click()
+    page.locator('[data-v2role="Support"]').click()
+    assert page.locator('#v2FilterPanel summary').inner_text() == 'Filters (1)'
+    assert page.locator('.v2-rolehead').all_text_contents() == ['Support']
+    page.goto(base + 'Kalsion')
+    page.wait_for_function('NAV.ready')
+    assert 'Sub-DPS' in page.locator('#profileFacts').inner_text()
+    assert page.locator('.profile-tabs').evaluate("(el) => getComputedStyle(el).position") == 'sticky'
+    page.goto(base + 'guides')
+    page.wait_for_function('NAV.ready')
+    assert page.locator('.mechanics-guide h3').all_text_contents() == ['Status Effects', 'Break & Super Armor', 'Nightmare+ Hunts']
+    assert not page.locator('.gd-card.soon').count()
+    for path in ['teams', 'news']:
+        page.goto(base + path, wait_until='networkidle')
+        page.wait_for_function('NAV.ready')
+        assert page.evaluate('document.documentElement.scrollWidth === document.documentElement.clientWidth'), path
+    ctx.close()
+    print('  mobile menu, Finder encounter and ranked-hero links, filters, profiles and guides checked')
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -965,6 +1007,7 @@ def main():
         visible_text_rules(browser, base)
         steam_news(browser, base)
         team_links(browser, base)
+        guide_polish(browser, base)
         with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
             beta_subpath(browser, prefixed)
         if not QUICK:

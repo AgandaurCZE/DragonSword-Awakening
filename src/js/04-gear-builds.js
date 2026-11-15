@@ -769,9 +769,6 @@ document.querySelectorAll('[data-profile-tab]').forEach((b) =>
       );
   }),
 );
-document.getElementById('profileIntro').addEventListener('click', (e) => {
-  if (e.target.closest('[data-back-tier]')) closeCharacterProfile();
-});
 
 /* ===== Preview: team-aware gear model (Claude, 10 Nov 2026). A port of tools/team_gear.py: keep the two identical.
    Settings live in data.json GEAR_MODEL. Shown on every hero Build tab. ===== */

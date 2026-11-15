@@ -25,7 +25,7 @@ function teamCard(team, heroes) {
   card.dataset.teamName = team.name;
   card.style.setProperty('--team-accent', ARCH_COLORS[team.arch] || team.accent);
   const archIcon = HEROES.find((hero) => hero.archetype === team.arch)?.archIcon;
-  card.innerHTML = `<h3 class="team-title">${archIcon ? `<span class="team-arch-crop"><img src="${profileEsc(archIcon)}" alt=""></span>` : ''}<span>${profileEsc(team.name)} <small>${profileEsc(team.arch)}</small></span></h3><div class="team-body"><div class="team-lead"></div><div class="team-members"></div></div><p class="team-notes">${formatTeamSkillText(team.note, team)}</p>`;
+  card.innerHTML = `<h3 class="team-title">${archIcon ? `<span class="team-arch-crop"><img src="${profileEsc(archIcon)}" alt=""></span>` : ''}<span>${profileEsc(team.name)} <small>${profileEsc(team.arch)}</small></span></h3><div class="team-body"><div class="team-lead"></div><div class="team-members"></div></div><div class="team-notes"><p class="team-combo">${formatTeamSkillText(team.combo, team)}</p><p>${formatTeamSkillText(team.note, team)}</p></div>`;
   const face = teamPortrait(heroes.get(team.lead), false, false);
   face.classList.add('team-face');
   face.querySelector('.team-portrait-name').remove();

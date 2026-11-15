@@ -1,5 +1,15 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 15 Nov 2026 — Mobile layout, encounter finder and mechanics guides
+
+- Replaced the phone icon rail with a labelled menu and grouped the sidebar into Play, Database, Progress, Resources and Updates. Shortcuts now features Tier List, Teams and Boss & Tower Finder, with a latest Hound13 link.
+- Put mode and investment controls before Tier List results, with counted filters and a single How ratings work control. Hero role, archetype and tier are in the hero banner. Hero tabs stick on phones. Hero catalogue and profile roles now use the Tier List role.
+- Added Boss & Tower Finder for all Hunts, Raids and Towers. The Finder shows encounter details and links to the relevant hero rankings, team cards or recorded Ursula rosters.
+- Published Status Effects, Break & Super Armor and Nightmare+ Hunts under Guides. Removed the empty cards from the public pages. Teams now show a short linked skill chain, and News wraps long preformatted content.
+- Added browser checks for mobile navigation, role consistency, Finder links and difficulty switching, completed guides, and News and Teams width.
+- Desktop and mobile comparison covered 113 views. The changes are the new Finder, sidebar grouping, full-width phone layout, streamlined hero headers and Tier List, and updated Teams, Guides, Shortcuts and News pages. At 390 px the News page now fits the viewport.
+- `tools/check_all.py` reported `ALL CHECKS PASSED`.
+
 ## 15 Nov 2026 — Teams lineups, Ursula speed runs and link previews
 
 - Filled the S, A and B groups with David’s six lineups. Teams keep roster order, use the lead hero for the large portrait, and show a role above each main or alternate portrait. Armor Break has an open Flex slot.

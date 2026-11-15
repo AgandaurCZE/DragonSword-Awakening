@@ -1048,20 +1048,6 @@ function renderTools() {
   renderSettingsBackup();
   show();
 }
-// ==== Guides (preview) ====
-function renderGuides() {
-  const root = $('guidesBody');
-  if (!root) return;
-  const G = (typeof GUIDES !== 'undefined' && GUIDES) || {};
-  const E = profileEsc;
-  root.innerHTML = (G.categories || [])
-    .map(
-      (c) =>
-        `<section class="gd-cat"><h3>${E(c.name)}</h3><div class="gd-grid">${(c.items || []).length ? (c.items || []).map((it) => `<button type="button" class="gd-card${it.ready ? '' : ' soon'}" ${it.ready ? '' : 'disabled'}>${it.image ? `<img src="${E(it.image)}" alt="">` : '<span class="gd-ph"></span>'}<span>${E(it.title)}</span>${it.ready ? '<span class="gd-arrow">→</span>' : '<span class="gd-soon">soon</span>'}</button>`).join('') : '<p class="gd-empty">No guides yet.</p>'}</div></section>`,
-    )
-    .join('');
-}
-
 /* Visitor progress backups (Beta, 11 Nov 2026). Part of the Tools page, following the calculators.
    Only the five documented progress keys are exported or restored. No account preset is included. */
 const PROGRESS_FORMAT = 'dragonsword-awakening-progress';

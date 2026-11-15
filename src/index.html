@@ -20,38 +20,44 @@
 <link rel="icon" type="image/png" href="assets/ui/favicon.png">
 <link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
 <title>DragonSword: Awakening, Guides, tools &amp; Tier List</title>
-<link rel="stylesheet" href="css/site.css?v=20261114-links1">
+<link rel="stylesheet" href="css/site.css?v=20261115-polish1">
 </head>
 <body>
-<aside class="app-sidebar" aria-label="Main navigation">
+<div class="mobile-bar"><a class="mobile-home" href="./" aria-label="Shortcuts"><img src="assets/logo_2x.png" alt="DragonSword: Awakening"></a><button id="mobileMenu" type="button" aria-controls="mainNavigation" aria-expanded="false">☰ Menu</button></div>
+<button class="mobile-menu-backdrop" id="mobileMenuBackdrop" type="button" aria-label="Close menu" hidden></button>
+<aside class="app-sidebar" id="mainNavigation" aria-label="Main navigation">
  <div class="sidebar-brand"><a class="brand-home" href="./" aria-label="DragonSword: Awakening home"><img src="assets/logo_2x.png" alt="DragonSword: Awakening"></a><span class="beta-badge">BETA</span></div>
  <a class="nav-item active" data-page="home" href="./"><span class="nav-icon" aria-hidden="true">⌂</span><span class="nav-label">Shortcuts</span></a>
- <div class="nav-group">DATABASE</div>
+ <div class="nav-group">PLAY</div>
  <a class="nav-item" data-page="heroes" href="heroes"><span class="nav-icon" id="navIconHeroes">♙</span><span class="nav-label">Heroes</span></a>
  <a class="nav-item" data-page="tier" href="tierlist"><span class="nav-icon">▦</span><span class="nav-label">Tier List</span></a>
  <a class="nav-item" data-page="teams" href="teams"><span class="nav-icon" id="navIconTeams">♟</span><span class="nav-label">Teams</span></a>
- <a class="nav-item" data-page="gear" href="gear"><span class="nav-icon">◇</span><span class="nav-label">Gear</span></a>
- <a class="nav-item" data-page="karma" href="karma"><span class="nav-icon">✧</span><span class="nav-label">Karma</span></a>
- <a class="nav-item" data-page="familiars" href="familiars"><span class="nav-icon" id="navIconFamiliars">♞</span><span class="nav-label">Familiars</span></a>
- <a class="nav-item" data-page="titles" href="titles"><span class="nav-icon"><svg class="nav-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor"><path d="M30.08 54.92 L40.95 53.10 L49.57 46.24 L53.79 36.06 L52.54 25.12 L46.14 16.15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><ellipse cx="42.41" cy="56.39" rx="5.6" ry="2.5" transform="rotate(11.0 42.41 56.39)"/><ellipse cx="39.48" cy="49.81" rx="5.6" ry="2.5" transform="rotate(11.0 39.48 49.81)"/><ellipse cx="52.45" cy="48.41" rx="5.6" ry="2.5" transform="rotate(-18.0 52.45 48.41)"/><ellipse cx="46.69" cy="44.07" rx="5.6" ry="2.5" transform="rotate(-18.0 46.69 44.07)"/><ellipse cx="57.35" cy="36.56" rx="5.6" ry="2.5" transform="rotate(-47.0 57.35 36.56)"/><ellipse cx="50.22" cy="35.56" rx="5.6" ry="2.5" transform="rotate(-47.0 50.22 35.56)"/><ellipse cx="55.90" cy="23.83" rx="5.6" ry="2.5" transform="rotate(-76.0 55.90 23.83)"/><ellipse cx="49.18" cy="26.41" rx="5.6" ry="2.5" transform="rotate(-76.0 49.18 26.41)"/><ellipse cx="48.46" cy="13.39" rx="5.6" ry="2.5" transform="rotate(-105.0 48.46 13.39)"/><ellipse cx="43.83" cy="18.90" rx="5.6" ry="2.5" transform="rotate(-105.0 43.83 18.90)"/><ellipse cx="42.33" cy="13.58" rx="5" ry="2.4" transform="rotate(-152.0 42.33 13.58)"/><path d="M33.92 54.92 L23.05 53.10 L14.43 46.24 L10.21 36.06 L11.46 25.12 L17.86 16.15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><ellipse cx="21.59" cy="56.39" rx="5.6" ry="2.5" transform="rotate(-191.0 21.59 56.39)"/><ellipse cx="24.52" cy="49.81" rx="5.6" ry="2.5" transform="rotate(-191.0 24.52 49.81)"/><ellipse cx="11.55" cy="48.41" rx="5.6" ry="2.5" transform="rotate(-162.0 11.55 48.41)"/><ellipse cx="17.31" cy="44.07" rx="5.6" ry="2.5" transform="rotate(-162.0 17.31 44.07)"/><ellipse cx="6.65" cy="36.56" rx="5.6" ry="2.5" transform="rotate(-133.0 6.65 36.56)"/><ellipse cx="13.78" cy="35.56" rx="5.6" ry="2.5" transform="rotate(-133.0 13.78 35.56)"/><ellipse cx="8.10" cy="23.83" rx="5.6" ry="2.5" transform="rotate(-104.0 8.10 23.83)"/><ellipse cx="14.82" cy="26.41" rx="5.6" ry="2.5" transform="rotate(-104.0 14.82 26.41)"/><ellipse cx="15.54" cy="13.39" rx="5.6" ry="2.5" transform="rotate(-75.0 15.54 13.39)"/><ellipse cx="20.17" cy="18.90" rx="5.6" ry="2.5" transform="rotate(-75.0 20.17 18.90)"/><ellipse cx="21.67" cy="13.58" rx="5" ry="2.4" transform="rotate(-28.0 21.67 13.58)"/><path d="M32.00 21.00 L34.47 27.60 L41.51 27.91 L35.99 32.30 L37.88 39.09 L32.00 35.20 L26.12 39.09 L28.01 32.30 L22.49 27.91 L29.53 27.60Z"/></svg></span><span class="nav-label">Titles</span></a>
-<div class="nav-group" id="navDungeonsGroup">DUNGEONS</div>
+ <a class="nav-item" data-page="finder" href="finder"><span class="nav-icon" aria-hidden="true">◇</span><span class="nav-label">Boss &amp; Tower Finder</span></a>
  <button class="nav-item" id="navDungeonsToggle" type="button" aria-expanded="false"><span class="nav-icon">⚔</span><span class="nav-label">Dungeons</span><span class="nav-caret">▾</span></button>
  <div class="nav-subgroup" id="navDungeonsSubgroup" hidden>
   <a class="nav-item nav-subitem" data-page="dungeons" href="dungeons/normal"><span class="nav-icon">▧</span><span class="nav-label">Normal Dungeons</span></a>
   <a class="nav-item nav-subitem" data-page="trait" href="dungeons/trait"><span class="nav-icon" id="navIconTrait">⚔</span><span class="nav-label">Trait Dungeons</span></a>
   <a class="nav-item nav-subitem" data-page="currency" href="dungeons/currency"><span class="nav-icon">◇</span><span class="nav-label">Currency Dungeons</span></a>
  </div>
+ <div class="nav-group">DATABASE</div>
+ <a class="nav-item" data-page="gear" href="gear"><span class="nav-icon">◇</span><span class="nav-label">Gear</span></a>
+ <a class="nav-item" data-page="karma" href="karma"><span class="nav-icon">✧</span><span class="nav-label">Karma</span></a>
+ <a class="nav-item" data-page="familiars" href="familiars"><span class="nav-icon" id="navIconFamiliars">♞</span><span class="nav-label">Familiars</span></a>
  <a class="nav-item" data-page="cookbook" href="cookbook"><span class="nav-icon" id="navIconCookbook">♨</span><span class="nav-label">Cookbook</span></a>
  <a class="nav-item" data-page="items" href="items"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span class="nav-label">Item Database</span></a>
+ <div class="nav-group">PROGRESS</div>
+ <a class="nav-item" data-page="titles" href="titles"><span class="nav-icon"><svg class="nav-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor"><path d="M30.08 54.92 L40.95 53.10 L49.57 46.24 L53.79 36.06 L52.54 25.12 L46.14 16.15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><ellipse cx="42.41" cy="56.39" rx="5.6" ry="2.5" transform="rotate(11.0 42.41 56.39)"/><ellipse cx="39.48" cy="49.81" rx="5.6" ry="2.5" transform="rotate(11.0 39.48 49.81)"/><ellipse cx="52.45" cy="48.41" rx="5.6" ry="2.5" transform="rotate(-18.0 52.45 48.41)"/><ellipse cx="46.69" cy="44.07" rx="5.6" ry="2.5" transform="rotate(-18.0 46.69 44.07)"/><ellipse cx="57.35" cy="36.56" rx="5.6" ry="2.5" transform="rotate(-47.0 57.35 36.56)"/><ellipse cx="50.22" cy="35.56" rx="5.6" ry="2.5" transform="rotate(-47.0 50.22 35.56)"/><ellipse cx="55.90" cy="23.83" rx="5.6" ry="2.5" transform="rotate(-76.0 55.90 23.83)"/><ellipse cx="49.18" cy="26.41" rx="5.6" ry="2.5" transform="rotate(-76.0 49.18 26.41)"/><ellipse cx="48.46" cy="13.39" rx="5.6" ry="2.5" transform="rotate(-105.0 48.46 13.39)"/><ellipse cx="43.83" cy="18.90" rx="5.6" ry="2.5" transform="rotate(-105.0 43.83 18.90)"/><ellipse cx="42.33" cy="13.58" rx="5" ry="2.4" transform="rotate(-152.0 42.33 13.58)"/><path d="M33.92 54.92 L23.05 53.10 L14.43 46.24 L10.21 36.06 L11.46 25.12 L17.86 16.15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><ellipse cx="21.59" cy="56.39" rx="5.6" ry="2.5" transform="rotate(-191.0 21.59 56.39)"/><ellipse cx="24.52" cy="49.81" rx="5.6" ry="2.5" transform="rotate(-191.0 24.52 49.81)"/><ellipse cx="11.55" cy="48.41" rx="5.6" ry="2.5" transform="rotate(-162.0 11.55 48.41)"/><ellipse cx="17.31" cy="44.07" rx="5.6" ry="2.5" transform="rotate(-162.0 17.31 44.07)"/><ellipse cx="6.65" cy="36.56" rx="5.6" ry="2.5" transform="rotate(-133.0 6.65 36.56)"/><ellipse cx="13.78" cy="35.56" rx="5.6" ry="2.5" transform="rotate(-133.0 13.78 35.56)"/><ellipse cx="8.10" cy="23.83" rx="5.6" ry="2.5" transform="rotate(-104.0 8.10 23.83)"/><ellipse cx="14.82" cy="26.41" rx="5.6" ry="2.5" transform="rotate(-104.0 14.82 26.41)"/><ellipse cx="15.54" cy="13.39" rx="5.6" ry="2.5" transform="rotate(-75.0 15.54 13.39)"/><ellipse cx="20.17" cy="18.90" rx="5.6" ry="2.5" transform="rotate(-75.0 20.17 18.90)"/><ellipse cx="21.67" cy="13.58" rx="5" ry="2.4" transform="rotate(-28.0 21.67 13.58)"/><path d="M32.00 21.00 L34.47 27.60 L41.51 27.91 L35.99 32.30 L37.88 39.09 L32.00 35.20 L26.12 39.09 L28.01 32.30 L22.49 27.91 L29.53 27.60Z"/></svg></span><span class="nav-label">Titles</span></a>
  <a class="nav-item" data-page="achievements" href="achievements"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span><span class="nav-label">Achievements</span></a>
+ <div class="nav-group">RESOURCES</div>
  <a class="nav-item" data-page="guides" href="guides"><span class="nav-icon" id="navIconGuides"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span><span class="nav-label">Guides</span></a>
  <a class="nav-item" data-page="tools" href="tools"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><span class="nav-label">Tools</span></a>
+ <div class="nav-group">UPDATES</div>
  <a class="nav-item" data-page="news" href="news"><span class="nav-icon"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0V11h4"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg></span><span class="nav-label">News</span></a>
  <a class="nav-item" data-page="patches" href="patch-notes"><span class="nav-icon">☰</span><span class="nav-label">Patch Notes</span></a>
 </aside>
 <div class="app-content">
 <header><h1>DRAGONSWORD: AWAKENING</h1><p><span id="hdrPage">Shortcuts</span> · Beta · patch <span id="patchLabel"></span></p></header>
-<section class="simple-page shortcuts-page" id="homePage"><div class="gear-heading"><h2>SHORTCUTS</h2><span>Explore the Beta guide</span></div><div id="shortcutsBody"></div></section>
+<section class="simple-page shortcuts-page" id="homePage"><div class="gear-heading"><h2>Shortcuts</h2></div><div id="shortcutsBody"></div></section>
 <main id="tierPage" hidden><p id="tierPatchLabel" class="tier-patch-label"></p><div id="tierV2"></div></main>
 <section class="heroes-page" id="heroesPage" hidden>
  <div class="heroes-heading"><h2>All Heroes <span id="heroesCount"></span></h2></div>
@@ -106,8 +112,12 @@
  <div class="gear-heading"><h2>ACHIEVEMENTS</h2><span>Tick the ones you have; your ticks are saved in this browser</span></div>
  <div id="achBody"></div>
 </section>
+<section class="simple-page" id="finderPage" hidden>
+ <div class="gear-heading"><h2>Boss &amp; Tower Finder</h2></div>
+ <div id="finderBody"></div>
+</section>
 <section class="simple-page" id="guidesPage" hidden>
- <div class="gear-heading"><h2>GUIDES</h2><span>Guides by topic. Work in progress: cards marked "soon" are placeholders.</span></div>
+ <div class="gear-heading"><h2>Guides</h2></div>
  <div id="guidesBody"></div>
 </section>
 <section class="simple-page" id="toolsPage" hidden>
@@ -130,8 +140,7 @@
 </section>
 <section class="profile-page" id="profilePage" hidden>
  <div class="profile-crumb"><button type="button" id="profileBackTier">Tier List</button> / Characters / <strong id="profileCrumbName">Character</strong></div>
- <div class="profile-hero"><div class="profile-hero-copy"><h2 id="profileName">Character</h2><div class="profile-subtitle">Character guide &amp; build</div><div class="profile-note" id="profileUpdated">Character guide</div></div><img class="profile-hero-portrait" id="profilePortrait" alt=""></div>
- <div class="profile-intro-grid"><section><h3 class="profile-section-title">Introduction</h3><p id="profileIntro"></p></section><section><h3 class="profile-section-title">Quick info</h3><p id="profileQuickInfo"></p></section></div>
+ <div class="profile-hero"><div class="profile-hero-copy"><h2 id="profileName">Character</h2><ul class="profile-facts" id="profileFacts"></ul><p class="profile-note" id="profileIntro"></p></div><img class="profile-hero-portrait" id="profilePortrait" alt=""></div>
  <div class="profile-tabs" role="tablist"><button class="profile-tab active" data-profile-tab="skills" role="tab">Skills</button><button class="profile-tab" data-profile-tab="review" role="tab">Review</button><button class="profile-tab" data-profile-tab="build" role="tab">Build and Teams</button></div>
  <section class="profile-tabpanel active" id="profileSkills" role="tabpanel"><div class="profile-skills-grid profile-skills-grid-top" id="profileSkillsGrid"></div><div id="profileStatus"></div></section>
  <section class="profile-tabpanel" id="profileReview" role="tabpanel"><h3 class="profile-subhead">Pros &amp; Cons</h3><div class="profile-proscons"><article><h4 class="profile-pros">PROS</h4><ul class="pc-list pc-pros" id="profilePros"></ul></article><article><h4 class="profile-cons">CONS</h4><ul class="pc-list pc-cons" id="profileCons"></ul></article></div><h3 class="profile-subhead">Review</h3><div id="profileReviewBody"></div><h3 class="profile-subhead">Best Awakening</h3><div id="profileBestAwakening"></div><h3 class="profile-subhead">Awakenings</h3><div class="profile-awakening-grid" id="profileAwakenings"></div></section>
@@ -143,14 +152,15 @@
 <div id="tooltip" role="tooltip"></div>
 <div id="karmaPopover" role="tooltip" hidden></div>
 <!-- Site script, in load order. Bump ?v= on every file you change so browsers fetch the new copy (10 Nov 2026). -->
-<script src="js/01-core.js?v=20261114-links1"></script>
-<script src="js/02-teams-karma.js?v=20261114-links1"></script>
-<script src="js/03-profile.js?v=20261114-links1"></script>
-<script src="js/04-gear-builds.js?v=20261114-links1"></script>
-<script src="js/05-tierlist-heroes-patches.js?v=20261114-links1"></script>
+<script src="js/01-core.js?v=20261115-polish1"></script>
+<script src="js/02-teams-karma.js?v=20261115-polish1"></script>
+<script src="js/03-profile.js?v=20261115-polish1"></script>
+<script src="js/04-gear-builds.js?v=20261115-polish1"></script>
+<script src="js/05-tierlist-heroes-patches.js?v=20261115-polish1"></script>
 <script src="js/06-dungeons.js?v=20261114-links1"></script>
-<script src="js/07-tierlist-v2-cookbook.js?v=20261114-links1"></script>
-<script src="js/08-items-tools-guides.js?v=20261114c"></script>
+<script src="js/07-tierlist-v2-cookbook.js?v=20261115-polish1"></script>
+<script src="js/08-finder-guides.js?v=20261115-polish1"></script>
+<script src="js/08-items-tools-guides.js?v=20261115-polish1"></script>
 <script src="js/08-steam-news.js?v=20261114-links1"></script>
-<script src="js/09-startup.js?v=20261114-links1"></script>
+<script src="js/09-startup.js?v=20261115-polish1"></script>
 </body></html>

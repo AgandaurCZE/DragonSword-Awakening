@@ -55,6 +55,7 @@ document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
       cookbook: 'Cookbook',
       items: 'Item Database',
       achievements: 'Achievements',
+      finder: 'Boss & Tower Finder',
       guides: 'Guides',
       tools: 'Tools',
       news: 'News',
@@ -74,6 +75,7 @@ document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
       }
     }
     if (page === 'news') renderNews();
+    setMobileMenu(false);
     navSchedule();
   }),
 );
@@ -114,20 +116,16 @@ function renderHeroesFilters() {
     };
     archRoot.append(b);
   });
-  const roles = [
-    { key: 'Main DPS', label: 'Main DPS' },
-    { key: 'Sub-DPS', label: 'Sub DPS' },
-    { key: 'Support', label: 'Support' },
-  ];
+  const roles = v2Data().roles;
   addAll(roleRoot, activeHeroesRole, (v) => (activeHeroesRole = v), 'All roles');
   roles.forEach((r) => {
     const b = document.createElement('button');
-    b.className = 'heroes-filter-btn' + (activeHeroesRole === r.key ? ' active' : '');
-    b.title = r.label;
-    b.setAttribute('aria-label', r.label);
-    b.innerHTML = `<img src="${ROLE_ICONS[r.key] || ''}" alt="">`;
+    b.className = 'heroes-filter-btn' + (activeHeroesRole === r ? ' active' : '');
+    b.title = r;
+    b.setAttribute('aria-label', r);
+    b.innerHTML = `<img src="${ROLE_ICONS[r] || ''}" alt="">`;
     b.onclick = () => {
-      activeHeroesRole = activeHeroesRole === r.key ? '' : r.key;
+      activeHeroesRole = activeHeroesRole === r ? '' : r;
       renderHeroesFilters();
       renderHeroes();
     };
@@ -140,7 +138,7 @@ function renderHeroes() {
     (h) =>
       (!q || h.name.toLowerCase().includes(q)) &&
       (!activeHeroesArch || h.archetype === activeHeroesArch) &&
-      (!activeHeroesRole || h.role === activeHeroesRole),
+      (!activeHeroesRole || v2Role(h) === activeHeroesRole),
   );
   $('heroesCount').textContent = `Showing ${list.length} characters`;
   const grid = $('heroesGrid');
@@ -149,8 +147,8 @@ function renderHeroes() {
     const card = document.createElement('a');
     card.className = 'heroes-character-card';
     card.href = heroLinkUrl(h.name);
-    card.title = `${h.name} · ${h.archetype} · ${h.role}`;
-    card.innerHTML = `<img class="heroes-portrait" src="${h.portrait}" alt="${h.name}" loading="lazy"><div class="heroes-char-badges"><span class="heroes-char-badge" title="${h.role}"><img src="${ROLE_ICONS[h.role] || ''}" alt="${h.role}"></span></div>${h.name === 'Ryza' ? '<span class="heroes-new">NEW</span>' : ''}<div class="heroes-char-name">${h.name}</div>`;
+    card.title = `${h.name} · ${h.archetype} · ${v2Role(h)}`;
+    card.innerHTML = `<img class="heroes-portrait" src="${h.portrait}" alt="${h.name}" loading="lazy"><div class="heroes-char-badges"><span class="heroes-char-badge" title="${v2Role(h)}"><img src="${ROLE_ICONS[v2Role(h)] || ''}" alt="${v2Role(h)}"></span></div>${h.name === 'Ryza' ? '<span class="heroes-new">NEW</span>' : ''}<div class="heroes-char-name">${h.name}</div>`;
     card.style.cursor = 'pointer';
     card.setAttribute('aria-label', `Open ${h.name} character page`);
     card.addEventListener('click', (event) => {
@@ -424,6 +422,7 @@ const PAGE_IDS = {
   trait: 'traitPage',
   currency: 'currencyPage',
   cookbook: 'cookbookPage',
+  finder: 'finderPage',
   guides: 'guidesPage',
   items: 'itemsPage',
   achievements: 'achievementsPage',

@@ -7489,3 +7489,292 @@ a.shortcut-card:focus-visible {
 .patch-filter[hidden] {
   display: none;
 }
+.mobile-bar,
+.mobile-menu-backdrop {
+  display: none;
+}
+.shortcut-featured .shortcut-card {
+  min-height: 108px;
+  border-top: 2px solid #31a8e4;
+}
+.shortcuts-latest {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 12px 0 26px;
+  padding: 10px 14px;
+  border: 1px solid #424c5c;
+  color: #a8dfff;
+  text-decoration: none;
+}
+.shortcuts-latest:hover span {
+  text-decoration: underline;
+}
+.v2-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+.v2-toolbar .v2-view {
+  margin: 0;
+}
+.v2-filter-panel,
+.v2-explainer {
+  margin-block: 10px;
+}
+.v2-explainer h3 {
+  margin-bottom: 4px;
+}
+.profile-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 8px 0;
+  padding: 0;
+  list-style: none;
+}
+.profile-facts li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+}
+.profile-facts img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+#profileIntro {
+  max-width: 46ch;
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.team-notes p {
+  margin: 0;
+}
+.team-notes .team-combo {
+  margin-bottom: 5px;
+  color: #f3f5fa;
+  font-weight: 700;
+}
+.finder-controls,
+.guide-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 14px 0;
+}
+.finder-controls label {
+  display: grid;
+  gap: 5px;
+  max-width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+}
+.finder-controls label[hidden] {
+  display: none;
+}
+.finder-controls select {
+  min-width: 0;
+  max-width: 100%;
+  padding: 9px;
+  border: 1px solid #545b67;
+  border-radius: 5px;
+  background: #262a34;
+  color: #f0f3f9;
+  font: inherit;
+}
+.finder-card,
+.mechanics-guide {
+  max-width: 940px;
+  margin-bottom: 18px;
+  border: 1px solid #454b58;
+  border-top: 3px solid var(--finder-accent, #31a8e4);
+  background: #252832;
+}
+.finder-art {
+  display: grid;
+  min-height: clamp(124px, 22vw, 235px);
+  align-items: end;
+  padding: 16px;
+  background:
+    linear-gradient(0deg, #10131ee8, transparent 85%),
+    var(--finder-art) center 45% / cover;
+}
+.finder-art h3,
+.mechanics-guide h3 {
+  margin: 0;
+  font-size: clamp(19px, 3vw, 29px);
+}
+.finder-content,
+.mechanics-guide {
+  padding: clamp(13px, 2vw, 22px);
+  line-height: 1.55;
+}
+.finder-status span {
+  margin-right: 8px;
+  color: #c5cbd6;
+}
+.finder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 16px;
+}
+.finder-content a,
+.mechanics-guide a,
+.guide-index a {
+  color: #a8dcff;
+  text-underline-offset: 3px;
+}
+.finder-team-list {
+  padding: 0;
+  list-style: none;
+}
+.finder-team-list li {
+  display: grid;
+  gap: 3px;
+  margin-bottom: 8px;
+}
+.finder-team-list span {
+  font-size: 13px;
+}
+.guide-index a {
+  padding: 8px 12px;
+  border: 1px solid #505765;
+  background: #262a34;
+}
+.mechanics-guide {
+  scroll-margin-top: 70px;
+}
+.mechanics-guide h4 {
+  margin-bottom: 4px;
+}
+.mechanics-guide section p {
+  margin-top: 4px;
+}
+#newsPage,
+#newsBody,
+.steam-post,
+.steam-body {
+  min-width: 0;
+  max-width: 100%;
+}
+.steam-body pre {
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  :root {
+    --mobile-bar-height: 56px;
+  }
+  .mobile-bar {
+    position: sticky;
+    z-index: 220;
+    top: 0;
+    display: flex;
+    height: var(--mobile-bar-height);
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    border-bottom: 1px solid #424c5c;
+    background: #171b23;
+  }
+  .mobile-home img {
+    display: block;
+    width: 113px;
+    max-height: 40px;
+    object-fit: contain;
+  }
+  #mobileMenu {
+    padding: 7px 12px;
+    border: 1px solid #53627b;
+    border-radius: 5px;
+    background: #242e41;
+    color: #f2f7ff;
+    font: inherit;
+    font-weight: 700;
+  }
+  .mobile-menu-backdrop:not([hidden]) {
+    position: fixed;
+    z-index: 201;
+    inset: var(--mobile-bar-height) 0 0;
+    display: block;
+    width: 100%;
+    border: 0;
+    background: #080b14a0;
+  }
+  .app-sidebar {
+    display: none;
+    z-index: 210;
+    inset: var(--mobile-bar-height) auto 0 0;
+    width: min(300px, 87vw);
+    padding: 9px 12px env(safe-area-inset-bottom);
+    overscroll-behavior: contain;
+  }
+  .app-sidebar.is-open {
+    display: flex;
+  }
+  .app-sidebar .sidebar-brand {
+    display: none;
+  }
+  .app-sidebar .nav-group,
+  .app-sidebar .nav-label {
+    display: block;
+  }
+  .app-sidebar .nav-item {
+    justify-content: flex-start;
+    padding: 10px 12px;
+  }
+  .app-content {
+    margin-left: 0;
+  }
+  .app-content > header {
+    padding: 8px 14px;
+  }
+  .app-content > header h1 {
+    display: none;
+  }
+  .app-content > header p {
+    margin: 0;
+  }
+  .profile-tabs {
+    position: sticky;
+    z-index: 20;
+    top: var(--mobile-bar-height);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+    margin: 10px 0 16px;
+    background: #202126;
+  }
+  .profile-tab {
+    min-height: 46px;
+    padding: 5px;
+    font-size: 11px;
+  }
+  .profile-skill {
+    scroll-margin-top: 110px;
+  }
+  .team-slot .team-portrait-name {
+    overflow-wrap: normal;
+  }
+  .team-slot .team-portrait {
+    width: min(65px, 100%);
+  }
+  .team-slot .team-portrait-alt {
+    width: min(48px, 100%);
+  }
+  .team-slot .team-portrait-name .pa {
+    display: none;
+  }
+  .shortcut-featured .shortcut-card {
+    min-height: 76px;
+  }
+  .finder-controls label {
+    flex: 1 1 170px;
+  }
+}
