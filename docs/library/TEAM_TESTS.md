@@ -309,6 +309,11 @@ Training Ogre, 1 minute, everyone geared; only the tested hero's Karma changes. 
 | Sion | Ryza, Ornette, Sion (all Lv.70 signatures) | 14M (Sion on A Flame That Cuts Through the Moment, Lv.70: same base stats and Crit Rate trait, Burn traits useless to him) | 17M (Fate Spoke to the Boy, Lv.70) | **+21%** (part of it is the Shock Additional Damage a normal Shock Karma would also give) |
 | Reina | Kalien (sig Lv.70), Kalsion (sig Lv.20), Reina | 4.1M (Lv.1 normal Gale) | 4.4M (Lv.1 signature) | **+7%** |
 | Castella | Theresia, Roxy, Castella | 3.9M (Lv.1 normal Breaker) | 4.2M (Lv.1 signature) | **+8%** |
+| Astria | Castella (sig), Kalien (sig Lv.70), Astria | 2.5M (The Way of the Wild, Lv.1) | 2.2M (Lv.1 signature) | **−12%: no real change** (the normal Karma had better traits; more hits landed under Stun + Airborne in run 1) |
+| Johnny | Charlotte (sig Lv.1), Reina (sig Lv.1), Johnny | 2.0M (So Good It's to Die For, Lv.1; once 2.5M, never repeated) | 2.6M (Lv.1 signature) | **+30%** (+4% against the one 2.5M run; aim-dependent, see skill test) |
+| Aria | Reina (sig), Kalien (sig Lv.70), Aria | 2.3M (The Burning Taste of Fire, Lv.1) | 2.8M (Lv.1 signature) | **+22%** |
+| Eileen | Kalsion (sig Lv.70), Kalien (sig Lv.70), Eileen | 3.8M (Become a Star in That Sky, Lv.1) | 4.4M (Lv.1 signature) | **+16%** |
+| Lute | Theresia (sig Lv.70), Roxy (sig Lv.70), Lute | 3.7M (I'll Knock You Out Myself) | 3.5M (Lv.1 signature) | **−5%: no effect here**: the team applies no Knockdown, so his relic never dropped in the minute |
 
 ### Signature skill tests: the last ten (David, 15 Nov)
 Training Ogre. Each row: the signature's change, against the earlier numbers in TEST01_RESULTS / AWAKENING_TESTS. Full-break times are the hero alone, going all out.

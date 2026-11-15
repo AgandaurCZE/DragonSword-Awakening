@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 16 Nov 2026 — Signature team tests: Astria, Johnny, Aria, Eileen, Lute (Claude)
+- David's 1-minute Ogre runs, Lv.1 normal Karma vs Lv.1 signature (TEAM_TESTS): Aria +22%, Eileen +16%, Johnny +30% (aim-dependent; one normal run reached 2.5M), Astria −12% (no real change), Lute −5% (no Knockdown in that team, so his relic never dropped). Priority lines added to their reviews: Aria high, Johnny and Eileen medium, Astria and Lute low. Pushed without the local browser check (David, 15 Nov).
+
 ## 15 Nov 2026 — Patches update the hero data automatically (Claude)
 - David: Steam patch notes count as the codex. New `tools/apply_patch_skills.py`: for each balance patch newer than `meta.balancePatch`, recognised skill damage changes rewrite that skill's "Attack Power N%" text and `meta.attackPct`; a skill that doesn't show the old value is reported, not changed. `.github/workflows/steam-news.yml` runs it and `tools/hero_stats.py --write` after the fetch and commits `data.json` with the feed. Replayed on today's data: nothing to change (1.1.0 already applied); a simulated 1.2.0 row applied once and was idempotent.
 - Tier list: a hero changed by a balance patch after `meta.tierReviewedPatch` gets a dashed tier chip and the hover line "Changed in patch X, after this rating; the rating will be reviewed." (`v2PatchedSince()`, `07` and `site.css` `?v=20261115-patchauto`). `check_site.py` checks it with the 1.2.0 test feed. AGENTS core rule 1 and SITE.md updated.

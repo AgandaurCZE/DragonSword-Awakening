@@ -4406,7 +4406,8 @@
       "[[awk:3]] and [[awk:6]] add hits to Fatal Sting and Venom Cutter; [[awk:2]] and [[awk:4]] are smaller."
      ],
      "karma": [
-      "Signature: [[karma:Wandering Blade]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Poison Additional Damage, plus the Poison blades along Phantom Slash. Second: [[karma:Defeating Poison with Poison]]."
+      "Signature: [[karma:Wandering Blade]] (exclusive shop): +15% Attack Power, +15% Crit Damage, +20% Poison Additional Damage, plus the Poison blades along Phantom Slash. Second: [[karma:Defeating Poison with Poison]].",
+      "**Priority: medium.** Up to about +30% team damage in Venom Cyclone; how much depends on aiming Phantom Slash through the target."
      ],
      "gear": [
       "3 [[set:Venomfog Shade]] + 2 [[set:The Infiltrator]]. Main stats and substats are on the Build tab."
@@ -4922,7 +4923,8 @@
       "[[awk:2]], [[awk:4]] and [[awk:5]] are stat bonuses that do little for a healer."
      ],
      "karma": [
-      "Signature: [[karma:A Sword Summoned for a Friend]] (exclusive shop): +15% Defense Ignore, +20% Attack Power, +20% Stun Additional Damage, and more relics in Relic Fall. Second: [[karma:I'll Knock You Out Myself]]."
+      "Signature: [[karma:A Sword Summoned for a Friend]] (exclusive shop): +15% Defense Ignore, +20% Attack Power, +20% Stun Additional Damage, and more relics in Relic Fall. Second: [[karma:I'll Knock You Out Myself]].",
+      "**Priority: low.** Only matters in teams that apply Knockdown, where his relic drops: then a much bigger buff circle for 10 seconds."
      ],
      "gear": [
       "3 [[set:Holy Arbiter]] + 2 [[set:Battle Will]], with Max HP Up on the chest and Defense Up on the legs to keep him alive."
@@ -5880,7 +5882,8 @@
       "**Best stop: [[awk:1]].** [[awk:4]] (+15% Crit Rate) is worth about +9% and [[awk:5]] at least +11%."
      ],
      "karma": [
-      "Signature: [[karma:Between Chivalry and Bookmarks]] (exclusive shop): +15% Defense Ignore, +20% Attack Power, +20% Airborne Additional Damage, and the stronger banner inside Brave One. Second: [[karma:A Path That Leads to the Wind]]."
+      "Signature: [[karma:Between Chivalry and Bookmarks]] (exclusive shop): +15% Defense Ignore, +20% Attack Power, +20% Airborne Additional Damage, and the stronger banner inside Brave One. Second: [[karma:A Path That Leads to the Wind]].",
+      "**Priority: medium.** About +16% team damage; the banner adds Crit Damage as well as Crit Rate."
      ],
      "gear": [
       "3 [[set:Azure Gale]] + 2 [[set:The Infiltrator]]."
@@ -6390,7 +6393,8 @@
       "[[awk:3]]'s Burn zone adds little when Kalsion and Kalien already keep Burn up."
      ],
      "karma": [
-      "Signature: [[karma:Explosion Is Art]] (exclusive shop): +10% Crit Rate, +300 Burn Additional Attack Power (about +6% Attack on Burning targets at end-game) and +20% Burn Additional Damage. Second: [[karma:The Burning Taste of Fire]]."
+      "Signature: [[karma:Explosion Is Art]] (exclusive shop): +10% Crit Rate, +300 Burn Additional Attack Power (about +6% Attack on Burning targets at end-game) and +20% Burn Additional Damage. Second: [[karma:The Burning Taste of Fire]].",
+      "**Priority: high.** About +22% team damage; Switch On! adds much more Burn and Airborne."
      ],
      "gear": [
       "3 [[set:Blazing Flames]] + 2 [[set:The Infiltrator]]. [[set:Azure Gale]] is a close alternative for the 2-piece, since Multiple Bolt always hits an Airborne target."
@@ -9220,7 +9224,8 @@
       "[[awk:3]]'s Burn zone does nothing in her teams."
      ],
      "karma": [
-      "Signature: [[karma:Wildflowers Bloom Through the Wind]] (exclusive shop): +10% Crit Rate, +1125 Break Additional Attack Power, +20% Break Additional Damage, and the charged Ballista Shot. Second: [[karma:Destruction Is the Mother of Creation]]."
+      "Signature: [[karma:Wildflowers Bloom Through the Wind]] (exclusive shop): +10% Crit Rate, +1125 Break Additional Attack Power, +20% Break Additional Damage, and the charged Ballista Shot. Second: [[karma:Destruction Is the Mother of Creation]].",
+      "**Priority: low.** Little change in team damage; the charged shot mainly refills her Ultimate faster."
      ],
      "gear": [
       "3 [[set:Ruinsbreaker]] + 2 [[set:The Infiltrator]]. [[set:Holy Arbiter]] is a close alternative for the 2-piece, since Bolt Bombard always hits a Stunned target."
