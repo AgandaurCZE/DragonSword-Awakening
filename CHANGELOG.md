@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 16 Nov 2026 — Alex's review (Claude)
+- David's go-ahead after Alex's A6 tests: review written in the banner format ("Roxy's bodyguard", Red Fox Mercenaries; Ogre-measured Defense cut around 10% / 30% at A6 shield Lv.1 / Lv.2, 10 s), new pros and cons, Ursula team; How to play, kit and investment restored from the earlier review with the Defense cut updated; signature priority low. Tier-list Expert note updated (was −20% / +11%). Ratings unchanged (B). Pushed without the local browser check.
+
 ## 16 Nov 2026 — Alex at A6 (notes only; Claude)
 - David's A6 + signature readings in AWAKENING_TESTS: Guard Counter Knockdown about 0.30, gauge about 10%, Defense debuff 10 s; from his damage readings the debuff works out to about −10% Defense at shield Lv.1 and about −30% at Lv.2. No site change. Pushed without the local browser check.
 

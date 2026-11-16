@@ -5398,9 +5398,110 @@
      }
     ]
    },
-   "pros": [],
-   "cons": [],
-   "review": null
+   "pros": [
+    "Cuts the target's Defense by around 30% for 10 seconds with [[awk:6]], for the whole team",
+    "The only tank: Taunt, 10% less enemy Attack, and 10% less damage for nearby allies with his signature",
+    "Part of a safe Ursula team under 2 minutes"
+   ],
+   "cons": [
+    "Expert: the counter needs exact timing",
+    "Very little damage of his own",
+    "B tier with or without awakenings"
+   ],
+   "review": {
+    "updated": "16 Nov 2026",
+    "pronoun": "him",
+    "tag": "Roxy's bodyguard",
+    "title": "Red Fox Mercenaries",
+    "summary": [
+     "Alex goes where [[hero:Roxy]] goes. Officially he's her bodyguard; in practice he's the wall between her and whatever wants to hit her. He's the only real tank in the game: [[skill:Guard Stance]] pulls enemies onto him (his Mastery also cuts their Attack by 10%), and his signature cuts the damage he and nearby allies take by 10% while the stance holds.",
+     "His real value is [[skill:Guard Counter]]. Time it with an enemy attack and the target's Defense drops for 10 seconds: around 10% at the first level of his [[awk:6]] shield, around 30% at the second, on top of everyone's Defense Ignore. Every teammate hits harder while it lasts. Miss the timing and you get neither the debuff nor much damage, which is why he's Expert."
+    ],
+    "groups": "Not his place: the debuff lands on one target and his own damage is low.",
+    "bosses": "Where he belongs. Hold the stance, counter the big swings and keep the Defense cut up for your damage dealers.",
+    "verdict": {
+     "level": "ok",
+     "label": "For bosses, if you can time it",
+     "text": [
+      "Bring him when a boss hits hard and your damage dealers need the Defense cut."
+     ]
+    },
+    "howToPlay": {
+     "intro": [
+      "Hold enemy attention in Defensive Stance, time Guard Counter, and use Knockdown to open Pounding Grab."
+     ],
+     "loop": [
+      "Enter Defensive Stance with [[skill:Guard Stance]] (Taunt).",
+      "Time [[skill:Guard Counter]] with an enemy attack: Knockdown and lower Defense on the target for 10 seconds.",
+      "Use [[skill:Pounding Grab]] on the knocked-down target.",
+      "Use [[skill:Knockdown Smash]] for Knockdown when Guard Counter isn't ready."
+     ],
+     "combos": [
+      {
+       "name": "Counter combo",
+       "sequence": [
+        "Guard Stance",
+        "Guard Counter",
+        "Pounding Grab"
+       ],
+       "note": "Guard Counter knocks down and lowers Defense; Pounding Grab needs Knockdown (or Stun with [[awk:3]])."
+      },
+      {
+       "name": "Simple combo",
+       "sequence": [
+        "Knockdown Smash",
+        "Pounding Grab"
+       ],
+       "note": "Knockdown Smash opens Pounding Grab without timing a counter."
+      }
+     ]
+    },
+    "kit": [
+     {
+      "title": "[[skill:Guard Stance]] and Defensive Stance",
+      "points": [
+       "Less Super Armor depletion and a counter-shockwave when hit; his Mastery adds unconditional Taunt and −10% Attack on Taunted enemies.",
+       "His signature Karma adds +100% Super Armor resistance for a time and −10% damage taken for him and nearby allies in Defensive Stance; [[awk:1]] and [[awk:6]] strengthen it."
+      ]
+     },
+     {
+      "title": "[[skill:Guard Counter]] and [[skill:Pounding Grab]]",
+      "points": [
+       "Guard Counter (1172%) knocks down and lowers the target's Defense on success; with [[awk:6]] the shield's levels push the cut to around 10% and then around 30% for 10 seconds.",
+       "Pounding Grab (1456%) needs Knockdown and raises the enemy's hostility towards him by 33%."
+      ]
+     }
+    ],
+    "investment": {
+     "skills": [
+      {
+       "priority": "High",
+       "text": "[[skill:Guard Stance]] and [[skill:Guard Counter]]."
+      },
+      {
+       "priority": "Medium",
+       "text": "[[skill:Knockdown Smash]] and [[skill:Pounding Grab]]."
+      },
+      {
+       "priority": "Low",
+       "text": "[[skill:Brandish]], [[skill:Dive Kick]] and [[skill:Dodge Combo]]."
+      }
+     ],
+     "awakening": [
+      "**Best stop: [[awk:6]].** [[awk:2]] (+40% Defense) and [[awk:1]] are solid; [[awk:3]] lets Pounding Grab use Stun."
+     ],
+     "karma": [
+      "Signature: [[karma:Loyalty Amidst Lethargy]] (exclusive shop): +30% Max HP, +1175 Knockdown Additional Attack Power, +20% Knockdown Additional Damage, plus the Defensive Stance damage reduction. Second: [[karma:Stay Sharp. Always]].",
+      "**Priority: low.** 10% less damage for allies in his stance; no damage gain for the team."
+     ],
+     "gear": [
+      "3 [[set:Earthshatterer]] + 2 [[set:Battle Will]], with Max HP Up and Defense Up main stats everywhere."
+     ]
+    },
+    "teams": [
+     "**Ursula (under 2 min):** Alex + [[hero:Lute]] + [[hero:Sion]]"
+    ]
+   }
   },
   "Reina": {
    "archetype": "GALE",
@@ -22633,7 +22734,7 @@
     ],
     "expert": {
      "drop": 1,
-     "reason": "His team value comes from Guard Counter, a parry that needs exact timing against an enemy attack. A successful one lowers the enemy's Defense by 20% for about 10 s (+11% damage for the whole team on a 1000-Defense boss). Missed parries mean no debuff and very little damage."
+     "reason": "His team value comes from Guard Counter, a parry that needs exact timing against an enemy attack. A successful one lowers the enemy's Defense for 10 s (around 30% at A6), so the whole team hits harder. Missed parries mean no debuff and very little damage."
     }
    },
    "Theresia": {

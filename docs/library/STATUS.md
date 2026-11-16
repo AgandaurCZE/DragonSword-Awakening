@@ -7,7 +7,7 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 - Upcoming heroes: `UPCOMING_HEROES` (15 Nov). Jerome (Bloodburst, Lentus Rebellion, December update, sword, parry) is shown on the Heroes page; Veronica and Logan are data only (Lentus Rebellion). Notes: `assets/sources/upcoming/notes.txt`.
 
 ## In progress
-- **Hero reviews:** rewritten and live 15 Nov (banner with nickname, lore title, A0/A6, groups vs bosses). Alex has no review until his awakenings are rated. Writing rules: no testing details or names; one cast never fills a status gauge; most skills return in about 10 s; against bosses heroes need partners or a broken Super Armor for physical statuses.
+- **Hero reviews:** rewritten and live 15 Nov (banner with nickname, lore title, A0/A6, groups vs bosses). Writing rules: no testing details or names; one cast never fills a status gauge; most skills return in about 10 s; against bosses heroes need partners or a broken Super Armor for physical statuses.
 - **"Start here" guide:** live 15 Nov at the top of the Guides page (`GUIDES.startHere`). Still unwritten guides: the other planned topics in `GUIDES.categories`.
 
 ## David's account (latest)
@@ -17,8 +17,6 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 
 ## Open questions (need the game)
 1. Perfect rune tops still predicted: Crit Rate 8.50% (step 0.425%) and Defense 100 (step 5). Seen tops: Attack 140, Crit Damage 14%, Max HP 1500 (15 Nov). Readings in `RUNES.seen`.
-2. Alex's awakenings, when materials allow.
-3. The remaining signature team runs, when those teams are at Lv.70.
 
 ## Can wait
 - Crit Rate awakenings were rated before the 30 Oct gear rebuild; worth a re-check.
