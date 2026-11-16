@@ -26970,14 +26970,15 @@
   ]
  },
  "GUIDES": {
-  "note": "Guides page (preview only). Categories in display order; each item {title, ready, image?, page?}. ready:false shows a 'soon' placeholder card. Content still to be written.",
+  "note": "Guide library categories in display order. Published items link to guide IDs. Planned items are shown without links.",
   "categories": [
    {
-    "name": "Newbies section",
+    "name": "New Players",
     "items": [
      {
-      "title": "Getting started",
-      "ready": false
+      "title": "Getting Started",
+      "ready": true,
+      "id": "start-here"
      },
      {
       "title": "What to spend resources on first",
@@ -26986,59 +26987,29 @@
     ]
    },
    {
-    "name": "General Guides",
+    "name": "Dungeons",
     "items": [
      {
-      "title": "Daily and weekly routine",
+      "title": "Normal Dungeons",
       "ready": false
      },
      {
-      "title": "Currencies and the Exchange",
+      "title": "Currency Dungeons",
+      "ready": false
+     },
+     {
+      "title": "Trait Dungeons",
       "ready": false
      }
     ]
    },
    {
-    "name": "Game Mechanics",
+    "name": "Bosses",
     "items": [
      {
-      "title": "Damage and status effects",
+      "title": "World Bosses",
       "ready": false
      },
-     {
-      "title": "Break and Super Armor",
-      "ready": false
-     },
-     {
-      "title": "Defense, Armor Penetration and Defense Ignore",
-      "ready": false
-     }
-    ]
-   },
-   {
-    "name": "Gear",
-    "items": [
-     {
-      "title": "Gear rarities and main stats",
-      "ready": false
-     },
-     {
-      "title": "Upgrading and Disassembling",
-      "ready": false
-     },
-     {
-      "title": "Runes",
-      "ready": false
-     }
-    ]
-   },
-   {
-    "name": "World Boss",
-    "items": []
-   },
-   {
-    "name": "Hunt",
-    "items": [
      {
       "title": "Hunt overview and rating rewards",
       "ready": false
@@ -27062,12 +27033,11 @@
      {
       "title": "Ghoul Greed",
       "ready": false
-     }
-    ]
-   },
-   {
-    "name": "Raid",
-    "items": [
+     },
+     {
+      "title": "Earthlander of the Ravenous Earth",
+      "ready": false
+     },
      {
       "title": "Raid overview",
       "ready": false
@@ -27075,14 +27045,83 @@
      {
       "title": "Gauron (Steelheart Fortress Defense)",
       "ready": false
+     },
+     {
+      "title": "Ursula",
+      "ready": false
      }
     ]
    },
    {
-    "name": "Tower",
+    "name": "Towers",
     "items": [
      {
       "title": "Tower of Trials overview",
+      "ready": false
+     },
+     {
+      "title": "Tower of Amplitude",
+      "ready": false
+     },
+     {
+      "title": "Tower of Gale",
+      "ready": false
+     },
+     {
+      "title": "Tower of Crushing",
+      "ready": false
+     }
+    ]
+   },
+   {
+    "name": "Game Mechanics",
+    "items": [
+     {
+      "title": "Status Effects",
+      "ready": true,
+      "id": "status-effects"
+     },
+     {
+      "title": "Break & Super Armor",
+      "ready": true,
+      "id": "break-super-armor"
+     },
+     {
+      "title": "Defense, Armor Penetration and Defense Ignore",
+      "ready": false
+     }
+    ]
+   },
+   {
+    "name": "Gear & Runes",
+    "items": [
+     {
+      "title": "Gear rarities and main stats",
+      "ready": false
+     },
+     {
+      "title": "Upgrading and Disassembling",
+      "ready": false
+     },
+     {
+      "title": "Runes",
+      "ready": false
+     }
+    ]
+   },
+   {
+    "name": "Progression",
+    "items": [
+     {
+      "title": "Daily and weekly routine",
+      "ready": false
+     },
+     {
+      "title": "Currencies and the Exchange",
+      "ready": false
+     },
+     {
+      "title": "Hero levels, Mastery and Awakenings",
       "ready": false
      }
     ]
@@ -27236,11 +27275,6 @@
          "icon": "🛡️",
          "title": "Break the Super Armor first",
          "text": "Bosses resist physical statuses until their Super Armor breaks. After that, Stun, Knockdown and Airborne build twice as fast, and some skills only work on a broken boss."
-        },
-        {
-         "icon": "🔥",
-         "title": "Nightmare and Hell change the rules",
-         "text": "Up to Extreme, every element works the same on a Hunt boss. On Nightmare and Hell each boss has a strong damage-resistance buff and is weak to two elements: one of its weak statuses, or any physical status, removes the buff while it lasts. The Boss & Tower Finder shows each boss's weaknesses."
         }
        ]
       },
@@ -28202,8 +28236,9 @@
     "label": "Guides",
     "items": [
      {
-      "label": "Mechanics guides",
+      "label": "Getting Started",
       "page": "guides",
+      "guide": "start-here",
       "image": "assets/ui/guides.webp"
      }
     ]

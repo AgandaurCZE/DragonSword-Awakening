@@ -7923,6 +7923,61 @@ a.shortcut-card:focus-visible {
   }
 }
 
+.guide-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 148px;
+  padding: clamp(16px, 3vw, 28px);
+  color: #f4f6fa;
+  text-decoration: none;
+}
+.guide-banner h4 {
+  margin: 4px 0 0;
+  font-size: clamp(22px, 3vw, 32px);
+}
+.guide-banner > span {
+  color: #a8dcff;
+  font-size: 27px;
+}
+.guide-banner:hover,
+.guide-banner:focus-visible,
+a.guide-tile:hover,
+a.guide-tile:focus-visible {
+  border-color: #68c7d5;
+  background-color: #303c4d;
+}
+.guide-grid {
+  padding: 0;
+  margin: 14px 0 0;
+  list-style: none;
+}
+.guide-tile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 12px;
+  height: 100%;
+  min-height: 58px;
+  padding: 10px 14px;
+  border: 1px solid #3a414d;
+  border-radius: 6px;
+  background: #252932;
+  color: #f4f6fa;
+  text-decoration: none;
+  font-weight: 700;
+}
+.guide-planned {
+  background: #22252c;
+  color: #c6cbd5;
+}
+.guide-planned small {
+  color: #a9afbc;
+  font-weight: 400;
+}
+
 /* "Start here" guide (GUIDES.startHere, 15 Nov 2026) */
 .sh {
   margin-bottom: 28px;
@@ -7972,6 +8027,7 @@ a.shortcut-card:focus-visible {
   border-color: #68c7d5;
 }
 .sh-sec {
+  scroll-margin-top: calc(var(--mobile-bar-height, 0px) + 12px);
   margin-top: 22px;
   background: #222a35;
   border: 1px solid #3b4654;

@@ -2755,7 +2755,13 @@
            "items": {
             "list": {
              "record": {
-              "opt": {},
+              "opt": {
+               "id": {
+                "types": [
+                 "string"
+                ]
+               }
+              },
               "req": {
                "ready": {
                 "types": [
@@ -4729,6 +4735,11 @@
             "list": {
              "record": {
               "opt": {
+               "guide": {
+                "types": [
+                 "string"
+                ]
+               },
                "tool": {
                 "types": [
                  "string"

@@ -414,8 +414,8 @@ def beta_routes(browser, base):
         ['Tier List','Teams','Boss & Tower Finder'],
         ['Heroes','Karma','Gear','Familiars','Cookbook','Item Database'],
         ['Trait Dungeons','Normal Dungeons','Currency Dungeons'],
-        ['Titles','Achievements'], ['Mechanics guides'], ['Damage Calculator','Levelling Calculator']]
-    actual = page.locator('.shortcut-group').evaluate_all("ss=>ss.map(s=>[...s.querySelectorAll('.shortcut-card>span:first-of-type')].map(e=>e.textContent))")
+        ['Titles','Achievements'], ['Getting Started'], ['Damage Calculator','Levelling Calculator']]
+    actual = page.locator('#shortcutsBody .shortcut-group').evaluate_all("ss=>ss.map(s=>[...s.querySelectorAll('.shortcut-card>span:first-of-type')].map(e=>e.textContent))")
     if actual != expected or page.locator('.shortcut-soon').count() or not page.locator('.shortcuts-latest').is_visible():
         bad('Beta shortcuts: expected featured pages, a News link and no placeholders')
     if not page.locator('.beta-badge').is_visible() or page.locator('.brand-home img').get_attribute('src') != 'assets/logo_2x.png':
@@ -948,9 +948,25 @@ def team_links(browser, base):
         text = pop.inner_text()
         if want[0] not in text or 'UPCOMING' not in text or 'not revealed yet' not in text:
             raise AssertionError(f'upcoming hero hover card: {text!r}')
-    # "Start here" guide (15 Nov 2026): the deep link opens the Guides page with every section of GUIDES.startHere
+    # Getting Started deep link opens the individual guide with every section of GUIDES.startHere
     # drawn, its pictures loaded, and its hero chips linking to hero pages.
-    page.goto(base + 'guides#start-here')
+    page.wait_for_load_state('networkidle')
+    page.goto(base, wait_until='networkidle')
+    page.wait_for_function('NAV.ready')
+    shortcut = page.locator('#shortcutsBody').get_by_role('link', name='Getting Started')
+    assert shortcut.get_attribute('href').endswith('/guides#start-here')
+    with ctx.expect_page() as starter_tab:
+        shortcut.click(modifiers=['Control'])
+    starter_tab.value.wait_for_function("typeof NAV !== 'undefined' && NAV.ready")
+    assert starter_tab.value.locator('#start-here').is_visible()
+    starter_tab.value.wait_for_load_state('networkidle')
+    starter_tab.value.close()
+    shortcut.click()
+    assert page.url.endswith('/guides#start-here')
+    page.locator('#start-here img').evaluate_all("(images) => images.forEach((img) => img.loading = 'eager')")
+    page.wait_for_function(
+        "[...document.querySelectorAll('#start-here img')].every((img) => img.complete && img.naturalWidth)")
+    page.reload(wait_until='networkidle')
     page.wait_for_function('NAV.ready')
     want = page.evaluate("((GUIDES||{}).startHere||{sections:[]}).sections.length")
     got = page.locator('#start-here .sh-sec').count()
@@ -995,8 +1011,36 @@ def guide_polish(browser, base):
     assert page.locator('.profile-tabs').evaluate("(el) => getComputedStyle(el).position") == 'sticky'
     page.goto(base + 'guides')
     page.wait_for_function('NAV.ready')
-    assert page.locator('.mechanics-guide h3').all_text_contents() == ['Status Effects', 'Break & Super Armor', 'Nightmare+ Hunts']
-    assert not page.locator('.gd-card.soon').count()
+    assert page.locator('#guidesBody h3.shortcut-title').all_text_contents() == [
+        'New Players', 'Dungeons', 'Bosses', 'Towers', 'Game Mechanics', 'Gear & Runes', 'Progression']
+    assert not page.locator('#start-here, .mechanics-guide').count()
+    planned = page.locator('.guide-planned')
+    assert planned.count() and not planned.locator('a').count()
+    banner = page.locator('.guide-banner')
+    assert banner.get_attribute('href').endswith('/guides#start-here')
+    banner.click()
+    assert page.locator('#start-here').is_visible()
+    assert 'Nightmare' not in page.locator('#start-here').inner_text()
+    page.get_by_role('navigation', name='On this page').get_by_role('link', name='How combat really works').click()
+    page.wait_for_function("document.activeElement.id === 'start-here-combat'")
+    assert page.url.endswith('/guides#start-here-combat')
+    page.wait_for_load_state('networkidle')
+    page.reload(wait_until='networkidle')
+    page.wait_for_function("NAV.ready && document.activeElement.id === 'start-here-combat'")
+    page.get_by_role('link', name='All guides').click()
+    assert banner.is_visible() and page.url.endswith('/guides')
+    page.go_back()
+    assert page.locator('#start-here').is_visible() and page.url.endswith('/guides#start-here-combat')
+    page.wait_for_load_state('networkidle')
+    for name, slug in [('Status Effects', 'status-effects'), ('Break & Super Armor', 'break-super-armor')]:
+        page.goto(base + 'guides#start-here')
+        page.wait_for_function('NAV.ready')
+        page.get_by_role('navigation', name='Related guides').get_by_role('link', name=name, exact=True).click()
+        assert page.url.endswith('/guides#' + slug)
+        assert page.locator('.mechanics-guide h3').inner_text() == name
+        page.get_by_role('link', name='All guides').click()
+        page.locator('#guidesBody').get_by_role('link', name=name, exact=True).click()
+        assert page.locator('.mechanics-guide h3').inner_text() == name
     for path in ['teams', 'news']:
         page.goto(base + path, wait_until='networkidle')
         page.wait_for_function('NAV.ready')

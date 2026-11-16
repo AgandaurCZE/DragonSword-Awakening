@@ -17,7 +17,8 @@ function routeUrl(page, options = {}) {
       : page === 'tools' && options.tool
         ? SITE.toolRoutes[options.tool] || SITE.routes.tools
         : (SITE.routes[page] ?? '');
-  return APP_ROOT + path;
+  const hash = page === 'guides' && options.guide ? '#' + encodeURIComponent(options.guide) : '';
+  return APP_ROOT + path + hash;
 }
 function navCurrent() {
   if (!$('profilePage').hidden)
@@ -28,6 +29,7 @@ function navCurrent() {
     };
   const page = document.querySelector('.nav-item.active[data-page]')?.dataset.page || 'home';
   const state = { page };
+  if (page === 'guides' && $('guidesBody').dataset.guide) state.guide = $('guidesBody').dataset.guide;
   if (page === 'tools') state.tool = document.querySelector('#toolTabs .on')?.dataset.tool || 'damage';
   if (page === 'tier') state.tier = { mode: V2.mode, boss: V2.boss, tower: V2.tower, view: V2.view };
   return state;
@@ -77,12 +79,20 @@ function navShow(state, scrollY = null) {
             flashEl([...document.querySelectorAll('.team-card')].find((card) => card.dataset.teamName === state.team)),
           );
       }
-      if (state.page === 'guides' && state.guide) requestAnimationFrame(() => $(state.guide)?.scrollIntoView());
+      if (state.page === 'guides') {
+        renderGuides(state.guide);
+        if (state.guide && guideTarget(state.guide) !== state.guide)
+          requestAnimationFrame(() => {
+            const section = $(state.guide);
+            section?.focus({ preventScroll: true });
+            section?.scrollIntoView();
+          });
+      }
     }
   } finally {
     NAV.restoring = false;
   }
-  if (scrollY !== null && !state.skill && !state.team && !state.guide)
+  if (scrollY !== null && !state.skill && !state.team && (!state.guide || guideTarget(state.guide) === state.guide))
     requestAnimationFrame(() => window.scrollTo({ top: scrollY, behavior: 'instant' }));
 }
 function navNavigate(state) {
@@ -127,8 +137,7 @@ function navInitial() {
   }
   if (page === 'teams' && hash === 'speed') return { page, speed: true };
   if (page === 'teams' && params.has('team')) return { page, team: params.get('team') };
-  if (page === 'guides' && (hash === 'start-here' || MECHANICS_GUIDES.some((guide) => guide.id === hash)))
-    return { page, guide: hash };
+  if (page === 'guides' && guideTarget(hash)) return { page, guide: hash };
   return { page: page || 'home' };
 }
 function navInit() {
@@ -158,6 +167,9 @@ function navInit() {
   document.addEventListener('change', () => navSchedule());
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') navSchedule();
+  });
+  document.querySelector('.nav-item[data-page="guides"]').addEventListener('click', (e) => {
+    if (!NAV.restoring && isPlainLinkClick(e)) renderGuides();
   });
   document.querySelectorAll('.brand-home, .mobile-home').forEach((link) =>
     link.addEventListener('click', (e) => {
@@ -194,7 +206,12 @@ function renderShortcuts() {
       card.addEventListener('click', (event) => {
         if (!isPlainLinkClick(event)) return;
         event.preventDefault();
-        navNavigate({ page: item.page, tool: item.tool, ...(item.mode ? { tier: { mode: item.mode } } : {}) });
+        navNavigate({
+          page: item.page,
+          guide: item.guide,
+          tool: item.tool,
+          ...(item.mode ? { tier: { mode: item.mode } } : {}),
+        });
       });
       const image = document.createElement('img');
       image.src = item.image;

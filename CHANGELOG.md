@@ -1,5 +1,12 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 16 Nov 2026 — Guides library and Getting Started
+
+- Restored Guides as a category library. New Players starts with a full-width Getting Started banner. Categories use the Shortcuts dividers and headings. Planned cards cover Dungeons, Bosses, Towers, Game Mechanics, Gear & Runes, and Progression.
+- Shortcuts links directly to Getting Started. Table-of-contents links open the correct section. Status Effects and Break & Super Armor have their own pages within Guides and are linked from Getting Started.
+- Removed the Nightmare+ Hunts article and the Nightmare/Hell rules card from Getting Started.
+- The full checks passed. The 113-view comparison showed changes only to Guides and the Getting Started shortcut at both widths. Browser checks covered opening in a new tab, reloading direct links, section jumps, Back, and returning to the library.
+
 ## 16 Nov 2026 — Alex's Defense cut is 40% (Claude)
 - David: Guard Counter cuts Defense by 20% at max level and A6 adds another 20%, so 40%. The review pros, How to play, kit line, tier-list Expert note and AWAKENING_TESTS now say 20% / 40% (was around 10% / 30%). Pushed without the local browser check.
 

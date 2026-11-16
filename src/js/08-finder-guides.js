@@ -85,6 +85,7 @@ const MECHANICS_GUIDES = [
   {
     id: 'status-effects',
     title: 'Status Effects',
+    next: { page: 'tools', tool: 'damage', label: 'Open the Damage Calculator' },
     intro: 'Which status opens a damage window, and which skills can use it?',
     sections: [
       [
@@ -108,6 +109,7 @@ const MECHANICS_GUIDES = [
   {
     id: 'break-super-armor',
     title: 'Break & Super Armor',
+    next: { page: 'teams', hash: '#team=Armor%20Break', label: 'See the Armor Break team' },
     intro: 'Build the next physical window while the enemy’s armour is down.',
     sections: [
       [
@@ -121,25 +123,6 @@ const MECHANICS_GUIDES = [
       [
         'Damage during Break',
         'Break adds no inherent hit bonus. Break Additional Attack Power, All Status Additional Attack Power, and Break Additional Damage can still raise hits. Break Additional Damage shares the usual Additional Damage pool.',
-      ],
-    ],
-  },
-  {
-    id: 'nightmare-hunts',
-    title: 'Nightmare+ Hunts',
-    intro: 'Build a team around the boss’s weakness, then spend the opening.',
-    sections: [
-      [
-        'Remove the resistance',
-        'On Nightmare and Hell, resistance leaves a direct hit at 17.1% of its unrestricted damage. A matching elemental status or an active physical status removes the resistance while it is active. Break helps set up physical statuses.',
-      ],
-      [
-        'Choose the opener',
-        'Bring a hero who quickly builds a matching element. On Frost-weak bosses, one Frost stack opens the damage window. Follow with your high-damage skills as soon as the status lands. The Boss & Tower Finder lists every Hunt weakness.',
-      ],
-      [
-        'Gallore’s stone fist',
-        'The first Break knocks off a fist and lowers Gallore’s Defense even after the boss recovers. An early Break and keeping Frost or Burn active are separate ways to improve damage in this fight.',
       ],
     ],
   },
@@ -185,35 +168,81 @@ function startHereHtml(G) {
       return `<div class="sh-links">${b.items.map((l) => `<a href="${E(routeUrl(l.page, l.tool ? { tool: l.tool } : {}))}">${E(l.label)} →</a>`).join('')}</div>`;
     return '';
   };
-  return `<article class="sh" id="${E(G.id)}"><header class="sh-head"><div class="sh-kicker">${E(G.kicker)}</div><h3>${E(G.title)}</h3><p>${E(G.intro)}</p><nav class="sh-toc">${G.sections.map((s, i) => `<a href="#${E(G.id)}-${E(s.id)}">${i + 1} · ${E(s.title)}</a>`).join('')}</nav></header>${G.sections
+  return `<article class="sh" id="${E(G.id)}"><header class="sh-head"><div class="sh-kicker">${E(G.kicker)}</div><h3>${E(G.title)}</h3><p>${E(G.intro)}</p><nav class="sh-toc" aria-label="On this page">${G.sections.map((s, i) => guideLink(G.id + '-' + s.id, i + 1 + ' · ' + s.title)).join('')}</nav><nav class="sh-toc" aria-label="Related guides">${MECHANICS_GUIDES.map((guide) => guideLink(guide.id, guide.title)).join('')}</nav></header>${G.sections
     .map(
       (s, i) =>
-        `<section class="sh-sec" id="${E(G.id)}-${E(s.id)}" style="--c:${E(s.color)}"><h4 class="sh-h"><span class="sh-num">${i + 1}</span>${E(s.title)}</h4><p class="sh-sub">${E(s.sub)}</p>${s.blocks.map(block).join('')}</section>`,
+        `<section class="sh-sec" tabindex="-1" id="${E(G.id)}-${E(s.id)}" style="--c:${E(s.color)}"><h4 class="sh-h"><span class="sh-num">${i + 1}</span>${E(s.title)}</h4><p class="sh-sub">${E(s.sub)}</p>${s.blocks.map(block).join('')}</section>`,
     )
     .join('')}</article>`;
 }
-function renderGuides() {
+function guideTarget(hash) {
+  const start = GUIDES.startHere;
+  if (start && (hash === start.id || start.sections.some((section) => hash === start.id + '-' + section.id)))
+    return start.id;
+  return MECHANICS_GUIDES.find((guide) => guide.id === hash)?.id;
+}
+
+function guideLink(id, label, className = '') {
   const E = profileEsc;
+  return `<a class="${className}" href="${E(routeUrl('guides', { guide: id }))}" data-guide-link="${E(id)}">${E(label)}</a>`;
+}
+
+function renderGuideLibrary() {
+  const E = profileEsc;
+  const start = GUIDES.startHere;
+  return GUIDES.categories
+    .map(({ name, items }) => {
+      const featured = items.find((item) => item.ready && item.id === start?.id);
+      const banner = featured
+        ? `<a class="sh-head guide-banner" href="${E(routeUrl('guides', { guide: featured.id }))}" data-guide-link="${E(featured.id)}">
+            <div><span class="sh-kicker">${E(featured.title)}</span><h4>${E(start.title)}</h4>
+            <p>Meet your first heroes, build a team and learn where to spend and farm.</p></div><span aria-hidden="true">→</span>
+          </a>`
+        : '';
+      const cards = items
+        .filter((item) => item !== featured)
+        .map(({ title, ready, id }) =>
+          ready
+            ? `<li>${guideLink(id, title, 'guide-tile')}</li>`
+            : `<li class="guide-tile guide-planned">${E(title)}<small>Planned</small></li>`,
+        )
+        .join('');
+      return `<section class="shortcut-group"><h3 class="gear-section-title shortcut-title">${E(name)}</h3>
+        ${banner}${cards ? `<ul class="guide-grid shortcut-grid">${cards}</ul>` : ''}</section>`;
+    })
+    .join('');
+}
+
+function renderGuides(hash = '') {
+  const E = profileEsc;
+  const id = guideTarget(hash);
   const root = $('guidesBody');
-  const urls = { status: routeUrl('tools', { tool: 'damage' }), break: routeUrl('teams'), hunts: routeUrl('finder') };
-  const next = [
-    [urls.status, 'Open the Damage Calculator'],
-    [urls.break, 'See the Armor Break team'],
-    [urls.hunts, 'Open the Boss & Tower Finder'],
-  ];
-  const start = (GUIDES || {}).startHere;
-  root.innerHTML = `<nav class="guide-index" aria-label="Guides">${start ? `<a href="#${E(start.id)}">Start here</a>` : ''}${MECHANICS_GUIDES.map((guide) => `<a href="#${E(guide.id)}">${E(guide.title)}</a>`).join('')}</nav>${start ? startHereHtml(start) : ''}
-  ${MECHANICS_GUIDES.map(
-    (
-      guide,
-      index,
-    ) => `<article class="mechanics-guide" id="${E(guide.id)}"><h3>${E(guide.title)}</h3><p>${E(guide.intro)}</p>
-  ${guide.sections.map(([heading, body]) => `<section><h4>${E(heading)}</h4><p>${formatSkillText(body)}</p></section>`).join('')}
-  <a href="${E(next[index][0])}${index === 1 ? '#team=Armor%20Break' : ''}">${E(next[index][1])} →</a></article>`,
-  ).join('')}`;
+  const current = guideTarget(root.dataset.guide);
+  root.dataset.guide = id ? hash : '';
+  if (id && current === id) return;
+  if (!id) {
+    root.innerHTML = renderGuideLibrary();
+    return;
+  }
+  const back = `<nav class="guide-index" aria-label="Guide navigation">${guideLink('', '← All guides')}</nav>`;
+  if (id === GUIDES.startHere?.id) {
+    root.innerHTML = back + startHereHtml(GUIDES.startHere);
+    return;
+  }
+  const guide = MECHANICS_GUIDES.find((entry) => entry.id === id);
+  const next = routeUrl(guide.next.page, guide.next) + (guide.next.hash || '');
+  root.innerHTML = `${back}<article class="mechanics-guide" id="${E(id)}"><h3>${E(guide.title)}</h3><p>${E(guide.intro)}</p>
+    ${guide.sections.map(([heading, body]) => `<section><h4>${E(heading)}</h4><p>${formatSkillText(body)}</p></section>`).join('')}
+    <a href="${E(next)}">${E(guide.next.label)} →</a></article>`;
 }
 
 document.addEventListener('click', (event) => {
+  const link = event.target.closest('[data-guide-link]');
+  if (link && isPlainLinkClick(event)) {
+    event.preventDefault();
+    navNavigate({ page: 'guides', guide: link.dataset.guideLink });
+    return;
+  }
   const a = event.target.closest('[data-sh-hero]');
   if (!a || !isPlainLinkClick(event)) return;
   event.preventDefault();
