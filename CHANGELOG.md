@@ -1,5 +1,9 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 16 Nov 2026 — Remove the daily and weekly routine placeholder
+
+- Removed the planned routine card from Progression. There are no required daily or weekly quests. The full local checks passed.
+
 ## 16 Nov 2026 — Dungeon, encounter, gear and progression guides
 
 - Published 24 short guides under the existing library categories. They cover early spending, Normal, Currency and Trait Dungeons, World Bosses, Hunts, Raids, Towers, gear, runes, the Exchange, and hero progression.

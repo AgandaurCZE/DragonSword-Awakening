@@ -1014,8 +1014,7 @@ def guide_polish(browser, base):
     assert page.locator('#guidesBody h3.shortcut-title').all_text_contents() == [
         'New Players', 'Dungeons', 'Bosses', 'Towers', 'Game Mechanics', 'Gear & Runes', 'Progression']
     assert not page.locator('#start-here, .mechanics-guide').count()
-    planned = page.locator('.guide-planned')
-    assert planned.count() and not planned.locator('a').count()
+    assert page.locator('.guide-planned').count() == 0
     banner = page.locator('.guide-banner')
     assert banner.get_attribute('href').endswith('/guides#start-here')
     banner.click()
@@ -1054,7 +1053,6 @@ def guide_polish(browser, base):
     page.get_by_role('link', name='All guides').click()
     articles = page.evaluate('GUIDES.articles.map(({id, title}) => ({id, title}))')
     assert len(articles) == 24
-    assert page.locator('.guide-planned').count() == 1
     for article in articles:
         page.locator('#guidesBody').get_by_role('link', name=article['title'], exact=True).click()
         assert page.url.endswith('/guides#' + article['id'])

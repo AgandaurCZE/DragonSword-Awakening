@@ -4,9 +4,13 @@
 
 Every Karma, signatures included, is owned and shown in colour.
 
+## 16 Nov — Removed routine placeholder
+
+Removed the daily and weekly routine topic. DragonSword: Awakening is a buy-to-play game with no required daily or weekly quest checklist.
+
 ## 16 Nov — Guide library articles
 
-Added 24 concise guides for early spending, dungeons, World Bosses, the six Hunts, the two Raids, all Towers, gear and runes, the Exchange, and hero progression. Hunt and Raid entries focus on preparation and confirmed encounter mechanics. Daily and weekly routine remains planned until the task and reset details are available.
+Added 24 concise guides for early spending, dungeons, World Bosses, the six Hunts, the two Raids, all Towers, gear and runes, the Exchange, and hero progression. Hunt and Raid entries focus on preparation and confirmed encounter mechanics.
 
 ## 16 Nov — Combat quick links and Defense guide
 

@@ -27136,10 +27136,6 @@
     "name": "Progression",
     "items": [
      {
-      "title": "Daily and weekly routine",
-      "ready": false
-     },
-     {
       "title": "Currencies and the Exchange",
       "ready": true,
       "id": "exchange"
