@@ -153,4 +153,4 @@ Measured rows are also in the Test Kit (`testId: apply`, notes say "A6"). A4 and
 ## Alex at A6 with his signature (David, 16 Nov)
 Panel: Attack 1298, Defense Ignore 2.70%, Armor Penetration 20, Crit Rate 18.10%, Crit Damage 66.20% (no gear). Training Ogre (Defense 1000), not broken, no status, first hit of his basic attack (whole sequence 354% at Lv.1).
 - **Guard Counter** at max level, synced: Knockdown about **0.30**, Super Armor gauge about **10%** (before A6: 0.33 / 8%). The Defense debuff lasts **10 s**.
-- **Debuff size** (worked out with GAME_MATH 3.1 from the hit 470 without a counter): A6 shield Lv.1 → 495 = target Defense about **−10%**; shield Lv.2 → 553 = about **−30%** (Lv.2 "amplifies Lv.1": roughly three times as much, David saw it as about double). The codex's −20% on Guard Counter wasn't isolated here.
+- **Debuff size:** Guard Counter cuts Defense by 20% at max level; A6 adds another 20%, so **40%** at max level with A6 (the same way Eileen's awakening adds its bonus on top of her skill at any level). The 470 → 495 / 553 hits were at a lower skill level.

@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 16 Nov 2026 — Alex's Defense cut is 40% (Claude)
+- David: Guard Counter cuts Defense by 20% at max level and A6 adds another 20%, so 40%. The review pros, How to play, kit line, tier-list Expert note and AWAKENING_TESTS now say 20% / 40% (was around 10% / 30%). Pushed without the local browser check.
+
 ## 16 Nov 2026 — Alex's review (Claude)
 - David's go-ahead after Alex's A6 tests: review written in the banner format ("Roxy's bodyguard", Red Fox Mercenaries; Ogre-measured Defense cut around 10% / 30% at A6 shield Lv.1 / Lv.2, 10 s), new pros and cons, Ursula team; How to play, kit and investment restored from the earlier review with the Defense cut updated; signature priority low. Tier-list Expert note updated (was −20% / +11%). Ratings unchanged (B). Pushed without the local browser check.
 

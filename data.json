@@ -5399,7 +5399,7 @@
     ]
    },
    "pros": [
-    "Cuts the target's Defense by around 30% for 10 seconds with [[awk:6]], for the whole team",
+    "Cuts the target's Defense by 40% for 10 seconds at max level with [[awk:6]], for the whole team",
     "The only tank: Taunt, 10% less enemy Attack, and 10% less damage for nearby allies with his signature",
     "Part of a safe Ursula team under 2 minutes"
    ],
@@ -5415,7 +5415,7 @@
     "title": "Red Fox Mercenaries",
     "summary": [
      "Alex goes where [[hero:Roxy]] goes. Officially he's her bodyguard; in practice he's the wall between her and whatever wants to hit her. He's the only real tank in the game: [[skill:Guard Stance]] pulls enemies onto him (his Mastery also cuts their Attack by 10%), and his signature cuts the damage he and nearby allies take by 10% while the stance holds.",
-     "His real value is [[skill:Guard Counter]]. Time it with an enemy attack and the target's Defense drops for 10 seconds: around 10% at the first level of his [[awk:6]] shield, around 30% at the second, on top of everyone's Defense Ignore. Every teammate hits harder while it lasts. Miss the timing and you get neither the debuff nor much damage, which is why he's Expert."
+     "His real value is [[skill:Guard Counter]]. Time it with an enemy attack and the target's Defense drops for 10 seconds: 20% at max level, and 40% with [[awk:6]], on top of everyone's Defense Ignore. Every teammate hits harder while it lasts. Miss the timing and you get neither the debuff nor much damage, which is why he's Expert."
     ],
     "groups": "Not his place: the debuff lands on one target and his own damage is low.",
     "bosses": "Where he belongs. Hold the stance, counter the big swings and keep the Defense cut up for your damage dealers.",
@@ -5467,7 +5467,7 @@
      {
       "title": "[[skill:Guard Counter]] and [[skill:Pounding Grab]]",
       "points": [
-       "Guard Counter (1172%) knocks down and lowers the target's Defense on success; with [[awk:6]] the shield's levels push the cut to around 10% and then around 30% for 10 seconds.",
+       "Guard Counter (1172%) knocks down and lowers the target's Defense on success; the cut is 20% at max level and 40% with [[awk:6]], for 10 seconds.",
        "Pounding Grab (1456%) needs Knockdown and raises the enemy's hostility towards him by 33%."
       ]
      }
@@ -22734,7 +22734,7 @@
     ],
     "expert": {
      "drop": 1,
-     "reason": "His team value comes from Guard Counter, a parry that needs exact timing against an enemy attack. A successful one lowers the enemy's Defense for 10 s (around 30% at A6), so the whole team hits harder. Missed parries mean no debuff and very little damage."
+     "reason": "His team value comes from Guard Counter, a parry that needs exact timing against an enemy attack. A successful one lowers the enemy's Defense for 10 s (20% at max level, 40% at A6), so the whole team hits harder. Missed parries mean no debuff and very little damage."
     }
    },
    "Theresia": {
