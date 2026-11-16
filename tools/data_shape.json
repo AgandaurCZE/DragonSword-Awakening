@@ -2747,6 +2747,72 @@
      "record": {
       "opt": {},
       "req": {
+       "articles": {
+        "list": {
+         "record": {
+          "opt": {},
+          "req": {
+           "id": {
+            "types": [
+             "string"
+            ]
+           },
+           "intro": {
+            "types": [
+             "string"
+            ]
+           },
+           "next": {
+            "record": {
+             "opt": {
+              "guide": {
+               "types": [
+                "string"
+               ]
+              },
+              "hash": {
+               "types": [
+                "string"
+               ]
+              },
+              "tool": {
+               "types": [
+                "string"
+               ]
+              }
+             },
+             "req": {
+              "label": {
+               "types": [
+                "string"
+               ]
+              },
+              "page": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           },
+           "sections": {
+            "list": {
+             "list": {
+              "types": [
+               "string"
+              ]
+             }
+            }
+           },
+           "title": {
+            "types": [
+             "string"
+            ]
+           }
+          }
+         }
+        }
+       },
        "categories": {
         "list": {
          "record": {

@@ -26982,7 +26982,8 @@
      },
      {
       "title": "What to spend resources on first",
-      "ready": false
+      "ready": true,
+      "id": "first-investments"
      }
     ]
    },
@@ -26991,15 +26992,18 @@
     "items": [
      {
       "title": "Normal Dungeons",
-      "ready": false
+      "ready": true,
+      "id": "normal-dungeons"
      },
      {
       "title": "Currency Dungeons",
-      "ready": false
+      "ready": true,
+      "id": "currency-dungeons"
      },
      {
       "title": "Trait Dungeons",
-      "ready": false
+      "ready": true,
+      "id": "trait-dungeons"
      }
     ]
    },
@@ -27008,47 +27012,58 @@
     "items": [
      {
       "title": "World Bosses",
-      "ready": false
+      "ready": true,
+      "id": "world-bosses"
      },
      {
       "title": "Hunt overview and rating rewards",
-      "ready": false
+      "ready": true,
+      "id": "hunt-overview"
      },
      {
       "title": "Furcas the Starving Ghost of Corrosion",
-      "ready": false
+      "ready": true,
+      "id": "hunt-furcas"
      },
      {
       "title": "Vanak the Bloody Hook",
-      "ready": false
+      "ready": true,
+      "id": "hunt-vanak"
      },
      {
       "title": "Barduk the Corrupted",
-      "ready": false
+      "ready": true,
+      "id": "hunt-barduk"
      },
      {
       "title": "Gallore the Collapse",
-      "ready": false
+      "ready": true,
+      "id": "hunt-gallore"
      },
      {
       "title": "Ghoul Greed",
-      "ready": false
+      "ready": true,
+      "id": "hunt-ghoul-greed"
      },
      {
       "title": "Earthlander of the Ravenous Earth",
-      "ready": false
+      "ready": true,
+      "id": "hunt-earthlander"
      },
      {
       "title": "Raid overview",
-      "ready": false
+      "ready": true,
+      "id": "raid-overview"
      },
      {
       "title": "Gauron (Steelheart Fortress Defense)",
-      "ready": false
+      "ready": true,
+      "id": "raid-gauron"
      },
      {
       "title": "Ursula",
-      "ready": false
+      "ready": true,
+      "id": "raid-ursula"
      }
     ]
    },
@@ -27057,19 +27072,23 @@
     "items": [
      {
       "title": "Tower of Trials overview",
-      "ready": false
+      "ready": true,
+      "id": "tower-overview"
      },
      {
       "title": "Tower of Amplitude",
-      "ready": false
+      "ready": true,
+      "id": "tower-amplitude"
      },
      {
       "title": "Tower of Gale",
-      "ready": false
+      "ready": true,
+      "id": "tower-gale"
      },
      {
       "title": "Tower of Crushing",
-      "ready": false
+      "ready": true,
+      "id": "tower-crushing"
      }
     ]
    },
@@ -27098,15 +27117,18 @@
     "items": [
      {
       "title": "Gear rarities and main stats",
-      "ready": false
+      "ready": true,
+      "id": "gear-rarities"
      },
      {
       "title": "Upgrading and Disassembling",
-      "ready": false
+      "ready": true,
+      "id": "gear-upgrades"
      },
      {
       "title": "Runes",
-      "ready": false
+      "ready": true,
+      "id": "runes"
      }
     ]
    },
@@ -27119,11 +27141,13 @@
      },
      {
       "title": "Currencies and the Exchange",
-      "ready": false
+      "ready": true,
+      "id": "exchange"
      },
      {
       "title": "Hero levels, Mastery and Awakenings",
-      "ready": false
+      "ready": true,
+      "id": "hero-progression"
      }
     ]
    }
@@ -27427,7 +27451,479 @@
      ]
     }
    ]
-  }
+  },
+  "articles": [
+   {
+    "id": "first-investments",
+    "title": "What to spend resources on first",
+    "intro": "Build one team that can clear the story and farm its own upgrades.",
+    "sections": [
+     [
+      "Heroes and skills",
+      "Put hero EXP into your main trio. Level their key damage skills first, using each hero’s Review tab to pick them. Leave basic, jump and dash attacks for later unless your rotation depends on them."
+     ],
+     [
+      "Gear and Karma",
+      "Use Battle Will or The Infiltrator as early options. Build toward a set that matches a status your team applies reliably. Equip a matching-archetype Karma while you save for signatures, and prioritise signatures your main team will actually use."
+     ],
+     [
+      "Spend Awakening Stones last",
+      "Choose the hero and the Awakening milestone you want before spending. The upgrade is permanent, so decide which change will help the team you already play."
+     ]
+    ],
+    "next": {
+     "page": "tools",
+     "tool": "level",
+     "label": "Plan your hero and Karma levels"
+    }
+   },
+   {
+    "id": "normal-dungeons",
+    "title": "Normal Dungeons",
+    "intro": "Run Normal Dungeons for early gear sets and breakthrough or crafting materials.",
+    "sections": [
+     [
+      "Pick the drop first",
+      "A dungeon lists the gear set, eligible slots and materials. For example, Warg Cave drops Ballad of Life for Helmet, Chest and Gloves. Check those slots before running a dungeon for a specific piece."
+     ],
+     [
+      "Pick the difficulty second",
+      "Clearing a difficulty opens the next one. Check the listed drops on Normal, Hard and Very Hard, then choose the highest tier you can clear reliably that gives you what you need."
+     ]
+    ],
+    "next": {
+     "page": "dungeons",
+     "label": "Compare Normal Dungeon drops"
+    }
+   },
+   {
+    "id": "currency-dungeons",
+    "title": "Currency Dungeons",
+    "intro": "Pick the dungeon that pays out the resource you need now.",
+    "sections": [
+     [
+      "Where to farm",
+      "Dragon Worshipper Ruins gives hero EXP, Endless Summoning Grounds gives gear EXP materials, Trace of the Giant gives Karma EXP, and Eroded Underground Cemetery gives Gold."
+     ],
+     [
+      "When you need a bit of everything",
+      "Residual Worm Cleanup Zone supplies hero, Karma and gear growth materials. Check the reward list before choosing a difficulty. A trip to the cemetery makes more sense when the problem is an empty wallet."
+     ]
+    ],
+    "next": {
+     "page": "currency",
+     "label": "Compare Currency Dungeon drops"
+    }
+   },
+   {
+    "id": "trait-dungeons",
+    "title": "Trait Dungeons",
+    "intro": "Farm Trait Stones here. Check the boss’s weakness and immunity before choosing your team.",
+    "sections": [
+     [
+      "Play into the weakness",
+      "Apply the matching status to build it faster and double its normal hit bonus. For example, the Poison hit bonus against a Poison-weak boss rises from +50% to +100%. The Poison ticks themselves keep their usual multiplier."
+     ],
+     [
+      "Watch Ghagaroach immunities",
+      "A skill of an immune archetype can trigger a bubble that Breaks your hero. For example, Ghagaroach of Blazeflame is immune to Blazeflame and weak to Frostbite. The other Ghagaroaches each have their own pairing."
+     ],
+     [
+      "Choose the reward",
+      "The boss determines the Trait Stone archetype. Choose the boss whose stones you need and a difficulty that drops the required grade."
+     ]
+    ],
+    "next": {
+     "page": "trait",
+     "label": "See boss weaknesses and Trait Stone rewards"
+    }
+   },
+   {
+    "id": "world-bosses",
+    "title": "World Bosses",
+    "intro": "World Bosses are an early source of archetype Karmas.",
+    "sections": [
+     [
+      "Find your boss",
+      "Open the Mercenary Guide and use Regional Missions to track the boss on the map. Check which Karmas it drops before travelling."
+     ],
+     [
+      "Plan a route",
+      "A World Boss returns two hours after it is defeated. If you need Karmas from several bosses, clear your route and use the gap for story or dungeons. The boss can wait. You don’t have to."
+     ]
+    ],
+    "next": {
+     "page": "karma",
+     "label": "Browse Karmas by archetype"
+    }
+   },
+   {
+    "id": "hunt-overview",
+    "title": "Hunt overview and rating rewards",
+    "intro": "Hunts are for one or two players and drop boss-specific materials for skill upgrades.",
+    "sections": [
+     [
+      "Raise your score",
+      "Clear quickly and earn bonus points with Perfect Dodges, statuses and Super Armor breaks. A clear over 15 minutes resets the score to Rank D. After a clear, select that difficulty on the Hunt screen to claim the rank reward."
+     ],
+     [
+      "Know the thresholds",
+      "S requires 36,000 points and awards one Stigma Awaken Stone. A, B, C and D award 50, 25, 15 and 10 Fragments of Sacred Light at 27,000, 21,000, 12,000 and 0 points respectively."
+     ],
+     [
+      "Adapt on Nightmare and Hell",
+      "A matching elemental status or an active physical status removes the major Hunt damage resistance while it lasts. Bring a reliable opener, then spend the window on your strongest hits. A Frost-weak boss opens up on the first Frost stack."
+     ]
+    ],
+    "next": {
+     "page": "finder",
+     "label": "Check each Hunt weakness"
+    }
+   },
+   {
+    "id": "hunt-furcas",
+    "title": "Furcas the Starving Ghost of Corrosion",
+    "intro": "Nightmare and Hell openings: Shock or Burn.",
+    "sections": [
+     [
+      "Choose an opener",
+      "Thunder Chorus can start with Shock from Ryza. Royal Inferno gives you a Burn route. Start the fight by applying your chosen status, then spend the opening on burst instead of opening with your hardest hit."
+     ]
+    ],
+    "next": {
+     "page": "tier",
+     "hash": "#boss=furcas",
+     "label": "See the Furcas rankings and rewards"
+    }
+   },
+   {
+    "id": "hunt-vanak",
+    "title": "Vanak the Bloody Hook",
+    "intro": "Nightmare and Hell openings: Poison or Bleed.",
+    "sections": [
+     [
+      "Choose an opener",
+      "Venom Cyclone builds Poison with Charlotte and Johnny. For a Bleed route, pair Roxy with Theresia in Crimson Verdict and use Roxy to set up the window."
+     ]
+    ],
+    "next": {
+     "page": "tier",
+     "hash": "#boss=vanak",
+     "label": "See the Vanak rankings and rewards"
+    }
+   },
+   {
+    "id": "hunt-barduk",
+    "title": "Barduk the Corrupted",
+    "intro": "Nightmare and Hell openings: Bleed or Frost.",
+    "sections": [
+     [
+      "Choose an opener",
+      "Use Crimson Verdict for Bleed or Frost Prison for Frost. With Frost, burst after the first stack. Save any attack that specifically needs Freeze to shatter for the third stack."
+     ]
+    ],
+    "next": {
+     "page": "tier",
+     "hash": "#boss=barduk",
+     "label": "See the Barduk rankings and rewards"
+    }
+   },
+   {
+    "id": "hunt-gallore",
+    "title": "Gallore the Collapse",
+    "intro": "Nightmare and Hell openings: Frost or Burn.",
+    "sections": [
+     [
+      "Break the fist early",
+      "The first Break knocks off a fist and lowers Gallore’s Defense even after the Super Armor gauge recovers. Make an early Break a priority alongside opening damage windows with Frost or Burn."
+     ],
+     [
+      "Pick a team",
+      "Frost Prison can attack through the first Frost stack. Royal Inferno gives you Burn, with Kalien helping wear down Super Armor."
+     ]
+    ],
+    "next": {
+     "page": "tier",
+     "hash": "#boss=gallore",
+     "label": "See Gallore’s rankings and rewards"
+    }
+   },
+   {
+    "id": "hunt-ghoul-greed",
+    "title": "Ghoul Greed",
+    "intro": "Nightmare and Hell openings: Burn or Shock.",
+    "sections": [
+     [
+      "Choose an opener",
+      "Use Royal Inferno for Burn or Thunder Chorus for Shock. Once the first stack lands, use the other heroes’ high-damage attacks in the same window."
+     ]
+    ],
+    "next": {
+     "page": "tier",
+     "hash": "#boss=ghoul-greed",
+     "label": "See the Ghoul Greed rankings and rewards"
+    }
+   },
+   {
+    "id": "hunt-earthlander",
+    "title": "Earthlander of the Ravenous Earth",
+    "intro": "Nightmare and Hell openings: Bleed or Poison.",
+    "sections": [
+     [
+      "Choose an opener",
+      "Crimson Verdict can apply Bleed with Roxy. Venom Cyclone can build Poison with Charlotte and Johnny. If your elemental opener is down, an active physical status also opens a damage window."
+     ]
+    ],
+    "next": {
+     "page": "tier",
+     "hash": "#boss=earthlander",
+     "label": "See the Earthlander rankings and rewards"
+    }
+   },
+   {
+    "id": "raid-overview",
+    "title": "Raid overview",
+    "intro": "Raid solo or with up to three players, each bringing a team of three heroes.",
+    "sections": [
+     [
+      "Pick your reward",
+      "Gauron drops Legendary pieces from the three normal gear sets as well as runes. Ursula also drops runes and equipment materials. Both offer Perfect runes on Very Hard."
+     ],
+     [
+      "Prepare for consecutive phases",
+      "Bring a team that can apply statuses and use the opening, plus healing food for Gauron’s HP carry-over. For a first clear, learn the phase transitions before aiming for a faster time."
+     ]
+    ],
+    "next": {
+     "page": "finder",
+     "label": "Compare the Raids in the Boss & Tower Finder"
+    }
+   },
+   {
+    "id": "raid-gauron",
+    "title": "Gauron (Steelheart Fortress Defense)",
+    "intro": "The bridge Ogre comes first, then humanoid Gauron, then his dragon form.",
+    "sections": [
+     [
+      "Bring healing food",
+      "HP carries over between the three fights. Put healing food on the Quick Slot before the run and save enough to cover the last phase."
+     ],
+     [
+      "Choose a difficulty",
+      "Normal, Hard and Very Hard recommend Lv.50, 70 and 90. All three drop Legendary Battle Will, Ballad of Life and The Infiltrator. Normal has Damaged and Intact runes, Hard has Refined and Radiant, and Very Hard has Perfect."
+     ]
+    ],
+    "next": {
+     "page": "tier",
+     "hash": "#boss=gauron",
+     "label": "See the Gauron rankings and rewards"
+    }
+   },
+   {
+    "id": "raid-ursula",
+    "title": "Ursula",
+    "intro": "Ursula unlocks after story Chapter 8. She starts in humanoid form and then becomes a dragon.",
+    "sections": [
+     [
+      "Dodge the grabs",
+      "Learn the grab timings before committing to long attacks. Missing a dodge can leave you open to a chain of follow-up hits. Use the openings after you’ve avoided her attacks."
+     ],
+     [
+      "Choose a difficulty",
+      "Normal, Hard and Very Hard recommend Lv.60, 80 and 90. Normal offers Intact and Refined runes, Hard offers Refined and Radiant, and Very Hard offers Perfect."
+     ]
+    ],
+    "next": {
+     "page": "teams",
+     "hash": "#speed",
+     "label": "See Ursula speedrun teams"
+    }
+   },
+   {
+    "id": "tower-overview",
+    "title": "Tower of Trials overview",
+    "intro": "Finish Barduk’s Intentions, then warp to the Tower of Trials from the map.",
+    "sections": [
+     [
+      "Match the status",
+      "Amplitude rewards Stun, Gale rewards Airborne and Crushing rewards Knockdown. Any hero can enter. What matters is how reliably your team applies the tower’s status and then deals damage while it is active."
+     ],
+     [
+      "Why the match matters",
+      "The matching status adds +400% to the Additional Damage pool. Poison, Bleed, Burn and Shock each add +100% to that pool while active. For example, the matching physical status alone gives ×2 from the normal hit bonus and ×5 from the tower for a ×10 hit before other bonuses."
+     ],
+     [
+      "Clear and collect",
+      "Each tower has 30 floors and up to three stars per floor. Clear to earn a star, and beat the two time targets for the others. Cumulative stars unlock Whirling Thoughts, which go toward Signature Karmas."
+     ]
+    ],
+    "next": {
+     "page": "finder",
+     "label": "Compare the three towers"
+    }
+   },
+   {
+    "id": "tower-amplitude",
+    "title": "Tower of Amplitude",
+    "intro": "Stun is the damage window that matters in Amplitude.",
+    "sections": [
+     [
+      "Plan around Stun",
+      "Bring reliable Stun buildup and hold burst until the target is Stunned. Crimson Verdict uses Roxy to build Stun and Bleed, then brings in Theresia for Divine Arc. Stun supplies the tower bonus while Bleed adds to it."
+     ]
+    ],
+    "next": {
+     "page": "tier",
+     "hash": "#tower=amplitude",
+     "label": "See the Tower of Amplitude rankings"
+    }
+   },
+   {
+    "id": "tower-gale",
+    "title": "Tower of Gale",
+    "intro": "Airborne is the damage window that matters in Gale.",
+    "sections": [
+     [
+      "Plan around the launch",
+      "Build Airborne, then use your burst before the target lands. Venom Cyclone uses Reina to launch for Charlotte’s Venom Cutter and Johnny’s Shadow Grab. Poison stacks can add damage alongside the launch."
+     ]
+    ],
+    "next": {
+     "page": "tier",
+     "hash": "#tower=gale",
+     "label": "See the Tower of Gale rankings"
+    }
+   },
+   {
+    "id": "tower-crushing",
+    "title": "Tower of Crushing",
+    "intro": "Knockdown is the damage window that matters in Crushing.",
+    "sections": [
+     [
+      "Plan around Knockdown",
+      "Use a reliable Knockdown source and save your highest-damage skills for the downed target. Thunder Chorus brings Ornette for Knockdown and Ryza for Shock and follow-up damage. On armoured enemies, an early Break helps build Knockdown faster."
+     ]
+    ],
+    "next": {
+     "page": "tier",
+     "hash": "#tower=crushing",
+     "label": "See the Tower of Crushing rankings"
+    }
+   },
+   {
+    "id": "gear-rarities",
+    "title": "Gear rarities and main stats",
+    "intro": "Read the main stat and the set before investing in a new piece.",
+    "sections": [
+     [
+      "Rarity and stats",
+      "Green caps at +6 with two substats, Blue at +9 with three, Purple at +12 with four and Orange at +15 with five. Upgrading improves the main stat and unlocks a substat every three levels."
+     ],
+     [
+      "Mix set bonuses",
+      "Three pieces activate both bonuses from one set. Two pieces of another set activate its first bonus. Match the bonus to the statuses your team applies. For instance, Blazing Flames rewards Burn."
+     ],
+     [
+      "Craft the piece you need",
+      "The Blacksmith lets you choose the piece and set. The main and secondary stats are rolled. Use a Forging Mold when you want to pick the main stat."
+     ]
+    ],
+    "next": {
+     "page": "gear",
+     "label": "Compare gear sets and stats"
+    }
+   },
+   {
+    "id": "gear-upgrades",
+    "title": "Upgrading and Disassembling",
+    "intro": "Upgrade pieces you expect to keep and lock them before salvaging the rest.",
+    "sections": [
+     [
+      "Budget for each upgrade",
+      "Paid Gold depends on which Mana materials you use. Upgrades unlock substats at +3, +6, +9, +12 and +15, up to the rarity’s cap."
+     ],
+     [
+      "Know what you get back",
+      "Disassembly returns the piece’s base materials and 80% of spent Equipment EXP, paid in materials. It returns zero Gold. Pieces salvaged in the same batch pool their EXP before it is rounded down to available materials. The Blacksmith does not run a savings account."
+     ]
+    ],
+    "next": {
+     "page": "gear",
+     "label": "Open the Gear Upgrade Calculator"
+    }
+   },
+   {
+    "id": "runes",
+    "title": "Runes",
+    "intro": "Runes drop in Raids and add one stat through a gear slot.",
+    "sections": [
+     [
+      "Engrave and swap",
+      "One Anonymous Artisan’s Crafting Tool opens one slot. A hero can use up to five slots across five pieces, including repeated rune types. Removing a rune returns it for 10,000 Gold."
+     ],
+     [
+      "Read the five types",
+      "Determination gives Attack, Protection gives Defense, Vitality gives Max HP, Focus gives Critical Hit Chance, and Amplification gives Critical Damage. For damage builds, check your Crit Chance before choosing between Focus and Amplification."
+     ],
+     [
+      "Synthesis",
+      "Individual runes cannot be upgraded. Five runes of the same grade become one random rune of the next grade. Three Perfect runes become one random Perfect. Keep useful rolls before feeding the machine. It has expensive tastes."
+     ]
+    ],
+    "next": {
+     "page": "gear",
+     "label": "See rune types, values and drops"
+    }
+   },
+   {
+    "id": "exchange",
+    "title": "Currencies and the Exchange",
+    "intro": "Keep Adventurer’s Emblems and Karma exchange crystals for the purchases they cover.",
+    "sections": [
+     [
+      "Spend Adventurer’s Emblems on a bottleneck",
+      "Use the Exchange for progression materials such as faction Insignias, Chronographs and skill books. Buy what blocks the next upgrade. Check dungeon drops before buying materials you could farm together."
+     ],
+     [
+      "Buy Karmas with their own currency",
+      "A General Karma costs 30 Karma exchange crystals. A Signature Karma costs one Fragment of Afterimage. Transmute one with 100 Karma exchange crystals, one Whirling Thoughts and 100,000 Gold."
+     ],
+     [
+      "Save before you transmute",
+      "Whirling Thoughts come from cumulative Tower stars. Pick the signature your main team benefits from first, and check its hero’s Review before spending."
+     ]
+    ],
+    "next": {
+     "page": "guides",
+     "guide": "tower-overview",
+     "label": "See how to earn Whirling Thoughts"
+    }
+   },
+   {
+    "id": "hero-progression",
+    "title": "Hero levels, Mastery and Awakenings",
+    "intro": "These three upgrades solve different problems. Level your hero, unlock their Master Skill, then choose Awakening milestones that support your team.",
+    "sections": [
+     [
+      "Levels and Breakthroughs",
+      "The level cap is 70. Breakthroughs are at Lv.20, 30, 40, 50 and 60 and require the appropriate Mercenary Crew Grade and materials. Gold for levelling is charged per EXP item used. Use the calculator to plan before spending."
+     ],
+     [
+      "Mastery",
+      "Master Skills unlock at Lv.30 and cost 10 Forbidden Grimoires from Legendary treasure chests. Read the Mastery on the hero’s Skills tab. It can change which attacks or effects your rotation relies on."
+     ],
+     [
+      "Awakenings and skill levels",
+      "Stigma Awaken Stones unlock up to six Awakenings, which grant stats or change skills. Regular skill levels are a separate upgrade, gated by Breakthrough. Levelling a skill raises its listed scaling without changing its status or Super Armor buildup."
+     ]
+    ],
+    "next": {
+     "page": "tools",
+     "tool": "level",
+     "label": "Open the Levelling Calculator"
+    }
+   }
+  ]
  },
  "DEFENSE_MODEL": {
   "formula": "damage = Attack × skill % × K / (K + Defense × (1 − DefenseIgnore) − ArmorPenetration), K = 1000",

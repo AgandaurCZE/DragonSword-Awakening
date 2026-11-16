@@ -4,6 +4,10 @@
 
 Every Karma, signatures included, is owned and shown in colour.
 
+## 16 Nov — Guide library articles
+
+Added 24 concise guides for early spending, dungeons, World Bosses, the six Hunts, the two Raids, all Towers, gear and runes, the Exchange, and hero progression. Hunt and Raid entries focus on preparation and confirmed encounter mechanics. Daily and weekly routine remains planned until the task and reset details are available.
+
 ## 16 Nov — Combat quick links and Defense guide
 
 Getting Started links to all three combat guides above the article. The new Defense guide explains flat and percentage reductions, their order and a worked example. The During Break section describes Break-gated skills in general.

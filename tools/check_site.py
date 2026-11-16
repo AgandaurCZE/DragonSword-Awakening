@@ -1051,6 +1051,18 @@ def guide_polish(browser, base):
     during_break = page.locator('#break-super-armor section').filter(has=page.get_by_role('heading', name='During Break', exact=True))
     assert 'while its Super Armor is broken' in during_break.inner_text()
     assert 'Stun Blow' not in during_break.inner_text()
+    page.get_by_role('link', name='All guides').click()
+    articles = page.evaluate('GUIDES.articles.map(({id, title}) => ({id, title}))')
+    assert len(articles) == 24
+    assert page.locator('.guide-planned').count() == 1
+    for article in articles:
+        page.locator('#guidesBody').get_by_role('link', name=article['title'], exact=True).click()
+        assert page.url.endswith('/guides#' + article['id'])
+        guide = page.locator('.mechanics-guide')
+        assert guide.get_by_role('heading', name=article['title'], exact=True).is_visible()
+        assert guide.locator('section').count()
+        assert guide.locator('a').get_attribute('href').startswith(page.evaluate('APP_ROOT'))
+        page.get_by_role('link', name='All guides').click()
     for path in ['teams', 'news']:
         page.goto(base + path, wait_until='networkidle')
         page.wait_for_function('NAV.ready')

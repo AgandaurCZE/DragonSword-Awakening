@@ -196,11 +196,15 @@ function startHereHtml(G) {
     )
     .join('')}</article>`;
 }
+function guideArticle(id) {
+  return MECHANICS_GUIDES.find((guide) => guide.id === id) || GUIDES.articles?.find((guide) => guide.id === id);
+}
+
 function guideTarget(hash) {
   const start = GUIDES.startHere;
   if (start && (hash === start.id || start.sections.some((section) => hash === start.id + '-' + section.id)))
     return start.id;
-  return MECHANICS_GUIDES.find((guide) => guide.id === hash)?.id;
+  return guideArticle(hash)?.id;
 }
 
 function guideLink(id, label, className = '') {
@@ -251,7 +255,7 @@ function renderGuides(hash = '') {
     root.innerHTML = back + quickLinks + startHereHtml(GUIDES.startHere);
     return;
   }
-  const guide = MECHANICS_GUIDES.find((entry) => entry.id === id);
+  const guide = guideArticle(id);
   const next = routeUrl(guide.next.page, guide.next) + (guide.next.hash || '');
   root.innerHTML = `${back}<article class="mechanics-guide" id="${E(id)}"><h3>${E(guide.title)}</h3><p>${E(guide.intro)}</p>
     ${guide.sections.map(([heading, body]) => `<section><h4>${E(heading)}</h4><p>${formatSkillText(body)}</p></section>`).join('')}

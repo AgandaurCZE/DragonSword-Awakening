@@ -1,5 +1,12 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 16 Nov 2026 — Dungeon, encounter, gear and progression guides
+
+- Published 24 short guides under the existing library categories. They cover early spending, Normal, Currency and Trait Dungeons, World Bosses, Hunts, Raids, Towers, gear, runes, the Exchange, and hero progression.
+- Reused the individual guide layout, with direct links to dungeon rewards, encounter rankings, guide articles, and the planning tools. Getting Started keeps its three combat quick links.
+- Daily and weekly routine remains planned. The individual Hunts and Raids cover team setup and the known fight structure.
+- The full checks passed. The 113-view comparison changed only the Guides library at the two viewport widths. Browser checks opened every new guide and exercised links to related guides, the Finder and the existing encounter views.
+
 ## 16 Nov 2026 — Combat quick links and Defense guide
 
 - Placed the Status Effects, Break & Super Armor and Defense quick links above the Getting Started article.
