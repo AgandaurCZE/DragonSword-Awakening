@@ -1,5 +1,12 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 16 Nov 2026 — Combat quick links and Defense guide
+
+- Placed the Status Effects, Break & Super Armor and Defense quick links above the Getting Started article.
+- Published Defense, Armor Penetration and Defense Ignore under Game Mechanics, with a worked example and a Damage Calculator link.
+- Replaced the Stun Blow reference in During Break with wording that covers any skill requiring broken Super Armor.
+- The full local checks passed. Of 113 views compared, only the Guides library changed at desktop and phone widths. Separate browser checks covered the three direct links, the article layouts and the Defense example against the calculator.
+
 ## 16 Nov 2026 — Guides library and Getting Started
 
 - Restored Guides as a category library. New Players starts with a full-width Getting Started banner. Categories use the Shortcuts dividers and headings. Planned cards cover Dungeons, Bosses, Towers, Game Mechanics, Gear & Runes, and Progression.

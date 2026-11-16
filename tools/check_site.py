@@ -1032,15 +1032,25 @@ def guide_polish(browser, base):
     page.go_back()
     assert page.locator('#start-here').is_visible() and page.url.endswith('/guides#start-here-combat')
     page.wait_for_load_state('networkidle')
-    for name, slug in [('Status Effects', 'status-effects'), ('Break & Super Armor', 'break-super-armor')]:
+    for name, slug in [
+        ('Status Effects', 'status-effects'), ('Break & Super Armor', 'break-super-armor'),
+        ('Defense, Armor Penetration and Defense Ignore', 'defense'),
+    ]:
         page.goto(base + 'guides#start-here')
         page.wait_for_function('NAV.ready')
-        page.get_by_role('navigation', name='Related guides').get_by_role('link', name=name, exact=True).click()
+        page.get_by_role('navigation', name='Combat quick links').get_by_role('link', name=name, exact=True).click()
         assert page.url.endswith('/guides#' + slug)
         assert page.locator('.mechanics-guide h3').inner_text() == name
         page.get_by_role('link', name='All guides').click()
         page.locator('#guidesBody').get_by_role('link', name=name, exact=True).click()
         assert page.locator('.mechanics-guide h3').inner_text() == name
+    assert '500 effective Defense' in page.locator('#defense').inner_text()
+    assert page.locator('#defense a').get_attribute('href').endswith('/tools/DamageCalculator')
+    page.goto(base + 'guides#break-super-armor')
+    page.wait_for_function('NAV.ready')
+    during_break = page.locator('#break-super-armor section').filter(has=page.get_by_role('heading', name='During Break', exact=True))
+    assert 'while its Super Armor is broken' in during_break.inner_text()
+    assert 'Stun Blow' not in during_break.inner_text()
     for path in ['teams', 'news']:
         page.goto(base + path, wait_until='networkidle')
         page.wait_for_function('NAV.ready')

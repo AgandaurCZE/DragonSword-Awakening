@@ -118,11 +118,32 @@ const MECHANICS_GUIDES = [
       ],
       [
         'During Break',
-        'The Break window lasts eight seconds and doubles Airborne, Knockdown and Stun buildup. Frost and the damage-over-time statuses keep their normal buildup. Castella’s Stun Blow becomes available on a broken armoured target.',
+        'The Break window lasts eight seconds and doubles Airborne, Knockdown and Stun buildup. Frost and the damage-over-time statuses keep their normal buildup. Some skills can only be used against a target while its Super Armor is broken.',
       ],
       [
         'Damage during Break',
         'Break adds no inherent hit bonus. Break Additional Attack Power, All Status Additional Attack Power, and Break Additional Damage can still raise hits. Break Additional Damage shares the usual Additional Damage pool.',
+      ],
+    ],
+  },
+  {
+    id: 'defense',
+    title: 'Defense, Armor Penetration and Defense Ignore',
+    next: { page: 'tools', tool: 'damage', label: 'Compare stats in the Damage Calculator' },
+    intro:
+      'Enemy Defense reduces hit damage. Armor Penetration subtracts points, and Defense Ignore bypasses a percentage.',
+    sections: [
+      [
+        'How Defense reduces damage',
+        'The Defense multiplier is 1,000 ÷ (1,000 + effective Defense). With 1,000 effective Defense, a hit deals 50% of its damage before Defense. At 500, it deals about 66.7%.',
+      ],
+      [
+        'Flat points and percentages',
+        'Each point of Armor Penetration subtracts one point of Defense. Defense Ignore scales with the Defense it works on, so the same percentage removes more points from a high-Defense target. At 1,000 Defense, 10% Ignore removes 100 points. At 500 Defense, it removes 50.',
+      ],
+      [
+        'Combining both with a Defense debuff',
+        'A Defense debuff and Defense Ignore each multiply the remaining Defense. Armor Penetration applies after both. For an enemy with 1,000 Defense, a 20% Defense debuff and 25% Defense Ignore leave 1,000 × 0.80 × 0.75 = 600 Defense. With 100 Armor Penetration, the hit uses 500 effective Defense.',
       ],
     ],
   },
@@ -168,7 +189,7 @@ function startHereHtml(G) {
       return `<div class="sh-links">${b.items.map((l) => `<a href="${E(routeUrl(l.page, l.tool ? { tool: l.tool } : {}))}">${E(l.label)} →</a>`).join('')}</div>`;
     return '';
   };
-  return `<article class="sh" id="${E(G.id)}"><header class="sh-head"><div class="sh-kicker">${E(G.kicker)}</div><h3>${E(G.title)}</h3><p>${E(G.intro)}</p><nav class="sh-toc" aria-label="On this page">${G.sections.map((s, i) => guideLink(G.id + '-' + s.id, i + 1 + ' · ' + s.title)).join('')}</nav><nav class="sh-toc" aria-label="Related guides">${MECHANICS_GUIDES.map((guide) => guideLink(guide.id, guide.title)).join('')}</nav></header>${G.sections
+  return `<article class="sh" id="${E(G.id)}"><header class="sh-head"><div class="sh-kicker">${E(G.kicker)}</div><h3>${E(G.title)}</h3><p>${E(G.intro)}</p><nav class="sh-toc" aria-label="On this page">${G.sections.map((s, i) => guideLink(G.id + '-' + s.id, i + 1 + ' · ' + s.title)).join('')}</nav></header>${G.sections
     .map(
       (s, i) =>
         `<section class="sh-sec" tabindex="-1" id="${E(G.id)}-${E(s.id)}" style="--c:${E(s.color)}"><h4 class="sh-h"><span class="sh-num">${i + 1}</span>${E(s.title)}</h4><p class="sh-sub">${E(s.sub)}</p>${s.blocks.map(block).join('')}</section>`,
@@ -226,7 +247,8 @@ function renderGuides(hash = '') {
   }
   const back = `<nav class="guide-index" aria-label="Guide navigation">${guideLink('', '← All guides')}</nav>`;
   if (id === GUIDES.startHere?.id) {
-    root.innerHTML = back + startHereHtml(GUIDES.startHere);
+    const quickLinks = `<nav class="guide-index" aria-label="Combat quick links">${MECHANICS_GUIDES.map((guide) => guideLink(guide.id, guide.title)).join('')}</nav>`;
+    root.innerHTML = back + quickLinks + startHereHtml(GUIDES.startHere);
     return;
   }
   const guide = MECHANICS_GUIDES.find((entry) => entry.id === id);

@@ -8,7 +8,7 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 
 ## In progress
 - **Hero reviews:** rewritten and live 15 Nov (banner with nickname, lore title, A0/A6, groups vs bosses). Writing rules: no testing details or names; one cast never fills a status gauge; most skills return in about 10 s; against bosses heroes need partners or a broken Super Armor for physical statuses.
-- **Guide library:** Getting Started has its own view and is featured first in New Players. Status Effects and Break & Super Armor have their own views in Game Mechanics. Planned guides are listed in `GUIDES.categories`.
+- **Guide library:** Getting Started has its own view and is featured first in New Players. Status Effects, Break & Super Armor and the Defense guide have their own views in Game Mechanics, with quick links at the top of Getting Started. Planned guides are listed in `GUIDES.categories`.
 
 ## David's account (latest)
 - All 20 heroes Lv.70, all masteries. Awakenings: A6 Castella, Cerese, Charlotte, Dana, Johnny, Kalien, Kalsion, Ornette, Reina, Roxy, Ryza, Theresia; A3 Aria, Astria, Eileen, Lute, Othello, Sion, Tarte; A0 Alex.

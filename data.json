@@ -27088,7 +27088,8 @@
      },
      {
       "title": "Defense, Armor Penetration and Defense Ignore",
-      "ready": false
+      "ready": true,
+      "id": "defense"
      }
     ]
    },

@@ -4,6 +4,10 @@
 
 Every Karma, signatures included, is owned and shown in colour.
 
+## 16 Nov — Combat quick links and Defense guide
+
+Getting Started links to all three combat guides above the article. The new Defense guide explains flat and percentage reductions, their order and a worked example. The During Break section describes Break-gated skills in general.
+
 ## 16 Nov — Guides library
 
 Replaced the combined guide page with a category library and a featured Getting Started banner. Shortcuts and the guide’s table of contents use direct links. Status Effects and Break & Super Armor are individual guides. The Nightmare+ Hunts article and the advanced Hunt rule in Getting Started were removed.
