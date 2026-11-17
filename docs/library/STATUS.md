@@ -16,7 +16,7 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 - Karmas 53 of 53 (every signature; Codex complete, 15 Nov), titles 49 of 109, familiars 16 of 29.
 
 ## Open questions (need the game)
-1. **Cookbook tests** (17 Nov): 18 three-ingredient combinations and 61 star values to read, listed in [COOKBOOK_TESTS.md](COOKBOOK_TESTS.md). Confirmed combinations: drop `check`; new values go in `COOKBOOK.dishes[].tiers`.
+1. **Cookbook tests** (17 Nov): 78 star values to read (the 18 combinations were confirmed 17 Nov), listed in [COOKBOOK_TESTS.md](COOKBOOK_TESTS.md). New values go in `COOKBOOK.dishes[].tiers`.
 2. Perfect rune tops still predicted: Crit Rate 8.50% (step 0.425%) and Defense 100 (step 5). Seen tops: Attack 140, Crit Damage 14%, Max HP 1500 (15 Nov). Readings in `RUNES.seen`.
 
 ## Can wait

@@ -2,46 +2,33 @@
 
 From David's full Cookbook video (5:16, 17 Nov 2026): all 73 recipes, 29 Grilling, 26 Boiling, 18 Slicing (the old 25/26/22 split was a guess). Dish stars = 1 + floor(sum of ingredient stars / 3), up to 5★: 1, 2 and 3 Boar Meats give a 2★, 3★ and 5★ Grilled Meat. A swap icon on a slot means it takes other ingredients, often from several categories (Grilled Fish: Fish + any Vegetables, Herbs, Mushrooms, Grains, Eggs or Natural Foods). Wheat without a swap icon is fixed: Meat/Fish/Seafood Stew and Fish Soup use Wheat + Wheat, the Porridges and Risotto use swappable Grains.
 
-## 1. Combinations to check (hidden on the site until confirmed)
+## 1. Combinations checked (David, 17 Nov): all 18 work
 
-Open the dish, put in these ingredients. Does the dish keep its name? If yes, note the stars and the effect.
-
-- **Grilled Fish** (Grilling): Fish + Vegetables + Vegetables. Try Fish Fillet 1★ + Round Eggplant 3★ + Round Eggplant 3★ → 3★ (and Fish Fillet 1★ + Round Eggplant 3★ + Radish 1★ → 2★)
-- **Fried Rice** (Grilling): Vegetables + Grains + Grains. Try Round Eggplant 3★ + Wheat 2★ + Wheat 2★ → 3★ (and Radish 1★ + Wheat 2★ + Wheat 2★ → 2★)
-- **Seafood Platter** (Grilling): Fish + Seafood + Seafood. Try Fish Fillet 1★ + Conch 3★ + Conch 3★ → 3★ (and Fish Fillet 1★ + Shellfish 2★ + Shellfish 2★ → 2★)
-- **Seafood Pasta** (Grilling): Seafood + Wheat + Wheat. Try Conch 3★ + Wheat 2★ + Wheat 2★ → 3★ (and Sand Crab 1★ + Wheat 2★ + Wheat 2★ → 2★)
-- **Fish and Chips** (Grilling): Dwarf Potato + Fish + Fish. Try Dwarf Potato 2★ + Fish Fillet 1★ + Fish Fillet 1★ → 2★
-- **Classic Pizza** (Grilling): Vegetables + Mushrooms + Wheat. Try Round Eggplant 3★ + Blue Lotus Mushroom 3★ + Wheat 2★ → 3★ (and Dwarf Potato 2★ + Rock Mushroom 1★ + Wheat 2★ → 2★)
-- **Nougat** (Grilling): Peanuts + Wheat + Wheat. Try Peanuts 2★ + Wheat 2★ + Wheat 2★ → 3★
-- **Beef Tartare** (Slicing): Meat + Meat + Meat. Try Boar Meat 4★ + Boar Meat 4★ + Boar Meat 4★ → 5★ (and Fox Meat 3★ + Beast Meat 1★ + Beast Meat 1★ → 2★)
-- **Sashimi** (Slicing): Fish + Fish + Fish. Try Fish Fillet 1★ + Fish Fillet 1★ + Fish Fillet 1★ → 2★
-- **Scallop Sashimi** (Slicing): Seafood + Seafood + Seafood. Try Conch 3★ + Conch 3★ + Conch 3★ → 4★ (and Shellfish 2★ + Shellfish 2★ + Sand Crab 1★ → 2★)
-- **Salad** (Slicing): Vegetables + Vegetables + Vegetables. Try Round Eggplant 3★ + Round Eggplant 3★ + Round Eggplant 3★ → 4★ (and Round Eggplant 3★ + Radish 1★ + Radish 1★ → 2★)
-- **Nutritious Salad** (Slicing): Vegetables + Herbs + Herbs. Try Round Eggplant 3★ + White Dewblossom 3★ + White Dewblossom 3★ → 4★ (and Radish 1★ + White Dewblossom 3★ + Dawn Lanternleaf 1★ → 2★)
-- **Morning Meal** (Slicing): Wheat + Wheat + Wheat. Try Wheat 2★ + Wheat 2★ + Wheat 2★ → 3★
-- **Seafood Sauce** (Slicing): Fish + Seafood + Seafood. Try Fish Fillet 1★ + Conch 3★ + Conch 3★ → 3★ (and Fish Fillet 1★ + Shellfish 2★ + Shellfish 2★ → 2★)
-- **Seafood Ceviche** (Slicing): Seafood + Grains + Grains. Try Conch 3★ + Wheat 2★ + Wheat 2★ → 3★ (and Sand Crab 1★ + Wheat 2★ + Wheat 2★ → 2★)
-- **Spring Rolls** (Slicing): Vegetables + Vegetables + Grains. Try Round Eggplant 3★ + Round Eggplant 3★ + Wheat 2★ → 3★ (and Dwarf Potato 2★ + Radish 1★ + Wheat 2★ → 2★)
-- **Mushroom Carving** (Slicing): Vegetables + Mushrooms + Mushrooms. Try Round Eggplant 3★ + Blue Lotus Mushroom 3★ + Blue Lotus Mushroom 3★ → 4★ (and Radish 1★ + Blue Lotus Mushroom 3★ + Rock Mushroom 1★ → 2★)
-- **Cereal** (Slicing): Walnuts + Walnuts + Walnuts. Try Walnuts 3★ + Walnuts 3★ + Walnuts 3★ → 4★
+All 18 three-ingredient guesses cook their dish and are shown on the site. Two details:
+- Fried Rice: Vegetables + Rice + Rice. Vegetables + Wheat + Wheat makes Classic Pizza instead (added to Classic Pizza).
+- Spring Rolls: Vegetables + Vegetables + Rice. In free cooking Vegetables + Vegetables + Wheat makes Salad (added to Salad); from the Spring Rolls recipe itself it still makes Spring Rolls (looks like a game bug).
 
 ## 2. Effect values still missing
 
-Any ingredients with the same stars work; the dish's star total is what matters.
+Any ingredients with the same stars work; the dish's star total is what matters. Select them in the recipe and read the effect.
 
 - **Grilled Fish** 1★: Fish Fillet 1★ + Radish 1★
+- **Grilled Fish** 3★: Fish Fillet 1★ + Round Eggplant 3★ + Round Eggplant 3★
 - **Roasted Vegetables** 1★: Dwarf Potato 2★
 - **Roasted Vegetables** 3★: Round Eggplant 3★ + Round Eggplant 3★
+- **Fried Rice** 3★: Round Eggplant 3★ + Rice 2★ + Rice 2★
 - **Fried Egg** 1★: Bird Eggs 2★
 - **Fried Egg** 2★: Goose Eggs 3★
 - **Fried Egg** 3★: Goose Eggs 3★ + Goose Eggs 3★
 - **Double Steak** 1★: Beast Meat 1★ + Fish Fillet 1★
 - **Meat Bowl** 2★: Beast Meat 1★ + Wheat 2★ + Wheat 2★
 - **Seafood Platter** 1★: Fish Fillet 1★ + Sand Crab 1★
+- **Seafood Platter** 3★: Fish Fillet 1★ + Conch 3★ + Conch 3★
 - **Grilled Fish Bowl** 2★: Fish Fillet 1★ + Dwarf Potato 2★ + Wheat 2★
+- **Seafood Pasta** 3★: Conch 3★ + Wheat 2★ + Wheat 2★
 - **Stir-fried Mushrooms and Vegetables** 1★: Radish 1★ + Rock Mushroom 1★
 - **Stir-fried Mushrooms and Vegetables** 2★: Dwarf Potato 2★ + Blue Lotus Mushroom 3★
-- **Rolled Omelet** 2★: Blue Lotus Mushroom 3★ + Bird Eggs 2★
+- **Rolled Omelet** 2★: Radish 1★ + Radish 1★ + Goose Eggs 3★
 - **Hamburger Steak** 2★: Beast Meat 1★ + Radish 1★ + Goose Eggs 3★
 - **Hamburger Steak** 3★: Boar Meat 4★ + Radish 1★ + Goose Eggs 3★
 - **Fish Steak** 2★: Fish Fillet 1★ + Radish 1★ + Blue Lotus Mushroom 3★
@@ -52,6 +39,8 @@ Any ingredients with the same stars work; the dish's star total is what matters.
 - **Herb Grill** 1★: Dried Maneflower 2★
 - **Herb Grill** 3★: White Dewblossom 3★ + White Dewblossom 3★
 - **Pan-fried Dumplings** 2★: Fox Meat 3★ + Wheat 2★
+- **Classic Pizza** 3★: Round Eggplant 3★ + Blue Lotus Mushroom 3★ + Wheat 2★
+- **Nougat** 3★: Peanuts 2★ + Wheat 2★ + Wheat 2★
 - **Vegetable Soup** 2★: Round Eggplant 3★ + Radish 1★ + Radish 1★
 - **Vegetable Soup** 3★: Round Eggplant 3★ + Round Eggplant 3★ + Dwarf Potato 2★
 - **Honey Tea** 2★: Honey 3★ + Dawn Lanternleaf 1★ + Dawn Lanternleaf 1★
@@ -63,8 +52,8 @@ Any ingredients with the same stars work; the dish's star total is what matters.
 - **Orbis-Style Double Stew** 3★: Boar Meat 4★ + Fox Meat 3★ + Fish Fillet 1★
 - **Orbis-Style Stew** 2★: Beast Meat 1★ + Beast Meat 1★ + Conch 3★
 - **Orbis-Style Stew** 3★: Boar Meat 4★ + Beast Meat 1★ + Conch 3★
-- **Consommé** 2★: Beast Meat 1★ + Beast Meat 1★ + Round Eggplant 3★
-- **Consommé** 3★: Boar Meat 4★ + Beast Meat 1★ + Round Eggplant 3★
+- **Consommé** 2★: Beast Meat 1★ + Round Eggplant 3★ + Radish 1★
+- **Consommé** 3★: Boar Meat 4★ + Round Eggplant 3★ + Radish 1★
 - **Seafood Porridge** 2★: Sand Crab 1★ + Wheat 2★ + Wheat 2★
 - **Herbal Tea** 2★: White Dewblossom 3★ + Dawn Lanternleaf 1★ + Dawn Lanternleaf 1★
 - **Herbal Tea** 3★: White Dewblossom 3★ + White Dewblossom 3★ + Dried Maneflower 2★
@@ -81,6 +70,13 @@ Any ingredients with the same stars work; the dish's star total is what matters.
 - **Radish Soup** 3★: Radish 1★ + Boar Meat 4★ + Fox Meat 3★
 - **Clam Soup** 3★: Shellfish 2★ + Shellfish 2★ + Shellfish 2★
 - **Beef Tartare** 1★: Bird Meat 2★
+- **Beef Tartare** 3★: Boar Meat 4★ + Fox Meat 3★ + Beast Meat 1★
+- **Beef Tartare** 4★: Boar Meat 4★ + Boar Meat 4★ + Fox Meat 3★
+- **Beef Tartare** 5★: Boar Meat 4★ + Boar Meat 4★ + Boar Meat 4★
+- **Sashimi** 2★: Fish Fillet 1★ + Fish Fillet 1★ + Fish Fillet 1★
+- **Scallop Sashimi** 4★: Conch 3★ + Conch 3★ + Conch 3★
+- **Salad** 4★: Round Eggplant 3★ + Round Eggplant 3★ + Round Eggplant 3★
+- **Morning Meal** 3★: Wheat 2★ + Wheat 2★ + Wheat 2★
 - **Egg Renew** 1★: Bird Eggs 2★
 - **Assorted Sashimi** 2★: Beast Meat 1★ + Fish Fillet 1★ + Round Eggplant 3★
 - **Carpaccio** 2★: Beast Meat 1★ + Conch 3★ + Radish 1★
@@ -88,8 +84,12 @@ Any ingredients with the same stars work; the dish's star total is what matters.
 - **Beef Tartare Bibimbap** 2★: Beast Meat 1★ + Dwarf Potato 2★ + Wheat 2★
 - **Beef Tartare Bibimbap** 3★: Boar Meat 4★ + Dwarf Potato 2★ + Wheat 2★
 - **Seafood Sauce** 1★: Fish Fillet 1★ + Sand Crab 1★
+- **Seafood Sauce** 3★: Fish Fillet 1★ + Conch 3★ + Conch 3★
 - **Assorted Sushi** 2★: Fish Fillet 1★ + Dwarf Potato 2★ + Wheat 2★
+- **Seafood Ceviche** 3★: Conch 3★ + Wheat 2★ + Wheat 2★
+- **Spring Rolls** 3★: Round Eggplant 3★ + Round Eggplant 3★ + Wheat 2★
 - **Assorted Rice Bowls** 2★: Bird Meat 2★ + Fish Fillet 1★ + Wheat 2★
+- **Cereal** 4★: Walnuts 3★ + Walnuts 3★ + Walnuts 3★
 
 ## 3. Added from the patterns (shown on the site)
 

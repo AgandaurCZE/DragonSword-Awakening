@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 17 Nov 2026 — Cookbook: the 18 combinations confirmed (Claude)
+- David cooked all 18 hidden three-ingredient guesses: all work, so `check` is gone and they show. Fried Rice's is Vegetables + Rice + Rice (Vegetables + Wheat + Wheat makes Classic Pizza, added there); Vegetables + Vegetables + Wheat in free cooking makes Salad (added there), while Spring Rolls takes Rice. COOKBOOK_TESTS now lists 78 star values to read (the new combinations reach new stars). Data only.
+
 ## 17 Nov 2026 — Full Cookbook: all 73 recipes (Claude)
 - From David's 5:16 Cookbook video: every recipe read (29 Grilling, 26 Boiling, 18 Slicing; the old 25/26/22 split was a guess), with its effect group, scope, text, the effect values per star seen, and every ingredient combination shown. 73 dish pictures and 10 effect icons cut from the video into `assets/cooking/` (the 17 old pictures replaced by the same crop).
 - Data: `COOKBOOK.dishes[]` now carries `combos[{slots, inferred?, check?}]` in place of `slots/fixed/best/bestStars`; tiers can hold several values (`{v}`, `{w}`, `{x}`); five new effect groups (Defense, HP, Resurrection, Status Effect Removal, Increased Rage Gain) with in-game icons. DATA_REFERENCE and data_shape updated.
