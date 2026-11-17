@@ -378,8 +378,6 @@ function startApp() {
   renderCookbook();
   renderGuides();
   renderFinder();
-  renderItems();
-  renderAchievements();
   renderTools();
   document.querySelectorAll('.nav-item').forEach((b) => {
     const label = b.querySelector('.nav-label');

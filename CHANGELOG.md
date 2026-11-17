@@ -3,6 +3,8 @@ Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 ## 17 Nov 2026 — Fight preparation, calculator sharing and gear comparison
 
 - The Finder checks a three-hero lineup’s status coverage and Signal requirements. Hero Skills links open the Training Ogre reference. Nightmare/Hell give approximate target conversions. Raids and other encounters display the separate Ogre reference. The table includes relative official Rage and buildup changes where published.
+- Item and achievement catalogues now load when their views need them. The first publishing check caught those idle requests being cancelled when leaving a guide.
+- After the catalogue change, 225 of 226 public and compatibility screenshots matched the first implementation. The remaining desktop Item Database screenshot caught icons loading. With all icons loaded, the page matched on desktop and phone.
 - Shared damage scenarios capture the skill, cast, level, target and inputs. All eight boss guides have a cue, response and burst card, with links to team checks. Raid guides link out to a sample Tomato Stew/Earthshatterer scenario.
 - Best Gear compares two recommendations or entered gear stats under the same selected skill, enemy Defense and active statuses. The Pantry keeps quantities through reload and links all one-ingredient options with their best star result.
 - Full local checks passed. The 113-view comparison found changes only to Finder, the Damage Calculator view and the hero Skills/Build tabs. Separate phone checks opened all eight pull cards and checked Nightmare/Hell status scaling, including Break.

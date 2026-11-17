@@ -75,6 +75,8 @@ document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
       }
     }
     if (page === 'news') renderNews();
+    if (page === 'items' && !$('itemsBody').hasChildNodes() && !(NAV.restoring && NAV.reference?.entry)) renderItems();
+    if (page === 'achievements' && (!$('achBody').hasChildNodes() || !ITEMDB.ach)) renderAchievements();
     setMobileMenu(false);
     navSchedule();
   }),

@@ -99,12 +99,16 @@ function achTicks() {
 async function renderAchievements() {
   const root = $('achBody');
   if (!root) return;
-  if (!ITEMDB.ach) {
-    try {
-      ITEMDB.ach = await (await fetch('assets/items/achievements.json')).json();
-    } catch (e) {
-      ITEMDB.ach = { items: [] };
-    }
+  try {
+    await progressCatalogue();
+  } catch (error) {
+    const retry = document.createElement('button');
+    retry.type = 'button';
+    retry.className = 'it-tab';
+    retry.textContent = 'Retry loading achievements';
+    retry.onclick = renderAchievements;
+    root.replaceChildren(retry);
+    return;
   }
   const E = profileEsc,
     A = ITEMDB.ach,
@@ -1326,14 +1330,21 @@ function progressValidate(doc) {
   }
   return doc;
 }
+let achRequest;
 async function progressCatalogue() {
-  if (!ITEMDB.ach) {
-    const r = await fetch('assets/items/achievements.json');
-    if (!r.ok) throw new Error('Could not load achievements. Please try again.');
-    ITEMDB.ach = await r.json();
+  if (ITEMDB.ach) return;
+  if (!achRequest) {
+    achRequest = fetch('assets/items/achievements.json')
+      .then(async (response) => {
+        if (!response.ok) throw new Error('Could not load achievements. Please try again.');
+        const catalogue = await response.json();
+        if (!Array.isArray(catalogue.items) || !catalogue.items.length)
+          throw new Error('Could not load achievements. Please try again.');
+        ITEMDB.ach = catalogue;
+      })
+      .finally(() => (achRequest = null));
   }
-  if (!Array.isArray(ITEMDB.ach.items) || !ITEMDB.ach.items.length)
-    throw new Error('Could not load achievements. Please reload and try again.');
+  return achRequest;
 }
 function progressSnapshot() {
   return Object.fromEntries(PROGRESS_KEYS.map(([key]) => [key, localStorage.getItem(key)]));

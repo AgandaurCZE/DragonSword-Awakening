@@ -279,7 +279,7 @@ def progress_backups(browser, base):
     for width in (1400, 390):
         ctx = browser.new_context(viewport={'width': width, 'height': 900}, accept_downloads=True)
         page = open_site(ctx, base, '?tiers=new', f'progress {width}px')
-        page.wait_for_function('ITEMDB.ach && ITEMDB.ach.items && ITEMDB.ach.items.length > 0')
+        page.evaluate('progressCatalogue()')
         fixture = page.evaluate("""()=>{
             const storage={
                 [TITLE_KEY]:[TITLES.list[0].name],
@@ -653,17 +653,20 @@ def site_discovery(browser, base):
             query.fill('leaflet tomato')
             links.first.click()
             assert page.url == base + 'items#item=ingredients%3ALeaflet%20Tomato'
+            page.locator('.it-card img').first.evaluate('(img) => img.decode()')
             page.wait_for_load_state('networkidle')
             page.reload(wait_until='networkidle')
             page.wait_for_function('NAV.ready')
             page.locator('.it-card').get_by_text('Leaflet Tomato', exact=True).wait_for()
             assert page.locator('.it-card').count() == 1
+            page.locator('.it-card img').first.evaluate('(img) => img.decode()')
             page.get_by_role('button', name='Show all items').click()
             assert page.url == base + 'items'
             assert page.locator('.it-card').count() > 1
             page.go_back()
             page.locator('#itShowAll').wait_for()
             assert page.locator('.it-card').count() == 1
+            page.locator('.it-card img').first.evaluate('(img) => img.decode()')
 
             search.click()
             kind.select_option('Recipe')
@@ -786,6 +789,24 @@ def site_prep(browser, base):
             assert gear.evaluate('document.documentElement.scrollWidth === innerWidth')
             gear.wait_for_load_state('networkidle')
     print('  Fight prep at both widths: team links, scaling, pull cards, scenario sharing, pantry sources and gear comparison')
+
+def item_catalogue_loading(browser, base):
+    """The guide can open without background database requests."""
+    with browser.new_context() as ctx:
+        page = ctx.new_page()
+        requested = []
+        page.on('request', lambda request: requested.append(request.url))
+        page.goto(base + 'guides#raid-gauron', wait_until='networkidle')
+        page.wait_for_function('NAV.ready')
+        assert not any('/assets/items/' in url and url.endswith('.json') for url in requested)
+        page.get_by_role('link', name='Item Database', exact=True).click()
+        page.locator('.it-card').first.wait_for()
+        assert any(url.endswith('/assets/items/materials.json') for url in requested)
+        page.get_by_role('link', name='Achievements', exact=True).click()
+        page.locator('.ach-row').first.wait_for()
+        assert any(url.endswith('/assets/items/achievements.json') for url in requested)
+        page.wait_for_load_state('networkidle')
+    print('  Item catalogues load only when their pages need them')
 
 
 
@@ -1408,6 +1429,7 @@ def main():
             beta_subpath(browser, prefixed)
             site_discovery(browser, prefixed)
             site_prep(browser, prefixed)
+            item_catalogue_loading(browser, prefixed)
         if not QUICK:
             print('check_site: JS ports against the Python tools')
             parity(browser, base)
