@@ -1,5 +1,10 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 18 Nov 2026 — Rotation playback on phones
+
+- While a rotation is playing on a phone, the current action and controls stay just below the navigation as you scroll its card. Previous and Next have larger tap targets, and an “Up next” line shows the next hero and action on saved and shared cards.
+- Full local checks passed. Checked playback at 1,400, 390 and 320 px, including a scroll check on both phone widths. The 115 default public views matched the previous release pixel for pixel.
+
 ## 18 Nov 2026 — Take My Plans between browsers
 
 - Backup & Restore now exports goals, farming lists, stock, rotations and watched heroes with the existing progress. The review compares file, browser and post-restore counts and shows which listed entries will keep their current version.

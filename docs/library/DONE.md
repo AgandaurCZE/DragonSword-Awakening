@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 18 Nov — Rotation playback on phones
+
+Added a pinned playback panel and larger controls in the phone view. Both saved and shared cards show the next hero and action.
+
 ## 18 Nov — Portable My Plans
 
 Added My Plans to progress backups. The restore preview compares current, imported and resulting counts. Merge preserves local entries and stock counts. Users can also replace plans or import them alone, with scoped Undo and backward compatibility for v1 files.

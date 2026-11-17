@@ -10,7 +10,7 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 - Public Beta, live since 11 Nov. Every page has a clean path (AGENTS.md). All 20 heroes, tier list (A0 + Mastery view and Awakenings view, re-rated 14 Nov from David's file), Teams (six lineups + Ursula speed runs), Boss & Tower Finder, Dungeons, Gear, Karma, Familiars, Cookbook, Items, Titles, Achievements, Damage and Levelling calculators, News and Patch Notes.
 - Site search connects the desktop and phone navigation to exact public lookups. The Cookbook pantry checks quantities against the existing recipe combinations.
 - Fight preparation links guides, the Finder team check, hero buildup and shareable damage scenarios. Best Gear compares recommended pairs or entered stats. The Pantry remembers quantities and links one-short ingredients to their sources.
-- My Plans groups goals, farming, rotation cards and a personal hero patch watchlist. The Test Kit has a video timing workbench for making future Rage and Signal readings.
+- My Plans groups goals, farming, rotation cards and a personal hero patch watchlist. Rotation playback stays in view while scrolling the card on a phone. The Test Kit has a video timing workbench for making future Rage and Signal readings.
 - Backup & Restore moves My Plans between browsers, with a merge preview, an optional plans-only restore and compatibility with the original backup format.
 - Upcoming heroes: `UPCOMING_HEROES` (15 Nov). Jerome (Bloodburst, Lentus Rebellion, December update, sword, parry) is shown on the Heroes page; Veronica and Logan are data only (Lentus Rebellion). Notes: `assets/sources/upcoming/notes.txt`.
 

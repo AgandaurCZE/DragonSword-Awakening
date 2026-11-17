@@ -635,6 +635,11 @@ function rotationStepSummary(step) {
     (step.note ? '<span>' + E(step.note) + '</span>' : '')
   );
 }
+function rotationUpcoming(steps) {
+  const next = steps[PLAN_VIEW.step + 1];
+  if (!next) return 'Last step';
+  return 'Up next · ' + [next.hero, next.skill || next.type].filter(Boolean).join(' · ');
+}
 function plansRotationsHtml() {
   const E = profileEsc;
   const card = rotationActive();
@@ -805,18 +810,20 @@ function plansRotationsHtml() {
     lineup +
     '</div></header>' +
     edit +
-    '<div class="plan-deck-actions">' +
+    '<div class="plan-playback"><div class="plan-deck-actions">' +
     planButton('Previous step', 'step-prev', '', { disabled: PLAN_VIEW.step <= 0 }) +
     planButton(PLAN_VIEW.step < 0 ? 'Start rotation' : 'Next step', 'step-next', '', {
       disabled: !card.steps.length || PLAN_VIEW.step >= card.steps.length - 1,
     }) +
     planButton('Reset', 'step-reset', '', { disabled: PLAN_VIEW.step < 0 }) +
     '</div>' +
-    '<div id="planCurrentStep" class="plan-step-summary plan-now"' +
+    '<div id="planNow" class="plan-now"' +
     (PLAN_VIEW.step < 0 ? ' hidden' : '') +
-    '>' +
+    '><div id="planCurrentStep" class="plan-step-summary">' +
     (PLAN_VIEW.step >= 0 ? rotationStepSummary(card.steps[PLAN_VIEW.step]) : '') +
-    '</div>' +
+    '</div><div id="planUpcoming" class="plan-upcoming">' +
+    (PLAN_VIEW.step >= 0 ? E(rotationUpcoming(card.steps)) : '') +
+    '</div></div></div>' +
     (steps
       ? '<ol class="plan-steps">' + steps + '</ol>'
       : '<p>Add the actions you use, with the timing or condition for each.</p>') +
@@ -1011,9 +1018,9 @@ function handlePlanAction(button) {
     get('step-next').disabled = PLAN_VIEW.step >= active.steps.length - 1;
     get('step-next').textContent = PLAN_VIEW.step < 0 ? 'Start rotation' : 'Next step';
     get('step-reset').disabled = PLAN_VIEW.step < 0;
-    const current = $('planCurrentStep');
-    current.hidden = PLAN_VIEW.step < 0;
-    current.innerHTML = current.hidden ? '' : rotationStepSummary(active.steps[PLAN_VIEW.step]);
+    $('planNow').hidden = PLAN_VIEW.step < 0;
+    $('planCurrentStep').innerHTML = PLAN_VIEW.step < 0 ? '' : rotationStepSummary(active.steps[PLAN_VIEW.step]);
+    $('planUpcoming').textContent = PLAN_VIEW.step < 0 ? '' : rotationUpcoming(active.steps);
     if (PLAN_VIEW.step >= 0)
       planSetStatus(
         'Step ' + (PLAN_VIEW.step + 1) + ' of ' + active.steps.length + ' · ' + active.steps[PLAN_VIEW.step].type,
@@ -1156,7 +1163,11 @@ function initPlans() {
       } else {
         const step = rotationActive()?.steps[+d.index];
         const summary = t.closest('.plan-step')?.querySelector('.plan-step-summary');
-        if (summary && step) summary.innerHTML = rotationStepSummary(step);
+        if (summary && step) {
+          const html = rotationStepSummary(step);
+          summary.innerHTML = html;
+          if (+d.index === PLAN_VIEW.step) $('planCurrentStep').innerHTML = html;
+        }
         if (!saved) planSetStatus('This browser could not save the step.');
       }
     }

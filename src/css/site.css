@@ -9561,6 +9561,12 @@ label.plan-check {
 .plan-now[hidden] {
   display: none;
 }
+.plan-upcoming {
+  margin-top: 4px;
+  color: #e0c8a6;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
 .plan-step-summary {
   display: flex;
   flex-wrap: wrap;
@@ -9589,6 +9595,24 @@ label.plan-check {
 }
 .patch-entry {
   scroll-margin-top: calc(var(--mobile-bar-height, 0px) + 12px);
+}
+@media (max-width: 760px) {
+  .plan-playback > .plan-deck-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+  }
+  .plan-playback .plan-button {
+    min-height: 44px;
+  }
+}
+@media (max-width: 760px) and (min-height: 450px) {
+  .plan-playback:has(.plan-now:not([hidden])) {
+    position: sticky;
+    z-index: 2;
+    top: var(--mobile-bar-height);
+    padding: 1px 0 6px;
+    background: #20242e;
+  }
 }
 @media (max-width: 550px) {
   .plan-build-levels {

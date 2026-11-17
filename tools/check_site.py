@@ -977,11 +977,30 @@ def personal_plans(browser, base):
                 entry = finder.locator('[data-plan-step=note]').last
                 entry.fill(note)
                 entry.dispatch_event('change')
+            finder.locator('[data-plan-step=hero]').first.select_option('Cerese')
             finder.get_by_role('button', name='Move step 2 up').click()
             assert 'Shatter at Freeze' in finder.locator('.plan-step').first.inner_text()
             finder.get_by_role('button', name='Start rotation').click()
             assert finder.locator('.plan-step.on').count() == 1
             assert 'Shatter at Freeze' in finder.locator('#planCurrentStep').inner_text()
+            assert 'Up next · Cerese' in finder.locator('#planUpcoming').inner_text()
+            next_step = finder.get_by_role('button', name='Next step', exact=True)
+            if width == 390:
+                finder.set_viewport_size({'width': width, 'height': 660})
+                finder.evaluate("window.scrollTo(0, document.querySelector('.plan-playback').offsetTop + 18)")
+                finder.wait_for_function("""() => Math.abs(
+                    document.querySelector('.plan-playback').getBoundingClientRect().top -
+                    document.querySelector('.mobile-bar').getBoundingClientRect().bottom
+                ) < 2""")
+                assert next_step.bounding_box()['height'] >= 44
+            next_step.click()
+            assert 'Build Frost' in finder.locator('#planCurrentStep').inner_text()
+            assert finder.locator('#planUpcoming').inner_text() == 'Last step'
+            assert next_step.is_disabled()
+            finder.get_by_role('button', name='Previous step').click()
+            assert 'Up next · Cerese' in finder.locator('#planUpcoming').inner_text()
+            finder.get_by_role('button', name='Reset', exact=True).click()
+            assert finder.locator('#planNow').is_hidden()
             finder.evaluate("Object.defineProperty(navigator, 'clipboard', {value: {writeText: () => Promise.reject()}})")
             finder.get_by_role('button', name='Copy rotation link').click()
             shared = finder.get_by_role('textbox', name='Rotation link')
@@ -990,6 +1009,8 @@ def personal_plans(browser, base):
             assert 'Shatter at Freeze' in finder.locator('.plan-step').first.inner_text()
             assert finder.locator('[data-plan-step]').count() == 0
             assert finder.evaluate('readPlans().rotations.length') == 1
+            finder.get_by_role('button', name='Start rotation').click()
+            assert 'Up next · Cerese' in finder.locator('#planUpcoming').inner_text()
             finder.get_by_role('button', name='Save a copy').click()
             assert finder.evaluate('readPlans().rotations.length') == 2
             assert finder.evaluate('document.documentElement.scrollWidth === innerWidth')
