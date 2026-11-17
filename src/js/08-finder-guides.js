@@ -196,6 +196,62 @@ function startHereHtml(G) {
     )
     .join('')}</article>`;
 }
+// Guide screenshots (GUIDES.articles[].figures, 17 Nov 2026): one image, or a swiper for several.
+function guideFigureHtml(images) {
+  const E = profileEsc;
+  const slide = (im) =>
+    `<figure class="gf-slide"><div class="gf-frame"><img src="${E(im.src)}" alt="${E(im.caption)}" loading="lazy"></div><figcaption>${E(im.caption)}</figcaption></figure>`;
+  if (images.length === 1) return `<div class="gf">${slide(images[0])}</div>`;
+  const dots = images
+    .map(
+      (_, i) =>
+        `<button type="button" aria-label="Screenshot ${i + 1}" data-gf-go="${i}"${i ? '' : ' aria-current="true"'}></button>`,
+    )
+    .join('');
+  return `<div class="gf gf-swiper" data-gf><div class="gf-track">${images.map(slide).join('')}</div>
+    <button type="button" class="gf-nav gf-prev" aria-label="Previous screenshot" data-gf-step="-1">‹</button>
+    <button type="button" class="gf-nav gf-next" aria-label="Next screenshot" data-gf-step="1">›</button>
+    <div class="gf-bar"><span class="gf-count">1 / ${images.length}</span><div class="gf-dots">${dots}</div></div></div>`;
+}
+function gfIndex(track) {
+  return Math.round(track.scrollLeft / Math.max(1, track.clientWidth));
+}
+function gfSync(box) {
+  const track = box.querySelector('.gf-track');
+  const n = track.children.length;
+  const i = Math.min(n - 1, gfIndex(track));
+  box.querySelector('.gf-count').textContent = `${i + 1} / ${n}`;
+  box.querySelectorAll('[data-gf-go]').forEach((b, j) => b.toggleAttribute('aria-current', i === j));
+  box.querySelector('.gf-prev').disabled = i === 0;
+  box.querySelector('.gf-next').disabled = i === n - 1;
+}
+function gfGo(box, i) {
+  const track = box.querySelector('.gf-track');
+  const n = track.children.length;
+  track.scrollTo({ left: Math.max(0, Math.min(n - 1, i)) * track.clientWidth, behavior: 'smooth' });
+}
+document.addEventListener('click', (event) => {
+  const b = event.target.closest('[data-gf] [data-gf-step], [data-gf] [data-gf-go]');
+  if (!b) return;
+  const box = b.closest('[data-gf]');
+  const track = box.querySelector('.gf-track');
+  gfGo(box, b.dataset.gfGo != null ? +b.dataset.gfGo : gfIndex(track) + +b.dataset.gfStep);
+});
+document.addEventListener(
+  'scroll',
+  (event) => {
+    const box = event.target.closest?.('[data-gf]');
+    if (box && event.target.classList.contains('gf-track')) gfSync(box);
+  },
+  true,
+);
+document.addEventListener('keydown', (event) => {
+  const box = event.target.closest?.('[data-gf]');
+  if (!box || (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight')) return;
+  event.preventDefault();
+  gfGo(box, gfIndex(box.querySelector('.gf-track')) + (event.key === 'ArrowRight' ? 1 : -1));
+});
+
 function guideArticle(id) {
   return MECHANICS_GUIDES.find((guide) => guide.id === id) || GUIDES.articles?.find((guide) => guide.id === id);
 }
@@ -258,8 +314,17 @@ function renderGuides(hash = '') {
   const guide = guideArticle(id);
   const next = routeUrl(guide.next.page, guide.next) + (guide.next.hash || '');
   root.innerHTML = `${back}<article class="mechanics-guide" id="${E(id)}"><h3>${E(guide.title)}</h3><p>${E(guide.intro)}</p>
-    ${guide.sections.map(([heading, body]) => `<section><h4>${E(heading)}</h4><p>${formatSkillText(body)}</p></section>`).join('')}
+    ${guide.sections
+      .map(
+        ([heading, body], i) =>
+          `<section><h4>${E(heading)}</h4><p>${formatSkillText(body)}</p>${(guide.figures || [])
+            .filter((f) => f.after === i)
+            .map((f) => guideFigureHtml(f.images))
+            .join('')}</section>`,
+      )
+      .join('')}
     <a href="${E(next)}">${E(guide.next.label)} →</a></article>`;
+  root.querySelectorAll('[data-gf]').forEach(gfSync);
 }
 
 document.addEventListener('click', (event) => {

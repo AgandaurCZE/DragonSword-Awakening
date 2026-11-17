@@ -1,5 +1,9 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 17 Nov 2026 — Screenshots in the guides (Claude)
+- David's 14 in-game screenshots cropped to the panels that matter and saved as `assets/ui/guide-*.webp` (the Rune one joins the rune list and the stats panel, without the empty middle). New optional `GUIDES.articles[].figures` (`{after, images[{src, caption}]}`, DATA_REFERENCE, data_shape updated) places them under the matching section: World Bosses, Hunt overview, Raid overview, Tower of Trials (swiper: floor, star rewards), Gear rarities, Upgrading and Disassembling (reforge, disassembly), Runes, Currencies and the Exchange (swiper of four tabs), Hero levels (Awaken tab).
+- Look: framed figure with a gold-to-teal border, soft glow and a caption bar; several images become a scroll-snap swiper with arrows, dots, a counter and arrow keys. Intended visual change: only these guide pages. `check_site` now checks every guide picture loads and the swiper moves. Pushed without waiting for the local checks.
+
 ## 16 Nov 2026 — Remove the daily and weekly routine placeholder
 
 - Removed the planned routine card from Progression. There are no required daily or weekly quests. The full local checks passed.

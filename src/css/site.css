@@ -8284,3 +8284,165 @@ a.guide-tile:focus-visible {
 .v2-stale-note {
   color: #f0b94a;
 }
+/* Guide screenshots (17 Nov 2026): framed figure, swiper for several. */
+.gf {
+  --gf-a: #68c7d5;
+  --gf-b: #e0b56a;
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  margin: 14px 0 6px;
+  padding: 1px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--gf-b), #3b4654 38%, #3b4654 62%, var(--gf-a));
+  box-shadow:
+    0 14px 34px #0008,
+    0 0 26px #68c7d51f;
+}
+.gf:not(.gf-swiper) {
+  width: min-content;
+}
+.gf-swiper {
+  width: min(100%, 820px);
+  container-type: inline-size;
+}
+.gf-slide {
+  margin: 0;
+  border-radius: 13px;
+  background: linear-gradient(180deg, #1b222c, #141a22);
+  overflow: hidden;
+}
+.gf-frame {
+  position: relative;
+  line-height: 0;
+}
+.gf-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px #ffffff14;
+  background: linear-gradient(180deg, #ffffff0d, transparent 30%);
+}
+.gf-frame img {
+  display: block;
+  width: auto;
+  max-width: min(820px, calc(100vw - 72px));
+  max-height: 420px;
+}
+.gf-slide figcaption {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  padding: 9px 14px 10px;
+  border-top: 1px solid #ffffff12;
+  color: #c9d2de;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.gf-slide figcaption::before {
+  content: '';
+  flex: none;
+  width: 7px;
+  height: 7px;
+  transform: rotate(45deg) translateY(-1px);
+  background: var(--gf-b);
+  box-shadow: 0 0 8px var(--gf-b);
+}
+.gf-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: 13px 13px 0 0;
+}
+.gf-track::-webkit-scrollbar {
+  display: none;
+}
+.gf-swiper .gf-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  border-radius: 0;
+}
+.gf-swiper .gf-frame {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 2 / 1;
+  background: #10151c;
+}
+.gf-swiper .gf-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+.gf-nav {
+  position: absolute;
+  top: 25cqw;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ffffff2e;
+  border-radius: 50%;
+  background: #10151ccc;
+  color: #f4f6fa;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transform: translateY(-50%);
+  transition:
+    opacity 0.2s,
+    background 0.2s;
+}
+.gf-nav:hover:not(:disabled) {
+  background: #68c7d5cc;
+  color: #10151c;
+}
+.gf-nav:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.gf-prev {
+  left: 10px;
+}
+.gf-next {
+  right: 10px;
+}
+.gf-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px 10px;
+  border-radius: 0 0 13px 13px;
+  background: #141a22;
+}
+.gf-count {
+  color: #8f9bab;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.gf-dots {
+  display: flex;
+  gap: 6px;
+}
+.gf-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: #4a5566;
+  cursor: pointer;
+  transition:
+    width 0.25s,
+    background 0.25s;
+}
+.gf-dots button[aria-current] {
+  width: 22px;
+  background: linear-gradient(90deg, var(--gf-b), var(--gf-a));
+}

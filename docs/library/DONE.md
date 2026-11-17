@@ -1,5 +1,8 @@
 # Done: finished tasks and answered questions
 
+## 17 Nov — Guide screenshots
+David's screenshots cropped and placed in nine guides; swipers for the Exchange and the Tower of Trials.
+
 ## 15 Nov — All 53 Karmas in colour
 
 Every Karma, signatures included, is owned and shown in colour.

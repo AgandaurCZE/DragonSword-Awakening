@@ -855,10 +855,7 @@
             }
            }
           }
-         },
-         "types": [
-          "null"
-         ]
+         }
         },
         "role": {
          "types": [
@@ -1256,13 +1253,7 @@
        "statuses": {
         "list": {
          "record": {
-          "opt": {
-           "untested": {
-            "types": [
-             "string"
-            ]
-           }
-          },
+          "opt": {},
           "req": {
            "hitBonus": {
             "types": [
@@ -2750,7 +2741,41 @@
        "articles": {
         "list": {
          "record": {
-          "opt": {},
+          "opt": {
+           "figures": {
+            "list": {
+             "record": {
+              "opt": {},
+              "req": {
+               "after": {
+                "types": [
+                 "number"
+                ]
+               },
+               "images": {
+                "list": {
+                 "record": {
+                  "opt": {},
+                  "req": {
+                   "caption": {
+                    "types": [
+                     "string"
+                    ]
+                   },
+                   "src": {
+                    "types": [
+                     "string"
+                    ]
+                   }
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          },
           "req": {
            "id": {
             "types": [
@@ -2821,14 +2846,13 @@
            "items": {
             "list": {
              "record": {
-              "opt": {
+              "opt": {},
+              "req": {
                "id": {
                 "types": [
                  "string"
                 ]
-               }
-              },
-              "req": {
+               },
                "ready": {
                 "types": [
                  "bool"

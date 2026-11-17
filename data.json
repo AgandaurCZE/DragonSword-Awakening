@@ -27551,7 +27551,18 @@
     "next": {
      "page": "karma",
      "label": "Browse Karmas by archetype"
-    }
+    },
+    "figures": [
+     {
+      "after": 0,
+      "images": [
+       {
+        "src": "assets/ui/guide-world-bosses.webp",
+        "caption": "Mercenary Guide › Regional Missions › World Boss: each boss with its Karma drops and a Habitat button"
+       }
+      ]
+     }
+    ]
    },
    {
     "id": "hunt-overview",
@@ -27574,7 +27585,18 @@
     "next": {
      "page": "finder",
      "label": "Check each Hunt weakness"
-    }
+    },
+    "figures": [
+     {
+      "after": 1,
+      "images": [
+       {
+        "src": "assets/ui/guide-hunt-ranks.webp",
+        "caption": "Rank thresholds and rewards: S gives a Stigma Awaken Stone, A to D give Fragments of Sacred Light"
+       }
+      ]
+     }
+    ]
    },
    {
     "id": "hunt-furcas",
@@ -27693,7 +27715,18 @@
     "next": {
      "page": "finder",
      "label": "Compare the Raids in the Boss & Tower Finder"
-    }
+    },
+    "figures": [
+     {
+      "after": 0,
+      "images": [
+       {
+        "src": "assets/ui/guide-raids.webp",
+        "caption": "Mercenary Guide › Special Challenges › Raid: Gauron (Steelheart Fortress Defense) and Ursula (Chase Toward the End) with their drops"
+       }
+      ]
+     }
+    ]
    },
    {
     "id": "raid-gauron",
@@ -27756,7 +27789,22 @@
     "next": {
      "page": "finder",
      "label": "Compare the three towers"
-    }
+    },
+    "figures": [
+     {
+      "after": 2,
+      "images": [
+       {
+        "src": "assets/ui/guide-tower-floor.webp",
+        "caption": "A floor: one star for the clear and one for each time target, plus a first-clear reward"
+       },
+       {
+        "src": "assets/ui/guide-tower-stars.webp",
+        "caption": "Cumulative star rewards: Tower Fragments every 5 stars"
+       }
+      ]
+     }
+    ]
    },
    {
     "id": "tower-amplitude",
@@ -27827,7 +27875,18 @@
     "next": {
      "page": "gear",
      "label": "Compare gear sets and stats"
-    }
+    },
+    "figures": [
+     {
+      "after": 0,
+      "images": [
+       {
+        "src": "assets/ui/guide-gear-enhance.webp",
+        "caption": "An Orange piece from +0 to +15: the main stat grows and every substat slot opens"
+       }
+      ]
+     }
+    ]
    },
    {
     "id": "gear-upgrades",
@@ -27846,7 +27905,27 @@
     "next": {
      "page": "gear",
      "label": "Open the Gear Upgrade Calculator"
-    }
+    },
+    "figures": [
+     {
+      "after": 0,
+      "images": [
+       {
+        "src": "assets/ui/guide-reforge.webp",
+        "caption": "Reforge a fully upgraded piece: re-roll its secondary options for a Shape Grinder and 5,000 Gold"
+       }
+      ]
+     },
+     {
+      "after": 1,
+      "images": [
+       {
+        "src": "assets/ui/guide-disassemble.webp",
+        "caption": "Disassembly shows what you get back before you confirm"
+       }
+      ]
+     }
+    ]
    },
    {
     "id": "runes",
@@ -27869,7 +27948,18 @@
     "next": {
      "page": "gear",
      "label": "See rune types, values and drops"
-    }
+    },
+    "figures": [
+     {
+      "after": 0,
+      "images": [
+       {
+        "src": "assets/ui/guide-runes.webp",
+        "caption": "Rune Engraving: pick a rune for the slot and see the piece’s stats with it"
+       }
+      ]
+     }
+    ]
    },
    {
     "id": "exchange",
@@ -27893,7 +27983,30 @@
      "page": "guides",
      "guide": "tower-overview",
      "label": "See how to earn Whirling Thoughts"
-    }
+    },
+    "figures": [
+     {
+      "after": 0,
+      "images": [
+       {
+        "src": "assets/ui/guide-exchange-materials.webp",
+        "caption": "Materials › Prog.: faction Insignias, Chronographs, skill books and more for Adventurer’s Emblems"
+       },
+       {
+        "src": "assets/ui/guide-exchange-special.webp",
+        "caption": "Materials › Special: Forging Mold, Shape Grinder, Anonymous Artisan’s Crafting Tool and more"
+       },
+       {
+        "src": "assets/ui/guide-exchange-karma.webp",
+        "caption": "Karma › Exclusive Karma: every Signature Karma for one Fragment of Afterimage"
+       },
+       {
+        "src": "assets/ui/guide-exchange-hero.webp",
+        "caption": "Hero › Awaken: Stigma Awaken Stones"
+       }
+      ]
+     }
+    ]
    },
    {
     "id": "hero-progression",
@@ -27917,7 +28030,18 @@
      "page": "tools",
      "tool": "level",
      "label": "Open the Levelling Calculator"
-    }
+    },
+    "figures": [
+     {
+      "after": 2,
+      "images": [
+       {
+        "src": "assets/ui/guide-awakening.webp",
+        "caption": "The Awaken tab: six Awakenings per hero, each with its effect"
+       }
+      ]
+     }
+    ]
    }
   ]
  },
