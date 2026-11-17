@@ -516,6 +516,22 @@ function renderTierV2() {
 }
 // ---- Cookbook (COOKBOOK in data.json; preview only) ----
 const CB = { m: '', e: '', hide: false, q: '', sel: null, pantry: new Map(), pantryOpen: false };
+const PANTRY_KEY = 'dsw.pantry.v1';
+function cbLoadPantry() {
+  try {
+    const stock = JSON.parse(localStorage.getItem(PANTRY_KEY) || '{}');
+    for (const { name } of COOKBOOK.ingredients || []) {
+      const amount = stock?.[name];
+      if (Number.isInteger(amount) && amount >= 1 && amount <= 3) CB.pantry.set(name, amount);
+    }
+  } catch (error) {}
+}
+function cbSavePantry() {
+  try {
+    if (CB.pantry.size) localStorage.setItem(PANTRY_KEY, JSON.stringify(Object.fromEntries(CB.pantry)));
+    else localStorage.removeItem(PANTRY_KEY);
+  } catch (error) {}
+}
 function cbTicks() {
   try {
     return new Set(JSON.parse(localStorage.getItem('dsw.cooked.v1') || '[]'));
@@ -582,11 +598,13 @@ function cbList() {
 
 function cbPantryBest(dish, options) {
   const left = new Map(CB.pantry);
+  const sources = new Map();
   let best = null;
   const used = [];
   for (const combo of options) {
     function visit(slot, sum, missing) {
       if (slot === combo.length) {
+        if (missing && (!sources.has(missing) || sources.get(missing) < sum)) sources.set(missing, sum);
         if (
           !best ||
           Number(Boolean(missing)) < Number(Boolean(best.missing)) ||
@@ -608,6 +626,7 @@ function cbPantryBest(dish, options) {
     }
     visit(0, 0, '');
   }
+  if (best?.missing) best.sources = [...sources].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   return best;
 }
 
@@ -634,6 +653,15 @@ function renderPantryMatches() {
     ['One ingredient short', matches.filter((match) => match.missing)],
   ];
   const E = profileEsc;
+  const sourceLinks = (sources) => {
+    const links = sources
+      .map(([name, sum]) => {
+        const entry = 'ingredients:' + name;
+        return `<li><a data-cb-pantry-item="${E(entry)}" href="${E(routeUrl('items', { entry }))}">${E(name)}</a> <span>${cbDishStars(sum)}★</span></li>`;
+      })
+      .join('');
+    return `<details class="cb-shopping"><summary>${sources.length === 1 ? 'Where to get it' : 'Ingredient options · ' + sources.length}</summary><ul>${links}</ul></details>`;
+  };
   root.innerHTML = groups
     .map(
       ([label, rows]) =>
@@ -646,7 +674,7 @@ function renderPantryMatches() {
           ? '<ul>' +
             rows
               .map(
-                ({ dish, sum, ingredients, missing }) =>
+                ({ dish, sum, ingredients, missing, sources }) =>
                   '<li><a data-cb-pantry-recipe="' +
                   E(dish.id) +
                   '" href="' +
@@ -660,7 +688,9 @@ function renderPantryMatches() {
                   '<small>' +
                   ingredients.map(E).join(' + ') +
                   (missing ? ' · Need 1 × ' + E(missing) : '') +
-                  '</small></a></li>',
+                  '</small></a>' +
+                  (sources ? sourceLinks(sources) : '') +
+                  '</li>',
               )
               .join('') +
             '</ul>'
@@ -734,16 +764,25 @@ function wirePantry() {
     const amount = Number(event.target.value);
     if (amount) CB.pantry.set(name, amount);
     else CB.pantry.delete(name);
+    cbSavePantry();
     renderPantryMatches();
   });
   $('cbPantryClear').onclick = () => {
     CB.pantry.clear();
+    cbSavePantry();
     const inputs = [...pantry.querySelectorAll('[data-cb-ingredient]')];
     for (const select of inputs) select.value = '0';
     inputs[0]?.focus();
     renderPantryMatches();
   };
   pantry.addEventListener('click', (event) => {
+    const item = event.target.closest('[data-cb-pantry-item]');
+    if (item && isPlainLinkClick(event)) {
+      event.preventDefault();
+      CB.pantryOpen = pantry.open;
+      navNavigate({ page: 'items', entry: item.dataset.cbPantryItem });
+      return;
+    }
     const link = event.target.closest('[data-cb-pantry-recipe]');
     if (!link || !isPlainLinkClick(event)) return;
     event.preventDefault();

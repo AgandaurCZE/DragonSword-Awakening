@@ -254,10 +254,120 @@ const DC_DEF = {
   st: {},
 };
 let DC_S = null;
+let DC_SCENARIO = '';
+
+function dcScenarioEncode(value) {
+  progressCalculator(value, 'dsw.dmgcalc.v1');
+  const bytes = new TextEncoder().encode(JSON.stringify(value));
+  return (
+    '1.' +
+    btoa(String.fromCharCode(...bytes))
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=+$/, '')
+  );
+}
+
+function dcScenarioRead(token) {
+  if (!token || token.length > 8192 || !/^1\.[A-Za-z0-9_-]+$/.test(token)) return null;
+  try {
+    const bytes = Uint8Array.from(atob(token.slice(2).replace(/-/g, '+').replace(/_/g, '/')), (c) => c.charCodeAt(0));
+    const value = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
+    progressCalculator(value, 'dsw.dmgcalc.v1');
+    return value;
+  } catch (error) {
+    return null;
+  }
+}
+
+function dcRaidExampleLinks() {
+  const hero = 'Theresia';
+  const skill = dcSkills(hero).find((s) => fightSkillName(s.skill) === 'Celestial Verdict');
+  if (!skill) return '';
+  const level = skill.meta.maxLevel;
+  const value = {
+    ...DC_DEF,
+    hero,
+    skill: skill.skill,
+    slotName: skill.slot,
+    lv: level,
+    varIdx: 0,
+    pct: dcPct(skill, level),
+    attack: 4000,
+    typed: true,
+    def: 1825,
+  };
+  const link = (di, label) =>
+    '<a href="' +
+    profileEsc(
+      routeUrl('tools', {
+        tool: 'damage',
+        scenario: dcScenarioEncode({ ...value, di }),
+      }),
+    ) +
+    '">' +
+    label +
+    '</a>';
+  return (
+    '<span>Defense Ignore example · 4,000 Attack, 1,825 Defense</span>' +
+    link(0, 'Without buffs') +
+    link(17, 'Tomato Stew · 17%') +
+    link(37, 'Stew + Earthshatterer · 37%')
+  );
+}
+
+function dcSharePanel() {
+  return `<div class="dc-share"><button type="button" class="dc-reset" id="dcShare">Copy scenario link</button>
+    ${DC_SCENARIO ? '<button type="button" class="dc-reset" id="dcKeep">Save as my calculator</button>' : ''}
+    <p class="gx-note" id="dcShareStatus" role="status">${DC_SCENARIO ? 'Shared scenario. Save it to replace your calculator’s saved inputs.' : ''}</p>
+    <input id="dcShareUrl" aria-label="Scenario link" type="url" readonly hidden></div>`;
+}
+
+function dcWireShare() {
+  $('dcShare').onclick = async () => {
+    const status = $('dcShareStatus');
+    const input = $('dcShareUrl');
+    let url;
+    try {
+      url = new URL(routeUrl('tools', { tool: 'damage', scenario: dcScenarioEncode(DC_S) }), location.origin).href;
+    } catch (error) {
+      status.textContent = 'Check the calculator inputs before sharing.';
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      status.textContent = 'Scenario link copied.';
+    } catch (error) {
+      input.value = url;
+      input.hidden = false;
+      input.select();
+      status.textContent = 'Copy the selected link.';
+    }
+  };
+  const keep = $('dcKeep');
+  if (keep)
+    keep.onclick = () => {
+      const scenario = DC_SCENARIO;
+      DC_SCENARIO = '';
+      if (!dcSave()) {
+        DC_SCENARIO = scenario;
+        $('dcShareStatus').textContent = 'This browser could not save your calculator.';
+        return;
+      }
+      renderDamageCalc();
+      navRecord(true);
+      $('dcShare').focus();
+    };
+}
+
 function dcSave() {
+  if (DC_SCENARIO) return false;
   try {
     localStorage.setItem('dsw.dmgcalc.v1', JSON.stringify(DC_S));
-  } catch (e) {}
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 // Hunt boss rows for the calculator, with the level and difficulty from TIER_LIST_V2.bosses[].hunt.
 function dcHuntRows(bosses) {
@@ -296,7 +406,8 @@ function renderDamageCalc() {
   try {
     saved = JSON.parse(localStorage.getItem('dsw.dmgcalc.v1') || 'null');
   } catch (e) {}
-  const S = (DC_S = { ...DC_DEF, ...(saved || {}) });
+  const shared = dcScenarioRead(DC_SCENARIO);
+  const S = (DC_S = { ...DC_DEF, ...(shared || saved || {}) });
   S.st = S.st || {};
   if (!CHARACTER_PROFILE_DATA[S.hero]) S.hero = (HEROES[0] || {}).name || '';
   const enemies = DEFENSE_MODEL.enemies || [],
@@ -324,7 +435,7 @@ function renderDamageCalc() {
       return `<tr><td><label class="dc-on"><input type="checkbox" data-st="${E(s.name)}" data-f="on"${r.on ? ' checked' : ''}><b style="color:${c}">${E(label)}</b></label></td><td class="n dc-mute">${s.hitBonus ? '+' + s.hitBonus + '%' : 'none'}<span class="dc-xb" data-xh="${E(s.name)}" hidden></span></td><td><input type="number" min="0" step="any" inputmode="decimal" data-st="${E(s.name)}" data-f="aap" aria-label="${E(label)} Additional Attack Power" value="${E(r.aap ?? '')}"></td><td><div class="dc-adw"><input type="number" min="0" step="any" inputmode="decimal" data-st="${E(s.name)}" data-f="ad" aria-label="${E(label)} Additional Damage %" value="${E(r.ad ?? '')}"><span class="dc-xb" data-xa="${E(s.name)}" hidden></span></div></td></tr>`;
     })
     .join('');
-  root.innerHTML = `<div class="gx-box dc-head"><h3>Damage calculator <span class="gx-tag">BETA</span></h3><p class="gx-sub">${E(C.intro)}</p></div><div class="dc"><div class="dc-in">
+  root.innerHTML = `<div class="gx-box dc-head"><h3>Damage calculator <span class="gx-tag">BETA</span></h3><p class="gx-sub">${E(C.intro)}</p>${dcSharePanel()}</div><div class="dc"><div class="dc-in">
  <div class="gx-box"><h3>Skill</h3><div class="dc-g"><label class="dc-f"><span>Hero</span><select id="dcHero">${HEROES.map((h) => `<option${h.name === S.hero ? ' selected' : ''}>${E(h.name)}</option>`).join('')}</select></label><label class="dc-f dc-w"><span>Skill</span><select id="dcSkill"></select></label><label class="dc-f"><span>Skill level</span><select id="dcLv"></select></label><label class="dc-f" id="dcVarW"><span>How it's used</span><select id="dcVar"></select></label>${num('pct', 'Skill %')}</div><p class="gx-note" id="dcSkillNote"></p></div>
  <div class="gx-box"><h3>Your stats</h3><p class="gx-sub">${E(C.statsHint)}</p><div class="dc-g">${num('attack', 'Attack')}${num('cd', 'Critical Damage %')}${num('cr', 'Critical Rate %')}${num('ap', 'Armor Penetration')}${num('di', 'Defense Ignore %')}${num('all', 'All Status Additional Attack Power')}${num('inc', 'Status Additional Attack Power Increase %')}</div>
  <details class="dc-more"><summary>Attack buff not on your panel</summary><p class="gx-note">${E(C.buffHint)}</p><div class="dc-g">${num('apu', 'Attack Power Up on panel %')}${num('buff', 'Extra Attack Power %')}</div></details></div>
@@ -532,6 +643,12 @@ function renderDamageCalc() {
     out.innerHTML = `<h3>Result</h3><div class="dc-big"><div><span>Non-crit</span><b>${fmt(r.non)}</b></div><div><span>Crit</span><b class="dc-c">${fmt(r.crit)}</b></div>${+S.cr > 0 ? `<div><span>Average at ${E(Math.min(+S.cr, 100))}% Crit Rate</span><b>${fmt(r.avg)}</b></div>` : ''}</div>
   <p class="dc-small">${small.join('<br>')}</p>${un.length ? `<p class="dc-small dc-warn">${[...new Set(un)].map(E).join('<br>')}</p>` : ''}<p class="dc-small">${(C.notes || []).map(E).join('<br>')}</p><p class="dc-small">${E(C.formula)}</p><button type="button" class="dc-reset" id="dcReset">Reset</button>`;
     $('dcReset').onclick = () => {
+      if (DC_SCENARIO) {
+        DC_SCENARIO = '';
+        renderDamageCalc();
+        navRecord(true);
+        return;
+      }
       try {
         localStorage.removeItem('dsw.dmgcalc.v1');
       } catch (x) {}
@@ -713,6 +830,7 @@ function renderDamageCalc() {
   };
   applyEnemy();
   draw();
+  dcWireShare();
 }
 // Levelling calculator (Tools page, Beta). Follows the game's item-picking rule; data from LEVEL_COSTS.
 // ==== Tools (preview): levelling calculator ====
@@ -1069,6 +1187,10 @@ function renderTools() {
   t.onclick = (e) => {
     const k = e.target.dataset.tool;
     if (!k) return;
+    if (!NAV.restoring && k !== 'damage' && DC_SCENARIO) {
+      DC_SCENARIO = '';
+      renderDamageCalc();
+    }
     cur = k;
     try {
       localStorage.setItem('dsw.tool', k);

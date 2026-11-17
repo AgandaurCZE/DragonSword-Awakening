@@ -24,6 +24,8 @@ function routeUrl(page, options = {}) {
     else if (options.tab === 'build' || options.tab === 'review') hash = '#' + options.tab;
   }
   if (page === 'guides' && options.guide) hash = '#' + encodeURIComponent(options.guide);
+  if (page === 'tools' && options.tool === 'damage' && options.scenario)
+    hash = '#scenario=' + encodeURIComponent(options.scenario);
   if (page === 'teams') {
     if (options.team) hash = '#team=' + encodeURIComponent(options.team);
     else if (options.speed) hash = '#speed';
@@ -36,6 +38,12 @@ function routeUrl(page, options = {}) {
     const { encounter, difficulty } = options.finder;
     hash = '#encounter=' + encodeURIComponent(encounter);
     if (difficulty) hash += '&difficulty=' + encodeURIComponent(difficulty);
+    const check = options.finder.teamCheck;
+    if (check) {
+      if (check.heroes.some(Boolean)) hash += '&team=' + encodeURIComponent(check.heroes.join(','));
+      if (check.build !== 'mastery') hash += '&build=' + encodeURIComponent(check.build);
+      if (check.broken) hash += '&break=1';
+    }
   }
   if (REFERENCE_HASHES[page] && options.entry)
     hash = '#' + REFERENCE_HASHES[page] + '=' + encodeURIComponent(options.entry);
@@ -60,7 +68,10 @@ function navCurrent() {
     if (selection) state.finder = selection;
   }
   if (page === 'guides' && $('guidesBody').dataset.guide) state.guide = $('guidesBody').dataset.guide;
-  if (page === 'tools') state.tool = document.querySelector('#toolTabs .on')?.dataset.tool || 'damage';
+  if (page === 'tools') {
+    state.tool = document.querySelector('#toolTabs .on')?.dataset.tool || 'damage';
+    if (state.tool === 'damage' && DC_SCENARIO) state.scenario = DC_SCENARIO;
+  }
   if (page === 'tier') state.tier = { mode: V2.mode, boss: V2.boss, tower: V2.tower, view: V2.view };
   if (REFERENCE_HASHES[page] && NAV.reference?.page === page) state.entry = NAV.reference.entry;
   return state;
@@ -89,6 +100,11 @@ function navSchedule() {
 function navShow(state, scrollY = null) {
   NAV.restoring = true;
   try {
+    const scenario = state.page === 'tools' && state.tool === 'damage' ? state.scenario || '' : '';
+    if (scenario !== DC_SCENARIO) {
+      DC_SCENARIO = scenario;
+      renderDamageCalc();
+    }
     const resetItems = ITEMDB.entry && state.page === 'items' && !state.entry;
     clearReferenceEntry(state.page !== 'items');
     NAV.reference = state.entry ? { page: state.page, entry: state.entry } : null;
@@ -174,7 +190,14 @@ function navInitial() {
     return { page: 'hero', hero: hero.name, tab, ...(skill ? { skill } : {}) };
   }
   const tool = Object.entries(SITE.toolRoutes).find(([, p]) => p.toLowerCase() === path.toLowerCase());
-  if (tool) return { page: 'tools', tool: tool[0] };
+  if (tool) {
+    const scenario = new URLSearchParams(hash).get('scenario');
+    return {
+      page: 'tools',
+      tool: tool[0],
+      ...(tool[0] === 'damage' && dcScenarioRead(scenario) ? { scenario } : {}),
+    };
+  }
   const page = Object.entries(SITE.routes).find(([, p]) => p === path)?.[0];
   const params = new URLSearchParams(hash);
   if (page === 'tier') {
@@ -184,7 +207,18 @@ function navInitial() {
     if (TOWER_TRIALS.towers.some((entry) => entry.id === tower)) return { page, tier: { mode: 'towers', tower } };
   }
   if (page === 'finder' && params.has('encounter'))
-    return { page, finder: { encounter: params.get('encounter'), difficulty: params.get('difficulty') } };
+    return {
+      page,
+      finder: {
+        encounter: params.get('encounter'),
+        difficulty: params.get('difficulty'),
+        teamCheck: {
+          heroes: (params.get('team') || '').split(',').slice(0, 3),
+          build: params.get('build'),
+          broken: params.get('break') === '1',
+        },
+      },
+    };
   if (page === 'teams' && hash === 'speed') return { page, speed: true };
   if (page === 'teams' && TEAM_DATA.some((team) => team.name === params.get('team')))
     return { page, team: params.get('team') };
@@ -234,7 +268,13 @@ function navInit() {
   });
   document.querySelectorAll('.nav-item[data-page]').forEach((button) => {
     button.addEventListener('click', (event) => {
-      if (!NAV.restoring && isPlainLinkClick(event)) clearReferenceEntry();
+      if (!NAV.restoring && isPlainLinkClick(event)) {
+        clearReferenceEntry();
+        if (DC_SCENARIO) {
+          DC_SCENARIO = '';
+          renderDamageCalc();
+        }
+      }
     });
   });
   document.querySelectorAll('.brand-home, .mobile-home').forEach((link) =>
@@ -334,6 +374,7 @@ function startApp() {
   renderDungeons();
   renderCurrencyDungeons();
   renderTrait();
+  cbLoadPantry();
   renderCookbook();
   renderGuides();
   renderFinder();

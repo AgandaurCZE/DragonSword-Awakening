@@ -689,7 +689,7 @@ def site_discovery(browser, base):
             page.reload(wait_until='networkidle')
             page.wait_for_function('NAV.ready')
             assert detail.get_by_role('heading', name='Tomato Stew').is_visible()
-            page.locator('#cbPantry summary').click()
+            page.locator('#cbPantry > summary').click()
             meat = page.get_by_role('combobox', name='Quantity of Boar Meat')
             meat.select_option('1')
             cooked = page.locator('.cb-pantry-group').filter(has=page.get_by_role('heading', name='Can cook'))
@@ -709,6 +709,83 @@ def site_discovery(browser, base):
             assert page.evaluate('document.documentElement.scrollWidth === innerWidth')
             page.wait_for_load_state('networkidle')
     print('  Site search and pantry on desktop and phone: keyboard, deep links, exact item, quantity and star results')
+
+
+def site_prep(browser, base):
+    """Cover the shareable team checks, scenarios and connected prep tools."""
+    for width in (1400, 390):
+        with browser.new_context(viewport={'width': width, 'height': 900}, has_touch=width == 390) as ctx:
+            page = open_site(ctx, base, 'finder#encounter=gallore&difficulty=Hell&team=Othello%2CCerese%2CDana',
+                             f'fight preparation {width}px')
+            check = page.locator('#fightCheck')
+            check.locator('table').first.wait_for(state='attached')
+            assert check.get_by_label('Hero 1').input_value() == 'Othello'
+            assert 'One full Frost stack opens this Hunt' in check.inner_text()
+            othello = check.locator('.fight-member').filter(has_text='Othello')
+            othello.locator('summary').click()
+            stinger = othello.get_by_role('row').filter(
+                has=page.get_by_role('link', name='Frozen Stinger', exact=True)
+            ).filter(has_text='A0').filter(has_text='Frost')
+            assert '≈27.2%' in stinger.inner_text()
+            check.get_by_role('checkbox', name='During Break').check()
+            assert 'break=1' in page.url
+            page.reload(wait_until='networkidle')
+            page.wait_for_function('NAV.ready')
+            assert check.get_by_role('checkbox', name='During Break').is_checked()
+            page.locator('#finderEncounter').select_option('ursula')
+            assert 'Raid bosses resist buildup more strongly' in check.inner_text()
+            assert 'One full Frost stack opens this Hunt' not in check.inner_text()
+            assert check.locator('tbody tr td:last-child').first.text_content() == '—'
+
+            guide = open_site(ctx, base, 'guides#raid-ursula', f'pull card {width}px')
+            assert guide.locator('.guide-pull dt').all_text_contents() == ['Watch for', 'React', 'Burst']
+            assert guide.get_by_role('link', name='Check a team for this fight').get_attribute('href').endswith('finder#encounter=ursula')
+            scenario = guide.get_by_role('link', name='Stew + Earthshatterer · 37%').get_attribute('href')
+            guide.evaluate("localStorage.setItem('dsw.dmgcalc.v1', JSON.stringify({attack: '999'}))")
+            calc = open_site(ctx, base, scenario.removeprefix(page.evaluate('new URL(APP_ROOT, location.origin).pathname')),
+                             f'shared calculator {width}px')
+            assert calc.locator('#dcHero').input_value() == 'Theresia'
+            assert calc.locator('[data-k=di]').input_value() == '37'
+            assert calc.locator('[data-k=def]').input_value() == '1825'
+            assert calc.locator('#dcOut .dc-big b').count() > 1
+            calc.locator('[data-k=attack]').fill('6000')
+            assert calc.evaluate("JSON.parse(localStorage.getItem('dsw.dmgcalc.v1')).attack") == '999'
+            calc.evaluate("Object.defineProperty(navigator, 'clipboard', { value: { writeText: () => Promise.reject() } })")
+            calc.get_by_role('button', name='Copy scenario link').click()
+            shared = calc.get_by_role('textbox', name='Scenario link')
+            shared.wait_for()
+            assert '#scenario=1.' in shared.input_value()
+            calc.goto(shared.input_value(), wait_until='networkidle')
+            assert calc.locator('[data-k=attack]').input_value() == '6000'
+
+            book = open_site(ctx, base, 'cookbook', f'pantry sources {width}px')
+            book.locator('#cbPantry > summary').click()
+            book.get_by_label('Quantity of Leaflet Tomato').select_option('1')
+            stew = book.locator('[data-cb-pantry-recipe="tomato-stew"]').locator('..')
+            stew.locator('summary').click()
+            source = stew.get_by_role('link', name='Wheat', exact=True)
+            assert 'ingredients%3AWheat' in source.get_attribute('href')
+            source.click()
+            book.locator('.it-card').get_by_text('Wheat', exact=True).wait_for()
+            book.go_back()
+            book.wait_for_load_state('networkidle')
+            assert book.get_by_label('Quantity of Leaflet Tomato').input_value() == '1'
+            book.reload(wait_until='networkidle')
+            book.locator('#cbPantry > summary').click()
+            assert book.get_by_label('Quantity of Leaflet Tomato').input_value() == '1'
+
+            gear = open_site(ctx, base, 'Ryza#build', f'gear comparison {width}px')
+            compare = gear.locator('#gmCompare')
+            compare.locator('summary').click(timeout=60000)
+            assert compare.get_by_role('row', name='Average hit').is_visible()
+            compare.get_by_label('Setup A', exact=True).select_option('manual')
+            compare.get_by_label('Setup B', exact=True).select_option('manual')
+            compare.locator('[data-gc-stat="flat"][data-gc-side="0"]').fill('1000')
+            compare.locator('[data-gc-stat="flat"][data-gc-side="1"]').fill('2000')
+            assert '(+100%)' in compare.locator('.gm-compare-delta').inner_text()
+            assert gear.evaluate('document.documentElement.scrollWidth === innerWidth')
+            gear.wait_for_load_state('networkidle')
+    print('  Fight prep at both widths: team links, scaling, pull cards, scenario sharing, pantry sources and gear comparison')
 
 
 
@@ -1330,6 +1407,7 @@ def main():
         with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
             beta_subpath(browser, prefixed)
             site_discovery(browser, prefixed)
+            site_prep(browser, prefixed)
         if not QUICK:
             print('check_site: JS ports against the Python tools')
             parity(browser, base)

@@ -406,6 +406,13 @@ function openCharacterProfile(name, initialTab = 'skills') {
 function renderProfileStatus(h, data) {
   const root = $('profileStatus');
   root.innerHTML = '';
+  const buildup = document.createElement('a');
+  buildup.className = 'profile-fight-link';
+  buildup.href = routeUrl('finder', {
+    finder: { encounter: 'training-ogre', teamCheck: { heroes: [h.name, '', ''], build: 'mastery' } },
+  });
+  buildup.textContent = 'Boss status buildup and Rage changes →';
+  root.append(buildup);
   const dot = STATUS_EFFECTS.damageOverTime;
   if (!dot) return;
   const by = {};

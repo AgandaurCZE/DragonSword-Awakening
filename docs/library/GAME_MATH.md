@@ -111,7 +111,7 @@ Terms:
 
   - **Nightmare and up halve every status's build-up** (Shock and Airborne both exactly half of Extreme; Hell the same as Nightmare).
   - Up to Extreme a physical status builds like on the Ogre, the weak element about 2.7× (in line with "a weakness raises build-up about 2–3×" above), and a non-weak element about 0.4× (×0.2 at Nightmare doubled back, an estimate).
-  - Charlotte's Ultimate still applies 0.50 Poison on the Ogre at A6 (David, 12 Nov), so the Poison column stands. One boss, eye readings: a working hypothesis until Test 07.
+  - Charlotte's Ultimate still applies 0.50 Poison on the Ogre at A6 (David, 12 Nov), so the Poison column stands. The rules apply across Hunts and are the same on Nightmare and Hell. The Finder uses these eye-read ratios to give approximate conversions from the Training Ogre. Raid values have no matching conversion.
   - **Weak elements of every Hunt boss (David, 12 Nov):** Furcas Shock, Burn · Vanak Poison, Bleed · Barduk Bleed, Frost · Gallore Frost, Burn · Ghoul Greed Burn, Shock · Earthlander Bleed, Poison. In `TIER_LIST_V2.bosses[].weak` as archetypes.
 - Leftover build-up stays on the enemy after a physical status ends.
 - Some skills apply statuses the codex doesn't mention (Charlotte's Illusion Kick and Clone explosion apply Poison and Airborne; Johnny's Venom Cutter spreads Airborne).

@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 17 Nov — Fight preparation and gear comparisons
+
+Added team status coverage, Ogre buildup and approximate Nightmare/Hell conversions to the Finder, fast pull cards to all six Hunts and both Raids, shareable damage scenarios, and side-by-side gear comparisons. Added Pantry ingredient alternatives, source links and persistent quantities. [Combat reference and evidence](COMBAT_REFERENCE.md).
+
 ## 17 Nov — Site search and Cookbook pantry
 
 Added search to the desktop and mobile navigation, shareable links for individual recipes, items, gear sets and Karmas, and a quantity-aware pantry that shows cookable dishes and one-ingredient gaps. Pantry counts are kept while the visitor uses the site and reset on reload.

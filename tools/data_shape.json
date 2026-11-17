@@ -2770,6 +2770,23 @@
                 "string"
                ]
               },
+              "plan": {
+               "record": {
+                "opt": {},
+                "req": {
+                 "burst": {
+                  "types": [
+                   "string"
+                  ]
+                 },
+                 "react": {
+                  "types": [
+                   "string"
+                  ]
+                 }
+                }
+               }
+              },
               "src": {
                "types": [
                 "string"
@@ -6386,6 +6403,120 @@
      "types": [
       "number"
      ]
+    }
+   }
+  }
+ },
+ "data/combat-reference.json": {
+  "record": {
+   "opt": {},
+   "req": {
+    "balance": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "effect": {
+         "types": [
+          "string"
+         ]
+        },
+        "hero": {
+         "types": [
+          "string"
+         ]
+        },
+        "percent": {
+         "types": [
+          "number"
+         ]
+        },
+        "skill": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "buildup": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "broken": {
+         "types": [
+          "bool"
+         ]
+        },
+        "fraction": {
+         "types": [
+          "number"
+         ]
+        },
+        "hero": {
+         "types": [
+          "string"
+         ]
+        },
+        "label": {
+         "types": [
+          "string"
+         ]
+        },
+        "skill": {
+         "types": [
+          "string"
+         ]
+        },
+        "stage": {
+         "types": [
+          "string"
+         ]
+        },
+        "status": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "rage": {
+     "list": {
+      "record": {
+       "opt": {},
+       "req": {
+        "hero": {
+         "types": [
+          "string"
+         ]
+        },
+        "metric": {
+         "types": [
+          "string"
+         ]
+        },
+        "patch": {
+         "types": [
+          "string"
+         ]
+        },
+        "percent": {
+         "types": [
+          "number"
+         ]
+        },
+        "skill": {
+         "types": [
+          "string"
+         ]
+        }
+       }
+      }
+     }
     }
    }
   }

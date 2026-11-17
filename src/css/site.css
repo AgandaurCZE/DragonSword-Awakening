@@ -8998,3 +8998,226 @@ body:has(.site-search[open]) {
   color: #ffd489;
   font-size: 13px;
 }
+
+/* Combat preparation and comparisons */
+.fight-check,
+.gm-compare {
+  margin: 14px 0 0;
+  border: 1px solid #465973;
+  border-radius: 8px;
+  background: #201f2b;
+}
+.fight-check > summary,
+.gm-compare > summary {
+  padding: 12px 15px;
+  color: var(--hero-accent, #9cdaee);
+  font-weight: 750;
+  cursor: pointer;
+}
+.fight-team-inner,
+.gm-compare-inner {
+  padding: 0 14px 14px;
+  min-width: 0;
+}
+.fight-team-controls,
+.gm-compare-controls,
+.gm-compare-custom fieldset {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 185px), 1fr));
+  align-items: end;
+  gap: 8px 12px;
+}
+.fight-team-controls label,
+.gm-compare-controls label,
+.gm-compare-custom label {
+  font-size: 13px;
+  color: var(--muted);
+}
+.fight-team-controls select,
+.gm-compare-controls select,
+.gm-compare-custom input {
+  margin-top: 3px;
+  min-height: 42px;
+  padding: 7px 9px;
+  color: var(--text);
+  font-size: 16px;
+}
+.fight-team-controls .fight-break {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 8px;
+}
+.fight-break input {
+  width: auto;
+  accent-color: #8acfe7;
+}
+.fight-context,
+.fight-frost,
+.fight-scale {
+  color: var(--muted);
+  margin: 12px 0;
+}
+.fight-coverage,
+.fight-handoffs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.fight-coverage li {
+  display: grid;
+  grid-template-columns: minmax(95px, 19%) minmax(0, 1fr);
+  gap: 10px;
+  padding: 7px 9px;
+  border-bottom: 1px solid #3b4654;
+}
+.fight-coverage .fight-priority {
+  background: #2c3344;
+}
+.fight-coverage small,
+.fight-table small {
+  display: block;
+  color: var(--muted);
+}
+.fight-source {
+  display: block;
+}
+.fight-source + .fight-source {
+  margin-top: 3px;
+}
+.fight-roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+  gap: 10px;
+}
+.fight-member {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.fight-member h4 {
+  margin: 0 0 6px;
+}
+.fight-handoffs li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 8px;
+  margin-bottom: 5px;
+}
+.fight-handoffs span {
+  color: var(--muted);
+}
+.fight-member summary,
+.cb-shopping summary {
+  padding: 7px 0;
+  cursor: pointer;
+}
+.fight-table {
+  max-height: 410px;
+  overflow: auto;
+}
+.fight-table table,
+.gm-compare table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+.fight-table th,
+.fight-table td,
+.gm-compare th,
+.gm-compare td {
+  padding: 7px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.fight-table thead {
+  position: sticky;
+  top: 0;
+  background: #2c3344;
+}
+.fight-member a,
+.fight-coverage a,
+.profile-fight-link,
+.guide-prep a {
+  color: #9cdaee;
+}
+.profile-fight-link {
+  display: inline-block;
+  margin-top: 14px;
+}
+.guide-fight-cue .guide-pull {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+.guide-pull dt {
+  font-weight: 800;
+  color: var(--fight-accent, #efbe7b);
+}
+.guide-pull dd {
+  margin: 2px 0 0;
+}
+.guide-prep {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin: 10px 0 14px;
+  font-size: 13px;
+}
+.guide-prep > span {
+  width: 100%;
+  color: var(--muted);
+}
+.dc-share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 10px;
+  margin-top: 9px;
+}
+.dc-share p {
+  margin: 0;
+}
+.dc-share input {
+  width: 100%;
+}
+.cb-shopping {
+  padding: 0 6px;
+  font-size: 12px;
+  color: #f2cd8b;
+}
+.cb-shopping li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 7px;
+}
+.cb-shopping a {
+  padding: 4px 7px;
+}
+.gm-compare-custom fieldset {
+  min-width: 0;
+  margin: 8px 0;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+.gm-compare-delta {
+  color: #a7debb;
+  font-weight: 700;
+}
+.gm-compare-delta.down {
+  color: #f4b19f;
+}
+@media (max-width: 640px) {
+  .guide-fight-cue .guide-pull {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .gm-compare th,
+  .gm-compare td {
+    padding: 5px;
+  }
+}

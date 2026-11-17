@@ -1,0 +1,3580 @@
+{
+ "buildup": [
+  {
+   "hero": "Castella",
+   "skill": "Whirlwind",
+   "label": "Whirlwind (Skill)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.175,
+   "broken": false
+  },
+  {
+   "hero": "Castella",
+   "skill": "Howling",
+   "label": "Howling (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Castella",
+   "skill": "Stun Blow",
+   "label": "Stun Blow (Special A)",
+   "stage": "A0",
+   "status": "Stun",
+   "fraction": 0.33,
+   "broken": true
+  },
+  {
+   "hero": "Castella",
+   "skill": "Upper Blow",
+   "label": "Upper Blow (Special B)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.33,
+   "broken": true
+  },
+  {
+   "hero": "Castella",
+   "skill": "Upper Blow",
+   "label": "Upper Blow (Special B)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Castella",
+   "skill": "Wild Blow",
+   "label": "Wild Blow (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.045,
+   "broken": false
+  },
+  {
+   "hero": "Castella",
+   "skill": "Wild Crash",
+   "label": "Wild Crash (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Castella",
+   "skill": "Shoulder Crusher",
+   "label": "Shoulder Crusher (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Castella",
+   "skill": "",
+   "label": "Full combo: basic, jump sequence, dash, back into basic",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.14,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Weapon Blaze",
+   "label": "Weapon Blaze (Skill)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Weapon Blaze",
+   "label": "Weapon Blaze (Skill)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.02,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Ultimate, press)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Ultimate, charge, close range)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Ultimate, charge, long range)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.12,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Burst Grab",
+   "label": "Burst Grab (Special A, at 1 Burn stack)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Burst Grab",
+   "label": "Burst Grab (Special A, at 1 Burn stack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Burst Grab",
+   "label": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.27,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Burst Grab",
+   "label": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Burst Grab",
+   "label": "Burst Grab (Special A, at 2 Burn stacks, whole 3-attack sequence)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Explosion",
+   "label": "Explosion (Special B, press)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Explosion",
+   "label": "Explosion (Special B, charge)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.12,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Great Rush",
+   "label": "Great Rush (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Circle Cleave",
+   "label": "Circle Cleave (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Circular Slash",
+   "label": "Circular Slash (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.015,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Royal Flame, press)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.33,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Royal Flame, press)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Royal Flame, press)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Royal Flame, charge, close or long range)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Royal Flame, charge, close or long range)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Royal Flame, charge, close or long range)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Great Rush",
+   "label": "Great Rush (Royal Flame, whole basic combo)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.09,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Great Rush",
+   "label": "Great Rush (Royal Flame, whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Circle Cleave",
+   "label": "Circle Cleave (Royal Flame, jump attack)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Circle Cleave",
+   "label": "Circle Cleave (Royal Flame, jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Circular Slash",
+   "label": "Circular Slash (Royal Flame, dash attack)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Circular Slash",
+   "label": "Circular Slash (Royal Flame, dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Fox Parade",
+   "label": "Fox Parade (Skill)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.23,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Fox Parade",
+   "label": "Fox Parade (Skill)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Fox Chase",
+   "label": "Fox Chase (Ultimate)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.23,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Fox Chase",
+   "label": "Fox Chase (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.125,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Fox Grab",
+   "label": "Fox Grab (Special A)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.3,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Fox Grab",
+   "label": "Fox Grab (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Finale",
+   "label": "Finale (Special B)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Finale",
+   "label": "Finale (Special B)",
+   "stage": "A0",
+   "status": "Stun",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Firefox",
+   "label": "Firefox (whole basic combo)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Firefox",
+   "label": "Firefox (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Pyro-Fang",
+   "label": "Pyro-Fang (jump attack)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Pyro-Fang",
+   "label": "Pyro-Fang (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Twin Tails",
+   "label": "Twin Tails (dash attack)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Twin Tails",
+   "label": "Twin Tails (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Invisible",
+   "label": "Invisible (Skill, clone explosion)",
+   "stage": "A0",
+   "status": "Poison",
+   "fraction": 0.24,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Invisible",
+   "label": "Invisible (Skill, clone explosion)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Invisible",
+   "label": "Invisible (Skill, clone explosion)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.055,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Poison Dagger",
+   "label": "Poison Dagger (Ultimate)",
+   "stage": "A0",
+   "status": "Poison",
+   "fraction": 0.5,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Poison Dagger",
+   "label": "Poison Dagger (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Illusion Kick",
+   "label": "Illusion Kick (Special A)",
+   "stage": "A0",
+   "status": "Poison",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Illusion Kick",
+   "label": "Illusion Kick (Special A)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Illusion Kick",
+   "label": "Illusion Kick (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Shadow Grab",
+   "label": "Shadow Grab (Special B)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Shadow Grab",
+   "label": "Shadow Grab (Special B)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Shadow Dance",
+   "label": "Shadow Dance (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Shadow Leaf",
+   "label": "Shadow Leaf (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.02,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Poison Step",
+   "label": "Poison Step (dash attack)",
+   "stage": "A0",
+   "status": "Poison",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Poison Step",
+   "label": "Poison Step (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Rising Cutter",
+   "label": "Rising Cutter (Skill)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.24,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Rising Cutter",
+   "label": "Rising Cutter (Skill)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.035,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Wind Slayer",
+   "label": "Wind Slayer (Ultimate, per charge)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Wind Slayer",
+   "label": "Wind Slayer (Ultimate, per charge)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Tempest",
+   "label": "Tempest (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Wind Grab",
+   "label": "Wind Grab (Special B)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Wind Grab",
+   "label": "Wind Grab (Special B)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.11,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Wind Sword",
+   "label": "Wind Sword (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Silphid Spike",
+   "label": "Silphid Spike (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Winchester",
+   "label": "Winchester (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Barraging Spear",
+   "label": "Barraging Spear (Skill)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Barraging Spear",
+   "label": "Barraging Spear (Skill)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Brave One",
+   "label": "Brave One (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.005,
+   "broken": false
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Rolling Upper",
+   "label": "Rolling Upper (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Vanguard Banner",
+   "label": "Vanguard Banner (Special B)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Grand Spear",
+   "label": "Grand Spear (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Spin Presser",
+   "label": "Spin Presser (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Spiral Shave",
+   "label": "Spiral Shave (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Crimson Spiral",
+   "label": "Crimson Spiral (Skill, press)",
+   "stage": "A0",
+   "status": "Bleed",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Crimson Spiral",
+   "label": "Crimson Spiral (Skill, press)",
+   "stage": "A0",
+   "status": "Stun",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Crimson Spiral",
+   "label": "Crimson Spiral (Skill, press)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Crimson Spiral",
+   "label": "Crimson Spiral (Skill, charge)",
+   "stage": "A0",
+   "status": "Bleed",
+   "fraction": 0.24,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Crimson Spiral",
+   "label": "Crimson Spiral (Skill, charge)",
+   "stage": "A0",
+   "status": "Stun",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Crimson Spiral",
+   "label": "Crimson Spiral (Skill, charge)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.075,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Bloody Shower",
+   "label": "Bloody Shower (Ultimate)",
+   "stage": "A0",
+   "status": "Bleed",
+   "fraction": 0.33,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Bloody Shower",
+   "label": "Bloody Shower (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Kick Storm",
+   "label": "Kick Storm (Special A)",
+   "stage": "A0",
+   "status": "Bleed",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Kick Storm",
+   "label": "Kick Storm (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.035,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Bleeding Grab",
+   "label": "Bleeding Grab (Special B, at 1 Bleed stack)",
+   "stage": "A0",
+   "status": "Bleed",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Bleeding Grab",
+   "label": "Bleeding Grab (Special B, at 1 Bleed stack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Bleeding Grab",
+   "label": "Bleeding Grab (Special B, at 2 Bleed stacks)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Bleeding Grab",
+   "label": "Bleeding Grab (Special B, at 2 Bleed stacks)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Bow Shot",
+   "label": "Bow Shot (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.015,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Double Shot",
+   "label": "Double Shot (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Sliding Shot",
+   "label": "Sliding Shot (dash attack)",
+   "stage": "A0",
+   "status": "Bleed",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Sliding Shot",
+   "label": "Sliding Shot (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.015,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Venom Dance",
+   "label": "Venom Dance (Skill)",
+   "stage": "A0",
+   "status": "Poison",
+   "fraction": 0.24,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Venom Dance",
+   "label": "Venom Dance (Skill)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Venom Dance",
+   "label": "Venom Dance (Skill)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Phantom Slash",
+   "label": "Phantom Slash (Ultimate)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Phantom Slash",
+   "label": "Phantom Slash (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Venom Cutter",
+   "label": "Venom Cutter (Special A)",
+   "stage": "A0",
+   "status": "Poison",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Venom Cutter",
+   "label": "Venom Cutter (Special A)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Venom Cutter",
+   "label": "Venom Cutter (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Poison Grab",
+   "label": "Poison Grab (Special B, at 1 Poison stack)",
+   "stage": "A0",
+   "status": "Poison",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Poison Grab",
+   "label": "Poison Grab (Special B, at 1 Poison stack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Poison Grab",
+   "label": "Poison Grab (Special B, at 2 Poison stacks)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Poison Grab",
+   "label": "Poison Grab (Special B, at 2 Poison stacks)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Dirty Fight",
+   "label": "Dirty Fight (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Piercing Step",
+   "label": "Piercing Step (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.015,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Fatal Sting",
+   "label": "Fatal Sting (dash attack)",
+   "stage": "A0",
+   "status": "Poison",
+   "fraction": 0.12,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Fatal Sting",
+   "label": "Fatal Sting (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Lightning Javelin",
+   "label": "Lightning Javelin (Skill, per charge)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Lightning Javelin",
+   "label": "Lightning Javelin (Skill, per charge)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.02,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Stormbringer",
+   "label": "Stormbringer (Ultimate)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.33,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Stormbringer",
+   "label": "Stormbringer (Ultimate)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Stormbringer",
+   "label": "Stormbringer (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Flash",
+   "label": "Flash (Special A)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Flash",
+   "label": "Flash (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Thunder Grab",
+   "label": "Thunder Grab (Special B, at 1 Shock stack)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Thunder Grab",
+   "label": "Thunder Grab (Special B, at 1 Shock stack)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Thunder Grab",
+   "label": "Thunder Grab (Special B, at 1 Shock stack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.12,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Thunder Grab",
+   "label": "Thunder Grab (Special B, at 2 Shock stacks)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Thunder Grab",
+   "label": "Thunder Grab (Special B, at 2 Shock stacks)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Volt Thrust",
+   "label": "Volt Thrust (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Lightning Flow",
+   "label": "Lightning Flow (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Lightning Step",
+   "label": "Lightning Step (dash attack)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Lightning Step",
+   "label": "Lightning Step (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Consecration",
+   "label": "Consecration (Skill, the skill's own hits)",
+   "stage": "A0",
+   "status": "Bleed",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Consecration",
+   "label": "Consecration (Skill, the skill's own hits)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "",
+   "label": "Heretic Judgment blood aura (whole 10 s mode)",
+   "stage": "A0",
+   "status": "Bleed",
+   "fraction": 0.12,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "",
+   "label": "Heretic Judgment blood aura (whole 10 s mode)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.02,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Celestial Verdict",
+   "label": "Celestial Verdict (Ultimate)",
+   "stage": "A0",
+   "status": "Stun",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Celestial Verdict",
+   "label": "Celestial Verdict (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Divine Arc",
+   "label": "Divine Arc (Special A)",
+   "stage": "A0",
+   "status": "Bleed",
+   "fraction": 0.23,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Divine Arc",
+   "label": "Divine Arc (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Holy Rise",
+   "label": "Holy Rise (Special B)",
+   "stage": "A0",
+   "status": "Bleed",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Holy Rise",
+   "label": "Holy Rise (Special B)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Holy Rise",
+   "label": "Holy Rise (Special B)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Judgment Spiral",
+   "label": "Judgment Spiral (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Celestial Dive",
+   "label": "Celestial Dive (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Heaven's Flick",
+   "label": "Heaven's Flick (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.015,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Celestial Verdict",
+   "label": "Celestial Verdict (Ultimate, Heretic Judgment mode)",
+   "stage": "A0",
+   "status": "Stun",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Celestial Verdict",
+   "label": "Celestial Verdict (Ultimate, Heretic Judgment mode)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Judgment Spiral",
+   "label": "Judgment Spiral (whole basic combo, Heretic Judgment mode)",
+   "stage": "A0",
+   "status": "Stun",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Heaven's Flick",
+   "label": "Heaven's Flick (dash attack, Heretic Judgment mode)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.015,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Judgment Spiral",
+   "label": "Judgment Spiral (whole basic combo, Heretic Judgment mode)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Lightning Shock",
+   "label": "Lightning Shock (Skill, press, no orbs)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Lightning Shock",
+   "label": "Lightning Shock (Skill, press)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Lightning Shock",
+   "label": "Lightning Shock (Skill, press, with all 26 Bolt Bubble orbs)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.6,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Lightning Shock",
+   "label": "Lightning Shock (Skill, charge, no orbs)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.33,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Lightning Shock",
+   "label": "Lightning Shock (Skill, charge)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.075,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Lightning Shock",
+   "label": "Lightning Shock (Skill, charge, with 8 orbs from the basic attack)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.5,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Lightning Shock",
+   "label": "Lightning Shock (Skill, charge, with all 26 Bolt Bubble orbs)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.9,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Bolt Bubble",
+   "label": "Bolt Bubble (Ultimate, 26 orbs, none exploded)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Thunderbolt",
+   "label": "Thunderbolt (Special A)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Thunderbolt",
+   "label": "Thunderbolt (Special A)",
+   "stage": "A0",
+   "status": "Stun",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Thunderbolt",
+   "label": "Thunderbolt (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Bolt Orb",
+   "label": "Bolt Orb (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.0025,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "",
+   "label": "One Holy Orb (over its 5 s)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.0025,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Spiky Bolt",
+   "label": "Spiky Bolt (jump attack)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Spiky Bolt",
+   "label": "Spiky Bolt (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.0125,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Cannon Bolt",
+   "label": "Cannon Bolt (dash attack, big orb moving)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Cannon Bolt",
+   "label": "Cannon Bolt (dash attack, big orb moving)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.0125,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Cannon Bolt",
+   "label": "Cannon Bolt (dash attack, big orb explosion)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.125,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Cannon Bolt",
+   "label": "Cannon Bolt (dash attack, big orb explosion)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.0125,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Divine Crash",
+   "label": "Divine Crash (Skill, no relic placed)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Divine Crash",
+   "label": "Divine Crash (Skill, no relic placed)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.125,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Divine Crash",
+   "label": "Divine Crash (Skill, with a relic placed)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.27,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Divine Crash",
+   "label": "Divine Crash (Skill, with a relic placed)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Divine Smash",
+   "label": "Divine Smash (Ultimate)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Divine Smash",
+   "label": "Divine Smash (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Bless",
+   "label": "Bless (Special A)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Bless",
+   "label": "Bless (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.008,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Justice Fall",
+   "label": "Justice Fall (Special B)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Justice Fall",
+   "label": "Justice Fall (Special B)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.02,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Divine Bolt",
+   "label": "Divine Bolt (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.016,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Air Bolt",
+   "label": "Air Bolt (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Sliding Bolt",
+   "label": "Sliding Bolt (dash attack, sphere moving, all 6 hits)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Sliding Bolt",
+   "label": "Sliding Bolt (dash attack, sphere moving, all 6 hits)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.0125,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Sliding Bolt",
+   "label": "Sliding Bolt (dash attack, sphere explosion)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Sliding Bolt",
+   "label": "Sliding Bolt (dash attack, sphere explosion)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.005,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Stun Slash",
+   "label": "Stun Slash (Skill)",
+   "stage": "A0",
+   "status": "Stun",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Stun Slash",
+   "label": "Stun Slash (Skill)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Healing Circle",
+   "label": "Healing Circle (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.0025,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Swordgrab",
+   "label": "Swordgrab (Special A)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Swordgrab",
+   "label": "Swordgrab (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Relic Fall",
+   "label": "Relic Fall (Special B)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Sword Slash",
+   "label": "Sword Slash (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Dropkick",
+   "label": "Dropkick (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Kick Combo",
+   "label": "Kick Combo (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.016,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Air Bomb",
+   "label": "Air Bomb (Skill)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.22,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Air Bomb",
+   "label": "Air Bomb (Skill)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Air Bomb",
+   "label": "Air Bomb (Skill)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.12,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Rolling Bomb",
+   "label": "Rolling Bomb (Ultimate)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.23,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Rolling Bomb",
+   "label": "Rolling Bomb (Ultimate)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Rolling Bomb",
+   "label": "Rolling Bomb (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Multiple Bolt",
+   "label": "Multiple Bolt (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Switch On!",
+   "label": "Switch On! (Special B, all 3 bolts on one target)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Switch On!",
+   "label": "Switch On! (Special B, all 3 bolts on one target)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Switch On!",
+   "label": "Switch On! (Special B, all 3 bolts on one target)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Bolt Shot",
+   "label": "Bolt Shot (whole basic combo, without the Bomb Arrow explosion)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.008,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Shoot and Bomb",
+   "label": "Shoot and Bomb (jump attack)",
+   "stage": "A0",
+   "status": "Burn",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Shoot and Bomb",
+   "label": "Shoot and Bomb (jump attack)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Shoot and Bomb",
+   "label": "Shoot and Bomb (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.008,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Rapid Shot",
+   "label": "Rapid Shot (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.0125,
+   "broken": false
+  },
+  {
+   "hero": "Astria",
+   "skill": "Wide Shot",
+   "label": "Wide Shot (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.175,
+   "broken": false
+  },
+  {
+   "hero": "Astria",
+   "skill": "Bolt Bombard",
+   "label": "Bolt Bombard (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.18,
+   "broken": false
+  },
+  {
+   "hero": "Astria",
+   "skill": "Ballista Shot",
+   "label": "Ballista Shot (whole basic combo, 6 bolts)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.12,
+   "broken": false
+  },
+  {
+   "hero": "Astria",
+   "skill": "Stunt Shot",
+   "label": "Stunt Shot (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Astria",
+   "skill": "Slide",
+   "label": "Slide (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.016,
+   "broken": false
+  },
+  {
+   "hero": "Astria",
+   "skill": "Ballista Shot",
+   "label": "Ballista Shot (whole basic combo, 6 bolts, Precision Shot mode)",
+   "stage": "A0",
+   "status": "Stun",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Astria",
+   "skill": "Ballista Shot",
+   "label": "Ballista Shot (whole basic combo, 6 bolts, Precision Shot mode)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.35,
+   "broken": false
+  },
+  {
+   "hero": "Astria",
+   "skill": "Wide Shot",
+   "label": "Wide Shot (Ultimate, Precision Shot mode)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.225,
+   "broken": false
+  },
+  {
+   "hero": "Astria",
+   "skill": "Bolt Bombard",
+   "label": "Bolt Bombard (Special A, Precision Shot mode)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.18,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Summon Chako",
+   "label": "Summon Chako (Skill)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Summon Chako",
+   "label": "Summon Chako (Skill)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Summon Chako",
+   "label": "Summon Chako (Skill)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.12,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Chako Shield",
+   "label": "Chako Shield (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Chako Knuckle",
+   "label": "Chako Knuckle (Special A, at 1 Frost stack)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Chako Knuckle",
+   "label": "Chako Knuckle (Special A, at 1 Frost stack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.22,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Chako Knuckle",
+   "label": "Chako Knuckle (Special A, at 2 Frost stacks, Knockdown or Ice Block)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.35,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Chako Spin",
+   "label": "Chako Spin (Special B)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Chako Spin",
+   "label": "Chako Spin (Special B)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.175,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Snow Pop",
+   "label": "Snow Pop (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.02,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Snow Pop",
+   "label": "Snow Pop (charged basic)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Snow Pop",
+   "label": "Snow Pop (charged basic)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Freezy Pop",
+   "label": "Freezy Pop (jump attack)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Freezy Pop",
+   "label": "Freezy Pop (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Snow Step",
+   "label": "Snow Step (dash attack)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Snow Step",
+   "label": "Snow Step (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Frozen Stinger",
+   "label": "Frozen Stinger (Skill)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Frozen Stinger",
+   "label": "Frozen Stinger (Skill)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.075,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Ice Crown",
+   "label": "Ice Crown (Ultimate, whole Ice Prison)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Ice Crown",
+   "label": "Ice Crown (Ultimate)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Ice Crown",
+   "label": "Ice Crown (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.075,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Ice Grab",
+   "label": "Ice Grab (Special A, at 1 Frost stack)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Ice Grab",
+   "label": "Ice Grab (Special A, at 1 Frost stack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.07,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Ice Grab",
+   "label": "Ice Grab (Special A, at 2 Frost stacks)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Ice Grab",
+   "label": "Ice Grab (Special A, at 2 Frost stacks)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Frozen Burst",
+   "label": "Frozen Burst (Special B, shattering the Ice Grab spear)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Frozen Burst",
+   "label": "Frozen Burst (Special B, shattering the Ice Grab spear)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Frozen Burst",
+   "label": "Frozen Burst (Special B, per Frozen Stinger spear)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Frozen Burst",
+   "label": "Frozen Burst (Special B, per Frozen Stinger spear)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Frozen Burst",
+   "label": "Frozen Burst (Special B, shattering the Ice Prison, all 5 explosions)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Frozen Burst",
+   "label": "Frozen Burst (Special B, shattering the Ice Prison, all 5 explosions)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Avenger Circle",
+   "label": "Avenger Circle (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Piercing Spike",
+   "label": "Piercing Spike (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Half-Moon Cutter",
+   "label": "Half-Moon Cutter (dash attack)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Half-Moon Cutter",
+   "label": "Half-Moon Cutter (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Ice Storm",
+   "label": "Ice Storm (Skill, full 5 s tornado)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Ice Storm",
+   "label": "Ice Storm (Skill, full 5 s tornado)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Ice Storm",
+   "label": "Ice Storm (Skill, full 5 s tornado)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Frozen Spike",
+   "label": "Frozen Spike (Ultimate)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Frozen Spike",
+   "label": "Frozen Spike (Ultimate)",
+   "stage": "A0",
+   "status": "Airborne",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Frozen Spike",
+   "label": "Frozen Spike (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Frozen Needles",
+   "label": "Frozen Needles (Special A)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Frozen Needles",
+   "label": "Frozen Needles (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Shattering Touch",
+   "label": "Shattering Touch (Special B)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Ice Ball",
+   "label": "Ice Ball (whole basic combo)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Ice Ball",
+   "label": "Ice Ball (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.007,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Glacial Wave",
+   "label": "Glacial Wave (jump attack)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Glacial Wave",
+   "label": "Glacial Wave (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Frozen Road",
+   "label": "Frozen Road (dash attack)",
+   "stage": "A0",
+   "status": "Frost",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Frozen Road",
+   "label": "Frozen Road (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.0025,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Cross",
+   "label": "Holy Cross (Skill, the swing itself)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.24,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Cross",
+   "label": "Holy Cross (Skill, the swing itself)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Cross",
+   "label": "Holy Cross (Skill, the moving cross)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Cross",
+   "label": "Holy Cross (Skill, the moving cross)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.075,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Circle",
+   "label": "Holy Circle (Ultimate)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.22,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Circle",
+   "label": "Holy Circle (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Judgment",
+   "label": "Judgment (Special A, at 1 Shock stack)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Judgment",
+   "label": "Judgment (Special A, at 1 Shock stack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Judgment",
+   "label": "Judgment (Special A, at 2 Shock stacks)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.4,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Judgment",
+   "label": "Judgment (Special A, at 2 Shock stacks)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Grab",
+   "label": "Holy Grab (Special B)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.28,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Grab",
+   "label": "Holy Grab (Special B)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.125,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Pray",
+   "label": "Pray (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Shining Spin",
+   "label": "Shining Spin (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Cutter",
+   "label": "Holy Cutter (dash attack)",
+   "stage": "A0",
+   "status": "Shock",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Cutter",
+   "label": "Holy Cutter (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Knockdown Smash",
+   "label": "Knockdown Smash (Skill)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Knockdown Smash",
+   "label": "Knockdown Smash (Skill)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Pounding Grab",
+   "label": "Pounding Grab (Special A)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Guard Counter",
+   "label": "Guard Counter (Special B, successful parry)",
+   "stage": "A0",
+   "status": "Knockdown",
+   "fraction": 0.33,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Guard Counter",
+   "label": "Guard Counter (Special B, successful parry)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Guard Counter",
+   "label": "Guard Counter (Special B, failed parry)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Guard Stance",
+   "label": "Guard Stance (Ultimate)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.01,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Brandish",
+   "label": "Brandish (whole basic combo)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Dive Kick",
+   "label": "Dive Kick (jump attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Dodge Combo",
+   "label": "Dodge Combo (dash attack)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.02,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Brandish",
+   "label": "Brandish (whole basic combo, Defensive Stance)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Alex",
+   "skill": "Dodge Combo",
+   "label": "Dodge Combo (dash attack, Defensive Stance)",
+   "stage": "A0",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Shoot and Bomb",
+   "label": "Shoot and Bomb (jump attack, mastery)",
+   "stage": "Mastery",
+   "status": "Burn",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Shoot and Bomb",
+   "label": "Shoot and Bomb (jump attack, mastery)",
+   "stage": "Mastery",
+   "status": "Airborne",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "Shoot and Bomb",
+   "label": "Shoot and Bomb (jump attack, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.0125,
+   "broken": false
+  },
+  {
+   "hero": "Astria",
+   "skill": "Slide",
+   "label": "Slide (dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.018,
+   "broken": false
+  },
+  {
+   "hero": "Castella",
+   "skill": "Shoulder Crusher",
+   "label": "Shoulder Crusher (dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Frozen Road",
+   "label": "Frozen Road (dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Frost",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Shadow Dance",
+   "label": "Shadow Dance (whole combo, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Shadow Leaf",
+   "label": "Shadow Leaf (jump attack, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Poison Step",
+   "label": "Poison Step (dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.025,
+   "broken": false
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Barraging Spear",
+   "label": "Barraging Spear (Skill, mastery)",
+   "stage": "Mastery",
+   "status": "Airborne",
+   "fraction": 0.33,
+   "broken": false
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Barraging Spear",
+   "label": "Barraging Spear (Skill, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.07,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Venom Dance",
+   "label": "Venom Dance (Skill, mastery)",
+   "stage": "Mastery",
+   "status": "Poison",
+   "fraction": 0.3,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Venom Dance",
+   "label": "Venom Dance (Skill, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Twin Tails",
+   "label": "Twin Tails (dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Burn",
+   "fraction": 0.11,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Twin Tails",
+   "label": "Twin Tails (dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Kick Combo",
+   "label": "Kick Combo (dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Stun",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Kick Combo",
+   "label": "Kick Combo (dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Dropkick",
+   "label": "Dropkick (mastery)",
+   "stage": "Mastery",
+   "status": "Stun",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Lute",
+   "skill": "Dropkick",
+   "label": "Dropkick (mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Cutter",
+   "label": "Holy Cutter (dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Shock",
+   "fraction": 0.18,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Cutter",
+   "label": "Holy Cutter (dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Knockdown",
+   "fraction": 0.03,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Cutter",
+   "label": "Holy Cutter (dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Half-Moon Cutter",
+   "label": "Half-Moon Cutter (charged dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Frost",
+   "fraction": 0.14,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Half-Moon Cutter",
+   "label": "Half-Moon Cutter (charged dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "",
+   "label": "Dash (not dash attack, mastery)",
+   "stage": "Mastery",
+   "status": "Super Armor",
+   "fraction": 0.02,
+   "broken": false
+  },
+  {
+   "hero": "Sion",
+   "skill": "Bless",
+   "label": "Bless (Special A, mastery)",
+   "stage": "Mastery",
+   "status": "Shock",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Spiky Bolt",
+   "label": "Spiky Bolt (mastery)",
+   "stage": "Mastery",
+   "status": "Shock",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Castella",
+   "skill": "Stun Blow",
+   "label": "Stun Blow (Special A, A1, target broken)",
+   "stage": "A1",
+   "status": "Stun",
+   "fraction": 0.45,
+   "broken": true
+  },
+  {
+   "hero": "Castella",
+   "skill": "Stun Blow",
+   "label": "Stun Blow (Special A, A1, target broken)",
+   "stage": "A1",
+   "status": "Knockdown",
+   "fraction": 0.25,
+   "broken": true
+  },
+  {
+   "hero": "Othello",
+   "skill": "Frozen Stinger",
+   "label": "Frozen Stinger (Skill, A1)",
+   "stage": "A1",
+   "status": "Frost",
+   "fraction": 0.28,
+   "broken": false
+  },
+  {
+   "hero": "Othello",
+   "skill": "Frozen Stinger",
+   "label": "Frozen Stinger (Skill, A1)",
+   "stage": "A1",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Flash",
+   "label": "Flash (Special A, A1, charged, both Lightning Javelins on the target)",
+   "stage": "A1",
+   "status": "Shock",
+   "fraction": 0.5,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Flash",
+   "label": "Flash (Special A, A1, charged, both Lightning Javelins on the target)",
+   "stage": "A1",
+   "status": "Airborne",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Flash",
+   "label": "Flash (Special A, A1, charged, both Lightning Javelins on the target)",
+   "stage": "A1",
+   "status": "Super Armor",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Crimson Spiral",
+   "label": "Crimson Spiral (Skill, A1, charge held)",
+   "stage": "A1",
+   "status": "Bleed",
+   "fraction": 0.33,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Crimson Spiral",
+   "label": "Crimson Spiral (Skill, A1, charge held)",
+   "stage": "A1",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Holy Rise",
+   "label": "Holy Rise (Special B, A1)",
+   "stage": "A1",
+   "status": "Bleed",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Holy Rise",
+   "label": "Holy Rise (Special B, A1)",
+   "stage": "A1",
+   "status": "Airborne",
+   "fraction": 0.3,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Holy Rise",
+   "label": "Holy Rise (Special B, A1)",
+   "stage": "A1",
+   "status": "Super Armor",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Chako Knuckle",
+   "label": "Chako Knuckle (Special A, A1, at 2 Frost stacks, Knockdown or Ice Block)",
+   "stage": "A1",
+   "status": "Super Armor",
+   "fraction": 0.545,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Fox Grab",
+   "label": "Fox Grab (Special A, A1, unbroken Burning target)",
+   "stage": "A1",
+   "status": "Burn",
+   "fraction": 0.3,
+   "broken": false
+  },
+  {
+   "hero": "Aria",
+   "skill": "",
+   "label": "Air Bomb burning ground (A3, whole duration)",
+   "stage": "A3",
+   "status": "Burn",
+   "fraction": 0.33,
+   "broken": false
+  },
+  {
+   "hero": "Astria",
+   "skill": "",
+   "label": "Bolt Bombard burning ground (A3, whole duration)",
+   "stage": "A3",
+   "status": "Burn",
+   "fraction": 0.45,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Frozen Needles",
+   "label": "Frozen Needles (Special A, A3)",
+   "stage": "A3",
+   "status": "Frost",
+   "fraction": 0.4,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Frozen Needles",
+   "label": "Frozen Needles (Special A, A3)",
+   "stage": "A3",
+   "status": "Knockdown",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Frozen Needles",
+   "label": "Frozen Needles (Special A, A3)",
+   "stage": "A3",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Fatal Sting",
+   "label": "Fatal Sting (dash attack, A3, with the extra thrust)",
+   "stage": "A3",
+   "status": "Poison",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Fatal Sting",
+   "label": "Fatal Sting (dash attack, A3, with the extra thrust)",
+   "stage": "A3",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Fox Chase",
+   "label": "Fox Chase (Ultimate, A3, summon)",
+   "stage": "A3",
+   "status": "Burn",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Fox Chase",
+   "label": "Fox Chase (Ultimate, A3, summon)",
+   "stage": "A3",
+   "status": "Super Armor",
+   "fraction": 0.175,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "",
+   "label": "Fox Chase Sur tail strike (A3, per attack)",
+   "stage": "A3",
+   "status": "Stun",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Kalien",
+   "skill": "",
+   "label": "Fox Chase Sur tail strike (A3, per attack)",
+   "stage": "A3",
+   "status": "Burn",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Circle",
+   "label": "Holy Circle (Ultimate, A3)",
+   "stage": "A3",
+   "status": "Shock",
+   "fraction": 0.27,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Holy Circle",
+   "label": "Holy Circle (Ultimate, A3)",
+   "stage": "A3",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Stormbringer",
+   "label": "Stormbringer (Ultimate, A3)",
+   "stage": "A3",
+   "status": "Shock",
+   "fraction": 0.5,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Stormbringer",
+   "label": "Stormbringer (Ultimate, A3)",
+   "stage": "A3",
+   "status": "Airborne",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Stormbringer",
+   "label": "Stormbringer (Ultimate, A3)",
+   "stage": "A3",
+   "status": "Super Armor",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Rolling Upper",
+   "label": "Rolling Upper (Special A, A3)",
+   "stage": "A3",
+   "status": "Super Armor",
+   "fraction": 0.075,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Lightning Shock",
+   "label": "Lightning Shock (Skill, A3, full charge, no orbs)",
+   "stage": "A3",
+   "status": "Shock",
+   "fraction": 0.6,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Lightning Shock",
+   "label": "Lightning Shock (Skill, A3, full charge, no orbs)",
+   "stage": "A3",
+   "status": "Stun",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Tarte",
+   "skill": "Lightning Shock",
+   "label": "Lightning Shock (Skill, A3, full charge, no orbs)",
+   "stage": "A3",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Castella",
+   "skill": "Whirlwind",
+   "label": "Whirlwind (Skill, A6, 8 spins in 3 s)",
+   "stage": "A6",
+   "status": "Super Armor",
+   "fraction": 0.325,
+   "broken": false
+  },
+  {
+   "hero": "Cerese",
+   "skill": "",
+   "label": "Frozen Spike on Frozen Road (A6, ice walls detonated)",
+   "stage": "A6",
+   "status": "Super Armor",
+   "fraction": 0.3,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Chako Spin",
+   "label": "Chako Spin (Special B, A6)",
+   "stage": "A6",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Dana",
+   "skill": "Chako Spin",
+   "label": "Chako Spin (Special B, A6)",
+   "stage": "A6",
+   "status": "Super Armor",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Illusion Kick",
+   "label": "Illusion Kick (Special A, A6)",
+   "stage": "A6",
+   "status": "Poison",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Illusion Kick",
+   "label": "Illusion Kick (Special A, A6)",
+   "stage": "A6",
+   "status": "Airborne",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Illusion Kick",
+   "label": "Illusion Kick (Special A, A6)",
+   "stage": "A6",
+   "status": "Super Armor",
+   "fraction": 0.05,
+   "broken": false
+  },
+  {
+   "hero": "Johnny",
+   "skill": "Venom Cutter",
+   "label": "Venom Cutter (Special A, A6)",
+   "stage": "A6",
+   "status": "Poison",
+   "fraction": 0.3,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Royal Flame, A6 sword beam with its ground)",
+   "stage": "A6",
+   "status": "Burn",
+   "fraction": 0.5,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Royal Flame, A6 sword beam with its ground)",
+   "stage": "A6",
+   "status": "Airborne",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Kalsion",
+   "skill": "Flame Wave",
+   "label": "Flame Wave (Royal Flame, A6 sword beam with its ground)",
+   "stage": "A6",
+   "status": "Super Armor",
+   "fraction": 0.1,
+   "broken": false
+  },
+  {
+   "hero": "Ornette",
+   "skill": "Judgment",
+   "label": "Judgment (Special A, A6, at 1 or 2 Shock stacks)",
+   "stage": "A6",
+   "status": "Shock",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Winchester",
+   "label": "Winchester (dash attack, A6 leap)",
+   "stage": "A6",
+   "status": "Airborne",
+   "fraction": 0.08,
+   "broken": false
+  },
+  {
+   "hero": "Reina",
+   "skill": "Winchester",
+   "label": "Winchester (dash attack, A6 leap)",
+   "stage": "A6",
+   "status": "Super Armor",
+   "fraction": 0.04,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Flash",
+   "label": "Flash (Special A, A1 charge with 4 Lightning Javelins, A6)",
+   "stage": "A1",
+   "status": "Shock",
+   "fraction": 1.0,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Flash",
+   "label": "Flash (Special A, A1 charge with 4 Lightning Javelins, A6)",
+   "stage": "A1",
+   "status": "Airborne",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Ryza",
+   "skill": "Flash",
+   "label": "Flash (Special A, A1 charge with 4 Lightning Javelins, A6)",
+   "stage": "A1",
+   "status": "Super Armor",
+   "fraction": 0.3,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Kick Storm",
+   "label": "Kick Storm (Special A, A6)",
+   "stage": "A6",
+   "status": "Bleed",
+   "fraction": 0.2,
+   "broken": false
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Kick Storm",
+   "label": "Kick Storm (Special A, A6)",
+   "stage": "A6",
+   "status": "Super Armor",
+   "fraction": 0.06,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Celestial Verdict",
+   "label": "Celestial Verdict (Ultimate, A6)",
+   "stage": "A6",
+   "status": "Stun",
+   "fraction": 0.25,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Celestial Verdict",
+   "label": "Celestial Verdict (Ultimate, A6)",
+   "stage": "A6",
+   "status": "Super Armor",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Celestial Verdict",
+   "label": "Celestial Verdict (Ultimate, A6, Heretic Judgment mode)",
+   "stage": "A6",
+   "status": "Bleed",
+   "fraction": 0.15,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Celestial Verdict",
+   "label": "Celestial Verdict (Ultimate, A6, Heretic Judgment mode)",
+   "stage": "A6",
+   "status": "Stun",
+   "fraction": 0.3,
+   "broken": false
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Celestial Verdict",
+   "label": "Celestial Verdict (Ultimate, A6, Heretic Judgment mode)",
+   "stage": "A6",
+   "status": "Super Armor",
+   "fraction": 0.25,
+   "broken": false
+  }
+ ],
+ "rage": [
+  {
+   "hero": "Eileen",
+   "skill": "Barraging Spear",
+   "metric": "cost",
+   "percent": -30,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Eileen",
+   "skill": "Brave One",
+   "metric": "cost",
+   "percent": -20,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Lute",
+   "skill": "Stun Slash",
+   "metric": "cost",
+   "percent": -10,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Castella",
+   "skill": "Wild Blow",
+   "metric": "gain",
+   "percent": 50,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Castella",
+   "skill": "Whirlwind",
+   "metric": "cost",
+   "percent": -20,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Reina",
+   "skill": "Rising Cutter",
+   "metric": "cost",
+   "percent": -15,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Crimson Spiral",
+   "metric": "cost",
+   "percent": -20,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Roxy",
+   "skill": "Bloody Shower",
+   "metric": "cost",
+   "percent": -10,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Invisible",
+   "metric": "cost",
+   "percent": 10,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Charlotte",
+   "skill": "Poison Dagger",
+   "metric": "cost",
+   "percent": 40,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Celestial Verdict",
+   "metric": "cost",
+   "percent": -30,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Dana",
+   "skill": "Chako Shield",
+   "metric": "cost",
+   "percent": 50,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Dana",
+   "skill": "Chako Knuckle",
+   "metric": "gain",
+   "percent": -50,
+   "patch": "1.1.0"
+  },
+  {
+   "hero": "Kalien",
+   "skill": "Fox Parade",
+   "metric": "cost",
+   "percent": 20,
+   "patch": "1.1.0"
+  }
+ ],
+ "balance": [
+  {
+   "hero": "Lute",
+   "skill": "Swordgrab",
+   "effect": "Knockdown buildup",
+   "percent": 100
+  },
+  {
+   "hero": "Reina",
+   "skill": "Wind Slayer",
+   "effect": "Airborne buildup",
+   "percent": 100
+  },
+  {
+   "hero": "Theresia",
+   "skill": "Judgment Spiral",
+   "effect": "Bleed buildup with Signature Karma",
+   "percent": 150
+  },
+  {
+   "hero": "Castella",
+   "skill": "Howling",
+   "effect": "Super Armor damage",
+   "percent": 36
+  },
+  {
+   "hero": "Othello",
+   "skill": "Frozen Burst",
+   "effect": "Super Armor damage",
+   "percent": -50
+  },
+  {
+   "hero": "Cerese",
+   "skill": "Shattering Touch",
+   "effect": "Super Armor damage",
+   "percent": -50
+  }
+ ]
+}

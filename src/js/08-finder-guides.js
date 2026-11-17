@@ -19,9 +19,10 @@ function renderFinder() {
       <optgroup label="Hunts">${options(bosses.filter((b) => b.type === 'Hunt'))}</optgroup>
       <optgroup label="Raids">${options(bosses.filter((b) => b.type === 'Raid'))}</optgroup>
       <optgroup label="Towers of Trials">${options(towers)}</optgroup>
+      <optgroup label="Reference"><option value="training-ogre">Lv.90 Training Ogre</option></optgroup>
     </select></label>
     <label id="finderDifficultyLabel">Difficulty<select id="finderDifficulty"></select></label>
-  </div><div id="finderResult" aria-live="polite"></div>`;
+  </div><div id="finderResult" aria-live="polite"></div><div id="fightTeam"></div>`;
   const encounter = $('finderEncounter');
   const difficulty = $('finderDifficulty');
   const statusOf = (arch) => Object.keys(STATUS_ARCHETYPE).find((status) => STATUS_ARCHETYPE[status] === arch);
@@ -38,6 +39,12 @@ function renderFinder() {
       difficulty.value = levels.findLast((level) => level.name === 'Hell')?.name || levels.at(-1)?.name || '';
     }
     $('finderDifficultyLabel').hidden = !levels.length;
+    if (!entry) {
+      $('finderResult').innerHTML =
+        '<section class="finder-card"><div class="finder-content"><h3>Lv.90 Training Ogre</h3><p>Compare skill buildup on the same boss training target.</p></div></section>';
+      renderFightTeam();
+      return;
+    }
     const highHunt = boss?.type === 'Hunt' && ['Nightmare', 'Hell'].includes(difficulty.value);
     const weakness = boss?.weak?.map(statusOf).filter(Boolean) || [];
     const statuses = tower ? [tower.status] : weakness;
@@ -75,18 +82,22 @@ function renderFinder() {
       <div class="finder-actions"><a href="${E(routeUrl('tier'))}#${tierHash}">See hero rankings →</a>${boss ? guideLink(boss.type.toLowerCase() + '-' + boss.id, 'Open fight guide →') : guideLink('tower-' + tower.id, 'Open tower guide →')}${boss?.id === 'ursula' ? `<a href="${E(routeUrl('teams'))}#speed">See recorded Ursula teams →</a>` : ''}</div>
       ${teamLinks ? `<h4>Teams to try</h4><ul class="finder-team-list">${teamLinks}</ul>` : ''}
       </div></article>`;
+    renderFightTeam();
   }
   encounter.onchange = () => update(true);
   difficulty.onchange = () => update();
   update(true);
   difficulty.dataset.defaultDifficulty = difficulty.value;
+  wireFightTeam();
 }
 
 function finderSelection() {
   const encounter = $('finderEncounter');
   const difficulty = $('finderDifficulty');
-  if (encounter.selectedIndex === 0 && difficulty.value === difficulty.dataset.defaultDifficulty) return null;
-  return { encounter: encounter.value, difficulty: difficulty.value };
+  const teamCheck = fightTeamState();
+  if (encounter.selectedIndex === 0 && difficulty.value === difficulty.dataset.defaultDifficulty && !teamCheck)
+    return null;
+  return { encounter: encounter.value, difficulty: difficulty.value, ...(teamCheck ? { teamCheck } : {}) };
 }
 
 function selectFinderEncounter(selection) {
@@ -99,6 +110,7 @@ function selectFinderEncounter(selection) {
     difficulty.value = selection.difficulty;
     difficulty.onchange();
   }
+  applyFightTeamState(selection?.teamCheck);
 }
 
 const MECHANICS_GUIDES = [
@@ -429,9 +441,20 @@ function renderGuides(hash = '') {
     ? `<div class="guide-fight-art" style="--fight-art:url('${E(absUrl(guide.cover.src))}')"></div>`
     : '';
   const cue = guide.cover
-    ? `<aside class="guide-fight-cue"><strong>Watch for</strong> ${formatGuideText(guide.cover.cue)}</aside>`
+    ? `<aside class="guide-fight-cue"><dl class="guide-pull">
+       <div><dt>Watch for</dt><dd>${formatGuideText(guide.cover.cue)}</dd></div>
+       ${
+         guide.cover.plan
+           ? `<div><dt>React</dt><dd>${formatGuideText(guide.cover.plan.react)}</dd></div>
+       <div><dt>Burst</dt><dd>${formatGuideText(guide.cover.plan.burst)}</dd></div>`
+           : ''
+       }
+       </dl></aside>`
     : '';
-  root.innerHTML = `${back}<article class="mechanics-guide${banner ? ' guide-fight' : ''}" id="${E(id)}"${accent ? ' style="--fight-accent:' + E(accent) + '"' : ''}>${banner}<h3>${E(guide.title)}</h3><p>${formatGuideText(guide.intro)}</p>${cue}
+  const prep = boss
+    ? `<nav class="guide-prep" aria-label="Fight preparation"><a href="${E(routeUrl('finder', { finder: { encounter: boss.id } }))}">Check a team for this fight →</a>${boss.type === 'Raid' ? dcRaidExampleLinks() : ''}</nav>`
+    : '';
+  root.innerHTML = `${back}<article class="mechanics-guide${banner ? ' guide-fight' : ''}" id="${E(id)}"${accent ? ' style="--fight-accent:' + E(accent) + '"' : ''}>${banner}<h3>${E(guide.title)}</h3><p>${formatGuideText(guide.intro)}</p>${cue}${prep}
     ${guide.sections
       .map(
         ([heading, body], i) =>

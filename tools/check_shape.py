@@ -22,7 +22,7 @@ import difflib, json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SHAPE_FILE = os.path.join(ROOT, 'tools', 'data_shape.json')
-FILES = ['data.json', 'data/steam-news.json', 'assets/items/materials.json', 'assets/items/ingredients.json', 'assets/items/important.json',
+FILES = ['data.json', 'data/steam-news.json', 'data/combat-reference.json', 'assets/items/materials.json', 'assets/items/ingredients.json', 'assets/items/important.json',
          'assets/items/quest.json', 'assets/items/achievements.json', 'assets/items/cookbook.json']
 # Objects the guess below gets wrong. Paths as printed in the messages.
 FORCE_MAP = {

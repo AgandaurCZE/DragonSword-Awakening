@@ -9,6 +9,7 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 ## The site
 - Public Beta, live since 11 Nov. Every page has a clean path (AGENTS.md). All 20 heroes, tier list (A0 + Mastery view and Awakenings view, re-rated 14 Nov from David's file), Teams (six lineups + Ursula speed runs), Boss & Tower Finder, Dungeons, Gear, Karma, Familiars, Cookbook, Items, Titles, Achievements, Damage and Levelling calculators, News and Patch Notes.
 - Site search connects the desktop and phone navigation to exact public lookups. The Cookbook pantry checks quantities against the existing recipe combinations.
+- Fight preparation links guides, the Finder team check, hero buildup and shareable damage scenarios. Best Gear compares recommended pairs or entered stats. The Pantry remembers quantities and links one-short ingredients to their sources.
 - Upcoming heroes: `UPCOMING_HEROES` (15 Nov). Jerome (Bloodburst, Lentus Rebellion, December update, sword, parry) is shown on the Heroes page; Veronica and Logan are data only (Lentus Rebellion). Notes: `assets/sources/upcoming/notes.txt`.
 
 ## In progress
@@ -22,6 +23,7 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 
 ## Open questions (need the game)
 1. **Cookbook tests** (17 Nov): 78 star values to read (the 18 combinations were confirmed 17 Nov), listed in [COOKBOOK_TESTS.md](COOKBOOK_TESTS.md). New values go in `COOKBOOK.dishes[].tiers`.
+2. **Rage and Signal timing:** relative changes are available from 1.1.0. Exact costs and timers need an in-game capture. Method and the buildup cross-check are in [COMBAT_REFERENCE.md](COMBAT_REFERENCE.md).
 
 ## Can wait
 - Crit Rate awakenings were rated before the 30 Oct gear rebuild; worth a re-check.

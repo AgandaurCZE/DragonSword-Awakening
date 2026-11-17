@@ -1141,6 +1141,7 @@ function gmRun(h, o) {
     token = (o.token = (o.token || 0) + 1);
   if (!o.st.length) {
     out.innerHTML = '<p class="profile-note">Tick at least one status.</p>';
+    gmCompare(h, o, []);
     return;
   }
   const ck = JSON.stringify([o.def, o.half, o.awk, o.sig, o.runes, o.st]);
@@ -1401,4 +1402,242 @@ function gmShow(h, o, rows, top) {
       }),
   );
   out.querySelectorAll('[data-gm-set]').forEach((b) => (b.onclick = () => openGearSet(b.dataset.gmSet)));
+  gmCompare(h, o, rows);
+}
+
+// Side-by-side comparison keeps the enemy and skill inputs common to both rows.
+const GM_COMPARE_STATS = [
+  ['Attack', 'flat'],
+  ['Critical Hit Chance', 'Critical Hit Chance'],
+  ['Critical Damage', 'Critical Damage'],
+  ['Armor Penetration', 'Armor Penetration'],
+  ['Defense Ignore', 'Defense Ignore'],
+  ['Active-status Additional Attack Power', 'aap'],
+  ['Active-status Additional Damage', 'ad'],
+];
+
+function gmCompare(h, o, rows) {
+  const root = document.createElement('details');
+  root.className = 'gm-compare';
+  root.id = 'gmCompare';
+  const skills = dcSkills(h.name);
+  const strongest = gmSkill(h.name);
+  const state = (o.comparison ||= {
+    open: false,
+    a: '',
+    b: '',
+    skill: skills.findIndex(
+      (skill) => skill.slot === strongest?.slot && fightSkillName(skill.skill) === strongest.name,
+    ),
+    level: 0,
+    variant: 0,
+    custom: [{}, {}],
+  });
+  if (!skills.length) return;
+  const E = profileEsc;
+  const pairKey = (row) => row.s3 + '|' + row.s2;
+  const defaults = [rows[0], rows[1]].map((row) => (row ? pairKey(row) : 'manual'));
+  const choices = (side, index) => {
+    const selected =
+      rows.some((row) => pairKey(row) === state[side]) || state[side] === 'manual' ? state[side] : defaults[index];
+    return (
+      rows
+        .map(
+          (row) =>
+            '<option value="' +
+            E(pairKey(row)) +
+            '"' +
+            (pairKey(row) === selected ? ' selected' : '') +
+            '>' +
+            E(row.s3 + ' (3) + ' + row.s2 + ' (2)') +
+            '</option>',
+        )
+        .join('') +
+      '<option value="manual"' +
+      (selected === 'manual' ? ' selected' : '') +
+      '>Enter gear stats</option>'
+    );
+  };
+  root.open = state.open;
+  root.innerHTML =
+    '<summary>Compare two gear setups</summary><div class="gm-compare-inner">' +
+    '<p>Both use the same enemy Defense and active statuses selected above. Enter your final stats to compare gear you own.</p>' +
+    '<div class="gm-compare-controls"><label>Setup A<select data-gcompare="a" aria-label="Setup A">' +
+    choices('a', 0) +
+    '</select></label>' +
+    '<label>Setup B<select data-gcompare="b" aria-label="Setup B">' +
+    choices('b', 1) +
+    '</select></label>' +
+    '<label>Skill<select id="gmCompareSkill">' +
+    skills
+      .map(
+        (skill, i) => '<option value="' + i + '">' + E(skill.slot + ' · ' + fightSkillName(skill.skill)) + '</option>',
+      )
+      .join('') +
+    '</select></label><label>Skill level<select id="gmCompareLevel"></select></label>' +
+    '<label id="gmCompareVariantRow">Cast<select id="gmCompareVariant"></select></label></div>' +
+    '<div class="gm-compare-custom" id="gmCompareCustom"></div><div id="gmCompareResult" aria-live="polite"></div></div>';
+  $('gmOut').append(root);
+  const control = (key) => root.querySelector('[data-gcompare="' + key + '"]');
+  const skillSelect = $('gmCompareSkill');
+  const levelSelect = $('gmCompareLevel');
+  const variantSelect = $('gmCompareVariant');
+  skillSelect.value = state.skill >= 0 && skills[state.skill] ? state.skill : 0;
+  function variants() {
+    const skill = skills[+skillSelect.value];
+    return (
+      DAMAGE_CALC.skillAdjust?.find((adj) => adj.hero === h.name && adj.slots.includes(skill.slot))?.variants || []
+    );
+  }
+  function updateSkill() {
+    const skill = skills[+skillSelect.value];
+    const max = skill.meta.maxLevel || 1;
+    state.level = state.level >= 1 && state.level <= max ? state.level : max;
+    levelSelect.replaceChildren(...Array.from({ length: max }, (_, index) => new Option(index + 1, index + 1)));
+    levelSelect.value = state.level;
+    const casts = variants();
+    state.variant = casts[state.variant] ? state.variant : 0;
+    variantSelect.replaceChildren(...casts.map((cast, index) => new Option(cast.label, index)));
+    variantSelect.value = state.variant;
+    $('gmCompareVariantRow').hidden = casts.length < 2;
+  }
+  function updateManualFields() {
+    $('gmCompareCustom').innerHTML = ['a', 'b']
+      .map((key, index) => {
+        if (control(key).value !== 'manual') return '';
+        const sets = [3, 2]
+          .map((count) => {
+            const current = state.custom[index]['set' + count];
+            return (
+              '<label>' +
+              count +
+              '-piece set<select data-gc-set="' +
+              count +
+              '" data-gc-side="' +
+              index +
+              '">' +
+              '<option value="">None</option>' +
+              GEAR_DATA.map(
+                ({ name }) => '<option' + (current === name ? ' selected' : '') + '>' + E(name) + '</option>',
+              ).join('') +
+              '</select></label>'
+            );
+          })
+          .join('');
+        return (
+          '<fieldset><legend>Setup ' +
+          key.toUpperCase() +
+          ' · final stats</legend>' +
+          GM_COMPARE_STATS.map(
+            ([label, stat]) =>
+              '<label>' +
+              E(label) +
+              '<input type="number" min="0" step="any" inputmode="decimal" data-gc-stat="' +
+              E(stat) +
+              '" data-gc-side="' +
+              index +
+              '" value="' +
+              E(state.custom[index][stat] ?? '') +
+              '"></label>',
+          ).join('') +
+          sets +
+          '</fieldset>'
+        );
+      })
+      .join('');
+  }
+  function updateResult() {
+    const skill = skills[+skillSelect.value];
+    const pct = dcPct(skill, +levelSelect.value) * (variants()[+variantSelect.value]?.mult || 1);
+    const fmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 });
+    const firstStatus = o.st[0];
+    const views = ['a', 'b'].map((key, index) => {
+      const row = rows.find((r) => pairKey(r) === control(key).value);
+      const get = (stat) => Math.max(0, Number(state.custom[index][stat]) || 0);
+      const c = row?.c || Object.fromEntries(GM_COMPARE_STATS.map(([, stat]) => [stat, get(stat)]));
+      if (!row && firstStatus) {
+        c[firstStatus + ' Additional Attack Power'] = get('aap');
+        c[firstStatus + ' Additional Damage'] = get('ad');
+      }
+      const total = ((c.flat || 0) + (c.gearAttack || 0)) * (1 + (c['Attack Power Up'] || 0) / 100);
+      const damage = gmSkillDmg(c, o, { pct });
+      const rate = Math.min(100, c['Critical Hit Chance'] || 0) / 100;
+      const average = damage.non * (1 - rate) + damage.crit * rate;
+      const bonus = (name, count) => {
+        const set = GEAR_DATA.find((entry) => entry.name === name);
+        if (!set) return '';
+        return E(name + ' (' + count + ') · ' + set.two + (count === 3 ? ' · ' + set.three : ''));
+      };
+      const s3 = row?.s3 || state.custom[index].set3;
+      const s2 = row?.s2 || state.custom[index].set2;
+      const bonuses = [bonus(s3, 3), ...(s2 !== s3 ? [bonus(s2, 2)] : [])].filter(Boolean).join('<br>');
+      return { total, damage, average, c, bonuses };
+    });
+    const val = (view, n) => (view.total > 0 ? fmt.format(n) : '—');
+    const lines = [
+      ['Attack', (v) => val(v, v.total)],
+      ['Crit Rate', (v) => val(v, v.c['Critical Hit Chance'] || 0) + (v.total ? '%' : '')],
+      ['Crit Damage', (v) => val(v, v.c['Critical Damage'] || 0) + (v.total ? '%' : '')],
+      ['Armor Penetration', (v) => val(v, v.c['Armor Penetration'] || 0)],
+      ['Defense Ignore', (v) => val(v, v.c['Defense Ignore'] || 0) + (v.total ? '%' : '')],
+      ['Non-crit', (v) => val(v, v.damage.non)],
+      ['Crit', (v) => val(v, v.damage.crit)],
+      ['Average hit', (v) => val(v, v.average)],
+      ['Set bonuses', (v) => v.bonuses || '—'],
+    ];
+    const [a, b] = views;
+    const delta = b.average - a.average;
+    const relative = a.average > 0 ? (100 * delta) / a.average : 0;
+    $('gmCompareResult').innerHTML =
+      '<p>Enemy Defense ' +
+      fmt.format(o.def) +
+      (o.st.length ? ' · Active ' + formatSkillText(o.st.join(', ')) : '') +
+      '</p>' +
+      '<table><thead><tr><th scope="col">Stat</th><th scope="col">Setup A</th><th scope="col">Setup B</th></tr></thead><tbody>' +
+      lines
+        .map(
+          ([label, read]) =>
+            '<tr><th scope="row">' + label + '</th>' + views.map((v) => '<td>' + read(v) + '</td>').join('') + '</tr>',
+        )
+        .join('') +
+      '</tbody></table>' +
+      (a.total && b.total
+        ? '<p class="gm-compare-delta' +
+          (delta < 0 ? ' down' : '') +
+          '">Average hit difference, B vs A · ' +
+          (delta > 0 ? '+' : '') +
+          fmt.format(delta) +
+          ' (' +
+          (relative > 0 ? '+' : '') +
+          fmt.format(relative) +
+          '%)</p>'
+        : '');
+  }
+  root.ontoggle = () => {
+    if (root.isConnected) state.open = root.open;
+  };
+  root.onchange = (event) => {
+    if (event.target.dataset.gcompare) {
+      state[event.target.dataset.gcompare] = event.target.value;
+      updateManualFields();
+    } else if (event.target.dataset.gcSet) {
+      state.custom[+event.target.dataset.gcSide]['set' + event.target.dataset.gcSet] = event.target.value;
+    } else if (event.target === skillSelect) {
+      state.skill = +skillSelect.value;
+      state.level = 0;
+      state.variant = 0;
+      updateSkill();
+    } else if (event.target === levelSelect) state.level = +levelSelect.value;
+    else if (event.target === variantSelect) state.variant = +variantSelect.value;
+    updateResult();
+  };
+  root.oninput = (event) => {
+    const key = event.target.dataset.gcStat;
+    if (!key) return;
+    state.custom[+event.target.dataset.gcSide][key] = event.target.value;
+    updateResult();
+  };
+  updateSkill();
+  updateManualFields();
+  updateResult();
 }

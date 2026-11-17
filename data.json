@@ -29365,7 +29365,11 @@
     },
     "cover": {
      "src": "assets/bosses/furcas-banner.webp",
-     "cue": "Furcas takes off → keep it in view and watch the landing area for lingering acid on Nightmare."
+     "cue": "Furcas takes off. On Nightmare, watch for acid left on the ground.",
+     "plan": {
+      "react": "Track the flight from a safe distance and route around the lingering acid on Nightmare.",
+      "burst": "Spend your long casts after the landing, once the approach is clear."
+     }
     }
    },
    {
@@ -29389,7 +29393,11 @@
     },
     "cover": {
      "src": "assets/bosses/vanak-banner.webp",
-     "cue": "Watch the ground after each jump. A red ring can be jumped over, and another slam can follow."
+     "cue": "A red ring spreads after each landing. Another slam can follow.",
+     "plan": {
+      "react": "Jump the red ring and keep watching for another landing.",
+      "burst": "Commit after the final slam in the chain."
+     }
     }
    },
    {
@@ -29413,7 +29421,11 @@
     },
     "cover": {
      "src": "assets/bosses/barduk-banner.webp",
-     "cue": "A leap can lead into tracking poison breath. Move to the flank and get behind his head before the breath starts."
+     "cue": "A leap can lead into a tracking poison breath.",
+     "plan": {
+      "react": "Move to a rear leg and get behind its head before the tracking breath.",
+      "burst": "Use the opening while you are clear of the breath and can still reach the flank."
+     }
     }
    },
    {
@@ -29437,7 +29449,11 @@
     },
     "cover": {
      "src": "assets/bosses/gallore-banner.webp",
-     "cue": "Wait for the fist to hit the ground. During the rolling charge, use a rock at the edge of the arena to make him crash."
+     "cue": "A raised fist signals a slam. When Gallore curls up, expect the rolling charge.",
+     "plan": {
+      "react": "Dodge the slam at impact. Bait the roll by an edge rock and move once it commits.",
+      "burst": "Punish the crash. Aim for the first Break to get the fist off early."
+     }
     }
    },
    {
@@ -29461,7 +29477,11 @@
     },
     "cover": {
      "src": "assets/bosses/ghoul-greed-banner.webp",
-     "cue": "Move sideways out of its charge line. A wall collision can leave it disoriented."
+     "cue": "Ghoul Greed lines up a straight rush.",
+     "plan": {
+      "react": "Leave room near a wall and step sideways out of the charge line.",
+      "burst": "Re-enter after a collision. Use short attacks if it is already recovering."
+     }
     }
    },
    {
@@ -29485,7 +29505,11 @@
     },
     "cover": {
      "src": "assets/bosses/earthlander-banner.webp",
-     "cue": "When it burrows, keep moving. On Nightmare, give the head space after it surfaces or sweeps so you can avoid the acid."
+     "cue": "Earthlander burrows before it reappears. Expect acid after it surfaces or sweeps on Nightmare.",
+     "plan": {
+      "react": "Keep moving while it burrows. Approach the side after it surfaces and leave room for acid on Nightmare.",
+      "burst": "Wait for a clear approach before starting a long cast."
+     }
     }
    },
    {
@@ -29555,7 +29579,11 @@
     },
     "cover": {
      "src": "assets/bosses/gauron-dragon-banner.webp",
-     "cue": "Glowing horns → line up a pillar → dodge sideways → burst when he collides."
+     "cue": "In dragon form, the horns glow before the charge.",
+     "plan": {
+      "react": "Line up a pillar and dodge sideways after he commits.",
+      "burst": "Unload when the dragon hits the pillar. Use safe openings in the bridge and humanoid encounters to carry damage forward."
+     }
     }
    },
    {
@@ -29587,7 +29615,11 @@
     },
     "cover": {
      "src": "assets/bosses/ursula-dragon-banner.webp",
-     "cue": "Avoid the grab rush, then punish the recovery. Keep your longest casts for a clear opening or a Break."
+     "cue": "Watch for the grab rush and the recovery animation if it misses.",
+     "plan": {
+      "react": "Leave yourself room to dodge the grab rush. In dragon form, reset to a position you can dodge from.",
+      "burst": "Punish a missed rush or a Break. Her remaining HP carries into the next arena."
+     }
     }
    },
    {
