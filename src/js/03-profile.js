@@ -48,6 +48,7 @@ function formatSkillText(text) {
     .join('\n');
 }
 let currentProfileName = '';
+let currentProfileSkill = '';
 const SKILL_MAX_TO_LV1 = 1.75; // max-level weight = Lv.1 weight x 1.75 (verified on every skill patched in 1.1.0)
 // Value at a lower level: round(max / 1.75 x level multiplier) (47 of 57 in-game checks exact, the other 10 are 1 off). Max level stays exactly as in the codex.
 function skillLevelValue(num, factor) {
@@ -296,6 +297,7 @@ function buildProfileSkillCard(sk) {
 function focusProfileSkill(hero, name) {
   const skill = findSkill(hero, name);
   if (!skill) return;
+  currentProfileSkill = name;
   requestAnimationFrame(() => {
     flashEl(
       [...document.querySelectorAll('#profileSkillsGrid .profile-skill')].find(
@@ -332,6 +334,7 @@ function openCharacterProfile(name, initialTab = 'skills') {
   const h = HEROES.find((x) => x.name.toLowerCase() === String(name).toLowerCase());
   if (!h) return;
   currentProfileName = h.name;
+  currentProfileSkill = '';
   document.documentElement.dataset.page = 'hero';
   if ($('hdrPage')) $('hdrPage').textContent = h.name;
   navSchedule();
@@ -771,6 +774,17 @@ document.addEventListener('click', (e) => {
   const open = e.target.closest('[data-open-hero]');
   if (open) {
     navigateRef('hero', open.dataset.openHero);
+    return;
+  }
+  const preview = e.target.closest('.guide-team-preview-trigger');
+  if (preview) {
+    if (refPinned === preview) {
+      refPinned = null;
+      hideKarmaPopover(0);
+    } else {
+      refPinned = preview;
+      showRefPopover(preview);
+    }
     return;
   }
   const a = e.target.closest('.ref');

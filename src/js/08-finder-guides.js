@@ -72,13 +72,33 @@ function renderFinder() {
       <div class="finder-art" style="--finder-art:url('${E(absUrl(art))}')"><h3>${E(entry.name)}</h3></div>
       <div class="finder-content">${statuses.length ? `<div class="finder-status"><span>${tower ? 'Tower status' : 'Weak to'}</span> ${statuses.map(formatSkillText).join(' · ')}</div>` : ''}
       <p>${formatSkillText(summary)}</p>
-      <div class="finder-actions"><a href="${E(routeUrl('tier'))}#${tierHash}">See hero rankings →</a>${boss?.id === 'ursula' ? `<a href="${E(routeUrl('teams'))}#speed">See recorded Ursula teams →</a>` : ''}</div>
+      <div class="finder-actions"><a href="${E(routeUrl('tier'))}#${tierHash}">See hero rankings →</a>${boss ? guideLink(boss.type.toLowerCase() + '-' + boss.id, 'Open fight guide →') : guideLink('tower-' + tower.id, 'Open tower guide →')}${boss?.id === 'ursula' ? `<a href="${E(routeUrl('teams'))}#speed">See recorded Ursula teams →</a>` : ''}</div>
       ${teamLinks ? `<h4>Teams to try</h4><ul class="finder-team-list">${teamLinks}</ul>` : ''}
       </div></article>`;
   }
   encounter.onchange = () => update(true);
   difficulty.onchange = () => update();
   update(true);
+  difficulty.dataset.defaultDifficulty = difficulty.value;
+}
+
+function finderSelection() {
+  const encounter = $('finderEncounter');
+  const difficulty = $('finderDifficulty');
+  if (encounter.selectedIndex === 0 && difficulty.value === difficulty.dataset.defaultDifficulty) return null;
+  return { encounter: encounter.value, difficulty: difficulty.value };
+}
+
+function selectFinderEncounter(selection) {
+  const encounter = $('finderEncounter');
+  const difficulty = $('finderDifficulty');
+  const entry = [...encounter.options].find((option) => option.value === selection?.encounter);
+  encounter.value = (entry || encounter.options[0]).value;
+  encounter.onchange();
+  if (entry && [...difficulty.options].some((option) => option.value === selection.difficulty)) {
+    difficulty.value = selection.difficulty;
+    difficulty.onchange();
+  }
 }
 
 const MECHANICS_GUIDES = [
@@ -159,7 +179,12 @@ function guideTeamLink(team, label = team) {
     E(team) +
     '">' +
     E(label) +
-    '</a>'
+    '</a>' +
+    '<button type="button" class="touch-ref-preview guide-team-preview-trigger" aria-label="Preview ' +
+    E(team) +
+    ' lineup" data-ref-type="team" data-ref-key="' +
+    E(team) +
+    '">ⓘ</button>'
   );
 }
 
@@ -385,7 +410,9 @@ function renderGuides(hash = '') {
     root.innerHTML = renderGuideLibrary();
     return;
   }
-  const back = `<nav class="guide-index" aria-label="Guide navigation">${guideLink('', '← All guides')}</nav>`;
+  const boss = guideBoss(id);
+  const finder = boss && routeUrl('finder', { finder: { encounter: boss.id } });
+  const back = `<nav class="guide-index" aria-label="Guide navigation">${guideLink('', '← All guides')}${finder ? `<a href="${E(finder)}">Open in Boss &amp; Tower Finder →</a>` : ''}</nav>`;
   if (id === GUIDES.startHere?.id) {
     const quickLinks = `<nav class="guide-index" aria-label="Combat quick links">${MECHANICS_GUIDES.map((guide) => guideLink(guide.id, guide.title)).join('')}</nav>`;
     root.innerHTML = back + quickLinks + startHereHtml(GUIDES.startHere);
@@ -397,7 +424,6 @@ function renderGuides(hash = '') {
   const nextLink = team
     ? guideTeamLink(team, guide.next.label + ' →')
     : '<a href="' + E(next) + '">' + E(guide.next.label) + ' →</a>';
-  const boss = guide.cover && guideBoss(id);
   const accent = boss && (ARCH_COLORS[boss.weak[0]] || '#e3818b');
   const banner = guide.cover
     ? `<div class="guide-fight-art" style="--fight-art:url('${E(absUrl(guide.cover.src))}')"></div>`

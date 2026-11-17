@@ -94,13 +94,13 @@ Terms:
 - Poison, Bleed, Burn and Shock: **5 ticks per application** (0, 2.5, 5, 7.5, 10 s), up to 3 stacks.
 - **Tick = 50% / 75% / 100% of the Attack of the hero who applied the first stack**, at 1 / 2 / 3 stacks, rounded down, using that hero's Attack at the moment of application.
 - Ticks ignore Defense, never crit, and aren't raised by AAP, Additional Damage or status sets.
-- Frost has no ticks: 3 stacks Freeze the enemy, and Frozen takes +50% from hits. Only Cerese's Shattering Touch shatters Frozen enemies and Ice Blocks.
+- Frost has no ticks. The first completed stack adds +50% to hits and enables Frost-related stat bonuses and Hunt weakness removal. Three stacks trigger Freeze, which enables shatter. Cerese's Shattering Touch shatters Frozen enemies and Ice Blocks.
 
 ### 3.3 Status build-up (Test 01; [TEST01_RESULTS.md](TEST01_RESULTS.md)) · 29 Oct – 9 Nov
 - Each skill adds a fixed fraction of one stack (or of the gauge, for Airborne, Knockdown and Stun, which fill once and trigger). Values per skill are in TEST01_RESULTS.
 - Not affected by hero or skill level, and neither is Super Armor gauge damage (Castella removed the same gauge at Lv.20 as at Lv.70).
 - **Super Armor Break doubles the build-up of physical statuses** (Stun, Knockdown, Airborne), not Frost or DoTs.
-- Bosses resist build-up more than mobs, and more at higher difficulty (Trait Dungeon I to III roughly halves it). A weakness raises build-up about 2–3× and doubles that status's hit bonus.
+- Bosses resist build-up more than mobs, and more at higher difficulty (Trait Dungeon I to III roughly halves it). A Trait Dungeon weakness raises build-up about 2–3× and doubles that status's hit bonus. Hunt weaknesses increase build-up and the matching status removes the Nightmare/Hell resistance.
 - **Hunt boss resistances (David, Furcas, 12 Nov; gauge fill read by eye from the build-up rings):** each Hunt boss has **two weak elements**; other elements aren't immune but resist far more. Ryza's Stormbringer and Charlotte's Poison Dagger compared with the Training Ogre (Test 01):
 
   | Furcas | Shock (weak) | Airborne (physical) | Poison (not weak) |
@@ -125,9 +125,9 @@ Terms:
   - **Trait Dungeon**: minions ×1.6, bosses ×3.2. The weak archetype's status hit bonus is doubled.
   - **Currency Dungeon**: ×0.4, with no type or boss multiplier.
   - Type multipliers (`types`): e.g. Goblin Archer ×0.8, Barbarian and Berserker ×1.1, Lesser Dragon ×1.2, Greater Dragon ×1.5, named enemies with visible changes ×1.15. Look-alike enemies can differ by one 5% step.
-- **Towers of Trials** (`TOWER_TRIALS.bonus`): hits on an enemy with the tower's own status get **+400%**, and each damage-over-time status **+100%**, added to the Additional Damage pool. Other statuses add nothing. Crushing isn't measured.
+- **Towers of Trials** (`TOWER_TRIALS.bonus`): hits on an enemy with the tower's own status get **+400%**, and each damage-over-time status **+100%**, added to the Additional Damage pool. Other statuses add nothing to the Tower Additional Damage pool. Amplitude uses Stun, Gale uses Airborne, and Crushing uses Knockdown.
 - **Hunt bosses, Nightmare and up**: a big damage-resistance buff that applying the boss's weak status removes (Furcas: Burn). **Physical statuses alone also remove it for as long as they last** (David, 12 Nov).
-- **Hunt boss Defense (David's readings 12 Nov, worked out by Claude):** Ryza (panel Attack 5577, Defense Ignore 21.09%, Armor Penetration 0, Shock / All Status AAP 346 / 169, AAP Increase 22.19%, Shock Additional Damage 34%), first hit of her basic attack, non-crit. Ogre (Defense 1000): 1194. Defense from the ratio to the Ogre with formula 3.1; the Nightmare/Hell "+ shock" readings divided by the Shock factor ×2.237 (AAP, +50% hit, +34%), "+ frost" by the Frozen factor ×1.556 (All AAP, +50% hit).
+- **Hunt boss Defense (David's readings 12 Nov, worked out by Claude):** Ryza (panel Attack 5577, Defense Ignore 21.09%, Armor Penetration 0, Shock / All Status AAP 346 / 169, AAP Increase 22.19%, Shock Additional Damage 34%), first hit of her basic attack, non-crit. Ogre (Defense 1000): 1194. Defense from the ratio to the Ogre with formula 3.1; the Nightmare/Hell "+ shock" readings divided by the Shock factor ×2.237 (AAP, +50% hit, +34%), "+ frost" by the Frost factor ×1.556 (All AAP, +50% hit).
   | Boss | Normal | Hard | Very Hard | Extreme | Nightmare | Hell |
   |---|---|---|---|---|---|---|
   | Furcas | 107 | 344 | 916 | 1258 | 1928 | 2034 |

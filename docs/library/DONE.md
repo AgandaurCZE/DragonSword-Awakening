@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 17 Nov — Player route and combat audit
+
+Fixed lost URL selections on Finder, encounter rankings, Ursula speed runs and hero pages. Connected Finder results to encounter guides, added touch previews, restored Frost’s hit bonus in the build preview and exposed enemy Defense debuffs in the Damage Calculator. [Audit and shot list](PLAYER_ROUTE_AUDIT.md).
+
 ## 17 Nov — Hunt and Raid walkthroughs and team previews
 
 Added fight cues and punish windows to the six Hunts and both Raids, kept the existing guide screenshots, and linked named teams to their exact cards and roster previews. Attack descriptions draw on the project combat notes and [first-hand encounter notes](https://gq-game-mods.blogspot.com/2026/08/dragonsword-awakening-boss-fight.html). Difficulty-specific Earthlander and Furcas attacks are scoped to Nightmare. A [Ursula clear discussion](https://www.reddit.com/r/DSwordAwakening/comments/1w2t12b/finally_cleared_ursula_level_90_with_no_food_but/) supports the Frost team approach.

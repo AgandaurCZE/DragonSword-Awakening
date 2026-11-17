@@ -4,6 +4,8 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 
 - Guides and Shortcuts have topic emblems. All six Hunt and both Raid guides have fight cues, openings and linked teams with mini rosters. Both Raid guides describe HP carry-over.
 
+- The [player route and mechanics audit](PLAYER_ROUTE_AUDIT.md) records the three flows, the remaining in-game checks, and the screenshot shot list.
+
 ## The site
 - Public Beta, live since 11 Nov. Every page has a clean path (AGENTS.md). All 20 heroes, tier list (A0 + Mastery view and Awakenings view, re-rated 14 Nov from David's file), Teams (six lineups + Ursula speed runs), Boss & Tower Finder, Dungeons, Gear, Karma, Familiars, Cookbook, Items, Titles, Achievements, Damage and Levelling calculators, News and Patch Notes.
 - Upcoming heroes: `UPCOMING_HEROES` (15 Nov). Jerome (Bloodburst, Lentus Rebellion, December update, sword, parry) is shown on the Heroes page; Veronica and Logan are data only (Lentus Rebellion). Notes: `assets/sources/upcoming/notes.txt`.

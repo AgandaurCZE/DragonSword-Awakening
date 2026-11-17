@@ -17471,7 +17471,7 @@
     "Tick damage is rounded down.",
     "Ticks never crit (watched 500 ticks over all four statuses)."
    ],
-   "untested": "Not tested yet: how fast build-up fills per press (only gauge estimates), and whether one press can add more than one stack. Tested: two different statuses' Additional Damage add (30 Oct 2026); three physical statuses add to x4 with no cap (31 Oct 2026); Break gives no hit bonus (29 Oct 2026); Frost: no ticks, 3 stacks Freeze the enemy, Frozen = +50% on hits (31 Oct 2026)."
+   "untested": "Not tested yet: how fast build-up fills per press (only gauge estimates), and whether one press can add more than one stack. Tested: two different statuses' Additional Damage add (30 Oct 2026); three physical statuses add to x4 with no cap (31 Oct 2026); Break gives no hit bonus (29 Oct 2026); Frost: no ticks, +50% to hits from the first stack, and Freeze at three stacks."
   }
  },
  "PATCH_NOTES": {
@@ -30369,13 +30369,13 @@
  },
  "DAMAGE_CALC": {
   "note": "Rules for the preview damage calculator (renderDamageCalc, dcCompute). Hit bonuses, stacking and the order of the pools come from DAMAGE_TESTS.findings; Defense from DEFENSE_MODEL.",
-  "formula": "Damage = (Attack + status Additional Attack Power) × skill % × 1000 / (1000 + Defense × (1 − Defense Ignore) − Armor Penetration) × (1 + hit bonuses) × (1 + Additional Damage). A crit multiplies that by (1 + Critical Damage).",
+  "formula": "Damage = (Attack + status Additional Attack Power) × skill % × 1000 / (1000 + Defense × (1 − Defense Ignore) × (1 − Defense debuff) − Armor Penetration) × (1 + hit bonuses) × (1 + Additional Damage). A crit multiplies that by (1 + Critical Damage).",
   "intro": "Predicts a skill's damage from the stats on your in-game panel. Damage has no random spread, so the same setup always deals the same number.",
   "statsHint": "Copy these from the stats panel. Include anything active, such as sets and buffs: the U key opens the panel during a fight.",
   "buffHint": "For a buff you can't read on your panel, such as Bless, Brave One or an Attack Power set bonus. Buffs join the Attack Power Up pool, so both numbers are needed.",
-  "statusHint": "Tick what is on the enemy when the hit lands. Hit bonuses add together, with no cap. Additional Attack Power and Additional Damage only count for ticked statuses.",
+  "statusHint": "Tick what is on the enemy when the hit lands. Frost counts from one completed stack, including during Freeze. At three stacks, Freeze also enables skills that require a frozen target. Hit bonuses add together. Additional Attack Power and Additional Damage count for ticked statuses.",
   "emptyHint": "Enter your Attack to see the damage.",
-  "overNote": "Your Armor Penetration is higher than the enemy's remaining Defense, so it's treated as zero Defense.",
+  "overNote": "Your Armor Penetration exceeds the remaining Defense. This calculator preview stops at zero Defense.",
   "weaknessUntested": "A weakness to this status is taken to double its hit bonus, as it does for Poison and Airborne.",
   "weaknessMeasured": [
    "Poison",

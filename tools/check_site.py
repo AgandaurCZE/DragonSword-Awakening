@@ -452,8 +452,9 @@ def beta_routes(browser, base):
     page.wait_for_timeout(100)
     for tab in ('review','build','skills'):
         page.locator(f'[data-profile-tab="{tab}"]').click()
-        if page.url != base+'Ryza':
-            bad('Beta hero tab changed the unified address')
+        target = base+'Ryza'+('#'+tab if tab != 'skills' else '')
+        if page.url != target:
+            bad('Beta hero tab lost the selected view in its address')
     page.locator('[data-page="gear"]').click()
     page.wait_for_timeout(100)
     page.go_back()
@@ -464,12 +465,12 @@ def beta_routes(browser, base):
     page.wait_for_timeout(100)
     if page.url != base+'gear' or page.evaluate('navCurrent().page') != 'gear':
         bad('Beta Forward did not return to Gear')
-    for old, canonical in [('?tiers=new#teams','teams'), ('?preview=1#gear','gear'), ('?tiers=new#hero/Johnny/review','Johnny')]:
+    for old, canonical in [('?tiers=new#teams','teams'), ('?preview=1#gear','gear'), ('?tiers=new#hero/Johnny/review','Johnny#review')]:
         page.goto(base+old, wait_until='networkidle')
         page.wait_for_function('NAV.ready')
         if page.url != base+canonical:
             bad(f'Beta legacy alias {old}: not canonicalized')
-    print(f'  Beta: shortcut order, branding, {len(cases)} direct routes and refreshes, unified hero URL, Back/Forward, old links')
+    print(f'  Beta: shortcut order, branding, {len(cases)} direct routes and refreshes, shareable hero tabs, Back/Forward, old links')
     ctx.close()
 
 
@@ -522,8 +523,9 @@ def beta_interactions(browser, base):
         }""")
         for issue in issues:
             bad(f'Beta interactions {width}px: {issue}')
-        if page.url != base+'tierlist':
-            bad(f'Beta interactions {width}px: tier controls changed unified URL')
+        tower_id = page.evaluate('TOWER_TRIALS.towers.at(-1).id')
+        if page.url != base+'tierlist#tower='+tower_id:
+            bad(f'Beta interactions {width}px: tier controls lost the tower selection')
         page.evaluate("navNavigate({page:'tools',tool:'damage'})")
         attack = page.locator('[data-k="attack"]')
         attack.fill('1000')
@@ -1014,13 +1016,26 @@ def guide_polish(browser, base):
     assert 'Frost · Burn' in result.inner_text()
     assert 'knocks off a fist' in result.inner_text()
     assert 'Frost Prison' in result.inner_text()
+    assert page.url.endswith('finder#encounter=gallore&difficulty=Hell')
+    result.get_by_role('link', name='Open fight guide').click()
+    assert page.locator('#hunt-gallore').is_visible()
+    page.go_back()
+    assert page.locator('#finderEncounter').input_value() == 'gallore'
+    assert page.locator('#finderDifficulty').input_value() == 'Hell'
     page.locator('#finderDifficulty').select_option('Normal')
     assert 'damage-resistance rule is inactive' in result.inner_text()
+    page.reload(wait_until='networkidle')
+    page.wait_for_function("typeof NAV !== 'undefined' && NAV.ready")
+    assert page.locator('#finderEncounter').input_value() == 'gallore'
+    assert page.locator('#finderDifficulty').input_value() == 'Normal'
     page.locator('#finderEncounter').select_option('gale')
     assert not page.locator('#finderDifficultyLabel').is_visible()
     assert 'Airborne adds +400%' in result.inner_text()
     result.get_by_role('link', name='See hero rankings').click()
     page.wait_for_function("NAV.ready && V2.mode === 'towers' && V2.tower === 'gale'", polling=100)
+    assert page.url.endswith('/tierlist#tower=gale')
+    page.reload(wait_until='networkidle')
+    page.wait_for_function("typeof NAV !== 'undefined' && NAV.ready && V2.tower === 'gale'")
     page.locator('#v2FilterPanel summary').click()
     page.locator('[data-v2role="Support"]').click()
     assert page.locator('#v2FilterPanel summary').inner_text() == 'Filters (1)'
@@ -1045,6 +1060,12 @@ def guide_polish(browser, base):
     assert banner.get_attribute('href').endswith('/guides#start-here')
     banner.click()
     assert page.locator('#start-here').is_visible()
+    starter_preview = page.get_by_role('button', name='Preview Royal Inferno lineup', exact=True)
+    starter_preview.click()
+    page.locator('#karmaPopover .guide-team-preview').wait_for(state='visible')
+    assert page.locator('#karmaPopover .guide-team-preview li > span').all_text_contents() == ['Kalsion', 'Kalien', 'Reina']
+    starter_preview.click()
+    page.locator('#karmaPopover').wait_for(state='hidden')
     assert 'Nightmare' not in page.locator('#start-here').inner_text()
     page.get_by_role('navigation', name='On this page').get_by_role('link', name='How combat really works').click()
     page.wait_for_function("document.activeElement.id === 'start-here-combat'")
@@ -1091,6 +1112,39 @@ def guide_polish(browser, base):
             assert guide.locator('section .guide-team-link').count()
         assert guide.locator('.guide-next a').get_attribute('href').startswith(page.evaluate('APP_ROOT'))
         page.get_by_role('link', name='All guides').click()
+    page.goto(base + 'teams#team=Royal%20Inferno', wait_until='networkidle')
+    page.wait_for_function("typeof NAV !== 'undefined' && NAV.ready")
+    preview = page.locator('[data-team-name="Royal Inferno"] .team-combo').get_by_role('button', name='Preview Explosion')
+    preview.click()
+    card = page.locator('#karmaSkillPopover')
+    card.wait_for(state='visible')
+    assert 'Explosion' in card.locator('h4').inner_text()
+    slider = card.get_by_role('slider')
+    assert slider.is_visible()
+    card.get_by_role('button', name='Open Explosion on Kalsion').click()
+    assert page.url.endswith('/Kalsion#skill=Explosion')
+    page.reload(wait_until='networkidle')
+    page.wait_for_function("typeof NAV !== 'undefined' && NAV.ready && NAV.state.skill === 'Explosion'")
+    page.locator('[data-profile-tab="build"]').click()
+    assert page.url.endswith('/Kalsion#build')
+    page.goto(base + 'guides#defense', wait_until='networkidle')
+    page.wait_for_function("typeof NAV !== 'undefined' && NAV.ready")
+    page.locator('#defense .guide-next a').click()
+    page.wait_for_function("typeof NAV !== 'undefined' && NAV.ready")
+    assert page.get_by_role('spinbutton', name='Enemy Defense debuff %').is_visible()
+    assert page.get_by_role('checkbox', name='Frost', exact=True).is_visible()
+    assert page.evaluate("""
+        Math.abs(dcCompute({attack:1000,pct:100,def:1000,dd:20,di:25,ap:100}).non - 2000/3) < 0.01 &&
+        gmSkillDmg({flat:1000}, {def:0,st:['Frost']}, {pct:100}).non === 1500 &&
+        dcCompute({attack:1000,pct:100,def:0,st:{Frozen:{on:true}}}).non === 1500
+    """)
+    page.goto(base + 'guides#raid-ursula', wait_until='networkidle')
+    page.wait_for_function("typeof NAV !== 'undefined' && NAV.ready")
+    page.get_by_role('link', name='See Ursula speedrun teams').click()
+    page.wait_for_function("typeof NAV !== 'undefined' && NAV.ready && TEAMS_VIEW.speed")
+    assert page.url.endswith('/teams#speed')
+    page.reload(wait_until='networkidle')
+    page.wait_for_function("typeof NAV !== 'undefined' && NAV.ready && TEAMS_VIEW.speed")
     for path in ['teams', 'news']:
         page.goto(base + path, wait_until='networkidle')
         page.wait_for_function('NAV.ready')

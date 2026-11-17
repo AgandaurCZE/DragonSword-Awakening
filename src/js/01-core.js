@@ -80,8 +80,7 @@ function isPlainLinkClick(event) {
   return event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey;
 }
 function heroLinkUrl(name, tab = 'skills', skill = '') {
-  const path = routeUrl('hero', { hero: name });
-  return path + (skill ? '#skill=' + encodeURIComponent(skill) : tab === 'build' ? '#build' : '');
+  return routeUrl('hero', { hero: name, tab, skill });
 }
 function wireTeamCharacter(element, hero) {
   element.href = heroLinkUrl(hero.name, 'build');
@@ -138,7 +137,8 @@ function formatTeamSkillText(raw, team) {
   for (const m of matches) {
     const { heroName, displayName } = m.skill;
     const link = `<a href="${profileEsc(heroLinkUrl(heroName, 'skills', displayName))}" class="karma-skill-link team-skill-link" data-karma-skill="${profileEsc(displayName)}" data-karma-hero="${profileEsc(heroName)}">${profileEsc(m.matched)}</a>`;
-    html = html.replace(m.token, link);
+    const preview = `<button type="button" class="touch-ref-preview karma-skill-link" data-karma-skill="${profileEsc(displayName)}" data-karma-hero="${profileEsc(heroName)}" aria-label="Preview ${profileEsc(displayName)}">ⓘ</button>`;
+    html = html.replace(m.token, link + preview);
   }
   return html;
 }

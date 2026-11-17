@@ -157,7 +157,8 @@ function dcCompute(i) {
   const def = N(i.def),
     di = N(i.di),
     ap = N(i.ap),
-    eff = (d, p) => Math.max(0, def * (1 - d / 100) - p),
+    reducedDef = def * (1 - Math.max(0, Math.min(N(i.dd), 100)) / 100),
+    eff = (d, p) => Math.max(0, reducedDef * (1 - d / 100) - p),
     fac = (d, p) => K / (K + eff(d, p));
   const base = (((atk + aap) * N(i.pct)) / 100) * (1 + hit / 100) * (1 + ad) * (i.resist > 0 ? i.resist : 1),
     cd = N(i.cd) / 100,
@@ -176,7 +177,7 @@ function dcCompute(i) {
     noAp: base * fac(di, 0),
     noDi: base * fac(0, ap),
     none: base * fac(0, 0),
-    over: def * (1 - di / 100) < ap,
+    over: reducedDef * (1 - di / 100) < ap,
     dots: on.filter((s) => dots.includes(s.name)),
   };
 }
@@ -210,6 +211,7 @@ const DC_DEF = {
   cr: 5,
   ap: 0,
   di: 0,
+  dd: 0,
   apu: '',
   buff: '',
   enemy: 0,
@@ -257,6 +259,10 @@ function dcPct(s, lv) {
   const m = s.meta.maxLevel;
   return !m || m < 2 ? s.meta.attackPct : skillLevelValue(s.meta.attackPct, skillLevelFactor(lv, m).factor);
 }
+// Keep the original Frozen key for saved calculator inputs and progress backups.
+function dcStatusLabel(name) {
+  return name === 'Frozen' ? 'Frost' : name;
+}
 function renderDamageCalc() {
   const root = $('dcRoot');
   if (!root || !DAMAGE_CALC || !DEFENSE_MODEL) return;
@@ -289,17 +295,20 @@ function renderDamageCalc() {
   const rows = C.statuses
     .map((s) => {
       const c = ARCH_COLORS[STATUS_ARCHETYPE[s.name]] || 'var(--text)';
-      const r = S.st[s.name] || {};
-      return `<tr><td><label class="dc-on"><input type="checkbox" data-st="${E(s.name)}" data-f="on"${r.on ? ' checked' : ''}><b style="color:${c}">${E(s.name)}</b></label></td><td class="n dc-mute">${s.hitBonus ? '+' + s.hitBonus + '%' : 'none'}<span class="dc-xb" data-xh="${E(s.name)}" hidden></span></td><td><input type="number" min="0" step="any" inputmode="decimal" data-st="${E(s.name)}" data-f="aap" aria-label="${E(s.name)} Additional Attack Power" value="${E(r.aap ?? '')}"></td><td><div class="dc-adw"><input type="number" min="0" step="any" inputmode="decimal" data-st="${E(s.name)}" data-f="ad" aria-label="${E(s.name)} Additional Damage %" value="${E(r.ad ?? '')}"><span class="dc-xb" data-xa="${E(s.name)}" hidden></span></div></td></tr>`;
+      const r = S.st[s.name] || {},
+        label = dcStatusLabel(s.name);
+      return `<tr><td><label class="dc-on"><input type="checkbox" data-st="${E(s.name)}" data-f="on"${r.on ? ' checked' : ''}><b style="color:${c}">${E(label)}</b></label></td><td class="n dc-mute">${s.hitBonus ? '+' + s.hitBonus + '%' : 'none'}<span class="dc-xb" data-xh="${E(s.name)}" hidden></span></td><td><input type="number" min="0" step="any" inputmode="decimal" data-st="${E(s.name)}" data-f="aap" aria-label="${E(label)} Additional Attack Power" value="${E(r.aap ?? '')}"></td><td><div class="dc-adw"><input type="number" min="0" step="any" inputmode="decimal" data-st="${E(s.name)}" data-f="ad" aria-label="${E(label)} Additional Damage %" value="${E(r.ad ?? '')}"><span class="dc-xb" data-xa="${E(s.name)}" hidden></span></div></td></tr>`;
     })
     .join('');
   root.innerHTML = `<div class="gx-box dc-head"><h3>Damage calculator <span class="gx-tag">BETA</span></h3><p class="gx-sub">${E(C.intro)}</p></div><div class="dc"><div class="dc-in">
  <div class="gx-box"><h3>Skill</h3><div class="dc-g"><label class="dc-f"><span>Hero</span><select id="dcHero">${HEROES.map((h) => `<option${h.name === S.hero ? ' selected' : ''}>${E(h.name)}</option>`).join('')}</select></label><label class="dc-f dc-w"><span>Skill</span><select id="dcSkill"></select></label><label class="dc-f"><span>Skill level</span><select id="dcLv"></select></label><label class="dc-f" id="dcVarW"><span>How it's used</span><select id="dcVar"></select></label>${num('pct', 'Skill %')}</div><p class="gx-note" id="dcSkillNote"></p></div>
  <div class="gx-box"><h3>Your stats</h3><p class="gx-sub">${E(C.statsHint)}</p><div class="dc-g">${num('attack', 'Attack')}${num('cd', 'Critical Damage %')}${num('cr', 'Critical Rate %')}${num('ap', 'Armor Penetration')}${num('di', 'Defense Ignore %')}${num('all', 'All Status Additional Attack Power')}${num('inc', 'Status Additional Attack Power Increase %')}</div>
  <details class="dc-more"><summary>Attack buff not on your panel</summary><p class="gx-note">${E(C.buffHint)}</p><div class="dc-g">${num('apu', 'Attack Power Up on panel %')}${num('buff', 'Extra Attack Power %')}</div></details></div>
- <div class="gx-box"><h3>Enemy</h3><div class="dc-where" id="dcWhere" role="group" aria-label="Where">${places.map((p) => `<button type="button" data-place="${E(p.id)}" aria-pressed="${p.id === S.place}"${p.id === S.place ? ' class="on"' : ''}>${E(p.label)}</button>`).join('')}</div><div class="dc-g"><label class="dc-on dc-bossw" id="dcBossW"><input type="checkbox" id="dcBoss"${S.boss ? ' checked' : ''}>Boss</label><label class="dc-f dc-w" id="dcEnemyW"><span>Enemy</span><select id="dcEnemy"></select></label><label class="dc-f" id="dcElvW"><span>Enemy level</span><input type="number" min="1" step="1" inputmode="numeric" id="dcElv" value="${E(S.elv)}"></label>${num('def', 'Enemy Defense')}<label class="dc-f" id="dcWeakW"><span>Weak to (Trait Dungeons)</span><select data-k="weak"><option value="">None</option>${C.statuses
+ <div class="gx-box"><h3>Enemy</h3><div class="dc-where" id="dcWhere" role="group" aria-label="Where">${places.map((p) => `<button type="button" data-place="${E(p.id)}" aria-pressed="${p.id === S.place}"${p.id === S.place ? ' class="on"' : ''}>${E(p.label)}</button>`).join('')}</div><div class="dc-g"><label class="dc-on dc-bossw" id="dcBossW"><input type="checkbox" id="dcBoss"${S.boss ? ' checked' : ''}>Boss</label><label class="dc-f dc-w" id="dcEnemyW"><span>Enemy</span><select id="dcEnemy"></select></label><label class="dc-f" id="dcElvW"><span>Enemy level</span><input type="number" min="1" step="1" inputmode="numeric" id="dcElv" value="${E(S.elv)}"></label>${num('def', 'Enemy Defense')}${num('dd', 'Enemy Defense debuff %')}<label class="dc-f" id="dcWeakW"><span>Weak to (Trait Dungeons)</span><select data-k="weak"><option value="">None</option>${C.statuses
    .filter((s) => s.hitBonus)
-   .map((s) => `<option${S.weak === s.name ? ' selected' : ''}>${E(s.name)}</option>`)
+   .map(
+     (s) => `<option value="${E(s.name)}"${S.weak === s.name ? ' selected' : ''}>${E(dcStatusLabel(s.name))}</option>`,
+   )
    .join(
      '',
    )}</select></label><label class="dc-f" id="dcTowerW"><span>Tower of Trials</span><select data-k="tower"><option value="">Not in a tower</option>${(TOWER_TRIALS.towers || []).map((t) => `<option value="${E(t.id)}"${S.tower === t.id ? ' selected' : ''}>${E(t.name)}</option>`).join('')}</select></label></div><p class="gx-note" id="dcEnemyNote"></p></div>
@@ -423,7 +432,7 @@ function renderDamageCalc() {
           el.title = t || '';
         };
       const w = dcWeak() === s.name && s.hitBonus ? s.hitBonus * (C.weaknessMultiplier - 1) : 0;
-      set(hx, w, w ? C.weakTip.replace('{s}', s.name).replace('{m}', C.weaknessMultiplier) : '');
+      set(hx, w, w ? C.weakTip.replace('{s}', dcStatusLabel(s.name)).replace('{m}', C.weaknessMultiplier) : '');
       const a = tw ? (tw.status === s.name ? N(tb.own) : dots.includes(s.name) ? N(tb.dot) : N(tb.other)) : 0;
       set(
         ax,
@@ -487,7 +496,7 @@ function renderDamageCalc() {
     if (ei && ei.h) {
       un.push(ei.p.note);
       if (rs.mult !== 1) un.push(ei.p.buffNote);
-      else if (rs.by) small.push(ei.p.buffOff.replace('{status}', rs.by));
+      else if (rs.by) small.push(ei.p.buffOff.replace('{status}', dcStatusLabel(rs.by)));
     }
     if (ei && ei.t) {
       if (ei.p.note) un.push(ei.p.note);

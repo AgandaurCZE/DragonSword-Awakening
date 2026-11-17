@@ -18,8 +18,24 @@ function routeUrl(page, options = {}) {
         ? SITE.toolRoutes[options.tool] || SITE.routes.tools
         : (SITE.routes[page] ?? '');
   let hash = '';
+  if (page === 'hero') {
+    if (options.skill) hash = '#skill=' + encodeURIComponent(options.skill);
+    else if (options.tab === 'build' || options.tab === 'review') hash = '#' + options.tab;
+  }
   if (page === 'guides' && options.guide) hash = '#' + encodeURIComponent(options.guide);
-  if (page === 'teams' && options.team) hash = '#team=' + encodeURIComponent(options.team);
+  if (page === 'teams') {
+    if (options.team) hash = '#team=' + encodeURIComponent(options.team);
+    else if (options.speed) hash = '#speed';
+  }
+  if (page === 'tier') {
+    if (options.tier?.mode === 'bosses') hash = '#boss=' + encodeURIComponent(options.tier.boss);
+    if (options.tier?.mode === 'towers') hash = '#tower=' + encodeURIComponent(options.tier.tower);
+  }
+  if (page === 'finder' && options.finder) {
+    const { encounter, difficulty } = options.finder;
+    hash = '#encounter=' + encodeURIComponent(encounter);
+    if (difficulty) hash += '&difficulty=' + encodeURIComponent(difficulty);
+  }
   return APP_ROOT + path + hash;
 }
 function navCurrent() {
@@ -28,10 +44,18 @@ function navCurrent() {
       page: 'hero',
       hero: currentProfileName,
       tab: document.querySelector('.profile-tab.active')?.dataset.profileTab || 'skills',
+      ...(currentProfileSkill ? { skill: currentProfileSkill } : {}),
     };
   const page = document.querySelector('.nav-item.active[data-page]')?.dataset.page || 'home';
   const state = { page };
-  if (page === 'teams' && TEAMS_VIEW.target) state.team = TEAMS_VIEW.target;
+  if (page === 'teams') {
+    if (TEAMS_VIEW.target) state.team = TEAMS_VIEW.target;
+    else if (TEAMS_VIEW.speed) state.speed = true;
+  }
+  if (page === 'finder') {
+    const selection = finderSelection();
+    if (selection) state.finder = selection;
+  }
   if (page === 'guides' && $('guidesBody').dataset.guide) state.guide = $('guidesBody').dataset.guide;
   if (page === 'tools') state.tool = document.querySelector('#toolTabs .on')?.dataset.tool || 'damage';
   if (page === 'tier') state.tier = { mode: V2.mode, boss: V2.boss, tower: V2.tower, view: V2.view };
@@ -74,10 +98,14 @@ function navShow(state, scrollY = null) {
         renderTierV2();
       }
       if (state.page === 'tools' && state.tool) document.querySelector(`[data-tool="${state.tool}"]`)?.click();
-      if (state.page === 'teams') TEAMS_VIEW.target = state.team || '';
-      if (state.page === 'teams' && (state.team || state.speed)) {
-        TEAMS_VIEW.speed = Boolean(state.speed);
-        renderTeams();
+      if (state.page === 'finder') selectFinderEncounter(state.finder);
+      if (state.page === 'teams') {
+        const speed = Boolean(state.speed);
+        TEAMS_VIEW.target = state.team || '';
+        if (TEAMS_VIEW.speed !== speed) {
+          TEAMS_VIEW.speed = speed;
+          renderTeams();
+        }
         if (state.team)
           requestAnimationFrame(() =>
             flashEl([...document.querySelectorAll('.team-card')].find((card) => card.dataset.teamName === state.team)),
@@ -127,7 +155,8 @@ function navInitial() {
   const hero = HEROES.find((h) => h.name.toLowerCase() === path.toLowerCase());
   if (hero) {
     const skill = new URLSearchParams(hash).get('skill');
-    return { page: 'hero', hero: hero.name, tab: hash === 'build' ? 'build' : 'skills', ...(skill ? { skill } : {}) };
+    const tab = ['build', 'review'].includes(hash) ? hash : 'skills';
+    return { page: 'hero', hero: hero.name, tab, ...(skill ? { skill } : {}) };
   }
   const tool = Object.entries(SITE.toolRoutes).find(([, p]) => p.toLowerCase() === path.toLowerCase());
   if (tool) return { page: 'tools', tool: tool[0] };
@@ -139,6 +168,8 @@ function navInitial() {
     if (TIER_LIST_V2.bosses.some((entry) => entry.id === boss)) return { page, tier: { mode: 'bosses', boss } };
     if (TOWER_TRIALS.towers.some((entry) => entry.id === tower)) return { page, tier: { mode: 'towers', tower } };
   }
+  if (page === 'finder' && params.has('encounter'))
+    return { page, finder: { encounter: params.get('encounter'), difficulty: params.get('difficulty') } };
   if (page === 'teams' && hash === 'speed') return { page, speed: true };
   if (page === 'teams' && TEAM_DATA.some((team) => team.name === params.get('team')))
     return { page, team: params.get('team') };
@@ -148,7 +179,7 @@ function navInitial() {
 function navInit() {
   const initial = navInitial();
   navShow(initial);
-  NAV.state = initial.skill ? { ...navCurrent(), skill: initial.skill } : navCurrent();
+  NAV.state = navCurrent();
   NAV.url = routeUrl(NAV.state.page, NAV.state);
   NAV.ready = true;
   history.replaceState({ view: NAV.state, y: 0 }, '', NAV.url);
@@ -174,7 +205,12 @@ function navInit() {
     if (e.key === 'Enter' || e.key === ' ') navSchedule();
   });
   document.querySelector('.nav-item[data-page="teams"]').addEventListener('click', (e) => {
-    if (!NAV.restoring && isPlainLinkClick(e)) TEAMS_VIEW.target = '';
+    if (NAV.restoring || !isPlainLinkClick(e)) return;
+    TEAMS_VIEW.target = '';
+    if (TEAMS_VIEW.speed) {
+      TEAMS_VIEW.speed = false;
+      renderTeams();
+    }
   });
   document.querySelector('.nav-item[data-page="guides"]').addEventListener('click', (e) => {
     if (!NAV.restoring && isPlainLinkClick(e)) renderGuides();

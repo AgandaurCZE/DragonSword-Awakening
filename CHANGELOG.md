@@ -1,5 +1,13 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 17 Nov 2026 — Player routes, combat math and touch previews
+
+- Finder retains the encounter and difficulty, opens the corresponding walkthrough, and receives direct boss links back from fight guides. Boss and tower rankings, Ursula speed runs, hero tabs and exact skill links retain their selections on reload.
+- Added mobile preview buttons for team rosters and linked Team skills. The name links open their respective pages.
+- Labelled the Damage Calculator's Frost row for the first stack and added an enemy Defense debuff input. Fixed the gear build's sample hit so Frost adds its +50% hit bonus. The calculator's zero-Defense floor is explicitly a model boundary.
+- Reconciled the Frost, Trait Dungeon, Hunt and Tower descriptions in the mechanics notes. Logged patches checked, outstanding in-game questions and the screenshot list in PLAYER_ROUTE_AUDIT.
+- Full local checks passed. The 113-view comparison found the expected Finder action, Damage Calculator fields and Frost build numbers. A settled comparison isolated Othello’s 1.5× Frost hit correction at both widths after a progress frame appeared in the broad comparison.
+
 ## 17 Nov 2026 — Hunt and Raid walkthroughs and linked teams
 
 - Expanded all six individual Hunt guides and both Raid guides. Each uses encounter art, a cue to watch for and compact sections covering positioning, a damage window and team setup. Raid preparation includes teamwide Tomato Stew and the Earthshatterer Signal window.

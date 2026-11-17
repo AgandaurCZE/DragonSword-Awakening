@@ -8049,6 +8049,25 @@ a.guide-tile:focus-visible {
 .guide-fight .guide-next {
   margin-top: 16px;
 }
+.touch-ref-preview {
+  display: none;
+}
+@media (hover: none) {
+  .touch-ref-preview {
+    display: inline-grid;
+    place-items: center;
+    width: 30px;
+    height: 28px;
+    margin-inline-start: 3px;
+    padding: 0;
+    border: 1px solid #536679;
+    border-radius: 4px;
+    background: #263747;
+    color: #c7e8ff;
+    font: inherit;
+    vertical-align: middle;
+  }
+}
 .guide-team-link {
   color: #a9dcff;
   font-weight: 700;

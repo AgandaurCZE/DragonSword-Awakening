@@ -758,6 +758,7 @@ function closeCharacterProfile() {
 $('profileBackTier').addEventListener('click', closeCharacterProfile);
 document.querySelectorAll('[data-profile-tab]').forEach((b) =>
   b.addEventListener('click', () => {
+    currentProfileSkill = '';
     document.querySelectorAll('.profile-tab').forEach((x) => x.classList.toggle('active', x === b));
     document
       .querySelectorAll('.profile-tabpanel')
@@ -1219,7 +1220,7 @@ function gmRun(h, o) {
 }
 const GM_ROWS = 6;
 /* Strongest skill for the row boxes (11 Nov 2026): highest codex % at the skill's max level (× the first skillAdjust variant: the whole skill),
-   every ticked status on the target at once, damage by the DAMAGE_CALC formula (checked on Ryza and Sion within 0.05%). Frost itself has no hit bonus (Frozen +50%). */
+   every ticked status on the target at once, damage by the DAMAGE_CALC formula (checked on Ryza and Sion within 0.05%). Frost counts from the first completed stack. */
 function gmSkill(h) {
   let best = null;
   ((CHARACTER_PROFILE_DATA[h] || {}).skills || []).forEach((sk) => {
@@ -1243,7 +1244,7 @@ function gmSkillDmg(c, o, sk) {
     ad = 0;
   o.st.forEach((s) => {
     aap += g(s + ' Additional Attack Power') + g('All Status Effect Additional Attack Power');
-    hit += HB[s] || 0;
+    hit += HB[s === 'Frost' ? 'Frozen' : s] || 0;
     ad += g(s + ' Additional Damage');
   });
   aap *= 1 + g('Status Effect Additional Attack Power Increase') / 100;

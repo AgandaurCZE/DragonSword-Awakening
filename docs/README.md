@@ -24,6 +24,7 @@ This is the index of every note in the repository. A new chat (Claude, ChatGPT, 
 | Rating rules, roles, tags, and the reasoning behind each hero's rating | [`library/DECISIONS.md`](library/DECISIONS.md) |
 | David's to-do list in priority order (game tasks; open it in a browser) | [`dragonsword_david_todo_by_priority.html`](dragonsword_david_todo_by_priority.html) |
 | The launch checklist and public text changes waiting for launch | [`LAUNCH_CHANGES.md`](LAUNCH_CHANGES.md) |
+| **Player route and mechanics audit** plus the next guide screenshot list | [`library/PLAYER_ROUTE_AUDIT.md`](library/PLAYER_ROUTE_AUDIT.md) |
 | Dungeon banner art workflow | [`DUNGEON_ARTWORK_WORKFLOW.md`](DUNGEON_ARTWORK_WORKFLOW.md) |
 | Notes for ChatGPT / Codex | [`../CHATGPT.md`](../CHATGPT.md) |
 
