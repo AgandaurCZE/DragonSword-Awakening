@@ -1028,26 +1028,6 @@ def guide_polish(browser, base):
     page.wait_for_function("NAV.ready && document.activeElement.id === 'start-here-combat'")
     page.get_by_role('link', name='All guides').click()
     assert banner.is_visible() and page.url.endswith('/guides')
-    # Guide screenshots (GUIDES.articles[].figures): every picture drawn under its section and loaded,
-    # and a swiper's next button and dots move between screenshots.
-    for art in page.evaluate("GUIDES.articles.filter(a => a.figures).map(a => [a.id, a.figures.flatMap(f => f.images).length, a.figures.filter(f => f.images.length > 1).length])"):
-        aid, want, swipers = art
-        page.evaluate(f"navNavigate({{page: 'guides', guide: '{aid}'}})")
-        page.wait_for_selector(f'#{aid} .gf-slide img')
-        page.locator(f'#{aid} .gf img').evaluate_all("(images) => images.forEach((img) => img.loading = 'eager')")
-        page.wait_for_function(
-            f"[...document.querySelectorAll('#{aid} .gf img')].every((img) => img.complete && img.naturalWidth)")
-        got = page.locator(f'#{aid} .gf-slide').count()
-        if got != want or page.locator(f'#{aid} [data-gf]').count() != swipers:
-            raise AssertionError(f'guide {aid}: {got} of {want} screenshots, swipers wrong')
-        if swipers:
-            box = page.locator(f'#{aid} [data-gf]').first
-            box.scroll_into_view_if_needed()
-            assert box.locator('.gf-count').inner_text().startswith('1 / ')
-            box.locator('.gf-next').click()
-            page.wait_for_function(f"document.querySelector('#{aid} .gf-count').textContent.startsWith('2 / ')")
-            box.locator('[data-gf-go="0"]').click()
-            page.wait_for_function(f"document.querySelector('#{aid} .gf-count').textContent.startsWith('1 / ')")
     page.go_back()
     assert page.locator('#start-here').is_visible() and page.url.endswith('/guides#start-here-combat')
     page.wait_for_load_state('networkidle')
@@ -1085,6 +1065,26 @@ def guide_polish(browser, base):
         page.goto(base + path, wait_until='networkidle')
         page.wait_for_function('NAV.ready')
         assert page.evaluate('document.documentElement.scrollWidth === document.documentElement.clientWidth'), path
+    # Guide screenshots (GUIDES.articles[].figures): every picture drawn under its section and loaded,
+    # and a swiper's next button and dots move between screenshots.
+    for art in page.evaluate("GUIDES.articles.filter(a => a.figures).map(a => [a.id, a.figures.flatMap(f => f.images).length, a.figures.filter(f => f.images.length > 1).length])"):
+        aid, want, swipers = art
+        page.evaluate(f"navNavigate({{page: 'guides', guide: '{aid}'}})")
+        page.wait_for_selector(f'#{aid} .gf-slide img')
+        page.locator(f'#{aid} .gf img').evaluate_all("(images) => images.forEach((img) => img.loading = 'eager')")
+        page.wait_for_function(
+            f"[...document.querySelectorAll('#{aid} .gf img')].every((img) => img.complete && img.naturalWidth)")
+        got = page.locator(f'#{aid} .gf-slide').count()
+        if got != want or page.locator(f'#{aid} [data-gf]').count() != swipers:
+            raise AssertionError(f'guide {aid}: {got} of {want} screenshots, swipers wrong')
+        if swipers:
+            box = page.locator(f'#{aid} [data-gf]').first
+            box.scroll_into_view_if_needed()
+            assert box.locator('.gf-count').inner_text().startswith('1 / ')
+            box.locator('.gf-next').click()
+            page.wait_for_function(f"document.querySelector('#{aid} .gf-count').textContent.startsWith('2 / ')")
+            box.locator('[data-gf-go="0"]').click()
+            page.wait_for_function(f"document.querySelector('#{aid} .gf-count').textContent.startsWith('1 / ')")
     ctx.close()
     print('  mobile menu, Finder encounter and ranked-hero links, filters, profiles and guides checked')
 
