@@ -4,25 +4,36 @@
 function itemRarColor(r) {
   return { Grey: '#9aa3ad', Green: '#5fd38d', Blue: '#4aa3ff', Purple: '#b77cf2', Orange: '#ff9f43' }[r] || '#666';
 }
+const itemRequests = new Map();
 async function itemLoad(k) {
-  if (ITEMDB.data[k] !== undefined) return;
-  try {
-    const r = await fetch(`assets/items/${k}.json`);
-    ITEMDB.data[k] = r.ok ? (await r.json()).items || [] : [];
-  } catch (e) {
-    ITEMDB.data[k] = [];
+  if (ITEMDB.data[k] !== undefined) return ITEMDB.data[k];
+  if (!itemRequests.has(k)) {
+    itemRequests.set(
+      k,
+      fetch(`assets/items/${k}.json`)
+        .then(async (response) => {
+          if (!response.ok) return null;
+          return (ITEMDB.data[k] = (await response.json()).items || []);
+        })
+        .catch(() => null)
+        .finally(() => itemRequests.delete(k)),
+    );
   }
+  return itemRequests.get(k);
 }
 async function renderItems() {
   const root = $('itemsBody');
   if (!root) return;
-  await itemLoad(ITEMDB.tab);
+  const tab = ITEMDB.tab;
+  const items = await itemLoad(tab);
+  if (tab !== ITEMDB.tab) return;
   const E = profileEsc;
-  const L = ITEMDB.data[ITEMDB.tab] || [];
+  const L = items || [];
   const rars = [...new Set(L.map((x) => x.rarity).filter(Boolean))];
   const q = ITEMDB.q.toLowerCase();
   const list = L.filter(
     (x) =>
+      (!ITEMDB.entry || x.name === ITEMDB.entry) &&
       (!q ||
         (
           x.name +
@@ -39,28 +50,41 @@ async function renderItems() {
           .includes(q)) &&
       (!ITEMDB.rar || x.rarity === ITEMDB.rar),
   );
-  root.innerHTML = `<div class="it-bar">${ITEM_TABS.map(([k, l]) => `<button type="button" class="it-tab${k === ITEMDB.tab ? ' on' : ''}" data-ittab="${k}">${l}</button>`).join('')}</div>
- <div class="it-bar"><input id="itQ" placeholder="Search name, use or source…" value="${E(ITEMDB.q)}"><select id="itRar"><option value="">All rarities</option>${rars.map((r) => `<option${r === ITEMDB.rar ? ' selected' : ''}>${E(r)}</option>`).join('')}</select><span class="gx-note">${list.length} of ${L.length}</span></div>
- ${L.length ? `<div class="it-grid">${list.map((x) => `<div class="it-card" style="--rc:${itemRarColor(x.rarity)}">${x.icon ? `<img src="${E(x.icon)}" alt="" loading="lazy">` : ''}<div><b>${E(x.name)}</b><small>${E(x.type || '')}${x.rarity ? ' · ' + E(x.rarity) : ''}</small>${x.use ? `<p>${E(x.use)}</p>` : ''}${x.description ? `<p style="color:var(--muted);white-space:pre-line">${E(x.description)}</p>` : ''}${(x.sources || []).length ? `<p class="it-src">Where to get: ${x.sources.map(E).join(', ')}</p>` : ''}</div></div>`).join('')}</div>` : '<p class="gd-empty">No items recorded in this tab yet.</p>'}`;
+  const emptyMessage = !items
+    ? 'Could not load items. Select a tab to retry.'
+    : L.length
+      ? 'No items match these filters.'
+      : 'No items recorded in this tab yet.';
+  root.innerHTML = `<div class="it-bar">${ITEM_TABS.map(([k, l]) => `<button type="button" class="it-tab${k === tab ? ' on' : ''}" data-ittab="${k}">${l}</button>`).join('')}</div>
+ <div class="it-bar"><input id="itQ" aria-label="Filter the item database" placeholder="Search name, use or source…" value="${E(ITEMDB.q)}"><select id="itRar" aria-label="Item rarity"><option value="">All rarities</option>${rars.map((r) => `<option${r === ITEMDB.rar ? ' selected' : ''}>${E(r)}</option>`).join('')}</select>${ITEMDB.entry ? '<button type="button" class="it-tab" id="itShowAll">Show all items</button>' : ''}<span class="gx-note">${list.length} of ${L.length}</span></div>
+ ${list.length ? `<div class="it-grid">${list.map((x) => `<div class="it-card" style="--rc:${itemRarColor(x.rarity)}">${x.icon ? `<img src="${E(x.icon)}" alt="" loading="lazy">` : ''}<div><b>${E(x.name)}</b><small>${E(x.type || '')}${x.rarity ? ' · ' + E(x.rarity) : ''}</small>${x.use ? `<p>${E(x.use)}</p>` : ''}${x.description ? `<p style="color:var(--muted);white-space:pre-line">${E(x.description)}</p>` : ''}${(x.sources || []).length ? `<p class="it-src">Where to get: ${x.sources.map(E).join(', ')}</p>` : ''}</div></div>`).join('')}</div>` : `<p class="gd-empty">${emptyMessage}</p>`}`;
   root.querySelectorAll('[data-ittab]').forEach(
     (b) =>
       (b.onclick = () => {
+        clearReferenceEntry(false);
         ITEMDB.tab = b.dataset.ittab;
         ITEMDB.rar = '';
         renderItems();
       }),
   );
   const qi = $('itQ');
+  $('itShowAll')?.addEventListener('click', () => {
+    clearReferenceEntry();
+  });
   qi.oninput = () => {
+    clearReferenceEntry(false);
     ITEMDB.q = qi.value;
     const p = qi.selectionStart;
     renderItems().then(() => {
       const n = $('itQ');
+      if (!n || $('itemsPage').hidden) return;
       n.focus();
       n.setSelectionRange(p, p);
     });
+    navSchedule();
   };
   $('itRar').onchange = (e) => {
+    clearReferenceEntry(false);
     ITEMDB.rar = e.target.value;
     renderItems();
   };

@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 17 Nov — Site search and Cookbook pantry
+
+Added search to the desktop and mobile navigation, shareable links for individual recipes, items, gear sets and Karmas, and a quantity-aware pantry that shows cookable dishes and one-ingredient gaps. Pantry counts are kept while the visitor uses the site and reset on reload.
+
 ## 17 Nov — Player route and combat audit
 
 Fixed lost URL selections on Finder, encounter rankings, Ursula speed runs and hero pages. Connected Finder results to encounter guides, added touch previews, restored Frost’s hit bonus in the build preview and exposed enemy Defense debuffs in the Damage Calculator. [Audit and shot list](PLAYER_ROUTE_AUDIT.md).

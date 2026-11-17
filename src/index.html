@@ -20,13 +20,14 @@
 <link rel="icon" type="image/png" href="assets/ui/favicon.png">
 <link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
 <title>DragonSword: Awakening, Guides, tools &amp; Tier List</title>
-<link rel="stylesheet" href="css/site.css?v=20261117-audit">
+<link rel="stylesheet" href="css/site.css?v=20261117-discover">
 </head>
 <body>
-<div class="mobile-bar"><a class="mobile-home" href="./" aria-label="Shortcuts"><img src="assets/logo_2x.png" alt="DragonSword: Awakening"></a><button id="mobileMenu" type="button" aria-controls="mainNavigation" aria-expanded="false">☰ Menu</button></div>
+<div class="mobile-bar"><a class="mobile-home" href="./" aria-label="Shortcuts"><img src="assets/logo_2x.png" alt="DragonSword: Awakening"></a><div class="mobile-actions"><button class="site-search-trigger" data-site-search type="button" aria-label="Search the site" aria-haspopup="dialog"><svg class="nav-svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button><button id="mobileMenu" type="button" aria-controls="mainNavigation" aria-expanded="false">☰ Menu</button></div></div>
 <button class="mobile-menu-backdrop" id="mobileMenuBackdrop" type="button" aria-label="Close menu" hidden></button>
 <aside class="app-sidebar" id="mainNavigation" aria-label="Main navigation">
  <div class="sidebar-brand"><a class="brand-home" href="./" aria-label="DragonSword: Awakening home"><img src="assets/logo_2x.png" alt="DragonSword: Awakening"></a><span class="beta-badge">BETA</span></div>
+ <button class="site-search-trigger sidebar-search" data-site-search type="button" aria-label="Search the site" aria-haspopup="dialog"><svg class="nav-svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span>Search</span><kbd aria-hidden="true">/</kbd></button>
  <a class="nav-item active" data-page="home" href="./"><span class="nav-icon" aria-hidden="true"><svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><path d="M14 10l7-7m-5 0h5v5"/></svg></span><span class="nav-label">Shortcuts</span></a>
  <div class="nav-group">PLAY</div>
  <a class="nav-item" data-page="heroes" href="heroes"><span class="nav-icon" id="navIconHeroes">♙</span><span class="nav-label">Heroes</span></a>
@@ -154,13 +155,25 @@
 <!-- Site script, in load order. Bump ?v= on every file you change so browsers fetch the new copy (10 Nov 2026). -->
 <script src="js/01-core.js?v=20261117-audit"></script>
 <script src="js/02-teams-karma.js?v=20261117-fights"></script>
-<script src="js/03-profile.js?v=20261117-audit"></script>
-<script src="js/04-gear-builds.js?v=20261117-audit"></script>
+<script src="js/03-profile.js?v=20261117-discover"></script>
+<script src="js/04-gear-builds.js?v=20261117-discover"></script>
 <script src="js/05-tierlist-heroes-patches.js?v=20261115-jerome"></script>
 <script src="js/06-dungeons.js?v=20261114-links1"></script>
-<script src="js/07-tierlist-v2-cookbook.js?v=20261117-cookbook"></script>
+<script src="js/07-tierlist-v2-cookbook.js?v=20261117-discover"></script>
 <script src="js/08-finder-guides.js?v=20261117-audit"></script>
-<script src="js/08-items-tools-guides.js?v=20261117-audit"></script>
+<script src="js/08-items-tools-guides.js?v=20261117-discover"></script>
+<dialog id="siteSearch" class="site-search" aria-labelledby="siteSearchHeading">
+ <div class="site-search-inner">
+  <div class="site-search-head"><h2 id="siteSearchHeading">Search DragonSword</h2><button id="siteSearchClose" type="button" aria-label="Close search">×</button></div>
+  <div class="site-search-fields">
+   <input type="search" id="siteSearchQuery" aria-label="Search DragonSword" placeholder="Hero, skill, boss, item…" autocomplete="off" autofocus>
+   <select id="siteSearchKind" aria-label="Result type"><option value="">All results</option></select>
+  </div>
+  <p class="site-search-status" id="siteSearchStatus" role="status"></p>
+  <ul class="site-search-results" id="siteSearchResults" aria-label="Search results"></ul>
+ </div>
+</dialog>
+<script src="js/08-site-search.js?v=20261117-discover"></script>
 <script src="js/08-steam-news.js?v=20261114-links1"></script>
-<script src="js/09-startup.js?v=20261117-audit"></script>
+<script src="js/09-startup.js?v=20261117-discover"></script>
 </body></html>

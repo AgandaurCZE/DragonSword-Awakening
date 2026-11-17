@@ -8,6 +8,7 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 
 ## The site
 - Public Beta, live since 11 Nov. Every page has a clean path (AGENTS.md). All 20 heroes, tier list (A0 + Mastery view and Awakenings view, re-rated 14 Nov from David's file), Teams (six lineups + Ursula speed runs), Boss & Tower Finder, Dungeons, Gear, Karma, Familiars, Cookbook, Items, Titles, Achievements, Damage and Levelling calculators, News and Patch Notes.
+- Site search connects the desktop and phone navigation to exact public lookups. The Cookbook pantry checks quantities against the existing recipe combinations.
 - Upcoming heroes: `UPCOMING_HEROES` (15 Nov). Jerome (Bloodburst, Lentus Rebellion, December update, sword, parry) is shown on the Heroes page; Veronica and Logan are data only (Lentus Rebellion). Notes: `assets/sources/upcoming/notes.txt`.
 
 ## In progress

@@ -653,14 +653,14 @@ function flashEl(el) {
     el.style.outlineOffset = '';
   }, 1800);
 }
-function openKarmaByName(name) {
-  document.querySelector('.nav-item[data-page="karma"]').click();
+function openKarmaByName(name, navigate = true) {
+  if (navigate) document.querySelector('.nav-item[data-page="karma"]').click();
   if (typeof activeKarmaArch !== 'undefined') {
     activeKarmaArch = '';
     renderKarmaFilters();
   }
   const search = $('karmaSearch');
-  search.value = name;
+  search.value = navigate ? name : '';
   renderKarmas();
   const n = (v) =>
     String(v || '')

@@ -219,8 +219,8 @@ $('gearReset').addEventListener('click', () => {
     .forEach((x) => x.classList.toggle('active', x.dataset.gearFilter === 'all'));
   renderGear();
 });
-function openGearSet(name) {
-  document.querySelector('.nav-item[data-page="gear"]').click();
+function openGearSet(name, navigate = true) {
+  if (navigate) document.querySelector('.nav-item[data-page="gear"]').click();
   activeGearFilter = 'all';
   $('gearSearch').value = '';
   document

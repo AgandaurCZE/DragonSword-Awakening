@@ -598,6 +598,119 @@ def beta_subpath(browser, base):
     ctx.close()
 
 
+def site_discovery(browser, base):
+    """Search and recipe navigation from the desktop keyboard and mobile header."""
+    for width in [1400, 390]:
+        phone = width < 760
+        with browser.new_context(viewport={'width': width, 'height': 844}, has_touch=phone) as ctx:
+            page = open_site(ctx, base, '', f'site discovery {width}px')
+            search = page.get_by_role('button', name='Search the site')
+            dialog = page.get_by_role('dialog', name='Search DragonSword')
+            query = dialog.get_by_role('searchbox')
+            kind = dialog.get_by_role('combobox', name='Result type')
+            links = dialog.get_by_role('link')
+
+            if phone:
+                search.tap()
+            else:
+                page.keyboard.press('/')
+            assert query.evaluate('(field) => field.clientWidth') >= 140
+            query.fill('kalsion explosion')
+            assert links.first.get_attribute('href') == base.removeprefix(page.evaluate('location.origin')) + 'Kalsion#skill=Explosion'
+            if phone:
+                links.first.tap()
+            else:
+                query.press('ArrowDown')
+                assert links.first.evaluate('(link) => document.activeElement === link')
+                page.keyboard.press('Enter')
+            assert page.url == base + 'Kalsion#skill=Explosion'
+            assert page.locator('#profileSkillsGrid').get_by_role('heading', name='Explosion', exact=False).count() > 0
+            assert not dialog.is_visible()
+
+            search.click()
+            query.fill('no such entry 987xyz')
+            assert dialog.get_by_role('status').inner_text().startswith(('Loading items', 'No results'))
+            page.keyboard.press('Escape')
+            dialog.wait_for(state='hidden')
+            page.wait_for_function("document.activeElement.matches('[data-site-search]')")
+            assert search.evaluate('(button) => document.activeElement === button')
+
+            for term, result_kind, destination in [
+                ('Royal Inferno', 'Team', 'teams#team=Royal%20Inferno'),
+                ('gallore', 'Hunt', 'finder#encounter=gallore&difficulty=Hell'),
+                ('Chase Toward the End', 'Guide', 'guides#raid-ursula'),
+                ('Freeze', 'Status', 'guides#status-effects'),
+                ('Earthshatterer', 'Gear', 'gear#set=Earthshatterer'),
+            ]:
+                search.click()
+                kind.select_option(result_kind)
+                query.fill(term)
+                links.first.click()
+                assert page.url.startswith(base + destination), (term, page.url)
+
+            search.click()
+            kind.select_option('Item')
+            query.fill('leaflet tomato')
+            links.first.click()
+            assert page.url == base + 'items#item=ingredients%3ALeaflet%20Tomato'
+            page.wait_for_load_state('networkidle')
+            page.reload(wait_until='networkidle')
+            page.wait_for_function('NAV.ready')
+            page.locator('.it-card').get_by_text('Leaflet Tomato', exact=True).wait_for()
+            assert page.locator('.it-card').count() == 1
+            page.get_by_role('button', name='Show all items').click()
+            assert page.url == base + 'items'
+            assert page.locator('.it-card').count() > 1
+            page.go_back()
+            page.locator('#itShowAll').wait_for()
+            assert page.locator('.it-card').count() == 1
+
+            search.click()
+            kind.select_option('Recipe')
+            query.fill('tomato stew')
+            links.first.click()
+            assert page.url == base + 'cookbook#recipe=tomato-stew'
+            detail = page.get_by_role('complementary', name='Selected recipe')
+            assert detail.get_by_role('heading', name='Tomato Stew').is_visible()
+            search.click()
+            kind.select_option('Page')
+            query.fill('Item Database')
+            links.first.click()
+            assert page.url == base + 'items'
+            assert page.locator('#itShowAll').count() == 0
+            assert page.locator('.it-card').count() > 1
+            page.go_back()
+            assert page.url == base + 'cookbook#recipe=tomato-stew'
+            page.locator('.cb-card:not(.cb-unk) .cb-art').evaluate_all("""(cards) => Promise.all(cards.map((card) => {
+                const image = new Image();
+                image.src = getComputedStyle(card).backgroundImage.slice(5, -2);
+                return image.decode();
+            }))""")
+            page.reload(wait_until='networkidle')
+            page.wait_for_function('NAV.ready')
+            assert detail.get_by_role('heading', name='Tomato Stew').is_visible()
+            page.locator('#cbPantry summary').click()
+            meat = page.get_by_role('combobox', name='Quantity of Boar Meat')
+            meat.select_option('1')
+            cooked = page.locator('.cb-pantry-group').filter(has=page.get_by_role('heading', name='Can cook'))
+            short = page.locator('.cb-pantry-group').filter(has=page.get_by_role('heading', name='One ingredient short'))
+            grilled = cooked.get_by_role('link', name='Grilled Meat', exact=False)
+            assert '2★' in grilled.inner_text()
+            assert short.get_by_role('link', name='Double Steak', exact=False).count() == 1
+            meat.select_option('3')
+            assert '5★' in grilled.inner_text()
+            assert 'Boar Meat + Boar Meat + Boar Meat' in grilled.inner_text()
+            grilled.click()
+            assert page.url == base + 'cookbook#recipe=grilled-meat'
+            assert detail.get_by_role('heading', name='Grilled Meat').is_visible()
+            assert meat.input_value() == '3'
+            page.get_by_role('button', name='Clear pantry').click()
+            assert meat.input_value() == '0' and grilled.count() == 0
+            assert page.evaluate('document.documentElement.scrollWidth === innerWidth')
+            page.wait_for_load_state('networkidle')
+    print('  Site search and pantry on desktop and phone: keyboard, deep links, exact item, quantity and star results')
+
+
 
 def tab_titles(browser, base):
     """Browser tab names (David, 11 Nov 2026; check added by Claude 12 Nov): home, pages, tool views, a hero, Back."""
@@ -1216,6 +1329,7 @@ def main():
         guide_polish(browser, base)
         with serve(ROOT, prefix=os.path.basename(ROOT)) as prefixed:
             beta_subpath(browser, prefixed)
+            site_discovery(browser, prefixed)
         if not QUICK:
             print('check_site: JS ports against the Python tools')
             parity(browser, base)

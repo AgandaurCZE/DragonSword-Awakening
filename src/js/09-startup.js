@@ -1,6 +1,7 @@
 /* Beta launch: shortcuts, canonical path navigation and data loading. */
 const APP_ROOT = new URL('.', document.baseURI).pathname;
 const NAV = { ready: false, restoring: false, state: null, url: '', y: 0 };
+const REFERENCE_HASHES = { cookbook: 'recipe', gear: 'set', karma: 'card', items: 'item' };
 function setMobileMenu(open, restoreFocus = false) {
   const toggle = $('mobileMenu');
   const menu = $('mainNavigation');
@@ -36,6 +37,8 @@ function routeUrl(page, options = {}) {
     hash = '#encounter=' + encodeURIComponent(encounter);
     if (difficulty) hash += '&difficulty=' + encodeURIComponent(difficulty);
   }
+  if (REFERENCE_HASHES[page] && options.entry)
+    hash = '#' + REFERENCE_HASHES[page] + '=' + encodeURIComponent(options.entry);
   return APP_ROOT + path + hash;
 }
 function navCurrent() {
@@ -59,6 +62,7 @@ function navCurrent() {
   if (page === 'guides' && $('guidesBody').dataset.guide) state.guide = $('guidesBody').dataset.guide;
   if (page === 'tools') state.tool = document.querySelector('#toolTabs .on')?.dataset.tool || 'damage';
   if (page === 'tier') state.tier = { mode: V2.mode, boss: V2.boss, tower: V2.tower, view: V2.view };
+  if (REFERENCE_HASHES[page] && NAV.reference?.page === page) state.entry = NAV.reference.entry;
   return state;
 }
 function navRecord(replace = false) {
@@ -85,6 +89,9 @@ function navSchedule() {
 function navShow(state, scrollY = null) {
   NAV.restoring = true;
   try {
+    const resetItems = ITEMDB.entry && state.page === 'items' && !state.entry;
+    clearReferenceEntry(state.page !== 'items');
+    NAV.reference = state.entry ? { page: state.page, entry: state.entry } : null;
     if (state.page === 'hero') {
       openCharacterProfile(state.hero, state.tab || 'skills');
       if (state.skill) focusProfileSkill(state.hero, state.skill);
@@ -93,6 +100,8 @@ function navShow(state, scrollY = null) {
         document.querySelector(`.nav-item[data-page="${state.page}"]`) ||
         document.querySelector('.nav-item[data-page="home"]');
       button.click();
+      if (state.entry) showReferenceEntry(state.page, state.entry);
+      if (resetItems) renderItems();
       if (state.page === 'tier' && state.tier) {
         Object.assign(V2, state.tier);
         renderTierV2();
@@ -124,7 +133,13 @@ function navShow(state, scrollY = null) {
   } finally {
     NAV.restoring = false;
   }
-  if (scrollY !== null && !state.skill && !state.team && (!state.guide || guideTarget(state.guide) === state.guide))
+  if (
+    scrollY !== null &&
+    !state.skill &&
+    !state.team &&
+    !state.entry &&
+    (!state.guide || guideTarget(state.guide) === state.guide)
+  )
     requestAnimationFrame(() => window.scrollTo({ top: scrollY, behavior: 'instant' }));
 }
 function navNavigate(state) {
@@ -174,6 +189,8 @@ function navInitial() {
   if (page === 'teams' && TEAM_DATA.some((team) => team.name === params.get('team')))
     return { page, team: params.get('team') };
   if (page === 'guides' && guideTarget(hash)) return { page, guide: hash };
+  if (REFERENCE_HASHES[page] && params.get(REFERENCE_HASHES[page]))
+    return { page, entry: params.get(REFERENCE_HASHES[page]) };
   return { page: page || 'home' };
 }
 function navInit() {
@@ -214,6 +231,11 @@ function navInit() {
   });
   document.querySelector('.nav-item[data-page="guides"]').addEventListener('click', (e) => {
     if (!NAV.restoring && isPlainLinkClick(e)) renderGuides();
+  });
+  document.querySelectorAll('.nav-item[data-page]').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      if (!NAV.restoring && isPlainLinkClick(event)) clearReferenceEntry();
+    });
   });
   document.querySelectorAll('.brand-home, .mobile-home').forEach((link) =>
     link.addEventListener('click', (e) => {
@@ -325,6 +347,7 @@ function startApp() {
     b.title = label.textContent.trim();
   });
   navInit();
+  initSiteSearch();
   for (const [id, key] of [
     ['navIconFamiliars', 'familiars'],
     ['navIconTrait', 'trait'],

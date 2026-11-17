@@ -1,5 +1,11 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 17 Nov 2026 — Site search and Cookbook pantry
+
+- Added site-wide search to the desktop rail and phone header, with category filters and keyboard shortcuts. Find a hero, skill, team, encounter, status, guide, gear set, Karma, recipe, item or tool. Results use shareable links.
+- Added a pantry finder to the Cookbook. Enter ingredient quantities to see dishes you can cook, their best star results, and dishes that need one more ingredient. Recipe links retain the selected dish on reload, and on phones selecting a recipe scrolls to its details.
+- Full local checks passed, including desktop and phone coverage for search, exact links, Back, pantry quantities and star calculations. The 113-view comparison shows the intended changes in the desktop sidebar, phone header and Cookbook. Outside those regions, 110 views match. The mobile Karma view differs only in the rendering of dotted link underlines.
+
 ## 17 Nov 2026 — Player routes, combat math and touch previews
 
 - Finder retains the encounter and difficulty, opens the corresponding walkthrough, and receives direct boss links back from fight guides. Boss and tower rankings, Ursula speed runs, hero tabs and exact skill links retain their selections on reload.

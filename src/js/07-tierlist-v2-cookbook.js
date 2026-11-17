@@ -515,7 +515,7 @@ function renderTierV2() {
   v2HeaderArt();
 }
 // ---- Cookbook (COOKBOOK in data.json; preview only) ----
-const CB = { m: '', e: '', hide: false, q: '', sel: null };
+const CB = { m: '', e: '', hide: false, q: '', sel: null, pantry: new Map(), pantryOpen: false };
 function cbTicks() {
   try {
     return new Set(JSON.parse(localStorage.getItem('dsw.cooked.v1') || '[]'));
@@ -540,12 +540,14 @@ function cbOpts(slot) {
   const ING = COOKBOOK.ingredients || [];
   return [].concat(slot).flatMap((a) => ING.filter((i) => i.category === a || i.name === a));
 }
+function cbDishStars(sum) {
+  return Math.min(5, 1 + Math.floor(sum / 3));
+}
 function cbRange(c) {
   const sums = c.slots.map((s) => cbOpts(s).map((i) => i.stars));
   const lo = sums.reduce((a, s) => a + Math.min(...s), 0);
   const hi = sums.reduce((a, s) => a + Math.max(...s), 0);
-  const st = (v) => Math.min(5, 1 + Math.floor(v / 3));
-  return [st(lo), st(hi)];
+  return [cbDishStars(lo), cbDishStars(hi)];
 }
 function cbReach(d) {
   const out = new Set();
@@ -577,6 +579,180 @@ function cbList() {
   });
   return out;
 }
+
+function cbPantryBest(dish, options) {
+  const left = new Map(CB.pantry);
+  let best = null;
+  const used = [];
+  for (const combo of options) {
+    function visit(slot, sum, missing) {
+      if (slot === combo.length) {
+        if (
+          !best ||
+          Number(Boolean(missing)) < Number(Boolean(best.missing)) ||
+          (Boolean(missing) === Boolean(best.missing) && sum > best.sum)
+        ) {
+          best = { dish, sum, missing, ingredients: [...used] };
+        }
+        return;
+      }
+      for (const ingredient of combo[slot]) {
+        const count = left.get(ingredient.name) || 0;
+        if (!count && (missing || combo.length === 1)) continue;
+        if (count) left.set(ingredient.name, count - 1);
+        used.push(ingredient.name);
+        visit(slot + 1, sum + ingredient.stars, count ? missing : ingredient.name);
+        used.pop();
+        if (count) left.set(ingredient.name, count);
+      }
+    }
+    visit(0, 0, '');
+  }
+  return best;
+}
+
+function renderPantryMatches() {
+  const root = $('cbPantryMatches');
+  const count = [...CB.pantry.values()].reduce((sum, amount) => sum + amount, 0);
+  $('cbPantryCount').textContent = count ? count + ' on hand' : '';
+  $('cbPantryClear').disabled = !count;
+  if (!count) {
+    root.innerHTML = '<p class="cb-note">Add ingredients to see matching recipes.</p>';
+    return;
+  }
+  const matches = (COOKBOOK.dishes || [])
+    .map((dish) =>
+      cbPantryBest(
+        dish,
+        cbCombos(dish).map((combo) => combo.slots.map(cbOpts)),
+      ),
+    )
+    .filter(Boolean)
+    .sort((a, b) => b.sum - a.sum || a.dish.name.localeCompare(b.dish.name));
+  const groups = [
+    ['Can cook', matches.filter((match) => !match.missing)],
+    ['One ingredient short', matches.filter((match) => match.missing)],
+  ];
+  const E = profileEsc;
+  root.innerHTML = groups
+    .map(
+      ([label, rows]) =>
+        '<section class="cb-pantry-group"><h4>' +
+        label +
+        ' <span>(' +
+        rows.length +
+        ')</span></h4>' +
+        (rows.length
+          ? '<ul>' +
+            rows
+              .map(
+                ({ dish, sum, ingredients, missing }) =>
+                  '<li><a data-cb-pantry-recipe="' +
+                  E(dish.id) +
+                  '" href="' +
+                  E(routeUrl('cookbook', { entry: dish.id })) +
+                  '">' +
+                  '<b>' +
+                  E(dish.name) +
+                  '</b><span class="cb-stars">' +
+                  cbDishStars(sum) +
+                  '★</span>' +
+                  '<small>' +
+                  ingredients.map(E).join(' + ') +
+                  (missing ? ' · Need 1 × ' + E(missing) : '') +
+                  '</small></a></li>',
+              )
+              .join('') +
+            '</ul>'
+          : '<p class="cb-note">No matches.</p>') +
+        '</section>',
+    )
+    .join('');
+}
+
+function renderPantry(ingredients) {
+  const E = profileEsc;
+  const categories = [...new Set(ingredients.map((ingredient) => ingredient.category))];
+  const options = [0, 1, 2, 3];
+  const groups = categories
+    .map(
+      (category) =>
+        '<fieldset><legend>' +
+        E(category) +
+        '</legend>' +
+        ingredients
+          .filter((ingredient) => ingredient.category === category)
+          .map(
+            ({ name, stars, icon }) =>
+              '<label class="cb-pantry-ingredient"><img loading="lazy" src="' +
+              E(icon) +
+              '" alt="">' +
+              '<span>' +
+              E(name) +
+              ' <small>' +
+              stars +
+              '★</small></span>' +
+              '<select data-cb-ingredient="' +
+              E(name) +
+              '" aria-label="Quantity of ' +
+              E(name) +
+              '">' +
+              options
+                .map(
+                  (amount) =>
+                    '<option' + ((CB.pantry.get(name) || 0) === amount ? ' selected' : '') + '>' + amount + '</option>',
+                )
+                .join('') +
+              '</select></label>',
+          )
+          .join('') +
+        '</fieldset>',
+    )
+    .join('');
+  return (
+    '<details class="cb-pantry" id="cbPantry"' +
+    (CB.pantryOpen ? ' open' : '') +
+    '>' +
+    '<summary><span>Pantry recipe finder</span><small id="cbPantryCount"></small></summary>' +
+    '<div class="cb-pantry-content"><div class="cb-pantry-intro"><p>Enter how many of each ingredient you have. ' +
+    'The finder checks every listed combination and shows the best star result for each dish.</p>' +
+    '<button type="button" class="cb-chip" id="cbPantryClear">Clear pantry</button></div>' +
+    '<div class="cb-pantry-ingredients">' +
+    groups +
+    '</div><div id="cbPantryMatches" aria-live="polite"></div></div></details>'
+  );
+}
+
+function wirePantry() {
+  const pantry = $('cbPantry');
+  pantry.addEventListener('toggle', () => {
+    if (pantry.isConnected) CB.pantryOpen = pantry.open;
+  });
+  pantry.addEventListener('change', (event) => {
+    const name = event.target.dataset.cbIngredient;
+    if (!name) return;
+    const amount = Number(event.target.value);
+    if (amount) CB.pantry.set(name, amount);
+    else CB.pantry.delete(name);
+    renderPantryMatches();
+  });
+  $('cbPantryClear').onclick = () => {
+    CB.pantry.clear();
+    const inputs = [...pantry.querySelectorAll('[data-cb-ingredient]')];
+    for (const select of inputs) select.value = '0';
+    inputs[0]?.focus();
+    renderPantryMatches();
+  };
+  pantry.addEventListener('click', (event) => {
+    const link = event.target.closest('[data-cb-pantry-recipe]');
+    if (!link || !isPlainLinkClick(event)) return;
+    event.preventDefault();
+    CB.pantryOpen = pantry.open;
+    navNavigate({ page: 'cookbook', entry: link.dataset.cbPantryRecipe });
+  });
+  renderPantryMatches();
+}
+
 function renderCookbook() {
   const root = $('cookbookBody');
   if (!root) return;
@@ -615,17 +791,19 @@ function renderCookbook() {
       })
       .join('') +
     `<div class="cb-pbox"><small>Cooked by you</small><b>${cookedIn()} / ${found}</b><div class="cb-bar"><i style="width:${found ? (cookedIn() / found) * 100 : 0}%;background:#19b9ff"></i></div></div></div>`;
+  h += renderPantry(ING);
   h += `<div class="cb-filters" role="group" aria-label="Cookbook filters">${['', ...Object.keys(M)].map((k) => `<button type="button" class="cb-chip${CB.m === k ? ' on' : ''}" data-cbm="${k}">${k ? `<span class="cb-dot" style="background:${M[k].color}"></span>${k}` : 'All methods'}</button>`).join('')}<span class="cb-sep"></span>${['', ...Object.keys(E)].map((k) => `<button type="button" class="cb-chip${CB.e === k ? ' on' : ''}" data-cbe="${k}">${k ? `<span class="cb-dot" style="background:${E[k].color}"></span>${k}` : 'All effects'}</button>`).join('')}<span class="cb-sep"></span><button type="button" class="cb-chip${CB.hide ? ' on' : ''}" id="cbHide">Hide undiscovered</button><input type="search" id="cbQ" placeholder="Dish or ingredient… (try “egg”)" value="${profileEsc(CB.q)}" autocomplete="off"></div>`;
   const card = (d) =>
     d.unk
       ? `<button type="button" class="cb-card cb-unk${CB.sel === d.id ? ' sel' : ''}" data-cbd="${d.id}" aria-label="Undiscovered ${d.method} dish"><div class="cb-art"></div><div class="cb-meta"><div class="cb-name">???</div><div class="cb-row"><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span></div></div></button>`
       : `<button type="button" class="cb-card${CB.sel === d.id ? ' sel' : ''}" data-cbd="${d.id}"><span class="cb-badge" title="${profileEsc(d.effect)}"><img src="${cbIcon(d)}" alt=""></span>${ticks.has(d.id) ? '<span class="cb-mine">COOKED</span>' : ''}<div class="cb-art" style="background-image:url('${d.image}')"></div><div class="cb-meta"><div class="cb-name">${profileEsc(d.name)}</div><div class="cb-row"><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span>${cbStars(cbMax(d))}</div></div></button>`;
-  h += `<div class="cb-main"><div class="cb-grid">${list.length ? list.map(card).join('') : '<div class="cb-empty">No dish matches these filters.</div>'}</div><aside class="cb-detail" aria-live="polite">${cbDetail(
+  h += `<div class="cb-main"><div class="cb-grid">${list.length ? list.map(card).join('') : '<div class="cb-empty">No dish matches these filters.</div>'}</div><aside class="cb-detail" id="cbRecipeDetails" aria-label="Selected recipe" aria-live="polite">${cbDetail(
     all.find((d) => d.id === CB.sel),
     ticks,
   )}</aside></div>`;
   h += `<section class="cb-calc" aria-labelledby="cbCalcH"><h4 class="cb-h" id="cbCalcH">Star calculator</h4><div class="cb-note">${profileEsc(C.starRule || '')}</div><div class="pick">${[4, 4, 3].map((v, i) => `<label>Slot ${i + 1} <select id="cbS${i}"><option value="0">empty</option>${[1, 2, 3, 4].map((s) => `<option value="${s}"${s === v ? ' selected' : ''}>${s}★ ingredient</option>`).join('')}</select></label>`).join('')}</div><div class="cb-res" id="cbRes"></div></section>`;
   root.innerHTML = h;
+  wirePantry();
   root.querySelectorAll('[data-cbm]').forEach(
     (b) =>
       (b.onclick = () => {
@@ -657,7 +835,11 @@ function renderCookbook() {
     (b) =>
       (b.onclick = () => {
         CB.sel = b.dataset.cbd;
+        NAV.reference = C.dishes.some((dish) => dish.id === CB.sel) ? { page: 'cookbook', entry: CB.sel } : null;
         renderCookbook();
+        const onPhone = matchMedia('(max-width: 980px)').matches;
+        if (onPhone) flashEl($('cbRecipeDetails'));
+        else root.querySelector('[data-cbd="' + CB.sel + '"]')?.focus({ preventScroll: true });
       }),
   );
   const tk = $('cbTick');
@@ -672,7 +854,7 @@ function renderCookbook() {
     const v = [0, 1, 2].map((i) => +$('cbS' + i).value).filter(Boolean);
     const sum = v.reduce((a, b) => a + b, 0);
     $('cbRes').innerHTML = v.length
-      ? `Sum ${sum} → ${cbStars(Math.min(5, 1 + Math.floor(sum / 3)))} dish`
+      ? `Sum ${sum} → ${cbStars(cbDishStars(sum))} dish`
       : 'Pick at least one ingredient.';
   };
   [0, 1, 2].forEach((i) => ($('cbS' + i).onchange = calc));
@@ -720,6 +902,7 @@ function cbDetail(d, ticks) {
  ${table}
  <h4 class="cb-h">Ingredient combinations</h4><div class="cb-combos">${combos}</div>
  <div class="cb-note">"Any" takes every ingredient of that category; named ingredients can't be swapped. Higher-star ingredients and more of them give a higher-star dish.</div>
+ <a class="cb-recipe-link" href="${X(routeUrl('cookbook', { entry: d.id }))}">Recipe permalink</a>
  <button type="button" class="cb-tick${ticks.has(d.id) ? ' done' : ''}" id="cbTick">${ticks.has(d.id) ? 'Cooked ✓ (click to undo)' : 'Mark as cooked'}</button>`;
 }
 // Additional Beta pages.
