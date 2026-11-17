@@ -416,6 +416,8 @@ def beta_routes(browser, base):
         ['Trait Dungeons','Normal Dungeons','Currency Dungeons'],
         ['Titles','Achievements'], ['Getting Started'], ['Damage Calculator','Levelling Calculator']]
     actual = page.locator('#shortcutsBody .shortcut-group').evaluate_all("ss=>ss.map(s=>[...s.querySelectorAll('.shortcut-card>span:first-of-type')].map(e=>e.textContent))")
+    assert page.locator('#shortcutsBody .shortcut-card > .card-emblem').count() == sum(map(len, expected))
+    assert page.locator('.shortcuts-latest .card-emblem').is_visible()
     if actual != expected or page.locator('.shortcut-soon').count() or not page.locator('.shortcuts-latest').is_visible():
         bad('Beta shortcuts: expected featured pages, a News link and no placeholders')
     if not page.locator('.beta-badge').is_visible() or page.locator('.brand-home img').get_attribute('src') != 'assets/logo_2x.png':
@@ -1015,6 +1017,12 @@ def guide_polish(browser, base):
         'New Players', 'Dungeons', 'Bosses', 'Towers', 'Game Mechanics', 'Gear & Runes', 'Progression']
     assert not page.locator('#start-here, .mechanics-guide').count()
     assert page.locator('.guide-planned').count() == 0
+    assert page.locator('#guidesBody [data-guide-link] > .card-emblem').count() == 28
+    portraits = page.locator('#guidesBody .card-emblem img')
+    assert portraits.count() == 11
+    portraits.evaluate_all("(images) => images.forEach((img) => img.loading = 'eager')")
+    page.wait_for_function(
+        "[...document.querySelectorAll('#guidesBody .card-emblem img')].every((img) => img.complete && img.naturalWidth)")
     banner = page.locator('.guide-banner')
     assert banner.get_attribute('href').endswith('/guides#start-here')
     banner.click()
@@ -1059,6 +1067,9 @@ def guide_polish(browser, base):
         guide = page.locator('.mechanics-guide')
         assert guide.get_by_role('heading', name=article['title'], exact=True).is_visible()
         assert guide.locator('section').count()
+        if article['id'] == 'raid-gauron':
+            assert guide.locator('.guide-fight-art').is_visible()
+            assert 'pillar' in guide.inner_text()
         assert guide.locator('a').get_attribute('href').startswith(page.evaluate('APP_ROOT'))
         page.get_by_role('link', name='All guides').click()
     for path in ['teams', 'news']:

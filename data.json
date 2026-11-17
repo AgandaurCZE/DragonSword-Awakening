@@ -28807,7 +28807,7 @@
       "id": "raid-gauron"
      },
      {
-      "title": "Ursula",
+      "title": "Ursula (Chase Toward the End)",
       "ready": true,
       "id": "raid-ursula"
      }
@@ -29477,27 +29477,47 @@
    {
     "id": "raid-gauron",
     "title": "Gauron (Steelheart Fortress Defense)",
-    "intro": "The bridge Ogre comes first, then humanoid Gauron, then his dragon form.",
+    "intro": "Steelheart Fortress Defense goes from a bridge Ogre to humanoid Gauron and then his dragon form. Keep your team healthy through the first two fights so you can take advantage of the dragon’s openings.",
     "sections": [
      [
-      "Bring healing food",
-      "HP carries over between the three fights. Put healing food on the Quick Slot before the run and save enough to cover the last phase."
+      "Before you enter",
+      "Put healing food on the Quick Slot. HP carries across the three encounters, so damage on the bridge still matters when the dragon arrives. Bring a hero who can wear down Super Armor and one whose strongest attacks you can hold for a clear opening. For damage, Tomato Stew can give the whole team 17% Defense Ignore for 15 minutes. Time your burst after a Signal Skill so it also benefits from the three-piece Earthshatterer bonus of 20% Defense Ignore for 10 seconds."
      ],
      [
-      "Choose a difficulty",
-      "Normal, Hard and Very Hard recommend Lv.50, 70 and 90. All three drop Legendary Battle Will, Ballad of Life and The Infiltrator. Normal has Damaged and Intact runes, Hard has Refined and Radiant, and Very Hard has Perfect."
+      "Bridge Ogre · keep your team healthy",
+      "Start with short attacks. Let the Ogre finish its swing sequence, then step back in and work on its Super Armor. If you have already got the Ogre close to death, finish with a short attack and save your biggest cooldowns for Gauron."
+     ],
+     [
+      "Humanoid Gauron · punish the recovery",
+      "Give him room to finish a weapon sequence before committing to a long cast or tag-in. Use your quick skills to build Super Armor damage between sequences. When you get a Break, tag into the damage dealer and spend the burst while the opening is still there."
+     ],
+     [
+      "Dragon Gauron · bait the charge into a pillar",
+      "Watch for the weapon going away and the horns lighting up. Put a pillar in the charge line and step out of that line as he commits. A collision briefly leaves him open. Use your longest attack or Signal chain there, then get moving as he recovers."
+     ],
+     [
+      "If the charge misses",
+      "Keep watching him. He can turn for another charge and follow it with breath. Hold long casts until that sequence ends. For a first clear, take the pillar openings and use short damage windows everywhere else."
+     ],
+     [
+      "Difficulty and drops",
+      "Normal, Hard and Very Hard recommend Lv.50, 70 and 90. All three can drop Legendary Battle Will, Ballad of Life and The Infiltrator. Normal offers Damaged and Intact runes, Hard offers Refined and Radiant, and Very Hard offers Perfect."
      ]
     ],
     "next": {
      "page": "tier",
      "hash": "#boss=gauron",
      "label": "See the Gauron rankings and rewards"
+    },
+    "cover": {
+     "src": "assets/bosses/gauron-dragon-banner.webp",
+     "cue": "Glowing horns → line up a pillar → dodge sideways → burst when he collides."
     }
    },
    {
     "id": "raid-ursula",
-    "title": "Ursula",
-    "intro": "Ursula unlocks after story Chapter 8. She starts in humanoid form and then becomes a dragon.",
+    "title": "Ursula (Chase Toward the End)",
+    "intro": "Ursula unlocks after story Chapter 8. She starts in humanoid form and then becomes a dragon. Your team’s HP carries over as the fight moves to a different arena for the dragon phase.",
     "sections": [
      [
       "Dodge the grabs",

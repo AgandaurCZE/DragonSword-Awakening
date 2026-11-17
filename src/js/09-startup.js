@@ -213,17 +213,14 @@ function renderShortcuts() {
           ...(item.mode ? { tier: { mode: item.mode } } : {}),
         });
       });
-      const image = document.createElement('img');
-      image.src = item.image;
-      image.alt = '';
-      image.loading = 'lazy';
+      card.insertAdjacentHTML('afterbegin', cardEmblem(item.guide || item.tool || item.page));
       const label = document.createElement('span');
       label.textContent = item.label;
       const arrow = document.createElement('span');
       arrow.className = 'shortcut-arrow';
       arrow.textContent = '→';
       arrow.setAttribute('aria-hidden', 'true');
-      card.append(image, label, arrow);
+      card.append(label, arrow);
       grid.append(card);
     }
     section.append(title, grid);
@@ -234,7 +231,7 @@ function renderShortcuts() {
     const latest = document.createElement('a');
     latest.className = 'shortcuts-latest';
     latest.href = routeUrl('news');
-    latest.innerHTML = `<strong>Latest from Hound13</strong><span>${profileEsc(first.title)} →</span>`;
+    latest.innerHTML = `${cardEmblem('news')}<strong>Latest from Hound13</strong><span>${profileEsc(first.title)} →</span>`;
     latest.onclick = (e) => {
       if (!isPlainLinkClick(e)) return;
       e.preventDefault();

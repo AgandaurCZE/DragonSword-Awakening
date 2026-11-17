@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 17 Nov — Guide emblems and Gauron walkthrough
+
+Designed the shared card emblems and prepared a Gauron first-clear walkthrough covering all three encounters. Gauron’s dragon charge and pillar opening follow [GQ’s first-hand boss notes](https://gq-game-mods.blogspot.com/2026/08/dragonsword-awakening-boss-fight.html). [A Lv.90 raid recording](https://www.youtube.com/watch?v=vNgjegF8bms) shows the full three-encounter sequence.
+
 ## 17 Nov — Full Cookbook
 All 73 recipes from David's video with groups, effects, star values and ingredient combinations. Open: the tests in `COOKBOOK_TESTS.md`.
 

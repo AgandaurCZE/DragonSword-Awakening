@@ -2761,6 +2761,23 @@
         "list": {
          "record": {
           "opt": {
+           "cover": {
+            "record": {
+             "opt": {},
+             "req": {
+              "cue": {
+               "types": [
+                "string"
+               ]
+              },
+              "src": {
+               "types": [
+                "string"
+               ]
+              }
+             }
+            }
+           },
            "figures": {
             "list": {
              "record": {

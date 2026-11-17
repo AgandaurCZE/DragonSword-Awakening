@@ -252,6 +252,58 @@ document.addEventListener('keydown', (event) => {
   gfGo(box, gfIndex(box.querySelector('.gf-track')) + (event.key === 'ArrowRight' ? 1 : -1));
 });
 
+const CARD_EMBLEMS = {
+  tier: ['ranks', '#f0c787'],
+  teams: ['teams', '#82d1ef'],
+  finder: ['finder', '#85dded'],
+  heroes: ['heroes', '#a9c8fc'],
+  karma: ['karma', '#c3a7f5'],
+  gear: ['gear', '#a6c9ee'],
+  familiars: ['familiar', '#9fddad'],
+  cookbook: ['recipes', '#efb38b'],
+  items: ['items', '#9bcdda'],
+  trait: ['trait', '#c0a8fa'],
+  dungeons: ['dungeon', '#9bc8ee'],
+  currency: ['coins', '#f0cc7a'],
+  titles: ['titles', '#e7ba86'],
+  achievements: ['trophy', '#f2cd82'],
+  damage: ['damage', '#f6aa94'],
+  level: ['level', '#8bd5c4'],
+  news: ['news', '#a1cce8'],
+  'start-here': ['journal', '#8fe5ef'],
+  'first-investments': ['materials', '#f2ca83'],
+  'normal-dungeons': ['dungeon', '#9bc8ee'],
+  'currency-dungeons': ['coins', '#f0cc7a'],
+  'trait-dungeons': ['trait', '#c0a8fa'],
+  'world-bosses': ['world', '#91d7b8'],
+  'hunt-overview': ['hunt', '#efb191'],
+  'raid-overview': ['raid', '#f99fa8'],
+  'tower-overview': ['tower', '#b2b4f6'],
+  'status-effects': ['status', '#91e0bb'],
+  'break-super-armor': ['break', '#f8ae93'],
+  defense: ['defense', '#aacbf7'],
+  'gear-rarities': ['gear', '#a6c9ee'],
+  'gear-upgrades': ['anvil', '#e7b091'],
+  runes: ['rune', '#c2a7f5'],
+  exchange: ['exchange', '#9cdac7'],
+  'hero-progression': ['progress', '#f0c487'],
+};
+
+function cardEmblem(key) {
+  const E = profileEsc;
+  const bossId = key.replace(/^(hunt|raid)-/, '');
+  const boss = bossId !== key ? v2Data().bosses.find((entry) => entry.id === bossId) : null;
+  const towerId = key.startsWith('tower-') ? key.slice(6) : '';
+  const tower = TOWER_TRIALS.towers.find((entry) => entry.id === towerId);
+  const portrait = (boss?.id === 'gauron' && boss.header?.right) || boss?.header?.left || boss?.portrait;
+  if (portrait || tower?.crest) {
+    const colour = tower ? ARCH_COLORS[tower.archetype] : ARCH_COLORS[boss.weak[0]] || '#e3818b';
+    return `<i class="card-emblem ${boss ? 'card-emblem-portrait' : 'card-emblem-crest'}" style="--emblem:${E(colour)}" aria-hidden="true"><img src="${E(portrait || tower.crest)}" alt="" loading="lazy"></i>`;
+  }
+  const [glyph, colour] = CARD_EMBLEMS[key] || CARD_EMBLEMS['start-here'];
+  return `<i class="card-emblem" style="--emblem:${colour}" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><use href="${E(absUrl('assets/ui/card-emblems.svg'))}#${glyph}"></use></svg></i>`;
+}
+
 function guideArticle(id) {
   return MECHANICS_GUIDES.find((guide) => guide.id === id) || GUIDES.articles?.find((guide) => guide.id === id);
 }
@@ -265,7 +317,9 @@ function guideTarget(hash) {
 
 function guideLink(id, label, className = '') {
   const E = profileEsc;
-  return `<a class="${className}" href="${E(routeUrl('guides', { guide: id }))}" data-guide-link="${E(id)}">${E(label)}</a>`;
+  const tile = className === 'guide-tile';
+  const title = tile ? cardEmblem(id) + `<span class="guide-tile-title">${E(label)}</span>` : E(label);
+  return `<a class="${className}" href="${E(routeUrl('guides', { guide: id }))}" data-guide-link="${E(id)}">${title}</a>`;
 }
 
 function renderGuideLibrary() {
@@ -276,7 +330,7 @@ function renderGuideLibrary() {
       const featured = items.find((item) => item.ready && item.id === start?.id);
       const banner = featured
         ? `<a class="sh-head guide-banner" href="${E(routeUrl('guides', { guide: featured.id }))}" data-guide-link="${E(featured.id)}">
-            <div><span class="sh-kicker">${E(featured.title)}</span><h4>${E(start.title)}</h4>
+            ${cardEmblem(featured.id)}<div><span class="sh-kicker">${E(featured.title)}</span><h4>${E(start.title)}</h4>
             <p>Meet your first heroes, build a team and learn where to spend and farm.</p></div><span aria-hidden="true">→</span>
           </a>`
         : '';
@@ -313,7 +367,13 @@ function renderGuides(hash = '') {
   }
   const guide = guideArticle(id);
   const next = routeUrl(guide.next.page, guide.next) + (guide.next.hash || '');
-  root.innerHTML = `${back}<article class="mechanics-guide" id="${E(id)}"><h3>${E(guide.title)}</h3><p>${E(guide.intro)}</p>
+  const banner = guide.cover
+    ? `<div class="guide-fight-art" style="--fight-art:url('${E(absUrl(guide.cover.src))}')"></div>`
+    : '';
+  const cue = guide.cover
+    ? `<aside class="guide-fight-cue"><strong>Watch for</strong> ${formatSkillText(guide.cover.cue)}</aside>`
+    : '';
+  root.innerHTML = `${back}<article class="mechanics-guide${banner ? ' guide-fight' : ''}" id="${E(id)}">${banner}<h3>${E(guide.title)}</h3><p>${E(guide.intro)}</p>${cue}
     ${guide.sections
       .map(
         ([heading, body], i) =>

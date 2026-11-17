@@ -7095,12 +7095,50 @@ a.shortcut-card:focus-visible {
   outline: 2px solid #36b7e6;
   outline-offset: 2px;
 }
-.shortcut-card img {
-  width: 88px;
-  height: 88px;
-  flex: 0 0 88px;
+.card-emblem {
+  --emblem-size: 43px;
+  display: grid;
+  flex: 0 0 var(--emblem-size);
+  place-items: center;
+  width: var(--emblem-size);
+  height: var(--emblem-size);
+  overflow: hidden;
+  color: var(--emblem);
+  background: radial-gradient(ellipse at 28% 5%, color-mix(in srgb, var(--emblem) 23%, #151a23), #171d27 70%);
+  border: 1px solid color-mix(in srgb, var(--emblem) 57%, #222a38);
+  border-radius: 9px;
+  box-shadow:
+    inset 0 0 0 2px #171d278c,
+    0 3px 8px #0004;
+}
+.card-emblem svg {
+  width: 66%;
+  height: 66%;
+  filter: drop-shadow(0 1px 2px #0008);
+}
+.card-emblem img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  background: #1a1e27;
+}
+.card-emblem-portrait img {
+  object-position: left center;
+}
+.card-emblem-portrait img[src$='-right.webp'] {
+  object-position: right center;
+}
+.card-emblem-crest img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+.shortcut-card .card-emblem {
+  --emblem-size: 54px;
+  margin-inline-start: 16px;
+}
+.shortcuts-latest .card-emblem {
+  --emblem-size: 28px;
+  align-self: center;
 }
 .shortcut-arrow {
   margin-left: auto;
@@ -7144,10 +7182,9 @@ a.shortcut-card:focus-visible {
     min-height: 76px;
     gap: 12px;
   }
-  .shortcut-card img {
-    width: 74px;
-    height: 74px;
-    flex-basis: 74px;
+  .shortcut-card .card-emblem {
+    --emblem-size: 46px;
+    margin-inline-start: 12px;
   }
 }
 /* Boss header art (David, 12 Nov 2026): PC only; shown on the tier list in Bosses mode with a boss picked. */
@@ -7933,6 +7970,12 @@ a.shortcut-card:focus-visible {
   color: #f4f6fa;
   text-decoration: none;
 }
+.guide-banner > div {
+  flex: 1;
+}
+.guide-banner .card-emblem {
+  --emblem-size: clamp(46px, 6vw, 70px);
+}
 .guide-banner h4 {
   margin: 4px 0 0;
   font-size: clamp(22px, 3vw, 32px);
@@ -7968,6 +8011,33 @@ a.guide-tile:focus-visible {
   color: #f4f6fa;
   text-decoration: none;
   font-weight: 700;
+}
+.guide-tile:has(.card-emblem) {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  min-height: 65px;
+  padding: 8px 12px;
+}
+.guide-tile-title {
+  min-width: 0;
+}
+.guide-fight-art {
+  min-height: clamp(100px, 21vw, 235px);
+  margin-bottom: 18px;
+  border-radius: 6px;
+  background:
+    linear-gradient(0deg, #12152167, transparent 70%),
+    var(--fight-art) center / cover;
+}
+.guide-fight-cue {
+  padding: 10px 14px;
+  border-left: 3px solid #ed9a83;
+  background: #3b2d33;
+  color: #ffe5df;
+}
+.guide-fight-cue strong {
+  display: block;
+  color: #ffc3b0;
 }
 .guide-planned {
   background: #22252c;
