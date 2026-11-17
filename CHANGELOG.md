@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 17 Nov 2026 — Perfect rune readings (Claude)
+- David's new Perfect rune values added to `RUNES.seen.Perfect` (new: Attack 84, 91; Defense 60, 70, 75, 85, 90, 100; Max HP 1350; Crit Rate 7.23%, 8.50%; Crit Damage 12.60%). Every top is now seen, so the open question in STATUS is closed (GAME_MATH updated). Data only.
+
 ## 17 Nov 2026 — Cookbook: the 18 combinations confirmed (Claude)
 - David cooked all 18 hidden three-ingredient guesses: all work, so `check` is gone and they show. Fried Rice's is Vegetables + Rice + Rice (Vegetables + Wheat + Wheat makes Classic Pizza, added there); Vegetables + Vegetables + Wheat in free cooking makes Salad (added there), while Spring Rolls takes Rice. COOKBOOK_TESTS now lists 78 star values to read (the new combinations reach new stars). Data only.
 

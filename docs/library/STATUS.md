@@ -17,7 +17,6 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 
 ## Open questions (need the game)
 1. **Cookbook tests** (17 Nov): 78 star values to read (the 18 combinations were confirmed 17 Nov), listed in [COOKBOOK_TESTS.md](COOKBOOK_TESTS.md). New values go in `COOKBOOK.dishes[].tiers`.
-2. Perfect rune tops still predicted: Crit Rate 8.50% (step 0.425%) and Defense 100 (step 5). Seen tops: Attack 140, Crit Damage 14%, Max HP 1500 (15 Nov). Readings in `RUNES.seen`.
 
 ## Can wait
 - Crit Rate awakenings were rated before the 30 Oct gear rebuild; worth a re-check.
