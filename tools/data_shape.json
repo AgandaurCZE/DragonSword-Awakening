@@ -938,17 +938,37 @@
          "record": {
           "opt": {},
           "req": {
-           "best": {
+           "combos": {
             "list": {
-             "types": [
-              "string"
-             ]
+             "record": {
+              "opt": {
+               "check": {
+                "types": [
+                 "bool"
+                ]
+               },
+               "inferred": {
+                "types": [
+                 "bool"
+                ]
+               }
+              },
+              "req": {
+               "slots": {
+                "list": {
+                 "list": {
+                  "types": [
+                   "string"
+                  ]
+                 },
+                 "types": [
+                  "string"
+                 ]
+                }
+               }
+              }
+             }
             }
-           },
-           "bestStars": {
-            "types": [
-             "number"
-            ]
            },
            "duration": {
             "types": [
@@ -959,11 +979,6 @@
            "effect": {
             "types": [
              "string"
-            ]
-           },
-           "fixed": {
-            "types": [
-             "bool"
             ]
            },
            "id": {
@@ -991,13 +1006,6 @@
              "string"
             ]
            },
-           "slots": {
-            "list": {
-             "types": [
-              "string"
-             ]
-            }
-           },
            "text": {
             "types": [
              "string"
@@ -1005,6 +1013,11 @@
            },
            "tiers": {
             "map": {
+             "list": {
+              "types": [
+               "string"
+              ]
+             },
              "types": [
               "string"
              ]
@@ -1017,7 +1030,13 @@
        "effects": {
         "map": {
          "record": {
-          "opt": {},
+          "opt": {
+           "teamIcon": {
+            "types": [
+             "string"
+            ]
+           }
+          },
           "req": {
            "color": {
             "types": [

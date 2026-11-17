@@ -531,8 +531,40 @@ function cbSaveTicks(t) {
 function cbStars(n, max = 5) {
   return `<span class="cb-stars">${'★'.repeat(n)}<span class="off">${'★'.repeat(Math.max(0, max - n))}</span></span>`;
 }
+// Ingredient combinations (COOKBOOK.dishes[].combos, 17 Nov 2026): a slot is a category, an exact ingredient or a list of
+// alternatives. Combos marked check stay hidden until confirmed in-game.
+function cbCombos(d) {
+  return (d.combos || []).filter((c) => !c.check);
+}
+function cbOpts(slot) {
+  const ING = COOKBOOK.ingredients || [];
+  return [].concat(slot).flatMap((a) => ING.filter((i) => i.category === a || i.name === a));
+}
+function cbRange(c) {
+  const sums = c.slots.map((s) => cbOpts(s).map((i) => i.stars));
+  const lo = sums.reduce((a, s) => a + Math.min(...s), 0);
+  const hi = sums.reduce((a, s) => a + Math.max(...s), 0);
+  const st = (v) => Math.min(5, 1 + Math.floor(v / 3));
+  return [st(lo), st(hi)];
+}
+function cbReach(d) {
+  const out = new Set();
+  cbCombos(d).forEach((c) => {
+    const [a, b] = cbRange(c);
+    for (let s = a; s <= b; s++) out.add(s);
+  });
+  return [...out].sort((a, b) => a - b);
+}
 function cbMax(d) {
-  return Math.min(5, 1 + Math.floor((4 * d.slots.length) / 3));
+  return Math.max(1, ...cbReach(d));
+}
+function cbFill(text, v) {
+  const vals = [].concat(v ?? '?');
+  return text.replace(/\{([vwx])\}/g, (_, k) => vals['vwx'.indexOf(k)] ?? '?');
+}
+function cbIcon(d) {
+  const e = COOKBOOK.effects[d.effect] || {};
+  return d.scope === 'Team' && e.teamIcon ? e.teamIcon : e.icon;
 }
 function cbList() {
   const C = COOKBOOK;
@@ -559,7 +591,6 @@ function renderCookbook() {
     ticks = cbTicks();
   const all = cbList();
   const found = (C.dishes || []).length;
-  const ingByName = (n) => ING.find((i) => i.name === n);
   const q = CB.q.toLowerCase();
   const list = all.filter(
     (d) =>
@@ -569,8 +600,9 @@ function renderCookbook() {
       (!q ||
         (!d.unk &&
           (d.name.toLowerCase().includes(q) ||
-            [...d.slots, ...d.best].some((x) => x.toLowerCase().includes(q)) ||
-            d.best.some((b) => (ingByName(b)?.category || '').toLowerCase().includes(q))))),
+            cbCombos(d)
+              .flatMap((c) => c.slots.flat())
+              .some((x) => x.toLowerCase().includes(q) || cbOpts(x).some((i) => i.name.toLowerCase().includes(q)))))),
   );
   if (CB.sel == null) CB.sel = (C.dishes[0] || {}).id;
   const cookedIn = (m) => (C.dishes || []).filter((d) => (!m || d.method === m) && ticks.has(d.id)).length;
@@ -587,7 +619,7 @@ function renderCookbook() {
   const card = (d) =>
     d.unk
       ? `<button type="button" class="cb-card cb-unk${CB.sel === d.id ? ' sel' : ''}" data-cbd="${d.id}" aria-label="Undiscovered ${d.method} dish"><div class="cb-art"></div><div class="cb-meta"><div class="cb-name">???</div><div class="cb-row"><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span></div></div></button>`
-      : `<button type="button" class="cb-card${CB.sel === d.id ? ' sel' : ''}" data-cbd="${d.id}"><span class="cb-badge" style="background:${E[d.effect].color}" title="${profileEsc(d.effect)}">${E[d.effect].icon}</span>${ticks.has(d.id) ? '<span class="cb-mine">COOKED</span>' : ''}<div class="cb-art" style="background-image:url('${d.image}')"></div><div class="cb-meta"><div class="cb-name">${profileEsc(d.name)}</div><div class="cb-row"><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span>${cbStars(d.bestStars, cbMax(d))}</div></div></button>`;
+      : `<button type="button" class="cb-card${CB.sel === d.id ? ' sel' : ''}" data-cbd="${d.id}"><span class="cb-badge" title="${profileEsc(d.effect)}"><img src="${cbIcon(d)}" alt=""></span>${ticks.has(d.id) ? '<span class="cb-mine">COOKED</span>' : ''}<div class="cb-art" style="background-image:url('${d.image}')"></div><div class="cb-meta"><div class="cb-name">${profileEsc(d.name)}</div><div class="cb-row"><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span>${cbStars(cbMax(d))}</div></div></button>`;
   h += `<div class="cb-main"><div class="cb-grid">${list.length ? list.map(card).join('') : '<div class="cb-empty">No dish matches these filters.</div>'}</div><aside class="cb-detail" aria-live="polite">${cbDetail(
     all.find((d) => d.id === CB.sel),
     ticks,
@@ -649,31 +681,45 @@ function renderCookbook() {
 function cbDetail(d, ticks) {
   const C = COOKBOOK,
     M = C.methods,
-    E = C.effects;
+    E = C.effects,
+    X = profileEsc;
   if (!d) return '';
   if (d.unk)
     return `<div class="cb-dh cb-unk"><div class="cb-art"></div><div><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span><h3>Unknown dish</h3><div class="cb-note">Not discovered yet. Its ingredients and effect show up here once it has been cooked.</div></div></div>`;
-  const ing = (n) => (C.ingredients || []).find((i) => i.name === n);
-  const max = cbMax(d);
-  const tiers = Object.entries(d.tiers);
-  const slot = (s, i) => {
-    const b = ing(d.best[i]);
-    return `<div class="cb-slot">${b ? `<img src="${b.icon}" alt="">` : ''}<b>${d.fixed ? profileEsc(s) : 'Any ' + profileEsc(s)}</b><small>${b ? `best: ${profileEsc(b.name)} ${'★'.repeat(b.stars)}` : ''}</small></div>`;
+  const reach = cbReach(d);
+  const known = reach.filter((s) => d.tiers[String(s)] != null);
+  const top = known[known.length - 1];
+  const val = (v) => [].concat(v).map(X).join(' · ');
+  const table = Object.keys(d.tiers).length
+    ? `<h4 class="cb-h">Effect by stars</h4><table><thead><tr><th>Stars</th><th>Value</th></tr></thead><tbody>${reach
+        .map(
+          (s) =>
+            `<tr class="${s === top ? 'hl' : ''}"><td>${cbStars(s)}</td><td>${d.tiers[String(s)] != null ? val(d.tiers[String(s)]) : '<span class="cb-note">—</span>'}</td></tr>`,
+        )
+        .join('')}</tbody></table>`
+    : '';
+  const chip = (slot) => {
+    const alts = [].concat(slot),
+      cats = alts.filter((a) => (C.ingredients || []).some((i) => i.category === a)),
+      best = cbOpts(slot).sort((a, b) => b.stars - a.stars)[0];
+    const label = alts.length > 1 ? alts.join(' / ') : cats.length ? 'Any ' + alts[0] : alts[0];
+    return `<span class="cb-ing${cats.length ? '' : ' exact'}" title="${X(
+      cbOpts(slot)
+        .map((i) => i.name + ' ' + '★'.repeat(i.stars))
+        .join(', '),
+    )}">${best ? `<img src="${best.icon}" alt="">` : ''}<b>${X(label)}</b></span>`;
   };
-  return `<div class="cb-dh"><div class="cb-art" style="background-image:url('${d.image}')"></div><div><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span><h3>${profileEsc(d.name)}</h3><div class="cb-eff"><span class="cb-dot" style="background:${E[d.effect].color}"></span> ${profileEsc(d.effect)} · ${profileEsc(d.scope)}${d.duration ? ' · ' + profileEsc(d.duration) : ''}</div></div></div>
- <div class="cb-eff">[${profileEsc(d.scope)}] ${profileEsc(d.text.replace('{v}', d.tiers[String(d.bestStars)] || '?'))}</div>
- <h4 class="cb-h">Effect by stars</h4><table><thead><tr><th>Stars</th><th>Value</th></tr></thead><tbody>${Array.from(
-   { length: max },
-   (_, i) => i + 1,
- )
-   .filter((s) => s >= 1 + Math.floor(d.slots.length / 3))
-   .map(
-     (s) =>
-       `<tr class="${s === d.bestStars ? 'hl' : ''}"><td>${cbStars(s, max)}</td><td>${d.tiers[String(s)] ? profileEsc(d.tiers[String(s)]) : '<span class="cb-note">—</span>'}</td></tr>`,
-   )
-   .join('')}</tbody></table>
- <h4 class="cb-h">Ingredients</h4><div class="cb-slots" style="grid-template-columns:repeat(${d.slots.length},minmax(0,1fr))">${d.slots.map(slot).join('')}</div>
- <div class="cb-note">${d.fixed ? 'These exact ingredients only (no substitutes in the game).' : 'Any ingredient of the same category fits each slot; higher-star ingredients give a higher-star dish.'} Highlighted row = the best version cooked so far.</div>
+  const combos = cbCombos(d)
+    .map((c) => {
+      const [a, b] = cbRange(c);
+      return `<div class="cb-combo"><div class="cb-ings">${c.slots.map(chip).join('<i>+</i>')}</div><span class="cb-crange" title="Dish stars with these ingredients">${a === b ? a : `${a}–${b}`}★</span></div>`;
+    })
+    .join('');
+  return `<div class="cb-dh"><div class="cb-art" style="background-image:url('${d.image}')"></div><div><span class="cb-meth" style="color:${M[d.method].color}">${d.method}</span><h3>${X(d.name)}</h3><div class="cb-eff"><img class="cb-eicon" src="${cbIcon(d)}" alt=""> ${X(d.effect)} · ${X(d.scope)}${d.duration ? ' · ' + X(d.duration) : ''}</div></div></div>
+ <div class="cb-eff">[${X(d.scope)}] ${X(cbFill(d.text, d.tiers[String(top)]))}</div>
+ ${table}
+ <h4 class="cb-h">Ingredient combinations</h4><div class="cb-combos">${combos}</div>
+ <div class="cb-note">"Any" takes every ingredient of that category; named ingredients can't be swapped. Higher-star ingredients and more of them give a higher-star dish.</div>
  <button type="button" class="cb-tick${ticks.has(d.id) ? ' done' : ''}" id="cbTick">${ticks.has(d.id) ? 'Cooked ✓ (click to undo)' : 'Mark as cooked'}</button>`;
 }
 // Additional Beta pages.

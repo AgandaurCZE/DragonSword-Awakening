@@ -8,7 +8,7 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 
 ## In progress
 - **Hero reviews:** rewritten and live 15 Nov (banner with nickname, lore title, A0/A6, groups vs bosses). Writing rules: no testing details or names; one cast never fills a status gauge; most skills return in about 10 s; against bosses heroes need partners or a broken Super Armor for physical statuses.
-- **Guide library:** Getting Started has its own view and is featured first in New Players. Status Effects, Break & Super Armor and the Defense guide have their own views in Game Mechanics, with quick links at the top of Getting Started. The library also includes the dungeon, World Boss, Hunt, Raid, Tower, gear and progression guides. Guide illustrations can be added as suitable screenshots arrive.
+- **Guide library:** Getting Started has its own view and is featured first in New Players. Status Effects, Break & Super Armor and the Defense guide have their own views in Game Mechanics, with quick links at the top of Getting Started. The library also includes the dungeon, World Boss, Hunt, Raid, Tower, gear and progression guides. Screenshots in nine guides (17 Nov).
 
 ## David's account (latest)
 - All 20 heroes Lv.70, all masteries. Awakenings: A6 Castella, Cerese, Charlotte, Dana, Johnny, Kalien, Kalsion, Ornette, Reina, Roxy, Ryza, Theresia; A3 Aria, Astria, Eileen, Lute, Othello, Sion, Tarte; A0 Alex.
@@ -16,7 +16,8 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 - Karmas 53 of 53 (every signature; Codex complete, 15 Nov), titles 49 of 109, familiars 16 of 29.
 
 ## Open questions (need the game)
-1. Perfect rune tops still predicted: Crit Rate 8.50% (step 0.425%) and Defense 100 (step 5). Seen tops: Attack 140, Crit Damage 14%, Max HP 1500 (15 Nov). Readings in `RUNES.seen`.
+1. **Cookbook tests** (17 Nov): 18 three-ingredient combinations and 61 star values to read, listed in [COOKBOOK_TESTS.md](COOKBOOK_TESTS.md). Confirmed combinations: drop `check`; new values go in `COOKBOOK.dishes[].tiers`.
+2. Perfect rune tops still predicted: Crit Rate 8.50% (step 0.425%) and Defense 100 (step 5). Seen tops: Attack 140, Crit Damage 14%, Max HP 1500 (15 Nov). Readings in `RUNES.seen`.
 
 ## Can wait
 - Crit Rate awakenings were rated before the 30 Oct gear rebuild; worth a re-check.

@@ -1,5 +1,8 @@
 # Done: finished tasks and answered questions
 
+## 17 Nov — Full Cookbook
+All 73 recipes from David's video with groups, effects, star values and ingredient combinations. Open: the tests in `COOKBOOK_TESTS.md`.
+
 ## 17 Nov — Guide screenshots
 David's screenshots cropped and placed in nine guides; swipers for the Exchange and the Tower of Trials.
 

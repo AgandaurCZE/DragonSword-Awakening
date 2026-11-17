@@ -1085,6 +1085,20 @@ def guide_polish(browser, base):
             page.wait_for_function(f"document.querySelector('#{aid} .gf-count').textContent.startsWith('2 / ')")
             box.locator('[data-gf-go="0"]').click()
             page.wait_for_function(f"document.querySelector('#{aid} .gf-count').textContent.startsWith('1 / ')")
+    # Cookbook (COOKBOOK.dishes[].combos): one card per recipe, every visible combination drawn with its star range,
+    # combinations marked check stay hidden, and the effect icons load.
+    page.goto(base + 'cookbook', wait_until='networkidle')
+    page.wait_for_function('NAV.ready')
+    want = page.evaluate("COOKBOOK.total")
+    if page.locator('.cb-card').count() != want:
+        raise AssertionError(f"cookbook: {page.locator('.cb-card').count()} cards for {want} recipes")
+    for dish in page.evaluate("COOKBOOK.dishes.filter(d => d.combos.some(c => c.check) || d.combos.length > 2).slice(0, 4).map(d => [d.id, d.combos.filter(c => !c.check).length])"):
+        page.locator(f'[data-cbd="{dish[0]}"]').click()
+        got = page.locator('.cb-detail .cb-combo').count()
+        if got != dish[1] or page.locator('.cb-detail .cb-crange').count() != got:
+            raise AssertionError(f'cookbook {dish[0]}: {got} combinations drawn, {dish[1]} expected')
+    page.locator('.cb-badge img').evaluate_all("(images) => images.forEach((img) => img.loading = 'eager')")
+    page.wait_for_function("[...document.querySelectorAll('.cb-badge img, .cb-eicon')].every((img) => img.complete && img.naturalWidth)")
     ctx.close()
     print('  mobile menu, Finder encounter and ranked-hero links, filters, profiles and guides checked')
 

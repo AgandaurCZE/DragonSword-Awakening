@@ -23062,11 +23062,11 @@
   "image": "assets/ui/mode-towers.webp"
  },
  "COOKBOOK": {
-  "note": "Cookbook tab (preview only; renderCookbook()). From David's Cookbook videos (31 Oct 2026); sources in assets/items/cookbook.json. Dish pictures cut from the Cookbook detail panel (assets/cooking/). 'slots' are ingredient categories (any ingredient of that category fits), or fixed ingredient names when 'fixed' is true (no swap icon in the game). 'tiers' = the effect value per dish star, read in-game; only those values are shown, never calculated. 'best' = the best combination David has cooked.",
+  "note": "Cookbook tab (renderCookbook()). All 73 recipes from David's Cookbook videos (31 Oct 2026, and the full recipe video of 17 Nov 2026, notes in docs/library/COOKBOOK_TESTS.md). Dish pictures and effect icons cut from that video (assets/cooking/). 'combos' = ingredient combinations that cook the dish; a slot is a category (any ingredient of it), an exact ingredient name (no swap icon in the game), or a list of alternatives. combo.inferred = added from the patterns, not cooked yet; combo.check = unsure, hidden on the page until David confirms. 'tiers' = effect value per dish star read in-game (a list when the text has several values: {v}, {w}, {x}); Grilled Meat 4★ 1450 taken from Grilled Seafood, which shares its values at 1-3★.",
   "total": 73,
   "methods": {
    "Grilling": {
-    "total": 25,
+    "total": 29,
     "color": "#f0874a"
    },
    "Boiling": {
@@ -23074,30 +23074,51 @@
     "color": "#4fb6c9"
    },
    "Slicing": {
-    "total": 22,
+    "total": 18,
     "color": "#8ccf6a"
    }
   },
   "effects": {
    "Recovery": {
     "color": "#ef4444",
-    "icon": "+"
+    "icon": "assets/cooking/effect-recovery.webp",
+    "teamIcon": "assets/cooking/effect-recovery-team.webp"
    },
    "Attack": {
-    "color": "#22c55e",
-    "icon": "⚔"
+    "color": "#14b8a6",
+    "icon": "assets/cooking/effect-attack.webp"
+   },
+   "Defense": {
+    "color": "#3b82f6",
+    "icon": "assets/cooking/effect-defense.webp"
+   },
+   "HP": {
+    "color": "#0ea5e9",
+    "icon": "assets/cooking/effect-hp.webp"
+   },
+   "Resurrection": {
+    "color": "#f43f5e",
+    "icon": "assets/cooking/effect-resurrection.webp"
    },
    "Stamina Buff": {
-    "color": "#14b8a6",
-    "icon": "S"
+    "color": "#2dd4bf",
+    "icon": "assets/cooking/effect-stamina-buff.webp"
    },
    "Stamina Recovery": {
     "color": "#ec4899",
-    "icon": "F"
+    "icon": "assets/cooking/effect-stamina-recovery.webp"
+   },
+   "Status Effect Removal": {
+    "color": "#22c55e",
+    "icon": "assets/cooking/effect-status-effect-removal.webp"
+   },
+   "Increased Rage Gain": {
+    "color": "#a855f7",
+    "icon": "assets/cooking/effect-rage.webp"
    }
   },
-  "starRule": "Dish stars = 1 + (sum of the ingredients' stars ÷ 3, rounded down). One ingredient caps at 2★, two at 3★, three at 5★.",
-  "intro": "Every recipe in the in-game Cookbook. Undiscovered dishes stay hidden, like in the game, until someone cooks them. Tick what you've cooked: it's saved in your browser.",
+  "starRule": "Dish stars = 1 + (sum of the ingredients' stars ÷ 3, rounded down), up to 5★. More ingredients mean more stars: one 4★ Boar Meat makes a 2★ Grilled Meat, three make a 5★ one.",
+  "intro": "Every recipe in the in-game Cookbook, with the ingredient combinations that cook it and its effect at each star level. Tick what you've cooked: it's saved in your browser.",
   "ingredients": [
    {
     "name": "Boar Meat",
@@ -23312,20 +23333,71 @@
     "effect": "Recovery",
     "scope": "Personal",
     "duration": null,
-    "text": "Immediately restores {v} HP.",
+    "text": "Instantly restores {v} HP.",
     "tiers": {
      "1": "850",
-     "2": "950"
+     "2": "950",
+     "3": "1200",
+     "4": "1450",
+     "5": "2400"
     },
-    "slots": [
-     "Meat"
+    "combos": [
+     {
+      "slots": [
+       "Meat"
+      ]
+     },
+     {
+      "slots": [
+       "Meat",
+       "Meat"
+      ]
+     },
+     {
+      "slots": [
+       "Meat",
+       "Meat",
+       "Meat"
+      ]
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Boar Meat"
-    ],
-    "bestStars": 2,
     "image": "assets/cooking/grilled-meat.webp"
+   },
+   {
+    "id": "grilled-fish",
+    "name": "Grilled Fish",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} of maximum HP.",
+    "tiers": {
+     "2": "16%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish",
+       [
+        "Vegetables",
+        "Herbs",
+        "Mushrooms",
+        "Grains",
+        "Eggs",
+        "Natural Foods"
+       ]
+      ]
+     },
+     {
+      "slots": [
+       "Fish",
+       "Vegetables",
+       "Vegetables"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/grilled-fish.webp"
    },
    {
     "id": "grilled-seafood",
@@ -23338,19 +23410,76 @@
     "tiers": {
      "1": "850",
      "2": "950",
-     "3": "1200"
+     "3": "1200",
+     "4": "1450"
     },
-    "slots": [
-     "Seafood",
-     "Mushrooms"
+    "combos": [
+     {
+      "slots": [
+       "Seafood"
+      ]
+     },
+     {
+      "slots": [
+       "Seafood",
+       [
+        "Vegetables",
+        "Mushrooms",
+        "Eggs"
+       ]
+      ]
+     },
+     {
+      "slots": [
+       "Seafood",
+       "Seafood"
+      ],
+      "inferred": true
+     },
+     {
+      "slots": [
+       "Seafood",
+       "Seafood",
+       "Seafood"
+      ]
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Conch",
-     "Blue Lotus Mushroom"
-    ],
-    "bestStars": 3,
     "image": "assets/cooking/grilled-seafood.webp"
+   },
+   {
+    "id": "roasted-vegetables",
+    "name": "Roasted Vegetables",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Restores {v} of maximum HP per second for 10 seconds.",
+    "tiers": {
+     "2": "2%",
+     "4": "3%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Vegetables"
+      ]
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Vegetables"
+      ],
+      "inferred": true
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Vegetables",
+       "Vegetables"
+      ]
+     }
+    ],
+    "image": "assets/cooking/roasted-vegetables.webp"
    },
    {
     "id": "grilled-mushrooms",
@@ -23362,17 +23491,66 @@
     "text": "Restores {v} HP per second for 10 seconds.",
     "tiers": {
      "1": "100",
-     "2": "125"
+     "2": "125",
+     "3": "150",
+     "4": "180"
     },
-    "slots": [
-     "Mushrooms"
+    "combos": [
+     {
+      "slots": [
+       "Mushrooms"
+      ]
+     },
+     {
+      "slots": [
+       "Mushrooms",
+       [
+        "Mushrooms",
+        "Natural Foods"
+       ]
+      ]
+     },
+     {
+      "slots": [
+       [
+        "Mushrooms",
+        "Herbs"
+       ],
+       "Mushrooms",
+       "Mushrooms"
+      ]
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Blue Lotus Mushroom"
-    ],
-    "bestStars": 2,
     "image": "assets/cooking/grilled-mushrooms.webp"
+   },
+   {
+    "id": "fried-rice",
+    "name": "Fried Rice",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} of maximum HP.",
+    "tiers": {
+     "2": "12%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Vegetables",
+       "Grains"
+      ]
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Grains",
+       "Grains"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/fried-rice.webp"
    },
    {
     "id": "fried-egg",
@@ -23385,19 +23563,67 @@
     "tiers": {
      "4": "24%"
     },
-    "slots": [
-     "Eggs",
-     "Eggs",
-     "Eggs"
+    "combos": [
+     {
+      "slots": [
+       "Eggs"
+      ],
+      "inferred": true
+     },
+     {
+      "slots": [
+       "Eggs",
+       "Eggs"
+      ],
+      "inferred": true
+     },
+     {
+      "slots": [
+       "Eggs",
+       "Eggs",
+       "Eggs"
+      ]
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Goose Eggs",
-     "Goose Eggs",
-     "Goose Eggs"
-    ],
-    "bestStars": 4,
     "image": "assets/cooking/fried-egg.webp"
+   },
+   {
+    "id": "double-steak",
+    "name": "Double Steak",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} HP and {w} of maximum HP.",
+    "tiers": {
+     "2": [
+      "850",
+      "15%"
+     ],
+     "3": [
+      "1100",
+      "18%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Fish"
+      ]
+     },
+     {
+      "slots": [
+       "Meat",
+       "Fish",
+       [
+        "Seafood",
+        "Fish"
+       ]
+      ]
+     }
+    ],
+    "image": "assets/cooking/double-steak.webp"
    },
    {
     "id": "assorted-grilled-meats",
@@ -23410,19 +23636,527 @@
     "tiers": {
      "1": "1200",
      "2": "1400",
-     "3": "1650"
+     "3": "1650",
+     "4": "2000"
     },
-    "slots": [
-     "Meat",
-     "Mushrooms"
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       [
+        "Vegetables",
+        "Mushrooms",
+        "Eggs"
+       ]
+      ]
+     },
+     {
+      "slots": [
+       "Meat",
+       "Vegetables",
+       [
+        "Herbs",
+        "Mushrooms"
+       ]
+      ]
+     },
+     {
+      "slots": [
+       "Meat",
+       "Eggs",
+       "Natural Foods"
+      ]
+     },
+     {
+      "slots": [
+       "Meat",
+       "Seafood",
+       "Seafood"
+      ]
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Boar Meat",
-     "Blue Lotus Mushroom"
-    ],
-    "bestStars": 3,
     "image": "assets/cooking/assorted-grilled-meats.webp"
+   },
+   {
+    "id": "meat-bowl",
+    "name": "Meat Bowl",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} HP and {w} of maximum HP.",
+    "tiers": {
+     "3": [
+      "750",
+      "15%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Wheat",
+       "Grains"
+      ]
+     }
+    ],
+    "image": "assets/cooking/meat-bowl.webp"
+   },
+   {
+    "id": "assorted-grilled-fish",
+    "name": "Assorted Grilled Fish",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} of maximum HP.",
+    "tiers": {
+     "2": "24%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish",
+       "Fish",
+       "Fish"
+      ]
+     }
+    ],
+    "image": "assets/cooking/assorted-grilled-fish.webp"
+   },
+   {
+    "id": "seafood-platter",
+    "name": "Seafood Platter",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} HP and {w} of maximum HP.",
+    "tiers": {
+     "2": [
+      "850",
+      "15%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish",
+       "Seafood"
+      ]
+     },
+     {
+      "slots": [
+       "Fish",
+       "Seafood",
+       "Seafood"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/seafood-platter.webp"
+   },
+   {
+    "id": "grilled-fish-bowl",
+    "name": "Grilled Fish Bowl",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} of maximum HP.",
+    "tiers": {
+     "3": "22.5%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish",
+       "Vegetables",
+       "Grains"
+      ]
+     }
+    ],
+    "image": "assets/cooking/grilled-fish-bowl.webp"
+   },
+   {
+    "id": "seafood-pasta",
+    "name": "Seafood Pasta",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} HP.",
+    "tiers": {
+     "2": "1050"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Seafood",
+       "Wheat"
+      ]
+     },
+     {
+      "slots": [
+       "Seafood",
+       "Wheat",
+       "Wheat"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/seafood-pasta.webp"
+   },
+   {
+    "id": "stir-fried-mushrooms-and-vegetables",
+    "name": "Stir-fried Mushrooms and Vegetables",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Restores {v} HP and {w} of maximum HP per second for 15 seconds.",
+    "tiers": {
+     "3": [
+      "120",
+      "2%"
+     ],
+     "4": [
+      "140",
+      "2.4%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Vegetables",
+       "Mushrooms"
+      ]
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Vegetables",
+       "Mushrooms"
+      ]
+     }
+    ],
+    "image": "assets/cooking/stir-fried-mushrooms-and-vegetables.webp"
+   },
+   {
+    "id": "rolled-omelet",
+    "name": "Rolled Omelet",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} of maximum HP.",
+    "tiers": {
+     "3": "30%",
+     "4": "36%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Mushrooms",
+       "Eggs"
+      ]
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Vegetables",
+       "Eggs"
+      ]
+     }
+    ],
+    "image": "assets/cooking/rolled-omelet.webp"
+   },
+   {
+    "id": "steak-set-meal",
+    "name": "Steak Set Meal",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} HP.",
+    "tiers": {
+     "2": "1600",
+     "3": "2000",
+     "4": "2400"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Seafood",
+       "Vegetables"
+      ]
+     }
+    ],
+    "image": "assets/cooking/steak-set-meal.webp"
+   },
+   {
+    "id": "hamburger-steak",
+    "name": "Hamburger Steak",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} HP and {w} of maximum HP.",
+    "tiers": {
+     "4": [
+      "1750",
+      "30%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Vegetables",
+       "Eggs"
+      ]
+     }
+    ],
+    "image": "assets/cooking/hamburger-steak.webp"
+   },
+   {
+    "id": "fish-steak",
+    "name": "Fish Steak",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} of maximum HP.",
+    "tiers": {
+     "3": "40%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish",
+       "Vegetables",
+       "Mushrooms"
+      ]
+     }
+    ],
+    "image": "assets/cooking/fish-steak.webp"
+   },
+   {
+    "id": "seafood-teppanyaki",
+    "name": "Seafood Teppanyaki",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} HP.",
+    "tiers": {
+     "4": "3000"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Seafood",
+       "Vegetables",
+       "Mushrooms"
+      ]
+     }
+    ],
+    "image": "assets/cooking/seafood-teppanyaki.webp"
+   },
+   {
+    "id": "omelet",
+    "name": "Omelet",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Instantly restores {v} of maximum HP and restores {w} HP per second for 20 seconds.",
+    "tiers": {
+     "4": [
+      "30%",
+      "180"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Vegetables",
+       "Mushrooms",
+       "Eggs"
+      ]
+     }
+    ],
+    "image": "assets/cooking/omelet.webp"
+   },
+   {
+    "id": "herb-grill",
+    "name": "Herb Grill",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Restores {v} of maximum HP per second for 5 seconds.",
+    "tiers": {
+     "2": "2.5%",
+     "4": "4%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Herbs"
+      ]
+     },
+     {
+      "slots": [
+       "Herbs",
+       "Herbs"
+      ],
+      "inferred": true
+     },
+     {
+      "slots": [
+       "Herbs",
+       "Herbs",
+       "Herbs"
+      ]
+     }
+    ],
+    "image": "assets/cooking/herb-grill.webp"
+   },
+   {
+    "id": "pan-fried-dumplings",
+    "name": "Pan-fried Dumplings",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} HP.",
+    "tiers": {
+     "1": "600",
+     "3": "850",
+     "4": "1000"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Wheat"
+      ]
+     },
+     {
+      "slots": [
+       "Meat",
+       "Wheat"
+      ]
+     },
+     {
+      "slots": [
+       "Meat",
+       [
+        "Meat",
+        "Herbs"
+       ],
+       "Wheat"
+      ]
+     },
+     {
+      "slots": [
+       "Wheat",
+       "Wheat",
+       "Wheat"
+      ]
+     }
+    ],
+    "image": "assets/cooking/pan-fried-dumplings.webp"
+   },
+   {
+    "id": "tomato-spaghetti",
+    "name": "Tomato Spaghetti",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} HP and restores {w} of maximum HP per second for 15 seconds.",
+    "tiers": {
+     "3": [
+      "750",
+      "1.5%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Wheat",
+       "Wheat",
+       "Leaflet Tomato"
+      ]
+     }
+    ],
+    "image": "assets/cooking/tomato-spaghetti.webp"
+   },
+   {
+    "id": "fish-and-chips",
+    "name": "Fish and Chips",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} of maximum HP and restores {w} of maximum HP per second for 10 seconds.",
+    "tiers": {
+     "2": [
+      "12%",
+      "1.5%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Dwarf Potato",
+       "Fish"
+      ]
+     },
+     {
+      "slots": [
+       "Dwarf Potato",
+       "Fish",
+       "Fish"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/fish-and-chips.webp"
+   },
+   {
+    "id": "classic-pizza",
+    "name": "Classic Pizza",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} HP.",
+    "tiers": {
+     "2": "950"
+    },
+    "combos": [
+     {
+      "slots": [
+       [
+        "Vegetables",
+        "Mushrooms"
+       ],
+       "Wheat"
+      ]
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Mushrooms",
+       "Wheat"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/classic-pizza.webp"
    },
    {
     "id": "potato-pizza",
@@ -23431,21 +24165,73 @@
     "effect": "Recovery",
     "scope": "Team",
     "duration": null,
-    "text": "Instantly restores {v} HP and restores 1.2% of maximum HP per second for 20 seconds.",
+    "text": "Instantly restores {v} HP and restores {w} of maximum HP per second for 20 seconds.",
     "tiers": {
-     "2": "800"
+     "2": [
+      "800",
+      "1.2%"
+     ],
+     "3": [
+      "1000",
+      "1.5%"
+     ]
     },
-    "slots": [
-     "Wheat",
-     "Dwarf Potato"
+    "combos": [
+     {
+      "slots": [
+       "Wheat",
+       "Dwarf Potato"
+      ]
+     },
+     {
+      "slots": [
+       "Wheat",
+       "Dwarf Potato",
+       "Wheat"
+      ]
+     }
     ],
-    "fixed": true,
-    "best": [
-     "Wheat",
-     "Dwarf Potato"
-    ],
-    "bestStars": 2,
     "image": "assets/cooking/potato-pizza.webp"
+   },
+   {
+    "id": "nougat",
+    "name": "Nougat",
+    "method": "Grilling",
+    "effect": "Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} HP.",
+    "tiers": {
+     "1": "750",
+     "2": "850"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Peanuts"
+      ]
+     },
+     {
+      "slots": [
+       "Walnuts"
+      ]
+     },
+     {
+      "slots": [
+       "Peanuts",
+       "Wheat"
+      ]
+     },
+     {
+      "slots": [
+       "Peanuts",
+       "Wheat",
+       "Wheat"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/nougat.webp"
    },
    {
     "id": "grilled-clams",
@@ -23456,46 +24242,25 @@
     "duration": null,
     "text": "Instantly restores {v} HP.",
     "tiers": {
-     "2": "1500"
+     "2": "1500",
+     "3": "1800"
     },
-    "slots": [
-     "Shellfish",
-     "Shellfish"
+    "combos": [
+     {
+      "slots": [
+       "Shellfish",
+       "Shellfish"
+      ]
+     },
+     {
+      "slots": [
+       "Shellfish",
+       "Shellfish",
+       "Shellfish"
+      ]
+     }
     ],
-    "fixed": true,
-    "best": [
-     "Shellfish",
-     "Shellfish"
-    ],
-    "bestStars": 2,
     "image": "assets/cooking/grilled-clams.webp"
-   },
-   {
-    "id": "steak-set-meal",
-    "name": "Steak Set Meal",
-    "method": "Grilling",
-    "effect": "Recovery",
-    "scope": "Personal",
-    "duration": null,
-    "text": "Immediately restores {v} HP.",
-    "tiers": {
-     "2": "1600",
-     "3": "2000",
-     "4": "2400"
-    },
-    "slots": [
-     "Meat",
-     "Seafood",
-     "Vegetables"
-    ],
-    "fixed": false,
-    "best": [
-     "Boar Meat",
-     "Conch",
-     "Round Eggplant"
-    ],
-    "bestStars": 4,
-    "image": "assets/cooking/steak-set-meal.webp"
    },
    {
     "id": "meat-stew",
@@ -23511,19 +24276,48 @@
      "4": "17%",
      "5": "20%"
     },
-    "slots": [
-     "Meat",
-     "Meat",
-     "Meat"
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Meat",
+       "Meat"
+      ]
+     },
+     {
+      "slots": [
+       "Meat",
+       "Wheat",
+       "Wheat"
+      ]
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Boar Meat",
-     "Boar Meat",
-     "Boar Meat"
-    ],
-    "bestStars": 5,
     "image": "assets/cooking/meat-stew.webp"
+   },
+   {
+    "id": "fish-porridge",
+    "name": "Fish Porridge",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Critical Rate increases by {v} and maximum HP increases by {w} for 15 minutes.",
+    "tiers": {
+     "2": [
+      "8%",
+      "10%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish",
+       "Grains",
+       "Grains"
+      ]
+     }
+    ],
+    "image": "assets/cooking/fish-porridge.webp"
    },
    {
     "id": "seafood-stew",
@@ -23538,19 +24332,118 @@
      "3": "18%",
      "4": "21%"
     },
-    "slots": [
-     "Seafood",
-     "Vegetables",
-     "Vegetables"
+    "combos": [
+     {
+      "slots": [
+       "Seafood",
+       "Seafood",
+       "Seafood"
+      ]
+     },
+     {
+      "slots": [
+       "Seafood",
+       "Vegetables",
+       "Vegetables"
+      ]
+     },
+     {
+      "slots": [
+       "Seafood",
+       "Wheat",
+       "Wheat"
+      ]
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Conch",
-     "Round Eggplant",
-     "Round Eggplant"
-    ],
-    "bestStars": 4,
     "image": "assets/cooking/seafood-stew.webp"
+   },
+   {
+    "id": "vegetable-soup",
+    "name": "Vegetable Soup",
+    "method": "Boiling",
+    "effect": "Defense",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Defense is increased by {v} for 15 minutes.",
+    "tiers": {
+     "4": "90"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Vegetables",
+       "Vegetables",
+       "Vegetables"
+      ]
+     }
+    ],
+    "image": "assets/cooking/vegetable-soup.webp"
+   },
+   {
+    "id": "honey-tea",
+    "name": "Honey Tea",
+    "method": "Boiling",
+    "effect": "Resurrection",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Restores {v} of maximum HP immediately after reviving.",
+    "tiers": {
+     "4": "45%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Honey",
+       "Herbs",
+       "Herbs"
+      ]
+     }
+    ],
+    "image": "assets/cooking/honey-tea.webp"
+   },
+   {
+    "id": "mushroom-tea",
+    "name": "Mushroom Tea",
+    "method": "Boiling",
+    "effect": "Resurrection",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Restores {v} of maximum HP after instantly reviving.",
+    "tiers": {
+     "4": "25%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Herbs",
+       "Mushrooms",
+       "Mushrooms"
+      ]
+     }
+    ],
+    "image": "assets/cooking/mushroom-tea.webp"
+   },
+   {
+    "id": "grain-tea",
+    "name": "Grain Tea",
+    "method": "Boiling",
+    "effect": "HP",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Increases maximum HP by {v} for 15 minutes.",
+    "tiers": {
+     "3": "1150"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Wheat",
+       "Wheat",
+       "Wheat"
+      ]
+     }
+    ],
+    "image": "assets/cooking/grain-tea.webp"
    },
    {
     "id": "hard-boiled-egg",
@@ -23561,22 +24454,227 @@
     "duration": "15 minutes",
     "text": "Attack power increases by {v} for 15 minutes.",
     "tiers": {
+     "2": "85",
      "3": "105",
      "4": "130"
     },
-    "slots": [
-     "Eggs",
-     "Eggs",
-     "Eggs"
+    "combos": [
+     {
+      "slots": [
+       "Eggs"
+      ]
+     },
+     {
+      "slots": [
+       "Eggs",
+       "Eggs"
+      ],
+      "inferred": true
+     },
+     {
+      "slots": [
+       "Eggs",
+       "Eggs",
+       "Eggs"
+      ]
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Goose Eggs",
-     "Goose Eggs",
-     "Goose Eggs"
-    ],
-    "bestStars": 4,
     "image": "assets/cooking/hard-boiled-egg.webp"
+   },
+   {
+    "id": "orbis-style-double-stew",
+    "name": "Orbis-Style Double Stew",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Increases Attack by {v} and Critical Rate by {w} for 15 minutes.",
+    "tiers": {
+     "4": [
+      "12%",
+      "13%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Meat",
+       "Fish"
+      ]
+     }
+    ],
+    "image": "assets/cooking/orbis-style-double-stew.webp"
+   },
+   {
+    "id": "orbis-style-stew",
+    "name": "Orbis-Style Stew",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Attack power increases by {v} and Critical Damage increases by {w} for 15 minutes.",
+    "tiers": {
+     "4": [
+      "12%",
+      "15%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Meat",
+       "Seafood"
+      ]
+     }
+    ],
+    "image": "assets/cooking/orbis-style-stew.webp"
+   },
+   {
+    "id": "consomme",
+    "name": "Consommé",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Attack power increases by {v} for 15 minutes.",
+    "tiers": {
+     "4": "20%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Meat",
+       "Vegetables"
+      ]
+     },
+     {
+      "slots": [
+       "Meat",
+       "Vegetables",
+       "Vegetables"
+      ]
+     }
+    ],
+    "image": "assets/cooking/consomme.webp"
+   },
+   {
+    "id": "seafood-hodgepodge",
+    "name": "Seafood Hodgepodge",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Critical Rate increases by {v} and Critical Damage increases by {w} for 15 minutes.",
+    "tiers": {
+     "2": [
+      "9%",
+      "10%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish",
+       "Fish",
+       "Seafood"
+      ]
+     }
+    ],
+    "image": "assets/cooking/seafood-hodgepodge.webp"
+   },
+   {
+    "id": "fish-soup",
+    "name": "Fish Soup",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Critical Rate increases by {v} for 15 minutes.",
+    "tiers": {
+     "2": "15%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish",
+       "Wheat",
+       "Wheat"
+      ]
+     }
+    ],
+    "image": "assets/cooking/fish-soup.webp"
+   },
+   {
+    "id": "shipboard-tea",
+    "name": "Shipboard Tea",
+    "method": "Boiling",
+    "effect": "Resurrection",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Restores {v} of maximum HP after instantly reviving.",
+    "tiers": {
+     "2": "25%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish",
+       "Fish",
+       "Herbs"
+      ]
+     }
+    ],
+    "image": "assets/cooking/shipboard-tea.webp"
+   },
+   {
+    "id": "seafood-porridge",
+    "name": "Seafood Porridge",
+    "method": "Boiling",
+    "effect": "HP",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "For 15 minutes, maximum HP is increased by {v} and Critical Damage is increased by {w}.",
+    "tiers": {
+     "3": [
+      "13%",
+      "12%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Seafood",
+       "Grains",
+       "Grains"
+      ]
+     }
+    ],
+    "image": "assets/cooking/seafood-porridge.webp"
+   },
+   {
+    "id": "herbal-tea",
+    "name": "Herbal Tea",
+    "method": "Boiling",
+    "effect": "Resurrection",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Restores {v} of maximum HP immediately after resurrection.",
+    "tiers": {
+     "4": "35%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Herbs",
+       "Herbs",
+       "Herbs"
+      ]
+     }
+    ],
+    "image": "assets/cooking/herbal-tea.webp"
    },
    {
     "id": "mushroom-soup",
@@ -23588,17 +24686,151 @@
     "text": "Armor Penetration increases by {v} for 15 minutes.",
     "tiers": {
      "1": "50",
-     "2": "60"
+     "2": "60",
+     "4": "90"
     },
-    "slots": [
-     "Mushrooms"
+    "combos": [
+     {
+      "slots": [
+       "Mushrooms"
+      ]
+     },
+     {
+      "slots": [
+       "Mushrooms",
+       "Mushrooms"
+      ],
+      "inferred": true
+     },
+     {
+      "slots": [
+       "Mushrooms",
+       "Mushrooms",
+       "Mushrooms"
+      ]
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Blue Lotus Mushroom"
-    ],
-    "bestStars": 2,
     "image": "assets/cooking/mushroom-soup.webp"
+   },
+   {
+    "id": "mushroom-porridge",
+    "name": "Mushroom Porridge",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "For 15 minutes, Armor Penetration increases by {v} and maximum HP increases by {w}.",
+    "tiers": {
+     "3": [
+      "45",
+      "13%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Mushrooms",
+       "Grains",
+       "Grains"
+      ]
+     }
+    ],
+    "image": "assets/cooking/mushroom-porridge.webp"
+   },
+   {
+    "id": "orbis-style-special-stew",
+    "name": "Orbis-Style Special Stew",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "For 15 minutes, Attack Power increases by {v}, Critical Rate by {w}, and Critical Damage by {x}.",
+    "tiers": {
+     "3": [
+      "9%",
+      "9%",
+      "11%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Fish",
+       "Seafood"
+      ]
+     }
+    ],
+    "image": "assets/cooking/orbis-style-special-stew.webp"
+   },
+   {
+    "id": "nutritious-soup",
+    "name": "Nutritious Soup",
+    "method": "Boiling",
+    "effect": "Resurrection",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Restores {v} of maximum HP after an instant resurrection.",
+    "tiers": {
+     "4": "40%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Vegetables",
+       "Herbs"
+      ]
+     }
+    ],
+    "image": "assets/cooking/nutritious-soup.webp"
+   },
+   {
+    "id": "seafood-paella",
+    "name": "Seafood Paella",
+    "method": "Boiling",
+    "effect": "HP",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Maximum HP increases by {v} for 15 minutes.",
+    "tiers": {
+     "3": "25%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Fish",
+       "Grains"
+      ]
+     }
+    ],
+    "image": "assets/cooking/seafood-paella.webp"
+   },
+   {
+    "id": "restorative-porridge",
+    "name": "Restorative Porridge",
+    "method": "Boiling",
+    "effect": "Resurrection",
+    "scope": "Personal",
+    "duration": null,
+    "text": "Upon immediate resurrection, restores {v} of maximum HP and increases Critical Hit Resistance and Critical Damage Reduction by {w} for 10 seconds.",
+    "tiers": {
+     "3": [
+      "35%",
+      "20%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Vegetables",
+       "Herbs",
+       "Wheat"
+      ]
+     }
+    ],
+    "image": "assets/cooking/restorative-porridge.webp"
    },
    {
     "id": "tomato-stew",
@@ -23609,19 +24841,72 @@
     "duration": "15 minutes",
     "text": "Defense Ignore increases by {v} for 15 minutes.",
     "tiers": {
-     "2": "12%"
+     "2": "12%",
+     "4": "17%"
     },
-    "slots": [
-     "Leaflet Tomato",
-     "Wheat"
+    "combos": [
+     {
+      "slots": [
+       "Leaflet Tomato",
+       "Wheat"
+      ]
+     },
+     {
+      "slots": [
+       "Leaflet Tomato",
+       "Vegetables",
+       "Vegetables"
+      ]
+     }
     ],
-    "fixed": true,
-    "best": [
-     "Leaflet Tomato",
-     "Wheat"
-    ],
-    "bestStars": 2,
     "image": "assets/cooking/tomato-stew.webp"
+   },
+   {
+    "id": "risotto",
+    "name": "Risotto",
+    "method": "Boiling",
+    "effect": "HP",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Maximum HP is increased by {v} for 15 minutes.",
+    "tiers": {
+     "3": "22%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Grains",
+       "Grains"
+      ]
+     }
+    ],
+    "image": "assets/cooking/risotto.webp"
+   },
+   {
+    "id": "radish-soup",
+    "name": "Radish Soup",
+    "method": "Boiling",
+    "effect": "Attack",
+    "scope": "Team",
+    "duration": "15 minutes",
+    "text": "Attack power increases by {v} and Defense increases by {w} for 15 minutes.",
+    "tiers": {
+     "4": [
+      "12%",
+      "65"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Radish",
+       "Meat",
+       "Meat"
+      ]
+     }
+    ],
+    "image": "assets/cooking/radish-soup.webp"
    },
    {
     "id": "clam-soup",
@@ -23632,17 +24917,87 @@
     "duration": "15 minutes",
     "text": "Critical Damage is increased by {v} for 15 minutes.",
     "tiers": {
-     "1": "14%"
+     "1": "14%",
+     "2": "16%"
     },
-    "slots": [
-     "Shellfish"
+    "combos": [
+     {
+      "slots": [
+       "Shellfish"
+      ]
+     },
+     {
+      "slots": [
+       "Shellfish",
+       "Shellfish"
+      ]
+     },
+     {
+      "slots": [
+       "Shellfish",
+       "Shellfish",
+       "Shellfish"
+      ],
+      "inferred": true
+     }
     ],
-    "fixed": true,
-    "best": [
-     "Shellfish"
-    ],
-    "bestStars": 1,
     "image": "assets/cooking/clam-soup.webp"
+   },
+   {
+    "id": "beef-tartare",
+    "name": "Beef Tartare",
+    "method": "Slicing",
+    "effect": "Stamina Buff",
+    "scope": "Team",
+    "duration": "1 minute",
+    "text": "For 1 minute, Stamina consumption while gliding while mounted on a Familiar is reduced by {v}.",
+    "tiers": {
+     "2": "15%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat"
+      ]
+     },
+     {
+      "slots": [
+       "Meat",
+       "Meat",
+       "Meat"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/beef-tartare.webp"
+   },
+   {
+    "id": "sashimi",
+    "name": "Sashimi",
+    "method": "Slicing",
+    "effect": "Stamina Buff",
+    "scope": "Team",
+    "duration": "1 minute",
+    "text": "For 1 minute, Stamina consumption while swimming or diving while mounted on a Familiar is reduced by {v}.",
+    "tiers": {
+     "1": "10%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish"
+      ]
+     },
+     {
+      "slots": [
+       "Fish",
+       "Fish",
+       "Fish"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/sashimi.webp"
    },
    {
     "id": "scallop-sashimi",
@@ -23657,16 +25012,27 @@
      "2": "15%",
      "3": "20%"
     },
-    "slots": [
-     "Seafood",
-     "Seafood"
+    "combos": [
+     {
+      "slots": [
+       "Seafood"
+      ]
+     },
+     {
+      "slots": [
+       "Seafood",
+       "Seafood"
+      ]
+     },
+     {
+      "slots": [
+       "Seafood",
+       "Seafood",
+       "Seafood"
+      ],
+      "check": true
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Conch",
-     "Conch"
-    ],
-    "bestStars": 3,
     "image": "assets/cooking/scallop-sashimi.webp"
    },
    {
@@ -23682,17 +25048,89 @@
      "2": "15%",
      "3": "20%"
     },
-    "slots": [
-     "Vegetables",
-     "Vegetables"
+    "combos": [
+     {
+      "slots": [
+       "Vegetables"
+      ]
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Vegetables"
+      ]
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Wheat"
+      ]
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Vegetables",
+       "Vegetables"
+      ],
+      "check": true
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Round Eggplant",
-     "Round Eggplant"
-    ],
-    "bestStars": 3,
     "image": "assets/cooking/salad.webp"
+   },
+   {
+    "id": "nutritious-salad",
+    "name": "Nutritious Salad",
+    "method": "Slicing",
+    "effect": "Status Effect Removal",
+    "scope": "Team",
+    "duration": null,
+    "text": "Immediately removes Elemental Status Effects.",
+    "tiers": {},
+    "combos": [
+     {
+      "slots": [
+       "Vegetables",
+       "Herbs"
+      ]
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Herbs",
+       "Herbs"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/nutritious-salad.webp"
+   },
+   {
+    "id": "morning-meal",
+    "name": "Morning Meal",
+    "method": "Slicing",
+    "effect": "Stamina Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} of the Hero's Stamina.",
+    "tiers": {
+     "1": "20%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Wheat"
+      ]
+     },
+     {
+      "slots": [
+       "Wheat",
+       "Wheat",
+       "Wheat"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/morning-meal.webp"
    },
    {
     "id": "egg-renew",
@@ -23703,22 +25141,322 @@
     "duration": null,
     "text": "Instantly restores {v} of the Familiar's Stamina.",
     "tiers": {
+     "2": "25%",
      "3": "30%",
      "4": "40%"
     },
-    "slots": [
-     "Eggs",
-     "Eggs",
-     "Eggs"
+    "combos": [
+     {
+      "slots": [
+       "Eggs"
+      ]
+     },
+     {
+      "slots": [
+       "Eggs",
+       "Eggs"
+      ],
+      "inferred": true
+     },
+     {
+      "slots": [
+       "Eggs",
+       "Eggs",
+       "Eggs"
+      ]
+     }
     ],
-    "fixed": false,
-    "best": [
-     "Goose Eggs",
-     "Goose Eggs",
-     "Goose Eggs"
-    ],
-    "bestStars": 4,
     "image": "assets/cooking/egg-renew.webp"
+   },
+   {
+    "id": "assorted-sashimi",
+    "name": "Assorted Sashimi",
+    "method": "Slicing",
+    "effect": "Stamina Buff",
+    "scope": "Team",
+    "duration": "1 minute",
+    "text": "For 1 minute, stamina consumption is reduced by {v} when gliding while mounted on a Familiar, and by {w} when swimming or diving while mounted on a Familiar.",
+    "tiers": {
+     "3": [
+      "20%",
+      "20%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Fish",
+       "Vegetables"
+      ]
+     }
+    ],
+    "image": "assets/cooking/assorted-sashimi.webp"
+   },
+   {
+    "id": "carpaccio",
+    "name": "Carpaccio",
+    "method": "Slicing",
+    "effect": "Stamina Buff",
+    "scope": "Team",
+    "duration": "1 minute",
+    "text": "For 1 minute, stamina consumption while gliding while mounted on a Familiar is reduced by {v}, and stamina consumption for dashing and swimming is reduced by {w}.",
+    "tiers": {
+     "4": [
+      "30%",
+      "30%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Seafood",
+       "Vegetables"
+      ]
+     }
+    ],
+    "image": "assets/cooking/carpaccio.webp"
+   },
+   {
+    "id": "beef-tartare-bibimbap",
+    "name": "Beef Tartare Bibimbap",
+    "method": "Slicing",
+    "effect": "Stamina Recovery",
+    "scope": "Team",
+    "duration": "1 minute",
+    "text": "For 1 minute, reduces stamina consumption by {v} while gliding while mounted on a Familiar, and instantly restores {w} of the hero's stamina.",
+    "tiers": {
+     "4": [
+      "30%",
+      "40%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Vegetables",
+       "Grains"
+      ]
+     }
+    ],
+    "image": "assets/cooking/beef-tartare-bibimbap.webp"
+   },
+   {
+    "id": "seafood-sauce",
+    "name": "Seafood Sauce",
+    "method": "Slicing",
+    "effect": "Stamina Buff",
+    "scope": "Team",
+    "duration": "1 minute",
+    "text": "For 1 minute, Stamina consumption while swimming or diving while mounted on a Familiar is reduced by {v}, and Stamina consumption for dashing and swimming is reduced by {w}.",
+    "tiers": {
+     "2": [
+      "15%",
+      "15%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish",
+       "Seafood"
+      ]
+     },
+     {
+      "slots": [
+       "Fish",
+       "Seafood",
+       "Seafood"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/seafood-sauce.webp"
+   },
+   {
+    "id": "assorted-sushi",
+    "name": "Assorted Sushi",
+    "method": "Slicing",
+    "effect": "Stamina Recovery",
+    "scope": "Team",
+    "duration": "1 minute",
+    "text": "For 1 minute, while mounted on a Familiar, stamina consumption while swimming and diving is reduced by {v}, and the hero's stamina is instantly restored by {w}.",
+    "tiers": {
+     "3": [
+      "20%",
+      "30%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Fish",
+       "Vegetables",
+       "Grains"
+      ]
+     }
+    ],
+    "image": "assets/cooking/assorted-sushi.webp"
+   },
+   {
+    "id": "seafood-ceviche",
+    "name": "Seafood Ceviche",
+    "method": "Slicing",
+    "effect": "Stamina Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Reduces stamina consumption for dashing and swimming by {v} and instantly restores {w} of the hero's stamina.",
+    "tiers": {
+     "2": [
+      "15%",
+      "25%"
+     ]
+    },
+    "combos": [
+     {
+      "slots": [
+       "Seafood",
+       "Grains"
+      ]
+     },
+     {
+      "slots": [
+       "Seafood",
+       "Grains",
+       "Grains"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/seafood-ceviche.webp"
+   },
+   {
+    "id": "spring-rolls",
+    "name": "Spring Rolls",
+    "method": "Slicing",
+    "effect": "Stamina Recovery",
+    "scope": "Team",
+    "duration": null,
+    "text": "Instantly restores {v} of the hero's stamina.",
+    "tiers": {
+     "2": "50%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Vegetables",
+       "Grains"
+      ]
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Vegetables",
+       "Grains"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/spring-rolls.webp"
+   },
+   {
+    "id": "assorted-rice-bowls",
+    "name": "Assorted Rice Bowls",
+    "method": "Slicing",
+    "effect": "Stamina Buff",
+    "scope": "Team",
+    "duration": "1 minute",
+    "text": "For 1 minute, all Stamina consumption for Heroes and Familiars is reduced by {v}.",
+    "tiers": {
+     "3": "30%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Meat",
+       "Fish",
+       "Grains"
+      ]
+     }
+    ],
+    "image": "assets/cooking/assorted-rice-bowls.webp"
+   },
+   {
+    "id": "assorted-salad",
+    "name": "Assorted Salad",
+    "method": "Slicing",
+    "effect": "Status Effect Removal",
+    "scope": "Team",
+    "duration": null,
+    "text": "Immediately removes all status effects.",
+    "tiers": {},
+    "combos": [
+     {
+      "slots": [
+       "Vegetables",
+       "Herbs",
+       "Mushrooms"
+      ]
+     }
+    ],
+    "image": "assets/cooking/assorted-salad.webp"
+   },
+   {
+    "id": "mushroom-carving",
+    "name": "Mushroom Carving",
+    "method": "Slicing",
+    "effect": "Status Effect Removal",
+    "scope": "Team",
+    "duration": null,
+    "text": "Immediately removes all physical status effects.",
+    "tiers": {},
+    "combos": [
+     {
+      "slots": [
+       "Vegetables",
+       "Mushrooms"
+      ]
+     },
+     {
+      "slots": [
+       "Vegetables",
+       "Mushrooms",
+       "Mushrooms"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/mushroom-carving.webp"
+   },
+   {
+    "id": "cereal",
+    "name": "Cereal",
+    "method": "Slicing",
+    "effect": "Increased Rage Gain",
+    "scope": "Team",
+    "duration": "1 minute",
+    "text": "For 1 minute, Rage gained from attacks increases by {v}.",
+    "tiers": {
+     "2": "12%"
+    },
+    "combos": [
+     {
+      "slots": [
+       "Walnuts"
+      ]
+     },
+     {
+      "slots": [
+       "Walnuts",
+       "Walnuts",
+       "Walnuts"
+      ],
+      "check": true
+     }
+    ],
+    "image": "assets/cooking/cereal.webp"
    }
   ]
  },
