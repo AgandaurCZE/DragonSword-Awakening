@@ -1365,7 +1365,7 @@ function gmShow(h, o, rows, top) {
       const s = set(n);
       return `<button type="button" class="gm-setlink" data-gm-set="${profileEsc(n)}">${icon(n)}<span><b>${profileEsc(n)}</b> ${n === r.s3 ? '(3) ' + profileEsc(s.three) + ' · (2) ' + profileEsc(s.two) : '(2) ' + profileEsc(s.two)}</span></button>`;
     };
-    return `<div class="gm-detail">${setLine(r.s3)}${setLine(r.s2)}<div class="profile-gear-pieces">${pieces}</div>${r.mix ? `<p class="gm-runes"><strong>Runes:</strong> ${gmRuneText(r.mix, top)}, one per piece.</p>` : ''}<div class="eg-grid gm-tot">${tot.map(([l, v, k]) => `<div class="eg-row"><span class="eg-label">${l}</span><span class="eg-val"><b class="eg-total">${k === 'Attack' ? Math.round(v).toLocaleString('en-GB') : fmtStat(k, v)}</b>${k === 'Critical Hit Chance' && v > 100 ? '<span class="eg-cap">over 100%</span>' : ''}${breakdown(k, v)}</span></div>`).join('')}${aap.map((k) => `<div class="eg-row"><span class="eg-label">${profileEsc(gmShort(k))}</span><span class="eg-val"><b class="eg-total">${fmtStat(k, g(k))}</b>${breakdown(k, g(k))}</span></div>`).join('')}</div></div>`;
+    return `<div class="gm-detail">${setLine(r.s3)}${setLine(r.s2)}<button type="button" class="plan-button" data-gm-plan>Make farming list</button><div class="profile-gear-pieces">${pieces}</div>${r.mix ? `<p class="gm-runes"><strong>Runes:</strong> ${gmRuneText(r.mix, top)}, one per piece.</p>` : ''}<div class="eg-grid gm-tot">${tot.map(([l, v, k]) => `<div class="eg-row"><span class="eg-label">${l}</span><span class="eg-val"><b class="eg-total">${k === 'Attack' ? Math.round(v).toLocaleString('en-GB') : fmtStat(k, v)}</b>${k === 'Critical Hit Chance' && v > 100 ? '<span class="eg-cap">over 100%</span>' : ''}${breakdown(k, v)}</span></div>`).join('')}${aap.map((k) => `<div class="eg-row"><span class="eg-label">${profileEsc(gmShort(k))}</span><span class="eg-val"><b class="eg-total">${fmtStat(k, g(k))}</b>${breakdown(k, g(k))}</span></div>`).join('')}</div></div>`;
   };
   const row = (r, n) => {
     const c = r.c,
@@ -1402,6 +1402,15 @@ function gmShow(h, o, rows, top) {
       }),
   );
   out.querySelectorAll('[data-gm-set]').forEach((b) => (b.onclick = () => openGearSet(b.dataset.gmSet)));
+  const plan = out.querySelector('[data-gm-plan]');
+  if (plan)
+    plan.onclick = () => {
+      const row = rows[o.open];
+      trackFarmBuild(h.name, [
+        { set: row.s3, pieces: 3 },
+        { set: row.s2, pieces: 2 },
+      ]);
+    };
   gmCompare(h, o, rows);
 }
 

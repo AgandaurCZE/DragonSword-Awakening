@@ -414,7 +414,7 @@ def beta_routes(browser, base):
         ['Tier List','Teams','Boss & Tower Finder'],
         ['Heroes','Karma','Gear','Familiars','Cookbook','Item Database'],
         ['Trait Dungeons','Normal Dungeons','Currency Dungeons'],
-        ['Titles','Achievements'], ['Getting Started'], ['Damage Calculator','Levelling Calculator']]
+        ['My Plans','Titles','Achievements'], ['Getting Started'], ['Damage Calculator','Levelling Calculator']]
     actual = page.locator('#shortcutsBody .shortcut-group').evaluate_all("ss=>ss.map(s=>[...s.querySelectorAll('.shortcut-card>span:first-of-type')].map(e=>e.textContent))")
     assert page.locator('#shortcutsBody .shortcut-card > .card-emblem').count() == sum(map(len, expected))
     assert page.locator('.shortcuts-latest .card-emblem').is_visible()
@@ -807,6 +807,147 @@ def item_catalogue_loading(browser, base):
         assert any(url.endswith('/assets/items/achievements.json') for url in requested)
         page.wait_for_load_state('networkidle')
     print('  Item catalogues load only when their pages need them')
+
+def personal_plans(browser, base):
+    for width in (1400, 390):
+        with browser.new_context(viewport={'width': width, 'height': 900}, has_touch=width == 390) as ctx:
+            page = open_site(ctx, base, 'plans', f'My Plans {width}px')
+            assert page.locator('#plansPage').is_visible()
+            goal = page.locator('#planGoalForm')
+            goal.locator('[name=kind]').select_option('recipe')
+            goal.locator('[name=target]').select_option('tomato-stew')
+            goal.locator('[name=title]').fill('Prepare for Ursula')
+            goal.get_by_role('button', name='Add goal').click()
+            page.get_by_role('checkbox', name='Complete Prepare for Ursula').check()
+            assert page.get_by_role('link', name='Tomato Stew').get_attribute('href').endswith('cookbook#recipe=tomato-stew')
+            page.reload(wait_until='networkidle')
+            page.wait_for_function('NAV.ready')
+            assert page.get_by_role('checkbox', name='Complete Prepare for Ursula').is_checked()
+
+            page.get_by_role('link', name='Farming list', exact=True).click()
+            for hero in ('Othello', 'Cerese'):
+                page.locator('#planFarmForm [name=hero]').select_option(hero)
+                page.get_by_role('button', name='Add recommended build').click()
+            page.wait_for_function('Array.isArray(ITEMDB.data.materials)')
+            builds = page.locator('.plan-build')
+            assert builds.count() == 2
+            for build in builds.all():
+                build.locator('[data-farm-level=heroTo]').fill('31')
+                build.locator('[data-farm-level=heroTo]').dispatch_event('change')
+            mats = page.evaluate("""() => {
+                const north = farmPlanRequirements();
+                const expected = plans.farm.flatMap(p => lvMats(p.hero, [20, 30]));
+                return expected.some(m => expected.filter(e => e.name === m.name).length > 1 &&
+                  north.some(n => n.name === m.name && n.need === expected.filter(e=>e.name===m.name).reduce((s,e)=>s+e.amount,0)));
+            }""")
+            assert mats
+            stock = page.locator('[data-farm-stock]').first
+            stock.fill('1')
+            stock.dispatch_event('change')
+            key = stock.get_attribute('data-farm-stock')
+            page.reload(wait_until='networkidle')
+            page.wait_for_function('Array.isArray(ITEMDB.data.materials)')
+            assert page.locator('[data-farm-stock=' + json.dumps(key) + ']').input_value() == '1'
+            assert page.evaluate("(key) => readPlans().stock[key]", key) == 1
+
+            build = open_site(ctx, base, 'Ryza#build', f'farm a gear pairing {width}px')
+            build.get_by_role('button', name='Make farming list').click(timeout=60000)
+            assert build.url == base + 'plans#farm'
+            assert build.locator('.plan-build').filter(has_text='Ryza').count() == 1
+
+            watch = open_site(ctx, base, 'Eileen', f'hero watchlist {width}px')
+            watch.get_by_role('button', name='Watch hero patches').click()
+            assert watch.get_by_role('button', name='Watching patches').get_attribute('aria-pressed') == 'true'
+            watch.goto(base + 'plans#watch', wait_until='networkidle')
+            change = watch.locator('.plan-watch-patch').filter(has=watch.get_by_role('heading', name='Patch 1.1.0', exact=True))
+            assert change.get_by_role('link', name='Barraging Spear', exact=True).count() > 0
+            assert 'Rage' in change.inner_text()
+            change.get_by_role('link', name='Read full patch notes').click()
+            watch.locator('#patch-1-1-0 .steam-patch[open]').wait_for(state='visible')
+
+            finder = open_site(ctx, base, 'finder#encounter=gallore&difficulty=Hell&team=Othello%2CCerese%2CDana',
+                               f'rotation from Finder {width}px')
+            finder.locator('#fightTeam table').first.wait_for(state='attached')
+            finder.get_by_role('button', name='Make a rotation card').click()
+            for note in ('Build Frost', 'Shatter at Freeze'):
+                finder.get_by_role('button', name='Add step').click()
+                entry = finder.locator('[data-plan-step=note]').last
+                entry.fill(note)
+                entry.dispatch_event('change')
+            finder.get_by_role('button', name='Move step 2 up').click()
+            assert 'Shatter at Freeze' in finder.locator('.plan-step').first.inner_text()
+            finder.get_by_role('button', name='Start rotation').click()
+            assert finder.locator('.plan-step.on').count() == 1
+            assert 'Shatter at Freeze' in finder.locator('#planCurrentStep').inner_text()
+            finder.evaluate("Object.defineProperty(navigator, 'clipboard', {value: {writeText: () => Promise.reject()}})")
+            finder.get_by_role('button', name='Copy rotation link').click()
+            shared = finder.get_by_role('textbox', name='Rotation link')
+            shared.wait_for()
+            finder.goto(shared.input_value(), wait_until='networkidle')
+            assert 'Shatter at Freeze' in finder.locator('.plan-step').first.inner_text()
+            assert finder.locator('[data-plan-step]').count() == 0
+            assert finder.evaluate('readPlans().rotations.length') == 1
+            finder.get_by_role('button', name='Save a copy').click()
+            assert finder.evaluate('readPlans().rotations.length') == 2
+            assert finder.evaluate('document.documentElement.scrollWidth === innerWidth')
+            finder.wait_for_load_state('networkidle')
+    print('  My Plans on desktop and phone: linked goals, combined stock, patch notes and shareable ordered rotations')
+
+def video_timing_workbench(browser, base):
+    with browser.new_context(viewport={'width':390,'height':850}, accept_downloads=True) as ctx:
+        page = ctx.new_page()
+        page.goto(base + 'docs/testkit/dragonsword-test-kit.html#timingWorkbench', wait_until='networkidle')
+        assert page.locator('#timingWorkbench').get_attribute('open') is not None
+        clip = page.evaluate("""async () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = canvas.height = 64;
+            const ctx = canvas.getContext('2d');
+            const stream = canvas.captureStream(20);
+            const recorder = new MediaRecorder(stream, {mimeType:'video/webm'});
+            const chunks = [];
+            recorder.ondataavailable = (event) => chunks.push(event.data);
+            const complete = new Promise((resolve) => recorder.onstop = resolve);
+            recorder.start();
+            for (let i = 0; i < 22; i++) {
+                ctx.fillStyle = i % 2 ? 'red' : 'black';
+                ctx.fillRect(0,0,64,64);
+                await new Promise((done) => setTimeout(done,52));
+            }
+            recorder.stop();
+            await complete;
+            stream.getTracks().forEach((track) => track.stop());
+            return [...new Uint8Array(await new Blob(chunks).arrayBuffer())];
+        }""")
+        page.locator('#timingFile').set_input_files({'name':'fixture.webm','mimeType':'video/webm','buffer':bytes(clip)})
+        page.wait_for_function("!document.getElementById('timingA').disabled")
+        page.locator('#timingFps').fill('20')
+        page.locator('#timingA').click()
+        page.locator('#timingNext').click()
+        page.wait_for_function("document.getElementById('timingVideo').currentTime > 0.05 && !document.getElementById('timingB').disabled")
+        page.locator('#timingB').click()
+        assert '0.050 s between Signal marks' in page.locator('#timingResult').inner_text()
+        page.locator('#timingMode').select_option('rage')
+        page.locator('#timingA').click()
+        page.locator('#timingNext').click()
+        page.wait_for_function("document.getElementById('timingVideo').currentTime > 0.1 && !document.getElementById('timingB').disabled")
+        page.locator('#timingB').click()
+        page.locator('#timingFillA').fill('80')
+        page.locator('#timingFillB').fill('50')
+        assert 'spent 30.0 percentage points' in page.locator('#timingResult').inner_text()
+        form = page.locator('#timingForm')
+        for field, value in {'hero':'Eileen','skill':'Barraging Spear','patch':'1.1.2','target':'Training Ogre','setup':'A0'}.items():
+            form.locator('[name=' + field + ']').fill(value)
+        form.get_by_role('button', name='Save reading').click()
+        page.reload(wait_until='networkidle')
+        assert 'Eileen' in page.locator('#timingSaved').inner_text()
+        assert page.locator('#timingVideo').get_attribute('src') is None
+        with page.expect_download() as download:
+            page.get_by_role('button', name='Download readings').click()
+        with open(download.value.path(), encoding='utf-8') as file:
+            data = json.load(file)
+        assert data['readings'][0]['result']['gaugeChange'] == -30
+        assert data['readings'][0]['setup'] == 'A0'
+    print('  Test Kit uses a local clip to step frames, measure Signal/Rage, save setup and export JSON')
 
 
 
@@ -1430,6 +1571,8 @@ def main():
             site_discovery(browser, prefixed)
             site_prep(browser, prefixed)
             item_catalogue_loading(browser, prefixed)
+            personal_plans(browser, prefixed)
+            video_timing_workbench(browser, prefixed)
         if not QUICK:
             print('check_site: JS ports against the Python tools')
             parity(browser, base)

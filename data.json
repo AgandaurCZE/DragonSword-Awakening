@@ -30605,7 +30605,8 @@
    "achievements": "achievements",
    "patches": "patch-notes",
    "news": "news",
-   "finder": "finder"
+   "finder": "finder",
+   "plans": "plans"
   },
   "toolRoutes": {
    "damage": "tools/DamageCalculator",
@@ -30691,6 +30692,11 @@
    {
     "label": "Progress",
     "items": [
+     {
+      "label": "My Plans",
+      "page": "plans",
+      "image": "assets/ui/help.webp"
+     },
      {
       "label": "Titles",
       "page": "titles",

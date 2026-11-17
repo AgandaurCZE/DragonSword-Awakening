@@ -252,3 +252,7 @@ This is a visitor-created file with runtime validation, not an additional reposi
 ### Boss preparation reference
 
 `data/combat-reference.json` is loaded by the Finder team checker. `buildup[]` rows contain `{hero, skill, label, stage, status, fraction, broken}`. The skill is a codex name for links, or empty for a composite cast. The label retains the cast variant. The fractional value is a share of one status stack or one gauge on the Lv.90 Training Ogre. `stage` is A0, Mastery, or the relevant Awakening level. `broken` identifies a reading taken during Break and prevents the calculator from doubling it a second time. `rage[]` contains `{hero, skill, metric, percent, patch}`. `balance[]` contains `{hero, skill, effect, percent}` for relative 1.1.0 buildup and Super Armor changes. These two lists are patch history. They are not applied again to post-patch Test 01 readings. See [COMBAT_REFERENCE.md](library/COMBAT_REFERENCE.md).
+
+### Personal plans
+
+`SITE.routes.plans` adds the My Plans page and accepts `#farm`, `#watch`, `#rotations` and versioned `#rotation=1.<payload>` links. All player entries use the separate browser key `dsw.plans.v1`. Farming uses the existing gear, Karma, levelling, Dungeon and item data. A shared rotation is validated against hero, encounter and skill names. Opening it does not change the local cards. Patch Notes accepts `#patch=<version>` and opens the requested full notes.

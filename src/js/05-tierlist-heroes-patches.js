@@ -55,6 +55,7 @@ document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
       cookbook: 'Cookbook',
       items: 'Item Database',
       achievements: 'Achievements',
+      plans: 'My Plans',
       finder: 'Boss & Tower Finder',
       guides: 'Guides',
       tools: 'Tools',
@@ -75,6 +76,7 @@ document.querySelectorAll('.nav-item[data-page]').forEach((btn) =>
       }
     }
     if (page === 'news') renderNews();
+    if (page === 'plans' && !NAV.restoring) showPlans();
     if (page === 'items' && !$('itemsBody').hasChildNodes() && !(NAV.restoring && NAV.reference?.entry)) renderItems();
     if (page === 'achievements' && (!$('achBody').hasChildNodes() || !ITEMDB.ach)) renderAchievements();
     setMobileMenu(false);
@@ -288,7 +290,19 @@ function patchChangeRows(c) {
     .join('');
 }
 let activePatchBadge = '',
-  activePatchHero = '';
+  activePatchHero = '',
+  activePatchVersion = '';
+function showPatchVersion(version) {
+  activePatchVersion = PATCH_NOTES.patches.some((patch) => patch.version === version) ? version : '';
+  activePatchBadge = activePatchHero = '';
+  renderPatches();
+  if (!activePatchVersion) return;
+  const entry = $('patch-' + activePatchVersion.replace(/\./g, '-'));
+  if (!entry) return;
+  const notes = entry.querySelector('.steam-patch');
+  if (notes) notes.open = true;
+  requestAnimationFrame(() => entry.scrollIntoView({ block: 'start' }));
+}
 function openPatchesFor(hero) {
   document.querySelector('.nav-item[data-page="patches"]').click();
   activePatchHero = hero || '';
@@ -334,7 +348,7 @@ function renderPatches() {
     )
     .join(
       '',
-    )}<select id="patchHeroSelect" aria-label="Filter by hero"><option value="">All heroes</option>${heroes.map((n) => `<option${n === activePatchHero ? ' selected' : ''}>${profileEsc(n)}</option>`).join('')}</select></div>`;
+    )}<select id="patchHeroSelect" aria-label="Filter by hero"><option value="">All heroes</option>${heroes.map((n) => `<option${n === activePatchHero ? ' selected' : ''}>${profileEsc(n)}</option>`).join('')}</select>${planLink({ page: 'plans', plan: 'watch' }, 'Hero patch watchlist', 'plan-button')}</div>`;
   const list = patches.filter((p) => {
     if (activePatchBadge && !(p.badges || []).includes(activePatchBadge)) return false;
     if (
@@ -388,11 +402,13 @@ function renderPatches() {
     (b) =>
       (b.onclick = () => {
         activePatchBadge = b.dataset.pbf;
+        activePatchVersion = '';
         renderPatches();
       }),
   );
   $('patchHeroSelect').onchange = (e) => {
     activePatchHero = e.target.value;
+    activePatchVersion = '';
     renderPatches();
   };
   root.querySelectorAll('.phc').forEach(
@@ -454,6 +470,7 @@ const PAGE_IDS = {
   guides: 'guidesPage',
   items: 'itemsPage',
   achievements: 'achievementsPage',
+  plans: 'plansPage',
   tools: 'toolsPage',
 };
 function navIcon(id, src) {

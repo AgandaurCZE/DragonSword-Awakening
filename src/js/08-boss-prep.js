@@ -285,9 +285,10 @@ function renderFightTeam() {
     '<p class="fight-scale">' +
     E(hint) +
     ' Signal Skills need their trigger and cooldown. Skill and Ultimate availability depends on Rage.</p>' +
-    '<div class="fight-roster">' +
+    '<button type="button" class="plan-button" id="fightMakeRotation">Make a rotation card</button><div class="fight-roster">' +
     articles.join('') +
     '</div>';
+  $('fightMakeRotation').onclick = rotationFromFinder;
 }
 
 function wireFightTeam() {

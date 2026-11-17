@@ -1,5 +1,14 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 17 Nov 2026 — My Plans and video timing
+
+- My Plans gives players linked goals, a combined farming checklist, a hero patch watchlist and shareable rotation cards. The Build tab sends the selected gear pairing to Farming, and the Finder sends the chosen lineup to Rotations.
+- Farming combines gear quantities, Karma and the existing Hero and Karma levelling requirements. Inventory entries reduce the remaining totals. The checklist links to dungeon filters, Exchange, crafting costs and item sources.
+- Patch watchlists link to skills and exact full patch notes. Rotation cards support reorderable actions, step tracking and saving a copy of a shared card.
+- The Test Kit timing workbench plays local video, steps through fixed-rate clips and records Signal intervals or Rage-gauge changes. The session exports readings as JSON without the clip.
+- Full local checks passed. The visual comparison covered 113 existing views and both widths of My Plans. The intended updates are on Shortcuts, Tools, Patch Notes and the hero tabs. An Item Database icon difference disappeared when all icons finished decoding.
+- Restore point before these changes: `248c402`.
+
 ## 17 Nov 2026 — Fight preparation, calculator sharing and gear comparison
 
 - The Finder checks a three-hero lineup’s status coverage and Signal requirements. Hero Skills links open the Training Ogre reference. Nightmare/Hell give approximate target conversions. Raids and other encounters display the separate Ogre reference. The table includes relative official Rage and buildup changes where published.

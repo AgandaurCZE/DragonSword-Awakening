@@ -24,6 +24,11 @@ function routeUrl(page, options = {}) {
     else if (options.tab === 'build' || options.tab === 'review') hash = '#' + options.tab;
   }
   if (page === 'guides' && options.guide) hash = '#' + encodeURIComponent(options.guide);
+  if (page === 'plans') {
+    if (options.rotation) hash = '#rotation=' + encodeURIComponent(options.rotation);
+    else if (options.plan && options.plan !== 'goals') hash = '#' + encodeURIComponent(options.plan);
+  }
+  if (page === 'patches' && options.patch) hash = '#patch=' + encodeURIComponent(options.patch);
   if (page === 'tools' && options.tool === 'damage' && options.scenario)
     hash = '#scenario=' + encodeURIComponent(options.scenario);
   if (page === 'teams') {
@@ -68,6 +73,11 @@ function navCurrent() {
     if (selection) state.finder = selection;
   }
   if (page === 'guides' && $('guidesBody').dataset.guide) state.guide = $('guidesBody').dataset.guide;
+  if (page === 'plans') {
+    state.plan = PLAN_VIEW.tab;
+    if (PLAN_VIEW.token) state.rotation = PLAN_VIEW.token;
+  }
+  if (page === 'patches' && activePatchVersion) state.patch = activePatchVersion;
   if (page === 'tools') {
     state.tool = document.querySelector('#toolTabs .on')?.dataset.tool || 'damage';
     if (state.tool === 'damage' && DC_SCENARIO) state.scenario = DC_SCENARIO;
@@ -116,6 +126,8 @@ function navShow(state, scrollY = null) {
         document.querySelector(`.nav-item[data-page="${state.page}"]`) ||
         document.querySelector('.nav-item[data-page="home"]');
       button.click();
+      if (state.page === 'plans') showPlans(state.plan, state.rotation);
+      if (state.page === 'patches' && (state.patch || activePatchVersion)) showPatchVersion(state.patch);
       if (state.entry) showReferenceEntry(state.page, state.entry);
       if (resetItems) renderItems();
       if (state.page === 'tier' && state.tier) {
@@ -154,6 +166,7 @@ function navShow(state, scrollY = null) {
     !state.skill &&
     !state.team &&
     !state.entry &&
+    !state.patch &&
     (!state.guide || guideTarget(state.guide) === state.guide)
   )
     requestAnimationFrame(() => window.scrollTo({ top: scrollY, behavior: 'instant' }));
@@ -200,6 +213,12 @@ function navInitial() {
   }
   const page = Object.entries(SITE.routes).find(([, p]) => p === path)?.[0];
   const params = new URLSearchParams(hash);
+  if (page === 'plans') {
+    const rotation = params.get('rotation');
+    if (rotationDecode(rotation)) return { page, plan: 'rotations', rotation };
+    if (Object.hasOwn(PLAN_TABS, hash)) return { page, plan: hash };
+  }
+  if (page === 'patches' && params.has('patch')) return { page, patch: params.get('patch') };
   if (page === 'tier') {
     const boss = params.get('boss'),
       tower = params.get('tower');
@@ -265,6 +284,9 @@ function navInit() {
   });
   document.querySelector('.nav-item[data-page="guides"]').addEventListener('click', (e) => {
     if (!NAV.restoring && isPlainLinkClick(e)) renderGuides();
+  });
+  document.querySelector('.nav-item[data-page="patches"]').addEventListener('click', (e) => {
+    if (!NAV.restoring && isPlainLinkClick(e) && activePatchVersion) showPatchVersion();
   });
   document.querySelectorAll('.nav-item[data-page]').forEach((button) => {
     button.addEventListener('click', (event) => {
@@ -385,6 +407,7 @@ function startApp() {
     b.setAttribute('aria-label', label.textContent.trim());
     b.title = label.textContent.trim();
   });
+  initPlans();
   navInit();
   initSiteSearch();
   for (const [id, key] of [

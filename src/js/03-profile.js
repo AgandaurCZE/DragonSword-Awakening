@@ -363,6 +363,11 @@ function openCharacterProfile(name, initialTab = 'skills') {
   $('profileFacts').innerHTML =
     `<li><img src="${profileEsc(h.archIcon)}" alt="">${profileEsc(h.archetype)}</li><li><img src="${profileEsc(ROLE_ICONS[role] || '')}" alt="">${profileEsc(role)}</li><li>Overall <span class="profile-tier-large" style="background:${v2TierColor(tier)}">${profileEsc(tier)}</span></li>`;
   $('profileIntro').textContent = HERO_INTROS[h.name] || '';
+  const watching = readPlans().watch.includes(h.name);
+  const watch = $('profileWatch');
+  watch.textContent = watching ? 'Watching patches' : 'Watch hero patches';
+  watch.setAttribute('aria-pressed', String(watching));
+  watch.onclick = () => tickWatch(h.name, watch);
   const data = CHARACTER_PROFILE_DATA[h.name] || { skills: [], karma: '', gear: '' };
   renderProfileAwakenings(h);
   const skillRoot = $('profileSkillsGrid');

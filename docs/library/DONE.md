@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 17 Nov — My Plans and the Test Kit timing workbench
+
+Connected hero builds and Finder lineups to personal plans, combined farming requirements, added a hero patch watchlist and shareable rotation cards. Added local video controls, two-point Signal and Rage readings, and JSON download to the Test Kit. The workbench provides a way to collect new figures. Exact cooldown and Rage values still require in-game clips.
+
 ## 17 Nov — Fight preparation and gear comparisons
 
 Added team status coverage, Ogre buildup and approximate Nightmare/Hell conversions to the Finder, fast pull cards to all six Hunts and both Raids, shareable damage scenarios, and side-by-side gear comparisons. Added Pantry ingredient alternatives, source links and persistent quantities. [Combat reference and evidence](COMBAT_REFERENCE.md).

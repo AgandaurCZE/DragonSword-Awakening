@@ -17,7 +17,7 @@ The Test 01 readings were taken after 1.1.0. The official deltas are historical 
 - **Raids.** Stronger resistance is known. No supportable numerical crosswalk from the Ogre or Hunt tables was found. Story, World Boss and dungeon encounters likewise have different resistances. Tower checks display the required status and the Ogre reference.
 - **Rage and cooldown.** Skill and Ultimate need Rage. Signals have their own activation condition and cooldown. The site shows 14 documented relative Rage cost/gain deltas and six quantified buildup or Super Armor changes. It gives no absolute values for either Rage or Signal timing.
 
-A way to add reliable timings without reading game files:
+A way to add reliable timings without reading game files is to start in the [Test Kit timing workbench](../testkit/dragonsword-test-kit.html#timingWorkbench). Set the FPS for a constant-rate capture. For variable-rate clips use the playback timestamps. The browser stores the marks and metadata locally and can export readings without the video.
 
 1. Record the current patch, hero, awakening, Karma, Mastery, gear and target at a fixed frame rate. Use the same target and settings for each repeat.
 2. For a Signal, record the frame the first cast spends its ready state. Recreate the same valid trigger throughout recovery. Record the first frame the Signal is usable again, and keep separate columns for Signal availability, the swap lockout and the end of the animation. If the trigger disappears during the attempt, record the run as inconclusive.

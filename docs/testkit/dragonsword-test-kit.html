@@ -91,6 +91,22 @@ details.log li span{color:var(--ok);font:600 .75rem var(--mono);margin-left:6px}
 .gcov table{border-collapse:collapse;margin-top:8px;font:600 .72rem var(--mono)}.gcov th,.gcov td{padding:2px 5px;text-align:center;border:1px solid var(--line)}
 .gcov td.full{color:var(--ok)}.gcov td.part{color:var(--warn)}.gcov td.none{color:var(--bad)}.gcov td.cur{outline:2px solid var(--accent);outline-offset:-2px}
 .gcov td button{all:unset;cursor:pointer}
+.timing-workbench{border:1px solid var(--line);border-radius:6px;padding:14px;background:var(--panel);margin:0 0 16px}
+.timing-workbench summary{color:var(--accent);font-weight:700;cursor:pointer}
+.timing-grid,.timing-actions{display:grid;gap:8px;margin:8px 0;align-items:end}
+.timing-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))}
+.timing-actions{display:flex;flex-wrap:wrap;align-items:center}
+.timing-actions label{max-width:160px}
+.timing-workbench label{display:block;font-size:.85rem;min-width:0}
+.timing-workbench input,.timing-workbench select{display:block;width:100%}
+.timing-workbench video{width:100%;max-height:55vh;margin-top:6px;background:#101318}
+.timing-workbench .timing-wide{grid-column:1/-1}
+.timing-workbench [hidden]{display:none}
+.timing-workbench button:disabled{opacity:.45;cursor:default}
+.timing-result{padding:8px;background:#1c2730;color:var(--ok);border-radius:4px}
+#timingSaved{padding-left:20px}
+#timingSaved li{margin:6px 0;overflow-wrap:anywhere}
+#timingSaved button{margin-left:8px}
 @media (min-width:1540px){.gcov{position:fixed;right:16px;top:90px;width:300px;max-height:calc(100vh - 110px);overflow:auto;box-shadow:0 4px 18px #0003;opacity:0;pointer-events:none;transition:opacity .2s;z-index:5}.gcov.vis{opacity:1;pointer-events:auto}}
 </style>
 
@@ -100,6 +116,48 @@ details.log li span{color:var(--ok);font:600 .75rem var(--mono);margin-left:6px}
   <p>In-game tests for the guide. Fill in what you see and the verdict updates as you type. <strong>Save</strong> stores the result so Claude can read it back. Tests marked <span class="multi">many</span> save a new entry each time, so you can log several heroes or enemies. Record video so you can pause on the numbers.</p>
   <p class="status" id="dbStatus">Connecting to storage…</p>
 </header>
+<p><a href="#timingWorkbench">Open the video timing workbench</a></p>
+<details id="timingWorkbench" class="timing-workbench">
+ <summary>Video timing workbench</summary>
+ <p class="note">Open a combat clip from your device. Playback, frame steps and saved readings stay in this browser. For a constant-rate clip, enter the recording FPS. For variable-rate clips use the video playhead and its timestamps.</p>
+ <div class="timing-grid">
+  <label>Combat clip <input id="timingFile" type="file" accept="video/*"></label>
+  <label>Recording FPS <input id="timingFps" type="number" min="1" max="240" step="any" value="60"></label>
+  <label>Time basis <select id="timingBasis"><option value="frames">Constant-rate frames</option><option value="timestamps">Playback timestamps</option></select></label>
+  <label>Reading type <select id="timingMode"><option value="signal">Signal cooldown</option><option value="rage">Rage gauge change</option></select></label>
+ </div>
+ <video id="timingVideo" controls playsinline hidden></video>
+ <p id="timingClock"></p>
+ <div class="timing-actions">
+  <button id="timingBack" type="button">Previous frame</button><button id="timingNext" type="button">Next frame</button>
+  <label>Time in seconds <input id="timingSeek" type="number" min="0" step="0.001"></label><button id="timingGo" type="button">Seek</button>
+ </div>
+ <div class="timing-actions">
+  <button id="timingA" type="button">A · Signal spent</button><output id="timingMarkA">—</output>
+  <button id="timingB" type="button">B · Signal usable</button><output id="timingMarkB">—</output>
+  <button id="timingClear" class="ghost" type="button">Clear marks</button>
+ </div>
+ <p class="note">Keep a valid trigger present when you mark a Signal as usable. For Rage, read the same gauge before and after a controlled action.</p>
+ <div id="timingGaugeFields" class="timing-grid" hidden>
+  <label>Gauge <select id="timingGauge"><option>Skill</option><option>Ultimate</option></select></label>
+  <label>A · Fill % <input id="timingFillA" type="number" min="0" max="100" step="any"></label>
+  <label>B · Fill % <input id="timingFillB" type="number" min="0" max="100" step="any"></label>
+ </div>
+ <p id="timingResult" class="timing-result" aria-live="polite"></p>
+ <form id="timingForm">
+  <div class="timing-grid">
+   <label>Hero <input name="hero" maxlength="60" required></label>
+   <label>Skill <input name="skill" maxlength="90" required></label>
+   <label>Game patch <input name="patch" maxlength="20" required></label>
+   <label>Enemy and difficulty <input name="target" maxlength="100" required></label>
+   <label class="timing-wide">Awakening, Karma, gear and setup <input name="setup" maxlength="250"></label>
+  </div>
+  <div class="timing-actions"><button id="timingSave" type="submit">Save reading</button>
+   <button id="timingExport" class="ghost" type="button">Download readings</button></div>
+ </form>
+ <p id="timingStatus" class="note" role="status"></p>
+ <p id="timingEmpty" class="note">No readings saved in this browser.</p><ul id="timingSaved"></ul>
+</details>
 <nav id="toc" aria-label="Tests"></nav>
 <div id="tests"></div>
 <details class="log" id="doneLog"><summary>Already answered (19 tests)</summary><ul id="doneList"></ul></details>
@@ -315,3 +373,4 @@ try{const d=JSON.parse(localStorage.getItem('ds-testkit-draft-v2')||'{}');Object
    ()=>{s.textContent='Lost the connection to storage. Reload the page to save again.';s.className='status bad';});
 })();
 </script>
+<script src="testkit-timing.js?v=1"></script>
