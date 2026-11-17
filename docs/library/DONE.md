@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 17 Nov — Hunt and Raid walkthroughs and team previews
+
+Added fight cues and punish windows to the six Hunts and both Raids, kept the existing guide screenshots, and linked named teams to their exact cards and roster previews. Attack descriptions draw on the project combat notes and [first-hand encounter notes](https://gq-game-mods.blogspot.com/2026/08/dragonsword-awakening-boss-fight.html). Difficulty-specific Earthlander and Furcas attacks are scoped to Nightmare. A [Ursula clear discussion](https://www.reddit.com/r/DSwordAwakening/comments/1w2t12b/finally_cleared_ursula_level_90_with_no_food_but/) supports the Frost team approach.
+
 ## 17 Nov — Guide emblems and Gauron walkthrough
 
 Designed the shared card emblems and prepared a Gauron first-clear walkthrough covering all three encounters. Gauron’s dragon charge and pillar opening follow [GQ’s first-hand boss notes](https://gq-game-mods.blogspot.com/2026/08/dragonsword-awakening-boss-fight.html). [A Lv.90 raid recording](https://www.youtube.com/watch?v=vNgjegF8bms) shows the full three-encounter sequence.

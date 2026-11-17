@@ -150,11 +150,34 @@ const MECHANICS_GUIDES = [
 ];
 
 // "Start here" guide for new players (GUIDES.startHere in data.json, 15 Nov 2026): sections of typed blocks.
+function guideTeamLink(team, label = team) {
+  const E = profileEsc;
+  return (
+    '<a class="guide-team-link" href="' +
+    E(routeUrl('teams', { team })) +
+    '" data-ref-type="team" data-ref-key="' +
+    E(team) +
+    '">' +
+    E(label) +
+    '</a>'
+  );
+}
+
+function formatGuideText(raw, format = formatSkillText) {
+  const names = TEAM_DATA.map((team) => team.name.replace(/[^\w ]/g, '\\$&'));
+  if (!names.length) return format(raw);
+  const pattern = new RegExp('\\b(' + names.join('|') + ')\\b', 'g');
+  return String(raw)
+    .split(pattern)
+    .map((part, index) => (index % 2 ? guideTeamLink(part) : format(part)))
+    .join('');
+}
+
 function startHereHtml(G) {
   const E = profileEsc,
     H = (n) => HEROES.find((h) => h.name === n),
     acc = (h) => (h && ARCH_COLORS[h.archetype]) || '#68c7d5',
-    md = (t) => E(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+    md = (t) => formatGuideText(t, E).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
   const chips = (names) =>
     names
       .map((n) =>
@@ -176,9 +199,9 @@ function startHereHtml(G) {
     if (b.type === 'heroes')
       return `<p class="sh-text">${md(b.text)} <span class="sh-chips">${chips(b.heroes)}</span></p>`;
     if (b.type === 'cols')
-      return `<div class="sh-cols">${b.items.map((c) => `<div class="sh-box"><h4 style="color:${E(c.color)}">${E(c.title)}</h4><div class="sh-chips">${chips(c.heroes)}</div><p>${colourStatusWords(c.text)}</p></div>`).join('')}</div>`;
+      return `<div class="sh-cols">${b.items.map((c) => `<div class="sh-box"><h4 style="color:${E(c.color)}">${E(c.title)}</h4><div class="sh-chips">${chips(c.heroes)}</div><p>${formatGuideText(c.text, colourStatusWords)}</p></div>`).join('')}</div>`;
     if (b.type === 'rules')
-      return `<div class="sh-rules">${b.items.map((r) => `<div class="sh-rule"><span class="sh-ic" aria-hidden="true">${E(r.icon)}</span><div><h4>${E(r.title)}</h4><p>${colourStatusWords(r.text)}</p></div></div>`).join('')}</div>`;
+      return `<div class="sh-rules">${b.items.map((r) => `<div class="sh-rule"><span class="sh-ic" aria-hidden="true">${E(r.icon)}</span><div><h4>${E(r.title)}</h4><p>${formatGuideText(r.text, colourStatusWords)}</p></div></div>`).join('')}</div>`;
     if (b.type === 'steps')
       return `<ol class="sh-steps">${b.items.map((t) => `<li><div>${md(t)}</div></li>`).join('')}</ol>`;
     if (b.type === 'table')
@@ -189,10 +212,10 @@ function startHereHtml(G) {
       return `<div class="sh-links">${b.items.map((l) => `<a href="${E(routeUrl(l.page, l.tool ? { tool: l.tool } : {}))}">${E(l.label)} →</a>`).join('')}</div>`;
     return '';
   };
-  return `<article class="sh" id="${E(G.id)}"><header class="sh-head"><div class="sh-kicker">${E(G.kicker)}</div><h3>${E(G.title)}</h3><p>${E(G.intro)}</p><nav class="sh-toc" aria-label="On this page">${G.sections.map((s, i) => guideLink(G.id + '-' + s.id, i + 1 + ' · ' + s.title)).join('')}</nav></header>${G.sections
+  return `<article class="sh" id="${E(G.id)}"><header class="sh-head"><div class="sh-kicker">${E(G.kicker)}</div><h3>${E(G.title)}</h3><p>${formatGuideText(G.intro, E)}</p><nav class="sh-toc" aria-label="On this page">${G.sections.map((s, i) => guideLink(G.id + '-' + s.id, i + 1 + ' · ' + s.title)).join('')}</nav></header>${G.sections
     .map(
       (s, i) =>
-        `<section class="sh-sec" tabindex="-1" id="${E(G.id)}-${E(s.id)}" style="--c:${E(s.color)}"><h4 class="sh-h"><span class="sh-num">${i + 1}</span>${E(s.title)}</h4><p class="sh-sub">${E(s.sub)}</p>${s.blocks.map(block).join('')}</section>`,
+        `<section class="sh-sec" tabindex="-1" id="${E(G.id)}-${E(s.id)}" style="--c:${E(s.color)}"><h4 class="sh-h"><span class="sh-num">${i + 1}</span>${E(s.title)}</h4><p class="sh-sub">${formatGuideText(s.sub, E)}</p>${s.blocks.map(block).join('')}</section>`,
     )
     .join('')}</article>`;
 }
@@ -289,10 +312,13 @@ const CARD_EMBLEMS = {
   'hero-progression': ['progress', '#f0c487'],
 };
 
+function guideBoss(id) {
+  return v2Data().bosses.find((boss) => boss.type.toLowerCase() + '-' + boss.id === id);
+}
+
 function cardEmblem(key) {
   const E = profileEsc;
-  const bossId = key.replace(/^(hunt|raid)-/, '');
-  const boss = bossId !== key ? v2Data().bosses.find((entry) => entry.id === bossId) : null;
+  const boss = guideBoss(key);
   const towerId = key.startsWith('tower-') ? key.slice(6) : '';
   const tower = TOWER_TRIALS.towers.find((entry) => entry.id === towerId);
   const portrait = (boss?.id === 'gauron' && boss.header?.right) || boss?.header?.left || boss?.portrait;
@@ -367,23 +393,29 @@ function renderGuides(hash = '') {
   }
   const guide = guideArticle(id);
   const next = routeUrl(guide.next.page, guide.next) + (guide.next.hash || '');
+  const team = new URLSearchParams(guide.next.hash?.slice(1)).get('team');
+  const nextLink = team
+    ? guideTeamLink(team, guide.next.label + ' →')
+    : '<a href="' + E(next) + '">' + E(guide.next.label) + ' →</a>';
+  const boss = guide.cover && guideBoss(id);
+  const accent = boss && (ARCH_COLORS[boss.weak[0]] || '#e3818b');
   const banner = guide.cover
     ? `<div class="guide-fight-art" style="--fight-art:url('${E(absUrl(guide.cover.src))}')"></div>`
     : '';
   const cue = guide.cover
-    ? `<aside class="guide-fight-cue"><strong>Watch for</strong> ${formatSkillText(guide.cover.cue)}</aside>`
+    ? `<aside class="guide-fight-cue"><strong>Watch for</strong> ${formatGuideText(guide.cover.cue)}</aside>`
     : '';
-  root.innerHTML = `${back}<article class="mechanics-guide${banner ? ' guide-fight' : ''}" id="${E(id)}">${banner}<h3>${E(guide.title)}</h3><p>${E(guide.intro)}</p>${cue}
+  root.innerHTML = `${back}<article class="mechanics-guide${banner ? ' guide-fight' : ''}" id="${E(id)}"${accent ? ' style="--fight-accent:' + E(accent) + '"' : ''}>${banner}<h3>${E(guide.title)}</h3><p>${formatGuideText(guide.intro)}</p>${cue}
     ${guide.sections
       .map(
         ([heading, body], i) =>
-          `<section><h4>${E(heading)}</h4><p>${formatSkillText(body)}</p>${(guide.figures || [])
+          `<section><h4>${E(heading)}</h4><p>${formatGuideText(body)}</p>${(guide.figures || [])
             .filter((f) => f.after === i)
             .map((f) => guideFigureHtml(f.images))
             .join('')}</section>`,
       )
       .join('')}
-    <a href="${E(next)}">${E(guide.next.label)} →</a></article>`;
+    <div class="guide-next">${nextLink}</div></article>`;
   root.querySelectorAll('[data-gf]').forEach(gfSync);
 }
 
@@ -392,6 +424,13 @@ document.addEventListener('click', (event) => {
   if (link && isPlainLinkClick(event)) {
     event.preventDefault();
     navNavigate({ page: 'guides', guide: link.dataset.guideLink });
+    return;
+  }
+  const team = event.target.closest('.guide-team-link');
+  if (team && isPlainLinkClick(event)) {
+    event.preventDefault();
+    hideKarmaPopover(0);
+    navNavigate({ page: 'teams', team: team.dataset.refKey });
     return;
   }
   const a = event.target.closest('[data-sh-hero]');

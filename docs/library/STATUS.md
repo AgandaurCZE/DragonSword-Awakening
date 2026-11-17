@@ -2,7 +2,7 @@
 
 Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DAVID.md](WORKING_WITH_DAVID.md). Keep this file short: only what is open or needed to work. Finished work goes to [DONE.md](DONE.md), history to CHANGELOG.
 
-- Guides and Shortcuts have topic emblems. Gauron has a phase-by-phase walkthrough and both Raid guides describe their HP carry-over.
+- Guides and Shortcuts have topic emblems. All six Hunt and both Raid guides have fight cues, openings and linked teams with mini rosters. Both Raid guides describe HP carry-over.
 
 ## The site
 - Public Beta, live since 11 Nov. Every page has a clean path (AGENTS.md). All 20 heroes, tier list (A0 + Mastery view and Awakenings view, re-rated 14 Nov from David's file), Teams (six lineups + Ursula speed runs), Boss & Tower Finder, Dungeons, Gear, Karma, Familiars, Cookbook, Items, Titles, Achievements, Damage and Levelling calculators, News and Patch Notes.

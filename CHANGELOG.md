@@ -1,5 +1,11 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 17 Nov 2026 — Hunt and Raid walkthroughs and linked teams
+
+- Expanded all six individual Hunt guides and both Raid guides. Each uses encounter art, a cue to watch for and compact sections covering positioning, a damage window and team setup. Raid preparation includes teamwide Tomato Stew and the Earthshatterer Signal window.
+- Named lineups in guides link to the matching Team card. Hover or keyboard focus shows the lineup portraits and names. Clicking, reloading and browser Back preserve Guide and Team destinations.
+- Full local checks passed. The 113-view comparison matched the previous release. Separate desktop and phone checks opened the individual boss routes and exercised their banners, roster previews and exact Team links.
+
 ## 17 Nov 2026 — Guide and Shortcuts emblems, Gauron walkthrough
 
 - Added a topic emblem to each Guide and Shortcuts card. Bosses use portraits, towers use crests, and other cards use outline symbols.

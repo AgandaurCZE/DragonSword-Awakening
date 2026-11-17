@@ -975,10 +975,28 @@ def team_links(browser, base):
     broken = page.evaluate("[...document.querySelectorAll('#start-here img')].filter(i=>i.complete&&!i.naturalWidth&&i.loading!=='lazy').length")
     if not want or got != want or broken or not page.locator('#start-here [data-sh-hero]').first.get_attribute('href'):
         raise AssertionError(f'start-here guide: {got} of {want} sections, {broken} broken pictures')
+    royal_guide = page.locator('#start-here').get_by_role('link', name='Royal Inferno', exact=True)
+    assert royal_guide.get_attribute('href').endswith('/teams#team=Royal%20Inferno')
+    royal_guide.hover()
+    roster = page.locator('#karmaPopover .guide-team-preview')
+    roster.wait_for(state='visible')
+    assert roster.locator('li > span').all_text_contents() == ['Kalsion', 'Kalien', 'Reina']
+    assert roster.locator('li img').count() == 3
+    page.keyboard.press('Escape')
+    roster.wait_for(state='hidden')
+    royal_guide.focus()
+    roster.wait_for(state='visible')
+    royal_guide.click()
+    page.wait_for_function("NAV.state.team === 'Royal Inferno' && location.hash === '#team=Royal%20Inferno'")
+    assert page.locator('.team-card[data-team-name="Royal Inferno"]').is_visible()
+    page.reload(wait_until='networkidle')
+    page.wait_for_function("typeof NAV !== 'undefined' && NAV.ready && NAV.state.team === 'Royal Inferno'")
+    page.go_back()
+    page.locator('#start-here').wait_for(state='visible')
     page.locator('.nav-item[data-page="tier"]').click()
     assert page.locator('.tier-hero-link').first.get_attribute('href')
     ctx.close()
-    print('  Team skill slider, hero deep links and native new-tab clicks checked')
+    print('  Team skill slider, hero deep links, native new-tab clicks and guide team previews checked')
 
 
 def guide_polish(browser, base):
@@ -1067,10 +1085,11 @@ def guide_polish(browser, base):
         guide = page.locator('.mechanics-guide')
         assert guide.get_by_role('heading', name=article['title'], exact=True).is_visible()
         assert guide.locator('section').count()
-        if article['id'] == 'raid-gauron':
+        if article['id'].startswith(('hunt-', 'raid-')) and not article['id'].endswith('-overview'):
             assert guide.locator('.guide-fight-art').is_visible()
-            assert 'pillar' in guide.inner_text()
-        assert guide.locator('a').get_attribute('href').startswith(page.evaluate('APP_ROOT'))
+            assert guide.locator('.guide-fight-cue').is_visible()
+            assert guide.locator('section .guide-team-link').count()
+        assert guide.locator('.guide-next a').get_attribute('href').startswith(page.evaluate('APP_ROOT'))
         page.get_by_role('link', name='All guides').click()
     for path in ['teams', 'news']:
         page.goto(base + path, wait_until='networkidle')

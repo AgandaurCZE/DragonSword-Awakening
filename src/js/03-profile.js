@@ -551,6 +551,31 @@ function richText(text, hero) {
   return out.join('').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 }
 function refCardHtml(type, key) {
+  if (type === 'team') {
+    const team = TEAM_DATA.find((entry) => entry.name === key);
+    if (!team) return '';
+    const E = profileEsc;
+    const roster = team.members
+      .map((slot) => {
+        const hero = HEROES.find((entry) => entry.name === slot.name);
+        const portrait = hero
+          ? '<img src="' + E(hero.portrait) + '" alt="">'
+          : '<span class="guide-team-flex">+</span>';
+        return '<li>' + portrait + '<span>' + E(hero?.name || 'Flex') + '</span></li>';
+      })
+      .join('');
+    return (
+      '<div class="ref-card guide-team-preview" style="--team-accent:' +
+      E(ARCH_COLORS[team.arch] || team.accent) +
+      '"><div class="ref-title">' +
+      E(team.name) +
+      '</div><div class="ref-meta">' +
+      E(team.arch) +
+      '</div><ul>' +
+      roster +
+      '</ul></div>'
+    );
+  }
   if (type === 'hero') {
     const h = HEROES.find((x) => x.name === key);
     if (!h) {
@@ -727,13 +752,20 @@ function hideRefPopover(delay = 150) {
 }
 document.addEventListener('pointerover', (e) => {
   if (e.pointerType === 'touch') return;
-  const a = e.target.closest('.ref:not(.ref-skill)');
+  const a = e.target.closest('.ref:not(.ref-skill), .guide-team-link');
   if (a && !refPinned) showRefPopover(a);
 });
 document.addEventListener('pointerout', (e) => {
   if (e.pointerType === 'touch') return;
-  const a = e.target.closest('.ref:not(.ref-skill)');
+  const a = e.target.closest('.ref:not(.ref-skill), .guide-team-link');
   if (a && !refPinned && !$('karmaPopover').contains(e.relatedTarget)) hideRefPopover();
+});
+document.addEventListener('focusin', (e) => {
+  const team = e.target.closest('.guide-team-link');
+  if (team && !refPinned && !IS_TOUCH) showRefPopover(team);
+});
+document.addEventListener('focusout', (e) => {
+  if (e.target.closest('.guide-team-link') && !IS_TOUCH) hideRefPopover();
 });
 document.addEventListener('click', (e) => {
   const open = e.target.closest('[data-open-hero]');
@@ -764,7 +796,10 @@ document.addEventListener('click', (e) => {
   }
 });
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && refPinned) {
+  if (
+    e.key === 'Escape' &&
+    (refPinned || (!$('karmaPopover').hidden && $('karmaPopover').querySelector('.guide-team-preview')))
+  ) {
     refPinned = null;
     hideKarmaPopover(0);
   }

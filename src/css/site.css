@@ -8029,6 +8029,65 @@ a.guide-tile:focus-visible {
     linear-gradient(0deg, #12152167, transparent 70%),
     var(--fight-art) center / cover;
 }
+.guide-fight {
+  --finder-accent: var(--fight-accent, #ed9a83);
+}
+.guide-fight section {
+  margin-top: 12px;
+  padding: 10px 13px;
+  border: 1px solid #454b58;
+  border-radius: 6px;
+  background: #202530;
+}
+.guide-fight section h4 {
+  margin: 0;
+  color: color-mix(in srgb, var(--finder-accent) 65%, #f4f6fa);
+}
+.guide-fight section p {
+  margin-bottom: 0;
+}
+.guide-fight .guide-next {
+  margin-top: 16px;
+}
+.guide-team-link {
+  color: #a9dcff;
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+#karmaPopover:has(.guide-team-preview) {
+  width: min(255px, calc(100vw - 24px));
+}
+.guide-team-preview {
+  border-top: 2px solid var(--team-accent, #31a8e4);
+}
+.guide-team-preview ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 10px 0 0;
+  list-style: none;
+}
+.guide-team-preview li {
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+  min-width: 52px;
+  font-size: 11px;
+}
+.guide-team-preview li img,
+.guide-team-flex {
+  width: 43px;
+  height: 43px;
+  object-fit: cover;
+  border: 1px solid var(--team-accent, #31a8e4);
+  border-radius: 5px;
+}
+.guide-team-flex {
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+}
 .guide-fight-cue {
   padding: 10px 14px;
   border-left: 3px solid #ed9a83;

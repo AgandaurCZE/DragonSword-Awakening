@@ -1,7 +1,7 @@
 /* js/02-teams-karma.js: Teams page (TEAM_DATA) and Karma page (KARMA_DATA). Part of the site script, split out of index.html on 10 Nov 2026.
    The files load in order (see index.html) and share one global scope, so code that runs at load time may only use what earlier files define. */
 // ==== Teams page (TEAM_DATA and TEAM_SPEED_RUNS) ====
-const TEAMS_VIEW = { speed: false };
+const TEAMS_VIEW = { speed: false, target: '' };
 
 function teamPortrait(hero, small = false, showRole = true) {
   const role = v2Role(hero);
@@ -58,6 +58,7 @@ function renderTeams() {
   button.classList.toggle('active', speed);
   button.onclick = () => {
     TEAMS_VIEW.speed = !speed;
+    TEAMS_VIEW.target = '';
     renderTeams();
   };
   $('teamsHeading').textContent = speed ? 'Ursula speed runs' : 'Team Tier List';

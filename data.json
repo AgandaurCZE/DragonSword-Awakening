@@ -29347,101 +29347,145 @@
    {
     "id": "hunt-furcas",
     "title": "Furcas the Starving Ghost of Corrosion",
-    "intro": "Nightmare and Hell openings: Shock or Burn.",
+    "intro": "Furcas is weak to Shock and Burn. The flight is a positioning check. Do your damage once it lands.",
     "sections": [
      [
-      "Choose an opener",
-      "Thunder Chorus can start with Shock from Ryza. Royal Inferno gives you a Burn route. Start the fight by applying your chosen status, then spend the opening on burst instead of opening with your hardest hit."
+      "Flight and landing",
+      "Keep the camera on Furcas as it takes off, follow from a safe distance and be ready to move out of its path. On Nightmare, watch for a spit that leaves a hazard on the ground. Go around the pool before you close in."
+     ],
+     [
+      "Team and timing",
+      "Thunder Chorus gives you Shock through Ryza. Royal Inferno gives you Burn. Build the first stack after Furcas lands, then use your strongest attacks while it stays grounded and the resistance is down."
      ]
     ],
     "next": {
      "page": "tier",
      "hash": "#boss=furcas",
      "label": "See the Furcas rankings and rewards"
+    },
+    "cover": {
+     "src": "assets/bosses/furcas-banner.webp",
+     "cue": "Furcas takes off → keep it in view and watch the landing area for lingering acid on Nightmare."
     }
    },
    {
     "id": "hunt-vanak",
     "title": "Vanak the Bloody Hook",
-    "intro": "Nightmare and Hell openings: Poison or Bleed.",
+    "intro": "Vanak is weak to Poison and Bleed. The dangerous part of his jumps is the shockwave on landing.",
     "sections": [
      [
-      "Choose an opener",
-      "Venom Cyclone builds Poison with Charlotte and Johnny. For a Bleed route, pair Roxy with Theresia in Crimson Verdict and use Roxy to set up the window."
+      "Repeated jumps",
+      "Time your jump to the ring reaching you. Keep Vanak in view and wait for the last landing before locking yourself into a long animation. Use the opening after the chain ends."
+     ],
+     [
+      "Team and timing",
+      "Venom Cyclone can keep Poison up with Charlotte and Johnny. Crimson Verdict uses Roxy’s Bleed to set up Theresia. Start reapplying your element as soon as you can safely reach him after a slam."
      ]
     ],
     "next": {
      "page": "tier",
      "hash": "#boss=vanak",
      "label": "See the Vanak rankings and rewards"
+    },
+    "cover": {
+     "src": "assets/bosses/vanak-banner.webp",
+     "cue": "Watch the ground after each jump. A red ring can be jumped over, and another slam can follow."
     }
    },
    {
     "id": "hunt-barduk",
     "title": "Barduk the Corrupted",
-    "intro": "Nightmare and Hell openings: Bleed or Frost.",
+    "intro": "Barduk is weak to Bleed and Frost. Fight from his flank so you have a shorter route out of his breath.",
     "sections": [
      [
-      "Choose an opener",
-      "Use Crimson Verdict for Bleed or Frost Prison for Frost. With Frost, burst after the first stack. Save any attack that specifically needs Freeze to shatter for the third stack."
+      "Flank him at the rear leg",
+      "Stay near a rear leg and watch for stomps and the tail sweep. If he leaps away, close the gap when it’s safe so you can get around his head. Running sideways at long range can leave you in the path of the tracking breath."
+     ],
+     [
+      "Team and timing",
+      "Crimson Verdict opens with Bleed. Frost Prison opens the resistance window with one Frost stack. Spend normal burst there and hold attacks that require Freeze until the third stack."
      ]
     ],
     "next": {
      "page": "tier",
      "hash": "#boss=barduk",
      "label": "See the Barduk rankings and rewards"
+    },
+    "cover": {
+     "src": "assets/bosses/barduk-banner.webp",
+     "cue": "A leap can lead into tracking poison breath. Move to the flank and get behind his head before the breath starts."
     }
    },
    {
     "id": "hunt-gallore",
     "title": "Gallore the Collapse",
-    "intro": "Nightmare and Hell openings: Frost or Burn.",
+    "intro": "Gallore is weak to Frost and Burn. Breaking his armour early weakens him for the rest of the fight.",
     "sections": [
      [
-      "Break the fist early",
-      "The first Break knocks off a fist and lowers Gallore’s Defense even after the Super Armor gauge recovers. Make an early Break a priority alongside opening damage windows with Frost or Burn."
+      "Fist slams and rolling charge",
+      "Dodge the fist slam at impact. When he starts rolling, position by an edge rock and move as he commits. He can steer if you move too early. Run in for a short punish if he crashes."
      ],
      [
-      "Pick a team",
-      "Frost Prison can attack through the first Frost stack. Royal Inferno gives you Burn, with Kalien helping wear down Super Armor."
+      "Break the fist early",
+      "The first Break knocks off a fist and lowers Gallore’s Defense even after the Super Armor gauge recovers. Frost Prison opens the damage window with the first Frost stack. Royal Inferno gives you Burn and Kalien’s Super Armor damage."
      ]
     ],
     "next": {
      "page": "tier",
      "hash": "#boss=gallore",
      "label": "See Gallore’s rankings and rewards"
+    },
+    "cover": {
+     "src": "assets/bosses/gallore-banner.webp",
+     "cue": "Wait for the fist to hit the ground. During the rolling charge, use a rock at the edge of the arena to make him crash."
     }
    },
    {
     "id": "hunt-ghoul-greed",
     "title": "Ghoul Greed",
-    "intro": "Nightmare and Hell openings: Burn or Shock.",
+    "intro": "Ghoul Greed is weak to Burn and Shock. Give yourself room to see its rush, then attack while it recovers.",
     "sections": [
      [
-      "Choose an opener",
-      "Use Royal Inferno for Burn or Thunder Chorus for Shock. Once the first stack lands, use the other heroes’ high-damage attacks in the same window."
+      "Turn the charge into an opening",
+      "Leave yourself room near a wall to sidestep its rush. Re-enter after the collision, and use quick hits if it recovers before your burst is ready. If it loses track of you and shows a question mark, you can approach from behind for a Surprise Grab if your hero can use it."
+     ],
+     [
+      "Team and timing",
+      "Royal Inferno opens with Burn, and Thunder Chorus opens with Shock. Apply the element after the rush, then tag into the damage dealer. It’s called Greed. You can let the boss be the greedy one."
      ]
     ],
     "next": {
      "page": "tier",
      "hash": "#boss=ghoul-greed",
      "label": "See the Ghoul Greed rankings and rewards"
+    },
+    "cover": {
+     "src": "assets/bosses/ghoul-greed-banner.webp",
+     "cue": "Move sideways out of its charge line. A wall collision can leave it disoriented."
     }
    },
    {
     "id": "hunt-earthlander",
     "title": "Earthlander of the Ravenous Earth",
-    "intro": "Nightmare and Hell openings: Bleed or Poison.",
+    "intro": "Earthlander is weak to Bleed and Poison. Watch where it comes up and leave room to move away from the next hazard.",
     "sections": [
      [
-      "Choose an opener",
-      "Crimson Verdict can apply Bleed with Roxy. Venom Cyclone can build Poison with Charlotte and Johnny. If your elemental opener is down, an active physical status also opens a damage window."
+      "Burrow and acid",
+      "Keep the camera loose when it goes under. Once you see where it surfaces, approach from the side and step away if it spits. Reposition around the ground hazard before starting a long cast."
+     ],
+     [
+      "Team and timing",
+      "Crimson Verdict opens with Roxy’s Bleed. Venom Cyclone can apply Poison with Charlotte and Johnny. Apply it once the head stops moving and use the opening before the next burrow. An active physical status can also take down the resistance while your elemental opener is unavailable."
      ]
     ],
     "next": {
      "page": "tier",
      "hash": "#boss=earthlander",
      "label": "See the Earthlander rankings and rewards"
+    },
+    "cover": {
+     "src": "assets/bosses/earthlander-banner.webp",
+     "cue": "When it burrows, keep moving. On Nightmare, give the head space after it surfaces or sweeps so you can avoid the acid."
     }
    },
    {
@@ -29481,15 +29525,15 @@
     "sections": [
      [
       "Before you enter",
-      "Put healing food on the Quick Slot. HP carries across the three encounters, so damage on the bridge still matters when the dragon arrives. Bring a hero who can wear down Super Armor and one whose strongest attacks you can hold for a clear opening. For damage, Tomato Stew can give the whole team 17% Defense Ignore for 15 minutes. Time your burst after a Signal Skill so it also benefits from the three-piece Earthshatterer bonus of 20% Defense Ignore for 10 seconds."
+      "Put healing food on the Quick Slot. HP carries across the three encounters, so damage on the bridge still matters when the dragon arrives. Bring a hero who can wear down Super Armor and one whose strongest attacks you can hold for a clear opening. For damage, Four-star Tomato Stew gives the whole team 17% Defense Ignore for 15 minutes. On a hero wearing three pieces of Earthshatterer, use a Signal Skill to get 20% Defense Ignore for 10 seconds, then spend your burst during the overlap."
      ],
      [
       "Bridge Ogre · keep your team healthy",
-      "Start with short attacks. Let the Ogre finish its swing sequence, then step back in and work on its Super Armor. If you have already got the Ogre close to death, finish with a short attack and save your biggest cooldowns for Gauron."
+      "Start with short attacks. Let the Ogre finish its swing sequence, then step back in and work on its Super Armor. If you have the Ogre nearly down, finish with a short attack and save your biggest cooldowns for Gauron."
      ],
      [
       "Humanoid Gauron · punish the recovery",
-      "Give him room to finish a weapon sequence before committing to a long cast or tag-in. Use your quick skills to build Super Armor damage between sequences. When you get a Break, tag into the damage dealer and spend the burst while the opening is still there."
+      "Give him room to finish a weapon sequence before committing to a long cast or tag-in. Use your quick skills to build Super Armor damage between sequences. When you get a Break, tag into the damage dealer and spend the burst while the opening is still there. For a roster with a dedicated breaker, Armor Break provides Castella and Astria with a flexible damage slot."
      ],
      [
       "Dragon Gauron · bait the charge into a pillar",
@@ -29517,21 +29561,33 @@
    {
     "id": "raid-ursula",
     "title": "Ursula (Chase Toward the End)",
-    "intro": "Ursula unlocks after story Chapter 8. She starts in humanoid form and then becomes a dragon. Your team’s HP carries over as the fight moves to a different arena for the dragon phase.",
+    "intro": "Chase Toward the End unlocks after story Chapter 8. Your team’s HP carries from the humanoid fight into the dragon fight in a different arena.",
     "sections": [
      [
-      "Dodge the grabs",
-      "Learn the grab timings before committing to long attacks. Missing a dodge can leave you open to a chain of follow-up hits. Use the openings after you’ve avoided her attacks."
+      "Before you enter",
+      "Put healing food on the Quick Slot. Four-star Tomato Stew gives the whole team 17% Defense Ignore for 15 minutes. A hero with three Earthshatterer pieces gains 20% Defense Ignore for 10 seconds after their Signal Skill. Use that window for your burst."
      ],
      [
-      "Choose a difficulty",
-      "Normal, Hard and Very Hard recommend Lv.60, 80 and 90. Normal offers Intact and Refined runes, Hard offers Refined and Radiant, and Very Hard offers Perfect."
+      "Humanoid Ursula · stay ready to dodge",
+      "Watch Ursula herself when she closes the gap. Save a dodge for the moment the grab commits. Use short attacks until she has finished the sequence, then tag into your damage dealer. Keep enough HP for the second arena."
+     ],
+     [
+      "Dragon Ursula · reset your position",
+      "Get her back in view as the new arena loads. Keep an exit lane so you can dodge the next rush. If you bring Frost Prison, place Chako close to Ursula and use the opening to start your Signals. Venom Cyclone is another option if you can keep its Poison and tag chain moving."
+     ],
+     [
+      "Difficulty and drops",
+      "Normal, Hard and Very Hard recommend Lv.60, 80 and 90. Normal drops Intact and Refined runes. Hard drops Refined and Radiant. Very Hard drops Perfect."
      ]
     ],
     "next": {
      "page": "teams",
      "hash": "#speed",
      "label": "See Ursula speedrun teams"
+    },
+    "cover": {
+     "src": "assets/bosses/ursula-dragon-banner.webp",
+     "cue": "Avoid the grab rush, then punish the recovery. Keep your longest casts for a clear opening or a Break."
     }
    },
    {

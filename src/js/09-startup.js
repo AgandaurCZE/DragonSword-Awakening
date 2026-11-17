@@ -17,7 +17,9 @@ function routeUrl(page, options = {}) {
       : page === 'tools' && options.tool
         ? SITE.toolRoutes[options.tool] || SITE.routes.tools
         : (SITE.routes[page] ?? '');
-  const hash = page === 'guides' && options.guide ? '#' + encodeURIComponent(options.guide) : '';
+  let hash = '';
+  if (page === 'guides' && options.guide) hash = '#' + encodeURIComponent(options.guide);
+  if (page === 'teams' && options.team) hash = '#team=' + encodeURIComponent(options.team);
   return APP_ROOT + path + hash;
 }
 function navCurrent() {
@@ -29,6 +31,7 @@ function navCurrent() {
     };
   const page = document.querySelector('.nav-item.active[data-page]')?.dataset.page || 'home';
   const state = { page };
+  if (page === 'teams' && TEAMS_VIEW.target) state.team = TEAMS_VIEW.target;
   if (page === 'guides' && $('guidesBody').dataset.guide) state.guide = $('guidesBody').dataset.guide;
   if (page === 'tools') state.tool = document.querySelector('#toolTabs .on')?.dataset.tool || 'damage';
   if (page === 'tier') state.tier = { mode: V2.mode, boss: V2.boss, tower: V2.tower, view: V2.view };
@@ -71,6 +74,7 @@ function navShow(state, scrollY = null) {
         renderTierV2();
       }
       if (state.page === 'tools' && state.tool) document.querySelector(`[data-tool="${state.tool}"]`)?.click();
+      if (state.page === 'teams') TEAMS_VIEW.target = state.team || '';
       if (state.page === 'teams' && (state.team || state.speed)) {
         TEAMS_VIEW.speed = Boolean(state.speed);
         renderTeams();
@@ -136,7 +140,8 @@ function navInitial() {
     if (TOWER_TRIALS.towers.some((entry) => entry.id === tower)) return { page, tier: { mode: 'towers', tower } };
   }
   if (page === 'teams' && hash === 'speed') return { page, speed: true };
-  if (page === 'teams' && params.has('team')) return { page, team: params.get('team') };
+  if (page === 'teams' && TEAM_DATA.some((team) => team.name === params.get('team')))
+    return { page, team: params.get('team') };
   if (page === 'guides' && guideTarget(hash)) return { page, guide: hash };
   return { page: page || 'home' };
 }
@@ -167,6 +172,9 @@ function navInit() {
   document.addEventListener('change', () => navSchedule());
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') navSchedule();
+  });
+  document.querySelector('.nav-item[data-page="teams"]').addEventListener('click', (e) => {
+    if (!NAV.restoring && isPlainLinkClick(e)) TEAMS_VIEW.target = '';
   });
   document.querySelector('.nav-item[data-page="guides"]').addEventListener('click', (e) => {
     if (!NAV.restoring && isPlainLinkClick(e)) renderGuides();
