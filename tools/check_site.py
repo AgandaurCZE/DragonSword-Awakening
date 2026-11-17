@@ -286,7 +286,8 @@ def progress_backups(browser, base):
                 'dsw.achievements.v1':{[ITEMDB.ach.items[0].name]:1},
                 'dsw.cooked.v1':[COOKBOOK.dishes[0].id],
                 'dsw.dmgcalc.v1':{...DC_DEF,hero:'Ryza',attack:1234,st:{Shock:{on:true,aap:'2',ad:3}}},
-                'dsw.lvcalc.v1':{...LV_DEF,kind:'hero',hero:'Ryza',arch:'Thunderbolt',from:1,to:20}
+                'dsw.lvcalc.v1':{...LV_DEF,kind:'hero',hero:'Ryza',arch:'Thunderbolt',from:1,to:20},
+                [PLAN_KEY]:{...plansBlank(),watch:['Ryza']}
             };
             for(const [k,v] of Object.entries(storage))localStorage.setItem(k,JSON.stringify(v));
             localStorage.setItem('progress-test-unrelated','keep me');return storage;
@@ -299,8 +300,8 @@ def progress_backups(browser, base):
             page.locator('#progressExport').click()
         with open(event.value.path(), encoding='utf-8') as f:
             doc = json.load(f)
-        if doc['storage'] != fixture:
-            bad(f'progress {width}px: exported file did not reproduce all five saved sections')
+        if doc['version'] != 2 or doc['storage'] != fixture:
+            bad(f'progress {width}px: exported file did not reproduce all six saved sections')
         before = page.evaluate("""()=>{
             localStorage.removeItem(TITLE_KEY);localStorage.setItem('dsw.cooked.v1','[]');
             localStorage.removeItem('dsw.dmgcalc.v1');return progressSnapshot();
@@ -355,7 +356,7 @@ def progress_backups(browser, base):
             if(!rejected||JSON.stringify(progressSnapshot())!==before||localStorage.getItem(PROGRESS_UNDO)!==undo)
                 errors.push('mid-write failure did not roll back progress and recovery');
             const absent=clone();for(const k in absent.storage)absent.storage[k]=null;
-            progressRestore(absent);
+            progressRestore(absent,{planMode:'replace'});
             if(Object.values(progressSnapshot()).some(v=>v!==null))errors.push('absent sections did not reset');
             progressUndo();
             if(JSON.stringify(progressSnapshot())!==before)errors.push('empty restore could not be undone');
@@ -365,6 +366,108 @@ def progress_backups(browser, base):
             bad(f'progress {width}px: {issue}')
         print(f'  progress {width}px: download, review, cancel, restore, reload, undo, invalid files, absent keys and write rollback')
         ctx.close()
+
+
+def progress_plans(browser, base):
+    """Round-trip planning data, merge previews, scoped undo and v1 compatibility."""
+    for width in (1400,390):
+        with browser.new_context(viewport={'width':width,'height':900}) as ctx:
+            page = open_site(ctx,base,'tools',f'My Plans backup {width}px')
+            page.evaluate('progressCatalogue()')
+            seeded = page.evaluate("""() => {
+                const here = {
+                    ...plansBlank(),
+                    goals:[{id:'both',title:'Edited here',kind:'note',target:'',done:true}],
+                    stock:{'material:Drop of Purity':0},watch:['Eileen'],
+                };
+                const incoming = {
+                    ...plansBlank(),
+                    goals:[
+                        {id:'both',title:'Older copy',kind:'note',target:'',done:false},
+                        {id:'new',title:'Clear Ursula',kind:'boss',target:'ursula',done:false},
+                    ],
+                    farm:[newFarmPlan('Othello')],
+                    stock:{'material:Drop of Purity':8,'set:Froststorm':1},
+                    rotations:[{id:'frost',name:'Freeze window',heroes:['Othello'],encounter:'gallore',
+                        steps:[{type:'Opener',hero:'Othello',skill:'Frozen Stinger',note:'Build Frost'}]}],
+                    watch:['Ornette','Eileen'],
+                };
+                localStorage.setItem(PLAN_KEY,JSON.stringify(here));
+                localStorage.setItem('dsw.cooked.v1',JSON.stringify([COOKBOOK.dishes[0].id]));
+                const doc = progressDocument();
+                doc.storage[PLAN_KEY]=incoming;
+                doc.storage['dsw.cooked.v1']=null;
+                return {doc, here, other:localStorage.getItem('dsw.cooked.v1')};
+            }""")
+            doc, here = seeded['doc'], seeded['here']
+            file = page.locator('#progressFile')
+            restore = page.get_by_role('button',name='Restore this backup')
+            def upload(value):
+                file.set_input_files({'name':'progress.json','mimeType':'application/json','buffer':json.dumps(value).encode()})
+                restore.wait_for(state='visible')
+            upload(doc)
+            table = page.get_by_role('table',name='My Plans restore preview')
+            assert table.get_by_role('row',name='Goals 1 2 2',exact=True).count() == 1
+            page.locator('#progressPlanPreview summary').click()
+            page.get_by_text('Older copy · keeping current',exact=True).wait_for()
+            assert page.evaluate('readPlans()') == here
+            page.get_by_role('checkbox',name='Restore only My Plans').check()
+            assert 'Keep current' in page.locator('#progressSummary').inner_text()
+            before = page.evaluate("""() => {
+                const p=readPlans(); p.watch.push('Ryza');
+                localStorage.setItem(PLAN_KEY,JSON.stringify(p)); return progressSnapshot();
+            }""")
+            restore.click()
+            assert 'Progress changed' in page.locator('#progressStatus').inner_text()
+            assert table.get_by_role('row',name='Watched heroes 2 2 3',exact=True).count() == 1
+            assert page.evaluate('progressSnapshot()') == before
+            with page.expect_navigation(wait_until='networkidle'):
+                restore.click()
+            page.wait_for_function('NAV.ready')
+            saved = page.evaluate('readPlans()')
+            assert saved['goals'][0] == here['goals'][0] and saved['goals'][1]['id'] == 'new'
+            assert saved['stock'] == {'material:Drop of Purity':0, 'set:Froststorm':1}
+            assert saved['farm'] == doc['storage']['dsw.plans.v1']['farm']
+            assert saved['rotations'] == doc['storage']['dsw.plans.v1']['rotations']
+            assert saved['watch'] == ['Eileen','Ryza','Ornette']
+            assert page.evaluate("localStorage.getItem('dsw.cooked.v1')") == seeded['other']
+            page.evaluate("localStorage.setItem('dsw.cooked.v1','[]')")
+            with page.expect_navigation(wait_until='networkidle'):
+                page.get_by_role('button',name='Undo last restore').click()
+            page.wait_for_function('NAV.ready')
+            assert page.evaluate("localStorage.getItem('dsw.plans.v1')") == before['dsw.plans.v1']
+            assert page.evaluate("localStorage.getItem('dsw.cooked.v1')") == '[]'
+
+            upload(doc)
+            page.get_by_label('How to restore plans').select_option('replace')
+            page.get_by_role('checkbox',name='Restore only My Plans').check()
+            assert table.get_by_role('row',name='Watched heroes 2 2 2',exact=True).count() == 1
+            with page.expect_navigation(wait_until='networkidle'):
+                restore.click()
+            page.wait_for_function('NAV.ready')
+            assert page.evaluate('readPlans()') == doc['storage']['dsw.plans.v1']
+            legacy = dict(doc,version=1,storage={key:value for key,value in doc['storage'].items() if key != 'dsw.plans.v1'})
+            upload(legacy)
+            assert not page.locator('#progressPlanChoices').is_visible()
+            assert 'leaves My Plans as they are' in page.locator('#progressPlanOutcome').inner_text()
+            with page.expect_navigation(wait_until='networkidle'):
+                restore.click()
+            page.wait_for_function('NAV.ready')
+            assert page.evaluate('readPlans()') == doc['storage']['dsw.plans.v1']
+            assert page.evaluate("localStorage.getItem('dsw.cooked.v1')") is None
+            page.evaluate("""() => {
+                const old = progressSnapshot(PROGRESS_LEGACY_KEYS.map(([key])=>key));
+                localStorage.setItem(PROGRESS_UNDO,JSON.stringify({version:1,storage:old}));
+                progressUndo();
+            }""")
+            assert page.evaluate('readPlans()') == doc['storage']['dsw.plans.v1']
+            invalid = json.loads(json.dumps(doc))
+            invalid['storage']['dsw.plans.v1']['stock']['material:Drop of Purity'] = -1
+            file.set_input_files({'name':'invalid.json','mimeType':'application/json','buffer':json.dumps(invalid).encode()})
+            page.wait_for_function("document.getElementById('progressStatus').textContent.startsWith('Cannot restore')")
+            assert not page.locator('#progressReview').is_visible()
+            assert page.evaluate('readPlans()') == doc['storage']['dsw.plans.v1']
+    print('  My Plans backup at both widths: safe merge, current entries, stale preview, replacement, scoped undo and v1 files')
 
 
 def preview_views(browser, base):
@@ -1577,6 +1680,7 @@ def main():
             print('check_site: JS ports against the Python tools')
             parity(browser, base)
             progress_backups(browser, base)
+            progress_plans(browser, base)
             preview_views(browser, base)
         browser.close()
     if problems:

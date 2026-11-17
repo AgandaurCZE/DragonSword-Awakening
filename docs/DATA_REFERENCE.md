@@ -229,11 +229,11 @@ Run these from the repository root with Python 3. The data tools need no extra p
 - **`tools/endgame_gear.py`** (9 Nov) and **`tools/team_gear.py`** (10 Nov): offline gear optimisers on the full damage formula (Defense, Defense Ignore, status AAP, set effects). `team_gear.py <Hero> <Status,Status,...>` counts every status the team keeps on the target, real awakening levels and owned signatures (signature ownership derived from `KARMA_DATA[].owned`; awakening levels from `GEAR_MODEL.account.awakenings`), at full and half physical-status uptime; results in GAME_MATH 4.1 and 4.3. Its page port is `gmBuild` in `src/js/04-gear-builds.js` (preview Best Gear box); `check_site.py` compares the two on every run.
 - **`tools/skill_meta.py --write`** regenerates `skills[].meta` and the profiles' `build`. Run it after editing skill text or the Karma or gear sentences.
 
-## Visitor progress backups (11 Nov 2026; preview Tools page)
+## Visitor progress backups (Tools page)
 
-`Backup & restore` is the third Tools tab. `renderSettingsBackup()` and the `progress*` helpers are in `src/js/08-items-tools-guides.js`; styles are `.pv`-scoped. No login, cloud storage, account preset or merge is involved.
+`Backup & restore` is the third Tools tab. `renderSettingsBackup()` and the `progress*` helpers are in `src/js/08-items-tools-guides.js`. The My Plans validation and merge live in `src/js/08-plans.js`.
 
-The downloaded JSON is `{format: "dragonsword-awakening-progress", version: 1, exportedAt: ISO date, storage: {...}}`. `storage` has exactly five keys, each holding its parsed saved value or `null` for an absent key:
+The downloaded JSON is `{format: "dragonsword-awakening-progress", version: 2, exportedAt: ISO date, storage: {...}}`. Each key holds its parsed saved value or `null` for an absent key.
 
 | Key | Value |
 |---|---|
@@ -242,12 +242,13 @@ The downloaded JSON is `{format: "dragonsword-awakening-progress", version: 1, e
 | `dsw.cooked.v1` | Array of known discovered-dish IDs |
 | `dsw.dmgcalc.v1` | Saved damage-calculator fields, with validated selections, numeric inputs and status rows |
 | `dsw.lvcalc.v1` | Saved levelling-calculator fields, valid level range, hero/archetype and excluded EXP items |
+| `dsw.plans.v1` | Goals, farming lists, stock quantities, saved rotations and watched heroes |
 
-Import is exact replacement of these five sections, never a merge: null sections remove the corresponding key. Files larger than 1 MiB, unsupported formats/versions, incomplete sections, unknown entries/fields and malformed nested settings are rejected before writing. Opening a file only shows a review; Cancel writes nothing. Browser preferences such as tag visibility and the selected Tools tab are untouched.
+Version 1 includes the first five keys and leaves current My Plans alone. Full restores replace the original five sections, with null sections removing their keys. Plans can be restored alongside them or by themselves. Merge is the default for My Plans. Stable IDs keep matching goal, farming and rotation records from the current browser. Current values win for matching stock keys, including zero, and watched heroes combine. Replace applies the file's plans exactly. The review shows counts before and after, and asks the visitor to confirm again if progress changes between review and restore. Files larger than 1 MiB, unknown formats, incomplete sections and malformed nested settings are rejected before writing.
 
-Before restoring, `dsw.progressUndo.v1` saves all five original raw values (including absent keys). A failed write attempts rollback, and a successful restore reloads the page to refresh cached title selections/calculator state. `Undo last restore` survives reload on the same browser and restores the previous raw values. This is one recovery copy, replaced by the next restore, not an extra exported/cloud backup. A transient sessionStorage notice reports restore/undo after reload. Keep an exported file outside browser storage for moving devices or surviving browser clears.
+Before restoring, `dsw.progressUndo.v1` stores the original raw values for the keys being changed, including absent keys. A failed write attempts rollback. A successful restore reloads the page to refresh the rendered state. Undo survives reload on the same browser and restores the targeted previous values. Version 1 recovery copies remain supported. An import with no changes keeps the previous recovery copy.
 
-This is a visitor-created file with runtime validation, not an additional repository data file in `check_shape.py`. If storage formats change, update the backup version/validation and its browser tests deliberately. `progress_backups()` in `tools/check_site.py` covers real download/upload, review/cancel, reload, exact restore/undo, invalid files, missing/empty sections, unrelated-key preservation and mid-write failure rollback at 1400 and 390 px.
+The visitor-created file is validated at runtime. The browser checks cover download, upload, review, Cancel, reload, merge, replacement, compatibility, scoped Undo, malformed files and failed-write rollback at 1400 and 390 px.
 
 ### Boss preparation reference
 

@@ -1,5 +1,9 @@
 # Done: finished tasks and answered questions
 
+## 18 Nov — Portable My Plans
+
+Added My Plans to progress backups. The restore preview compares current, imported and resulting counts. Merge preserves local entries and stock counts. Users can also replace plans or import them alone, with scoped Undo and backward compatibility for v1 files.
+
 ## 17 Nov — My Plans and the Test Kit timing workbench
 
 Connected hero builds and Finder lineups to personal plans, combined farming requirements, added a hero patch watchlist and shareable rotation cards. Added local video controls, two-point Signal and Rage readings, and JSON download to the Test Kit. The workbench provides a way to collect new figures. Exact cooldown and Rage values still require in-game clips.

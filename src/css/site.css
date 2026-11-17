@@ -6974,6 +6974,63 @@ a.tr-hero {
 .progress-review button {
   margin: 4px 4px 4px 0;
 }
+.progress-plan-choices {
+  display: grid;
+  gap: 8px;
+  max-width: 430px;
+  margin: 0;
+  padding: 9px 12px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.progress-plan-choices[hidden],
+#progressPlanOutcome:empty {
+  display: none;
+}
+.progress-plan-choices select {
+  margin-top: 4px;
+  padding: 7px 8px;
+  font-size: 16px;
+}
+.progress-plans-only {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.progress-plans-only input {
+  width: auto;
+  accent-color: var(--accent);
+}
+#progressPlanPreview table {
+  max-width: 580px;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+#progressPlanPreview th,
+#progressPlanPreview td {
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--line);
+}
+#progressPlanPreview thead {
+  color: var(--muted);
+}
+#progressPlanPreview details {
+  margin-top: 9px;
+  overflow-wrap: anywhere;
+}
+#progressPlanPreview summary {
+  color: #a6dce9;
+  cursor: pointer;
+}
+.plans-backup-link a {
+  color: #a6dce9;
+}
+.progress-review button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
 .progress-backup #progressStatus {
   overflow-wrap: anywhere;
 }

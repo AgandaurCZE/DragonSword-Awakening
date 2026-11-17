@@ -1,5 +1,4 @@
 /* Personal plans. Site data supplies the links and quantities. Plans live in this browser. */
-const PLAN_KEY = 'dsw.plans.v1';
 const PLAN_TABS = { goals: 'Goals', farm: 'Farming list', rotations: 'Rotation cards', watch: 'Patch watchlist' };
 const PLAN_KINDS = {
   hero: 'Hero build',
@@ -128,6 +127,131 @@ function plansTabHtml() {
       .join('') +
     '</nav>'
   );
+}
+
+const PLAN_BACKUP_GROUPS = [
+  ['goals', 'Goals'],
+  ['farm', 'Farming lists'],
+  ['stock', 'Stock entries'],
+  ['rotations', 'Saved rotations'],
+  ['watch', 'Watched heroes'],
+];
+function validatePlanBackup(value) {
+  const label = 'My Plans';
+  const keys = PLAN_BACKUP_GROUPS.map(([key]) => key);
+  const invalid = (name) => {
+    throw new Error(label + ' · ' + name + ' is invalid.');
+  };
+  const record = (row, fields, name) => {
+    progressObject(row, label + ' · ' + name, fields);
+    if (fields.some((key) => !Object.hasOwn(row, key))) invalid(name);
+  };
+  const text = (v, n, blank = false) => typeof v === 'string' && v.length <= n && (blank || !!v.trim());
+  const integer = (v, lo, hi) => Number.isInteger(v) && v >= lo && v <= hi;
+  const rows = (group, fields, valid) => {
+    const records = value[group];
+    if (!Array.isArray(records)) invalid(group);
+    const ids = new Set();
+    for (const row of records) {
+      record(row, ['id', ...fields], group);
+      if (typeof row.id !== 'string' || !/^[A-Za-z0-9-]{1,80}$/.test(row.id) || ids.has(row.id) || !valid(row))
+        invalid(group);
+      ids.add(row.id);
+    }
+  };
+  record(value, keys, 'saved plans');
+  rows(
+    'goals',
+    ['title', 'kind', 'target', 'done'],
+    (g) =>
+      text(g.title, 90) &&
+      Object.hasOwn(PLAN_KINDS, g.kind) &&
+      (g.kind === 'note' ? g.target === '' : planTargets(g.kind).some(([id]) => id === g.target)) &&
+      typeof g.done === 'boolean',
+  );
+  const levels = ['heroFrom', 'heroTo', 'karmaFrom', 'karmaTo'];
+  rows(
+    'farm',
+    ['hero', 'sets', 'karma', 'heroSkip', 'karmaSkip', ...levels],
+    (f) =>
+      planHero(f.hero) &&
+      (f.karma === '' || planKarma(f.karma)) &&
+      Array.isArray(f.sets) &&
+      f.sets.length <= 5 &&
+      f.sets.every((set) => {
+        record(set, ['set', 'pieces'], 'gear pairing');
+        return planSet(set.set) && integer(set.pieces, 1, 5);
+      }) &&
+      levels.every((key) => integer(f[key], 1, 70)) &&
+      typeof f.heroSkip === 'boolean' &&
+      typeof f.karmaSkip === 'boolean',
+  );
+  rows('rotations', ['name', 'heroes', 'encounter', 'steps'], (card) => {
+    if (
+      !text(card.name, 72) ||
+      !Array.isArray(card.heroes) ||
+      card.heroes.length > 3 ||
+      (card.encounter !== '' && !planEncounters().some(({ id }) => id === card.encounter)) ||
+      !Array.isArray(card.steps) ||
+      card.steps.length > 18
+    )
+      return false;
+    progressNames(
+      card.heroes,
+      label + ' · lineup',
+      HEROES.map((hero) => hero.name),
+    );
+    return card.steps.every((step) => {
+      record(step, ['type', 'hero', 'skill', 'note'], 'rotation step');
+      return (
+        ROTATION_TYPES.includes(step.type) &&
+        (step.hero === '' || card.heroes.includes(step.hero)) &&
+        text(step.skill, 80, true) &&
+        text(step.note, 140, true)
+      );
+    });
+  });
+  progressNames(
+    value.watch,
+    label + ' · watched heroes',
+    HEROES.map((hero) => hero.name),
+  );
+  if (!value.stock || typeof value.stock !== 'object' || Array.isArray(value.stock)) invalid('stock');
+  for (const [key, quantity] of Object.entries(value.stock)) {
+    const colon = key.indexOf(':');
+    const name = key.slice(colon + 1);
+    const stockType = key.slice(0, colon);
+    const valid =
+      (stockType === 'set' && planSet(name)) ||
+      (stockType === 'karma' && planKarma(name)) ||
+      (stockType === 'gold' && name === 'Gold') ||
+      (stockType === 'material' && text(name, 140));
+    if (!valid || !integer(quantity, 0, 1e9)) invalid('stock');
+  }
+}
+
+function mergePlanBackup(current, incoming) {
+  const appendNew = (here, there) => {
+    const existing = new Set(here.map((row) => row.id));
+    return [...here, ...there.filter((row) => !existing.has(row.id))];
+  };
+  return {
+    goals: appendNew(current.goals, incoming.goals),
+    farm: appendNew(current.farm, incoming.farm),
+    stock: {
+      ...current.stock,
+      ...Object.fromEntries(Object.entries(incoming.stock).filter(([key]) => !Object.hasOwn(current.stock, key))),
+    },
+    rotations: appendNew(current.rotations, incoming.rotations),
+    watch: [...new Set([...current.watch, ...incoming.watch])],
+  };
+}
+function planBackupEntries(plans, key) {
+  if (!plans) return [];
+  if (key === 'stock')
+    return Object.entries(plans.stock).map(([id, count]) => [id, id.slice(id.indexOf(':') + 1) + ' · ' + count]);
+  if (key === 'watch') return plans.watch.map((hero) => [hero, hero]);
+  return plans[key].map((row) => [row.id, row.title || row.name || row.hero]);
 }
 function planButton(label, action, id = '', options = {}) {
   return (
@@ -801,7 +925,12 @@ function drawPlans() {
   plans = readPlans();
   const contents = { goals: plansGoalsHtml, farm: plansFarmHtml, rotations: plansRotationsHtml, watch: plansWatchHtml };
   root.innerHTML =
-    plansTabHtml() + '<p class="plan-status" id="planStatus" role="status"></p>' + contents[PLAN_VIEW.tab]();
+    plansTabHtml() +
+    '<p class="plan-status" id="planStatus" role="status"></p>' +
+    contents[PLAN_VIEW.tab]() +
+    '<p class="plans-backup-link">' +
+    planLink({ page: 'tools', tool: 'backup' }, 'Back up or transfer My Plans →') +
+    '</p>';
   if (PLAN_VIEW.tab === 'farm' && $('planFarmTotals')) {
     drawFarmTotals();
     if (!ITEMDB.data.materials)

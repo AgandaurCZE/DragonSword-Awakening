@@ -1207,19 +1207,20 @@ function renderTools() {
   renderSettingsBackup();
   show();
 }
-/* Visitor progress backups (Beta, 11 Nov 2026). Part of the Tools page, following the calculators.
-   Only the five documented progress keys are exported or restored. No account preset is included. */
+/* Visitor progress backups. Part of the Tools page, following the calculators. */
 const PROGRESS_FORMAT = 'dragonsword-awakening-progress';
-const PROGRESS_VERSION = 1;
+const PROGRESS_VERSION = 2;
 const PROGRESS_LIMIT = 1024 * 1024;
 const PROGRESS_UNDO = 'dsw.progressUndo.v1';
-const PROGRESS_KEYS = [
+const PLAN_KEY = 'dsw.plans.v1';
+const PROGRESS_LEGACY_KEYS = [
   ['dsw.selectedTitles.v1', 'Titles'],
   ['dsw.achievements.v1', 'Achievements'],
   ['dsw.cooked.v1', 'Cookbook'],
   ['dsw.dmgcalc.v1', 'Damage calculator'],
   ['dsw.lvcalc.v1', 'Levelling calculator'],
 ];
+const PROGRESS_KEYS = [...PROGRESS_LEGACY_KEYS, [PLAN_KEY, 'My Plans']];
 function progressObject(value, label, allowed) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error(`${label}: expected an object.`);
   if (Object.keys(value).some((key) => !allowed.includes(key))) throw new Error(`${label}: contains an unknown field.`);
@@ -1296,14 +1297,14 @@ function progressCalculator(value, key) {
 }
 function progressValidate(doc) {
   progressObject(doc, 'Backup', ['format', 'version', 'exportedAt', 'storage']);
-  if (doc.format !== PROGRESS_FORMAT || doc.version !== PROGRESS_VERSION)
+  if (doc.format !== PROGRESS_FORMAT || ![1, PROGRESS_VERSION].includes(doc.version))
     throw new Error('This is not a supported DragonSword progress backup.');
   if (typeof doc.exportedAt !== 'string' || !Number.isFinite(Date.parse(doc.exportedAt)))
     throw new Error('The backup date is missing or invalid.');
-  const keys = PROGRESS_KEYS.map(([key]) => key);
+  const keys = progressSections(doc).map(([key]) => key);
   progressObject(doc.storage, 'Saved progress', keys);
   if (keys.some((key) => !Object.hasOwn(doc.storage, key))) throw new Error('The backup is incomplete.');
-  for (const [key, label] of PROGRESS_KEYS) {
+  for (const [key, label] of progressSections(doc)) {
     const value = doc.storage[key];
     if (value === null) continue; // No saved value: an exact restore removes this key.
     if (key === TITLE_KEY)
@@ -1326,9 +1327,13 @@ function progressValidate(doc) {
       );
       if (Object.values(value).some((v) => ![0, 1, false, true].includes(v)))
         throw new Error('Achievements: invalid tick.');
-    } else progressCalculator(value, key);
+    } else if (key === PLAN_KEY) validatePlanBackup(value);
+    else progressCalculator(value, key);
   }
   return doc;
+}
+function progressSections(doc) {
+  return doc.version === 1 ? PROGRESS_LEGACY_KEYS : PROGRESS_KEYS;
 }
 let achRequest;
 async function progressCatalogue() {
@@ -1346,8 +1351,8 @@ async function progressCatalogue() {
   }
   return achRequest;
 }
-function progressSnapshot() {
-  return Object.fromEntries(PROGRESS_KEYS.map(([key]) => [key, localStorage.getItem(key)]));
+function progressSnapshot(keys = PROGRESS_KEYS.map(([key]) => key)) {
+  return Object.fromEntries(keys.map((key) => [key, localStorage.getItem(key)]));
 }
 function progressDocument() {
   const storage = Object.fromEntries(
@@ -1361,9 +1366,9 @@ function progressDocument() {
   });
 }
 function progressWriteRaw(values) {
-  for (const [key] of PROGRESS_KEYS) {
-    if (values[key] === null) localStorage.removeItem(key);
-    else localStorage.setItem(key, values[key]);
+  for (const [key, value] of Object.entries(values)) {
+    if (value === null) localStorage.removeItem(key);
+    else localStorage.setItem(key, value);
   }
 }
 function progressUndoRecord() {
@@ -1371,28 +1376,61 @@ function progressUndoRecord() {
   if (!raw) return null;
   const r = JSON.parse(raw);
   progressObject(r, 'Recovery copy', ['version', 'storage']);
-  if (r.version !== 1) throw new Error('Unsupported recovery copy.');
-  progressObject(
-    r.storage,
-    'Recovery copy',
-    PROGRESS_KEYS.map(([key]) => key),
-  );
-  for (const [key] of PROGRESS_KEYS)
-    if (r.storage[key] !== null && typeof r.storage[key] !== 'string') throw new Error('Incomplete recovery copy.');
+  if (![1, 2].includes(r.version)) throw new Error('Unsupported recovery copy.');
+  const keys = (r.version === 1 ? PROGRESS_LEGACY_KEYS : PROGRESS_KEYS).map(([key]) => key);
+  progressObject(r.storage, 'Recovery copy', keys);
+  const entries = Object.values(r.storage);
+  if (
+    !entries.length ||
+    (r.version === 1 && entries.length !== keys.length) ||
+    entries.some((value) => value !== null && typeof value !== 'string')
+  )
+    throw new Error('Incomplete recovery copy.');
   return r;
 }
-function progressRestore(doc) {
+function progressPrepare(doc, { plansOnly = false, planMode = 'merge' } = {}) {
   progressValidate(doc);
-  const before = progressSnapshot(),
-    previousUndo = localStorage.getItem(PROGRESS_UNDO);
-  // Save recovery before touching progress. A quota failure here leaves all five keys untouched.
-  localStorage.setItem(PROGRESS_UNDO, JSON.stringify({ version: 1, storage: before }));
+  if (plansOnly && doc.version === 1) throw new Error('This older backup has no My Plans section.');
+  const keys = plansOnly ? [PLAN_KEY] : progressSections(doc).map(([key]) => key);
+  const before = progressSnapshot(keys);
+  const target = Object.fromEntries(
+    keys.map((key) => [key, doc.storage[key] === null ? null : JSON.stringify(doc.storage[key])]),
+  );
+  let plan = null;
+  if (Object.hasOwn(target, PLAN_KEY)) {
+    const incoming = doc.storage[PLAN_KEY];
+    let current;
+    try {
+      current = before[PLAN_KEY] === null ? plansBlank() : JSON.parse(before[PLAN_KEY]);
+      validatePlanBackup(current);
+    } catch (error) {
+      if (incoming && planMode !== 'replace')
+        throw new Error(
+          'My Plans in this browser could not be read. Choose Replace My Plans to restore the file’s copy.',
+        );
+      current = null;
+    }
+    const after = planMode === 'replace' ? incoming : incoming ? mergePlanBackup(current, incoming) : current;
+    if (planMode !== 'replace') {
+      target[PLAN_KEY] =
+        incoming && JSON.stringify(after) !== JSON.stringify(current) ? JSON.stringify(after) : before[PLAN_KEY];
+    }
+    plan = { current, incoming, after };
+  }
+  return { before, target, plan };
+}
+function progressRestore(doc, options = {}, expected = null) {
+  const prepared = progressPrepare(doc, options);
+  if (expected && JSON.stringify(prepared.before) !== JSON.stringify(expected.before)) return 'changed';
+  const changed = Object.keys(prepared.target).filter((key) => prepared.target[key] !== prepared.before[key]);
+  if (!changed.length) return 'unchanged';
+  const before = Object.fromEntries(changed.map((key) => [key, prepared.before[key]]));
+  const target = Object.fromEntries(changed.map((key) => [key, prepared.target[key]]));
+  const previousUndo = localStorage.getItem(PROGRESS_UNDO);
+  // Save recovery before touching any of the sections included in this restore.
+  localStorage.setItem(PROGRESS_UNDO, JSON.stringify({ version: 2, storage: before }));
   try {
-    progressWriteRaw(
-      Object.fromEntries(
-        PROGRESS_KEYS.map(([key]) => [key, doc.storage[key] === null ? null : JSON.stringify(doc.storage[key])]),
-      ),
-    );
+    progressWriteRaw(target);
   } catch (error) {
     try {
       progressWriteRaw(before);
@@ -1405,11 +1443,12 @@ function progressRestore(doc) {
     }
     throw new Error('The browser could not save the backup. Your previous progress has been kept.');
   }
+  return 'restored';
 }
 function progressUndo() {
   const undo = progressUndoRecord();
   if (!undo) throw new Error('There is no restore to undo.');
-  const before = progressSnapshot();
+  const before = progressSnapshot(Object.keys(undo.storage));
   try {
     progressWriteRaw(undo.storage);
     localStorage.removeItem(PROGRESS_UNDO);
@@ -1425,7 +1464,10 @@ function progressUndo() {
   }
 }
 function progressDownload(doc) {
-  const url = URL.createObjectURL(new Blob([JSON.stringify(doc, null, 2) + '\n'], { type: 'application/json' }));
+  const blob = new Blob([JSON.stringify(doc, null, 2) + '\n'], { type: 'application/json' });
+  if (blob.size > PROGRESS_LIMIT)
+    throw new Error('This backup is over 1 MB. You can free space by removing unused plans.');
+  const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
   a.download = `dragonsword-progress-${doc.exportedAt.slice(0, 10)}.json`;
@@ -1444,25 +1486,131 @@ function renderSettingsBackup() {
   const root = $('backupRoot');
   if (!root) return;
   root.innerHTML = `<section class="gx-box progress-backup"><h3>Backup &amp; restore</h3>
-    <p>Save your title ticks, achievements, cooked dishes and both calculator settings to a file. Keep a copy to move your progress between browsers or devices.</p>
+    <p>Save My Plans, title ticks, achievements, cooked dishes and calculator settings to a file you can take to another browser.</p>
     <div class="progress-actions"><button type="button" id="progressExport">Download backup</button>
     <label for="progressFile">Open a backup <input type="file" id="progressFile" accept=".json,application/json"></label>
     <button type="button" id="progressUndo" disabled>Undo last restore</button></div>
     <p id="progressStatus" role="status" aria-live="polite"></p>
     <section id="progressReview" class="progress-review" aria-labelledby="progressReviewTitle" hidden>
-    <h4 id="progressReviewTitle">Review before restoring</h4><p id="progressDate"></p><ul id="progressSummary"></ul>
-    <p>This replaces all five saved sections with the backup, including empty sections. Other browser preferences stay as they are. A recovery copy of your current progress will be saved before anything changes.</p>
+    <h4 id="progressReviewTitle" tabindex="-1">Review before restoring</h4><p id="progressDate"></p>
+    <fieldset id="progressPlanChoices" class="progress-plan-choices" hidden><legend>My Plans</legend>
+      <label>How to restore plans <select id="progressPlanMode"><option value="merge">Merge with current plans</option><option value="replace">Replace My Plans</option></select></label>
+      <label class="progress-plans-only"><input type="checkbox" id="progressPlansOnly"> Restore only My Plans</label>
+    </fieldset>
+    <ul id="progressSummary"></ul>
+    <p id="progressPlanOutcome"></p>
+    <div id="progressPlanPreview"></div>
+    <p>A recovery copy is saved before any changes are applied. You can undo the last restore on this browser.</p>
     <button type="button" id="progressRestore">Restore this backup</button> <button type="button" id="progressCancel">Cancel</button></section></section>`;
   let pending = null,
+    preview = null,
     revision = 0;
   const status = (text) => {
     $('progressStatus').textContent = text;
   };
   const reset = () => {
     pending = null;
+    preview = null;
     $('progressReview').hidden = true;
     $('progressFile').value = '';
   };
+  function restoreOptions() {
+    return {
+      plansOnly: !$('progressPlanChoices').hidden && $('progressPlansOnly').checked,
+      planMode: $('progressPlanMode').value,
+    };
+  }
+  function updatePreview() {
+    const options = restoreOptions();
+    const list = $('progressSummary');
+    const plans = $('progressPlanPreview');
+    const outcome = $('progressPlanOutcome');
+    list.replaceChildren();
+    plans.replaceChildren();
+    outcome.textContent = '';
+    try {
+      preview = progressPrepare(pending, options);
+    } catch (error) {
+      preview = null;
+      $('progressRestore').disabled = true;
+      outcome.textContent = error.message;
+      return;
+    }
+    $('progressRestore').disabled = false;
+    for (const [key, label] of PROGRESS_LEGACY_KEYS) {
+      const value = pending.storage[key];
+      const row = document.createElement('li');
+      const count = Array.isArray(value)
+        ? value.length
+        : key === 'dsw.achievements.v1' && value
+          ? Object.values(value).filter(Boolean).length
+          : null;
+      let action =
+        value === null ? 'Reset' : count === null ? 'Replace saved settings' : 'Restore ' + count + ' ticked';
+      if (options.plansOnly) action = 'Keep current';
+      else if (preview.target[key] === preview.before[key]) action = 'No change';
+      row.textContent = label + ' · ' + action;
+      list.append(row);
+    }
+    if (!preview.plan) {
+      outcome.textContent = 'This older file leaves My Plans as they are.';
+      return;
+    }
+    const { current, incoming, after } = preview.plan;
+    outcome.textContent =
+      options.planMode === 'replace'
+        ? 'This replaces My Plans with the file’s copy.'
+        : 'Merge keeps your current entries and stock counts when both copies contain the same entry.';
+    const grid = document.createElement('table');
+    grid.setAttribute('aria-label', 'My Plans restore preview');
+    const count = (value, key) => (value ? Object.keys(value[key]).length : 0);
+    grid.innerHTML =
+      '<thead><tr><th scope="col">My Plans</th><th scope="col">Here</th><th scope="col">In file</th>' +
+      '<th scope="col">After restore</th></tr></thead><tbody>' +
+      PLAN_BACKUP_GROUPS.map(
+        ([key, label]) =>
+          '<tr><th scope="row">' +
+          label +
+          '</th><td>' +
+          count(current, key) +
+          '</td><td>' +
+          count(incoming, key) +
+          '</td><td>' +
+          count(after, key) +
+          '</td></tr>',
+      ).join('') +
+      '</tbody>';
+    plans.append(grid);
+    if (incoming) {
+      const details = document.createElement('details');
+      const summary = document.createElement('summary');
+      summary.textContent = 'See entries in this file';
+      details.append(summary);
+      details.ontoggle = () => {
+        if (!details.open || details.childElementCount > 1) return;
+        for (const [key, label] of PLAN_BACKUP_GROUPS) {
+          const entries = planBackupEntries(incoming, key);
+          if (!entries.length) continue;
+          const local = new Set(planBackupEntries(current, key).map(([id]) => id));
+          const title = document.createElement('h5');
+          title.textContent = label;
+          const items = document.createElement('ul');
+          for (const [id, name] of entries.slice(0, 20)) {
+            const item = document.createElement('li');
+            item.textContent = name + (options.planMode === 'merge' && local.has(id) ? ' · keeping current' : '');
+            items.append(item);
+          }
+          if (entries.length > 20) {
+            const remaining = document.createElement('li');
+            remaining.textContent = entries.length - 20 + ' more in the file';
+            items.append(remaining);
+          }
+          details.append(title, items);
+        }
+      };
+      if (PLAN_BACKUP_GROUPS.some(([key]) => count(incoming, key))) plans.append(details);
+    }
+  }
   try {
     $('progressUndo').disabled = !progressUndoRecord();
   } catch (e) {
@@ -1488,6 +1636,7 @@ function renderSettingsBackup() {
     const file = $('progressFile').files[0],
       current = ++revision;
     pending = null;
+    preview = null;
     $('progressReview').hidden = true;
     if (!file) return;
     try {
@@ -1497,26 +1646,14 @@ function renderSettingsBackup() {
       const doc = progressValidate(JSON.parse(text));
       if (current !== revision) return;
       pending = doc;
-      $('progressDate').textContent = `Backup saved: ${new Date(doc.exportedAt).toLocaleString('en-GB')}`;
-      const list = $('progressSummary');
-      list.replaceChildren();
-      for (const [key, label] of PROGRESS_KEYS) {
-        const value = doc.storage[key],
-          row = document.createElement('li');
-        const count =
-          value === null
-            ? null
-            : Array.isArray(value)
-              ? value.length
-              : key === 'dsw.achievements.v1'
-                ? Object.values(value).filter(Boolean).length
-                : null;
-        row.textContent = `${label}: ${value === null ? 'not saved — will reset' : count === null ? 'saved settings' : count + ' ticked'}`;
-        list.append(row);
-      }
+      $('progressDate').textContent = `Backup saved ${new Date(doc.exportedAt).toLocaleString('en-GB')}`;
+      $('progressPlanChoices').hidden = doc.version === 1;
+      $('progressPlanMode').value = 'merge';
+      $('progressPlansOnly').checked = false;
+      updatePreview();
       $('progressReview').hidden = false;
-      status('File checked. Review it below; nothing has been changed.');
-      $('progressRestore').focus();
+      status('File checked. Review the changes before restoring.');
+      $('progressReviewTitle').focus();
     } catch (e) {
       if (current === revision) {
         reset();
@@ -1524,16 +1661,24 @@ function renderSettingsBackup() {
       }
     }
   };
+  $('progressPlanMode').onchange = $('progressPlansOnly').onchange = updatePreview;
   $('progressCancel').onclick = () => {
     revision++;
     reset();
     status('Cancelled. Your progress has not changed.');
   };
   $('progressRestore').onclick = () => {
-    if (!pending) return;
+    if (!pending || !preview) return;
     try {
-      progressRestore(pending);
-      progressReload('Backup restored. Undo last restore is available on this browser.');
+      const result = progressRestore(pending, restoreOptions(), preview);
+      if (result === 'changed') {
+        updatePreview();
+        status('Progress changed while this file was open. Review the updated preview and confirm again.');
+        return;
+      }
+      reset();
+      if (result === 'unchanged') status('Your progress already has these entries and settings.');
+      else progressReload('Backup restored. Undo last restore is available on this browser.');
     } catch (e) {
       status(e.message);
       try {

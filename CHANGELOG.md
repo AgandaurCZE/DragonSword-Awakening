@@ -1,5 +1,13 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 18 Nov 2026 — Take My Plans between browsers
+
+- Backup & Restore now exports goals, farming lists, stock, rotations and watched heroes with the existing progress. The review compares file, browser and post-restore counts and shows which listed entries will keep their current version.
+- Merge adds missing entries and keeps local edits and stock counts. Explicit replacement and a My Plans-only restore are available. Older backup files and recovery copies still work, with My Plans left alone.
+- A changed browser snapshot prompts a fresh review before applying the file. Undo restores only the keys changed by the last restore. Added a direct Backup & Restore link from My Plans.
+- Full local checks passed. The 115-view visual comparison showed the intended My Plans link at both widths. The Backup & Restore review was inspected separately on desktop and phone.
+- Restore point before these changes: `c1042b8`.
+
 ## 17 Nov 2026 — My Plans and video timing
 
 - My Plans gives players linked goals, a combined farming checklist, a hero patch watchlist and shareable rotation cards. The Build tab sends the selected gear pairing to Farming, and the Finder sends the chosen lineup to Rotations.
