@@ -21,6 +21,7 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 ## David's account (latest)
 - All 20 heroes Lv.70, all masteries. Awakenings: A6 Castella, Cerese, Charlotte, Dana, Johnny, Kalien, Kalsion, Ornette, Reina, Roxy, Ryza, Theresia; A3 Aria, Astria, Eileen, Lute, Othello, Sion, Tarte; A0 Alex.
 - Signature Karmas: Theresia, Kalien, Kalsion, Othello, Cerese, Dana, Ornette, Charlotte, Ryza, Roxy (Ryza's and Ornette's Lv.70).
+- Tower of Trials: all three towers completed (20 Nov).
 - Karmas 53 of 53 (every signature; Codex complete, 15 Nov), titles 49 of 109, familiars 16 of 29.
 
 ## Open questions (need the game)
