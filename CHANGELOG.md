@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 20 Nov 2026 — More Perfect rune readings (Claude)
+- David's new Perfect rune values: new ones are Attack 98, Defense 65, Crit Damage 8.40% and 9.80%; the rest were already in `RUNES.seen.Perfect`. Every type now has all nine steps (12/20 to 20/20 of the top) except Crit Rate at 13/20. Data only.
+
 ## 18 Nov 2026 — Rotation playback on phones
 
 - While a rotation is playing on a phone, the current action and controls stay just below the navigation as you scroll its card. Previous and Next have larger tap targets, and an “Up next” line shows the next hero and action on saved and shared cards.
