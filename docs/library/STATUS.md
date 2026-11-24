@@ -12,7 +12,7 @@ Back to the library: [docs/README.md](../README.md). Read after [WORKING_WITH_DA
 - Fight preparation links guides, the Finder team check, hero buildup and shareable damage scenarios. Best Gear compares recommended pairs or entered stats. The Pantry remembers quantities and links one-short ingredients to their sources.
 - My Plans groups goals, farming, rotation cards and a personal hero patch watchlist. Rotation playback stays in view while scrolling the card on a phone. The Test Kit has a video timing workbench for making future Rage and Signal readings.
 - Backup & Restore moves My Plans between browsers, with a merge preview, an optional plans-only restore and compatibility with the original backup format.
-- Upcoming heroes: `UPCOMING_HEROES` (15 Nov). Jerome (Bloodburst, Lentus Rebellion, December update, sword, parry) is shown on the Heroes page; Veronica and Logan are data only (Lentus Rebellion). Notes: `assets/sources/upcoming/notes.txt`.
+- Upcoming heroes: `UPCOMING_HEROES` (15 Nov). Jerome (Bloodburst, Lentus Rebellion, December update, sword, parry) is shown on the Heroes page; Veronica (Lentus Rebellion, December Free Hero Update, fists, kicks and a gun) shown since 24 Nov; Logan is data only (Lentus Rebellion). Notes: `assets/sources/upcoming/notes.txt`.
 
 ## In progress
 - **Hero reviews:** rewritten and live 15 Nov (banner with nickname, lore title, A0/A6, groups vs bosses). Writing rules: no testing details or names; one cast never fills a status gauge; most skills return in about 10 s; against bosses heroes need partners or a broken Super Armor for physical statuses.

@@ -1,5 +1,8 @@
 Older months: [October 2026](docs/library/CHANGELOG_2026-10.md). Newest first.
 
+## 24 Nov 2026 — Veronica on the Heroes page (Claude)
+- From the official trailer (David's screenshot): Veronica gets a portrait card (`assets/heroes/veronica.webp`) and shows as UPCOMING after Jerome. Hover card: Lentus Rebellion, coming in the December Free Hero Update, fights with fists and kicks, one attack uses a gun; archetype and role stay "not revealed yet". Screenshot kept in `assets/sources/upcoming/`. Data and image only.
+
 ## 20 Nov 2026 — More Perfect rune readings (Claude)
 - David's new Perfect rune values: new ones are Attack 98, Defense 65, Crit Damage 8.40% and 9.80%; the rest were already in `RUNES.seen.Perfect`. Every type now has all nine steps (12/20 to 20/20 of the top) except Crit Rate at 13/20. Data only.
 

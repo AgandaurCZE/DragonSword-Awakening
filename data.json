@@ -422,11 +422,14 @@
   {
    "name": "Veronica",
    "archetype": null,
-   "portrait": null,
+   "portrait": "assets/heroes/veronica.webp",
    "archIcon": null,
    "faction": "Lentus Rebellion",
-   "arrives": null,
-   "facts": []
+   "arrives": "December Free Hero Update",
+   "facts": [
+    "Fights with fists and kicks",
+    "One of her attacks uses a gun"
+   ]
   },
   {
    "name": "Logan",
